@@ -23,6 +23,8 @@ interface Business {
     booking?: string;
   };
   commissionRate?: string;
+  city?: string;
+  country?: string;
 }
 
 interface BusinessListingCardProps {
@@ -146,13 +148,28 @@ export default function BusinessListingCard({ business }: BusinessListingCardPro
       <div className="p-6 relative z-10">
         {/* Title and location */}
         <div className="mb-4">
-          <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-1 group-hover:text-sky-600 transition-colors">
-            {business.name}
-          </h3>
+          <div className="flex items-start justify-between mb-2">
+            <h3 className="text-xl font-bold text-gray-900 line-clamp-1 group-hover:text-sky-600 transition-colors">
+              {business.name}
+            </h3>
+            {business.city && (
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800 border border-gray-200">
+                <MapPin size={12} className="mr-1" />
+                {business.city}
+              </span>
+            )}
+          </div>
+          
           <div className="flex items-center text-gray-600 mb-3">
             <MapPin size={16} className="text-gray-400 mr-2 flex-shrink-0" />
-            <span className="text-sm truncate">{business.location}</span>
+            <div className="flex flex-col">
+              <span className="text-sm truncate">{business.location}</span>
+              {business.country && (
+                <span className="text-xs text-gray-500 mt-0.5">{business.country}</span>
+              )}
+            </div>
           </div>
+          
           <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
             {business.description}
           </p>

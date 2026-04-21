@@ -1,9 +1,95 @@
 import Header from '@/components/Header';
 import BusinessListingCard from '@/components/BusinessListingCard';
-import { Sparkles, Shield, Globe, Users, Star, TrendingUp } from 'lucide-react';
+import { Sparkles, Shield, Globe, Users, Star, TrendingUp, MapPin, Building2 } from 'lucide-react';
 
-// Sample data for MVP - Combined Tokyo & Bangkok
-const activities = [
+// Load data from files
+const fs = require('fs');
+const path = require('path');
+
+function loadActivities() {
+  const activities = [];
+  const dataDir = path.join(process.cwd(), 'data');
+  
+  // Load Tokyo
+  try {
+    const tokyoData = JSON.parse(fs.readFileSync(path.join(dataDir, 'tokyo-family-activities.json'), 'utf8'));
+    tokyoData.activities.forEach((activity: any, index: number) => {
+      activities.push({
+        ...activity,
+        id: index + 1,
+        city: 'Tokyo',
+        country: 'Japan'
+      });
+    });
+  } catch (error) {
+    console.error('Error loading Tokyo data:', error);
+  }
+  
+  // Load Bangkok
+  try {
+    const bangkokData = JSON.parse(fs.readFileSync(path.join(dataDir, 'bangkok-family-activities.json'), 'utf8'));
+    const startId = activities.length + 1;
+    bangkokData.activities.forEach((activity: any, index: number) => {
+      activities.push({
+        ...activity,
+        id: startId + index,
+        city: 'Bangkok',
+        country: 'Thailand'
+      });
+    });
+  } catch (error) {
+    console.error('Error loading Bangkok data:', error);
+  }
+  
+  // Load Singapore
+  try {
+    const singaporeData = JSON.parse(fs.readFileSync(path.join(dataDir, 'singapore-family-activities.json'), 'utf8'));
+    const startId = activities.length + 1;
+    singaporeData.activities.forEach((activity: any, index: number) => {
+      activities.push({
+        ...activity,
+        id: startId + index,
+        city: 'Singapore',
+        country: 'Singapore'
+      });
+    });
+  } catch (error) {
+    console.error('Error loading Singapore data:', error);
+  }
+  
+  return activities;
+}
+
+const activities = loadActivities();
+
+// Calculate stats
+const totalActivities = activities.length;
+const cities = Array.from(new Set(activities.map(a => a.city).filter(Boolean)));
+const countries = Array.from(new Set(activities.map(a => a.country).filter(Boolean)));
+const totalCommission = activities.reduce((sum, activity) => {
+  if (activity.commissionRate) {
+    const rate = parseFloat(activity.commissionRate);
+    return sum + (isNaN(rate) ? 0 : rate);
+  }
+  return sum;
+}, 0);
+const avgCommission = totalActivities > 0 ? (totalCommission / totalActivities).toFixed(1) + '%' : '0%';
+
+// Stats for display
+const stats = [
+  { label: 'Activities', value: totalActivities.toString(), icon: Building2, color: 'text-sky-500' },
+  { label: 'Cities', value: cities.length.toString(), icon: MapPin, color: 'text-emerald-500' },
+  { label: 'Countries', value: countries.length.toString(), icon: Globe, color: 'text-amber-500' },
+  { label: 'Avg Commission', value: avgCommission, icon: Star, color: 'text-rose-500' },
+];
+
+// Top destinations for display
+const topDestinations = [
+  { name: 'Tokyo', country: 'Japan', image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&auto=format&fit=crop', count: activities.filter(a => a.city === 'Tokyo').length },
+  { name: 'Bangkok', country: 'Thailand', image: 'https://images.unsplash.com/photo-1552465011-b4e30bf7349d?w-800&auto=format&fit=crop', count: activities.filter(a => a.city === 'Bangkok').length },
+  { name: 'Singapore', country: 'Singapore', image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&auto=format&fit=crop', count: activities.filter(a => a.city === 'Singapore').length },
+  { name: 'Coming Soon', country: 'Hong Kong', image: 'https://images.unsplash.com/photo-1518599807935-37015b9cefcb?w=800&auto=format&fit=crop', count: 0 },
+];
   // Tokyo Activities
   {
     id: 1,
@@ -127,6 +213,45 @@ export default function Home() {
       <Header />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Top Destinations Section */}
+        <section className="mb-12">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900">Top Asia Destinations</h2>
+              <p className="text-gray-600">Most visited family-friendly cities</p>
+            </div>
+            <button className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
+              View all cities
+              <TrendingUp size={16} />
+            </button>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {topDestinations.map((destination, index) => (
+              <div key={index} className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-gray-800">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={destination.image} 
+                    alt={destination.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-lg font-bold text-white mb-1">{destination.name}</h3>
+                  <p className="text-gray-300 text-sm mb-2">{destination.country}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-300">{destination.count} activities</span>
+                    <span className="text-xs px-2 py-1 rounded-full bg-white/20 text-white">
+                      {destination.count > 0 ? 'Explore' : 'Coming Soon'}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -162,7 +287,7 @@ export default function Home() {
               <TrendingUp className="inline-block w-6 h-6 ml-2 text-green-500" />
             </h2>
             <div className="text-sm text-gray-500">
-              Showing {activities.length} verified locations across Tokyo & Bangkok
+              Showing {activities.length} verified locations across {cities.length} cities
             </div>
           </div>
 
@@ -177,22 +302,15 @@ export default function Home() {
         {/* Stats Section */}
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900">50+</div>
-              <div className="text-gray-600">Destinations</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900">4.8</div>
-              <div className="text-gray-600">Avg Safety Rating</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900">98%</div>
-              <div className="text-gray-600">Family Approved</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900">24/7</div>
-              <div className="text-gray-600">Support</div>
-            </div>
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <stat.icon className={`w-5 h-5 ${stat.color}`} />
+                  <div className="text-3xl font-bold text-gray-900">{stat.value}</div>
+                </div>
+                <div className="text-gray-600">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
 
