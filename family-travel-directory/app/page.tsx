@@ -2,8 +2,9 @@ import Header from '@/components/Header';
 import BusinessListingCard from '@/components/BusinessListingCard';
 import { Sparkles, Shield, Globe, Users, Star, TrendingUp } from 'lucide-react';
 
-// Sample Tokyo data for MVP - No Supabase dependency
-const tokyoActivities = [
+// Sample data for MVP - Combined Tokyo & Bangkok
+const activities = [
+  // Tokyo Activities
   {
     id: 1,
     name: "Tokyo Disneyland & DisneySea",
@@ -58,6 +59,65 @@ const tokyoActivities = [
       klook: "https://www.klook.com/activity/789-kidzania-tokyo/?aid=OURCODE"
     },
     commissionRate: "7%"
+  },
+  
+  // Bangkok Activities
+  {
+    id: 4,
+    name: "Safari World Bangkok",
+    description: "Massive open zoo and marine park with drive-through safari, animal shows, and feeding experiences. Perfect for animal-loving families.",
+    location: "99 Panya Intra Rd, Sam Wa Tawan Tok, Khlong Sam Wa, Bangkok 10510",
+    ageRange: "2-15",
+    safetyRating: 4.7,
+    amenities: ["Safari Drive", "Animal Shows", "Feeding Experiences", "Stroller Rental"],
+    category: "Zoo",
+    imageUrl: "https://images.unsplash.com/photo-1550358864-518f202c02ba",
+    priceRange: "$$",
+    bestTime: "Morning, Dry season (Nov-Feb)",
+    popularity: 88,
+    affiliateLinks: {
+      klook: "https://www.klook.com/activity/1183-safari-world-bangkok/?aid=OURCODE",
+      viator: "https://www.viator.com/tours/Bangkok/Safari-World-Bangkok-Ticket/d343-50170P1?pid=OURCODE"
+    },
+    commissionRate: "7%"
+  },
+  {
+    id: 5,
+    name: "Sea Life Bangkok Ocean World",
+    description: "Southeast Asia's largest aquarium located under Siam Paragon mall. Walk-through tunnels, touch pools, and penguin feeding shows.",
+    location: "Siam Paragon, 991 Rama I Rd, Pathum Wan, Bangkok 10330",
+    ageRange: "3-14",
+    safetyRating: 4.8,
+    amenities: ["Underwater Tunnel", "Touch Pools", "Penguin Feeding", "Stroller Access"],
+    category: "Aquarium",
+    imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
+    priceRange: "$$",
+    bestTime: "Weekdays, Morning",
+    popularity: 92,
+    affiliateLinks: {
+      klook: "https://www.klook.com/activity/1184-sea-life-bangkok-ocean-world/?aid=OURCODE",
+      getYourGuide: "https://www.getyourguide.com/bangkok-l169/bangkok-sea-life-ocean-world-ticket-t395175/?partner_id=OURCODE"
+    },
+    commissionRate: "8%"
+  },
+  {
+    id: 6,
+    name: "Dream World Bangkok",
+    description: "Thailand's answer to Disneyland with themed zones, gentle rides for young children, and thrilling rides for teens. Good mix of attractions.",
+    location: "62 Moo 1, Rangsit-Nakornnayok Rd, Thanyaburi, Pathum Thani 12130",
+    ageRange: "5-17",
+    safetyRating: 4.6,
+    amenities: ["Theme Zones", "Gentle Rides", "Thrill Rides", "Shows", "Restaurants"],
+    category: "Theme Park",
+    imageUrl: "https://images.unsplash.com/photo-1567602901358-5ba17615aaeb",
+    priceRange: "$$",
+    bestTime: "Weekdays, Dry season",
+    popularity: 85,
+    affiliateLinks: {
+      klook: "https://www.klook.com/activity/1186-dream-world-bangkok/?aid=OURCODE",
+      viator: "https://www.viator.com/tours/Bangkok/Dream-World-Bangkok-Ticket/d343-50170P2?pid=OURCODE"
+    },
+    commissionRate: "6%"
   }
 ];
 
@@ -98,17 +158,17 @@ export default function Home() {
         <div className="mb-12">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-gray-900">
-              Top Family Destinations in Tokyo
+              Top Family Destinations in Asia
               <TrendingUp className="inline-block w-6 h-6 ml-2 text-green-500" />
             </h2>
             <div className="text-sm text-gray-500">
-              Showing {tokyoActivities.length} verified locations
+              Showing {activities.length} verified locations across Tokyo & Bangkok
             </div>
           </div>
 
           {/* Business listings grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {tokyoActivities.map((business) => (
+            {activities.map((business) => (
               <BusinessListingCard key={business.id} business={business} />
             ))}
           </div>
