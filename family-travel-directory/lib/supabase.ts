@@ -1,279 +1,88 @@
-// Mock Supabase client for development
-// Replace with real Supabase client when credentials available
+import { createClient } from '@supabase/supabase-js';
 
-export interface Business {
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://llnflvnjinavbtqadgyu.supabase.co';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxsbmZsdm5qaW5hdmJ0cWFkZ3l1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2OTM4MTUsImV4cCI6MjA5MjI2OTgxNX0.xnn7-x8rV2cluETN-3eDI2yhuxMzcnTraBKmwbW1qJw';
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+// Types for our database
+export interface DatabaseBusiness {
   id: string;
   name: string;
   description: string;
   location: string;
-  age_range: string;
-  safety_rating: number;
-  amenities: string[];
   category: string;
-  image_url: string;
+  family_friendly_score: number;
   created_at: string;
+  updated_at: string;
+  age_range?: string;
+  amenities?: string[];
+  price_range?: string;
+  best_time?: string;
+  popularity?: number;
+  image_url?: string;
+  affiliate_links?: Record<string, string>;
+  commission_rate?: string;
 }
 
-export interface Category {
-  id: string;
-  name: string;
-  icon: string;
-  description: string;
+// Convert database business to frontend business
+export function dbToBusiness(db: DatabaseBusiness): any {
+  return {
+    id: parseInt(db.id.split('-')[0], 16) || 0, // Simple hash for demo
+    name: db.name,
+    description: db.description,
+    location: db.location,
+    ageRange: db.age_range || 'All ages',
+    safetyRating: db.family_friendly_score,
+    amenities: db.amenities || [],
+    category: db.category,
+    imageUrl: db.image_url || 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf',
+    priceRange: db.price_range || '$$',
+    bestTime: db.best_time || 'Year-round',
+    popularity: db.popularity || 50,
+    affiliateLinks: db.affiliate_links || {},
+    commissionRate: db.commission_rate || '5%'
+  };
 }
 
-// Mock data
-const mockBusinesses: Business[] = [
-  {
-    id: '1',
-    name: 'Disneyland Paris',
-    description: 'Magical theme park perfect for all ages with family-friendly rides and shows.',
-    location: 'Paris, France',
-    age_range: '3+',
-    safety_rating: 5,
-    amenities: ['Changing rooms', 'Stroller rental', 'Kid menus', 'First aid', 'Baby care centers'],
-    category: 'Theme Park',
-    image_url: 'https://images.unsplash.com/photo-1545580492-8859ba8323f0?w=800&auto=format&fit=crop',
-    created_at: '2026-04-18T10:00:00Z'
-  },
-  {
-    id: '2',
-    name: 'Natural History Museum London',
-    description: 'Interactive exhibits and dinosaur skeletons that captivate children of all ages.',
-    location: 'London, UK',
-    age_range: 'All ages',
-    safety_rating: 5,
-    amenities: ['Baby changing', 'Family bathrooms', 'Café', 'Gift shop', 'Cloakroom'],
-    category: 'Museum',
-    image_url: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&auto=format&fit=crop',
-    created_at: '2026-04-18T10:00:00Z'
-  },
-  {
-    id: '3',
-    name: 'Jardin du Luxembourg',
-    description: 'Beautiful gardens with playgrounds, puppet shows, and pony rides for young children.',
-    location: 'Paris, France',
-    age_range: '0-12',
-    safety_rating: 4,
-    amenities: ['Playground', 'Pony rides', 'Puppet theater', 'Picnic areas', 'Boat rental'],
-    category: 'Park',
-    image_url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop',
-    created_at: '2026-04-18T10:00:00Z'
-  },
-  {
-    id: '4',
-    name: 'London Zoo',
-    description: 'World-class zoo with interactive animal experiences and family-friendly facilities.',
-    location: 'London, UK',
-    age_range: 'All ages',
-    safety_rating: 5,
-    amenities: ['Baby changing', 'Stroller access', 'Feeding rooms', 'First aid', 'Animal encounters'],
-    category: 'Zoo',
-    image_url: 'https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&auto=format&fit=crop',
-    created_at: '2026-04-18T10:00:00Z'
-  },
-  {
-    id: '5',
-    name: 'Eiffel Tower',
-    description: 'Iconic landmark with family-friendly tours and breathtaking views of Paris.',
-    location: 'Paris, France',
-    age_range: '6+',
-    safety_rating: 5,
-    amenities: ['Elevators', 'Guided tours', 'Souvenir shop', 'Restaurant', 'Viewing decks'],
-    category: 'Landmark',
-    image_url: 'https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&auto=format&fit=crop',
-    created_at: '2026-04-18T10:00:00Z'
-  },
-  {
-    id: '6',
-    name: 'Tower of London',
-    description: 'Historic castle with Crown Jewels and engaging tours for families.',
-    location: 'London, UK',
-    age_range: '8+',
-    safety_rating: 4,
-    amenities: ['Audio guides', 'Family tours', 'Gift shop', 'Café', 'Historic exhibits'],
-    category: 'Historic Site',
-    image_url: 'https://images.unsplash.com/photo-1513628253939-010e64ac66cd?w=800&auto=format&fit=crop',
-    created_at: '2026-04-18T10:00:00Z'
-  },
-  {
-    id: '7',
-    name: 'Parc de la Villette',
-    description: 'Large cultural park with science museum, concert halls, and playgrounds.',
-    location: 'Paris, France',
-    age_range: 'All ages',
-    safety_rating: 4,
-    amenities: ['Playgrounds', 'Science museum', 'Concert halls', 'Picnic areas', 'Bike rental'],
-    category: 'Park',
-    image_url: 'https://images.unsplash.com/photo-1575373263475-8e61d7daee4c?w=800&auto=format&fit=crop',
-    created_at: '2026-04-18T10:00:00Z'
-  },
-  {
-    id: '8',
-    name: 'Science Museum London',
-    description: 'Interactive science exhibits and hands-on activities for curious minds.',
-    location: 'London, UK',
-    age_range: '5+',
-    safety_rating: 5,
-    amenities: ['Interactive exhibits', 'Workshops', 'Café', 'Gift shop', 'IMAX cinema'],
-    category: 'Museum',
-    image_url: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop',
-    created_at: '2026-04-18T10:00:00Z'
-  },
-  {
-    id: '9',
-    name: 'Aquarium de Paris',
-    description: 'Underwater world with sharks, jellyfish, and interactive touch pools.',
-    location: 'Paris, France',
-    age_range: 'All ages',
-    safety_rating: 5,
-    amenities: ['Touch pools', 'Feeding shows', 'Gift shop', 'Café', 'Educational programs'],
-    category: 'Aquarium',
-    image_url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop',
-    created_at: '2026-04-18T10:00:00Z'
-  },
-  {
-    id: '10',
-    name: 'Madame Tussauds London',
-    description: 'Wax museum with celebrity figures and interactive experiences.',
-    location: 'London, UK',
-    age_range: '6+',
-    safety_rating: 4,
-    amenities: ['Photo opportunities', 'Interactive exhibits', 'Gift shop', 'Café', 'Marvel zone'],
-    category: 'Museum',
-    image_url: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&auto=format&fit=crop',
-    created_at: '2026-04-18T10:00:00Z'
-  }
-];
+// Fetch businesses from Supabase
+export async function fetchBusinesses() {
+  try {
+    const { data, error } = await supabase
+      .from('businesses')
+      .select('*')
+      .order('family_friendly_score', { ascending: false })
+      .limit(20);
 
-const mockCategories: Category[] = [
-  { id: '1', name: 'Theme Parks', icon: '🎢', description: 'Amusement and theme parks' },
-  { id: '2', name: 'Museums', icon: '🏛️', description: 'Educational and cultural museums' },
-  { id: '3', name: 'Parks', icon: '🌳', description: 'Public parks and gardens' },
-  { id: '4', name: 'Zoos', icon: '🦁', description: 'Zoos and aquariums' },
-  { id: '5', name: 'Restaurants', icon: '🍽️', description: 'Family-friendly dining' },
-  { id: '6', name: 'Hotels', icon: '🏨', description: 'Family accommodation' },
-  { id: '7', name: 'Activities', icon: '🎨', description: 'Classes and workshops' },
-  { id: '8', name: 'Landmarks', icon: '🗼', description: 'Iconic tourist sites' }
-];
+    if (error) {
+      console.error('Error fetching businesses:', error);
+      return [];
+    }
 
-// Mock Supabase client
-export const supabase = {
-  from: (table: string) => {
-    return {
-      select: (columns = '*') => {
-        return {
-          eq: (column: string, value: any) => {
-            return {
-              data: table === 'businesses' 
-                ? mockBusinesses.filter(b => (b as any)[column] === value)
-                : table === 'categories'
-                ? mockCategories.filter(c => (c as any)[column] === value)
-                : [],
-              error: null
-            };
-          },
-          in: (column: string, values: any[]) => {
-            return {
-              data: table === 'businesses'
-                ? mockBusinesses.filter(b => values.includes((b as any)[column]))
-                : [],
-              error: null
-            };
-          },
-          ilike: (column: string, pattern: string) => {
-            const searchTerm = pattern.replace('%', '').toLowerCase();
-            return {
-              data: table === 'businesses'
-                ? mockBusinesses.filter(b => 
-                    b.name.toLowerCase().includes(searchTerm) ||
-                    b.description.toLowerCase().includes(searchTerm) ||
-                    b.location.toLowerCase().includes(searchTerm)
-                  )
-                : [],
-              error: null
-            };
-          },
-          data: table === 'businesses' ? mockBusinesses : 
-                table === 'categories' ? mockCategories : [],
-          error: null
-        };
-      },
-      insert: (data: any) => {
-        console.log('Mock insert:', data);
-        return { data: [{ id: Date.now().toString(), ...data }], error: null };
-      },
-      update: (data: any) => {
-        console.log('Mock update:', data);
-        return { data: [data], error: null };
-      },
-      delete: () => {
-        console.log('Mock delete');
-        return { data: [], error: null };
-      }
-    };
-  },
-  auth: {
-    getSession: async () => ({ data: { session: null }, error: null }),
-    signInWithPassword: async () => ({ data: { user: null, session: null }, error: null }),
-    signUp: async () => ({ data: { user: null, session: null }, error: null }),
-    signOut: async () => ({ error: null })
+    return data.map(dbToBusiness);
+  } catch (error) {
+    console.error('Error in fetchBusinesses:', error);
+    return [];
   }
-};
-
-// Helper functions
-export async function getBusinesses(filters?: {
-  location?: string;
-  category?: string;
-  ageRange?: string;
-  search?: string;
-}) {
-  let businesses = mockBusinesses;
-  
-  if (filters?.location) {
-    businesses = businesses.filter(b => b.location === filters.location);
-  }
-  
-  if (filters?.category) {
-    businesses = businesses.filter(b => b.category === filters.category);
-  }
-  
-  if (filters?.ageRange) {
-    businesses = businesses.filter(b => {
-      if (filters.ageRange === 'all-ages') return true;
-      if (filters.ageRange === '0-2') return b.age_range === '0-2' || b.age_range === 'All ages';
-      if (filters.ageRange === '3-5') return b.age_range === '3-5' || b.age_range === 'All ages';
-      if (filters.ageRange === '6-12') return b.age_range === '6-12' || b.age_range === 'All ages';
-      if (filters.ageRange === '13-17') return b.age_range === '13-17' || b.age_range === 'All ages';
-      return b.age_range === filters.ageRange;
-    });
-  }
-  
-  if (filters?.search) {
-    const searchTerm = filters.search.toLowerCase();
-    businesses = businesses.filter(b => 
-      b.name.toLowerCase().includes(searchTerm) ||
-      b.description.toLowerCase().includes(searchTerm) ||
-      b.location.toLowerCase().includes(searchTerm)
-    );
-  }
-  
-  return { data: businesses, error: null };
 }
 
-export async function getBusinessById(id: string) {
-  const business = mockBusinesses.find(b => b.id === id);
-  return { data: business, error: business ? null : new Error('Business not found') };
-}
+// Insert a new business
+export async function insertBusiness(business: Omit<DatabaseBusiness, 'id' | 'created_at' | 'updated_at'>) {
+  try {
+    const { data, error } = await supabase
+      .from('businesses')
+      .insert([business])
+      .select()
+      .single();
 
-export async function getCategories() {
-  return { data: mockCategories, error: null };
-}
+    if (error) {
+      console.error('Error inserting business:', error);
+      return null;
+    }
 
-export async function addBusinessReview(businessId: string, review: {
-  rating: number;
-  comment: string;
-  userId: string;
-}) {
-  console.log('Mock review added:', { businessId, review });
-  return { data: { id: Date.now().toString(), ...review }, error: null };
+    return data;
+  } catch (error) {
+    console.error('Error in insertBusiness:', error);
+    return null;
+  }
 }
