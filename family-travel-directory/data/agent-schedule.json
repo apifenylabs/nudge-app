@@ -1,0 +1,48 @@
+{
+  "researcher": {
+    "interval": 14400000,
+    "lastRun": 1776782830853
+  },
+  "writer": {
+    "interval": 7200000,
+    "lastRun": 1776782830853
+  },
+  "developer": {
+    "interval": 21600000,
+    "lastRun": 1776782902121
+  },
+  "reviewer": {
+    "phases": [
+      {
+        "name": "safety",
+        "interval": 3600000
+      },
+      {
+        "name": "accuracy",
+        "interval": 7200000
+      },
+      {
+        "name": "seo",
+        "interval": 14400000
+      },
+      {
+        "name": "ux",
+        "interval": 21600000
+      }
+    ],
+    "lastRun": {
+      "safety": 1776788286255,
+      "accuracy": 1776782902121,
+      "seo": 1776782902121,
+      "ux": 1776782902121
+    }
+  },
+  "uiMonitor": {
+    "interval": 43200000,
+    "lastRun": 1776782910159
+  },
+  "chiefEditor": {
+    "interval": 86400000,
+    "lastRun": 0
+  }
+}
