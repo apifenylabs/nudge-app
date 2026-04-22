@@ -1,16 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import BusinessListingCard from '@/components/BusinessListingCard';
-import {
-  Search, MapPin, Sparkles, Shield, Globe, Users, Star, TrendingUp,
-  Filter, SlidersHorizontal, ChevronDown, ChevronRight, Clock,
+import { 
+  Search, MapPin, Sparkles, Shield, Globe, Users, Star, TrendingUp, 
+  Filter, SlidersHorizontal, ChevronDown, ChevronRight, Clock, 
   Compass, TreePine, Palmtree, Landmark, Utensils, Hotel, ShoppingBag,
   ArrowRight, BookOpen, Heart, Quote
 } from 'lucide-react';
 
-// -- DATA --
+// ─── DATA ────────────────────────────────────────────
 const destinations = [
   {
     id: 1,
@@ -143,12 +143,12 @@ const destinations = [
 ];
 
 const categories = [
-  { name: "Theme Parks", icon: Sparkles, desc: "Where memories are made" },
-  { name: "Parks & Nature", icon: TreePine, desc: "Fresh air, open spaces" },
-  { name: "Zoos & Aquariums", icon: Palmtree, desc: "Wild encounters up close" },
-  { name: "Museums", icon: Landmark, desc: "Learn while having fun" },
-  { name: "Restaurants", icon: Utensils, desc: "Kid-approved dining" },
-  { name: "Hotels", icon: Hotel, desc: "Stay where families love" },
+  { name: "Theme Parks", icon: Sparkles, desc: "Where memories are made", color: "from-amber-400 to-orange-500", bg: "bg-amber-50 text-amber-600" },
+  { name: "Parks & Nature", icon: TreePine, desc: "Fresh air, open spaces", color: "from-emerald-400 to-green-500", bg: "bg-emerald-50 text-emerald-600" },
+  { name: "Zoos & Aquariums", icon: Palmtree, desc: "Wild encounters up close", color: "from-sky-400 to-blue-500", bg: "bg-sky-50 text-sky-600" },
+  { name: "Museums", icon: Landmark, desc: "Learn while having fun", color: "from-violet-400 to-purple-500", bg: "bg-violet-50 text-violet-600" },
+  { name: "Restaurants", icon: Utensils, desc: "Kid-approved dining", color: "from-rose-400 to-pink-500", bg: "bg-rose-50 text-rose-600" },
+  { name: "Hotels", icon: Hotel, desc: "Stay where families love", color: "from-indigo-400 to-blue-500", bg: "bg-indigo-50 text-indigo-600" },
 ];
 
 const cities = ["Tokyo", "Osaka", "Nara", "Singapore"];
@@ -157,19 +157,6 @@ const featuredCities = [
   { name: "Osaka", country: "Japan", count: 23, image: "https://images.unsplash.com/photo-1590559899731-a382839e5549", tag: "Best for: Food & fun" },
   { name: "Singapore", country: "Singapore", count: 31, image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd", tag: "Best for: Clean & safe" },
 ];
-
-const stories = [
-  { id: 1, title: "When our 4-year-old met a panda", excerpt: "She pressed her face against the glass for 15 minutes, completely still. I don't think she blinked once. Ueno Zoo isn't fancy, but it's the most honest, wonderful zoo we've ever been to.", author: "Sarah, mom of 2", destination: "Ueno Zoo, Tokyo", emoji: "panda" },
-  { id: 2, title: "The night we almost lost our son at Gardens by the Bay", excerpt: "He ran toward the light show and we panicked for 30 seconds. The staff were incredible -- within 2 minutes they had him safe. The show? Magical. The staff? Even better.", author: "Mike, dad of 3", destination: "Gardens by the Bay, Singapore", emoji: "tree" },
-  { id: 3, title: "Universal Studios with a 5-year-old: a survival guide", excerpt: "We bought the Express Pass and it saved our trip. She rode the flying dinosaur 4 times. She's 5. I don't know where she gets the energy, but I know where she gets the courage -- Super Nintendo World.", author: "Lisa, mom of 1", destination: "Universal Studios Japan, Osaka", emoji: "star" },
-  { id: 4, title: "KidZania changed how my son thinks about work", excerpt: "He was a firefighter for 45 minutes. Then a pilot. Then a surgeon. He came home and asked if he could do ALL of them when he grows up. We said yes, buddy. You can do anything.", author: "James, dad of 2", destination: "KidZania, Tokyo", emoji: "fire" },
-  { id: 5, title: "The cheap trick that made Nara Deer Park our favorite day", excerpt: "Buy the deer crackers. Hide half of them in your pocket. The deer will bow for treats -- your kids will lose their minds. Pro tip: go early, the deer are hungrier and more enthusiastic.", author: "Emma, mom of 3", destination: "Nara Deer Park, Nara", emoji: "deer" },
-  { id: 6, title: "Marina Bay Sands with kids: is it worth the hype?", excerpt: "Yes. But skip the main pool and head to the family pool -- way more room, way less Instagram crowd, and your kids can actually swim instead of posing.", author: "Tom, dad of 2", destination: "Marina Bay Sands, Singapore", emoji: "swim" },
-];
-
-const emojiMap: Record<string, string> = {
-  panda: "\u{1F43C}", tree: "\u{1F333}", star: "\u{2B50}", fire: "\u{1F692}", deer: "\u{1F986}", swim: "\u{1F3CA}"
-};
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -180,11 +167,12 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<"explore" | "stories">("explore");
   const [selectedStory, setSelectedStory] = useState<number | null>(null);
 
+  // Filter & sort
   let filtered = [...destinations];
   if (searchQuery) {
     const q = searchQuery.toLowerCase();
-    filtered = filtered.filter(d =>
-      d.name.toLowerCase().includes(q) ||
+    filtered = filtered.filter(d => 
+      d.name.toLowerCase().includes(q) || 
       d.description.toLowerCase().includes(q) ||
       d.city.toLowerCase().includes(q)
     );
@@ -192,35 +180,7 @@ export default function Home() {
   if (selectedCity !== "All") filtered = filtered.filter(d => d.city === selectedCity);
   if (selectedCategory !== "All") filtered = filtered.filter(d => d.category === selectedCategory);
   filtered.sort((a, b) => {
-    if (sortBy === "popularity") {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Asia Family Travel Directory",
-            "description": "The most beautiful directory of family-friendly travel destinations across Asia. Curated by parents, safety-rated, and updated daily.",
-            "url": "https://family-travel-directory.vercel.app",
-            "about": {
-              "@type": "Thing",
-              "name": "Family Travel in Asia"
-            },
-            "mainEntity": {
-              "@type": "ItemList",
-              "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "Tokyo Disneyland"},
-                {"@type": "ListItem", "position": 2, "name": "Universal Studios Japan"},
-                {"@type": "ListItem", "position": 3, "name": "Gardens by the Bay"},
-                {"@type": "ListItem", "position": 4, "name": "Singapore Zoo"},
-                {"@type": "ListItem", "position": 5, "name": "KidZania Tokyo"}
-              ]
-            }
-          })
-        }}
-      />
-
-return (b.popularity || 0) - (a.popularity || 0);
+    if (sortBy === "popularity") return (b.popularity || 0) - (a.popularity || 0);
     if (sortBy === "safety") return b.safetyRating - a.safetyRating;
     return (a.priceRange?.length || 0) - (b.priceRange?.length || 0);
   });
@@ -228,36 +188,38 @@ return (b.popularity || 0) - (a.popularity || 0);
   return (
     <div className="min-h-screen bg-white">
       <Header />
-
-      {/* HERO -- Personal storytelling meets Nomad List */}
+      
+      {/* --- HERO -- Personal storytelling meets Nomad List --- */}
       <section className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.04]"
+        <div className="absolute inset-0 opacity-[0.04]" 
           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}>
         </div>
-
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="max-w-3xl mx-auto text-center">
+            {/* Storytelling badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-sm text-white/80 mb-6">
               <BookOpen size={14} className="text-amber-400" />
-              Curated by parents who've been there -- 101 destinations
+              Curated by parents who've been there · 101 destinations
             </div>
-
+            
+            {/* Personal headline -- not a directory, a guide */}
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">
-              We found the places
+              We found the places 
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
                 your kids will remember forever
               </span>
             </h1>
-
+            
             <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed">
-              No generic lists. No paid placements. Every destination here was
-              <span className="text-white/90 font-medium"> hand-picked by parents</span> who brought their own kids --
-              tested for safety, rated for fun, and shared with the honest, unfiltered
+              No generic lists. No paid placements. Every destination here was 
+              <span className="text-white/90 font-medium"> hand-picked by parents</span> who brought their own kids -- 
+              tested for safety, rated for fun, and shared with the honest, unfiltered 
               advice you'd get from a friend.
             </p>
 
-            {/* Search bar */}
+            {/* Search -- the Klook way, personal + actionable */}
             <div className="relative max-w-xl mx-auto mb-8">
               <div className="flex items-center bg-white rounded-2xl shadow-2xl shadow-black/20 overflow-hidden">
                 <div className="flex-1 flex items-center px-5">
@@ -276,7 +238,7 @@ return (b.popularity || 0) - (a.popularity || 0);
               </div>
             </div>
 
-            {/* City pills */}
+            {/* City pills -- actionable like Klook */}
             <div className="flex flex-wrap justify-center gap-3">
               {cities.map(city => (
                 <button
@@ -302,11 +264,12 @@ return (b.popularity || 0) - (a.popularity || 0);
             </div>
           </div>
         </div>
-
+        
+        {/* Fade to white */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
-      {/* CATEGORY GRID */}
+      {/* --- CATEGORY GRID -- MonksTrip inspired --- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 mb-12">
         <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
           {categories.map((cat) => (
@@ -333,7 +296,7 @@ return (b.popularity || 0) - (a.popularity || 0);
         </div>
       </section>
 
-      {/* TAB: Explore / Stories */}
+      {/* --- TAB: Explore / Stories --- */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
         <div className="flex items-center gap-1 bg-gray-100 rounded-xl p-1 w-fit">
           <button
@@ -357,11 +320,67 @@ return (b.popularity || 0) - (a.popularity || 0);
         </div>
       </div>
 
-      {/* STORIES TAB */}
+      {/* --- STORIES TAB -- The storytelling layer --- */}
       {activeTab === "stories" && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {stories.map(story => (
+            {/* Story cards */}
+            {[
+              {
+                id: 1,
+                title: "When our 4-year-old met a panda",
+                excerpt: "She pressed her face against the glass for 15 minutes, completely still. I don't think she blinked once. Ueno Zoo isn't fancy, but it's the most honest, wonderful zoo we've ever been to.",
+                author: "Sarah, mom of 2",
+                destination: "Ueno Zoo, Tokyo",
+                emoji: "🐼",
+                readTime: "3 min"
+              },
+              {
+                id: 2,
+                title: "The night we almost lost our son at Gardens by the Bay",
+                excerpt: "Okay, dramatic title. He ran toward the light show and we panicked for 30 seconds. The staff were incredible -- within 2 minutes they had him safe. The show? Magical. The staff? Even better.",
+                author: "Mike, dad of 3",
+                destination: "Gardens by the Bay, Singapore",
+                emoji: "🌳",
+                readTime: "4 min"
+              },
+              {
+                id: 3,
+                title: "Universal Studios with a 5-year-old: a survival guide",
+                excerpt: "We bought the Express Pass and it saved our trip. She rode the flying dinosaur 4 times. 4 times. She's 5. I don't know where she gets the energy, but I know where she gets the courage -- Super Nintendo World.",
+                author: "Lisa, mom of 1",
+                destination: "Universal Studios Japan, Osaka",
+                emoji: "🎢",
+                readTime: "5 min"
+              },
+              {
+                id: 4,
+                title: "KidZania changed how my son thinks about work",
+                excerpt: "He was a firefighter for 45 minutes. Then a pilot. Then a surgeon. He came home and asked if he could do ALL of them when he grows up. We said yes, buddy. You can do anything.",
+                author: "James, dad of 2",
+                destination: "KidZania, Tokyo",
+                emoji: "👨‍🚒",
+                readTime: "3 min"
+              },
+              {
+                id: 5,
+                title: "The cheap trick that made Nara Deer Park our favorite day",
+                excerpt: "Buy the deer crackers. Hide half of them in your pocket. The deer will bow for treats -- your kids will lose their minds. Pro tip: go early, the deer are hungrier and more enthusiastic.",
+                author: "Emma, mom of 3",
+                destination: "Nara Deer Park, Nara",
+                emoji: "🦌",
+                readTime: "2 min"
+              },
+              {
+                id: 6,
+                title: "Marina Bay Sands with kids: is it worth the hype?",
+                excerpt: "Yes. But skip the main pool and head to the family pool -- way more room, way less Instagram crowd, and your kids can actually swim instead of posing. The sunset view is the same either way.",
+                author: "Tom, dad of 2",
+                destination: "Marina Bay Sands, Singapore",
+                emoji: "🏊",
+                readTime: "4 min"
+              }
+            ].map(story => (
               <button
                 key={story.id}
                 onClick={() => setSelectedStory(selectedStory === story.id ? null : story.id)}
@@ -372,15 +391,15 @@ return (b.popularity || 0) - (a.popularity || 0);
                 }`}
               >
                 <div className="flex items-start gap-4">
-                  <div className="text-3xl flex-shrink-0">{emojiMap[story.emoji] || "\u{1F4D6}"}</div>
+                  <div className="text-3xl flex-shrink-0">{story.emoji}</div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs font-medium text-gray-400">3 min</span>
-                      <span className="text-gray-300">&middot;</span>
+                      <span className="text-xs font-medium text-gray-400">{story.readTime}</span>
+                      <span className="text-gray-300">·</span>
                       <span className="text-xs font-medium text-amber-600">{story.destination}</span>
                     </div>
                     <h3 className="text-base font-semibold text-gray-900 mb-2 leading-snug">{story.title}</h3>
-                    <p className={`text-sm text-gray-600 leading-relaxed ${
+                    <p className={`text-sm text-gray-600 leading-relaxed transition-all ${
                       selectedStory === story.id ? "" : "line-clamp-2"
                     }`}>
                       {story.excerpt}
@@ -401,7 +420,8 @@ return (b.popularity || 0) - (a.popularity || 0);
               </button>
             ))}
           </div>
-
+          
+          {/* Story CTA */}
           <div className="mt-8 p-8 bg-gray-50 rounded-2xl border border-gray-200 text-center">
             <p className="text-sm text-gray-500 mb-3">Have a story to share?</p>
             <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors">
@@ -412,9 +432,9 @@ return (b.popularity || 0) - (a.popularity || 0);
         </div>
       )}
 
-      {/* EXPLORE TAB */}
+      {/* --- EXPLORE TAB --- */}
       {activeTab === "explore" && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           {/* Toolbar */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
             <div>
@@ -424,15 +444,15 @@ return (b.popularity || 0) - (a.popularity || 0);
               <p className="text-gray-500 mt-1">
                 {filtered.length} {filtered.length === 1 ? 'destination' : 'destinations'} found
                 {selectedCity !== "All" && ` in ${selectedCity}`}
-                {selectedCategory !== "All" && ` - ${selectedCategory}`}
+                {selectedCategory !== "All" && ` · ${selectedCategory}`}
               </p>
             </div>
-
+            
             <div className="flex items-center gap-3">
               <div className="relative">
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as "popularity" | "safety" | "price")}
+                  onChange={(e) => setSortBy(e.target.value as any)}
                   className="appearance-none bg-gray-50 border border-gray-200 text-gray-700 rounded-xl px-4 py-2.5 pr-10 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-300 cursor-pointer"
                 >
                   <option value="popularity">Most Popular</option>
@@ -455,7 +475,7 @@ return (b.popularity || 0) - (a.popularity || 0);
 
           {/* Expanded filters */}
           {showFilters && (
-            <div className="mb-8 p-6 bg-gray-50 rounded-2xl border border-gray-200">
+            <div className="mb-8 p-6 bg-gray-50 rounded-2xl border border-gray-200 animate-in slide-in-from-top-2 duration-300">
               <div className="flex flex-wrap gap-4">
                 <div className="flex-1 min-w-[200px]">
                   <label className="block text-xs font-medium text-gray-500 mb-2">Category</label>
@@ -489,7 +509,7 @@ return (b.popularity || 0) - (a.popularity || 0);
             </div>
           )}
 
-          {/* Featured cities */}
+          {/* FEATURED CITIES -- Guide-style city cards */}
           <div className="mb-12">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Pick a city, we've done the research</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -528,100 +548,75 @@ return (b.popularity || 0) - (a.popularity || 0);
             ))}
           </div>
 
-          {/* Empty state */}
           {filtered.length === 0 && (
             <div className="text-center py-16">
               <Compass size={48} className="mx-auto text-gray-300 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">No destinations found</h3>
-              <p className="text-gray-500 mb-4">Try adjusting your filters or search query</p>
-              <button
-                onClick={() => { setSearchQuery(""); setSelectedCity("All"); setSelectedCategory("All"); }}
-                className="px-6 py-2.5 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
-              >
-                Clear all filters
-              </button>
-            </div>
-          )}
-        </div>
-      )}
-
-      {/* STATS */}
-      <section className="bg-gray-50 border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">50+</div>
-              <div className="text-sm text-gray-500">Verified Destinations</div>
-              <div className="mt-2 h-0.5 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full mx-auto w-12" />
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">4.8</div>
-              <div className="text-sm text-gray-500">Avg Safety Rating</div>
-              <div className="mt-2 h-0.5 bg-gradient-to-r from-emerald-400 to-green-400 rounded-full mx-auto w-12" />
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">98%</div>
-              <div className="text-sm text-gray-500">Family Approved</div>
-              <div className="mt-2 h-0.5 bg-gradient-to-r from-sky-400 to-blue-400 rounded-full mx-auto w-12" />
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">24/7</div>
-              <div className="text-sm text-gray-500">Parent Support</div>
-              <div className="mt-2 h-0.5 bg-gradient-to-r from-violet-400 to-purple-400 rounded-full mx-auto w-12" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-        <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-8 md:p-12 overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.03]"
-            style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}>
-          </div>
-          <div className="relative text-center max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-sm text-white/80 mb-6">
-              <Star size={14} className="text-amber-400" />
-              Join 10,000+ families who trust us
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to plan your next family adventure?
-            </h2>
-            <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-              Every destination here was tested by real parents.
-              We share the good, the bad, and the "bring extra snacks."
+              <p className="text-gray-500 mb-4">Try adjusting              your filters or search query
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="px-8 py-3.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-xl hover:from-amber-600 hover:to-orange-600 transition-all shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/30 active:scale-[0.98]">
-                Explore All Destinations
-                <ChevronRight size={18} className="inline-block ml-1" />
-              </button>
-              <button className="px-8 py-3.5 bg-white/10 backdrop-blur-sm text-white font-medium rounded-xl border border-white/20 hover:bg-white/20 transition-all">
-                Read Parent Stories
-              </button>
-            </div>
+            <button 
+              onClick={() => { setSearchQuery(""); setSelectedCity("All"); setSelectedCategory("All"); }}
+              className="px-6 py-2.5 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
+            >
+              Clear all filters
+            </button>
           </div>
-        </div>
-      </section>
+        )}
+    </main>
+  )}
 
-      {/* FOOTER */}
-      <footer className="border-t border-gray-100 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-gray-500">
-              <Sparkles size={16} className="text-amber-500" />
-              <span className="text-sm">Family Travel Directory</span>
-            </div>
-            <div className="flex items-center gap-6 text-sm text-gray-500">
-              <a href="#" className="hover:text-gray-900 transition-colors">About</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">Privacy</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">Terms</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">Contact</a>
-            </div>
-            <p className="text-sm text-gray-400">(c) 2026 Family Travel Directory. Curated by parents, for parents.</p>
-          </div>
+  {/* --- STATS --- */}
+  <section className="bg-gray-50 border-y border-gray-100">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="text-center">
+          <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">50+</div>
+          <div className="text-sm text-gray-500">Verified Destinations</div>
+          <div className="mt-2 h-0.5 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full mx-auto w-12" />
         </div>
-      </footer>
+        <div className="text-center">
+          <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">4.8</div>
+          <div className="text-sm text-gray-500">Avg Safety Rating</div>
+          <div className="mt-2 h-0.5 bg-gradient-to-r from-emerald-400 to-green-400 rounded-full mx-auto w-12" />
+        </div>
+        <div className="text-center">
+          <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">98%</div>
+          <div className="text-sm text-gray-500">Family Approved</div>
+          <div className="mt-2 h-0.5 bg-gradient-to-r from-sky-400 to-blue-400 rounded-full mx-auto w-12" />
+        </div>
+        <div className="text-center">
+          <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">24/7</div>
+          <div className="text-sm text-gray-500">Parent Support</div>
+          <div className="mt-2 h-0.5 bg-gradient-to-r from-violet-400 to-purple-400 rounded-full mx-auto w-12" />
+        </div>
+      </div>
     </div>
-  );
+  </section>
+
+  {/* --- CTA -- Personal, not corporate --- */}
+  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+    <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-8 md:p-12 overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.03]" 
+        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}>
+      </div>
+
+  {/* --- FOOTER --- */}
+  <footer className="border-t border-gray-100 bg-gray-50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-gray-500">
+          <Sparkles size={16} className="text-amber-500" />
+          <span className="text-sm">Family Travel Directory</span>
+        </div>
+        <div className="flex items-center gap-6 text-sm text-gray-500">
+          <a href="#" className="hover:text-gray-900 transition-colors">About</a>
+          <a href="#" className="hover:text-gray-900 transition-colors">Privacy</a>
+          <a href="#" className="hover:text-gray-900 transition-colors">Terms</a>
+          <a href="#" className="hover:text-gray-900 transition-colors">Contact</a>
+        </div>
+        <p className="text-sm text-gray-400">© 2026 Family Travel Directory. Curated by parents, for parents.</p>
+      </div>
+    </div>
+  </footer>
+);
 }
