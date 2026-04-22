@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-10T16:18:09.781Z",
+  "entries": {
+    "memory:memory/2026-04-10.md:469:522": {
+      "key": "memory:memory/2026-04-10.md:469:522",
+      "path": "memory/2026-04-10.md",
+      "startLine": 469,
+      "endLine": 522,
+      "source": "memory",
+      "snippet": "- Telegram/native-approvals subsystem affected **Actions taken this heartbeat:** 1. Checked recent logs - pairing errors still happening 2. Confirmed issue is ongoing, not transient 3. Verified no user activity (expected due to issue) **System status:** - Gateway: Running but with connection errors - Memory: 67k/131k (51%) - no compaction needed - Issue: Persistent Telegram pairing failure **Impact:** - User cannot connect to receive report - Overnight planning work stalled - Day 1 setup cannot begin **Next:** Continue monitoring, issue requires manual intervention **Next heartbeat:** ~10:49 AM HKT --- ## Heartbeat Check - 10:49 AM HKT **STATUS: CONFIGURATION INVESTIGATION COMPLETE**",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7099763386203677,
+      "maxScore": 0.7099763386203677,
+      "firstRecalledAt": "2026-04-10T16:18:09.781Z",
+      "lastRecalledAt": "2026-04-10T16:18:09.781Z",
+      "queryHashes": [
+        "f835203b0437"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "gateway",
+        "telegram/native-approvals",
+        "67k/131k",
+        "telegram",
+        "native",
+        "approvals",
+        "subsystem",
+        "affected"
+      ]
+    }
+  }
+}

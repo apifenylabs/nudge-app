@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "KidScan",
+    "slug": "kidscan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4CAF50"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.kidscan.scanner",
+      "infoPlist": {
+        "NSCameraUsageDescription": "KidScan needs camera access to scan food barcodes for safety analysis.",
+        "NSPhotoLibraryUsageDescription": "KidScan needs photo library access to save and share scan results."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/adaptive-icon.png",
+        "backgroundColor": "#4CAF50"
+      },
+      "package": "app.kidscan.scanner",
+      "permissions": [
+        "CAMERA",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./src/assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow KidScan to access your camera to scan barcodes."
+        }
+      ],
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Allow KidScan to access your camera to scan barcodes."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "kidscan-project-id"
+      }
+    }
+  }
+}

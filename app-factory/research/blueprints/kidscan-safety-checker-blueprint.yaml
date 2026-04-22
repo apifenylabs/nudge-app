@@ -1,0 +1,202 @@
+# Distribution Software Blueprint: KidScan Safety Checker
+# Date: 2026-04-19
+# Type: Free Tool Funnel (Distribution Strategy #3)
+
+## Overview
+**Name:** KidScan Safety Checker  
+**Tagline:** "Free tool to check if content is safe for kids"  
+**Distribution Strategy:** #3 Free Tool Entry → #1 MCP Server integration  
+**Target:** Parents, teachers, content moderators  
+**Funnel to:** KidScan Beast premium ($9/month)  
+**Build Time:** 3-5 days  
+**Cost:** <$50 (YouTube API + hosting)
+
+## Problem & Solution
+**Problem:** Parents waste hours previewing YouTube videos/TikToks to check if they're kid-appropriate.  
+**Solution:** Free tool that analyzes content in seconds, gives safety score.  
+**Pain Point Solved:** "Is this YouTube video safe for my 8-year-old?"
+
+## Target User
+- **Primary:** Parents of kids aged 3-12  
+- **Secondary:** Teachers, homeschoolers, content creators  
+- **Tertiary:** App developers needing content moderation  
+- **Micro-Monopoly:** 5,000+ engaged parents in parenting communities
+
+## Distribution Channels
+### 1. SEO (Primary)
+- Keywords: "is this youtube video safe for kids", "kid content checker", "youtube safety check"
+- Estimated monthly searches: 10,000+
+- Traffic potential: 1,000+ visitors/month
+
+### 2. MCP Server (Secondary)
+- Integrate with AI assistants
+- When user asks: "AI, is this video kid-friendly?"
+- AI uses KidScan Safety Checker MCP server
+- Zero-CAC distribution
+
+### 3. Social Sharing (Tertiary)
+- Shareable results: "This video is 92% kid-safe!"
+- Parents share in parenting groups
+- Viral potential in mom/dad communities
+
+## Funnel Design
+```
+Step 1: Free Tool (100% of users)
+  ↓
+User pastes YouTube/TikTok URL
+  ↓
+Get instant safety score (0-100%)
+  ↓
+See 3 safety concerns (if any)
+  ↓
+Step 2: Upsell (10-20% of users)
+  ↓
+"Get detailed report + monitoring → $9/month"
+  ↓
+Sign up for KidScan Beast premium
+```
+
+## Features
+### Free Tier
+- Safety score (0-100%)
+- Top 3 safety concerns
+- Age appropriateness estimate
+- Basic content analysis
+- 5 checks per month
+
+### Premium Funnel ($9/month)
+- Detailed safety report
+- Continuous monitoring
+- Custom age ranges
+- Batch checking
+- API access
+- Priority support
+
+## Technical Stack
+- **Frontend:** React + Tailwind (simple UI)
+- **Backend:** Node.js/Next.js API routes
+- **APIs:** YouTube Data API, TikTok API (if possible)
+- **Database:** Supabase (free tier)
+- **Hosting:** Vercel (free)
+- **Payments:** Stripe ($9/month subscription)
+
+## Build Timeline
+### Day 1-2: MVP
+- Basic UI (paste URL, get score)
+- YouTube API integration
+- Safety scoring algorithm (mock initially)
+- Deploy to Vercel
+
+### Day 3: Funnel
+- Premium upsell page
+- Stripe integration
+- Email collection for free users
+- Analytics setup
+
+### Day 4-5: Distribution
+- SEO optimization
+- MCP server integration
+- Social sharing features
+- Basic analytics dashboard
+
+## Success Metrics
+### Week 1 Goals
+- 500 tool uses
+- 50 email sign-ups (free)
+- 5 premium conversions ($45 MRR)
+- SEO ranking for 1-2 keywords
+
+### Month 1 Goals
+- 2,000 tool uses
+- 200 email sign-ups
+- 20 premium conversions ($180 MRR)
+- 1,000+ SEO visitors
+
+### Quarter 1 Goals
+- 10,000 tool uses
+- 1,000 email sign-ups
+- 100 premium conversions ($900 MRR)
+- Near-zero CAC achieved
+
+## Integration with KidScan Beast
+### Data Flow
+1. Free tool collects URLs + safety scores
+2. Anonymized data improves KidScan AI model
+3. Premium users get enhanced features
+4. MCP server uses KidScan database
+
+### Cross-Promotion
+1. KidScan Beast mentions free tool
+2. Free tool users see KidScan features
+3. Shared branding across both
+4. Combined SEO strategy
+
+## Risk Assessment
+### Low Risk
+- Free tool costs minimal to build/maintain
+- YouTube API has free tier
+- Can pivot if not working
+
+### Medium Risk
+- YouTube/TikTok may block API access
+- Competition from other safety tools
+- Parental concerns about AI judgment
+
+### Mitigation
+- Cache results to reduce API calls
+- Focus on niche (specific age ranges)
+- Human review option for premium
+
+## Expansion Opportunities
+### Phase 2 (Month 2-3)
+- TikTok/Instagram analysis
+- Game content checking
+- Book/movie database
+- School district partnerships
+
+### Phase 3 (Month 4-6)
+- Browser extension
+- Mobile app
+- White-label for schools
+- API for developers
+
+## Immediate Next Steps
+1. **Today:** Create landing page with email sign-up
+2. **Day 2:** Build basic YouTube analysis MVP
+3. **Day 3:** Add Stripe + premium funnel
+4. **Day 4:** SEO optimization
+5. **Day 5:** MCP server integration
+6. **Week 2:** Launch to parenting communities
+
+## Budget
+- **Development:** $0 (using existing skills)
+- **APIs:** $0-20/month (YouTube free tier)
+- **Hosting:** $0 (Vercel free)
+- **Total:** <$50 for first month
+
+## Team Required
+- 1 developer (3-5 days)
+- 1 marketer (for community launch)
+- Can be done solo with AI assistance
+
+## Why This Will Work
+1. **Real pain point** (parents worry about content)
+2. **Zero-CAC distribution** (SEO + MCP)
+3. **Clear funnel** (free → $9/month)
+4. **Micro-monopoly potential** (own "kid content safety" niche)
+5. **Synergy with KidScan Beast** (existing project)
+
+## Launch Checklist
+- [ ] Landing page with email collection
+- [ ] Basic YouTube analysis MVP
+- [ ] Safety scoring algorithm
+- [ ] Premium funnel (Stripe)
+- [ ] SEO optimization
+- [ ] MCP server integration
+- [ ] Analytics tracking
+- [ ] Community launch plan
+
+**Status:** Ready to build  
+**Priority:** High  
+**Estimated First Revenue:** Week 1  
+**Break-even:** 6 premium users ($54 MRR)

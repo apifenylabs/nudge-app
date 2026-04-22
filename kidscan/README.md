@@ -1,0 +1,1 @@
+KidScan Project Initialized

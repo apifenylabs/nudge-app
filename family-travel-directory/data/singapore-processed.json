@@ -1,0 +1,93 @@
+{
+  "city": "Singapore",
+  "country": "Singapore",
+  "lastUpdated": "2026-04-22T07:21:31.001Z",
+  "activities": [
+    {
+      "id": "singapore-new-1",
+      "name": "Singapore Family Shopping 1",
+      "category": "Shopping",
+      "ageRange": "0-13",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly shopping in Singapore. Perfect for children of all ages with safety measures in place.",
+      "location": "Singapore, Singapore",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000001"
+    },
+    {
+      "id": "singapore-new-2",
+      "name": "Singapore Family Beach 2",
+      "category": "Beach",
+      "ageRange": "1-12",
+      "safetyRating": "4.8",
+      "description": "A wonderful family-friendly beach in Singapore. Perfect for children of all ages with safety measures in place.",
+      "location": "Singapore, Singapore",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000002"
+    },
+    {
+      "id": "singapore-new-3",
+      "name": "Singapore Family Park 3",
+      "category": "Park",
+      "ageRange": "2-17",
+      "safetyRating": "4.8",
+      "description": "A wonderful family-friendly park in Singapore. Perfect for children of all ages with safety measures in place.",
+      "location": "Singapore, Singapore",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000003"
+    },
+    {
+      "id": "singapore-new-4",
+      "name": "Singapore Family Cultural 4",
+      "category": "Cultural",
+      "ageRange": "2-14",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly cultural in Singapore. Perfect for children of all ages with safety measures in place.",
+      "location": "Singapore, Singapore",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000004"
+    },
+    {
+      "id": "singapore-new-5",
+      "name": "Singapore Family Park 5",
+      "category": "Park",
+      "ageRange": "2-9",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly park in Singapore. Perfect for children of all ages with safety measures in place.",
+      "location": "Singapore, Singapore",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000005"
+    }
+  ],
+  "source": "Simulated data - would be real scraping in production",
+  "seoContent": {
+    "metaTitle": "Family Travel Guide: Singapore, Singapore",
+    "metaDescription": "Complete family travel guide for Singapore. Safety-rated activities, age recommendations, and essential tips.",
+    "keywords": [
+      "Singapore family travel",
+      "things to do in Singapore with kids",
+      "Singapore children activities"
+    ],
+    "article": "Singapore is a fantastic destination for families. Our guide covers the best activities for children of all ages."
+  }
+}

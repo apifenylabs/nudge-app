@@ -1,0 +1,84 @@
+# App Research Analysis - Nomad List
+# Date: 2026-04-19
+# Source: Research synthesis from multiple sources
+
+app_name: "Nomad List"
+niche: "City rankings and data for remote workers/digital nomads"
+mrr: "$125,000+ ($1.5M+ ARR)"
+founding_story: "Pieter Levels built Nomad List in 2014 as part of his '12 Startups in 12 Months' challenge. Started as a spreadsheet, grew to $1.5M+ ARR solo with no employees."
+key_insight: "Extremely niche focus (digital nomads) with data-driven rankings. Built with simple tech (PHP, jQuery, SQLite) proving fancy tech isn't required."
+pain_point_solved: "Digital nomads waste hours researching cities for cost, internet speed, safety, and community. Nomad List provides curated, data-driven rankings."
+target_audience: "Remote workers, digital nomads, location-independent professionals (estimated 35M+ globally)"
+monetization_model: "Membership: $99/year or $199 lifetime access"
+tech_stack_hints: "Vanilla PHP, jQuery, SQLite, Stripe for payments"
+replicability_score: 9
+synergy_score: 10
+priority: "High"
+actionable_next_step: "Build MVP: 'Family Travel Directory' using Nomad List model but for family-friendly destinations. Use Directory Beast as foundation."
+
+# Analysis Framework Answers:
+# 1. What specific pain does it solve?
+# Digital nomads spend 10+ hours researching cities for cost of living, internet speed, safety, and community. Nomad List reduces this to minutes with curated data.
+
+# 2. Who is the exact user?
+# Remote workers earning $50K+/year, aged 25-45, working for tech companies, traveling while working.
+
+# 3. What's the "unbundling" angle?
+# Unbundles TripAdvisor/Google for the specific use case of digital nomads. Adds data points nomads care about (internet speed, coworking spaces, visa requirements).
+
+# 4. What's the distribution moat?
+# Founder's massive personal brand (@levelsio), SEO for "best cities for digital nomads", community-driven content, first-mover advantage.
+
+# 5. What would a "copycat" version look like for a different niche?
+# "Family Travel Directory" - exactly what Directory Beast is building. Data on family-friendly amenities, safety, kid activities instead of internet speed.
+
+# 6. Does this app cross-sell to any of our existing orchestras?
+# DIRECTLY: Directory Beast IS the copycat for family travel. Perfect synergy.
+# Indirectly: Social Beast could promote it, AppFactory could build similar directory apps.
+
+# 7. Can we build the MVP in <7 days with <$50 API costs?
+# Yes: Directory Beast already has the foundation. Add ranking algorithms, user reviews, premium features.
+
+# Synergy Analysis:
+# - Directory Beast: DIRECT COPYCAT OPPORTUNITY - 10/10 synergy
+# - AppFactory Beast: Could build similar directory apps for other niches
+# - Social Beast: Content marketing for family travel
+# - Nudge: Could integrate task reminders for travel planning
+# - KidScan: Safety data integration
+
+# Replicability Analysis:
+# - Technical complexity: Low (database + frontend)
+# - Competition: Low for family travel niche
+# - Market demand: High (families spend $150B+ on travel annually)
+# - Time to MVP: 1 week (Directory Beast is 80% there)
+# - Cost: <$50 (Supabase, Vercel)
+
+# Recommended Next Actions:
+# 1. Enhance Directory Beast with Nomad List features:
+#   - City rankings algorithm
+#   - User reviews and ratings
+#   - Premium membership ($49/year)
+#   - Community features
+# 2. Launch as "Nomad List for Families"
+# 3. Use Social Beast for content marketing
+# 4. Integrate KidScan safety data
+
+# Cross-Sell Opportunities:
+# - Directory Beast premium: $49/year for advanced filters, saved lists
+# - AppFactory: Build similar directories for other niches (pet travel, senior travel)
+# - Social Beast: Family travel content → directory referrals
+# - KidScan: Safety ratings integration
+
+# Key Learnings from Nomad List:
+# 1. Start simple (spreadsheet → product)
+# 2. Niche focus beats broad appeal
+# 3. Community builds moat
+# 4. Simple tech stack works
+# 5. Premium membership model scales
+
+# Immediate Implementation for Directory Beast:
+# 1. Add city ranking algorithm (cost, safety, amenities)
+# 2. Add user review system
+# 3. Create premium tier ($49/year)
+# 4. Build community features (forums, user profiles)
+# 5. Content marketing via Social Beast

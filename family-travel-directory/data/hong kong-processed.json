@@ -1,15 +1,15 @@
 {
   "city": "Hong Kong",
   "country": "China",
-  "lastUpdated": "2026-04-21T14:47:10.853Z",
+  "lastUpdated": "2026-04-21T23:18:30.842Z",
   "activities": [
     {
       "id": "hong kong-new-1",
-      "name": "Hong Kong Family Museum 1",
-      "category": "Museum",
-      "ageRange": "1-13",
-      "safetyRating": "4.5",
-      "description": "A wonderful family-friendly museum in Hong Kong. Perfect for children of all ages with safety measures in place.",
+      "name": "Hong Kong Family Restaurant 1",
+      "category": "Restaurant",
+      "ageRange": "1-12",
+      "safetyRating": "4.8",
+      "description": "A wonderful family-friendly restaurant in Hong Kong. Perfect for children of all ages with safety measures in place.",
       "location": "Hong Kong, China",
       "amenities": [
         "Family Restrooms",
@@ -20,11 +20,11 @@
     },
     {
       "id": "hong kong-new-2",
-      "name": "Hong Kong Family Shopping 2",
-      "category": "Shopping",
-      "ageRange": "0-13",
-      "safetyRating": "4.5",
-      "description": "A wonderful family-friendly shopping in Hong Kong. Perfect for children of all ages with safety measures in place.",
+      "name": "Hong Kong Family Beach 2",
+      "category": "Beach",
+      "ageRange": "0-9",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly beach in Hong Kong. Perfect for children of all ages with safety measures in place.",
       "location": "Hong Kong, China",
       "amenities": [
         "Family Restrooms",
@@ -37,8 +37,8 @@
       "id": "hong kong-new-3",
       "name": "Hong Kong Family Cultural 3",
       "category": "Cultural",
-      "ageRange": "0-12",
-      "safetyRating": "4.9",
+      "ageRange": "0-17",
+      "safetyRating": "5.0",
       "description": "A wonderful family-friendly cultural in Hong Kong. Perfect for children of all ages with safety measures in place.",
       "location": "Hong Kong, China",
       "amenities": [
@@ -50,11 +50,11 @@
     },
     {
       "id": "hong kong-new-4",
-      "name": "Hong Kong Family Shopping 4",
-      "category": "Shopping",
-      "ageRange": "1-10",
-      "safetyRating": "4.8",
-      "description": "A wonderful family-friendly shopping in Hong Kong. Perfect for children of all ages with safety measures in place.",
+      "name": "Hong Kong Family Restaurant 4",
+      "category": "Restaurant",
+      "ageRange": "0-17",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly restaurant in Hong Kong. Perfect for children of all ages with safety measures in place.",
       "location": "Hong Kong, China",
       "amenities": [
         "Family Restrooms",
@@ -67,8 +67,8 @@
       "id": "hong kong-new-5",
       "name": "Hong Kong Family Cultural 5",
       "category": "Cultural",
-      "ageRange": "1-12",
-      "safetyRating": "4.7",
+      "ageRange": "1-9",
+      "safetyRating": "5.0",
       "description": "A wonderful family-friendly cultural in Hong Kong. Perfect for children of all ages with safety measures in place.",
       "location": "Hong Kong, China",
       "amenities": [

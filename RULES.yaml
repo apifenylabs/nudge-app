@@ -1,0 +1,106 @@
+# RULES.yaml - OpenClaw Execution Rules (Source of Truth)
+
+model_routing:
+  default: "deepseek-chat"                     # Cheapest high-quality model
+  fallback_chain:
+    - "deepseek-chat"
+    - "kimi"
+    - "gemini-2.5-flash"
+    - "claude-sonnet-4.6"                        # Only with explicit user approval
+
+  task_type_mapping:
+    CEO: "deepseek-chat"                   # Default CEO = DeepSeek (cheap)
+    routine: "deepseek-chat"
+    research: "gemini-2.5-flash"
+    researcher: "deepseek-chat"            # App Factory Researcher uses DeepSeek
+    product_owner: "deepseek-chat"
+    coder: "deepseek-chat"
+    coder2: "deepseek-chat"
+    coder3: "deepseek-chat"
+    coder4: "deepseek-chat"
+    coder5: "deepseek-chat"
+    reviewer_first: "deepseek-chat"            # cheap first pass
+    reviewer_final: "claude-sonnet-4.6"        # quality gate only at teh end
+    high_stakes: "claude-opus-4.6"             # Requires user approval
+
+budget_control:
+  daily_limit_usd: 1.0
+  monthly_limit_usd: 30.0
+  action_on_exceed: "pause_and_notify_user"
+  tiered_approval:
+    under_10: "auto_approve"
+    10_to_50: "notify_user"
+    over_50: "require_explicit_approval"
+
+reporting:
+  include_in_every_report:
+    - exact_token_usage
+    - estimated_cost_usd
+    - estimated_time_minutes
+    - tiered_approval_status
+
+validation_playbook:
+  pre_sell_required_customers: 3
+  landing_page_visits_target: 200
+  email_signups_target: 20
+  interview_signals_required: 7
+
+github_kanban:
+  enabled: true
+  repo: "your-username/your-repo"               # Change this later
+  board_name: "Validation Kanban"
+  columns:
+    - "Backlog"
+    - "Validation"
+    - "Build"
+    - "Done"
+
+escalation_rules:
+  max_attempts_per_task: 2
+  after_max_attempts: "create_github_issue_with_tag needs-human"
+
+design_quality:
+  required: true
+  checklist_file: "/home/captain/.openclaw/workspace/design-principles.md"
+  pre_deploy_checks:
+    - command: "npx tailwindcss -o /dev/null --stdin < src/index.css"
+      description: "Validate Tailwind CSS classes exist"
+      fail_action: "abort_deployment"
+    - command: "npx eslint src/**/*.tsx --max-warnings 0"
+      description: "Lint React components"
+      fail_action: "abort_deployment"
+  post_deploy_checks:
+    - command: "curl -s http://localhost:3001 | grep -q 'Kanban Board'"
+      description: "Verify UI loads"
+  human_review_required_for:
+    - landing_page
+    - core_app_screens
+    - dashboard
+  auto_audit: true
+
+orchestra_monitoring:
+  watchdog_enabled: true
+  schedule: "*/5 * * * *"  # every 5 minutes
+  task: |
+    # Check if all 7 orchestras are running via PM2
+    cd /home/captain/.openclaw/workspace
+    RUNNING=$(pm2 jlist | jq '[.[] | .pm2_env.status] | contains(["online"])' )
+    if [ "$RUNNING" != "true" ]; then
+      echo "One or more orchestras down. Restarting all..."
+      ./fix-sigkill.sh
+      # Send alert to Alpha-HQ (optional)
+      curl -X POST http://localhost:3004/api/alerts -d '{"source":"watchdog","message":"Orchestras restarted"}'
+    fi
+  alert_threshold: 2  # Number of failures before alert
+  auto_restart: true
+  health_check_endpoints:
+    - directory_beast: "http://localhost:3000/health"
+    - social_beast: "http://localhost:3001/health"
+    - kidscan_beast: "http://localhost:3002/health"
+    - appfactory_beast: "http://localhost:3003/health"
+    - affiliate_beast: "http://localhost:3004/health"
+  required_orchestras: 7
+  max_restart_attempts: 3
+  escalation_channel: "telegram:1741426794"  # Alert to you on Telegram
+
+EOF
