@@ -67,31 +67,59 @@ export default function Home() {
   useEffect(() => {
     async function loadData() {
       try {
-        const cities = ['tokyo', 'bangkok', 'singapore'];
-        let all: Activity[] = [];
-        let count = 0;
-
-        for (const city of cities) {
-          const res = await fetch(`/data/${city}-family-activities.json`);
-          if (res.ok) {
-            const json = await res.json();
-            if (json.activities) {
-              const withCity = json.activities.map((a: Activity) => ({
-                ...a,
-                city: json.city,
-                country: json.country,
-              }));
-              all = [...all, ...withCity];
-              count += json.totalListings || withCity.length;
-            }
+        const res = await fetch('/data/sample-activities.json');
+        if (res.ok) {
+          const json = await res.json();
+          if (json.activities) {
+            const withCity = json.activities.map((a: Activity) => ({
+              ...a,
+              city: json.city,
+              country: json.country,
+            }));
+            setDestinations(withCity);
+            setTotalCount(withCity.length);
           }
         }
-
-        setDestinations(all);
-        setTotalCount(count);
         setLoading(false);
       } catch (e) {
         console.error('Failed to load data:', e);
+        // Fallback to sample data
+        const sampleData: Activity[] = [
+          {
+            id: 'tokyo-001',
+            name: 'Tokyo Disneyland',
+            category: 'Theme Park',
+            ageRange: '3-12',
+            safetyRating: 4.9,
+            description: 'The ultimate family destination with classic Disney magic.',
+            location: 'Urayasu, Chiba',
+            city: 'Tokyo',
+            country: 'Japan',
+            bestTime: 'Weekdays',
+            priceRange: '$$$',
+            amenities: ['Stroller Rental', 'Baby Care Centers'],
+            imageUrl: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf',
+            popularity: 98
+          },
+          {
+            id: 'tokyo-002',
+            name: 'Ueno Zoo',
+            category: 'Zoo',
+            ageRange: '0-12',
+            safetyRating: 4.7,
+            description: "Japan's oldest zoo with pandas and gorillas.",
+            location: 'Uenokoen, Taito City',
+            city: 'Tokyo',
+            country: 'Japan',
+            bestTime: 'Morning',
+            priceRange: '$',
+            amenities: ['Stroller Access', 'Nursing Rooms'],
+            imageUrl: 'https://images.unsplash.com/photo-1564349683136-77e08dba1ef7',
+            popularity: 87
+          }
+        ];
+        setDestinations(sampleData);
+        setTotalCount(sampleData.length);
         setLoading(false);
       }
     }
@@ -99,7 +127,7 @@ export default function Home() {
   }, []);
 
   // Get unique cities from data
-  const cities = [...new Set(destinations.map(d => d.city))];
+  const cities = ['Tokyo', 'Bangkok', 'Singapore']; // Hardcode for now
 
   // Filter and sort
   let filtered = [...destinations];

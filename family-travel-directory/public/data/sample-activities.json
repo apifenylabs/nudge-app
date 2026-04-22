@@ -1,0 +1,90 @@
+{
+  "city": "Tokyo",
+  "country": "Japan",
+  "activities": [
+    {
+      "id": "tokyo-001",
+      "name": "Tokyo Disneyland",
+      "category": "Theme Park",
+      "ageRange": "3-12",
+      "safetyRating": 4.9,
+      "description": "The ultimate family destination with classic Disney magic.",
+      "location": "Urayasu, Chiba",
+      "bestTime": "Weekdays",
+      "priceRange": "$$$",
+      "amenities": ["Stroller Rental", "Baby Care Centers"],
+      "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf",
+      "popularity": 98
+    },
+    {
+      "id": "tokyo-002",
+      "name": "Ueno Zoo",
+      "category": "Zoo",
+      "ageRange": "0-12",
+      "safetyRating": 4.7,
+      "description": "Japan's oldest zoo with pandas and gorillas.",
+      "location": "Uenokoen, Taito City",
+      "bestTime": "Morning",
+      "priceRange": "$",
+      "amenities": ["Stroller Access", "Nursing Rooms"],
+      "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+      "popularity": 87
+    },
+    {
+      "id": "bangkok-001",
+      "name": "Safari World",
+      "category": "Zoo",
+      "ageRange": "2-10",
+      "safetyRating": 4.5,
+      "description": "Drive-through safari and marine park.",
+      "location": "99 Panya Indra Rd, Bangkok",
+      "bestTime": "Morning",
+      "priceRange": "$$",
+      "amenities": ["Animal Shows", "Feeding Sessions"],
+      "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba",
+      "popularity": 85
+    },
+    {
+      "id": "singapore-001",
+      "name": "Gardens by the Bay",
+      "category": "Parks & Nature",
+      "ageRange": "0-99",
+      "safetyRating": 4.8,
+      "description": "Futuristic gardens with giant supertrees.",
+      "location": "18 Marina Gardens Dr, Singapore",
+      "bestTime": "Evening",
+      "priceRange": "$$",
+      "amenities": ["Wheelchair Access", "Light Show"],
+      "imageUrl": "https://images.unsplash.com/photo-1525629547080-c70cc56f1b7a",
+      "popularity": 95
+    },
+    {
+      "id": "singapore-002",
+      "name": "Singapore Zoo",
+      "category": "Zoo",
+      "ageRange": "1-12",
+      "safetyRating": 4.6,
+      "description": "World-famous open-concept zoo.",
+      "location": "80 Mandai Lake Rd, Singapore",
+      "bestTime": "Morning",
+      "priceRange": "$$",
+      "amenities": ["Breakfast with Orangutans", "Night Safari"],
+      "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba",
+      "popularity": 92
+    },
+    {
+      "id": "tokyo-003",
+      "name": "KidZania Tokyo",
+      "category": "Theme Park",
+      "ageRange": "4-14",
+      "safetyRating": 4.8,
+      "description": "Educational role-playing city for kids.",
+      "location": "Lalaport Toyosu, Tokyo",
+      "bestTime": "Weekdays",
+      "priceRange": "$$",
+      "amenities": ["Educational Programs", "Role-playing"],
+      "imageUrl": "https://images.unsplash.com/photo-1533237264987-ae43347ae3c9",
+      "popularity": 89
+    }
+  ]
+}

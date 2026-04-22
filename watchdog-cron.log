@@ -109569,3 +109569,7 @@ Checking system resources...
 
 === WATCHDOG COMPLETE ===
 Next check: 23:50 HKT
+=== WATCHDOG ORCHESTRA MONITOR ===
+Time: 2026-04-22 23:50 HKT
+
+❌ PM2 not installed. Installing...
