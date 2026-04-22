@@ -1,0 +1,93 @@
+{
+  "city": "Seoul",
+  "country": "South Korea",
+  "lastUpdated": "2026-04-22T03:21:14.625Z",
+  "activities": [
+    {
+      "id": "seoul-new-1",
+      "name": "Seoul Family Restaurant 1",
+      "category": "Restaurant",
+      "ageRange": "0-15",
+      "safetyRating": "4.5",
+      "description": "A wonderful family-friendly restaurant in Seoul. Perfect for children of all ages with safety measures in place.",
+      "location": "Seoul, South Korea",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000001"
+    },
+    {
+      "id": "seoul-new-2",
+      "name": "Seoul Family Beach 2",
+      "category": "Beach",
+      "ageRange": "1-16",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly beach in Seoul. Perfect for children of all ages with safety measures in place.",
+      "location": "Seoul, South Korea",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000002"
+    },
+    {
+      "id": "seoul-new-3",
+      "name": "Seoul Family Beach 3",
+      "category": "Beach",
+      "ageRange": "0-8",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly beach in Seoul. Perfect for children of all ages with safety measures in place.",
+      "location": "Seoul, South Korea",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000003"
+    },
+    {
+      "id": "seoul-new-4",
+      "name": "Seoul Family Beach 4",
+      "category": "Beach",
+      "ageRange": "1-13",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly beach in Seoul. Perfect for children of all ages with safety measures in place.",
+      "location": "Seoul, South Korea",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000004"
+    },
+    {
+      "id": "seoul-new-5",
+      "name": "Seoul Family Restaurant 5",
+      "category": "Restaurant",
+      "ageRange": "1-11",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly restaurant in Seoul. Perfect for children of all ages with safety measures in place.",
+      "location": "Seoul, South Korea",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000005"
+    }
+  ],
+  "source": "Simulated data - would be real scraping in production",
+  "seoContent": {
+    "metaTitle": "Family Travel Guide: Seoul, South Korea",
+    "metaDescription": "Complete family travel guide for Seoul. Safety-rated activities, age recommendations, and essential tips.",
+    "keywords": [
+      "Seoul family travel",
+      "things to do in Seoul with kids",
+      "Seoul children activities"
+    ],
+    "article": "Seoul is a fantastic destination for families. Our guide covers the best activities for children of all ages."
+  }
+}

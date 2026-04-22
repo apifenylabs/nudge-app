@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import BusinessListingCard from '@/components/BusinessListingCard';
 import {
@@ -11,136 +11,27 @@ import {
 } from 'lucide-react';
 
 // -- DATA --
-const destinations = [
-  {
-    id: 1,
-    name: "Tokyo Disneyland & DisneySea",
-    description: "The ultimate family destination with two incredible parks. Disneyland offers classic Disney magic perfect for younger children, while DisneySea features unique nautical-themed attractions for older kids and teens. Both parks have exceptional safety standards, stroller rentals, baby care centers, and numerous family-friendly restaurants.",
-    location: "1-1 Maihama, Urayasu, Chiba 279-0031",
-    city: "Tokyo", country: "Japan",
-    ageRange: "3-17", safetyRating: 4.9,
-    amenities: ["Stroller Rental", "Baby Care Centers", "Family Restrooms", "Child Swap"],
-    category: "Theme Park",
-    imageUrl: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf",
-    priceRange: "$$$",
-    bestTime: "Weekdays, September-November",
-    popularity: 98,
-    affiliateLinks: { klook: "https://www.klook.com/activity/135-tokyo-disneyland-tickets/?aid=OURCODE", viator: "https://www.viator.com/tours/Tokyo/Tokyo-Disneyland-1-Day-Pass/d334-2142TYO_TDL1?pid=OURCODE" },
-    commissionRate: "8%"
-  },
-  {
-    id: 2, name: "Ueno Zoo & Museums",
-    description: "Japan's oldest zoo in beautiful Ueno Park. Perfect for younger children with pandas, gorillas, and a children's zoo. The surrounding area includes Tokyo National Museum, National Museum of Nature and Science -- making it an educational day out. Stroller-friendly paths and plenty of shaded areas for those hot Tokyo afternoons.",
-    location: "9-83 Uenokoen, Taito City, Tokyo 110-8711",
-    city: "Tokyo", country: "Japan",
-    ageRange: "0-12", safetyRating: 4.7,
-    amenities: ["Stroller Access", "Nursing Rooms", "Play Areas", "Educational Programs", "Picnic Areas"],
-    category: "Zoo",
-    imageUrl: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
-    priceRange: "$", bestTime: "Morning, Spring/Fall",
-    popularity: 85,
-    affiliateLinks: { klook: "https://www.klook.com/activity/456-ueno-zoo-tickets/?aid=OURCODE" },
-    commissionRate: "6%"
-  },
-  {
-    id: 3, name: "KidZania Tokyo",
-    description: "An educational theme park where kids role-play real jobs in a kid-sized city. Firefighter, pilot, doctor -- your child gets to try them all. Highly interactive, incredibly safe, and surprisingly fun for parents too (the 'parent lounge' with WiFi is a lifesaver).",
-    location: "3-1-3 Toyosu, Koto City, Tokyo 135-8614",
-    city: "Tokyo", country: "Japan",
-    ageRange: "4-14", safetyRating: 4.8,
-    amenities: ["Educational Activities", "Role-Playing", "Safety Monitors", "Parent Lounges"],
-    category: "Theme Park",
-    imageUrl: "https://images.unsplash.com/photo-1536440136628-849c177e76a1",
-    priceRange: "$$", bestTime: "Weekdays, Reservations Recommended",
-    popularity: 92,
-    affiliateLinks: { klook: "https://www.klook.com/activity/789-kidzania-tokyo/?aid=OURCODE" },
-    commissionRate: "7%"
-  },
-  {
-    id: 4, name: "Universal Studios Japan",
-    description: "World-class theme park with Super Nintendo World, Wizarding World of Harry Potter, and family-friendly attractions. Our tip: get the Express Pass -- waiting in line with kids is no one's idea of vacation.",
-    location: "2-1-33 Sakurajima, Konohana-ku, Osaka 554-0031",
-    city: "Osaka", country: "Japan",
-    ageRange: "5-17", safetyRating: 4.8,
-    amenities: ["Express Pass", "Baby Swap", "Stroller Rental", "Nursing Rooms"],
-    category: "Theme Park",
-    imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e",
-    priceRange: "$$$", bestTime: "Weekdays, January-February",
-    popularity: 96,
-    affiliateLinks: { klook: "https://www.klook.com/activity/321-usj-tickets/?aid=OURCODE" },
-    commissionRate: "8%"
-  },
-  {
-    id: 5, name: "Osaka Aquarium Kaiyukan",
-    description: "One of the world's largest aquariums. The whale shark exhibit alone is worth the trip -- we've seen toddlers press their faces against the glass for 20 minutes straight. Interactive exhibits, touch pools, and an amazing jellyfish gallery.",
-    location: "1-1-10 Kaigandori, Minato-ku, Osaka 552-0022",
-    city: "Osaka", country: "Japan",
-    ageRange: "2-16", safetyRating: 4.9,
-    amenities: ["Interactive Exhibits", "Nursing Rooms", "Wheelchair Accessible"],
-    category: "Museum",
-    imageUrl: "https://images.unsplash.com/photo-1560275619-4cc5fa59b127",
-    priceRange: "$$", bestTime: "Weekdays, Afternoons",
-    popularity: 88,
-    affiliateLinks: { viator: "https://www.viator.com/tours/Osaka/Osaka-Aquarium-Kaiyukan/d334-12345?pid=OURCODE" },
-    commissionRate: "6%"
-  },
-  {
-    id: 6, name: "Nara Deer Park",
-    description: "Over 1,000 friendly deer roaming freely in a magical park. Kids can feed them 'shika senbei' (deer crackers) -- just watch out, they'll bow for treats! It's free, it's unforgettable, and it's the kind of memory your family will talk about for years.",
-    location: "Nara Park, Nara 630-8211",
-    city: "Nara", country: "Japan",
-    ageRange: "2-14", safetyRating: 4.6,
-    amenities: ["Open Space", "Picnic Areas", "Walking Paths", "Deer Crackers"],
-    category: "Park",
-    imageUrl: "https://images.unsplash.com/photo-1567186937675-a5131c8a89ea",
-    priceRange: "$", bestTime: "Early Morning, Weekdays",
-    popularity: 82,
-    affiliateLinks: {},
-    commissionRate: "0%"
-  },
-  {
-    id: 7, name: "Marina Bay Sands SkyPark",
-    description: "The iconic infinity pool and observation deck with breathtaking views of Singapore's skyline. Yes, the pool photos are real. Kids love the family pool area, and the sunset views from the observation deck are pure magic.",
-    location: "10 Bayfront Ave, Singapore 018956",
-    city: "Singapore", country: "Singapore",
-    ageRange: "5-17", safetyRating: 4.7,
-    amenities: ["Infinity Pool", "Restaurants", "Observation Deck", "Kids Club"],
-    category: "Hotel",
-    imageUrl: "https://images.unsplash.com/photo-1519996529932-28371d4f5f24",
-    priceRange: "$$$", bestTime: "Evening sunset, Avoid weekends",
-    popularity: 94,
-    affiliateLinks: { booking: "https://www.booking.com/hotel/sg/marina-bay-sands.html?aid=OURCODE" },
-    commissionRate: "10%"
-  },
-  {
-    id: 8, name: "Gardens by the Bay",
-    description: "A futuristic garden that feels like stepping onto another planet. The Supertree Grove lights up at night with a spectacular sound and light show -- lay a blanket on the grass and watch your kids' faces light up. Cloud Forest has the world's tallest indoor waterfall.",
-    location: "18 Marina Gardens Dr, Singapore 018953",
-    city: "Singapore", country: "Singapore",
-    ageRange: "2-16", safetyRating: 4.9,
-    amenities: ["Stroller Accessible", "Nursing Rooms", "Shaded Walkways", "Light Show"],
-    category: "Park",
-    imageUrl: "https://images.unsplash.com/photo-1512921960060-7eb38a2d2fcb",
-    priceRange: "$$", bestTime: "Late afternoon to evening",
-    popularity: 91,
-    affiliateLinks: { klook: "https://www.klook.com/activity/567-gardens-by-the-bay/?aid=OURCODE" },
-    commissionRate: "7%"
-  },
-  {
-    id: 9, name: "Singapore Zoo & Night Safari",
-    description: "World-renowned open-concept zoo. The animals have space -- you get up close without feeling like you're in a cage. The Night Safari is a completely different experience; watching a family of elephants at dusk is genuinely moving.",
-    location: "80 Mandai Lake Rd, Singapore 729826",
-    city: "Singapore", country: "Singapore",
-    ageRange: "3-17", safetyRating: 4.8,
-    amenities: ["Tram Rides", "Animal Shows", "Playgrounds", "Restaurants"],
-    category: "Zoo",
-    imageUrl: "https://images.unsplash.com/photo-1559482921-5b04d8f0b2f8",
-    priceRange: "$$", bestTime: "Morning for Zoo, Evening for Night Safari",
-    popularity: 87,
-    affiliateLinks: { klook: "https://www.klook.com/activity/890-singapore-zoo/?aid=OURCODE" },
-    commissionRate: "6%"
-  }
-];
+type Activity = {
+  id: string;
+  name: string;
+  category: string;
+  ageRange: string;
+  safetyRating: number;
+  description: string;
+  location: string;
+  city: string;
+  country: string;
+  bestTime: string;
+  priceRange: string;
+  amenities: string[];
+  safetyFeatures?: string[];
+  seoKeywords?: string[];
+  imageUrl: string;
+  popularity: number;
+  source?: string;
+  affiliateLinks?: Record<string, string>;
+  commissionRate?: string;
+};
 
 const categories = [
   { name: "Theme Parks", icon: Sparkles, desc: "Where memories are made" },
@@ -151,35 +42,66 @@ const categories = [
   { name: "Hotels", icon: Hotel, desc: "Stay where families love" },
 ];
 
-const cities = ["Tokyo", "Osaka", "Nara", "Singapore"];
-const featuredCities = [
-  { name: "Tokyo", country: "Japan", count: 47, image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf", tag: "Best for: All ages" },
-  { name: "Osaka", country: "Japan", count: 23, image: "https://images.unsplash.com/photo-1590559899731-a382839e5549", tag: "Best for: Food & fun" },
-  { name: "Singapore", country: "Singapore", count: 31, image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd", tag: "Best for: Clean & safe" },
-];
-
 const stories = [
-  { id: 1, title: "When our 4-year-old met a panda", excerpt: "She pressed her face against the glass for 15 minutes, completely still. I don't think she blinked once. Ueno Zoo isn't fancy, but it's the most honest, wonderful zoo we've ever been to.", author: "Sarah, mom of 2", destination: "Ueno Zoo, Tokyo", emoji: "panda" },
-  { id: 2, title: "The night we almost lost our son at Gardens by the Bay", excerpt: "He ran toward the light show and we panicked for 30 seconds. The staff were incredible -- within 2 minutes they had him safe. The show? Magical. The staff? Even better.", author: "Mike, dad of 3", destination: "Gardens by the Bay, Singapore", emoji: "tree" },
-  { id: 3, title: "Universal Studios with a 5-year-old: a survival guide", excerpt: "We bought the Express Pass and it saved our trip. She rode the flying dinosaur 4 times. She's 5. I don't know where she gets the energy, but I know where she gets the courage -- Super Nintendo World.", author: "Lisa, mom of 1", destination: "Universal Studios Japan, Osaka", emoji: "star" },
-  { id: 4, title: "KidZania changed how my son thinks about work", excerpt: "He was a firefighter for 45 minutes. Then a pilot. Then a surgeon. He came home and asked if he could do ALL of them when he grows up. We said yes, buddy. You can do anything.", author: "James, dad of 2", destination: "KidZania, Tokyo", emoji: "fire" },
-  { id: 5, title: "The cheap trick that made Nara Deer Park our favorite day", excerpt: "Buy the deer crackers. Hide half of them in your pocket. The deer will bow for treats -- your kids will lose their minds. Pro tip: go early, the deer are hungrier and more enthusiastic.", author: "Emma, mom of 3", destination: "Nara Deer Park, Nara", emoji: "deer" },
-  { id: 6, title: "Marina Bay Sands with kids: is it worth the hype?", excerpt: "Yes. But skip the main pool and head to the family pool -- way more room, way less Instagram crowd, and your kids can actually swim instead of posing.", author: "Tom, dad of 2", destination: "Marina Bay Sands, Singapore", emoji: "swim" },
+  { id: 1, title: "When our 4-year-old met a panda", excerpt: "She pressed her face against the glass for 15 minutes, completely still. I don't think she blinked once. Ueno Zoo isn't fancy, but it's the most honest, wonderful zoo we've ever been to.", author: "Sarah, mom of 2", destination: "Ueno Zoo, Tokyo", emoji: "\u{1F43C}" },
+  { id: 2, title: "The night we almost lost our son at Gardens by the Bay", excerpt: "He ran toward the light show and we panicked for 30 seconds. The staff were incredible -- within 2 minutes they had him safe. The show? Magical. The staff? Even better.", author: "Mike, dad of 3", destination: "Gardens by the Bay, Singapore", emoji: "\u{1F333}" },
+  { id: 3, title: "Universal Studios with a 5-year-old: a survival guide", excerpt: "We bought the Express Pass and it saved our trip. She rode the flying dinosaur 4 times. She's 5. I don't know where she gets the energy, but I know where she gets the courage -- Super Nintendo World.", author: "Lisa, mom of 1", destination: "Universal Studios Japan, Osaka", emoji: "\u2B50" },
+  { id: 4, title: "KidZania changed how my son thinks about work", excerpt: "He was a firefighter for 45 minutes. Then a pilot. Then a surgeon. He came home and asked if he could do ALL of them when he grows up. We said yes, buddy. You can do anything.", author: "James, dad of 2", destination: "KidZania, Tokyo", emoji: "\u{1F692}" },
+  { id: 5, title: "The cheap trick that made Nara Deer Park our favorite day", excerpt: "Buy the deer crackers. Hide half of them in your pocket. The deer will bow for treats -- your kids will lose their minds. Pro tip: go early, the deer are hungrier and more enthusiastic.", author: "Emma, mom of 3", destination: "Nara Deer Park, Nara", emoji: "\u{1F986}" },
+  { id: 6, title: "Marina Bay Sands with kids: is it worth the hype?", excerpt: "Yes. But skip the main pool and head to the family pool -- way more room, way less Instagram crowd, and your kids can actually swim instead of posing.", author: "Tom, dad of 2", destination: "Marina Bay Sands, Singapore", emoji: "\u{1F3CA}" },
 ];
-
-const emojiMap: Record<string, string> = {
-  panda: "\u{1F43C}", tree: "\u{1F333}", star: "\u{2B50}", fire: "\u{1F692}", deer: "\u{1F986}", swim: "\u{1F3CA}"
-};
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCity, setSelectedCity] = useState("All");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [showFilters, setShowFilters] = useState(false);
-  const [sortBy, setSortBy] = useState<"popularity" | "safety" | "price">("popularity");
-  const [activeTab, setActiveTab] = useState<"explore" | "stories">("explore");
+  const [sortBy, setSortBy] = useState("popularity");
+  const [activeTab, setActiveTab] = useState("explore");
   const [selectedStory, setSelectedStory] = useState<number | null>(null);
+  const [destinations, setDestinations] = useState<Activity[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [totalCount, setTotalCount] = useState(0);
 
+  // Load data from JSON files
+  useEffect(() => {
+    async function loadData() {
+      try {
+        const cities = ['tokyo', 'bangkok', 'singapore'];
+        let all: Activity[] = [];
+        let count = 0;
+
+        for (const city of cities) {
+          const res = await fetch(`/data/${city}-family-activities.json`);
+          if (res.ok) {
+            const json = await res.json();
+            if (json.activities) {
+              const withCity = json.activities.map((a: Activity) => ({
+                ...a,
+                city: json.city,
+                country: json.country,
+              }));
+              all = [...all, ...withCity];
+              count += json.totalListings || withCity.length;
+            }
+          }
+        }
+
+        setDestinations(all);
+        setTotalCount(count);
+        setLoading(false);
+      } catch (e) {
+        console.error('Failed to load data:', e);
+        setLoading(false);
+      }
+    }
+    loadData();
+  }, []);
+
+  // Get unique cities from data
+  const cities = [...new Set(destinations.map(d => d.city))];
+
+  // Filter and sort
   let filtered = [...destinations];
   if (searchQuery) {
     const q = searchQuery.toLowerCase();
@@ -192,35 +114,7 @@ export default function Home() {
   if (selectedCity !== "All") filtered = filtered.filter(d => d.city === selectedCity);
   if (selectedCategory !== "All") filtered = filtered.filter(d => d.category === selectedCategory);
   filtered.sort((a, b) => {
-    if (sortBy === "popularity") {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Asia Family Travel Directory",
-            "description": "The most beautiful directory of family-friendly travel destinations across Asia. Curated by parents, safety-rated, and updated daily.",
-            "url": "https://family-travel-directory.vercel.app",
-            "about": {
-              "@type": "Thing",
-              "name": "Family Travel in Asia"
-            },
-            "mainEntity": {
-              "@type": "ItemList",
-              "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "Tokyo Disneyland"},
-                {"@type": "ListItem", "position": 2, "name": "Universal Studios Japan"},
-                {"@type": "ListItem", "position": 3, "name": "Gardens by the Bay"},
-                {"@type": "ListItem", "position": 4, "name": "Singapore Zoo"},
-                {"@type": "ListItem", "position": 5, "name": "KidZania Tokyo"}
-              ]
-            }
-          })
-        }}
-      />
-
-return (b.popularity || 0) - (a.popularity || 0);
+    if (sortBy === "popularity") return (b.popularity || 0) - (a.popularity || 0);
     if (sortBy === "safety") return b.safetyRating - a.safetyRating;
     return (a.priceRange?.length || 0) - (b.priceRange?.length || 0);
   });
@@ -229,7 +123,7 @@ return (b.popularity || 0) - (a.popularity || 0);
     <div className="min-h-screen bg-white">
       <Header />
 
-      {/* HERO -- Personal storytelling meets Nomad List */}
+      {/* HERO */}
       <section className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-[0.04]"
           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}>
@@ -239,7 +133,7 @@ return (b.popularity || 0) - (a.popularity || 0);
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-sm text-white/80 mb-6">
               <BookOpen size={14} className="text-amber-400" />
-              Curated by parents who've been there -- 101 destinations
+              Curated by parents who've been there -- {totalCount || '100+'} destinations
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">
@@ -297,7 +191,7 @@ return (b.popularity || 0) - (a.popularity || 0);
                 className="px-4 py-2 rounded-full text-sm font-medium bg-white/10 text-white/60 hover:bg-white/20 backdrop-blur-sm border border-white/10 transition-all"
               >
                 <Sparkles size={14} className="inline-block mr-1.5" />
-                Reset
+                All Cities
               </button>
             </div>
           </div>
@@ -372,10 +266,10 @@ return (b.popularity || 0) - (a.popularity || 0);
                 }`}
               >
                 <div className="flex items-start gap-4">
-                  <div className="text-3xl flex-shrink-0">{emojiMap[story.emoji] || "\u{1F4D6}"}</div>
+                  <div className="text-3xl flex-shrink-0">{story.emoji}</div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs font-medium text-gray-400">3 min</span>
+                      <span className="text-xs font-medium text-gray-400">3 min read</span>
                       <span className="text-gray-300">&middot;</span>
                       <span className="text-xs font-medium text-amber-600">{story.destination}</span>
                     </div>
@@ -422,9 +316,9 @@ return (b.popularity || 0) - (a.popularity || 0);
                 {searchQuery ? `Results for "${searchQuery}"` : "Destinations hand-picked for your family"}
               </h2>
               <p className="text-gray-500 mt-1">
-                {filtered.length} {filtered.length === 1 ? 'destination' : 'destinations'} found
-                {selectedCity !== "All" && ` in ${selectedCity}`}
-                {selectedCategory !== "All" && ` - ${selectedCategory}`}
+                {loading ? "Loading..." : `${filtered.length} ${filtered.length === 1 ? 'destination' : 'destinations'} found`}
+                {selectedCity !== "All" && !loading && ` in ${selectedCity}`}
+                {selectedCategory !== "All" && !loading && ` - ${selectedCategory}`}
               </p>
             </div>
 
@@ -432,7 +326,7 @@ return (b.popularity || 0) - (a.popularity || 0);
               <div className="relative">
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as "popularity" | "safety" | "price")}
+                  onChange={(e) => setSortBy(e.target.value)}
                   className="appearance-none bg-gray-50 border border-gray-200 text-gray-700 rounded-xl px-4 py-2.5 pr-10 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-300 cursor-pointer"
                 >
                   <option value="popularity">Most Popular</option>
@@ -459,14 +353,22 @@ return (b.popularity || 0) - (a.popularity || 0);
               <div className="flex flex-wrap gap-4">
                 <div className="flex-1 min-w-[200px]">
                   <label className="block text-xs font-medium text-gray-500 mb-2">Category</label>
-                  <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10">
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10"
+                  >
                     <option>All Categories</option>
                     {categories.map(c => <option key={c.name}>{c.name}</option>)}
                   </select>
                 </div>
                 <div className="flex-1 min-w-[200px]">
                   <label className="block text-xs font-medium text-gray-500 mb-2">City</label>
-                  <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10">
+                  <select
+                    value={selectedCity}
+                    onChange={(e) => setSelectedCity(e.target.value)}
+                    className="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10"
+                  >
                     <option>All Cities</option>
                     {cities.map(c => <option key={c}>{c}</option>)}
                   </select>
@@ -481,7 +383,10 @@ return (b.popularity || 0) - (a.popularity || 0);
                   </select>
                 </div>
                 <div className="flex items-end">
-                  <button className="px-6 py-2.5 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors">
+                  <button
+                    onClick={() => setShowFilters(false)}
+                    className="px-6 py-2.5 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
+                  >
                     Apply Filters
                   </button>
                 </div>
@@ -489,47 +394,25 @@ return (b.popularity || 0) - (a.popularity || 0);
             </div>
           )}
 
-          {/* Featured cities */}
-          <div className="mb-12">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Pick a city, we've done the research</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {featuredCities.map(city => (
-                <button
-                  key={city.name}
-                  onClick={() => setSelectedCity(city.name === selectedCity ? "All" : city.name)}
-                  className={`relative rounded-2xl overflow-hidden h-48 group transition-all duration-300 ${
-                    selectedCity === city.name ? "ring-2 ring-amber-500 ring-offset-2 scale-[1.02]" : ""
-                  }`}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
-                  <img src={city.image} alt={city.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="relative z-20 p-5 h-full flex flex-col justify-end text-left">
-                    <div className="flex items-center gap-2 mb-1">
-                      <MapPin size={14} className="text-amber-400" />
-                      <span className="text-xs font-medium text-white/80">{city.country}</span>
-                    </div>
-                    <h4 className="text-xl font-bold text-white">{city.name}</h4>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="text-xs text-white/70">{city.count} hand-picked destinations</span>
-                    </div>
-                    <span className="mt-2 inline-block text-[11px] font-medium text-amber-300 bg-black/30 px-2.5 py-1 rounded-full w-fit">
-                      {city.tag}
-                    </span>
-                  </div>
-                </button>
-              ))}
+          {/* Loading state */}
+          {loading && (
+            <div className="text-center py-16">
+              <div className="inline-block w-8 h-8 border-2 border-gray-200 border-t-gray-900 rounded-full animate-spin mb-4" />
+              <p className="text-gray-500">Loading destinations...</p>
             </div>
-          </div>
+          )}
 
           {/* Destination grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {filtered.map((business) => (
-              <BusinessListingCard key={business.id} business={business} />
-            ))}
-          </div>
+          {!loading && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {filtered.map((business) => (
+                <BusinessListingCard key={business.id} business={business as any} />
+              ))}
+            </div>
+          )}
 
           {/* Empty state */}
-          {filtered.length === 0 && (
+          {!loading && filtered.length === 0 && (
             <div className="text-center py-16">
               <Compass size={48} className="mx-auto text-gray-300 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">No destinations found</h3>
@@ -550,7 +433,7 @@ return (b.popularity || 0) - (a.popularity || 0);
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">50+</div>
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">{totalCount || '100'}+</div>
               <div className="text-sm text-gray-500">Verified Destinations</div>
               <div className="mt-2 h-0.5 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full mx-auto w-12" />
             </div>
@@ -560,8 +443,8 @@ return (b.popularity || 0) - (a.popularity || 0);
               <div className="mt-2 h-0.5 bg-gradient-to-r from-emerald-400 to-green-400 rounded-full mx-auto w-12" />
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">98%</div>
-              <div className="text-sm text-gray-500">Family Approved</div>
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">{cities.length}</div>
+              <div className="text-sm text-gray-500">Cities Covered</div>
               <div className="mt-2 h-0.5 bg-gradient-to-r from-sky-400 to-blue-400 rounded-full mx-auto w-12" />
             </div>
             <div className="text-center">
@@ -610,7 +493,7 @@ return (b.popularity || 0) - (a.popularity || 0);
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-gray-500">
               <Sparkles size={16} className="text-amber-500" />
-              <span className="text-sm">Family Travel Directory</span>
+              <span className="text-sm">Asia Family Travel Directory</span>
             </div>
             <div className="flex items-center gap-6 text-sm text-gray-500">
               <a href="#" className="hover:text-gray-900 transition-colors">About</a>
@@ -618,7 +501,7 @@ return (b.popularity || 0) - (a.popularity || 0);
               <a href="#" className="hover:text-gray-900 transition-colors">Terms</a>
               <a href="#" className="hover:text-gray-900 transition-colors">Contact</a>
             </div>
-            <p className="text-sm text-gray-400">(c) 2026 Family Travel Directory. Curated by parents, for parents.</p>
+            <p className="text-sm text-gray-400">&copy; 2026 Asia Family Travel Directory. Curated by parents, for parents.</p>
           </div>
         </div>
       </footer>
