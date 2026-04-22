@@ -18,6 +18,8 @@ Orchestrate all Alpha Orchestras to maximize revenue generation with minimal hum
 
 Every change that reaches the user must pass ALL gates in order. No skipping. No shortcuts.
 
+Updated pipeline: DEV → UI REVIEW → TESTING → SEO OPTIMIZATION → REVIEW → CHIEF EDITOR + CTO → DEPLOY
+
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                    DEPLOYMENT PIPELINE                           │
@@ -29,9 +31,11 @@ Every change that reaches the user must pass ALL gates in order. No skipping. No
 │     ↓                                                            │
 │  3. TESTING ──── Tester/QA runs all test suites                  │
 │     ↓                                                            │
-│  4. REVIEW ───── Reviewer checks code quality, documentation     │
+│  4. SEO OPTIMIZATION ─ SEO Agent optimizes titles, meta, content │
 │     ↓                                                            │
-│  5. SIGN-OFF ─── Chief Editor + CTO final approval              │
+│  5. REVIEW ───── Reviewer checks code quality, documentation     │
+│     ↓                                                            │
+│  6. SIGN-OFF ─── Chief Editor + CTO final approval              │
 │     ↓                                                            │
 │  6. DEPLOY ───── Production release                              │
 │                                                                  │
@@ -44,6 +48,7 @@ Every change that reaches the user must pass ALL gates in order. No skipping. No
 ### Gate Failures:
 - **UI Agent fails**: Return to Coder with layout defect report + screenshots
 - **Tester fails**: Return to Coder with failing tests + reproduction steps
+- **SEO Agent fails**: Return to Coder with SEO optimization requirements
 - **Reviewer fails**: Return to Coder with code quality issues
 - **Chief Editor + CTO reject**: Return with specific rejection reasons
 - **Paperclip detects duplication**: Return to Coder to use shared component

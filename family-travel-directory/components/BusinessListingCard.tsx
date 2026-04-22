@@ -4,7 +4,7 @@ import { Star, MapPin, Users, CheckCircle, Heart, Share2, ChevronRight, Clock, D
 import { useState } from 'react';
 
 interface Business {
-  id: number;
+  id: string | number;
   name: string;
   description: string;
   location: string;

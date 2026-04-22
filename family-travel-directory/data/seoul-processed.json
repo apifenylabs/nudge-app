@@ -1,15 +1,15 @@
 {
   "city": "Seoul",
   "country": "South Korea",
-  "lastUpdated": "2026-04-22T03:21:14.625Z",
+  "lastUpdated": "2026-04-22T11:24:52.339Z",
   "activities": [
     {
       "id": "seoul-new-1",
-      "name": "Seoul Family Restaurant 1",
-      "category": "Restaurant",
-      "ageRange": "0-15",
-      "safetyRating": "4.5",
-      "description": "A wonderful family-friendly restaurant in Seoul. Perfect for children of all ages with safety measures in place.",
+      "name": "Seoul Family Cultural 1",
+      "category": "Cultural",
+      "ageRange": "1-9",
+      "safetyRating": "4.8",
+      "description": "A wonderful family-friendly cultural in Seoul. Perfect for children of all ages with safety measures in place.",
       "location": "Seoul, South Korea",
       "amenities": [
         "Family Restrooms",
@@ -20,11 +20,11 @@
     },
     {
       "id": "seoul-new-2",
-      "name": "Seoul Family Beach 2",
-      "category": "Beach",
-      "ageRange": "1-16",
-      "safetyRating": "4.7",
-      "description": "A wonderful family-friendly beach in Seoul. Perfect for children of all ages with safety measures in place.",
+      "name": "Seoul Family Shopping 2",
+      "category": "Shopping",
+      "ageRange": "1-11",
+      "safetyRating": "4.6",
+      "description": "A wonderful family-friendly shopping in Seoul. Perfect for children of all ages with safety measures in place.",
       "location": "Seoul, South Korea",
       "amenities": [
         "Family Restrooms",
@@ -35,11 +35,11 @@
     },
     {
       "id": "seoul-new-3",
-      "name": "Seoul Family Beach 3",
-      "category": "Beach",
-      "ageRange": "0-8",
-      "safetyRating": "4.7",
-      "description": "A wonderful family-friendly beach in Seoul. Perfect for children of all ages with safety measures in place.",
+      "name": "Seoul Family Park 3",
+      "category": "Park",
+      "ageRange": "2-9",
+      "safetyRating": "4.8",
+      "description": "A wonderful family-friendly park in Seoul. Perfect for children of all ages with safety measures in place.",
       "location": "Seoul, South Korea",
       "amenities": [
         "Family Restrooms",
@@ -52,8 +52,8 @@
       "id": "seoul-new-4",
       "name": "Seoul Family Beach 4",
       "category": "Beach",
-      "ageRange": "1-13",
-      "safetyRating": "4.7",
+      "ageRange": "0-10",
+      "safetyRating": "4.6",
       "description": "A wonderful family-friendly beach in Seoul. Perfect for children of all ages with safety measures in place.",
       "location": "Seoul, South Korea",
       "amenities": [
@@ -65,11 +65,11 @@
     },
     {
       "id": "seoul-new-5",
-      "name": "Seoul Family Restaurant 5",
-      "category": "Restaurant",
-      "ageRange": "1-11",
-      "safetyRating": "4.7",
-      "description": "A wonderful family-friendly restaurant in Seoul. Perfect for children of all ages with safety measures in place.",
+      "name": "Seoul Family Shopping 5",
+      "category": "Shopping",
+      "ageRange": "2-9",
+      "safetyRating": "4.8",
+      "description": "A wonderful family-friendly shopping in Seoul. Perfect for children of all ages with safety measures in place.",
       "location": "Seoul, South Korea",
       "amenities": [
         "Family Restrooms",

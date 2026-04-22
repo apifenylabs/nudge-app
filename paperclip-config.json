@@ -83,6 +83,9 @@
         "testing": {
           "mustPass": ["all-tests-green", "no-critical-bugs", "build-zero-errors"]
         },
+        "seoOptimization": {
+          "mustPass": ["title-optimized", "meta-description-optimized", "keywords-natural", "schema-markup-present", "internal-links-strategy"]
+        },
         "review": {
           "mustPass": ["code-quality", "documentation-complete", "no-duplication"]
         }

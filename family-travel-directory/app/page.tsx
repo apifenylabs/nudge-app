@@ -164,7 +164,15 @@ export default function Home() {
                     className="w-full py-4 px-3 text-gray-900 placeholder:text-gray-400 focus:outline-none text-base bg-transparent"
                   />
                 </div>
-                <button className="px-6 py-4 bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors text-sm">
+                <button 
+                  onClick={() => {
+                    // Search is already handled by searchQuery state + filtered array
+                    // This button provides visual feedback
+                    const searchInput = document.querySelector('input[type="text"]') as HTMLInputElement;
+                    if (searchInput) searchInput.blur();
+                  }}
+                  className="px-6 py-4 bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors text-sm"
+                >
                   Search
                 </button>
               </div>
@@ -298,7 +306,10 @@ export default function Home() {
 
           <div className="mt-8 p-8 bg-gray-50 rounded-2xl border border-gray-200 text-center">
             <p className="text-sm text-gray-500 mb-3">Have a story to share?</p>
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors">
+            <button 
+              onClick={() => alert('Story submission coming soon! Share your family travel story at stories@familytravel.asia')}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
+            >
               <BookOpen size={16} />
               Write Your Family Story
             </button>
@@ -406,7 +417,7 @@ export default function Home() {
           {!loading && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {filtered.map((business) => (
-                <BusinessListingCard key={business.id} business={business as any} />
+                <BusinessListingCard key={business.id} business={business} />
               ))}
             </div>
           )}
@@ -475,11 +486,26 @@ export default function Home() {
               We share the good, the bad, and the "bring extra snacks."
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="px-8 py-3.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-xl hover:from-amber-600 hover:to-orange-600 transition-all shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/30 active:scale-[0.98]">
+              <button 
+                onClick={() => {
+                  setSearchQuery('');
+                  setSelectedCity('All');
+                  setSelectedCategory('All');
+                  setActiveTab('explore');
+                  window.scrollTo({ top: 600, behavior: 'smooth' });
+                }}
+                className="px-8 py-3.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-xl hover:from-amber-600 hover:to-orange-600 transition-all shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/30 active:scale-[0.98]"
+              >
                 Explore All Destinations
                 <ChevronRight size={18} className="inline-block ml-1" />
               </button>
-              <button className="px-8 py-3.5 bg-white/10 backdrop-blur-sm text-white font-medium rounded-xl border border-white/20 hover:bg-white/20 transition-all">
+              <button 
+                onClick={() => {
+                  setActiveTab('stories');
+                  window.scrollTo({ top: 600, behavior: 'smooth' });
+                }}
+                className="px-8 py-3.5 bg-white/10 backdrop-blur-sm text-white font-medium rounded-xl border border-white/20 hover:bg-white/20 transition-all"
+              >
                 Read Parent Stories
               </button>
             </div>
@@ -496,10 +522,10 @@ export default function Home() {
               <span className="text-sm">Asia Family Travel Directory</span>
             </div>
             <div className="flex items-center gap-6 text-sm text-gray-500">
-              <a href="#" className="hover:text-gray-900 transition-colors">About</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">Privacy</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">Terms</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">Contact</a>
+              <a href="/about" className="hover:text-gray-900 transition-colors">About</a>
+              <a href="/privacy" className="hover:text-gray-900 transition-colors">Privacy</a>
+              <a href="/terms" className="hover:text-gray-900 transition-colors">Terms</a>
+              <a href="/contact" className="hover:text-gray-900 transition-colors">Contact</a>
             </div>
             <p className="text-sm text-gray-400">&copy; 2026 Asia Family Travel Directory. Curated by parents, for parents.</p>
           </div>
