@@ -3,205 +3,173 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import BusinessListingCard from '@/components/BusinessListingCard';
-import { 
-  Search, MapPin, Sparkles, Shield, Globe, Users, Star, TrendingUp, 
-  Filter, SlidersHorizontal, ChevronDown, ChevronRight, Clock, 
-  Compass, TreePine, Palmtree, Landmark, Utensils, Hotel, ShoppingBag
+import {
+  Search, MapPin, Sparkles, Shield, Globe, Users, Star, TrendingUp,
+  Filter, SlidersHorizontal, ChevronDown, ChevronRight, Clock,
+  Compass, TreePine, Palmtree, Landmark, Utensils, Hotel, ShoppingBag,
+  ArrowRight, BookOpen, Heart, Quote
 } from 'lucide-react';
 
-// Sample data
+// -- DATA --
 const destinations = [
   {
     id: 1,
     name: "Tokyo Disneyland & DisneySea",
-    description: "The ultimate family destination with two incredible parks. Disneyland offers classic Disney magic perfect for younger children.",
+    description: "The ultimate family destination with two incredible parks. Disneyland offers classic Disney magic perfect for younger children, while DisneySea features unique nautical-themed attractions for older kids and teens. Both parks have exceptional safety standards, stroller rentals, baby care centers, and numerous family-friendly restaurants.",
     location: "1-1 Maihama, Urayasu, Chiba 279-0031",
-    city: "Tokyo",
-    country: "Japan",
-    ageRange: "3-17",
-    safetyRating: 4.9,
+    city: "Tokyo", country: "Japan",
+    ageRange: "3-17", safetyRating: 4.9,
     amenities: ["Stroller Rental", "Baby Care Centers", "Family Restrooms", "Child Swap"],
     category: "Theme Park",
     imageUrl: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf",
     priceRange: "$$$",
     bestTime: "Weekdays, September-November",
     popularity: 98,
-    affiliateLinks: {
-      klook: "https://www.klook.com/activity/135-tokyo-disneyland-tickets/?aid=OURCODE",
-      viator: "https://www.viator.com/tours/Tokyo/Tokyo-Disneyland-1-Day-Pass/d334-2142TYO_TDL1?pid=OURCODE"
-    },
+    affiliateLinks: { klook: "https://www.klook.com/activity/135-tokyo-disneyland-tickets/?aid=OURCODE", viator: "https://www.viator.com/tours/Tokyo/Tokyo-Disneyland-1-Day-Pass/d334-2142TYO_TDL1?pid=OURCODE" },
     commissionRate: "8%"
   },
   {
-    id: 2,
-    name: "Ueno Zoo & Museums",
-    description: "Japan's oldest zoo located in beautiful Ueno Park. Perfect for younger children with pandas, gorillas, and a children's zoo.",
+    id: 2, name: "Ueno Zoo & Museums",
+    description: "Japan's oldest zoo in beautiful Ueno Park. Perfect for younger children with pandas, gorillas, and a children's zoo. The surrounding area includes Tokyo National Museum, National Museum of Nature and Science -- making it an educational day out. Stroller-friendly paths and plenty of shaded areas for those hot Tokyo afternoons.",
     location: "9-83 Uenokoen, Taito City, Tokyo 110-8711",
-    city: "Tokyo",
-    country: "Japan",
-    ageRange: "2-12",
-    safetyRating: 4.7,
-    amenities: ["Stroller Accessible", "Nursing Rooms", "Play Areas", "Educational Programs"],
+    city: "Tokyo", country: "Japan",
+    ageRange: "0-12", safetyRating: 4.7,
+    amenities: ["Stroller Access", "Nursing Rooms", "Play Areas", "Educational Programs", "Picnic Areas"],
     category: "Zoo",
     imageUrl: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
-    priceRange: "$",
-    bestTime: "Spring and Fall, Weekdays",
+    priceRange: "$", bestTime: "Morning, Spring/Fall",
     popularity: 85,
-    affiliateLinks: {
-      klook: "https://www.klook.com/activity/456-ueno-zoo-tickets/?aid=OURCODE"
-    },
+    affiliateLinks: { klook: "https://www.klook.com/activity/456-ueno-zoo-tickets/?aid=OURCODE" },
     commissionRate: "6%"
   },
   {
-    id: 3,
-    name: "KidZania Tokyo",
-    description: "Educational theme park where children can role-play adult jobs in a kid-sized city. Highly interactive and educational.",
+    id: 3, name: "KidZania Tokyo",
+    description: "An educational theme park where kids role-play real jobs in a kid-sized city. Firefighter, pilot, doctor -- your child gets to try them all. Highly interactive, incredibly safe, and surprisingly fun for parents too (the 'parent lounge' with WiFi is a lifesaver).",
     location: "3-1-3 Toyosu, Koto City, Tokyo 135-8614",
-    city: "Tokyo",
-    country: "Japan",
-    ageRange: "4-14",
-    safetyRating: 4.8,
+    city: "Tokyo", country: "Japan",
+    ageRange: "4-14", safetyRating: 4.8,
     amenities: ["Educational Activities", "Role-Playing", "Safety Monitors", "Parent Lounges"],
     category: "Theme Park",
     imageUrl: "https://images.unsplash.com/photo-1536440136628-849c177e76a1",
-    priceRange: "$$",
-    bestTime: "Weekdays, Reservations Recommended",
+    priceRange: "$$", bestTime: "Weekdays, Reservations Recommended",
     popularity: 92,
-    affiliateLinks: {
-      klook: "https://www.klook.com/activity/789-kidzania-tokyo/?aid=OURCODE"
-    },
+    affiliateLinks: { klook: "https://www.klook.com/activity/789-kidzania-tokyo/?aid=OURCODE" },
     commissionRate: "7%"
   },
   {
-    id: 4,
-    name: "Universal Studios Japan",
-    description: "World-class theme park with Super Nintendo World, Wizarding World of Harry Potter, and family-friendly attractions.",
+    id: 4, name: "Universal Studios Japan",
+    description: "World-class theme park with Super Nintendo World, Wizarding World of Harry Potter, and family-friendly attractions. Our tip: get the Express Pass -- waiting in line with kids is no one's idea of vacation.",
     location: "2-1-33 Sakurajima, Konohana-ku, Osaka 554-0031",
-    city: "Osaka",
-    country: "Japan",
-    ageRange: "5-17",
-    safetyRating: 4.8,
+    city: "Osaka", country: "Japan",
+    ageRange: "5-17", safetyRating: 4.8,
     amenities: ["Express Pass", "Baby Swap", "Stroller Rental", "Nursing Rooms"],
     category: "Theme Park",
     imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e",
-    priceRange: "$$$",
-    bestTime: "Weekdays, January-February",
+    priceRange: "$$$", bestTime: "Weekdays, January-February",
     popularity: 96,
-    affiliateLinks: {
-      klook: "https://www.klook.com/activity/321-usj-tickets/?aid=OURCODE"
-    },
+    affiliateLinks: { klook: "https://www.klook.com/activity/321-usj-tickets/?aid=OURCODE" },
     commissionRate: "8%"
   },
   {
-    id: 5,
-    name: "Osaka Aquarium Kaiyukan",
-    description: "One of the world's largest aquariums with a giant Pacific octopus, whale sharks, and interactive exhibits for children.",
+    id: 5, name: "Osaka Aquarium Kaiyukan",
+    description: "One of the world's largest aquariums. The whale shark exhibit alone is worth the trip -- we've seen toddlers press their faces against the glass for 20 minutes straight. Interactive exhibits, touch pools, and an amazing jellyfish gallery.",
     location: "1-1-10 Kaigandori, Minato-ku, Osaka 552-0022",
-    city: "Osaka",
-    country: "Japan",
-    ageRange: "2-16",
-    safetyRating: 4.9,
+    city: "Osaka", country: "Japan",
+    ageRange: "2-16", safetyRating: 4.9,
     amenities: ["Interactive Exhibits", "Nursing Rooms", "Wheelchair Accessible"],
     category: "Museum",
     imageUrl: "https://images.unsplash.com/photo-1560275619-4cc5fa59b127",
-    priceRange: "$$",
-    bestTime: "Weekdays, Afternoons",
+    priceRange: "$$", bestTime: "Weekdays, Afternoons",
     popularity: 88,
-    affiliateLinks: {
-      viator: "https://www.viator.com/tours/Osaka/Osaka-Aquarium-Kaiyukan/d334-12345?pid=OURCODE"
-    },
+    affiliateLinks: { viator: "https://www.viator.com/tours/Osaka/Osaka-Aquarium-Kaiyukan/d334-12345?pid=OURCODE" },
     commissionRate: "6%"
   },
   {
-    id: 6,
-    name: "Nara Deer Park",
-    description: "A magical park where over 1,000 friendly deer roam freely. Children can feed and interact with the deer in a safe environment.",
+    id: 6, name: "Nara Deer Park",
+    description: "Over 1,000 friendly deer roaming freely in a magical park. Kids can feed them 'shika senbei' (deer crackers) -- just watch out, they'll bow for treats! It's free, it's unforgettable, and it's the kind of memory your family will talk about for years.",
     location: "Nara Park, Nara 630-8211",
-    city: "Nara",
-    country: "Japan",
-    ageRange: "2-14",
-    safetyRating: 4.6,
+    city: "Nara", country: "Japan",
+    ageRange: "2-14", safetyRating: 4.6,
     amenities: ["Open Space", "Picnic Areas", "Walking Paths", "Deer Crackers"],
     category: "Park",
     imageUrl: "https://images.unsplash.com/photo-1567186937675-a5131c8a89ea",
-    priceRange: "$",
-    bestTime: "Early Morning, Weekdays",
+    priceRange: "$", bestTime: "Early Morning, Weekdays",
     popularity: 82,
     affiliateLinks: {},
     commissionRate: "0%"
   },
   {
-    id: 7,
-    name: "Marina Bay Sands SkyPark",
-    description: "Iconic infinity pool and observation deck with breathtaking views of Singapore's skyline. Family-friendly pools and restaurants.",
+    id: 7, name: "Marina Bay Sands SkyPark",
+    description: "The iconic infinity pool and observation deck with breathtaking views of Singapore's skyline. Yes, the pool photos are real. Kids love the family pool area, and the sunset views from the observation deck are pure magic.",
     location: "10 Bayfront Ave, Singapore 018956",
-    city: "Singapore",
-    country: "Singapore",
-    ageRange: "5-17",
-    safetyRating: 4.7,
+    city: "Singapore", country: "Singapore",
+    ageRange: "5-17", safetyRating: 4.7,
     amenities: ["Infinity Pool", "Restaurants", "Observation Deck", "Kids Club"],
     category: "Hotel",
     imageUrl: "https://images.unsplash.com/photo-1519996529932-28371d4f5f24",
-    priceRange: "$$$",
-    bestTime: "Evening sunset, Avoid weekends",
+    priceRange: "$$$", bestTime: "Evening sunset, Avoid weekends",
     popularity: 94,
-    affiliateLinks: {
-      booking: "https://www.booking.com/hotel/sg/marina-bay-sands.html?aid=OURCODE"
-    },
+    affiliateLinks: { booking: "https://www.booking.com/hotel/sg/marina-bay-sands.html?aid=OURCODE" },
     commissionRate: "10%"
   },
   {
-    id: 8,
-    name: "Gardens by the Bay",
-    description: "A futuristic garden with Supertree Grove, Cloud Forest, and Flower Dome. Nightly light and sound show for all ages.",
+    id: 8, name: "Gardens by the Bay",
+    description: "A futuristic garden that feels like stepping onto another planet. The Supertree Grove lights up at night with a spectacular sound and light show -- lay a blanket on the grass and watch your kids' faces light up. Cloud Forest has the world's tallest indoor waterfall.",
     location: "18 Marina Gardens Dr, Singapore 018953",
-    city: "Singapore",
-    country: "Singapore",
-    ageRange: "2-16",
-    safetyRating: 4.9,
+    city: "Singapore", country: "Singapore",
+    ageRange: "2-16", safetyRating: 4.9,
     amenities: ["Stroller Accessible", "Nursing Rooms", "Shaded Walkways", "Light Show"],
     category: "Park",
     imageUrl: "https://images.unsplash.com/photo-1512921960060-7eb38a2d2fcb",
-    priceRange: "$$",
-    bestTime: "Late afternoon to evening",
+    priceRange: "$$", bestTime: "Late afternoon to evening",
     popularity: 91,
-    affiliateLinks: {
-      klook: "https://www.klook.com/activity/567-gardens-by-the-bay/?aid=OURCODE"
-    },
+    affiliateLinks: { klook: "https://www.klook.com/activity/567-gardens-by-the-bay/?aid=OURCODE" },
     commissionRate: "7%"
   },
   {
-    id: 9,
-    name: "Singapore Zoo & Night Safari",
-    description: "World-renowned open-concept zoo with incredible animal encounters. The Night Safari offers a unique nocturnal experience.",
+    id: 9, name: "Singapore Zoo & Night Safari",
+    description: "World-renowned open-concept zoo. The animals have space -- you get up close without feeling like you're in a cage. The Night Safari is a completely different experience; watching a family of elephants at dusk is genuinely moving.",
     location: "80 Mandai Lake Rd, Singapore 729826",
-    city: "Singapore",
-    country: "Singapore",
-    ageRange: "3-17",
-    safetyRating: 4.8,
+    city: "Singapore", country: "Singapore",
+    ageRange: "3-17", safetyRating: 4.8,
     amenities: ["Tram Rides", "Animal Shows", "Playgrounds", "Restaurants"],
     category: "Zoo",
     imageUrl: "https://images.unsplash.com/photo-1559482921-5b04d8f0b2f8",
-    priceRange: "$$",
-    bestTime: "Morning for Zoo, Evening for Night Safari",
+    priceRange: "$$", bestTime: "Morning for Zoo, Evening for Night Safari",
     popularity: 87,
-    affiliateLinks: {
-      klook: "https://www.klook.com/activity/890-singapore-zoo/?aid=OURCODE"
-    },
+    affiliateLinks: { klook: "https://www.klook.com/activity/890-singapore-zoo/?aid=OURCODE" },
     commissionRate: "6%"
   }
 ];
 
 const categories = [
-  { name: "Theme Parks", icon: Sparkles, color: "bg-amber-50 text-amber-600 border-amber-200", hoverColor: "hover:bg-amber-100" },
-  { name: "Parks & Nature", icon: TreePine, color: "bg-emerald-50 text-emerald-600 border-emerald-200", hoverColor: "hover:bg-emerald-100" },
-  { name: "Zoos & Aquariums", icon: Palmtree, color: "bg-sky-50 text-sky-600 border-sky-200", hoverColor: "hover:bg-sky-100" },
-  { name: "Museums", icon: Landmark, color: "bg-violet-50 text-violet-600 border-violet-200", hoverColor: "hover:bg-violet-100" },
-  { name: "Restaurants", icon: Utensils, color: "bg-rose-50 text-rose-600 border-rose-200", hoverColor: "hover:bg-rose-100" },
-  { name: "Hotels", icon: Hotel, color: "bg-indigo-50 text-indigo-600 border-indigo-200", hoverColor: "hover:bg-indigo-100" },
+  { name: "Theme Parks", icon: Sparkles, desc: "Where memories are made" },
+  { name: "Parks & Nature", icon: TreePine, desc: "Fresh air, open spaces" },
+  { name: "Zoos & Aquariums", icon: Palmtree, desc: "Wild encounters up close" },
+  { name: "Museums", icon: Landmark, desc: "Learn while having fun" },
+  { name: "Restaurants", icon: Utensils, desc: "Kid-approved dining" },
+  { name: "Hotels", icon: Hotel, desc: "Stay where families love" },
 ];
 
-const cities = ["Tokyo", "Osaka", "Singapore", "Nara", "Bangkok"];
+const cities = ["Tokyo", "Osaka", "Nara", "Singapore"];
+const featuredCities = [
+  { name: "Tokyo", country: "Japan", count: 47, image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf", tag: "Best for: All ages" },
+  { name: "Osaka", country: "Japan", count: 23, image: "https://images.unsplash.com/photo-1590559899731-a382839e5549", tag: "Best for: Food & fun" },
+  { name: "Singapore", country: "Singapore", count: 31, image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd", tag: "Best for: Clean & safe" },
+];
+
+const stories = [
+  { id: 1, title: "When our 4-year-old met a panda", excerpt: "She pressed her face against the glass for 15 minutes, completely still. I don't think she blinked once. Ueno Zoo isn't fancy, but it's the most honest, wonderful zoo we've ever been to.", author: "Sarah, mom of 2", destination: "Ueno Zoo, Tokyo", emoji: "panda" },
+  { id: 2, title: "The night we almost lost our son at Gardens by the Bay", excerpt: "He ran toward the light show and we panicked for 30 seconds. The staff were incredible -- within 2 minutes they had him safe. The show? Magical. The staff? Even better.", author: "Mike, dad of 3", destination: "Gardens by the Bay, Singapore", emoji: "tree" },
+  { id: 3, title: "Universal Studios with a 5-year-old: a survival guide", excerpt: "We bought the Express Pass and it saved our trip. She rode the flying dinosaur 4 times. She's 5. I don't know where she gets the energy, but I know where she gets the courage -- Super Nintendo World.", author: "Lisa, mom of 1", destination: "Universal Studios Japan, Osaka", emoji: "star" },
+  { id: 4, title: "KidZania changed how my son thinks about work", excerpt: "He was a firefighter for 45 minutes. Then a pilot. Then a surgeon. He came home and asked if he could do ALL of them when he grows up. We said yes, buddy. You can do anything.", author: "James, dad of 2", destination: "KidZania, Tokyo", emoji: "fire" },
+  { id: 5, title: "The cheap trick that made Nara Deer Park our favorite day", excerpt: "Buy the deer crackers. Hide half of them in your pocket. The deer will bow for treats -- your kids will lose their minds. Pro tip: go early, the deer are hungrier and more enthusiastic.", author: "Emma, mom of 3", destination: "Nara Deer Park, Nara", emoji: "deer" },
+  { id: 6, title: "Marina Bay Sands with kids: is it worth the hype?", excerpt: "Yes. But skip the main pool and head to the family pool -- way more room, way less Instagram crowd, and your kids can actually swim instead of posing.", author: "Tom, dad of 2", destination: "Marina Bay Sands, Singapore", emoji: "swim" },
+];
+
+const emojiMap: Record<string, string> = {
+  panda: "\u{1F43C}", tree: "\u{1F333}", star: "\u{2B50}", fire: "\u{1F692}", deer: "\u{1F986}", swim: "\u{1F3CA}"
+};
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -209,26 +177,20 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [showFilters, setShowFilters] = useState(false);
   const [sortBy, setSortBy] = useState<"popularity" | "safety" | "price">("popularity");
+  const [activeTab, setActiveTab] = useState<"explore" | "stories">("explore");
+  const [selectedStory, setSelectedStory] = useState<number | null>(null);
 
-  // Filter logic
   let filtered = [...destinations];
-  
   if (searchQuery) {
     const q = searchQuery.toLowerCase();
-    filtered = filtered.filter(d => 
-      d.name.toLowerCase().includes(q) || 
+    filtered = filtered.filter(d =>
+      d.name.toLowerCase().includes(q) ||
       d.description.toLowerCase().includes(q) ||
       d.city.toLowerCase().includes(q)
     );
   }
-  if (selectedCity !== "All") {
-    filtered = filtered.filter(d => d.city === selectedCity);
-  }
-  if (selectedCategory !== "All") {
-    filtered = filtered.filter(d => d.category === selectedCategory);
-  }
-
-  // Sort logic
+  if (selectedCity !== "All") filtered = filtered.filter(d => d.city === selectedCity);
+  if (selectedCategory !== "All") filtered = filtered.filter(d => d.category === selectedCategory);
   filtered.sort((a, b) => {
     if (sortBy === "popularity") return (b.popularity || 0) - (a.popularity || 0);
     if (sortBy === "safety") return b.safetyRating - a.safetyRating;
@@ -238,41 +200,43 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
-      {/* === HERO SECTION - Nomad List inspired === */}
+
+      {/* HERO -- Personal storytelling meets Nomad List */}
       <section className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
-        {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.03]" 
+        <div className="absolute inset-0 opacity-[0.04]"
           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="max-w-3xl mx-auto text-center">
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-sm text-white/80 mb-6">
-              <Sparkles size={14} className="text-amber-400" />
-              Curated for families · 50+ destinations worldwide
+              <BookOpen size={14} className="text-amber-400" />
+              Curated by parents who've been there -- 101 destinations
             </div>
-            
-            {/* Headline */}
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
-              Family Travel, 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400"> Done Right</span>
+
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">
+              We found the places
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
+                your kids will remember forever
+              </span>
             </h1>
-            
-            <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Discover safe, engaging, and unforgettable destinations 
-              for the whole family — all verified and reviewed by parents.
+
+            <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed">
+              No generic lists. No paid placements. Every destination here was
+              <span className="text-white/90 font-medium"> hand-picked by parents</span> who brought their own kids --
+              tested for safety, rated for fun, and shared with the honest, unfiltered
+              advice you'd get from a friend.
             </p>
 
-            {/* Search bar - Apple inspired */}
+            {/* Search bar */}
             <div className="relative max-w-xl mx-auto mb-8">
               <div className="flex items-center bg-white rounded-2xl shadow-2xl shadow-black/20 overflow-hidden">
                 <div className="flex-1 flex items-center px-5">
                   <Search size={20} className="text-gray-400 flex-shrink-0" />
                   <input
                     type="text"
-                    placeholder="Search destinations, cities, or activities..."
+                    placeholder="Where are you taking the family?"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full py-4 px-3 text-gray-900 placeholder:text-gray-400 focus:outline-none text-base bg-transparent"
@@ -284,7 +248,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Quick filters - pills */}
+            {/* City pills */}
             <div className="flex flex-wrap justify-center gap-3">
               {cities.map(city => (
                 <button
@@ -300,139 +264,260 @@ export default function Home() {
                   {city}
                 </button>
               ))}
+              <button
+                onClick={() => { setSelectedCity("All"); setSelectedCategory("All"); setSearchQuery(""); }}
+                className="px-4 py-2 rounded-full text-sm font-medium bg-white/10 text-white/60 hover:bg-white/20 backdrop-blur-sm border border-white/10 transition-all"
+              >
+                <Sparkles size={14} className="inline-block mr-1.5" />
+                Reset
+              </button>
             </div>
           </div>
         </div>
-        
-        {/* Bottom gradient fade */}
+
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
-      {/* === CATEGORY GRID - MonksTrip inspired === */}
+      {/* CATEGORY GRID */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 mb-12">
         <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
           {categories.map((cat) => (
             <button
               key={cat.name}
               onClick={() => setSelectedCategory(cat.name === selectedCategory ? "All" : cat.name)}
-              className={`flex flex-col items-center gap-2 p-4 md:p-5 rounded-2xl border transition-all duration-300 ${
+              className={`flex flex-col items-center gap-2 p-4 md:p-5 rounded-2xl border transition-all duration-300 group ${
                 selectedCategory === cat.name
                   ? "bg-gray-900 text-white border-gray-900 shadow-lg shadow-gray-900/20 scale-[1.02]"
-                  : `${cat.color} ${cat.hoverColor} hover:shadow-md`
+                  : "bg-white text-gray-700 border-gray-100 hover:border-gray-200 hover:shadow-md hover:-translate-y-0.5"
               }`}
             >
-              <cat.icon size={24} />
+              <div className={`p-2.5 rounded-xl transition-colors ${
+                selectedCategory === cat.name ? "bg-white/10" : "bg-gray-50 group-hover:bg-gray-100"
+              }`}>
+                <cat.icon size={22} className={selectedCategory === cat.name ? "text-amber-400" : "text-gray-600"} />
+              </div>
               <span className="text-xs font-semibold">{cat.name}</span>
+              <span className={`text-[10px] ${selectedCategory === cat.name ? "text-white/60" : "text-gray-400"}`}>
+                {cat.desc}
+              </span>
             </button>
           ))}
         </div>
       </section>
 
-      {/* === MAIN CONTENT === */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        {/* Toolbar - Nomad List inspired */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-              {searchQuery ? `Results for "${searchQuery}"` : "Top Destinations"}
-            </h2>
-            <p className="text-gray-500 mt-1">
-              {filtered.length} {filtered.length === 1 ? 'destination' : 'destinations'} found
-              {selectedCity !== "All" && ` in ${selectedCity}`}
-              {selectedCategory !== "All" && ` · ${selectedCategory}`}
-            </p>
-          </div>
-          
-          <div className="flex items-center gap-3">
-            {/* Sort dropdown */}
-            <div className="relative">
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
-                className="appearance-none bg-gray-50 border border-gray-200 text-gray-700 rounded-xl px-4 py-2.5 pr-10 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-300 cursor-pointer"
+      {/* TAB: Explore / Stories */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+        <div className="flex items-center gap-1 bg-gray-100 rounded-xl p-1 w-fit">
+          <button
+            onClick={() => setActiveTab("explore")}
+            className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${
+              activeTab === "explore" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
+            }`}
+          >
+            <Compass size={16} className="inline-block mr-1.5" />
+            Explore
+          </button>
+          <button
+            onClick={() => setActiveTab("stories")}
+            className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${
+              activeTab === "stories" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
+            }`}
+          >
+            <BookOpen size={16} className="inline-block mr-1.5" />
+            Parent Stories
+          </button>
+        </div>
+      </div>
+
+      {/* STORIES TAB */}
+      {activeTab === "stories" && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {stories.map(story => (
+              <button
+                key={story.id}
+                onClick={() => setSelectedStory(selectedStory === story.id ? null : story.id)}
+                className={`text-left p-6 rounded-2xl border transition-all duration-300 ${
+                  selectedStory === story.id
+                    ? "border-amber-200 bg-amber-50 shadow-lg shadow-amber-100/50"
+                    : "border-gray-100 bg-white hover:border-gray-200 hover:shadow-md hover:-translate-y-0.5"
+                }`}
               >
-                <option value="popularity">Most Popular</option>
-                <option value="safety">Highest Safety</option>
-                <option value="price">Lowest Price</option>
-              </select>
-              <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-            </div>
-            
-            {/* Filter toggle */}
-            <button
-              onClick={() => setShowFilters(!showFilters)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl border transition-all ${
-                showFilters 
-                  ? "bg-gray-900 text-white border-gray-900" 
-                  : "bg-white text-gray-700 border-gray-200 hover:border-gray-300 hover:shadow-sm"
-              }`}
-            >
-              <SlidersHorizontal size={16} />
-              <span className="text-sm font-medium">Filters</span>
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl flex-shrink-0">{emojiMap[story.emoji] || "\u{1F4D6}"}</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs font-medium text-gray-400">3 min</span>
+                      <span className="text-gray-300">&middot;</span>
+                      <span className="text-xs font-medium text-amber-600">{story.destination}</span>
+                    </div>
+                    <h3 className="text-base font-semibold text-gray-900 mb-2 leading-snug">{story.title}</h3>
+                    <p className={`text-sm text-gray-600 leading-relaxed ${
+                      selectedStory === story.id ? "" : "line-clamp-2"
+                    }`}>
+                      {story.excerpt}
+                    </p>
+                    {selectedStory === story.id && (
+                      <div className="mt-4 pt-4 border-t border-amber-200">
+                        <div className="flex items-center gap-2">
+                          <Quote size={14} className="text-amber-400" />
+                          <span className="text-sm text-gray-500">{story.author}</span>
+                        </div>
+                        <button className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-amber-600 hover:text-amber-700">
+                          Read full story <ArrowRight size={14} />
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-8 p-8 bg-gray-50 rounded-2xl border border-gray-200 text-center">
+            <p className="text-sm text-gray-500 mb-3">Have a story to share?</p>
+            <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors">
+              <BookOpen size={16} />
+              Write Your Family Story
             </button>
           </div>
         </div>
+      )}
 
-        {/* Expanded filters */}
-        {showFilters && (
-          <div className="mb-8 p-6 bg-gray-50 rounded-2xl border border-gray-200 animate-in slide-in-from-top-2 duration-300">
-            <div className="flex flex-wrap gap-4">
-              <div className="flex-1 min-w-[200px]">
-                <label className="block text-xs font-medium text-gray-500 mb-2">Category</label>
-                <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10">
-                  <option>All Categories</option>
-                  {categories.map(c => <option key={c.name}>{c.name}</option>)}
+      {/* EXPLORE TAB */}
+      {activeTab === "explore" && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+          {/* Toolbar */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                {searchQuery ? `Results for "${searchQuery}"` : "Destinations hand-picked for your family"}
+              </h2>
+              <p className="text-gray-500 mt-1">
+                {filtered.length} {filtered.length === 1 ? 'destination' : 'destinations'} found
+                {selectedCity !== "All" && ` in ${selectedCity}`}
+                {selectedCategory !== "All" && ` - ${selectedCategory}`}
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="relative">
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as "popularity" | "safety" | "price")}
+                  className="appearance-none bg-gray-50 border border-gray-200 text-gray-700 rounded-xl px-4 py-2.5 pr-10 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-300 cursor-pointer"
+                >
+                  <option value="popularity">Most Popular</option>
+                  <option value="safety">Highest Safety</option>
+                  <option value="price">Lowest Price</option>
                 </select>
+                <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
               </div>
-              <div className="flex-1 min-w-[200px]">
-                <label className="block text-xs font-medium text-gray-500 mb-2">City</label>
-                <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10">
-                  <option>All Cities</option>
-                  {cities.map(c => <option key={c}>{c}</option>)}
-                </select>
+              <button
+                onClick={() => setShowFilters(!showFilters)}
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl border transition-all ${
+                  showFilters ? "bg-gray-900 text-white border-gray-900" : "bg-white text-gray-700 border-gray-200 hover:border-gray-300 hover:shadow-sm"
+                }`}
+              >
+                <SlidersHorizontal size={16} />
+                <span className="text-sm font-medium">Filters</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Expanded filters */}
+          {showFilters && (
+            <div className="mb-8 p-6 bg-gray-50 rounded-2xl border border-gray-200">
+              <div className="flex flex-wrap gap-4">
+                <div className="flex-1 min-w-[200px]">
+                  <label className="block text-xs font-medium text-gray-500 mb-2">Category</label>
+                  <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10">
+                    <option>All Categories</option>
+                    {categories.map(c => <option key={c.name}>{c.name}</option>)}
+                  </select>
+                </div>
+                <div className="flex-1 min-w-[200px]">
+                  <label className="block text-xs font-medium text-gray-500 mb-2">City</label>
+                  <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10">
+                    <option>All Cities</option>
+                    {cities.map(c => <option key={c}>{c}</option>)}
+                  </select>
+                </div>
+                <div className="flex-1 min-w-[200px]">
+                  <label className="block text-xs font-medium text-gray-500 mb-2">Price Range</label>
+                  <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10">
+                    <option>Any Price</option>
+                    <option>$ Budget</option>
+                    <option>$$ Mid</option>
+                    <option>$$$ Premium</option>
+                  </select>
+                </div>
+                <div className="flex items-end">
+                  <button className="px-6 py-2.5 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors">
+                    Apply Filters
+                  </button>
+                </div>
               </div>
-              <div className="flex-1 min-w-[200px]">
-                <label className="block text-xs font-medium text-gray-500 mb-2">Price Range</label>
-                <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10">
-                  <option>Any Price</option>
-                  <option>$ Budget</option>
-                  <option>$$ Mid</option>
-                  <option>$$$ Premium</option>
-                </select>
-              </div>
-              <div className="flex items-end">
-                <button className="px-6 py-2.5 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors">
-                  Apply Filters
+            </div>
+          )}
+
+          {/* Featured cities */}
+          <div className="mb-12">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Pick a city, we've done the research</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {featuredCities.map(city => (
+                <button
+                  key={city.name}
+                  onClick={() => setSelectedCity(city.name === selectedCity ? "All" : city.name)}
+                  className={`relative rounded-2xl overflow-hidden h-48 group transition-all duration-300 ${
+                    selectedCity === city.name ? "ring-2 ring-amber-500 ring-offset-2 scale-[1.02]" : ""
+                  }`}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
+                  <img src={city.image} alt={city.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="relative z-20 p-5 h-full flex flex-col justify-end text-left">
+                    <div className="flex items-center gap-2 mb-1">
+                      <MapPin size={14} className="text-amber-400" />
+                      <span className="text-xs font-medium text-white/80">{city.country}</span>
+                    </div>
+                    <h4 className="text-xl font-bold text-white">{city.name}</h4>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="text-xs text-white/70">{city.count} hand-picked destinations</span>
+                    </div>
+                    <span className="mt-2 inline-block text-[11px] font-medium text-amber-300 bg-black/30 px-2.5 py-1 rounded-full w-fit">
+                      {city.tag}
+                    </span>
+                  </div>
                 </button>
-              </div>
+              ))}
             </div>
           </div>
-        )}
 
-        {/* Business listings grid - 3 columns on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {filtered.map((business) => (
-            <BusinessListingCard key={business.id} business={business} />
-          ))}
-        </div>
-
-        {/* Empty state */}
-        {filtered.length === 0 && (
-          <div className="text-center py-16">
-            <Compass size={48} className="mx-auto text-gray-300 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">No destinations found</h3>
-            <p className="text-gray-500 mb-4">Try adjusting your filters or search query</p>
-            <button 
-              onClick={() => { setSearchQuery(""); setSelectedCity("All"); setSelectedCategory("All"); }}
-              className="px-6 py-2.5 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
-            >
-              Clear all filters
-            </button>
+          {/* Destination grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {filtered.map((business) => (
+              <BusinessListingCard key={business.id} business={business} />
+            ))}
           </div>
-        )}
-      </main>
 
-      {/* === STATS SECTION === */}
+          {/* Empty state */}
+          {filtered.length === 0 && (
+            <div className="text-center py-16">
+              <Compass size={48} className="mx-auto text-gray-300 mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No destinations found</h3>
+              <p className="text-gray-500 mb-4">Try adjusting your filters or search query</p>
+              <button
+                onClick={() => { setSearchQuery(""); setSelectedCity("All"); setSelectedCategory("All"); }}
+                className="px-6 py-2.5 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
+              >
+                Clear all filters
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* STATS */}
       <section className="bg-gray-50 border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -460,42 +545,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* === CTA SECTION === */}
+      {/* CTA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
         <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-8 md:p-12 overflow-hidden">
-          {/* Pattern */}
-          <div className="absolute inset-0 opacity-[0.03]" 
+          <div className="absolute inset-0 opacity-[0.03]"
             style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}>
           </div>
-          
           <div className="relative text-center max-w-2xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-sm text-white/80 mb-6">
               <Star size={14} className="text-amber-400" />
-              Join 10,000+ happy families
+              Join 10,000+ families who trust us
             </div>
-            
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Plan Your Family Adventure?
+              Ready to plan your next family adventure?
             </h2>
             <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-              Join thousands of families who trust our verified recommendations for safe, 
-              engaging, and memorable travel experiences.
+              Every destination here was tested by real parents.
+              We share the good, the bad, and the "bring extra snacks."
             </p>
-            
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button className="px-8 py-3.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-xl hover:from-amber-600 hover:to-orange-600 transition-all shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/30 active:scale-[0.98]">
                 Explore All Destinations
                 <ChevronRight size={18} className="inline-block ml-1" />
               </button>
               <button className="px-8 py-3.5 bg-white/10 backdrop-blur-sm text-white font-medium rounded-xl border border-white/20 hover:bg-white/20 transition-all">
-                See How It Works
+                Read Parent Stories
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* === FOOTER === */}
+      {/* FOOTER */}
       <footer className="border-t border-gray-100 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -509,7 +590,7 @@ export default function Home() {
               <a href="#" className="hover:text-gray-900 transition-colors">Terms</a>
               <a href="#" className="hover:text-gray-900 transition-colors">Contact</a>
             </div>
-            <p className="text-sm text-gray-400">© 2026 Family Travel Directory. All rights reserved.</p>
+            <p className="text-sm text-gray-400">(c) 2026 Family Travel Directory. Curated by parents, for parents.</p>
           </div>
         </div>
       </footer>
