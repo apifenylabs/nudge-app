@@ -45,6 +45,38 @@ validation_playbook:
   email_signups_target: 20
   interview_signals_required: 7
 
+deployment_pipeline:
+  mandatory: true
+  steps:
+    - step: "Product Owner"
+      deliverable: "BRD + PRD with acceptance criteria"
+      template: "templates/BRD_TEMPLATE.md, templates/PRD_TEMPLATE.md"
+    - step: "Coder"
+      deliverable: "Implementation"
+      requirements: "Follow PRD acceptance criteria"
+    - step: "UI Agent"
+      deliverable: "Design review"
+      checklist: "design-principles.md"
+    - step: "Tester"
+      deliverable: "Test execution report"
+      template: "templates/TEST_STRATEGY_TEMPLATE.md, templates/TEST_CASE_TEMPLATE.md"
+      requirement: "Test cases reviewed by Product Owner before execution"
+    - step: "SEO Agent"
+      deliverable: "SEO optimization"
+      checklist: "agents/SEO_AGENT.md"
+    - step: "Reviewer"
+      deliverable: "Code quality review"
+    - step: "Chief Editor + CTO"
+      deliverable: "Final sign-off"
+    - step: "Deploy"
+      deliverable: "Production release"
+  quality_gates:
+    - "All P0 acceptance criteria must pass testing"
+    - "Test coverage ≥95% of acceptance criteria"
+    - "No critical bugs blocking launch"
+    - "Design passes Apple-level standards"
+    - "SEO foundation complete"
+
 github_kanban:
   enabled: true
   repo: "your-username/your-repo"               # Change this later

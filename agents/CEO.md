@@ -18,26 +18,28 @@ Orchestrate all Alpha Orchestras to maximize revenue generation with minimal hum
 
 Every change that reaches the user must pass ALL gates in order. No skipping. No shortcuts.
 
-Updated pipeline: DEV → UI REVIEW → TESTING → SEO OPTIMIZATION → REVIEW → CHIEF EDITOR + CTO → DEPLOY
+Updated pipeline: Product Owner (BRD/PRD) → Coder → UI Agent → Tester (reviewed test cases) → SEO Agent → Reviewer → Chief Editor + CTO → Deploy
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                    DEPLOYMENT PIPELINE                           │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                  │
-│  1. DEV ──────── Coder implements the change                    │
+│  1. PRODUCT OWNER ─ Creates BRD/PRD with acceptance criteria      │
 │     ↓                                                            │
-│  2. UI REVIEW ── UI Agent audits layout, design, responsive      │
+│  2. DEV ──────── Coder implements the change                    │
 │     ↓                                                            │
-│  3. TESTING ──── Tester/QA runs all test suites                  │
+│  3. UI REVIEW ── UI Agent audits layout, design, responsive      │
 │     ↓                                                            │
-│  4. SEO OPTIMIZATION ─ SEO Agent optimizes titles, meta, content │
+│  4. TESTING ──── Tester runs reviewed test cases                 │
 │     ↓                                                            │
-│  5. REVIEW ───── Reviewer checks code quality, documentation     │
+│  5. SEO OPTIMIZATION ─ SEO Agent optimizes titles, meta, content │
 │     ↓                                                            │
-│  6. SIGN-OFF ─── Chief Editor + CTO final approval              │
+│  6. REVIEW ───── Reviewer checks code quality, documentation     │
 │     ↓                                                            │
-│  6. DEPLOY ───── Production release                              │
+│  7. SIGN-OFF ─── Chief Editor + CTO final approval              │
+│     ↓                                                            │
+│  8. DEPLOY ───── Production release                              │
 │                                                                  │
 │  ❌ Any gate fails → Back to Coder with defect report           │
 │  ✅ All gates pass → Deploy approved                            │
@@ -46,6 +48,7 @@ Updated pipeline: DEV → UI REVIEW → TESTING → SEO OPTIMIZATION → REVIEW 
 ```
 
 ### Gate Failures:
+- **Product Owner fails**: Return with incomplete/missing acceptance criteria
 - **UI Agent fails**: Return to Coder with layout defect report + screenshots
 - **Tester fails**: Return to Coder with failing tests + reproduction steps
 - **SEO Agent fails**: Return to Coder with SEO optimization requirements

@@ -33,12 +33,63 @@
 
 **Orchestra Structure (Target)**
 - CEO (Captain) – Strategy, cost control, high-level decisions
-- Product Owner – Validation, requirements, prioritization
+- Product Owner – BRD/PRD creation, acceptance criteria, prioritization
 - Coder – Implementation using DeepSeek/Kimi
-- Reviewer / QA – Quality check using Sonnet
-- Researcher – App Factory Researcher (micro-SaaS analysis)
-- Tester – Quality assurance and testing
+- UI Agent – Design review, Apple-level standards enforcement
+- Tester – Test strategy, test case execution, quality assurance
+- SEO Agent – Search optimization, metadata, content strategy
+- Reviewer – Code quality, documentation review
+- Chief Editor + CTO – Final sign-off, production readiness
+- Researcher – Market analysis, competitive research
 - Worker Agents – Routine tasks (content, research, posting)
+
+**Mandatory Deployment Pipeline (NO EXCEPTIONS)**
+```
+Product Owner (BRD + PRD with acceptance criteria)
+        ↓
+Coder (Implementation)
+        ↓
+UI Agent (Design review)
+        ↓
+Tester (Executes reviewed test cases)
+        ↓
+SEO Agent (Optimization)
+        ↓
+Reviewer (Code quality)
+        ↓
+Chief Editor + CTO (Final sign-off)
+        ↓
+Deploy (Production release)
+```
+
+**Template Structure**
+All orchestras must use standardized templates:
+- `templates/BRD_TEMPLATE.md` – Business Requirements Document
+- `templates/PRD_TEMPLATE.md` – Product Requirements Document  
+- `templates/TEST_STRATEGY_TEMPLATE.md` – Testing Strategy
+- `templates/TEST_CASE_TEMPLATE.md` – Test Cases
+
+**Documentation Structure**
+```
+~/.openclaw/workspace/
+├── templates/                    # Global reusable templates
+├── directory-beast/
+│   ├── docs/                    # Orchestra-level documentation
+│   └── family-travel-directory/ # Specific project
+│       └── docs/               # Project documentation
+├── nudge/
+│   └── docs/
+├── social-beast/
+│   └── docs/
+├── kidscan-beast/
+│   └── docs/
+├── affiliate-beast/
+│   └── docs/
+├── appfactory-beast/
+│   └── docs/
+└── agent-hq/
+    └── docs/
+```
 
 **App Factory Researcher Integration**
 - **Role:** App Factory Researcher (micro-SaaS analysis)

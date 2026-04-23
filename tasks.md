@@ -69,7 +69,7 @@ Only one agent per task.
 ## MANDATORY DEPLOYMENT PIPELINE (NO EXCEPTIONS)
 
 ```
-DEV (Coder) → UI REVIEW (UI Agent) → TESTING (Tester) → SEO OPTIMIZATION (SEO Agent) → REVIEW (Reviewer) → CHIEF EDITOR + CTO → DEPLOY
+Product Owner (BRD/PRD) → Coder → UI Agent → Tester (reviewed test cases) → SEO Agent → Reviewer → Chief Editor + CTO → Deploy
 ```
 
 ### Gate Enforcement:
@@ -80,7 +80,7 @@ DEV (Coder) → UI REVIEW (UI Agent) → TESTING (Tester) → SEO OPTIMIZATION (
 ## Task Coordination Rules
 
 ### Governance Rules (NON-NEGOTIABLE)
-1. **Pipeline Compliance**: Every change follows DEV → UI → TEST → SEO → REVIEW → CHIEF EDITOR + CTO → DEPLOY
+1. **Pipeline Compliance**: Every change follows Product Owner → Coder → UI → Tester → SEO → Reviewer → Chief Editor + CTO → Deploy
 2. **No Skip**: Emergency fast-track only for security/production outages
 3. **Paperclip Scan**: Always check Paperclip for existing solutions before building
 4. **Component Reuse**: Use shared components from Social Beast (Paperclip enforces)
