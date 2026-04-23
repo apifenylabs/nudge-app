@@ -51,7 +51,7 @@ const categories = [
   { name: "Hotels", icon: Star, desc: "Stay where families love" },
 ];
 
-const cities = ["Tokyo", "Hong Kong", "Bangkok", "Phuket", "Singapore", "Bali", "Hanoi", "Seoul"];
+const cities = ["Tokyo", "Hong Kong", "Bangkok", "Phuket", "Singapore", "Bali", "Hanoi", "Seoul", "Osaka", "Kuala Lumpur", "Chiang Mai"];
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -90,14 +90,21 @@ export default function Home() {
       d.tipsAndTricks.some(t => t.toLowerCase().includes(q))
     );
   }
-  if (selectedCity !== "All") filtered = filtered.filter(d => d.city === selectedCity);
+  if (selectedCity !== "All") filtered = filtered.filter(d => d.city.toLowerCase() === selectedCity.toLowerCase());
   if (selectedCategory !== "All") filtered = filtered.filter(d => d.category === selectedCategory);
   if (selectedAge !== "All") {
     filtered = filtered.filter(d => {
-      if (selectedAge === "0-3") return parseInt(d.ageRange) <= 3;
-      if (selectedAge === "4-6") return parseInt(d.ageRange) <= 6;
-      if (selectedAge === "7-12") return parseInt(d.ageRange) <= 12;
-      if (selectedAge === "13+") return parseInt(d.ageRange) >= 13 || d.ageRange.includes('17') || d.ageRange.includes('99');
+      // Parse the destination's age range (e.g. "3-12" → min=3, max=12; "0-99" → min=0, max=99)
+      const range = d.ageRange;
+      const rangeParts = range.split('-');
+      const destMin = parseInt(rangeParts[0]);
+      const destMax = rangeParts.length > 1 ? parseInt(rangeParts[1]) : destMin;
+
+      // Parse the selected filter range
+      if (selectedAge === "0-3") return destMin <= 3;
+      if (selectedAge === "4-6") return destMin <= 6;
+      if (selectedAge === "7-12") return destMin <= 12;
+      if (selectedAge === "13+") return destMax >= 13 && destMax <= 99;
       return true;
     });
   }
@@ -447,7 +454,7 @@ export default function Home() {
               <div className="mt-2 h-1 w-12 mx-auto bg-gradient-to-r from-amber-400 to-orange-500 rounded-full" />
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 mb-1">120+</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">{destinations.reduce((sum, d) => sum + d.tipsAndTricks.length, 0)}+</div>
               <div className="text-sm text-gray-500">Parent Tips</div>
               <div className="mt-2 h-1 w-12 mx-auto bg-gradient-to-r from-amber-400 to-orange-500 rounded-full" />
             </div>
