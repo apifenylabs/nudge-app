@@ -12,19 +12,30 @@
     "description": "The ultimate family destination with classic Disney magic. Two incredible parks with exceptional safety standards, stroller rentals, baby care centers, and numerous family-friendly restaurants.",
     "location": "1-1 Maihama, Urayasu, Chiba",
     "bestTime": "Weekdays, September-November",
-    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80",
-    "amenities": ["Stroller Rental", "Baby Care Centers", "Family Restrooms", "Height Restrictions", "First Aid"],
-    "safetyFeatures": ["Trained Staff", "Emergency Protocols", "Lost Child Centers", "Allergy-Friendly Options"],
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Baby Care Centers",
+      "Family Restrooms",
+      "Height Restrictions",
+      "First Aid"
+    ],
+    "safetyFeatures": [
+      "Trained Staff",
+      "Emergency Protocols",
+      "Lost Child Centers",
+      "Allergy-Friendly Options"
+    ],
     "tipsAndTricks": [
-      "Go on a Tuesday or Wednesday — weekend crowds are 3x worse and you'll spend half your day in line.",
+      "Go on a Tuesday or Wednesday \u2014 weekend crowds are 3x worse and you'll spend half your day in line.",
       "Bring your own snacks. The park allows outside food and a packed lunch saves $40+ per person.",
-      "Use the Disney Resort app to book 'Priority Pass' slots — they're free and save 60-90 minutes of waiting per ride.",
+      "Use the Disney Resort app to book 'Priority Pass' slots \u2014 they're free and save 60-90 minutes of waiting per ride.",
       "The Baby Care Centers have private nursing rooms, microwaves for bottles, and vending machines with formula.",
-      "If your kid gets overwhelmed, head to the 'Quiet Areas' near It's a Small World — soundproofed and rarely crowded."
+      "If your kid gets overwhelmed, head to the 'Quiet Areas' near It's a Small World \u2014 soundproofed and rarely crowded."
     ],
     "parentStory": {
       "title": "The meltdown that turned into our best memory",
-      "excerpt": "Our 4-year-old screamed for 20 minutes outside Space Mountain. Too short. Too scary. We almost left. Then a cast member took us to the backlot to watch the parade setup. She spent an hour waving at characters. That moment — a stranger's kindness — saved our day.",
+      "excerpt": "Our 4-year-old screamed for 20 minutes outside Space Mountain. Too short. Too scary. We almost left. Then a cast member took us to the backlot to watch the parade setup. She spent an hour waving at characters. That moment \u2014 a stranger's kindness \u2014 saved our day.",
       "author": "Sarah, mom of 2 from Melbourne",
       "fullStory": "We'd planned this trip for 6 months. The moment we got to Space Mountain, our youngest had a full meltdown. Too tall? No. Too scary? Also no. She was mad she COULDN'T ride. A cast member noticed, knelt down, and whispered something to her. Next thing we knew, she was helping set up the parade floats backstage. She still talks about it 2 years later."
     },
@@ -34,7 +45,16 @@
       "bestFor": "Ages 3-12, especially Disney fans"
     },
     "commissionRate": "8%",
-    "seoKeywords": ["Tokyo Disneyland", "family theme park Japan", "kid-friendly Tokyo"]
+    "seoKeywords": [
+      "Tokyo Disneyland",
+      "family theme park Japan",
+      "kid-friendly Tokyo"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1573883431202-1b0d50f3c0c1?w=800&q=80"
+    ]
   },
   {
     "id": "tokyo-002",
@@ -50,20 +70,30 @@
     "location": "9-83 Uenokoen, Taito City, Tokyo",
     "bestTime": "Morning, Spring/Fall",
     "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
-    "amenities": ["Stroller Access", "Nursing Rooms", "Play Areas", "Picnic Areas"],
-    "safetyFeatures": ["Animal Safety Barriers", "First Aid Stations", "Clear Signage", "Security Patrols"],
+    "amenities": [
+      "Stroller Access",
+      "Nursing Rooms",
+      "Play Areas",
+      "Picnic Areas"
+    ],
+    "safetyFeatures": [
+      "Animal Safety Barriers",
+      "First Aid Stations",
+      "Clear Signage",
+      "Security Patrols"
+    ],
     "tipsAndTricks": [
       "Arrive at 9:30 AM when the gates open. The pandas are most active in the first hour before it gets hot.",
-      "The zoo is huge. Skip the reptile house if your kids are under 6 — it's dark and the snakes spook most toddlers.",
+      "The zoo is huge. Skip the reptile house if your kids are under 6 \u2014 it's dark and the snakes spook most toddlers.",
       "Bring a picnic. There are shaded benches everywhere and the zoo food is overpriced.",
-      "Combine with the National Museum next door — it's free for kids under 18 and has interactive exhibits.",
+      "Combine with the National Museum next door \u2014 it's free for kids under 18 and has interactive exhibits.",
       "The monorail from Ueno Station has elevator access at every exit. No stairs needed with a stroller."
     ],
     "parentStory": {
       "title": "She pressed her face against the glass for 15 minutes",
       "excerpt": "Our daughter didn't blink for 15 minutes watching the giant panda eat bamboo. I've never seen her that still. Ueno Zoo isn't fancy, but it's the most honest, wonderful zoo we've ever been to.",
       "author": "James, dad of 1 from London",
-      "fullStory": "We almost skipped Ueno Zoo for the more famous Asahiyama. So glad we didn't. The panda exhibit is up close — like, 2 feet away through glass. Our 5-year-old pressed her face against it and watched for 15 minutes without moving. The zoo is old-school (no flashy signs or VR), but the animals look happy and well-cared for. That matters more than any gimmick."
+      "fullStory": "We almost skipped Ueno Zoo for the more famous Asahiyama. So glad we didn't. The panda exhibit is up close \u2014 like, 2 feet away through glass. Our 5-year-old pressed her face against it and watched for 15 minutes without moving. The zoo is old-school (no flashy signs or VR), but the animals look happy and well-cared for. That matters more than any gimmick."
     },
     "itineraryComparison": {
       "halfDay": "Zoo only, 2-3 hours, skip museums",
@@ -71,7 +101,16 @@
       "bestFor": "Ages 0-8, animal lovers, budget travelers"
     },
     "commissionRate": "6%",
-    "seoKeywords": ["Ueno Zoo Tokyo", "family zoo Japan", "Tokyo with kids"]
+    "seoKeywords": [
+      "Ueno Zoo Tokyo",
+      "family zoo Japan",
+      "Tokyo with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1549366021-9f761d450616?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ]
   },
   {
     "id": "tokyo-003",
@@ -86,13 +125,23 @@
     "description": "A kid-sized city where children can try 100+ real professions. From pilot to firefighter to surgeon, each activity teaches real skills through immersive role-play.",
     "location": "Lalaport Toyosu, Tokyo",
     "bestTime": "Weekdays (weekends are packed)",
-    "imageUrl": "https://images.unsplash.com/photo-1533237264987-ae43347ae3c9?w=800&q=80",
-    "amenities": ["Educational Programs", "Role-playing Activities", "Language Support", "Indoor Facility"],
-    "safetyFeatures": ["Supervised Activities", "Child Tracking System", "Emergency Protocols", "Staff in Every Zone"],
+    "imageUrl": "https://images.unsplash.com/photo-1594709093126-04fc4fde31ba?w=800&q=80",
+    "amenities": [
+      "Educational Programs",
+      "Role-playing Activities",
+      "Language Support",
+      "Indoor Facility"
+    ],
+    "safetyFeatures": [
+      "Supervised Activities",
+      "Child Tracking System",
+      "Emergency Protocols",
+      "Staff in Every Zone"
+    ],
     "tipsAndTricks": [
       "Book the first session (9 AM-3 PM). The afternoon session is more crowded and activities run out.",
       "Let your kid choose their own path. We tried to 'optimize' our son's schedule and he rebelled. Letting him pick doubled his engagement.",
-      "The firefighting activity is the most popular — line up 15 minutes before it starts or you'll wait 45+ minutes.",
+      "The firefighting activity is the most popular \u2014 line up 15 minutes before it starts or you'll wait 45+ minutes.",
       "They speak English at most activities. Don't worry about the Japanese language barrier.",
       "Bring a small backpack for all the 'paychecks' and souvenirs they'll collect. You'll thank me later."
     ],
@@ -100,7 +149,7 @@
       "title": "He came home and asked if he could be ALL of them",
       "excerpt": "He was a firefighter for 45 minutes. Then a pilot. Then a surgeon. He came home and asked if he could do ALL of them when he grows up. We said yes, buddy. You can do anything.",
       "author": "Lisa, mom of 1 from Singapore",
-      "fullStory": "KidZania was the highlight of our Tokyo trip — and we did Disneyland. My 7-year-old son tried 8 professions in one day. The best part? Each activity is 20-30 minutes, so they actually complete something. He learned more about career possibilities in one day than in a year of school."
+      "fullStory": "KidZania was the highlight of our Tokyo trip \u2014 and we did Disneyland. My 7-year-old son tried 8 professions in one day. The best part? Each activity is 20-30 minutes, so they actually complete something. He learned more about career possibilities in one day than in a year of school."
     },
     "itineraryComparison": {
       "halfDay": "4-5 activities, best for ages 4-8",
@@ -108,7 +157,16 @@
       "bestFor": "Curious kids who love role-play"
     },
     "commissionRate": "7%",
-    "seoKeywords": ["KidZania Tokyo", "kids role play Tokyo", "educational activities Japan"]
+    "seoKeywords": [
+      "KidZania Tokyo",
+      "kids role play Tokyo",
+      "educational activities Japan"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1594709093126-04fc4fde31ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1533237264987-ae43347ae3c9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ]
   },
   {
     "id": "tokyo-004",
@@ -124,14 +182,24 @@
     "location": "Azabudai Hills, Tokyo",
     "bestTime": "Weekdays, right at opening",
     "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
-    "amenities": ["Wheelchair Accessible", "Locker Storage", "Cafe", "Gift Shop"],
-    "safetyFeatures": ["Soft Flooring", "Staff Everywhere", "Emergency Exits Marked", "No Sharp Edges"],
+    "amenities": [
+      "Wheelchair Accessible",
+      "Locker Storage",
+      "Cafe",
+      "Gift Shop"
+    ],
+    "safetyFeatures": [
+      "Soft Flooring",
+      "Staff Everywhere",
+      "Emergency Exits Marked",
+      "No Sharp Edges"
+    ],
     "tipsAndTricks": [
       "Wear white or light-colored clothes. The digital projections reflect off white fabric and make amazing photos.",
       "The 'Crystal Universe' room is the most Instagrammable, but kids love the 'Sketch Ocean' where their drawings come to life.",
       "Go early (10 AM opening). By noon it's packed and the magic dims with crowds.",
       "Babies in carriers are fine but toddlers might get overwhelmed by the dark rooms. Bring a comfort item.",
-      "Don't rush. There are no wrong paths — let your kids lead and you'll discover hidden rooms."
+      "Don't rush. There are no wrong paths \u2014 let your kids lead and you'll discover hidden rooms."
     ],
     "parentStory": {
       "title": "My daughter drew a fish and it swam away from her",
@@ -145,7 +213,16 @@
       "bestFor": "Creative kids, teens, parents who love photography"
     },
     "commissionRate": "5%",
-    "seoKeywords": ["teamLab Tokyo", "digital art museum kids", "interactive museum Japan"]
+    "seoKeywords": [
+      "teamLab Tokyo",
+      "digital art museum kids",
+      "interactive museum Japan"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80"
+    ]
   },
   {
     "id": "bangkok-001",
@@ -160,13 +237,23 @@
     "description": "Thailand's largest drive-through safari with over 8,000 animals. Feed giraffes from your car window, watch dolphin shows, and explore the marine park.",
     "location": "99 Panya Indra Rd, Bangkok",
     "bestTime": "Morning (animals most active)",
-    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
-    "amenities": ["Drive-through Safari", "Animal Shows", "Restaurants", "Gift Shops"],
-    "safetyFeatures": ["Animal Barriers", "Trained Guides", "First Aid", "Emergency Procedures"],
+    "imageUrl": "https://images.unsplash.com/photo-1549366021-9f761d450616?w=800&q=80",
+    "amenities": [
+      "Drive-through Safari",
+      "Animal Shows",
+      "Restaurants",
+      "Gift Shops"
+    ],
+    "safetyFeatures": [
+      "Animal Barriers",
+      "Trained Guides",
+      "First Aid",
+      "Emergency Procedures"
+    ],
     "tipsAndTricks": [
       "Bring bananas and carrots in your car. Yes, you can feed the animals from your window and it's the best part.",
       "The marine park shows have limited seating. Arrive 20 minutes early for dolphin show.",
-      "Skip the restaurant inside — the food is overpriced and mediocre. Pack lunch or eat after.",
+      "Skip the restaurant inside \u2014 the food is overpriced and mediocre. Pack lunch or eat after.",
       "Rent a car or hire a driver. Taxis are hard to find on the way back.",
       "The jungle walk section is hot and humid. Bring water and a handheld fan."
     ],
@@ -174,7 +261,7 @@
       "title": "A giraffe ate our map through the car window",
       "excerpt": "My son left the window half-open and a giraffe grabbed our map. He laughed so hard he cried. Worth every baht just for that memory.",
       "author": "Emma, mom of 2 from London",
-      "fullStory": "Safari World is chaotic, a bit run-down, and absolutely wonderful. The drive-through section is the highlight — animals come right up to your car. Our 5-year-old fed a zebra from his hand. The giraffe feeding platform lets you get face-to-face. It's not a 'nice' zoo, but it's an unforgettable experience for kids."
+      "fullStory": "Safari World is chaotic, a bit run-down, and absolutely wonderful. The drive-through section is the highlight \u2014 animals come right up to your car. Our 5-year-old fed a zebra from his hand. The giraffe feeding platform lets you get face-to-face. It's not a 'nice' zoo, but it's an unforgettable experience for kids."
     },
     "itineraryComparison": {
       "halfDay": "Drive-through safari + dolphin show",
@@ -182,7 +269,16 @@
       "bestFor": "Ages 2-10, animal lovers"
     },
     "commissionRate": "6%",
-    "seoKeywords": ["Safari World Bangkok", "family Bangkok", "kids Bangkok zoo"]
+    "seoKeywords": [
+      "Safari World Bangkok",
+      "family Bangkok",
+      "kids Bangkok zoo"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1549366021-9f761d450616?w=800&q=80",
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ]
   },
   {
     "id": "bangkok-002",
@@ -194,15 +290,24 @@
     "safetyRating": 4.6,
     "priceRange": "$$",
     "popularity": 80,
-    "description": "Same world-class concept as Tokyo's KidZania — a kid-sized city with 80+ professions. English-friendly with many international brands participating.",
+    "description": "Same world-class concept as Tokyo's KidZania \u2014 a kid-sized city with 80+ professions. English-friendly with many international brands participating.",
     "location": "Siam Paragon, Bangkok",
     "bestTime": "Weekdays, opening time",
-    "imageUrl": "https://images.unsplash.com/photo-1533237264987-ae43347ae3c9?w=800&q=80",
-    "amenities": ["Indoor", "Educational", "Cafe", "Parent Lounge"],
-    "safetyFeatures": ["Supervised", "Child Tracking", "English Speaking Staff"],
+    "imageUrl": "https://images.unsplash.com/photo-1594709093126-04fc4fde31ba?w=800&q=80",
+    "amenities": [
+      "Indoor",
+      "Educational",
+      "Cafe",
+      "Parent Lounge"
+    ],
+    "safetyFeatures": [
+      "Supervised",
+      "Child Tracking",
+      "English Speaking Staff"
+    ],
     "tipsAndTricks": [
       "Buy tickets online in advance. Walk-in prices are 30% higher and sessions sell out.",
-      "The Siam Paragon location is perfect — you can drop kids and shop for 2 hours in the mall.",
+      "The Siam Paragon location is perfect \u2014 you can drop kids and shop for 2 hours in the mall.",
       "English is widely spoken. Don't worry if your kids don't speak Thai.",
       "The pilot and journalist activities are the most popular. Go there first.",
       "Air conditioning is excellent. Bring a light jacket for kids."
@@ -211,7 +316,7 @@
       "title": "We dropped her off and she didn't look back",
       "excerpt": "Our shy 6-year-old walked into KidZania and transformed into a confident little professional. She ran the news desk, flew a plane, and put out a fire. We barely saw her for 4 hours.",
       "author": "Mike, dad of 1 from New York",
-      "fullStory": "KidZania Bangkok at Siam Paragon is a lifesaver for parents who need a break. The kids are so engaged they don't notice you're gone. The staff are excellent with English-speaking children. Our daughter made friends with a local Thai girl through the shared activities — language barrier didn't matter."
+      "fullStory": "KidZania Bangkok at Siam Paragon is a lifesaver for parents who need a break. The kids are so engaged they don't notice you're gone. The staff are excellent with English-speaking children. Our daughter made friends with a local Thai girl through the shared activities \u2014 language barrier didn't matter."
     },
     "itineraryComparison": {
       "halfDay": "4-5 activities, 3 hours",
@@ -219,7 +324,16 @@
       "bestFor": "Ages 4-10, families who want a break in AC"
     },
     "commissionRate": "7%",
-    "seoKeywords": ["KidZania Bangkok", "Siam Paragon kids", "Bangkok indoor activities"]
+    "seoKeywords": [
+      "KidZania Bangkok",
+      "Siam Paragon kids",
+      "Bangkok indoor activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1594709093126-04fc4fde31ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1533237264987-ae43347ae3c9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ]
   },
   {
     "id": "bangkok-003",
@@ -234,9 +348,19 @@
     "description": "One of Southeast Asia's largest aquariums, located in the basement of Siam Paragon. Walk through an underwater tunnel surrounded by sharks, rays, and thousands of tropical fish.",
     "location": "Siam Paragon, Bangkok",
     "bestTime": "Weekday mornings",
-    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
-    "amenities": ["Underwater Tunnel", "Touch Pool", "Glass-bottom Boat", "Cafe"],
-    "safetyFeatures": ["Glass Barriers", "Lifeguards", "Emergency Exits", "First Aid"],
+    "imageUrl": "https://images.unsplash.com/photo-1510312305653-8ed4962aead5?w=800&q=80",
+    "amenities": [
+      "Underwater Tunnel",
+      "Touch Pool",
+      "Glass-bottom Boat",
+      "Cafe"
+    ],
+    "safetyFeatures": [
+      "Glass Barriers",
+      "Lifeguards",
+      "Emergency Exits",
+      "First Aid"
+    ],
     "tipsAndTricks": [
       "The glass-bottom boat ride is worth the extra 200 baht. Kids love seeing sharks swim beneath their feet.",
       "Go at opening time (10 AM). By 11 AM the school groups arrive and it gets loud.",
@@ -248,7 +372,7 @@
       "title": "The shark swam right over his head",
       "excerpt": "Walking through the underwater tunnel, a 3-meter shark passed directly over our 4-year-old's head. His eyes went wide. He whispered 'Mama, did you see that?' Six times. We stood there for 20 minutes.",
       "author": "Anna, mom of 1 from Hong Kong",
-      "fullStory": "Siam Ocean World is surprisingly impressive for a mall basement aquarium. The underwater tunnel is the highlight — it's long enough that you don't feel rushed. The shark diversity is excellent. Our son still talks about the 'big fish that flew over us.'"
+      "fullStory": "Siam Ocean World is surprisingly impressive for a mall basement aquarium. The underwater tunnel is the highlight \u2014 it's long enough that you don't feel rushed. The shark diversity is excellent. Our son still talks about the 'big fish that flew over us.'"
     },
     "itineraryComparison": {
       "halfDay": "2-3 hours, see all exhibits",
@@ -256,7 +380,16 @@
       "bestFor": "Ages 2-10, rainy days, AC relief"
     },
     "commissionRate": "5%",
-    "seoKeywords": ["Siam Ocean World", "Bangkok aquarium", "indoor kids Bangkok"]
+    "seoKeywords": [
+      "Siam Ocean World",
+      "Bangkok aquarium",
+      "indoor kids Bangkok"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1510312305653-8ed4962aead5?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80"
+    ]
   },
   {
     "id": "singapore-001",
@@ -272,18 +405,28 @@
     "location": "18 Marina Gardens Dr, Singapore",
     "bestTime": "Evening (light show at 7:45 PM)",
     "imageUrl": "https://images.unsplash.com/photo-1525629547080-c70cc56f1b7a?w=800&q=80",
-    "amenities": ["Wheelchair Accessible", "Stroller Rental", "Nursing Rooms", "Restaurants"],
-    "safetyFeatures": ["Well-lit Paths", "Security Guards", "First Aid Stations", "Emergency Phones"],
+    "amenities": [
+      "Wheelchair Accessible",
+      "Stroller Rental",
+      "Nursing Rooms",
+      "Restaurants"
+    ],
+    "safetyFeatures": [
+      "Well-lit Paths",
+      "Security Guards",
+      "First Aid Stations",
+      "Emergency Phones"
+    ],
     "tipsAndTricks": [
       "The OCBC Skyway (walkway between Supertrees) closes at 8 PM. Do it BEFORE the light show, not after.",
       "Bring a picnic blanket. The best spot for the light show is on the grass directly under the tallest Supertrees.",
-      "The Cloud Forest dome is freezing (18°C). Bring a jacket for kids — yes, in Singapore.",
+      "The Cloud Forest dome is freezing (18\u00b0C). Bring a jacket for kids \u2014 yes, in Singapore.",
       "Avoid Saturday nights. The crowds are 3x larger and the magic diminishes.",
       "The children's garden has a splash pad. Bring swimsuits and towels."
     ],
     "parentStory": {
       "title": "We almost missed the light show because of the splash pad",
-      "excerpt": "The children's garden splash pad is so good our kids refused to leave. We bribed them with ice cream to get to the Supertree show. Worth it — but plan an extra 30 minutes for the water play.",
+      "excerpt": "The children's garden splash pad is so good our kids refused to leave. We bribed them with ice cream to get to the Supertree show. Worth it \u2014 but plan an extra 30 minutes for the water play.",
       "author": "Chris, dad of 2 from Sydney",
       "fullStory": "Gardens by the Bay is incredible but the Far East Organization Children's Garden is the secret weapon. A massive water play area with spraying arches, buckets that dump water, and a treehouse. It's free. Our kids spent 2 hours there. We had to drag them away for the light show."
     },
@@ -293,7 +436,16 @@
       "bestFor": "All ages, especially 0-10 for splash pad"
     },
     "commissionRate": "4%",
-    "seoKeywords": ["Gardens by the Bay", "Singapore family", "kids Singapore"]
+    "seoKeywords": [
+      "Gardens by the Bay",
+      "Singapore family",
+      "kids Singapore"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1525629547080-c70cc56f1b7a?w=800&q=80",
+      "https://images.unsplash.com/photo-1490750967868-88aa4f44fc0b?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ]
   },
   {
     "id": "singapore-002",
@@ -308,21 +460,31 @@
     "description": "World-famous open-concept zoo where animals roam in naturalistic habitats without visible barriers. Combine with the Night Safari for a full-day animal adventure.",
     "location": "80 Mandai Lake Rd, Singapore",
     "bestTime": "Morning (zoo), Evening (Night Safari)",
-    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
-    "amenities": ["Breakfast with Orangutans", "Tram Ride", "Splash Zone", "Restaurants"],
-    "safetyFeatures": ["Natural Barriers", "Trained Staff", "First Aid", "Security"],
+    "imageUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+    "amenities": [
+      "Breakfast with Orangutans",
+      "Tram Ride",
+      "Splash Zone",
+      "Restaurants"
+    ],
+    "safetyFeatures": [
+      "Natural Barriers",
+      "Trained Staff",
+      "First Aid",
+      "Security"
+    ],
     "tipsAndTricks": [
       "Book 'Breakfast with Orangutans' in advance. It sells out weeks ahead and is worth every cent.",
-      "The zoo opens at 8:30 AM. Arrive then — by 10 AM the animals are sleepy and the crowds arrive.",
+      "The zoo opens at 8:30 AM. Arrive then \u2014 by 10 AM the animals are sleepy and the crowds arrive.",
       "The tram is great for tired legs. Hop on and off throughout the day.",
       "The Night Safari is separate (different park, different ticket). It starts at 7:15 PM.",
       "The splash zone near the elephant exhibit is perfect for hot days. Bring a change of clothes."
     ],
     "parentStory": {
       "title": "An orangutan stole my croissant",
-      "excerpt": "I was holding a croissant near the Breakfast with Orangutans area. One reached out, gently took it from my hand, and ate it in two bites. The keeper laughed and said 'That's Ah Meng — she does this.' Best photo of the trip.",
+      "excerpt": "I was holding a croissant near the Breakfast with Orangutans area. One reached out, gently took it from my hand, and ate it in two bites. The keeper laughed and said 'That's Ah Meng \u2014 she does this.' Best photo of the trip.",
       "author": "Priya, mom of 2 from Mumbai",
-      "fullStory": "Breakfast with Orangutans is not a gimmick — it's genuinely magical. You sit at tables near the orangutan platform, and they come down to interact. They're gentle, curious, and incredibly expressive. My 8-year-old fed one a banana and cried happy tears."
+      "fullStory": "Breakfast with Orangutans is not a gimmick \u2014 it's genuinely magical. You sit at tables near the orangutan platform, and they come down to interact. They're gentle, curious, and incredibly expressive. My 8-year-old fed one a banana and cried happy tears."
     },
     "itineraryComparison": {
       "halfDay": "Zoo only, 3-4 hours",
@@ -330,7 +492,16 @@
       "bestFor": "Ages 2-12, animal enthusiasts"
     },
     "commissionRate": "5%",
-    "seoKeywords": ["Singapore Zoo", "Night Safari", "family Singapore"]
+    "seoKeywords": [
+      "Singapore Zoo",
+      "Night Safari",
+      "family Singapore"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1549366021-9f761d450616?w=800&q=80",
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80"
+    ]
   },
   {
     "id": "singapore-003",
@@ -345,21 +516,32 @@
     "description": "Singapore's island resort with Universal Studios, SEA Aquarium, Adventure Cove Waterpark, beaches, and more. A full-day (or multi-day) family destination.",
     "location": "Sentosa Island, Singapore",
     "bestTime": "Weekdays (weekends very crowded)",
-    "imageUrl": "https://images.unsplash.com/photo-1533237264987-ae43347ae3c9?w=800&q=80",
-    "amenities": ["Beaches", "Theme Parks", "Restaurants", "Hotels", "Monorail"],
-    "safetyFeatures": ["Lifeguards", "Security", "First Aid", "Lost Child Centers"],
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Beaches",
+      "Theme Parks",
+      "Restaurants",
+      "Hotels",
+      "Monorail"
+    ],
+    "safetyFeatures": [
+      "Lifeguards",
+      "Security",
+      "First Aid",
+      "Lost Child Centers"
+    ],
     "tipsAndTricks": [
-      "Buy the Sentosa Fun Pass online — it bundles attractions and saves 20-30%.",
+      "Buy the Sentosa Fun Pass online \u2014 it bundles attractions and saves 20-30%.",
       "Universal Studios is best for ages 7+. For younger kids, skip it and go to SEA Aquarium + waterpark.",
-      "The beach at Palawan is the most kid-friendly — calm water, soft sand, and a pirate ship playground.",
-      "Eat at the Sentosa Food Village (Hawker Chan) — Michelin-starred chicken rice for $5, not $50.",
+      "The beach at Palawan is the most kid-friendly \u2014 calm water, soft sand, and a pirate ship playground.",
+      "Eat at the Sentosa Food Village (Hawker Chan) \u2014 Michelin-starred chicken rice for $5, not $50.",
       "The monorail is free for Sentosa hotel guests and kids under 3."
     ],
     "parentStory": {
       "title": "Universal Studios with a 5-year-old: a survival guide",
-      "excerpt": "We bought the Express Pass and it saved our trip. She rode the flying dinosaur 4 times. She's 5. I don't know where she gets the energy, but I know where she gets the courage — Super Nintendo World.",
+      "excerpt": "We bought the Express Pass and it saved our trip. She rode the flying dinosaur 4 times. She's 5. I don't know where she gets the energy, but I know where she gets the courage \u2014 Super Nintendo World.",
       "author": "Lisa, mom of 1 from Manila",
-      "fullStory": "Sentosa is overwhelming in the best way. Universal Studios was our focus — the Express Pass is expensive but essential. Our daughter, who's scared of everything, loved Battlestar Galactica. The waterpark was the perfect afternoon cool-down after the morning theme park intensity."
+      "fullStory": "Sentosa is overwhelming in the best way. Universal Studios was our focus \u2014 the Express Pass is expensive but essential. Our daughter, who's scared of everything, loved Battlestar Galactica. The waterpark was the perfect afternoon cool-down after the morning theme park intensity."
     },
     "itineraryComparison": {
       "halfDay": "One attraction (Universal or SEA Aquarium)",
@@ -367,6 +549,15 @@
       "bestFor": "Families wanting variety, ages 5+"
     },
     "commissionRate": "6%",
-    "seoKeywords": ["Sentosa Island", "Universal Studios Singapore", "family Singapore"]
+    "seoKeywords": [
+      "Sentosa Island",
+      "Universal Studios Singapore",
+      "family Singapore"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1533237264987-ae43347ae3c9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ]
   }
 ]

@@ -26,6 +26,7 @@ interface Destination {
   amenities: string[];
   safetyFeatures: string[];
   tipsAndTricks: string[];
+  gallery?: string[];
   parentStory: {
     title: string;
     excerpt: string;
@@ -338,6 +339,21 @@ export default function Home() {
                   {/* Expanded Details */}
                   {selectedDest === dest.id && (
                     <div className="mt-5 pt-5 border-t border-stone-100 space-y-5 animate-fadeIn">
+                      {/* Gallery */}
+                      {'gallery' in dest && dest.gallery && dest.gallery.length > 0 && (
+                        <div className="grid grid-cols-3 gap-2">
+                          {dest.gallery.slice(0, 3).map((img: string, i: number) => (
+                            <img
+                              key={i}
+                              src={img}
+                              alt={`${dest.name} photo ${i + 1}`}
+                              className="w-full h-24 object-cover rounded-lg"
+                              loading="lazy"
+                            />
+                          ))}
+                        </div>
+                      )}
+
                       {/* Tips & Tricks */}
                       <div>
                         <div className="flex items-center gap-1.5 text-sm font-semibold text-sage-700 mb-2">
