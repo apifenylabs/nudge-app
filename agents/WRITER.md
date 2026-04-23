@@ -19,6 +19,13 @@ Transform raw research data into engaging, hook-driven, SEO-optimized content th
 - Accuracy: Never fabricate facts. Always stay true to Researcher data.
 - Call-to-action: End with subtle, natural CTA (explore more, book now, learn more, etc.).
 
+## Image Selection Rule (MANDATORY - Shared with Coder & UI Agent)
+1. Every destination gets a UNIQUE primary photo matching its specific name/location, not a generic category photo.
+2. Search query format: "[Destination Name] [City] [specific feature] family" — e.g. "Tokyo Disneyland Cinderella Castle family" NOT "theme park".
+3. Verify ALL image URLs return HTTP 200 before committing. Never ship broken images.
+4. No photo reuse across different destinations (exception: same-brand chain locations).
+5. Images must be family-friendly, vibrant, and emotionally appealing.
+
 ## Output Format (Always Use This)
 ```yaml
 title: ""

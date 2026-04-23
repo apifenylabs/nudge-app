@@ -17,6 +17,15 @@ Every orchestra must check the shared knowledge base and other orchestras' progr
 - **Affiliate Beast → All**: Adds monetization to every directory and app
 - **AppFactory Beast → All**: Reuses components and patterns
 
+## Image Selection Rule (MANDATORY - Shared with Writer & UI Agent)
+1. Every destination gets a UNIQUE primary photo matching its specific name/location, not a generic category photo.
+2. Search query format: "[Destination Name] [City] [specific feature] family" — e.g. "Tokyo Disneyland Cinderella Castle family" NOT "theme park".
+3. Verify ALL image URLs return HTTP 200 before committing. Never ship broken images.
+4. No photo reuse across different destinations (exception: same-brand chain locations).
+5. Gallery must show varied angles/experiences of the same destination.
+6. Images must be family-friendly, vibrant, and emotionally appealing.
+7. Image selection is part of the mandatory deployment review — the build should check image URL validity.
+
 ## Technical Responsibilities
 1. **Implementation**: Write production-ready code for all orchestras
 2. **Architecture**: Design scalable systems and APIs

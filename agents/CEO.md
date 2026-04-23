@@ -54,6 +54,7 @@ Updated pipeline: Product Owner (BRD/PRD) → Coder → UI Agent → Tester (rev
 - **SEO Agent fails**: Return to Coder with SEO optimization requirements
 - **Reviewer fails**: Return to Coder with code quality issues
 - **Chief Editor + CTO reject**: Return with specific rejection reasons
+- **UI Agent rejects images**: Return to Coder with photo mismatch report (images must be unique, specific, verified HTTP 200)
 - **Paperclip detects duplication**: Return to Coder to use shared component
 
 ### Emergency Fast-Track (RARE):

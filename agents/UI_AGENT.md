@@ -16,6 +16,16 @@ Ensure every UI in our system is #1 quality — Apple-level premium, modern, cle
 3. Sightseeing / SetSail modern travel directories — professional, trustworthy, family-friendly
 4. Apple design language — generous whitespace, perfect typography, micro-interactions
 
+## Image Selection Rule (MANDATORY)
+Every destination/listing MUST have:
+1. A unique primary photo that SPECIFICALLY matches the destination — not a generic category photo.
+2. Use highly specific Unsplash search queries (e.g., "Tokyo Disneyland castle family" not just "theme park").
+3. Verify each photo URL returns HTTP 200 before including it.
+4. No reused photos across different destinations unless they're the same chain (e.g., KidZania Tokyo and KidZania Bangkok).
+5. Gallery photos should show different angles/experiences of the SAME destination.
+6. Family-friendly, vibrant, real-life photos that make parents excited to visit.
+7. Part of mandatory review — reject any deployment with mismatched or low-quality images.
+
 ## Strict Review Checklist (Use Every Time)
 - 8px grid system with generous whitespace
 - Beautiful typography hierarchy (system fonts, perfect scaling)
