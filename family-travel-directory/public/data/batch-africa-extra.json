@@ -1,0 +1,906 @@
+[
+  {
+    "id": "cairo-001",
+    "name": "Giza Zoo",
+    "city": "Cairo",
+    "country": "Egypt",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.2,
+    "priceRange": "$",
+    "popularity": 78,
+    "description": "One of the oldest zoos in Africa, Giza Zoo spans 80 acres of lush gardens with over 4,000 animals including rare species like the Barbary lion and Nubian giraffe. The lake with paddle boats, vintage monkey enclosure (a historic cast-iron structure), and the suspension bridge make it a unique family day out. The grounds are beautifully shaded with old trees, offering a cool escape from Cairo's heat.",
+    "location": "Giza, Cairo Governorate, Egypt (Near Cairo University)",
+    "bestTime": "Morning, October-April (cooler months)",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Picnic Areas",
+      "Paddle Boats",
+      "Shaded Walkways",
+      "Cafe",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Animal Enclosures",
+      "Security Guards",
+      "Fenced Play Areas",
+      "First Aid Station"
+    ],
+    "tipsAndTricks": [
+      "Go early (8 AM opening) to see the animals when theyre most active. By 11 AM, most animals nap in the shade.",
+      "Bring your own water and snacks. The on-site cafe is basic and overpriced for what it is.",
+      "The paddle boats and vintage monkey house are the highlights for toddlers.",
+      "Avoid Friday and weekends when Cairo families flood the zoo.",
+      "Wear comfortable walking shoes. Strollers struggle on some older pathways."
+    ],
+    "parentStory": {
+      "title": "The day my city kid discovered animals are real",
+      "excerpt": "My 3-year-old had only ever seen animals on an iPad. At Giza Zoo, she saw a real hippo yawn and screamed BIG MOUTH in Arabic. She refused to leave the monkey house.",
+      "author": "Nadia, mom of 1 from Heliopolis",
+      "fullStory": "We almost skipped the zoo. But our daughter had been asking about real animals for weeks. The moment she saw the giraffes, she ran to the fence and just stared. For a curious 3-year-old, it was pure magic. We stayed 4 hours."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main animal houses, paddle boats, picnic lunch, leave by 1pm",
+      "fullDay": "Full zoo walkthrough, lake activities, playground, extended picnic",
+      "bestFor": "Ages 2-8, budget-conscious families, animal lovers"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Giza Zoo",
+      "Cairo family activities",
+      "Egypt zoo kids",
+      "budget family day Cairo"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80"
+    ]
+  },
+  {
+    "id": "cairo-002",
+    "name": "Egyptian Museum Kid-Friendly Tour",
+    "city": "Cairo",
+    "country": "Egypt",
+    "category": "Museums",
+    "ageRange": "5-16",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 85,
+    "description": "The world-famous Egyptian Museum houses over 120,000 ancient artifacts including Tutankhamuns complete treasure. Kid-friendly guided tours bring mummies, golden masks, and ancient hieroglyphs to life with storytelling and scavenger hunts.",
+    "location": "Tahrir Square, Downtown Cairo, Egypt",
+    "bestTime": "Morning (8 AM opening), Sunday-Thursday",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+    "amenities": [
+      "Guided Tours",
+      "Air Conditioning",
+      "Gift Shop",
+      "Cafe Nearby",
+      "Audio Guides"
+    ],
+    "safetyFeatures": [
+      "Security Screening",
+      "Controlled Entry",
+      "Bag Check",
+      "Well-Lit Galleries"
+    ],
+    "tipsAndTricks": [
+      "Book a private family guide. Group tours rush through. Private guides can stop at whatever catches your kids eye.",
+      "Bring a small notebook and pencil. Kids love drawing the statues and hieroglyphs.",
+      "The Royal Mummy Room has an extra fee and might be too intense for kids under 8.",
+      "Start on the 2nd floor (Tutankhamuns treasures) while energy is high.",
+      "The museum has no cafeteria. Eat breakfast before you come."
+    ],
+    "parentStory": {
+      "title": "My 7-year-old found King Tut more exciting than video games",
+      "excerpt": "I bribed her with ice cream. Instead, she spent 45 minutes staring at Tutankhamuns dagger made from a meteorite. She didnt even ask for the ice cream.",
+      "author": "Ahmed, dad of 2 from Giza",
+      "fullStory": "Our guide gave her a treasure hunt checklist. She sprinted through every room. Two hours later, I had to pry her away from the jewelry exhibit. She asked to come back tomorrow."
+    },
+    "itineraryComparison": {
+      "halfDay": "Tutankhamun treasures, Royal Mummies (if age-appropriate), main floor highlights",
+      "fullDay": "Full guided tour, all galleries, notebook drawing session, lunch break nearby",
+      "bestFor": "Ages 7-16, history enthusiasts, school-aged kids"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Egyptian Museum Cairo",
+      "kid-friendly museum Cairo",
+      "Tutankhamun kids tour",
+      "family museum trip Egypt"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "cairo-003",
+    "name": "Al-Azhar Park Family Day",
+    "city": "Cairo",
+    "country": "Egypt",
+    "category": "Parks & Nature",
+    "ageRange": "0-17",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 82,
+    "description": "A sprawling 74-acre green oasis in the heart of historic Cairo. Al-Azhar Park offers immaculate gardens, fountains, a man-made lake, and breathtaking panoramic views of the Cairo skyline and Citadel. Multiple playgrounds, walking paths, horse carriage rides, and outdoor restaurants make it a perfect family escape.",
+    "location": "Salah Salem Street, Al-Darb Al-Ahmar, Cairo",
+    "bestTime": "Late afternoon (3 PM - sunset), October-April",
+    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+    "amenities": [
+      "Playgrounds",
+      "Restaurants",
+      "Walking Paths",
+      "Lake Views",
+      "Fountains",
+      "Horse Carriage Rides",
+      "Picnic Areas"
+    ],
+    "safetyFeatures": [
+      "Park Security",
+      "Fenced Play Areas",
+      "Well-Maintained Paths",
+      "Lighted Evenings",
+      "Lifeguard at Lake"
+    ],
+    "tipsAndTricks": [
+      "Go around 3-4 PM. The golden hour views over the Citadel are breathtaking for photos.",
+      "The Citadel View Restaurant inside the park has decent food and unmatched views.",
+      "Bring a blanket for picnicking. The park is incredibly clean by Cairo standards.",
+      "Horse carriage rides cost around 50 EGP for a 15-minute loop. Kids under 4 ride free.",
+      "The park hosts free cultural events and childrens workshops on weekends."
+    ],
+    "parentStory": {
+      "title": "The best 50 EGP I spent in Cairo",
+      "excerpt": "My twin 4-year-olds spent 2 hours chasing pigeons and rolling down a hill. Zero screens. Zero complaints.",
+      "author": "Layla, expat mom of twins from Dubai",
+      "fullStory": "After a week of museum-hopping, my kids were done. Al-Azhar Park saved our trip. The playgrounds are modern, the grass is green, and there is enough space for kids to just run. For about $2 entry fee, its the best value attraction in Cairo."
+    },
+    "itineraryComparison": {
+      "halfDay": "Playground fun, lake walk, carriage ride, sunset dinner at Citadel View",
+      "fullDay": "Morning stargazing in the botanical gardens, lunch, afternoon play, sunset photos",
+      "bestFor": "All ages, especially toddlers who need to run"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Al-Azhar Park",
+      "Cairo family park",
+      "kid-friendly Cairo outdoors",
+      "Al-Azhar Park playground"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    ]
+  },
+  {
+    "id": "serengeti-001",
+    "name": "Serengeti National Park Family Safari",
+    "city": "Serengeti",
+    "country": "Tanzania",
+    "category": "Zoos & Aquariums",
+    "ageRange": "5-17",
+    "safetyRating": 4.4,
+    "priceRange": "$$$$",
+    "popularity": 96,
+    "description": "The worlds most legendary wildlife destination 14,763 square kilometers of savannah teeming with lions, leopards, elephants, giraffes, and the Great Migration of over 1.5 million wildebeest. Family-friendly lodges offer guided game drives and educational programs.",
+    "location": "Serengeti National Park, Northern Tanzania (nearest airstrip: Seronera)",
+    "bestTime": "June-October (dry season, best game viewing)",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Family Lodges",
+      "Guided Game Drives",
+      "Bush Meals",
+      "Swimming Pools",
+      "Kids Safari Programs"
+    ],
+    "safetyFeatures": [
+      "Armed Rangers",
+      "Safari Vehicle Protocols",
+      "Lodge Security",
+      "Medical Evacuation Plan",
+      "Malaria Precautions"
+    ],
+    "tipsAndTricks": [
+      "Book family-friendly lodges like Serengeti Serena they have kids programs and pools.",
+      "The Great Migration River Crossings (July-September) are spectacular. Bring activity books.",
+      "Early morning game drives (6 AM) are non-negotiable. Animals are most active at dawn.",
+      "Bring binoculars for each child and a wildlife checklist scavenger hunt.",
+      "Lodges have high chairs, kids menus, and can arrange babysitting. Request in advance."
+    ],
+    "parentStory": {
+      "title": "The moment a lioness looked at my son and he stared back",
+      "excerpt": "A lioness walked within 10 meters of our jeep. My 8-year-old held his breath. For 20 seconds, they just looked at each other.",
+      "author": "Marcus, dad of 2 from London",
+      "fullStory": "I was nervous about bringing kids on safari. On day two, a lioness lay down in the shade of our jeep. My son whispered, Shes so beautiful. My daughter asked if we could name her. The Serengeti changed them."
+    },
+    "itineraryComparison": {
+      "halfDay": "Morning game drive, lodge lunch and pool, afternoon rest",
+      "fullDay": "Full-day game drive with bush breakfast, sunset sundowners, star-gazing",
+      "bestFor": "Ages 6-16, adventurous families, wildlife enthusiasts"
+    },
+    "commissionRate": "12%",
+    "seoKeywords": [
+      "Serengeti family safari",
+      "kid-friendly Tanzania safari",
+      "Great Migration kids",
+      "family safari lodges Serengeti"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ]
+  },
+  {
+    "id": "serengeti-002",
+    "name": "Ngorongoro Crater Family Safari",
+    "city": "Serengeti",
+    "country": "Tanzania",
+    "category": "Zoos & Aquariums",
+    "ageRange": "5-17",
+    "safetyRating": 4.5,
+    "priceRange": "$$$$",
+    "popularity": 94,
+    "description": "A UNESCO World Heritage Site and one of Africas Seven Natural Wonders. A massive 600-meter-deep volcanic caldera teeming with over 25,000 animals including the densest population of lions and hyenas in Africa. Spot the Big Five in a single day.",
+    "location": "Ngorongoro Conservation Area, Tanzania (180 km from Arusha)",
+    "bestTime": "June-October (dry season), January-February (calving season)",
+    "imageUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+    "amenities": [
+      "Guide Services",
+      "Family Lodges on Rim",
+      "Rest Stops",
+      "Picnic Sites",
+      "Educational Exhibits"
+    ],
+    "safetyFeatures": [
+      "Experienced Guides",
+      "Park Rangers",
+      "Closed Vehicle Rules",
+      "Emergency Radio",
+      "Altitude Awareness"
+    ],
+    "tipsAndTricks": [
+      "The crater rim is at 2,200m altitude. Kids might feel light-headed. Acclimatize overnight.",
+      "The descent road is steep and windy. Pack Dramamine for motion sickness.",
+      "Game drives inside the crater are limited to 6 hours. It is enough.",
+      "The Crater View Point at sunrise is spectacular. Leave by 6 AM.",
+      "Pack layers. Its cold on the rim at dawn but hot on the crater floor by midday."
+    ],
+    "parentStory": {
+      "title": "We saw a lion kill in 15 minutes my kids handled it better than I did",
+      "excerpt": "Three lionesses took down a zebra. My 9-year-old said Circle of life, Mom. I was the one who needed a minute.",
+      "author": "Priya, mom of 2 from Singapore",
+      "fullStory": "I prepared speeches about death on safari. Fifteen minutes in, three lionesses ambushed a zebra. My daughter said, The zebra will feed the lion cubs. She got it completely."
+    },
+    "itineraryComparison": {
+      "halfDay": "Sunrise descent, crater floor game drive, picnic lunch, ascent by 2pm",
+      "fullDay": "Full 6-hour crater floor exploration, Bushman village visit, rim sunset walk",
+      "bestFor": "Ages 7-16, wildlife photographers, guaranteed Big Five spotting"
+    },
+    "commissionRate": "12%",
+    "seoKeywords": [
+      "Ngorongoro Crater family safari",
+      "Ngorongoro with kids",
+      "Big Five family safari Tanzania",
+      "crater safari kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80"
+    ]
+  },
+  {
+    "id": "marrakech-001",
+    "name": "Marrakech Zoo",
+    "city": "Marrakech",
+    "country": "Morocco",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.3,
+    "priceRange": "$",
+    "popularity": 72,
+    "description": "A modern zoo set among the Atlas Mountain foothills on the outskirts of Marrakech. Home to over 100 species including the endangered Atlas lion, Barbary macaques, white rhinos, and a walk-through aviary. The childrens petting zoo with goats, rabbits, and ponies is a highlight for little ones.",
+    "location": "Route de Fes, Douar Sidi Abderrazzak, Marrakech",
+    "bestTime": "Morning (9:30 AM opening), Spring and Fall",
+    "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "amenities": [
+      "Petting Zoo",
+      "Cafe",
+      "Picnic Areas",
+      "Playground",
+      "Shaded Walkways",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Glass Enclosures",
+      "Security at Gates",
+      "Handwashing Stations",
+      "Path Barriers",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "Go on a weekday morning to avoid crowds. The zoo gets packed by noon on Saturdays.",
+      "Bring cash the entry fee is cash-only.",
+      "The petting zoo is the highlight for kids under 6. They can feed goats for 10 dirhams.",
+      "Combine with nearby Menara Gardens for a full day out.",
+      "Pack lunch. The main restaurant is overpriced."
+    ],
+    "parentStory": {
+      "title": "My shy kid finally talked to a camel",
+      "excerpt": "My 3-year-old is painfully shy. At the petting zoo, a camel sniffed her hand and she said Soft! First word to a non-family member in months.",
+      "author": "Yasmin, mom of 2 from Casablanca",
+      "fullStory": "We moved to Marrakech last year and my youngest has struggled with the transition. At the zoos petting area, a camel ambled over and gently nuzzled her palm. She said, Soft, Mama. The camel is soft. She talked about that camel for a week."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main zoo walkthrough, petting zoo, cafe lunch, leave by 1pm",
+      "fullDay": "Full zoo plus Menara Gardens nearby, picnic lunch, playground time",
+      "bestFor": "Ages 2-10, budget-conscious families, first-time zoo visitors"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Marrakech Zoo",
+      "Morocco family activities",
+      "Marrakech with kids",
+      "zoo in Marrakech",
+      "Marrakech petting zoo"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80"
+    ]
+  },
+  {
+    "id": "marrakech-002",
+    "name": "Jardin Majorelle",
+    "city": "Marrakech",
+    "country": "Morocco",
+    "category": "Parks & Nature",
+    "ageRange": "2-17",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 91,
+    "description": "A stunning one-hectare botanical garden designed by French painter Jacques Majorelle and restored by Yves Saint Laurent. The famous Majorelle Blue buildings, exotic plants from five continents, and the sound of fountains create a sensory paradise. The Berber Museum inside showcases North African culture.",
+    "location": "Rue Yves Saint Laurent, Marrakech 40000",
+    "bestTime": "Opening time (8 AM), weekdays, October-May",
+    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+    "amenities": [
+      "Garden Cafe",
+      "Gift Shop",
+      "Berber Museum",
+      "Memorial Museum",
+      "Shaded Seating",
+      "Restrooms"
+    ],
+    "safetyFeatures": [
+      "Smooth Pathways",
+      "No Sharp Plants Near Paths",
+      "Staff Throughout",
+      "Controlled Entry",
+      "Clean Restrooms"
+    ],
+    "tipsAndTricks": [
+      "Book tickets online in advance. Queues can stretch 45+ minutes.",
+      "Go at 8 AM opening. The garden is empty and perfect for photos.",
+      "Keep toddlers in strollers on main paths gravel is hard for little legs.",
+      "The cafe is expensive. Bring water and snacks.",
+      "Combine with Yves Saint Laurent Museum next door same ticket covers both."
+    ],
+    "parentStory": {
+      "title": "The garden that made my teenager put down her phone",
+      "excerpt": "My 14-year-old Instagram-obsessed daughter spent an hour taking photos because she genuinely found the blue walls and cacti beautiful. She didnt check notifications once.",
+      "author": "Daniel, dad of 2 from Paris",
+      "fullStory": "I expected an eye-roll festival. But the moment we walked through the gates, the colors hit her. She started taking photos with my camera, not her phone. She later said it was like walking through a painting."
+    },
+    "itineraryComparison": {
+      "halfDay": "Garden walk, photo session, Berber Museum, cafe break, 2 hours total",
+      "fullDay": "Combine with YSL Museum, lunch in Gueliz, afternoon at Menara Gardens",
+      "bestFor": "All ages, especially creative kids and tweens/teens who appreciate art"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Jardin Majorelle",
+      "Majorelle Garden kids",
+      "Marrakech family garden",
+      "YSL Garden Marrakech",
+      "botanical garden Marrakech"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80"
+    ]
+  },
+  {
+    "id": "tunis-001",
+    "name": "Carthage Land",
+    "city": "Tunis",
+    "country": "Tunisia",
+    "category": "Theme Parks",
+    "ageRange": "3-14",
+    "safetyRating": 4.1,
+    "priceRange": "$$",
+    "popularity": 68,
+    "description": "Tunisias largest amusement park located along the coast near historic Carthage. Features thrilling rides (roller coasters, drop tower, log flume), family-friendly attractions (carousel, bumper cars), and dedicated zones for younger children. Mediterranean Sea views make it uniquely charming.",
+    "location": "Route La Goulette - Carthage, 2045 La Goulette, Tunis",
+    "bestTime": "Weekdays, March-June and September-October",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Restaurants",
+      "Snack Kiosks",
+      "Rest Areas",
+      "Parking",
+      "Gift Shops",
+      "Ride Photos"
+    ],
+    "safetyFeatures": [
+      "Ride Height Restrictions",
+      "Staffed Operations",
+      "Fenced Ride Areas",
+      "Security at Entrance",
+      "First Aid Station"
+    ],
+    "tipsAndTricks": [
+      "Go on a weekday in spring (March-April). Walk-on rides, no queues.",
+      "Buy the Unlimited Ride Pass wristband at the entrance. Per-ride tickets add up fast.",
+      "The log flume gets you soaked. Bring a change of clothes.",
+      "Avoid August 40C heat plus no shade equals meltdowns.",
+      "The restaurant serves pizza and fries what kids actually want."
+    ],
+    "parentStory": {
+      "title": "The roller coaster that cured my fear of heights",
+      "excerpt": "My 7-year-old dragged me onto Le Cobra a looping coaster I was terrified of. She held my hand and screamed AGAIN! I went three times.",
+      "author": "Karim, dad of 1 from Tunis",
+      "fullStory": "Ive avoided roller coasters since childhood. But my daughter had been begging to try the big one. She grabbed my hand and said Dont worry Papa, Ill protect you. On the ride, she laughed the entire time."
+    },
+    "itineraryComparison": {
+      "halfDay": "Ride 5-7 attractions, lunch, leave by 3pm",
+      "fullDay": "All rides, shows, multiple log flume runs, dinner at park restaurant",
+      "bestFor": "Ages 4-14, thrill-seeking families, a fun break from historical sightseeing"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Carthage Land Tunis",
+      "Tunisia theme park",
+      "amusement park Tunis",
+      "Carthage Land kids",
+      "family fun Tunis"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "tunis-002",
+    "name": "Tunis Zoo",
+    "city": "Tunis",
+    "country": "Tunisia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.0,
+    "priceRange": "$",
+    "popularity": 65,
+    "description": "A historic zoo in the Belvedere Park neighborhood. Home to lions, bears, monkeys, birds of prey, and a reptile house. While showing its age, recent renovations offer affordable family entertainment with shaded avenues of cork oak and pine trees within the larger Belvedere Park.",
+    "location": "Parc du Belvedere, Rue du Belvedere, Tunis",
+    "bestTime": "Morning, Spring and Fall",
+    "imageUrl": "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+    "amenities": [
+      "Picnic Areas",
+      "Playground",
+      "Cafe",
+      "Parking",
+      "Shaded Benches"
+    ],
+    "safetyFeatures": [
+      "Enclosure Barriers",
+      "Park Guards",
+      "Clean Pathways",
+      "Low Traffic Area"
+    ],
+    "tipsAndTricks": [
+      "Combine with Belvedere Park for a full day. Great playgrounds and shaded lawns.",
+      "Buy snacks from vendors outside the zoo entrance better options.",
+      "Monkeys and birds of prey are most engaging for kids.",
+      "Go Saturday morning when local families bring their kids lively atmosphere.",
+      "Lower expectations for modern enclosures think retro zoo charm."
+    ],
+    "parentStory": {
+      "title": "A retro zoo with real charm and real peacocks on the loose",
+      "excerpt": "A peacock strutted past our picnic blanket like he owned the place. My 4-year-old followed him for 20 minutes. We ate lunch cold. Worth it.",
+      "author": "Samar, mom of 2 from La Marsa",
+      "fullStory": "I wasnt excited about Tunis Zoo. But my kids dont care about modern. They care about watching peacocks fan their feathers inches from their faces. For a few dinars entry, we spent 4 hours between the zoo and the park."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main zoo walk, playground, picnic, leave by 1pm",
+      "fullDay": "Zoo plus Belvedere Park, playgrounds, lake walk, extended picnic",
+      "bestFor": "Ages 2-10, budget-conscious families, locals looking for a relaxed day out"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Tunis Zoo",
+      "zoo in Tunis",
+      "Tunisia family day out",
+      "Belvedere Park Tunis",
+      "Tunis family activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80"
+    ]
+  },
+  {
+    "id": "uganda-001",
+    "name": "Uganda Wildlife Education Centre",
+    "city": "Entebbe",
+    "country": "Uganda",
+    "category": "Zoos & Aquariums",
+    "ageRange": "3-16",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 74,
+    "description": "A wildlife conservation and education center on the shores of Lake Victoria in Entebbe. Home to lions, chimpanzees, rhinos, giraffes, and over 200 bird species. The centre focuses on wildlife rehabilitation and offers close-up encounters with orphaned animals, guided educational tours, and a childrens petting corner. The lakeside setting is stunning.",
+    "location": "56 Circus Avenue, Entebbe, Uganda (near Entebbe International Airport)",
+    "bestTime": "Morning (9 AM opening), dry season (June-August, December-February)",
+    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+    "amenities": [
+      "Guided Tours",
+      "Cafe",
+      "Picnic Areas",
+      "Playground",
+      "Gift Shop",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Animal Enclosure Barriers",
+      "Educational Rangers",
+      "Handwashing Stations",
+      "First Aid",
+      "Security Guards"
+    ],
+    "tipsAndTricks": [
+      "Combine with a visit to Entebbe Botanical Gardens in the same day they are 5 minutes away.",
+      "The chimpanzee sanctuary is the highlight book the morning feeding session.",
+      "Wear long pants and closed shoes. Mosquito repellent is essential.",
+      "The centre is a 10-minute drive from Entebbe Airport. Perfect for a layover visit.",
+      "Bring binoculars for bird watching along the Lake Victoria shoreline."
+    ],
+    "parentStory": {
+      "title": "My daughter adopted a chimpanzee after visiting",
+      "excerpt": "She met a 3-year-old chimp named Kiki whod been rescued from a pet trade. My daughter emptied her piggy bank to adopt her. We now get monthly chimp updates.",
+      "author": "Grace, mom of 2 from Kampala",
+      "fullStory": "I took my daughters to UWEC for a weekend outing. They met Kiki, a baby chimp rescued from illegal trade. My 7-year-old asked if we could take her home. When I explained no, she asked if we could help pay for her food. She emptied her savings. The adoption program is real and affordable 50,000 UGX a month."
+    },
+    "itineraryComparison": {
+      "halfDay": "Guided tour of main animal areas, chimp feeding, playground, cafe lunch",
+      "fullDay": "Full tour plus Entebbe Botanical Gardens, lakeside picnic, boat ride on Lake Victoria",
+      "bestFor": "Ages 4-14, conservation-minded families, layover travelers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Uganda Wildlife Education Centre",
+      "Entebbe zoo",
+      "Uganda family safari",
+      "Entebbe with kids",
+      "chimpanzee sanctuary Uganda"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "zambia-001",
+    "name": "Mosi-oa-Tunya National Park",
+    "city": "Livingstone",
+    "country": "Zambia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "4-17",
+    "safetyRating": 4.3,
+    "priceRange": "$$",
+    "popularity": 82,
+    "description": "Home to the magnificent Victoria Falls (Mosi-oa-Tunya - The Smoke That Thunders). This UNESCO World Heritage Site offers family-friendly game drives where you can spot white rhinos, zebras, giraffes, and elephants against the backdrop of one of the Seven Natural Wonders of the World. The park also features the Victoria Falls rainforest trail with permanent rainbows.",
+    "location": "Livingstone, Zambia (10 km from Livingstone town center)",
+    "bestTime": "June-August (peak water volume), September-December (calmer, clearer views)",
+    "imageUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+    "amenities": [
+      "Walking Trails",
+      "Viewpoints",
+      "Parking",
+      "Cafe",
+      "Restrooms",
+      "Guided Walks"
+    ],
+    "safetyFeatures": [
+      "Fenced Viewpoints",
+      "Park Rangers",
+      "Well-Marked Trails",
+      "Safety Barriers",
+      "Lifeguards at Swimming Points"
+    ],
+    "tipsAndTricks": [
+      "Visit in June-August for the most powerful waterfall but expect to get soaked. Ponchos are sold at the gate.",
+      "The Knife-Edge Bridge gives the best views but is intense for kids under 6 with the mist and noise.",
+      "The Devil's Pool (natural infinity pool at the falls edge) is only for confident swimmers aged 12+.",
+      "Combine with a sunset boat cruise on the Zambezi River hippos and elephants at dusk.",
+      "Book the Livingstone Island tour for a guided lunch right on the edge of the falls."
+    ],
+    "parentStory": {
+      "title": "When my 6-year-old saw a rainbow at her feet",
+      "excerpt": "The mist was so thick we thought wed get soaked. Then the sun hit it and a full rainbow appeared below us at the cliff edge. My daughter thought we were in heaven.",
+      "author": "Sarah-Jane, mom of 1 from Nairobi",
+      "fullStory": "I kept saying Youll see the smoke and hear the thunder. Nothing prepared her for the reality. When we reached the main viewpoint, the mist created this massive rainbow arc at the top of the falls. She reached out her hand to touch it. She said Is this what heaven looks like? Couldnt argue with that."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main falls viewpoint, rainforest walk, lunch at cafe, leave by 2pm",
+      "fullDay": "Falls walk, Zambezi boat cruise, Livingstone Island tour, sunset sundowners",
+      "bestFor": "Ages 6-16, nature lovers, adventurous families"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Victoria Falls Zambia",
+      "Mosi-oa-Tunya",
+      "Livingstone family activities",
+      "Victoria Falls with kids",
+      "Zambia family safari"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "botswana-001",
+    "name": "Chobe National Park Family Safari",
+    "city": "Kasane",
+    "country": "Botswana",
+    "category": "Zoos & Aquariums",
+    "ageRange": "5-17",
+    "safetyRating": 4.5,
+    "priceRange": "$$$$",
+    "popularity": 90,
+    "description": "Botswanas first national park and home to the worlds largest concentration of African elephants over 50,000 of them. The Chobe Riverfront offers spectacular game viewing from both vehicle and boat safaris. Families can watch elephants swim across the river, pods of hippos, crocodiles basking on sandbanks, and vast herds of buffalo and antelope. A true African wilderness experience.",
+    "location": "Chobe National Park, Kasane, Botswana (near Victoria Falls)",
+    "bestTime": "May-October (dry season, animals concentrate near the river)",
+    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+    "amenities": [
+      "Family Lodges",
+      "Boat Safaris",
+      "Game Drives",
+      "Picnic Sites",
+      "Parking",
+      "Restrooms"
+    ],
+    "safetyFeatures": [
+      "Experienced Guides",
+      "Park Rangers",
+      "Boat Safety Equipment",
+      "Wildlife Distancing Rules",
+      "Medical Access"
+    ],
+    "tipsAndTricks": [
+      "The boat safari on the Chobe River is better for kids than vehicle game drives close-up wildlife from water, no dust, and more comfortable.",
+      "Stay at a family lodge like Chobe Game Lodge no kids under 12 restriction here.",
+      "Pack binoculars and a camera with good zoom. The elephants are close enough for great photos from the boat.",
+      "The sun is intense even in winter. Hats, sunscreen, and long sleeves are mandatory.",
+      "Combine with a day trip to Victoria Falls (1 hour drive) for the ultimate family adventure combo."
+    ],
+    "parentStory": {
+      "title": "The moment fifty elephants crossed the river in front of us",
+      "excerpt": "Our boat drifted to a stop as a herd of elephants swam single-file across the Chobe River, trunks raised like snorkels. My kids were silent. Totally silent. They'd never seen anything that big and that peaceful.",
+      "author": "David, dad of 2 from Cape Town",
+      "fullStory": "My kids are 7 and 9 and usually bicker about everything. On the boat, a herd of elephants started their afternoon river crossing. The matriarch stopped, looked at our boat, then continued. My son whispered How many are there? I lost count at 40. They held hands watching. They havent fought since we came home."
+    },
+    "itineraryComparison": {
+      "halfDay": "Sunset boat cruise on Chobe River, lodge dinner, stargazing",
+      "fullDay": "Morning game drive, afternoon boat safari, picnic lunch on the riverbank",
+      "bestFor": "Ages 6-16, elephant lovers, families doing a Victoria Falls trip extension"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Chobe National Park",
+      "Botswana family safari",
+      "Chobe elephants kids",
+      "Kasane family activities",
+      "Botswana with children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "namibia-001",
+    "name": "Etosha National Park Family Safari",
+    "city": "Etosha",
+    "country": "Namibia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "4-17",
+    "safetyRating": 4.4,
+    "priceRange": "$$$$",
+    "popularity": 87,
+    "description": "One of Africas greatest wildlife destinations centered around a vast salt pan visible from space. Etosha is famous for its floodlit waterholes where families can watch elephants, rhinos, lions, and giraffes drink at night from the safety of their lodge. The park offers some of the most accessible self-drive safaris in Africa with excellent roads and well-signposted waterholes.",
+    "location": "Etosha National Park, Northern Namibia (main gate: Okaukuejo)",
+    "bestTime": "May-October (dry season, animals gather at waterholes)",
+    "imageUrl": "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+    "amenities": [
+      "Rest Camps",
+      "Floodlit Waterholes",
+      "Swimming Pools",
+      "Restaurants",
+      "Fuel Stations",
+      "Gift Shops"
+    ],
+    "safetyFeatures": [
+      "Self-Drive Safe Roads",
+      "Park Rangers",
+      "Fenced Rest Camps",
+      "Emergency Radio",
+      "Medical Facilities at Camps"
+    ],
+    "tipsAndTricks": [
+      "Stay at Okaukuejo Rest Camp and watch the floodlit waterhole at night pure magic as elephants and rhinos come to drink.",
+      "Self-drive is safe and easy in Etosha. The roads are gravel but well-maintained. A 2WD is fine.",
+      "Bring a cooler with snacks, water, and lunch. Game drives last 4-6 hours and there are no restaurants in the park.",
+      "The Etosha Pan is spectacular at sunset. Drive to the pan viewpoint before heading back to camp.",
+      "Teach kids to stay quiet in the vehicle. The closer to silence, the better the wildlife sightings."
+    ],
+    "parentStory": {
+      "title": "Watching rhinos drink at midnight with my 8-year-old",
+      "excerpt": "We wrapped in blankets at the floodlit waterhole near our lodge. At 11 PM, a black rhino and her calf walked right up. My son whispered Is this a dream? I said I think we're both having the same one.",
+      "author": "Helena, mom of 1 from Windhoek",
+      "fullStory": "The floodlit waterhole at Okaukuejo is the best family experience in Namibia. At midnight, a black rhino and her baby wandered in. My son had been begging to see a rhino all trip. We sat there for an hour, whispering. He fell asleep in my lap at 1 AM, smiling. Worth every cent of the trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Self-drive to nearby waterholes, lunch at camp, afternoon rest and floodlit waterhole",
+      "fullDay": "Full-day self-drive across the park, picnic lunch on the pan edge, evening floodlit viewing",
+      "bestFor": "Ages 5-16, self-drive families, photographers, anyone wanting to see rhinos in the wild"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Etosha National Park",
+      "Namibia family safari",
+      "Etosha with kids",
+      "self-drive safari Namibia",
+      "floodlit waterhole Etosha"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "zimbabwe-001",
+    "name": "Victoria Falls Family Tour",
+    "city": "Victoria Falls",
+    "country": "Zimbabwe",
+    "category": "Parks & Nature",
+    "ageRange": "3-17",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 89,
+    "description": "The Zimbabwean side of Victoria Falls offers the most spectacular views of the worlds largest sheet of falling water. Well-maintained walking trails through the Victoria Falls Rainforest lead to 16 different viewpoints, each more breathtaking than the last. Permanent rainbows, thundering spray, and the sheer power of the Zambezi River plunging 108 meters create an unforgettable family experience.",
+    "location": "Victoria Falls National Park, Victoria Falls Town, Zimbabwe",
+    "bestTime": "June-August (maximum water flow), November-March (clearer views, greener foliage)",
+    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+    "amenities": [
+      "Walking Trails",
+      "Viewpoints",
+      "Gift Shop",
+      "Restaurant",
+      "Restrooms",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Fenced Walkways",
+      "Safety Barriers",
+      "Park Rangers",
+      "Non-Slip Surfaces",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "The Zimbabwe side has the best views (85% of the falls visible) while the Zambia side is closer to the water.",
+      "Go in the morning when the sun is at your back for the best rainbow photos.",
+      "Bring a waterproof bag and poncho. In peak season (June), you will get soaked even from the viewpoints.",
+      "The rainforest trail is about 2 km and stroller-friendly in dry season. For toddlers, carriers are better.",
+      "Combine with a sunset helicopter flight over the falls for the ultimate family photo opportunity."
+    ],
+    "parentStory": {
+      "title": "The rainbow that followed us through the rainforest",
+      "excerpt": "Every viewpoint had a rainbow. My kids started counting them. We lost count at 8. They still argue about the final number.",
+      "author": "Thomas, dad of 3 from Sydney",
+      "fullStory": "We visited in July when the falls are at full power. The spray is so thick it feels like rain. My three kids (5, 7, 10) ran from viewpoint to viewpoint, rainbows appearing and disappearing as the sun shifted. The main falls viewpoint had a double rainbow that lasted 20 minutes. We took what must be the best family photo ever."
+    },
+    "itineraryComparison": {
+      "halfDay": "Falls trail walk, viewpoints, lunch, helicopter flight (book ahead)",
+      "fullDay": "Falls walk, helicopter flight, sunset cruise on Zambezi, dinner at The Boma",
+      "bestFor": "All ages, especially first-time visitors to Africa"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Victoria Falls Zimbabwe",
+      "Victoria Falls family",
+      "Zimbabwe family activities",
+      "Victoria Falls rainforest trail",
+      "family safari Zimbabwe"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    ]
+  },
+  {
+    "id": "dubai-extra-002",
+    "name": "Dubai Lagoon Waterpark",
+    "city": "Dubai",
+    "country": "UAE",
+    "category": "Theme Parks",
+    "ageRange": "3-16",
+    "safetyRating": 4.6,
+    "priceRange": "$$$",
+    "popularity": 79,
+    "description": "One of Dubais premier waterparks located in the heart of the city. Features wave pools, lazy rivers, adrenaline-pumping water slides including a near-vertical drop slide, and dedicated kids zones with smaller slides and splash pads. The park offers shaded cabanas for families to base their day around, sun protection is a priority with plenty of covered areas.",
+    "location": "Dubai Lagoon, Jumeirah Beach Residence, Dubai, UAE",
+    "bestTime": "October-April (cooler months), weekdays",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Cabanas",
+      "Restaurants",
+      "Locker Rentals",
+      "Towel Service",
+      "Kiddie Pool",
+      "Wave Pool",
+      "Lazy River"
+    ],
+    "safetyFeatures": [
+      "Lifeguards at All Pools",
+      "Height Restrictions",
+      "Life Jackets Provided",
+      "First Aid Station",
+      "Sun Safety Stations"
+    ],
+    "tipsAndTricks": [
+      "Book a cabana in advance. It gives you a shaded home base with a fan, fridge, and lockable storage worth every dirham in summer.",
+      "Go on a weekday in January-February. The water is perfect 26C and the park is half empty.",
+      "The kids zone has slides appropriate for ages 3-8. The big slides have height requirements starting at 1.1m.",
+      "Bring reef-safe sunscreen. The park sells it but at a premium.",
+      "Pack water shoes. The ground gets hot enough to burn little feet even in winter."
+    ],
+    "parentStory": {
+      "title": "The day my water-phobic 5-year-old became a fish",
+      "excerpt": "She refused to get in the pool for two years. At the kids splash zone, a bucket dumped water on her head. She laughed. Then she pointed at the big slides.",
+      "author": "Noora, mom of 2 from Abu Dhabi",
+      "fullStory": "My youngest has been terrified of water since a swimming incident at age 3. I almost didn't bring her to the waterpark. The kids splash zone is so gentle and fun that she forgot to be scared. A giant bucket dumped water on her head and she burst out laughing. By the end of the day, she was going down the junior slides. Sometimes magic just happens."
+    },
+    "itineraryComparison": {
+      "halfDay": "Kids splash zone, lazy river, lunch, cabana rest, leave by 3pm",
+      "fullDay": "All slides, wave pool, multiple lazy river loops, cabana lunch break, sunset session",
+      "bestFor": "Ages 4-14, families wanting a cool water break from Dubai heat"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Dubai Lagoon Waterpark",
+      "Dubai waterpark kids",
+      "Dubai family activities",
+      "waterpark Dubai children",
+      "JBR family day"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  }
+]
