@@ -26253,5 +26253,2379 @@
       "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80",
       "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80"
     ]
+  },
+  {
+    "id": "new-caledonia-001",
+    "name": "Aquarium des Lagons",
+    "city": "Noum\u00e9a",
+    "country": "New Caledonia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 78,
+    "description": "New Caledonia's premier aquarium showcasing the marine biodiversity of the UNESCO-listed lagoon. Features a massive 500,000-litre shark tank, a touch pool for young kids, and mesmerizing reef fish displays. Curved glass tunnels let toddlers feel like they are swimming underwater.",
+    "location": "Route de l'Anse Vata, Noum\u00e9a 98800, New Caledonia",
+    "bestTime": "Morning, May-October (dry season)",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Nursing Room",
+      "Touch Pool",
+      "Shaded Areas",
+      "Caf\u00e9"
+    ],
+    "safetyFeatures": [
+      "Clear Glass Barriers",
+      "Life Guards (Touch Pool)",
+      "Non-Slip Floors",
+      "First Aid Station",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "Arrive right at 9 AM opening. The shark tunnel is almost empty for the first hour and your kids will have it to themselves.",
+      "The touch pool is near the exit. Do it last \u2014 once they get their hands wet, they won't focus on the exhibits.",
+      "Bring a hat and sunscreen. The queue for the outdoor turtle pond can be 15-20 minutes in direct sun.",
+      "The aquarium caf\u00e9 is basic. Pack snacks or walk 5 minutes to the nearby Le Roof restaurant for a proper lunch.",
+      "Combine with a morning at Anse Vata Beach right next door. The water is calm and perfect for toddlers."
+    ],
+    "parentStory": {
+      "title": "She touched a sea cucumber and shrieked with delight",
+      "excerpt": "Our 3-year-old spent 20 minutes gently poking sea cucumbers, announcing each one by a made-up name. 'This one is Squishy, Mama.'",
+      "author": "Marie, mom of 2 from Lyon",
+      "fullStory": "I wasn't sure the aquarium would hold my kids for more than 20 minutes. It held them for 2 hours. The curved glass tunnel is genius \u2014 they felt surrounded by fish. But the touch pool was the real winner. Our daughter was so gentle with a sea cucumber she named it Squishy. She still talks about it a year later."
+    },
+    "itineraryComparison": {
+      "halfDay": "Aquarium tour (2 hours) + Anse Vata Beach lunch",
+      "fullDay": "Aquarium morning + Parc Forestier afternoon + beach dinner",
+      "bestFor": "Ages 2-10, first-time snorkelers, marine life lovers"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Aquarium des Lagons",
+      "Noum\u00e9a with kids",
+      "New Caledonia family",
+      "aquarium Pacific Islands"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "new-caledonia-002",
+    "name": "Parc Forestier",
+    "city": "Noum\u00e9a",
+    "country": "New Caledonia",
+    "category": "Parks & Nature",
+    "ageRange": "0-12",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 68,
+    "description": "A lush 135-hectare forest park on the hills above Noum\u00e9a with gentle walking trails, picnic areas, and a small zoo with native New Caledonian birds including the iconic cagou \u2014 a flightless bird found nowhere else on Earth. The elevated viewpoint over the lagoon is worth the walk.",
+    "location": "Route du Parc Forestier, Noum\u00e9a 98800, New Caledonia",
+    "bestTime": "Early morning, dry season (May-October)",
+    "imageUrl": "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+    "amenities": [
+      "Walking Trails",
+      "Picnic Tables",
+      "Playground",
+      "Shaded Benches",
+      "Public Toilets"
+    ],
+    "safetyFeatures": [
+      "Fenced Animal Enclosures",
+      "Well-Marked Trails",
+      "First Aid Post",
+      "Railings on Viewpoints",
+      "Ranger Patrols"
+    ],
+    "tipsAndTricks": [
+      "The cagou bird enclosure opens at 10 AM. Time your visit to see feeding time when the birds are most active.",
+      "Bring bug spray. The forest has mosquitoes even during the dry season \u2014 especially near the stream crossings.",
+      "Pack a picnic. The park has lovely shaded tables and the nearest restaurant is a 15-minute walk back downhill.",
+      "The main loop trail takes about 45 minutes at toddler pace. Perfect for burning off energy before a car ride.",
+      "Park at the bottom entrance \u2014 the upper entrance has very limited parking and the walk from the bottom is stroller-friendly."
+    ],
+    "parentStory": {
+      "title": "We chased a cagou and learned patience",
+      "excerpt": "My son wanted to 'catch a dinosaur bird.' We spent 30 minutes following a cagou through the forest. We never caught it. But we saw it three feet away. Best day ever.",
+      "author": "Tom, dad of 1 from Brisbane",
+      "fullStory": "The paths wind through beautiful old forest, the birds do their thing, and you wander at your own pace. My son was obsessed with finding the cagou \u2014 this prehistoric-looking bird. When we finally spotted one, he went completely silent, utterly transfixed. It was a moment."
+    },
+    "itineraryComparison": {
+      "halfDay": "Cagou viewing + short loop trail + picnic",
+      "fullDay": "Morning at Parc Forestier + afternoon at Aquarium des Lagons + beach",
+      "bestFor": "Ages 0-10, nature families, budget travelers"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Parc Forestier Noum\u00e9a",
+      "New Caledonia nature park",
+      "family hiking Noum\u00e9a",
+      "cagou bird"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ]
+  },
+  {
+    "id": "tahiti-001",
+    "name": "Tahiti Lagoonarium",
+    "city": "Papeete",
+    "country": "French Polynesia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$$",
+    "popularity": 74,
+    "description": "An immersive natural aquarium built into Tahiti's lagoon where families swim alongside tropical fish, stingrays, blacktip reef sharks, and green sea turtles. Unlike traditional aquariums, kids get into the water with marine life \u2014 supervised by expert marine biologists.",
+    "location": "PK 18, C\u00f4tier c\u00f4t\u00e9 mer, Papeete, Tahiti 98718, French Polynesia",
+    "bestTime": "Morning (calmer water), May-October",
+    "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "amenities": [
+      "Changing Rooms",
+      "Life Jackets (All Sizes)",
+      "Snorkel Gear Rental",
+      "Shaded Viewing Area",
+      "Freshwater Showers",
+      "On-site Caf\u00e9"
+    ],
+    "safetyFeatures": [
+      "Marine Biologist Supervision",
+      "Life Jackets Required",
+      "Fenced Lagoon Area",
+      "First Aid Trained Staff",
+      "Emergency Oxygen",
+      "Clear Safety Briefing"
+    ],
+    "tipsAndTricks": [
+      "Book the morning session (8:30 AM). The water is calmest and the fish are most active before the afternoon breeze.",
+      "Even if your kid swims, put them in a life jacket. It lets them float effortlessly and focus on the fish.",
+      "Bring reef-safe waterproof sunscreen. The lagoonarium is strict about chemicals that harm coral.",
+      "The lagoonarium provides wetsuit tops for kids \u2014 warm and sun-protected in one go.",
+      "Warn nervous kids: the rays are gentle and the sharks are small (blacktips max 5 ft). Magical, not scary."
+    ],
+    "parentStory": {
+      "title": "My 5-year-old held a stingray and I cried",
+      "excerpt": "My daughter held a stingray in her own hands while a marine biologist guided her. That grin \u2014 I just lost it.",
+      "author": "Emily, mom of 2 from Auckland",
+      "fullStory": "I was nervous bringing a 5- and 7-year-old to swim with sharks. Even small ones. The team eased them in group by group. By the end, they were chasing chromis and my youngest was petting a stingray's wings. Pure joy."
+    },
+    "itineraryComparison": {
+      "halfDay": "Lagoonarium swim session (2 hours) + beach lunch",
+      "fullDay": "Lagoonarium morning + Vaipahi Water Gardens afternoon",
+      "bestFor": "Ages 4-14, confident swimmers, marine life enthusiasts"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Tahiti Lagoonarium",
+      "swim with sharks Tahiti",
+      "French Polynesia with kids",
+      "family lagoon Tahiti"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80"
+    ]
+  },
+  {
+    "id": "tahiti-002",
+    "name": "Vaipahi Water Gardens",
+    "city": "Papeete",
+    "country": "French Polynesia",
+    "category": "Parks & Nature",
+    "ageRange": "0-12",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 62,
+    "description": "A serene botanical garden along the Vaipahi River on Tahiti's south coast with cascading waterfalls, lotus ponds, and lush tropical vegetation. The easy 1 km loop winds through garden sections themed to different Pacific islands, past giant ferns and lily-covered pools.",
+    "location": "PK 12.5, Route de ceinture, Papeete, Tahiti 98718, French Polynesia",
+    "bestTime": "Morning (avoid midday heat), May-October",
+    "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    "amenities": [
+      "Walking Paths",
+      "Picnic Areas",
+      "Public Toilets",
+      "Parking",
+      "Shaded Benches"
+    ],
+    "safetyFeatures": [
+      "Fenced Waterfall Areas",
+      "Non-Slip Bridge Surfaces",
+      "Signage in French/English",
+      "First Aid Kit at Entrance",
+      "Railings Along Stream"
+    ],
+    "tipsAndTricks": [
+      "Bring a second set of clothes. Kids will splash in the waterfall pool \u2014 soggy car ride warning.",
+      "The path is stroller-friendly but bumpy. A jogging stroller handles it better than a lightweight umbrella stroller.",
+      "Go early (8 AM) before tour buses. The gardens get crowded and the quiet magic fades by 10-noon.",
+      "Pack a picnic. Perfect lunch spot by the lily ponds. No food vendor on site.",
+      "Combine with the Lagoonarium \u2014 same road, 15 minutes apart. Perfect day loop."
+    ],
+    "parentStory": {
+      "title": "She sat by the lily pond and talked to the fish for an hour",
+      "excerpt": "We paid $5 to enter. Our daughter spent an hour having a serious conversation with a goldfish. Most peaceful hour of our entire vacation.",
+      "author": "David, dad of 1 from Vancouver",
+      "fullStory": "Vaipahi isn't flashy. No animatronics, no guided tours, no gift shop. Just beautiful. The waterfall is stunning \u2014 15 meters tall, cascading into a pool shallow enough for kids to wade in. My daughter found the koi pond and that was it. She sat there naming them all."
+    },
+    "itineraryComparison": {
+      "halfDay": "Garden walk + waterfall splash + picnic lunch",
+      "fullDay": "Vaipahi morning + Tahiti Lagoonarium afternoon",
+      "bestFor": "Ages 0-10, nature-loving families, budget travelers"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Vaipahi Water Gardens",
+      "Tahiti botanical garden",
+      "Tahiti waterfall family",
+      "free things Tahiti"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80"
+    ]
+  },
+  {
+    "id": "samoa-001",
+    "name": "Samoa Cultural Village",
+    "city": "Apia",
+    "country": "Samoa",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 70,
+    "description": "An open-air cultural museum in central Apia where families experience traditional Samoan life firsthand. Kids watch 'ava ceremonies, weave coconut fronds, try fire-making, and see traditional tattoo artists. Run by local artisans who genuinely love sharing their culture with children.",
+    "location": "Beach Road, across from the Clock Tower, Apia, Samoa",
+    "bestTime": "Weekdays 10 AM-3 PM, dry season (May-October)",
+    "imageUrl": "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+    "amenities": [
+      "Shaded Demonstration Areas",
+      "Restrooms",
+      "Souvenir Shop",
+      "Seating for Ceremonies",
+      "Water Station"
+    ],
+    "safetyFeatures": [
+      "Designated Viewing Areas",
+      "Supervised Activities",
+      "Fire Safety Protocol",
+      "Clear Pathways"
+    ],
+    "tipsAndTricks": [
+      "The 'ava ceremony is at 11 AM sharp. Arrive by 10:45 for a good seat.",
+      "Let kids try weaving. The artisans patiently guide them to make a coconut frond fish in 10 minutes.",
+      "Bring a fan or mister. Open-air village gets hot by midday (30\u00b0C+ even in dry season).",
+      "Kids under 5 may get restless during the 'ava ceremony (20+ min). The weaving area is better.",
+      "Closes at 4 PM. Combine with a morning at Maketi Fou market for the full Samoan experience."
+    ],
+    "parentStory": {
+      "title": "My son tried fire-making and came home a 'Samoan warrior'",
+      "excerpt": "A 70-year-old master taught my 8-year-old to start a fire with coconut husk and a stick. The pride when smoke appeared was everything.",
+      "author": "Anna, mom of 2 from Sydney",
+      "fullStory": "I booked thinking it'd be an hour of polite watching. It was the highlight of our trip. Artisans don't just perform \u2014 they teach. My daughter learned weaving, my son fire-making. Two hours flew by. Best part: $5 per adult, kids free."
+    },
+    "itineraryComparison": {
+      "halfDay": "Cultural Village (2 hours) + Apia Market lunch",
+      "fullDay": "Cultural Village + Papaseea Sliding Rocks + Piula Cave Pool",
+      "bestFor": "Ages 4-14, culture-curious families"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Samoa Cultural Village",
+      "Apia family activities",
+      "Samoan culture kids",
+      "Samoa with children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80"
+    ]
+  },
+  {
+    "id": "tonga-001",
+    "name": "Tonga National Centre",
+    "city": "Nuku'alofa",
+    "country": "Tonga",
+    "category": "Parks & Nature",
+    "ageRange": "0-12",
+    "safetyRating": 4.3,
+    "priceRange": "$",
+    "popularity": 55,
+    "description": "A cultural and nature park in Nuku'alofa with traditional Tongan architecture, a medicinal plant garden, and easy walking paths through palm groves. Kids explore replica ancient villages, climb on traditional canoes, and watch artisans carve tapa cloth. On-site lagoon overlook is perfect for picnics.",
+    "location": "Taufa'ahau Road, Nuku'alofa, Tonga",
+    "bestTime": "Morning, June-September (cooler, drier)",
+    "imageUrl": "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80",
+    "amenities": [
+      "Shaded Pathways",
+      "Picnic Area",
+      "Restrooms",
+      "Souvenir Shop",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Fenced Lagoon Area",
+      "Well-Maintained Paths",
+      "Shaded Rest Areas",
+      "First Aid Available"
+    ],
+    "tipsAndTricks": [
+      "Arrive by 9 AM when artisans start work. Watching tapa cloth beaten from bark is hypnotic.",
+      "The lagoon edge is unfenced in spots. Keep toddlers close near the water.",
+      "Bring cash \u2014 souvenir shop is cash-only. Handmade tapa cloth from $5 pa'anga.",
+      "The garden has labeled medicinal plants. Make a game: 'find the nonu tree' with older kids.",
+      "Combine with the nearby Royal Palace (view from outside) for a quick photo op."
+    ],
+    "parentStory": {
+      "title": "He was more interested in the chickens than the artifacts",
+      "excerpt": "The centre has free-range chickens. My toddler chased them shrieking the whole visit. I saw 30% of exhibits. He saw 100% of chickens.",
+      "author": "Kate, mom of 2 from Melbourne",
+      "fullStory": "I worried it would be too educational for a 3-year-old. It wasn't. The grounds are open and grassy. He ran around the replica village like a playground. The carved canoes were a hit. And the chickens \u2014 so many chickens. Perfect balance."
+    },
+    "itineraryComparison": {
+      "halfDay": "National Centre (1.5 hours) + waterfront lunch",
+      "fullDay": "National Centre + Ha'amonga 'a Maui Trilithon + Anahulu Cave",
+      "bestFor": "Ages 0-10, cultural families, budget travelers"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Tonga National Centre",
+      "Nuku'alofa with kids",
+      "Tonga family activities",
+      "Tongan culture kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80"
+    ]
+  },
+  {
+    "id": "vanuatu-001",
+    "name": "Vanuatu National Museum",
+    "city": "Port Vila",
+    "country": "Vanuatu",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 65,
+    "description": "A compact museum showcasing the cultures and natural history of Vanuatu's 80+ islands. Kids love the slit drum room where they try full-sized replicas, the preserved giant coconut crab, and traditional grade-taking ceremony masks and headdresses.",
+    "location": "Rue Pasteur, Port Vila, Vanuatu",
+    "bestTime": "Weekday mornings, April-October (dry season)",
+    "imageUrl": "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80",
+    "amenities": [
+      "Interactive Displays",
+      "Gift Shop",
+      "Air Conditioning",
+      "Restrooms",
+      "Water Refill Station"
+    ],
+    "safetyFeatures": [
+      "Safe Exhibit Barriers",
+      "Well-Lit Galleries",
+      "Emergency Exits Marked",
+      "Clean Environment"
+    ],
+    "tipsAndTricks": [
+      "The slit drum room is the highlight. Let kids bang away \u2014 staff encourages it and the acoustics are incredible.",
+      "Don't miss the coconut crab display upstairs. Kids are stunned by how big they get.",
+      "Museum is small (45-60 min). Combine with the Port Vila market right across the street.",
+      "Entry by donation (300 Vatu suggested \u2014 about $3). Bring small bills.",
+      "The air conditioning is a lifesaver on hot days. Perfect midday cool-down between beach visits."
+    ],
+    "parentStory": {
+      "title": "The slit drum room turned into an impromptu concert",
+      "excerpt": "The museum employee picked up a mallet and played a traditional rhythm. My 6-year-old copied him badly but joyfully. Unscripted perfection.",
+      "author": "James, dad of 2 from Seattle",
+      "fullStory": "The grade-taking masks are genuinely impressive \u2014 huge, elaborate, otherworldly. But the slit drums won the day. A staff member taught my kids a basic rhythm. They spent 20 minutes taking turns. We walked out with a hand-carved souvenir drum."
+    },
+    "itineraryComparison": {
+      "halfDay": "Museum (1 hour) + Port Vila market + waterfront lunch",
+      "fullDay": "Museum + Mele Cascades + Hideaway Island snorkeling",
+      "bestFor": "Ages 4-14, culture and history families"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Vanuatu National Museum",
+      "Port Vila with kids",
+      "Vanuatu family activities",
+      "Vanuatu museums"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336605-5e9c7c738336?w=800&q=80",
+      "https://images.unsplash.com/photo-1738023354227-16a406891bd2?w=800&q=80"
+    ]
+  },
+  {
+    "id": "solomon-islands-001",
+    "name": "Tenaru Falls",
+    "city": "Honiara",
+    "country": "Solomon Islands",
+    "category": "Parks & Nature",
+    "ageRange": "4-14",
+    "safetyRating": 4.2,
+    "priceRange": "$",
+    "popularity": 58,
+    "description": "A rewarding family hike through tropical forest to a stunning multi-tiered waterfall with crystal-clear swimming holes. The trail follows the Tenaru River across easy footbridges. At the falls, families swim in the deep natural pool surrounded by Solomon Island wilderness.",
+    "location": "Tenaru River, ~20 km east of Honiara, Guadalcanal, Solomon Islands",
+    "bestTime": "Morning (6:30-9 AM start), dry season (May-October)",
+    "imageUrl": "https://images.unsplash.com/photo-1775152496490-9cebc8bb7dde?w=800&q=80",
+    "amenities": [
+      "Trail Markers",
+      "Swimming Holes",
+      "Natural Shade",
+      "Parking Area"
+    ],
+    "safetyFeatures": [
+      "Guide Recommended",
+      "Slippery Rock Warnings",
+      "Defined Trail",
+      "Shallow Entry Points"
+    ],
+    "tipsAndTricks": [
+      "Hire a local guide ($10-15). Not mandatory but the trail has unmarked forks.",
+      "Leave by 7 AM. Hike takes 45 min each way with kids. Best swimming before midday heat.",
+      "Bring water shoes. River crossings have slippery rocks.",
+      "Pack snacks and plenty of water. No vendors on the trail or at falls.",
+      "Safe for swimming but don't let kids dive from cliff edges \u2014 underwater rocks are unpredictable."
+    ],
+    "parentStory": {
+      "title": "The swim at the bottom was worth every muddy step",
+      "excerpt": "My 7-year-old complained 15 min into the hike. Then we saw the falls. He stripped off and ran in. Smiled the whole hour.",
+      "author": "Mark, dad of 1 from Brisbane",
+      "fullStory": "The trail is muddy and humid. But the local guide kept my son entertained \u2014 pointed out butterflies, edible plants. When we reached the falls, it was stunning. Two tiers dropping into a deep green pool. My son forgot every complaint."
+    },
+    "itineraryComparison": {
+      "halfDay": "Morning hike + swim + packed lunch at falls",
+      "fullDay": "Tenaru Falls morning + Honiara Central Market + Japanese Peace Memorial",
+      "bestFor": "Ages 5-14, active families, adventure seekers"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Tenaru Falls",
+      "Honiara family hike",
+      "Solomon Islands with kids",
+      "Guadalcanal waterfall"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80",
+      "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80",
+      "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80"
+    ]
+  },
+  {
+    "id": "papua-new-guinea-001",
+    "name": "Port Moresby Nature Park",
+    "city": "Port Moresby",
+    "country": "Papua New Guinea",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 72,
+    "description": "PNG's premier wildlife sanctuary and botanical garden with over 550 animals including tree kangaroos, cassowaries, and the world's largest butterfly \u2014 the Queen Alexandra's Birdwing. Elevated boardwalks wind through rainforest aviaries where birds of paradise fly freely overhead.",
+    "location": "Waigani Drive, Port Moresby, NCD, Papua New Guinea",
+    "bestTime": "Weekday mornings, dry season (May-October)",
+    "imageUrl": "https://images.unsplash.com/photo-1772550018808-ebbcc271726c?w=800&q=80",
+    "amenities": [
+      "Stroller-Friendly Boardwalks",
+      "Picnic Areas",
+      "Playground",
+      "Air-Conditioned Discovery Center",
+      "Caf\u00e9",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Secure Animal Enclosures",
+      "Security Guards",
+      "First Aid Room",
+      "Hand Sanitizer Stations",
+      "Lost Child Protocol"
+    ],
+    "tipsAndTricks": [
+      "Bird of paradise feeding at 10 AM. Arrive by 9:30 for a good spot near the aviary.",
+      "Tree kangaroo keeper talk at 11 AM. Kids can ask questions; sometimes the keeper brings a joey out.",
+      "Pack a rain jacket even in dry season. Rainforest pocket \u2014 brief showers are common.",
+      "Discovery Center has interactive exhibits. Air-conditioned and perfect for midday cool-down.",
+      "Combine with nearby Parliament House (modern architectural landmark) for photos."
+    ],
+    "parentStory": {
+      "title": "A tree kangaroo looked our son in the eye",
+      "excerpt": "Our 6-year-old pressed his forehead against the glass. A tree kangaroo hopped over and stared back for 30 seconds. 'He knows me.'",
+      "author": "Priya, mom of 1 from Singapore",
+      "fullStory": "Port Moresby Nature Park is world-class. The boardwalks through the aviary are incredible \u2014 birds of paradise above you. But the tree kangaroo moment was pure magic. Such gentle, curious animals. My son was convinced they had a soul connection."
+    },
+    "itineraryComparison": {
+      "halfDay": "Nature park (3 hours) + caf\u00e9 lunch",
+      "fullDay": "Nature park + National Museum & Art Gallery + Parliament House",
+      "bestFor": "Ages 0-14, wildlife families, bird lovers"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Port Moresby Nature Park",
+      "Papua New Guinea with kids",
+      "birds of paradise family",
+      "PNG wildlife park"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80",
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "fiji-extra-002",
+    "name": "Fiji Museum",
+    "city": "Suva",
+    "country": "Fiji",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 67,
+    "description": "Located within Thurston Gardens, the Fiji Museum holds the world's most comprehensive Fijian artifact collection including the rudder of the HMS Bounty, 3,000-year-old Lapita pottery, and spectacular traditional Fijian war canoes. A kid-friendly scavenger hunt keeps young visitors engaged.",
+    "location": "Ratu Cakobau Road, Thurston Gardens, Suva, Fiji",
+    "bestTime": "Weekday mornings, dry season (May-October)",
+    "imageUrl": "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+    "amenities": [
+      "Interactive Exhibits",
+      "Gift Shop",
+      "Air Conditioning",
+      "Restrooms",
+      "Gardens for Picnics"
+    ],
+    "safetyFeatures": [
+      "Well-Lit Galleries",
+      "Security Guards",
+      "Emergency Exits",
+      "Handrails"
+    ],
+    "tipsAndTricks": [
+      "Free scavenger hunt at the front desk. 30-40 min covering all major exhibits.",
+      "The Bounty exhibit is ground floor right. Tell the mutiny story like a pirate tale.",
+      "Museum is 60-90 min. Pack a picnic for Thurston Gardens afterward.",
+      "Gift shop sells handmade Fijian jewelry and tapa cloth. Better quality than airport shops.",
+      "Entry $10 Fijian adults, kids under 16 free. Cash only \u2014 ATM 5 min away at MHCC mall."
+    ],
+    "parentStory": {
+      "title": "The Lapita pottery sparked questions about 'people from before'",
+      "excerpt": "My 8-year-old stared at 3,000-year-old pottery for 10 minutes. 'Did ancient Fijians have toys?' She spent the rest of the day drawing.",
+      "author": "Sophie, mom of 2 from Sydney",
+      "fullStory": "Thurston Gardens alone are worth the visit \u2014 enormous tropical trees, peacocks wandering. The museum inside is world-class. The war canoe is breathtaking (25m long!). The Lapita collection is one of the best in the Pacific."
+    },
+    "itineraryComparison": {
+      "halfDay": "Museum (1.5 hrs) + Thurston Gardens picnic",
+      "fullDay": "Museum + Colo-i-Suva Forest Park + Suva Municipal Market",
+      "bestFor": "Ages 4-14, history and culture families"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Fiji Museum",
+      "Suva with kids",
+      "Fiji cultural activities",
+      "Lapita pottery Fiji"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80",
+      "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+      "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "fiji-extra-003",
+    "name": "Colo-i-Suva Forest Park",
+    "city": "Suva",
+    "country": "Fiji",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.3,
+    "priceRange": "$",
+    "popularity": 63,
+    "description": "A lush 2.5 km\u00b2 rainforest park 20 minutes from Suva with crystal-clear natural swimming pools fed by mountain streams, easy walking trails, and spectacular picnic spots. Three main swimming holes \u2014 Lower, Middle, and Upper Pool \u2014 offer varying depths from toddler-safe to swimmer-friendly.",
+    "location": "Ruth Road, off Princes Road, Suva, Fiji",
+    "bestTime": "Morning, May-October (cooler, less rain)",
+    "imageUrl": "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80",
+    "amenities": [
+      "Natural Swimming Pools",
+      "Walking Trails",
+      "Picnic Tables",
+      "BBQ Grills",
+      "Parking",
+      "Public Toilets"
+    ],
+    "safetyFeatures": [
+      "Lifeguard on Weekends",
+      "Rope Lines in Deep Pools",
+      "Signage in English",
+      "Trail Markers",
+      "Emergency Contact Number"
+    ],
+    "tipsAndTricks": [
+      "Lower Pool is safest for young kids \u2014 waist-deep for adults, gentle current.",
+      "Arrive before 9 AM on weekends. Gets busy with local families by 10 AM.",
+      "Bring water shoes. Pool rocks are smooth but slippery.",
+      "Pack a full picnic. BBQ grills available but no food vendors inside.",
+      "Main loop trail is 45 min. Muddy after rain \u2014 wear shoes you don't mind dirtying."
+    ],
+    "parentStory": {
+      "title": "The middle pool was our accidental paradise",
+      "excerpt": "Upper Pool was too deep for our 4-year-old. Middle Pool was perfect \u2014 knee-deep for him, with a mini waterfall to sit under.",
+      "author": "Rachel, mom of 1 from Perth",
+      "fullStory": "Colo-i-Suva feels like a secret. Thick vines and giant ferns, air smelling of wet earth, pools of incredible blue-green. We spent 3 hours swimming and watching our son chase tadpoles. Entry was $5 Fijian. Absolute steal."
+    },
+    "itineraryComparison": {
+      "halfDay": "Swimming at Lower Pool + short trail + picnic",
+      "fullDay": "Colo-i-Suva morning + Fiji Museum afternoon + Suva Market",
+      "bestFor": "Ages 0-14, nature families, budget travelers"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Colo-i-Suva Forest Park",
+      "Suva with kids",
+      "Fiji nature park",
+      "natural swimming pools Fiji"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1594103345324-16aa1bcffdb9?w=800&q=80",
+      "https://images.unsplash.com/photo-1644327981167-fbd67b34ba72?w=800&q=80",
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "new-zealand-002",
+    "name": "Auckland War Memorial Museum",
+    "city": "Auckland",
+    "country": "New Zealand",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "One of NZ's finest museums set majestically on the Auckland Domain. Three floors cover Pacific and M\u0101ori taonga (treasures), natural history, and war history. Kids are captivated by the full-sized M\u0101ori carved meeting house, the 25-metre waka (war canoe), and the daily M\u0101ori cultural performance featuring the haka.",
+    "location": "The Auckland Domain, Parnell, Auckland 1010, New Zealand",
+    "bestTime": "Weekday mornings, year-round",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Interactive Exhibits",
+      "Caf\u00e9",
+      "Gift Shop",
+      "Air Conditioning",
+      "Restrooms",
+      "Elevators",
+      "Free Guided Tours"
+    ],
+    "safetyFeatures": [
+      "Security Staff",
+      "Well-Lit Galleries",
+      "Emergency Exits",
+      "Lost Child Protocol",
+      "Hand Sanitizer Stations"
+    ],
+    "tipsAndTricks": [
+      "M\u0101ori cultural performance runs 11 AM and 1 PM daily. Book tickets online in advance.",
+      "Volcanoes & Earthquake gallery has a simulated earthquake platform. Fun but warn sensitive kids.",
+      "Free entry for Auckland residents (proof of address). Non-residents $25 NZD adults, kids under 18 free.",
+      "Explorers backpack for kids ($5) with scavenger hunt cards for each gallery",
+      "Combine with a walk through the Auckland Domain \u2014 the Wintergardens glasshouses and duck pond are 5 min away."
+    ],
+    "parentStory": {
+      "title": "He did the haka back to the performer",
+      "excerpt": "My 7-year-old stepped up during the cultural performance and gave the haka everything. The whole audience clapped.",
+      "author": "Mike, dad of 2 from Christchurch",
+      "fullStory": "I've been to Auckland Museum a dozen times but seeing it through my son's eyes was different. The war canoe hall \u2014 he just stood there with his mouth open. And the haka? He practiced it for weeks after."
+    },
+    "itineraryComparison": {
+      "halfDay": "Museum (2-3 hours) + caf\u00e9 lunch + Domain walk",
+      "fullDay": "Museum + Auckland Domain + Wintergardens + Parnell shopping",
+      "bestFor": "Ages 4-14, history and culture families, rainy day option"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Auckland War Memorial Museum",
+      "Auckland with kids",
+      "M\u0101ori culture kids",
+      "New Zealand family museum"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "new-zealand-003",
+    "name": "Hamilton Gardens",
+    "city": "Hamilton",
+    "country": "New Zealand",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "An internationally acclaimed garden complex with 28+ themed gardens spanning the world \u2014 Italian Renaissance, Japanese Zen, M\u0101ori, Indian Mughal, and more. Wide paths, plenty of lawns, a children's playground, and a splash pad in summer make it perfect for families.",
+    "location": "Cobham Drive, Hamilton 3216, New Zealand",
+    "bestTime": "Weekday mornings, October-April (spring-autumn bloom)",
+    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+    "amenities": [
+      "Walking Paths",
+      "Playground",
+      "Caf\u00e9",
+      "Restrooms",
+      "Picnic Areas",
+      "Free Parking",
+      "Wheelchair Accessible"
+    ],
+    "safetyFeatures": [
+      "Well-Maintained Paths",
+      "Fenced Ponds",
+      "Security Patrols",
+      "First Aid at Visitor Centre",
+      "Clear Signage"
+    ],
+    "tipsAndTricks": [
+      "Start at the Visitor Centre for a free map. Gardens span 54 hectares.",
+      "Children's playground near the Italian Garden. 45 min exploring + 20 min play works well.",
+      "Japanese Garden is the quietest section. Great for a calm sit-down if kids need a break.",
+      "Splash pad operates in warm months \u2014 check at the visitor centre. Bring swimsuits.",
+      "Enchanted Garden has secret doorways and hidden sculptures. Make it a scavenger hunt."
+    ],
+    "parentStory": {
+      "title": "We spent 20 minutes in the Chinese garden talking about dragons",
+      "excerpt": "My daughter was convinced a dragon princess lived in the koi pond. She spent 20 minutes weaving stories about her.",
+      "author": "Jen, mom of 1 from Wellington",
+      "fullStory": "I worried Hamilton Gardens would bore a 5-year-old. Wrong. The themed gardens are like different worlds \u2014 Italian like a castle, Japanese 'like in my anime,' Indian with dramatic colors. She ran from garden to garden pretending each was a different country. Four hours flew by."
+    },
+    "itineraryComparison": {
+      "halfDay": "Visitor Centre + 5-6 themed gardens + playground + caf\u00e9",
+      "fullDay": "All gardens + picnic + paddle boats on lake + Hamilton Zoo afternoon",
+      "bestFor": "All ages, garden lovers, families needing open space"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Hamilton Gardens",
+      "Hamilton New Zealand with kids",
+      "family gardens North Island",
+      "free things Hamilton NZ"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80"
+    ]
+  },
+  {
+    "id": "guam-001",
+    "name": "UnderWater World Guam",
+    "city": "Tumon",
+    "country": "Guam",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 76,
+    "description": "One of the longest underwater tunnels in the world at 97 metres \u2014 an acrylic tunnel surrounded by sharks, stingrays, sea turtles, and thousands of tropical fish. Over 80 species from Micronesia's waters including reef sharks, Napoleon wrasses, and giant groupers swimming directly overhead.",
+    "location": "888 Tumon Bay, Tumon, Guam 96913",
+    "bestTime": "Weekday mornings, January-May (dry season)",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Gift Shop",
+      "Photo Opportunities",
+      "Air Conditioning",
+      "Restrooms"
+    ],
+    "safetyFeatures": [
+      "Thick Acrylic Tunnel",
+      "Non-Slip Floors",
+      "Staff in Every Gallery",
+      "Emergency Exits",
+      "Hand Sanitizer Stations"
+    ],
+    "tipsAndTricks": [
+      "Go straight to the tunnel when doors open. First 30 minutes are least crowded.",
+      "Diver feeding show at 11 AM and 2 PM. Sharks get active \u2014 best time for photos.",
+      "Aquariums are dimly lit. Toddlers might spook \u2014 bring a comfort item.",
+      "Combine with Gun Beach or Ypao Beach (5 min away). Calm waters for kids.",
+      "Gift shop prices are reasonable. Plush shark ~$10 USD \u2014 great affordable souvenir."
+    ],
+    "parentStory": {
+      "title": "A 6-foot shark swam over her head and she laughed",
+      "excerpt": "My 3-year-old pointed up and said 'Look Mama, a fishy airplane!' The tunnel makes sharks feel less threatening.",
+      "author": "Hannah, mom of 2 from Tokyo",
+      "fullStory": "UnderWater World works for every age. My 3-year-old loved 'fishy airplanes' (sharks overhead), my 8-year-old loved the touch screens, and I loved the AC. The 97-metre tunnel is genuinely impressive \u2014 we went through three times."
+    },
+    "itineraryComparison": {
+      "halfDay": "Aquarium (1.5-2 hours) + beach lunch at Ypao Beach",
+      "fullDay": "Aquarium + Tumon sandcastle + The Plaza shopping + beach sunset",
+      "bestFor": "Ages 2-14, first-time snorkelers, marine life lovers"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "UnderWater World Guam",
+      "Guam with kids",
+      "Tumon family activities",
+      "Guam aquarium tunnel"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ]
+  },
+  {
+    "id": "palau-001",
+    "name": "Palau Aquarium",
+    "city": "Koror",
+    "country": "Palau",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 62,
+    "description": "Part of the Palau International Coral Reef Center \u2014 a research-grade aquarium showcasing the astonishing marine biodiversity of Palau's Rock Islands. Features a 1-million-litre reef tank with live coral, a jellyfish exhibit inspired by Jellyfish Lake, and touch pools with sea cucumbers and starfish.",
+    "location": "Palau International Coral Reef Center, P.O. Box 6536, Koror, Palau 96940",
+    "bestTime": "Weekday mornings, November-April (dry season)",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Touch Pool",
+      "Gift Shop",
+      "Air Conditioning",
+      "Educational Displays",
+      "Restrooms",
+      "Water Refill Station"
+    ],
+    "safetyFeatures": [
+      "Supervised Touch Pool",
+      "Non-Slip Flooring",
+      "Emergency Exits",
+      "Staff on Site",
+      "Clear Pathways"
+    ],
+    "tipsAndTricks": [
+      "Giant reef tank feeding at 10:30 AM and 2:30 PM. Feeding frenzy = most exciting time.",
+      "Upstairs houses the Coral Reef Research Center. Older kids can see actual research labs.",
+      "Gift shop sells handmade Palauan storyboards \u2014 authentic wooden carvings.",
+      "Aquarium is small (1-2 hrs). Combine with Etpison Museum for a full cultural morning.",
+      "Bring a refillable water bottle. Free water station at entrance."
+    ],
+    "parentStory": {
+      "title": "The jellyfish exhibit made her forget about the real ones",
+      "excerpt": "We couldn't get Jellyfish Lake permits. She was devastated. Then she saw the glowing moon jellies. 'These are better anyway, Mama.'",
+      "author": "Tara, mom of 1 from California",
+      "fullStory": "Palau Aquarium punches above its weight. The main reef tank is world-class \u2014 live coral, hundreds of fish species, a huge Napoleon wrasse. The kids' touch pool has a resident clownfish my son named 'Nemo 2.0.' Impressive for a small island nation."
+    },
+    "itineraryComparison": {
+      "halfDay": "Aquarium (1.5 hrs) + Etpison Museum + Koror town lunch",
+      "fullDay": "Aquarium morning + Rock Islands boat tour afternoon",
+      "bestFor": "Ages 2-14, marine science enthusiasts, pre-snorkel primer"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Palau Aquarium",
+      "Koror with kids",
+      "Palau family activities",
+      "Palau marine life children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    ]
+  },
+  {
+    "id": "punta-cana-001",
+    "name": "Indigenous Eyes Park (Parque Ojos Indigenas)",
+    "city": "Punta Cana",
+    "country": "Dominican Republic",
+    "category": "Parks & Nature",
+    "ageRange": "3-16",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 85,
+    "description": "A stunning 1,500-acre ecological reserve inside the Punta Cana Resort, featuring 12 freshwater lagoons (indigenous eyes), nature trails through subtropical forest, and a protected beach. Perfect for families who want a safe, guided nature experience with swimming in crystal-clear natural pools.",
+    "location": "Punta Cana Resort & Club, Carretera Punta Cana, Punta Cana 23000",
+    "bestTime": "Morning 8-11am, November-April",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Guided Nature Trails",
+      "Swimming Lagoons",
+      "Restrooms",
+      "Parking",
+      "Shaded Picnic Areas"
+    ],
+    "safetyFeatures": [
+      "Certified Nature Guides",
+      "Life Jackets Available",
+      "Clearly Marked Trails",
+      "First Aid Station",
+      "Fenced Entry"
+    ],
+    "tipsAndTricks": [
+      "Book the 8am guided tour - it's cooler, less crowded, and you'll spot more iguanas and birds before the heat sets in.",
+      "Bring water shoes. The lagoon bottoms are sandy but the trail between them has some rocky patches.",
+      "Only 4 of the 12 lagoons are open for swimming. The clearest one is Laguna 8 - it's the deepest and most Instagrammable.",
+      "The nature trail is about 1.5 km. It's stroller-friendly in a rugged way - better to baby-wear if your kid is under 2.",
+      "Pack bug spray. The forest has mosquitoes especially after rain. The resort provides some at the entrance but bring your own."
+    ],
+    "parentStory": {
+      "title": "She thought she was swimming in a giant fishbowl",
+      "excerpt": "Our 6-year-old kept calling the lagoon the giant fishbowl because she could see every pebble at the bottom. We spent 2 hours floating in Laguna 8 while parrotfish swam past. The most peaceful family morning of our entire trip.",
+      "author": "Emma, mom of 2 from Toronto",
+      "fullStory": "I was nervous about taking two young kids into nature in the Caribbean - bugs, currents, who knows what. But the Indigenous Eyes park is so well-managed. Our guide led us slowly, pointing out lizards and tropical flowers. The lagoon swimming was the highlight - waist-deep, no waves, water like glass. My daughter refused to leave."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-hour guided nature walk + swim in 2-3 lagoons, done by noon",
+      "fullDay": "Morning walk + lagoon swim + beach time at the reserve's private beach + picnic lunch",
+      "bestFor": "Ages 3-16, nature-loving families, first-time snorkelers"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Indigenous Eyes Park Punta Cana",
+      "family nature park Dominican Republic",
+      "freshwater lagoons Punta Cana"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "punta-cana-002",
+    "name": "Manati Park",
+    "city": "Punta Cana",
+    "country": "Dominican Republic",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 80,
+    "description": "A family-friendly ecological park featuring native Dominican wildlife including flamingos, parrots, sea lions, and manatees. Highlights include interactive dolphin shows, parrot feeding, and a replica Taino village. Compact and easy to navigate with young children.",
+    "location": "Av. Espana, Punta Cana 23000",
+    "bestTime": "Morning shows at 10am, November-April",
+    "imageUrl": "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+    "amenities": [
+      "Animal Shows",
+      "Restrooms",
+      "Souvenir Shop",
+      "Food Court",
+      "Shaded Walkways"
+    ],
+    "safetyFeatures": [
+      "Trained Animal Handlers",
+      "Secure Animal Enclosures",
+      "Hand Sanitizer Stations",
+      "First Aid Station",
+      "Fenced Perimeter"
+    ],
+    "tipsAndTricks": [
+      "Plan your day around the show schedule - the sea lion show at 11am and parrot show at 2pm are the best. Arrive 15 minutes early for good seats in the shade.",
+      "Skip the on-site restaurant. It's overpriced and mediocre. There's a nice Dominican restaurant 5 minutes down the road called Don Luca with kid-friendly portions.",
+      "The parrot feeding area lets kids hold the birds. Bring a phone lanyard - parrots love shiny objects and will grab for phones.",
+      "Manati is small - you can see everything in 2-3 hours. Combine it with a morning at nearby Macao Beach for a balanced day.",
+      "Buy tickets online the night before. The walk-up line moves slowly and you'll save 15-20 minutes with pre-booked entry."
+    ],
+    "parentStory": {
+      "title": "He fed a parrot and forgot about iPads for an hour",
+      "excerpt": "My 4-year-old son, who usually needs a screen within 30 seconds of sitting still, spent 45 minutes hand-feeding parrots. A green one sat on his shoulder and wouldn't leave. He named it Paco. Best $30 we spent all trip.",
+      "author": "David, dad of 1 from Chicago",
+      "fullStory": "Manati Park isn't a world-class zoo - it's a Dominican animal park that feels a bit retro. But the kid encounters are fantastic. The parrot feeding area lets you buy a cup of seeds and birds land right on your hands. Our son was terrified at first, then obsessed. The sea lion show made him laugh so hard he snorted. Three hours, zero screens, pure joy."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours, see all animals, catch 2 shows, done by lunchtime",
+      "fullDay": "Not necessary - park is compact. Add Macao Beach or Indigenous Eyes Park in the afternoon",
+      "bestFor": "Ages 2-14, animal lovers, families wanting a low-key morning"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Manati Park Punta Cana",
+      "family zoo Dominican Republic",
+      "animal shows Punta Cana kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ]
+  },
+  {
+    "id": "punta-cana-003",
+    "name": "Dolphin Explorer Punta Cana",
+    "city": "Punta Cana",
+    "country": "Dominican Republic",
+    "category": "Zoos & Aquariums",
+    "ageRange": "3-16",
+    "safetyRating": 4.8,
+    "priceRange": "$$$",
+    "popularity": 88,
+    "description": "An interactive dolphin encounter program in a protected natural lagoon at the Punta Cana Resort. Families can swim, play, and learn alongside trained dolphins in a small-group setting. Programs include shallow-water encounters for toddlers and deeper swims for older kids and adults.",
+    "location": "Punta Cana Resort & Club, Carretera Punta Cana 23000",
+    "bestTime": "Morning sessions 9am, November-April",
+    "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "amenities": [
+      "Changing Rooms",
+      "Lockers",
+      "Showers",
+      "Underwater Photo Service",
+      "Shaded Viewing Area"
+    ],
+    "safetyFeatures": [
+      "Marine Biologist Supervision",
+      "Life Jackets Provided",
+      "Small Group Ratio (max 8 per group)",
+      "Emergency Response Team",
+      "Shallow Water Options for Toddlers"
+    ],
+    "tipsAndTricks": [
+      "Book the Dolphin Encounter (waist-deep water, 30 min) for ages 3-6. The Dolphin Swim (deep water, 45 min) is better for ages 7+ who are confident in the water.",
+      "The underwater photo package is worth it - $50 gets you 20+ professional photos. Your phone in a waterproof pouch won't get the same shots.",
+      "Arrive 30 minutes early for check-in and a safety briefing. Late arrivals may be turned away with no refund.",
+      "Pregnant women and kids under 3 can't participate in the full swim program - check the Dolphin Encounter for the most accessible option.",
+      "Bring reef-safe sunscreen. Regular sunscreen is not allowed in the lagoon as it harms the dolphins."
+    ],
+    "parentStory": {
+      "title": "The dolphin kissed her and she screamed with joy",
+      "excerpt": "For 2 years my daughter had watched dolphin videos every night to fall asleep. When she finally touched one, she cried happy tears. The trainer let her give a hand signal and the dolphin did a backflip. She's 7 and still calls it the best day of my life.",
+      "author": "Linda, mom of 1 from New York",
+      "fullStory": "I was worried Dolphin Explorer would feel like a tourist trap. It's not. The trainers are genuine marine educators who clearly love the animals. My daughter was nervous until the dolphin nudged her hand. Within 5 minutes she was laughing, splashing, and giving commands. The trainers let each kid have one-on-one time."
+    },
+    "itineraryComparison": {
+      "halfDay": "Dolphin Encounter/Swim session (1-1.5h total), done by 10:30am",
+      "fullDay": "Not needed. Combine with Indigenous Eyes Park visit since they're on the same resort property",
+      "bestFor": "Ages 3-16, animal lovers, families wanting a bucket-list experience"
+    },
+    "commissionRate": "12%",
+    "seoKeywords": [
+      "dolphin swim Punta Cana",
+      "dolphin encounter kids Dominican Republic",
+      "family dolphin experience Caribbean"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80"
+    ]
+  },
+  {
+    "id": "grand-cayman-001",
+    "name": "Cayman Turtle Centre",
+    "city": "Grand Cayman",
+    "country": "Cayman Islands",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 84,
+    "description": "A conservation and education centre where families can interact with sea turtles of all sizes, from hatchlings to 600-pound giants. Features turtle pools, a predator reef tank, a nature trail, and a splash park for toddlers. Combines wildlife education with hands-on fun in a safe, well-maintained facility.",
+    "location": "825 Northwest Point Road, West Bay, Grand Cayman",
+    "bestTime": "Morning 9am-12pm, November-April",
+    "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    "amenities": [
+      "Touch Pools",
+      "Splash Park",
+      "Restrooms",
+      "Cafe",
+      "Souvenir Shop",
+      "Shaded Seating Areas"
+    ],
+    "safetyFeatures": [
+      "Life Guards at Splash Park",
+      "Hand Washing Stations",
+      "Shallow Pools for Toddlers",
+      "First Aid Station",
+      "Fenced Grounds"
+    ],
+    "tipsAndTricks": [
+      "Head straight to the Turtle Touch Pool when you arrive - it has the smallest hatchlings and kids under 5 love holding them. It gets crowded after 10am.",
+      "The splash park is included in admission. Bring swimsuits and towels even if you think you won't use them. Kids see the water and can't resist.",
+      "Skip the on-site cafe. Walk 3 minutes to Macabuca next door - it has better food, cheaper prices, and ocean views.",
+      "The nature trail behind the centre takes 15 minutes and has native birds and iguanas. Good for burning off post-lunch energy.",
+      "Buy a Turtle Feeder cup ($5) at the front desk. The big turtles in the main pond will swim right up to your kids."
+    ],
+    "parentStory": {
+      "title": "Holding a baby turtle broke something in me (in a good way)",
+      "excerpt": "My 5-year-old daughter gently held a hatchling the size of her palm. She whispered to it for 5 minutes. When she put it back, she said with total seriousness: I'm going to save ALL the turtles. We've been donating to sea turtle conservation ever since.",
+      "author": "Rachel, mom of 1 from Boston",
+      "fullStory": "I honestly thought Cayman Turtle Centre was just a tourist trap. It's actually doing meaningful conservation work - breeding endangered green sea turtles and releasing them. The touch pool is supervised by knowledgeable staff who explain everything. My daughter learned more about marine conservation in 2 hours than I could teach in a year."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours: touch turtles, splash park, nature trail, done by lunch",
+      "fullDay": "Not needed. Combine with Stingray City or Seven Mile Beach in the afternoon",
+      "bestFor": "Ages 2-14, animal lovers, families wanting educational fun"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Cayman Turtle Centre",
+      "Grand Cayman with kids",
+      "sea turtle encounter Cayman Islands"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80"
+    ]
+  },
+  {
+    "id": "grand-cayman-002",
+    "name": "Stingray City Sandbar Tour",
+    "city": "Grand Cayman",
+    "country": "Cayman Islands",
+    "category": "Zoos & Aquariums",
+    "ageRange": "3-16",
+    "safetyRating": 4.9,
+    "priceRange": "$$$",
+    "popularity": 95,
+    "description": "A world-famous family experience where you stand waist-deep on a sandbar in crystal-clear Caribbean water while friendly southern stingrays glide around you. Professional guides teach safe interaction with these gentle creatures. Boat tour includes snorkeling at a nearby coral reef. An absolute bucket-list family activity.",
+    "location": "North Sound, Grand Cayman (depart from Seven Mile Beach or Rum Point)",
+    "bestTime": "Early morning 7:30-9:30am, calmest water conditions November-April",
+    "imageUrl": "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+    "amenities": [
+      "Life Jackets (all sizes including toddler)",
+      "Snorkel Gear Included",
+      "Underwater Cameras Available",
+      "Dry Bags",
+      "Freshwater Rinse"
+    ],
+    "safetyFeatures": [
+      "Certified Marine Guides",
+      "Stingray Handling Training",
+      "Emergency Life Jackets",
+      "Boat Safety Equipment",
+      "Shallow Waist-Deep Water"
+    ],
+    "tipsAndTricks": [
+      "Book the 7am or 8am departure. The water is calmer, the stingrays are more active, and you'll have the sandbar mostly to yourself before the 10am crowd arrives.",
+      "Tell your kids the stingray shuffle - slide your feet on the sandy bottom instead of stepping. It gently moves any hidden rays and prevents accidental stepping.",
+      "Bring a rash guard or wetsuit top for kids. The sun at 10am in Cayman is brutal and reapplying sunscreen on wet kids is impossible.",
+      "Toddlers under 3 can join but must stay on the boat. The Stingray City experience requires stepping off the boat into waist-deep water.",
+      "The guides will take turns holding a stingray for photos. Let your kids touch the wings (smooth) not the tail (spiny). They're harmless but the feel surprises some kids."
+    ],
+    "parentStory": {
+      "title": "The stingray kissed his cheek and he didn't even flinch",
+      "excerpt": "I was terrified of stingrays. My 8-year-old son was not. When the guide showed him how to feed a squid to a ray, he didn't hesitate. The ray's mouth brushed his cheek and he just laughed. I learned more from watching him that day than from any guide.",
+      "author": "Marcus, dad of 1 from London",
+      "fullStory": "After Steve Irwin, I had a deep fear of stingrays. I almost backed out. But Stingray City is different - it's a sandbar, not deep water, and the rays are wild but accustomed to gentle human interaction. The guides taught us the scoop technique for feeding. My son was fearless. I held a stingray for the first time in my life."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-hour tour: 40min at Stingray City + 30min snorkel + boat ride, done by 11am",
+      "fullDay": "Book a Stingray City + Snorkel + Lunch combo tour (4-5 hours total)",
+      "bestFor": "Ages 3-16, adventurous families, first-time Caribbean water experiences"
+    },
+    "commissionRate": "12%",
+    "seoKeywords": [
+      "Stingray City Grand Cayman",
+      "family stingray tour Cayman Islands",
+      "snorkeling with stingrays kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80"
+    ]
+  },
+  {
+    "id": "aruba-001",
+    "name": "Aruba Butterfly Farm",
+    "city": "Oranjestad",
+    "country": "Aruba",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.9,
+    "priceRange": "$$",
+    "popularity": 82,
+    "description": "A lush tropical garden sanctuary housing hundreds of free-flying butterflies from species around the world. Walk through screened enclosures as butterflies land on your shoulders, arms, and hands. Educational guided tours explain the butterfly lifecycle from egg to chrysalis to adult. Peaceful, magical, and perfect for young children.",
+    "location": "J.E. Irausquin Boulevard 344, Palm Beach, Aruba",
+    "bestTime": "Morning 9-11am, butterflies most active in warm humid conditions",
+    "imageUrl": "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80",
+    "amenities": [
+      "Guided Tours",
+      "Chrysalis Viewing Area",
+      "Souvenir Shop",
+      "Shaded Benches",
+      "Restrooms"
+    ],
+    "safetyFeatures": [
+      "Screened Enclosures (no escape)",
+      "Clean Pathways",
+      "Hand Washing Station",
+      "Non-Toxic Plants Only",
+      "First Aid Kit"
+    ],
+    "tipsAndTricks": [
+      "Wear bright colors - pink, yellow, and orange attract butterflies. They'll land on you within minutes. White also works well.",
+      "The guided tour lasts about 30 minutes and is worth it. You'll see the chrysalis room where hundreds of butterflies are hatching, and the guide knows exactly which species land the most.",
+      "Don't wear strong perfume or sunscreen with heavy fragrance. Butterflies have scent receptors on their antennae and strong smells can confuse or repel them.",
+      "Bring a camera with macro mode. The butterflies are incredibly photogenic but small - phone cameras without zoom miss the detail.",
+      "Combine with the nearby Philips Animal Garden (Aruba's small zoo) which is a 2-minute walk away. Makes for a lovely animal-filled morning."
+    ],
+    "parentStory": {
+      "title": "A blue morpho landed on her nose and she froze like a statue",
+      "excerpt": "Our 3-year-old was holding so still I thought she'd stopped breathing. A blue morpho butterfly landed right on her nose. She looked at me with huge eyes, whispering Mama, I'm a princess. We stayed in that garden for 2 hours.",
+      "author": "Sophie, mom of 1 from Amsterdam",
+      "fullStory": "I was worried a butterfly farm would be dull for a toddler. Wrong. The moment we stepped in, butterflies were everywhere. A guide showed us a chrysalis that was actually shaking - a butterfly was emerging inside. The garden is designed so butterflies naturally land on visitors. My daughter wore a bright pink dress and was a butterfly magnet."
+    },
+    "itineraryComparison": {
+      "halfDay": "1-2 hours: guided tour + free-roam time, combine with Philips Animal Garden",
+      "fullDay": "Not needed. Add Palm Beach or Eagle Beach for the afternoon",
+      "bestFor": "Ages 2-14, young children, families wanting a calm nature experience"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Aruba Butterfly Farm",
+      "butterfly garden Aruba",
+      "family activity Aruba kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80"
+    ]
+  },
+  {
+    "id": "curacao-001",
+    "name": "Curacao Sea Aquarium",
+    "city": "Willemstad",
+    "country": "Curacao",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-16",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 86,
+    "description": "One of the Caribbean's best family aquariums, featuring an open-water system that pumps fresh seawater directly from the ocean. Highlights include an open-sea exhibit with sharks and rays, touch pools with starfish and sea cucumbers, daily animal feeding shows, and a famous Animal Encounter program where kids can swim with dolphins and sea lions in a natural lagoon.",
+    "location": "Bapor Kibra z/n, Willemstad, Curacao",
+    "bestTime": "Morning 9-11am, feeding shows start at 10am",
+    "imageUrl": "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80",
+    "amenities": [
+      "Touch Pools",
+      "Animal Encounter Programs",
+      "Restaurant with Ocean View",
+      "Souvenir Shop",
+      "Changing Facilities",
+      "Restrooms"
+    ],
+    "safetyFeatures": [
+      "Professional Marine Staff",
+      "Secure Glass Barriers",
+      "Life Jackets for Water Programs",
+      "Shaded Viewing Areas",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "Time your visit around the feeding schedule - shark feeding at 11am is the highlight and the underwater viewing window is incredible for kids.",
+      "The Sea Lion Encounter (separate fee) is better for kids under 8 than the dolphin program. Sea lions are smaller, less intimidating, and the interaction is shallower.",
+      "Buy the combo ticket for the aquarium + Curacao Ostrich Farm (15 minutes away). It saves 20% and makes for a full family day.",
+      "The restaurant has a kids' menu and ocean-view balcony. The lionfish tacos are surprisingly kid-friendly.",
+      "Parking is free but limited. Arrive before 10am on cruise ship days or you'll be circling for 15 minutes."
+    ],
+    "parentStory": {
+      "title": "He touched a shark and thought he was a superhero",
+      "excerpt": "The touch pool lets kids pet baby sharks and rays. My 5-year-old touched a bamboo shark and spent an hour telling everyone he was the shark whisperer. The open-sea tunnel made him feel like he was underwater. Best aquarium we've visited in 12 countries.",
+      "author": "Tom, dad of 2 from Sydney",
+      "fullStory": "Curacao Sea Aquarium is brilliantly designed for kids. The open-water system means the exhibits are vibrant and healthy. My kids were mesmerized by the open-sea tank - it's huge, with sharks, rays, and giant groupers swimming right overhead. The touch pool staff were patient, letting each child take their time."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours: main aquarium + all feeding shows + touch pool",
+      "fullDay": "Add Sea Lion or Dolphin Encounter + Ostrich Farm combo",
+      "bestFor": "Ages 2-16, marine life enthusiasts, rainy day activity"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Curacao Sea Aquarium",
+      "aquarium Curacao kids",
+      "family activities Willemstad"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336605-5e9c7c738336?w=800&q=80",
+      "https://images.unsplash.com/photo-1738023354227-16a406891bd2?w=800&q=80"
+    ]
+  },
+  {
+    "id": "st-lucia-001",
+    "name": "St Lucia Zoo (Zoo La Belle Vie)",
+    "city": "Castries",
+    "country": "St. Lucia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "3-14",
+    "safetyRating": 4.3,
+    "priceRange": "$",
+    "popularity": 70,
+    "description": "A small, intimate zoo in a beautiful tropical garden setting. Home to native St. Lucian parrots (the endangered Amazona versicolor), iguanas, agoutis, monkeys, and boa constrictors. The zoo is compact and easily walkable, with informative signage and a strong conservation focus.",
+    "location": "Morne Cochon, Union, Castries, St. Lucia",
+    "bestTime": "Morning 9am-12pm, cooler and animals are more active",
+    "imageUrl": "https://images.unsplash.com/photo-1775152496490-9cebc8bb7dde?w=800&q=80",
+    "amenities": [
+      "Shaded Pathways",
+      "Restrooms",
+      "Small Gift Shop",
+      "Parking",
+      "Picnic Tables"
+    ],
+    "safetyFeatures": [
+      "Secure Enclosures",
+      "Staff Supervision",
+      "First Aid Kit",
+      "Emergency Contact Signage"
+    ],
+    "tipsAndTricks": [
+      "Go in the morning before it gets hot. The St. Lucian parrot is most active between 9-10am and often hides during afternoon heat.",
+      "This is a small zoo - 45 minutes to 1 hour is plenty. Combine with a visit to Morne Coubaril Estate or Marigot Bay for a full day.",
+      "Expect a local zoo experience, not a Western-style facility. Some enclosures are basic. It's charming but not flashy.",
+      "The gift shop sells handcrafted St. Lucian parrot souvenirs. Profits support the conservation program - worth buying a small thing.",
+      "Bring your own water. There's a drink stand but it's cash-only and occasionally closed without notice."
+    ],
+    "parentStory": {
+      "title": "We saw the rarest parrot in the world",
+      "excerpt": "Standing 3 feet from a St. Lucian parrot - one of the rarest birds on Earth - with my 7-year-old was unreal. The zoo is humble but the conservation work matters. My daughter wrote her school report on parrots of the Caribbean after that visit.",
+      "author": "Jennifer, mom of 1 from Manchester",
+      "fullStory": "Don't come expecting a world-class zoo. Come expecting a real, honest conservation effort. The St. Lucian parrot is stunning - purple, green, and blue feathers you can't believe are real. The zookeeper gave us a 10-minute talk about their breeding program."
+    },
+    "itineraryComparison": {
+      "halfDay": "45-60 min zoo visit + Morne Coubaril Estate or Marigot Bay",
+      "fullDay": "Zoo + Morne Coubaril + Castries market visit",
+      "bestFor": "Ages 3-14, nature-focused families, bird lovers"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "St Lucia Zoo",
+      "Zoo La Belle Vie",
+      "St. Lucian parrot conservation"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80",
+      "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80",
+      "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80"
+    ]
+  },
+  {
+    "id": "antigua-001",
+    "name": "Stingray City Antigua",
+    "city": "St. John's",
+    "country": "Antigua & Barbuda",
+    "category": "Zoos & Aquariums",
+    "ageRange": "4-16",
+    "safetyRating": 4.8,
+    "priceRange": "$$$",
+    "popularity": 88,
+    "description": "A thrilling family experience in the clear, calm waters of Antigua's North Sound. Step onto a shallow sandbar surrounded by dozens of friendly southern stingrays. Professional guides teach safe interaction, feeding, and even allow gentle holds for photos. Includes snorkeling on a nearby coral reef. The water is crystal clear and never deeper than waist-level for adults.",
+    "location": "Moss Bay, North Sound, Antigua (depart from St. John's or Dickenson Bay)",
+    "bestTime": "Morning 8-10am, calmest conditions December-May",
+    "imageUrl": "https://images.unsplash.com/photo-1772550018808-ebbcc271726c?w=800&q=80",
+    "amenities": [
+      "Snorkel Gear Provided",
+      "Life Jackets (all sizes)",
+      "Underwater Photography",
+      "Dry Bags",
+      "Freshwater Rinse",
+      "Boat Amenities"
+    ],
+    "safetyFeatures": [
+      "Certified Marine Guides",
+      "Life Jackets for All Ages",
+      "Safety Briefing Before Entry",
+      "Shallow Sandbar (waist-deep max)",
+      "Emergency Communication on Boat"
+    ],
+    "tipsAndTricks": [
+      "Book directly with Stingray City Antigua (not through a hotel desk) to save 15-20%. Hotel concierges add a markup.",
+      "The 8am tour is the best - you'll beat the cruise ship crowds and have calmer water. By 11am, 3-4 tour boats share the sandbar.",
+      "Kids under 4 generally can't participate - the minimum age is 4 for safety reasons. Check the individual operator's policy.",
+      "Bring reef-safe sunscreen and a rash guard. The boat ride is 20 minutes each way and the Caribbean sun is relentless.",
+      "Feed the stingrays with your palm flat (fingers together) so they don't nibble your fingertips. The guides demonstrate this clearly."
+    ],
+    "parentStory": {
+      "title": "She fed a stingray and stopped being afraid of everything",
+      "excerpt": "My daughter was terrified of everything - dogs, bugs, the dark. She was shaking getting on the boat. But the moment she saw those stingrays gliding through the clear water, something switched. She fed one on the first try.",
+      "author": "Chris, dad of 1 from Austin",
+      "fullStory": "I booked Stingray City Antigua as a splurge. Best money I've spent. The guides are incredible with kids - patient, encouraging, and knowledgeable. My daughter was terrified at first but within 5 minutes she was feeding stingrays like a pro. The water is so clear you can see everything. We did the reef snorkel after and saw sea turtles."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-hour tour: Stingray City + reef snorkel, done by 11:30am",
+      "fullDay": "Combo with lunch at North Sound beach club for a 5-hour excursion",
+      "bestFor": "Ages 4-16, families wanting an unforgettable water experience"
+    },
+    "commissionRate": "12%",
+    "seoKeywords": [
+      "Stingray City Antigua",
+      "family stingray experience Antigua",
+      "snorkeling Antigua kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80",
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "grenada-001",
+    "name": "Grand Etang National Park",
+    "city": "St. George's",
+    "country": "Grenada",
+    "category": "Parks & Nature",
+    "ageRange": "4-16",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 76,
+    "description": "A lush rainforest park centered around a stunning volcanic crater lake at 1,800 feet elevation. Features well-maintained hiking trails through tropical forest with waterfalls, exotic birds, Mona monkeys, and the beautiful Grand Etang Lake. A perfect family introduction to Grenada's wild interior with guided nature walks suitable for children.",
+    "location": "Grand Etang Road, St. George's, Grenada",
+    "bestTime": "Morning 8-11am, December-May dry season",
+    "imageUrl": "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80",
+    "amenities": [
+      "Visitor Center",
+      "Restrooms",
+      "Parking",
+      "Picnic Areas",
+      "Guided Tours Available"
+    ],
+    "safetyFeatures": [
+      "Marked Trails",
+      "Park Rangers on Site",
+      "Emergency Contact Points",
+      "Handrails on Steep Sections",
+      "First Aid at Visitor Center"
+    ],
+    "tipsAndTricks": [
+      "Hire a guide at the visitor center ($15 for a 1-hour walk). They'll spot monkeys, birds, and plants you'd walk right past.",
+      "The Seven Sisters Falls hike is 45 minutes one way and moderate. Kids 6+ can handle it with good shoes. Skip it with toddlers.",
+      "Bring rain jackets even on sunny days. The rainforest creates its own weather and sudden showers are common.",
+      "Stop at the visitor center first for trail maps and bug spray. They rent hiking sticks for $1 which kids love.",
+      "Feed the Mona monkeys only the fruit provided by guides. Packaged snacks are bad for them and aggressive begging behavior has been an issue."
+    ],
+    "parentStory": {
+      "title": "A monkey stole her granola bar and she laughed instead of cried",
+      "excerpt": "A Mona monkey jumped onto our trail, stared at my 6-year-old, and gently took the granola bar from her hand. She was so shocked she just giggled. The guide explained he was a local named George who knew which hikers carried snacks. My daughter felt like she'd met a celebrity.",
+      "author": "Nina, mom of 1 from Berlin",
+      "fullStory": "Grand Etang is the real Grenada - no resorts, no beaches, just pure tropical rainforest. The crater lake at the top is eerily beautiful, surrounded by mist. Our guide pointed out nutmeg trees, wild mangoes, and monkeys hiding in the canopy. The hike to Seven Sisters Falls was muddy and tiring but the waterfall pool at the end was worth every step."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hour guided nature walk around the lake + short waterfall hike",
+      "fullDay": "Morning Grand Etang hike + afternoon at Concord Falls or Annandale Falls",
+      "bestFor": "Ages 4-16, active families, nature lovers"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Grand Etang National Park Grenada",
+      "rainforest hike kids Grenada",
+      "Grand Etang Lake family"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80",
+      "https://images.unsplash.com/photo-1594103345324-16aa1bcffdb9?w=800&q=80"
+    ]
+  },
+  {
+    "id": "kuala-lumpur-004",
+    "name": "Sunway Lagoon Theme Park",
+    "city": "Kuala Lumpur",
+    "country": "Malaysia",
+    "category": "Theme Parks",
+    "ageRange": "2-16",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 92,
+    "description": "Malaysia's premier theme park with six distinct zones: Water Park, Amusement Park, Wildlife Park, Scream Park (horror), Extreme Park, and the new Nickelodeon Lost Lagoon featuring SpongeBob and Dora attractions. One-day entry covers all parks. World-class water slides, a 360-degree surf simulator, and a man-made beach make it a full-day family destination.",
+    "location": "3, Jalan PJS 11/11, Bandar Sunway, 47500 Subang Jaya, Selangor",
+    "bestTime": "Weekdays 10am, March-November (avoid school holidays)",
+    "imageUrl": "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80",
+    "amenities": [
+      "Lockers",
+      "Changing Rooms",
+      "Restaurants",
+      "Stroller Rental",
+      "Souvenir Shops",
+      "ATMs"
+    ],
+    "safetyFeatures": [
+      "Life Guards at All Water Attractions",
+      "Height Requirements Posted",
+      "First Aid Centers",
+      "Lost Child Center",
+      "Security Staff Throughout"
+    ],
+    "tipsAndTricks": [
+      "Buy the 'Super Pass' online in advance - it's 40% cheaper than the gate price and includes all 6 parks. The walk-up queue is brutal on weekends.",
+      "Arrive at 10am and head straight to the Nickelodeon Lost Lagoon. It's the newest zone and gets packed by noon.",
+      "Bring water shoes. The ground gets scorching hot by 11am and barefoot walking between pools is painful.",
+      "The Wildlife Park is surprisingly good - they have white tigers, a petting zoo, and bird shows. Don't skip it for the water park alone.",
+      "Food inside is overpriced (RM 25-35 for a meal). You can get a wristband for re-entry to eat at Sunway Pyramid mall next door."
+    ],
+    "parentStory": {
+      "title": "We surfed a wave in the middle of Kuala Lumpur",
+      "excerpt": "The flow rider surf simulator looked impossible. But my 8-year-old watched a pro for 10 minutes, tried it, and stood up for 3 seconds. She screamed so loud the lifeguard high-fived her. Two hours later, she was bodyboarding like a local. Best park in SE Asia, hands down.",
+      "author": "Hannah, mom of 2 from Singapore",
+      "fullStory": "Sunway Lagoon is huge - we didn't see all 6 parks in one day. The water park is the main draw but the Amusement Park has a great wooden roller coaster and the Nickelodeon area is pure joy for younger kids. We went on a Tuesday and barely queued. The SpongeBob splash pad kept my 4-year-old occupied for 90 minutes straight."
+    },
+    "itineraryComparison": {
+      "halfDay": "Not recommended - too much to see. Focus on Water Park + Nickelodeon zone only",
+      "fullDay": "Full day 10am-6pm: Water Park + Nickelodeon + Wildlife Park + 1-2 thrill rides",
+      "bestFor": "Ages 2-16, families wanting a full day of variety"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Sunway Lagoon Kuala Lumpur",
+      "theme park Malaysia kids",
+      "Sunway Lagoon family ticket"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80",
+      "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80",
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80"
+    ]
+  },
+  {
+    "id": "kuala-lumpur-005",
+    "name": "Kuala Selangor Fireflies Park (Kampung Kuantan)",
+    "city": "Kuala Lumpur",
+    "country": "Malaysia",
+    "category": "Parks & Nature",
+    "ageRange": "3-16",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 82,
+    "description": "A magical evening experience along the Selangor River where thousands of fireflies light up the mangrove trees in synchronized flashes. Families take a quiet boat ride through the dark river at dusk, watching the trees sparkle like Christmas. One of the world's largest firefly colonies and a truly breathtaking natural spectacle.",
+    "location": "Kampung Kuantan, Kuala Selangor, Selangor (1 hour from KL)",
+    "bestTime": "Sunset to 9pm, March-October (avoid full moon and rainy evenings)",
+    "imageUrl": "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+    "amenities": [
+      "Boat Rides",
+      "Parking",
+      "Small Food Stalls",
+      "Restrooms",
+      "Mosque Nearby"
+    ],
+    "safetyFeatures": [
+      "Life Jackets on Boats",
+      "Experienced Boatmen",
+      "Low-Speed Boats",
+      "Well-Worn Docks",
+      "Emergency Flashlights"
+    ],
+    "tipsAndTricks": [
+      "Go on a moonless night. The darker the sky, the brighter the fireflies. A full moon ruins the effect entirely.",
+      "Book a boatman named 'Pak Man' (ask at the jetty). He's been doing this for 30 years and knows exactly which trees have the most fireflies.",
+      "Arrive at 6:30pm for sunset views over the river, then take the boat at 7:15pm when it's properly dark.",
+      "No photos! Cameras and phones with flash scare the fireflies and ruin the experience for everyone. The boatmen will ask you to keep devices off.",
+      "Combine with a visit to Bukit Melawati (Silver Leaf Monkey Hill) during daylight - the monkeys are friendly and the fortress ruins are cool."
+    ],
+    "parentStory": {
+      "title": "She thought we'd sailed into a fairy tale",
+      "excerpt": "The boat glided silently through the dark. Then the trees started blinking. Thousands of fireflies, all at once. My 5-year-old whispered 'Are we in a fairy tale?' She asked to go back the next night. We did. It was even better the second time.",
+      "author": "Priya, mom of 2 from Mumbai",
+      "fullStory": "I was skeptical about a 1-hour drive from KL for fireflies. But the moment the boat turned off its motor and we drifted into the mangroves, I understood. The trees were COVERED in blinking lights. Our boatman used a blue light to attract a firefly onto his hand for the kids to see. It's not a long experience (30 minutes on the water) but it's one of those moments you'll never forget."
+    },
+    "itineraryComparison": {
+      "halfDay": "Evening only: depart KL at 4pm, firefly boat ride 7pm, dinner at seafood restaurant, return by 10pm",
+      "fullDay": "Day trip: Bukit Melawati + seafood lunch + fireflies in evening",
+      "bestFor": "Ages 3-16, families wanting a unique nature experience"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Kuala Selangor fireflies",
+      "firefly park Malaysia",
+      "Kampung Kuantan fireflies kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80",
+      "https://images.unsplash.com/photo-1594103345324-16aa1bcffdb9?w=800&q=80",
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "mexico-city-001",
+    "name": "Chapultepec Zoo (Zool\u00f3gico de Chapultepec)",
+    "city": "Mexico City",
+    "country": "Mexico",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-16",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 88,
+    "description": "One of the largest and most visited zoos in Latin America, set within the sprawling Chapultepec Park. Home to over 1,300 animals from 200+ species including giant pandas (one of only four zoos outside China), elephants, giraffes, and a spectacular aviary. Completely free admission with excellent conservation programs and modern habitats.",
+    "location": "Bosque de Chapultepec, Miguel Hidalgo, 11100 Mexico City",
+    "bestTime": "Weekdays 9-11am, October-April",
+    "imageUrl": "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restrooms",
+      "Food Vendors",
+      "Souvenir Shops",
+      "Shaded Walkways",
+      "Playgrounds"
+    ],
+    "safetyFeatures": [
+      "Security Staff Throughout",
+      "Clear Signage",
+      "First Aid Stations",
+      "Animal Safety Barriers",
+      "Lost Child Assistance"
+    ],
+    "tipsAndTricks": [
+      "The zoo is free (!) but you need to reserve a timeslot online. Weekend slots book up days in advance - book Tuesday for Saturday.",
+      "Go at 9am when it opens. The giant pandas are most active in the morning and the crowds are thin. By 11am it's shoulder-to-shoulder.",
+      "Combine the zoo with Chapultepec Castle (same park, pay entrance). The castle has incredible views of the city and murals by Diego Rivera.",
+      "Bring snacks and water. The food inside is cheap but greasy - quesadillas from the stalls near the entrance are the best option.",
+      "The zoo is enormous (17 hectares). Rent a pedal cart near the main entrance if your kids tire easily - it's fun and covers more ground."
+    ],
+    "parentStory": {
+      "title": "Giant pandas at a free zoo - Mexico is incredible",
+      "excerpt": "My daughter touched the glass watching Xin Xin the giant panda roll on her back eating bamboo. She looked at me and said 'This is the best day ever and it didn't cost anything.' We spent 4 hours at a world-class zoo for zero pesos. Mexico City, I love you.",
+      "author": "Luis, dad of 2 from San Diego",
+      "fullStory": "Chapultepec Zoo is genuinely world-class and entirely free. The giant panda exhibit is the highlight - they have a breeding program with China and the enclosure is beautiful. The aviary is a walk-through experience with hundreds of birds flying freely. We saw a jaguar swimming, a lion roaring, and elephants getting a bath. My kids still talk about the zoo more than any paid attraction in CDMX."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 hours: zoo only, see top exhibits (pandas, aviary, big cats)",
+      "fullDay": "Zoo + Chapultepec Castle + Chapultepec Park lake + National Museum of Anthropology",
+      "bestFor": "Ages 2-16, budget-conscious families, animal lovers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Chapultepec Zoo Mexico City",
+      "free zoo CDMX",
+      "giant pandas Mexico City kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80",
+      "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80",
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80"
+    ]
+  },
+  {
+    "id": "guatemala-city-001",
+    "name": "La Aurora Zoo (Zool\u00f3gico La Aurora)",
+    "city": "Guatemala City",
+    "country": "Guatemala",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-16",
+    "safetyRating": 4.3,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "The oldest and most important zoo in Central America, founded in 1924 and recently renovated with modern enclosures. Home to native Guatemalan wildlife including jaguars, quetzals (the national bird), spider monkeys, and tapirs alongside African and Asian species. Features an impressive reptile house, a children's petting zoo, and a beautiful botanical garden within the grounds.",
+    "location": "5a Calle Final, Zona 5, Guatemala City 01005",
+    "bestTime": "Weekdays 9-11am, November-April dry season",
+    "imageUrl": "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+    "amenities": [
+      "Petting Zoo",
+      "Playground",
+      "Food Court",
+      "Restrooms",
+      "Parking",
+      "Shaded Areas"
+    ],
+    "safetyFeatures": [
+      "Security Guards",
+      "Fenced Enclosures",
+      "First Aid Station",
+      "Hand Washing Stations",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "The quetzal exhibit is a must-see - the national bird of Guatemala with stunning emerald plumage. It's in the aviary near the entrance.",
+      "Arrive at 9am when the jaguars are being fed. The zookeeper talk at 9:30am is informative and kids can ask questions.",
+      "The petting zoo (open 10am-12pm) has goats, sheep, and rabbits. Hand sanitizer is provided but bring wipes too.",
+      "The zoo is in Zone 5 of Guatemala City. Use Uber rather than walking - the area is fine during the day but traffic is heavy.",
+      "Combine with a visit to nearby La Aurora Botanical Garden (adjacent) which has incredible orchid collections."
+    ],
+    "parentStory": {
+      "title": "She saw a quetzal and cried because it was too beautiful",
+      "excerpt": "My 7-year-old daughter gasped when the quetzal spread its tail feathers. Two feet away, gleaming green and red. She actually cried. 'It's like a rainbow bird, Mami.' The zookeeper heard her and gave her a quetzal feather that had molted. She keeps it in a special box at home.",
+      "author": "Maria, mom of 1 from Antigua Guatemala",
+      "fullStory": "La Aurora Zoo has come a long way. The old enclosures from the 1980s are mostly gone, replaced with spacious natural habitats. The reptile house is excellent - they have a massive green iguana that's over 40 years old. The children's area has a train that goes around the park. It's not a world-class zoo but it's authentic, affordable, and the animals look healthy and well-cared for."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours: quetzal exhibit + jaguar feeding + petting zoo + reptile house",
+      "fullDay": "Zoo + La Aurora Botanical Garden + Miraflores Museum (Mayan artifacts)",
+      "bestFor": "Ages 2-16, families in Guatemala City, natural history lovers"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "La Aurora Zoo Guatemala",
+      "Guatemala City zoo kids",
+      "quetzal exhibit Guatemala"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80",
+      "https://images.unsplash.com/photo-1594103345324-16aa1bcffdb9?w=800&q=80",
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "malacca-001",
+    "name": "Malacca Zoo",
+    "city": "Malacca",
+    "country": "Malaysia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 72,
+    "description": "One of Malaysia's oldest zoos featuring over 1,200 animals across 54 acres. Affordable family outing with shaded walkways, a petting zoo, and animal shows. Home to Malayan tigers, orangutans, and sun bears in large naturalistic enclosures.",
+    "location": "Lebuh Ayer Keroh, 75450 Malacca",
+    "bestTime": "Morning, Weekdays",
+    "imageUrl": "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Parking",
+      "Food Stalls",
+      "Rest Areas",
+      "Animal Shows",
+      "Picnic Spots"
+    ],
+    "safetyFeatures": [
+      "Animal Enclosure Barriers",
+      "First Aid Post",
+      "Park Security",
+      "Clear Signage",
+      "Shaded Walkways"
+    ],
+    "tipsAndTricks": [
+      "Go right when they open at 8:30 AM - the animals are most active before the midday heat hits.",
+      "Bring mosquito repellent. The zoo is surrounded by tropical greenery and mozzies come out strong by late morning.",
+      "The tram ride costs just RM5 per person and covers the whole zoo - worth it with tired little legs.",
+      "Wednesday and Thursday are the quietest days. Avoid weekends when local school groups flood in.",
+      "Pack snacks and water from outside. The on-site food court is basic and 2x the price of town.",
+      "The free-flight aviary is a highlight - kids can walk through with birds flying inches overhead."
+    ],
+    "parentStory": {
+      "title": "The sun bear that waved back",
+      "excerpt": "My 3-year-old waved at a sun bear and the bear actually raised its paw.",
+      "author": "Lin, mom of 2 from Kuala Lumpur",
+      "fullStory": "We drove down from KL for a weekend. Our toddler waved at the bear and it lifted one paw in reply. She was convinced they were best friends."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours, animal shows, aviary, petting zoo",
+      "fullDay": "4-5 hours including tram ride, picnic lunch, playground area",
+      "bestFor": "Ages 2-12 on a budget, animal lovers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Malacca Zoo",
+      "zoo Malacca family",
+      "kid-friendly Melaka",
+      "Malaysia zoo with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80"
+    ]
+  },
+  {
+    "id": "malacca-002",
+    "name": "Jonker Walk Night Market",
+    "city": "Malacca",
+    "country": "Malaysia",
+    "category": "Parks & Nature",
+    "ageRange": "3-16",
+    "safetyRating": 4.3,
+    "priceRange": "$",
+    "popularity": 91,
+    "description": "Malacca's iconic weekend night market stretching through historic Jonker Street. A sensory feast of street food, trinkets, antiques, and live performances. Family-friendly with wide pedestrian walkways and a lively but safe atmosphere.",
+    "location": "Jalan Hang Jebat, 75200 Malacca",
+    "bestTime": "Friday-Sunday evenings, 6pm-10pm",
+    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+    "amenities": [
+      "Free Entry",
+      "Street Food",
+      "Public Toilets",
+      "Seating Areas",
+      "Nearby Parking"
+    ],
+    "safetyFeatures": [
+      "Well-Lit Streets",
+      "Pedestrian-Only",
+      "Police Presence",
+      "First Aid Booths"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 6 PM sharp. By 7:30 PM it is shoulder-to-shoulder and strollers are a nightmare.",
+      "Park at Dataran Pahlawan Megamall (RM3 flat rate) and walk 5 minutes.",
+      "Let kids try one new snack per stall - cendol, satay celup, durian crepes, coconut shakes.",
+      "Baby carriers work better than strollers after 7 PM when aisles get tight.",
+      "Keep kids in bright shirts and pick a meeting point (the giant clock tower) in case anyone wanders."
+    ],
+    "parentStory": {
+      "title": "Where my picky eater finally tried everything",
+      "excerpt": "My 7-year-old who only eats chicken nuggets devoured chicken rice balls, cendol, and durian puff.",
+      "author": "David, dad of 2 from Singapore",
+      "fullStory": "Our eldest has the palate of a toddler. At Jonker Walk the street food is everywhere and smells amazing. He saw other kids eating from skewers and wanted in. Ended up trying everything - more than the previous week combined."
+    },
+    "itineraryComparison": {
+      "halfDay": "2 hours, walk the strip, eat snacks, busking performance",
+      "fullDay": "Combine with Malacca River cruise and Maritime Museum",
+      "bestFor": "Foodie families, budget travelers, evening entertainment"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Jonker Walk night market",
+      "Malacca night market family",
+      "Jonker Street kids",
+      "Melaka weekend market"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ]
+  },
+  {
+    "id": "phnom-penh-002",
+    "name": "Phnom Penh Water Park",
+    "city": "Phnom Penh",
+    "country": "Cambodia",
+    "category": "Theme Parks",
+    "ageRange": "3-16",
+    "safetyRating": 4.2,
+    "priceRange": "$$",
+    "popularity": 74,
+    "description": "Cambodia's largest water park featuring towering slides, a wave pool, lazy river, and dedicated kids' splash zones. Modern facilities with lifeguards throughout. A welcome escape from Phnom Penh's heat.",
+    "location": "Street 2004, Sangkat Kakab, Phnom Penh",
+    "bestTime": "Weekdays, November-February",
+    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+    "amenities": [
+      "Locker Rentals",
+      "Changing Rooms",
+      "Restaurants",
+      "Sun Loungers",
+      "Umbrellas",
+      "Swimming Lessons"
+    ],
+    "safetyFeatures": [
+      "Professional Lifeguards",
+      "Height/Weight Restrictions",
+      "Pool Fencing",
+      "First Aid Room",
+      "Anti-Slip Surfaces"
+    ],
+    "tipsAndTricks": [
+      "Go on a Tuesday or Wednesday morning - the park is nearly empty and staff are extra attentive.",
+      "Kids under 120cm are limited to children's pool and small slides. Measure before you go.",
+      "Bring reef shoes. Concrete paths get scorching hot by 11 AM.",
+      "The floating obstacle course in the main pool is the highlight for tweens - included in the ticket.",
+      "Pack your own lunch. On-site food court charges city-premium prices.",
+      "Book through a hotel concierge for discounted tickets - sometimes 30% off."
+    ],
+    "parentStory": {
+      "title": "A cool escape from Phnom Penh's heat",
+      "excerpt": "After three days of temple-hopping, the water park was our saving grace.",
+      "author": "Rachel, mom of 2 from Sydney",
+      "fullStory": "A local tuk-tuk driver recommended this water park. The kids area is shallow (30cm) with tiny slides and water cannons. Our 4-year-old spent 2 hours there."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 hours, lazy river, kids splash zone, slides, lunch",
+      "fullDay": "All day, wave pool, all slides, floating obstacle course, dinner at park",
+      "bestFor": "Hot weather escape, kids 3+, budget-friendly water fun"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Phnom Penh water park",
+      "Cambodia water park family",
+      "Phnom Penh kids activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80"
+    ]
+  },
+  {
+    "id": "siem-reap-002",
+    "name": "Angkor Wat Family Sunrise Tour",
+    "city": "Siem Reap",
+    "country": "Cambodia",
+    "category": "Museums",
+    "ageRange": "5-16",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 93,
+    "description": "A family-friendly guided tour of the world's largest religious monument designed for kids. Early morning sunrise viewing over the iconic temple, followed by a child-focused exploration with interactive storytelling, photo hunts, and cool temple secrets that captivate young explorers.",
+    "location": "Angkor Wat Temple, Angkor Archaeological Park, Siem Reap",
+    "bestTime": "5:30 AM start, November-February",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+    "amenities": [
+      "Guided Tours",
+      "Restrooms",
+      "Water Refill Stations",
+      "Shaded Rest Areas",
+      "Nearby Cafes"
+    ],
+    "safetyFeatures": [
+      "Qualified Guides",
+      "Clearly Marked Paths",
+      "Steep Stairs with Rails",
+      "Security Staff",
+      "Emergency Services Nearby"
+    ],
+    "tipsAndTricks": [
+      "Book a dedicated family guide ($40-50) who knows shortcuts that skip the hardest stairs and find hidden carvings kids love.",
+      "Pack a flashlight for the pre-dawn walk from the gate to the temple pond. Uneven ground everywhere at 5:30 AM.",
+      "The library building on the right side has the best photo ops - fewer crowds than the reflection pond.",
+      "Kids under 12 enter free with a parent ticket.",
+      "The Churning of the Ocean of Milk bas-relief is 50m long - kids love finding the monkey army hidden in it.",
+      "Most family tours finish by 9 AM before the heat peaks - that is by design."
+    ],
+    "parentStory": {
+      "title": "The sunrise that made my 8-year-old ask about history",
+      "excerpt": "She has never cared about history. But watching the sun rise behind those five towers, she asked the questions that matter.",
+      "author": "Tom, dad of 2 from London",
+      "fullStory": "Our guide had a temple detective game where kids had to find specific apsara carvings. Our 8-year-old was obsessed. The sunrise itself was quiet and peaceful. She sat on my shoulders and did not say a word until the sun cleared the towers. Then the questions started."
+    },
+    "itineraryComparison": {
+      "halfDay": "Sunrise at Angkor Wat, 9 AM breakfast, return by 10:30 AM",
+      "fullDay": "Sunrise + Angkor Thom + Bayon + Ta Prohm, lunch break, return by 3 PM",
+      "bestFor": "History-curious families, ages 5+, first-time visitors to Cambodia"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Angkor Wat family tour",
+      "Angkor Wat with kids",
+      "Siem Reap family sunrise",
+      "kids tour Angkor Wat"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1527179526932-3a7fb5a367a4?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "luang-prabang-002",
+    "name": "Tat Kuang Si Bear Rescue Centre",
+    "city": "Luang Prabang",
+    "country": "Laos",
+    "category": "Zoos & Aquariums",
+    "ageRange": "3-16",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 85,
+    "description": "A heartwarming wildlife rescue center within the stunning Kuang Si Waterfall park. Home to rescued Asiatic black bears (moon bears) saved from the illegal bile trade. Educational walkways let kids observe the bears in natural forested enclosures while learning about conservation.",
+    "location": "Kuang Si Waterfall Road, 30km south of Luang Prabang",
+    "bestTime": "8:30-11 AM, November-April",
+    "imageUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+    "amenities": [
+      "Educational Center",
+      "Shaded Viewing Decks",
+      "Restrooms",
+      "Parking",
+      "Nearby Food Stalls",
+      "Waterfall Access"
+    ],
+    "safetyFeatures": [
+      "Reinforced Enclosures",
+      "Signage in English and Lao",
+      "Distant Viewing Zones",
+      "First Aid Station at Waterfall Entrance"
+    ],
+    "tipsAndTricks": [
+      "Get there for the 9 AM feeding time - bears are most active and rangers do a short educational talk.",
+      "Combine with Kuang Si Waterfall in one trip. The bear center is at the entrance, the waterfall is 15 minutes uphill.",
+      "No flash photography - it spooks the rescued bears who were abused by humans.",
+      "The gift shop sells stuffed moon bears (about $8) and proceeds go to bear rescue.",
+      "Kids under 10 might find the rescue backstory tough. Preview it with them first.",
+      "Visit the bear center BEFORE hiking to the waterfall when energy is high."
+    ],
+    "parentStory": {
+      "title": "My daughter decided to save bears that day",
+      "excerpt": "She watched a rescued moon bear pace its enclosure, then asked why. Two years later she is raising money for the center.",
+      "author": "Claire, mom of 2 from Vancouver",
+      "fullStory": "The ranger gently explained the moon bears stories. Our daughter listened with her hand over her mouth. Now she does bake sales for Tat Kuang Si. The bears changed her."
+    },
+    "itineraryComparison": {
+      "halfDay": "Bear center (1 hour) + waterfall lower pools (1 hour) + lunch, back by 1 PM",
+      "fullDay": "Bear center + full waterfall hike to the top + swimming + picnic lunch",
+      "bestFor": "Animal-loving families, ages 3+, conservation-minded travelers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Kuang Si bear rescue",
+      "Tat Kuang Si with kids",
+      "Luang Prabang family activities",
+      "moon bear rescue Laos"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ]
+  },
+  {
+    "id": "vang-vieng-001",
+    "name": "Blue Lagoon Family Swim",
+    "city": "Vang Vieng",
+    "country": "Laos",
+    "category": "Parks & Nature",
+    "ageRange": "3-16",
+    "safetyRating": 4.0,
+    "priceRange": "$",
+    "popularity": 82,
+    "description": "A stunning turquoise natural swimming hole set among limestone karsts, perfect for a family swim break. Shallow entry areas for young children, rope swings for the adventurous, and crystal-clear water fed by underground springs.",
+    "location": "Ban Tham Phoukham, 7km from Vang Vieng town center",
+    "bestTime": "8-11 AM, November-April",
+    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+    "amenities": [
+      "Changing Rooms",
+      "Picnic Tables",
+      "Food Stalls",
+      "Parking",
+      "Life Jacket Rentals",
+      "Toilet Facilities"
+    ],
+    "safetyFeatures": [
+      "Life Jacket Rentals Available",
+      "Shallow Entry Zone",
+      "Rope Swing Depth Signage",
+      "Local Attendants On-Site",
+      "Clear Water Visibility"
+    ],
+    "tipsAndTricks": [
+      "Arrive by 8 AM to have the place nearly empty. By 10 AM minibuses arrive and it gets crowded.",
+      "Life jackets rent for 20,000 LAK ($1) at the entrance - grab one for any kid under 8.",
+      "The blue color is strongest between 9-10 AM when sunlight hits the water at the right angle.",
+      "Younger kids should play in the shallow wading area to the right - knee-deep and much calmer.",
+      "The rope swing drop is about 4 meters. Supervise closely and check depth before each jump.",
+      "Bring water shoes. Limestone rocks are sharp in spots near the cave entrance.",
+      "Combine with Tham Phoukham Cave (same parking lot) for older kids."
+    ],
+    "parentStory": {
+      "title": "The day my 5-year-old learned to love swimming",
+      "excerpt": "She was terrified of water deeper than her waist. At Blue Lagoon she saw older kids splashing and laughing. Something clicked.",
+      "author": "Ben, dad of 2 from Melbourne",
+      "fullStory": "Our youngest has always hated swimming lessons. At Blue Lagoon the water is so clear and warm she got curious. A local kid showed her how to blow bubbles. By end of day she was in a life jacket kicking her feet. First time she has ever had fun in water."
+    },
+    "itineraryComparison": {
+      "halfDay": "Swim 2-3 hours, skip the cave, picnic lunch, back by noon",
+      "fullDay": "Blue Lagoon swim + Tham Phoukham Cave hike + tubing on the Song River (older kids)",
+      "bestFor": "Nature-loving families, ages 3+, budget travelers"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Blue Lagoon Vang Vieng",
+      "Vang Vieng with kids",
+      "family swimming Laos",
+      "natural pools Vang Vieng"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80"
+    ]
+  },
+  {
+    "id": "da-lat-001",
+    "name": "Da Lat Zoo",
+    "city": "Da Lat",
+    "country": "Vietnam",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 75,
+    "description": "A charming mountain zoo set in Da Lat's cool pine-forest landscape. Home to over 300 animals including rare langurs, white tigers, and colorful pheasants. The cool highland climate makes it comfortable for walking year-round. Features a petting zoo, aviary, and pony rides.",
+    "location": "Zone 4, Ward 7, Da Lat, Lam Dong Province",
+    "bestTime": "8-11 AM, December-March",
+    "imageUrl": "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+    "amenities": [
+      "Parking",
+      "Food Stalls",
+      "Petting Zoo",
+      "Pony Rides",
+      "Rest Areas",
+      "Picnic Spots"
+    ],
+    "safetyFeatures": [
+      "Enclosure Fencing",
+      "Animal Handler Supervision",
+      "First Aid",
+      "Clear Pathways",
+      "Shaded Areas"
+    ],
+    "tipsAndTricks": [
+      "Da Lat weather changes hourly. Go in the morning when it is driest - afternoon thunderstorms roll in around 2 PM.",
+      "Wear layers. The zoo sits at 1,500m elevation and morning temperatures can be a brisk 15C even in summer.",
+      "Pony rides cost 50,000 VND ($2) for 10 minutes - great for kids 3-7 not ready for real horseback riding.",
+      "The white tiger enclosure is the main draw, but the langur habitat is more interesting - very active and swing right up to the glass.",
+      "The petting zoo goats are enthusiastic. Watch toddlers closely - they nibble fingers if they smell snacks.",
+      "Combine with the nearby Da Lat Flower Gardens - a 5-minute drive and free for kids under 6."
+    ],
+    "parentStory": {
+      "title": "Pony ride victory for our timid 4-year-old",
+      "excerpt": "She was terrified of the pony. The handler let her just watch for 10 minutes. Then she fed it a carrot. Then she rode it twice.",
+      "author": "Natalie, mom of 1 from Ho Chi Minh City",
+      "fullStory": "Our 4-year-old is cautious around animals. At Da Lat Zoo the pony ride handler was incredibly patient - let her stand back and watch, offered a carrot for feeding, then gently lifted her onto a calm pony named Mochi. She rode twice and cried when we had to leave."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours, pony ride, petting zoo, white tiger viewing, picnic lunch",
+      "fullDay": "Zoo + Da Lat Flower Gardens + cable car to Robin Hill",
+      "bestFor": "Toddlers to tweens, cold-weather escape, budget-friendly family day"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Da Lat Zoo",
+      "Da Lat with kids",
+      "Vietnam zoo family",
+      "Da Lat children activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "hue-001",
+    "name": "Hue Imperial City Family Tour",
+    "city": "Hue",
+    "country": "Vietnam",
+    "category": "Museums",
+    "ageRange": "5-16",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 86,
+    "description": "A UNESCO World Heritage site and the ancient capital of Vietnam's Nguyen Dynasty. The sprawling citadel complex features ornate palaces, temples, and ceremonial gates spanning centuries. Family-friendly with wide walking paths, fascinating stories of emperors, and the famous Forbidden Purple City.",
+    "location": "Thuan Hoa Ward, Hue City, Thua Thien Hue Province",
+    "bestTime": "7:30-10 AM, February-April",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Guided Tours Available",
+      "Restrooms",
+      "Bicycle Rentals",
+      "Food Stalls",
+      "Souvenir Shops",
+      "Shaded Rest Areas"
+    ],
+    "safetyFeatures": [
+      "Well-Maintained Pathways",
+      "Guard Rails on Steep Steps",
+      "Security Personnel",
+      "First Aid Station",
+      "Clear Signage"
+    ],
+    "tipsAndTricks": [
+      "Hire a cyclo (bicycle rickshaw) at the entrance - kids love the ride and it covers the massive 5km citadel grounds.",
+      "Arrive at 7:30 AM opening. The complex is enormous and by 10 AM the heat makes it significantly less pleasant.",
+      "Kids love the Emperor Treasure Hunt - spot the nine holy cannons, the bronze cauldrons, and the dragon throne.",
+      "The Forbidden Purple City has a small museum with kid-friendly exhibits showing how young princes lived.",
+      "Vendors near the Citadel gate sell emperor-themed hats and paper fans for 20,000 VND - cheap souvenirs kids adore.",
+      "Pack a small umbrella. Hue weather is famously unpredictable.",
+      "Skip the audio guide and get a live guide instead ($10-15). Kids engage better with a real person who can answer questions.",
+      "The moat has shaded benches where you can rest. The carp in the moat are massive and kids enjoy watching them."
+    ],
+    "parentStory": {
+      "title": "My son wore the emperor hat for the entire trip",
+      "excerpt": "A vendor outside the citadel put a gold paper emperor hat on my 6-year-old. He wore it for the next 5 days.",
+      "author": "Sophie, mom of 2 from Paris",
+      "fullStory": "We barely made it through the entrance before a smiling vendor placed a gold paper emperor hat on our son's head. He was instantly a real emperor. The hat disintegrated by day 3 but he refused to throw it away."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours, main citadel, Forbidden Purple City, throne hall",
+      "fullDay": "Citadel + Imperial Tombs (Tomb of Khai Dinh) + Thien Mu Pagoda + Perfume River boat ride",
+      "bestFor": "Ages 5+, history fans, photographers"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Hue Imperial City",
+      "Hue with kids",
+      "Vietnam family tour Hue",
+      "Hue citadel children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80"
+    ]
+  },
+  {
+    "id": "iloilo-001",
+    "name": "Iloilo City Zoo",
+    "city": "Iloilo",
+    "country": "Philippines",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.3,
+    "priceRange": "$",
+    "popularity": 65,
+    "description": "A growing community zoo and conservation center in Iloilo's lush Jaro district. Home to native Philippine wildlife including the critically endangered Visayan warty pig and colorful Philippine cockatoos. A modest but genuine zoo with a focus on education, native species conservation, and a lovely children's petting area.",
+    "location": "Jaro, Iloilo City, Panay Island",
+    "bestTime": "8-10 AM, December-May",
+    "imageUrl": "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+    "amenities": [
+      "Parking",
+      "Food Stalls",
+      "Rest Areas",
+      "Petting Area",
+      "Shaded Walkways",
+      "Restrooms"
+    ],
+    "safetyFeatures": [
+      "Animal Enclosures",
+      "Staff Supervision",
+      "Hand Washing Stations",
+      "First Aid Basic"
+    ],
+    "tipsAndTricks": [
+      "Go first thing at 8 AM before the heat sets in. Iloilo gets brutally humid by 10 AM and the animals retreat into the shade.",
+      "The Visayan warty pig enclosure is the zoo's conservation highlight - it is one of the rarest pigs in the world.",
+      "Admission is under PHP 100 ($2) making it one of the cheapest family outings in Iloilo.",
+      "The petting area has goats and rabbits - bring quarters for the feed dispenser (PHP 5 per handful).",
+      "Don't expect high-tech exhibits. This is a humble local zoo. What it lacks in flash it makes up for in genuine care for its animals.",
+      "Combine with a visit to the nearby Jaro Cathedral and Iloilo Museum of Contemporary Art (within 15 minutes each way)."
+    ],
+    "parentStory": {
+      "title": "She named every animal after her classmates",
+      "excerpt": "The Visayan pig became Juan. The cockatoo became Maria. For an hour, our 4-year-old was the zoo director introducing us to her classmates.",
+      "author": "Mike, dad of 2 from Iloilo City",
+      "fullStory": "We live in Iloilo and this is our go-to weekend spot. It is small enough that our toddler doesn't get overwhelmed. She named every animal at the petting zoo after her preschool classmates. The staff are incredibly warm - one keeper let her help scatter feed for the chickens. It is not a world-class zoo but it is our zoo."
+    },
+    "itineraryComparison": {
+      "halfDay": "1.5-2 hours, petting zoo, native species exhibits, done by 10 AM",
+      "fullDay": "Combine with Jaro Cathedral + La Paz Public Market lunch + Iloilo River Esplanade walk",
+      "bestFor": "Toddlers and preschoolers, budget families, conservation-minded visitors"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Iloilo City Zoo",
+      "Iloilo with kids",
+      "Philippines zoo family",
+      "Iloilo children activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ]
+  },
+  {
+    "id": "myanmar-001",
+    "name": "Ngwe Saung Beach Family Day",
+    "city": "Ngwe Saung",
+    "country": "Myanmar",
+    "category": "Parks & Nature",
+    "ageRange": "0-16",
+    "safetyRating": 4.4,
+    "priceRange": "$$",
+    "popularity": 70,
+    "description": "A stunning 15-km stretch of white sand beach on Myanmar's Bay of Bengal coast, far quieter than neighboring Chaung Tha. Gentle waves, shallow waters perfect for young swimmers, and a relaxed village atmosphere. Horseback rides along the beach, fresh seafood shacks, and magnificent sunsets.",
+    "location": "Ngwe Saung Beach, Ayeyarwady Region, Myanmar (5-hour drive from Yangon)",
+    "bestTime": "November-April (dry season), weekdays for solitude",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Beachside Resorts",
+      "Seafood Restaurants",
+      "Horse Rentals",
+      "Umbrella Rentals",
+      "Beach Volleyball",
+      "ATMs in Village"
+    ],
+    "safetyFeatures": [
+      "Gentle Waves",
+      "Shallow Entry",
+      "Lifeguards at Main Resort Beaches",
+      "Clean Beach",
+      "Resort Security"
+    ],
+    "tipsAndTricks": [
+      "Book a resort on the southern end of the beach - the water is calmer and the sand is cleaner than the northern section.",
+      "Horseback rides at sunset cost around 30,000 MMK ($15) for 30 minutes. Kids as young as 4 can ride with a handler leading.",
+      "The beach is virtually empty on weekdays. You might share it with only a dozen other people across the entire 15km.",
+      "Bring cash. There are no ATMs on the actual beach strip. The nearest ATM is in the village, 3km away.",
+      "The sea is safe for kids but has a mild undertow in spots. Stay within resort roped-off swimming areas.",
+      "Fresh seafood is incredibly cheap - a whole grilled snapper with rice costs around $3-4 at a beach shack.",
+      "The jellyfish season runs June-September. If visiting then, bring vinegar and check with locals before swimming."
+    ],
+    "parentStory": {
+      "title": "The quietest beach we have ever seen",
+      "excerpt": "We walked for 2 hours in either direction and saw maybe 5 people. Our kids built sandcastles in total peace.",
+      "author": "James, dad of 3 from Auckland",
+      "fullStory": "After the chaos of Yangon, Ngwe Saung was heaven. The beach stretches forever. Our kids ran barefoot in the wet sand, collected shells, and flopped in the gentle waves. We ate grilled fish at a thatched-roof shack for $4. No jet skis. No vendors hassling you. Just the ocean and sky."
+    },
+    "itineraryComparison": {
+      "halfDay": "Beach morning, swimming, shell collecting, lunch, nap under umbrella",
+      "fullDay": "Sunrise beach walk + swimming + horseback ride + seafood lunch + sunset beach walk",
+      "bestFor": "Beach-loving families, peace seekers, everyone ages 0+"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Ngwe Saung beach",
+      "Myanmar beach family",
+      "Ngwe Saung with kids",
+      "Myanmar family holiday"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ]
+  },
+  {
+    "id": "maldives-002",
+    "name": "Maldives National Museum",
+    "city": "Male",
+    "country": "Maldives",
+    "category": "Museums",
+    "ageRange": "5-16",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 60,
+    "description": "A fascinating museum housed in the Sultan Park grounds within the Maldives' only UNESCO World Heritage site area. Showcasing Maldivian history through three galleries of artifacts including ancient coral stone carvings, lacquerwork, sultanate-era weaponry, and pre-Islamic Buddhist artefacts from the country's early kingdoms.",
+    "location": "Chandhanee Magu, Male, Maldives",
+    "bestTime": "9:30 AM - 12 PM, Sunday-Thursday",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Air Conditioning",
+      "Restrooms",
+      "Gift Shop",
+      "Bookstore",
+      "Sultan Park Access",
+      "Water Fountains"
+    ],
+    "safetyFeatures": [
+      "Security Staff",
+      "Exhibit Barriers",
+      "Smooth Floors",
+      "Well-Lit Galleries",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "The museum is small (3 galleries, 90 minutes max) so don't plan a full day. Combine with other Male attractions like the nearby Grand Friday Mosque.",
+      "The top floor has an exhibit on traditional Maldivian boats (dhoni) that kids find surprisingly fascinating - there is a model they can touch.",
+      "Photography is allowed but no flash. The coral stone carvings in the first gallery are incredibly delicate and light-sensitive.",
+      "The museum is closed on Fridays and public holidays. Check before you go - many tourists have made this mistake.",
+      "Sultan Park attached to the museum is a nice shaded playground break for kids who need to run around after the indoor galleries.",
+      "Air conditioning is strong. Bring a light jacket even in Male's heat - the contrast going from 35C outside to 18C inside is jarring.",
+      "The highlight for most kids is the throne of Sultan Mohamed Shamsuddeen III - it is glittering gold and they can get within arm's reach of it."
+    ],
+    "parentStory": {
+      "title": "A break from the beach that everyone needed",
+      "excerpt": "Three days of sun and sand had our kids lobster-red and restless. The museum was a cool, quiet break where they actually learned something.",
+      "author": "Priya, mom of 2 from Mumbai",
+      "fullStory": "We were on a resort island for a week but took the speedboat to Male for a cultural day. The National Museum was a surprise hit. Our 8-year-old loved the sultan's gold throne and asked a hundred questions. Our 10-year-old was fascinated by the Buddhist artefacts - she did not know the Maldives was Buddhist before Islam. Two hours of air-conditioned learning then ice cream at the park."
+    },
+    "itineraryComparison": {
+      "halfDay": "1.5 hours museum + 30 min Sultan Park + 30 min Grand Friday Mosque + lunch in Male",
+      "fullDay": "Half-day Male walking tour: National Museum + fish market + Sultan Park + local market + afternoon at a nearby cafe",
+      "bestFor": "Culture-curious families, ages 5+, a break from beach time"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Maldives National Museum",
+      "Male with kids",
+      "Maldives family activities",
+      "Maldives museum"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ]
   }
 ]
