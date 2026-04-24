@@ -1,0 +1,904 @@
+[
+  {
+    "id": "helsinki-001",
+    "name": "Helsinki Zoo",
+    "city": "Helsinki",
+    "country": "Finland",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 82,
+    "description": "The oldest zoo in Finland, set on the beautiful Korkeasaari Island. Home to over 150 animal species from snow leopards to Amazonian monkeys. The natural island setting means animals have spacious, well-designed habitats that feel more like wilderness than cages.",
+    "location": "Mustikkamaanpolku 12, 00570 Helsinki",
+    "bestTime": "Late spring to early autumn, 10 AM opening",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Restaurant & Cafe",
+      "Picnic Areas",
+      "Indoor Exhibits",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Animal Safety Barriers",
+      "First Aid Station",
+      "Well-Marked Paths",
+      "Lifeguards at Water Areas"
+    ],
+    "tipsAndTricks": [
+      "Take the ferry from Market Square (May-September) — it’s part of the experience and kids love the boat ride. Winter access is by bus only.",
+      "The Amazonia house is warm and humid — dress in layers so you can peel off when you go inside.",
+      "Weekday mornings are gloriously quiet. You’ll often have entire exhibits to yourselves.",
+      "Pack snacks. The cafe is decent but pricey, and picky eaters will prefer familiar food.",
+      "The zoo has excellent indoor play areas for toddlers — perfect if it rains (which it will).",
+      "Don’t miss the feeding times: snow leopards at 11 AM and seals at 1 PM are crowd favorites."
+    ],
+    "parentStory": {
+      "title": "Snow leopard eye contact through the glass",
+      "excerpt": "Our 6-year-old came nose-to-nose with a snow leopard. She whispered ‘he’s wearing pajamas.’ The keeper heard her and spent 10 minutes explaining how their fur keeps them warm.",
+      "author": "Anna, mom of 2 from Stockholm",
+      "fullStory": "Korkeasaari is a hidden gem. We’ve been to zoos all over Europe and this one has the best habitats. The snow leopard enclosure is elevated so you’re at eye level with them. Our youngest pressed her hands against the glass and a leopard walked right over and sat down. A keeper noticed and gave us an impromptu lesson. The kids still talk about ‘the pajama cat’ two years later."
+    },
+    "itineraryComparison": {
+      "halfDay": "Ferry in, visit highlights (Amazonia, snow leopards, bears), lunch at cafe, ferry back",
+      "fullDay": "Full zoo exploration, picnic on the island, children’s farm, play areas, late afternoon ferry",
+      "bestFor": "Ages 2-12, nature families, rainy day backup"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Helsinki Zoo",
+      "Korkeasaari",
+      "Finland family attractions",
+      "Helsinki with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "helsinki-002",
+    "name": "Linnanmaki Amusement Park",
+    "city": "Helsinki",
+    "country": "Finland",
+    "category": "Theme Parks",
+    "ageRange": "3-15",
+    "safetyRating": 4.9,
+    "priceRange": "$$",
+    "popularity": 91,
+    "description": "Finland's oldest and most beloved amusement park, perched on a hill with panoramic views of Helsinki. Over 40 rides from gentle carousels for toddlers to heart-pounding coasters for teens. The park is impeccably maintained and famously safe. Bonus: all profits go to Finnish children's welfare.",
+    "location": "Tivolikuja 1, 00510 Helsinki",
+    "bestTime": "June-August, weekday evenings for shorter queues",
+    "imageUrl": "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+    "amenities": [
+      "Nursing Room",
+      "Baby Change Stations",
+      "Family Restrooms",
+      "Stroller Parking",
+      "Lost Child Center",
+      "First Aid"
+    ],
+    "safetyFeatures": [
+      "Regular Ride Inspections",
+      "Height Measurement Stations",
+      "Trained Ride Operators",
+      "Emergency Response Team",
+      "Well-Lit Park at Night"
+    ],
+    "tipsAndTricks": [
+      "Buy tickets online in advance — the queue at the gate can be 30 minutes on summer weekends and the online price is cheaper.",
+      "The 'Taiga' rollercoaster is world-class but has a 120 cm height requirement. Check at the measurement station before queuing.",
+      "There's a dedicated 'Peukaloisen Maa' (Thumbelina's Land) area for under-5s with gentle rides and no queues.",
+      "Wednesday afternoons are local 'happy hour' — discounted entry after 3 PM on most Wednesdays.",
+      "The park has excellent dietary accommodation — labels allergens clearly and offers gluten-free and dairy-free options.",
+      "Bring cash. Some food stalls and games are cash-only, though most rides accept cards."
+    ],
+    "parentStory": {
+      "title": "When our shy kid rode the little rollercoaster 7 times",
+      "excerpt": "My 5-year-old was terrified of everything. Then she did the 'Kieppi' — a gentle rollercoaster for little ones — and asked to go again. Seven times.",
+      "author": "Mikko, dad of 2 from Espoo",
+      "fullStory": "We brought our daughter expecting her to hate it. She's the cautious type. But the 'Peukaloisen Maa' area is genius — the rides are small enough that kids feel in control. She picked the little rollercoaster, screamed the whole way, and immediately asked to go again. The Finnish summer night (light until 10 PM!) meant we stayed until closing. She fell asleep in the car with the biggest smile."
+    },
+    "itineraryComparison": {
+      "halfDay": "Afternoon visit, focus on age-appropriate zone, 1-2 big rides, dinner at park",
+      "fullDay": "Full day with lunch break outside, all zones, evening shows, fireworks (Saturday)",
+      "bestFor": "Ages 3-15, first-time theme park families, budget-conscious"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Linnanmaki",
+      "Helsinki amusement park",
+      "Finland theme parks",
+      "family fun Helsinki",
+      "Helsinki with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ]
+  },
+  {
+    "id": "stockholm-003",
+    "name": "Skansen Aquarium",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 78,
+    "description": "A compact but thrilling indoor aquarium located inside the Skansen open-air museum. Home to exotic species including ring-tailed lemurs that roam freely in a walk-through enclosure, plus tropical fish, reptiles, and a bat cave. The tropical house is a warm escape from Stockholm's chilly climate.",
+    "location": "Djurgardsslatten 49-51, 115 21 Stockholm",
+    "bestTime": "Weekday mornings, winter afternoons (warm escape)",
+    "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "amenities": [
+      "Indoor Climate Control",
+      "Pushchair Access",
+      "Nappy Changing",
+      "Small Cafe",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Glass Barriers",
+      "Staff Supervision at Lemur Enclosure",
+      "Clear Walkways",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "Entry is included with your Skansen ticket — don't pay separately. Just walk in through the main entrance.",
+      "The lemur walk-through opens at 10 AM and they're most active in the first hour before the crowd builds.",
+      "It's hot and humid inside the tropical house. Dress in layers and leave coats at the Skansen cloakroom.",
+      "The bat cave is dark and might spook very young children. Scope it out solo first if your kid is jumpy.",
+      "Combine with a full day at Skansen — the aquarium is a perfect 45-minute warm-up break between outdoor exhibits."
+    ],
+    "parentStory": {
+      "title": "The lemur that stole my daughter's banana",
+      "excerpt": "A lemur jumped onto our bench, grabbed the banana my 4-year-old was eating, and peeled it with its tiny hands while staring at her. She was speechless.",
+      "author": "Emma, mom of 1 from Oslo",
+      "fullStory": "We bought Skansen tickets mainly for the animals and zoo. The aquarium was an afterthought. Best accident ever. The lemurs roam freely in the walk-through and they have NO shame. One hopped onto our bench, looked my daughter dead in the eye, and gently took her banana. The peeling was so precise and human-like we couldn't stop laughing. My daughter was too shocked to cry. She now eats bananas with intense suspicion."
+    },
+    "itineraryComparison": {
+      "halfDay": "Combine with Skansen main zoo, 45 min at aquarium, lunch at Skansen",
+      "fullDay": "Full Skansen day with aquarium as warm break, Nordic Museum nearby, ferry back",
+      "bestFor": "Ages 2-12, families already visiting Skansen, rainy days"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Skansen Aquarium",
+      "Stockholm aquarium",
+      "lemur walk-through Stockholm",
+      "Skansen with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80"
+    ]
+  },
+  {
+    "id": "oslo-002",
+    "name": "Oslo Reptile Park",
+    "city": "Oslo",
+    "country": "Norway",
+    "category": "Zoos & Aquariums",
+    "ageRange": "4-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 72,
+    "description": "Scandinavia's largest reptile and exotic animal exhibition. Over 100 species including massive pythons, monitor lizards, colorful poison dart frogs, and a walk-through terrarium with free-roaming turtles and iguanas. The park also has a small aquarium section with piranhas and caimans.",
+    "location": "St. Olavs gate 2, 0165 Oslo",
+    "bestTime": "Weekday afternoons, avoid school holidays",
+    "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    "amenities": [
+      "Indoor Exhibits",
+      "Handwashing Stations",
+      "Interactive Zones",
+      "Small Gift Shop"
+    ],
+    "safetyFeatures": [
+      "Reinforced Glass Enclosures",
+      "Staff Throughout Exhibit",
+      "Height-Protected Viewing Areas",
+      "Emergency Protocols"
+    ],
+    "tipsAndTricks": [
+      "Check the feeding schedule online — watching the piranhas feed is a highlight kids never forget.",
+      "The monitor lizard enclosure has scheduled keeper talks at 1 PM daily. Get there 10 minutes early.",
+      "It's located about 15 minutes from the city center by tram. Take line 11 or 17 to St. Olavs Gate.",
+      "Some terrariums are dimly lit for the animals' comfort. Let nervous kids know it's not scary.",
+      "The touch pool with small turtles and geckos is open between 12-2 PM on weekends."
+    ],
+    "parentStory": {
+      "title": "My snake-phobic wife held a python",
+      "excerpt": "My wife has been terrified of snakes her entire life. The staff let her hold a baby python during a talk. She cried. Happy tears.",
+      "author": "Thomas, dad of 3 from Bergen",
+      "fullStory": "We went for the kids but the reptile park converted my wife. The keeper talks are genuinely educational — not the usual 'snakes are scary' nonsense. They explained how docile the pythons are, how they 'smell' with their tongues, and how they make incredible escape artists. By the end, my wife was holding a snake around her neck. The kids were more jealous than scared. We now have a pet bearded dragon named after the park."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours, covers all exhibits, keeper talk, feeding session",
+      "fullDay": "Combine with Vigeland Park and lunch in central Oslo.",
+      "bestFor": "Ages 4-14, reptile enthusiasts, rainy days"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Oslo Reptile Park",
+      "Norway reptile exhibition",
+      "Oslo with kids",
+      "indoor family attraction Oslo"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80"
+    ]
+  },
+  {
+    "id": "reykjavik-001",
+    "name": "Reykjavik Family Park & Zoo",
+    "city": "Reykjavik",
+    "country": "Iceland",
+    "category": "Zoos & Aquariums",
+    "ageRange": "1-10",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 75,
+    "description": "A charming, small-scale zoo and amusement park in the heart of Reykjavik. Features Icelandic farm animals (horses, sheep, goats, reindeer) plus a petting zoo and small rides. Refreshingly simple — no gimmicks, just the joy of meeting animals up close in a safe, laid-back Scandinavian setting.",
+    "location": "Fjolskyldu- og husdyragardurinn, 112 Reykjavik",
+    "bestTime": "Summer afternoons, 11 AM for feeding time",
+    "imageUrl": "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+    "amenities": [
+      "Petting Zoo",
+      "Small Rides",
+      "Picnic Tables",
+      "Playground",
+      "Ice Cream Kiosk"
+    ],
+    "safetyFeatures": [
+      "Gentle Animal Policy",
+      "Staff at Petting Areas",
+      "Handwashing Stations",
+      "Fenced Play Areas"
+    ],
+    "tipsAndTricks": [
+      "Entry is very affordable (about 1000 ISK) and includes both the zoo and unlimited rides on the small train and carousel.",
+      "The pony rides are a highlight — they're led by staff and suitable for children aged 2-8.",
+      "The Icelandic horse exhibit is special. These horses have five gaits (most have three) and kids can brush them at designated times.",
+      "Bring a change of clothes. The playground has a sandpit and water play area that kids find irresistible.",
+      "Combine with the nearby Reykjavik Botanic Garden for a full afternoon of calm outdoor family time."
+    ],
+    "parentStory": {
+      "title": "She brushed an Icelandic horse for an hour",
+      "excerpt": "Our 3-year-old found a grooming brush and spent an hour brushing an Icelandic horse that patiently stood there, occasionally sighing with contentment.",
+      "author": "Laura, mom of 2 from Boston",
+      "fullStory": "We came to Iceland for the geothermal pools and Northern Lights. The family park was a 'maybe' on our list. It became our favorite memory. The Icelandic horses are incredibly gentle and patient. Our toddler grabbed a brush and just went to work on this one horse's mane. The horse stood perfectly still for over an hour. A zookeeper came over and taught us about the horses' unique tolt gait. My daughter still draws pictures of 'her' horse."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours: petting zoo, pony ride, playground, ice cream",
+      "fullDay": "Combine with Botanic Garden and nearby playgrounds.",
+      "bestFor": "Ages 1-10, budget families, animal lovers"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Reykjavik Family Park",
+      "Iceland zoo",
+      "Reykjavik with kids",
+      "Iceland family activities",
+      "petting zoo Reykjavik"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80"
+    ]
+  },
+  {
+    "id": "reykjavik-002",
+    "name": "FlyOver Iceland",
+    "city": "Reykjavik",
+    "country": "Iceland",
+    "category": "Theme Parks",
+    "ageRange": "4-16",
+    "safetyRating": 4.9,
+    "priceRange": "$$$",
+    "popularity": 88,
+    "description": "An immersive aerial flight simulation ride that takes you on a breathtaking journey over Iceland's most dramatic landscapes. You soar over glaciers, waterfalls, volcanic fields, and northern lights — suspended in front of a massive 20-meter spherical screen with wind, mist, and scents for full sensory immersion.",
+    "location": "Fiskislod 45, 101 Reykjavik (Grandi district)",
+    "bestTime": "Book the first or last showing for shortest queues",
+    "imageUrl": "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80",
+    "amenities": [
+      "Indoor Queuing",
+      "Seating Throughout",
+      "Gift Shop",
+      "Cafe",
+      "Accessible Entry"
+    ],
+    "safetyFeatures": [
+      "Secure Harnessing",
+      "Briefing Before Each Ride",
+      "Height Requirements Enforced",
+      "Emergency Stop Systems"
+    ],
+    "tipsAndTricks": [
+      "Minimum height is 102 cm. Under 140 cm must ride with an adult. Check the rule before booking.",
+      "Book online at least 3 days in advance during summer. Walk-in slots are rare from June to August.",
+      "The 'Pre-Show' in the Viking longhouse is worth arriving early for — it sets the story beautifully.",
+      "Motion-sensitive kids will be fine. It's smooth, with no jerking or spinning. More like flying than a rollercoaster.",
+      "The scents (wildflowers, sea spray, glacial air) are a fun surprise. Warn kids so they don't get confused.",
+      "Combine with lunch at the Grandi district's famous lobster soup spot, 'Saegreifinn' — a 5-minute walk away."
+    ],
+    "parentStory": {
+      "title": "My 6-year-old thought we were really flying",
+      "excerpt": "When the screen lifted and we were 'flying' over a glacier, my daughter grabbed my arm and whispered 'Are we in a helicopter?'",
+      "author": "David, dad of 1 from Singapore",
+      "fullStory": "I was skeptical about a simulator ride costing this much. But FlyOver Iceland is genuinely spectacular. The way the seats lift and the screen wraps around you — your brain believes you're flying. My daughter, who hates rollercoasters, loved every second. The mist from the waterfall scene made her shriek with delight. We went straight back in line and did it again."
+    },
+    "itineraryComparison": {
+      "halfDay": "FlyOver (45 min experience) + lunch at Grandi + walk along the harbor",
+      "fullDay": "Combine with Harpa concert hall, Maritime Museum, and Grandi district exploration",
+      "bestFor": "Ages 4-16, families who love experiences over rides, rainy days"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "FlyOver Iceland",
+      "Reykjavik flight simulator",
+      "Iceland family experience",
+      "things to do Reykjavik kids",
+      "indoor attraction Iceland"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80"
+    ]
+  },
+  {
+    "id": "tallinn-001",
+    "name": "Tallinn Zoo",
+    "city": "Tallinn",
+    "country": "Estonia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 76,
+    "description": "Estonia's largest zoo, set across 90 hectares of forested parkland. Famous for its impressive collection of mountain goats, eagles, and rare snow leopards. The spacious enclosures are set among pine trees, giving the entire zoo a peaceful, natural atmosphere. Exceptionally affordable by European standards.",
+    "location": "Paldiski mnt 145, 13522 Tallinn",
+    "bestTime": "Late spring to early autumn, weekdays",
+    "imageUrl": "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80",
+    "amenities": [
+      "Stroller-Friendly Paths",
+      "Children's Zoo",
+      "Playground",
+      "Cafe",
+      "Picnic Areas"
+    ],
+    "safetyFeatures": [
+      "Natural Barriers",
+      "First Aid Post",
+      "Security Staff",
+      "Lost Child Protocol"
+    ],
+    "tipsAndTricks": [
+      "The zoo is huge — rent a stroller at the entrance or your toddler will be exhausted within an hour.",
+      "The eagle aviary is world-class. The golden eagles here have one of the largest flight enclosures in Europe.",
+      "Bring mosquito repellent in summer. The forested area means bugs, especially near the lake.",
+      "The children's zoo has domestic animals you can pet and feed. Feed is available at the counter for 1 EUR.",
+      "The indoor tropical house is warm year-round — a perfect winter escape when Tallinn is freezing.",
+      "Take tram #6 from the city center (about 20 minutes). It stops right at the zoo entrance."
+    ],
+    "parentStory": {
+      "title": "The eagle that showed off for us",
+      "excerpt": "A golden eagle did a full flight display just as we reached its enclosure — swooping from one end of the massive aviary to the other, then back.",
+      "author": "Mari, mom of 1 from Helsinki",
+      "fullStory": "We took the ferry from Helsinki for a day trip to Tallinn. The zoo wasn't the main plan (we came for the Old Town) but it ended up being the highlight. The enclosures are so spacious and natural — the eagles have room to properly fly. My 5-year-old son is obsessed with birds of prey and seeing a golden eagle soar up close was a dream come true. The keeper took 10 minutes to explain their hunting style. He's been drawing eagles ever since."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 hours: tropical house, eagle aviary, children's zoo, playground",
+      "fullDay": "Full zoo exploration + nearby Rocca al Mare shopping center for lunch and play",
+      "bestFor": "Ages 2-12, nature families, budget-conscious travelers"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Tallinn Zoo",
+      "Estonia zoo",
+      "Tallinn with kids",
+      "Estonia family activities",
+      "Tallinn day trip"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336605-5e9c7c738336?w=800&q=80",
+      "https://images.unsplash.com/photo-1738023354227-16a406891bd2?w=800&q=80"
+    ]
+  },
+  {
+    "id": "riga-001",
+    "name": "Riga Zoo",
+    "city": "Riga",
+    "country": "Latvia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 73,
+    "description": "A charming, well-maintained zoo located in Riga's Mezaparks forest district. Home to nearly 500 species including elephants, giraffes, rhinos, and a popular tropical butterfly house. The zoo is set around a picturesque lake with walking trails, giving it a park-like feel. Excellent value for money.",
+    "location": "Meza prospekts 1, LV-1014 Riga",
+    "bestTime": "May-September, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1775152496490-9cebc8bb7dde?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Children's Playground",
+      "Cafe & Snack Bars",
+      "Butterfly House",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Double-Fenced Exhibits",
+      "On-Site Veterinary",
+      "First Aid Points",
+      "Supervised Play Areas"
+    ],
+    "tipsAndTricks": [
+      "The butterfly house is a magical experience for kids under 8 — butterflies land on shoulders and hands. Go early when they're most active.",
+      "The zoo is a 15-minute tram ride from the Old Town. Take tram #11 from the city center.",
+      "The elephant enclosure has underwater viewing windows. Kids press their faces to the glass watching them swim.",
+      "Bring swimsuits in summer. Mezaparks has a great public beach right next to the zoo entrance.",
+      "The polar bear exhibit is excellent — they have a large, chilled pool and are surprisingly active in the morning.",
+      "Pack a picnic. The cafe is fine but there are lovely benches around the lake."
+    ],
+    "parentStory": {
+      "title": "A butterfly landed on her nose for 10 minutes",
+      "excerpt": "My 3-year-old stood frozen with a blue morpho butterfly on her nose for what felt like forever. She whispered 'Mama, don't move.'",
+      "author": "Inese, mom of 2 from Liepaja",
+      "fullStory": "The Riga Zoo butterfly house is something special. It's not huge but the butterflies are fearless. They land on people constantly. My toddler was terrified at first, then a blue morpho landed on her hand. She giggled. Then it flew to her nose. She held so still, eyes crossed trying to see it. The keeper recognized the moment and snapped a photo, then printed it at the gift shop. Best 5 euros we spent in Riga."
+    },
+    "itineraryComparison": {
+      "halfDay": "3 hours: butterfly house, elephants, polar bears, lake walk, playground",
+      "fullDay": "Zoo + Mezaparks forest trails + beach + cafe lunch, very relaxing day out",
+      "bestFor": "Ages 2-12, budget families, nature lovers"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Riga Zoo",
+      "Latvia zoo",
+      "Riga with kids",
+      "family activities Latvia",
+      "Riga children attractions"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80",
+      "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80",
+      "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80"
+    ]
+  },
+  {
+    "id": "warsaw-001",
+    "name": "Warsaw Zoo",
+    "city": "Warsaw",
+    "country": "Poland",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 84,
+    "description": "One of Europe's most historically significant zoos, known for sheltering Jewish families during WWII (the story behind 'The Zookeeper's Wife'). Today it's a modern, spacious zoo with over 500 species including elephants, dolphins (in a dedicated aquarium), and a large reptile house.",
+    "location": "ul. Ratuszowa 1/3, 03-461 Warsaw",
+    "bestTime": "Spring and fall, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1772550018808-ebbcc271726c?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Dolphin Show Arena",
+      "Children's Zoo",
+      "Multiple Restaurants",
+      "Playgrounds",
+      "Free Wi-Fi"
+    ],
+    "safetyFeatures": [
+      "Modern Enclosure Design",
+      "On-Site Medical Team",
+      "CCTV Coverage",
+      "Safety Briefings at Dolphin Show"
+    ],
+    "tipsAndTricks": [
+      "Buy a combined zoo + dolphin show ticket online. It's cheaper and the show sells out on weekends.",
+      "The 'Zookeeper's Wife' memorial is near the main entrance. Take 10 minutes to read the story.",
+      "The children's zoo has goats, sheep, and rabbits you can pet and feed. Feed pellets are 2 PLN per cup.",
+      "The aquarium section has a tunnel walkway with sharks overhead - a hit with kids.",
+      "There are plenty of shaded benches. This zoo was designed with stroller-pushing parents in mind.",
+      "Zoo is right next to the Praga district with excellent and affordable Polish restaurants."
+    ],
+    "parentStory": {
+      "title": "Learning about heroes while feeding goats",
+      "excerpt": "I read 'The Zookeeper's Wife' years ago. Standing in the villa where the Zabinskis hid 300 Jews, while my kids fed goats 50 meters away was surreal.",
+      "author": "Katherine, mom of 2 from London",
+      "fullStory": "I came to Warsaw Zoo knowing the history. My husband and kids just wanted to see animals. The memorial is beautifully done. I spent 15 minutes reading while the kids played nearby. When we regrouped, my oldest asked about the memorial. I explained that the zookeepers hid people during the war. She asked 'Was it dangerous?' Yes. 'Did they get caught?' Some did. 'But they did it anyway?' Yes. That conversation was more valuable than any zoo exhibit."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 hours: dolphin show, children's zoo, reptile house, memorial visit",
+      "fullDay": "Full zoo exploration + Praga district lunch + nearby playgrounds",
+      "bestFor": "Ages 2-14, history-interested parents, animal lovers, dolphin fans"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Warsaw Zoo",
+      "dolphin show Warsaw",
+      "Poland zoo",
+      "Warsaw with kids",
+      "Zookeeper's Wife zoo"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80",
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "budapest-001",
+    "name": "Budapest Zoo & Botanical Garden",
+    "city": "Budapest",
+    "country": "Hungary",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 89,
+    "description": "One of the oldest zoos in Europe (opened 1866), set in the heart of City Park with stunning historic architecture. Home to over 1,000 animal species across beautifully themed areas including a tropical rainforest house, a Great Lake exhibit, and a Magic Mountain adventure. The botanical garden adds lush greenery throughout.",
+    "location": "Allatkerti krt. 6-12, 1146 Budapest",
+    "bestTime": "Spring and fall, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Multiple Restaurants",
+      "Playgrounds",
+      "Botanical Garden",
+      "Petting Zoo",
+      "Souvenir Shops"
+    ],
+    "safetyFeatures": [
+      "Historic But Updated Enclosures",
+      "First Aid Stations",
+      "Lost Child Center",
+      "Well-Marked Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "The 'Magic Mountain' exhibit is worth the extra ticket - a walk-through adventure past reptiles, bats, and glowing underwater creatures.",
+      "Buy tickets online to skip the line. On weekends the queue can stretch 20-30 minutes.",
+      "The zoo is next to the famous Szechenyi Baths. Combine them for a perfect family day.",
+      "The botanical garden has a maze and a Japanese garden that older kids enjoy exploring.",
+      "November-February is very quiet and many indoor exhibits are warm. Great winter option.",
+      "The Great Lake exhibit with penguins and seals has scheduled feeding at 11 AM and 2 PM."
+    ],
+    "parentStory": {
+      "title": "The seal that posed for photos",
+      "excerpt": "A harbor seal swam up to the glass, turned sideways, and floated perfectly still while my daughter took 'photos' with her toy camera.",
+      "author": "Peter, dad of 1 from Debrecen",
+      "fullStory": "The seal exhibit has an underwater viewing area that's pure magic. My daughter was pretending to take photos with a little camera toy. A harbor seal noticed her, swam right up, floated horizontally, and just posed. It stayed there, turning to show different angles, for five solid minutes. A keeper told us this particular seal does this with children regularly. My daughter still believes she's a wildlife photographer."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 hours: Magic Mountain, Great Lake, petting zoo, botanical garden",
+      "fullDay": "Full day: zoo + Szechenyi Baths + Vajdahunyad Castle + lunch at City Park",
+      "bestFor": "Ages 2-14, architecture lovers, zoo enthusiasts"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Budapest Zoo",
+      "Hungary zoo",
+      "Budapest with kids",
+      "City Park Budapest",
+      "family activities Hungary"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80",
+      "https://images.unsplash.com/photo-1594103345324-16aa1bcffdb9?w=800&q=80"
+    ]
+  },
+  {
+    "id": "prague-002",
+    "name": "Prague Aquarium",
+    "city": "Prague",
+    "country": "Czech Republic",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 70,
+    "description": "A modern freshwater aquarium in Prague's Holesovice district, showcasing fish, amphibians, and reptiles from around the world. Features a massive Amazonian biotope tank with piranhas, stingrays, and arapaimas, plus a touch pool where kids can handle small sturgeon and crayfish.",
+    "location": "U Pruhonu 3, 170 00 Prague 7",
+    "bestTime": "Weekday mornings, avoid Czech school holidays",
+    "imageUrl": "https://images.unsplash.com/photo-1644327981167-fbd67b34ba72?w=800&q=80",
+    "amenities": [
+      "Touch Pool",
+      "Indoor Climate Control",
+      "Nappy Changing",
+      "Small Cafe",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Reinforced Aquarium Glass",
+      "Staff Supervision at Touch Pool",
+      "Emergency Exits",
+      "Anti-Slip Flooring"
+    ],
+    "tipsAndTricks": [
+      "The Amazonian tank is the main attraction. Visit at 11 AM for diver feeding the arapaimas.",
+      "The touch pool is open 10 AM-12 PM and 2-4 PM. Arrive early to avoid school groups.",
+      "The aquarium is small - you can see everything in 90 minutes.",
+      "Wear shoes with good grip. The lighting is dim and floors can be wet near exhibits.",
+      "The piranha exhibit has a 'feeding frenzy' video. Warn sensitive kids."
+    ],
+    "parentStory": {
+      "title": "My son touched a sturgeon and gasped like it was magic",
+      "excerpt": "Our 4-year-old dipped his hand in the touch pool expecting to be scared. A baby sturgeon swam right into his palm.",
+      "author": "Klara, mom of 1 from Brno",
+      "fullStory": "The touch pool at Prague Aquarium is genius. Instead of starfish they have small freshwater sturgeon and crayfish. The staff tell you exactly how to hold your hand. Our son was nervous, then a sturgeon swam directly into his palm and just sat there. He didn't move for a full minute, staring at this ancient-looking fish. Now he wants to be a marine biologist."
+    },
+    "itineraryComparison": {
+      "halfDay": "90 minutes: Amazonian tank, touch pool, piranha exhibit, cafe",
+      "fullDay": "Combine with DOX gallery and Letna Park playground for a full Prague 7 day",
+      "bestFor": "Ages 2-12, rainy days, half-day filler, fish enthusiasts"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Prague Aquarium",
+      "Czech Republic aquarium",
+      "Prague with kids",
+      "indoor family Prague",
+      "aquarium Czech"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80",
+      "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80",
+      "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80"
+    ]
+  },
+  {
+    "id": "dubai-002",
+    "name": "Dubai Parks and Resorts",
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "category": "Theme Parks",
+    "ageRange": "3-16",
+    "safetyRating": 4.8,
+    "priceRange": "$$$$",
+    "popularity": 94,
+    "description": "The Middle East's largest themed entertainment destination, combining three massive parks: Motiongate (Hollywood-themed with How to Train Your Dragon, Madagascar, Ghostbusters), Bollywood Parks, and Legoland Dubai. Connected by Riverland, a promenade with shops and dining. Legoland Water Park is a separate add-on.",
+    "location": "Sheikh Zayed Rd, Dubai",
+    "bestTime": "October-April, weekdays for shortest queues",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Baby Care Rooms",
+      "Multiple Restaurants",
+      "Shaded Areas",
+      "Lost Child Centers",
+      "First Aid",
+      "Free Wi-Fi"
+    ],
+    "safetyFeatures": [
+      "Height Measurement at All Rides",
+      "Trained Lifeguards at Water Park",
+      "Medical Center On-Site",
+      "Extensive CCTV",
+      "Security Patrols"
+    ],
+    "tipsAndTricks": [
+      "Buy the 'Multi-Park' ticket online 2 weeks in advance for up to 40% off gate prices.",
+      "Legoland is perfect for ages 2-12. Motiongate is better for 7+. Just do Legoland if kids are under 7.",
+      "Arrive at opening. By 11 AM you can finish Legoland's most popular rides before the midday heat.",
+      "Riverland is free to enter and has air-conditioned restaurants. Use it for lunch breaks.",
+      "Bring sun protection: hats, sunscreen, UV-protective clothing. The sun is brutal even in winter.",
+      "Friday and Saturday are busiest. Go Sunday-Wednesday for shortest lines."
+    ],
+    "parentStory": {
+      "title": "The Legoland rollercoaster that broke my fear",
+      "excerpt": "My 8-year-old was terrified of rollercoasters. After three gentle rides in 'Kid Power Towers', she tackled 'The Dragon'. She screamed then said 'Can we do it again?'",
+      "author": "Nadia, mom of 2 from Cairo",
+      "fullStory": "Dubai Parks is overwhelming in size. But once inside Legoland, the scale felt right for kids. Every ride has a smaller version to build confidence. By noon, our daughter had enough courage to ride The Dragon. Her victory shriek drew applause from strangers. We stayed until closing and she passed out in the stroller before we reached the car."
+    },
+    "itineraryComparison": {
+      "halfDay": "One park: Legoland (full day) or Motiongate (full day)",
+      "fullDay": "Multi-park: Legoland morning + Motiongate afternoon + Riverland dinner. Two days recommended.",
+      "bestFor": "Ages 3-16, multi-generational families, theme park enthusiasts"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Dubai Parks and Resorts",
+      "Legoland Dubai",
+      "Motiongate Dubai",
+      "Dubai theme parks",
+      "Dubai with kids",
+      "family activities UAE"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ]
+  },
+  {
+    "id": "hochiminh-002",
+    "name": "Binh Quoi Tourist Village",
+    "city": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "category": "Parks & Nature",
+    "ageRange": "2-14",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 68,
+    "description": "A lush riverside tourist complex recreating the charm of Vietnam's countryside on the outskirts of Ho Chi Minh City. Features traditional Vietnamese houses, tropical gardens, a lake with pedal boats, mini-golf, and authentic Vietnamese food. A peaceful green escape from Saigon, great for a half-day family outing.",
+    "location": "1147 Binh Quoi, Ward 28, Binh Thanh District, HCMC",
+    "bestTime": "Early morning or late afternoon, avoid midday heat",
+    "imageUrl": "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+    "amenities": [
+      "Pedal Boat Rental",
+      "Mini Golf",
+      "Swimming Pool",
+      "Restaurants",
+      "Parking",
+      "Picnic Areas"
+    ],
+    "safetyFeatures": [
+      "Life Jackets at Boat Rental",
+      "Fenced Pool Area",
+      "Security at Entrance",
+      "Shaded Walkways"
+    ],
+    "tipsAndTricks": [
+      "Go as early as 8 AM to beat the heat. By 10 AM it's too hot for outdoor play.",
+      "The pedal boats are a highlight. Rent one for 30 minutes (about 50,000 VND) and explore the small islands.",
+      "Order 'banh xeo' (crispy pancake) and fresh spring rolls - kids love making their own.",
+      "Bring swimsuits. The pool is clean, shaded, and a lifesaver on hot afternoons.",
+      "The village has a small petting zoo with goats and rabbits. Ask staff for feed at reception.",
+      "The restaurant gets busy with tour groups 11:30-1:30 PM. Eat earlier or later."
+    ],
+    "parentStory": {
+      "title": "Pedal boats, sugar cane juice, and a perfect afternoon",
+      "excerpt": "We spent 45 minutes in a pedal boat shaped like a swan, chasing ducks across the lake. Then fresh sugar cane juice.",
+      "author": "Linh, mom of 1 from Da Nang",
+      "fullStory": "Binh Quoi isn't fancy. That's exactly why it's perfect for families. The pedal boats are delightfully old-school - rusty swan shapes, squeaky pedals. Our daughter had never been on a boat. She shrieked with laughter every time we bumped into a lily pad. Afterward, fresh sugar cane juice at the riverside stall. Three dollars for four glasses. No screens, no queues, no stress. Just green, slow, beautiful Vietnam."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours: pedal boats, petting zoo, mini golf, lunch",
+      "fullDay": "Half day: morning arrival, pool swim, lunch, nap in gardens, late afternoon pedal boats",
+      "bestFor": "Ages 2-14, families seeking nature escape from Saigon, budget travelers"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Binh Quoi Tourist Village",
+      "Ho Chi Minh City with kids",
+      "Saigon nature park",
+      "family activities Vietnam",
+      "Binh Quoi village"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80"
+    ]
+  },
+  {
+    "id": "stpetersburg-001",
+    "name": "Leningrad Zoo",
+    "city": "St. Petersburg",
+    "country": "Russia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 65,
+    "description": "One of the world's northernmost zoos and Russia's oldest (opened 1865). Home to over 600 species including polar bears, Amur tigers, and a large collection of birds of prey. The historic enclosures have been modernized in recent years, and the zoo is famous for its successful polar bear breeding program.",
+    "location": "Alexandrovsky Park 1, St. Petersburg 197198",
+    "bestTime": "Late spring to early autumn, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Children's Zoo",
+      "Cafe",
+      "Indoor Exhibits",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "On-Site Veterinary",
+      "Fenced Enclosures",
+      "First Aid Post",
+      "Security"
+    ],
+    "tipsAndTricks": [
+      "The polar bear exhibit is world-class. Visit at feeding time (11 AM) for the best views.",
+      "The zoo is located right next to the St. Petersburg Planetarium. Buy a combined ticket.",
+      "Winter visits are challenging but indoor exhibits are cozy and warm.",
+      "The children's zoo has domestic animals and a small petting area.",
+      "English signage is limited. Download a translation app.",
+      "Payment is mostly cash-only (rubles). Bring small bills."
+    ],
+    "parentStory": {
+      "title": "Watching a polar bear swim made us forget the cold",
+      "excerpt": "Our 7-year-old pressed against the glass for 20 minutes watching a polar bear swim laps. We left with numb toes and full hearts.",
+      "author": "Alexei, dad of 2 from Moscow",
+      "fullStory": "We visited in February. It was freezing. But the polar bear exhibit has huge underwater viewing windows and the bears are incredibly active in cold weather. Our daughter watched one swim figure-eights for 20 minutes. A keeper noticed and spent 15 minutes explaining the breeding program. She wants to be a zookeeper now."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours: polar bears, Amur tigers, children's zoo, planetarium",
+      "fullDay": "Full day: zoo + planetarium + Alexandrovsky Park + Peter and Paul Fortress",
+      "bestFor": "Ages 2-14, wildlife enthusiasts, unique St. Petersburg experience"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Leningrad Zoo",
+      "St. Petersburg zoo",
+      "Russia zoo",
+      "St. Petersburg with kids",
+      "polar bears Russia"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+    ]
+  },
+  {
+    "id": "moscow-001",
+    "name": "Moscow Zoo",
+    "city": "Moscow",
+    "country": "Russia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 78,
+    "description": "Russia's largest and most famous zoo, spanning over 20 hectares in central Moscow. Home to more than 8,000 animals from over 1,000 species. The zoo is divided into an Old Territory and New Territory connected by a pedestrian bridge. Highlights include the polar bear complex, the Great Apes pavilion, and a modern dolphinarium.",
+    "location": "Bolshaya Gruzinskaya St 1, Moscow 123242",
+    "bestTime": "May-September, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Multiple Restaurants",
+      "Dolphinarium",
+      "Playgrounds",
+      "Indoor Pavilions",
+      "ATM"
+    ],
+    "safetyFeatures": [
+      "Modern Enclosure Design",
+      "Medical Staff On-Site",
+      "CCTV Coverage",
+      "Lost Child Center"
+    ],
+    "tipsAndTricks": [
+      "Buy tickets online to skip the notoriously long queues. Weekend wait times can exceed 45 minutes.",
+      "The dolphinarium show tickets sell separately and fast. Book online at least 3 days ahead.",
+      "The Night Safari program in summer (9 PM-midnight) is magical - nocturnal animals are awake.",
+      "The New Territory is newer with better enclosures. Start there if you are short on time.",
+      "Download the zoo's app - it has an English audio guide and interactive map.",
+      "There is a great playground near the Old Territory exit. A perfect way to end the visit."
+    ],
+    "parentStory": {
+      "title": "He shared his ice cream with a chimpanzee",
+      "excerpt": "Our 5-year-old was eating ice cream near the ape enclosure. A young chimp signed 'please'. Our son broke off a piece and held it against the glass.",
+      "author": "Svetlana, mom of 2 from Novosibirsk",
+      "fullStory": "The great ape pavilion is the highlight of Moscow Zoo. The viewing is incredibly close. Our son was eating ice cream when a young chimpanzee approached the glass and started signing. A keeper told us 'please' is one of the signs they have learned. Our son broke off a piece and held it against the glass. The chimp sat down and mimed eating with him. They 'shared' ice cream for five minutes. It was the most beautiful interspecies moment I have ever witnessed."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 hours: dolphin show, great apes, polar bears, reptile house, playground",
+      "fullDay": "Full day: both territories, dolphinarium, Night Safari (summer), dinner at nearby Georgian restaurant",
+      "bestFor": "Ages 2-14, zoo enthusiasts, dolphin fans, Moscow visitors"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Moscow Zoo",
+      "Russia zoo",
+      "Moscow with kids",
+      "Russian family activities",
+      "Moscow dolphinarium"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  }
+]
