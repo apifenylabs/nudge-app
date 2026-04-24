@@ -5,7 +5,7 @@ import {
   Search, MapPin, Sparkles, Shield, Globe, Users, Star,
   ChevronDown, ChevronRight, Clock, Compass,
   Lightbulb, Heart, Clock3, Sun, Moon, Filter,
-  TrendingUp, SlidersHorizontal
+  TrendingUp, SlidersHorizontal, ArrowUp
 } from 'lucide-react';
 
 // ─── Types ──────────────────────────────────────────────────────
@@ -52,6 +52,15 @@ const categories = [
 const cities = ["Tokyo", "Bangkok", "Singapore", "Hong Kong", "Phuket", "Bali", "Hanoi", "Seoul", "Osaka", "Kuala Lumpur", "Chiang Mai"];
 
 export default function Home() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 600);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCity, setSelectedCity] = useState("All");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -507,6 +516,17 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* ─── SCROLL TO TOP ─── */}
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-2 right-2 z-50 p-4 bg-white border border-gray-200 text-gray-500 hover:text-sky-600 hover:border-sky-300 rounded-xl shadow-lg transition-all active:scale-95"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp size={20} />
+        </button>
+      )}
     </div>
   );
 }

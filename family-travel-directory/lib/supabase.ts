@@ -1,20 +1,17 @@
 import { createClient } from '@supabase/supabase-js';
 
 // ─── Client Setup ──────────────────────────────────────────────
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn(
-    'Supabase env vars not set. Expected NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY. ' +
-    'Falling back to demo defaults.'
+  throw new Error(
+    'Supabase env vars not set. Required: NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY. ' +
+    'Set them in your .env.local file from Supabase project settings.'
   );
 }
 
-export const supabase = createClient(
-  supabaseUrl || 'https://llnflvnjinavbtqadgyu.supabase.co',
-  supabaseAnonKey || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxsbmZsdm5qaW5hdmJ0cWFkZ3l1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2OTM4MTUsImV4cCI6MjA5MjI2OTgxNX0.xnn7-x8rV2cluETN-3eDI2yhuxMzcnTraBKmwbW1qJw'
-);
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 // ─── Types ──────────────────────────────────────────────────────
 export interface Destination {
