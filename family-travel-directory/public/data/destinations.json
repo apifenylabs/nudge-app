@@ -11556,5 +11556,2440 @@
       "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
       "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80"
     ]
+  },
+  {
+    "id": "london-001",
+    "name": "ZSL London Zoo",
+    "city": "London",
+    "country": "United Kingdom",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.6,
+    "priceRange": "$$$",
+    "popularity": 91,
+    "description": "The world's oldest scientific zoo, home to over 20,000 animals across stunning heritage and modern habitats. Highlights include the splashy Penguin Beach, the walk-through Butterfly Paradise, and the Land of the Lions exhibit.",
+    "location": "Outer Circle, Regent's Park, London NW1 4RY",
+    "bestTime": "Weekday mornings, April-September",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Baby Changing Facilities",
+      "Family Restrooms",
+      "Picnic Areas",
+      "On-site Cafes",
+      "Buggy Parking"
+    ],
+    "safetyFeatures": [
+      "Well-Maintained Enclosures",
+      "First Aid Stations",
+      "Clear Emergency Exits",
+      "Staff Patrols Throughout"
+    ],
+    "tipsAndTricks": [
+      "Book tickets online at least 48 hours ahead \u2014 you save 10% and skip the queue which can take 30+ minutes at peak season.",
+      "Arrive when gates open at 10AM and head to Penguin Beach for the 11AM feeding. Penguins are most active in the morning.",
+      "The walk-through Butterfly Paradise is a huge hit with toddlers but keep them on shoulders or they'll try to catch the butterflies.",
+      "Bring a refillable water bottle \u2014 there are free water stations throughout the zoo.",
+      "The Tiny Giants exhibit (insects/reptiles) is dark and loud. Test it alone first if your child is sensory-sensitive."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Penguin Beach made our three-year-old's entire year",
+      "excerpt": "She stood frozen watching the penguins dive. Then one waddled right up to the glass and kissed her hand. She talked about it for weeks.",
+      "author": "Mei-Ling, mom of 2 from Singapore",
+      "fullStory": "We booked London Zoo thinking it would be a quick stop. Five hours later we had to drag our kids out. The penguin feeding show is world-class. Our youngest made eye contact with a penguin called Squiggles who followed her along the glass. We bought the annual pass on the way out."
+    },
+    "itineraryComparison": {
+      "halfDay": "Penguin Beach, Land of the Lions, Butterfly Paradise. 2-3 hours.",
+      "fullDay": "All zones, 3+ keeper talks, picnic, petting zoo, playground. 4-5 hours.",
+      "bestFor": "Ages 3-10, animal lovers, rainy day backup"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "London Zoo",
+      "family things to do London",
+      "kids zoo UK"
+    ]
+  },
+  {
+    "id": "london-002",
+    "name": "Natural History Museum",
+    "city": "London",
+    "country": "United Kingdom",
+    "category": "Museums",
+    "ageRange": "0-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 96,
+    "description": "One of London's most spectacular family attractions, set in a breathtaking Romanesque building. Free entry to the main galleries including the iconic dinosaur skeletons, the magnificent blue whale in Hintze Hall, and the interactive Volcanoes and Earthquakes zone.",
+    "location": "Cromwell Road, South Kensington, London SW7 5BD",
+    "bestTime": "Weekday afternoons, Tuesday-Thursday",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+    "amenities": [
+      "Free Entry",
+      "Baby Changing Rooms",
+      "Family Backpacks with Activities",
+      "Nursing Room",
+      "Multiple Cafes",
+      "Buggy Parking"
+    ],
+    "safetyFeatures": [
+      "Security Screening",
+      "First Aid Rooms",
+      "Sensory-Friendly Hours",
+      "CCTV Throughout"
+    ],
+    "tipsAndTricks": [
+      "Entry is free but book a timed slot online. Weekend slots vanish 2-3 weeks ahead. Book the first slot at 10AM.",
+      "The Volcanoes and Earthquakes zone simulates an earthquake every 15 min. Warn younger kids.",
+      "Rent the free Family Backpack at the info desk \u2014 explorer tools and scavenger hunts for ages 4-9.",
+      "Avoid cafe lunch rush 12:00-13:30. The basement cafe is quieter, or picnic in Exhibition Road gardens.",
+      "Afternoon visits (post-2PM) are much quieter. The blue whale hall is most photogenic at 3PM."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "She touched a real meteorite and her eyes went wide",
+      "excerpt": "The dinosaur skeletons are amazing but the touchable meteorite was the highlight. She held space rock and forgot her iPad existed.",
+      "author": "David, dad of 2 from Kuala Lumpur",
+      "fullStory": "I worried it would be too serious for young kids. Wrong. The hands-on science center kept them busy for two hours \u2014 a wind tunnel, simulated earthquake, real fossils. The mineral gallery was stunning. We stayed 6 hours and only left because we were starving."
+    },
+    "itineraryComparison": {
+      "halfDay": "Dinosaur Gallery, Blue Whale Hall, Earth Hall. 2-3 hours.",
+      "fullDay": "All galleries, Wildlife Garden, hands-on science center. 5-6 hours.",
+      "bestFor": "Ages 4-12, rainy days, budding scientists, free-budget families"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Natural History Museum London",
+      "free family attractions London",
+      "dinosaur museum kids London"
+    ]
+  },
+  {
+    "id": "london-003",
+    "name": "Hyde Park & Kensington Gardens",
+    "city": "London",
+    "country": "United Kingdom",
+    "category": "Parks & Nature",
+    "ageRange": "0-12",
+    "safetyRating": 4.9,
+    "priceRange": "$",
+    "popularity": 93,
+    "description": "London's grandest green space spanning 625 acres of rolling lawns, serene lakes, and magnificent Kensington Gardens. Families flock here for the Diana Memorial Playground (with its pirate ship!), pedal boats on the Serpentine, and the Peter Pan statue.",
+    "location": "Hyde Park, London W2 2UH",
+    "bestTime": "Weekday mornings in late spring or sunny autumn afternoons",
+    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+    "amenities": [
+      "Diana Memorial Playground (pirate ship)",
+      "Pedal Boat Rentals",
+      "Public Toilets with Baby Change",
+      "Deck Chair Rentals",
+      "Multiple Cafes",
+      "Free Water Fountains"
+    ],
+    "safetyFeatures": [
+      "Park Rangers on Patrol",
+      "Well-Lit Paths",
+      "Fenced Play Areas",
+      "Shallow Lake Edges with Barriers"
+    ],
+    "tipsAndTricks": [
+      "Diana Memorial Playground has timed entry \u2014 go before 10AM or after 3PM to avoid waits.",
+      "Bring bird-safe seed (sold at kiosks) for Serpentine ducks \u2014 not bread which harms them.",
+      "The Peter Pan statue near Long Water is a quiet spot when the playground gets frantic.",
+      "Serpentine Lido has a shallow paddling area in summer (June-August), free for under-8s.",
+      "Pedal boats cost 12 pounds for 30 min. Toddlers can steer from your lap."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The pirate ship playground is pure chaos \u2014 in the best way",
+      "excerpt": "Wooden pirate ship, rope bridges, sand pits, water pumps. Our son disappeared for 45 minutes being Captain Hook.",
+      "author": "Priya, mom of 1 from Hong Kong",
+      "fullStory": "The Diana playground blew our minds \u2014 a giant pirate ship with slides, climbing nets, sensory trail. Our 4-year-old made friends from three countries. We stayed 3 hours. The splash zone is a lifesaver on hot days but bring a change of clothes."
+    },
+    "itineraryComparison": {
+      "halfDay": "Diana Playground (1-2h), Serpentine duck feeding (30min), Peter Pan statue (15min).",
+      "fullDay": "Add pedal boats, Kensington Palace grounds, Italian Gardens picnic, Albert Memorial. 5-6 hours.",
+      "bestFor": "Ages 0-10, free activities, sunny days, stroller-friendly"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Hyde Park family",
+      "Kensington Gardens",
+      "London parks for kids"
+    ]
+  },
+  {
+    "id": "paris-001",
+    "name": "Disneyland Paris",
+    "city": "Paris",
+    "country": "France",
+    "category": "Theme Parks",
+    "ageRange": "3-12",
+    "safetyRating": 4.7,
+    "priceRange": "$$$$",
+    "popularity": 97,
+    "description": "Europe's most-visited theme park destination offering classic Disney magic with a French twist. Two parks \u2014 Disneyland Park (magical castles, classic rides, parades) and Walt Disney Studios (movie-themed thrills). Designed for families with height requirement guides and baby switch services.",
+    "location": "Boulevard de Parc, 77700 Coupvray (35 min from central Paris by RER A)",
+    "bestTime": "Wednesday-Thursday, September-October or January-February",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Baby Care Centers",
+      "Parent Swap (Baby Switch)",
+      "Character Dining",
+      "Family Restrooms",
+      "Lost Child Protocol"
+    ],
+    "safetyFeatures": [
+      "Ride Height Restrictions",
+      "Trained Security",
+      "Medical Centers On-Site",
+      "Emergency Evacuation Plans"
+    ],
+    "tipsAndTricks": [
+      "Stay at a Disney hotel for early access \u2014 one hour before crowds. Ride 4 popular rides before queues hit 60+ min.",
+      "Asian families: rice and noodle options at Restaurant Agrabah in Adventureland \u2014 a hidden gem.",
+      "Parade starts near It's a Small World 30 min before Main Street. Watch from there for half the crowd.",
+      "Book character dining at Plaza Gardens Restaurant 3 months ahead for Mickey meet without queuing.",
+      "Winter (Dec-Jan) has magical Christmas decor and lower crowds but bundle up."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "She cried meeting Rapunzel and so did I",
+      "excerpt": "The queue was 45 minutes. She waited practicing her curtsy. When Rapunzel held her hand, she burst into tears.",
+      "author": "Claire, mom of 1 from Taipei",
+      "fullStory": "I was skeptical about Disneyland Paris. Yes, smaller than Tokyo. Yes, some rides feel dated. But character interactions are unmatched. Our daughter spent 10 minutes talking to Rapunzel. A staff member noticed my son was tired and let us rest in the parent lounge. We went for 1 day and added a second."
+    },
+    "itineraryComparison": {
+      "halfDay": "One park. 3-4 rides + character meet + parade.",
+      "fullDay": "Park hopper. Start at Disneyland, lunch, then Studios. End with fireworks.",
+      "bestFor": "Ages 4-12, Disney fans, special occasion trips"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Disneyland Paris",
+      "Disneyland Paris family guide",
+      "Euro Disney kids"
+    ]
+  },
+  {
+    "id": "paris-002",
+    "name": "Jardin du Luxembourg",
+    "city": "Paris",
+    "country": "France",
+    "category": "Parks & Nature",
+    "ageRange": "0-12",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 90,
+    "description": "Paris's most beautiful park for families \u2014 60 acres of manicured French gardens, a large pond where children sail wooden boats, pony rides, a vintage carousel, and one of the best playgrounds in the city. Wide gravel paths are stroller-friendly.",
+    "location": "6th Arrondissement, Rue de Medicis (RER B: Luxembourg)",
+    "bestTime": "Weekday mornings, April-October for boat sailing",
+    "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "amenities": [
+      "Wooden Sailboat Rentals",
+      "Pony Rides",
+      "Vintage Carousel",
+      "Large Fenced Playground",
+      "Public Restrooms",
+      "Cafe & Kiosks"
+    ],
+    "safetyFeatures": [
+      "Fenced Play Zones",
+      "Garden Attendants",
+      "Pond with Low Barriers",
+      "Separated Play Areas by Age"
+    ],
+    "tipsAndTricks": [
+      "Wooden sailboat rental is a Parisian rite \u2014 3 euros for 30 min with vintage boats. Magic for ages 3-7.",
+      "Playground split into two sections: ages 3-6 and 7-12. Don't mix them up.",
+      "Bring a picnic blanket for lawns around Grand Basin. On-site cafe is pricey with slow queues.",
+      "Pony rides run Wed, Sat, Sun, and school holidays only. 5 euros per ride. Ages 2-6 love it.",
+      "Puppet theater shows are in French but slapstick works for all ages. 30 min shows, 6 euros."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Sailing boats in a Parisian pond \u2014 the simplest joy",
+      "excerpt": "Two hours. One wooden boat. Zero screens. My daughter pushed that boat around the fountain like commanding a fleet.",
+      "author": "Tom, dad of 1 from Sydney",
+      "fullStory": "Our 4-year-old spent two hours with a rented sailboat. An elderly French gentleman gave her running commentary in French \u2014 she loved every second. We had a picnic under chestnut trees. Paris does not have to be expensive."
+    },
+    "itineraryComparison": {
+      "halfDay": "Boat sailing (1h), playground (1h), carousel (15min), picnic. 2-3 hours.",
+      "fullDay": "Add pony rides, puppet show, Medici Fountain, stroll to St-Germain for crepes. 4-5 hours.",
+      "bestFor": "Ages 2-8, budget-friendly, sunny weather, stroller families"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Jardin du Luxembourg",
+      "Luxembourg Gardens kids",
+      "Paris family park"
+    ]
+  },
+  {
+    "id": "paris-003",
+    "name": "Cite des Sciences et de l'Industrie",
+    "city": "Paris",
+    "country": "France",
+    "category": "Museums",
+    "ageRange": "2-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "Europe's largest science museum with the dedicated Cite des Enfants \u2014 a massive interactive space for ages 2-7 and 5-12. Hands-on experiments, planetarium, submarine tour inside a real 1960s sub, and the Geode IMAX theatre.",
+    "location": "30 Avenue Corentin Cariou, 75019 Paris (Metro: Porte de la Villette)",
+    "bestTime": "Tuesday-Thursday mornings, September-November",
+    "imageUrl": "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+    "amenities": [
+      "Cite des Enfants (2-7 & 5-12)",
+      "Planetarium & IMAX",
+      "Baby Nursing Room",
+      "Family Picnic Area",
+      "Cafeteria with Kids Menu",
+      "Buggy Parking"
+    ],
+    "safetyFeatures": [
+      "Staffed Interactive Zones",
+      "Emergency Exits Throughout",
+      "Age-Restricted Play Areas",
+      "First Aid Post"
+    ],
+    "tipsAndTricks": [
+      "Book Cite des Enfants in advance \u2014 timed entry sells out weekends. Ages 2-7 has water play and sensory maze.",
+      "Geode IMAX overwhelms kids under 5. Stick to planetarium \u2014 shorter shows (30 min), less intimidating.",
+      "Argonaute submarine outside is a genuine 1960s naval sub. Kids 6+ love it. Skip if claustrophobic.",
+      "Half the exhibits are in French. Download museum app for English translations. Cite des Enfants is language-free.",
+      "Tuesdays and Thursdays are quietest. Avoid Wednesdays when school groups flood the museum."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1644327981167-fbd67b34ba72?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My 6-year-old built a robot and I was useless",
+      "excerpt": "She assembled a circuit-powered robot in 20 minutes. The pride on her face was worth everything.",
+      "author": "Andrew, dad of 1 from Hong Kong",
+      "fullStory": "I speak zero French and was nervous. Cite des Enfants is almost entirely language-free \u2014 hands-on and visual. My daughter spent 40 minutes building bridges and testing them with weights. Staff demonstrated experiments in careful English. We stayed 5 hours and I bribed her with crepes to leave."
+    },
+    "itineraryComparison": {
+      "halfDay": "Cite des Enfants (2h), planetarium (30min), submarine (20min).",
+      "fullDay": "Add Geode IMAX, permanent exhibitions, robotics workshop, lunch. 5-6 hours.",
+      "bestFor": "Ages 4-12, STEM-curious kids, rainy days"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Cite des Sciences Paris",
+      "science museum Paris kids",
+      "Cite des Enfants"
+    ]
+  },
+  {
+    "id": "rome-001",
+    "name": "Bioparco di Roma",
+    "city": "Rome",
+    "country": "Italy",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 85,
+    "description": "Rome's historic zoo transformed into a modern conservation park within Villa Borghese gardens. Home to 200+ species including elephants, giraffes, big cats, and lemurs. Leafy, shaded pathways are an escape from Rome's summer heat.",
+    "location": "Viale del Giardino Zoologico, 20, 00197 Rome",
+    "bestTime": "Early mornings, March-May or September-October",
+    "imageUrl": "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+    "amenities": [
+      "Children's Farm (petting zoo)",
+      "Stroller-Friendly Paths",
+      "Picnic Areas with Shade",
+      "Baby Changing Facilities",
+      "Playground",
+      "On-site Cafe"
+    ],
+    "safetyFeatures": [
+      "Double Fencing at Large Enclosures",
+      "First Aid Station",
+      "Staff Monitoring High-Traffic Zones",
+      "Supervised Animal Encounters"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 9:30 AM opening. Animals most active before 11AM \u2014 elephants and lemurs show best energy.",
+      "Pack a picnic. Zoo food is mediocre and overpriced. Plenty of shaded benches.",
+      "Lemur island is the standout \u2014 raised walkway with leaping platforms. Best at 10:30 AM keeper talk.",
+      "Combine with Villa Borghese. Rent a family surrey bike to explore the park after the zoo.",
+      "Zoo entrance is near Pincio terrace \u2014 15-min walk from Piazza del Popolo through beautiful park."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A shady escape from the Roman heat",
+      "excerpt": "Roman sun was brutal. Then Bioparco \u2014 cool, shaded pathways, happy animals, ice cream. We went back three times.",
+      "author": "Anna, mom of 2 from Bangkok",
+      "fullStory": "We stumbled on Bioparco exploring Villa Borghese. The zoo is leafy and shaded \u2014 genuinely cooler than the city. Elephant enclosure is massive, kids watched them splash for 30 min. Lemur walkway was a surprise highlight. We bought membership and returned twice."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main zoo loop (2h), children's farm (30min), playground (30min).",
+      "fullDay": "Zoo + Villa Borghese rental bikes + Galleria Borghese (booked ahead). 5-6 hours.",
+      "bestFor": "Ages 2-10, hot days needing shade, budget-conscious families"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Bioparco Roma",
+      "Rome zoo family",
+      "Villa Borghese kids"
+    ]
+  },
+  {
+    "id": "rome-002",
+    "name": "Villa Borghese Family Day",
+    "city": "Rome",
+    "country": "Italy",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 89,
+    "description": "Rome's answer to Central Park \u2014 200 acres of manicured gardens, hidden fountains, museums, and family activities. Features a lake with rowboats, children's cinema, bike rentals, and the iconic Little Rome wooden playground.",
+    "location": "Piazzale del Museo Borghese, 00197 Rome (Metro: Flaminio)",
+    "bestTime": "April-May or September-October mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80",
+    "amenities": [
+      "Rowboat Rentals (Lake)",
+      "Bicycle & Surrey Rentals",
+      "Children's Cinema",
+      "Multiple Playgrounds",
+      "Puppet Theater",
+      "Public Restrooms"
+    ],
+    "safetyFeatures": [
+      "Traffic-Free Paths",
+      "Park Security Patrols",
+      "Well-Maintained Play Equipment",
+      "Lifeguards at Boat Rental"
+    ],
+    "tipsAndTricks": [
+      "Rent a 4-person surrey bike (12 euros/hr) from Pincio entrance. Best way to cover the huge park with tired kids.",
+      "La Piccola Roma playground near the lake has miniature Colosseum and Trevi structures for climbing. Ages 3-8 love it.",
+      "Lake rowboats are 15 euros for 30 min. Go before 11AM. Kids under 5 can sit on laps and steer.",
+      "Pincio Terrace is the best family photo backdrop \u2014 Spanish Steps and Vatican visible. Go 45 min before sunset.",
+      "Bring snacks from Conad supermarket on Via Flaminia. Park kiosks are expensive."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My 4-year-old drove a surrey and nearly hit a fountain",
+      "excerpt": "We rented a family surrey. Our son insisted on steering. We nearly crashed into a 16th-century fountain.",
+      "author": "Mark, dad of 1 from London",
+      "fullStory": "Villa Borghese is a masterpiece. Wide gravel paths, ancient trees, fountains around every corner. Our 4-year-old demanded the surrey steering wheel and immediately aimed at a fountain. We swerved, laughed, and cruised through pine groves. Stopped at the lake for rowboats, playground, ended at Pincio for sunset. Cheapest day in Rome, favorite by far."
+    },
+    "itineraryComparison": {
+      "halfDay": "Surrey bike tour (1h), lake rowboats (30min), playground (45min).",
+      "fullDay": "Add Galleria Borghese (book ahead), Bioparco zoo (2-3h), picnic, Pincio sunset. 6-7 hours.",
+      "bestFor": "All ages, sunny days, active families, budget-friendly"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Villa Borghese Rome",
+      "Rome parks for families",
+      "things to do in Rome with kids"
+    ]
+  },
+  {
+    "id": "barcelona-001",
+    "name": "Barcelona Zoo",
+    "city": "Barcelona",
+    "country": "Spain",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.4,
+    "priceRange": "$$",
+    "popularity": 84,
+    "description": "Set within the lush Ciutadella Park, Barcelona's zoo is home to over 4,000 animals across 300+ species. Highlights include the dolphin show (crowd-pleaser for all ages), the primate walk-through, and the expansive aviary.",
+    "location": "Parc de la Ciutadella, 08003 Barcelona (Metro: Ciutadella)",
+    "bestTime": "Weekday mornings, March-May or September-October",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Dolphin Show",
+      "Stroller Rental",
+      "Picnic Areas",
+      "Children's Playground",
+      "Baby Changing Facilities",
+      "On-site Cafes"
+    ],
+    "safetyFeatures": [
+      "Well-Maintained Enclosures",
+      "First Aid Station",
+      "Clear Signage",
+      "Security on Site"
+    ],
+    "tipsAndTricks": [
+      "The dolphin show has limited seating. Arrive 20 min early for good spots. The 11AM show is least crowded.",
+      "Combine with Ciutadella Park \u2014 the zoo is inside the park. Rowboats on the lake nearby.",
+      "The primate walk-through area is the highlight. Best before noon when keepers do enrichment feeding.",
+      "Bring hats and sunscreen \u2014 many newer enclosures have less shade than the old zoo layout.",
+      "The zoo is undergoing renovations so some areas may be closed. Check their website before visiting."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1527179526932-3a7fb5a367a4?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The dolphin show made our 3-year-old shriek with joy",
+      "excerpt": "When the dolphins leaped and splashed, our daughter shrieked so loudly the whole row laughed. Pure joy.",
+      "author": "Sofia, mom of 1 from Jakarta",
+      "fullStory": "We almost skipped the dolphin show. So glad we went. She sat mesmerized for 25 minutes. When a dolphin did a backflip and splashed the front rows, she erupted. The zoo itself is a work in progress \u2014 some areas feel dated \u2014 but the dolphin show and primate section make it worth the ticket."
+    },
+    "itineraryComparison": {
+      "halfDay": "Dolphin show (30min), primate walk-through (45min), aviary (30min). 2-3 hours.",
+      "fullDay": "Full zoo (3-4h) + Ciutadella rowboats + playground + picnic. 5-6 hours.",
+      "bestFor": "Ages 2-10, dolphin lovers, families wanting a mixed park/zoo day"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Barcelona Zoo",
+      "Parc de la Ciutadella",
+      "Barcelona with kids"
+    ]
+  },
+  {
+    "id": "barcelona-002",
+    "name": "Tibidabo Amusement Park",
+    "city": "Barcelona",
+    "country": "Spain",
+    "category": "Theme Parks",
+    "ageRange": "3-12",
+    "safetyRating": 4.4,
+    "priceRange": "$$",
+    "popularity": 86,
+    "description": "Perched atop the highest peak of the Collserola mountain range, Tibidabo offers breathtaking views of Barcelona plus a charming vintage fairground atmosphere. A century-old park with classic carnival rides and the iconic 1928 Ferris wheel.",
+    "location": "Placa del Tibidabo, 3-4, 08035 Barcelona (Funicular from Pl. Doctor Andreu)",
+    "bestTime": "Weekday mornings, April-June or September-October",
+    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Family Restrooms",
+      "Children's Rides",
+      "Observation Deck",
+      "Picnic Areas",
+      "Cafeteria"
+    ],
+    "safetyFeatures": [
+      "Ride Height Requirements",
+      "Trained Operators",
+      "First Aid Station",
+      "Emergency Procedures"
+    ],
+    "tipsAndTricks": [
+      "Take the historic Tramvia Blau (blue tram) from the base to the funicular \u2014 a nostalgic experience kids love.",
+      "Buy the unlimited ride wristband online for 15% off. Per-ride tickets add up fast for repeat rides.",
+      "The panoramic views from the observation deck are stunning on clear days. Sunset visits are magical.",
+      "Weekdays in shoulder season (May or September) are ideal. Summer Saturdays can have 45-min queues.",
+      "The park is small enough for a half-day visit. Combine with a picnic at the summit viewpoint."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The view from the top made us forget the queues",
+      "excerpt": "Ferris wheel at sunset over Barcelona. Our 5-year-old pressed her face to the glass. Worth every minute.",
+      "author": "Carlos, dad of 2 from Manila",
+      "fullStory": "Tibidabo is not a big theme park \u2014 more like a vintage fairground with a killer view. Our kids loved the classic carousel and small roller coaster. But the real star is the observation deck next to the church. The whole city spreads at your feet \u2014 Sagrada Familia, the port, the Mediterranean. We stayed for sunset and it was unforgettable."
+    },
+    "itineraryComparison": {
+      "halfDay": "Funicular up, 2-3 hours at the park hitting 4-5 rides plus observation deck.",
+      "fullDay": "Add lunch at the summit, walk in Collserola forest park. 4-5 hours total.",
+      "bestFor": "Ages 4-12, vintage ride lovers, families wanting Barcelona views"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Tibidabo Barcelona",
+      "Tibidabo amusement park",
+      "Barcelona with kids view"
+    ]
+  },
+  {
+    "id": "amsterdam-001",
+    "name": "Artis Royal Zoo",
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "One of Europe's oldest zoos, Artis is a beautifully preserved 19th-century garden zoo in the heart of Amsterdam. Home to over 900 animal species, a planetarium, aquarium, and the stunning Artis Micropia (the world's first museum of microbes). The zoo's gas-lit pathways, historic buildings, and leafy grounds create a magical atmosphere.",
+    "location": "Plantage Kerklaan 38-40, 1018 CZ Amsterdam",
+    "bestTime": "Weekday mornings, April-June or September",
+    "imageUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+    "amenities": [
+      "Petting Zoo",
+      "Stroller-Friendly Paths",
+      "Indoor Playground",
+      "Baby Changing Facilities",
+      "Cafe with Kids Menu",
+      "Picnic Areas"
+    ],
+    "safetyFeatures": [
+      "Well-Maintained Historic Grounds",
+      "First Aid Stations",
+      "Clear Signage",
+      "Staff Throughout Grounds"
+    ],
+    "tipsAndTricks": [
+      "Artis Micropia (the microbe museum) is fascinating for older kids 8+ but skip it if your children are under 6 \u2014 it is mostly looking through microscopes.",
+      "The historic planetarium has English shows at 11AM and 2PM. Arrive 15 min early for good seats. Shows last 30 min.",
+      "Bring a picnic \u2014 the zoo has several lovely lawn areas surrounded by 19th-century architecture.",
+      "The indoor butterfly pavilion is a highlight for ages 2-6. Warm and humid with butterflies landing on visitors.",
+      "Combine with a walk through the Plantage neighborhood \u2014 Amsterdam's greenest area with lovely parks nearby."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1527179526932-3a7fb5a367a4?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The microbe museum was the surprise hit",
+      "excerpt": "We came for the lions and giraffes. Our 7-year-old spent 90 minutes in Micropia. A museum of microbes. Who knew.",
+      "author": "Emma, mom of 2 from Singapore",
+      "fullStory": "Artis is a beautiful zoo \u2014 not huge, not flashy, but wonderfully atmospheric with old trees and historic buildings. The animal collection is solid (lions, elephants, giraffes, penguins). But the real gem is Micropia, the microbe museum. Our kids were fascinated by the giant microscope screens. They even got to swab their hands and see the bacteria grow."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main zoo loop (2h), planetarium (30min). Skip Micropia.",
+      "fullDay": "Full zoo + Micropia (1.5h) + planetarium + petting zoo + lunch. 5-6 hours.",
+      "bestFor": "Ages 3-10, science-curious kids, historic zoo lovers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Artis Zoo Amsterdam",
+      "Amsterdam with kids",
+      "Artis Royal Zoo"
+    ]
+  },
+  {
+    "id": "amsterdam-002",
+    "name": "NEMO Science Museum",
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "category": "Museums",
+    "ageRange": "2-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 92,
+    "description": "Housed in a stunning green copper building that looks like a ship rising from the water, NEMO is the Netherlands' largest science museum. Five floors of hands-on exhibits covering technology, energy, space, and the human body. The rooftop terrace offers panoramic Amsterdam views and a kid-friendly cafe.",
+    "location": "Oosterdok 2, 1011 VX Amsterdam (10 min walk from Central Station)",
+    "bestTime": "Weekday mornings, September-November or January-March",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Five Floors of Interactive Exhibits",
+      "Rooftop Cafe with City Views",
+      "Baby Changing Facilities",
+      "Nursing Room",
+      "Buggy Parking",
+      "Lockers"
+    ],
+    "safetyFeatures": [
+      "Staff at Every Exhibit",
+      "Well-Maintained Equipment",
+      "Age-Zoned Play Areas",
+      "Emergency Exits Clearly Marked"
+    ],
+    "tipsAndTricks": [
+      "Book tickets online at least 2 weeks ahead for weekends \u2014 they sell out regularly. Weekdays are easier.",
+      "Start at the top floor and work down. The rooftop has a cafe and playground with amazing city views.",
+      "The giant chain reaction exhibit on the ground floor is mesmerizing for all ages. Kids can add their own components.",
+      "The Teen Facts floor (ages 12+) covers sex, drugs, and the brain. You can skip this floor with younger kids easily.",
+      "The museum is very popular with school groups (especially Wednesdays and Fridays). Visit Thursday morning for the quietest experience."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1644327981167-fbd67b34ba72?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Five floors of pure interactive chaos",
+      "excerpt": "Nothing is behind glass. Our kids built bridges, launched rockets, and generated electricity. Four hours vanished like nothing.",
+      "author": "Lisa, mom of 3 from Hong Kong",
+      "fullStory": "NEMO is the gold standard for science museums. Every single exhibit is hands-on. Our 4-year-old spent 45 minutes in the water play zone. Our 7-year-old built a circuit that powered a light. Our 10-year-old did a lab experiment with real chemicals. The rooftop is a bonus \u2014 lunch with a view of the whole city. If you have one museum day in Amsterdam, this is it."
+    },
+    "itineraryComparison": {
+      "halfDay": "Floors 1-3: chain reaction, water play, energy exhibits. 2-3 hours plus rooftop lunch.",
+      "fullDay": "All 5 floors including chemistry lab, rooftop playground, tech workshop. 4-5 hours.",
+      "bestFor": "Ages 4-12, hands-on learners, rainy days, STEM families"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "NEMO Science Museum",
+      "Amsterdam science museum kids",
+      "NEMO museum family"
+    ]
+  },
+  {
+    "id": "zurich-001",
+    "name": "Zurich Zoo",
+    "city": "Zurich",
+    "country": "Switzerland",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 87,
+    "description": "Set on the Zurichberg hill with sweeping views of the Alps, Zurich Zoo is one of Europe's most modern zoos. The Masoala Rainforest Hall \u2014 a massive indoor tropical ecosystem \u2014 is the star attraction, complete with free-flying birds, butterflies, and a waterfall. World-class naturalistic enclosures.",
+    "location": "Zurichbergstrasse 221, 8044 Zurich (Tram 6 from Central Station)",
+    "bestTime": "Weekday mornings, May-June or September",
+    "imageUrl": "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+    "amenities": [
+      "Masoala Rainforest Hall",
+      "Elefant Park",
+      "Children's Zoo",
+      "Petting Zoo",
+      "Stroller-Friendly Paths",
+      "Baby Care Rooms",
+      "Multiple Cafes"
+    ],
+    "safetyFeatures": [
+      "Modern Animal Enclosures",
+      "First Aid Station",
+      "Clear Pathways",
+      "Staff Throughout Grounds"
+    ],
+    "tipsAndTricks": [
+      "The Masoala Rainforest Hall is the absolute highlight. Go there first at opening \u2014 birds are most active in the morning.",
+      "The zoo is on a hill. Enter from the top entrance (near the tram stop) and work your way downhill.",
+      "The Children's Zoo has a petting area with goats and sheep, plus a playground. Plan 30-45 min.",
+      "Swiss prices apply \u2014 the zoo is not cheap. Pack a picnic to save money.",
+      "Free guided feeding sessions throughout the day. Check the schedule at entrance. Penguin and elephant feedings are most popular."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The indoor rainforest blew our minds",
+      "excerpt": "Walking into the Masoala Hall is like stepping into Madagascar. Hot, humid, birds swooping, butterflies landing on your shoulder.",
+      "author": "Wei, dad of 2 from Kuala Lumpur",
+      "fullStory": "Zurich Zoo is expensive but worth every Swiss franc. The Masoala rainforest hall is genuinely world-class \u2014 a climate-controlled dome with a whole ecosystem inside. Free-flying birds, massive butterflies, lemurs in the canopy. Our 5-year-old caught a butterfly on her finger. The elephant park is also spectacular with a pool they swim in."
+    },
+    "itineraryComparison": {
+      "halfDay": "Masoala Rainforest (1h), Elefant Park (30min), penguins (20min). 2-3 hours.",
+      "fullDay": "Full zoo + Children's Zoo + feeding sessions + picnic with Alps view. 4-5 hours.",
+      "bestFor": "Ages 2-10, nature lovers, families wanting a half-day in nature"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Zurich Zoo",
+      "Zurich family activities",
+      "Zurich with kids"
+    ]
+  },
+  {
+    "id": "prague-001",
+    "name": "Prague Zoo",
+    "city": "Prague",
+    "country": "Czech Republic",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 86,
+    "description": "Consistently ranked among the world's top zoos, Prague Zoo is a sprawling hillside paradise with over 5,000 animals. Famous for its conservation work with the Przewalski's horse (wild horse species saved from extinction), the zoo also features an Indonesian jungle pavilion, a massive elephant valley, and a chairlift connecting the upper and lower sections.",
+    "location": "U Trojskeho Zamku 3/120, 171 00 Prague 7 (Bus 112 from Nadrazi Holesovice)",
+    "bestTime": "Weekday mornings, April-June or September",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Chairlift Across Zoo",
+      "Children's Petting Zoo",
+      "Stroller Rental",
+      "Multiple Playgrounds",
+      "Baby Changing Facilities",
+      "Picnic Areas",
+      "Several Cafes"
+    ],
+    "safetyFeatures": [
+      "Well-Designed Enclosures",
+      "First Aid Station",
+      "Staff on Grounds",
+      "Clear Path Markings"
+    ],
+    "tipsAndTricks": [
+      "Take the chairlift (included in admission) from the lower entrance to the top. Saves little legs a steep climb.",
+      "The Przewalski's horse exhibit has info about the zoo's conservation program. Great learning moment for kids 7+.",
+      "The Indonesian Jungle pavilion is warm, humid, and full of free-roaming animals. Great for rainy days.",
+      "The zoo is massive and on a hill. Wear comfortable shoes and plan for 4-5 hours minimum.",
+      "The children's petting zoo has goats, sheep, rabbits, and ponies. Wash stations available after touching animals."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1527179526932-3a7fb5a367a4?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Best value zoo in Europe by far",
+      "excerpt": "5,000 animals, chairlift rides, multiple playgrounds, and it cost less than a pizza dinner. Prague Zoo is the family win we did not see coming.",
+      "author": "Sarah, mom of 2 from London",
+      "fullStory": "We expected a standard European zoo. Prague Zoo blew our expectations away. The setting on a hillside with the Vltava River below is gorgeous. The chairlift was the highlight for our kids \u2014 they insisted on riding it three times. The Indonesian pavilion is spectacular, and the gorilla enclosure is one of the best I have seen. Admission for a family of four was under 30 euros."
+    },
+    "itineraryComparison": {
+      "halfDay": "Chairlift up, Indonesian Pavilion, elephants, gorillas. 3 hours.",
+      "fullDay": "Full zoo including chairlift, children's zoo, Przewalski's horses, playgrounds, picnic. 4-5 hours.",
+      "bestFor": "All ages, budget-conscious families, animal lovers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Prague Zoo",
+      "Prague with kids",
+      "Prague family activities"
+    ]
+  },
+  {
+    "id": "vienna-001",
+    "name": "Schonbrunn Zoo (Tiergarten Schonbrunn)",
+    "city": "Vienna",
+    "country": "Austria",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 91,
+    "description": "The world's oldest continuously operating zoo, founded in 1752 within the grounds of the imperial Schonbrunn Palace. Combining Habsburg grandeur with modern animal welfare, the zoo is home to giant pandas, the lush Rainforest House, and the spectacular ORANG.erie orangutan pavilion. A uniquely beautiful family destination.",
+    "location": "Maxingstrasse 13b, 1130 Vienna (U4: Hietzing + 5 min walk)",
+    "bestTime": "Weekday mornings, April-June or September",
+    "imageUrl": "https://images.unsplash.com/photo-1644327981167-fbd67b34ba72?w=800&q=80",
+    "amenities": [
+      "Giant Panda Exhibit",
+      "Rainforest House",
+      "Children's Farm & Playground",
+      "Stroller Rental",
+      "Baby Care Rooms",
+      "Multiple Cafes",
+      "Lockers"
+    ],
+    "safetyFeatures": [
+      "Historic but Modernized Enclosures",
+      "First Aid Station",
+      "Staff at All Major Exhibits",
+      "Well-Marked Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "The giant pandas are the zoo's biggest draw. Go to the panda house first at opening \u2014 they are most active in the morning.",
+      "Combine your zoo visit with Schonbrunn Palace and gardens. The zoo is at the back of the palace grounds \u2014 buy a combined ticket.",
+      "The Rainforest House is a walk-through tropical dome with free-flying birds and butterflies. Dress in layers.",
+      "The children's farm has a petting zoo, pony rides (weekends), and a large playground. Can fill an hour for kids 2-7.",
+      "The zoo restaurant has a decent kids menu but is pricey. Kiosks near the polar bear exhibit sell good sandwiches at better prices."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The oldest zoo in the world is also one of the best",
+      "excerpt": "Pandas in a Baroque palace garden. It sounds absurd. It is also wonderful. Our kids saw their first panda surrounded by Habsburg history.",
+      "author": "Marie, mom of 2 from Paris",
+      "fullStory": "I was skeptical about a 270-year-old zoo \u2014 surely it would feel outdated? Not at all. Schonbrunn Zoo has masterfully blended its historic heritage with modern animal habitats. The panda enclosure is world-class, and the ORANG.erie is the best orangutan exhibit I have seen. After the zoo, we walked through the palace gardens to the Gloriette \u2014 the kids ran on the manicured lawns while we took in the Vienna skyline."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo loop: pandas, Rainforest House, ORANG.erie, polar bears. 2-3 hours.",
+      "fullDay": "Zoo (3-4h) + Schonbrunn Palace tour (1h) + palace gardens to Gloriette + playground. 6-7 hours.",
+      "bestFor": "All ages, history + animal lovers, families wanting a combined culture/nature day"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Schonbrunn Zoo Vienna",
+      "oldest zoo in the world",
+      "Vienna family activities"
+    ]
+  },
+  {
+    "id": "saitama-001",
+    "name": "Railway Museum",
+    "city": "Saitama",
+    "country": "Japan",
+    "category": "Museums",
+    "ageRange": "2-16",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 82,
+    "description": "Japan's premier railway museum with full-size trains you can walk through, a massive diorama, and hands-on simulators. Kids can drive a simulated Shinkansen and explore steam locomotives up close. The roof deck offers real train spotting.",
+    "location": "3-47 Onari-cho, Omiya-ku, Saitama City",
+    "bestTime": "Weekday mornings, right at 10am opening",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Nursing Room",
+      "Cafeteria",
+      "Coin Lockers",
+      "Gift Shop"
+    ],
+    "safetyFeatures": [
+      "Barrier-Protected Exhibits",
+      "Staff Supervision at Simulators",
+      "Clear Signage",
+      "First Aid Station"
+    ],
+    "tipsAndTricks": [
+      "The train simulation is first-come first-served. Head straight there when doors open.",
+      "Bring your JR Pass for a small discount on admission at the ticket counter.",
+      "The rooftop observation deck offers real train spotting of the Tohoku Shinkansen line.",
+      "The 'Train Shaped Bento' in the cafeteria is a hit with kids. Grab it before noon.",
+      "The 1/80 scale diorama show runs every hour and mesmerizes kids of all ages."
+    ],
+    "parentStory": {
+      "title": "My 3-year-old drove a Shinkansen",
+      "excerpt": "She sat in the simulator, pulled the throttle, and screamed CHOO CHOO for 5 straight minutes.",
+      "author": "Emily, mom of 2 from Singapore",
+      "fullStory": "We almost skipped this for a day in Tokyo but our train-obsessed 3-year-old begged. The simulator was life-changing for her. She still talks about driving the fast train. The retired Shinkansen you can walk through is incredible."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours - main hall, simulators, diorama show, bento lunch",
+      "fullDay": "Add mini-railway ride outside + nearby Omiya Park playground",
+      "bestFor": "Train-obsessed kids ages 2-10, hands-on learners"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Saitama Railway Museum",
+      "train museum Japan kids",
+      "Omiya Railway Museum family",
+      "Tokyo day trip with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "saitama-002",
+    "name": "Seibuen Amusement Park",
+    "city": "Saitama",
+    "country": "Japan",
+    "category": "Theme Parks",
+    "ageRange": "3-14",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 70,
+    "description": "A retro-style amusement park revitalized with new attractions including the thrilling BANDIT roller coaster, a Gudetama-themed area, and plenty of gentle rides for little ones. Perfect alternative to Tokyo mega-parks without the crowds.",
+    "location": "2960 Yamaguchi, Tokorozawa, Saitama",
+    "bestTime": "Spring and autumn weekdays",
+    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Restaurants",
+      "Nursing Room",
+      "Free Parking"
+    ],
+    "safetyFeatures": [
+      "Height Requirements Posted",
+      "Ride Safety Inspections",
+      "First Aid",
+      "Lost Child Center"
+    ],
+    "tipsAndTricks": [
+      "Weekdays are blissfully quiet - some rides have zero queue.",
+      "The Gudetama cafe serves adorable lazy egg-themed food that kids go crazy for.",
+      "Buy the Free Pass online for a discount. Pay-per-ride is cheaper if kids are under 5.",
+      "The park is near the Sayama Hills - combine with a walk for a full day out.",
+      "Pack snacks. The food is good but priced like any theme park."
+    ],
+    "parentStory": {
+      "title": "No queues, no stress, all fun",
+      "excerpt": "We rode the teacups 5 times in a row because there was literally no line.",
+      "author": "Hiroshi, dad of 2 from Tokyo",
+      "fullStory": "I grew up coming here and was nervous it would be sad compared to Disney. It is not fancy but it is genuine. My kids loved the Gudetama zone. The new BANDIT coaster is actually thrilling."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 hours - kid rides + Gudetama zone + one big coaster",
+      "fullDay": "Add Sayama Hill hike + nearby Lake Sayama boat ride",
+      "bestFor": "Families wanting a low-key Japan theme park without Disney crowds"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Seibuen Amusement Park",
+      "Saitama theme park kids",
+      "Tokorozawa family park",
+      "Tokyo day trip amusement park"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80"
+    ]
+  },
+  {
+    "id": "yokoha-001",
+    "name": "Yokohama Hakkeijima Sea Paradise",
+    "city": "Yokohama",
+    "country": "Japan",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-16",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 84,
+    "description": "A sprawling aquarium-amusement park hybrid on an island in Yokohama Bay. Features the famous Aqua Museum with huge tanks, spectacular dolphin shows, a petting pool, and a small amusement area with a roller coaster over the water.",
+    "location": "10-1 Hakkeijima, Kanazawa-ku, Yokohama",
+    "bestTime": "Weekday mornings, spring or autumn",
+    "imageUrl": "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Restaurants",
+      "Nursing Room",
+      "Coin Lockers",
+      "Wheelchair Access"
+    ],
+    "safetyFeatures": [
+      "Handrails by All Tanks",
+      "Lifeguards at Water Zones",
+      "First Aid",
+      "Ride Safety Barriers"
+    ],
+    "tipsAndTricks": [
+      "The dolphin show is incredible - arrive 20 minutes early for front-row seats.",
+      "Buy the Aqua Resort Pass online to save 20% versus walk-up prices.",
+      "The Sea Village touch pool lets kids pet rays and small sharks.",
+      "Combine with a ride on the Aqua Ride III for a mini boat tour of the bay.",
+      "The aquarium restaurant has tanks built into the walls - book a tank-side table."
+    ],
+    "parentStory": {
+      "title": "She kissed a dolphin and didnt shower for a week",
+      "excerpt": "My 7-year-old got picked for the dolphin kiss during the show. Best $15 we ever spent.",
+      "author": "Maria, mom of 1 from Hong Kong",
+      "fullStory": "The dolphin experience program was next level. She got a dolphin kiss on the cheek and the photos are our screensaver still. The aquarium is world-class with huge tanks, jellyfish gallery, and arctic exhibit."
+    },
+    "itineraryComparison": {
+      "halfDay": "Aqua Museum + dolphin show + touch pool",
+      "fullDay": "Add amusement rides + Pleasure Boat + Sea Paradise Village",
+      "bestFor": "Ocean-loving kids 2-12, families who want aquarium plus rides combo"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Yokohama Sea Paradise",
+      "Hakkeijima aquarium kids",
+      "Yokohama family day trip",
+      "dolphin show Japan"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ]
+  },
+  {
+    "id": "yokoha-002",
+    "name": "Anpanman Children's Museum",
+    "city": "Yokohama",
+    "country": "Japan",
+    "category": "Museums",
+    "ageRange": "0-6",
+    "safetyRating": 4.9,
+    "priceRange": "$$",
+    "popularity": 78,
+    "description": "An indoor interactive museum themed around Anpanman, Japan's beloved cartoon bread hero. Perfect for toddlers and preschoolers with play zones, live shows, and a bakery shaped like Anpanman's head. Every surface is toddler-safe.",
+    "location": "6-2-9 Minato Mirai, Nishi-ku, Yokohama",
+    "bestTime": "Weekday mornings before 11am",
+    "imageUrl": "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Nursing Room",
+      "Baby Changing Stations",
+      "Kids Cafe",
+      "Gift Shop"
+    ],
+    "safetyFeatures": [
+      "Soft Flooring Everywhere",
+      "Round Corners",
+      "Child-Sized Furniture",
+      "Security Staff",
+      "No Sharp Edges"
+    ],
+    "tipsAndTricks": [
+      "Anpanman shows happen every hour. Grab a spot 15 minutes early.",
+      "The bakery sells Anpanman-shaped buns fresh every hour - they sell out fast.",
+      "Toddlers under 1 get in free. The sensory play area is designed for babies.",
+      "The museum is in Minato Mirai - combine with Cosmo World ferris wheel.",
+      "Buy tickets online in advance. Weekend walk-up slots sell out by noon."
+    ],
+    "parentStory": {
+      "title": "My toddler met her hero and froze",
+      "excerpt": "When the real-life Anpanman walked on stage, she went completely still. Then screamed PANMAN and cried happy tears.",
+      "author": "Yuki, mom of 1 from Osaka",
+      "fullStory": "I knew this would be special but I did not expect tears. My 2-year-old has an Anpanman stuffed toy she sleeps with. The live show was magical - characters dance and sing and come down to high-five kids."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours - interactive play + live show + bakery lunch",
+      "fullDay": "Add Cosmo World + Cup Noodles Museum across the street",
+      "bestFor": "Toddlers and preschoolers 0-5, Anpanman fans"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Anpanman Museum Yokohama",
+      "toddler museum Japan",
+      "Yokohama with baby",
+      "Anpanman kids experience"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80"
+    ]
+  },
+  {
+    "id": "kobe-001",
+    "name": "Kobe Animal Kingdom",
+    "city": "Kobe",
+    "country": "Japan",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-99",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 85,
+    "description": "A unique indoor-outdoor zoo where many animals roam freely. Feed flamingos, walk among wallabies, and watch incredible bird-of-prey shows in a massive greenhouse. Rain-friendly with covered walkways connecting all zones.",
+    "location": "6-3-5 Minatojima Minamimachi, Chuo-ku, Kobe",
+    "bestTime": "Morning arrival, anytime of year (mostly indoor)",
+    "imageUrl": "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Nursing Room",
+      "Restaurants",
+      "Picnic Areas",
+      "Free Parking"
+    ],
+    "safetyFeatures": [
+      "Animal Handling Staff",
+      "Handwashing Stations",
+      "Clear Guidelines",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "Feed flamingos at designated times - buy feed at entrance for 100 yen.",
+      "The free-flying bird show in the dome is spectacular. Eagles fly inches above your head.",
+      "The capybara petting area is most popular. Go early before the afternoon nap crowd.",
+      "Almost entirely undercover - perfect for rainy days or hot summer afternoons.",
+      "The indoor Flower and Animal Garden has stunning botanical displays between animal zones."
+    ],
+    "parentStory": {
+      "title": "A flamingo followed us for 10 minutes",
+      "excerpt": "My daughter held out a feed cup and a flamingo took it so gently. Then 15 more surrounded us.",
+      "author": "Alex, dad of 1 from London",
+      "fullStory": "Every animal here looks happy and well-fed. The open concept lets you get up close - a wallaby hopped right past our stroller. The dome is beautiful like a giant greenhouse. We spent 3 hours and could have stayed longer."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours - walk-through aviary, petting zone, bird show",
+      "fullDay": "Add Kobe Port Tower + Harborland walks",
+      "bestFor": "All ages, especially animal lovers and rainy day plans"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Kobe Animal Kingdom",
+      "Kobe family zoo",
+      "interactive zoo Japan",
+      "Kobe rainy day kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80",
+      "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80"
+    ]
+  },
+  {
+    "id": "kobe-002",
+    "name": "Kobe Port Tower & Harborland",
+    "city": "Kobe",
+    "country": "Japan",
+    "category": "Parks & Nature",
+    "ageRange": "2-99",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "A beautiful waterfront complex with the iconic red Kobe Port Tower offering 360-degree views, plus Harborland's Mosaic shopping center, a giant ferris wheel, and green promenades perfect for stroller walks and sunset photos.",
+    "location": "5-5 Hatoba-cho, Chuo-ku, Kobe",
+    "bestTime": "Late afternoon for sunset views",
+    "imageUrl": "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Elevators",
+      "Restaurants",
+      "Playground",
+      "Nursing Rooms"
+    ],
+    "safetyFeatures": [
+      "Glass Barriers at Observation Deck",
+      "Well-Lit at Night",
+      "Security Patrols",
+      "Smooth Walkways"
+    ],
+    "tipsAndTricks": [
+      "Visit Port Tower at sunset for the best photos.",
+      "The Mosaic shopping center has a massive food court with kid-friendly options.",
+      "The ferris wheel is cheaper than Tokyo's - 800 yen for 12 minutes with bay views.",
+      "The Harborland promenade is stroller heaven - flat, wide, and scenic.",
+      "Kobe Beef lunch sets are available for 2,000 yen at budget-friendly spots."
+    ],
+    "parentStory": {
+      "title": "Sunset from the tower hit different",
+      "excerpt": "Our 6-year-old pressed her nose against the glass while the sun set over the bay.",
+      "author": "Natalie, mom of 1 from Vancouver",
+      "fullStory": "We came to kill time before dinner and ended up staying 2 hours on the observation deck. The views are insane, mountains on one side, bay on the other. The kids love the glass floor panels."
+    },
+    "itineraryComparison": {
+      "halfDay": "Port Tower + Harborland walk + ferris wheel + dinner",
+      "fullDay": "Add Kobe Animal Kingdom + Nunobiki Herb Gardens",
+      "bestFor": "Families who love city views, stroller-friendly walks, sunset photo ops"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Kobe Port Tower",
+      "Kobe Harborland family",
+      "Kobe view with kids",
+      "Kobe waterfront family day"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1775152496490-9cebc8bb7dde?w=800&q=80",
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80",
+      "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80"
+    ]
+  },
+  {
+    "id": "nagoya-001",
+    "name": "Legoland Japan",
+    "city": "Nagoya",
+    "country": "Japan",
+    "category": "Theme Parks",
+    "ageRange": "3-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$$",
+    "popularity": 90,
+    "description": "Japan's only Legoland theme park with over 40 rides, shows, and attractions. The Miniland features Tokyo, Kyoto, and Osaka built from 10 million LEGO bricks. Kid-focused with gentle rides, splash zones, and build activities everywhere.",
+    "location": "2-2 Kinjo-futo, Minato-ku, Nagoya",
+    "bestTime": "Weekday mornings, March-May and October-November",
+    "imageUrl": "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Nursing Rooms",
+      "Restaurants",
+      "Locker Storage",
+      "Splash Zone Towel Rental"
+    ],
+    "safetyFeatures": [
+      "Height Restrictions Enforced",
+      "Ride Safety Inspections",
+      "Lost Child Center",
+      "First Aid",
+      "Shaded Rest Areas"
+    ],
+    "tipsAndTricks": [
+      "The Build and Test zone is the hidden gem - kids build LEGO cars and race them.",
+      "Miniland is incredible at night when the tiny city lights up.",
+      "The Aquazone wave racer gets you wet - bring a change of clothes.",
+      "Download the Legoland app for real-time queue times.",
+      "The LEGO-themed restaurant has brick-shaped fries. Kids lose their minds."
+    ],
+    "parentStory": {
+      "title": "She built a car and it won the race",
+      "excerpt": "My 5-year-old spent 45 minutes carefully building a LEGO car. It won first place.",
+      "author": "Jason, dad of 2 from Melbourne",
+      "fullStory": "Perfectly scaled for young kids, no ride is too scary, everything is interactive. The Build and Test track was the highlight. My 8-year-old rebuilt his car 6 times trying to beat the record."
+    },
+    "itineraryComparison": {
+      "halfDay": "5-6 rides, Miniland tour, Build and Test zone",
+      "fullDay": "All zones + water play area + 4D cinema + LEGO shopping",
+      "bestFor": "LEGO-loving kids 3-12, families wanting a chill theme park day"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Legoland Japan Nagoya",
+      "Nagoya theme park kids",
+      "LEGO park Japan family",
+      "Japan family attractions"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80",
+      "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "nagoya-002",
+    "name": "Nagoya City Science Museum",
+    "city": "Nagoya",
+    "country": "Japan",
+    "category": "Museums",
+    "ageRange": "4-16",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 83,
+    "description": "One of Japan's largest science museums inside a striking silver sphere. Features the world's largest planetarium dome, hands-on science exhibits, and a real submarine you can explore. The Extreme Science zone lets kids experience a 20m wind tunnel and -30C cold room.",
+    "location": "2-17-1 Sakae, Naka-ku, Nagoya",
+    "bestTime": "Weekday afternoons (less crowded than mornings)",
+    "imageUrl": "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Coin Lockers",
+      "Cafeteria",
+      "Gift Shop",
+      "Wheelchair Accessible"
+    ],
+    "safetyFeatures": [
+      "Staffed Interactive Zones",
+      "Safety Briefings for Extreme Zone",
+      "Clear Signage",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "The planetarium show is stunning - book tickets when you arrive as shows sell out.",
+      "The -30C Extreme Cold room gives you coats to feel what Antarctica is like.",
+      "The submarine exhibit (Fuyo Maru) is outside and free to explore.",
+      "Check the special exhibit schedule on the Science Square floor.",
+      "Plan 3-4 hours minimum. The electricity zone mesmerizes kids for an hour alone."
+    ],
+    "parentStory": {
+      "title": "My 8-year-old decided to become a scientist",
+      "excerpt": "After the Extreme Cold room, he asked 47 questions about Antarctica.",
+      "author": "Linda, mom of 1 from Kuala Lumpur",
+      "fullStory": "This museum is world-class. The submarine was a total surprise - climbing through a real sub's hatches made my kids feel like explorers. We spent 5 hours and could have stayed longer."
+    },
+    "itineraryComparison": {
+      "halfDay": "Planetarium + main science halls + submarine",
+      "fullDay": "Add extreme science zone + special exhibit + lunch in Sakae",
+      "bestFor": "Science-curious kids 5-15, rainy day activities"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Nagoya Science Museum",
+      "planetarium Nagoya kids",
+      "Nagoya family museum",
+      "interactive science museum Japan"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1644327981167-fbd67b34ba72?w=800&q=80",
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+    ]
+  },
+  {
+    "id": "fukuok-001",
+    "name": "Fukuoka City Zoo",
+    "city": "Fukuoka",
+    "country": "Japan",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 72,
+    "description": "A well-maintained city zoo in the heart of Fukuoka with over 100 species including elephants, giraffes, and red pandas. Features a children's petting zoo, a small amusement area, and a Dinosaur-themed zone that fascinates younger kids.",
+    "location": "Minami Park, 1-1 Minami-koen, Chuo-ku, Fukuoka",
+    "bestTime": "Morning, March-May and October-November",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Nursing Room",
+      "Picnic Areas",
+      "Vending Machines",
+      "Free Parking"
+    ],
+    "safetyFeatures": [
+      "Animal Barriers",
+      "Hand Sanitizer Stations",
+      "First Aid",
+      "Security Staff"
+    ],
+    "tipsAndTricks": [
+      "Red pandas are most active at the 10am morning feeding. Do not miss it.",
+      "Entry is only 500 yen for adults and FREE for kids under 15.",
+      "The petting zoo has rabbits and guinea pigs with hand sanitizer provided.",
+      "The dinosaur zone has life-size moving models - may spook very young toddlers.",
+      "Combine with Minami Park's playground and paddle boat pond."
+    ],
+    "parentStory": {
+      "title": "Best 500 yen we spent in Japan",
+      "excerpt": "The red panda walked right up to the glass and my 3-year-old pressed her nose to his.",
+      "author": "Chris, dad of 1 from Sydney",
+      "fullStory": "It is not fancy - no shows or gimmicks - but the animals are clearly happy. The petting zoo was clean and well-staffed. For the price (kids are free!), it is unbeatable value."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours - animal exhibits + petting zoo + playground",
+      "fullDay": "Add Ohori Park + Fukuoka City Museum across the street",
+      "bestFor": "Budget-conscious families, animal lovers, ages 2-10"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Fukuoka City Zoo",
+      "Fukuoka family zoo",
+      "cheap family activities Fukuoka",
+      "Japan free zoo kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80"
+    ]
+  },
+  {
+    "id": "fukuok-002",
+    "name": "Marine World Uminonakamichi",
+    "city": "Fukuoka",
+    "country": "Japan",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-99",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 86,
+    "description": "A spectacular oceanarium on the coast with massive tanks, dolphin and sea lion shows, and a touch pool. The Sea of Kyushu tank is one of Japan's largest. Themed zones take visitors from arctic waters to tropical reefs.",
+    "location": "18-28 Saitozaki, Higashi-ku, Fukuoka",
+    "bestTime": "Weekday mornings, spring and autumn",
+    "imageUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Nursing Room",
+      "Restaurants",
+      "Coin Lockers",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Glass Tank Barriers",
+      "Lifeguards at Pool Shows",
+      "First Aid",
+      "Wheelchair Access"
+    ],
+    "tipsAndTricks": [
+      "The dolphin show is world-class - they jump 8 meters high.",
+      "The tunnel aquarium shark tunnel is best right when it opens.",
+      "The outdoor area has a small aquarium-themed playground.",
+      "There are 4 different shows daily. Check times when you arrive.",
+      "The restaurant has a tank wall - kids watch giant fish while eating."
+    ],
+    "parentStory": {
+      "title": "The dolphin splash that soaked 3 rows of strangers",
+      "excerpt": "A dolphin did a triple twist and landed like a cannonball. Everyone screamed with joy.",
+      "author": "Rachel, mom of 2 from New York",
+      "fullStory": "The dolphin show is genuinely impressive - trainers and dolphins clearly have an incredible bond. The shark tunnel was my 9-year-old's favorite. She wants to be a marine biologist now."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main aquarium + dolphin show + touch pool + lunch",
+      "fullDay": "Add Uminonakamichi seaside park + ferry ride to Keya Beach",
+      "bestFor": "All ages, dolphin lovers, families wanting a full Fukuoka coastline day"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Marine World Fukuoka",
+      "Uminonakamichi aquarium",
+      "Fukuoka dolphin show",
+      "Fukuoka family aquarium"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ]
+  },
+  {
+    "id": "danang-004",
+    "name": "Sun World Ba Na Hills",
+    "city": "Da Nang",
+    "country": "Vietnam",
+    "category": "Theme Parks",
+    "ageRange": "4-16",
+    "safetyRating": 4.3,
+    "priceRange": "$$$",
+    "popularity": 88,
+    "description": "An expansive mountain resort complex at 1,487m elevation reached by record-breaking cable car. Features the iconic Golden Bridge held by giant stone hands, a French village with live street performances, indoor amusement games, a wax museum, and stunning mountain gardens.",
+    "location": "Ba Na Hills, Hoa Ninh, Hoa Vang, Da Nang",
+    "bestTime": "Weekdays, arrive by 7:30am before the crowds",
+    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+    "amenities": [
+      "Cable Car Access",
+      "Restaurants",
+      "Stroller Rental",
+      "Wheelchair Access",
+      "Souvenir Shops"
+    ],
+    "safetyFeatures": [
+      "Cable Car Safety Inspections",
+      "Railed Mountain Walkways",
+      "First Aid Station",
+      "Security Staff",
+      "Weather Monitoring"
+    ],
+    "tipsAndTricks": [
+      "Cable car opens at 7:30am. Be there at opening - by 10am queue is 45+ minutes.",
+      "The Golden Bridge is packed by 9:30am. Do it FIRST.",
+      "It is 10C cooler up top than Da Nang city. Bring jackets even in summer.",
+      "The indoor amusement area has arcade games - great break if fog rolls in.",
+      "The French village behind the main square is less crowded with great photo spots."
+    ],
+    "parentStory": {
+      "title": "My daughter staged a full photoshoot on the Golden Bridge",
+      "excerpt": "She pointed at the clouds and pretended to be held by the giant hands. Tourists stopped and clapped.",
+      "author": "Mike, dad of 2 from Hong Kong",
+      "fullStory": "We went on a Thursday and it was busy but manageable. The cable car ride alone is worth the price. My kids loved the wax museum where they posed with Messi. The French village feels like Europe."
+    },
+    "itineraryComparison": {
+      "halfDay": "Cable car up, Golden Bridge, French village, lunch, cable car down",
+      "fullDay": "Add indoor games, wax museum, flower garden, Le Jardin d'Amour, dinner at mountain restaurant",
+      "bestFor": "Adventure families, kids 6-16 who can handle walking, Instagram-loving teens"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Sun World Ba Na Hills",
+      "Ba Na Hills family",
+      "Golden Bridge Da Nang kids",
+      "Da Nang family theme park"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80"
+    ]
+  },
+  {
+    "id": "manila-004",
+    "name": "Star City",
+    "city": "Manila",
+    "country": "Philippines",
+    "category": "Theme Parks",
+    "ageRange": "3-16",
+    "safetyRating": 3.8,
+    "priceRange": "$",
+    "popularity": 75,
+    "description": "Manila's most beloved amusement park with over 30 rides and attractions. Features the famous Star Ferris Wheel with stunning city views, a dedicated kiddie zone, and a 3D cinema. Indoor sections make it workable even in the rainy season.",
+    "location": "CCP Complex, Pasay City, Metro Manila",
+    "bestTime": "Weekday afternoons, November-February",
+    "imageUrl": "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80",
+    "amenities": [
+      "Restaurants",
+      "Locker Rental",
+      "Free Parking",
+      "Nursing Room"
+    ],
+    "safetyFeatures": [
+      "Ride Safety Inspections",
+      "First Aid Station",
+      "Security Staff",
+      "Life Jackets for Water Rides"
+    ],
+    "tipsAndTricks": [
+      "Weekdays have near-empty queues. Weekends can have 30-45 min waits per ride.",
+      "The Kiddie Kingdom section has 8 gentle rides perfect for under-7s.",
+      "The indoor Star World section has air conditioning - great afternoon escape.",
+      "Buy the Unli-Ride wristband online for best value.",
+      "Food inside is standard fairground fare. Eat before coming for healthier options."
+    ],
+    "parentStory": {
+      "title": "We rode the ferris wheel 4 times because it was empty",
+      "excerpt": "My 6-year-old declared the Star City ferris wheel the best thing in the world.",
+      "author": "Grace, mom of 1 from Quezon City",
+      "fullStory": "Star City is not fancy but it is pure fun. The kiddie rides are well-maintained and staff are friendly. We went on a Tuesday and my daughter ran from ride to ride with zero wait."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 hours - Kiddie Kingdom + ferris wheel + 3D cinema",
+      "fullDay": "Add CCP Complex museums + nearby SM Mall of Asia",
+      "bestFor": "Budget families, grade school kids, first-time theme park visitors"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Star City Manila",
+      "Manila amusement park kids",
+      "Pasay family attraction",
+      "Philippines theme park budget"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80",
+      "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80"
+    ]
+  },
+  {
+    "id": "manila-005",
+    "name": "Rizal Park Family Day",
+    "city": "Manila",
+    "country": "Philippines",
+    "category": "Parks & Nature",
+    "ageRange": "2-99",
+    "safetyRating": 4.2,
+    "priceRange": "$",
+    "popularity": 78,
+    "description": "Manila's sprawling central park honoring national hero Jose Rizal. Features a massive open lawn, playgrounds, a Chinese garden, a planetarium, and the iconic Rizal Monument. Weekends come alive with families flying kites and eating street food.",
+    "location": "Rizal Park, Ermita, Manila",
+    "bestTime": "Early mornings and late afternoons, December to February",
+    "imageUrl": "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+    "amenities": [
+      "Playgrounds",
+      "Public Toilets",
+      "Food Stalls",
+      "Benches",
+      "Shaded Walkways"
+    ],
+    "safetyFeatures": [
+      "Security Guards",
+      "Well-Lit at Night",
+      "Police Posts",
+      "Open Sight Lines"
+    ],
+    "tipsAndTricks": [
+      "Sunday mornings have free Zumba and family fitness activities near the grandstand.",
+      "The Chinese Garden has koi fish ponds that kids love to watch.",
+      "The park planetarium has kid-friendly shows every weekend.",
+      "Bring a picnic blanket and snacks - food stalls are basic.",
+      "The Rizal Monument lights up beautifully at sunset for family photos."
+    ],
+    "parentStory": {
+      "title": "Kite flying in the city center",
+      "excerpt": "We bought a cheap kite from a vendor and spent 2 hours flying it. My kids said it was the best day of our Manila trip.",
+      "author": "Carlos, dad of 2 from Cebu",
+      "fullStory": "It is just a park but it is so much more. The open space feels like magic in the middle of Manila. My 7-year-old learned to fly a kite here. There are ice cream vendors, a small train ride, and the grandstand has free activities."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours - monument, gardens, playground, kite flying",
+      "fullDay": "Add National Museum complex + planetarium + Intramuros walking tour",
+      "bestFor": "All ages, budget travelers, families who love open green spaces"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Rizal Park Manila kids",
+      "Manila family park",
+      "free family activities Manila",
+      "Manila weekend family outing"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80",
+      "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80",
+      "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80"
+    ]
+  },
+  {
+    "id": "jakarta-001",
+    "name": "Taman Mini Indonesia Indah",
+    "city": "Jakarta",
+    "country": "Indonesia",
+    "category": "Theme Parks",
+    "ageRange": "3-16",
+    "safetyRating": 4.0,
+    "priceRange": "$",
+    "popularity": 77,
+    "description": "A sprawling cultural theme park showcasing Indonesia's 34 provinces through traditional houses, regional costumes, and cuisine. Ride the cable car for an aerial view, explore museums, and watch captivating cultural dance performances.",
+    "location": "East Jakarta, Indonesia",
+    "bestTime": "Weekday mornings, June to August",
+    "imageUrl": "https://images.unsplash.com/photo-1772550018808-ebbcc271726c?w=800&q=80",
+    "amenities": [
+      "Cable Car",
+      "Restaurants",
+      "Mosque",
+      "Tram Service",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Security Patrols",
+      "First Aid",
+      "Clear Signage",
+      "Ride Safety Checks"
+    ],
+    "tipsAndTricks": [
+      "Rent a bicycle or take the tram - the park is 150 hectares and walking is exhausting.",
+      "The cable car gives a fantastic overview of the entire park.",
+      "Each provincial house has traditional snacks and crafts for sale.",
+      "The Keong Emas (Golden Snail) theater has kid-friendly cultural shows.",
+      "Visit the bird park and butterfly park within the complex for extra animal fun."
+    ],
+    "parentStory": {
+      "title": "We traveled Indonesia in one afternoon",
+      "excerpt": "From Batak houses to Balinese temples, my kids asked if we actually visited all the islands.",
+      "author": "Dewi, mom of 2 from Bandung",
+      "fullStory": "It is like a giant cultural buffet. Each province house has real artifacts and friendly staff in traditional dress. The cable car was the highlight for my boys. We spent 5 hours and only saw half of it."
+    },
+    "itineraryComparison": {
+      "halfDay": "Cable car ride + 4-5 province pavilions + bird park",
+      "fullDay": "Tram tour of all pavilions + museums + cable car + cultural show",
+      "bestFor": "Families interested in culture, ages 5+, first-time visitors to Indonesia"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Taman Mini Jakarta",
+      "Jakarta family theme park",
+      "Indonesian culture kids",
+      "Jakarta cultural park family"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80",
+      "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80",
+      "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80"
+    ]
+  },
+  {
+    "id": "jakarta-002",
+    "name": "Ragunan Zoo",
+    "city": "Jakarta",
+    "country": "Indonesia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 3.7,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "Southeast Asia's largest zoo spread over 140 hectares. Home to hundreds of species including orangutans, komodo dragons, and Sumatran tigers. Features a world-class primate center, children's zoo, and large picnic grounds.",
+    "location": "Jalan Harsono RM No 1, Ragunan, South Jakarta",
+    "bestTime": "Early mornings, June to August",
+    "imageUrl": "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Food Stalls",
+      "Playground",
+      "Picnic Areas",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Animal Barriers",
+      "Security Guards",
+      "First Aid Station",
+      "Handwashing Stations"
+    ],
+    "tipsAndTricks": [
+      "Go at 7am opening when animals are most active and the weather is cooler.",
+      "The Schmutzer Primate Center is world-class - orangutans and gibbons in natural habitats.",
+      "Bring a picnic. Food inside is limited and can be pricey.",
+      "Rent a bike or golf cart - the zoo is massive and tiring for little legs.",
+      "Monday is the quietest day. Weekends can be very crowded by 10am."
+    ],
+    "parentStory": {
+      "title": "Komodo dragon encounter was life-changing",
+      "excerpt": "My 8-year-old stared at the Komodo dragon for 20 minutes and announced he wants to be a herpetologist.",
+      "author": "Siti, mom of 1 from Jakarta",
+      "fullStory": "The zoo is huge and a bit old in places but the primate center is genuinely world-class. The Komodo dragon exhibit is top-notch with clear glass viewing. My son has been obsessed with reptiles ever since."
+    },
+    "itineraryComparison": {
+      "halfDay": "Primate center + Komodo dragon + children zoo + picnic",
+      "fullDay": "Add lake boat ride + bird park + all animal zones",
+      "bestFor": "Animal-loving families, budget travelers, ages 2-12"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Ragunan Zoo Jakarta",
+      "Jakarta family zoo",
+      "Jakarta kids activities",
+      "Indonesia zoo with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80"
+    ]
+  },
+  {
+    "id": "tokyo-013",
+    "name": "Tama Zoo",
+    "city": "Tokyo",
+    "country": "Japan",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 78,
+    "description": "A sprawling suburban zoo 40 minutes from central Tokyo. Famous for its koala and kangaroo walkabout, insectarium, and spacious nature-focused habitats. Less crowded than Ueno Zoo with more room for kids to run.",
+    "location": "7-1-1 Hodokubo, Hino, Tokyo",
+    "bestTime": "Weekday mornings, Spring/Autumn",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Nursing Rooms",
+      "Picnic Areas",
+      "Children's Zoo",
+      "Cafeteria"
+    ],
+    "safetyFeatures": [
+      "Animal Safety Barriers",
+      "First Aid Station",
+      "Lost Child Center",
+      "Clear Signage"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 9:30 AM opening. The koalas are most active in the first hour before they settle into their famous 20-hour nap.",
+      "Feed the capybaras at 11 AM in the Children's Zoo section \u2014 it's free and a guaranteed photo op.",
+      "The Insectarium has a butterfly greenhouse. Warn your kid beforehand or a landing butterfly might trigger a shriek.",
+      "The zoo grounds are large \u2014 rent a stroller even for a 4-year-old who normally walks. Hills are real.",
+      "Bring your own lunch. The cafeteria is serviceable but $8 for a curry rice when a konbini onigiri costs $1.50."
+    ],
+    "parentStory": {
+      "title": "The koala that won't nap",
+      "excerpt": "We told our son koalas sleep 20 hours a day. Naturally, the one we saw was wide awake, munching eucalyptus. He still thinks we made it up.",
+      "author": "Yuki, mom of 1 from Singapore",
+      "fullStory": "We prepped our 6-year-old for a sleeping koala. 'They sleep almost all day,' we said. The first one we saw was sitting up, pulling leaves into its mouth with both paws like a tiny green sandwich. My son turned to me with that look \u2014 you know, the 'you lied to me' look. Best moment of the trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Koala + Kangaroo + Insectarium, 3 hours, lunch at zoo cafe",
+      "fullDay": "Full zoo + Animal Show + adjacent Tama Tech playground + picnic",
+      "bestFor": "Ages 2-10, animal lovers, families who want space to roam"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Tama Zoo Tokyo",
+      "koala zoo Japan",
+      "Tokyo family zoo",
+      "suburban Tokyo with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80"
+    ]
+  },
+  {
+    "id": "tokyo-014",
+    "name": "Hanayashiki Amusement Park",
+    "city": "Tokyo",
+    "country": "Japan",
+    "category": "Theme Parks",
+    "ageRange": "3-10",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 68,
+    "description": "Japan's oldest amusement park, tucked in the heart of Asakusa since 1853. A charming retro wonderland with gentle rides, a mini roller coaster, and spectacular views of Tokyo SkyTree. Every ride is under 600 yen \u2014 a fraction of Disney prices.",
+    "location": "2-28-1 Asakusa, Taito City, Tokyo",
+    "bestTime": "Weekday afternoons, Cherry blossom season",
+    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restrooms with Changing Tables",
+      "Snack Stalls",
+      "Photo Spots"
+    ],
+    "safetyFeatures": [
+      "Height Restrictions Posted",
+      "Staffed Rides",
+      "Fenced Areas"
+    ],
+    "tipsAndTricks": [
+      "Buy the 'Free Pass' at the gate instead of per-ride tickets if your kid wants to go on everything. At 2,500 yen, it pays for itself after 4 rides.",
+      "The Bee Tower drop ride is surprisingly thrilling for its size. Best for ages 6+ who want a 'big kid' thrill.",
+      "Combine with Sensoji Temple next door. They're a 5-minute walk apart. Morning at temple, afternoon at Hanayashiki.",
+      "The park is compact. You can see everything in 2-3 hours even at a toddler's pace.",
+      "Skip the ninja maze if your kid scares easily. The dark hallway and sudden effects make it more intense than the brochure suggests."
+    ],
+    "parentStory": {
+      "title": "My 4-year-old's first 'big' roller coaster",
+      "excerpt": "The mini roller coaster goes maybe 30km/h. Our daughter screamed with joy the whole 75-second ride. She rode it six times. Best $6 we've ever spent.",
+      "author": "Tom, dad of 1 from Hong Kong",
+      "fullStory": "We'd been in Tokyo a week and blown our budget at Disney Sea. A local friend told us about Hanayashiki. The roller coaster is adorable \u2014 it winds between buildings and you can see SkyTree from the top. Our daughter was tall enough by 2cm. She came off the first run and yelled 'AGA-CHA!' (again). We handed over another 600 yen, then another, then another. Six rides. Every one her favorite. Zero regrets."
+    },
+    "itineraryComparison": {
+      "halfDay": "3 hours, all rides + Sensoji Temple walk-through",
+      "fullDay": "Hanayashiki am + Asakusa exploration + Sumida River cruise back",
+      "bestFor": "Ages 3-10, budget-conscious families, retro charm lovers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Hanayashiki Asakusa",
+      "oldest amusement park Japan",
+      "cheap Tokyo family activities",
+      "Asakusa with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "tokyo-015",
+    "name": "Tokyo Toy Museum",
+    "city": "Tokyo",
+    "country": "Japan",
+    "category": "Museums",
+    "ageRange": "0-8",
+    "safetyRating": 4.9,
+    "priceRange": "$",
+    "popularity": 72,
+    "description": "A hands-on wonderland of wooden toys and creative play in a restored 1920s elementary school building in Shinjuku. Every exhibit is meant to be touched, built, climbed, and explored. No screens, no ropes, no 'don't touch' signs.",
+    "location": "4-20 Yotsuya, Shinjuku, Tokyo",
+    "bestTime": "Weekday mornings, Rainy days",
+    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+    "amenities": [
+      "Stroller Parking",
+      "Nursing Room",
+      "Baby Play Area",
+      "Cafe",
+      "Gift Shop"
+    ],
+    "safetyFeatures": [
+      "Soft Flooring",
+      "Rounded Corners",
+      "Staff Supervision",
+      "No Tripping Hazards"
+    ],
+    "tipsAndTricks": [
+      "Reserve tickets online in advance. Weekends sell out 2+ weeks ahead, especially during school holidays.",
+      "The 'Wooden Play Park' on the 3rd floor is the main attraction for toddlers \u2014 giant blocks, ball pits, and slides. Budget at least 90 minutes here alone.",
+      "The cafe serves bento boxes specifically designed for kids \u2014 cute character food that's actually healthy.",
+      "Socks required for toddlers on the play structures. Bring anti-slip socks or buy them at the reception for $3.",
+      "Combine with nearby Shinjuku Gyoen National Garden for a picnic and run-around. They're a 10-minute walk apart."
+    ],
+    "parentStory": {
+      "title": "Two hours in a ball pit changed everything",
+      "excerpt": "Our 18-month-old wasn't walking yet. The therapist said 'more tummy time.' We went to Tokyo Toy Museum. Two hours in the ball pit and he stood up on his own for the first time.",
+      "author": "Maria, mom of 1 from Manila",
+      "fullStory": "We were worried about our son's motor development. A Japanese friend recommended this museum. The entire place is designed for little bodies \u2014 the ball pit has a gentle slope, the wooden blocks are light enough for baby hands, and everything is soft-edged. He spent two hours pulling himself up on the play structures. On the way out, he let go of my hand and took three steps. I cried in the bathroom."
+    },
+    "itineraryComparison": {
+      "halfDay": "3 hours, full museum exploration + cafe lunch",
+      "fullDay": "Tokyo Toy Museum + Shinjuku Gyoen + Omoide Yokocho dinner",
+      "bestFor": "Ages 0-8, rainy days, hands-on learners"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Tokyo Toy Museum",
+      "indoor play Tokyo",
+      "baby friendly Tokyo",
+      "Shinjuku with kids",
+      "rainy day Tokyo"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    ]
+  },
+  {
+    "id": "hong-kong-007",
+    "name": "Hong Kong Space Museum",
+    "city": "Hong Kong",
+    "country": "Hong Kong SAR",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 82,
+    "description": "An iconic egg-shaped dome on the Tsim Sha Tsui waterfront. Houses one of the world's largest planetariums with a fully immersive 3D space theater, hands-on exhibits about astronomy and space travel, and bilingual English/Cantonese shows.",
+    "location": "10 Salisbury Road, Tsim Sha Tsui, Kowloon",
+    "bestTime": "Weekday afternoons, Avoid public holidays",
+    "imageUrl": "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Elevators",
+      "Nursing Room",
+      "Cafe",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Low Light Exit Signs",
+      "Accessible Viewing Areas",
+      "Handrails Everywhere"
+    ],
+    "tipsAndTricks": [
+      "Book Space Theatre tickets online at least 3 days ahead. The shows sell out, especially the Cantonese/English versions.",
+      "Pick the 'English' earphone option at the audio guide desk \u2014 many exhibits are trilingual but you want your kid to actually understand.",
+      "The Omnimax screen tilts over your head. If your child gets motion sick easily, sit in the back row and warn them before the rocket launch sequences.",
+      "Wednesday is FREE admission to the exhibition halls. The Space Theatre still costs extra but the main floor is completely free.",
+      "Combine with the Hong Kong Cultural Centre and Avenue of Stars \u2014 all within a 5-minute walk along the Tsim Sha Tsui promenade."
+    ],
+    "parentStory": {
+      "title": "The 8-year-old who now wants to be an astronaut",
+      "excerpt": "We went for 'something to do on a rainy afternoon.' Three hours later, our son had watched the Omnimax show twice and was explaining gravitational slingshots to a bewildered grandpa.",
+      "author": "Patrick, dad of 2 from Sydney",
+      "fullStory": "We were stuck indoors during typhoon season and needed a plan. The Space Museum seemed like a 45-minute diversion. Wrong. Our 8-year-old got hooked on the 'Rocket Zone' exhibit where you design a rocket and launch it on-screen. He kept getting better scores and refused to leave. The Space Theatre show about the James Webb telescope floored him. That night he asked for astronomy books for his birthday. Best accidental discovery of our trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Exhibition halls + one Space Theatre show, 2-3 hours",
+      "fullDay": "Both shows + hands-on exhibits + Avenue of Stars + waterfront dinner",
+      "bestFor": "Ages 4-14, science-curious kids, rainy days"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Hong Kong Space Museum",
+      "planetarium Hong Kong",
+      "Tsim Sha Tsui with kids",
+      "rainy day Hong Kong"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80"
+    ]
+  },
+  {
+    "id": "hong-kong-008",
+    "name": "Ngong Ping 360 & Po Lin Monastery",
+    "city": "Hong Kong",
+    "country": "Hong Kong SAR",
+    "category": "Theme Parks",
+    "ageRange": "4-12",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 85,
+    "description": "A spectacular 5.7km cable car ride from Tung Chung to Lantau Island's Ngong Ping Village. Soar over mountains, the airport, and the South China Sea to reach the Tian Tan Big Buddha and Po Lin Monastery. The village adds cultural exhibits, a VR experience, and walking trails.",
+    "location": "Tung Chung, Lantau Island, Hong Kong",
+    "bestTime": "Clear days, 9 AM ropeway opening",
+    "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    "amenities": [
+      "Stroller Access (crystal cabin friendly)",
+      "Restrooms",
+      "Restaurants",
+      "Gift Shops",
+      "Photo Spots"
+    ],
+    "safetyFeatures": [
+      "Secure Harnesses",
+      "Emergency Protocols",
+      "Weather Monitoring",
+      "Handrails on Stairs"
+    ],
+    "tipsAndTricks": [
+      "Book 'Crystal Cabin' (glass floor) tickets online at least 2 days ahead. Regular cabins have no glass floor and the view is half as fun for kids.",
+      "Go at 9 AM ropeway opening. The cable car queues at 11 AM can hit 90 minutes. Early morning = walk right on.",
+      "If anyone in the family has vertigo, pick a standard cabin. The crystal floor is amazing but can spook younger kids looking down at 350m drop.",
+      "Buy the combo ticket (cable car + Ngong Ping Village attractions). Singles cost more in the long run if your kid wants to try everything.",
+      "Bring water and snacks. The village restaurants are overpriced and the vegetarian monastery food isn't kid-friendly."
+    ],
+    "parentStory": {
+      "title": "He cried when the cable car started moving \u2014 then refused to get off",
+      "excerpt": "My 5-year-old sobbed during takeoff. 'Mama I'm scared!' Two minutes later he was pressed against the glass floor shouting 'WE'RE FLYING.' Some fears are just excitement wearing a scary mask.",
+      "author": "Sophie, mom of 1 from Kuala Lumpur",
+      "fullStory": "We chose the crystal cabin because the brochure looked amazing. Big mistake initially \u2014 my son started crying as the ground dropped away. I was ready to call it off. Then the glass floor caught his attention. He saw a plane taking off below us and his tears turned to wonder. By the time we reached the Buddha, he was demanding we go back in the 'see-through train.' Kid logic."
+    },
+    "itineraryComparison": {
+      "halfDay": "Cable car round trip + Buddha statue + quick monastery visit, 3 hours",
+      "fullDay": "Cable car + Ngong Ping Village + Po Lin Monastery lunch + Wisdom Path hike",
+      "bestFor": "Ages 4-12, adventure families, first-time Hong Kong visitors"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Ngong Ping 360",
+      "Big Buddha Lantau",
+      "Hong Kong cable car with kids",
+      "Po Lin Monastery",
+      "Lantau Island family"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80"
+    ]
+  },
+  {
+    "id": "singapore-009",
+    "name": "Haw Par Villa",
+    "city": "Singapore",
+    "country": "Singapore",
+    "category": "Theme Parks",
+    "ageRange": "5-14",
+    "safetyRating": 4.0,
+    "priceRange": "$",
+    "popularity": 62,
+    "description": "A bizarre, wonderful, one-of-a-kind Asian mythology theme park built by the Tiger Balm founders. Famous for its Ten Courts of Hell diorama, mythological statues, and colorful (sometimes terrifying) depictions of Chinese folklore. Free entry. Absolutely unforgettable.",
+    "location": "262 Pasir Panjang Road, Singapore",
+    "bestTime": "Late afternoon, weekdays to avoid crowds",
+    "imageUrl": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Parking",
+      "Nearby Food Court",
+      "Souvenir Kiosk"
+    ],
+    "safetyFeatures": [
+      "Clear Pathways",
+      "Well-Lit Areas",
+      "Low-Level Displays"
+    ],
+    "tipsAndTricks": [
+      "Skip the Ten Courts of Hell if your child is under 7 or easily scared. The depictions of hell punishments are graphic \u2014 think impalement and boiling oil. Wait until they are older.",
+      "Go with a guide or download the audio tour app. The statues have wild stories behind them, and exploring without context is just 'look, a statue of a man with 10 heads.'",
+      "Combine with nearby Labrador Park for a playground and seaside walk. The park is 10 minutes away by bus.",
+      "Bring water. The park is open-air tropical and there's limited shade near the main courtyard.",
+      "The Dragon Garden with the giant green serpent is the best photo spot. Line your kids up for a group shot on the dragon's tail."
+    ],
+    "parentStory": {
+      "title": "The 10 Courts of Hell conversation I wasn't ready for",
+      "excerpt": "'Mama, why is that lady being cut in half?' I'd forgotten this was a theme park about the afterlife. We learned a lot about theology that day \u2014 and about toddler limits.",
+      "author": "Wei Ling, mom of 2 from Taipei",
+      "fullStory": "I'd read about Haw Par Villa being 'quirky' and 'colorful.' Nobody mentioned it's basically a Chinese hell museum with parking. My 6-year-old was fascinated and horrified in equal measure. The mountain monkeys getting boiled in oil sparked a 20-minute discussion about heaven and hell that I was absolutely not prepared for at 2 PM on a Saturday. Would go again? Absolutely. Just maybe not with a preschooler."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main courtyard + garden walk + photo spots, 1.5 hours",
+      "fullDay": "Haw Par Villa + nearby Labrador Park + Pasir Panjang food court dinner",
+      "bestFor": "Ages 5-14, curious kids who love mythology and weird stuff"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Haw Par Villa Singapore",
+      "Ten Courts of Hell",
+      "free things to do Singapore",
+      "unusual Singapore attractions"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80"
+    ]
+  },
+  {
+    "id": "singapore-010",
+    "name": "Singapore Art Museum",
+    "city": "Singapore",
+    "country": "Singapore",
+    "category": "Museums",
+    "ageRange": "0-12",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 70,
+    "description": "Southeast Asia's premier contemporary art museum housed in a restored 19th-century Catholic boys' school. The newly reimagined SAM features interactive installations, family-friendly workshops, and a dedicated 'SAMily' program with art-making stations designed for toddlers through teens.",
+    "location": "39 Keppel Road, Tanjong Pagar, Singapore",
+    "bestTime": "Weekday mornings, School holiday periods",
+    "imageUrl": "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Nursing Room",
+      "Art Workshop Space",
+      "Cafe",
+      "Lockers"
+    ],
+    "safetyFeatures": [
+      "Soft Flooring in Kids Areas",
+      "Security Staff",
+      "Child-Friendly Heights",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "Check the 'SAMily' schedule online. Weekend workshops (10 AM-12 PM) are free but capped at 20 kids. Arrive 20 minutes early.",
+      "The Glass Hall on Level 2 has rotating interactive installations \u2014 kids can touch, climb, and rearrange the art. It is the main draw for under-8s.",
+      "The cafe has a surprisingly good kids menu ($8 for a bento set with fruit, sandwich and juice). Way better value than mall food courts.",
+      "Skip the 3rd floor gallery if your kids are under 6. The conceptual art pieces are less engaging for little ones and they will get bored fast.",
+      "The gift shop sells affordable art kits ($5-12) that make great souvenirs. Let your kid pick one and they will have an afternoon activity."
+    ],
+    "parentStory": {
+      "title": "She made a 'masterpiece' that's still on our fridge",
+      "excerpt": "The free art workshop had our 3-year-old finger-painting what she called 'a dragon eating a rainbow.' It's abstract chaos. We framed it.",
+      "author": "Rachel, mom of 1 from Auckland",
+      "fullStory": "We'd dragged our daughter through two 'proper' museums where she touched nothing and whined constantly. SAM was different within minutes of entering. A volunteer handed her a smock and pointed her to a table with paints, clay, and recycled materials. She spent 90 minutes making something indescribable \u2014 part octopus, part spaceship, entirely her. A staff member even hung it on the 'young artist wall.' Best museum experience of our lives."
+    },
+    "itineraryComparison": {
+      "halfDay": "SAMily workshop + main galleries + cafe lunch, 3 hours",
+      "fullDay": "SAM morning + Keppel Bay afternoon walk + Sentosa sunset",
+      "bestFor": "Ages 0-12, creative kids, families who want interactive arts"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Singapore Art Museum",
+      "SAM family activities",
+      "kids art Singapore",
+      "free workshops Singapore",
+      "Tanjong Pagar with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80",
+      "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80"
+    ]
+  },
+  {
+    "id": "seoul-010",
+    "name": "Lotte World Adventure",
+    "city": "Seoul",
+    "country": "South Korea",
+    "category": "Theme Parks",
+    "ageRange": "3-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 91,
+    "description": "Korea's largest indoor adventure theme park coupled with an outdoor 'Magic Island.' Year-round fun with roller coasters, parades, ice skating, live shows, and a folk museum. The indoor portion is perfect for any weather \u2014 rain or shine, Lotte World delivers.",
+    "location": "240 Olympic-ro, Songpa-gu, Seoul",
+    "bestTime": "Weekdays, October-November for best weather",
+    "imageUrl": "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Baby Care Room",
+      "Family Restaurants",
+      "Lockers",
+      "First Aid"
+    ],
+    "safetyFeatures": [
+      "Height Restrictions",
+      "Ride Operators",
+      "Medical Station",
+      "Lost Child Service"
+    ],
+    "tipsAndTricks": [
+      "Buy the 'Magic Pass' QR tickets via the app at 10:30 AM sharp \u2014 they're free but limited and save you from 60+ minute queues on popular rides.",
+      "The indoor Adventure floor has the most rides for little kids (ages 3-7). The outdoor Magic Island has the thrill rides. Plan accordingly.",
+      "The Gyro Drop outdoor tower is Seoul's version of a free-fall ride. Skip it if your kid scares easily \u2014 the 70m drop is no joke.",
+      "The Folk Museum in the basement is surprisingly excellent. Free with admission, air-conditioned, and has traditional games kids can play.",
+      "Go on a rainy weekday if you can. The indoor park is the perfect backup plan and crowds thin significantly."
+    ],
+    "parentStory": {
+      "title": "Indoor adventure, outdoor meltdown",
+      "excerpt": "The indoor section was perfect for our nervous 6-year-old. We made the mistake of pulling her onto the Gyro Swing outside. She didn't speak to us for an hour. Lesson learned.",
+      "author": "Hana, mom of 2 from Busan",
+      "fullStory": "Lotte World Magic Island looked so fun from the gondola. We convinced our 6-year-old to try the Gyro Swing \u2014 'It's just a big swing set, sweetie!' It swings 70m in the air at 90km/h. She screamed the entire time. Not a fun scream. A 'get me out of this nightmare' scream. She didn't talk to us for an hour after. The indoor Adventure section, though? She rode the undersea carousel five times. Stick to indoors for timid kids."
+    },
+    "itineraryComparison": {
+      "halfDay": "Indoor Adventure section + Folk Museum + lunch, 4 hours",
+      "fullDay": "Indoor + Magic Island + parade + dinner + ice skating",
+      "bestFor": "Ages 3-14, mixed age families, rainy day back-up"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Lotte World Seoul",
+      "indoor theme park Seoul",
+      "Lotte World with kids",
+      "Songpa family attractions"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80",
+      "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336605-5e9c7c738336?w=800&q=80"
+    ]
+  },
+  {
+    "id": "luang-prabang-001",
+    "name": "Kuang Si Waterfall",
+    "city": "Luang Prabang",
+    "country": "Laos",
+    "category": "Parks & Nature",
+    "ageRange": "3-14",
+    "safetyRating": 4.2,
+    "priceRange": "$",
+    "popularity": 88,
+    "description": "A stunning multi-tiered turquoise waterfall 29km south of Luang Prabang. The main cascade drops 60m into crystal-clear pools perfect for swimming. Bear rescue center on-site. A family highlight that combines hiking, swimming, and nature in one spectacular setting.",
+    "location": "Kuang Si Waterfall, Luang Prabang Province, Laos",
+    "bestTime": "8:30 AM opening to beat crowds, November-April dry season",
+    "imageUrl": "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80",
+    "amenities": [
+      "Changing Rooms",
+      "Restrooms",
+      "Snack Stalls",
+      "Parking",
+      "Bear Rescue Center"
+    ],
+    "safetyFeatures": [
+      "Slippery Rock Warnings",
+      "Life Jackets Available",
+      "Fenced Viewing Areas",
+      "Staff Patrols"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 8:30 AM opening. By 10:30 AM the tour buses arrive and the main pool becomes a human soup.",
+      "The hike to the top of the falls takes 20-30 minutes with kids and is worth every step. The pools get quieter the higher you go.",
+      "Bring water shoes. The rocks at the bottom of the pools are slippery and sharp. Flip-flops will betray you.",
+      "The Free the Bears sanctuary on site is included in entry. Spend 15 minutes watching the sun bears \u2014 they are playful in the morning.",
+      "Pack lunch. The only food options are noodle stalls with questionable hygiene. Sandwiches and fruit from Luang Prabang market are better."
+    ],
+    "parentStory": {
+      "title": "The pool that turned my cautious kid into a fish",
+      "excerpt": "Our 5-year-old wouldn't go near the ocean in Vietnam. One dip in the turquoise Kuang Si pools and she was swimming between waterfalls. Something about the color unlocks bravery.",
+      "author": "Mark, dad of 1 from London",
+      "fullStory": "We had spent two weeks in Southeast Asia with a kid who refused to swim anywhere. The ocean was 'too big.' The hotel pool was 'too deep.' At Kuang Si, the water is so clear you can see every pebble at the bottom. She waded in up to her waist, then her chest, and then she was swimming. I sat on a rock and watched her splash between the turquoise pools for two hours. I cried a little. She didn't notice."
+    },
+    "itineraryComparison": {
+      "halfDay": "9 AM swim + hike to top + bear center, return by 1 PM",
+      "fullDay": "Kuang Si am + Luang Prabang afternoon temples + night market dinner",
+      "bestFor": "Ages 3-14, nature families, confident swimmers or cautious kids who need the right pool"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Kuang Si Waterfall",
+      "Luang Prabang with kids",
+      "Laos family travel",
+      "swimming waterfall Laos"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80",
+      "https://images.unsplash.com/photo-1772550018808-ebbcc271726c?w=800&q=80",
+      "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "yangon-001",
+    "name": "Yangon Zoo",
+    "city": "Yangon",
+    "country": "Myanmar",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 3.8,
+    "priceRange": "$",
+    "popularity": 65,
+    "description": "Myanmar's oldest and largest zoo, established in 1906 within the beautiful Kandawgyi Park. Home to elephants, tigers, bears, and an impressive collection of Southeast Asian birds. The vintage charm and incredibly low prices make it a worthwhile stop for families exploring Yangon. The adjacent amusement park and lake complete a full day.",
+    "location": "Kandawgyi Road, Dagon Township, Yangon, Myanmar",
+    "bestTime": "Weekday mornings, November-February cool season",
+    "imageUrl": "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restrooms",
+      "Snack Stalls",
+      "Parking",
+      "Playground"
+    ],
+    "safetyFeatures": [
+      "Animal Barriers",
+      "First Aid Post",
+      "Staff Patrols"
+    ],
+    "tipsAndTricks": [
+      "Go early (7:30 AM opening). The animals are fed in the first hour and are most active. By 10 AM they are all napping.",
+      "The elephant ride ($3) is controversial but popular with local families. Decide what you are comfortable with before your kids see it and beg.",
+      "Bring small bills (kyat) for the entrance fee and snacks. The ATMs nearby are unreliable.",
+      "The butterfly house and aquarium within the zoo are extra ($1 each) but worth it for younger kids.",
+      "Combine with a Kandawgyi Lake walk and the Karaweik Palace replica \u2014 all right next to each other for a full morning out."
+    ],
+    "parentStory": {
+      "title": "The cheapest day out in Southeast Asia",
+      "excerpt": "Entry for a family of four cost less than $2. We spent more on parking. The zoo is old and worn but our kids didn't care \u2014 they saw a real elephant for the first time.",
+      "author": "John, dad of 2 from Kuala Lumpur",
+      "fullStory": "We were in Yangon for 3 days and needed something to do. Yangon Zoo was the budget option. Entry was about 50 cents per person. The zoo is clearly old \u2014 some enclosures need updating \u2014 but our kids had never seen an elephant in real life. My 4-year-old stared at one for 20 minutes. She kept saying 'it's so big, Papa.' At that price, it's not a zoo visit, it's a bargain."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo + butterfly house + playground, 2-3 hours",
+      "fullDay": "Zoo + Kandawgyi Lake walk + Karaweik Palace + Bogyoke Market shopping",
+      "bestFor": "Ages 0-12, budget families, first-time animal experiences"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Yangon Zoo",
+      "Yangon with kids",
+      "Myanmar family travel",
+      "Kandawgyi Park"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80",
+      "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "phnom-penh-001",
+    "name": "Phnom Penh Zoo",
+    "city": "Phnom Penh",
+    "country": "Cambodia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 3.5,
+    "priceRange": "$",
+    "popularity": 58,
+    "description": "Cambodia's largest zoo located 40km outside Phnom Penh. Home to elephants, lions, tigers, monkeys, and an array of native birds in sprawling grounds. While conditions are more basic than Western zoos, the close-up animal encounters and incredibly low prices (under $2 entry) make it a popular weekend destination for local families and adventurous tourists.",
+    "location": "Phnom Penh National Zoo, Takmao, Kandal Province, Cambodia",
+    "bestTime": "Early morning, November-February",
+    "imageUrl": "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+    "amenities": [
+      "Parking",
+      "Restrooms",
+      "Picnic Areas",
+      "Food Stalls",
+      "Playground"
+    ],
+    "safetyFeatures": [
+      "Basic Fencing",
+      "Staff Patrolling"
+    ],
+    "tipsAndTricks": [
+      "Hire a tuk-tuk for the day ($20-25 round trip with waiting). The zoo is 40km out of town and taxis are harder to find for the return.",
+      "Bring your own lunch. The on-site food stalls are limited and hygiene is questionable with small kids.",
+      "The monkey enclosure is the highlight \u2014 they are visible and active. Keep your bags zipped. They have learned to steal snacks.",
+      "Set expectations before you go. This is not Singapore Zoo. Some enclosures are basic. Frame it as an adventure, not a world-class attraction.",
+      "Combine with the nearby Koh Dach (Silk Island) ferry for a full day out from Phnom Penh."
+    ],
+    "parentStory": {
+      "title": "A monkey stole my daughter's hair clip",
+      "excerpt": "We were taking a family photo when a macaque jumped onto my shoulder, grabbed my daughter's glittery hair clip, and was gone in half a second. She cried for 10 minutes and then laughed about it for 3 days.",
+      "author": "Srey Leak, mom of 1 from Phnom Penh",
+      "fullStory": "We go to Phnom Penh Zoo every few months because it's cheap and my daughter loves animals. The monkeys are brazen. One jumped onto my husband's shoulder while we were posing for a photo, snatched the sparkly butterfly clip from our daughter's hair, and was up a tree before anyone could react. She was devastated for exactly 10 minutes. Then she saw a baby monkey and all was forgiven. We now leave all shiny things in the car."
+    },
+    "itineraryComparison": {
+      "halfDay": "Tuk-tuk ride + zoo + lunch, 4-5 hours round trip",
+      "fullDay": "Zoo + Koh Dach Silk Island + return via Phnom Penh riverside dinner",
+      "bestFor": "Ages 2-12, adventurous families, budget-conscious travelers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Phnom Penh Zoo",
+      "Cambodia with kids",
+      "Phnom Penh day trip",
+      "Phnom Penh family activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80",
+      "https://images.unsplash.com/photo-1594103345324-16aa1bcffdb9?w=800&q=80"
+    ]
+  },
+  {
+    "id": "sri-lanka-006",
+    "name": "Kandy & Temple of the Tooth Family Day",
+    "city": "Kandy",
+    "country": "Sri Lanka",
+    "category": "Parks & Nature",
+    "ageRange": "5-14",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "A full family day in the beautiful hill capital of Kandy. The centerpiece is the Temple of the Sacred Tooth Relic (Sri Dalada Maligawa), a UNESCO World Heritage site surrounded by the serene Kandy Lake. Combines cultural education, temple exploration, and the colorful Kandy Esala Perahera pageantry when in season.",
+    "location": "Sri Dalada Veediya, Kandy, Sri Lanka",
+    "bestTime": "Morning for temple (opens 5:30 AM), July-August for Perahera festival",
+    "imageUrl": "https://images.unsplash.com/photo-1644327981167-fbd67b34ba72?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Shoe Storage",
+      "Audio Guides",
+      "Nearby Restaurants",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Security Checkpoints",
+      "Crowd Control",
+      "Well-Lit Premises"
+    ],
+    "tipsAndTricks": [
+      "Cover knees and shoulders. The temple is an active religious site. Sarongs are available for rent at the entrance if you forget.",
+      "Visit at 5:30 AM or 6:30 PM for the puja (offering ceremony). The 6:30 PM ceremony includes drumming and is more visually engaging for kids.",
+      "The Temple of the Tooth museum has a 3D hologram show that explains the tooth relic history in 10 minutes. Kids love it more than the actual relic room.",
+      "Take the train from Colombo to Kandy instead of driving. The 2.5-hour train ride through tea plantations is a highlight itself.",
+      "Combine with the Kandy Royal Botanical Gardens at Peradeniya (15 min drive) \u2014 the giant Java fig tree and orchid house are kid magnets."
+    ],
+    "parentStory": {
+      "title": "The drum ceremony that woke something in my son",
+      "excerpt": "The evening puja started with drummers in traditional Kandyan dress. My 7-year-old stood frozen for a moment, then started dancing. A monk smiled at him. A tourist filmed it.",
+      "author": "Rohan, dad of 1 from Melbourne",
+      "fullStory": "We arrived at the Temple of the Tooth around 5:30 PM, thinking we would do a quick walk-through before dinner. The evening puja ceremony started with traditional Kandyan drummers. The rhythm got faster and louder. My son, who is usually shy in new places, started swaying. Then he started dancing a full-on Bollywood-style shoulder shake. A Western tourist filmed him. Two monks were watching from the doorway, smiling. I bought the biggest flower offering I could find."
+    },
+    "itineraryComparison": {
+      "halfDay": "Temple + Kandy Lake walk + lunch, 3-4 hours",
+      "fullDay": "Train from Colombo am + Temple + Botanical Gardens + return train pm",
+      "bestFor": "Ages 5-14, culture-curious families, train lovers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Kandy with kids",
+      "Temple of the Tooth",
+      "Sri Lanka family travel",
+      "Kandy Sri Lanka children",
+      "UNESCO family day"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1644327981167-fbd67b34ba72?w=800&q=80",
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80",
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80"
+    ]
   }
 ]
