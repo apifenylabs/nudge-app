@@ -13,10 +13,10 @@ interface Destination {
 }
 
 /**
- * Convert a city name to a URL-safe slug.
- * Examples: "Hong Kong" → "hong-kong", "New York" → "new-york"
+ * Convert a name to a URL-safe slug.
+ * Examples: "Hong Kong" → "hong-kong", "Parks & Nature" → "parks-nature"
  */
-function slugifyCity(name: string): string {
+function slugify(name: string): string {
   return name
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, '')
@@ -31,14 +31,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const raw = fs.readFileSync(filePath, 'utf-8');
   const destinations: Destination[] = JSON.parse(raw);
 
-  // Collect unique cities
-  const seen = new Set<string>();
+  // Collect unique cities from actual data
+  const seenCities = new Set<string>();
   const uniqueCities: { slug: string; name: string }[] = [];
 
   for (const dest of destinations) {
-    if (!seen.has(dest.city)) {
-      seen.add(dest.city);
-      uniqueCities.push({ slug: slugifyCity(dest.city), name: dest.city });
+    if (!seenCities.has(dest.city)) {
+      seenCities.add(dest.city);
+      uniqueCities.push({ slug: slugify(dest.city), name: dest.city });
+    }
+  }
+
+  // Collect unique categories from actual data
+  const seenCategories = new Set<string>();
+  const uniqueCategories: { slug: string; name: string }[] = [];
+
+  for (const dest of destinations) {
+    if (!seenCategories.has(dest.category)) {
+      seenCategories.add(dest.category);
+      uniqueCategories.push({ slug: slugify(dest.category), name: dest.category });
     }
   }
 
@@ -58,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // City pages — dynamically generated from data
+  // City pages — dynamically generated from actual data only
   const cityEntries: MetadataRoute.Sitemap = uniqueCities.map((city) => ({
     url: `${BASE_URL}/city/${city.slug}`,
     lastModified: new Date(),
@@ -74,18 +85,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Category pages
-  const categories = [
-    'theme-parks',
-    'zoos',
-    'museums',
-    'parks',
-    'hotels',
-    'restaurants',
-  ];
-
-  const categoryEntries: MetadataRoute.Sitemap = categories.map((cat) => ({
-    url: `${BASE_URL}/category/${cat}`,
+  // Category pages — dynamically generated from actual data only
+  const categoryEntries: MetadataRoute.Sitemap = uniqueCategories.map((cat) => ({
+    url: `${BASE_URL}/category/${cat.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.7,

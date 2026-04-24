@@ -44,14 +44,12 @@ interface Destination {
 
 const categories = [
   { name: "Theme Parks", icon: Sparkles, desc: "Where memories are made" },
-  { name: "Parks & Nature", icon: Globe, desc: "Fresh air, open spaces" },
   { name: "Zoos & Aquariums", icon: Globe, desc: "Wild encounters up close" },
+  { name: "Parks & Nature", icon: Globe, desc: "Fresh air, open spaces" },
   { name: "Museums", icon: Globe, desc: "Learn while having fun" },
-  { name: "Restaurants", icon: Star, desc: "Kid-approved dining" },
-  { name: "Hotels", icon: Star, desc: "Stay where families love" },
 ];
 
-const cities = ["Tokyo", "Hong Kong", "Bangkok", "Phuket", "Singapore", "Bali", "Hanoi", "Seoul", "Osaka", "Kuala Lumpur", "Chiang Mai"];
+const cities = ["Tokyo", "Bangkok", "Singapore", "Hong Kong", "Phuket", "Bali", "Hanoi", "Seoul", "Osaka", "Kuala Lumpur", "Chiang Mai"];
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -94,17 +92,14 @@ export default function Home() {
   if (selectedCategory !== "All") filtered = filtered.filter(d => d.category === selectedCategory);
   if (selectedAge !== "All") {
     filtered = filtered.filter(d => {
-      // Parse the destination's age range (e.g. "3-12" → min=3, max=12; "0-99" → min=0, max=99)
-      const range = d.ageRange;
-      const rangeParts = range.split('-');
-      const destMin = parseInt(rangeParts[0]);
-      const destMax = rangeParts.length > 1 ? parseInt(rangeParts[1]) : destMin;
+      const [minStr, maxStr] = d.ageRange.split('-');
+      const destMin = parseInt(minStr);
+      const destMax = maxStr ? parseInt(maxStr) : destMin;
 
-      // Parse the selected filter range
       if (selectedAge === "0-3") return destMin <= 3;
       if (selectedAge === "4-6") return destMin <= 6;
       if (selectedAge === "7-12") return destMin <= 12;
-      if (selectedAge === "13+") return destMax >= 13 && destMax <= 99;
+      if (selectedAge === "13+") return destMax >= 13;
       return true;
     });
   }
@@ -222,7 +217,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <h2 className="text-xl font-bold text-gray-900">
+            <h2 id="destinations-section" className="text-xl font-bold text-gray-900">
               {searchQuery ? `"${searchQuery}"` : "Destinations"}
             </h2>
             {!loading && (
@@ -480,7 +475,10 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                onClick={() => {
+                  const el = document.getElementById('destinations-section');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="px-8 py-3.5 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-all shadow-lg active:scale-[0.98]"
               >
                 Browse All Destinations
