@@ -69,7 +69,7 @@
     "description": "Japan's oldest zoo in beautiful Ueno Park. Perfect for younger children with pandas, gorillas, and a children's zoo. Stroller-friendly paths and plenty of shaded areas.",
     "location": "9-83 Uenokoen, Taito City, Tokyo",
     "bestTime": "Morning, Spring/Fall",
-    "imageUrl": "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-508830029-314829375-743642838?w=800&q=80",
     "amenities": [
       "Stroller Access",
       "Nursing Rooms",
@@ -164,8 +164,8 @@
     ],
     "gallery": [
       "https://images.unsplash.com/photo-113169872-716396766?w=800&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80"
+      "https://images.unsplash.com/photo-347242720-366751099?w=800&q=80",
+      "https://images.unsplash.com/photo-915912190-192962935?w=800&q=80"
     ]
   },
   {
@@ -277,7 +277,7 @@
     "gallery": [
       "https://images.unsplash.com/photo-120972273-922050912-718142807-508431021?w=800&q=80",
       "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+      "https://images.unsplash.com/photo-882791100-511315681-669955692?w=800&q=80"
     ]
   },
   {
@@ -330,7 +330,7 @@
       "Bangkok indoor activities"
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+      "https://images.unsplash.com/photo-769928629-625354986?w=800&q=80",
       "https://images.unsplash.com/photo-1516214104703-d870b4ab5e22?w=800&q=80",
       "https://images.unsplash.com/photo-1521296797187-726205347ca0?w=800&q=80"
     ]
@@ -555,7 +555,7 @@
       "family Singapore"
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80",
+      "https://images.unsplash.com/photo-552731736-875483847?w=800&q=80",
       "https://images.unsplash.com/photo-142800191-563887247-888699799-446090161?w=800&q=80",
       "https://images.unsplash.com/photo-153839920-727255918?w=800&q=80"
     ]
@@ -900,9 +900,9 @@
       "Bali with kids"
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+      "https://images.unsplash.com/photo-951062813-946447971?w=800&q=80",
       "https://images.unsplash.com/photo-180600295-268075622-102873038-538642403?w=800&q=80",
-      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&q=80"
+      "https://images.unsplash.com/photo-982965198-516731920-832687937?w=800&q=80"
     ]
   },
   {
@@ -6073,7 +6073,7 @@
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80",
-      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-263505683-595513911?w=800&q=80",
       "https://images.unsplash.com/photo-127571992-434961542-718257024-827296111?w=800&q=80"
     ],
     "parentStory": {
@@ -6477,7 +6477,7 @@
     ],
     "gallery": [
       "https://images.unsplash.com/photo-183197117-866162966-406798268?w=800&q=80",
-      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-708720353-463790962?w=800&q=80",
       "https://images.unsplash.com/photo-184564737-191969690-885879795-621828280?w=800&q=80"
     ],
     "parentStory": {
@@ -6932,7 +6932,7 @@
       "Go on a weekday as weekends see over 30,000 visitors with 90-minute waits."
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-869529290-667704660?w=800&q=80",
       "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
       "https://images.unsplash.com/photo-228727266-711684318-364371717?w=800&q=80"
     ],
@@ -7606,7 +7606,7 @@
       "The Lego Ninjago ride is the most popular and hits 45-minute queues by noon. Go there first."
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-603626844-439709088?w=800&q=80",
       "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
       "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
     ],
@@ -7686,6 +7686,2651 @@
       "Taichung with kids",
       "Taiwan science museum",
       "Taichung family"
+    ]
+  },
+  {
+    "id": "kathmandu-001",
+    "name": "Patan Durbar Square",
+    "city": "Kathmandu",
+    "country": "Nepal",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 3.8,
+    "priceRange": "$",
+    "popularity": 78,
+    "description": "A living UNESCO World Heritage site filled with ancient palaces, temples, and courtyards where kids can run and explore. The Patan Museum inside has a fantastic children's audio guide that brings the history to life.",
+    "location": "Mangal Bazar, Patan, Kathmandu",
+    "bestTime": "October-November, March-April",
+    "imageUrl": "https://images.unsplash.com/photo-7602786836?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Small Cafes",
+      "Souvenir Stalls",
+      "Benches and Shade Areas"
+    ],
+    "safetyFeatures": [
+      "Flat Stone Pathways",
+      "Pedestrian-Only Zone",
+      "Open Courtyards for Kids"
+    ],
+    "tipsAndTricks": [
+      "Visit early (7-8 AM) to avoid crowds and heat — the square is magical at sunrise with fewer vendors hassling you.",
+      "Buy the combined museum ticket (700 NPR) — it covers both the palace and the museum, saving 40% over individual tickets.",
+      "Bring a small ball or frisbee — the main courtyard is huge and kids get bored of temples fast.",
+      "Hire a registered guide for $8-10 — they know where the hidden guardian statues are that kids love touching.",
+      "Pack snacks and water from outside — the cafe inside charges 3x street prices for basic items."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1536974994874-f2e80a49758b?w=800&q=80",
+      "https://images.unsplash.com/photo-1624831100984-e2673804369a?w=800&q=80",
+      "https://images.unsplash.com/photo-1577956251089-c02373e41ee9?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "When a 5-year-old out-haggled me",
+      "excerpt": "My daughter negotiated down to 100 NPR for a tiny brass bell. The vendor was so amused he threw in a second one for free.",
+      "author": "Emma, mom of 2 from Sydney",
+      "fullStory": "I usually do all the bargaining, but at Patan my 5-year-old decided she wanted a little brass bell. She held up one finger and said 'One rupee.' The vendor burst out laughing. They went back and forth for five minutes, him pretending to be outraged, her completely serious. Ended up getting two bells for basically nothing. The vendor said she was the best negotiator he'd seen all week."
+    },
+    "itineraryComparison": {
+      "halfDay": "Explore the square, Patan Museum, lunch at a local cafe, back to hotel by 1pm",
+      "fullDay": "Morning at square, afternoon pottery workshop (Kumbheshwar), sunset rooftop dinner",
+      "bestFor": "Families interested in history and culture, ages 6+"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Patan Durbar Square family",
+      "Kathmandu with kids",
+      "UNESCO family trip Nepal"
+    ]
+  },
+  {
+    "id": "kathmandu-002",
+    "name": "Garden of Dreams",
+    "city": "Kathmandu",
+    "country": "Nepal",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 72,
+    "description": "A restored neo-classical garden oasis in central Kathmandu with fountains, pavilions, and lush greenery. The enclosed garden is completely safe for toddlers to explore, with a small cafe serving kid-friendly food and excellent coffee for parents.",
+    "location": "Keshar Mahal, Thamel, Kathmandu",
+    "bestTime": "Morning (9-11 AM), March-May and September-November",
+    "imageUrl": "https://images.unsplash.com/photo-1395936801?w=800&q=80",
+    "amenities": [
+      "Cafe with High Chairs",
+      "Clean Restrooms",
+      "Shaded Benches",
+      "Bookshop"
+    ],
+    "safetyFeatures": [
+      "Fully Enclosed Walls",
+      "No Vehicle Access",
+      "Shallow Fish Ponds (Supervised)"
+    ],
+    "tipsAndTricks": [
+      "Go at opening time (9 AM) — it's peaceful and the fish in the ponds are most active in the morning.",
+      "The cafe has a children's menu with pasta and french fries — a lifesaver if your kids refuse dal bhat.",
+      "Bring a book — the garden chairs are incredibly comfortable and parents can rotate watching the kids.",
+      "Entry is only 200 NPR for adults and free for kids under 10 — one of the best value in Thamel.",
+      "Combine with a Thamel visit — the garden is a perfect mid-day escape from the chaotic streets."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1568361407841-ee1c47079816?w=800&q=80",
+      "https://images.unsplash.com/photo-1579869847514-0c5f8f0b4b5b?w=800&q=80",
+      "https://images.unsplash.com/photo-1585020430142-8c82a04a7ad9?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The only quiet hour in two weeks",
+      "excerpt": "We sat on a bench while our kids chased butterflies for an hour. No one bothered us. No one tried to sell us anything. Just an hour of peace.",
+      "author": "James, dad of twin toddlers from London",
+      "fullStory": "Thamel is a sensory overload — honking horns, incense, touts everywhere. We stumbled into the Garden of Dreams on day three, completely frazzled. Our twins are usually wild, but something about this place calmed them. They spent an entire hour chasing butterflies around the central fountain. My wife and I just sat there, took turns sipping cappuccinos, and didn't say a word to each other. Best hour of the trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "1-2 hours in the garden, then Thamel market walk",
+      "fullDay": "Morning garden, lunch nearby, afternoon at Kathmandu Durbar Square",
+      "bestFor": "All ages, especially families needing a calm break"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Garden of Dreams Kathmandu",
+      "kid-friendly cafe Kathmandu",
+      "calm place in Kathmandu with kids"
+    ]
+  },
+  {
+    "id": "kathmandu-003",
+    "name": "Chitwan National Park Safari",
+    "city": "Bharatpur",
+    "country": "Nepal",
+    "category": "Parks & Nature",
+    "ageRange": "3-14",
+    "safetyRating": 3.5,
+    "priceRange": "$$",
+    "popularity": 85,
+    "description": "A UNESCO World Heritage site offering jungle safaris to spot rhinos, elephants, and even Bengal tigers from a safe distance. The canoe ride along the Rapti River is a family favorite, with crocodiles sunbathing on the banks and exotic birds overhead.",
+    "location": "Chitwan District, Bharatpur, Nepal",
+    "bestTime": "October-February (dry season, best animal sightings)",
+    "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    "amenities": [
+      "Resort Lodges",
+      "Guided Tours",
+      "Restaurants",
+      "Swimming Pools at Resorts"
+    ],
+    "safetyFeatures": [
+      "Experienced Guides with Rifles",
+      "Designated Safari Vehicles",
+      "Life Jackets for Canoe Rides",
+      "Lodge Security"
+    ],
+    "tipsAndTricks": [
+      "Book a 3-day/2-night package — one full day of safari is enough for kids and the rest is pool time.",
+      "Request a jeep safari over elephant-back — it's safer for young children and you can carry snacks and water easily.",
+      "Bring binoculars and a kids' wildlife checklist — turning the safari into a scavenger hunt keeps them engaged.",
+      "Stay at a resort inside the buffer zone — they have cultural dance shows in the evening that kids love.",
+      "Avoid July-September (monsoon) — leeches are everywhere and many trails close."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1559551409-dadc959f76b8?w=800&q=80",
+      "https://images.unsplash.com/photo-1573545743596-552a572a70fc?w=800&q=80",
+      "https://images.unsplash.com/photo-4709107453?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The rhino that photobombed our picnic",
+      "excerpt": "We were eating sandwiches at the riverbank when a rhino and her calf walked out of the jungle 30 meters away. Our 6-year-old whispered 'Is that a unicorn?'",
+      "author": "Priya, mom of 3 from Delhi",
+      "fullStory": "We'd heard about rhino sightings but didn't really expect to see one up close. We stopped for a riverside picnic around noon — sandwiches, chips, the works. Suddenly the bushes rustled and out came a mother rhino with her baby. Our son dropped his sandwich and just stared. The rhino looked at us, snorted, and went back to eating grass. Our daughter asked if it was a baby unicorn that lost its horn. To be fair, the baby rhino absolutely looked like one."
+    },
+    "itineraryComparison": {
+      "halfDay": "Afternoon jeep safari, river sunset view",
+      "fullDay": "Morning canoe ride + elephant-breeding center, afternoon jeep safari, evening cultural show",
+      "bestFor": "Nature-loving families, ages 5+"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Chitwan safari family",
+      "Nepal national park with kids",
+      "jungle safari kids Nepal"
+    ]
+  },
+  {
+    "id": "pokhara-001",
+    "name": "Phewa Lake & Boating",
+    "city": "Pokhara",
+    "country": "Nepal",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.3,
+    "priceRange": "$",
+    "popularity": 88,
+    "description": "A stunning freshwater lake with the Annapurna range reflected in its waters. Colorful wooden boats can be rented for the day, with a small island temple in the middle that kids love exploring.",
+    "location": "Lakeside Road, Pokhara",
+    "bestTime": "October-April, early morning for best reflections",
+    "imageUrl": "https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?w=800&q=80",
+    "amenities": [
+      "Boat Rentals",
+      "Lakeside Restaurants",
+      "Playgrounds Nearby",
+      "Life Jackets"
+    ],
+    "safetyFeatures": [
+      "Life Jackets Provided",
+      "Calm Waters",
+      "Shallow Beaches in Parts",
+      "Boat Attendants on Duty"
+    ],
+    "tipsAndTricks": [
+      "Rent a rowboat rather than a motorboat — it's quieter, kids can help 'steer,' and you'll see more birdlife.",
+      "Bring bread or fish food — the fish near Tal Barahi Temple swarm when you feed them and kids find it magical.",
+      "Go before 8 AM — the lake is mirror-still at dawn and paragliders haven't started yet.",
+      "Negotiate the boat price upfront — expect 500-800 NPR per hour for a rowboat.",
+      "Pack sunscreen and hats — the sun reflects off the water and kids burn fast even on cloudy days."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-5920164117?w=800&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1590005176489-db40e4c3b21b?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The time my toddler tried to row us to Everest",
+      "excerpt": "She grabbed the oars with total conviction and spun us in circles for 20 minutes. We didn't get anywhere. Best 500 NPR I ever spent.",
+      "author": "Dan, dad of 3 from Toronto",
+      "fullStory": "We'd been in Pokhara for 3 days and our 3-year-old had developed an obsession with the boats on Phewa Lake. We finally rented one and she insisted on rowing. The moment she grabbed the oars, she had this look of serious determination. We spent 20 minutes going in tight circles while she grunted with effort. A Nepali family in a nearby boat was laughing so hard they almost capsized. One of those perfect travel moments that costs almost nothing."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-hour boat ride, temple visit, lakeside lunch",
+      "fullDay": "Morning boat ride, lunch, afternoon at Devi's Fall and Gupteshwor Cave",
+      "bestFor": "All ages, especially toddlers and young children"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Phewa Lake boating kids",
+      "Pokhara family activities",
+      "lake boating Nepal kids"
+    ]
+  },
+  {
+    "id": "pokhara-002",
+    "name": "Sarangkot Sunrise & Paragliding",
+    "city": "Pokhara",
+    "country": "Nepal",
+    "category": "Parks & Nature",
+    "ageRange": "5-14",
+    "safetyRating": 3.5,
+    "priceRange": "$$$",
+    "popularity": 82,
+    "description": "A hilltop viewpoint offering panoramic sunrise views over the Annapurna range and Pokhara valley. For adventurous families, tandem paragliding launches from here — one of the safest places in the world for kids to paraglide for the first time.",
+    "location": "Sarangkot Hill, Pokhara",
+    "bestTime": "Sunrise, October-November and March-April",
+    "imageUrl": "https://images.unsplash.com/photo-2731633186?w=800&q=80",
+    "amenities": [
+      "Viewpoint Platform",
+      "Small Tea Stalls",
+      "Paragliding Operators",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Licensed Paragliding Operators",
+      "Safety Harnesses for Kids",
+      "Designated Landing Zone",
+      "Weather Monitoring"
+    ],
+    "tipsAndTricks": [
+      "Leave your hotel at 5 AM — the 30-minute drive plus 15-minute hike gets you there for golden hour.",
+      "Book paragliding in advance (4,000-6,000 NPR) and request a gentle flight if flying with kids aged 5-8.",
+      "Bring warm jackets even in summer — summit temperatures are 10 degrees C cooler than Pokhara valley.",
+      "Skip the cable car (closed frequently) and hire a private taxi for 2,000 NPR round trip.",
+      "Let kids bring a small camera — the aerial views of Phewa Lake are unforgettable."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80",
+      "https://images.unsplash.com/photo-8910360414?w=800&q=80",
+      "https://images.unsplash.com/photo-1580697486626-bffbfd5cb570?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My 7-year-old flew before I did",
+      "excerpt": "She looked at the valley below, said 'I'm not scared, daddy,' and ran off the cliff with her tandem partner. I cried. She loved it.",
+      "author": "Mike, dad of a fearless daughter from Chicago",
+      "fullStory": "I've always been terrified of heights. But my daughter wanted to paraglide in Pokhara more than anything. We watched the sunrise, and she kept tugging my sleeve. Finally, the tandem pilot said they'd take good care of her. She hugged me, ran to the edge, and jumped off without a second's hesitation. I stood there, heart pounding, watching her float over the valley, laughing. She landed and said 'Can we go again?' I had to sit down."
+    },
+    "itineraryComparison": {
+      "halfDay": "Sunrise at Sarangkot, breakfast at viewpoint, back by 9 AM",
+      "fullDay": "Sunrise + paragliding, late breakfast, afternoon World Peace Pagoda",
+      "bestFor": "Adventurous families with kids aged 7+"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Sarangkot sunrise kids",
+      "paragliding Pokhara children",
+      "Pokhara viewpoint family"
+    ]
+  },
+  {
+    "id": "paro-001",
+    "name": "Paro Taktsang (Tiger's Nest Monastery)",
+    "city": "Paro",
+    "country": "Bhutan",
+    "category": "Parks & Nature",
+    "ageRange": "6-14",
+    "safetyRating": 3.2,
+    "priceRange": "$$",
+    "popularity": 94,
+    "description": "Bhutan's most iconic landmark, a breathtaking monastery perched on a cliff 900 meters above the Paro Valley. The hike up takes 2-3 hours each way through pine forests with prayer flags, but children under 10 can ride a pony for most of the trail.",
+    "location": "Paro Valley, 10km north of Paro town",
+    "bestTime": "March-May, September-November (clear skies, moderate temperature)",
+    "imageUrl": "https://images.unsplash.com/photo-9224121804?w=800&q=80",
+    "amenities": [
+      "Pony Rides for Kids",
+      "Tea House Halfway",
+      "Rest Area Benches",
+      "Viewing Platforms"
+    ],
+    "safetyFeatures": [
+      "Pony Handlers with Kids",
+      "Railed Paths at Monastery",
+      "First Aid at Tea House",
+      "Guide Required"
+    ],
+    "tipsAndTricks": [
+      "Book the pony ride for kids under 10 (800 BTN) — the handlers are patient and the ponies are gentle.",
+      "Start by 7 AM — the morning clouds clear by 9 and after 10 the sun beats down on the exposed trail.",
+      "Pack at least 2 liters of water per person and electrolyte tablets — the altitude (3,120m) dehydrates fast.",
+      "Pay the tea house owner at the halfway viewpoint for use of their binoculars — kids spot eagles and marmots.",
+      "Buy the entry ticket (500 BTN adults, free for under 18) at the base before hiking — no tickets at the top."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80",
+      "https://images.unsplash.com/photo-7801572552?w=800&q=80",
+      "https://images.unsplash.com/photo-2232823354?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The prayer flag that healed her fear",
+      "excerpt": "My 8-year-old was terrified of the steep drop-offs on the trail. A monk handed her a prayer flag and said 'Tie this where you feel scared.' She tied them at every bend.",
+      "author": "Lena, mom of 2 from Berlin",
+      "fullStory": "The trail to Tiger's Nest is no joke — narrow paths with sheer drops. My daughter froze about 15 minutes in. An older monk walking behind us noticed. He stopped, pulled a handful of colorful prayer flags from his bag, and gently placed them in her hands. 'Tie one wherever you feel afraid,' he said. She spent the next two hours tying tiny flags at every scary bend. By the top, she'd run out of fear and flags."
+    },
+    "itineraryComparison": {
+      "halfDay": "Morning hike up and back, lunch at base",
+      "fullDay": "Full hike including monastery interior tour, afternoon Paro town visit",
+      "bestFor": "Active families with kids aged 8+"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Tiger's Nest with kids",
+      "Bhutan family hike",
+      "Paro Taktsang children"
+    ]
+  },
+  {
+    "id": "paro-002",
+    "name": "National Museum of Bhutan (Ta Dzong)",
+    "city": "Paro",
+    "country": "Bhutan",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 70,
+    "description": "A circular 17th-century watchtower turned museum showcasing Bhutan's cultural heritage through colorful thangka paintings, ancient weapons, and taxidermy. Kids love the circular gallery layout and the rooftop views of Paro Valley.",
+    "location": "Above Paro town, near Rinpung Dzong",
+    "bestTime": "March-May, September-November (open 9 AM-5 PM daily)",
+    "imageUrl": "https://images.unsplash.com/photo-8439932431?w=800&q=80",
+    "amenities": [
+      "Clean Restrooms",
+      "Souvenir Shop",
+      "Rooftop Viewing Deck",
+      "Benches Inside"
+    ],
+    "safetyFeatures": [
+      "Well-Maintained Stairs",
+      "Railed Walkways",
+      "No Crowds (max 50 visitors at a time)",
+      "Indoor Climate Control"
+    ],
+    "tipsAndTricks": [
+      "Print the children's scavenger hunt worksheet from the museum website — kids search for specific artifacts as they go.",
+      "The taxidermy section has a massive takin (Bhutan's national animal) — kids will ask to see it twice.",
+      "Go in the morning before the hike to Tiger's Nest — the museum opens at 9 AM, perfect warm-up.",
+      "The rooftop offers the best photo spot with Paro Dzong in the background — go on a clear day.",
+      "Kids under 18 enter for free — only adults pay the 300 BTN entry fee."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1558304970-abd589ba2f32?w=800&q=80",
+      "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&q=80",
+      "https://images.unsplash.com/photo-3532136215?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The takin that became our mascot",
+      "excerpt": "My son spent 20 minutes staring at the mounted takin. Now he draws them on every piece of paper he finds.",
+      "author": "Ashwin, dad of a zoologist-in-training from Singapore",
+      "fullStory": "We almost skipped the museum. The hike to Tiger's Nest was our main plan, but it was raining that morning. The museum turned out to be the highlight. Our son, who loves animals, discovered the takin — this bizarre creature that looks like a gnu-beaver hybrid. He stood in front of the display forever, reading every label. Now he draws takins everywhere. On school notebooks, cardboard boxes, even on a wall in his room (we were not thrilled about that last one)."
+    },
+    "itineraryComparison": {
+      "halfDay": "Museum tour (1-2 hours), short walk to Rinpung Dzong",
+      "fullDay": "Museum morning, lunch in Paro town, afternoon Paro River picnic",
+      "bestFor": "All ages, especially on rainy days or before/after Tiger's Nest"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "National Museum Bhutan kids",
+      "Paro museum family",
+      "Ta Dzong children"
+    ]
+  },
+  {
+    "id": "thimphu-001",
+    "name": "Buddha Dordenma Statue & Kuenselphodrang Nature Park",
+    "city": "Thimphu",
+    "country": "Bhutan",
+    "category": "Parks & Nature",
+    "ageRange": "2-14",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "A massive 51-meter golden Buddha statue overlooking the Thimphu valley, surrounded by a peaceful nature park with walking trails and meditation centers. The park has a small playground and plenty of open space for kids to run.",
+    "location": "Kuenselphodrang, Thimphu",
+    "bestTime": "Morning (8-10 AM), October-April",
+    "imageUrl": "https://images.unsplash.com/photo-9456645570?w=800&q=80",
+    "amenities": [
+      "Playground",
+      "Walking Trails",
+      "Parking",
+      "Picnic Areas"
+    ],
+    "safetyFeatures": [
+      "Enclosed Grounds",
+      "Gentle Slopes",
+      "No Vehicle Traffic Inside Park",
+      "Park Rangers Present"
+    ],
+    "tipsAndTricks": [
+      "Bring a picnic blanket — the grassy areas below the statue are perfect for a family lunch with valley views.",
+      "Visit at sunset — the statue glows golden against the mountains and the park is cool and empty.",
+      "Let kids count the 125,000 mini-Buddha statues inside the main statue — it'll keep them occupied for 10 minutes.",
+      "Walk the meditation circuit (15 min loop) — kids find the prayer wheels fascinating to spin.",
+      "Combine with a visit to the nearby Takin Preserve — both are on the same road, 5 minutes apart."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&q=80",
+      "https://images.unsplash.com/photo-1612469991247-c43cbca756af?w=800&q=80",
+      "https://images.unsplash.com/photo-1600988147854-4feaec5f1378?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "125,000 Buddhas and a very tired child",
+      "excerpt": "My 6-year-old insisted on counting them all. She got to 47 before giving up and asking 'How did they make SO MANY?'",
+      "author": "Claire, mom of 2 from Vancouver",
+      "fullStory": "We'd read about the 125,000 small Buddha statues inside the big Buddha Dordenma. Our 6-year-old daughter, who loves counting, announced she would count them all. She made it to 47 in the first room before her eyes glazed over. She looked at me with this profound confusion and said 'Mama, how did they make SO MANY?' It sparked a beautiful conversation about patience and devotion and craft."
+    },
+    "itineraryComparison": {
+      "halfDay": "Statue visit, park walk, picnic lunch",
+      "fullDay": "Morning at Buddha point, afternoon Takin Preserve + Folk Heritage Museum",
+      "bestFor": "All ages, especially families wanting open space"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Buddha Dordenma kids",
+      "Thimphu family park",
+      "Kuenselphodrang nature park"
+    ]
+  },
+  {
+    "id": "thimphu-002",
+    "name": "Tashichho Dzong & Evening Ceremony",
+    "city": "Thimphu",
+    "country": "Bhutan",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 76,
+    "description": "The magnificent fortress-monastery housing the throne room and government offices, with beautifully painted wooden galleries and a stunning courtyard. The evening flag-lowering ceremony is a daily spectacle that kids find mesmerizing.",
+    "location": "Chhagchhen Lam, Thimphu",
+    "bestTime": "Evening (5 PM for flag ceremony), March-May and September-November",
+    "imageUrl": "https://images.unsplash.com/photo-4061500074?w=800&q=80",
+    "amenities": [
+      "Restrooms Nearby",
+      "Benches in Courtyard",
+      "Guide Services",
+      "Souvenir Stalls Outside"
+    ],
+    "safetyFeatures": [
+      "Open Courtyard",
+      "Guided Entry",
+      "Security Personnel",
+      "Well-Maintained Walkways"
+    ],
+    "tipsAndTricks": [
+      "Arrive by 4:45 PM to get a good spot for the 5 PM flag-lowering ceremony — it's short (10 min) but impressive.",
+      "Explain to kids beforehand that they cannot touch the monks or their robes — it's seen as disrespectful.",
+      "The wooden walkways creak loudly — tell kids it's the 'dragon footsteps' and watch their eyes light up.",
+      "Take the guided tour (free, in English) — the stories about the dzong's construction are better than any sign.",
+      "Visit on a weekday — weekends are quiet but the main halls may be closed."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-5948826057?w=800&q=80",
+      "https://images.unsplash.com/photo-8299502078?w=800&q=80",
+      "https://images.unsplash.com/photo-1417006556?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The flag that refused to come down",
+      "excerpt": "The wind caught the giant flag during the lowering ceremony and it took four monks to wrestle it down. My kids thought it was a dragon fight.",
+      "author": "Hiro, dad of 2 from Tokyo",
+      "fullStory": "We arrived for the evening flag ceremony thinking it would be a quiet, meditative experience. The flag — which is enormous — got caught by a sudden gust of wind. The monks holding the ropes were literally lifted off their feet for a second. Four of them had to work together to wrestle it down. My kids were completely convinced they were watching a battle with a sky dragon. The monks were laughing about it afterward. Best accidental entertainment ever."
+    },
+    "itineraryComparison": {
+      "halfDay": "Afternoon dzong tour, evening flag ceremony",
+      "fullDay": "Morning Buddha Point, lunch, afternoon dzong + ceremony",
+      "bestFor": "Families interested in culture, ages 5+"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Tashichho Dzong kids",
+      "Thimphu flag ceremony",
+      "Bhutan dzong family"
+    ]
+  },
+  {
+    "id": "dhaka-001",
+    "name": "Lalbagh Fort",
+    "city": "Dhaka",
+    "country": "Bangladesh",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 3.4,
+    "priceRange": "$",
+    "popularity": 65,
+    "description": "An incomplete 17th-century Mughal fort complex with beautiful gardens, a mosque, and a museum displaying Mughal weapons and artifacts. The sprawling lawns give kids room to run while parents explore the history.",
+    "location": "Lalbagh Road, Old Dhaka, Dhaka",
+    "bestTime": "November-February, morning (8-11 AM)",
+    "imageUrl": "https://images.unsplash.com/photo-1599571234902-0fc0e1c0c1a0?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Gardens",
+      "Museum",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Enclosed Grounds",
+      "Security Guards",
+      "Designated Walkways",
+      "Benches Throughout"
+    ],
+    "tipsAndTricks": [
+      "Hire a guide at the entrance (300 BDT) — the stories about the fort's three unfinished tombs are fascinating and the guide keeps kids engaged.",
+      "Visit on a Friday morning — it's less crowded and the gardens are at their best after the weekly maintenance.",
+      "Bring a hat and umbrella — the fort has very little shade and Dhaka sun is relentless.",
+      "Pack snacks — the nearby street food is delicious but may upset sensitive stomachs.",
+      "Combine with a rickshaw ride through Old Dhaka — kids love the chaotic, colorful streets."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1566837945700-30057527ade0?w=800&q=80",
+      "https://images.unsplash.com/photo-1590073242678-70ee3fc28f8e?w=800&q=80",
+      "https://images.unsplash.com/photo-1626447857555-bf2b1f7c6a8a?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The unfinished fort and the princess ghost story",
+      "excerpt": "Our guide told my daughter the legend of Pari Bibi, the princess buried in the fort. She still asks if we can visit her ghost friend.",
+      "author": "Nadia, mom of 1 from Kuala Lumpur",
+      "fullStory": "The guide noticed our 7-year-old was getting bored after 10 minutes of Mughal history. So he switched tactics and told her the story of Pari Bibi, the Mughal princess who died tragically young and is buried in the fort's mausoleum. He whispered that her spirit still visits the gardens at night. Our daughter was absolutely captivated. For the rest of the trip, she asked if we could go back to 'visit the princess ghost.' Now every time she hears the word 'Bangladesh,' she asks about Pari Bibi."
+    },
+    "itineraryComparison": {
+      "halfDay": "Fort tour (1-2 hours), rickshaw ride through Old Dhaka",
+      "fullDay": "Morning at Lalbagh, lunch at Star Kabab, afternoon at Ahsan Manzil",
+      "bestFor": "History-loving families, ages 6+"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Lalbagh Fort kids",
+      "Dhaka family outing",
+      "Mughal fort Bangladesh children"
+    ]
+  },
+  {
+    "id": "dhaka-002",
+    "name": "Fantasy Kingdom",
+    "city": "Dhaka",
+    "country": "Bangladesh",
+    "category": "Theme Parks",
+    "ageRange": "2-14",
+    "safetyRating": 3.6,
+    "priceRange": "$$",
+    "popularity": 78,
+    "description": "Bangladesh's largest amusement park, spread across 50 acres with rides for all ages including a giant Ferris wheel, roller coasters, and a wave pool. The park is well-maintained with plenty of shaded seating for parents.",
+    "location": "Aminbazar, Savar, Dhaka",
+    "bestTime": "November-February, weekdays to avoid crowds",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Restaurants",
+      "First Aid",
+      "Baby Changing Rooms",
+      "Parking",
+      "ATMs"
+    ],
+    "safetyFeatures": [
+      "Ride Safety Inspections",
+      "Lifeguards at Wave Pool",
+      "Lost Child Center",
+      "Security Personnel"
+    ],
+    "tipsAndTricks": [
+      "Buy tickets online (1,200 BDT adults, 800 BDT kids) — the weekday queue can be 30 minutes, weekends over an hour.",
+      "Go on a Tuesday or Wednesday — the park is nearly empty and kids can ride everything without waiting.",
+      "Bring swimsuits and towels — the wave pool and water slides are the biggest hit with kids aged 5-12.",
+      "Pack a picnic lunch — the food court is overpriced and the kids' meals are basic fried food.",
+      "Arrive at opening (10 AM) and leave by 3 PM — afternoon crowds and heat make it less enjoyable."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564419322508-cc2e0b9e5a4e?w=800&q=80",
+      "https://images.unsplash.com/photo-9270528453?w=800&q=80",
+      "https://images.unsplash.com/photo-2102961279?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The smallest person on the biggest ride",
+      "excerpt": "Our 4-year-old was too short for the roller coaster. A staff member measured her three times, each time shaking his head apologetically. She glared at him.",
+      "author": "Tariq, dad of 2 from Dubai",
+      "fullStory": "We went to Fantasy Kingdom expecting a chill day. Our 4-year-old had her heart set on the big roller coaster. She walked up to the height check with total confidence. The staff member measured her: 90cm. Requirement: 100cm. He shook his head. She stepped back, straightened her posture, and asked for a remeasure. He laughed, measured again: 91cm. She glared at him with such intensity that he looked genuinely sorry. We made it up to her with three rounds on the merry-go-round and a giant ice cream."
+    },
+    "itineraryComparison": {
+      "halfDay": "4-5 rides, wave pool, lunch, depart by 2 PM",
+      "fullDay": "All major rides, water park, shows, dinner",
+      "bestFor": "All ages, thrill-seekers and splash-lovers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Fantasy Kingdom Dhaka",
+      "Bangladesh theme park kids",
+      "amusement park Dhaka family"
+    ]
+  },
+  {
+    "id": "guwahati-001",
+    "name": "Assam State Zoo & Botanical Garden",
+    "city": "Guwahati",
+    "country": "India",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 3.8,
+    "priceRange": "$",
+    "popularity": 74,
+    "description": "One of the largest zoos in Northeast India, housing over 100 species including the rare one-horned rhinoceros, Bengal tigers, and clouded leopards. The attached botanical garden has marked nature trails perfect for a family stroll.",
+    "location": "Jalukbari, Guwahati, Assam",
+    "bestTime": "November-February, morning (8-11 AM)",
+    "imageUrl": "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Canteen",
+      "Picnic Areas",
+      "Toy Train Ride",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Animal Safety Barriers",
+      "Security Personnel",
+      "Designated Walkways",
+      "First Aid Post"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 8 AM opening — the animals are most active in the morning before the heat sets in.",
+      "The toy train ride (20 BDT per person) is a hit with kids under 8 — it loops through the botanical garden section.",
+      "Don't skip the aquarium section — the giant freshwater fish from the Brahmaputra are mesmerizing for kids.",
+      "Bring your own lunch — the canteen is basic and options are limited for picky eaters.",
+      "Hire a cycle rickshaw at the gate for elderly family members or tired toddlers — the zoo is spread out."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587463275833-93f2d8e0b0b6?w=800&q=80",
+      "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=80",
+      "https://images.unsplash.com/photo-6205052100?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The rhino that yawned and made my day",
+      "excerpt": "We stood in front of the rhino enclosure for 20 minutes waiting for it to move. It finally yawned. My son considered it a triumph.",
+      "author": "Meera, mom of 2 from Bangalore",
+      "fullStory": "We'd built up the one-horned rhino as the main event. When we got to the enclosure, the rhino was just lying there. Not moving. For 20 minutes. My 6-year-old stood there, completely still, waiting. Other kids ran past to see the tigers, but he was committed. Finally, the rhino opened its mouth in a massive yawn. My son pumped his fist in the air like we'd won the World Cup. Sometimes patience really does pay off."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo tour (2-3 hours), picnic lunch in botanical garden",
+      "fullDay": "Morning at zoo, afternoon at Umananda Temple (Brahmaputra river island)",
+      "bestFor": "Animal-loving families, all ages"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Assam State Zoo kids",
+      "Guwahati with children",
+      "one-horned rhino zoo"
+    ]
+  },
+  {
+    "id": "shillong-001",
+    "name": "Umiam Lake & Adventure Sports",
+    "city": "Shillong",
+    "country": "India",
+    "category": "Parks & Nature",
+    "ageRange": "4-14",
+    "safetyRating": 3.8,
+    "priceRange": "$$",
+    "popularity": 76,
+    "description": "A sprawling man-made lake surrounded by pine-covered hills, offering water sports like kayaking, paddle boating, and water zorbing. The lakeside park has playground equipment and barbecue spots for family picnics.",
+    "location": "Umiam, 15km from Shillong, Meghalaya",
+    "bestTime": "October-May, especially March-April for pleasant weather",
+    "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
+    "amenities": [
+      "Water Sports Rentals",
+      "Lakeside Restaurant",
+      "Playground",
+      "Picnic Areas",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Life Jackets Provided",
+      "Lifeguards on Duty",
+      "Safety Briefing Before Activities",
+      "Enclosed Park Area"
+    ],
+    "tipsAndTricks": [
+      "Book water sports at the official counter (paddle boat 300 BDT for 30 min, kayak 400 BDT) — private operators charge double.",
+      "Visit on a weekday — weekends get crowded with locals and the water sports queues can be long.",
+      "Bring a change of clothes — water zorbing guarantees a soaking and kids will want to go again.",
+      "Pack a picnic — the designated barbecue spots have grills you can use for free with a picnic booking.",
+      "The sunset (4:30-5 PM in winter) is spectacular — the lake turns golden against the pine hills."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80",
+      "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The kayak that had a mutiny",
+      "excerpt": "Both kids wanted to steer. We went in circles for 30 minutes while they argued about 'port vs starboard.' I just floated and enjoyed the view.",
+      "author": "Vikram, dad of 2 from Mumbai",
+      "fullStory": "We rented a family kayak at Umiam Lake. My 8-year-old demanded to steer. My 6-year-old also demanded to steer. They compromised by both grabbing the rudder lines and pulling in opposite directions. We spent the next 30 minutes tracing beautiful circles in the water. I gave up trying to mediate and just leaned back, watching the pine trees and the clouds. It was honestly one of the most relaxing hours of the entire trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Water sports (1-2 hours), lakeside picnic",
+      "fullDay": "Morning water sports, lunch, afternoon Shillong Peak viewpoint",
+      "bestFor": "Water-loving families, ages 5+"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Umiam Lake family",
+      "Shillong water sports kids",
+      "Meghalaya lake activities children"
+    ]
+  },
+  {
+    "id": "darjeeling-001",
+    "name": "Darjeeling Himalayan Railway (Toy Train)",
+    "city": "Darjeeling",
+    "country": "India",
+    "category": "Theme Parks",
+    "ageRange": "2-14",
+    "safetyRating": 4.2,
+    "priceRange": "$$",
+    "popularity": 91,
+    "description": "A UNESCO World Heritage steam railway winding through breathtaking mountain scenery with loops and zigzag reverses. The iconic narrow-gauge 'Toy Train' ride from Darjeeling to Ghum (India's highest railway station) is a magical experience for families.",
+    "location": "Darjeeling Railway Station, Darjeeling, West Bengal",
+    "bestTime": "October-November, March-April for clear Kanchenjunga views",
+    "imageUrl": "https://images.unsplash.com/photo-9270085773?w=800&q=80",
+    "amenities": [
+      "Heritage Train Cars",
+      "Restrooms at Stations",
+      "Souvenir Shop",
+      "Photo Stops"
+    ],
+    "safetyFeatures": [
+      "Slow Speed",
+      "Open Windows Guarded",
+      "Attendants on Board",
+      "Designated Stops"
+    ],
+    "tipsAndTricks": [
+      "Book the joy ride (Darjeeling to Ghum and back, 2 hours) — the full journey to Siliguri takes 7 hours which is too long for most kids.",
+      "Book at least 2 weeks in advance online — the heritage steam engine sells out especially during peak season.",
+      "Request the open-window car if available — kids can stick their heads out to feel the mountain breeze (safely).",
+      "Bring light jackets even in summer — at 2,000m elevation the ride gets chilly once the train starts moving.",
+      "Pack motion sickness bands for kids — the winding tracks and sharp loops can upset sensitive stomachs."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-6021236447?w=800&q=80",
+      "https://images.unsplash.com/photo-3488140388?w=800&q=80",
+      "https://images.unsplash.com/photo-3486952119?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Choo-choo through the clouds",
+      "excerpt": "My 3-year-old spent the entire ride shouting 'CHOO CHOO' at every tunnel. Passengers were filming her instead of the mountains.",
+      "author": "Amanda, mom of 2 from Perth",
+      "fullStory": "We booked the Toy Train thinking it would be a nice photo op. It became the defining memory of our trip. Our 3-year-old stood at the window the whole time, yelling 'CHOO CHOO' every time the whistle blew. Other passengers started filming her instead of Kanchenjunga. By the third tunnel, half the car was joining in. The train attendants were laughing so hard. When we got off, they gave her a little engineer's hat. She wore it for the rest of the trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Joy ride (2 hours), walk around Ghum Monastery, lunch",
+      "fullDay": "Joy ride, Ghum museum, afternoon Darjeeling tea estate tour",
+      "bestFor": "Train-obsessed kids, all ages"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Darjeeling Toy Train kids",
+      "UNESCO railway family",
+      "Darjeeling with children"
+    ]
+  },
+  {
+    "id": "gangtok-001",
+    "name": "Rumtek Monastery",
+    "city": "Gangtok",
+    "country": "India",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 4.0,
+    "priceRange": "$",
+    "popularity": 72,
+    "description": "One of the largest and most significant Tibetan Buddhist monasteries in Sikkim, featuring stunning golden stupas, intricate mural paintings, and a peaceful atmosphere. The monastery houses a remarkable collection of religious art and a small museum.",
+    "location": "Rumtek, 24km from Gangtok, Sikkim",
+    "bestTime": "March-May, September-December (avoid monsoon)",
+    "imageUrl": "https://images.unsplash.com/photo-1816147119?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Parking",
+      "Small Tea Shop",
+      "Souvenir Stalls"
+    ],
+    "safetyFeatures": [
+      "Enclosed Courtyard",
+      "Quiet Atmosphere",
+      "Well-Marked Paths",
+      "Parking Attendants"
+    ],
+    "tipsAndTricks": [
+      "Visit during the morning prayer session (6-8 AM) — kids are fascinated by the chanting and the monks allow quiet observation.",
+      "Explain 'indoor voice' before entering — the monastery has a peaceful vibe that gets broken by loud children.",
+      "Spin the prayer wheels clockwise with the kids — they love the clicking sound and it's a good cultural lesson.",
+      "Bring some coins for the donation boxes — kids enjoy dropping them in and watching the offering rituals.",
+      "Combine with a drive through the beautiful Rumtek ridge — the views of the Teesta River valley are spectacular."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-3639165375?w=800&q=80",
+      "https://images.unsplash.com/photo-9474700204?w=800&q=80",
+      "https://images.unsplash.com/photo-1116173720?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The monk who taught my son to meditate",
+      "excerpt": "A young monk saw my fidgety 7-year-old and spent 10 minutes teaching him how to sit still and breathe. He sat perfectly still for a full minute.",
+      "author": "Priyanka, mom of 2 from Pune",
+      "fullStory": "My 7-year-old son is basically a squirrel on caffeine. At Rumtek, he was wiggling during the morning prayers. A young monk, maybe 16, noticed and came over. He knelt down and started showing my son how to sit cross-legged, hands on knees, breathing slowly. My son, who never sits still, tried so hard to copy him. He stayed completely motionless for about a minute — a personal record. The monk gave him a little thumbs up. My son still talks about 'the day a monk taught me to be calm.'"
+    },
+    "itineraryComparison": {
+      "halfDay": "Monastery tour (1-2 hours), lunch at a local Sikkimese restaurant",
+      "fullDay": "Morning at Rumtek, afternoon Gangtok city tour + MG Marg walk",
+      "bestFor": "Families interested in culture and Buddhism, ages 6+"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Rumtek Monastery kids",
+      "Sikkim family trip",
+      "Gangtok monastery children"
+    ]
+  },
+  {
+    "id": "syd-001",
+    "name": "Taronga Zoo Sydney",
+    "city": "Sydney",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 92,
+    "description": "World-class zoo perched on Sydney Harbour with over 4,000 animals. Stunning harbour views from the main entrance, daily keeper talks, and a sky safari cable car that kids adore.",
+    "location": "Bradleys Head Rd, Mosman, Sydney",
+    "bestTime": "Morning, Spring (Sep-Nov) or Autumn (Mar-May)",
+    "imageUrl": "https://images.unsplash.com/photo-1578262825743-a4e402e0a1c9?w=800&q=80",
+    "amenities": [
+      "Stroller Hire",
+      "Baby Change Rooms",
+      "Cafes & Restaurants",
+      "Souvenir Shop",
+      "Cable Car",
+      "Free-Roaming Kangaroo Walk"
+    ],
+    "safetyFeatures": [
+      "Clear Animal Barriers",
+      "First Aid Stations",
+      "Zoo Staff Everywhere",
+      "Shaded Pathways",
+      "Lost Child Protocol"
+    ],
+    "tipsAndTricks": [
+      "Take the ferry from Circular Quay to the zoo — it is faster, cheaper, and more fun than driving. Kids love the boat.",
+      "Book your tickets online at least 48 hours ahead. Walk-up prices are 20% more and you skip the queue.",
+      "The Wild Australia show at 11 AM sells out fast. Arrive 20 minutes early for good seats in the shade.",
+      "Bring a refillable water bottle. There are free water stations near every restroom and zoo cafe drinks are $5+.",
+      "The cable car down to the harbour exit is the least crowded at 2 PM — perfect timing after the seal show."
+    ],
+    "parentStory": {
+      "title": "She still asks when we are going back to see the koalas",
+      "excerpt": "Our 4-year-old held a koala for the first time and refused to wash her hands for three days. Every week since, she asks when we are going back to koala heaven.",
+      "author": "Emily, mom of 1 from Singapore",
+      "fullStory": "I was nervous about coming all the way from Singapore with a toddler but the zoo ferry from the city was the highlight before we even got there. The koala encounter was $35 extra but worth every cent — our daughter face when she held one was pure magic. We spent 5 hours and only saw half the zoo. Plan a full day, trust me."
+    },
+    "itineraryComparison": {
+      "halfDay": "Ferry there, cable car up, main exhibits, Wild Australia show, ferry back",
+      "fullDay": "Ferry there, all exhibits, keeper talks, seal show, picnic lunch, cable car back",
+      "bestFor": "Ages 2-12, animal lovers, first-time Sydney visitors"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Taronga Zoo Sydney",
+      "family zoo Australia",
+      "Sydney with kids",
+      "koala encounter Sydney"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1544899491-52ddc71e0a67?w=800&q=80",
+      "https://images.unsplash.com/photo-1503663100514-c423b13c5d53?w=800&q=80",
+      "https://images.unsplash.com/photo-1467348733814-f93fc480bec6?w=800&q=80"
+    ]
+  },
+  {
+    "id": "syd-002",
+    "name": "SEA LIFE Sydney Aquarium",
+    "city": "Sydney",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 90,
+    "description": "Massive aquarium in Darling Harbour featuring the Great Barrier Reef exhibit, penguin encounters, and a 360-degree ocean tunnel. Dedicated family zones with touch pools and interactive displays.",
+    "location": "1-5 Wheat Rd, Darling Harbour, Sydney",
+    "bestTime": "Weekday mornings, school term (avoid school holidays)",
+    "imageUrl": "https://images.unsplash.com/photo-1582967788606-a171d1080cb0?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Nursing Room",
+      "Interactive Touch Pools",
+      "Cafe",
+      "Gift Shop",
+      "Cloakroom"
+    ],
+    "safetyFeatures": [
+      "All-Indoor Facility",
+      "Glass Barriers Throughout",
+      "Hand Sanitiser Stations",
+      "Staff at Every Exhibit",
+      "Emergency Exits Clearly Marked"
+    ],
+    "tipsAndTricks": [
+      "Arrive right at 9:30 AM when it opens. The tunnel walkway is uncrowded until 11 AM and you get photos without strangers in them.",
+      "The Dugong show at 11:30 is hilarious and educational — sit in the front row if your kid is brave enough for a splash.",
+      "Book the Penguin Pass add-on. It is $15 extra but you get to feed penguins and it makes the whole trip unforgettable.",
+      "Combine with Darling Harbour activities across the street — the playground and paddle boats are free afterwards.",
+      "The touch pools get slimy by mid-afternoon. Visit them in the first hour for the best experience."
+    ],
+    "parentStory": {
+      "title": "My 7-year-old corrected the tour guide on the shark trivia",
+      "excerpt": "He has been obsessed with sharks since age 4. When the guide said the grey nurse shark lays eggs, our son corrected her — and she thanked him. He wore that moment like a badge for weeks.",
+      "author": "David, dad of 2 from Brisbane",
+      "fullStory": "We are from Brisbane so Sydney Aquarium was a splurge trip. Our older son is a shark encyclopedia. When the guide mentioned grey nurse sharks lay eggs, he politely said actually they are ovoviviparous — the eggs hatch inside. The guide paused, said he was right, and gave him a junior ranger badge on the spot. He has not stopped smiling."
+    },
+    "itineraryComparison": {
+      "halfDay": "Aquarium only, 2 hours, include penguin encounter",
+      "fullDay": "Aquarium + Darling Harbour playground + Sydney Maritime Museum + lunch at harbour",
+      "bestFor": "Ages 3-12, kids who love marine life"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "SEA LIFE Sydney",
+      "family aquarium Australia",
+      "Darling Harbour kids",
+      "Sydney indoor activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=800&q=80",
+      "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&q=80",
+      "https://images.unsplash.com/photo-1614313913007-22a4b32e3b3b?w=800&q=80"
+    ]
+  },
+  {
+    "id": "syd-003",
+    "name": "Royal Botanic Garden Sydney",
+    "city": "Sydney",
+    "country": "Australia",
+    "category": "Parks & Nature",
+    "ageRange": "0-12",
+    "safetyRating": 4.9,
+    "priceRange": "$",
+    "popularity": 82,
+    "description": "Expansive 30-hectare harbourside garden with dedicated children discovery areas, flying foxes, and the best views of the Sydney Opera House. Free entry with paid workshops and tours.",
+    "location": "Mrs Macquaries Rd, Sydney CBD",
+    "bestTime": "Early morning, Spring (Sep-Nov) for flower blooms",
+    "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80",
+    "amenities": [
+      "Free Entry",
+      "Children Discovery Area",
+      "Picnic Shelters",
+      "Cafe",
+      "Public Toilets",
+      "Water Fountains"
+    ],
+    "safetyFeatures": [
+      "Flat Paved Paths",
+      "Fenced Play Areas",
+      "No Traffic Inside",
+      "Gardens Staff on Site",
+      "Nearby Hospital 5 Min Away"
+    ],
+    "tipsAndTricks": [
+      "Pack a picnic and blankets. The lawn in front of the Opera House view is the best free lunch spot in all of Sydney.",
+      "The Wild Words nature play area has logs, sand, and water pumps — bring a change of clothes because your kids WILL get muddy.",
+      "Start at the Art Gallery entrance and walk downhill toward the harbour. It is less crowded and the gradient is kid-friendly.",
+      "The flying fox colony at dusk is spectacular and free. Bring binoculars if you have them. They leave the garden around 7 PM from November to February.",
+      "The free guided Aboriginal Heritage Walk on Tuesdays is fantastic for curious kids aged 6+. Book via the website."
+    ],
+    "parentStory": {
+      "title": "We spent $0 and had the best afternoon of our trip",
+      "excerpt": "After blowing our budget on tours, we found the Garden. Free entry. Free play area. Free flying fox show at sunset. Our 3-year-old ran himself tired and fell asleep on the picnic blanket. Perfect afternoon.",
+      "author": "Liam & Priya, parents of 1 from Mumbai",
+      "fullStory": "We had been in Australia for two weeks and our bank account was hurting. A local told us about the Botanic Garden. No entry fee. We bought sandwiches from Woolworths, sat on the grass overlooking the Opera House, and watched our son chase pigeons for hours. The flying foxes at twilight were an unexpected bonus. Best afternoon of our entire trip and it cost $12 for lunch."
+    },
+    "itineraryComparison": {
+      "halfDay": "Garden walk, Opera House photos, children play area, picnic",
+      "fullDay": "Morning garden tour + lunch + Art Gallery of NSW + Mrs Macquaries Chair + harbour walk to Circular Quay",
+      "bestFor": "Ages 0-8, budget travelers, parents wanting a relaxed day"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Royal Botanic Garden Sydney",
+      "free Sydney activities kids",
+      "Opera House view family",
+      "Sydney parks for children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1510798831971-3c4e5faa90b0?w=800&q=80",
+      "https://images.unsplash.com/photo-1551927336-709d5a38b1b8?w=800&q=80",
+      "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800&q=80"
+    ]
+  },
+  {
+    "id": "mel-001",
+    "name": "Melbourne Zoo",
+    "city": "Melbourne",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "Australia's oldest zoo with 320+ species in beautifully landscaped enclosures. Highlights include the Trail of the Elephants, orangutan sanctuary, and the immersive Butterfly House kids adore.",
+    "location": "Elliott Ave, Parkville, Melbourne",
+    "bestTime": "Weekday mornings, October-March",
+    "imageUrl": "https://images.unsplash.com/photo-1557418661-6f27b9d2a5e3?w=800&q=80",
+    "amenities": [
+      "Stroller Hire",
+      "Baby Feeding Rooms",
+      "Shaded Rest Areas",
+      "Cafes & Kiosks",
+      "Picnic Tables",
+      "Splash Park"
+    ],
+    "safetyFeatures": [
+      "Double-Gated Entry/Exit",
+      "First Aid Post",
+      "Staff Throughout Grounds",
+      "Lost Child Points",
+      "Handwashing Stations"
+    ],
+    "tipsAndTricks": [
+      "Arrive before 10 AM to see the elephants being fed. It's the most interactive keeper talk of the day.",
+      "The splash park near the main lawn is a lifesaver on hot days — bring swimmers and a towel even if you don't plan on water play.",
+      "Buy a family membership ($130/year) if you're in Melbourne for more than 3 days. It pays for itself after one visit and you get discounts at other zoos nationwide.",
+      "Download the zoo map before you go. Phone signal is patchy inside the grounds and paper maps run out by noon.",
+      "The Butterfly House is tiny and gets crowded. Go at 2 PM when school groups have left for the best experience."
+    ],
+    "parentStory": {
+      "title": "The orangutan looked right at my son and held his hand through the glass",
+      "excerpt": "A 20-year-old orangutan pressed her hand against the glass where our 4-year-old's hand was. They sat like that for almost a minute. Neither of us spoke. We couldn't. I still cry thinking about it.",
+      "author": "Natasha, mom of 2 from Perth",
+      "fullStory": "We were visiting family in Melbourne and decided to do the zoo. The orangutan sanctuary is incredible — it's a massive open space with tall climbing structures. One of the females came right up to the glass, sat down, and pressed her hand against our son's. He was frozen. She looked at him, then at us, then slowly moved away. The keeper said she'd never done that before. Some moments you just can't plan."
+    },
+    "itineraryComparison": {
+      "halfDay": "Elephant trail, orangutan sanctuary, Butterfly House, lunch, splash park",
+      "fullDay": "All exhibits, all keeper talks, train ride, both cafes, splash park",
+      "bestFor": "Ages 2-12, families who love hands-on zoo experiences"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Melbourne Zoo",
+      "family zoo Melbourne",
+      "Victoria with kids",
+      "zoo near Melbourne CBD"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+      "https://images.unsplash.com/photo-1534802046520-4f27db7f6725?w=800&q=80",
+      "https://images.unsplash.com/photo-1525246143233-c7de82b4d6d0?w=800&q=80"
+    ]
+  },
+  {
+    "id": "mel-002",
+    "name": "Scienceworks Melbourne",
+    "city": "Melbourne",
+    "country": "Australia",
+    "category": "Museums",
+    "ageRange": "3-14",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 84,
+    "description": "Hands-on science museum in Spotswood with over 200 interactive exhibits, a planetarium, and the iconic lightning room show. Kids can pilot a plane, race a cheetah, and build bridges.",
+    "location": "2 Booker St, Spotswood, Melbourne",
+    "bestTime": "Weekday afternoons, school term (quietest Tues-Thurs)",
+    "imageUrl": "https://images.unsplash.com/photo-1564325724739-bae0bd08762c?w=800&q=80",
+    "amenities": [
+      "Indoor Facility",
+      "Cafe",
+      "Locker Hire",
+      "Free Parking",
+      "Accessible Toilets",
+      "Baby Change Area"
+    ],
+    "safetyFeatures": [
+      "All-Indoor Climate Control",
+      "Staff at Every Exhibit",
+      "Emergency Exits",
+      "Non-Slip Floors",
+      "Height-Adjusted Displays"
+    ],
+    "tipsAndTricks": [
+      "The Planetarium shows are timed and seats fill 20 minutes ahead. Book your slot when you enter, not after exploring.",
+      "The Lightning Room show at 2 PM is the most dramatic — sit in the middle rows for the best safe view of the 2-million-volt bolts.",
+      "Bring a spare set of clothes. The water play area in 'Sportsworks' soaks kids completely, even when they're just 'observing'.",
+      "The Pumping Station tour outside is worth 30 minutes. Kids love the giant steam engines and it's included in entry.",
+      "Food from the cafe is average but the adjacent Spotswood shops have excellent bakeries. Pack a lunch and eat at the picnic tables outside."
+    ],
+    "parentStory": {
+      "title": "He explained gravity to his grandmother over FaceTime that night",
+      "excerpt": "Scienceworks gave our 6-year-old the confidence to become the family expert on everything. He spent 20 minutes explaining black holes to his grandma and she didn't interrupt once.",
+      "author": "Tom, dad of 1 from Hobart",
+      "fullStory": "We drove from Hobart to Melbourne specifically for Scienceworks — our son is obsessed with space. The planetarium blew his mind. Then the gravity well exhibit kept him occupied for 40 minutes. That night he called his grandma and walked her through the Big Bang, black holes, and why astronauts float. He was 6. I'll never forget the pride in his voice."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main exhibits, planetarium, Lightning Room, Sportsworks",
+      "fullDay": "All exhibits + planetarium + Lightning Room + Pumping Station tour + outdoor play area",
+      "bestFor": "Ages 4-14, science-curious kids, rainy day backup plans"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Scienceworks Melbourne",
+      "museum for kids Melbourne",
+      "interactive science Australia",
+      "family Melbourne rainy day"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1580196969807-cc6de81c700e?w=800&q=80",
+      "https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=800&q=80",
+      "https://images.unsplash.com/photo-1496065187959-7f07b8353c55?w=800&q=80"
+    ]
+  },
+  {
+    "id": "mel-003",
+    "name": "Luna Park Melbourne",
+    "city": "Melbourne",
+    "country": "Australia",
+    "category": "Theme Parks",
+    "ageRange": "3-14",
+    "safetyRating": 4.3,
+    "priceRange": "$$",
+    "popularity": 85,
+    "description": "Historic seaside amusement park on St Kilda beach with the iconic giant mouth entrance. Family-friendly rides, carnival games, and spectacular sunset views over Port Phillip Bay.",
+    "location": "18 Lower Esplanade, St Kilda, Melbourne",
+    "bestTime": "Late afternoon (opens weekends & school holidays), avoid summer weekends for shorter queues",
+    "imageUrl": "https://images.unsplash.com/photo-1574236170880-22baef79dd35?w=800&q=80",
+    "amenities": [
+      "Ride Pass Options",
+      "Food Court",
+      "Parents' Lounge",
+      "Lockers",
+      "ATM",
+      "First Aid Room"
+    ],
+    "safetyFeatures": [
+      "Regular Ride Inspections",
+      "Height Requirements Posted",
+      "Trained Operators",
+      "Fenced Perimeter",
+      "Security Staff"
+    ],
+    "tipsAndTricks": [
+      "Buy the 'Unlimited Ride Pass' online in advance — it's 25% cheaper than at the gate and you skip the ticket booth queue.",
+      "Park at St Kilda beach parking ($5 flat Sunday rate) instead of Luna Park parking ($20 for 2 hours). It's a 3-minute walk.",
+      "The Scenic Railway roller coaster is the oldest operating in the world. It's wooden, bumpy, and brilliant — sit in the front if your kid is brave enough.",
+      "Combine with St Kilda beach playground and the penguin viewing platform at the breakwater (free, best at sunset).",
+      "Arrive right when gates open on weekends. The first hour is blissfully quiet before the crowds show up around noon."
+    ],
+    "parentStory": {
+      "title": "The giant face terrified her, then became her favourite part",
+      "excerpt": "My 3-year-old screamed when she saw the giant clown face entrance. By the end of the day, she was asking to go through it again. 'It's not scary Mama, it's the happy mouth.'",
+      "author": "Jasmine, mom of 1 from Adelaide",
+      "fullStory": "We came to Melbourne for a weekend and Luna Park was on the list. Our toddler was genuinely afraid of the big face — she called it 'the eating house.' We almost skipped it. I carried her in while she cried on my shoulder. Three hours later, she was dragging us back through 'the happy mouth' to leave. The carousel was her favourite. She asked for a horse ride for her birthday."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours of rides, carnival games, lunch at St Kilda beach",
+      "fullDay": "Luna Park rides + St Kilda beach + penguin viewing + sunset dinner on the esplanade",
+      "bestFor": "Ages 3-12, families combining beach + rides, carnival nostalgia"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Luna Park Melbourne",
+      "St Kilda family activities",
+      "Melbourne theme park kids",
+      "amusement park Australia"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1573883431205-b7e5b5a42d9a?w=800&q=80",
+      "https://images.unsplash.com/photo-1598899134739-24c46f58b5c0?w=800&q=80"
+    ]
+  },
+  {
+    "id": "gco-001",
+    "name": "Dreamworld Gold Coast",
+    "city": "Gold Coast",
+    "country": "Australia",
+    "category": "Theme Parks",
+    "ageRange": "3-14",
+    "safetyRating": 4.4,
+    "priceRange": "$$$",
+    "popularity": 91,
+    "description": "Queensland's biggest theme park with thrill rides, the Dreamworld Corroboree Aboriginal experience, Wiggles World for toddlers, and the adjacent WhiteWater World water park.",
+    "location": "Dreamworld Pkwy, Coomera, Gold Coast",
+    "bestTime": "Weekdays in school term, April-May or August-September",
+    "imageUrl": "https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?w=800&q=80",
+    "amenities": [
+      "Stroller Hire",
+      "Baby Care Rooms",
+      "All-You-Can-Eat Dining",
+      "Lockers",
+      "Shaded Rest Areas",
+      "Train Transport Between Zones"
+    ],
+    "safetyFeatures": [
+      "Ride Safety Briefings",
+      "Height Checks at Every Ride",
+      "Medical Room",
+      "Security Patrols",
+      "Lost Child Wristbands"
+    ],
+    "tipsAndTricks": [
+      "Buy the '3-Park Pass' if you're doing more than one day — it includes Dreamworld, WhiteWater World, and SkyPoint for barely more than a single-day ticket.",
+      "Start at Wiggles World first with under-5s. By 11 AM the queue for Big Red Car is 30+ minutes — at 9:30 AM it's walk-on.",
+      "Pack swimmers and towels in the car even if you only plan Dreamworld. Kids see WhiteWater World next door and change their minds — guarantee it.",
+      "The Dreamworld Express train is a lazy ride around the park. Use it to tire out toddlers before nap time.",
+      "Eating at the on-site buffet ($28 adults, $14 kids) is better value than individual kiosk meals. Unlimited pizza, pasta, and ice cream."
+    ],
+    "parentStory": {
+      "title": "She sat on Big Red Car for four consecutive rides before we had to physically remove her",
+      "excerpt": "My 2-year-old would not get off the Big Red Car. The operator let us stay for four cycles. Other parents started cheering. That's the magic of Wiggles World.",
+      "author": "Michelle, mom of 2 from New Zealand",
+      "fullStory": "We brought our Wiggles-obsessed 2-year-old for her birthday. She LOVES the Big Red Car song. The first cycle she was thrilled. Second cycle, ecstatic. By the third cycle other parents were laughing. The ride operator waved us around for a fourth. I had to carry her out screaming. She still talks about it six months later as 'the day I drove the red car.' Worth every dollar."
+    },
+    "itineraryComparison": {
+      "halfDay": "Wiggles World, Dreamworld main rides, lunch, leave by 2 PM",
+      "fullDay": "Dreamworld full day or Dreamworld morning + WhiteWater World afternoon",
+      "bestFor": "Ages 3-12, Wiggles fans, families wanting a full theme park day"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Dreamworld Gold Coast",
+      "theme park Queensland kids",
+      "Gold Coast family activities",
+      "Wiggles World Australia"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1562016600-ece13e8ba570?w=800&q=80",
+      "https://images.unsplash.com/photo-1574966743558-b1370eadecf8?w=800&q=80",
+      "https://images.unsplash.com/photo-1535485156230-020d0b4e6f5f?w=800&q=80"
+    ]
+  },
+  {
+    "id": "gco-002",
+    "name": "Currumbin Wildlife Sanctuary",
+    "city": "Gold Coast",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 86,
+    "description": "Iconic wildlife sanctuary set in 27 hectares of natural bushland. Famous for free-roaming kangaroos, koala cuddles, daily bird shows, and the Aboriginal dance performance that captivates all ages.",
+    "location": "28 Tomewin St, Currumbin, Gold Coast",
+    "bestTime": "Arrive at 8 AM opening, avoid January peak",
+    "imageUrl": "https://images.unsplash.com/photo-1470117949246-f658e52657ca?w=800&q=80",
+    "amenities": [
+      "Kangaroo Feeding Area",
+      "Koala Photo Studio",
+      "Cafe",
+      "Picnic Areas",
+      "Free Parking",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Trained Wildlife Handlers",
+      "Fenced Animal Zones",
+      "First Aid Room",
+      "Shaded Walkways",
+      "Handwashing Stations After Animal Contact"
+    ],
+    "tipsAndTricks": [
+      "Book the 'Breakfast with the Birds' experience at 8 AM — it's $35 extra but you feed lorikeets from your hand while eating. Kids lose their minds.",
+      "The kangaroo feeding area is open until 4 PM but food runs out by 2 PM. Buy two bags of feed ($3 each) when you enter.",
+      "Hold a koala early in the morning when they're alert. By 2 PM they're sleepy and your photos will be of a grumpy furball.",
+      "The Aboriginal dance circle at 11 AM is genuinely good — not a tourist trap. Indigenous performers explain traditional tools and stories.",
+      "Bring insect repellent. The sanctuary is lush bushland and mozzies come out around 3 PM."
+    ],
+    "parentStory": {
+      "title": "The kangaroo stole her entire bag of feed and she thought it was hilarious",
+      "excerpt": "A big male kangaroo put his paw right into her pocket and pulled out the feed bag. She laughed so hard she fell over. The staff said he does this to everyone — he's a menace and they love him.",
+      "author": "Ben, dad of 1 from Seoul",
+      "fullStory": "Coming from South Korea, the kids were excited but nervous about Australian wildlife. Our 5-year-old was shy with the kangaroos until one came up and literally put his paw in her pocket. She screamed at first, then laughed uncontrollably. The keeper told us that specific kangaroo, 'Bruce,' has been stealing feed from kids for 8 years and they just let him. He's a celebrity. You have to see it to believe it."
+    },
+    "itineraryComparison": {
+      "halfDay": "Lorikeet breakfast, koala hold, kangaroo feeding, bird show, leave by 12:30",
+      "fullDay": "All shows (bird, snake, Aboriginal dance), rainforest walk, devils exhibit, picnic lunch, koala encounter",
+      "bestFor": "Ages 2-12, hands-on wildlife lovers, first-time Australian visitors"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Currumbin Wildlife Sanctuary",
+      "Gold Coast zoo",
+      "koala cuddle Queensland",
+      "Australian wildlife family"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1572017805578-3a68fb2a65b7?w=800&q=80",
+      "https://images.unsplash.com/photo-1538095242198-b99d12f1e614?w=800&q=80",
+      "https://images.unsplash.com/photo-1481018085664-2bcb6794548f?w=800&q=80"
+    ]
+  },
+  {
+    "id": "cns-001",
+    "name": "Great Barrier Reef Family Tour",
+    "city": "Cairns",
+    "country": "Australia",
+    "category": "Parks & Nature",
+    "ageRange": "4-14",
+    "safetyRating": 4.5,
+    "priceRange": "$$$",
+    "popularity": 93,
+    "description": "Child-friendly reef tour operators from Cairns offering semi-submersible viewing, glass-bottom boats, and snorkeling at the outer reef. Dedicated 'kids first' approach with trained marine biologists on board.",
+    "location": "Reef Fleet Terminal, Cairns Marina",
+    "bestTime": "June-October (dry season, calmest waters)",
+    "imageUrl": "https://images.unsplash.com/photo-1587139223877-04cb899fa3e2?w=800&q=80",
+    "amenities": [
+      "Life Jackets All Sizes",
+      "Semi-Submersible Boat",
+      "Glass-Bottom Boat",
+      "Snorkel Equipment",
+      "Underwater Viewing Platform",
+      "Lunch Included"
+    ],
+    "safetyFeatures": [
+      "Marine Biologist Onboard",
+      "Safety Briefing Before Each Activity",
+      "Life Jackets Mandatory",
+      "Medical Kit & Defibrillator",
+      "Satellite Phone & Emergency Beacons",
+      "Child-Specific Wetsuits"
+    ],
+    "tipsAndTricks": [
+      "Book with 'Reef Magic' or 'Passions of Paradise' — they have dedicated kids' programs with marine biologists who make touching starfish safe and educational.",
+      "Give your kids motion sickness tablets the night before AND the morning of. The reef is 90 minutes offshore and the swell can hit even calm days. Trust me on this one.",
+      "Book the helicopter return ($150 extra) if budget allows. Seeing the reef from above is the most unforgettable moment of any kid's trip and saves 90 minutes of boat time.",
+      "The semi-submersible is better than snorkeling for under-6s. They see everything (turtles, giant clams, colorful fish) through big windows without getting cold or scared.",
+      "Pack rash guards and reef-safe sunscreen. Standard sunscreen harms coral and some operators will refuse boarding without reef-safe brands."
+    ],
+    "parentStory": {
+      "title": "He saw Nemo and refused to leave the viewing platform",
+      "excerpt": "Our 5-year-old spent 45 minutes on the underwater viewing platform pointing at every clownfish. 'Nemo! Nemo! Nemo's cousin! Nemo's teacher!' He named them all. The crew let us stay an extra 30 minutes.",
+      "author": "Rachel & Steve, parents of 1 from Hong Kong",
+      "fullStory": "We debated whether the reef was worth it for a 5-year-old. So glad we did it. The semi-submersible was the gateway — he saw clownfish and that was it. Hooked. He spent the rest of the trip on the underwater viewing platform naming every fish. The crew were incredible. They brought out sea cucumbers for him to touch. If you're hesitating, don't. Your kid will surprise you."
+    },
+    "itineraryComparison": {
+      "halfDay": "Inner reef tour, 4 hours, semi-submersible + glass-bottom boat + lunch",
+      "fullDay": "Outer reef tour, 8 hours, snorkeling + semi-submersible + helicopter return + full lunch",
+      "bestFor": "Ages 5-14, families who love ocean adventures"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Great Barrier Reef family tour",
+      "Cairns with kids",
+      "reef snorkeling children",
+      "Queensland family activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80",
+      "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?w=800&q=80",
+      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=800&q=80"
+    ]
+  },
+  {
+    "id": "cns-002",
+    "name": "Kuranda Scenic Railway & Skyrail",
+    "city": "Cairns",
+    "country": "Australia",
+    "category": "Parks & Nature",
+    "ageRange": "3-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "World-heritage rainforest experience combining the historic Kuranda Scenic Railway with the Skyrail Rainforest Cableway. Kids love the gondola ride above the canopy and the charming Kuranda markets at the summit.",
+    "location": "Departure from Cairns Railway Station or Skyrail Smithfield Terminal",
+    "bestTime": "Dry season (May-October), depart early morning to avoid afternoon heat",
+    "imageUrl": "https://images.unsplash.com/photo-1470071459604-7b8ec44ffd0b?w=800&q=80",
+    "amenities": [
+      "Stroller Access (Skyrail & Kuranda)",
+      "Cafe at Kuranda",
+      "Markets & Souvenirs",
+      "Wildlife Park Nearby",
+      "Public Toilets",
+      "Covered Waiting Areas"
+    ],
+    "safetyFeatures": [
+      "Safety Harnesses on Skyrail",
+      "Emergency Procedures Briefed",
+      "Staff at Both Terminals",
+      "Double-Gated Railway Platforms",
+      "Non-Slip Decking at Viewing Platforms"
+    ],
+    "tipsAndTricks": [
+      "Do the Skyrail up and the train back — not the other way. Skyrail in the morning has clearer views and the train back is thrilling coming down the mountain switchbacks.",
+      "Buy the combined ticket online ($89 adult, $45 child) — it's 15% cheaper than buying separately at the terminals.",
+      "Get off at the Skyrail Red Peak mid-station. The 10-minute boardwalk through the ancient rainforest has a ranger talk at 10:30 AM that kids actually enjoy.",
+      "Kuranda Village markets open at 9:30 AM. The best Aboriginal art stalls are near the train station, not the main market area.",
+      "Bring a light jacket even in summer. The mountain is 350m higher than Cairns and drops 5-7C. Toddlers get cold in the open train carriages."
+    ],
+    "parentStory": {
+      "title": "The train whistle scared her, then she waved at every single hiker",
+      "excerpt": "Our 3-year-old was terrified of the train whistle at first. By the second tunnel she was waving at every bushwalker we passed. The Skyrail was magical — she pressed her face against the glass for 30 minutes without a word.",
+      "author": "Anna, mom of 2 from Berlin",
+      "fullStory": "We came to Cairns specifically for this experience and it exceeded every expectation. The Skyrail gondola was the highlight — our 3-year-old normally won't sit still for 5 minutes but she was glued to the window for the full 30 minutes. 'Mama, the trees are flat!' The train ride down was bumpy and fun. We ate ice cream in Kuranda and bought boomerangs at the market. A perfect day."
+    },
+    "itineraryComparison": {
+      "halfDay": "Skyrail up (including Red Peak stop), Kuranda markets, train back to Cairns",
+      "fullDay": "Skyrail up + Kuranda markets + Birdworld + Butterfly Sanctuary + train back",
+      "bestFor": "Ages 4-12, nature lovers, families wanting an adventure without hiking"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Kuranda Railway",
+      "Skyrail Cairns",
+      "rainforest cableway family",
+      "Cairns day trip kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1505576391880-b3f11d96b7ce?w=800&q=80",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+      "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=80"
+    ]
+  },
+  {
+    "id": "akl-001",
+    "name": "Auckland Zoo",
+    "city": "Auckland",
+    "country": "New Zealand",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 87,
+    "description": "New Zealand's largest zoo with over 135 species including a spectacular Te Wao Nui sanctuary featuring native NZ wildlife. The elephant encounter and free-flying bird aviary are family favourites.",
+    "location": "99 Motions Rd, Western Springs, Auckland",
+    "bestTime": "Weekday mornings, September-May",
+    "imageUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+    "amenities": [
+      "Stroller Hire",
+      "Baby Feeding Room",
+      "Sun Shelter Areas",
+      "Cafe & Kiosks",
+      "Electric Buggy Hire",
+      "Interactive Playground"
+    ],
+    "safetyFeatures": [
+      "Shaded Walkways Throughout",
+      "First Aid Room",
+      "Staff in All Zones",
+      "Animal Safety Glass",
+      "Lost Child Meeting Points"
+    ],
+    "tipsAndTricks": [
+      "Start at Te Wao Nui — the NZ native section has kiwi birds in a dark house, tuatara, and kea. Kiwi are nocturnal so the exhibit is dimly lit; give your eyes 2 minutes to adjust before moving on.",
+      "The 'Zoo Keeper for a Day' program ($85) is worth it for kids 8+. They feed elephants, prepare animal diets, and earn a certificate. Book 2 weeks ahead.",
+      "Bring a raincoat even if it's sunny. Auckland weather changes every 20 minutes and the zoo is mostly outdoors.",
+      "Take the free zoo shuttle from the parking lot — the walk from the car park to the entrance is deceptive (10 minutes uphill).",
+      "The elephant barn talk at 11:30 AM is the best timed keeper talk. The handler answers kids' questions and they get to touch a shed elephant tusk."
+    ],
+    "parentStory": {
+      "title": "She finally saw a kiwi and whispered 'It's real' for 5 solid minutes",
+      "excerpt": "Our 6-year-old has been obsessed with kiwis since she learned they exist. When she finally saw one in the dark house, she sat on the floor and whispered 'it's real' over and over. I cried.",
+      "author": "Marcus, dad of 2 from Wellington",
+      "fullStory": "We drove up from Wellington for a weekend in Auckland and the zoo was top of the list. Our daughter has been kiwi-obsessed for two years. When we entered the dark house, the kiwi was right there, about 3 feet away, poking around with its beak. She sat down on the floor — just sat — and watched. Other families came and went. She didn't move. I stood in the corner and cried. That moment was worth the entire trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Te Wao Nui, elephant talk, giraffe feeding, zoo cafe lunch",
+      "fullDay": "All exhibits + Zoo Keeper program + aviary + behind-the-scenes tour",
+      "bestFor": "Ages 2-12, NZ wildlife enthusiasts, families wanting an educational day out"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Auckland Zoo",
+      "family zoo New Zealand",
+      "kiwi bird exhibit",
+      "Auckland with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1440581572841-d163e8aa4804?w=800&q=80",
+      "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=800&q=80",
+      "https://images.unsplash.com/photo-1515597142199-ee1e930168ce?w=800&q=80"
+    ]
+  },
+  {
+    "id": "akl-002",
+    "name": "Kelly Tarlton's Sea Life Aquarium",
+    "city": "Auckland",
+    "country": "New Zealand",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 83,
+    "description": "Iconic Auckland aquarium built into historic stormwater tanks with a 110-metre transparent tunnel through shark and stingray exhibits. Penguin encounter and Antarctic snow room thrill kids of all ages.",
+    "location": "23 Tamaki Dr, Orakei, Auckland",
+    "bestTime": "Weekday mornings, avoid NZ school holidays",
+    "imageUrl": "https://images.unsplash.com/photo-1519337265831-281ec6cc8514?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Baby Change Facilities",
+      "Cafe",
+      "Gift Shop",
+      "Free Parking",
+      "Photo Point"
+    ],
+    "safetyFeatures": [
+      "All-Indoor Facility",
+      "Thick Glass Tunnel Walls",
+      "Staff at All Exits",
+      "Non-Slip Flooring",
+      "First Aid Trained Staff"
+    ],
+    "tipsAndTricks": [
+      "The penguin encounter at 11 AM is the highlight. Book online for the 'Penguin VIP' add-on ($20) — kids get to feed a king penguin and it's worth every cent.",
+      "Walk the tunnel at least twice. First time just look up. Second time look at each side — the rays hide against the sand and kids love spotting them.",
+      "The Antarctic snow room is cold but only lasts 5 minutes. It's a nice photo op but don't queue longer than 15 minutes for it.",
+      "Free parking is limited and fills by 10:30 AM. The bus from downtown stops right outside — easier than driving.",
+      "Combine with the nearby Mission Bay beach playground (5 min drive). Kids can burn off energy after the aquarium."
+    ],
+    "parentStory": {
+      "title": "The shark swam directly above my son and he went completely silent",
+      "excerpt": "A 3-metre tiger shark glided over our heads in the tunnel. My 5-year-old went silent, grabbed my hand, and just stared. He didn't speak for a full minute. Then he whispered 'I want to be a shark.'",
+      "author": "Hannah, mom of 1 from Christchurch",
+      "fullStory": "We've been to Christchurch aquarium but Kelly Tarlton's is different. The tunnel is longer and the sharks are bigger. Our son has always been a bit afraid of sharks — Jaws ruined it for him. But when the tiger shark swam right over us in the tunnel, he didn't flinch. He just held my hand and watched. When we came out he said he wanted to be a marine biologist. Kids change in the strangest moments."
+    },
+    "itineraryComparison": {
+      "halfDay": "Aquarium tunnel, penguin encounter, snow room, lunch at cafe",
+      "fullDay": "Aquarium + Mission Bay beach + playground + afternoon ice cream at the waterfront",
+      "bestFor": "Ages 3-12, marine life lovers, rainy day activities in Auckland"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Kelly Tarlton's",
+      "Auckland aquarium",
+      "shark tunnel New Zealand",
+      "Auckland family activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1568526382713-7e86f71cf8f9?w=800&q=80",
+      "https://images.unsplash.com/photo-1579003593419-98f949b1f5cc?w=800&q=80",
+      "https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?w=800&q=80"
+    ]
+  },
+  {
+    "id": "akl-003",
+    "name": "Sky Tower Auckland",
+    "city": "Auckland",
+    "country": "New Zealand",
+    "category": "Parks & Nature",
+    "ageRange": "4-14",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 86,
+    "description": "Auckland's iconic 328-metre observation tower with glass-floor viewing platforms and a 360-degree view of the city and harbours. The SkyJump and SkyWalk thrill older kids while the main observation deck captivates all ages.",
+    "location": "Corner Victoria & Federal Sts, Auckland CBD",
+    "bestTime": "Late afternoon for sunset views, weekdays for smaller crowds",
+    "imageUrl": "https://images.unsplash.com/photo-1506803680671-8151bdca1de0?w=800&q=80",
+    "amenities": [
+      "Glass-Floor Viewing",
+      "Revolving Restaurant",
+      "Cafe",
+      "Gift Shop",
+      "Binocular Rentals",
+      "SkyJump Platform"
+    ],
+    "safetyFeatures": [
+      "Safety Barriers on All Decks",
+      "Staff at Every Level",
+      "Glass Floor Safety Rating",
+      "Evacuation Protocol",
+      "Security Screening at Entry"
+    ],
+    "tipsAndTricks": [
+      "Buy tickets online for a 15% discount and skip the ticket queue. The walk-up line can be 30+ minutes on weekends.",
+      "Visit at 4 PM and stay until sunset. You get daylight views AND the city lights coming on — one ticket, two experiences.",
+      "The glass floor section near the elevator is the least crowded. Most people crowd the windows, leaving the glass floor mostly empty for photos.",
+      "If your kid is scared of heights, start at the main deck (186m) before going to the Sky Deck (220m). The upper deck feels more exposed.",
+      "The SkyJump ($145) is for ages 10+ only. Don't promise it to younger kids — they can't do it and the meltdown is real."
+    ],
+    "parentStory": {
+      "title": "My 8-year-old did the SkyJump and I was more scared than her",
+      "excerpt": "She stepped off a 192-metre building voluntarily. I was shaking. She was laughing. The GoPro footage is her screaming 'THIS IS THE BEST DAY EVER' all the way down. I've never been prouder.",
+      "author": "Mike, dad of 2 from Melbourne",
+      "fullStory": "We came to Auckland for a long weekend. My daughter saw the SkyJump from the harbour and decided on the spot she was doing it. I thought she'd chicken out. Nope. She strapped in, high-fived the crew, and jumped without hesitation. I watched from the observation deck and my heart stopped for 3 seconds until I saw the parachute deploy. She landed and immediately asked to go again. Best $145 I ever spent."
+    },
+    "itineraryComparison": {
+      "halfDay": "Observation decks, glass floor, lunch at cafe, gift shop",
+      "fullDay": "Observation decks + SkyJump/SkyWalk + lunch at Orbit revolving restaurant + harbour walk",
+      "bestFor": "Ages 6-14, adventure seekers, first-time Auckland visitors"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Sky Tower Auckland",
+      "Auckland observation deck",
+      "SkyJump New Zealand",
+      "family things to do Auckland"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1542206395-9feb3edaa0c3?w=800&q=80",
+      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&q=80",
+      "https://images.unsplash.com/photo-1531525645387-1e14b0c6844b?w=800&q=80"
+    ]
+  },
+  {
+    "id": "zqn-001",
+    "name": "Skyline Queenstown & Gondola",
+    "city": "Queenstown",
+    "country": "New Zealand",
+    "category": "Parks & Nature",
+    "ageRange": "3-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 89,
+    "description": "Scenic gondola ride to the top of Bob's Peak with breathtaking views of Lake Wakatipu and The Remarkables mountain range. Features luge rides that kids adore, a mountain-top restaurant, and the Kiwi Hologram experience.",
+    "location": "Brecon St, Queenstown",
+    "bestTime": "Late afternoon for sunset, December-March for clear skies",
+    "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    "amenities": [
+      "Gondola Scenic Ride",
+      "Luge Track",
+      "Revolving Restaurant",
+      "Cafe",
+      "Photo Service",
+      "Kiwi Experience"
+    ],
+    "safetyFeatures": [
+      "Safety Harnesses on Gondola",
+      "Luge Helmet Provided",
+      "Speed Control on Luge",
+      "Staff at All Stations",
+      "First Aid Room"
+    ],
+    "tipsAndTricks": [
+      "Buy the 'Gondola + 5 Luge Ride' bundle online ($59 adult, $39 child) — it's the best value and kids will want more than 3 runs, trust me.",
+      "Go up around 3 PM. Ride the luge 3 times, have an early dinner (5 PM), then catch sunset at 7 PM. Perfect timing.",
+      "The luge has two tracks — 'Scenic' (slow, wide turns) and 'Advanced' (faster, banked corners). Start your kid on Scenic for the first run even if they beg for Advanced.",
+      "The buffet dinner at the Stratosfare Restaurant is pricey ($69 adult) but the view is unmatched. Book the 5:30 PM slot for the sunset window seat.",
+      "Bring a light jacket even in summer. The mountain top is 450m above Queenstown and the wind picks up in the late afternoon."
+    ],
+    "parentStory": {
+      "title": "My 4-year-old beat me at the luge and hasn't stopped reminding me",
+      "excerpt": "She went down the Scenic track with her dad. I took the Advanced track. She still beat me because I spun out on a hairpin. Now she tells everyone 'Mummy crashed. I won.' Worth it.",
+      "author": "Emma, mom of 1 from Sydney",
+      "fullStory": "We booked the gondola and luge combo expecting a nice family afternoon. What we got was a competition. Our 4-year-old was terrified on the gondola up — climbed into my lap. First luge run, she was hesitant. By the third run, she was passing people. I took the Advanced track, spun out on the last corner, and she finished before me. She still brings it up at dinner. 'Remember when you crashed, Mummy?' Yes. I remember."
+    },
+    "itineraryComparison": {
+      "halfDay": "Gondola up, 3 luge rides, buffet dinner, sunset photos, gondola down",
+      "fullDay": "Gondola + luge + Kiwi experience + mountain walks + dinner + stargazing (book a late gondola)",
+      "bestFor": "Ages 4-14, adventure families, scenic photographers"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Skyline Queenstown",
+      "Queenstown gondola kids",
+      "luge Queenstown family",
+      "New Zealand South Island activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800&q=80",
+      "https://images.unsplash.com/photo-1518495973-0bac4a14b0de?w=800&q=80",
+      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80"
+    ]
+  },
+  {
+    "id": "zqn-002",
+    "name": "Milford Sound Family Cruise",
+    "city": "Queenstown",
+    "country": "New Zealand",
+    "category": "Parks & Nature",
+    "ageRange": "4-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 92,
+    "description": "Bucket-list cruise through breathtaking Milford Sound with towering waterfalls, dolphins, seals, and dramatic fiord cliffs. Family-friendly operators provide child-specific commentary, indoor cabins for nervous kids, and nature talks.",
+    "location": "Departure from Queenstown or Te Anau (2hr drive from Queenstown)",
+    "bestTime": "November-April (warmer, more wildlife), book morning departure for best light",
+    "imageUrl": "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800&q=80",
+    "amenities": [
+      "Indoor Warm Cabin",
+      "Outdoor Viewing Decks",
+      "Lunch Included",
+      "Hot Drinks",
+      "Binoculars Onboard",
+      "Toilet Facilities"
+    ],
+    "safetyFeatures": [
+      "Life Jackets for All Sizes",
+      "Safety Briefing",
+      "Enclosed Cabin Option",
+      "Experienced Skipper & Crew",
+      "Weather Monitoring",
+      "Emergency Communication"
+    ],
+    "tipsAndTricks": [
+      "The drive from Queenstown to Milford Sound is 4 hours round trip. Book a tour that includes bus+boat so you don't have to drive the winding mountain roads yourself.",
+      "Bring warm layers even in summer. It's a fiord — it rains 182 days a year and the wind off the water is cold. Ponchos are provided but cheap ones.",
+      "Book the earliest cruise (8:45 AM) or the latest (2 PM). Midday boats are packed and you'll fight for deck space at waterfalls.",
+      "The tunnel through Homer Pass on the drive is an adventure itself. Kids love the dark tunnel and the dramatic reveal of the fiord on the other side.",
+      "Motion sickness is rare on the fiord (it's sheltered) but if your kid is prone, skip the breakfast buffet and stick to light snacks before boarding."
+    ],
+    "parentStory": {
+      "title": "The dolphin swam alongside our boat for 20 minutes",
+      "excerpt": "A pod of bottlenose dolphins appeared alongside our cruise and stayed for nearly half an hour. Our 7-year-old ran from one side of the boat to the other screaming 'SHE'S JUMPING!' We missed half the fiord views. Didn't care.",
+      "author": "Olivia, mom of 2 from London",
+      "fullStory": "We'd saved for two years for this New Zealand trip. Milford Sound was my bucket list item. The fiord itself was stunning — waterfalls everywhere, sheer cliffs, the whole thing. But what made it for the kids was the dolphin pod that appeared 20 minutes in. They swam alongside, jumped, played. Our 7-year-old was so excited she nearly fell over the railing. A crew member grabbed her jacket. She didn't notice. She was too busy naming the dolphins."
+    },
+    "itineraryComparison": {
+      "halfDay": "Cruise only (2 hours), return to Te Anau for lunch",
+      "fullDay": "Bus from Queenstown + Milford Sound cruise + lunch + return with scenic stops at Mirror Lakes and Homer Tunnel",
+      "bestFor": "Ages 5-14, nature lovers, families wanting a true NZ bucket-list experience"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Milford Sound family cruise",
+      "Queenstown day trips",
+      "New Zealand fiord kids",
+      "dolphin cruise New Zealand"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80",
+      "https://images.unsplash.com/photo-1477322524744-6ee2ca281b70?w=800&q=80",
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "dubai-004",
+    "name": "Aquaventure Waterpark",
+    "city": "Dubai",
+    "country": "UAE",
+    "category": "Theme Parks",
+    "ageRange": "4-16",
+    "safetyRating": 4.6,
+    "priceRange": "$$$",
+    "popularity": 94,
+    "description": "One of the world's largest waterparks at Atlantis, The Palm, with over 30 rides and a dedicated toddler zone. Splashers Cove has zero height restrictions for small children.",
+    "location": "Atlantis The Palm, Palm Jumeirah",
+    "bestTime": "November to March, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1414963501131-5d61f46f1df8?w=800&q=80",
+    "amenities": [
+      "Lifeguard Stations",
+      "Stroller Parking",
+      "Cabanas",
+      "Restaurants",
+      "Lockers",
+      "Changing Rooms"
+    ],
+    "safetyFeatures": [
+      "24/7 Lifeguard Coverage",
+      "Height Requirements Posted",
+      "Life Jackets Available",
+      "First Aid Stations"
+    ],
+    "tipsAndTricks": [
+      "Book the Aquaventure plus Lost Chambers combo ticket online to save 25 percent.",
+      "Arrive at 9:30 AM before the 10 AM crowd rush.",
+      "Use waterproof wristbands for cashless payments throughout the park.",
+      "Bring swim diapers as they cost triple on-site.",
+      "Skip the Leap of Faith if your kid is nervous and try the Rapids River instead."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1595348026445-f6f0a100e21c?w=800&q=80",
+      "https://images.unsplash.com/photo-1560109947-c81c064f87f4?w=800&q=80",
+      "https://images.unsplash.com/photo-1577471488272-29e7ae5a36cc?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The water slide that cured my fear of heights",
+      "excerpt": "My 7-year-old begged me to go on the Leap of Faith. I was terrified but she went first and I had to follow.",
+      "author": "James, dad of 2 from London",
+      "fullStory": "We almost skipped Aquaventure because I am terrified of heights. But my daughter saw the Leap of Faith on Instagram. At the top of that 27-meter slide she vanished down the drop. A lifeguard had to remind me to breathe. I went screaming all the way and at the bottom she was waiting with the biggest hug."
+    },
+    "itineraryComparison": {
+      "halfDay": "Splashers Cove 2 hours, Rapids River 1 hour, lunch, 2-3 family slides",
+      "fullDay": "All family slides, Leap of Faith, Lost Chambers Aquarium, lunch, wave pool, second round on favorites",
+      "bestFor": "Families with kids 4-16 who love water thrills"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Aquaventure Waterpark",
+      "Dubai waterpark family",
+      "Atlantis water park",
+      "best waterparks Dubai"
+    ]
+  },
+  {
+    "id": "dubai-005",
+    "name": "Dubai Aquarium and Underwater Zoo",
+    "city": "Dubai",
+    "country": "UAE",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 92,
+    "description": "A massive aquarium inside the Dubai Mall with a 48-meter acrylic tunnel surrounded by 140 species of marine life. The Underwater Zoo offers interactive touch pools kids love.",
+    "location": "Dubai Mall, Downtown Dubai",
+    "bestTime": "Weekday mornings at 10 AM opening",
+    "imageUrl": "https://images.unsplash.com/photo-1533460004989-cef5103b0f41?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Nursing Rooms",
+      "Restaurants Nearby",
+      "Gift Shop",
+      "Glass-Bottom Boat",
+      "Touch Pool"
+    ],
+    "safetyFeatures": [
+      "Glass Thickness Certified",
+      "Staff at Touch Pools",
+      "Well-Marked Exits",
+      "AED Available",
+      "Security Screening"
+    ],
+    "tipsAndTricks": [
+      "Buy the Explorer pass for aquarium plus VR and glass-bottom boat for 30 percent more.",
+      "Visit at 10 AM opening to have the tunnel almost to yourself.",
+      "Pack a light jacket as the aquarium is kept at 20 degrees Celsius.",
+      "The touch pool runs 11 AM to 7 PM and only fits 8 kids at a time.",
+      "Combine with KidZania or the ice rink in the same mall for a 20 percent discount."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1445820200644-69f7d2847f51?w=800&q=80",
+      "https://images.unsplash.com/photo-1598554739171-0407840ebbf8?w=800&q=80",
+      "https://images.unsplash.com/photo-1598096972835-8ccf62c71f7c?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Two hours staring at one shark",
+      "excerpt": "My 3-year-old spent two hours watching one reef shark circle. I sat next to him. Never been so bored and so happy.",
+      "author": "Priya, mom of 1 from Singapore",
+      "fullStory": "The Dubai Mall is overwhelming but inside that aquarium tunnel everything went quiet. My son sat down cross-legged and watched a single shark make its rounds. I sat down next to him. Two hours later he stood up and said okay bye-bye fishy. It was the cheapest best therapy I have had in years."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main tunnel 1 hour, Underwater Zoo 45 minutes, lunch, gift shop",
+      "fullDay": "Add VR experience, glass-bottom boat, KidZania, ice rink, dinner, fountain show",
+      "bestFor": "Kids 2-10 who love animals and calm indoor activities"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Dubai Aquarium",
+      "Dubai Mall aquarium",
+      "Underwater Zoo Dubai",
+      "family things Dubai"
+    ]
+  },
+  {
+    "id": "dubai-006",
+    "name": "IMG Worlds of Adventure",
+    "city": "Dubai",
+    "country": "UAE",
+    "category": "Theme Parks",
+    "ageRange": "5-16",
+    "safetyRating": 4.5,
+    "priceRange": "$$$",
+    "popularity": 85,
+    "description": "The world's largest indoor theme park with Marvel, Cartoon Network, and dinosaur zones. Fully air-conditioned for Dubai summers with rides from gentle coasters to intense thrill drops.",
+    "location": "E311, Sheikh Mohammed Bin Zayed Road, Dubai",
+    "bestTime": "Weekday mornings, September to April",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Indoor Parking",
+      "Multiple Dining Options",
+      "Stroller Rentals",
+      "Prayer Rooms",
+      "Lockers",
+      "Baby Changing"
+    ],
+    "safetyFeatures": [
+      "Ride Safety Inspections",
+      "Height Requirements",
+      "First Aid Stations",
+      "Lost Child Protocol",
+      "CCTV"
+    ],
+    "tipsAndTricks": [
+      "Download the IMG app for real-time queue times and fast-track booking.",
+      "Hit the Marvel zone first as queues hit 45 minutes by 11 AM.",
+      "The Velociraptor in Lost Valley is a gentle spinner perfect for nervous 5-year-olds.",
+      "Bring a refillable water bottle for free water stations near every restroom.",
+      "Aim for Sunday or Monday when school groups are minimal."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1568932259959-c909547373e6?w=800&q=80",
+      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80",
+      "https://images.unsplash.com/photo-1573883431205-98b5f10aaedb?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The indoor park that saved our summer trip",
+      "excerpt": "48 degrees in Dubai and we found IMG Worlds. Three days of air-conditioned fun taking turns on the Hulk coaster.",
+      "author": "Aisha, mom of 2 from Jeddah",
+      "fullStory": "July in Dubai is brutal. A local friend suggested IMG Worlds and it saved our holiday. The kids rode the Cartoon Network zone on repeat. My husband and I took turns on the Avengers ride. We ended up buying 3-day passes."
+    },
+    "itineraryComparison": {
+      "halfDay": "Marvel zone 2 hours, Cartoon Network 1 hour, lunch, one ride in Lost Valley",
+      "fullDay": "All four zones, fast-track Avengers, sit-down lunch, return to favorites, dinner",
+      "bestFor": "Thrill-seeking families with kids 7 and up"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "IMG Worlds of Adventure",
+      "Marvel theme park Dubai",
+      "indoor theme park Dubai",
+      "Dubai attractions"
+    ]
+  },
+  {
+    "id": "dubai-007",
+    "name": "Dubai Miracle Garden",
+    "city": "Dubai",
+    "country": "UAE",
+    "category": "Parks & Nature",
+    "ageRange": "2-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "The world's largest flower garden with 150 million blooms in incredible sculptures including a life-sized A380 plane. Open November to May with floral castles topiaries and Instagram-worthy displays.",
+    "location": "Al Barsha South, Dubailand, Dubai",
+    "bestTime": "November to March, early morning or sunset",
+    "imageUrl": "https://images.unsplash.com/photo-1585198560642-14e20d02ef76?w=800&q=80",
+    "amenities": [
+      "Wheelchair Access",
+      "Stroller-Friendly Paths",
+      "Cafes",
+      "Souvenir Shops",
+      "Shaded Seating",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Fenced Perimeter",
+      "Wide Pathways",
+      "Security Personnel",
+      "No Rides",
+      "Clearly Marked Exits"
+    ],
+    "tipsAndTricks": [
+      "Come at 3 PM for golden hour lighting on the floral displays.",
+      "Arrive early for crowd-free photos at the sunflower field and A380.",
+      "Buy tickets online 2 days ahead as weekend slots sell out.",
+      "Bring hats and sunscreen as open fields offer zero shade.",
+      "Take the free tram from parking to save a 15-minute walk with toddlers."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1530878955558-a6c31bb9e6ef?w=800&q=80",
+      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&q=80",
+      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A garden that made my flower-hating son stop",
+      "excerpt": "My 6-year-old groaned at flower garden but the floral A380 made his jaw drop. He smelled every rose.",
+      "author": "Leila, mom of 1 from Toronto",
+      "fullStory": "I dragged my son to Miracle Garden expecting complaints. The floral A380 made his jaw drop. He kept asking how they did that. We spent three hours there. He smelled every rose bush and tried to count the sunflowers. AED 95 for adults and free for under 3. Best value day of our Dubai trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Garden walk 1.5 hours, A380 display 30 minutes, sunflower photos, ice cream",
+      "fullDay": "Add Butterfly Garden 10 minutes away, lunch, return for sunset photos",
+      "bestFor": "Families with young kids who love colorful stroller-friendly walks"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Dubai Miracle Garden",
+      "flower garden Dubai",
+      "things to see Dubai",
+      "family garden Dubai"
+    ]
+  },
+  {
+    "id": "abu-dhabi-001",
+    "name": "Ferrari World Abu Dhabi",
+    "city": "Abu Dhabi",
+    "country": "UAE",
+    "category": "Theme Parks",
+    "ageRange": "5-16",
+    "safetyRating": 4.6,
+    "priceRange": "$$$",
+    "popularity": 91,
+    "description": "The world's first Ferrari-branded theme park and home to Formula Rossa, the fastest roller coaster on the planet at 240 km/h in 4.9 seconds. The Junior Grand Prix offers scaled-down experiences for younger children.",
+    "location": "Yas Island, Abu Dhabi",
+    "bestTime": "October to April, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1568735899246-5aea9a3b89bd?w=800&q=80",
+    "amenities": [
+      "Indoor Air-Conditioned",
+      "Family Restrooms",
+      "Nursing Room",
+      "Restaurants",
+      "Gift Shop",
+      "Prayer Rooms"
+    ],
+    "safetyFeatures": [
+      "Height Requirements Enforced",
+      "Ride Restraint Checks",
+      "First Aid",
+      "Security Screening",
+      "Lost Child Wristbands"
+    ],
+    "tipsAndTricks": [
+      "Book the Yas Island 2-Park combo with Yas Waterworld to save 30 percent with free shuttle.",
+      "Get to Formula Rossa before 10:30 AM as lines hit 90 minutes after lunch.",
+      "Junior Grand Prix costs AED 25 extra but gives kids a real mini-Ferrari on a track.",
+      "Kids under 130 cm can enjoy Speed of Magic 4D show instead of big coasters.",
+      "Eat at 11:30 AM to beat the lunch rush at Mamma Rossella."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551016521-3580f5e63bb1?w=800&q=80",
+      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80",
+      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My speed-demon daughter conquered Formula Rossa",
+      "excerpt": "My 9-year-old walked onto the fastest coaster like a merry-go-round. She came off grinning. We did it four times.",
+      "author": "Tom, dad of 1 from Sydney",
+      "fullStory": "I had heard about Formula Rossa doing 240 km/h. My daughter wanted to ride it the moment we walked in. I was terrified. She sat next to me held my hand and said you can do it daddy. We launched and I could not feel my face. She laughed the entire time. We went four times. She wanted a fifth."
+    },
+    "itineraryComparison": {
+      "halfDay": "Formula Rossa 3x, Junior Grand Prix, Speed of Magic show, lunch",
+      "fullDay": "All major coasters, kids zones, 4D shows, behind-the-scenes tour, dinner at Yas Marina",
+      "bestFor": "Car-loving families and thrill seekers aged 8 and up"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Ferrari World Abu Dhabi",
+      "Formula Rossa",
+      "Yas Island attractions",
+      "Abu Dhabi theme parks"
+    ]
+  },
+  {
+    "id": "abu-dhabi-002",
+    "name": "Yas Waterworld",
+    "city": "Abu Dhabi",
+    "country": "UAE",
+    "category": "Theme Parks",
+    "ageRange": "3-16",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 89,
+    "description": "An Emirati-themed waterpark on Yas Island with 40 rides and attractions. The Al Mariyah pirate fort with 150 water features keeps toddlers happy while older kids love the Bandit Bomber water coaster.",
+    "location": "Yas Island, Abu Dhabi",
+    "bestTime": "November to March, right at 10 AM opening",
+    "imageUrl": "https://images.unsplash.com/photo-1575485184186-9c991aa5be90?w=800&q=80",
+    "amenities": [
+      "Lifeguard Stations",
+      "Cabana Rentals",
+      "Stroller Parking",
+      "Changing Rooms",
+      "Lockers",
+      "Family Dining",
+      "Halal Options"
+    ],
+    "safetyFeatures": [
+      "Lifeguards at Every Pool",
+      "Free Life Jackets",
+      "Height Restriction Signs",
+      "First Aid Room",
+      "Free Sunscreen Stations"
+    ],
+    "tipsAndTricks": [
+      "The YAS combo ticket with Ferrari World and Warner Bros costs AED 495 which is 55 percent off individual tickets.",
+      "Head to Bandit Bomber first as it is the only water coaster in the region.",
+      "Bring water shoes since the ground gets hot enough to burn bare feet by 11 AM.",
+      "Al Mariyah fort has timed bucket dumps every 15 minutes for great splash photos.",
+      "Pack a waterproof phone pouch for photos of the pearl centerpiece and wave pool."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1560155016-bf3aac6e5f15?w=800&q=80",
+      "https://images.unsplash.com/photo-1575995872537-3793d29d972c?w=800&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Three hours in the pirate fort",
+      "excerpt": "My 4-year-old twins spent 3 hours in the pirate fort and never looked for me. I read half a book. Best day of the trip.",
+      "author": "Emma, mom of twins from Auckland",
+      "fullStory": "Yas Waterworld was supposed to be just another stop. But my twins saw the Al Mariyah pirate fort and did not look back. I found a shaded lounger and checked on them every 15 minutes. They were making friends splashing and laughing. I finished 120 pages of a book which has not happened since 2019."
+    },
+    "itineraryComparison": {
+      "halfDay": "Al Mariyah fort 1.5 hours, Bandit Bomber 3x, lazy river, lunch",
+      "fullDay": "All major slides, wave pool, second round of favorites, cabana rental, dinner at Yas Plaza",
+      "bestFor": "Families with mixed ages from toddlers to teens"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Yas Waterworld",
+      "Abu Dhabi waterpark",
+      "Yas Island water park",
+      "family waterpark UAE"
+    ]
+  },
+  {
+    "id": "abu-dhabi-003",
+    "name": "Louvre Abu Dhabi",
+    "city": "Abu Dhabi",
+    "country": "UAE",
+    "category": "Museums",
+    "ageRange": "4-16",
+    "safetyRating": 4.9,
+    "priceRange": "$$",
+    "popularity": 87,
+    "description": "The iconic museum on Saadiyat Island with a stunning rain of light dome. A dedicated children's gallery with hands-on activities and art workshops makes it surprisingly family-friendly.",
+    "location": "Saadiyat Island, Abu Dhabi",
+    "bestTime": "Saturday to Wednesday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1554893520-20faec733c36?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Children's Gallery",
+      "Nursing Room",
+      "Cafe",
+      "Bookshop",
+      "Free Wi-Fi"
+    ],
+    "safetyFeatures": [
+      "Security Staff Throughout",
+      "Glass Barriers Near Art",
+      "Wide Galleries",
+      "Temperature Controlled",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "Visit on Family Day Mondays for free children's art workshops 10 AM to 12 PM.",
+      "The rain of light effect is best between 11 AM and 1 PM in the dome center.",
+      "Download the Louvre Kids app for a scavenger hunt through the galleries.",
+      "Pick 5-6 key pieces and use the family audio guide AED 20 for 90 minutes max.",
+      "The outdoor boardwalk has shaded seating with Abu Dhabi skyline views."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1594068972024-639a1101c20d?w=800&q=80",
+      "https://images.unsplash.com/photo-1561576195-0e7ec4ecd76b?w=800&q=80",
+      "https://images.unsplash.com/photo-1552410260-db4abc39adad?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My 6-year-old's art critique",
+      "excerpt": "She stood in front of a Picasso and said his lines are messy because he was thinking about too many things. A curator agreed.",
+      "author": "Nadia, mom of 1 from Kuala Lumpur",
+      "fullStory": "I worried the Louvre would bore my 6-year-old. Instead she walked through the galleries like a tiny critic. She analyzed a Monet and a curator knelt down to explain the Impressionists. She made a Picasso-style mask in the children's workshop. It is on our fridge."
+    },
+    "itineraryComparison": {
+      "halfDay": "Dome 20 minutes, children's gallery 1 hour, 5 galleries, cafe lunch",
+      "fullDay": "Add audioguide, boardwalk walk, documentary screening, art workshop, sunset plaza",
+      "bestFor": "Culture-curious families with kids 6 and up"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Louvre Abu Dhabi",
+      "Abu Dhabi museum family",
+      "Saadiyat Island",
+      "children's museum Abu Dhabi"
+    ]
+  },
+  {
+    "id": "doha-001",
+    "name": "Katara Cultural Village",
+    "city": "Doha",
+    "country": "Qatar",
+    "category": "Museums",
+    "ageRange": "3-14",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 83,
+    "description": "A sprawling cultural destination on Doha's east coast with art galleries, an amphitheater, a mosque, and beachfront. Children love the kite-flying fields, small aquarium, and weekend markets with camel rides.",
+    "location": "West Bay, Doha",
+    "bestTime": "November to March, late afternoons",
+    "imageUrl": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80",
+    "amenities": [
+      "Beach Access",
+      "Restaurants",
+      "Art Galleries",
+      "Open-Air Theater",
+      "Prayer Room",
+      "Free Parking"
+    ],
+    "safetyFeatures": [
+      "Security Personnel",
+      "Well-Lit Walkways",
+      "Shaded Seating",
+      "Pedestrian-Only Zones",
+      "Fenced Beach"
+    ],
+    "tipsAndTricks": [
+      "Go Friday or Saturday for the weekend market with camel rides and henna painting.",
+      "Bring a kite for the plaza near the amphitheater or buy one for QR 30.",
+      "The beach has gentle waves and lifeguards ideal for toddler splashing.",
+      "Check the Katara website for free Friday evening storytelling events.",
+      "Park at the southern entrance closer to the beach and playground."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1582995110737-f1b5203c2ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1560996388-5b5624c0187b?w=800&q=80",
+      "https://images.unsplash.com/photo-1567951209511-db7701bcb9c7?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The free afternoon that won",
+      "excerpt": "We spent 400 dollars on museum tickets but my kids spent two hours flying a cheap kite at Katara. That was their favorite memory of Doha.",
+      "author": "Sarah, mom of 2 from Melbourne",
+      "fullStory": "We had been to all the big Doha museums. On our last day we stumbled into Katara just to kill time. My kids bought a kite for QR 20 and ran across the plaza for almost two hours. A local family shared traditional sweets with us. No entry fee. No queues. Just a perfect afternoon."
+    },
+    "itineraryComparison": {
+      "halfDay": "Plazas and amphitheater 1 hour, kite flying 45 min, beach 30 min, lunch at cafe",
+      "fullDay": "Add art galleries, weekend market, beach time, dinner, evening fountain walk",
+      "bestFor": "Families wanting culture mixed with free outdoor fun for kids"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Katara Cultural Village",
+      "Doha family activities",
+      "Qatar attractions",
+      "free things Doha"
+    ]
+  },
+  {
+    "id": "doha-002",
+    "name": "Museum of Islamic Art",
+    "city": "Doha",
+    "country": "Qatar",
+    "category": "Museums",
+    "ageRange": "4-16",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 84,
+    "description": "The I.M. Pei-designed museum houses 1400 years of Islamic artifacts with a waterfront park offering playgrounds, fountains, and Doha skyline views. Family-friendly audio guides and activity booklets turn cultural visits into treasure hunts.",
+    "location": "Corniche, Doha",
+    "bestTime": "November to March, right at 9 AM opening",
+    "imageUrl": "https://images.unsplash.com/photo-1552125382-d5efbf5a1ffb?w=800&q=80",
+    "amenities": [
+      "Museum Cafe",
+      "Gift Shop",
+      "Children's Activity Room",
+      "Stroller Access",
+      "Wi-Fi",
+      "Fountain Play Area"
+    ],
+    "safetyFeatures": [
+      "Security Screening",
+      "Staff Throughout",
+      "Artifact Glass Protection",
+      "Spacious Galleries",
+      "Air-Conditioned"
+    ],
+    "tipsAndTricks": [
+      "Ask for the free kids activity backpack with coloring books and scavenger hunt cards.",
+      "The restaurant IDAM by Alain Ducasse has a QR 60 kids three-course meal with a view.",
+      "Visit the museum first hour when kids are fresh then let them play outside.",
+      "The central staircase and shadow play fascinate children architecturally.",
+      "Add a dhow boat ride from the Corniche dock for QR 40 per person for 30 minutes."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1511652563611-6310a0cfe79d?w=800&q=80",
+      "https://images.unsplash.com/photo-1518532086188-3cc1f0a7b78a?w=800&q=80",
+      "https://images.unsplash.com/photo-1591101762088-9408d7be59f8?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Coloring at a world-class museum",
+      "excerpt": "My 6-year-old spent an hour coloring geometric patterns while a curator explained how they symbolize infinity.",
+      "author": "Fatima, mom of 2 from Istanbul",
+      "fullStory": "I worried a museum of Islamic art would bore my children. But the activity room with coloring tables hooked them. My daughter spent an hour drawing geometric patterns. A curator sat down and explained the star shapes represent the heavens and the endless repetition represents infinity. I got to explore the galleries in peace."
+    },
+    "itineraryComparison": {
+      "halfDay": "Activity room 30 min, galleries 1 hour, park 45 min, cafe lunch",
+      "fullDay": "Add full audio tour, dhow boat, Corniche walk, dinner at Souq Waqif",
+      "bestFor": "Families wanting culture plus outdoor play with kids 5 and up"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Museum of Islamic Art Doha",
+      "MIA Park",
+      "Doha family museum",
+      "Qatar cultural experiences"
+    ]
+  },
+  {
+    "id": "doha-003",
+    "name": "Aspire Park",
+    "city": "Doha",
+    "country": "Qatar",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.9,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "Doha's largest park spanning 88 hectares with a massive lake, fountains, jogging trails, and multiple shaded playgrounds. The wide open spaces are perfect for toddlers to run safely and the paddle boats delight kids of all ages.",
+    "location": "Aspire Zone, Al Waab Street, Doha",
+    "bestTime": "November to March, late afternoon",
+    "imageUrl": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&q=80",
+    "amenities": [
+      "Playgrounds",
+      "Paddle Boats",
+      "Walking Trails",
+      "Lake Fountains",
+      "Shaded Seating",
+      "Cafe",
+      "Free Parking"
+    ],
+    "safetyFeatures": [
+      "Fenced Perimeter",
+      "Security Patrols",
+      "Well-Lit at Night",
+      "Separated Paths",
+      "First Aid Available"
+    ],
+    "tipsAndTricks": [
+      "Visit after 3 PM when temperatures drop and the lake fountains create cooling mist.",
+      "Paddle boats cost QR 20 for 30 minutes and are the most popular kid activity.",
+      "Bring a picnic blanket as the grass areas near the lake are perfect for family picnics.",
+      "The playground near the south entrance has the best equipment for toddlers under 5.",
+      "Combine with a visit to Kidzmondo next door for indoor play on hot days."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1500076656116-558758c991c1?w=800&q=80",
+      "https://images.unsplash.com/photo-1563620915144-6a837f120a28?w=800&q=80",
+      "https://images.unsplash.com/photo-1505567745926-b2dbf5275f18?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The park that saved our flight day",
+      "excerpt": "We had 4 hours before our flight and Aspire Park was the perfect sendoff. Paddle boats, playground, and a picnic under the palm trees.",
+      "author": "Michael, dad of 1 from Berlin",
+      "fullStory": "Our flight to Berlin was at 10 PM and checkout was at noon. Aspire Park was 15 minutes from the airport. We rented paddle boats on the lake and my 5-year-old thought she was a captain. The playground has a huge climbing structure. We grabbed sandwiches from the cafe and had a picnic. She fell asleep on the way to the airport. Perfect last day."
+    },
+    "itineraryComparison": {
+      "halfDay": "Paddle boats 30 min, playground 1 hour, lake walk 30 min, picnic lunch",
+      "fullDay": "Add Kidzmondo indoor play, Aspire Zone sports facilities, dinner at nearby mall",
+      "bestFor": "Families with toddlers and young kids who need open space to run"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Aspire Park Doha",
+      "Doha family park",
+      "free park Doha",
+      "Qatar outdoor activities"
+    ]
+  },
+  {
+    "id": "muscat-001",
+    "name": "Qurum Natural Park",
+    "city": "Muscat",
+    "country": "Oman",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 78,
+    "description": "Muscat's largest and most beloved park with lush greenery, a lake with paddle boats, children's playgrounds, and a small amusement park. The open lawns are perfect for family picnics and the shaded walkways keep even summer visits comfortable.",
+    "location": "Qurum, Muscat",
+    "bestTime": "October to April, late afternoon",
+    "imageUrl": "https://images.unsplash.com/photo-1490750967868-88aa4f44ca16?w=800&q=80",
+    "amenities": [
+      "Children's Playgrounds",
+      "Paddle Boats",
+      "Mini Amusement Rides",
+      "Cafes",
+      "Picnic Areas",
+      "Walking Trails",
+      "Free Parking"
+    ],
+    "safetyFeatures": [
+      "Fenced Perimeter",
+      "Security Patrols",
+      "Shaded Seating Throughout",
+      "Well-Lit Paths",
+      "Playground Safety Surfacing"
+    ],
+    "tipsAndTricks": [
+      "Arrive before 4 PM to secure a shaded picnic table near the lake as they fill fast with local families.",
+      "The mini amusement rides cost 500 baisa each which is about 1 dollar making it the cheapest fun in Muscat.",
+      "Bring bread crumbs for the ducks and geese at the lake but check with staff first as feeding rules vary seasonally.",
+      "Friday mornings are busy with Omani families so aim for Saturday through Wednesday for quieter visits.",
+      "Combine with a visit to the nearby Qurum Beach which is a 5-minute drive for sunset beach time after the park."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1540479859555-17af45c78602?w=800&q=80",
+      "https://images.unsplash.com/photo-1453227588063-bb302b62f50b?w=800&q=80",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The 1-dollar roller coaster",
+      "excerpt": "My 4-year-old rode the mini roller coaster at Qurum Park eight times. Each ride cost 50 cents. She still talks about the pink train with the smiling face.",
+      "author": "Lena, mom of 1 from Helsinki",
+      "fullStory": "We expected Oman to be expensive like Dubai but Qurum Park was a revelation. The mini amusement area has a tiny roller coaster, a carousel, and bumper boats. My daughter rode the train coaster eight times. Eight times for 4 dollars total. She named it Pinky the Train. She asks about Pinky every week."
+    },
+    "itineraryComparison": {
+      "halfDay": "Playground 1 hour, paddle boats 30 min, mini rides 30 min, picnic lunch",
+      "fullDay": "Add Qurum Beach, walk to nearby restaurants on Shatti Al Qurum for dinner",
+      "bestFor": "Families with young kids who want cheap outdoor fun"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Qurum Park Muscat",
+      "Oman family activities",
+      "Muscat parks",
+      "free things Muscat"
+    ]
+  },
+  {
+    "id": "muscat-002",
+    "name": "Muscat Children's Museum",
+    "city": "Muscat",
+    "country": "Oman",
+    "category": "Museums",
+    "ageRange": "3-12",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 74,
+    "description": "An interactive science museum built for children with hands-on exhibits on physics, nature, and human biology. Bubbles, magnets, a human-sized hamster wheel, and a planetarium make learning feel like play.",
+    "location": "Sultan Qaboos Street, Al Khuwair, Muscat",
+    "bestTime": "Sunday to Wednesday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1568132930455-d2e33baf5677?w=800&q=80",
+    "amenities": [
+      "Interactive Exhibits",
+      "Planetarium",
+      "Outdoor Play Area",
+      "Cafe",
+      "Gift Shop",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Staff Supervised Zones",
+      "Child-Safe Exhibits",
+      "Indoor Air-Conditioned",
+      "Emergency Exits",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "The bubble exhibit is the star attraction for under 7s so head straight there before it gets busy around 10 AM.",
+      "Planetarium shows run at 10 AM and 11 AM on Sundays and Tuesdays with the 11 AM show being less crowded.",
+      "The entrance fee is just 500 baisa about 1.30 dollars making it one of the cheapest kids activities in the Gulf region.",
+      "Combine with the nearby Natural History Museum which is free and a 3-minute walk from the Children's Museum.",
+      "Friday mornings are closed as the museum follows Omani weekend hours so check the website before visiting."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80",
+      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The human-sized hamster wheel changed everything",
+      "excerpt": "My 5-year-old spent 40 minutes in the giant hamster wheel. She learned about kinetic energy by being the energy source. We had to drag her out for lunch.",
+      "author": "Omar, dad of 1 from Amman",
+      "fullStory": "The Children's Museum in Muscat is a hidden gem. The giant hamster wheel is basically a human-sized exercise wheel that lights up as you run. My daughter ran until she collapsed from laughter. She learned more about energy in that 40 minutes than in a month of school science. And it cost less than a juice at the mall."
+    },
+    "itineraryComparison": {
+      "halfDay": "Bubble exhibit 30 min, planetarium 30 min, science floor 1 hour, lunch at cafe",
+      "fullDay": "Add Natural History Museum next door, lunch at Al Khuwair restaurants, afternoon playground",
+      "bestFor": "Curious kids aged 3-10 who love hands-on science"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Muscat Children's Museum",
+      "kids museum Oman",
+      "family Muscat",
+      "Oman attractions kids"
+    ]
+  },
+  {
+    "id": "muscat-003",
+    "name": "Al Qurum Beach",
+    "city": "Muscat",
+    "country": "Oman",
+    "category": "Parks & Nature",
+    "ageRange": "0-16",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 82,
+    "description": "A beautiful long sandy beach in the heart of Muscat with calm waters perfect for young swimmers. Lined with cafes, restaurants, and a dedicated children's playground area right on the sand with sunset views over the Gulf of Oman.",
+    "location": "Shatti Al Qurum, Muscat",
+    "bestTime": "October to April, late afternoon for sunset",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    "amenities": [
+      "Lifeguards",
+      "Children's Playground",
+      "Beachfront Cafes",
+      "Restaurants",
+      "Public Restrooms",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Lifeguard Patrols",
+      "Calm Swimming Area",
+      "Designated Family Zone",
+      "Well-Lit Evenings",
+      "Emergency Contact Posts"
+    ],
+    "tipsAndTricks": [
+      "Visit between 4 PM and sunset when the temperature drops and the beach comes alive with local families.",
+      "The beach has separate family areas from single men's areas so look for the family section sign near the playground.",
+      "Pack water shoes as the sand can get hot mid-afternoon and there are small shells near the waterline.",
+      "Beach chairs and umbrellas are free at most sections unlike paid beaches in Dubai and Europe.",
+      "Dinner at one of the Shatti Al Qurum restaurants after sunset is a family tradition with Omani halwa for dessert."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=800&q=80",
+      "https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=800&q=80",
+      "https://images.unsplash.com/photo-1519046904884-53103b34b575?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The sunset that stopped time",
+      "excerpt": "We sat on the sand at Qurum Beach at sunset. My kids were building sandcastles and locals were playing football. No jet skis. No loud music. Just the waves and families. That is Oman.",
+      "author": "Chris, dad of 2 from London",
+      "fullStory": "After days of theme park chaos in Dubai, Qurum Beach was therapy. The water was calm and warm enough for my toddler to float with floaties. Older kids were playing football with a Omani family who wave to everyone. The sunset was spectacular. We ate grilled fish at a beachfront restaurant for 25 dollars for four people. Oman feels like the Gulf before everyone discovered it."
+    },
+    "itineraryComparison": {
+      "halfDay": "Swimming 1 hour, sand play 45 min, sunset walk, beachfront dinner",
+      "fullDay": "Add Qurum Natural Park morning, lunch, beach afternoon, dinner on Shatti Al Qurum",
+      "bestFor": "Families who want relaxed beach time away from crowds and commercialization"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Qurum Beach Muscat",
+      "Oman beaches",
+      "Muscat family beach",
+      "Shatti Al Qurum"
+    ]
+  },
+  {
+    "id": "manama-001",
+    "name": "Bahrain National Museum",
+    "city": "Manama",
+    "country": "Bahrain",
+    "category": "Museums",
+    "ageRange": "4-16",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 79,
+    "description": "Bahrain's premier museum showcasing 6000 years of history with stunning Dilmun-era artifacts, traditional Bahraini house reconstructions, and interactive displays. The children's section has hands-on archaeology pits where kids can dig for replica artifacts.",
+    "location": "Al Fateh Highway, Manama",
+    "bestTime": "Sunday to Wednesday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=800&q=80",
+    "amenities": [
+      "Cafe",
+      "Gift Shop",
+      "Children's Discovery Area",
+      "Wheelchair Access",
+      "Parking",
+      "Free Wi-Fi"
+    ],
+    "safetyFeatures": [
+      "Security Staff",
+      "Wide Galleries",
+      "Air-Conditioned",
+      "Temperature Controlled",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "The archaeology sand pit in the children's section is the highlight for under 10s and costs nothing extra.",
+      "Visit on Sunday or Tuesday mornings when school groups are fewer and you can enjoy the galleries quietly.",
+      "The traditional house reconstruction with life-sized mannequins fascinates kids who get to see how families lived 100 years ago.",
+      "Entry is just 1 dinar about 2.50 dollars making it one of the best value museums in the region.",
+      "Combine with a walk along the nearby Bahrain Bay waterfront which has playgrounds and food trucks on weekends."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1560880685-94a4f081a590?w=800&q=80",
+      "https://images.unsplash.com/photo-1544965858-83ef53f74e9b?w=800&q=80",
+      "https://images.unsplash.com/photo-1551098716-cf3f8f1e8e9a?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The Dilmun dig that made a little archaeologist",
+      "excerpt": "My 7-year-old spent an hour in the archaeology sand pit brushing away sand to find replica Dilmun seals. A curator showed him how real archaeologists work.",
+      "author": "Yusuf, dad of 1 from Dubai",
+      "fullStory": "We drove from Dubai to Bahrain for a weekend and the National Museum was our first stop. My son loves dinosaurs and anything digging-related. The children's section has a sand pit with replica Dilmun artifacts buried inside. He found a tiny clay seal and the museum staff gave him a certificate. He wore it around his neck for the rest of the trip. Best 1 dinar I ever spent."
+    },
+    "itineraryComparison": {
+      "halfDay": "Children's discovery area 1 hour, main galleries 1 hour, cafe lunch",
+      "fullDay": "Add Bahrain Fort nearby, afternoon at Bahrain Bay waterfront, dinner in Manama Souq",
+      "bestFor": "History-curious families with kids 5 and up"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Bahrain National Museum",
+      "Manama family activities",
+      "Bahrain attractions",
+      "kids museum Bahrain"
+    ]
+  },
+  {
+    "id": "manama-002",
+    "name": "Lost Paradise of Dilmun Water Park",
+    "city": "Manama",
+    "country": "Bahrain",
+    "category": "Theme Parks",
+    "ageRange": "3-16",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 81,
+    "description": "Bahrain's largest waterpark themed after the ancient Dilmun civilization with over 15 rides, a wave pool, lazy river, and dedicated children's area with mini slides and water cannons. Less crowded than Dubai waterparks with gentler pricing.",
+    "location": "Dilmunia Island, near Bahrain International Circuit",
+    "bestTime": "November to March, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1570989234217-f4c4eb5e7884?w=800&q=80",
+    "amenities": [
+      "Lifeguard Stations",
+      "Cabana Rentals",
+      "Changing Rooms",
+      "Lockers",
+      "Family Restaurants",
+      "Free Parking"
+    ],
+    "safetyFeatures": [
+      "Full Lifeguard Coverage",
+      "Height Restrictions Enforced",
+      "Life Jackets Provided",
+      "First Aid Station",
+      "Shaded Areas"
+    ],
+    "tipsAndTricks": [
+      "Buy tickets online for 20 percent discount as walk-up prices are significantly higher at the gate.",
+      "Weekdays have almost no crowds and you can walk onto most slides multiple times without queuing.",
+      "The lazy river is surprisingly long at 500 meters and is great for parents floating with toddlers in their laps.",
+      "Bring your own towels as rental fees add up and the park does not include them in ticket prices.",
+      "The park is significantly cheaper than Dubai waterparks with family tickets around 50 percent less than Aquaventure."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1575425186779-b8de9b4279c3?w=800&q=80",
+      "https://images.unsplash.com/photo-1529755586385-891f58753a3f?w=800&q=80",
+      "https://images.unsplash.com/photo-1534008897995-27a23e859048?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The waterpark without the chaos",
+      "excerpt": "Lost Paradise was everything Aquaventure is not. Quiet weekdays, half the price, and the kids had the slides to themselves. We did the lazy river five times.",
+      "author": "Noor, mom of 2 from Riyadh",
+      "fullStory": "We usually go to Dubai for waterparks but tried Bahrain on a whim. Lost Paradise was a revelation. We went on a Tuesday and practically had the park to ourselves. My kids rode the giant funnel slide ten times without waiting. The toddler zone was clean and well-shaded. We spent less than half of what Aquaventure costs and had just as much fun. Bahrain is seriously underrated for family trips."
+    },
+    "itineraryComparison": {
+      "halfDay": "Kids zone 1.5 hours, lazy river 30 min, wave pool 30 min, lunch",
+      "fullDay": "All slides, second round of favorites, cabana rental, wave pool, lazy river float, dinner",
+      "bestFor": "Families who want waterpark fun without Dubai crowds and prices"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Lost Paradise Bahrain",
+      "Bahrain waterpark",
+      "Dilmun water park",
+      "Manama family attractions"
     ]
   }
 ]
