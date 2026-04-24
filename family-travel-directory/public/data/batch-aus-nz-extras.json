@@ -1,0 +1,895 @@
+[
+  {
+    "id": "sydney-extra-001",
+    "name": "Taronga Zoo",
+    "city": "Sydney",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 94,
+    "description": "World-class zoo perched on Sydney Harbour with breathtaking harbour views. Home to 4,000+ animals including Australian natives and exotic species. The Sky Safari cable car, free-flight bird shows, and close-up koala encounters make it unforgettable for families.",
+    "location": "Bradleys Head Road, Mosman, NSW 2088",
+    "bestTime": "Mornings, weekdays during school terms",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Cable Car (Sky Safari)",
+      "Baby Change Rooms",
+      "Cafes & Picnic Areas",
+      "Water Fountains"
+    ],
+    "safetyFeatures": [
+      "Animal Safety Barriers",
+      "First Aid Stations",
+      "Lifeguards at Water Play",
+      "Secure Fencing",
+      "Lost Child Protocol"
+    ],
+    "tipsAndTricks": [
+      "Take the ferry from Circular Quay instead of driving. It's faster, cheaper, and the harbour views get the kids excited before you arrive.",
+      "Book the 'Roar and Snore' overnight stay if you can—sleeping in a tent with lion calls in the distance is a once-in-a-lifetime experience.",
+      "The Sky Safari cable car is free with admission. Queue early (before 10 AM) or wait 30+ minutes midday.",
+      "Bring swimmers for the kids' water play area near the entrance—perfect for cooling off between exhibits.",
+      "The free-flight bird show at 11 AM is the best value. Arrive 15 minutes early for front-row seats."
+    ],
+    "parentStory": {
+      "title": "The view made us forget the jet lag",
+      "excerpt": "We'd been in Sydney for 6 hours and the kids were cranky. Taronga Zoo saved our first day.",
+      "author": "Emma, mom of 2 from Singapore",
+      "fullStory": "After a red-eye from Singapore, landing at 6 AM with two jet-lagged kids felt like a mistake. We caught the ferry to Taronga on a whim. Best decision. The zoo sits on a hill with Sydney Harbour as its backdrop. My son fed a giraffe for $5. My daughter was mesmerized by the seal show. We ate lunch overlooking the water."
+    },
+    "itineraryComparison": {
+      "halfDay": "Sky Safari + Australian Walkabout + Seal Show + lunch with harbour view + ferry back",
+      "fullDay": "All exhibits + bird show + giraffe feeding + Wild Australia experience + Rooftop Cafe lunch + ferry back",
+      "bestFor": "Ages 2-12, animal lovers, first-timers in Sydney"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Taronga Zoo Sydney",
+      "Sydney family zoo",
+      "best things to do in Sydney with kids",
+      "Taronga Zoo overnight",
+      "kids zoo Australia"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ]
+  },
+  {
+    "id": "sydney-extra-002",
+    "name": "Featherdale Wildlife Park",
+    "city": "Sydney",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.9,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "The ultimate hands-on Australian wildlife experience. Kids can hand-feed kangaroos, pat koalas, and meet wombats, echidnas, and Tasmanian devils up close. More intimate than Taronga, with over 1,700 native animals in natural bushland settings.",
+    "location": "217 Kildare Road, Doonside, NSW 2767",
+    "bestTime": "Opening time (9 AM) for active animals and smaller crowds",
+    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+    "amenities": [
+      "Animal Feeding Stations",
+      "Picnic Areas",
+      "Cafe",
+      "Stroller Access",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Supervised Animal Encounters",
+      "Hand Sanitiser Stations",
+      "First Aid",
+      "Shaded Walkways"
+    ],
+    "tipsAndTricks": [
+      "Buy a bag of kangaroo food ($2) at the entrance—it's the cheapest joy your kids will have all trip. The kangaroos are free-roaming and incredibly gentle.",
+      "Arrive when the gates open at 9 AM. By 10:30 the school groups arrive and the quiet magic disappears.",
+      "The koala encounter costs extra but is worth it. You get a professional photo and the koalas are actually awake (fed just before).",
+      "Skip the cafe. Bring your own picnic and eat at the shaded tables near the emu enclosure.",
+      "Combine with a visit to the Blue Mountains on the same day—Featherdale is on the way from Sydney and makes a perfect pit stop."
+    ],
+    "parentStory": {
+      "title": "My daughter fed a kangaroo and I cried",
+      "excerpt": "She was terrified of animals before Featherdale. By the end, she had a kangaroo eating from her hand.",
+      "author": "Mike, dad of 1 from Hong Kong",
+      "fullStory": "Our 4-year-old has always been cautious with animals. At Featherdale, we walked into the free-roaming kangaroo enclosure and within minutes she was holding food out to a gentle old roo named Bruce. The staff are patient and let kids go at their own pace."
+    },
+    "itineraryComparison": {
+      "halfDay": "Kangaroo feeding + koala encounter + reptile show + picnic lunch",
+      "fullDay": "All encounters + Blue Mountains afternoon combo",
+      "bestFor": "Ages 2-10, nervous animal kids, families wanting up-close wildlife"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Featherdale Wildlife Park Sydney",
+      "hand feed kangaroos Sydney",
+      "koala encounter Sydney",
+      "family wildlife park Australia",
+      "Sydney with toddlers"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+    ]
+  },
+  {
+    "id": "melbourne-extra-001",
+    "name": "Melbourne Zoo",
+    "city": "Melbourne",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 90,
+    "description": "Australia's oldest zoo, blending heritage architecture with modern animal habitats. The Trail of the Elephants, Butterfly House, and Wild Sea exhibit are family favourites. A lush, shady oasis just minutes from the city centre.",
+    "location": "Elliott Avenue, Parkville, VIC 3052",
+    "bestTime": "Weekdays, spring or autumn, early morning",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Stroller Hire",
+      "Train Ride",
+      "Baby Change Facilities",
+      "Multiple Cafes",
+      "Playgrounds"
+    ],
+    "safetyFeatures": [
+      "Animal Barriers",
+      "First Aid Posts",
+      "All-Weather Shelters",
+      "Security Staff",
+      "Lost Child Centre"
+    ],
+    "tipsAndTricks": [
+      "Take the train from Flinders Street to Royal Park station—it drops you right at the zoo entrance and kids love the ride.",
+      "Go straight to the Butterfly House first. By 10:30 AM it's shoulder-to-shoulder and the butterflies stop landing on people.",
+      "The Wild Sea exhibit is indoor and climate-controlled—perfect for Melbourne's unpredictable weather.",
+      "Pack rain jackets even on sunny days. Melbourne weather changes faster than a toddler's mood.",
+      "The zoo train is included with entry and runs every 20 minutes. Use it to cover ground with tired little legs."
+    ],
+    "parentStory": {
+      "title": "The butterfly landed on her nose and she held her breath",
+      "excerpt": "A blue butterfly landed on her nose and she stood perfectly still for a full minute.",
+      "author": "Priya, mom of 1 from Kuala Lumpur",
+      "fullStory": "We almost skipped the Butterfly House because our 5-year-old was getting tired. So glad we didn't. The moment we walked in, a large blue butterfly landed right on her nose. She froze, eyes wide, whispering 'Mummy don't move.'"
+    },
+    "itineraryComparison": {
+      "halfDay": "Butterfly House + Wild Sea + Elephant Trail + playground + tram ride back",
+      "fullDay": "Full zoo exploration + keeper talks + train ride + picnic in Royal Park",
+      "bestFor": "Ages 2-12, rainy day backup, first-time Melbourne families"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Melbourne Zoo",
+      "zoo Melbourne kids",
+      "family things to do Melbourne",
+      "butterfly house Melbourne",
+      "Melbourne with children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80"
+    ]
+  },
+  {
+    "id": "melbourne-extra-002",
+    "name": "SEA LIFE Melbourne Aquarium",
+    "city": "Melbourne",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 86,
+    "description": "An immersive underwater journey on the Yarra River. Walk through glass tunnels surrounded by sharks, rays, and sea turtles. Penguin Playground, interactive rock pools, and the 360° ocean tunnel make it a must-do for young marine enthusiasts.",
+    "location": "King Street & Flinders Street, Melbourne, VIC 3000",
+    "bestTime": "Weekdays before 11 AM or after 2 PM",
+    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Interactive Touch Pools",
+      "Penguin Viewing",
+      "Cafe",
+      "Gift Shop"
+    ],
+    "safetyFeatures": [
+      "Glass Barrier Safety",
+      "Wet Floor Signage",
+      "First Aid Available",
+      "Staff in Every Zone"
+    ],
+    "tipsAndTricks": [
+      "Time your visit for a penguin feeding (10:30 AM or 2:30 PM). Watching the king penguins torpedo through the water is mesmerising.",
+      "The glass tunnel is at the end. Save energy for the walkthrough—it's 50 metres of sharks swimming over your head.",
+      "Touch pools are best for ages 3+. Starfish and sea cucumbers are gentle enough for small hands.",
+      "Skip the 4D cinema unless your kids are 6+. The motion effects scare younger children.",
+      "Buy tickets online in advance (save 20%) and avoid the walk-up queue which can stretch to 30 minutes on weekends."
+    ],
+    "parentStory": {
+      "title": "My 2-year-old pressed his face against the glass for the whole tunnel",
+      "excerpt": "He didn't say a word for 15 minutes walking through the shark tunnel. Just wide eyes and little handprints on the glass.",
+      "author": "Tom, dad of 2 from Brisbane",
+      "fullStory": "We'd been in Melbourne for 3 days and our toddler was overstimulated. I was worried SEA LIFE would be another 'look don't touch' museum. But the shark tunnel changed everything. He pressed his face against the glass and watched a massive stingray glide by. We walked through 3 times."
+    },
+    "itineraryComparison": {
+      "halfDay": "Penguin feeding + shark tunnel + touch pools + gift shop visit",
+      "fullDay": "Aquarium + afternoon at nearby Federation Square + Yarra River walk",
+      "bestFor": "Ages 0-10, rainy day activity, marine animal lovers"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "SEA LIFE Melbourne",
+      "Melbourne aquarium",
+      "shark tunnel Melbourne",
+      "things to do Melbourne with kids",
+      "aquarium Australia toddlers"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80"
+    ]
+  },
+  {
+    "id": "gold-coast-extra-001",
+    "name": "Warner Bros. Movie World",
+    "city": "Gold Coast",
+    "country": "Australia",
+    "category": "Theme Parks",
+    "ageRange": "4-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 91,
+    "description": "Hollywood on the Gold Coast. Live-action stunt shows, DC superhero meet-and-greets, Looney Tunes-themed rides, and world-class roller coasters. A perfect blend of movie magic and theme park thrills for kids and adults alike.",
+    "location": "Pacific Motorway, Oxenford, QLD 4210",
+    "bestTime": "Weekdays during school terms, arrive at opening",
+    "imageUrl": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+    "amenities": [
+      "Stroller Hire",
+      "Baby Care Room",
+      "Parent Swap Program",
+      "Lockers",
+      "ATMs"
+    ],
+    "safetyFeatures": [
+      "Height Restrictions Enforced",
+      "Ride Safety Inspections",
+      "First Aid Centre",
+      "All-Weather Shelters",
+      "Security Patrols"
+    ],
+    "tipsAndTricks": [
+      "Use the Parent Swap program (free)—one parent queues for a thrill ride while the other waits, then swap without re-queuing.",
+      "The Main Street Parade at 3 PM is non-negotiable. Stake out a spot by the fountain 20 minutes early for shade.",
+      "Download the Movie World app for real-time wait times. The DC Rivals Hypercoaster hits 90-minute queues by midday.",
+      "The Looney Tunes area is perfect for under-7s. Junior driving school, carousel, and Tweety's playground are walk-on in the first hour.",
+      "Pack a refillable water bottle. There are free water stations near every bathroom, and park drinks are $5+ each."
+    ],
+    "parentStory": {
+      "title": "He wore his Batman cape for 3 days straight after",
+      "excerpt": "Meeting Batman at Movie World was the peak experience of our 5-year-old's life.",
+      "author": "Nathan, dad of 1 from New Zealand",
+      "fullStory": "We timed our visit so our son would see Batman during the 12 PM character meet. The actor stayed in character the whole time, crouched down to his level, and called him 'young apprentice.' He didn't wash the hand Batman shook for 2 days."
+    },
+    "itineraryComparison": {
+      "halfDay": "Looney Tunes area + stunt show + DC meet & greet + parade",
+      "fullDay": "All rides + shows + character dining + parade + night show",
+      "bestFor": "Ages 4-14, superhero fans, families doing multiple GC parks"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Warner Bros Movie World Gold Coast",
+      "Gold Coast theme parks families",
+      "DC superhero meet Gold Coast",
+      "Movie World with kids",
+      "family theme park Australia"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ]
+  },
+  {
+    "id": "brisbane-001",
+    "name": "Lone Pine Koala Sanctuary",
+    "city": "Brisbane",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.9,
+    "popularity": 89,
+    "priceRange": "$$",
+    "description": "The world's first and largest koala sanctuary, home to 130+ koalas. Cuddle a koala, hand-feed kangaroos, and meet platypuses, wombats, and dingoes. Set on the banks of the Brisbane River, it's a peaceful, green escape just 20 minutes from the city.",
+    "location": "708 Jesmond Road, Fig Tree Pocket, QLD 4069",
+    "bestTime": "Early morning for feeding sessions, weekdays",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+    "amenities": [
+      "Koala Photo Studio",
+      "Kangaroo Feeding Area",
+      "Cafe & Picnic Areas",
+      "BBQ Facilities",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Supervised Animal Contact",
+      "Hand Washing Stations",
+      "First Aid",
+      "Shaded Rest Areas",
+      "Water Fountains"
+    ],
+    "tipsAndTricks": [
+      "Book the koala cuddle online in advance. Walk-up slots sell out by 10 AM and there's a limit of 20 cuddles per day.",
+      "Take the Mirimar river cruise from the CBD instead of driving. The 75-minute cruise drops you right at the sanctuary.",
+      "Bring $2 coins for the kangaroo food dispensers. The machines are everywhere but don't take cards.",
+      "The platypus exhibit is the hardest to spot. Visit at 2 PM during feeding time when they're most active.",
+      "Pack swimmers—there's a small water play area near the cafe that's perfect for hot afternoons."
+    ],
+    "parentStory": {
+      "title": "She asked to sleep with the koala plush for a week",
+      "excerpt": "Holding a koala was her mission from the moment she knew we were going.",
+      "author": "Claire, mom of 1 from Tokyo",
+      "fullStory": "Our 6-year-old had been planning 'koala cuddle day' for months. The sanctuary staff showed her how to hold her hands flat, stand still, and be gentle. The koala they chose, a sleepy female named Willow, sat in her arms for a full 3 minutes. That photo is now her screensaver."
+    },
+    "itineraryComparison": {
+      "halfDay": "Koala cuddle + kangaroo feeding + river cruise back to city",
+      "fullDay": "Koala cuddle + all animal talks + lunch + platypus feeding + cruise both ways",
+      "bestFor": "Ages 2-12, first-time Australia visitors, animal-loving families"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Lone Pine Koala Sanctuary Brisbane",
+      "koala cuddle Brisbane",
+      "feed kangaroos Brisbane",
+      "Brisbane family activities",
+      "koala sanctuary Australia"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "brisbane-002",
+    "name": "South Bank Parklands",
+    "city": "Brisbane",
+    "country": "Australia",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.8,
+    "popularity": 92,
+    "priceRange": "$",
+    "description": "Brisbane's premier family playground. A man-made beach (Streets Beach), massive playground, lush gardens, and a stunning riverside promenade. Free to enter with paid attractions like the Wheel of Brisbane and Queensland Art Gallery nearby.",
+    "location": "South Bank, Brisbane, QLD 4101",
+    "bestTime": "Early morning or late afternoon to avoid heat",
+    "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "amenities": [
+      "Streets Beach (Free)",
+      "Playgrounds",
+      "BBQ Facilities",
+      "Public Toilets",
+      "Shaded Walkways"
+    ],
+    "safetyFeatures": [
+      "Lifeguards at Streets Beach",
+      "Fenced Playgrounds",
+      "Well-Lit Paths at Night",
+      "First Aid Room",
+      "Security Patrols"
+    ],
+    "tipsAndTricks": [
+      "Streets Beach is free and patrolled by lifeguards. Pack towels and sand toys—kids can spend 2+ hours in the lagoon pool.",
+      "The 'Aquativity' water play area near the beach is designed specifically for toddlers (0-4). Zero-depth entry and gentle sprays.",
+      "Picnic is the way to go. There are free electric BBQs and shaded tables everywhere.",
+      "The Wheel of Brisbane is $20/adult, $12/child. Go at sunset for the best views.",
+      "Walk across the Goodwill Bridge to the city centre—it's pram-friendly and gives amazing river views."
+    ],
+    "parentStory": {
+      "title": "We spent 4 hours at a free beach in the middle of a city",
+      "excerpt": "I kept waiting for someone to ask for money. A pristine lagoon, lifeguards, sand, and shade—all free.",
+      "author": "Sofia, mom of 2 from Vancouver",
+      "fullStory": "We arrived in Brisbane with no plan and $50 left in our daily budget. South Bank saved us. The artificial beach is incredible—clean sand, crystal-clear water, and lifeguards. We spent the entire afternoon there. It was one of the best, cheapest days of our 3-week Australia trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Streets Beach swim + playground + picnic + riverside walk",
+      "fullDay": "Beach + Wheel of Brisbane + QAGOMA museum + lunch at market + sunset walk",
+      "bestFor": "Ages 0-12, budget travellers, families wanting a chill day"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "South Bank Brisbane families",
+      "Streets Beach free",
+      "Brisbane family park",
+      "free things to do Brisbane with kids",
+      "Brisbane water play kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80"
+    ]
+  },
+  {
+    "id": "adelaide-001",
+    "name": "Adelaide Zoo",
+    "city": "Adelaide",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.8,
+    "popularity": 83,
+    "priceRange": "$$",
+    "description": "One of Australia's oldest zoos with a stunning heritage setting next to the Botanic Gardens. Home to Wang Wang and Fu Ni (the only giant pandas in the Southern Hemisphere), plus a new Children's Zoo with goat feeding, pony rides, and a giant indoor playground.",
+    "location": "Frome Road, Adelaide, SA 5000",
+    "bestTime": "Morning for pandas, spring or autumn",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+    "amenities": [
+      "Stroller Hire",
+      "Children's Zoo",
+      "Panda Viewing Platform",
+      "Cafe",
+      "BBQ & Picnic Areas"
+    ],
+    "safetyFeatures": [
+      "Animal Enclosure Safety",
+      "First Aid Station",
+      "All-Weather Shelters",
+      "Hand Sanitiser Stations"
+    ],
+    "tipsAndTricks": [
+      "Head straight to the panda exhibit when you arrive. They're most active in the first hour before it warms up.",
+      "The Children's Zoo opens at 10 AM and the goat feeding is a riot.",
+      "Pack a picnic. The zoo has beautiful shaded lawn areas.",
+      "Combine with the Botanic Gardens next door for a full day.",
+      "Tuesday mornings are the quietest."
+    ],
+    "parentStory": {
+      "title": "The pandas were eating bamboo and we forgot to breathe",
+      "excerpt": "Wang Wang was 3 metres away, munching bamboo. It's rare to see pandas that close outside of China.",
+      "author": "Marcus, dad of 1 from Perth",
+      "fullStory": "My 5-year-old daughter's favourite animal is the giant panda. Walking into Adelaide Zoo's panda exhibit and seeing Wang Wang casually munching bamboo 3 metres away was the highlight of our trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Panda exhibit + Children's Zoo + picnic lunch + Botanic Gardens walk",
+      "fullDay": "Full zoo + panda keeper talk + children's zoo + gardens + museum across the park",
+      "bestFor": "Ages 0-10, panda fans, families wanting a calm zoo day"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Adelaide Zoo",
+      "pandas Adelaide",
+      "Adelaide with kids",
+      "children's zoo Adelaide",
+      "family activities Adelaide"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80"
+    ]
+  },
+  {
+    "id": "perth-001",
+    "name": "Perth Zoo",
+    "city": "Perth",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.8,
+    "popularity": 84,
+    "priceRange": "$$",
+    "description": "A beautifully landscaped zoo on the Swan River, home to native Australian wildlife and exotic species. The Australian Wetlands walk, African Savannah exhibit, and keeper talks make it both educational and entertaining. Perfectly sized for little walkers.",
+    "location": "20 Labouchere Road, South Perth, WA 6151",
+    "bestTime": "Weekday mornings, spring/autumn",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Stroller Hire",
+      "Train Ride",
+      "Children's Play Area",
+      "Cafe",
+      "Ferry Access"
+    ],
+    "safetyFeatures": [
+      "Viewing Barriers",
+      "First Aid Stations",
+      "Shaded Walkways",
+      "Security Staff"
+    ],
+    "tipsAndTricks": [
+      "Take the ferry from Elizabeth Quay to the zoo—it's a 5-minute ride and kids adore the boat.",
+      "The keeper talks are outstanding. The 11 AM elephant talk is a must.",
+      "The Australian Wetlands boardwalk has emus and kangaroos that wander close to the path.",
+      "The zoo train is worth the small extra fee ($3/person).",
+      "Pack light. The zoo is smaller than Taronga—you can cover it in 2-3 hours."
+    ],
+    "parentStory": {
+      "title": "We took the ferry and it became the main event",
+      "excerpt": "We took the ferry from the city and my son spent the whole ride pointing at swans on the river.",
+      "author": "Jackson, dad of 1 from Sydney",
+      "fullStory": "The ferry to Perth Zoo was supposed to be 'just transportation.' But for our 3-year-old, it was the highlight before the highlight. He stood at the window the whole 5 minutes, spotting black swans."
+    },
+    "itineraryComparison": {
+      "halfDay": "Ferry + zoo loop + keeper talks + ferry back",
+      "fullDay": "Zoo + Kings Park picnic + South Perth foreshore playground",
+      "bestFor": "Ages 1-10, families wanting a gentle day out"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Perth Zoo",
+      "zoo Perth kids",
+      "Perth ferry zoo",
+      "family things to do Perth",
+      "Swan River family"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    ]
+  },
+  {
+    "id": "perth-002",
+    "name": "Kings Park & Botanic Garden",
+    "city": "Perth",
+    "country": "Australia",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.9,
+    "popularity": 93,
+    "priceRange": "$",
+    "description": "One of the world's largest inner-city parks, bigger than NYC's Central Park. The Lotterywest Family Area has an incredible nature-inspired playground, the Rio Tinto Naturescape lets kids build cubbies and climb, and the treetop walkway offers sweeping Swan River views. Most activities are free.",
+    "location": "Fraser Avenue, Kings Park, Perth, WA 6005",
+    "bestTime": "Spring (wildflower festival), mornings or late afternoons",
+    "imageUrl": "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+    "amenities": [
+      "Playgrounds",
+      "BBQ Facilities",
+      "Cafe",
+      "Public Toilets",
+      "Free Walking Trails"
+    ],
+    "safetyFeatures": [
+      "Well-Lit Paths",
+      "Railed Lookouts",
+      "First Aid at Visitor Centre",
+      "Park Rangers",
+      "Emergency Phones"
+    ],
+    "tipsAndTricks": [
+      "The Lotterywest Family Area playground is world-class with climbing nets and giant slides for kids 2-12.",
+      "Wildflower season (Sept-Nov) is spectacular with free guided walks for families.",
+      "The treetop walk is a 620-metre elevated boardwalk through the canopy. Stroller-friendly.",
+      "Pack a picnic. There are free electric BBQs and 400 hectares of lawn.",
+      "The Naturescape area lets kids build cubbies, climb rocks, and explore a creek."
+    ],
+    "parentStory": {
+      "title": "A free park that felt like a secret",
+      "excerpt": "We spent a full day at Kings Park without spending a single dollar.",
+      "author": "Lin, mom of 2 from Shanghai",
+      "fullStory": "I was skeptical about a 'free park' being a highlight, but Kings Park blew us away. The Lotterywest playground has a 10-metre climbing net. We walked the treetop boardwalk and saw the entire Swan River. Best part: not one dollar spent."
+    },
+    "itineraryComparison": {
+      "halfDay": "Lotterywest playground + treetop walk + picnic + views",
+      "fullDay": "Naturescape + playground + botanic garden + BBQ + sunset over Swan River",
+      "bestFor": "Ages 0-14, budget families, nature lovers"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Kings Park Perth kids",
+      "Perth family park",
+      "free things Perth with kids",
+      "Kings Park playground",
+      "Perth botanic garden families"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80"
+    ]
+  },
+  {
+    "id": "cairns-001",
+    "name": "Cairns Zoo",
+    "city": "Cairns",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.7,
+    "popularity": 80,
+    "priceRange": "$$",
+    "description": "A tropical wildlife sanctuary in the heart of Cairns, home to koalas, kangaroos, crocodiles, and colourful native birds. The Cassowary exhibit is a highlight, and the Tropical Dome lets you walk among butterflies and free-flying birds in a rainforest setting.",
+    "location": "221 Sheridan Street, Cairns, QLD 4870",
+    "bestTime": "Early morning to avoid tropical heat, dry season (May-October)",
+    "imageUrl": "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+    "amenities": [
+      "Cafe",
+      "Picnic Areas",
+      "Stroller Access",
+      "Gift Shop",
+      "Shaded Walkways"
+    ],
+    "safetyFeatures": [
+      "Crocodile Safety Barriers",
+      "First Aid",
+      "Hand Sanitiser Stations",
+      "All-Weather Shelters"
+    ],
+    "tipsAndTricks": [
+      "The crocodile feeding at 11 AM is the main event. Get there early for a spot at the front.",
+      "Bring insect repellent. You're in the tropics and the mozzies love the shaded areas.",
+      "The cassowary is Cairns Zoo's star. They're rare to see in the wild.",
+      "Combine with the adjacent Flecker Botanic Gardens for a full morning.",
+      "Visit during dry season (May-Oct). Wet season afternoons bring torrential rain."
+    ],
+    "parentStory": {
+      "title": "The cassowary stared at us and we froze",
+      "excerpt": "A giant cassowary walked to the fence and looked our toddler dead in the eye.",
+      "author": "Tanya, mom of 1 from Melbourne",
+      "fullStory": "Cassowaries are intimidating birds, but the one at Cairns Zoo was oddly majestic. Our 4-year-old pressed against the fence, whispering 'dinosaur.' The keeper gave a great talk about how they're critical for rainforest regeneration."
+    },
+    "itineraryComparison": {
+      "halfDay": "Croc feeding + cassowary exhibit + butterfly dome + cafe lunch",
+      "fullDay": "Zoo morning + Flecker Botanic Gardens + afternoon at Cairns Esplanade lagoon",
+      "bestFor": "Ages 3-12, tropical wildlife fans, families on Cairns holiday"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Cairns Zoo",
+      "Cairns with kids",
+      "crocodile feeding Cairns",
+      "Cairns family activities",
+      "tropical zoo Australia"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "darwin-001",
+    "name": "Crocosaurus Cove",
+    "city": "Darwin",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "4-14",
+    "safetyRating": 4.6,
+    "popularity": 85,
+    "priceRange": "$$",
+    "description": "The ultimate crocodile experience in the heart of Darwin. Home to the famous 'Cage of Death' where you can swim with massive saltwater crocs. Interactive reptile shows, baby croc holding, and the Big Croc aquarium viewing make it a thrilling family stop.",
+    "location": "58 Mitchell Street, Darwin, NT 0800",
+    "bestTime": "Mornings for cooler croc activity, dry season (May-October)",
+    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+    "amenities": [
+      "Air Conditioning",
+      "Cafe",
+      "Gift Shop",
+      "Dry Area for Phones",
+      "Lockers"
+    ],
+    "safetyFeatures": [
+      "Reinforced Glass Tanks",
+      "Trained Handlers",
+      "Emergency Protocols",
+      "Height and Age Restrictions"
+    ],
+    "tipsAndTricks": [
+      "The 'Cage of Death' requires minimum age 16. Don't promise it to younger kids.",
+      "The Big Croc tank viewing is the highlight for all ages. Giant saltwater crocs swim right up to the glass.",
+      "Baby croc holding sessions run throughout the day. Kids 4+ can hold a small croc under supervision.",
+      "The reptile show at 11 AM is informative and a bit cheeky.",
+      "Air conditioning is a blessing in Darwin's heat. Crocosaurus Cove is fully indoor."
+    ],
+    "parentStory": {
+      "title": "My 7-year-old held a baby crocodile and became a legend",
+      "excerpt": "He told everyone at school he 'held a dinosaur.'",
+      "author": "Dave, dad of 2 from Sydney",
+      "fullStory": "The handler taught the kids how to support the belly and keep the tail straight. My 7-year-old was nervous, then proud. He's been telling everyone he 'held a dinosaur.'"
+    },
+    "itineraryComparison": {
+      "halfDay": "Big Croc viewing + baby croc hold + reptile show + souvenir stop",
+      "fullDay": "Full experience + Cage of Death (adults/teens) + Darwin Waterfront precinct",
+      "bestFor": "Ages 4-14, thrill-seeking families, anyone visiting the Top End"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Crocosaurus Cove Darwin",
+      "Darwin with kids",
+      "cage of death Darwin",
+      "crocodile park Darwin",
+      "Top End family activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80"
+    ]
+  },
+  {
+    "id": "new-zealand-001",
+    "name": "Rainbow's End Theme Park",
+    "city": "Auckland",
+    "country": "New Zealand",
+    "category": "Theme Parks",
+    "ageRange": "3-14",
+    "safetyRating": 4.7,
+    "popularity": 82,
+    "priceRange": "$$",
+    "description": "New Zealand's largest theme park, packed with 20+ rides and attractions. From the adrenaline-pumping Stratosfear to the gentle Kidz Kingdom for little ones, it's a full day of family fun. The alien-themed Invader roller coaster and the Log Flume are perennial favourites.",
+    "location": "2 Clist Crescent, Manukau, Auckland 2104",
+    "bestTime": "Weekdays during school terms, arrive at 10 AM opening",
+    "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    "amenities": [
+      "Stroller Parking",
+      "Cafe & Food Court",
+      "Parent Swap Program",
+      "Lockers",
+      "First Aid"
+    ],
+    "safetyFeatures": [
+      "Height Restrictions Enforced",
+      "Ride Safety Inspections",
+      "Covered Queues",
+      "Security Staff",
+      "All-Weather Shelters"
+    ],
+    "tipsAndTricks": [
+      "Buy tickets online in advance—you save 25% versus walk-up prices.",
+      "The Kidz Kingdom area has 10 rides designed for under-7s with zero height restrictions.",
+      "Rainbow's End is open year-round but rides close during thunderstorms.",
+      "The Pirate Ship is a guaranteed queue-buster—it cycles quickly.",
+      "Pack lunch in a cooler. The park allows outside food."
+    ],
+    "parentStory": {
+      "title": "She rode every ride in Kidz Kingdom twice",
+      "excerpt": "She marched from ride to ride with a laminated map, crossing off each one like a mission.",
+      "author": "Hannah, mom of 1 from Christchurch",
+      "fullStory": "We made the drive from Christchurch to Auckland specifically for Rainbow's End. The rides are gentle and Kidz Kingdom is perfect for under-7s. She felt like a big kid and we stayed 6 hours."
+    },
+    "itineraryComparison": {
+      "halfDay": "Kidz Kingdom + Pirate Ship + Log Flume + lunch + leave by 2 PM",
+      "fullDay": "All rides + Stratosfear + Invader + Log Flume + Kidz Kingdom + dinner",
+      "bestFor": "Ages 3-14, New Zealand families, budget-friendly theme park day"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Rainbow's End Auckland",
+      "New Zealand theme park kids",
+      "Auckland family activities",
+      "Rainbow's End rides kids",
+      "theme park New Zealand families"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80"
+    ]
+  },
+  {
+    "id": "fiji-extra-001",
+    "name": "Kula Wild Adventure Park",
+    "city": "Sigatoka",
+    "country": "Fiji",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.6,
+    "popularity": 75,
+    "priceRange": "$$",
+    "description": "Fiji's only adventure park combining wildlife sanctuary, waterslides, and nature walks. Home to the iconic Fijian crested iguana, colourful parrots, turtles, and native fish. The waterslide complex and natural swimming pools are a hit with kids in the tropical heat.",
+    "location": "Queens Highway, Sigatoka, Coral Coast, Fiji",
+    "bestTime": "Dry season (May-October), mornings before the heat peaks",
+    "imageUrl": "https://images.unsplash.com/photo-1440582375379-42dbb376d65b?w=800&q=80",
+    "amenities": [
+      "Waterslides",
+      "Swimming Pools",
+      "Changing Rooms",
+      "Cafe",
+      "Gift Shop"
+    ],
+    "safetyFeatures": [
+      "Lifeguards at Pool",
+      "Pool Fencing",
+      "Animal Enclosure Safety",
+      "First Aid Station",
+      "Life Jackets Available"
+    ],
+    "tipsAndTricks": [
+      "Bring swimmers and towels. The waterslides and natural pools are the real draw for kids.",
+      "The Fijian crested iguana is critically endangered and Kula has a breeding program.",
+      "The parrot feeding session is hands-on. Kids can hold a perch while a lorikeet sits on their hand.",
+      "Pack reef-safe sunscreen. Fiji takes its reef protection seriously.",
+      "Combine with a Coral Coast resort stay—most hotels are a 10-15 minute drive away."
+    ],
+    "parentStory": {
+      "title": "The waterslides saved us from the heat",
+      "excerpt": "Fiji heat hit us hard. Two hours in, the wildlife was interesting but the pool was calling.",
+      "author": "Jenna, mom of 2 from Melbourne",
+      "fullStory": "We visited Kula on a 34-degree day. The wildlife sanctuary is lovely, but after 90 minutes the kids were melting. The waterslide complex was the saviour. We spent 3 more hours going down slides and swimming in the natural rock pools."
+    },
+    "itineraryComparison": {
+      "halfDay": "Wildlife walk + bird feeding + iguana talk + waterslides",
+      "fullDay": "Full wildlife + waterslides + lunch + more slides + souvenir shop",
+      "bestFor": "Ages 2-12, Fiji resort families, nature + water play combo lovers"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Kula Wild Adventure Park Fiji",
+      "Fiji with kids",
+      "Fiji family activities",
+      "Coral Coast kids Fiji",
+      "iguana sanctuary Fiji"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1440582375379-42dbb376d65b?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ]
+  },
+  {
+    "id": "tasmania-001",
+    "name": "Bonorong Wildlife Sanctuary",
+    "city": "Brighton",
+    "country": "Australia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.9,
+    "popularity": 81,
+    "priceRange": "$$",
+    "description": "Tasmania's most loved wildlife rescue and sanctuary. Get up close with rescued Tasmanian devils, wombats, koalas, and kangaroos. The 'Devil Talk' and night tours are must-dos. Unlike a zoo, every animal here has a rescue story.",
+    "location": "593 Briggs Road, Brighton, TAS 7030",
+    "bestTime": "Night tours for devil spotting, daytime for feeding sessions (10 AM preferred)",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Animal Feeding Included",
+      "Guided Tours",
+      "Cafe",
+      "Stroller Access",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Supervised Encounters",
+      "Hand Washing Stations",
+      "Animal Handling Protocols",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "The guided 'Devil Talk' is included with admission and absolutely essential.",
+      "Book the night tour (extra cost) if you can. Tasmanian devils are nocturnal.",
+      "Kangaroo feeding is included at Bonorong—no extra charge.",
+      "The wombat encounter is rare and special.",
+      "Bonorong is a 30-minute drive from Hobart. Combine with MONA or Mt Wellington."
+    ],
+    "parentStory": {
+      "title": "We heard a Tasmanian devil scream and understood why they're called devils",
+      "excerpt": "A rescued devil named Taz let out a scream during feeding time. My 6-year-old jumped, then laughed.",
+      "author": "Rachel, mom of 1 from Sydney",
+      "fullStory": "Bonorong is special because every animal has a story. Taz the devil was hit by a car and has a permanent limp. The keepers know each animal personally. It's educational in ways zoos never are. My daughter left wanting to be a wildlife rescuer."
+    },
+    "itineraryComparison": {
+      "halfDay": "Devil Talk + kangaroo feeding + wombat encounter + guided tour",
+      "fullDay": "Day tour + night tour combo + Hobart sightseeing",
+      "bestFor": "Ages 3-14, wildlife lovers, families wanting ethical animal encounters"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Bonorong Wildlife Sanctuary Tasmania",
+      "Tasmanian devil encounter",
+      "Hobart with kids",
+      "Tasmania family activities",
+      "ethical wildlife sanctuary Australia"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+    ]
+  }
+]
