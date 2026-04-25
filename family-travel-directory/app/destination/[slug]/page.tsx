@@ -82,6 +82,55 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
+function jsonLd(d: Destination): string {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": d.name,
+    "description": d.description,
+    "url": `${BASE_URL}/destination/${d.id}`,
+    "image": d.imageUrl,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": d.city,
+      "addressCountry": d.country
+    },
+    "isAccessibleForFree": d.priceRange === "Free",
+    "amenityFeature": d.amenities.map((a: string) => ({
+      "@type": "LocationFeatureSpecification",
+      "name": a
+    })),
+    "audience": {
+      "@type": "PeopleAudience",
+      "suggestedMinAge": parseInt(d.ageRange.split('-')[0]) || 2,
+      "suggestedMaxAge": parseInt(d.ageRange.split('-')[1]?.split('+')[0]) || 18
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": d.safetyRating,
+      "bestRating": 5,
+      "ratingCount": 1
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${BASE_URL}/destination/${d.id}`
+    }
+  };
+
+  // Also add BreadcrumbList
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+      { "@type": "ListItem", "position": 2, "name": d.city, "item": `${BASE_URL}?city=${encodeURIComponent(d.city)}` },
+      { "@type": "ListItem", "position": 3, "name": d.name, "item": `${BASE_URL}/destination/${d.id}` }
+    ]
+  };
+
+  return `<script type="application/ld+json">${JSON.stringify(schema)}</script>\n<script type="application/ld+json">${JSON.stringify(breadcrumb)}</script>`;
+}
+
 export default async function DestinationPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const destinations = await getDestinations();
@@ -89,5 +138,10 @@ export default async function DestinationPage({ params }: { params: Promise<{ sl
 
   if (!found) notFound();
 
-  return <ClientDestinationPage initialData={found} slug={slug} />;
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html: jsonLd(found) }} />
+      <ClientDestinationPage initialData={found} slug={slug} />
+    </>
+  );
 }
