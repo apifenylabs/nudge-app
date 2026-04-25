@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import {
   Search, MapPin, Sparkles, Shield, Globe, Users, Star,
   ChevronDown, ChevronRight, Clock, Compass,
@@ -66,7 +67,6 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedAge, setSelectedAge] = useState("All");
   const [sortBy, setSortBy] = useState("popularity");
-  const [selectedDest, setSelectedDest] = useState<string | null>(null);
   const [destinations, setDestinations] = useState<Destination[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -119,7 +119,6 @@ export default function Home() {
     return 0;
   });
 
-  const selected = destinations.find(d => d.id === selectedDest);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -286,10 +285,10 @@ export default function Home() {
         {!loading && filtered.length > 0 && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {filtered.map((dest) => (
-              <div
+              <Link
                 key={dest.id}
-                onClick={() => setSelectedDest(selectedDest === dest.id ? null : dest.id)}
-                className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer group"
+                href={`/destination/${dest.id}`}
+                className="block bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer group"
               >
                 {/* Image */}
                 <div className="relative h-48 sm:h-56 bg-gray-200 overflow-hidden">
@@ -334,105 +333,8 @@ export default function Home() {
                     <span>Read story</span>
                   </div>
 
-                  {/* Expanded Details */}
-                  {selectedDest === dest.id && (
-                    <div className="mt-5 pt-5 border-t border-gray-100 space-y-5">
-                      {/* Gallery */}
-                      {dest.gallery && dest.gallery.length > 0 && (
-                        <div className="grid grid-cols-3 gap-2">
-                          {dest.gallery.map((img: string, i: number) => (
-                            <img
-                              key={i}
-                              src={img}
-                              alt={`${dest.name} photo ${i + 1}`}
-                              className="w-full h-24 object-cover rounded-lg"
-                              loading="lazy"
-                            />
-                          ))}
-                        </div>
-                      )}
-
-                      {/* Tips & Tricks */}
-                      <div>
-                        <div className="flex items-center gap-1.5 text-sm font-semibold text-gray-900 mb-2">
-                          <Lightbulb size={14} />
-                          Tips & Tricks from Parents
-                        </div>
-                        <ul className="space-y-2">
-                          {dest.tipsAndTricks.map((tip, i) => (
-                            <li key={i} className="flex gap-2 text-sm text-gray-600">
-                              <span className="text-sky-500 font-bold flex-shrink-0 mt-0.5">*</span>
-                              {tip}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Parent Story */}
-                      <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">
-                        <div className="flex items-center gap-1.5 text-sm font-semibold text-gray-900 mb-1">
-                          <Heart size={14} className="text-rose-500" />
-                          {dest.parentStory.title}
-                        </div>
-                        <p className="text-sm text-gray-600 leading-relaxed italic mb-2">
-                          &ldquo;{dest.parentStory.excerpt}&rdquo;
-                        </p>
-                        <p className="text-xs text-gray-500 font-medium">&mdash; {dest.parentStory.author}</p>
-                      </div>
-
-                      {/* Itinerary */}
-                      <div>
-                        <div className="flex items-center gap-1.5 text-sm font-semibold text-gray-900 mb-2">
-                          <Clock3 size={14} />
-                          Plan Your Visit
-                        </div>
-                        <div className="grid grid-cols-2 gap-3">
-                          <div className="bg-gray-50 rounded-xl p-3 border border-gray-100">
-                            <div className="flex items-center gap-1 text-xs font-semibold text-gray-500 mb-1">
-                              <Sun size={12} /> Half Day
-                            </div>
-                            <p className="text-xs text-gray-600">{dest.itineraryComparison.halfDay}</p>
-                          </div>
-                          <div className="bg-gray-50 rounded-xl p-3 border border-gray-100">
-                            <div className="flex items-center gap-1 text-xs font-semibold text-gray-500 mb-1">
-                              <Moon size={12} /> Full Day
-                            </div>
-                            <p className="text-xs text-gray-600">{dest.itineraryComparison.fullDay}</p>
-                          </div>
-                        </div>
-                        <div className="mt-2 text-xs text-gray-400">
-                          <span className="font-medium">Best for:</span> {dest.itineraryComparison.bestFor}
-                        </div>
-                      </div>
-
-                      {/* Safety & Amenities */}
-                      <div className="flex gap-4">
-                        <div className="flex-1">
-                          <div className="text-xs font-semibold text-gray-500 mb-1.5">Safety</div>
-                          <div className="flex flex-wrap gap-1">
-                            {dest.safetyFeatures.slice(0, 3).map((f, i) => (
-                              <span key={i} className="text-xs bg-green-50 text-green-600 px-2 py-0.5 rounded-full">{f}</span>
-                            ))}
-                          </div>
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-xs font-semibold text-gray-500 mb-1.5">Amenities</div>
-                          <div className="flex flex-wrap gap-1">
-                            {dest.amenities.slice(0, 3).map((a, i) => (
-                              <span key={i} className="text-xs bg-sky-50 text-sky-600 px-2 py-0.5 rounded-full">{a}</span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-1.5 text-xs text-gray-500">
-                        <Clock size={12} />
-                        <span className="font-medium">Best time:</span> {dest.bestTime}
-                      </div>
-                    </div>
-                  )}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}

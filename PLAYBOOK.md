@@ -38,6 +38,7 @@
 - UI Agent – Design review, Apple-level standards enforcement
 - Tester – Test strategy, test case execution, quality assurance
 - SEO Agent – Search optimization, metadata, content strategy
+- Security Agent – Security audit (secrets, dependencies, auth, OWASP Top 10, infra)
 - Reviewer – Code quality, documentation review
 - Chief Editor + CTO – Final sign-off, production readiness
 - Researcher – Market analysis, competitive research
@@ -54,6 +55,8 @@ UI Agent (Design review)
 Tester (Executes reviewed test cases)
         ↓
 SEO Agent (Optimization)
+        ↓
+Security Agent (Security audit)
         ↓
 Reviewer (Code quality)
         ↓
