@@ -1,21 +1,35 @@
 #!/bin/bash
 # Auto-recovery script: Brings all orchestras online
+# Only starts processes that aren't already running
+
 WORKSPACE=/home/captain/.openclaw/workspace
+RESTARTED=false
 
-# Ensure PM2 daemon is running
-pm2 resurrect 2>/dev/null || true
+# Try PM2 resurrect first (fastest path)
+pm2 resurrect 2>/dev/null
+sleep 2
 
-# Start Directory Beast
-cd $WORKSPACE/family-travel-directory
-if ! curl -s -o /dev/null http://localhost:3000 2>/dev/null; then
-  PORT=3000 pm2 start "npm start" --name directory-beast --restart-delay 5000 --max-restarts 5
+# Check each beast by port, start if missing
+check_and_start() {
+  local port=$1
+  local name=$2
+  local dir=$3
+  if curl -s -o /dev/null http://localhost:$port 2>/dev/null; then
+    echo "✅ $name already running on $port"
+  else
+    echo "⚠️  $name down on $port — starting..."
+    cd "$WORKSPACE/$dir"
+    PORT=$port pm2 start "npm start" --name "$name" --restart-delay 5000 --max-restarts 5 2>/dev/null
+    RESTARTED=true
+  fi
+}
+
+check_and_start 3000 "directory-beast" "family-travel-directory"
+check_and_start 3001 "nudge-beast" "nudge"
+
+if [ "$RESTARTED" = true ]; then
+  pm2 save
+  echo "✅ State saved at $(date)"
+else
+  echo "✅ All orchestras already running at $(date)"
 fi
-
-# Start Nudge Beast
-cd $WORKSPACE/nudge
-if ! curl -s -o /dev/null http://localhost:3001 2>/dev/null; then
-  PORT=3001 pm2 start "npm start" --name nudge-beast --restart-delay 5000 --max-restarts 5
-fi
-
-pm2 save
-echo "All orchestras started at $(date)"
