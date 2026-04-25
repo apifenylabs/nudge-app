@@ -44,10 +44,9 @@ interface Destination {
 }
 
 const categories = [
-  { name: "Theme Parks", icon: Sparkles, desc: "Where memories are made" },
-  { name: "Zoos & Aquariums", icon: Globe, desc: "Wild encounters up close" },
-  { name: "Parks & Nature", icon: Globe, desc: "Fresh air, open spaces" },
-  { name: "Museums", icon: Globe, desc: "Learn while having fun" },
+  { name: "Theme Parks & Attractions", icon: Sparkles, desc: "Thrills and smiles for all ages" },
+  { name: "Nature & Outdoor Adventures", icon: Globe, desc: "Fresh air, open spaces, wild encounters" },
+  { name: "Cultural & Historical Sites", icon: Globe, desc: "Learn while having fun" },
 ];
 
 const cities = ["Tokyo", "Bangkok", "Singapore", "Hong Kong", "Phuket", "Bali", "Hanoi", "Seoul", "Osaka", "Kuala Lumpur", "Chiang Mai"];

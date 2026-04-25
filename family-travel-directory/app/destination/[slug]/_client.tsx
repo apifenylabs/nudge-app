@@ -134,25 +134,40 @@ function generateAgeBreakdown(d: Destination) {
   const range = d.ageRange;
   const safety = d.safetyRating;
   const sections = [];
-  if (range.includes('0') || range.includes('1') || range.includes('2') || range.includes('3')) {
+
+  // Parse age range to determine which groups to show
+  const nums = range.replace('+', '').split(/[-–&,]/).map(s => parseInt(s.trim())).filter(n => !isNaN(n));
+  const minAge = Math.min(...nums);
+  const maxAge = Math.max(...nums);
+
+  if (minAge <= 3) {
     sections.push({
       age: 'Toddlers (0-3)',
       icon: Baby,
-      content: `${d.name} is suitable for toddlers${safety >= 4 ? ' with excellent safety features including stroller access and baby facilities' : ''}. ${d.amenities.includes('Stroller access') || d.amenities.includes('Stroller Friendly') || d.amenities.includes('Stroller') ? 'Stroller-friendly throughout. ' : ''}Parent tip: visit during off-peak hours for the calmest experience.`,
+      color: 'bg-pink-50 border-pink-100',
+      iconBg: 'bg-pink-100',
+      iconColor: 'text-pink-600',
+      content: `${d.name} is toddler-friendly${safety >= 4 ? ' with high safety standards' : ''}. ${d.amenities.some(a => a.toLowerCase().includes('stroller')) ? 'Stroller-friendly access throughout. ' : 'Parent tip: bring a baby carrier for easier navigation. '}Visit during morning hours for the calmest experience with little ones.`,
     });
   }
-  if (range.includes('4') || range.includes('5') || range.includes('6') || range.includes('7') || range.includes('8') || range.includes('9')) {
+  if (minAge <= 9 && maxAge >= 4) {
     sections.push({
       age: 'Young Kids (4-9)',
       icon: School,
-      content: `Perfect age range for exploring ${d.name}. Kids will love the interactive elements${d.category.includes('Theme') || d.category.includes('Zoo') ? ' and hands-on activities' : ''}. ${d.safetyFeatures.length > 0 ? 'Safety features include: ' + d.safetyFeatures.slice(0, 2).join(', ') + '.' : ''}`,
+      color: 'bg-sky-50 border-sky-100',
+      iconBg: 'bg-sky-100',
+      iconColor: 'text-sky-600',
+      content: `This age group absolutely loves ${d.name}. The interactive elements and sensory experiences are perfect for curious young minds. ${safety >= 4 ? 'Safety measures are excellent, giving parents peace of mind. ' : ''}Plan for 2-3 hours before attention spans start to wane.`,
     });
   }
-  if (range.includes('10') || range.includes('11') || range.includes('12') || range.includes('13') || range.includes('14') || range.includes('15') || range.includes('teen')) {
+  if (maxAge >= 10) {
     sections.push({
       age: 'Tweens & Teens (10+)',
       icon: Users,
-      content: `Older kids and teens will appreciate ${d.name}. ${d.itineraryComparison?.fullDay ? 'A full-day visit (' + d.itineraryComparison.fullDay + ') works well for this age group.' : ''} ${d.popularity >= 80 ? 'Rated highly by parents of teens.' : ''}`,
+      color: 'bg-emerald-50 border-emerald-100',
+      iconBg: 'bg-emerald-100',
+      iconColor: 'text-emerald-600',
+      content: `Older kids will appreciate the deeper experiences ${d.name} offers. ${d.itineraryComparison?.fullDay ? 'A full-day visit works great here: ' + d.itineraryComparison.fullDay + '. ' : ''}${d.popularity >= 80 ? 'Highly rated by parents of teens for keeping them engaged. ' : ''}Let teens take photos for the family album — they will appreciate the ownership.`,
     });
   }
   return sections;
@@ -161,46 +176,63 @@ function generateAgeBreakdown(d: Destination) {
 function generateAttractions(d: Destination) {
   const name = d.name;
   const city = d.city;
+  const category = d.category;
+
+  // Build category-specific attraction descriptions
+  let catDesc = '';
+  if (category.includes('Theme')) catDesc = ' spectacular rides, character meet-and-greets, and themed zones';
+  else if (category.includes('Nature')) catDesc = ' wildlife encounters, nature trails, and outdoor discovery zones';
+  else if (category.includes('Cultural')) catDesc = ' interactive exhibits, hands-on workshops, and cultural demonstrations';
+  else catDesc = ' family-friendly activities and engaging experiences';
+
   const attractions = [
     { name, desc: d.description.length > 100 ? d.description.substring(0, 120) + '...' : d.description },
-    { name: `${city} Family Walking Tour`, desc: `Explore ${city} with a kid-friendly walking route that passes the best sights, playgrounds, and ice cream stops.` },
-    { name: `${d.category} Experience`, desc: `Immerse in ${d.category.toLowerCase()} activities designed for families at this top-rated ${city} attraction.` },
+    { name: `${city} Family Walking Route`, desc: `A parent-tested walking route through ${city} connecting ${name} with nearby playgrounds, kid-friendly cafes, and rest stops. Perfect for a full day of exploration.` },
+    { name: `${d.ageRange} Experience Package`, desc: `Tailored ${d.ageRange}-year-old experience at ${name} featuring${catDesc}. Designed to match energy levels and attention spans.` },
   ];
   if (d.itineraryComparison?.halfDay) {
-    attractions.push({ name: `${name} - Half Day Plan`, desc: d.itineraryComparison.halfDay });
+    attractions.push({ name: `Half-Day Itinerary`, desc: d.itineraryComparison.halfDay });
   }
   return attractions;
 }
 
 function generatePracticalInfo(d: Destination) {
   return [
-    { icon: Clock, label: 'Best Time', value: d.bestTime },
-    { icon: Bus, label: 'Getting Around', value: `${d.city} has family-friendly transport options. Taxis and ride-sharing are readily available near ${d.name}.` },
-    { icon: Bed, label: 'Family Hotels', value: `Several family-friendly hotels near ${d.name} offer kid's clubs, pools, and family suites. Book in advance during peak season.` },
-    { icon: Utensils, label: 'Kid-Friendly Food', value: `${d.city} offers plenty of child-friendly dining options near ${d.name}, from quick bites to sit-down restaurants with kids' menus.` },
+    { icon: Clock, label: 'Best Time to Visit', value: d.bestTime },
+    { icon: Bus, label: 'Getting Around', value: `${d.city} has solid family-friendly transport. Taxis and ride-sharing are easy to find near ${d.name}. For stroller users, check for elevator access at metro stations.` },
+    { icon: Bed, label: 'Family Accommodation', value: `Hotels near ${d.name} range from budget-friendly to luxury. Look for places with family rooms, kid's clubs, and early dinner service. Booking 2-4 weeks ahead is recommended.` },
+    { icon: Utensils, label: 'Kid-Friendly Dining', value: `${d.city} has excellent child-friendly dining near ${d.name}. Look for places with kids' menus, high chairs, and quick service. Street food is always a hit with adventurous young eaters.` },
   ];
 }
 
 function generateRelatedDestinations(d: Destination, allDests: any[]) {
-  // Find destinations in same city or same country
   const sameCity = allDests.filter(x => x.city === d.city && x.id !== d.id).slice(0, 2);
   const sameCountry = allDests.filter(x => x.country === d.country && x.id !== d.id && x.city !== d.city).slice(0, 2);
   const sameCategory = allDests.filter(x => x.category === d.category && x.id !== d.id && x.city !== d.city && x.country !== d.country).slice(0, 2);
   const related = [...sameCity, ...sameCountry, ...sameCategory].slice(0, 4);
-  // Remove duplicates by id
   const seen = new Set<string>();
   return related.filter(r => { if (seen.has(r.id)) return false; seen.add(r.id); return true; });
+}
+
+// ─── Section decorator ────────────────────────────────────────────
+function SectionNumber({ num }: { num: number }) {
+  return (
+    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-sky-100 text-sky-600 font-bold text-xs mr-0 flex-shrink-0">
+      {num}
+    </div>
+  );
 }
 
 // ─── Main component ──────────────────────────────────────────────
 export default function ClientDestinationPage({ initialData }: DestinationPageProps) {
   const d = initialData;
 
-  // Load all destinations for related links
   const [related, setRelated] = useState<any[]>([]);
+  const [allLoaded, setAllLoaded] = useState(false);
   useState(() => {
     fetch('/data/destinations.json').then(r => r.json()).then(data => {
       setRelated(generateRelatedDestinations(d, data));
+      setAllLoaded(true);
     }).catch(() => {});
   });
 
@@ -209,11 +241,11 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
   const practicalInfo = generatePracticalInfo(d);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* ═══ 1. HEADER ═══ */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900">
+          <Link href="/" className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
             <ArrowLeft size={16} />
             <span className="hidden sm:inline">Back to destinations</span>
           </Link>
@@ -224,27 +256,32 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
         </div>
       </header>
 
-      {/* ═══ 2. HERO ═══ */}
+      {/* ═══ SECTION 1: HERO ═══ */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0">
-          <DestinationImage src={d.imageUrl} alt={d.name} className="w-full h-full object-cover opacity-25" />
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-gray-900/80" />
+          <DestinationImage src={d.imageUrl} alt={d.name} className="w-full h-full object-cover opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-800/75 to-gray-900/85" />
         </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
           <div className="flex flex-wrap items-center gap-2 mb-4">
-            <span className="text-xs bg-sky-500/20 text-sky-300 px-2.5 py-0.5 rounded-full font-medium border border-sky-500/30">{d.category}</span>
-            <span className="text-xs bg-white/10 text-gray-300 px-2.5 py-0.5 rounded-full border border-gray-700">{d.ageRange} yrs</span>
-            <span className="text-xs bg-white/10 text-gray-300 px-2.5 py-0.5 rounded-full border border-gray-700">{d.priceRange}</span>
+            <span className="text-xs bg-sky-500/20 text-sky-300 px-2.5 py-0.5 rounded-full font-medium border border-sky-500/30 backdrop-blur-sm">{d.category}</span>
+            <span className="text-xs bg-white/10 text-gray-300 px-2.5 py-0.5 rounded-full border border-gray-700 backdrop-blur-sm">{d.ageRange} yrs</span>
+            <span className="text-xs bg-white/10 text-gray-300 px-2.5 py-0.5 rounded-full border border-gray-700 backdrop-blur-sm">{d.priceRange}</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-3 leading-tight">{d.name}</h1>
-          <p className="text-sm text-gray-300 mb-4 flex items-center gap-2">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 leading-tight">
+            {d.name}
+          </h1>
+          <p className="text-lg text-gray-300/90 max-w-2xl mb-6 leading-relaxed">
+            {d.description.length > 200 ? d.description.substring(0, 200) + '...' : d.description}
+          </p>
+          <p className="text-sm text-gray-400 mb-4 flex items-center gap-2">
             <MapPin size={14} />
             <span>{d.location} &middot; {d.city}, {d.country}</span>
           </p>
-          <div className="flex flex-wrap items-center gap-4 text-sm">
+          <div className="flex flex-wrap items-center gap-5 text-sm">
             <div className="flex items-center gap-1.5">
               <StarRating rating={d.safetyRating} />
-              <span className="text-gray-400 text-xs ml-1">{d.safetyRating.toFixed(1)} Safety</span>
+              <span className="text-gray-400 text-xs ml-1">{d.safetyRating.toFixed(1)} / 5 Safety</span>
             </div>
             <div className="flex items-center gap-1.5 text-gray-400">
               <Calendar size={14} />
@@ -256,13 +293,12 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-50 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
-      {/* ═══ 3. QUICK OVERVIEW ═══ */}
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
-        {/* Stats bar */}
-        <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 mb-10 shadow-sm">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-20">
+        {/* ═══ SECTION 2: QUICK OVERVIEW ═══ */}
+        <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-6 mb-12 shadow-sm">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
             <div className="text-center">
               <div className="flex items-center justify-center gap-1 text-2xl font-bold text-gray-900 mb-0.5">
@@ -280,89 +316,99 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-gray-900">{d.popularity}%</div>
-              <div className="text-xs text-gray-500">Parent Rating</div>
+              <div className="text-xs text-gray-500">Parent Approval</div>
             </div>
           </div>
         </div>
 
-        {/* Why This Destination */}
-        <section className="mb-10">
-          <h2 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-            <Sparkles size={18} className="text-sky-500" />
-            Why Families Love {d.name}
-          </h2>
-          <div className="bg-white rounded-xl border border-gray-200 p-5">
+        <section className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <SectionNumber num={2} />
+            <h2 className="text-xl font-bold text-gray-900">Why Families Love {d.name}</h2>
+          </div>
+          <div className="bg-white rounded-2xl border border-gray-200 p-6">
             <p className="text-base text-gray-700 leading-relaxed">{d.description}</p>
-            <div className="flex flex-wrap gap-2 mt-4">
-              {d.amenities.slice(0, 5).map((a, i) => (
-                <span key={i} className="text-xs bg-sky-50 text-sky-700 px-2.5 py-1 rounded-full font-medium border border-sky-100">{a}</span>
+            <div className="flex flex-wrap gap-2 mt-5">
+              {d.amenities.slice(0, 6).map((a, i) => (
+                <span key={i} className="text-xs bg-sky-50 text-sky-700 px-3 py-1.5 rounded-full font-medium border border-sky-100">{a}</span>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ═══ 4. AGE-SPECIFIC BREAKDOWN ═══ */}
-        {ageBreakdown.length > 0 && (
-          <section className="mb-10">
-            <h2 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-              <Users size={18} className="text-sky-500" />
-              Age-Specific Guide
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {ageBreakdown.map((ab, i) => (
-                <div key={i} className="bg-white rounded-xl border border-gray-200 p-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <ab.icon size={16} className="text-sky-500" />
-                    <h3 className="font-semibold text-gray-900 text-sm">{ab.age}</h3>
+        {/* ═══ SECTION 3: AGE-SPECIFIC BREAKDOWN ═══ */}
+        <section className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <SectionNumber num={3} />
+            <h2 className="text-xl font-bold text-gray-900">Age-Specific Guide</h2>
+          </div>
+          <p className="text-sm text-gray-500 mb-5">{d.name} suits ages {d.ageRange}. Here is what each age group will love:</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {ageBreakdown.map((ab, i) => (
+              <div key={i} className={`rounded-2xl border p-5 ${ab.color}`}>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`w-10 h-10 rounded-xl ${ab.iconBg} flex items-center justify-center`}>
+                    <ab.icon size={18} className={ab.iconColor} />
                   </div>
-                  <p className="text-sm text-gray-600 leading-relaxed">{ab.content}</p>
+                  <h3 className="font-semibold text-gray-900 text-sm">{ab.age}</h3>
                 </div>
-              ))}
-            </div>
-          </section>
-        )}
+                <p className="text-sm text-gray-700 leading-relaxed">{ab.content}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        {/* ═══ 5. TOP ATTRACTIONS ═══ */}
-        <section className="mb-10">
-          <h2 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-            <Compass size={18} className="text-sky-500" />
-            Top Attractions & Activities
-          </h2>
+        {/* ═══ SECTION 4: TOP ATTRACTIONS ═══ */}
+        <section className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <SectionNumber num={4} />
+            <h2 className="text-xl font-bold text-gray-900">Top Attractions & Activities</h2>
+          </div>
           <div className="space-y-3">
             {attractions.map((a, i) => (
-              <div key={i} className="bg-white rounded-xl border border-gray-200 p-4 flex gap-3">
-                <div className="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center flex-shrink-0">
+              <div key={i} className="bg-white rounded-xl border border-gray-200 p-5 flex gap-4 hover:border-gray-300 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center flex-shrink-0">
                   <span className="text-sky-600 font-bold text-sm">{i + 1}</span>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 text-sm mb-1">{a.name}</h3>
-                  <p className="text-sm text-gray-600">{a.desc}</p>
+                  <h3 className="font-semibold text-gray-900 text-sm mb-1.5">{a.name}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{a.desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* ═══ 6. TIPS & TRICKS ═══ */}
-        <section className="mb-10">
-          <ExpandableSection title="Tips & Tricks from Real Parents" icon={Lightbulb} defaultOpen={true}>
-            <ul className="space-y-3">
-              {d.tipsAndTricks.map((tip, i) => (
-                <li key={i} className="flex gap-2">
-                  <span className="text-amber-500 font-bold flex-shrink-0 mt-0.5 text-sm">★</span>
-                  <span className="text-sm text-gray-600 leading-relaxed">{tip}</span>
-                </li>
-              ))}
-            </ul>
-          </ExpandableSection>
+        {/* ═══ SECTION 5: TIPS & TRICKS ═══ */}
+        <section className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <SectionNumber num={5} />
+            <h2 className="text-xl font-bold text-gray-900">Tips & Tricks from Real Parents</h2>
+          </div>
+          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+            <div className="divide-y divide-gray-100">
+              {d.tipsAndTricks.length > 0 ? (
+                d.tipsAndTricks.map((tip, i) => (
+                  <div key={i} className="flex gap-3 p-4 sm:p-5">
+                    <div className="w-7 h-7 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-amber-600 font-bold text-xs">{i + 1}</span>
+                    </div>
+                    <p className="text-sm text-gray-700 leading-relaxed">{tip}</p>
+                  </div>
+                ))
+              ) : (
+                <div className="p-5 text-sm text-gray-500">No parent tips yet. Be the first to share your experience!</div>
+              )}
+            </div>
+          </div>
         </section>
 
-        {/* ═══ 7. PRACTICAL INFO ═══ */}
-        <section className="mb-10">
-          <h2 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-            <Info size={18} className="text-sky-500" />
-            Practical Information
-          </h2>
+        {/* ═══ SECTION 6: PRACTICAL INFO ═══ */}
+        <section className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <SectionNumber num={6} />
+            <h2 className="text-xl font-bold text-gray-900">Practical Information</h2>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {practicalInfo.map((p, i) => (
               <InfoCard key={i} icon={p.icon} title={p.label}>{p.value}</InfoCard>
@@ -370,53 +416,59 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
           </div>
         </section>
 
-        {/* ═══ 8. PARENT STORY ═══ */}
+        {/* ═══ SECTION 7: PARENT REVIEWS ═══ */}
         {d.parentStory && (
-          <section className="mb-10">
-            <h2 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-              <Heart size={18} className="text-rose-500" />
-              Real Parent Review
-            </h2>
-            <div className="bg-white rounded-xl border border-gray-200 p-5">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-8 h-8 rounded-full bg-rose-100 flex items-center justify-center">
-                  <Heart size={14} className="text-rose-500" />
+          <section className="mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <SectionNumber num={7} />
+              <h2 className="text-xl font-bold text-gray-900">Parent Reviews & Stories</h2>
+            </div>
+            <div className="bg-white rounded-2xl border border-gray-200 p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center">
+                  <Heart size={16} className="text-rose-500" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-gray-900">{d.parentStory.author}</p>
-                  <StarRating rating={d.safetyRating} />
+                  <div className="flex items-center gap-2">
+                    <StarRating rating={d.safetyRating} />
+                    <span className="text-xs text-gray-400">Verified Parent</span>
+                  </div>
                 </div>
               </div>
-              <h3 className="font-medium text-gray-900 mb-2">&ldquo;{d.parentStory.title}&rdquo;</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{d.parentStory.fullStory}</p>
+              <h3 className="font-medium text-gray-900 mb-3 text-base">&ldquo;{d.parentStory.title}&rdquo;</h3>
+              <p className="text-sm text-gray-600 leading-relaxed mb-4">{d.parentStory.fullStory}</p>
+              <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">
+                <p className="text-xs text-gray-500 italic leading-relaxed">
+                  &ldquo;{d.parentStory.excerpt}&rdquo;
+                </p>
+              </div>
             </div>
           </section>
         )}
 
-        {/* ═══ 9. GALLERY — Removed. Users upload from reviews with moderation ═══ */}
-
-        {/* ═══ 10. RELATED DESTINATIONS ═══ */}
+        {/* ═══ SECTION 8: RELATED DESTINATIONS ═══ */}
         {related.length > 0 && (
-          <section className="mb-10">
-            <h2 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-              <TreePine size={18} className="text-sky-500" />
-              Plan Your Next Trip
-            </h2>
+          <section className="mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <SectionNumber num={8} />
+              <h2 className="text-xl font-bold text-gray-900">Plan Your Next Trip</h2>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {related.map((r) => (
                 <Link key={r.id} href={`/destination/${r.id}`}
-                  className="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-gray-300 transition-all flex items-center gap-3 group">
-                  <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
+                  className="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-gray-300 transition-all flex items-center gap-4 group">
+                  <div className="w-20 h-16 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0">
                     <DestinationImage src={r.imageUrl} alt={r.name} className="w-full h-full object-cover" />
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <h3 className="font-semibold text-gray-900 text-sm group-hover:text-sky-600 transition-colors truncate">{r.name}</h3>
                     <p className="text-xs text-gray-500 truncate">{r.city}, {r.country}</p>
-                    <div className="flex items-center gap-2 mt-1">
+                    <div className="flex items-center gap-2 mt-1.5">
                       <span className="text-xs text-amber-600 flex items-center gap-0.5">
                         <Star size={10} className="fill-amber-400" /> {r.safetyRating.toFixed(1)}
                       </span>
-                      <span className="text-xs text-gray-400">{r.category}</span>
+                      <span className="text-xs bg-sky-50 text-sky-700 px-2 py-0.5 rounded-full">{r.category}</span>
                     </div>
                   </div>
                 </Link>
@@ -425,20 +477,23 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
           </section>
         )}
 
-        {/* ═══ 11. CLEAR CTA ═══ */}
-        <section className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-xl border border-sky-100 p-6 mb-6 text-center">
-          <h2 className="text-lg font-bold text-gray-900 mb-2">Ready to visit {d.name}?</h2>
-          <p className="text-sm text-gray-600 mb-4">
+        {/* ═══ SECTION 9: CLEAR CTA ═══ */}
+        <section className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl border border-sky-100 p-8 mb-6 text-center">
+          <div className="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center mx-auto mb-4">
+            <Sparkles size={24} className="text-sky-600" />
+          </div>
+          <h2 className="text-xl font-bold text-gray-900 mb-2">Ready to visit {d.name}?</h2>
+          <p className="text-sm text-gray-600 mb-5 max-w-md mx-auto">
             Bookmark this page, share it with your travel group, and start planning your family adventure in {d.city}.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link href="/"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors shadow-sm">
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors shadow-sm">
               <ArrowLeft size={14} />
               Browse all destinations
             </Link>
             <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 rounded-lg text-sm font-medium border border-gray-200 hover:bg-gray-50 transition-colors">
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-700 rounded-xl text-sm font-medium border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm">
               <Compass size={14} />
               Back to top
             </button>
@@ -447,9 +502,9 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
       </main>
 
       {/* ═══ FOOTER ═══ */}
-      <footer className="border-t border-gray-200 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+      <footer className="border-t border-gray-200 bg-white mt-0">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2 text-gray-500">
               <Compass size={16} className="text-sky-600" />
               <span className="text-sm">Asia Family Travel Directory</span>
@@ -459,7 +514,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
               <Link href="/privacy" className="hover:text-gray-900 transition-colors">Privacy</Link>
               <Link href="/terms" className="hover:text-gray-900 transition-colors">Terms</Link>
             </div>
-            <p className="text-sm text-gray-400">&copy; 2026 Family Travel Asia</p>
+            <p className="text-sm text-gray-400">&copy; 2026 Asia Family Travel Directory</p>
           </div>
         </div>
       </footer>
