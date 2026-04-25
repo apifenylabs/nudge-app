@@ -97,32 +97,6 @@ function ExpandableSection({
   );
 }
 
-function ImageGallery({ images, name }: { images: string[]; name: string }) {
-  const [idx, setIdx] = useState(0);
-  if (!images?.length) return null;
-  const prev = () => setIdx(i => (i === 0 ? images.length - 1 : i - 1));
-  const next = () => setIdx(i => (i === images.length - 1 ? 0 : i + 1));
-  return (
-    <div className="relative rounded-xl overflow-hidden bg-gray-200">
-      <img src={images[idx]} alt={`${name} gallery ${idx + 1}`}
-        className="w-full h-64 sm:h-80 object-cover"
-        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-      {images.length > 1 && (
-        <>
-          <button onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/40 text-white hover:bg-black/60"><ChevronLeft size={18} /></button>
-          <button onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/40 text-white hover:bg-black/60"><ChevronRight size={18} /></button>
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-            {images.map((_, i) => (
-              <button key={i} onClick={() => setIdx(i)}
-                className={`w-2 h-2 rounded-full transition-all ${i === idx ? 'bg-white w-4' : 'bg-white/50'}`} />
-            ))}
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
-
 function InfoCard({ icon: Icon, title, children }: { icon: any; title: string; children: React.ReactNode }) {
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-4">
@@ -419,16 +393,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
           </section>
         )}
 
-        {/* ═══ 9. GALLERY ═══ */}
-        {d.gallery && d.gallery.length > 0 && (
-          <section className="mb-10">
-            <h2 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-              <Sparkles size={18} className="text-sky-500" />
-              Photo Gallery
-            </h2>
-            <ImageGallery images={d.gallery} name={d.name} />
-          </section>
-        )}
+        {/* ═══ 9. GALLERY — Removed. Users upload from reviews with moderation ═══ */}
 
         {/* ═══ 10. RELATED DESTINATIONS ═══ */}
         {related.length > 0 && (
