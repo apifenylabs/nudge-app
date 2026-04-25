@@ -7,7 +7,7 @@ import {
   Shield, Sparkles, Compass, ChevronDown, ChevronUp,
   ArrowLeft, Clock3, Calendar, Users,
   ChevronLeft, ChevronRight, School, Baby,
-  Utensils, Bed, Bus, TreePine, Info
+  Utensils, Bed, Bus, TreePine, Info, ExternalLink, DollarSign
 } from 'lucide-react';
 
 // ─── Types ──────────────────────────────────────────────────────
@@ -42,6 +42,11 @@ interface Destination {
   };
   commissionRate: string;
   seoKeywords: string[];
+  affiliateLinks?: {
+    booking: { url: string; text: string };
+    klook: { url: string; text: string };
+    viator: { url: string; text: string };
+  };
 }
 
 interface DestinationPageProps {
@@ -194,6 +199,17 @@ function generateAttractions(d: Destination) {
     attractions.push({ name: `Half-Day Itinerary`, desc: d.itineraryComparison.halfDay });
   }
   return attractions;
+}
+
+function AffiliateButton({ url, label }: { url: string; label: string }) {
+  return (
+    <a href={url} target="_blank" rel="nofollow sponsored noopener"
+      className="flex items-center gap-2 bg-sky-50 hover:bg-sky-100 border border-sky-200 rounded-xl px-4 py-3 text-sm font-medium text-sky-700 transition-colors group">
+      <ExternalLink size={14} className="text-sky-500 group-hover:translate-x-0.5 transition-transform" />
+      <span>{label}</span>
+      <span className="text-[10px] text-gray-400 ml-auto uppercase tracking-wider">Affiliate</span>
+    </a>
+  );
 }
 
 function generatePracticalInfo(d: Destination) {
@@ -379,6 +395,21 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
           </div>
         </section>
 
+        {/* ═══ IN-CONTENT AD ═══ */}
+        <div className="mb-12">
+          <div className="bg-gray-50 rounded-2xl border border-gray-200 py-6 px-4 text-center">
+            <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-3">Advertisement</p>
+            <div className="max-w-[728px] mx-auto">
+              <ins className="adsbygoogle"
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX"
+                data-ad-format="auto"
+                data-full-width-responsive="true" />
+            </div>
+          </div>
+        </div>
+
         {/* ═══ SECTION 5: TIPS & TRICKS ═══ */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-4">
@@ -413,6 +444,30 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
             {practicalInfo.map((p, i) => (
               <InfoCard key={i} icon={p.icon} title={p.label}>{p.value}</InfoCard>
             ))}
+          </div>
+        </section>
+
+        {/* ═══ AFFILIATE BOOKING CARD ═══ */}
+        <section className="mb-12">
+          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6">
+            <div className="flex items-center gap-2 mb-4">
+              <DollarSign size={16} className="text-amber-600" />
+              <h3 className="font-semibold text-gray-900 text-sm">Book Your {d.name} Trip</h3>
+            </div>
+            <p className="text-sm text-gray-600 mb-4">
+              We partner with trusted travel sites so you get the best deals. Bookings support our free directory.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {d.affiliateLinks?.booking && (
+                <AffiliateButton url={d.affiliateLinks.booking.url} label="Family Hotels" />
+              )}
+              {d.affiliateLinks?.klook && (
+                <AffiliateButton url={d.affiliateLinks.klook.url} label="Klook Activities" />
+              )}
+              {d.affiliateLinks?.viator && (
+                <AffiliateButton url={d.affiliateLinks.viator.url} label="Viator Tours" />
+              )}
+            </div>
           </div>
         </section>
 
