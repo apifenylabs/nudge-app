@@ -347994,3 +347994,1305 @@ Checking system resources...
 
 === WATCHDOG COMPLETE ===
 Next check: 22:21 HKT
+=== WATCHDOG ORCHESTRA MONITOR ===
+Time: 2026-04-26 22:20 HKT
+
+❌ PM2 not installed. Installing...
+
+changed 134 packages in 2s
+
+13 packages are looking for funding
+  run `npm fund` for details
+❌ jq not installed. Installing...
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+⚠️ Could not install jq. Using fallback check.
+Checking PM2 status...
+❌ No PM2 processes online. Starting all orchestras...
+=== Fixing SIGKILL Issues ===
+Increasing inotify watches...
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+Checking swap...
+Installing PM2...
+
+changed 134 packages in 13s
+
+13 packages are looking for funding
+  run `npm fund` for details
+./fix-sigkill.sh: line 28: pm2: command not found
+Building all orchestras...
+Building family-travel-directory...
+
+> family-travel-directory@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.4
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/517) ...
+   Generating static pages (129/517) 
+   Generating static pages (258/517) 
+   Generating static pages (387/517) 
+ ✓ Generating static pages (517/517)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    4.8 kB          100 kB
+├ ○ /_not-found                          871 B          87.9 kB
+├ ƒ /api/review-photo                    0 B                0 B
+├ ƒ /api/test-data                       0 B                0 B
+├ ● /destination/[slug]                  6.85 kB         102 kB
+├   ├ /destination/tokyo-001
+├   ├ /destination/tokyo-002
+├   ├ /destination/tokyo-003
+├   └ [+503 more paths]
+├ ○ /health                              0 B                0 B
+├ ○ /review                              933 B            88 kB
+├ ○ /robots.txt                          0 B                0 B
+└ ○ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            87 kB
+  ├ chunks/23-ca6084080687a642.js        31.5 kB
+  ├ chunks/fd9d1056-f5ca11604835b0e5.js  53.6 kB
+  └ other shared chunks (total)          1.89 kB
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
+Building social-beast-components...
+
+> social-beast-components@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.4s
+  Running TypeScript ...
+  Finished TypeScript in 1398ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 296ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building kidscan-api...
+
+> kidscan-api@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.4s
+  Running TypeScript ...
+  Finished TypeScript in 1299ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 292ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building habit-tracker...
+
+> habit-tracker@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local, .env.production
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.4s
+  Running TypeScript ...
+  Finished TypeScript in 2.1s ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/5) ...
+  Generating static pages using 6 workers (1/5) 
+  Generating static pages using 6 workers (2/5) 
+  Generating static pages using 6 workers (3/5) 
+✓ Generating static pages using 6 workers (5/5) in 325ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+└ ƒ /auth/callback
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+Building affiliate-tracking...
+
+> affiliate-tracking@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.9s
+  Running TypeScript ...
+  Finished TypeScript in 1284ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 296ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Starting all orchestras with PM2...
+./fix-sigkill.sh: line 46: pm2: command not found
+./fix-sigkill.sh: line 49: pm2: command not found
+./fix-sigkill.sh: line 50: pm2: command not found
+=== Fix Complete ===
+Orchestras running on:
+- Directory Beast: http://localhost:3000
+- Social Beast: http://localhost:3001
+- KidScan Beast: http://localhost:3002
+- AppFactory Beast: http://localhost:3003
+- Affiliate Beast: http://localhost:3004
+
+Check status: pm2 status
+View logs: pm2 logs
+
+Performing health checks...
+Checking http://localhost:3000 ... ✅
+Checking http://localhost:3001 ... ✅
+Checking http://localhost:3002 ... ❌
+Checking http://localhost:3003 ... ❌
+Checking http://localhost:3004 ... ❌
+⚠️ 3 health checks failed. Consider restarting...
+
+Checking system resources...
+📊 Memory usage: 19.0%
+/home/captain/.openclaw/workspace/watchdog-orchestra-monitor.sh: line 117: [: 19.0: integer expression expected
+
+=== WATCHDOG COMPLETE ===
+Next check: 22:26 HKT
+=== WATCHDOG ORCHESTRA MONITOR ===
+Time: 2026-04-26 22:25 HKT
+
+❌ PM2 not installed. Installing...
+
+changed 134 packages in 2s
+
+13 packages are looking for funding
+  run `npm fund` for details
+❌ jq not installed. Installing...
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+⚠️ Could not install jq. Using fallback check.
+Checking PM2 status...
+❌ No PM2 processes online. Starting all orchestras...
+=== Fixing SIGKILL Issues ===
+Increasing inotify watches...
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+Checking swap...
+Installing PM2...
+
+changed 134 packages in 2s
+
+13 packages are looking for funding
+  run `npm fund` for details
+./fix-sigkill.sh: line 28: pm2: command not found
+Building all orchestras...
+Building family-travel-directory...
+
+> family-travel-directory@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.4
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/517) ...
+   Generating static pages (129/517) 
+   Generating static pages (258/517) 
+   Generating static pages (387/517) 
+ ✓ Generating static pages (517/517)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    4.8 kB          100 kB
+├ ○ /_not-found                          871 B          87.9 kB
+├ ƒ /api/review-photo                    0 B                0 B
+├ ƒ /api/test-data                       0 B                0 B
+├ ● /destination/[slug]                  6.85 kB         102 kB
+├   ├ /destination/tokyo-001
+├   ├ /destination/tokyo-002
+├   ├ /destination/tokyo-003
+├   └ [+503 more paths]
+├ ○ /health                              0 B                0 B
+├ ○ /review                              933 B            88 kB
+├ ○ /robots.txt                          0 B                0 B
+└ ○ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            87 kB
+  ├ chunks/23-ca6084080687a642.js        31.5 kB
+  ├ chunks/fd9d1056-f5ca11604835b0e5.js  53.6 kB
+  └ other shared chunks (total)          1.89 kB
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
+Building social-beast-components...
+
+> social-beast-components@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.0s
+  Running TypeScript ...
+  Finished TypeScript in 1441ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 311ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building kidscan-api...
+
+> kidscan-api@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.7s
+  Running TypeScript ...
+  Finished TypeScript in 1356ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 314ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building habit-tracker...
+
+> habit-tracker@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local, .env.production
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.7s
+  Running TypeScript ...
+  Finished TypeScript in 2.3s ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/5) ...
+  Generating static pages using 6 workers (1/5) 
+  Generating static pages using 6 workers (2/5) 
+  Generating static pages using 6 workers (3/5) 
+✓ Generating static pages using 6 workers (5/5) in 331ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+└ ƒ /auth/callback
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+Building affiliate-tracking...
+
+> affiliate-tracking@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.1s
+  Running TypeScript ...
+  Finished TypeScript in 1297ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 292ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Starting all orchestras with PM2...
+./fix-sigkill.sh: line 46: pm2: command not found
+./fix-sigkill.sh: line 49: pm2: command not found
+./fix-sigkill.sh: line 50: pm2: command not found
+=== Fix Complete ===
+Orchestras running on:
+- Directory Beast: http://localhost:3000
+- Social Beast: http://localhost:3001
+- KidScan Beast: http://localhost:3002
+- AppFactory Beast: http://localhost:3003
+- Affiliate Beast: http://localhost:3004
+
+Check status: pm2 status
+View logs: pm2 logs
+
+Performing health checks...
+Checking http://localhost:3000 ... ✅
+Checking http://localhost:3001 ... ✅
+Checking http://localhost:3002 ... ❌
+Checking http://localhost:3003 ... ❌
+Checking http://localhost:3004 ... ❌
+⚠️ 3 health checks failed. Consider restarting...
+
+Checking system resources...
+📊 Memory usage: 19.1%
+/home/captain/.openclaw/workspace/watchdog-orchestra-monitor.sh: line 117: [: 19.1: integer expression expected
+
+=== WATCHDOG COMPLETE ===
+Next check: 22:30 HKT
+=== WATCHDOG ORCHESTRA MONITOR ===
+Time: 2026-04-26 22:30 HKT
+
+❌ PM2 not installed. Installing...
+
+changed 134 packages in 13s
+
+13 packages are looking for funding
+  run `npm fund` for details
+❌ jq not installed. Installing...
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+⚠️ Could not install jq. Using fallback check.
+Checking PM2 status...
+❌ No PM2 processes online. Starting all orchestras...
+=== Fixing SIGKILL Issues ===
+Increasing inotify watches...
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+Checking swap...
+Installing PM2...
+
+changed 134 packages in 2s
+
+13 packages are looking for funding
+  run `npm fund` for details
+./fix-sigkill.sh: line 28: pm2: command not found
+Building all orchestras...
+Building family-travel-directory...
+
+> family-travel-directory@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.4
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/517) ...
+   Generating static pages (129/517) 
+   Generating static pages (258/517) 
+   Generating static pages (387/517) 
+ ✓ Generating static pages (517/517)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    4.8 kB          100 kB
+├ ○ /_not-found                          871 B          87.9 kB
+├ ƒ /api/review-photo                    0 B                0 B
+├ ƒ /api/test-data                       0 B                0 B
+├ ● /destination/[slug]                  6.85 kB         102 kB
+├   ├ /destination/tokyo-001
+├   ├ /destination/tokyo-002
+├   ├ /destination/tokyo-003
+├   └ [+503 more paths]
+├ ○ /health                              0 B                0 B
+├ ○ /review                              933 B            88 kB
+├ ○ /robots.txt                          0 B                0 B
+└ ○ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            87 kB
+  ├ chunks/23-ca6084080687a642.js        31.5 kB
+  ├ chunks/fd9d1056-f5ca11604835b0e5.js  53.6 kB
+  └ other shared chunks (total)          1.89 kB
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
+Building social-beast-components...
+
+> social-beast-components@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.7s
+  Running TypeScript ...
+  Finished TypeScript in 1420ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 301ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building kidscan-api...
+
+> kidscan-api@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.3s
+  Running TypeScript ...
+  Finished TypeScript in 1338ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 287ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building habit-tracker...
+
+> habit-tracker@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local, .env.production
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.4s
+  Running TypeScript ...
+  Finished TypeScript in 2.1s ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/5) ...
+  Generating static pages using 6 workers (1/5) 
+  Generating static pages using 6 workers (2/5) 
+  Generating static pages using 6 workers (3/5) 
+✓ Generating static pages using 6 workers (5/5) in 324ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+└ ƒ /auth/callback
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+Building affiliate-tracking...
+
+> affiliate-tracking@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.0s
+  Running TypeScript ...
+  Finished TypeScript in 1275ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 301ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Starting all orchestras with PM2...
+./fix-sigkill.sh: line 46: pm2: command not found
+./fix-sigkill.sh: line 49: pm2: command not found
+./fix-sigkill.sh: line 50: pm2: command not found
+=== Fix Complete ===
+Orchestras running on:
+- Directory Beast: http://localhost:3000
+- Social Beast: http://localhost:3001
+- KidScan Beast: http://localhost:3002
+- AppFactory Beast: http://localhost:3003
+- Affiliate Beast: http://localhost:3004
+
+Check status: pm2 status
+View logs: pm2 logs
+
+Performing health checks...
+Checking http://localhost:3000 ... ✅
+Checking http://localhost:3001 ... ✅
+Checking http://localhost:3002 ... ❌
+Checking http://localhost:3003 ... ❌
+Checking http://localhost:3004 ... ❌
+⚠️ 3 health checks failed. Consider restarting...
+
+Checking system resources...
+📊 Memory usage: 19.3%
+/home/captain/.openclaw/workspace/watchdog-orchestra-monitor.sh: line 117: [: 19.3: integer expression expected
+
+=== WATCHDOG COMPLETE ===
+Next check: 22:36 HKT
+=== WATCHDOG ORCHESTRA MONITOR ===
+Time: 2026-04-26 22:35 HKT
+
+❌ PM2 not installed. Installing...
+
+changed 134 packages in 2s
+
+13 packages are looking for funding
+  run `npm fund` for details
+❌ jq not installed. Installing...
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+⚠️ Could not install jq. Using fallback check.
+Checking PM2 status...
+❌ No PM2 processes online. Starting all orchestras...
+=== Fixing SIGKILL Issues ===
+Increasing inotify watches...
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+Checking swap...
+Installing PM2...
+
+changed 134 packages in 14s
+
+13 packages are looking for funding
+  run `npm fund` for details
+./fix-sigkill.sh: line 28: pm2: command not found
+Building all orchestras...
+Building family-travel-directory...
+
+> family-travel-directory@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.4
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/517) ...
+   Generating static pages (129/517) 
+   Generating static pages (258/517) 
+   Generating static pages (387/517) 
+ ✓ Generating static pages (517/517)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    4.8 kB          100 kB
+├ ○ /_not-found                          871 B          87.9 kB
+├ ƒ /api/review-photo                    0 B                0 B
+├ ƒ /api/test-data                       0 B                0 B
+├ ● /destination/[slug]                  6.85 kB         102 kB
+├   ├ /destination/tokyo-001
+├   ├ /destination/tokyo-002
+├   ├ /destination/tokyo-003
+├   └ [+503 more paths]
+├ ○ /health                              0 B                0 B
+├ ○ /review                              933 B            88 kB
+├ ○ /robots.txt                          0 B                0 B
+└ ○ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            87 kB
+  ├ chunks/23-ca6084080687a642.js        31.5 kB
+  ├ chunks/fd9d1056-f5ca11604835b0e5.js  53.6 kB
+  └ other shared chunks (total)          1.89 kB
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
+Building social-beast-components...
+
+> social-beast-components@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.2s
+  Running TypeScript ...
+  Finished TypeScript in 1474ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 336ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building kidscan-api...
+
+> kidscan-api@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.0s
+  Running TypeScript ...
+  Finished TypeScript in 1306ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 295ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building habit-tracker...
+
+> habit-tracker@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local, .env.production
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.7s
+  Running TypeScript ...
+  Finished TypeScript in 2.1s ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/5) ...
+  Generating static pages using 6 workers (1/5) 
+  Generating static pages using 6 workers (2/5) 
+  Generating static pages using 6 workers (3/5) 
+✓ Generating static pages using 6 workers (5/5) in 333ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+└ ƒ /auth/callback
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+Building affiliate-tracking...
+
+> affiliate-tracking@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.3s
+  Running TypeScript ...
+  Finished TypeScript in 1262ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 290ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Starting all orchestras with PM2...
+./fix-sigkill.sh: line 46: pm2: command not found
+./fix-sigkill.sh: line 49: pm2: command not found
+./fix-sigkill.sh: line 50: pm2: command not found
+=== Fix Complete ===
+Orchestras running on:
+- Directory Beast: http://localhost:3000
+- Social Beast: http://localhost:3001
+- KidScan Beast: http://localhost:3002
+- AppFactory Beast: http://localhost:3003
+- Affiliate Beast: http://localhost:3004
+
+Check status: pm2 status
+View logs: pm2 logs
+
+Performing health checks...
+Checking http://localhost:3000 ... ✅
+Checking http://localhost:3001 ... ✅
+Checking http://localhost:3002 ... ❌
+Checking http://localhost:3003 ... ❌
+Checking http://localhost:3004 ... ❌
+⚠️ 3 health checks failed. Consider restarting...
+
+Checking system resources...
+📊 Memory usage: 19.4%
+/home/captain/.openclaw/workspace/watchdog-orchestra-monitor.sh: line 117: [: 19.4: integer expression expected
+
+=== WATCHDOG COMPLETE ===
+Next check: 22:41 HKT
+=== WATCHDOG ORCHESTRA MONITOR ===
+Time: 2026-04-26 22:40 HKT
+
+❌ PM2 not installed. Installing...
+
+changed 134 packages in 4s
+
+13 packages are looking for funding
+  run `npm fund` for details
+❌ jq not installed. Installing...
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+⚠️ Could not install jq. Using fallback check.
+Checking PM2 status...
+❌ No PM2 processes online. Starting all orchestras...
+=== Fixing SIGKILL Issues ===
+Increasing inotify watches...
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+Checking swap...
+Installing PM2...
+
+changed 134 packages in 8s
+
+13 packages are looking for funding
+  run `npm fund` for details
+./fix-sigkill.sh: line 28: pm2: command not found
+Building all orchestras...
+Building family-travel-directory...
+
+> family-travel-directory@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.4
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/517) ...
+   Generating static pages (129/517) 
+   Generating static pages (258/517) 
+   Generating static pages (387/517) 
+ ✓ Generating static pages (517/517)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    4.8 kB          100 kB
+├ ○ /_not-found                          871 B          87.9 kB
+├ ƒ /api/review-photo                    0 B                0 B
+├ ƒ /api/test-data                       0 B                0 B
+├ ● /destination/[slug]                  6.85 kB         102 kB
+├   ├ /destination/tokyo-001
+├   ├ /destination/tokyo-002
+├   ├ /destination/tokyo-003
+├   └ [+503 more paths]
+├ ○ /health                              0 B                0 B
+├ ○ /review                              933 B            88 kB
+├ ○ /robots.txt                          0 B                0 B
+└ ○ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            87 kB
+  ├ chunks/23-ca6084080687a642.js        31.5 kB
+  ├ chunks/fd9d1056-f5ca11604835b0e5.js  53.6 kB
+  └ other shared chunks (total)          1.89 kB
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
+Building social-beast-components...
+
+> social-beast-components@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.6s
+  Running TypeScript ...
+  Finished TypeScript in 1478ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 316ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building kidscan-api...
+
+> kidscan-api@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.1s
+  Running TypeScript ...
+  Finished TypeScript in 1325ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 308ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building habit-tracker...
+
+> habit-tracker@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local, .env.production
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.4s
+  Running TypeScript ...
+  Finished TypeScript in 2.3s ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/5) ...
+  Generating static pages using 6 workers (1/5) 
+  Generating static pages using 6 workers (2/5) 
+  Generating static pages using 6 workers (3/5) 
+✓ Generating static pages using 6 workers (5/5) in 338ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+└ ƒ /auth/callback
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+Building affiliate-tracking...
+
+> affiliate-tracking@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.1s
+  Running TypeScript ...
+  Finished TypeScript in 1344ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 288ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Starting all orchestras with PM2...
+./fix-sigkill.sh: line 46: pm2: command not found
+./fix-sigkill.sh: line 49: pm2: command not found
+./fix-sigkill.sh: line 50: pm2: command not found
+=== Fix Complete ===
+Orchestras running on:
+- Directory Beast: http://localhost:3000
+- Social Beast: http://localhost:3001
+- KidScan Beast: http://localhost:3002
+- AppFactory Beast: http://localhost:3003
+- Affiliate Beast: http://localhost:3004
+
+Check status: pm2 status
+View logs: pm2 logs
+
+Performing health checks...
+Checking http://localhost:3000 ... ✅
+Checking http://localhost:3001 ... ✅
+Checking http://localhost:3002 ... ❌
+Checking http://localhost:3003 ... ❌
+Checking http://localhost:3004 ... ❌
+⚠️ 3 health checks failed. Consider restarting...
+
+Checking system resources...
+📊 Memory usage: 19.0%
+/home/captain/.openclaw/workspace/watchdog-orchestra-monitor.sh: line 117: [: 19.0: integer expression expected
+
+=== WATCHDOG COMPLETE ===
+Next check: 22:45 HKT
+=== WATCHDOG ORCHESTRA MONITOR ===
+Time: 2026-04-26 22:45 HKT
+
+❌ PM2 not installed. Installing...
+
+changed 134 packages in 8s
+
+13 packages are looking for funding
+  run `npm fund` for details
+❌ jq not installed. Installing...
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+⚠️ Could not install jq. Using fallback check.
+Checking PM2 status...
+❌ No PM2 processes online. Starting all orchestras...
+=== Fixing SIGKILL Issues ===
+Increasing inotify watches...
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+Checking swap...
+Installing PM2...
+
+changed 134 packages in 9s
+
+13 packages are looking for funding
+  run `npm fund` for details
+./fix-sigkill.sh: line 28: pm2: command not found
+Building all orchestras...
+Building family-travel-directory...
+
+> family-travel-directory@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.4
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/517) ...
+   Generating static pages (129/517) 
+   Generating static pages (258/517) 
+   Generating static pages (387/517) 
+ ✓ Generating static pages (517/517)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    4.8 kB          100 kB
+├ ○ /_not-found                          871 B          87.9 kB
+├ ƒ /api/review-photo                    0 B                0 B
+├ ƒ /api/test-data                       0 B                0 B
+├ ● /destination/[slug]                  6.85 kB         102 kB
+├   ├ /destination/tokyo-001
+├   ├ /destination/tokyo-002
+├   ├ /destination/tokyo-003
+├   └ [+503 more paths]
+├ ○ /health                              0 B                0 B
+├ ○ /review                              933 B            88 kB
+├ ○ /robots.txt                          0 B                0 B
+└ ○ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            87 kB
+  ├ chunks/23-ca6084080687a642.js        31.5 kB
+  ├ chunks/fd9d1056-f5ca11604835b0e5.js  53.6 kB
+  └ other shared chunks (total)          1.89 kB
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
+Building social-beast-components...
+
+> social-beast-components@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 6.5s
+  Running TypeScript ...
+  Finished TypeScript in 1421ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 289ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building kidscan-api...
+
+> kidscan-api@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.0s
+  Running TypeScript ...
+  Finished TypeScript in 1372ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 298ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building habit-tracker...
+
+> habit-tracker@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local, .env.production
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.0s
+  Running TypeScript ...
+  Finished TypeScript in 2.2s ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/5) ...
+  Generating static pages using 6 workers (1/5) 
+  Generating static pages using 6 workers (2/5) 
+  Generating static pages using 6 workers (3/5) 
+✓ Generating static pages using 6 workers (5/5) in 330ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+└ ƒ /auth/callback
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+Building affiliate-tracking...
+
+> affiliate-tracking@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.9s
+  Running TypeScript ...
+  Finished TypeScript in 1363ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 307ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Starting all orchestras with PM2...
+./fix-sigkill.sh: line 46: pm2: command not found
+./fix-sigkill.sh: line 49: pm2: command not found
+./fix-sigkill.sh: line 50: pm2: command not found
+=== Fix Complete ===
+Orchestras running on:
+- Directory Beast: http://localhost:3000
+- Social Beast: http://localhost:3001
+- KidScan Beast: http://localhost:3002
+- AppFactory Beast: http://localhost:3003
+- Affiliate Beast: http://localhost:3004
+
+Check status: pm2 status
+View logs: pm2 logs
+
+Performing health checks...
+Checking http://localhost:3000 ... ✅
+Checking http://localhost:3001 ... ✅
+Checking http://localhost:3002 ... ❌
+Checking http://localhost:3003 ... ❌
+Checking http://localhost:3004 ... ❌
+⚠️ 3 health checks failed. Consider restarting...
+
+Checking system resources...
+📊 Memory usage: 19.1%
+/home/captain/.openclaw/workspace/watchdog-orchestra-monitor.sh: line 117: [: 19.1: integer expression expected
+
+=== WATCHDOG COMPLETE ===
+Next check: 22:51 HKT
