@@ -40,7 +40,7 @@ function getMeta() {
 }
 
 // ─── PAGE COMPONENT ─────────────────────────────────────────────
-export default function Home({ ssrDestinations, ssrCities, ssrTips }: { ssrDestinations?: number; ssrCities?: number; ssrTips?: number }) {
+export default function Home({ meta }: { meta?: { totalDestinations: number; cities: string[]; totalParentTips: number } }) {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCity, setSelectedCity] = useState("All");
@@ -50,19 +50,22 @@ export default function Home({ ssrDestinations, ssrCities, ssrTips }: { ssrDesti
   const [destinations, setDestinations] = useState<Destination[]>([]);
   const [loading, setLoading] = useState(true);
   const [cities, setCities] = useState<string[]>(defaultCities);
-  const [totalDestinations, setTotalDestinations] = useState(ssrDestinations || 0);
-  const [totalTips, setTotalTips] = useState(ssrTips || 0);
-  const [totalCities, setTotalCities] = useState(ssrCities || defaultCities.length);
+  // Use SSR-passed metadata for initial render (instant, no blank state)
+  const [totalDestinations, setTotalDestinations] = useState(meta?.totalDestinations || 0);
+  const [totalTips, setTotalTips] = useState(meta?.totalParentTips || 0);
+  const [totalCities, setTotalCities] = useState(meta?.cities?.length || defaultCities.length);
 
   useEffect(() => {
-    // Update from injected meta (includes full cities list)
-    const meta = getMeta();
-    if (meta) {
-      setTotalDestinations(meta.totalDestinations);
-      setTotalTips(meta.totalParentTips);
-      setTotalCities(meta.cities?.length || defaultCities.length);
-      setCities(meta.cities || defaultCities);
+    // Inject script tag for persistence across navigations
+    if (!document.getElementById('__dir-meta')) {
+      const s = document.createElement('script');
+      s.id = '__dir-meta';
+      s.textContent = `window.__DIRECTORY_META__ = ${JSON.stringify(meta)};`;
+      document.head.appendChild(s);
     }
+
+    // Update cities list from full meta
+    if (meta?.cities) setCities(meta.cities);
 
     const handleScroll = () => setShowScrollTop(window.scrollY > 600);
     window.addEventListener('scroll', handleScroll);
