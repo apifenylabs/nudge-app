@@ -349556,3 +349556,177 @@ Building family-travel-directory...
   - Environments: .env.local
 
    Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/517) ...
+   Generating static pages (129/517) 
+   Generating static pages (258/517) 
+   Generating static pages (387/517) 
+ ✓ Generating static pages (517/517)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    4.98 kB         100 kB
+├ ○ /_not-found                          871 B          87.9 kB
+├ ƒ /api/review-photo                    0 B                0 B
+├ ƒ /api/test-data                       0 B                0 B
+├ ● /destination/[slug]                  6.85 kB         102 kB
+├   ├ /destination/tokyo-001
+├   ├ /destination/tokyo-002
+├   ├ /destination/tokyo-003
+├   └ [+503 more paths]
+├ ○ /health                              0 B                0 B
+├ ○ /review                              933 B            88 kB
+├ ○ /robots.txt                          0 B                0 B
+└ ○ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            87 kB
+  ├ chunks/23-236157bc15f48f71.js        31.5 kB
+  ├ chunks/fd9d1056-83701e137505fb90.js  53.6 kB
+  └ other shared chunks (total)          1.89 kB
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
+Building social-beast-components...
+
+> social-beast-components@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.1s
+  Running TypeScript ...
+  Finished TypeScript in 1333ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 306ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building kidscan-api...
+
+> kidscan-api@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.1s
+  Running TypeScript ...
+  Finished TypeScript in 1303ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 289ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Building habit-tracker...
+
+> habit-tracker@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local, .env.production
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.4s
+  Running TypeScript ...
+  Finished TypeScript in 2.2s ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/5) ...
+  Generating static pages using 6 workers (1/5) 
+  Generating static pages using 6 workers (2/5) 
+  Generating static pages using 6 workers (3/5) 
+✓ Generating static pages using 6 workers (5/5) in 330ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+└ ƒ /auth/callback
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+Building affiliate-tracking...
+
+> affiliate-tracking@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.9s
+  Running TypeScript ...
+  Finished TypeScript in 1300ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/4) ...
+  Generating static pages using 5 workers (1/4) 
+  Generating static pages using 5 workers (2/4) 
+  Generating static pages using 5 workers (3/4) 
+✓ Generating static pages using 5 workers (4/4) in 322ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+Starting all orchestras with PM2...
+./fix-sigkill.sh: line 46: pm2: command not found
+./fix-sigkill.sh: line 49: pm2: command not found
+./fix-sigkill.sh: line 50: pm2: command not found
+=== Fix Complete ===
+Orchestras running on:
+- Directory Beast: http://localhost:3000
+- Social Beast: http://localhost:3001
+- KidScan Beast: http://localhost:3002
+- AppFactory Beast: http://localhost:3003
+- Affiliate Beast: http://localhost:3004
+
+Check status: pm2 status
+View logs: pm2 logs
+
+Performing health checks...
+Checking http://localhost:3000 ... ✅
+Checking http://localhost:3001 ... ✅
+Checking http://localhost:3002 ... ❌
+Checking http://localhost:3003 ... ❌
+Checking http://localhost:3004 ... ❌
+⚠️ 3 health checks failed. Consider restarting...
+
+Checking system resources...
+📊 Memory usage: 19.6%
+/home/captain/.openclaw/workspace/watchdog-orchestra-monitor.sh: line 117: [: 19.6: integer expression expected
+
+=== WATCHDOG COMPLETE ===
+Next check: 23:01 HKT

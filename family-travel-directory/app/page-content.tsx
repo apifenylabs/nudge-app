@@ -10,12 +10,6 @@ import {
 } from 'lucide-react';
 
 // ─── Types ──────────────────────────────────────────────────────
-interface MetaData {
-  totalDestinations: number;
-  cities: string[];
-  totalParentTips: number;
-}
-
 interface Destination {
   id: string;
   name: string;
@@ -38,7 +32,6 @@ const categories = [
   { name: "Cultural & Historical Sites", icon: Globe, desc: "Learn while having fun" },
 ];
 
-// ─── PAGE COMPONENT ─────────────────────────────────────────────
 const defaultCities = ["Tokyo", "Bangkok", "Singapore", "Hong Kong", "Phuket", "Bali", "Hanoi", "Seoul", "Osaka", "Kuala Lumpur", "Chiang Mai"];
 
 function getMeta() {
@@ -46,7 +39,8 @@ function getMeta() {
   return (window as any).__DIRECTORY_META__ || null;
 }
 
-export default function Home() {
+// ─── PAGE COMPONENT ─────────────────────────────────────────────
+export default function Home({ ssrDestinations, ssrCities, ssrTips }: { ssrDestinations?: number; ssrCities?: number; ssrTips?: number }) {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCity, setSelectedCity] = useState("All");
@@ -56,15 +50,26 @@ export default function Home() {
   const [destinations, setDestinations] = useState<Destination[]>([]);
   const [loading, setLoading] = useState(true);
   const [cities, setCities] = useState<string[]>(defaultCities);
-  const totalDestinations = destinations.length || getMeta()?.totalDestinations || 0;
-  const totalTips = destinations.reduce((a, d) => a + (d.tipsAndTricks?.length || 0), 0) || getMeta()?.totalParentTips || 0;
+  const [totalDestinations, setTotalDestinations] = useState(ssrDestinations || 0);
+  const [totalTips, setTotalTips] = useState(ssrTips || 0);
+  const [totalCities, setTotalCities] = useState(ssrCities || defaultCities.length);
 
   useEffect(() => {
+    // Update from injected meta (includes full cities list)
+    const meta = getMeta();
+    if (meta) {
+      setTotalDestinations(meta.totalDestinations);
+      setTotalTips(meta.totalParentTips);
+      setTotalCities(meta.cities?.length || defaultCities.length);
+      setCities(meta.cities || defaultCities);
+    }
+
     const handleScroll = () => setShowScrollTop(window.scrollY > 600);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Load data
   useEffect(() => {
     async function loadData() {
       try {
@@ -72,6 +77,9 @@ export default function Home() {
         if (res.ok) {
           const data = await res.json();
           setDestinations(data);
+          setTotalDestinations(data.length);
+          const tipCount = data.reduce((a: number, d: any) => a + (d.tipsAndTricks?.length || 0), 0);
+          setTotalTips(tipCount);
         }
         setLoading(false);
       } catch (e) {
@@ -116,17 +124,7 @@ export default function Home() {
     return f;
   }, [destinations, searchQuery, selectedCity, selectedCategory, selectedAge, sortBy]);
 
-  const uniqueCities = useMemo(() => {
-    const seen = new Set<string>();
-    return destinations.filter(d => {
-      const key = d.city.toLowerCase();
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    }).map(d => d.city);
-  }, [destinations]);
-
-  const visibleCities = uniqueCities.length >= 6 ? uniqueCities.slice(0, 11) : cities;
+  const visibleCities = cities.length >= 6 ? cities.slice(0, 11) : defaultCities;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -138,9 +136,9 @@ export default function Home() {
             <span className="font-semibold text-gray-900 text-sm tracking-tight">Family Travel Asia</span>
           </div>
           <div className="flex items-center gap-4 text-sm text-gray-500">
-            <span>{totalDestinations} destinations</span>
+            <span id="dest-count">{totalDestinations} destinations</span>
             <span className="hidden sm:inline">&middot;</span>
-            <span className="hidden sm:inline">{visibleCities.length} cities</span>
+            <span className="hidden sm:inline">{totalCities} cities</span>
           </div>
         </div>
       </header>
@@ -356,7 +354,7 @@ export default function Home() {
               <div className="mt-2 h-1 w-12 mx-auto bg-gradient-to-r from-amber-400 to-orange-500 rounded-full" />
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 mb-1">{visibleCities.length}</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">{totalCities}</div>
               <div className="text-sm text-gray-500">Cities Covered</div>
               <div className="mt-2 h-1 w-12 mx-auto bg-gradient-to-r from-amber-400 to-orange-500 rounded-full" />
             </div>

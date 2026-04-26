@@ -1,4 +1,4 @@
-// Server component — preloads metadata at build time and injects into HTML
+// Server component — preloads metadata at build time for instant render
 import { getMeta } from '@/lib/getData';
 import HomeContent from './page-content';
 
@@ -11,7 +11,11 @@ export default function Page() {
           __html: `window.__DIRECTORY_META__ = ${JSON.stringify(meta)};`,
         }}
       />
-      <HomeContent />
+      <HomeContent
+        ssrDestinations={meta.totalDestinations}
+        ssrCities={meta.cities.length}
+        ssrTips={meta.totalParentTips}
+      />
     </>
   );
 }
