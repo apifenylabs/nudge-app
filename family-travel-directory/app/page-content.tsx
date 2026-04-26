@@ -39,7 +39,14 @@ const categories = [
 ];
 
 // ─── PAGE COMPONENT ─────────────────────────────────────────────
-export default function Home({ _meta }: { _meta?: MetaData }) {
+const defaultCities = ["Tokyo", "Bangkok", "Singapore", "Hong Kong", "Phuket", "Bali", "Hanoi", "Seoul", "Osaka", "Kuala Lumpur", "Chiang Mai"];
+
+function getMeta() {
+  if (typeof window === 'undefined') return null;
+  return (window as any).__DIRECTORY_META__ || null;
+}
+
+export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCity, setSelectedCity] = useState("All");
@@ -48,9 +55,9 @@ export default function Home({ _meta }: { _meta?: MetaData }) {
   const [sortBy, setSortBy] = useState("popularity");
   const [destinations, setDestinations] = useState<Destination[]>([]);
   const [loading, setLoading] = useState(true);
-  const [cities, setCities] = useState<string[]>(_meta?.cities || ["Tokyo", "Bangkok", "Singapore", "Hong Kong", "Phuket", "Bali", "Hanoi", "Seoul", "Osaka", "Kuala Lumpur", "Chiang Mai"]);
-  const totalDestinations = destinations.length || _meta?.totalDestinations || 0;
-  const totalTips = destinations.reduce((a, d) => a + (d.tipsAndTricks?.length || 0), 0) || _meta?.totalParentTips || 0;
+  const [cities, setCities] = useState<string[]>(defaultCities);
+  const totalDestinations = destinations.length || getMeta()?.totalDestinations || 0;
+  const totalTips = destinations.reduce((a, d) => a + (d.tipsAndTricks?.length || 0), 0) || getMeta()?.totalParentTips || 0;
 
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 600);
