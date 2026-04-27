@@ -57,6 +57,10 @@ export default function Header() {
               Trip Planner
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-500 group-hover:w-full transition-all duration-300"></span>
             </a>
+            <a href="/blog" className="group text-gray-700 hover:text-gray-900 font-medium text-sm tracking-wide transition-colors relative">
+              Blog
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-500 group-hover:w-full transition-all duration-300"></span>
+            </a>
             <a href="#" className="group text-gray-700 hover:text-gray-900 font-medium text-sm tracking-wide transition-colors relative">
               Community
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-500 group-hover:w-full transition-all duration-300"></span>
@@ -114,7 +118,7 @@ export default function Header() {
         {isMenuOpen && (
           <div className="lg:hidden py-6 border-t border-gray-100 bg-gradient-to-b from-white to-gray-50/50">
             <div className="flex flex-col gap-1">
-              {['Destinations', 'Activities', 'Safety Guide', 'Trip Planner', 'Community'].map((item) => (
+              {['Destinations', 'Activities', 'Safety Guide', 'Trip Planner', 'Blog', 'Community'].map((item) => (
                 <a 
                   key={item}
                   href="#" 

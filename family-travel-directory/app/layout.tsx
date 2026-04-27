@@ -71,7 +71,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <head>
         {/* Google AdSense */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossOrigin="anonymous" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6046953221141245" crossOrigin="anonymous" />
       </head>
       <body className="min-h-full bg-gray-50 text-gray-900">
         {children}

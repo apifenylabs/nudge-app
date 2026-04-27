@@ -412,6 +412,7 @@ export default function Home({ meta }: { meta?: { totalDestinations: number; cit
               <span className="text-sm">Asia Family Travel Directory</span>
             </div>
             <div className="flex items-center gap-6 text-sm text-gray-500">
+              <a href="/blog" className="hover:text-gray-900 transition-colors">Blog</a>
               <a href="/about" className="hover:text-gray-900 transition-colors">About</a>
               <a href="/privacy" className="hover:text-gray-900 transition-colors">Privacy</a>
               <a href="/terms" className="hover:text-gray-900 transition-colors">Terms</a>

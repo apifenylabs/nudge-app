@@ -3,12 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import {
-  MapPin, Star, Clock, Lightbulb, Heart, Sun, Moon,
-  Shield, Sparkles, Compass, ChevronDown, ChevronUp,
-  ArrowLeft, Clock3, Calendar, Users,
-  ChevronLeft, ChevronRight, School, Baby,
-  Utensils, Bed, Bus, TreePine, Info, ExternalLink, DollarSign
+  MapPin, Star, Heart, Sparkles, Compass, ChevronDown, ChevronUp,
+  ArrowLeft, Calendar, Clock, Users,
+  School, Baby,
+  Utensils, Bed, Bus, ExternalLink, DollarSign
 } from 'lucide-react';
+import AdUnit from '@/components/AdUnit';
 
 // ─── Types ──────────────────────────────────────────────────────
 interface Destination {
@@ -395,20 +395,8 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
           </div>
         </section>
 
-        {/* ═══ IN-CONTENT AD ═══ */}
-        <div className="mb-12">
-          <div className="bg-gray-50 rounded-2xl border border-gray-200 py-6 px-4 text-center">
-            <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-3">Advertisement</p>
-            <div className="max-w-[728px] mx-auto">
-              <ins className="adsbygoogle"
-                style={{ display: 'block' }}
-                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX"
-                data-ad-format="auto"
-                data-full-width-responsive="true" />
-            </div>
-          </div>
-        </div>
+        {/* ═══ IN-CONTENT AD (between attractions and tips) ═══ */}
+        <AdUnit slot="1234567890" className="mb-12" />
 
         {/* ═══ SECTION 5: TIPS & TRICKS ═══ */}
         <section className="mb-12">
@@ -446,6 +434,9 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
             ))}
           </div>
         </section>
+
+        {/* ═══ BOTTOM AD (after Practical Info) ═══ */}
+        <AdUnit slot="1234567891" className="mb-12" />
 
         {/* ═══ AFFILIATE BOOKING CARD ═══ */}
         <section className="mb-12">
