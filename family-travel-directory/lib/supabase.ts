@@ -1,17 +1,20 @@
 import { createClient } from '@supabase/supabase-js';
 
-// ─── Client Setup ──────────────────────────────────────────────
+// ─── Client Setup (lazy — don't call at module scope during build) ──
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+let _supabaseClient: ReturnType<typeof createClient> | null = null;
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error(
-    'Supabase env vars not set. Required: NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY. ' +
-    'Set them in your .env.local file from Supabase project settings.'
-  );
+function getClient() {
+  if (_supabaseClient) return _supabaseClient;
+  if (!supabaseUrl || !supabaseAnonKey) {
+    const errMsg = 'Supabase env vars not set. Required: NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY. ' +
+      'Set them in your .env.local file from Supabase project settings.';
+    throw new Error(errMsg);
+  }
+  _supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
+  return _supabaseClient;
 }
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 // ─── Types ──────────────────────────────────────────────────────
 export interface Destination {
@@ -43,7 +46,6 @@ export interface Destination {
 
 /**
  * Fetch all destinations with optional filters.
- * Mirrors the JSON-based filtering in page.tsx but runs server-side via Supabase.
  */
 export async function getAllDestinations(filters?: {
   city?: string;
@@ -53,7 +55,7 @@ export async function getAllDestinations(filters?: {
   limit?: number;
   offset?: number;
 }) {
-  let query = supabase
+  let query = (getClient() as any)
     .from('destinations')
     .select('*');
 
@@ -72,7 +74,6 @@ export async function getAllDestinations(filters?: {
     );
   }
 
-  // Sort
   if (filters?.sortBy === 'safety') {
     query = query.order('safety_rating', { ascending: false });
   } else if (filters?.sortBy === 'price') {
@@ -81,7 +82,6 @@ export async function getAllDestinations(filters?: {
     query = query.order('popularity', { ascending: false });
   }
 
-  // Pagination
   if (filters?.limit) {
     query = query.limit(filters.limit);
   }
@@ -101,10 +101,10 @@ export async function getAllDestinations(filters?: {
 }
 
 /**
- * Fetch a single destination by its ID (e.g. "tokyo-001").
+ * Fetch a single destination by its slug (e.g. "tokyo-001").
  */
 export async function getDestinationBySlug(slug: string) {
-  const { data, error } = await supabase
+  const { data, error } = await (getClient() as any)
     .from('destinations')
     .select('*')
     .eq('id', slug)
@@ -122,7 +122,7 @@ export async function getDestinationBySlug(slug: string) {
  * Fetch distinct cities from the destinations table.
  */
 export async function getCities() {
-  const { data, error } = await supabase
+  const { data, error } = await (getClient() as any)
     .from('destinations')
     .select('city', { count: 'exact', head: false })
     .order('city');
@@ -132,7 +132,6 @@ export async function getCities() {
     return [];
   }
 
-  // Deduplicate cities (Supabase returns all rows, not distinct)
   const cities = new Set<string>();
   for (const row of data) {
     if (row.city) cities.add(row.city);
@@ -145,7 +144,7 @@ export async function getCities() {
  * Fetch distinct categories from the destinations table.
  */
 export async function getCategories() {
-  const { data, error } = await supabase
+  const { data, error } = await (getClient() as any)
     .from('destinations')
     .select('category', { count: 'exact', head: false })
     .order('category');
@@ -164,10 +163,10 @@ export async function getCategories() {
 }
 
 /**
- * Get total count of destinations (for stats).
+ * Get total count of destinations.
  */
 export async function getDestinationCount() {
-  const { count, error } = await supabase
+  const { count, error } = await (getClient() as any)
     .from('destinations')
     .select('*', { count: 'exact', head: true });
 
@@ -180,7 +179,7 @@ export async function getDestinationCount() {
 }
 
 /**
- * Check if Supabase is configured (has valid env vars).
+ * Check if Supabase is configured.
  */
 export function isSupabaseConfigured() {
   return !!(

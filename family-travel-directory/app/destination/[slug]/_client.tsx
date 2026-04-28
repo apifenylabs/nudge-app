@@ -1,14 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import {
   MapPin, Star, Heart, Sparkles, Compass, ChevronDown, ChevronUp,
   ArrowLeft, Calendar, Clock, Users,
-  School, Baby,
+  School, Baby, MessageSquarePlus,
   Utensils, Bed, Bus, ExternalLink, DollarSign
 } from 'lucide-react';
 import AdUnit from '@/components/AdUnit';
+import BookmarkButton from '@/components/BookmarkButton';
+import ReviewSummary from '@/components/ReviewSummary';
+import ReviewList from '@/components/ReviewList';
+import ReviewForm from '@/components/ReviewForm';
+import type { ReviewData } from '@/components/ReviewCard';
 
 // ─── Types ──────────────────────────────────────────────────────
 interface Destination {
@@ -73,10 +78,13 @@ function StarRating({ rating }: { rating: number }) {
 function PriceIndicator({ range }: { range: string }) {
   const count = range.length;
   return (
-    <div className="flex items-center gap-0.5">
-      {Array.from({ length: 3 }).map((_, i) => (
-        <span key={i} className={`text-sm font-bold ${i < count ? 'text-gray-900' : 'text-gray-300'}`}>$</span>
-      ))}
+    <div className="text-center">
+      <div className="text-2xl font-bold text-gray-900">
+        {Array.from({ length: 3 }).map((_, i) => (
+          <span key={i} className={`${i < count ? 'text-gray-900' : 'text-gray-300'}`}>$</span>
+        ))}
+      </div>
+      <div className="text-xs text-gray-500">Price Range</div>
     </div>
   );
 }
@@ -256,6 +264,69 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
   const attractions = generateAttractions(d);
   const practicalInfo = generatePracticalInfo(d);
 
+  // ═══ Review system state ═══
+  const [reviews, setReviews] = useState<ReviewData[]>([]);
+  const [reviewsLoading, setReviewsLoading] = useState(true);
+  const [reviewFormOpen, setReviewFormOpen] = useState(false);
+  const [reviewRefreshKey, setReviewRefreshKey] = useState(0);
+
+  const fetchReviews = useCallback(async () => {
+    setReviewsLoading(true);
+    try {
+      const res = await fetch(`/api/reviews?destination_id=${d.id}&status=approved&limit=50`);
+      const data = await res.json();
+      setReviews(data.reviews || []);
+    } catch {
+      // Silently fail — reviews are optional UI
+      setReviews([]);
+    } finally {
+      setReviewsLoading(false);
+    }
+  }, [d.id]);
+
+  useEffect(() => {
+    fetchReviews();
+  }, [fetchReviews, reviewRefreshKey]);
+
+  const handleReviewSubmitSuccess = () => {
+    setReviewRefreshKey((k) => k + 1);
+  };
+
+  const handleHelpfulToggle = async (reviewId: string) => {
+    try {
+      await fetch(`/api/reviews/${reviewId}/helpful`, { method: 'POST' });
+    } catch {
+      // Silent fail
+    }
+  };
+
+  // Compute review summary stats
+  const reviewStats = (() => {
+    const approved = reviews.filter((r) => r.status === 'approved');
+    const total = approved.length;
+    if (total === 0) {
+      return {
+        averageRating: 0,
+        totalReviews: 0,
+        distribution: { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 },
+        wouldRecommendPercent: 0,
+      };
+    }
+    const sum = approved.reduce((s, r) => s + r.overall_rating, 0);
+    const distribution: { [key: number]: number } = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
+    approved.forEach((r) => {
+      const key = Math.round(r.overall_rating);
+      distribution[key] = (distribution[key] || 0) + 1;
+    });
+    const recommendCount = approved.filter((r) => r.would_recommend).length;
+    return {
+      averageRating: sum / total,
+      totalReviews: total,
+      distribution,
+      wouldRecommendPercent: Math.round((recommendCount / total) * 100),
+    };
+  })();
+
   return (
     <div className="min-h-screen bg-white">
       {/* ═══ 1. HEADER ═══ */}
@@ -308,6 +379,10 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
               <span>{d.popularity}% parent-approved</span>
             </div>
           </div>
+          <div className="mt-6 flex items-center gap-3">
+            <BookmarkButton destinationId={d.id} size="md" />
+            <span className="text-sm text-gray-400">Save this destination</span>
+          </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
@@ -324,7 +399,6 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
             </div>
             <div className="text-center">
               <PriceIndicator range={d.priceRange} />
-              <div className="text-xs text-gray-500 mt-0.5">Price Range</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-gray-900">{d.ageRange}</div>
@@ -462,14 +536,16 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
           </div>
         </section>
 
-        {/* ═══ SECTION 7: PARENT REVIEWS ═══ */}
-        {d.parentStory && (
-          <section className="mb-12">
-            <div className="flex items-center gap-3 mb-4">
-              <SectionNumber num={7} />
-              <h2 className="text-xl font-bold text-gray-900">Parent Reviews & Stories</h2>
-            </div>
-            <div className="bg-white rounded-2xl border border-gray-200 p-6">
+        {/* ═══ SECTION 7: PARENT REVIEWS & STORIES ═══ */}
+        <section className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <SectionNumber num={7} />
+            <h2 className="text-xl font-bold text-gray-900">Parent Reviews & Stories</h2>
+          </div>
+
+          {/* Featured Story */}
+          {d.parentStory && (
+            <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center">
                   <Heart size={16} className="text-rose-500" />
@@ -490,8 +566,52 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
                 </p>
               </div>
             </div>
-          </section>
-        )}
+          )}
+
+          {/* Review Summary */}
+          {reviewStats.totalReviews > 0 && (
+            <div className="mb-6">
+              <ReviewSummary
+                averageRating={reviewStats.averageRating}
+                totalReviews={reviewStats.totalReviews}
+                distribution={reviewStats.distribution}
+                wouldRecommendPercent={reviewStats.wouldRecommendPercent}
+              />
+            </div>
+          )}
+
+          {/* Write Review CTA */}
+          <div className="flex items-center justify-between mb-5">
+            <h3 className="text-base font-semibold text-gray-900">
+              {reviews.length > 0
+                ? `What parents are saying`
+                : `Share your experience`}
+            </h3>
+            <button
+              onClick={() => setReviewFormOpen(true)}
+              className="flex items-center gap-1.5 px-4 py-2 bg-sky-500 hover:bg-sky-600 text-white text-sm font-medium rounded-xl transition-colors shadow-sm"
+            >
+              <MessageSquarePlus size={15} />
+              Write a Review
+            </button>
+          </div>
+
+          {/* Reviews List */}
+          <ReviewList
+            reviews={reviews}
+            isLoading={reviewsLoading}
+            onHelpfulToggle={handleHelpfulToggle}
+          />
+        </section>
+
+        {/* ═══ REVIEW FORM MODAL ═══ */}
+        <ReviewForm
+          destinationId={d.id}
+          destinationName={d.name}
+          isOpen={reviewFormOpen}
+          onClose={() => setReviewFormOpen(false)}
+          onSubmitSuccess={handleReviewSubmitSuccess}
+        />
 
         {/* ═══ SECTION 8: RELATED DESTINATIONS ═══ */}
         {related.length > 0 && (

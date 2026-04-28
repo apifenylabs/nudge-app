@@ -13,7 +13,13 @@ export type Review = Database['public']['Tables']['reviews']['Row'];
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 
-export const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey);
+let _supabaseInstance: ReturnType<typeof createClient<Database>> | null = null;
+export function getSupabaseClient() {
+  if (!_supabaseInstance) {
+    _supabaseInstance = createClient<Database>(supabaseUrl, supabaseAnonKey);
+  }
+  return _supabaseInstance;
+}
 
 // Business queries
 export async function getBusinesses(filters?: {
@@ -24,7 +30,7 @@ export async function getBusinesses(filters?: {
   limit?: number;
   offset?: number;
 }) {
-  let query = supabase
+  let query = getSupabaseClient()
     .from('businesses')
     .select('*')
     .order('created_at', { ascending: false });
@@ -57,7 +63,7 @@ export async function getBusinesses(filters?: {
 }
 
 export async function getBusinessById(id: string) {
-  return await supabase
+  return await getSupabaseClient()
     .from('businesses')
     .select('*, reviews(*)')
     .eq('id', id)
@@ -65,7 +71,7 @@ export async function getBusinessById(id: string) {
 }
 
 export async function getBusinessesByLocation(location: string) {
-  return await supabase
+  return await getSupabaseClient()
     .from('businesses')
     .select('*')
     .eq('location', location)
@@ -73,14 +79,14 @@ export async function getBusinessesByLocation(location: string) {
 }
 
 export async function getCategories() {
-  return await supabase
+  return await getSupabaseClient()
     .from('categories')
     .select('*')
     .order('name');
 }
 
 export async function getBusinessCount() {
-  const { count, error } = await supabase
+  const { count, error } = await getSupabaseClient()
     .from('businesses')
     .select('*', { count: 'exact', head: true });
   
@@ -98,7 +104,7 @@ export async function addBusinessReview(businessId: string, review: {
 }
 
 export async function getBusinessReviews(businessId: string) {
-  return await supabase
+  return await getSupabaseClient()
     .from('reviews')
     .select('*')
     .eq('business_id', businessId)
@@ -114,7 +120,7 @@ export async function searchBusinesses(options: {
   minSafetyRating?: number;
   amenities?: string[];
 }) {
-  let query = supabase.from('businesses').select('*');
+  let query = getSupabaseClient().from('businesses').select('*');
 
   if (options.query) {
     query = query.or(`name.ilike.%${options.query}%,description.ilike.%${options.query}%`);

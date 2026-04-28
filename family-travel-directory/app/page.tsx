@@ -1,8 +1,10 @@
-// Server component — preloads metadata at build time
+// Server component — preloads metadata and blog posts at build time
 import { getMeta } from '@/lib/getData';
+import { getAllPosts } from '@/lib/blog-data';
 import HomeContent from './page-content';
 
 export default function Page() {
   const meta = getMeta();
-  return <HomeContent meta={meta} />;
+  const blogPosts = getAllPosts();
+  return <HomeContent meta={meta} blogPosts={blogPosts} />;
 }

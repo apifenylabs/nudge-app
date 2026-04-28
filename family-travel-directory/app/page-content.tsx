@@ -5,9 +5,12 @@ import Link from 'next/link';
 import {
   Search, MapPin, Sparkles, Globe, Users, Star,
   ChevronDown, ChevronRight, Clock, Compass,
-  Lightbulb, Heart, Filter,
-  SlidersHorizontal, ArrowUp
+  Lightbulb, Heart, Filter, BookOpen,
+  SlidersHorizontal, ArrowUp, Calendar, Tag
 } from 'lucide-react';
+import HeroSection from '@/components/HeroSection';
+import FilterBar from '@/components/FilterBar';
+import DestinationCard from '@/components/DestinationCard';
 
 // ─── Types ──────────────────────────────────────────────────────
 interface Destination {
@@ -34,37 +37,38 @@ const categories = [
 
 const defaultCities = ["Tokyo", "Bangkok", "Singapore", "Hong Kong", "Phuket", "Bali", "Hanoi", "Seoul", "Osaka", "Kuala Lumpur", "Chiang Mai"];
 
-function getMeta() {
-  if (typeof window === 'undefined') return null;
-  return (window as any).__DIRECTORY_META__ || null;
+// ─── PAGE COMPONENT ─────────────────────────────────────────────
+interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  tags: string[];
+  readingTime: string;
+  content: string;
+  relatedDestinations: string[];
 }
 
-// ─── PAGE COMPONENT ─────────────────────────────────────────────
-export default function Home({ meta }: { meta?: { totalDestinations: number; cities: string[]; totalParentTips: number } }) {
+export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: number; cities: string[]; totalParentTips: number }; blogPosts?: BlogPost[] }) {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCity, setSelectedCity] = useState("All");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedAge, setSelectedAge] = useState("All");
+  const [selectedPrice, setSelectedPrice] = useState("All");
+  const [minSafety, setMinSafety] = useState<number | null>(null);
+  const [selectedCountry, setSelectedCountry] = useState("All");
   const [sortBy, setSortBy] = useState("popularity");
   const [destinations, setDestinations] = useState<Destination[]>([]);
   const [loading, setLoading] = useState(true);
   const [cities, setCities] = useState<string[]>(defaultCities);
-  // Use SSR-passed metadata for initial render (instant, no blank state)
+  const [countries, setCountries] = useState<string[]>([]);
   const [totalDestinations, setTotalDestinations] = useState(meta?.totalDestinations || 0);
   const [totalTips, setTotalTips] = useState(meta?.totalParentTips || 0);
   const [totalCities, setTotalCities] = useState(meta?.cities?.length || defaultCities.length);
 
   useEffect(() => {
-    // Inject script tag for persistence across navigations
-    if (!document.getElementById('__dir-meta')) {
-      const s = document.createElement('script');
-      s.id = '__dir-meta';
-      s.textContent = `window.__DIRECTORY_META__ = ${JSON.stringify(meta)};`;
-      document.head.appendChild(s);
-    }
-
-    // Update cities list from full meta
     if (meta?.cities) setCities(meta.cities);
 
     const handleScroll = () => setShowScrollTop(window.scrollY > 600);
@@ -83,6 +87,8 @@ export default function Home({ meta }: { meta?: { totalDestinations: number; cit
           setTotalDestinations(data.length);
           const tipCount = data.reduce((a: number, d: any) => a + (d.tipsAndTricks?.length || 0), 0);
           setTotalTips(tipCount);
+          const allCountries = [...new Set(data.map((d: any) => d.country))].sort() as string[];
+          setCountries(allCountries);
         }
         setLoading(false);
       } catch (e) {
@@ -101,33 +107,94 @@ export default function Home({ meta }: { meta?: { totalDestinations: number; cit
         d.name.toLowerCase().includes(q) ||
         d.description?.toLowerCase().includes(q) ||
         d.city.toLowerCase().includes(q) ||
+        d.country.toLowerCase().includes(q) ||
         d.tipsAndTricks?.some(t => t.toLowerCase().includes(q))
       );
     }
     if (selectedCity !== "All") f = f.filter(d => d.city.toLowerCase() === selectedCity.toLowerCase());
+    if (selectedCountry !== "All") f = f.filter(d => d.country === selectedCountry);
     if (selectedCategory !== "All") f = f.filter(d => d.category === selectedCategory);
+
+    // Age filter
     if (selectedAge !== "All") {
       f = f.filter(d => {
-        const [minStr, maxStr] = d.ageRange.split('-');
-        const destMin = parseInt(minStr);
-        const destMax = maxStr ? parseInt(maxStr) : destMin;
+        const parts = d.ageRange.split('-');
+        const destMin = parseInt(parts[0]);
+        const destMax = parts[1] ? parseInt(parts[1]) : destMin;
+        if (isNaN(destMin)) return false;
         if (selectedAge === "0-3") return destMin <= 3;
-        if (selectedAge === "4-6") return destMin <= 6;
-        if (selectedAge === "7-12") return destMin <= 12;
-        if (selectedAge === "13+") return destMax >= 13;
+        if (selectedAge === "4-9") return destMin <= 9 && destMax >= 4;
+        if (selectedAge === "10+") return destMax >= 10;
         return true;
       });
     }
+
+    // Price filter
+    if (selectedPrice !== "All") {
+      const priceLen = selectedPrice.replace(/[^$]/g, '').length || 1;
+      f = f.filter(d => {
+        const destLen = d.priceRange.replace(/[^$]/g, '').length || 1;
+        return destLen === priceLen;
+      });
+    }
+
+    // Safety filter
+    if (minSafety !== null && minSafety > 0) {
+      f = f.filter(d => d.safetyRating >= minSafety);
+    }
+
     f.sort((a, b) => {
       if (sortBy === "popularity") return b.popularity - a.popularity;
       if (sortBy === "safety") return b.safetyRating - a.safetyRating;
-      if (sortBy === "price") return a.priceRange.length - b.priceRange.length;
+      if (sortBy === "price") {
+        const aLen = a.priceRange.replace(/[^$]/g, '').length || 1;
+        const bLen = b.priceRange.replace(/[^$]/g, '').length || 1;
+        return aLen - bLen;
+      }
       return 0;
     });
     return f;
-  }, [destinations, searchQuery, selectedCity, selectedCategory, selectedAge, sortBy]);
+  }, [destinations, searchQuery, selectedCity, selectedCountry, selectedCategory, selectedAge, selectedPrice, minSafety, sortBy]);
+
+  const clearAllFilters = () => {
+    setSearchQuery("");
+    setSelectedCity("All");
+    setSelectedCountry("All");
+    setSelectedCategory("All");
+    setSelectedAge("All");
+    setSelectedPrice("All");
+    setMinSafety(null);
+  };
+
+  const handleQuickFilter = (type: string, value: string) => {
+    if (type === 'city') {
+      setSelectedCity(selectedCity === value ? "All" : value);
+    } else if (type === 'category') {
+      setSelectedCategory(selectedCategory === value ? "All" : value);
+    } else if (type === 'age') {
+      setSelectedAge(selectedAge === value ? "All" : value);
+    }
+  };
 
   const visibleCities = cities.length >= 6 ? cities.slice(0, 11) : defaultCities;
+  const loadingSkeleton = (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {[1, 2, 3, 4].map((i) => (
+        <div key={i} className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-pulse">
+          <div className="h-48 bg-gray-200" />
+          <div className="p-5 space-y-3">
+            <div className="h-5 bg-gray-200 rounded w-3/4" />
+            <div className="flex gap-2">
+              <div className="h-5 bg-gray-100 rounded-full w-16" />
+              <div className="h-5 bg-gray-100 rounded-full w-12" />
+            </div>
+            <div className="h-4 bg-gray-100 rounded w-full" />
+            <div className="h-4 bg-gray-100 rounded w-2/3" />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -146,65 +213,17 @@ export default function Home({ meta }: { meta?: { totalDestinations: number; cit
         </div>
       </header>
 
-      {/* ─── HERO ─── */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-gray-700 text-sm text-gray-300 mb-6">
-              <Compass size={14} />
-              Real parent advice. No fluff. {totalDestinations} hand-picked destinations.
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 leading-tight">
-              We took our kids so you don't have to guess
-            </h1>
-            <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-              Honest, unfiltered tips from parents who've actually been there.
-              Every destination has real advice — the good, the bad, and the "bring extra snacks."
-            </p>
-            <div className="relative max-w-xl mx-auto mb-8">
-              <div className="flex items-center bg-white rounded-xl overflow-hidden shadow-2xl shadow-black/30">
-                <div className="flex-1 flex items-center px-4">
-                  <Search size={18} className="text-gray-400 flex-shrink-0" />
-                  <input
-                    type="text"
-                    placeholder="Search destinations, tips, or cities..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full py-3.5 px-3 text-gray-900 placeholder:text-gray-400 focus:outline-none text-sm"
-                  />
-                </div>
-                <button className="px-5 py-3.5 bg-sky-500 text-white font-medium hover:bg-sky-600 transition-colors text-sm">
-                  Search
-                </button>
-              </div>
-            </div>
-            <div className="flex flex-wrap justify-center gap-2">
-              {visibleCities.map(city => (
-                <button
-                  key={city}
-                  onClick={() => setSelectedCity(city === selectedCity ? "All" : city)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                    selectedCity === city
-                      ? "bg-white text-gray-900 shadow-lg"
-                      : "bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700"
-                  }`}
-                >
-                  <MapPin size={14} className="inline-block mr-1.5" />
-                  {city}
-                </button>
-              ))}
-              <button
-                onClick={() => { setSelectedCity("All"); setSelectedCategory("All"); setSelectedAge("All"); setSearchQuery(""); }}
-                className="px-4 py-2 rounded-full text-sm font-medium bg-gray-800 text-gray-400 hover:bg-gray-700 border border-gray-700 transition-all"
-              >
-                Reset
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-50 to-transparent" />
-      </section>
+      {/* ─── HERO SECTION (new) ─── */}
+      <HeroSection
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        onQuickFilter={handleQuickFilter}
+        totalDestinations={totalDestinations}
+        totalCities={totalCities}
+        totalTips={totalTips}
+        cities={visibleCities}
+        selectedCity={selectedCity}
+      />
 
       {/* ─── CATEGORY GRID ─── */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-10 mb-10">
@@ -230,58 +249,37 @@ export default function Home({ meta }: { meta?: { totalDestinations: number; cit
         </div>
       </section>
 
-      {/* ─── FILTER BAR ─── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <h2 id="destinations-section" className="text-xl font-bold text-gray-900">
-              {searchQuery ? `"${searchQuery}"` : "Destinations"}
-            </h2>
-            <span className="text-sm text-gray-500 bg-gray-200 px-2.5 py-1 rounded-full">
-              {filtered.length} {filtered.length === 1 ? 'place' : 'places'}
-            </span>
-          </div>
-          <div className="flex items-center gap-3 w-full sm:w-auto">
-            <select
-              value={selectedAge}
-              onChange={(e) => setSelectedAge(e.target.value)}
-              className="bg-white border border-gray-200 text-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-300"
-            >
-              <option value="All">All ages</option>
-              <option value="0-3">Babies & Toddlers (0-3)</option>
-              <option value="4-6">Preschool (4-6)</option>
-              <option value="7-12">School Age (7-12)</option>
-              <option value="13+">Teens (13+)</option>
-            </select>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="bg-white border border-gray-200 text-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-300"
-            >
-              <option value="popularity">Popular</option>
-              <option value="safety">Safest</option>
-              <option value="price">Cheapest</option>
-            </select>
-          </div>
-        </div>
-      </div>
+      {/* ─── FILTER BAR (new) ─── */}
+      <FilterBar
+        selectedCategory={selectedCategory}
+        onCategoryChange={setSelectedCategory}
+        selectedAge={selectedAge}
+        onAgeChange={setSelectedAge}
+        selectedPrice={selectedPrice}
+        onPriceChange={setSelectedPrice}
+        minSafety={minSafety}
+        onSafetyChange={setMinSafety}
+        selectedCountry={selectedCountry}
+        onCountryChange={setSelectedCountry}
+        sortBy={sortBy}
+        onSortChange={setSortBy}
+        countries={countries}
+        categories={categories.map(c => c.name)}
+        resultsCount={filtered.length}
+        onClearAll={clearAllFilters}
+      />
 
-      {/* ─── DESTINATION CARDS ─── */}
+      {/* ─── DESTINATION CARDS (refactored) ─── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        {loading && (
-          <div className="text-center py-16">
-            <div className="inline-block w-8 h-8 border-2 border-gray-200 border-t-sky-500 rounded-full animate-spin mb-4" />
-            <p className="text-gray-500 text-sm">Finding the best destinations...</p>
-          </div>
-        )}
+        {loading && loadingSkeleton}
 
         {!loading && filtered.length === 0 && (
           <div className="text-center py-16 bg-white rounded-xl border border-gray-200">
             <Compass size={40} className="mx-auto text-gray-300 mb-3" />
             <h3 className="text-lg font-semibold text-gray-900 mb-1">No destinations match your filters</h3>
-            <p className="text-gray-500 text-sm mb-4">Try a different city, age range, or search term</p>
+            <p className="text-gray-500 text-sm mb-4">Try broadening your search, adjusting age range, or selecting a different city</p>
             <button
-              onClick={() => { setSearchQuery(""); setSelectedCity("All"); setSelectedCategory("All"); setSelectedAge("All"); }}
+              onClick={clearAllFilters}
               className="px-5 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
             >
               Clear all filters
@@ -292,51 +290,22 @@ export default function Home({ meta }: { meta?: { totalDestinations: number; cit
         {!loading && filtered.length > 0 && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {filtered.map((dest) => (
-              <Link
+              <DestinationCard
                 key={dest.id}
-                href={`/destination/${dest.id}`}
-                className="block bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer group"
-              >
-                <div className="relative h-48 sm:h-56 bg-gray-200 overflow-hidden">
-                  <img
-                    src={dest.imageUrl}
-                    alt={dest.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <div className="flex items-center gap-2 text-white text-xs">
-                      <MapPin size={12} />
-                      <span>{dest.city}, {dest.country}</span>
-                      <span className="ml-auto flex items-center gap-1">
-                        <Star size={12} className="text-amber-400 fill-amber-400" />
-                        {dest.safetyRating}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <div className="flex items-start justify-between mb-2">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 leading-snug">{dest.name}</h3>
-                      <div className="flex items-center gap-2 mt-1">
-                        <span className="text-xs bg-sky-100 text-sky-700 px-2 py-0.5 rounded-full font-medium">{dest.category}</span>
-                        <span className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full">{dest.ageRange} yrs</span>
-                        <span className="text-xs text-gray-400">{dest.priceRange}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600 leading-relaxed line-clamp-2">{dest.description}</p>
-                  <div className="mt-3 flex items-center gap-1.5 text-xs text-sky-600 font-medium">
-                    <Lightbulb size={12} />
-                    <span>{dest.tipsAndTricks?.length || 0} parent tips</span>
-                    <span className="text-gray-300">&middot;</span>
-                    <Heart size={12} />
-                    <span>Read story</span>
-                  </div>
-                </div>
-              </Link>
+                id={dest.id}
+                name={dest.name}
+                city={dest.city}
+                country={dest.country}
+                category={dest.category}
+                ageRange={dest.ageRange}
+                safetyRating={dest.safetyRating}
+                priceRange={dest.priceRange}
+                popularity={dest.popularity}
+                description={dest.description}
+                imageUrl={dest.imageUrl}
+                tipsCount={dest.tipsAndTricks?.length || 0}
+                parentStory={!!dest.parentStory}
+              />
             ))}
           </div>
         )}
@@ -369,6 +338,61 @@ export default function Home({ meta }: { meta?: { totalDestinations: number; cit
           </div>
         </div>
       </section>
+
+      {/* ─── BLOG PREVIEW ─── */}
+      {blogPosts && blogPosts.length > 0 && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14" id="blog-section">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900">Latest from Our Blog</h2>
+              <p className="text-gray-500 text-sm mt-1">Travel tips, comparison guides, and parent advice</p>
+            </div>
+            <a href="/blog" className="flex items-center gap-1.5 text-sm font-medium text-sky-600 hover:text-sky-700 transition-colors">
+              View all articles
+              <ChevronRight size={16} />
+            </a>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {blogPosts.slice(0, 3).map((post) => (
+              <a
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300"
+              >
+                <div className="p-6">
+                  <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                    <span className="flex items-center gap-1">
+                      <Calendar size={12} />
+                      {post.date}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <BookOpen size={12} />
+                      {post.readingTime}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-sky-600 transition-colors mb-2 line-clamp-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 line-clamp-3 mb-4">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {post.tags.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="inline-flex items-center gap-1 px-2.5 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                      >
+                        <Tag size={10} />
+                        {tag.replace(/-/g, ' ')}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ─── CTA ─── */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">

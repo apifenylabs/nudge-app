@@ -6,140 +6,71 @@ Only one agent per task.
 
 ## Current Active Tasks
 
-### Directory Beast Orchestra
-- **Task**: Fix Vercel deployment, make production-ready with beautiful UI
-- **Status**: In progress (Captain working overnight)
+### [HIGH] Directory Beast — Fix Client Exception
+- **Task**: Fix "Application error: client-side exception" on family-travel-directory.vercel.app
+- **Status**: ✅ **FIXED & DEPLOYED** (2026-04-28 14:22 HKT)
 - **Agent**: Captain (CEO Agent)
-- **Started**: 2026-04-22 00:50 HKT
-- **Last Update**: 2026-04-22 01:39 HKT
-- **Progress**: TypeScript errors fixed, simplified for deployment, waiting for Vercel
+- **Root cause**: `require('@supabase/ssr')` called in browser from `lib/supabase-browser.ts`. `require` doesn't exist in browser — ESM package.
+- **Fix**: Replaced `@supabase/ssr` with `@supabase/supabase-js` in browser lib.
+- **Prevention**: All browser Supabase client code must use `@supabase/supabase-js` directly. `@supabase/ssr` reserved for server-side only.
 
-### Social Beast Orchestra
-- **Task**: Push code to GitHub, create Vercel project
-- **Status**: Completed
-- **Agent**: Captain (CEO Agent)
-- **Completed**: 2026-04-22 01:00 HKT
-- **Result**: GitHub pushed, Vercel project created (prj_Wslu4DDbn0YgofBkqwhzz2DV9bY9)
+### [HIGH] Directory Beast — Phase 2 (Search + Map + Scoring)
+- **Task**: Implement advanced search with filters, map view, destination scoring algorithm
+- **Status**: 🔄 **READY TO START** — PRD exists at `knowledge/research/directory-beast-10-10-PRD.md`
+- **Blocked on**: CAPTAIN needs to spawn CEO sub-agent to plan and delegate
 
-### KidScan Beast Orchestra
-- **Task**: Push code to GitHub, create Vercel project
-- **Status**: Completed
-- **Agent**: Captain (CEO Agent)
-- **Completed**: 2026-04-22 01:02 HKT
-- **Result**: GitHub pushed, Vercel project created (prj_CYavNRzacxTIi80l2iSaGKN7rIOY)
+### [HIGH] Social Beast — Wire Up Credentials
+- **Task**: Fill `credentials.json` with real Telegram bot token, Twitter/X API keys, LinkedIn API keys
+- **Status**: ⛔ **BLOCKED** — Needs Chris to provide API keys or Captain to generate them
+- **39 files, 2,481 lines, all tests passing**
+- **Cron set**: `0 7 * * * daily-pipeline.sh` (currently won't run without credentials)
 
-### AppFactory Beast Orchestra
-- **Task**: Push code to GitHub
-- **Status**: Completed
-- **Agent**: Captain (CEO Agent)
-- **Completed**: 2026-04-22 01:05 HKT
-- **Result**: GitHub pushed
+### [MEDIUM] Nudge — Monitor & Improve
+- **Status**: ✅ **Deployed** at https://nudge-sigma-liart.vercel.app
+- **Agent**: Captain
+- **Next**: Track usage, fix any issues
 
-### Affiliate Beast Orchestra
-- **Task**: Push code to GitHub
-- **Status**: Completed
-- **Agent**: Captain (CEO Agent)
-- **Completed**: 2026-04-22 01:06 HKT
-- **Result**: GitHub pushed
+### [MEDIUM] GeneralScan — Phase 1 Done
+- **Status**: ✅ **Complete** — 12/12 tests, build passes
 
-### Nudge Beast Orchestra
-- **Task**: Deploy production-ready family task management system
-- **Status**: 🚀 **DEPLOYING TO VERCEL**
-- **Agent**: Captain (CEO Agent)
-- **Deployment ID**: `dpl_FNdEPyS8u1tRKGTKk2N42gA2tXuP`
-- **Vercel Project**: `prj_TslSZAaaCS8w9m2CdRs6DO5x9RqL`
-- **Features**:
-  - ✅ Voice Input (Whisper API + browser speech)
-  - ✅ Telegram bot integration
-  - ✅ Family coordination dashboard
-  - ✅ AI-powered parsing (Claude 3.5 Haiku)
-  - ✅ Enterprise monitoring
-- **Credentials Configured**:
-  - ✅ Supabase URL & Keys (shared with Directory Beast)
-  - ✅ Telegram Bot Token: `8618011015:AAGzQYA5oalWtQA7FEv-YaPGCg6EDa-YbS8` 🔒
-  - ⏳ Vercel URL (waiting for deployment)
-- **Phone App Strategy**:
-  - Telegram Bot (native app experience)
-  - PWA (installable on homescreen)
-  - Hybrid approach - best of both worlds
-- **Business Model**: Freemium SaaS ($5/mo Pro, $9/mo Family)
-- **Target**: Busy families, parents, couples
-- **Competitive Edge**: Voice + Telegram + AI combination
+### [MEDIUM] ScanWise — Phase 1 Done
+- **Status**: ✅ **Complete** — Clean build at workspace/scanwise/
 
-## MANDATORY DEPLOYMENT PIPELINE (NO EXCEPTIONS)
+### [LOW] EV Charging Asia
+- **Status**: 📄 **PRD written** (1,224 lines) — awaiting Directory Beast 10/10 completion
+- **Blocked on**: Directory Beast Phase 2+ completion
 
-```
-Product Owner (BRD/PRD) → Coder → UI Agent → Tester (reviewed test cases) → SEO Agent → Reviewer → Chief Editor + CTO → Deploy
-```
-
-### Gate Enforcement:
-- **No deployment without passing ALL gates**
-- **Every output must pass Tester/QA before reporting complete**
-- **"Boil the ocean" standard** — only tested, documented, impressive work counts
-
-## Task Coordination Rules
-
-### Governance Rules (NON-NEGOTIABLE)
-1. **Pipeline Compliance**: Every change follows Product Owner → Coder → UI → Tester → SEO → Reviewer → Chief Editor + CTO → Deploy
-2. **No Skip**: Emergency fast-track only for security/production outages
-3. **Paperclip Scan**: Always check Paperclip for existing solutions before building
-4. **Component Reuse**: Use shared components from Social Beast (Paperclip enforces)
-5. **API Pattern Reuse**: Use shared patterns from KidScan
-6. **Design System**: Follow shared Tailwind configuration
-7. **Task Assignment**: Paperclip prevents duplication automatically
-8. **Knowledge Sharing**: Update Paperclip with new solutions
-
-### Basic Rules
-1. **Check First**: Always check this file before starting any new task
-2. **Claim Tasks**: Add your name to a task before starting work
-3. **Update Progress**: Update status when you make progress
-4. **Mark Complete**: Change status to "Completed" when done (only after passing all gates)
-5. **One Agent Per Task**: No duplicate work
-6. **Central Coordination Only**: No orchestra-specific task files
-7. **Priority Order**: 
-   - Nudge Beast (deploying)
-   - Paperclip coordination enforcement
-   - Other Beasts (create Vercel projects)
-   - Directory Beast (fix build issues later)
+### [LOW] AppFactory Beast
+- **Status**: ❌ **Not started**
 
 ## Infrastructure Status
 
-### GitHub Repositories
-- ✅ family-travel-directory (Directory Beast)
-- ✅ social-beast-components (Social Beast)
-- ✅ kidscan-api (KidScan Beast)
-- ✅ habit-tracker (AppFactory Beast)
-- ✅ affiliate-tracking (Affiliate Beast)
-- ⚠️ nudge (Nudge Beast) - Fixing large file issue
-
 ### Vercel Projects
-- ✅ family-travel-directory (Directory Beast) - Deploying
-- ✅ social-beast-components (Social Beast) - Created
-- ✅ kidscan-api (KidScan Beast) - Created
-- ❌ habit-tracker (AppFactory Beast) - Not created yet
-- ❌ affiliate-tracking (Affiliate Beast) - Not created yet
-- ❌ nudge (Nudge Beast) - Not created yet
+- ✅ family-travel-directory — Live at family-travel-directory.vercel.app
+- ✅ nudge — Live at nudge-sigma-liart.vercel.app
+- ✅ social-beast-components — Created
+- ✅ kidscan-api — Created
+- ❌ habit-tracker — Not created
+- ❌ affiliate-tracking — Not created
 
 ### Supabase Database
-- ✅ Architecture designed (shared project)
-- ✅ Environment files configured
-- ✅ SQL script ready: `/home/captain/.openclaw/workspace/create-supabase-schemas.sql`
-- ❌ Tables not created yet (need to run SQL in Supabase dashboard)
+- ✅ Connected: URL + ANON key in .env.local
+- ✅ SQL schema for auth ready: supabase/auth-schema.sql
+- ✅ SQL schema for reviews ready: supabase/reviews-schema.sql
+- ❌ SQL not yet run in Supabase dashboard
 
-## Next Priority Tasks
+## Next Priority Actions (for CAPTAIN to execute autonomously)
 
-1. **Directory Beast**: Monitor Vercel deployment, fix if still ERROR
-2. **Nudge Beast**: Complete GitHub push after fixing large file issue
-3. **Create Vercel projects** for remaining Beasts
-4. **Run Supabase SQL script** to create database tables
-5. **Implement real features** across all Beasts
+1. **Run Supabase SQL** to create auth + reviews tables
+2. **Start Directory Beast Phase 2** — spawn CEO sub-agent to plan and delegate
+3. **Monitor DB site** — verify client error is gone after CDN purge
+4. **Push Social Beast to git** once credentials are provided
+5. **Commit all changes to git**
 
-## Agent Roles
-
-- **Captain (CEO Agent)**: Autonomous decision-making, overnight execution
-- **SEO Agent**: Cross-cutting distribution and optimization
-- **Writer Agent**: Content creation and transformation
-- **Tester/QA**: Quality validation across all outputs
+## Urgent Fix Notes
+- `lib/supabase-browser.ts`: NEVER use `@supabase/ssr`. Must use `@supabase/supabase-js` only.
+- `@supabase/ssr` breaks in browser because it uses ESM `require()` pattern.
+- Vercel CDN may serve old chunks for up to 2-3 minutes after deploy. Hard refresh or incognito needed.
 
 ---
-*Last Updated: 2026-04-22 09:56 HKT by Captain (CEO Agent)*
+*Last Updated: 2026-04-28 14:25 HKT by Captain*
