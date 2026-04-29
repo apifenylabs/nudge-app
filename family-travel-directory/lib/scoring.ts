@@ -118,3 +118,20 @@ export function scoreTier(overall: number): { label: string; color: string } {
   if (overall >= 55) return { label: 'Good', color: 'text-amber-600 bg-amber-50 border-amber-200' };
   return { label: 'Average', color: 'text-gray-600 bg-gray-50 border-gray-200' };
 }
+
+/**
+ * Simple scoring: normalized 0-100
+ * safetyRating * 0.4 + popularity * 0.3 + tipsCount * 0.2 + (has parentStory ? 0.1 : 0)
+ */
+export function computeSimpleScore(
+  safetyRating: number,
+  popularity: number,
+  tipsCount: number,
+  hasParentStory: boolean
+): number {
+  const safetyPart = (safetyRating / 5) * 40;       // 0-40
+  const popPart = (popularity / 100) * 30;            // 0-30
+  const tipPart = Math.min(tipsCount / 10, 1) * 20;   // 0-20
+  const storyPart = hasParentStory ? 10 : 0;           // 0-10
+  return Math.round(safetyPart + popPart + tipPart + storyPart);
+}

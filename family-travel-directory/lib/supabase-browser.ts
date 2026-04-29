@@ -16,8 +16,9 @@ export function createBrowserSupabaseClient() {
     // Server-side: return a mock/noop to avoid SSR failures
     if (!_noop) {
       _noop = new Proxy({}, {
-        get(_target, _prop) {
-          return () => Promise.resolve({ data: null, error: null });
+        get(_target, prop) {
+          if (prop === 'auth') return _noop;
+          return () => Promise.resolve({ data: {}, error: null });
         }
       });
     }

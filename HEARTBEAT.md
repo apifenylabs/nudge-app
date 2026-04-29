@@ -1,27 +1,24 @@
-# HEARTBEAT.md - Completed / In Progress
+# HEARTBEAT.md - Current State
 
-## ✅ DONE (10:58-11:20 HKT)
+## 🟢 Both Orchestras Online
 
-### Directory Beast — Phase 1 Complete ✅
-**All 4 sub-agents done, all deployed live:**
+- **directory-beast** (id 23, PID 2719350) — port 3000, just started, 0 restarts
+- **nudge-beast** (id 1, PID 2715160) — port 3001, 5m up, 1 restart
 
-**1. Auth System** — Login, signup, callback, UserMenu, BookmarkButton, Toast, account pages (profile/saved/reviews), API routes, database schema
-**2. Reviews System** — ReviewCard, ReviewList, ReviewForm, StarInput, ReviewSummary, review API routes, moderation page, Review section on destination pages
-**3. Hero + Filters** — HeroSection with gradient animation, FilterBar (category/age/price/safety/sort), DestinationCard redesign, search API
-**4. Social Beast cron** — Crontab entry set: `0 7 * * * daily-pipeline.sh`
+## Incident Log — Apr 28-29
 
-**Fixes during deploy:**
-- Lazy Supabase client instantiation (no module-scope `createClient` — fixes Vercel build failure)
-- Middleware simplified (no `@supabase/ssr` in edge runtime — just redirect `/account` to `/auth/login`)
-- `lib/supabase.ts` and `lib/supabase-client.ts` converted to lazy patterns
-- `strict: false` in tsconfig (subagent code didn't follow strict typing)
+**19:10 HK** — Both processes dropped (empty PM2 table). `pm2 resurrect` recovered. New PIDs: 2627961/2627962.
 
-**Live at:** https://family-travel-directory.vercel.app
+**00:40 HK (just now)** — Directory Beast crashed in EADDRINUSE loop (34 restarts). Port 3000 held by orphan process. Nudge Beast restarted once (PID 2715160, 1 restart).
 
-## 🔄 Remaining
-1. Wire up Telegram approval buttons for Social Beast
-2. Add Twitter/Telegram/LinkedIn API keys to publish modules
-3. Add Nudge data source skill to Social Beast
-4. Update Paperclip issue status
-5. Commit Social Beast to git
-6. Morning report at 09:00
+**Recovery steps taken:**
+1. `npm run build` to restore missing `.next` artifacts
+2. `fuser -k 3000/tcp` to kill orphan port holder
+3. Cleaned up 16 duplicate PM2 processes (created by `-i 0` cluster flag)
+4. Restarted clean single instance via `pm2 start "npm start" --name "directory-beast"`
+
+**Root cause:** WSL/system-level process drops still happening sporadically (~every 4-24h). Recovery working.
+
+## Awaiting Chris
+- Supabase SQL schemas
+- Next feature direction for either beast

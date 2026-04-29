@@ -58,7 +58,11 @@ function SavedDestinations() {
     load()
   }, [supabase])
 
+  const [removing, setRemoving] = useState<string | null>(null)
+
   const removeBookmark = async (destinationId: string) => {
+    if (removing === destinationId) return // already in progress
+    setRemoving(destinationId)
     const { error } = await supabase
       .from('bookmarks')
       .delete()
@@ -67,6 +71,7 @@ function SavedDestinations() {
     if (!error) {
       setBookmarks(bookmarks.filter(b => b.destination_id !== destinationId))
     }
+    setRemoving(null)
   }
 
   if (loading) {

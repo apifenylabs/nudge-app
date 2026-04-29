@@ -1,6 +1,6 @@
 'use client';
 
-import { SlidersHorizontal, X, ChevronDown, Shield, ArrowUpDown, ListFilter } from 'lucide-react';
+import { SlidersHorizontal, X, Shield, ListFilter } from 'lucide-react';
 import { useState, useMemo } from 'react';
 
 interface FilterBarProps {
@@ -42,10 +42,10 @@ const sortOptions = [
   { value: 'price', label: 'Price: Low-High' },
 ];
 
-function Pill({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
+function Pill({ label, active, onClick, children }: { label: string; active: boolean; onClick: () => void; children?: React.ReactNode }) {
   return (
     <button onClick={onClick} className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all border ${active ? 'bg-sky-100 text-sky-700 border-sky-200 shadow-sm' : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300 hover:bg-gray-50'}`}>
-      {label}
+      {children}{label}
     </button>
   );
 }
@@ -80,7 +80,11 @@ export default function FilterBar({
       <div className="w-px h-6 bg-gray-200 shrink-0" />
       {priceOptions.slice(1).map(o => <Pill key={o.value} label={o.label} active={selectedPrice === o.value} onClick={() => onPriceChange(selectedPrice === o.value ? 'All' : o.value)} />)}
       <div className="w-px h-6 bg-gray-200 shrink-0" />
-      {safetyOptions.map(s => <Pill key={s} label={<><Shield size={11} className="mr-0.5" />{s}+</> as any} active={minSafety === s} onClick={() => onSafetyChange(minSafety === s ? null : s)} />)}
+      {safetyOptions.map(s => (
+        <Pill key={s} label={`${s}+ Safety`} active={minSafety === s} onClick={() => onSafetyChange(minSafety === s ? null : s)}>
+          <Shield size={11} className="mr-0.5" />{s}+
+        </Pill>
+      ))}
       <div className="w-px h-6 bg-gray-200 shrink-0" />
       <select value={selectedCountry} onChange={e => onCountryChange(e.target.value)}
         className="appearance-none bg-white border border-gray-200 text-gray-600 rounded-full px-3.5 py-1.5 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-sky-300 cursor-pointer pr-7 shrink-0">

@@ -113,7 +113,7 @@ export default function Header() {
           {/* Right side actions - Premium UI */}
           <div className="flex items-center gap-3">
             {/* Search */}
-            <button className="hidden md:flex items-center justify-center w-10 h-10 rounded-xl border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-300 hover:bg-gray-50 transition-all duration-200">
+            <button className="hidden md:flex items-center justify-center w-11 h-11 rounded-xl border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-300 hover:bg-gray-50 transition-all duration-200">
               <Search size={18} />
             </button>
             
@@ -157,7 +157,7 @@ export default function Header() {
             ) : (
               <Link
                 href="/auth/login"
-                className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-xl border border-gray-200 text-gray-700 hover:text-gray-900 font-medium hover:border-gray-300 transition-colors"
+                className="hidden md:flex items-center gap-2 px-5 min-h-[44px] rounded-xl border border-gray-200 text-gray-700 hover:text-gray-900 font-medium hover:border-gray-300 transition-colors"
               >
                 <User size={16} />
                 Sign In
@@ -166,7 +166,7 @@ export default function Header() {
 
             {/* Mobile menu button */}
             <button 
-              className="lg:hidden p-2.5 rounded-xl text-gray-700 hover:bg-gray-100 transition-colors"
+              className="lg:hidden min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl text-gray-700 hover:bg-gray-100 transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -193,7 +193,7 @@ export default function Header() {
                 <a 
                   key={item.name}
                   href={item.href} 
-                  className="px-4 py-3.5 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl font-medium transition-colors"
+                  className="px-4 py-3.5 min-h-[44px] flex items-center text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl font-medium transition-colors"
                 >
                   {item.name}
                 </a>
@@ -208,7 +208,7 @@ export default function Header() {
                       <button
                         key={region.code}
                         onClick={() => setActiveRegion(region.name)}
-                        className={`px-3 py-2.5 rounded-xl border text-sm font-medium transition-all ${
+                        className={`px-3 min-h-[44px] flex items-center rounded-xl border text-sm font-medium transition-all ${
                           activeRegion === region.name
                             ? 'border-sky-500 bg-sky-50 text-sky-700'
                             : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'
@@ -227,21 +227,21 @@ export default function Header() {
                 
                 {/* Actions */}
                 <div className="px-4 space-y-2">
-                  <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-gray-200 bg-white hover:border-gray-300 transition-colors">
+                  <button className="w-full flex items-center justify-center gap-2 px-4 min-h-[44px] rounded-xl border border-gray-200 bg-white hover:border-gray-300 transition-colors">
                     <Search className="w-4 h-4 text-gray-500" />
                     <span className="text-sm font-medium text-gray-700">Search</span>
                   </button>
                   
                   <Link
                     href={user ? '/account/saved' : '/auth/login'}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-gray-200 bg-white hover:border-gray-300 transition-colors"
+                    className="w-full flex items-center justify-center gap-2 px-4 min-h-[44px] rounded-xl border border-gray-200 bg-white hover:border-gray-300 transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Heart className="w-4 h-4 text-gray-500" />
                     <span className="text-sm font-medium text-gray-700">Saved Places</span>
                   </Link>
                   
-                  <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-medium hover:shadow-lg hover:shadow-sky-200 transition-all">
+                  <button className="w-full flex items-center justify-center gap-2 px-4 min-h-[44px] rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-medium hover:shadow-lg hover:shadow-sky-200 transition-all">
                     <Plus className="w-4 h-4" />
                     Add Listing
                   </button>

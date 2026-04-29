@@ -50,12 +50,22 @@ function formatDate(dateStr: string): string {
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-function BlogCard({ post }: { post: BlogPost }) {
+function BlogCard({ post, featured = false }: { post: BlogPost; featured?: boolean }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+      className={`group block bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-lg ${featured ? 'md:col-span-2 md:grid md:grid-cols-2 md:gap-0' : ''}`}
     >
+      {featured && (
+        <div className="relative h-48 md:h-full bg-gray-100 overflow-hidden">
+          <div className="w-full h-full bg-gradient-to-br from-sky-100 via-sky-200 to-blue-200 flex items-center justify-center">
+            <Compass size={48} className="text-sky-400/60" />
+          </div>
+          <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500 text-white text-[10px] font-bold uppercase tracking-wider">
+            Featured
+          </div>
+        </div>
+      )}
       <div className="p-6 md:p-8">
         {/* Meta row */}
         <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
@@ -70,7 +80,7 @@ function BlogCard({ post }: { post: BlogPost }) {
         </div>
 
         {/* Title */}
-        <h2 className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-sky-600 transition-colors mb-3 leading-snug">
+        <h2 className={`font-bold text-gray-900 group-hover:text-sky-600 transition-colors mb-3 leading-snug ${featured ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'}`}>
           {post.title}
         </h2>
 
@@ -212,27 +222,36 @@ export default function BlogPage() {
         </div>
 
         {posts.length === 0 ? (
-          <div className="text-center py-16 bg-white rounded-xl border border-gray-200">
+          <div className="text-center py-16 bg-white/70 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg">
             <Compass size={40} className="mx-auto text-gray-300 mb-3" />
             <h3 className="text-lg font-semibold text-gray-900 mb-1">Coming Soon</h3>
             <p className="text-gray-500 text-sm">We're writing new articles. Check back soon!</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.map(post => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
-          </div>
+          <>
+            {/* Featured article — full-width with large image */}
+            {posts[0] && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <BlogCard post={posts[0]} featured />
+              </div>
+            )}
+            {/* Remaining articles — 1-col mobile, 2-col tablet, 3-col desktop */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {posts.slice(1).map(post => (
+                <BlogCard key={post.slug} post={post} />
+              ))}
+            </div>
+          </>
         )}
 
         {/* Topic tags cloud */}
-        <div className="mt-16 pt-10 border-t border-gray-200">
+        <div className="mt-16 pt-10 border-t border-gray-200/50">
           <h3 className="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wider">Browse by Topic</h3>
           <div className="flex flex-wrap gap-2">
             {Array.from(new Set(posts.flatMap(p => p.tags))).map(tag => (
               <span
                 key={tag}
-                className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium ${getTagVariant(tag)}`}
+                className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium backdrop-blur-sm ${getTagVariant(tag)}`}
               >
                 {tag.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
               </span>
@@ -243,7 +262,7 @@ export default function BlogPage() {
 
       {/* ─── CTA ─── */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-8 md:p-12 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-[#FF6B35] via-gray-900 to-[#1a365d] rounded-2xl p-8 md:p-12 overflow-hidden animate-gradient-shift">
           <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
           <div className="relative text-center max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to plan a trip your kids will love?</h2>
@@ -263,7 +282,7 @@ export default function BlogPage() {
       </section>
 
       {/* ─── FOOTER ─── */}
-      <footer className="border-t border-gray-200 bg-white">
+      <footer className="border-t border-gray-200/50 bg-white/70 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-gray-500">

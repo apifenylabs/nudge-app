@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import DestinationCard from '@/components/DestinationCard';
 import SimpleMapContainer from '@/components/SimpleMapContainer';
+import { computeSimpleScore, scoreTier } from '@/lib/scoring';
 
 // ─── Types ──────────────────────────────────────────────────────
 interface Destination {
@@ -24,6 +25,8 @@ interface Destination {
   description: string;
   imageUrl: string;
   location?: string;
+  amenities?: string[];
+  tipsAndTricks?: string[];
 }
 
 interface Meta {
@@ -36,6 +39,7 @@ const CATEGORIES = ['All', 'Theme Parks & Attractions', 'Nature & Outdoor Advent
 const AGE_RANGES = ['All', '0-3', '4-9', '10+'];
 const PRICE_RANGES = ['All', '$', '$$', '$$$'];
 const SORT_OPTIONS = [
+  { value: 'score', label: 'Best Overall' },
   { value: 'popularity', label: 'Most Popular' },
   { value: 'safety', label: 'Highest Safety' },
   { value: 'price', label: 'Lowest Price' },
@@ -65,7 +69,7 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
   const [priceRange, setPriceRange] = useState('All');
   const [minSafety, setMinSafety] = useState(0);
   const [country, setCountry] = useState('All');
-  const [sort, setSort] = useState('popularity');
+  const [sort, setSort] = useState('score');
   const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid');
 
   // ── Data ──
@@ -177,6 +181,11 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
 
     // Sort
     results.sort((a, b) => {
+      if (sort === 'score') {
+        const aScore = computeSimpleScore(a.safetyRating, a.popularity, 0, false);
+        const bScore = computeSimpleScore(b.safetyRating, b.popularity, 0, false);
+        return bScore - aScore;
+      }
       if (sort === 'popularity') return b.popularity - a.popularity;
       if (sort === 'safety') return b.safetyRating - a.safetyRating;
       if (sort === 'price') {
@@ -225,19 +234,24 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="sticky top-0 z-40 bg-white border-b border-gray-200">
+      {/* Header — glassmorphism */}
+      <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="h-14 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2 min-h-[44px]">
               <Compass size={18} className="text-sky-600" />
               <span className="font-semibold text-gray-900 text-sm">Family Travel</span>
             </Link>
+            <nav className="hidden sm:flex items-center gap-6 text-sm">
+              <Link href="/" className="text-gray-500 hover:text-gray-900 transition-colors">Home</Link>
+              <Link href="/blog" className="text-gray-500 hover:text-gray-900 transition-colors">Blog</Link>
+              <Link href="/search" className="text-gray-900 font-medium transition-colors">Search</Link>
+            </nav>
             <div className="flex items-center gap-3">
               <span className="text-xs text-gray-500 hidden sm:block">
                 {meta.totalDestinations} destinations
               </span>
-              <Link href="/account/saved" className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+              <Link href="/account/saved" className="p-2 hover:bg-gray-100 rounded-lg transition-colors min-h-[44px] flex items-center">
                 <Heart size={16} className="text-gray-500" />
               </Link>
             </div>
@@ -246,7 +260,7 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
-        {/* ── Search bar ── */}
+        {/* ── Search bar — glassmorphism */}
         <div ref={searchRef} className="relative mb-6">
           <div className="relative">
             <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -256,29 +270,29 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
               onChange={e => { setQuery(e.target.value); setShowSuggestions(true); }}
               onFocus={() => { if (suggestions.length > 0) setShowSuggestions(true); }}
               placeholder="Search destinations, cities, countries..."
-              className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 shadow-sm"
+              className="w-full pl-11 pr-10 py-3.5 rounded-xl border border-white/20 bg-white/70 backdrop-blur-sm text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 shadow-lg"
             />
             {query && (
               <button
                 onClick={() => { setQuery(''); setSuggestions([]); }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 min-h-[44px] flex items-center"
               >
                 <X size={16} />
               </button>
             )}
           </div>
 
-          {/* Suggestions dropdown */}
+          {/* Suggestions dropdown — glassmorphism */}
           {showSuggestions && suggestions.length > 0 && (
-            <div className="absolute top-full left-0 right-0 mt-1 bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden z-30">
+            <div className="absolute top-full left-0 right-0 mt-1 bg-white/90 backdrop-blur-lg rounded-xl border border-white/20 shadow-xl overflow-hidden z-30">
               {suggestions.map(d => (
                 <Link
                   key={d.id}
                   href={`/destination/${d.id}`}
-                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0"
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-sky-50/50 transition-colors border-b border-gray-100/50 last:border-0"
                   onClick={() => setShowSuggestions(false)}
                 >
-                  <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                  <div className="w-10 h-10 rounded-lg bg-white/70 flex items-center justify-center flex-shrink-0 overflow-hidden border border-white/20">
                     {d.imageUrl ? (
                       <img src={d.imageUrl} alt={d.name} className="w-full h-full object-cover" />
                     ) : (
@@ -319,7 +333,7 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
               )}
             </button>
 
-            {/* Active filter chips */}
+            {/* Active filter chips — pill-style */}
             {category !== 'All' && (
               <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-sky-50 text-sky-700 text-xs font-medium border border-sky-100">
                 {category}
@@ -387,84 +401,207 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
           </div>
         </div>
 
-        {/* ── Filter drawer (mobile-friendly) ── */}
+        {/* ── Filter drawer — glassmorphism ── */}
         {showFilters && (
-          <div className="mb-6 bg-white rounded-2xl border border-gray-200 p-4 sm:p-6">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-              {/* Category */}
-              <div>
-                <label className="block text-xs font-medium text-gray-500 mb-1.5">Category</label>
-                <select
-                  value={category}
-                  onChange={e => setCategory(e.target.value)}
-                  className="w-full text-sm border border-gray-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20"
-                >
-                  {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
-                </select>
+          <>
+            {/* Desktop: inline panel */}
+            <div className="hidden sm:block mb-6 bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg p-4 sm:p-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                {/* Category */}
+                <div>
+                  <label className="block text-xs font-medium text-gray-500 mb-1.5">Category</label>
+                  <select
+                    value={category}
+                    onChange={e => setCategory(e.target.value)}
+                    className="w-full text-sm border border-gray-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+                  >
+                    {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
+                  </select>
+                </div>
+
+                {/* Age Range */}
+                <div>
+                  <label className="block text-xs font-medium text-gray-500 mb-1.5">Age Range</label>
+                  <select
+                    value={ageRange}
+                    onChange={e => setAgeRange(e.target.value)}
+                    className="w-full text-sm border border-gray-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+                  >
+                    {AGE_RANGES.map(a => <option key={a} value={a}>{a === 'All' ? 'All Ages' : `${a} years`}</option>)}
+                  </select>
+                </div>
+
+                {/* Price Range */}
+                <div>
+                  <label className="block text-xs font-medium text-gray-500 mb-1.5">Price Range</label>
+                  <select
+                    value={priceRange}
+                    onChange={e => setPriceRange(e.target.value)}
+                    className="w-full text-sm border border-gray-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+                  >
+                    {PRICE_RANGES.map(p => <option key={p} value={p}>{p === 'All' ? 'Any Price' : p}</option>)}
+                  </select>
+                </div>
+
+                {/* Country */}
+                <div>
+                  <label className="block text-xs font-medium text-gray-500 mb-1.5">Country</label>
+                  <select
+                    value={country}
+                    onChange={e => setCountry(e.target.value)}
+                    className="w-full text-sm border border-gray-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+                  >
+                    <option value="All">All Countries</option>
+                    {countries.map(c => <option key={c} value={c}>{c}</option>)}
+                  </select>
+                </div>
+
+                {/* Min Safety */}
+                <div>
+                  <label className="block text-xs font-medium text-gray-500 mb-1.5">
+                    Min Safety: {minSafety}★
+                  </label>
+                  <input
+                    type="range"
+                    min={0}
+                    max={5}
+                    step={0.5}
+                    value={minSafety}
+                    onChange={e => setMinSafety(parseFloat(e.target.value))}
+                    className="w-full accent-sky-500"
+                  />
+                  <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                    <span>Any</span>
+                    <span>5★</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Age Range */}
-              <div>
-                <label className="block text-xs font-medium text-gray-500 mb-1.5">Age Range</label>
-                <select
-                  value={ageRange}
-                  onChange={e => setAgeRange(e.target.value)}
-                  className="w-full text-sm border border-gray-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20"
-                >
-                  {AGE_RANGES.map(a => <option key={a} value={a}>{a === 'All' ? 'All Ages' : `${a} years`}</option>)}
-                </select>
-              </div>
+            </div>
 
-              {/* Price Range */}
-              <div>
-                <label className="block text-xs font-medium text-gray-500 mb-1.5">Price Range</label>
-                <select
-                  value={priceRange}
-                  onChange={e => setPriceRange(e.target.value)}
-                  className="w-full text-sm border border-gray-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20"
-                >
-                  {PRICE_RANGES.map(p => <option key={p} value={p}>{p === 'All' ? 'Any Price' : p}</option>)}
-                </select>
-              </div>
+            {/* Mobile: slide-in drawer from bottom */}
+            <div className="sm:hidden">
+              <div className="fixed inset-0 bg-black/40 z-50" onClick={() => setShowFilters(false)} />
+              <div className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-2xl shadow-xl max-h-[80vh] overflow-y-auto animate-slide-up">
+                <div className="sticky top-0 bg-white border-b border-gray-100 px-5 py-4 flex items-center justify-between rounded-t-2xl">
+                  <h3 className="font-semibold text-gray-900 text-sm flex items-center gap-2">
+                    <SlidersHorizontal size={15} />
+                    Filters
+                    {activeFilterCount > 0 && (
+                      <span className="w-5 h-5 rounded-full bg-sky-500 text-white flex items-center justify-center text-[10px] font-bold">
+                        {activeFilterCount}
+                      </span>
+                    )}
+                  </h3>
+                  <button onClick={() => setShowFilters(false)} className="p-1.5 hover:bg-gray-100 rounded-lg">
+                    <X size={18} className="text-gray-500" />
+                  </button>
+                </div>
+                <div className="p-5 space-y-5">
+                  {/* Category */}
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Category</label>
+                    <div className="flex flex-wrap gap-2">
+                      {CATEGORIES.map(c => (
+                        <button
+                          key={c}
+                          onClick={() => setCategory(c)}
+                          className={`px-3.5 py-2 rounded-lg text-sm font-medium border transition-all ${category === c ? 'bg-sky-100 text-sky-700 border-sky-200' : 'bg-white text-gray-600 border-gray-200'}`}
+                        >
+                          {c}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
 
-              {/* Country */}
-              <div>
-                <label className="block text-xs font-medium text-gray-500 mb-1.5">Country</label>
-                <select
-                  value={country}
-                  onChange={e => setCountry(e.target.value)}
-                  className="w-full text-sm border border-gray-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20"
-                >
-                  <option value="All">All Countries</option>
-                  {countries.map(c => <option key={c} value={c}>{c}</option>)}
-                </select>
-              </div>
+                  {/* Age Range */}
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Age Range</label>
+                    <div className="flex flex-wrap gap-2">
+                      {AGE_RANGES.map(a => (
+                        <button
+                          key={a}
+                          onClick={() => setAgeRange(a)}
+                          className={`px-3.5 py-2 rounded-lg text-sm font-medium border transition-all ${ageRange === a ? 'bg-emerald-100 text-emerald-700 border-emerald-200' : 'bg-white text-gray-600 border-gray-200'}`}
+                        >
+                          {a === 'All' ? 'All Ages' : `${a} years`}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
 
-              {/* Min Safety */}
-              <div>
-                <label className="block text-xs font-medium text-gray-500 mb-1.5">
-                  Min Safety: {minSafety}★
-                </label>
-                <input
-                  type="range"
-                  min={0}
-                  max={5}
-                  step={0.5}
-                  value={minSafety}
-                  onChange={e => setMinSafety(parseFloat(e.target.value))}
-                  className="w-full accent-sky-500"
-                />
-                <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
-                  <span>Any</span>
-                  <span>5★</span>
+                  {/* Price Range */}
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Price Range</label>
+                    <div className="flex flex-wrap gap-2">
+                      {PRICE_RANGES.map(p => (
+                        <button
+                          key={p}
+                          onClick={() => setPriceRange(p)}
+                          className={`px-3.5 py-2 rounded-lg text-sm font-medium border transition-all ${priceRange === p ? 'bg-amber-100 text-amber-700 border-amber-200' : 'bg-white text-gray-600 border-gray-200'}`}
+                        >
+                          {p === 'All' ? 'Any Price' : p}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Country */}
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Country</label>
+                    <select
+                      value={country}
+                      onChange={e => setCountry(e.target.value)}
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 bg-white"
+                    >
+                      <option value="All">All Countries</option>
+                      {countries.map(c => <option key={c} value={c}>{c}</option>)}
+                    </select>
+                  </div>
+
+                  {/* Min Safety */}
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                      Min Safety: {minSafety}★
+                    </label>
+                    <input
+                      type="range"
+                      min={0}
+                      max={5}
+                      step={0.5}
+                      value={minSafety}
+                      onChange={e => setMinSafety(parseFloat(e.target.value))}
+                      className="w-full accent-sky-500"
+                    />
+                    <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                      <span>Any</span>
+                      <span>5★</span>
+                    </div>
+                  </div>
+
+                  {/* Actions */}
+                  <div className="flex gap-3 pt-2">
+                    <button
+                      onClick={() => { clearFilters(); setShowFilters(false); }}
+                      className="flex-1 px-4 py-2.5 rounded-xl border border-gray-200 text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors"
+                    >
+                      Clear All
+                    </button>
+                    <button
+                      onClick={() => setShowFilters(false)}
+                      className="flex-1 px-4 py-2.5 rounded-xl bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-colors"
+                    >
+                      Apply Filters
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </>
         )}
 
         {/* ── Results info ── */}
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4 bg-white/30 backdrop-blur-sm rounded-xl px-4 py-2 border border-white/10">
           <p className="text-sm text-gray-500">
             {loading ? (
               <span className="flex items-center gap-2">
@@ -482,14 +619,14 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
 
         {/* ── Results / Map ── */}
         {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[1, 2, 3, 4, 5, 6].map(i => (
-              <div key={i} className="bg-white rounded-2xl border border-gray-200 overflow-hidden animate-pulse">
-                <div className="h-48 bg-gray-200" />
-                <div className="p-4 space-y-3">
-                  <div className="h-4 bg-gray-200 rounded w-2/3" />
-                  <div className="h-3 bg-gray-100 rounded w-1/2" />
-                  <div className="h-3 bg-gray-100 rounded w-3/4" />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+            {Array.from({ length: 12 }).map((_, i) => (
+              <div key={i} className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-pulse">
+                <div className="aspect-[4/3] bg-gray-200" />
+                <div className="p-3 space-y-2">
+                  <div className="h-3 bg-gray-200 rounded w-3/4" />
+                  <div className="h-2 bg-gray-100 rounded w-1/2" />
+                  <div className="h-2 bg-gray-100 rounded w-2/3" />
                 </div>
               </div>
             ))}
@@ -517,7 +654,7 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
             />
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
             {filtered.map(d => (
               <DestinationCard
                 key={d.id}
@@ -532,7 +669,9 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
                 popularity={d.popularity}
                 description={d.description}
                 imageUrl={d.imageUrl}
-                tipsCount={0 as any}
+                tipsCount={d.tipsAndTricks?.length || 0}
+                parentStory={false}
+                amenities={d.amenities}
               />
             ))}
           </div>

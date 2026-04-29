@@ -11,6 +11,7 @@ import {
 import HeroSection from '@/components/HeroSection';
 import FilterBar from '@/components/FilterBar';
 import DestinationCard from '@/components/DestinationCard';
+import { computeSimpleScore, scoreTier } from '@/lib/scoring';
 
 // ─── Types ──────────────────────────────────────────────────────
 interface Destination {
@@ -26,6 +27,7 @@ interface Destination {
   description: string;
   imageUrl: string;
   tipsAndTricks: string[];
+  amenities?: string[];
   parentStory?: { title: string; excerpt: string; author: string; fullStory: string; };
 }
 
@@ -37,7 +39,6 @@ const categories = [
 
 const defaultCities = ["Tokyo", "Bangkok", "Singapore", "Hong Kong", "Phuket", "Bali", "Hanoi", "Seoul", "Osaka", "Kuala Lumpur", "Chiang Mai"];
 
-// ─── PAGE COMPONENT ─────────────────────────────────────────────
 interface BlogPost {
   slug: string;
   title: string;
@@ -59,7 +60,7 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
   const [selectedPrice, setSelectedPrice] = useState("All");
   const [minSafety, setMinSafety] = useState<number | null>(null);
   const [selectedCountry, setSelectedCountry] = useState("All");
-  const [sortBy, setSortBy] = useState("popularity");
+  const [sortBy, setSortBy] = useState("score");
   const [destinations, setDestinations] = useState<Destination[]>([]);
   const [loading, setLoading] = useState(true);
   const [cities, setCities] = useState<string[]>(defaultCities);
@@ -144,6 +145,11 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
     }
 
     f.sort((a, b) => {
+      if (sortBy === "score") {
+        const aScore = computeSimpleScore(a.safetyRating, a.popularity, a.tipsAndTricks?.length || 0, !!a.parentStory);
+        const bScore = computeSimpleScore(b.safetyRating, b.popularity, b.tipsAndTricks?.length || 0, !!b.parentStory);
+        return bScore - aScore;
+      }
       if (sortBy === "popularity") return b.popularity - a.popularity;
       if (sortBy === "safety") return b.safetyRating - a.safetyRating;
       if (sortBy === "price") {
@@ -178,18 +184,14 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
 
   const visibleCities = cities.length >= 6 ? cities.slice(0, 11) : defaultCities;
   const loadingSkeleton = (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-      {[1, 2, 3, 4].map((i) => (
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
+      {Array.from({ length: 12 }).map((_, i) => (
         <div key={i} className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-pulse">
-          <div className="h-48 bg-gray-200" />
-          <div className="p-5 space-y-3">
-            <div className="h-5 bg-gray-200 rounded w-3/4" />
-            <div className="flex gap-2">
-              <div className="h-5 bg-gray-100 rounded-full w-16" />
-              <div className="h-5 bg-gray-100 rounded-full w-12" />
-            </div>
-            <div className="h-4 bg-gray-100 rounded w-full" />
-            <div className="h-4 bg-gray-100 rounded w-2/3" />
+          <div className="aspect-[4/3] bg-gray-200" />
+          <div className="p-3 space-y-2">
+            <div className="h-3 bg-gray-200 rounded w-3/4" />
+            <div className="h-2 bg-gray-100 rounded w-1/2" />
+            <div className="h-2 bg-gray-100 rounded w-2/3" />
           </div>
         </div>
       ))}
@@ -213,7 +215,7 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
         </div>
       </header>
 
-      {/* ─── HERO SECTION (new) ─── */}
+      {/* ─── HERO SECTION ─── */}
       <HeroSection
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
@@ -249,7 +251,7 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
         </div>
       </section>
 
-      {/* ─── FILTER BAR (new) ─── */}
+      {/* ─── FILTER BAR (no EV toggle) ─── */}
       <FilterBar
         selectedCategory={selectedCategory}
         onCategoryChange={setSelectedCategory}
@@ -269,7 +271,7 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
         onClearAll={clearAllFilters}
       />
 
-      {/* ─── DESTINATION CARDS (refactored) ─── */}
+      {/* ─── DESTINATION CARDS ─── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         {loading && loadingSkeleton}
 
@@ -288,7 +290,7 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
         )}
 
         {!loading && filtered.length > 0 && (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
             {filtered.map((dest) => (
               <DestinationCard
                 key={dest.id}
@@ -305,6 +307,7 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
                 imageUrl={dest.imageUrl}
                 tipsCount={dest.tipsAndTricks?.length || 0}
                 parentStory={!!dest.parentStory}
+                amenities={dest.amenities || []}
               />
             ))}
           </div>
@@ -405,7 +408,7 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">Ready to plan a trip your kids will actually remember?</h2>
             <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
-              We've done the research, read the Reddit threads, and talked to hundreds of parents. Now you get the shortcut.
+              We&apos;ve done the research, read the Reddit threads, and talked to hundreds of parents. Now you get the shortcut.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="#destinations-section" className="px-8 py-3.5 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-all shadow-lg active:scale-[0.98]">

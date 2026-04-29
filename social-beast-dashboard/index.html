@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Beast — Content Pipeline Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    * { font-family: 'Inter', system-ui, sans-serif; }
+    body { background: #0a0a0f; }
+    .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.06); }
+    .glass-hover:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); }
+    .card { transition: all 0.2s ease; }
+    .card:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+    .pulse-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .pulse { animation: pulse 2s ease-in-out infinite; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+  </style>
+</head>
+<body class="text-gray-100 min-h-screen">
+  <div class="max-w-7xl mx-auto px-4 py-6">
+    <!-- Header -->
+    <header class="flex items-center justify-between mb-8">
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-rose-600 flex items-center justify-center text-lg font-bold">SB</div>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight">Social Beast</h1>
+          <p class="text-xs text-gray-500">Content Pipeline Dashboard</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 text-sm">
+        <span class="flex items-center gap-1.5 text-gray-400">
+          <span class="pulse-dot bg-emerald-400 pulse"></span>
+          Mock Mode
+        </span>
+        <span class="text-gray-500" id="lastRunTime">2026-04-28 07:00 AM</span>
+        <button onclick="location.reload()" class="px-3 py-1.5 rounded-lg glass glass-hover text-sm text-gray-400 hover:text-white transition-colors">⟳ Refresh</button>
+      </div>
+    </header>
+
+    <!-- Stats Row -->
+    <div class="grid grid-cols-4 gap-4 mb-8" id="statsRow">
+      <!-- filled by JS -->
+    </div>
+
+    <!-- Platform Status -->
+    <div class="glass rounded-xl p-4 mb-6">
+      <div class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-medium">Platform Connections</div>
+      <div class="grid grid-cols-3 gap-4" id="platformStatus">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- Source Items -->
+    <div class="mb-4">
+      <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+        Source Items
+        <span class="text-gray-600 font-normal normal-case" id="sourceCount">(3)</span>
+      </h2>
+      <div class="grid gap-3" id="sourceItems">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- Transformed Content -->
+    <div class="mb-4">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+          Transformed Content
+          <span class="text-gray-600 font-normal normal-case" id="transformCount">(9)</span>
+        </h2>
+        <div class="flex gap-2" id="filterBar">
+          <button data-filter="all" class="filter-btn px-3 py-1 rounded-lg text-xs bg-white/10 text-white font-medium">All</button>
+          <button data-filter="short_hook" class="filter-btn px-3 py-1 rounded-lg text-xs text-gray-400 hover:text-white transition-colors">Short Hook</button>
+          <button data-filter="thread" class="filter-btn px-3 py-1 rounded-lg text-xs text-gray-400 hover:text-white transition-colors">Thread</button>
+          <button data-filter="deep_dive" class="filter-btn px-3 py-1 rounded-lg text-xs text-gray-400 hover:text-white transition-colors">Deep Dive</button>
+        </div>
+      </div>
+      <div class="grid gap-3" id="transformedItems">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- Publishing History -->
+    <div class="mb-4">
+      <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+        Publishing History
+        <span class="text-gray-600 font-normal normal-case" id="historyCount">(18)</span>
+      </h2>
+      <div class="overflow-x-auto rounded-xl glass">
+        <table class="w-full text-sm" id="historyTable">
+          <thead>
+            <tr class="text-left text-gray-500 border-b border-white/5">
+              <th class="py-3 px-4 font-medium">Time</th>
+              <th class="py-3 px-4 font-medium">Content</th>
+              <th class="py-3 px-4 font-medium">Platform</th>
+              <th class="py-3 px-4 font-medium">Status</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody">
+            <!-- filled by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 pb-6 text-center text-xs text-gray-600">
+      Social Beast · Agent Orchestration Pipeline · <span id="footerTime"></span>
+    </footer>
+  </div>
+
+  <script>
+    // ============================================================
+    // DATA
+    // ============================================================
+    const SAMPLE = {
+      lastRun: "2026-04-28 07:00 AM",
+      sources: [
+        {
+          id: "s1",
+          title: "Bangkok's Best Night Markets 2026",
+          source: "Directory Beast — Bangkok",
+          url: "https://directorybeast.com/bangkok/night-markets",
+          category: "travel",
+          image: "🌃",
+          status: "ready"
+        },
+        {
+          id: "s2",
+          title: "Top 10 Coworking Spaces in Saigon",
+          source: "Directory Beast — Saigon",
+          url: "https://directorybeast.com/saigon/coworking",
+          category: "work",
+          image: "💼",
+          status: "ready"
+        },
+        {
+          id: "s3",
+          title: "Hidden Rooftop Bars in Tokyo",
+          source: "Directory Beast — Tokyo",
+          url: "https://directorybeast.com/tokyo/rooftops",
+          category: "nightlife",
+          image: "🍸",
+          status: "ready"
+        }
+      ],
+      transforms: [
+        // s1 transforms
+        { id: "t1", sourceId: "s1", type: "short_hook", title: "Thread: 5 Bangkok night markets that changed my life 🌆", target: ["twitter", "telegram"], status: "pending" },
+        { id: "t2", sourceId: "s1", type: "thread", title: "Bangkok Night Market Survival Guide 🧵", target: ["twitter"], status: "pending" },
+        { id: "t3", sourceId: "s1", type: "deep_dive", title: "Ultimate Bangkok Night Market Map: 2026 Edition", target: ["linkedin"], status: "ready" },
+        // s2 transforms
+        { id: "t4", sourceId: "s2", type: "short_hook", title: "Saigon's coworking scene is wild right now 🚀", target: ["twitter", "telegram"], status: "pending" },
+        { id: "t5", sourceId: "s2", type: "thread", title: "10 Saigon coworking spaces ranked by WiFi + coffee 🧵", target: ["twitter"], status: "ready" },
+        { id: "t6", sourceId: "s2", type: "deep_dive", title: "Digital Nomad's Guide to Saigon Workspaces", target: ["linkedin", "telegram"], status: "pending" },
+        // s3 transforms
+        { id: "t7", sourceId: "s3", type: "short_hook", title: "Tokyo rooftops you won't find on Google Maps 🗼", target: ["twitter", "telegram"], status: "ready" },
+        { id: "t8", sourceId: "s3", type: "thread", title: "Speakeasy rooftop bars of Tokyo 🧵", target: ["twitter"], status: "pending" },
+        { id: "t9", sourceId: "s3", type: "deep_dive", title: "Tokyo After Dark: The Hidden Rooftop Scene", target: ["linkedin"], status: "error" }
+      ],
+      history: [
+        { time: "2026-04-27 19:00", content: "Bali Digital Nomad Guide", platform: "twitter", status: "published" },
+        { time: "2026-04-27 19:00", content: "Bali Digital Nomad Guide", platform: "telegram", status: "published" },
+        { time: "2026-04-27 19:01", content: "Bali Digital Nomad Guide — Thread", platform: "twitter", status: "published" },
+        { time: "2026-04-27 19:02", content: "Working from Bali: Full Report", platform: "linkedin", status: "published" },
+        { time: "2026-04-27 18:00", content: "Chiang Mai Cafe Guide", platform: "twitter", status: "published" },
+        { time: "2026-04-27 18:00", content: "Chiang Mai Cafe Guide", platform: "telegram", status: "published" },
+        { time: "2026-04-27 18:01", content: "Chiang Mai Coffee Thread 🧵", platform: "twitter", status: "published" },
+        { time: "2026-04-27 18:02", content: "Chiang Mai Digital Nomad Cafes", platform: "linkedin", status: "published" },
+        { time: "2026-04-27 17:00", content: "Singapore Hawker Guide", platform: "twitter", status: "published" },
+        { time: "2026-04-27 17:00", content: "Singapore Hawker Guide", platform: "telegram", status: "published" },
+        { time: "2026-04-27 17:01", content: "Best Hawker Stalls Thread 🧵", platform: "twitter", status: "published" },
+        { time: "2026-04-27 17:02", content: "Singapore Michelin Hawker Analysis", platform: "linkedin", status: "published" },
+        { time: "2026-04-26 20:00", content: "Seoul Nightlife Guide", platform: "twitter", status: "published" },
+        { time: "2026-04-26 20:00", content: "Seoul Nightlife Guide", platform: "telegram", status: "published" },
+        { time: "2026-04-26 20:01", content: "Seoul Bar Crawl Thread 🧵", platform: "twitter", status: "published" },
+        { time: "2026-04-26 20:02", content: "Seoul Nightlife: The Insider's Guide", platform: "linkedin", status: "published" },
+        { time: "2026-04-26 15:00", content: "Kuala Lumpur Street Food", platform: "twitter", status: "published" },
+        { time: "2026-04-26 15:00", content: "Kuala Lumpur Street Food", platform: "telegram", status: "published" }
+      ]
+    };
+
+    // Try to load user data, fall back to sample
+    async function loadData() {
+      // In a real scenario we'd fetch credentials.json and data files
+      // For now, always use sample data
+      return SAMPLE;
+    }
+
+    // Helper: get source title by id
+    function getSourceTitle(id) {
+      const s = SAMPLE.sources.find(src => src.id === id);
+      return s ? s.title : 'Unknown';
+    }
+    function getSourceImage(id) {
+      const s = SAMPLE.sources.find(src => src.id === id);
+      return s ? s.image : '📄';
+    }
+
+    // Platform badge
+    function platformBadge(name) {
+      const colors = { twitter: 'bg-sky-500/20 text-sky-300 border-sky-500/30', telegram: 'bg-blue-500/20 text-blue-300 border-blue-500/30', linkedin: 'bg-blue-700/20 text-blue-300 border-blue-700/30' };
+      const icons = { twitter: '𝕏', telegram: '✈', linkedin: 'in' };
+      return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium border ${colors[name] || 'bg-gray-500/20 text-gray-400 border-gray-500/30'}">${icons[name] || name}</span>`;
+    }
+
+    // Status badge
+    function statusBadge(status) {
+      const map = {
+        ready: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/20',
+        pending: 'bg-amber-500/15 text-amber-300 border-amber-500/20',
+        published: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/20',
+        error: 'bg-red-500/15 text-red-300 border-red-500/20'
+      };
+      return `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-medium border ${map[status] || 'bg-gray-500/15 text-gray-400 border-gray-500/20'}"><span class="pulse-dot ${status === 'published' || status === 'ready' ? 'bg-emerald-400' : status === 'error' ? 'bg-red-400' : 'bg-amber-400'} ${status === 'ready' || status === 'pending' ? 'pulse' : ''}"></span>${status}</span>`;
+    }
+
+    // Transform type badge
+    function typeBadge(type) {
+      const labels = { short_hook: 'Short Hook', thread: 'Thread', deep_dive: 'Deep Dive' };
+      return `<span class="text-xs px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">${labels[type] || type}</span>`;
+    }
+
+    // ============================================================
+    // RENDER
+    // ============================================================
+    function render(data) {
+      // Last run
+      document.getElementById('lastRunTime').textContent = data.lastRun;
+      document.getElementById('footerTime').textContent = new Date().toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' });
+
+      // Stats
+      const pending = data.transforms.filter(t => t.status === 'pending').length;
+      const ready = data.transforms.filter(t => t.status === 'ready').length;
+      const error = data.transforms.filter(t => t.status === 'error').length;
+      const published = data.history.filter(h => h.status === 'published').length;
+
+      document.getElementById('statsRow').innerHTML = `
+        <div class="glass rounded-xl p-4 card">
+          <div class="text-2xl font-bold text-emerald-400">${ready}</div>
+          <div class="text-xs text-gray-500 mt-1">Ready to Publish</div>
+        </div>
+        <div class="glass rounded-xl p-4 card">
+          <div class="text-2xl font-bold text-amber-400">${pending}</div>
+          <div class="text-xs text-gray-500 mt-1">Pending Review</div>
+        </div>
+        <div class="glass rounded-xl p-4 card">
+          <div class="text-2xl font-bold text-red-400">${error}</div>
+          <div class="text-xs text-gray-500 mt-1">Errors</div>
+        </div>
+        <div class="glass rounded-xl p-4 card">
+          <div class="text-2xl font-bold text-blue-400">${published}</div>
+          <div class="text-xs text-gray-500 mt-1">Published (all time)</div>
+        </div>
+      `;
+
+      // Platform status
+      document.getElementById('platformStatus').innerHTML = `
+        <div class="flex items-center gap-3 p-3 rounded-lg bg-white/[0.02]">
+          <span class="text-lg">𝕏</span>
+          <div>
+            <div class="text-sm font-medium">Twitter</div>
+            <div class="text-xs text-gray-500"><span class="text-emerald-400">🟢</span> Mock mode</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 p-3 rounded-lg bg-white/[0.02]">
+          <span class="text-lg">✈</span>
+          <div>
+            <div class="text-sm font-medium">Telegram</div>
+            <div class="text-xs text-gray-500"><span class="text-emerald-400">🟢</span> Mock mode</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 p-3 rounded-lg bg-white/[0.02]">
+          <span class="text-lg">in</span>
+          <div>
+            <div class="text-sm font-medium">LinkedIn</div>
+            <div class="text-xs text-gray-500"><span class="text-emerald-400">🟢</span> Mock mode</div>
+          </div>
+        </div>
+      `;
+
+      // Source count
+      document.getElementById('sourceCount').textContent = `(${data.sources.length})`;
+
+      // Source items
+      document.getElementById('sourceItems').innerHTML = data.sources.map(s => `
+        <div class="glass rounded-xl p-4 card flex items-start gap-4">
+          <div class="text-2xl flex-shrink-0">${s.image}</div>
+          <div class="flex-1 min-w-0">
+            <div class="font-medium text-sm truncate">${s.title}</div>
+            <div class="text-xs text-gray-500 mt-0.5">${s.source}</div>
+            <div class="text-xs text-gray-600 mt-1 truncate"><a href="${s.url}" class="hover:text-blue-400 transition-colors" target="_blank">${s.url}</a></div>
+          </div>
+          <div class="flex-shrink-0">${statusBadge(s.status)}</div>
+        </div>
+      `).join('');
+
+      // Transform count
+      document.getElementById('transformCount').textContent = `(${data.transforms.length})`;
+
+      // Transformed items
+      function renderTransforms(filter) {
+        const items = filter === 'all' ? data.transforms : data.transforms.filter(t => t.type === filter);
+        if (items.length === 0) {
+          return `<div class="glass rounded-xl p-8 text-center text-gray-500"><p>No items match this filter.</p></div>`;
+        }
+        return items.map(t => {
+          const sourceTitle = getSourceTitle(t.sourceId);
+          const sourceImage = getSourceImage(t.sourceId);
+          return `
+            <div class="glass rounded-xl p-4 card flex items-start gap-4">
+              <div class="text-lg flex-shrink-0">${sourceImage}</div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium truncate">${t.title}</div>
+                <div class="flex items-center gap-2 mt-1.5 flex-wrap">
+                  ${typeBadge(t.type)}
+                  ${t.target.map(p => platformBadge(p)).join(' ')}
+                </div>
+                <div class="text-xs text-gray-600 mt-1">Source: ${sourceTitle}</div>
+              </div>
+              <div class="flex-shrink-0">${statusBadge(t.status)}</div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      document.getElementById('transformedItems').innerHTML = renderTransforms('all');
+
+      // Filter buttons
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.remove('bg-white/10', 'text-white', 'font-medium');
+            b.classList.add('text-gray-400');
+          });
+          this.classList.add('bg-white/10', 'text-white', 'font-medium');
+          this.classList.remove('text-gray-400');
+          const filter = this.dataset.filter;
+          document.getElementById('transformedItems').innerHTML = renderTransforms(filter);
+        });
+      });
+
+      // History count
+      document.getElementById('historyCount').textContent = `(${data.history.length})`;
+
+      // History table
+      document.getElementById('historyBody').innerHTML = data.history.map(h => `
+        <tr class="border-b border-white/[0.03] hover:bg-white/[0.02] transition-colors">
+          <td class="py-3 px-4 text-gray-400 whitespace-nowrap">${h.time}</td>
+          <td class="py-3 px-4 text-gray-200">${h.content}</td>
+          <td class="py-3 px-4">${platformBadge(h.platform)}</td>
+          <td class="py-3 px-4">${statusBadge(h.status)}</td>
+        </tr>
+      `).join('');
+    }
+
+    // Boot
+    loadData().then(render);
+  </script>
+</body>
+</html>

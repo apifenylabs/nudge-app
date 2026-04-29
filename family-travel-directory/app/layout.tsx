@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import BottomNav from "@/components/BottomNav";
+import Link from "next/link";
 
 const BASE_URL = 'https://family-travel-directory.vercel.app';
 
@@ -73,8 +75,9 @@ export default function RootLayout({
         {/* Google AdSense */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6046953221141245" crossOrigin="anonymous" />
       </head>
-      <body className="min-h-full bg-gray-50 text-gray-900">
+      <body className="min-h-full bg-gray-50 text-gray-900 pb-safe pt-safe">
         {children}
+        <BottomNav />
       </body>
     </html>
   );

@@ -4,11 +4,17 @@
 
 ```yaml
 project: "Directory Beast — Master Template Directory"
-version: "2.0 (10/10 Full Vision)"
-date: "2026-04-28"
+version: "2.3 (Sticky Family Metrics - CEO approved)"
+date: "2026-04-29"
 based_on_brd: "PRD_TEMPLATE.md"
-status: "Planning"
+status: "Active Development"
 ```
+
+## CEO Directives (2026-04-29)
+
+1. **Remove EV Nearby badges from Directory Beast cards.** EV features belong in EV Charging Asia only. These tags add zero value for family travelers.
+2. **Redesign landing page cards to show metrics parents actually care about:** age suitability, kid-friendly amenities, safety score, number of parent reviews, family tips count. Make the directory sticky/addictive so users return every trip-planning cycle.
+3. **All changes must follow pipeline:** PO updates PRD → Coder builds → UI Agent reviews → Tester runs full tests → Reviewer code review → Chief Editor sign-off → Deploy. No exceptions.
 
 ---
 

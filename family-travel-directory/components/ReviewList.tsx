@@ -17,7 +17,7 @@ export default function ReviewList({
   isLoading,
   onHelpfulToggle,
 }: ReviewListProps) {
-  const [sortBy, setSortBy] = useState<'newest' | 'highest'>('newest');
+  const [sortBy, setSortBy] = useState<'newest' | 'highest' | 'helpful'>('newest');
   const [page, setPage] = useState(1);
 
   const sorted = useMemo(() => {
@@ -27,8 +27,10 @@ export default function ReviewList({
         (a, b) =>
           new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
       );
-    } else {
+    } else if (sortBy === 'highest') {
       copy.sort((a, b) => b.overall_rating - a.overall_rating);
+    } else if (sortBy === 'helpful') {
+      copy.sort((a, b) => (b.helpful_count || 0) - (a.helpful_count || 0));
     }
     return copy;
   }, [reviews, sortBy]);
@@ -37,7 +39,7 @@ export default function ReviewList({
   const paginated = sorted.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
   // Reset page when sort changes
-  const handleSortChange = (sort: 'newest' | 'highest') => {
+  const handleSortChange = (sort: 'newest' | 'highest' | 'helpful') => {
     setSortBy(sort);
     setPage(1);
   };
@@ -105,6 +107,16 @@ export default function ReviewList({
             }`}
           >
             Highest Rated
+          </button>
+          <button
+            onClick={() => handleSortChange('helpful')}
+            className={`text-xs px-2.5 py-1 rounded-lg border transition-colors ${
+              sortBy === 'helpful'
+                ? 'bg-sky-50 border-sky-200 text-sky-700 font-medium'
+                : 'bg-white border-gray-200 text-gray-500 hover:bg-gray-50'
+            }`}
+          >
+            Most Helpful
           </button>
         </div>
       </div>

@@ -8,11 +8,13 @@ Only one agent per task.
 
 ### [HIGH] Directory Beast — Fix Client Exception
 - **Task**: Fix "Application error: client-side exception" on family-travel-directory.vercel.app
-- **Status**: ✅ **FIXED & DEPLOYED** (2026-04-28 14:22 HKT)
+- **Status**: ✅ **FIXED & DEPLOYED** (2026-04-28 14:46 HKT)
 - **Agent**: Captain (CEO Agent)
-- **Root cause**: `require('@supabase/ssr')` called in browser from `lib/supabase-browser.ts`. `require` doesn't exist in browser — ESM package.
-- **Fix**: Replaced `@supabase/ssr` with `@supabase/supabase-js` in browser lib.
-- **Prevention**: All browser Supabase client code must use `@supabase/supabase-js` directly. `@supabase/ssr` reserved for server-side only.
+- **Root cause 1**: `require('@supabase/ssr')` called in browser from `lib/supabase-browser.ts`. `require` doesn't exist in browser.
+- **Root cause 2**: `app/search/page.tsx` + `_client.tsx` had type mismatches with Phase 1 `DestinationCard` props (was passing `destination={d}` but component takes individual props). Build errored silently.
+- **Root cause 3**: `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` NOT set on Vercel project — only in `.env.local`. The noop proxy returned `{ data: null }` which crashed on destructuring `{ data: { subscription } }`.
+- **Fixes**: (1) Changed `@supabase/ssr` to `@supabase/supabase-js` in browser lib. (2) Fixed `search/_client.tsx` props to match DestinationCard interface. (3) Added both env vars to Vercel project. (4) Fixed noop proxy to return `{ data: {} }` instead of `{ data: null }`.
+- **Prevention**: (1) No `@supabase/ssr` in browser code. (2) All env vars must be set on Vercel before deploy. (3) Mock proxy must return valid destructureable shapes.
 
 ### [HIGH] Directory Beast — Phase 2 (Search + Map + Scoring)
 - **Task**: Implement advanced search with filters, map view, destination scoring algorithm

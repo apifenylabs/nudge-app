@@ -18,7 +18,7 @@ export default function ReviewSummary({
   const maxCount = Math.max(1, ...Object.values(distribution));
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-5 sm:p-6">
+    <div className="bg-white/80 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg p-5 sm:p-6">
       <div className="flex flex-col sm:flex-row items-start gap-6">
         {/* Big average rating */}
         <div className="flex-shrink-0 text-center sm:text-left w-full sm:w-auto">
@@ -77,7 +77,7 @@ export default function ReviewSummary({
       </div>
 
       {/* Rating breakdown legend */}
-      <div className="flex flex-wrap items-center gap-4 mt-4 pt-4 border-t border-gray-100 text-xs text-gray-500">
+      <div className="flex flex-wrap items-center gap-4 mt-4 pt-4 border-t border-gray-100/50 text-xs text-gray-500">
         <span className="flex items-center gap-1">
           <BarChart3 size={12} className="text-sky-400" />
           Parent ratings from {totalReviews} review{totalReviews !== 1 ? 's' : ''}
