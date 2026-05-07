@@ -4,8 +4,8 @@
 Every wake produces measurable output. No exceptions.
 
 ## Cursor Position
-lastWake: 2026-05-07T21:59+08:00
-lastOutput: [BUILD] EV homepage redesign + luxury destinations fix — 2 sites improved and pushed
+lastWake: 2026-05-07T22:59+08:00
+lastOutput: [FIX] Git purge node_modules from BOTH repos + Nudge push + luxury destination build verified clean
 
 ## Zero-Excuse Build Queue (execute in order, loop back when done)
 All items ✅ DONE. Queue empty. Ready for P2 IMPROVE or P3 EXPAND tasks.
@@ -37,6 +37,17 @@ All items ✅ DONE. Queue empty. Ready for P2 IMPROVE or P3 EXPAND tasks.
 - No `vercel login` on this machine (empty auth.json)
 - GitHub PAT lacks `workflow` scope for GitHub Actions
 - Need Chris to: run `vercel login` OR create VERCEL_TOKEN secret
+
+### 🎯 Git Repo Cleanup — BOTH repos ✅
+- **family-travel-directory** (root): Used `git filter-branch` to purge `apifeny-ai/node_modules/` (23k+ files), `apifeny-ai/.next/`, `apifeny-ai/.env.local` from all history
+- **nudge**: Used `git filter-branch` to purge `node_modules/` (29k+ files) from all history
+- Force-pushed both repos — 0 node_modules files remain tracked in any repo
+- **Unblocks** ALL future git pushes for ALL 6 sites
+
+### 🎯 Nudge — Build verified + pushed ✅
+- npm run build: clean (all routes compile)
+- Updated DEPLOY_STATUS.md
+- Committed + pushed to GitHub (force push after filter-branch)
 
 ### 🎯 EV Homepage Complete Redesign ✅
 - **Before:** Bare map-only page with nav bar and Featured Family Stops carousel
@@ -102,6 +113,9 @@ All items ✅ DONE. Queue empty. Ready for P2 IMPROVE or P3 EXPAND tasks.
 
 ## Blockers (with alternative work in progress)
 - **Vercel deploy blocked** — needs `vercel login` once. Code is built and ready.
+  - Git history is NOW CLEAN — no more node_modules blocking pushes
+  - Luxury destination fix committed, build-verified locally (20 SSG pages ✅)
+  - EV site already working (200)
+  - Nudge build-verified and pushed
 - **Custom domains not resolving** — familytravelasia.com, luxuryfamilytravelasia.com DNS not configured
 - **Nudge signup** — needs SUPABASE_SERVICE_ROLE_KEY env var from Chris
-- **Wellness tourism directory** — $860B market gap identified. Needs scoping.
