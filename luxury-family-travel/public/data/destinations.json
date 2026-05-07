@@ -1,3953 +1,882 @@
 [
   {
-    "id": "bali-001",
-    "name": "Four Seasons Sayan",
+    "id": "bali-new-1",
+    "name": "Bali Family Park 1",
     "city": "Bali",
     "country": "Indonesia",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 97,
-    "description": "Luxury in Ayung River valley.",
-    "location": "Ubud, Bali",
-    "bestTime": "Apr-Oct",
-    "imageUrl": "https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&q=80",
-    "amenities": [
-      "Kids Club",
-      "Butler Service"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Pool Fencing"
-    ],
-    "tipsAndTricks": [
-      "River-view upper level.",
-      "Kids cooking class."
-    ],
-    "parentStory": {
-      "title": "Nanny became family",
-      "excerpt": "Wayan taught lotus folding.",
-      "author": "Emma",
-      "fullStory": "As I sat on our private river-view balcony at Four Seasons Sayan, watching my little ones play in the lush Ayung Valley, I felt grateful for this little slice of luxury that had become our home away from home. My nanny, Wayan, was more than just a caregiver - she'd become an integral part of our family. She taught us lotus folding, made us laugh, and even convinced my kids to try their hand at coo"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, club",
-      "fullDay": "Market, spa",
-      "bestFor": "Young families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "FS Sayan"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "bali-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Bali%2C+Indonesia&aid=2875669",
-        "text": "Book Four Seasons Sayan"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Four%20Seasons%20Sayan&aid=119991",
-        "text": "Klook Four Seasons Sayan"
-      },
-      "viator": {
-        "url": "https://viator.com/Bali/things-to-do?aid=P00299136",
-        "text": "Viator Bali"
-      }
-    }
-  },
-  {
-    "id": "bali-002",
-    "name": "Bulgari Resort Bali",
-    "city": "Bali",
-    "country": "Indonesia",
-    "category": "Luxury Resort",
-    "ageRange": "4-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 95,
-    "description": "Cliff-top with infinity pools.",
-    "location": "Uluwatu, Bali",
-    "bestTime": "May-Sep",
-    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
-    "amenities": [
-      "Infinity Pool",
-      "Kids Club"
-    ],
-    "safetyFeatures": [
-      "Cliff Barriers"
-    ],
-    "tipsAndTricks": [
-      "Inland villa for wind.",
-      "Junior Chef."
-    ],
-    "parentStory": {
-      "title": "Best chicken nuggets",
-      "excerpt": "$85 Wagyu was best chicken nuggets.",
-      "author": "David",
-      "fullStory": "As I looked out at our cliff-top infinity pool, my kids' eyes widened with excitement. We were staying in an inland villa at Bulgari Resort Bali, a haven from the wind that whipped through the Balinese forests. Our Junior Chef had prepared a special dinner for us - chicken nuggets fit for royalty: $85 Wagyu. My youngest asked if they were as good as she thought they'd be. I watched her take a bite"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, club",
-      "fullDay": "Spa, dinner",
-      "bestFor": "Design families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Bulgari Bali"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "bali-002",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Bali%2C+Indonesia&aid=2875669",
-        "text": "Book Bulgari Resort Bali"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Bulgari%20Resort%20Bali&aid=119991",
-        "text": "Klook Bulgari Resort Bali"
-      },
-      "viator": {
-        "url": "https://viator.com/Bali/things-to-do?aid=P00299136",
-        "text": "Viator Bali"
-      }
-    }
-  },
-  {
-    "id": "bali-003",
-    "name": "Ayana Estate",
-    "city": "Bali",
-    "country": "Indonesia",
-    "category": "Spa & Wellness",
-    "ageRange": "0-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 94,
-    "description": "90ha estate, 11 pools, Rock Bar.",
-    "location": "Jimbaran, Bali",
-    "bestTime": "Apr-Oct",
-    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
-    "amenities": [
-      "Kids Club",
-      "Private Beach",
-      "Multiple Pools"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "GPS Wristbands"
-    ],
-    "tipsAndTricks": [
-      "Rock Bar sunset.",
-      "Safari Club."
-    ],
-    "parentStory": {
-      "title": "3 generations happy",
-      "excerpt": "First time no one fought.",
-      "author": "Lisa",
-      "fullStory": "We're sitting on the private beach at Ayana Estate in Bali, surrounded by 11 pools and the calm sound of the ocean. My two kids, aged 8 and 10, are playing together in the shallow end, while my parents - my grandparents - lounge under a colorful umbrella nearby. It's our first family vacation without me as an infant, and I'm beaming with happiness. The kids' laughter and chatter fill the air as we"
-    },
-    "itineraryComparison": {
-      "halfDay": "River Pool",
-      "fullDay": "Spa, Rock Bar",
-      "bestFor": "Multi-gen"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Ayana"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "bali-003",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Bali%2C+Indonesia&aid=2875669",
-        "text": "Book Ayana Estate"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Ayana%20Estate&aid=119991",
-        "text": "Klook Ayana Estate"
-      },
-      "viator": {
-        "url": "https://viator.com/Bali/things-to-do?aid=P00299136",
-        "text": "Viator Bali"
-      }
-    }
-  },
-  {
-    "id": "phuket-001",
-    "name": "Amanpuri",
-    "city": "Phuket",
-    "country": "Thailand",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 5,
-    "priceRange": "$$$$",
-    "popularity": 98,
-    "description": "Aman first property, private peninsula.",
-    "location": "Pansea, Phuket",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80",
-    "amenities": [
-      "Private Beach",
-      "Kids Club",
-      "Butler Service"
-    ],
-    "safetyFeatures": [
-      "Private Security"
-    ],
-    "tipsAndTricks": [
-      "Garden pavilion.",
-      "Aman Kids free."
-    ],
-    "parentStory": {
-      "title": "Remembered her name",
-      "excerpt": "2 years later, butler knew her drink.",
-      "author": "James",
-      "fullStory": "Two years after our unforgettable getaway to Amanpuri, I still smile when my daughter's eyes light up at the mere mention of that private peninsula. As we settled into our villa, she'd excitedly ask for her \"special drink\" \u2013 a concoction of pineapple juice and coconut milk that only our butler, Kiet, knew by heart. Aman had become more than just a luxury resort to us; it was a haven where memories"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, club",
-      "fullDay": "Yacht, spa",
-      "bestFor": "Privacy"
-    },
-    "commissionRate": "12%",
-    "seoKeywords": [
-      "Amanpuri"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "phuket-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Phuket%2C+Thailand&aid=2875669",
-        "text": "Book Amanpuri"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Amanpuri&aid=119991",
-        "text": "Klook Amanpuri"
-      },
-      "viator": {
-        "url": "https://viator.com/Phuket/things-to-do?aid=P00299136",
-        "text": "Viator Phuket"
-      }
-    }
-  },
-  {
-    "id": "phuket-002",
-    "name": "Trisara",
-    "city": "Phuket",
-    "country": "Thailand",
-    "category": "Michelin Dining",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 96,
-    "description": "Garden in Third Heaven, Michelin dining.",
-    "location": "Cherngtalay, Phuket",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&q=80",
-    "amenities": [
-      "Private Pool",
-      "Kids Club",
-      "Michelin"
-    ],
-    "safetyFeatures": [
-      "Pool Covers",
-      "Allergen Menu"
-    ],
-    "tipsAndTricks": [
-      "Book PRU 1mo ahead.",
-      "Family photos."
-    ],
-    "parentStory": {
-      "title": "Michelin loved kids",
-      "excerpt": "Chef let 5yo plate desserts.",
-      "author": "Sophie",
-      "fullStory": "I'll never forget the time we dined at Trisara's Michelin-starred Garden in Third Heaven with my 5-year-old. She was so excited to watch Chef prepare our meal, and he even let her plate her own desserts. The look on her face when she took that first bite of foie gras, though, still makes me chuckle - I think it was more excitement than fear! It's moments like those that remind me why we love takin"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, garden",
-      "fullDay": "PRU, spa",
-      "bestFor": "Foodies"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Trisara"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "phuket-002",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Phuket%2C+Thailand&aid=2875669",
-        "text": "Book Trisara"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Trisara&aid=119991",
-        "text": "Klook Trisara"
-      },
-      "viator": {
-        "url": "https://viator.com/Phuket/things-to-do?aid=P00299136",
-        "text": "Viator Phuket"
-      }
-    }
-  },
-  {
-    "id": "phuket-003",
-    "name": "Rosewood Phuket",
-    "city": "Phuket",
-    "country": "Thailand",
-    "category": "Spa & Wellness",
-    "ageRange": "0-12",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 94,
-    "description": "Beachfront on Emerald Bay, residences.",
-    "location": "Emerald Bay, Phuket",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80",
-    "amenities": [
-      "Kids Club",
-      "Private Beach",
-      "Residences"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "Allergen Free"
-    ],
-    "tipsAndTricks": [
-      "3BR residence.",
-      "Explorers program."
-    ],
-    "parentStory": {
-      "title": "Residence saved us",
-      "excerpt": "Separate wings for all.",
-      "author": "Mike",
-      "fullStory": "We arrived at Rosewood Phuket exhausted from our flight, but the resort's calm energy immediately soothed our frazzled nerves. Our 3-year-old and newborn twins were separated by just a few months, and the kids' club was a lifesaver. One evening, as we watched our little ones play on the private beach, I realized that this was more than just a vacation - it was a chance to watch them thrive in a sa"
-    },
-    "itineraryComparison": {
-      "halfDay": "Beach, club",
-      "fullDay": "Wellness, dinner",
-      "bestFor": "Multi-gen beach"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Rosewood Phuket"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "phuket-003",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Phuket%2C+Thailand&aid=2875669",
-        "text": "Book Rosewood Phuket"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Rosewood%20Phuket&aid=119991",
-        "text": "Klook Rosewood Phuket"
-      },
-      "viator": {
-        "url": "https://viator.com/Phuket/things-to-do?aid=P00299136",
-        "text": "Viator Phuket"
-      }
-    }
-  },
-  {
-    "id": "maldives-001",
-    "name": "Soneva Fushi",
-    "city": "Maldives",
-    "country": "Maldives",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 99,
-    "description": "Private island, waterslides, chocolate room.",
-    "location": "Baa Atoll",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80",
-    "amenities": [
-      "Kids Club",
-      "Water Slides",
-      "Private Pool"
-    ],
-    "safetyFeatures": [
-      "GPS",
-      "Medical"
-    ],
-    "tipsAndTricks": [
-      "West-side villa.",
-      "Free chocolate!"
-    ],
-    "parentStory": {
-      "title": "Chocolate room found us",
-      "excerpt": "5yo found in 45 min.",
-      "author": "Rachel",
-      "fullStory": "I'll never forget the look on my 5-year-old's face when she stumbled upon our villa's private chocolate room - a treasure trove of sweet treats that we'd been spoiled with since arrival at Soneva Fushi. We had just spent 45 minutes exploring the island, and she burst in, eyes shining bright, exclaiming \"Chocolate!\" as if she'd discovered a long-lost secret. That was when I knew our little one was "
-    },
-    "itineraryComparison": {
-      "halfDay": "The Den",
-      "fullDay": "Dolphins, spa",
-      "bestFor": "Adventurous"
-    },
-    "commissionRate": "12%",
-    "seoKeywords": [
-      "Soneva"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "maldives-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Maldives%2C+Maldives&aid=2875669",
-        "text": "Book Soneva Fushi"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Soneva%20Fushi&aid=119991",
-        "text": "Klook Soneva Fushi"
-      },
-      "viator": {
-        "url": "https://viator.com/Maldives/things-to-do?aid=P00299136",
-        "text": "Viator Maldives"
-      }
-    }
-  },
-  {
-    "id": "maldives-002",
-    "name": "Velaa Private Island",
-    "city": "Maldives",
-    "country": "Maldives",
-    "category": "Private Villa",
-    "ageRange": "0-16",
-    "safetyRating": 5,
-    "priceRange": "$$$$",
-    "popularity": 97,
-    "description": "47 villas, submarine, private yacht.",
-    "location": "Noonu Atoll",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1578922746465-3a80a228f223?w=800&q=80",
-    "amenities": [
-      "Private Pool",
-      "Kids Club",
-      "Yacht"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Evacuation"
-    ],
-    "tipsAndTricks": [
-      "Submarine 3mo ahead.",
-      "Beach villa for toddlers."
-    ],
-    "parentStory": {
-      "title": "Submarine changed life",
-      "excerpt": "8yo steered at 30m.",
-      "author": "Thomas",
-      "fullStory": "As I watched my 8-year-old son steer our family's private submarine at just 30 meters deep, I felt a surge of pride and wonder. It was like he'd been born to explore the ocean. That moment changed everything - we upgraded to a beach villa for toddlers when we returned home, and now our little one is obsessed with marine life. The spark in his eyes reminds me that even the most unforgettable moment"
-    },
-    "itineraryComparison": {
-      "halfDay": "Club, pool",
-      "fullDay": "Submarine, yacht",
-      "bestFor": "Ultra-luxury"
-    },
-    "commissionRate": "12%",
-    "seoKeywords": [
-      "Velaa"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "maldives-002",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Maldives%2C+Maldives&aid=2875669",
-        "text": "Book Velaa Private Island"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Velaa%20Private%20Island&aid=119991",
-        "text": "Klook Velaa Private Island"
-      },
-      "viator": {
-        "url": "https://viator.com/Maldives/things-to-do?aid=P00299136",
-        "text": "Viator Maldives"
-      }
-    }
-  },
-  {
-    "id": "maldives-003",
-    "name": "Gili Lankanfushi",
-    "city": "Maldives",
-    "country": "Maldives",
-    "category": "Private Villa",
-    "ageRange": "0-12",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 95,
-    "description": "Overwater with glass floors, Mr Friday butler.",
-    "location": "North Male",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80",
-    "amenities": [
-      "Overwater Villa",
-      "Butler Service"
-    ],
-    "safetyFeatures": [
-      "Netting",
-      "Life Jackets"
-    ],
-    "tipsAndTricks": [
-      "Villa 40 or 41.",
-      "Glass floors entertain hours."
-    ],
-    "parentStory": {
-      "title": "Glass floor babysitter",
-      "excerpt": "3yo watched fish 3 hours.",
-      "author": "Anna",
-      "fullStory": "As I watched my 3-year-old son gaze mesmerized at the fish swimming beneath our glass floor, I couldn't help but smile. We were having the most relaxing afternoon in our overwater villa at Gili Lankanfushi. My husband and I took turns giving him snacks and playtime while Mr. Friday, our charming butler, kept us refreshed with herbal tea. The children loved watching the fish swim above them, entert"
-    },
-    "itineraryComparison": {
-      "halfDay": "Fish spot, club",
-      "fullDay": "Snorkel, restaurant",
-      "bestFor": "Romantic with kids"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Gili"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "maldives-003",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Maldives%2C+Maldives&aid=2875669",
-        "text": "Book Gili Lankanfushi"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Gili%20Lankanfushi&aid=119991",
-        "text": "Klook Gili Lankanfushi"
-      },
-      "viator": {
-        "url": "https://viator.com/Maldives/things-to-do?aid=P00299136",
-        "text": "Viator Maldives"
-      }
-    }
-  },
-  {
-    "id": "singapore-001",
-    "name": "Raffles Hotel Singapore",
-    "city": "Singapore",
-    "country": "Singapore",
-    "category": "Luxury Resort",
-    "ageRange": "0-12",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 97,
-    "description": "Colonial icon with legendary butler.",
-    "location": "1 Beach Road, Singapore",
-    "bestTime": "Year round",
-    "imageUrl": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80",
-    "amenities": [
-      "Butler Service",
-      "Kids Club",
-      "Heritage Tours"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Medical"
-    ],
-    "tipsAndTricks": [
-      "Palm Court suite.",
-      "Afternoon tea for kids."
-    ],
-    "parentStory": {
-      "title": "Teddy in uniform",
-      "excerpt": "Butler dressed teddy in Raffles uniform.",
-      "author": "Claire",
-      "fullStory": "As I look at Teddy now, I'm transported back to our family's magical stay at Raffles Hotel Singapore. The butler had dressed him in a miniature version of our concierge's uniform, complete with a tiny hat and bow tie. Teddy giggled as he 'helped' me pour tea during afternoon tea for kids - it was a moment that still makes me smile. When we left, I tucked Teddy into his backpack, and to my surprise"
-    },
-    "itineraryComparison": {
-      "halfDay": "Heritage, tea",
-      "fullDay": "Gardens, Long Bar",
-      "bestFor": "Colonial luxury"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "Raffles"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "singapore-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Singapore%2C+Singapore&aid=2875669",
-        "text": "Book Raffles Hotel Singapore"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Raffles%20Hotel%20Singapore&aid=119991",
-        "text": "Klook Raffles Hotel Singapore"
-      },
-      "viator": {
-        "url": "https://viator.com/Singapore/things-to-do?aid=P00299136",
-        "text": "Viator Singapore"
-      }
-    }
-  },
-  {
-    "id": "singapore-002",
-    "name": "Marina Bay Sands",
-    "city": "Singapore",
-    "country": "Singapore",
-    "category": "Exclusive Experience",
-    "ageRange": "0-16",
-    "safetyRating": 3.5,
+    "category": "Park",
+    "ageRange": "2-11",
+    "safetyRating": 4.5,
     "priceRange": "$$$",
-    "popularity": 99,
-    "description": "Highest infinity pool, museum, shopping.",
-    "location": "Bayfront, Singapore",
-    "bestTime": "Year round",
-    "imageUrl": "https://images.unsplash.com/photo-1569336415962-a4bd9f609c2e?w=800&q=80",
+    "popularity": 1,
+    "description": "A wonderful family-friendly park in Bali. Perfect for children of all ages with safety measures in place.",
+    "location": "Bali, Indonesia",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000001",
     "amenities": [
-      "Infinity Pool",
-      "Museum",
-      "Mall"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "Tracking"
-    ],
-    "tipsAndTricks": [
-      "57th floor family pool.",
-      "Future World museum."
-    ],
-    "parentStory": {
-      "title": "Pool made her fearless",
-      "excerpt": "6yo walked into pool, forgot fear.",
-      "author": "Mark",
-      "fullStory": "As I watched my 6-year-old daughter take her first tentative step into the infinity pool at Marina Bay Sands, I held my breath - not because she was going to fall off, but because I wasn't sure if she'd overcome her fear of heights. But as soon as her toes dipped into the water, a look of wonder washed over her face and she forgot all about it. From that moment on, she was hooked. Fast forward to "
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, museum",
-      "fullDay": "Gardens, show",
-      "bestFor": "Non-stop action"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "MBS"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "singapore-002",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Singapore%2C+Singapore&aid=2875669",
-        "text": "Book Marina Bay Sands"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Marina%20Bay%20Sands&aid=119991",
-        "text": "Klook Marina Bay Sands"
-      },
-      "viator": {
-        "url": "https://viator.com/Singapore/things-to-do?aid=P00299136",
-        "text": "Viator Singapore"
-      }
-    },
-    "safetyNote": "Infinity pool has no visible barrier edge. Extremely crowded on weekends. Easy to lose sight of children."
-  },
-  {
-    "id": "singapore-003",
-    "name": "Capella Singapore",
-    "city": "Singapore",
-    "country": "Singapore",
-    "category": "Adventure",
-    "ageRange": "0-12",
-    "safetyRating": 3.5,
-    "priceRange": "$$$$",
-    "popularity": 94,
-    "description": "30-acre rainforest retreat, Sentosa.",
-    "location": "Sentosa, Singapore",
-    "bestTime": "Year round",
-    "imageUrl": "https://images.unsplash.com/photo-1582727657635-c771262b2c5c?w=800&q=80",
-    "amenities": [
-      "Private Pool",
-      "Kids Club",
-      "Rainforest"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Trail Safety"
-    ],
-    "tipsAndTricks": [
-      "Garden villa plunge pool.",
-      "Free US shuttle."
-    ],
-    "parentStory": {
-      "title": "Rainforest bliss",
-      "excerpt": "Toddler napped, parents plunged.",
-      "author": "Sarah",
-      "fullStory": "As we stepped into our garden villa at Capella Singapore, I felt my toddler's exhaustion melt away with the scent of frangipani and hibiscus. She napped soundly while my husband and I lounged by the plunge pool, its gentle bubbles a soothing serenade. Later, we explored the 30-acre rainforest retreat, our little one giggling in the Kids Club as we watched from the safety of the observation deck. A"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, club",
-      "fullDay": "Spa, Universal",
-      "bestFor": "Sentosa luxury"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "Capella"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "singapore-003",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Singapore%2C+Singapore&aid=2875669",
-        "text": "Book Capella Singapore"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Capella%20Singapore&aid=119991",
-        "text": "Klook Capella Singapore"
-      },
-      "viator": {
-        "url": "https://viator.com/Singapore/things-to-do?aid=P00299136",
-        "text": "Viator Singapore"
-      }
-    },
-    "safetyNote": "Adventure trails and jungle setting have uneven paths and exposed roots. Pool has limited fencing on one side."
-  },
-  {
-    "id": "tokyo-001",
-    "name": "Aman Tokyo",
-    "city": "Tokyo",
-    "country": "Japan",
-    "category": "Luxury Resort",
-    "ageRange": "4-16",
-    "safetyRating": 5,
-    "priceRange": "$$$$",
-    "popularity": 98,
-    "description": "Top 6 floors of Otemachi Tower.",
-    "location": "Otemachi, Tokyo",
-    "bestTime": "Mar-May",
-    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80",
-    "amenities": [
-      "Indoor Pool",
-      "Kids Club",
-      "Palace Views"
-    ],
-    "safetyFeatures": [
-      "Private Elevator",
-      "Allergen"
-    ],
-    "tipsAndTricks": [
-      "Palace-facing suite.",
-      "Pool before 9am."
-    ],
-    "parentStory": {
-      "title": "Hidden playground",
-      "excerpt": "Concierge arranged Palace tour for restless kid.",
-      "author": "Kenji",
-      "fullStory": "As we stepped into our Palace-facing suite at Aman Tokyo, I knew we were in for a treat. My restless 7-year-old had been asking to leave the hotel room all morning, until our concierge arranged a private palace tour. We explored the serene gardens and tranquil courtyards, watching as koi fish swam beneath the water's edge. But it was when my little one spotted a hidden pond tucked away behind a wa"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, palace",
-      "fullDay": "Tsukiji, sushi class",
-      "bestFor": "Design families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Aman Tokyo"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "tokyo-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Tokyo%2C+Japan&aid=2875669",
-        "text": "Book Aman Tokyo"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Aman%20Tokyo&aid=119991",
-        "text": "Klook Aman Tokyo"
-      },
-      "viator": {
-        "url": "https://viator.com/Tokyo/things-to-do?aid=P00299136",
-        "text": "Viator Tokyo"
-      }
-    }
-  },
-  {
-    "id": "tokyo-002",
-    "name": "Park Hyatt Tokyo",
-    "city": "Tokyo",
-    "country": "Japan",
-    "category": "Luxury Resort",
-    "ageRange": "4-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 96,
-    "description": "Lost in Translation icon, panoramic views.",
-    "location": "Shinjuku, Tokyo",
-    "bestTime": "Mar-May",
-    "imageUrl": "https://images.unsplash.com/photo-1551641506-ee5bf4cb45f1?w=800&q=80",
-    "amenities": [
-      "Panoramic Views",
-      "Indoor Pool",
-      "Michelin"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Child Pool"
-    ],
-    "tipsAndTricks": [
-      "South room 45+ for Fuji.",
-      "NY Bar kids til 7pm."
-    ],
-    "parentStory": {
-      "title": "Lost in Translation moment",
-      "excerpt": "Kids did mocktail whisper secrets.",
-      "author": "Aya",
-      "fullStory": "As we settled into our luxurious room at Park Hyatt Tokyo, I watched my children's eyes widen with wonder as they took in the breathtaking views of Mount Fuji from their south-facing window. It was one of those rare moments where time stood still, and all that mattered was this instant with my family. Later, over a mocktail or two (they were whispering secrets to each other, giggling like they did"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, garden",
-      "fullDay": "Meiji, Harajuku",
-      "bestFor": "Film lovers"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "Park Hyatt"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "tokyo-002",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Tokyo%2C+Japan&aid=2875669",
-        "text": "Book Park Hyatt Tokyo"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Park%20Hyatt%20Tokyo&aid=119991",
-        "text": "Klook Park Hyatt Tokyo"
-      },
-      "viator": {
-        "url": "https://viator.com/Tokyo/things-to-do?aid=P00299136",
-        "text": "Viator Tokyo"
-      }
-    }
-  },
-  {
-    "id": "tokyo-003",
-    "name": "Palace Hotel Tokyo",
-    "city": "Tokyo",
-    "country": "Japan",
-    "category": "Luxury Resort",
-    "ageRange": "0-12",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 94,
-    "description": "Largest standard Tokyo rooms, Palace view.",
-    "location": "Marunouchi, Tokyo",
-    "bestTime": "Mar-May",
-    "imageUrl": "https://images.unsplash.com/photo-1530587191325-3db32d826c5e?w=800&q=80",
-    "amenities": [
-      "Palace Views",
-      "Kids Club",
-      "Pool"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Baby Gear"
-    ],
-    "tipsAndTricks": [
-      "Grand Palace View room.",
-      "Breakfast at 7am."
-    ],
-    "parentStory": {
-      "title": "Chef saved vacay",
-      "excerpt": "Chef made panda bento for picky eater.",
-      "author": "Hiroko",
-      "fullStory": "We returned from our luxurious stay at the Palace Hotel Tokyo feeling rejuvenated. Our little one's first trip abroad was a resounding success, thanks to Chef's incredible creativity in making a panda bento for our picky eater. The look on their face when they took that first bite was pure joy - and we were thrilled!"
-    },
-    "itineraryComparison": {
-      "halfDay": "Palace, pool",
-      "fullDay": "Ginza, dinner",
-      "bestFor": "Spacious rooms"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "Palace Hotel"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "tokyo-003",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Tokyo%2C+Japan&aid=2875669",
-        "text": "Book Palace Hotel Tokyo"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Palace%20Hotel%20Tokyo&aid=119991",
-        "text": "Klook Palace Hotel Tokyo"
-      },
-      "viator": {
-        "url": "https://viator.com/Tokyo/things-to-do?aid=P00299136",
-        "text": "Viator Tokyo"
-      }
-    }
-  },
-  {
-    "id": "hongkong-001",
-    "name": "Mandarin Oriental Hong Kong",
-    "city": "Hong Kong",
-    "country": "Hong Kong",
-    "category": "Michelin Dining",
-    "ageRange": "0-12",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 96,
-    "description": "1963 institution, harbour views.",
-    "location": "Central, HK",
-    "bestTime": "Oct-Dec",
-    "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80",
-    "amenities": [
-      "Butler Service",
-      "Kids Club",
-      "Michelin"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Child Concierge"
-    ],
-    "tipsAndTricks": [
-      "Harbour suite 15-20.",
-      "Kids afternoon tea."
-    ],
-    "parentStory": {
-      "title": "Doorman taught Cantonese",
-      "excerpt": "20min lesson for 4yo to say mmgoy.",
-      "author": "Tim",
-      "fullStory": "As I watched my little one giggle at our Mandarin Oriental Hong Kong butler's enthusiastic attempt to teach her Cantonese phrases, I couldn't help but feel grateful for this special trip. Four years ago, she proudly declared \"mmgoy\" - a 20-minute lesson that became an unforgettable milestone. Today, with the harbour views and Michelin dining at our doorstep, we're creating more memories together. "
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, tea",
-      "fullDay": "Peak, Star Ferry",
-      "bestFor": "Classic HK"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "MO HK"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "hongkong-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Hong Kong%2C+Hong Kong&aid=2875669",
-        "text": "Book Mandarin Oriental Hong Kong"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Mandarin%20Oriental%20Hong%20Kong&aid=119991",
-        "text": "Klook Mandarin Oriental Hong Kong"
-      },
-      "viator": {
-        "url": "https://viator.com/HongKong/things-to-do?aid=P00299136",
-        "text": "Viator Hong Kong"
-      }
-    }
-  },
-  {
-    "id": "hongkong-002",
-    "name": "Four Seasons Hong Kong",
-    "city": "Hong Kong",
-    "country": "Hong Kong",
-    "category": "Michelin Dining",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 97,
-    "description": "2 Michelin-star Chinese, best spa.",
-    "location": "Central, HK",
-    "bestTime": "Oct-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?w=800&q=80",
-    "amenities": [
-      "Butler Service",
-      "Kids Club",
-      "Michelin"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Hospital"
-    ],
-    "tipsAndTricks": [
-      "30-40 floor harbour.",
-      "Dim sum class."
-    ],
-    "parentStory": {
-      "title": "Dim sum chef in making",
-      "excerpt": "7yo designed his own dumpling at Michelin 3-star.",
-      "author": "Michelle",
-      "fullStory": "I still chuckle when I think about my 7-year-old's culinary debut at the Four Seasons Hong Kong. We were celebrating our family's Michelin-starred dim sum experience, and he had designed his own dumpling from scratch. The chef was impressed, and as we watched him expertly wrap each little package, our son beamed with pride. When it was time to serve, he carefully handed the dumplings to the table,"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, dim sum",
-      "fullDay": "Park, Peak, Symphony",
-      "bestFor": "Foodies"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "FS HK"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "hongkong-002",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Hong Kong%2C+Hong Kong&aid=2875669",
-        "text": "Book Four Seasons Hong Kong"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Four%20Seasons%20Hong%20Kong&aid=119991",
-        "text": "Klook Four Seasons Hong Kong"
-      },
-      "viator": {
-        "url": "https://viator.com/HongKong/things-to-do?aid=P00299136",
-        "text": "Viator Hong Kong"
-      }
-    }
-  },
-  {
-    "id": "hongkong-003",
-    "name": "The Upper House",
-    "city": "Hong Kong",
-    "country": "Hong Kong",
-    "category": "Exclusive Experience",
-    "ageRange": "4-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 95,
-    "description": "Boutique luxury, Pacific Place.",
-    "location": "Pacific Place, HK",
-    "bestTime": "Oct-Dec",
-    "imageUrl": "https://images.unsplash.com/photo-1556534570-7bdc00a73e33?w=800&q=80",
-    "amenities": [
-      "Butler Service",
-      "Harbour Views",
-      "Free Minibar"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Child Kit"
-    ],
-    "tipsAndTricks": [
-      "Suite 60+ bathtub.",
-      "Free minibar."
-    ],
-    "parentStory": {
-      "title": "Bathtub = pool",
-      "excerpt": "5 and 7 yo both fit.",
-      "author": "Jen",
-      "fullStory": "Traveling with kids can be chaotic, but sometimes it's those unexpected moments that make all the chaos worth it. Like when my 7-year-old and I both slipped into the bathtub in our Upper House suite, overlooking the glittering Hong Kong harbour. As we floated, watching the sunset, she giggled at the bubbles and I couldn't help but feel grateful for these unscripted, wine-filled moments with her."
-    },
-    "itineraryComparison": {
-      "halfDay": "Bath, mall",
-      "fullDay": "Park, city",
-      "bestFor": "Design families"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "Upper House"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "hongkong-003",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Hong Kong%2C+Hong Kong&aid=2875669",
-        "text": "Book The Upper House"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=The%20Upper%20House&aid=119991",
-        "text": "Klook The Upper House"
-      },
-      "viator": {
-        "url": "https://viator.com/HongKong/things-to-do?aid=P00299136",
-        "text": "Viator Hong Kong"
-      }
-    }
-  },
-  {
-    "id": "kyoto-001",
-    "name": "Aman Kyoto",
-    "city": "Kyoto",
-    "country": "Japan",
-    "category": "Luxury Resort",
-    "ageRange": "4-16",
-    "safetyRating": 5,
-    "priceRange": "$$$$",
-    "popularity": 97,
-    "description": "26 pavilions, 32 acres moss garden.",
-    "location": "Sakyo, Kyoto",
-    "bestTime": "Mar-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80",
-    "amenities": [
-      "Private Garden",
-      "Kids Club",
-      "Onsen"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Trails"
-    ],
-    "tipsAndTricks": [
-      "Book 1 year ahead.",
-      "Private tea ceremony."
-    ],
-    "parentStory": {
-      "title": "Secret garden explorers",
-      "excerpt": "Kids found waterfalls in moss garden.",
-      "author": "Yuki",
-      "fullStory": "As we wandered through Aman Kyoto's serene moss garden, our little explorers squealed with delight at every discovery. My daughter, aged 8, carefully made her way up a small stone path to investigate a hidden waterfall, and my son, 10, enthusiastically followed, laughing as the mist tickled his face. I watched from a nearby bench, feeling grateful for this magical experience, where my children's e"
-    },
-    "itineraryComparison": {
-      "halfDay": "Garden, tea",
-      "fullDay": "Temples, kaiseki",
-      "bestFor": "Zen luxury"
-    },
-    "commissionRate": "12%",
-    "seoKeywords": [
-      "Aman Kyoto"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "kyoto-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Kyoto%2C+Japan&aid=2875669",
-        "text": "Book Aman Kyoto"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Aman%20Kyoto&aid=119991",
-        "text": "Klook Aman Kyoto"
-      },
-      "viator": {
-        "url": "https://viator.com/Kyoto/things-to-do?aid=P00299136",
-        "text": "Viator Kyoto"
-      }
-    }
-  },
-  {
-    "id": "kyoto-002",
-    "name": "Ritz-Carlton Kyoto",
-    "city": "Kyoto",
-    "country": "Japan",
-    "category": "Exclusive Experience",
-    "ageRange": "0-12",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 96,
-    "description": "Kamogawa riverfront luxury.",
-    "location": "Kamogawa, Kyoto",
-    "bestTime": "Mar-May",
-    "imageUrl": "https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=800&q=80",
-    "amenities": [
-      "Kids Club",
-      "Michelin",
-      "River Views"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Concierge"
-    ],
-    "tipsAndTricks": [
-      "River-view for sakura.",
-      "Kimono dressing."
-    ],
-    "parentStory": {
-      "title": "Kimono moment",
-      "excerpt": "Kids in yukata for tea.",
-      "author": "Lisa",
-      "fullStory": "As I gazed out at the serene Kamogawa river, my little ones played in their yukatas, giggling with joy as they sipped tea from delicate ceramic cups. We were wrapped in a luxurious afternoon, surrounded by tranquil views and traditional charm. The kids' eyes sparkled as they twirled around, kimono-clad, feeling like princesses for the day. That moment, with the soft rustle of kimonos and the gentl"
-    },
-    "itineraryComparison": {
-      "halfDay": "River, club",
-      "fullDay": "Temples, Gion",
-      "bestFor": "Riverfront location"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "RC Kyoto"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "kyoto-002",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Kyoto%2C+Japan&aid=2875669",
-        "text": "Book Ritz-Carlton Kyoto"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Ritz-Carlton%20Kyoto&aid=119991",
-        "text": "Klook Ritz-Carlton Kyoto"
-      },
-      "viator": {
-        "url": "https://viator.com/Kyoto/things-to-do?aid=P00299136",
-        "text": "Viator Kyoto"
-      }
-    }
-  },
-  {
-    "id": "kyoto-003",
-    "name": "Hoshinoya Kyoto",
-    "city": "Kyoto",
-    "country": "Japan",
-    "category": "Spa & Wellness",
-    "ageRange": "4-16",
-    "safetyRating": 4.7,
-    "priceRange": "$$$$",
-    "popularity": 93,
-    "description": "Luxury ryokan, boat access only.",
-    "location": "Arashiyama, Kyoto",
-    "bestTime": "Mar-May",
-    "imageUrl": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
-    "amenities": [
-      "Onsen",
-      "Kaiseki",
-      "Boat Access"
-    ],
-    "safetyFeatures": [
-      "Staff",
-      "Traditional"
-    ],
-    "tipsAndTricks": [
-      "Boat arrival magical.",
-      "Riverside room."
-    ],
-    "parentStory": {
-      "title": "Boat arrival stunned",
-      "excerpt": "Kids thought it was a movie.",
-      "author": "Tom",
-      "fullStory": "As we glided up to Hoshinoya Kyoto's dock on a serene lake, my kids' eyes widened in unison. \"Is this a movie?\" they exclaimed, taking in the tranquil forest surroundings and traditional Japanese architecture. I couldn't help but smile as we disembarked onto the water's edge. The next morning, after a rejuvenating Kaiseki breakfast, we strolled to our riverside room - its wooden floorboards creaki"
-    },
-    "itineraryComparison": {
-      "halfDay": "Onsen, boat",
-      "fullDay": "Bamboo, monkey park",
-      "bestFor": "Traditional luxury"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Hoshinoya"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "kyoto-003",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Kyoto%2C+Japan&aid=2875669",
-        "text": "Book Hoshinoya Kyoto"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Hoshinoya%20Kyoto&aid=119991",
-        "text": "Klook Hoshinoya Kyoto"
-      },
-      "viator": {
-        "url": "https://viator.com/Kyoto/things-to-do?aid=P00299136",
-        "text": "Viator Kyoto"
-      }
-    }
-  },
-  {
-    "id": "langkawi-001",
-    "name": "The Datai Langkawi",
-    "city": "Langkawi",
-    "country": "Malaysia",
-    "category": "Exclusive Experience",
-    "ageRange": "0-12",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 96,
-    "description": "Rainforest meets beach, nature programs.",
-    "location": "Datai Bay, Langkawi",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80",
-    "amenities": [
-      "Kids Club",
-      "Nature Programs",
-      "Beach"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Nature Guides"
-    ],
-    "tipsAndTricks": [
-      "Naturalist walks.",
-      "Explorers program."
-    ],
-    "parentStory": {
-      "title": "Nature classroom",
-      "excerpt": "Kids learned 5 rainforest trees by name.",
-      "author": "Sarah",
-      "fullStory": "As we explored The Datai Langkawi with our little ones, I was struck by how seamlessly rainforest met beach. Our kids learned 5 rainforest trees by name during one of the naturalist walks and still remember them to this day. My youngest asked me why the kapok tree had such big seeds - I'm pretty sure she'll recall that for years to come. It was moments like these, surrounded by the wonders of natu"
-    },
-    "itineraryComparison": {
-      "halfDay": "Beach, walk",
-      "fullDay": "Mangrove, spa",
-      "bestFor": "Nature families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Datai"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "langkawi-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Langkawi%2C+Malaysia&aid=2875669",
-        "text": "Book The Datai Langkawi"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=The%20Datai%20Langkawi&aid=119991",
-        "text": "Klook The Datai Langkawi"
-      },
-      "viator": {
-        "url": "https://viator.com/Langkawi/things-to-do?aid=P00299136",
-        "text": "Viator Langkawi"
-      }
-    }
-  },
-  {
-    "id": "langkawi-002",
-    "name": "Four Seasons Langkawi",
-    "city": "Langkawi",
-    "country": "Malaysia",
-    "category": "Adventure",
-    "ageRange": "0-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 95,
-    "description": "Malay-inspired beachfront.",
-    "location": "Tanjung Rhu",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
-    "amenities": [
-      "Kids Club",
-      "Beach",
-      "Pools"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "Medical"
-    ],
-    "tipsAndTricks": [
-      "Sunset Pavilion dinner.",
-      "Kids for All Seasons."
-    ],
-    "parentStory": {
-      "title": "Eagle watching chef",
-      "excerpt": "Chef took kids eagle watching.",
-      "author": "Mike",
-      "fullStory": "As I watched my little ones' faces light up with excitement, our four-day adventure at Four Seasons Langkawi came to a close. Chef took us on an unforgettable eagle watching experience, and my 8-year-old's eyes sparkled as he spotted his first bird of prey soaring overhead. The kids for all seasons program had been a lifesaver during our busy days, and the sunset pavilion dinner was pure magic - I"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, club",
-      "fullDay": "Mangrove, spa",
-      "bestFor": "Reliable FS quality"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "FS Langkawi"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "langkawi-002",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Langkawi%2C+Malaysia&aid=2875669",
-        "text": "Book Four Seasons Langkawi"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Four%20Seasons%20Langkawi&aid=119991",
-        "text": "Klook Four Seasons Langkawi"
-      },
-      "viator": {
-        "url": "https://viator.com/Langkawi/things-to-do?aid=P00299136",
-        "text": "Viator Langkawi"
-      }
-    }
-  },
-  {
-    "id": "langkawi-003",
-    "name": "St. Regis Langkawi",
-    "city": "Langkawi",
-    "country": "Malaysia",
-    "category": "Luxury Resort",
-    "ageRange": "0-12",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 93,
-    "description": "Private butler service, overwater villas.",
-    "location": "Kuah, Langkawi",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-    "amenities": [
-      "Butler Service",
-      "Overwater Villas",
-      "Spa"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Private"
-    ],
-    "tipsAndTricks": [
-      "Butler service included.",
-      "Kayak at sunrise."
-    ],
-    "parentStory": {
-      "title": "Butler magic",
-      "excerpt": "Butler set up sandcastle building for kids.",
-      "author": "Priya",
-      "fullStory": "Our St. Regis Langkawi getaway was pure magic. I'll never forget our butler's ingenious idea to set up a sandcastle building station for our little ones on the beach. Watching my two-year-old son build a castle with turrets, complete with a moat and drawbridge, as his dad kayaked at sunrise nearby, feeling carefree and safe in paradise."
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, butler",
-      "fullDay": "Kayak, spa",
-      "bestFor": "Butler service luxury"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "St Regis"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "langkawi-003",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Langkawi%2C+Malaysia&aid=2875669",
-        "text": "Book St. Regis Langkawi"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=St.%20Regis%20Langkawi&aid=119991",
-        "text": "Klook St. Regis Langkawi"
-      },
-      "viator": {
-        "url": "https://viator.com/Langkawi/things-to-do?aid=P00299136",
-        "text": "Viator Langkawi"
-      }
-    }
-  },
-  {
-    "id": "hanoi-001",
-    "name": "Sofitel Legend Metropole Hanoi",
-    "city": "Hanoi",
-    "country": "Vietnam",
-    "category": "Adventure",
-    "ageRange": "0-12",
-    "safetyRating": 4.7,
-    "priceRange": "$$$$",
-    "popularity": 95,
-    "description": "Colonial grand dame since 1901.",
-    "location": "Hoan Kiem, Hanoi",
-    "bestTime": "Sep-Nov",
-    "imageUrl": "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=80",
-    "amenities": [
-      "Butler Service",
-      "Kids Club",
-      "Pool"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Medical"
-    ],
-    "tipsAndTricks": [
-      "Historic wing rooms.",
-      "Bamboo cooking class."
-    ],
-    "parentStory": {
-      "title": "History came alive",
-      "excerpt": "Concierge showed kids where diplomats hid in tunnels.",
-      "author": "Mark",
-      "fullStory": "As we explored the Sofitel Legend Metropole Hanoi, my kids' eyes sparkled with curiosity. The concierge took us on a secret mission to uncover hidden tunnels where diplomats once hid from invaders. My little one's face lit up as she watched our guide reveal a narrow passage behind a bookshelf. She whispered \"treasure\" as we crawled through the tunnel together, feeling like pioneers in a colonial a"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, cooking",
-      "fullDay": "Old Quarter, water puppet",
-      "bestFor": "History buff families"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "Metropole"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "hanoi-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Hanoi%2C+Vietnam&aid=2875669",
-        "text": "Book Sofitel Legend Metropole Hanoi"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Sofitel%20Legend%20Metropole%20Hanoi&aid=119991",
-        "text": "Klook Sofitel Legend Metropole Hanoi"
-      },
-      "viator": {
-        "url": "https://viator.com/Hanoi/things-to-do?aid=P00299136",
-        "text": "Viator Hanoi"
-      }
-    }
-  },
-  {
-    "id": "hanoi-002",
-    "name": "Capella Hanoi",
-    "city": "Hanoi",
-    "country": "Vietnam",
-    "category": "Exclusive Experience",
-    "ageRange": "4-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 93,
-    "description": "Opera-themed luxury by Bill Bensley.",
-    "location": "Hoan Kiem, Hanoi",
-    "bestTime": "Sep-Nov",
-    "imageUrl": "https://images.unsplash.com/photo-1567157577867-917ebb70fcb5?w=800&q=80",
-    "amenities": [
-      "Butler Service",
-      "Designer Suites",
-      "Spa"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Concierge"
-    ],
-    "tipsAndTricks": [
-      "Opera-themed rooms.",
-      "Rooftop pool."
-    ],
-    "parentStory": {
-      "title": "Opera fantasy",
-      "excerpt": "Kids loved the theater-themed room.",
-      "author": "Anna",
-      "fullStory": "As we stepped into our opera-themed room at Capella Hanoi, my kids' eyes widened with wonder. They squealed with delight as they discovered their very own La Boh\u00e8me suite, complete with pink tutus and a chandelier that sparkled like diamonds. My youngest, aged 7, insisted on having \"a grand performance\" in the bathtub, twirling around the bubbles while I watched, mesmerized. Little did I know, thi"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, explore",
-      "fullDay": "Old Quarter, opera house",
-      "bestFor": "Design lovers"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Capella Hanoi"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "hanoi-002",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Hanoi%2C+Vietnam&aid=2875669",
-        "text": "Book Capella Hanoi"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Capella%20Hanoi&aid=119991",
-        "text": "Klook Capella Hanoi"
-      },
-      "viator": {
-        "url": "https://viator.com/Hanoi/things-to-do?aid=P00299136",
-        "text": "Viator Hanoi"
-      }
-    }
-  },
-  {
-    "id": "hanoi-003",
-    "name": "JW Marriott Hanoi",
-    "city": "Hanoi",
-    "country": "Vietnam",
-    "category": "Exclusive Experience",
-    "ageRange": "0-12",
-    "safetyRating": 3.5,
-    "priceRange": "$$$",
-    "popularity": 92,
-    "description": "Modern luxury near West Lake.",
-    "location": "West Lake, Hanoi",
-    "bestTime": "Sep-Nov",
-    "imageUrl": "https://images.unsplash.com/photo-1533416784636-2b0ccfea6b97?w=800&q=80",
-    "amenities": [
-      "Kids Club",
-      "Multiple Pools",
-      "Spa"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Medical"
-    ],
-    "tipsAndTricks": [
-      "Family pool area.",
-      "Near to Tay Ho eateries."
-    ],
-    "parentStory": {
-      "title": "Lake escape",
-      "excerpt": "Kids loved the huge pool complex.",
-      "author": "David",
-      "fullStory": "As I sat with my little ones on the hotel's tranquil lake shore, watching them play in the sunshine, it was hard not to feel grateful for this slice of modern luxury near West Lake. Our kids' eyes widened as they spotted the huge pool complex, and we spent the morning splashing around together in the family-friendly pool area. The spa treatments afterwards were a lovely treat, too - I even managed"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, club",
-      "fullDay": "Temple, lake",
-      "bestFor": "Modern amenities"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "JW Hanoi"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "hanoi-003",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Hanoi%2C+Vietnam&aid=2875669",
-        "text": "Book JW Marriott Hanoi"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=JW%20Marriott%20Hanoi&aid=119991",
-        "text": "Klook JW Marriott Hanoi"
-      },
-      "viator": {
-        "url": "https://viator.com/Hanoi/things-to-do?aid=P00299136",
-        "text": "Viator Hanoi"
-      }
-    },
-    "safetyNote": "Located in busy area with heavy Hanoi traffic. Pool isn't fully fenced. Need to cross streets to reach attractions."
-  },
-  {
-    "id": "siemreap-001",
-    "name": "Amansara",
-    "city": "Siem Reap",
-    "country": "Cambodia",
-    "category": "Exclusive Experience",
-    "ageRange": "4-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 96,
-    "description": "Angkor luxury, private temple access.",
-    "location": "Siem Reap",
-    "bestTime": "Nov-Mar",
-    "imageUrl": "https://images.unsplash.com/photo-1580834344588-ce3b445b9fe6?w=800&q=80",
-    "amenities": [
-      "Private Pool",
-      "Butler Service",
-      "Temple Tours"
-    ],
-    "safetyFeatures": [
-      "Private Security"
-    ],
-    "tipsAndTricks": [
-      "Private Angkor sunrise.",
-      "Mercedes vintage car."
-    ],
-    "parentStory": {
-      "title": "Private Angkor sunrise",
-      "excerpt": "We had Angkor Wat to ourselves at dawn.",
-      "author": "Chris",
-      "fullStory": "As we stepped out of our Mercedes vintage car, I watched my kids' eyes light up with wonder. We had Angkor Wat to ourselves at dawn, the only sound the gentle chirping of birds. My 8-year-old son's hand was glued to mine as we walked towards the majestic temple, the golden sunrise creeping over the intricate carvings. Suddenly, he whispered \"it's like a dream\" and I smiled, knowing this was a mome"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, spa",
-      "fullDay": "Angkor temples, sunset",
-      "bestFor": "Cultural luxury"
-    },
-    "commissionRate": "12%",
-    "seoKeywords": [
-      "Amansara"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "siemreap-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Siem Reap%2C+Cambodia&aid=2875669",
-        "text": "Book Amansara"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Amansara&aid=119991",
-        "text": "Klook Amansara"
-      },
-      "viator": {
-        "url": "https://viator.com/SiemReap/things-to-do?aid=P00299136",
-        "text": "Viator Siem Reap"
-      }
-    }
-  },
-  {
-    "id": "siemreap-002",
-    "name": "Shinta Mani Angkor",
-    "city": "Siem Reap",
-    "country": "Cambodia",
-    "category": "Exclusive Experience",
-    "ageRange": "0-12",
-    "safetyRating": 4.6,
-    "priceRange": "$$$",
-    "popularity": 91,
-    "description": "Design-meets-community luxury by Bill Bensley.",
-    "location": "Siem Reap",
-    "bestTime": "Nov-Mar",
-    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=800&q=80",
-    "amenities": [
-      "Designer Rooms",
-      "Pool",
-      "Community Programs"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Staff"
-    ],
-    "tipsAndTricks": [
-      "Free Khmer cooking class.",
-      "Community farm visit."
-    ],
-    "parentStory": {
-      "title": "Giving back",
-      "excerpt": "Kids helped plant rice at the community farm.",
-      "author": "Laura",
-      "fullStory": "As we wandered through the lush gardens of Shinta Mani Angkor, my kids' eyes widened with wonder. We'd spent the morning learning about Khmer cooking in our own hotel kitchen - who knew making sticky rice could be so much fun? But it was at the community farm that truly left an impression: watching them help plant rice alongside locals and hearing their excited chatter about \"growing food\" still m"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, cooking",
-      "fullDay": "Angkor, farm",
-      "bestFor": "Socially-conscious families"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "Shinta Mani"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "siemreap-002",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Siem Reap%2C+Cambodia&aid=2875669",
-        "text": "Book Shinta Mani Angkor"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Shinta%20Mani%20Angkor&aid=119991",
-        "text": "Klook Shinta Mani Angkor"
-      },
-      "viator": {
-        "url": "https://viator.com/SiemReap/things-to-do?aid=P00299136",
-        "text": "Viator Siem Reap"
-      }
-    }
-  },
-  {
-    "id": "siemreap-003",
-    "name": "Raffles Grand Hotel d Angkor",
-    "city": "Siem Reap",
-    "country": "Cambodia",
-    "category": "Luxury Resort",
-    "ageRange": "0-12",
-    "safetyRating": 4.7,
-    "priceRange": "$$$$",
-    "popularity": 92,
-    "description": "Colonial heritage hotel from 1932.",
-    "location": "Siem Reap",
-    "bestTime": "Nov-Mar",
-    "imageUrl": "https://images.unsplash.com/photo-1551965644-a65d0d7f3a04?w=800&q=80",
-    "amenities": [
-      "Butler Service",
-      "Kids Club",
-      "Pool"
-    ],
-    "safetyFeatures": [
-      "Security",
-      "Medical"
-    ],
-    "tipsAndTricks": [
-      "Heritage rooms.",
-      "Elephant Bar."
-    ],
-    "parentStory": {
-      "title": "Colonial time travel",
-      "excerpt": "Kids felt like explorers from the 1920s.",
-      "author": "John",
-      "fullStory": "As I watched my little ones frolic by the pool, their eyes shining with excitement, I felt like we'd truly stepped into colonial time. My 6-year-old insisted on wearing his safari hat and khaki shorts, just like a young Indiana Jones from the 1920s. Meanwhile, my 3-year-old giggled at the antique trunks in our heritage room, declaring them \"magic treasure chests.\" The next morning, we feasted on p"
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, bar",
-      "fullDay": "Angkor, market",
-      "bestFor": "Colonial heritage"
-    },
-    "commissionRate": "8%",
-    "seoKeywords": [
-      "Raffles Siem Reap"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-    ],
-    "slug": "siemreap-003",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Siem Reap%2C+Cambodia&aid=2875669",
-        "text": "Book Raffles Grand Hotel d Angkor"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Raffles%20Grand%20Hotel%20d%20Angkor&aid=119991",
-        "text": "Klook Raffles Grand Hotel d Angkor"
-      },
-      "viator": {
-        "url": "https://viator.com/SiemReap/things-to-do?aid=P00299136",
-        "text": "Viator Siem Reap"
-      }
-    }
-  },
-  {
-    "id": "palawan-001",
-    "name": "Amanpulo",
-    "city": "Palawan",
-    "country": "Philippines",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 97,
-    "description": "A private island sanctuary on Pamalican Island with powdery white sand and turquoise waters, exclusively Aman.",
-    "location": "Pamalican Island, Palawan, Philippines",
-    "bestTime": "Nov-May",
-    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-    "amenities": [
-      "Private Beach",
-      "Butler Service",
-      "Tennis Courts",
-      "Kids Club",
-      "Diving Center"
-    ],
-    "safetyFeatures": [
-      "Private Island Security",
-      "Lifeguards",
-      "Kids Club Supervision"
-    ],
-    "tipsAndTricks": [
-      "Book a beach casita for direct sand access.",
-      "The dive center offers beginner PADI courses for kids 10+.",
-      "Request a private beach dinner on the north shore."
-    ],
-    "parentStory": {
-      "title": "Paradise found in Palawan",
-      "excerpt": "We didn't see a single other guest for three days.",
-      "author": "Sophie",
-      "fullStory": "Flying in on the private plane was surreal. Our beach casita was the only building on a kilometre of white sand. The kids collected shells while we read novels. Staff remembered everyone's names by day two."
-    },
-    "itineraryComparison": {
-      "halfDay": "Snorkelling, beach",
-      "fullDay": "Island tour, spa",
-      "bestFor": "Privacy seekers"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Amanpulo",
-      "Palawan luxury resort"
-    ],
-    "gallery": [],
-    "slug": "palawan-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Pamalican%20Island%2C%20Palawan%2C%20Philippines&aid=2875669",
-        "text": "Book Amanpulo"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Amanpulo&aid=119991",
-        "text": "Klook Amanpulo"
-      },
-      "viator": {
-        "url": "https://viator.com/Philippines/things-to-do?aid=P00299136",
-        "text": "Viator Palawan"
-      }
-    }
-  },
-  {
-    "id": "maldives-004",
-    "name": "The St. Regis Maldives Vommuli Resort",
-    "city": "Vommuli",
-    "country": "Maldives",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 94,
-    "description": "Overwater and beach villas in a pristine atoll with a whale shark-shaped Iridium Spa and St. Regis butler tradition.",
-    "location": "Vommuli Island, Dhaalu Atoll, Maldives",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80",
-    "amenities": [
-      "Private Pool",
-      "Butler Service",
-      "Kids Club",
-      "PADI Dive Centre",
-      "Tennis Courts"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "On-site Medical",
-      "Pool Fencing",
-      "Certified Babysitting"
-    ],
-    "tipsAndTricks": [
-      "The whale shark-shaped spa is a must \u2014 book the family wellness package.",
-      "Ask your butler to arrange a sandbank picnic.",
-      "Overwater villas with plunge pool are best for families with young children."
-    ],
-    "parentStory": {
-      "title": "Butler saved our holiday",
-      "excerpt": "Our butler arranged a treasure hunt that kept our twins busy for hours.",
-      "author": "James",
-      "fullStory": "We were nervous bringing twin toddlers to the Maldives. Then Ali, our butler, appeared with a hand-drawn treasure map and pirate hats. He organised a resort-wide scavenger hunt just for them. We sipped champagne on the deck while they searched for gold."
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, kids club",
-      "fullDay": "Snorkelling, spa",
-      "bestFor": "Butler service lovers"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "St. Regis Maldives",
-      "Vommuli family resort"
-    ],
-    "gallery": [],
-    "slug": "maldives-004",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Vommuli%20Island%2C%20Dhaalu%20Atoll%2C%20Maldives&aid=2875669",
-        "text": "Book The St. Regis Maldives Vommuli Resort"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=The%20St.%20Regis%20Maldives%20Vommuli%20Resort&aid=119991",
-        "text": "Klook The St. Regis Maldives Vommuli Resort"
-      },
-      "viator": {
-        "url": "https://viator.com/Maldives/things-to-do?aid=P00299136",
-        "text": "Viator Vommuli"
-      }
-    }
-  },
-  {
-    "id": "yaonoi-001",
-    "name": "Six Senses Yao Noi",
-    "city": "Koh Yao Noi",
-    "country": "Thailand",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 3.5,
-    "priceRange": "$$$$",
-    "popularity": 93,
-    "description": "Sustainable luxury with panoramic Phang Nga Bay views, private pools, and a renowned organic garden.",
-    "location": "Koh Yao Noi, Phang Nga Bay, Thailand",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1566669437695-5bfced5b3a92?w=800&q=80",
-    "amenities": [
-      "Private Pool",
-      "Organic Garden",
-      "Kids Club",
-      "Spa",
-      "Sunset Cinema",
-      "Tennis"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "Pool Fencing",
-      "Insect Protection Program",
-      "Golf Cart Transport"
-    ],
-    "tipsAndTricks": [
-      "Hilltop pool villas have the best sunset views over Phang Nga Bay.",
-      "Kids love the Grow-It program \u2014 they harvest their own vegetables for dinner.",
-      "Book a private long-tail boat tour at sunrise."
-    ],
-    "parentStory": {
-      "title": "Where sustainability meets luxury",
-      "excerpt": "My daughter planted her first vegetable in the organic garden.",
-      "author": "Natalie",
-      "fullStory": "Six Senses has an incredible Grow-It program where kids can plant, care for, and harvest from the organic farm. My five-year-old planted basil and proudly watched the chef use it in her pasta. She still talks about it a year later."
-    },
-    "itineraryComparison": {
-      "halfDay": "Organic garden, pool",
-      "fullDay": "Phang Nga Bay tour, spa",
-      "bestFor": "Eco-conscious families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Six Senses Yao Noi",
-      "Phang Nga family resort"
-    ],
-    "gallery": [],
-    "slug": "yaonoi-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Koh%20Yao%20Noi%2C%20Phang%20Nga%20Bay%2C%20Thailand&aid=2875669",
-        "text": "Book Six Senses Yao Noi"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Six%20Senses%20Yao%20Noi&aid=119991",
-        "text": "Klook Six Senses Yao Noi"
-      },
-      "viator": {
-        "url": "https://viator.com/Thailand/things-to-do?aid=P00299136",
-        "text": "Viator Koh Yao Noi"
-      }
-    },
-    "safetyNote": "Steep hillside resort requiring golf cart transport between all areas. Cliff-edge villas need close supervision of young children."
-  },
-  {
-    "id": "kohsamui-001",
-    "name": "Four Seasons Resort Koh Samui",
-    "city": "Koh Samui",
-    "country": "Thailand",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 95,
-    "description": "Hillside paradise on the Gulf of Thailand with every villa facing the ocean and a private infinity pool.",
-    "location": "Laem Yai Bay, Koh Samui, Thailand",
-    "bestTime": "Dec-Jun",
-    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
-    "amenities": [
-      "Infinity Pool",
-      "Kids Club",
-      "Butler Service",
-      "Tennis Courts",
-      "Cooking Academy"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "Pool Fencing",
-      "Golf Cart Escort",
-      "Babysitting Service"
-    ],
-    "tipsAndTricks": [
-      "Request a Residence villa for multi-generational trips.",
-      "The Thai cooking class for families is the best in Samui.",
-      "Sunset cocktails at Koh Thai bar while kids enjoy evening club."
-    ],
-    "parentStory": {
-      "title": "The cooking class we'll never forget",
-      "excerpt": "My son made Tom Yum better than any restaurant.",
-      "author": "Rachel",
-      "fullStory": "We signed up for the family Thai cooking class. Chef Somchai treated our 7-year-old with genuine respect, teaching him to balance sweet, sour, and spicy. His Tom Yum that day is still the benchmark for every Thai meal we've had since."
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, kids club",
-      "fullDay": "Cooking class, spa",
-      "bestFor": "Foodie families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Four Seasons Koh Samui",
-      "Samui luxury family resort"
-    ],
-    "gallery": [],
-    "slug": "kohsamui-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Laem%20Yai%20Bay%2C%20Koh%20Samui%2C%20Thailand&aid=2875669",
-        "text": "Book Four Seasons Resort Koh Samui"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Four%20Seasons%20Resort%20Koh%20Samui&aid=119991",
-        "text": "Klook Four Seasons Resort Koh Samui"
-      },
-      "viator": {
-        "url": "https://viator.com/Thailand/things-to-do?aid=P00299136",
-        "text": "Viator Koh Samui"
-      }
-    }
-  },
-  {
-    "id": "southafrica-001",
-    "name": "Singita Lebombo",
-    "city": "Kruger National Park",
-    "country": "South Africa",
-    "category": "Exclusive Experience",
-    "ageRange": "6-16",
-    "safetyRating": 4.7,
-    "priceRange": "$$$$",
-    "popularity": 96,
-    "description": "Ultra-luxe safari on a private reserve within Kruger with glass-walled suites overlooking the bushveld.",
-    "location": "Singita Kruger National Park, South Africa",
-    "bestTime": "May-Sep",
-    "imageUrl": "https://images.unsplash.com/photo-1534177616072-ef7dc120449d?w=800&q=80",
-    "amenities": [
-      "Private Game Drives",
-      "Butler Service",
-      "Infinity Pool",
-      "Kids Safari Program",
-      "Spa"
-    ],
-    "safetyFeatures": [
-      "Professional Ranger Guides",
-      "Fenced Camp Perimeter",
-      "Emergency Response",
-      "Child Tracking Vests"
-    ],
-    "tipsAndTricks": [
-      "Glass-walled suites provide uninterrupted watering hole views.",
-      "The Elefun kids program includes bush walks and star-gazing.",
-      "Book the photography hide for award-worthy family wildlife photos."
-    ],
-    "parentStory": {
-      "title": "When the Big Five came to dinner",
-      "excerpt": "We watched a leopard from our bathtub.",
-      "author": "Tom",
-      "fullStory": "Our suite's floor-to-ceiling glass wall faced a watering hole. My daughters were in the bathtub when a leopard came to drink, metres away. They froze. The leopard looked at them, drank, and walked off. They still tell everyone about the leopard that watched them bathe."
-    },
-    "itineraryComparison": {
-      "halfDay": "Morning game drive, pool",
-      "fullDay": "Full-day safari, bush dinner",
-      "bestFor": "Wildlife families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Singita Lebombo",
-      "Kruger luxury safari"
-    ],
-    "gallery": [],
-    "slug": "southafrica-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Singita%20Kruger%20National%20Park%2C%20South%20Africa&aid=2875669",
-        "text": "Book Singita Lebombo"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Singita%20Lebombo&aid=119991",
-        "text": "Klook Singita Lebombo"
-      },
-      "viator": {
-        "url": "https://viator.com/South Africa/things-to-do?aid=P00299136",
-        "text": "Viator Kruger National Park"
-      }
-    }
-  },
-  {
-    "id": "turkscaicos-001",
-    "name": "Amanyara",
-    "city": "Providenciales",
-    "country": "Turks and Caicos",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 94,
-    "description": "Serene Caribbean hideaway on the northwest coast with minimalist pavilions and a pristine coral reef.",
-    "location": "Providenciales, Turks and Caicos",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
-    "amenities": [
-      "Private Beach",
-      "Kids Club",
-      "Tennis",
-      "Dive Centre",
-      "Spa",
-      "Yoga Pavilion"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "Reef-safe Sunscreen Program",
-      "Pool Fencing",
-      "24hr Security"
-    ],
-    "tipsAndTricks": [
-      "Ocean pavilions with glass walls offer the best water views.",
-      "Snorkelling off the resort beach is world-class.",
-      "Book the full-moon beach dinner for a magical family celebration."
-    ],
-    "parentStory": {
-      "title": "Caribbean without the crowds",
-      "excerpt": "We had the beach entirely to ourselves on Christmas morning.",
-      "author": "Claire",
-      "fullStory": "Only 40 pavilions. On Christmas morning, we walked out to the beach and there wasn't another soul. Just our family, turquoise water, and dolphins passing by. Staff had set up a gift-wrapped Christmas tree on the sand."
-    },
-    "itineraryComparison": {
-      "halfDay": "Snorkelling, beach",
-      "fullDay": "Boat excursion, spa",
-      "bestFor": "Beach families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Amanyara",
-      "Turks and Caicos luxury"
-    ],
-    "gallery": [],
-    "slug": "turkscaicos-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Providenciales%2C%20Turks%20and%20Caicos&aid=2875669",
-        "text": "Book Amanyara"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Amanyara&aid=119991",
-        "text": "Klook Amanyara"
-      },
-      "viator": {
-        "url": "https://viator.com/Turks and Caicos/things-to-do?aid=P00299136",
-        "text": "Viator Providenciales"
-      }
-    }
-  },
-  {
-    "id": "maldives-005",
-    "name": "Cheval Blanc Randheli",
-    "city": "Noonu Atoll",
-    "country": "Maldives",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 96,
-    "description": "LVMH's crown jewel in the Maldives \u2014 art-filled villas, Dior Spa, and three-Michelin-starred Le 1947.",
-    "location": "Randheli, Noonu Atoll, Maldives",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80",
-    "amenities": [
-      "Private Pool",
-      "Butler Service",
-      "Dior Spa",
-      "Kids Club",
-      "Michelin Dining",
-      "Water Sports"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "On-site Doctor",
-      "Pool Fencing",
-      "Baby-proofed Villas"
-    ],
-    "tipsAndTricks": [
-      "The owner's villa has a two-storey slide into the pool.",
-      "Book Le 1947 for one adult-only dinner.",
-      "The Dior spa offers teen skincare treatments."
-    ],
-    "parentStory": {
-      "title": "When luxury meets family",
-      "excerpt": "They remembered my son loves vanilla ice cream. Every day.",
-      "author": "Isabella",
-      "fullStory": "I worried Cheval Blanc would be stuffy. The butler greeted my son by name and had his favourite snack ready every afternoon. The villa was baby-proofed before we arrived. We had two Michelin-starred dinners while the kids made friends. Never felt more looked after."
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, water sports",
-      "fullDay": "Spa, overwater dining",
-      "bestFor": "Ultra-luxury families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Cheval Blanc Randheli",
-      "Maldives LVMH resort"
-    ],
-    "gallery": [],
-    "slug": "maldives-005",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Randheli%2C%20Noonu%20Atoll%2C%20Maldives&aid=2875669",
-        "text": "Book Cheval Blanc Randheli"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Cheval%20Blanc%20Randheli&aid=119991",
-        "text": "Klook Cheval Blanc Randheli"
-      },
-      "viator": {
-        "url": "https://viator.com/Maldives/things-to-do?aid=P00299136",
-        "text": "Viator Noonu Atoll"
-      }
-    }
-  },
-  {
-    "id": "bali-005",
-    "name": "Capella Ubud",
-    "city": "Bali",
-    "country": "Indonesia",
-    "category": "Exclusive Experience",
-    "ageRange": "4-16",
-    "safetyRating": 3.5,
-    "priceRange": "$$$$",
-    "popularity": 93,
-    "description": "Tented camp luxury in the Wos River valley with 19th-century explorer aesthetics and private plunge pools.",
-    "location": "Ubud, Bali",
-    "bestTime": "Apr-Oct",
-    "imageUrl": "https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&q=80",
-    "amenities": [
-      "Private Plunge Pool",
-      "Butler Service",
-      "Spa",
-      "Yoga",
-      "Cooking Classes"
-    ],
-    "safetyFeatures": [
-      "Camp Security",
-      "Guide Escorts",
-      "Pool Fencing"
-    ],
-    "tipsAndTricks": [
-      "Book the Keliki Valley tent for the best views.",
-      "Explorer-style campfire storytelling at dusk is magical.",
-      "Request a picnic lunch in the valley."
-    ],
-    "parentStory": {
-      "title": "Glamping at its finest",
-      "excerpt": "Tent living without sacrificing a single luxury.",
-      "author": "Olivia",
-      "fullStory": "Our 'tent' was a 200sqm canvas palace with a four-poster bed, copper bathtub, and private plunge pool. The kids slept on daybeds listening to the river. We roasted marshmallows at the campfire. A childhood dream I never knew I had."
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, camp activities",
-      "fullDay": "Ubud temples, river spa",
-      "bestFor": "Adventurous families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Capella Ubud",
-      "Bali tented camp"
-    ],
-    "gallery": [],
-    "slug": "bali-005",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Ubud%2C%20Bali&aid=2875669",
-        "text": "Book Capella Ubud"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Capella%20Ubud&aid=119991",
-        "text": "Klook Capella Ubud"
-      },
-      "viator": {
-        "url": "https://viator.com/Indonesia/things-to-do?aid=P00299136",
-        "text": "Viator Bali"
-      }
-    },
-    "safetyNote": "Jungle camp setting with open-air tents and steep stone paths. Wildlife (monkeys) in area. Pool has partial fencing only."
-  },
-  {
-    "id": "hongkong-004",
-    "name": "The Ritz-Carlton Hong Kong",
-    "city": "Hong Kong",
-    "country": "Hong Kong",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 94,
-    "description": "The highest hotel in the world across floors 102\u2013118 of the ICC, with Victoria Harbour views from every room.",
-    "location": "West Kowloon, Hong Kong",
-    "bestTime": "Oct-Dec",
-    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80",
-    "amenities": [
-      "Infinity Pool",
-      "Kids Club",
-      "Michelin Dining",
-      "Spa",
-      "Butler Service"
-    ],
-    "safetyFeatures": [
-      "24hr Security",
-      "Child-proofing Available",
-      "Pool Fencing"
-    ],
-    "tipsAndTricks": [
-      "The infinity pool on the 118th floor is the world's highest.",
-      "Children's afternoon tea at The Lounge is a highlight.",
-      "Ozone bar has a separate kids-friendly early seating."
-    ],
-    "parentStory": {
-      "title": "Above the clouds in Kowloon",
-      "excerpt": "My 6-year-old said we were 'sleeping in heaven'.",
-      "author": "Michelle",
-      "fullStory": "Checking in on the 103rd floor already feels surreal. When we opened the curtains in our harbour-view suite and my son saw the entire city below us, he gasped. The pool at 118 floors up was terrifying and thrilling. We watched the sunset from our room."
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, afternoon tea",
-      "fullDay": "Victoria Peak, harbour cruise",
-      "bestFor": "City skyline families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Ritz-Carlton Hong Kong",
-      "Hong Kong luxury hotel"
-    ],
-    "gallery": [],
-    "slug": "hongkong-004",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=West%20Kowloon%2C%20Hong%20Kong&aid=2875669",
-        "text": "Book The Ritz-Carlton Hong Kong"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=The%20Ritz-Carlton%20Hong%20Kong&aid=119991",
-        "text": "Klook The Ritz-Carlton Hong Kong"
-      },
-      "viator": {
-        "url": "https://viator.com/Hong Kong/things-to-do?aid=P00299136",
-        "text": "Viator Hong Kong"
-      }
-    }
-  },
-  {
-    "id": "bhutan-001",
-    "name": "COMO Uma Paro",
-    "city": "Paro",
-    "country": "Bhutan",
-    "category": "Luxury Resort",
-    "ageRange": "4-16",
-    "safetyRating": 4.7,
-    "priceRange": "$$$$",
-    "popularity": 90,
-    "description": "Himalayan wellness retreat in the Paro Valley with COMO Shambhala spa and legendary Buddhist hospitality.",
-    "location": "Paro Valley, Bhutan",
-    "bestTime": "Mar-May, Sep-Nov",
-    "imageUrl": "https://images.unsplash.com/photo-1574169207511-e21a21f80725?w=800&q=80",
-    "amenities": [
-      "Spa",
-      "Yoga Pavilion",
-      "Hiking",
-      "Cooking Classes",
-      "Butler Service"
-    ],
-    "safetyFeatures": [
-      "Guide Escorts",
-      "Altitude Training Support",
-      "Medical Access"
-    ],
-    "tipsAndTricks": [
-      "Book the Tiger's Nest hike early \u2014 kids 8+ can manage with guides.",
-      "COMO Shambhala treatments are exceptional after high-altitude hiking.",
-      "The Bhutanese cooking class is both cultural and delicious for all ages."
-    ],
-    "parentStory": {
-      "title": "The happiest country made us happier",
-      "excerpt": "My kids learned about Gross National Happiness and started their own happiness chart.",
-      "author": "Parker",
-      "fullStory": "We chose Bhutan hoping for something different. The staff took our kids on a prayer flag painting session while we had a couples massage. The hike to Tiger's Nest was tough but our 9-year-old did it with a guide. We came home different people."
-    },
-    "itineraryComparison": {
-      "halfDay": "Spa, yoga",
-      "fullDay": "Tiger's Nest hike, monastery",
-      "bestFor": "Wellness families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "COMO Uma Paro",
-      "Bhutan luxury resort"
-    ],
-    "gallery": [],
-    "slug": "bhutan-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Paro%20Valley%2C%20Bhutan&aid=2875669",
-        "text": "Book COMO Uma Paro"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=COMO%20Uma%20Paro&aid=119991",
-        "text": "Klook COMO Uma Paro"
-      },
-      "viator": {
-        "url": "https://viator.com/Bhutan/things-to-do?aid=P00299136",
-        "text": "Viator Paro"
-      }
-    }
-  },
-  {
-    "id": "chiangmai-001",
-    "name": "Four Seasons Resort Chiang Mai",
-    "city": "Chiang Mai",
-    "country": "Thailand",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 93,
-    "description": "Terraced rice paddies and Lanna-style pavilions in the Mae Rim valley, with elephant sanctuary access.",
-    "location": "Mae Rim, Chiang Mai, Thailand",
-    "bestTime": "Nov-Feb",
-    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
-    "amenities": [
-      "Kids Club",
-      "Rice Farming",
-      "Cooking School",
-      "Tennis",
-      "Spa",
-      "Infinity Pool"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "Pool Fencing",
-      "Child-friendly Pathways",
-      "Golf Cart Service"
-    ],
-    "tipsAndTricks": [
-      "The rice planting experience is unforgettable for kids.",
-      "Book the Chiang Mai Elephant Sanctuary day trip.",
-      "Upper pool villas have the best rice terrace views at sunrise."
-    ],
-    "parentStory": {
-      "title": "Muddy rice paddies and pure joy",
-      "excerpt": "My city kids became farmers for a day.",
-      "author": "Jessica",
-      "fullStory": "I watched my children wade into a rice paddy with absolute joy. A farmer taught them to plant seedlings while I watched from the pool. That evening, they ate rice they'd planted that morning. They've been asking for a garden ever since."
-    },
-    "itineraryComparison": {
-      "halfDay": "Rice planting, pool",
-      "fullDay": "Elephant sanctuary, spa",
-      "bestFor": "Cultural families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Four Seasons Chiang Mai",
-      "Chiang Mai luxury resort"
-    ],
-    "gallery": [],
-    "slug": "chiangmai-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Mae%20Rim%2C%20Chiang%20Mai%2C%20Thailand&aid=2875669",
-        "text": "Book Four Seasons Resort Chiang Mai"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Four%20Seasons%20Resort%20Chiang%20Mai&aid=119991",
-        "text": "Klook Four Seasons Resort Chiang Mai"
-      },
-      "viator": {
-        "url": "https://viator.com/Thailand/things-to-do?aid=P00299136",
-        "text": "Viator Chiang Mai"
-      }
-    }
-  },
-  {
-    "id": "sumba-001",
-    "name": "Nihi Sumba",
-    "city": "Sumba",
-    "country": "Indonesia",
-    "category": "Luxury Resort",
-    "ageRange": "6-16",
-    "safetyRating": 3.5,
-    "priceRange": "$$$$",
-    "popularity": 91,
-    "description": "Remote surf-side luxury with thatched-roof villas and the legendary spa safari on a pristine Indonesian island.",
-    "location": "Sumba Island, Indonesia",
-    "bestTime": "May-Oct",
-    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
-    "amenities": [
-      "Kids Club",
-      "Horseback Riding",
-      "Surf Lessons",
-      "Private Pool",
-      "Spa Village"
-    ],
-    "safetyFeatures": [
-      "Medical Clinic On-site",
-      "Lifeguards",
-      "Pool Fencing"
-    ],
-    "tipsAndTricks": [
-      "Book the Bokoo Villa for direct beach access.",
-      "The spa safari is a half-day must for parents.",
-      "Pack light \u2014 the resort provides thoughtful amenities for all ages."
-    ],
-    "parentStory": {
-      "title": "A week off the grid",
-      "excerpt": "My kids learned to surf before they learned to swim.",
-      "author": "Marcus",
-      "fullStory": "We arrived thinking we'd be bored after day two. Instead, we extended by three nights. Kids spent mornings with surf instructors and afternoons building sandcastles. My wife and I rediscovered each other over sunset cocktails at the treehouse spa. First real vacation in five years."
-    },
-    "itineraryComparison": {
-      "halfDay": "Surf lesson, pool",
-      "fullDay": "Spa safari, beach horse ride",
-      "bestFor": "Adventure families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Nihi Sumba",
-      "Sumba luxury resort"
-    ],
-    "gallery": [],
-    "slug": "sumba-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Sumba%20Island%2C%20Indonesia&aid=2875669",
-        "text": "Book Nihi Sumba"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Nihi%20Sumba&aid=119991",
-        "text": "Klook Nihi Sumba"
-      },
-      "viator": {
-        "url": "https://viator.com/Indonesia/things-to-do?aid=P00299136",
-        "text": "Viator Sumba"
-      }
-    },
-    "safetyNote": "Remote location 1hr from nearest hospital. Strong ocean currents on nearby beaches. Open-air villas with unfenced plunge pools."
-  },
-  {
-    "id": "bali-006",
-    "name": "Alila Villas Uluwatu",
-    "city": "Bali",
-    "country": "Indonesia",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 92,
-    "description": "Dramatic cliff-top architecture with the iconic sunset cabana, private pool villas, and sustainable luxury.",
-    "location": "Uluwatu, Bali, Indonesia",
-    "bestTime": "Apr-Oct",
-    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
-    "amenities": [
-      "Private Pool",
-      "Sunset Cabana",
-      "Kids Club",
-      "Spa",
-      "Yoga",
-      "Organic Dining"
-    ],
-    "safetyFeatures": [
-      "Cliff Barriers",
-      "Lifeguards",
-      "Pool Fencing",
-      "Golf Cart Service"
-    ],
-    "tipsAndTricks": [
-      "The sunset cabana is the most photographed spot in Bali \u2014 book it for golden hour.",
-      "The kids' eco-program includes recycling crafts and organic gardening.",
-      "Request villa 11 for the best ocean views and privacy."
-    ],
-    "parentStory": {
-      "title": "The cabana that changed everything",
-      "excerpt": "We got engaged at sunset. And the kids loved the kids club.",
-      "author": "Aisha",
-      "fullStory": "We came for our anniversary and the sunset cabana was everything. Our two kids spent the evening with the amazing kids club staff making Batik paintings while we watched the sun sink into the Indian Ocean with cocktails. Perfect balance of romance and family."
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, sunset cabana",
-      "fullDay": "Uluwatu temple, spa",
-      "bestFor": "Romantic families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Alila Villas Uluwatu",
-      "Bali cliff resort"
-    ],
-    "gallery": [],
-    "slug": "bali-006",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Uluwatu%2C%20Bali%2C%20Indonesia&aid=2875669",
-        "text": "Book Alila Villas Uluwatu"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Alila%20Villas%20Uluwatu&aid=119991",
-        "text": "Klook Alila Villas Uluwatu"
-      },
-      "viator": {
-        "url": "https://viator.com/Indonesia/things-to-do?aid=P00299136",
-        "text": "Viator Bali"
-      }
-    }
-  },
-  {
-    "id": "phnompenh-001",
-    "name": "Rosewood Phnom Penh",
-    "city": "Phnom Penh",
-    "country": "Cambodia",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 3.5,
-    "priceRange": "$$$$",
-    "popularity": 89,
-    "description": "Luxury atop Vattanac Capital Tower with skyline views, Cambodia's finest dining, and Art Deco Indochine elegance.",
-    "location": "Phnom Penh, Cambodia",
-    "bestTime": "Nov-May",
-    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-    "amenities": [
-      "Infinity Pool",
-      "Kids Club",
-      "Michelin Dining",
-      "Spa",
-      "Butler Service"
-    ],
-    "safetyFeatures": [
-      "24hr Security",
-      "Pool Fencing",
-      "Child-safe Environment"
-    ],
-    "tipsAndTricks": [
-      "The sky bar on the 37th floor has incredible sunset views over the Mekong.",
-      "Books, the hotel library caf\u00e9, is perfect for a quiet family afternoon.",
-      "Ask the concierge to arrange a private tuk-tuk food tour."
-    ],
-    "parentStory": {
-      "title": "Cambodia's new crown jewel",
-      "excerpt": "We felt like royalty in the capital.",
-      "author": "Nathan",
-      "fullStory": "Rosewood Phnom Penh is effortlessly elegant. The staff welcomed our kids with a personalised scavenger hunt through the hotel. The infinity pool overlooks the entire city. We took a private boat to the floating villages and came back to the best Khmer curry of our lives at the hotel."
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, afternoon tea",
-      "fullDay": "Royal Palace, Mekong cruise",
-      "bestFor": "City culture families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Rosewood Phnom Penh",
-      "Cambodia luxury hotel"
-    ],
-    "gallery": [],
-    "slug": "phnompenh-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Phnom%20Penh%2C%20Cambodia&aid=2875669",
-        "text": "Book Rosewood Phnom Penh"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Rosewood%20Phnom%20Penh&aid=119991",
-        "text": "Klook Rosewood Phnom Penh"
-      },
-      "viator": {
-        "url": "https://viator.com/Cambodia/things-to-do?aid=P00299136",
-        "text": "Viator Phnom Penh"
-      }
-    },
-    "safetyNote": "High-rise hotel (levels 35+) with pool accessible by elevator. Street-level chaos in Phnom Penh for strollers."
-  },
-  {
-    "id": "vietnam-001",
-    "name": "Amanoi",
-    "city": "Ninh Thuan",
-    "country": "Vietnam",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 93,
-    "description": "Aman's first Vietnamese resort on the dramatic Ninh Thuan coastline with Lotus Pavilion spa and national park access.",
-    "location": "Vinh Hy Bay, Ninh Thuan, Vietnam",
-    "bestTime": "Feb-Aug",
-    "imageUrl": "https://images.unsplash.com/photo-1574169207511-e21a21f80725?w=800&q=80",
-    "amenities": [
-      "Private Beach",
-      "Spa",
-      "Kids Club",
-      "Hiking",
-      "Tennis",
-      "Yoga Pavilion"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "Pool Fencing",
-      "Nature Guide Escorts",
-      "Medical Access"
-    ],
-    "tipsAndTricks": [
-      "The Lotus Pavilion spa is one of Aman's best \u2014 book the family treatment.",
-      "Take the guided hike through Nui Chua National Park.",
-      "Cliff pool villas have the most dramatic ocean views in Vietnam."
-    ],
-    "parentStory": {
-      "title": "Hidden paradise on the Vietnamese coast",
-      "excerpt": "We felt like the first people to discover this bay.",
-      "author": "Liam",
-      "fullStory": "Amanoi is reached via a winding mountain road, and the reveal when you first see Vinh Hy Bay is breathtaking. Our pavilion was perched on the cliffside overlooking the turquoise bay. The kids did a marine biology program with the naturalist. We did nothing but read, swim, and eat. Perfect."
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, beach",
-      "fullDay": "National park hike, spa",
-      "bestFor": "Nature families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Amanoi",
-      "Vietnam luxury resort"
-    ],
-    "gallery": [],
-    "slug": "vietnam-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Vinh%20Hy%20Bay%2C%20Ninh%20Thuan%2C%20Vietnam&aid=2875669",
-        "text": "Book Amanoi"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Amanoi&aid=119991",
-        "text": "Klook Amanoi"
-      },
-      "viator": {
-        "url": "https://viator.com/Vietnam/things-to-do?aid=P00299136",
-        "text": "Viator Ninh Thuan"
-      }
-    }
-  },
-  {
-    "id": "maldives-006",
-    "name": "Waldorf Astoria Maldives Ithaafushi",
-    "city": "Ithaafushi",
-    "country": "Maldives",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 95,
-    "description": "An island kingdom of 122 villas across three private islands with 11 dining venues and the largest spa in the Maldives.",
-    "location": "Ithaafushi, South Male Atoll, Maldives",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80",
-    "amenities": [
-      "Private Pool",
-      "Butler Service",
-      "Kids Club",
-      "11 Restaurants",
-      "Spa",
-      "Water Sports"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "On-site Doctor",
-      "Pool Fencing",
-      "Babysitting Certified"
-    ],
-    "tipsAndTricks": [
-      "The Stella Maris Ocean Villa has a glass-floored living room over the lagoon.",
-      "Book the Zuma tasting menu for one royal adult dinner.",
-      "The kids club has a mini marine biology program."
-    ],
-    "parentStory": {
-      "title": "Three islands of pure luxury",
-      "excerpt": "My daughter said this was better than the cartoons she usually prefers.",
-      "author": "Amanda",
-      "fullStory": "Three private islands connected by bridges felt like our own kingdom. The overwater villa had a glass floor where we watched reef sharks swim beneath us every morning. The kids club was so good our 5-year-old asked to go back after lunch. We had the best sushi of our lives at Zuma."
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool, snorkelling",
-      "fullDay": "Spa, overwater dining",
-      "bestFor": "Kingdom seekers"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Waldorf Astoria Maldives",
-      "Ithaafushi resort"
-    ],
-    "gallery": [],
-    "slug": "maldives-006",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Ithaafushi%2C%20South%20Male%20Atoll%2C%20Maldives&aid=2875669",
-        "text": "Book Waldorf Astoria Maldives Ithaafushi"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Waldorf%20Astoria%20Maldives%20Ithaafushi&aid=119991",
-        "text": "Klook Waldorf Astoria Maldives Ithaafushi"
-      },
-      "viator": {
-        "url": "https://viator.com/Maldives/things-to-do?aid=P00299136",
-        "text": "Viator Ithaafushi"
-      }
-    }
-  },
-  {
-    "id": "bangkok-001",
-    "name": "Safari World Bangkok",
-    "city": "Bangkok",
-    "country": "Thailand",
-    "category": "Zoo",
-    "ageRange": "2-15",
-    "safetyRating": 4.7,
-    "priceRange": "$$",
-    "popularity": 88,
-    "description": "Massive open zoo and marine park with drive-through safari, animal shows, and feeding experiences. Perfect for animal-loving families with spacious areas and good facilities.",
-    "location": "99 Panya Intra Rd, Sam Wa Tawan Tok, Khlong Sam Wa, Bangkok 10510",
-    "bestTime": "Morning, Dry season (Nov-Feb)",
-    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba",
-    "amenities": [
-      "Safari Drive",
-      "Animal Shows",
-      "Feeding Experiences",
-      "Stroller Rental",
-      "Restaurants"
-    ],
-    "safetyFeatures": [
-      "Trained Animal Handlers",
-      "Vehicle Safety",
-      "Shaded Areas",
-      "First Aid",
-      "Security"
-    ],
-    "tipsAndTricks": [
-      "Visit on weekdays to avoid crowds at Safari World Bangkok.",
-      "Best time to go is early morning before the heat sets in.",
-      "Bring water and snacks \u2014 prices inside can be steep."
-    ],
-    "parentStory": {
-      "title": "Lunch with the giraffes",
-      "excerpt": "My three-year-old fed a giraffe and hasn't stopped talking about it.",
-      "author": "Priya",
-      "fullStory": "I was sceptical about Safari World. Another tourist trap, I thought. But watching my daughter's face light up as a giraffe gently took a banana from her hand \u2014 that was worth the entire trip. The drive-through safari section means even the littlest ones stay strapped in comfortably. We spent four hours and could've stayed four more."
-    },
-    "itineraryComparison": {
-      "halfDay": "Explore the activity",
-      "fullDay": "Add nearby sights and lunch",
-      "bestFor": "Families with kids aged 2-15"
-    },
-    "commissionRate": "7%",
-    "seoKeywords": [
-      "Safari World Bangkok",
-      "Bangkok zoo family",
-      "animal park Thailand",
-      "kid-friendly Bangkok"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1550358864-518f202c02ba",
-      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80"
-    ],
-    "slug": "bangkok-001",
-    "affiliateLinks": {
-      "klook": {
-        "url": "https://www.klook.com/activity/1183-safari-world-bangkok/?aid=OURCODE",
-        "text": "Klook Safari World Bangkok"
-      },
-      "viator": {
-        "url": "https://www.viator.com/tours/Bangkok/Safari-World-Bangkok-Ticket/d343-50170P1?pid=OURCODE",
-        "text": "Viator Safari World Bangkok"
-      }
-    }
-  },
-  {
-    "id": "bangkok-002",
-    "name": "Sea Life Bangkok Ocean World",
-    "city": "Bangkok",
-    "country": "Thailand",
-    "category": "Aquarium",
-    "ageRange": "3-14",
-    "safetyRating": 4.8,
-    "priceRange": "$$",
-    "popularity": 92,
-    "description": "Southeast Asia's largest aquarium located under Siam Paragon mall. Walk-through tunnels, touch pools, and penguin feeding shows. Air-conditioned and stroller-friendly.",
-    "location": "Siam Paragon, 991 Rama I Rd, Pathum Wan, Bangkok 10330",
-    "bestTime": "Weekdays, Morning",
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
-    "amenities": [
-      "Underwater Tunnel",
-      "Touch Pools",
-      "Penguin Feeding",
+      "Family Restrooms",
       "Stroller Access",
-      "Mall Location"
+      "Play Area"
     ],
     "safetyFeatures": [
-      "Air-Conditioned",
-      "Wide Pathways",
-      "Emergency Exits",
-      "Trained Staff",
-      "Clean Facilities"
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
     ],
-    "tipsAndTricks": [
-      "Visit on weekdays to avoid crowds at Sea Life Bangkok Ocean World.",
-      "Best time to go is early morning before the heat sets in.",
-      "Bring water and snacks \u2014 prices inside can be steep."
-    ],
+    "tipsAndTricks": [],
+    "gallery": [],
     "parentStory": {
-      "title": "Air-conditioned sanity",
-      "excerpt": "When Bangkok heat gets too much, this aquarium saves the day.",
-      "author": "Mei-Lin",
-      "fullStory": "Bangkok in April is brutal with kids. We ducked into Siam Paragon for lunch and stumbled into Sea Life. The underwater tunnel had both kids mesmerised for twenty minutes straight. The touch pool where they could feel starfish and sea cucumbers was their favourite. Two hours of cool, calm, happy children. A miracle."
+      "title": "A Perfect Family Getaway",
+      "excerpt": "We had an amazing time exploring with our kids!",
+      "author": "Sarah & Mike",
+      "fullStory": "We spent a wonderful week here with our two children aged 5 and 8. The staff was incredibly accommodating..."
     },
     "itineraryComparison": {
-      "halfDay": "Explore the activity",
-      "fullDay": "Add nearby sights and lunch",
-      "bestFor": "Families with kids aged 3-14"
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 2-11"
     },
-    "commissionRate": "8%",
+    "commissionRate": "5-8%",
     "seoKeywords": [
-      "Sea Life Bangkok",
-      "Bangkok aquarium",
-      "ocean world Thailand",
-      "family activities Bangkok"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
-      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80"
-    ],
-    "slug": "bangkok-002",
-    "affiliateLinks": {
-      "klook": {
-        "url": "https://www.klook.com/activity/1184-sea-life-bangkok-ocean-world/?aid=OURCODE",
-        "text": "Klook Sea Life Bangkok Ocean World"
-      },
-      "getYourGuide": "https://www.getyourguide.com/bangkok-l169/bangkok-sea-life-ocean-world-ticket-t395175/?partner_id=OURCODE"
-    }
+      "family travel Bali",
+      "Bali with kids",
+      "family-friendly Bali"
+    ]
   },
   {
-    "id": "bangkok-003",
-    "name": "KidZania Bangkok",
-    "city": "Bangkok",
-    "country": "Thailand",
-    "category": "Educational",
-    "ageRange": "4-14",
+    "id": "bali-new-2",
+    "name": "Bali Family Beach 2",
+    "city": "Bali",
+    "country": "Indonesia",
+    "category": "Beach",
+    "ageRange": "0-12",
+    "safetyRating": 4.8,
+    "priceRange": "$$$",
+    "popularity": 2,
+    "description": "A wonderful family-friendly beach in Bali. Perfect for children of all ages with safety measures in place.",
+    "location": "Bali, Indonesia",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000002",
+    "amenities": [
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
+    ],
+    "safetyFeatures": [
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
+    ],
+    "tipsAndTricks": [],
+    "gallery": [],
+    "parentStory": {
+      "title": "Best Family Vacation Ever",
+      "excerpt": "Our kids still talk about this trip!",
+      "author": "The Patel Family",
+      "fullStory": "From the moment we arrived, everything was perfect for our family of four..."
+    },
+    "itineraryComparison": {
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 0-12"
+    },
+    "commissionRate": "5-8%",
+    "seoKeywords": [
+      "family travel Bali",
+      "Bali with kids",
+      "family-friendly Bali"
+    ]
+  },
+  {
+    "id": "bali-new-3",
+    "name": "Bali Family Museum 3",
+    "city": "Bali",
+    "country": "Indonesia",
+    "category": "Museum",
+    "ageRange": "2-17",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 3,
+    "description": "A wonderful family-friendly museum in Bali. Perfect for children of all ages with safety measures in place.",
+    "location": "Bali, Indonesia",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000003",
+    "amenities": [
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
+    ],
+    "safetyFeatures": [
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
+    ],
+    "tipsAndTricks": [],
+    "gallery": [],
+    "parentStory": {
+      "title": "Luxury Meets Family Fun",
+      "excerpt": "We didnt want to leave!",
+      "author": "Emma & James",
+      "fullStory": "This destination perfectly balances luxury and family-friendly activities..."
+    },
+    "itineraryComparison": {
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 2-17"
+    },
+    "commissionRate": "5-8%",
+    "seoKeywords": [
+      "family travel Bali",
+      "Bali with kids",
+      "family-friendly Bali"
+    ]
+  },
+  {
+    "id": "bali-new-4",
+    "name": "Bali Family Beach 4",
+    "city": "Bali",
+    "country": "Indonesia",
+    "category": "Beach",
+    "ageRange": "1-8",
     "safetyRating": 4.9,
     "priceRange": "$$$",
-    "popularity": 90,
-    "description": "Interactive role-playing city where kids can try over 80 professions. Located in Siam Paragon with English-speaking staff and excellent safety standards.",
-    "location": "5th Floor, Siam Paragon, 991 Rama I Rd, Pathum Wan, Bangkok 10330",
-    "bestTime": "Weekdays",
-    "imageUrl": "https://images.unsplash.com/photo-1511988617509-a57c8a288659",
+    "popularity": 4,
+    "description": "A wonderful family-friendly beach in Bali. Perfect for children of all ages with safety measures in place.",
+    "location": "Bali, Indonesia",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000004",
     "amenities": [
-      "Role-Playing Activities",
-      "English Staff",
-      "Supervised Play",
-      "Parent Lounge",
-      "Educational"
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
     ],
     "safetyFeatures": [
-      "Trained Supervisors",
-      "Secure Entry/Exit",
-      "Clean Environment",
-      "Allergy Awareness",
-      "First Aid"
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
     ],
-    "tipsAndTricks": [
-      "Visit on weekdays to avoid crowds at KidZania Bangkok.",
-      "Best time to go is early morning before the heat sets in.",
-      "Bring water and snacks \u2014 prices inside can be steep."
-    ],
+    "tipsAndTricks": [],
+    "gallery": [],
     "parentStory": {
-      "title": "They didn't want to leave",
-      "excerpt": "My son the firefighter, my daughter the pilot \u2014 all in one afternoon.",
-      "author": "David",
-      "fullStory": "KidZania is genius. You walk in and suddenly your kids aren't bored \u2014 they're pilots, firefighters, chefs, doctors. Everything is scaled down but real: actual fire trucks, working model planes, a hospital with pretend patients. My kids learned about earning a salary (KidZos) and managing money without even realising it. The English-speaking staff were patient and encouraging. The grown-up seating area with coffee was a nice bonus."
+      "title": "A Perfect Family Getaway",
+      "excerpt": "We had an amazing time exploring with our kids!",
+      "author": "Sarah & Mike",
+      "fullStory": "We spent a wonderful week here with our two children aged 5 and 8. The staff was incredibly accommodating..."
     },
     "itineraryComparison": {
-      "halfDay": "Explore the activity",
-      "fullDay": "Add nearby sights and lunch",
-      "bestFor": "Families with kids aged 4-14"
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 1-8"
     },
-    "commissionRate": "7%",
+    "commissionRate": "5-8%",
     "seoKeywords": [
-      "KidZania Bangkok",
-      "educational activities Bangkok",
-      "role-play for kids",
-      "family fun Bangkok"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1511988617509-a57c8a288659",
-      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80"
-    ],
-    "slug": "bangkok-003",
-    "affiliateLinks": {
-      "klook": {
-        "url": "https://www.klook.com/activity/1185-kidzania-bangkok/?aid=OURCODE",
-        "text": "Klook KidZania Bangkok"
-      }
-    }
+      "family travel Bali",
+      "Bali with kids",
+      "family-friendly Bali"
+    ]
   },
   {
-    "id": "bangkok-004",
-    "name": "Dream World Bangkok",
-    "city": "Bangkok",
-    "country": "Thailand",
-    "category": "Theme Park",
-    "ageRange": "5-17",
-    "safetyRating": 4.6,
-    "priceRange": "$$",
-    "popularity": 85,
-    "description": "Thailand's answer to Disneyland with themed zones, gentle rides for young children, and thrilling rides for teens. Good mix of indoor and outdoor attractions.",
-    "location": "62 Moo 1, Rangsit-Nakornnayok Rd, Thanyaburi, Pathum Thani 12130",
-    "bestTime": "Weekdays, Dry season",
-    "imageUrl": "https://images.unsplash.com/photo-1567602901358-5ba17615aaeb",
+    "id": "bali-new-5",
+    "name": "Bali Family Cultural 5",
+    "city": "Bali",
+    "country": "Indonesia",
+    "category": "Cultural",
+    "ageRange": "2-17",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 5,
+    "description": "A wonderful family-friendly cultural in Bali. Perfect for children of all ages with safety measures in place.",
+    "location": "Bali, Indonesia",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000005",
     "amenities": [
-      "Theme Zones",
-      "Gentle Rides",
-      "Thrill Rides",
-      "Shows",
-      "Restaurants"
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
     ],
     "safetyFeatures": [
-      "Height Restrictions",
-      "Trained Operators",
-      "First Aid",
-      "Shaded Queues",
-      "Security"
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
     ],
-    "tipsAndTricks": [
-      "Visit on weekdays to avoid crowds at Dream World Bangkok.",
-      "Best time to go is early morning before the heat sets in.",
-      "Bring water and snacks \u2014 prices inside can be steep."
-    ],
+    "tipsAndTricks": [],
+    "gallery": [],
     "parentStory": {
-      "title": "Thailand's answer to Disney",
-      "excerpt": "Half the price, still plenty of magic.",
-      "author": "Sarah",
-      "fullStory": "Dream World doesn't have the Disney polish, but what it lacks in Pixar it makes up for in sheer fun. The snow room \u2014 actual snow in Bangkok \u2014 was a highlight for kids who'd never touched it. Rides range from gentle teacups for toddlers to legit roller coasters for teens. We went on a Thursday and barely queued. Bring snacks from 7-Eleven to avoid the overpriced food court."
+      "title": "Best Family Vacation Ever",
+      "excerpt": "Our kids still talk about this trip!",
+      "author": "The Patel Family",
+      "fullStory": "From the moment we arrived, everything was perfect for our family of four..."
     },
     "itineraryComparison": {
-      "halfDay": "Explore the activity",
-      "fullDay": "Add nearby sights and lunch",
-      "bestFor": "Families with kids aged 5-17"
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 2-17"
     },
-    "commissionRate": "6%",
+    "commissionRate": "5-8%",
     "seoKeywords": [
-      "Dream World Bangkok",
-      "theme park Thailand",
-      "family amusement park",
-      "Bangkok rides"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1567602901358-5ba17615aaeb",
-      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80"
-    ],
-    "slug": "bangkok-004",
-    "affiliateLinks": {
-      "klook": {
-        "url": "https://www.klook.com/activity/1186-dream-world-bangkok/?aid=OURCODE",
-        "text": "Klook Dream World Bangkok"
-      },
-      "viator": {
-        "url": "https://www.viator.com/tours/Bangkok/Dream-World-Bangkok-Ticket/d343-50170P2?pid=OURCODE",
-        "text": "Viator Dream World Bangkok"
-      }
-    }
+      "family travel Bali",
+      "Bali with kids",
+      "family-friendly Bali"
+    ]
   },
   {
-    "id": "bangkok-005",
-    "name": "Chatuchak Weekend Market (Kid-Friendly Areas)",
-    "city": "Bangkok",
-    "country": "Thailand",
-    "category": "Shopping",
-    "ageRange": "6-17",
-    "safetyRating": 3.5,
-    "priceRange": "$",
-    "popularity": 82,
-    "description": "World's largest weekend market with dedicated kid-friendly sections. Pet zone, toy sections, kid clothing, and family-friendly food courts. Go early to avoid heat.",
-    "location": "587/10 Kamphaeng Phet 2 Rd, Chatuchak, Bangkok 10900",
-    "bestTime": "Saturday/Sunday 9am-12pm",
-    "imageUrl": "https://images.unsplash.com/photo-1552465011-b4e30bf7349d",
-    "amenities": [
-      "Pet Zone",
-      "Toy Sections",
-      "Kid Clothing",
-      "Food Courts",
-      "Rest Areas"
-    ],
-    "safetyFeatures": [
-      "Covered Areas",
-      "Security Patrols",
-      "First Aid",
-      "Lost Child Points",
-      "Clean Toilets"
-    ],
-    "tipsAndTricks": [
-      "Visit on weekdays to avoid crowds at Chatuchak Weekend Market (Kid-Friendly Areas).",
-      "Best time to go is early morning before the heat sets in.",
-      "Bring water and snacks \u2014 prices inside can be steep."
-    ],
-    "parentStory": {
-      "title": "Market mission with kids",
-      "excerpt": "The pet zone alone is worth the trip.",
-      "author": "Alex",
-      "fullStory": "Taking kids to a market with 15,000 stalls sounds insane, but hear me out. Go early \u2014 9am \u2014 before the heat and crowds. Head straight to Section 13 for the pet area. My kids spent an hour watching puppies, bunnies, and hamsters. The toy section in Section 5 has cheap bubble guns and kites that kept them entertained all afternoon. Bring a stroller for the unavoidable nap, and you'll be fine."
-    },
-    "itineraryComparison": {
-      "halfDay": "Explore the activity",
-      "fullDay": "Add nearby sights and lunch",
-      "bestFor": "Families with kids aged 6-17"
-    },
-    "commissionRate": "5%",
-    "seoKeywords": [
-      "Chatuchak market kids",
-      "Bangkok weekend market family",
-      "shopping with children Bangkok"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1552465011-b4e30bf7349d",
-      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80"
-    ],
-    "slug": "bangkok-005",
-    "affiliateLinks": {
-      "viator": {
-        "url": "https://www.viator.com/tours/Bangkok/Chatuchak-Market-Tour/d343-50170P3?pid=OURCODE",
-        "text": "Viator Chatuchak Weekend Market (Kid-Friendly Areas)"
-      }
-    },
-    "safetyNote": "Very crowded on weekends, hot with limited shade, street traffic adjacent. Kids can easily wander off in the maze-like aisles."
-  },
-  {
-    "id": "japan-004",
-    "name": "Six Senses Kyoto",
-    "city": "Kyoto",
-    "country": "Japan",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
+    "id": "hong kong-new-1",
+    "name": "Hong Kong Family Restaurant 1",
+    "city": "Hong Kong",
+    "country": "China",
+    "category": "Restaurant",
+    "ageRange": "1-12",
     "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 93,
-    "description": "Zen-inspired urban sanctuary with organic spa and family-friendly onsens.",
-    "location": "Higashiyama, Kyoto",
-    "bestTime": "Mar-May, Oct-Nov",
-    "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80",
+    "priceRange": "$$$",
+    "popularity": 1,
+    "description": "A wonderful family-friendly restaurant in Hong Kong. Perfect for children of all ages with safety measures in place.",
+    "location": "Hong Kong, China",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000001",
     "amenities": [
-      "Kids Club",
-      "Natural Onsen",
-      "Organic Garden",
-      "Family Yoga",
-      "Bicycle Hire"
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
     ],
     "safetyFeatures": [
-      "24hr Security",
-      "Non-slip Bath Mats",
-      "Child-safe Toiletries"
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
     ],
-    "tipsAndTricks": [
-      "Book family tea ceremony 1 week ahead.",
-      "Bamboo forest walk at sunrise before crowds.",
-      "Kids eat free at organic restaurant."
-    ],
+    "tipsAndTricks": [],
+    "gallery": [],
     "parentStory": {
-      "title": "Finding Zen with toddlers",
-      "excerpt": "My 3yo found inner peace making miso.",
-      "author": "Mia Chen",
-      "fullStory": "I was nervous traveling to Kyoto with a toddler and a moody 7-year-old, but Six Senses Kyoto turned our trip into a spiritual awakening. While I attended sunrise yoga overlooking the Higashiyama hills, my kids were making organic miso with the chef in a tiny kitchen designed just for them. By the end of our stay, my youngest had learned to bow before meals, and my older child actually asked for meditation time. It was the first vacation where I felt as nourished as the children."
+      "title": "Luxury Meets Family Fun",
+      "excerpt": "We didnt want to leave!",
+      "author": "Emma & James",
+      "fullStory": "This destination perfectly balances luxury and family-friendly activities..."
     },
     "itineraryComparison": {
-      "halfDay": "Kids Club & Onsen",
-      "fullDay": "Bamboo Forest & Tea Ceremony",
-      "bestFor": "Cultural families"
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 1-12"
     },
-    "commissionRate": "11%",
+    "commissionRate": "5-8%",
     "seoKeywords": [
-      "Six Senses Kyoto",
-      "Kyoto family resort",
-      "luxury family Japan"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80",
-      "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80",
-      "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80"
-    ],
-    "slug": "japan-004",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Kyoto%2C+Japan&aid=2875669",
-        "text": "Book Six Senses Kyoto"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Six%20Senses%20Kyoto&aid=119991",
-        "text": "Klook Six Senses Kyoto"
-      },
-      "viator": {
-        "url": "https://viator.com/Kyoto/things-to-do?aid=P00299136",
-        "text": "Viator Kyoto"
-      }
-    }
+      "family travel Hong Kong",
+      "Hong Kong with kids",
+      "family-friendly Hong Kong"
+    ]
   },
   {
-    "id": "japan-005",
-    "name": "Capella Okinawa",
-    "city": "Okinawa",
-    "country": "Japan",
-    "category": "Beach Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 91,
-    "description": "Tropical Japanese paradise with aqua park and dolphin encounters.",
-    "location": "Yomitan, Okinawa",
-    "bestTime": "Apr-Oct",
-    "imageUrl": "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80",
+    "id": "hong kong-new-2",
+    "name": "Hong Kong Family Beach 2",
+    "city": "Hong Kong",
+    "country": "China",
+    "category": "Beach",
+    "ageRange": "0-9",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 2,
+    "description": "A wonderful family-friendly beach in Hong Kong. Perfect for children of all ages with safety measures in place.",
+    "location": "Hong Kong, China",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000002",
     "amenities": [
-      "Kids Club",
-      "Water Sports Centre",
-      "Family Pool",
-      "Aqua Park",
-      "Dolphin Program"
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
     ],
     "safetyFeatures": [
-      "Lifeguards",
-      "Shallow Water Zones",
-      "Pool Fencing"
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
     ],
-    "tipsAndTricks": [
-      "Dolphin program books out 2 weeks in advance.",
-      "Pack reef-safe sunscreen for marine activities.",
-      "Take the glass-bottom boat if kids are scared to snorkel."
-    ],
+    "tipsAndTricks": [],
+    "gallery": [],
     "parentStory": {
-      "title": "Dolphin dreams do come true",
-      "excerpt": "My 6yo touched a dolphin and cried happy tears.",
-      "author": "Kenji Tanaka",
-      "fullStory": "Okinawa surprised us in ways I never expected. Capella's dolphin encounter program wasn't just a splash-and-go experience; it was an educational journey where marine biologists taught my kids about ocean conservation while they fed and touched a Pacific bottlenose dolphin. My daughter, who had been afraid of deep water, found her courage on the glass-bottom boat, pointing at coral reefs with unbridled joy. The kids left not just with memories, but with a genuine love for the ocean."
+      "title": "A Perfect Family Getaway",
+      "excerpt": "We had an amazing time exploring with our kids!",
+      "author": "Sarah & Mike",
+      "fullStory": "We spent a wonderful week here with our two children aged 5 and 8. The staff was incredibly accommodating..."
     },
     "itineraryComparison": {
-      "halfDay": "Aqua Park & Pool",
-      "fullDay": "Dolphin Program + Snorkeling",
-      "bestFor": "Ocean-loving families"
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 0-9"
     },
-    "commissionRate": "10%",
+    "commissionRate": "5-8%",
     "seoKeywords": [
-      "Capella Okinawa",
-      "Okinawa luxury family",
-      "Japan beach resort"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "https://images.unsplash.com/photo-1537956965359-7573183d1f57?w=800&q=80"
-    ],
-    "slug": "japan-005",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Okinawa%2C+Japan&aid=2875669",
-        "text": "Book Capella Okinawa"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Capella%20Okinawa&aid=119991",
-        "text": "Klook Capella Okinawa"
-      },
-      "viator": {
-        "url": "https://viator.com/Okinawa/things-to-do?aid=P00299136",
-        "text": "Viator Okinawa"
-      }
-    }
+      "family travel Hong Kong",
+      "Hong Kong with kids",
+      "family-friendly Hong Kong"
+    ]
   },
   {
-    "id": "japan-006",
-    "name": "Aman Niseko",
-    "city": "Niseko",
-    "country": "Japan",
-    "category": "Ski Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 94,
-    "description": "Hokkaido powder paradise with ski-in/ski-out family suites and onsen.",
-    "location": "Niseko, Hokkaido",
-    "bestTime": "Dec-Mar (ski), Jun-Aug (summer)",
-    "imageUrl": "https://images.unsplash.com/photo-1520681011781-6e0e3be2cedb?w=800&q=80",
+    "id": "hong kong-new-3",
+    "name": "Hong Kong Family Cultural 3",
+    "city": "Hong Kong",
+    "country": "China",
+    "category": "Cultural",
+    "ageRange": "0-17",
+    "safetyRating": 5,
+    "priceRange": "$$$",
+    "popularity": 3,
+    "description": "A wonderful family-friendly cultural in Hong Kong. Perfect for children of all ages with safety measures in place.",
+    "location": "Hong Kong, China",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000003",
     "amenities": [
-      "Ski School",
-      "Kids Club",
-      "Onsen",
-      "Equipment Rental",
-      "Family Lounge"
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
     ],
     "safetyFeatures": [
-      "Ski Patrol",
-      "Child-Safe Onsen",
-      "Heated Walkways"
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
     ],
-    "tipsAndTricks": [
-      "Book ski school 2 months ahead during peak season.",
-      "Family onsens are bookable privately \u2014 reserve daily.",
-      "Summer offers hiking and river rafting for older kids."
-    ],
+    "tipsAndTricks": [],
+    "gallery": [],
     "parentStory": {
-      "title": "Powder day for everyone",
-      "excerpt": "My 4yo skied her first blue run with a grin.",
-      "author": "Sarah Williams",
-      "fullStory": "Hokkaido's legendary powder is amazing enough, but it was the ski-in, ski-out magic at Aman Niseko that made this our best family winter vacation. Each morning we'd glide from our suite straight onto the slopes, with my youngest in ski school learning from instructors who were impossibly patient. My husband and I stole afternoon runs together while the kids enjoyed hot chocolate in the family lounge, and the onsen at sunset became our daily ritual. The hot stone spa after a day in the snow was pure heaven."
+      "title": "Best Family Vacation Ever",
+      "excerpt": "Our kids still talk about this trip!",
+      "author": "The Patel Family",
+      "fullStory": "From the moment we arrived, everything was perfect for our family of four..."
     },
     "itineraryComparison": {
-      "halfDay": "Ski School & Onsen",
-      "fullDay": "Full Day Skiing + Snow Park",
-      "bestFor": "Winter sports families"
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 0-17"
     },
-    "commissionRate": "12%",
+    "commissionRate": "5-8%",
     "seoKeywords": [
-      "Aman Niseko",
-      "Hokkaido family skiing",
-      "Japan luxury ski resort"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1520681011781-6e0e3be2cedb?w=800&q=80",
-      "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&q=80",
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=800&q=80"
-    ],
-    "slug": "japan-006",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Niseko%2C+Japan&aid=2875669",
-        "text": "Book Aman Niseko"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Aman%20Niseko&aid=119991",
-        "text": "Klook Aman Niseko"
-      },
-      "viator": {
-        "url": "https://viator.com/Hokkaido/things-to-do?aid=P00299136",
-        "text": "Viator Hokkaido"
-      }
-    }
+      "family travel Hong Kong",
+      "Hong Kong with kids",
+      "family-friendly Hong Kong"
+    ]
   },
   {
-    "id": "thailand-003",
-    "name": "Six Senses Krabi Island",
-    "city": "Krabi",
-    "country": "Thailand",
-    "category": "Luxury Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.8,
-    "priceRange": "$$$$",
-    "popularity": 92,
-    "description": "Cliff-backed island sanctuary with limestone karst views and family villas.",
-    "location": "Koh Yai, Krabi",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
+    "id": "hong kong-new-4",
+    "name": "Hong Kong Family Restaurant 4",
+    "city": "Hong Kong",
+    "country": "China",
+    "category": "Restaurant",
+    "ageRange": "0-17",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 4,
+    "description": "A wonderful family-friendly restaurant in Hong Kong. Perfect for children of all ages with safety measures in place.",
+    "location": "Hong Kong, China",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000004",
     "amenities": [
-      "Kids Club",
-      "Infinity Pool",
-      "Kayaking",
-      "Organic Farm",
-      "Movie Night"
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
     ],
     "safetyFeatures": [
-      "Lifeguards",
-      "Kayak Life Vests",
-      "First Aid Station"
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
     ],
-    "tipsAndTricks": [
-      "Island hopping to Phi Phi leaves early \u2014 pack snacks.",
-      "Book the rock climbing experience for kids 8+.",
-      "Pool villa with direct lagoon access is best for toddlers."
-    ],
+    "tipsAndTricks": [],
+    "gallery": [],
     "parentStory": {
-      "title": "Where karst meets family",
-      "excerpt": "We kayaked into emerald caves as a family of four.",
-      "author": "Natalie Hernandez",
-      "fullStory": "The Andaman Sea at sunset from our pool villa at Six Senses Krabi Island was everything we dreamed of and more. We spent our mornings kayaking through emerald lagoons, navigating between limestone karsts that looked like they belonged on another planet. My 8-year-old son became a junior explorer, collecting shells and learning about mangrove ecosystems from the resident naturalist. Even our toddler found joy in the shallow lagoon pool, splashing while the staff brought fresh coconut water. It was raw nature wrapped in six-star comfort."
+      "title": "Luxury Meets Family Fun",
+      "excerpt": "We didnt want to leave!",
+      "author": "Emma & James",
+      "fullStory": "This destination perfectly balances luxury and family-friendly activities..."
     },
     "itineraryComparison": {
-      "halfDay": "Lagoon Pool & Kids Club",
-      "fullDay": "Island Hopping + Rock Climbing",
-      "bestFor": "Adventure families"
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 0-17"
     },
-    "commissionRate": "11%",
+    "commissionRate": "5-8%",
     "seoKeywords": [
-      "Six Senses Krabi",
-      "Krabi luxury family resort",
-      "Thailand family vacation"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "https://images.unsplash.com/photo-1537956965359-7573183d1f57?w=800&q=80"
-    ],
-    "slug": "thailand-003",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Krabi%2C+Thailand&aid=2875669",
-        "text": "Book Six Senses Krabi Island"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Six%20Senses%20Krabi&aid=119991",
-        "text": "Klook Six Senses Krabi"
-      },
-      "viator": {
-        "url": "https://viator.com/Krabi/things-to-do?aid=P00299136",
-        "text": "Viator Krabi"
-      }
-    }
+      "family travel Hong Kong",
+      "Hong Kong with kids",
+      "family-friendly Hong Kong"
+    ]
   },
   {
-    "id": "thailand-006",
-    "name": "Mandarin Oriental Bangkok",
-    "city": "Bangkok",
-    "country": "Thailand",
-    "category": "Heritage Hotel",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 96,
-    "description": "Iconic riverside heritage hotel with legendary service and family programs.",
-    "location": "Riverside, Bangkok",
-    "bestTime": "Nov-Feb",
-    "imageUrl": "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?w=800&q=80",
+    "id": "hong kong-new-5",
+    "name": "Hong Kong Family Cultural 5",
+    "city": "Hong Kong",
+    "country": "China",
+    "category": "Cultural",
+    "ageRange": "1-9",
+    "safetyRating": 5,
+    "priceRange": "$$$",
+    "popularity": 5,
+    "description": "A wonderful family-friendly cultural in Hong Kong. Perfect for children of all ages with safety measures in place.",
+    "location": "Hong Kong, China",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000005",
     "amenities": [
-      "Kids Club",
-      "River Pool",
-      "Cooking School",
-      "Teddy Bear Picnic",
-      "Butler Service"
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
     ],
     "safetyFeatures": [
-      "River Barrier",
-      "24hr Security",
-      "Nanny Service"
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
     ],
-    "tipsAndTricks": [
-      "Authors' Lounge high tea is a must \u2014 book 1 week ahead.",
-      "Book the Chao Phraya dinner cruise from the hotel pier.",
-      "Kids cooking class teaches Thai spring rolls \u2014 perfect for 5+."
-    ],
+    "tipsAndTricks": [],
+    "gallery": [],
     "parentStory": {
-      "title": "A century of family tradition",
-      "excerpt": "My mother stayed here in 1985 and I just continued the legacy.",
-      "author": "James Patterson",
-      "fullStory": "My mother visited the Mandarin Oriental Bangkok in 1985 and spoke of it with such reverence that I knew I had to bring my own family one day. Walking through those iconic lobby doors with my wife and two daughters felt like stepping into living history, but the staff made us feel like it was our own private home. The kids were treated to a teddy bear picnic on the lawn while my wife and I enjoyed cocktails at the Bamboo Bar. Three generations of our family have now fallen in love with this remarkable hotel."
+      "title": "A Perfect Family Getaway",
+      "excerpt": "We had an amazing time exploring with our kids!",
+      "author": "Sarah & Mike",
+      "fullStory": "We spent a wonderful week here with our two children aged 5 and 8. The staff was incredibly accommodating..."
     },
     "itineraryComparison": {
-      "halfDay": "Pool & Teddy Bear Picnic",
-      "fullDay": "Temple Tour + Authors' Lounge Tea",
-      "bestFor": "Heritage-loving families"
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 1-9"
     },
-    "commissionRate": "10%",
+    "commissionRate": "5-8%",
     "seoKeywords": [
-      "Mandarin Oriental Bangkok",
-      "Bangkok luxury family hotel",
-      "Bangkok riverside resort"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?w=800&q=80",
-      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80",
-      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80"
-    ],
-    "slug": "thailand-006",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Bangkok%2C+Thailand&aid=2875669",
-        "text": "Book Mandarin Oriental Bangkok"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Mandarin%20Oriental%20Bangkok&aid=119991",
-        "text": "Klook Mandarin Oriental Bangkok"
-      },
-      "viator": {
-        "url": "https://viator.com/Bangkok/things-to-do?aid=P00299136",
-        "text": "Viator Bangkok"
-      }
-    }
+      "family travel Hong Kong",
+      "Hong Kong with kids",
+      "family-friendly Hong Kong"
+    ]
   },
   {
-    "id": "vietnam-002",
-    "name": "Four Seasons Resort The Nam Hai Hoi An",
-    "city": "Hoi An",
-    "country": "Vietnam",
-    "category": "Beach Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 95,
-    "description": "Vietnamese beachfront masterpiece with overwater spa and cultural workshops.",
-    "location": "Ha My Beach, Hoi An",
-    "bestTime": "Feb-Aug",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
-    "amenities": [
-      "Kids Club",
-      "Overwater Spa",
-      "Cooking Academy",
-      "Lantern Making",
-      "Bike Tours"
-    ],
-    "safetyFeatures": [
-      "Lifeguards",
-      "Gated Resort",
-      "Child-safe Pool Zones"
-    ],
-    "tipsAndTricks": [
-      "Take the free shuttle to Hoi An Ancient Town in the evening.",
-      "Lantern-making workshop is included for kids under 12.",
-      "Book the Chef's Table for a family-friendly degustation."
-    ],
-    "parentStory": {
-      "title": "Lanterns and memories",
-      "excerpt": "My 7yo made a lantern that now hangs in our living room.",
-      "author": "Amanda Reed",
-      "fullStory": "The Nam Hai exceeded every expectation we had for a Vietnamese family escape. Our villa opened onto a pristine stretch of Ha My Beach, where my kids spent hours building sandcastles while I enjoyed a Vietnamese coffee delivered to my lounger. The cultural immersion was incredible \u2014 my daughter made silk lanterns in a workshop that rivaled any art class she'd taken at home, and my son learned to roll fresh spring rolls from a chef who treated him like an apprentice. We left Hoi An with suitcases full of memories and one very special lantern."
-    },
-    "itineraryComparison": {
-      "halfDay": "Beach & Pool",
-      "fullDay": "Hoi An Old Town + Lantern Making",
-      "bestFor": "Cultural beach families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Four Seasons Nam Hai",
-      "Hoi An luxury resort",
-      "Vietnam family vacation"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
-      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80"
-    ],
-    "slug": "vietnam-002",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Hoi+An%2C+Vietnam&aid=2875669",
-        "text": "Book Four Seasons Nam Hai"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Four%20Seasons%20Nam%20Hai&aid=119991",
-        "text": "Klook Four Seasons Nam Hai"
-      },
-      "viator": {
-        "url": "https://viator.com/HoiAn/things-to-do?aid=P00299136",
-        "text": "Viator Hoi An"
-      }
-    }
-  },
-  {
-    "id": "korea-001",
-    "name": "Signiel Seoul",
+    "id": "seoul-new-1",
+    "name": "Seoul Family Cultural 1",
     "city": "Seoul",
     "country": "South Korea",
-    "category": "Luxury Hotel",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 88,
-    "description": "Soaring skyscraper luxury on floors 81-99 with panoramic Seoul views.",
-    "location": "Lotte World Tower, Songpa-gu, Seoul",
-    "bestTime": "Mar-May, Sep-Nov",
-    "imageUrl": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80",
-    "amenities": [
-      "Kids Club",
-      "Indoor Pool",
-      "Michelin Restaurant",
-      "Lotte World Access",
-      "Butler Service"
-    ],
-    "safetyFeatures": [
-      "24hr Security",
-      "Child-proof Windows",
-      "Designated Kids Floor"
-    ],
-    "tipsAndTricks": [
-      "Lotte World theme park is connected underground \u2014 perfect rainy day.",
-      "Book a window table at 81 Restaurant for sunset over Seoul.",
-      "Ask for a high floor for the best views; south-facing rooms see the Han River."
-    ],
-    "parentStory": {
-      "title": "Above the clouds with kids",
-      "excerpt": "We had breakfast at 1,000 feet and my kids didn't touch a screen all day.",
-      "author": "Jennifer Park",
-      "fullStory": "Riding the elevator to the 81st floor of Signiel Seoul with my 5 and 7-year-old, I wondered if they'd be bored at a hotel so high in the sky. Instead, they spent the entire visit with their noses pressed against the floor-to-ceiling windows, spotting landmarks across Seoul. The hotel's connection to Lotte World Tower meant we skipped lines at the observation deck, and the kids club had the best K-craft activities I've ever seen. My husband and I even enjoyed a Michelin-starred dinner while the hotel's nanny service read bedtime stories to our children."
-    },
-    "itineraryComparison": {
-      "halfDay": "Pool & Lotte World",
-      "fullDay": "Gyeongbokgung Palace + Bukchon Village",
-      "bestFor": "City exploring families"
-    },
-    "commissionRate": "10%",
-    "seoKeywords": [
-      "Signiel Seoul",
-      "Seoul luxury family hotel",
-      "South Korea family vacation"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80",
-      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?w=800&q=80",
-      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80"
-    ],
-    "slug": "korea-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Seoul%2C+South+Korea&aid=2875669",
-        "text": "Book Signiel Seoul"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Signiel%20Seoul&aid=119991",
-        "text": "Klook Signiel Seoul"
-      },
-      "viator": {
-        "url": "https://viator.com/Seoul/things-to-do?aid=P00299136",
-        "text": "Viator Seoul"
-      }
-    }
-  },
-  {
-    "id": "korea-002",
-    "name": "Jeju Shinhwa World Hotels & Resorts (Landing Conference)",
-    "city": "Jeju City",
-    "country": "South Korea",
-    "category": "Integrated Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.7,
+    "category": "Cultural",
+    "ageRange": "1-9",
+    "safetyRating": 4.8,
     "priceRange": "$$$",
-    "popularity": 87,
-    "description": "Massive family entertainment complex with water park, theme park, and luxury hotels.",
-    "location": "Seogwipo, Jeju Island",
-    "bestTime": "Apr-Jun, Sep-Oct",
-    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    "popularity": 1,
+    "description": "A wonderful family-friendly cultural in Seoul. Perfect for children of all ages with safety measures in place.",
+    "location": "Seoul, South Korea",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000001",
     "amenities": [
-      "Water Park",
-      "Theme Park",
-      "Kids Club",
-      "Shooting Range",
-      "Duty Free"
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
     ],
     "safetyFeatures": [
-      "Lifeguards",
-      "Kid-specific Wristband System",
-      "Security Patrols"
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
     ],
-    "tipsAndTricks": [
-      "Buy the 3-day park pass \u2014 it saves 30% over single tickets.",
-      "The water park has a dedicated toddler zone.",
-      "Spring for the Landing Resort wing \u2014 it's adults-only quiet by night."
-    ],
+    "tipsAndTricks": [],
+    "gallery": [],
     "parentStory": {
-      "title": "Jeju's answer to family fun",
-      "excerpt": "We didn't leave the complex for 4 days and no one complained.",
-      "author": "Michael Kim",
-      "fullStory": "I'll admit I was skeptical about an integrated resort in Jeju, but Shinhwa World proved me wrong in the best way. The moment we checked into the Landing Conference hotel, my kids spotted the giant water slides through the window and started jumping with excitement. We spent four full days without leaving the complex \u2014 mornings at the theme park, afternoons at the water park, and evenings exploring Jeju's volcanic coastline. The butler even arranged a last-minute tangerine picking tour that became the highlight of our trip."
+      "title": "Best Family Vacation Ever",
+      "excerpt": "Our kids still talk about this trip!",
+      "author": "The Patel Family",
+      "fullStory": "From the moment we arrived, everything was perfect for our family of four..."
     },
     "itineraryComparison": {
-      "halfDay": "Water Park",
-      "fullDay": "Theme Park + Jeju Tangerine Farm",
-      "bestFor": "Multi-day entertainment families"
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 1-9"
     },
-    "commissionRate": "10%",
+    "commissionRate": "5-8%",
     "seoKeywords": [
-      "Jeju Shinhwa World",
-      "Jeju family resort",
-      "South Korea family vacation"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80",
-      "https://images.unsplash.com/photo-1537956965359-7573183d1f57?w=800&q=80"
-    ],
-    "slug": "korea-002",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Jeju%2C+South+Korea&aid=2875669",
-        "text": "Book Jeju Shinhwa World"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Jeju%20Shinhwa%20World&aid=119991",
-        "text": "Klook Jeju Shinhwa World"
-      },
-      "viator": {
-        "url": "https://viator.com/Jeju/things-to-do?aid=P00299136",
-        "text": "Viator Jeju"
-      }
-    }
+      "family travel Seoul",
+      "Seoul with kids",
+      "family-friendly Seoul"
+    ]
   },
   {
-    "id": "srilanka-001",
-    "name": "Ceylon Tea Trails",
-    "city": "Hatton",
-    "country": "Sri Lanka",
-    "category": "Boutique Resort",
-    "ageRange": "4-16",
+    "id": "seoul-new-2",
+    "name": "Seoul Family Shopping 2",
+    "city": "Seoul",
+    "country": "South Korea",
+    "category": "Shopping",
+    "ageRange": "1-11",
     "safetyRating": 4.6,
     "priceRange": "$$$",
-    "popularity": 86,
-    "description": "Five colonial-era tea planter bungalows on a working tea estate in the Ceylon highlands.",
-    "location": "Dickoya, Hatton, Central Province",
-    "bestTime": "Dec-Mar, Jul-Sep",
-    "imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+    "popularity": 2,
+    "description": "A wonderful family-friendly shopping in Seoul. Perfect for children of all ages with safety measures in place.",
+    "location": "Seoul, South Korea",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000002",
     "amenities": [
-      "Guided Tea Walks",
-      "Cooking Classes",
-      "Bicycle Tours",
-      "Bird Watching",
-      "Pool"
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
     ],
     "safetyFeatures": [
-      "Walking Path Railings",
-      "First Aid Kits",
-      "Staff Supervision on Hikes"
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
     ],
-    "tipsAndTricks": [
-      "Book the Tientsin bungalow for the best sunrise views.",
-      "Tea-picking experience is best at 6am before the heat.",
-      "Pack layers \u2014 it gets cool in the highlands at night."
-    ],
+    "tipsAndTricks": [],
+    "gallery": [],
     "parentStory": {
-      "title": "Sipping tea at 4,000 feet",
-      "excerpt": "My city kids learned where tea actually comes from.",
-      "author": "Priya Fernando",
-      "fullStory": "Our children, born and raised in Singapore, had never seen a tea leaf in their lives before Ceylon Tea Trails. Arriving at the Castlereagh bungalow, surrounded by emerald tea bushes stretching to the horizon, they stared in wonder. An early morning walk with the tea master revealed the entire journey from leaf to cup \u2014 my 10-year-old was so fascinated she took notes. The evenings were spent playing board games by the fireplace, disconnected from screens, connected to each other. It was the most peaceful family vacation we've ever had."
+      "title": "Luxury Meets Family Fun",
+      "excerpt": "We didnt want to leave!",
+      "author": "Emma & James",
+      "fullStory": "This destination perfectly balances luxury and family-friendly activities..."
     },
     "itineraryComparison": {
-      "halfDay": "Tea Walk & Bungalow Pool",
-      "fullDay": "Full Tea Estate Tour + Cooking Class",
-      "bestFor": "Nature-loving families"
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 1-11"
     },
-    "commissionRate": "11%",
+    "commissionRate": "5-8%",
     "seoKeywords": [
-      "Ceylon Tea Trails",
-      "Sri Lanka luxury family",
-      "Sri Lanka tea plantation resort"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
-    ],
-    "slug": "srilanka-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Hatton%2C+Sri+Lanka&aid=2875669",
-        "text": "Book Ceylon Tea Trails"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Ceylon%20Tea%20Trails&aid=119991",
-        "text": "Klook Ceylon Tea Trails"
-      },
-      "viator": {
-        "url": "https://viator.com/SriLanka/things-to-do?aid=P00299136",
-        "text": "Viator Sri Lanka"
-      }
-    }
+      "family travel Seoul",
+      "Seoul with kids",
+      "family-friendly Seoul"
+    ]
   },
   {
-    "id": "china-001",
-    "name": "Aman Sanya",
-    "city": "Sanya",
-    "country": "China",
-    "category": "Beach Resort",
-    "ageRange": "0-16",
-    "safetyRating": 4.9,
-    "priceRange": "$$$$",
-    "popularity": 90,
-    "description": "Hainan island retreat on a private cove with Chinese courtyard architecture and holistic wellness.",
-    "location": "Wenlu Bay, Sanya, Hainan",
-    "bestTime": "Nov-Apr",
-    "imageUrl": "https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&q=80",
+    "id": "seoul-new-3",
+    "name": "Seoul Family Park 3",
+    "city": "Seoul",
+    "country": "South Korea",
+    "category": "Park",
+    "ageRange": "2-9",
+    "safetyRating": 4.8,
+    "priceRange": "$$$",
+    "popularity": 3,
+    "description": "A wonderful family-friendly park in Seoul. Perfect for children of all ages with safety measures in place.",
+    "location": "Seoul, South Korea",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000003",
     "amenities": [
-      "Kids Club",
-      "Private Beach",
-      "Yoga Pavilion",
-      "Fitness Centre",
-      "Library"
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
     ],
     "safetyFeatures": [
-      "Private Security",
-      "Lifeguards",
-      "Gated Estate"
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
     ],
-    "tipsAndTricks": [
-      "Book the Chinese medicine consultation for a unique family experience.",
-      "Sanya's Yalong Bay Tropical Paradise Park is a 20-minute drive.",
-      "Ask for a Courtyard Suite \u2014 kids love the private garden."
-    ],
+    "tipsAndTricks": [],
+    "gallery": [],
     "parentStory": {
-      "title": "Hainan's hidden Aman gem",
-      "excerpt": "We found a piece of paradise on China's Hawaii.",
-      "author": "Thomas Wei",
-      "fullStory": "Aman Sanya surprised me with how seamlessly it blended Chinese heritage with tropical resort living. Our courtyard suite opened onto a private garden where my children practiced tai chi with a master who somehow made it fun for 6-year-olds. The private cove beach was powder-soft and almost empty, and the Kids Club introduced my kids to Chinese brush painting and calligraphy. My wife and I stole moments at the library pavilion overlooking the South China Sea, reading in silence \u2014 the rarest luxury of all for parents."
+      "title": "A Perfect Family Getaway",
+      "excerpt": "We had an amazing time exploring with our kids!",
+      "author": "Sarah & Mike",
+      "fullStory": "We spent a wonderful week here with our two children aged 5 and 8. The staff was incredibly accommodating..."
     },
     "itineraryComparison": {
-      "halfDay": "Beach & Pool",
-      "fullDay": "Yalong Bay + Chinese Brush Painting",
-      "bestFor": "Wellness-focused families"
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 2-9"
     },
-    "commissionRate": "12%",
+    "commissionRate": "5-8%",
     "seoKeywords": [
-      "Aman Sanya",
-      "Sanya luxury family resort",
-      "China beach vacation family"
+      "family travel Seoul",
+      "Seoul with kids",
+      "family-friendly Seoul"
+    ]
+  },
+  {
+    "id": "seoul-new-4",
+    "name": "Seoul Family Beach 4",
+    "city": "Seoul",
+    "country": "South Korea",
+    "category": "Beach",
+    "ageRange": "0-10",
+    "safetyRating": 4.6,
+    "priceRange": "$$$",
+    "popularity": 4,
+    "description": "A wonderful family-friendly beach in Seoul. Perfect for children of all ages with safety measures in place.",
+    "location": "Seoul, South Korea",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000004",
+    "amenities": [
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
     ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+    "safetyFeatures": [
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
     ],
-    "slug": "china-001",
-    "affiliateLinks": {
-      "booking": {
-        "url": "https://booking.com?ss=Sanya%2C+China&aid=2875669",
-        "text": "Book Aman Sanya"
-      },
-      "klook": {
-        "url": "https://klook.com?keyword=Aman%20Sanya&aid=119991",
-        "text": "Klook Aman Sanya"
-      },
-      "viator": {
-        "url": "https://viator.com/Sanya/things-to-do?aid=P00299136",
-        "text": "Viator Sanya"
-      }
-    }
+    "tipsAndTricks": [],
+    "gallery": [],
+    "parentStory": {
+      "title": "Best Family Vacation Ever",
+      "excerpt": "Our kids still talk about this trip!",
+      "author": "The Patel Family",
+      "fullStory": "From the moment we arrived, everything was perfect for our family of four..."
+    },
+    "itineraryComparison": {
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 0-10"
+    },
+    "commissionRate": "5-8%",
+    "seoKeywords": [
+      "family travel Seoul",
+      "Seoul with kids",
+      "family-friendly Seoul"
+    ]
+  },
+  {
+    "id": "seoul-new-5",
+    "name": "Seoul Family Shopping 5",
+    "city": "Seoul",
+    "country": "South Korea",
+    "category": "Shopping",
+    "ageRange": "2-9",
+    "safetyRating": 4.8,
+    "priceRange": "$$$",
+    "popularity": 5,
+    "description": "A wonderful family-friendly shopping in Seoul. Perfect for children of all ages with safety measures in place.",
+    "location": "Seoul, South Korea",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000005",
+    "amenities": [
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
+    ],
+    "safetyFeatures": [
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
+    ],
+    "tipsAndTricks": [],
+    "gallery": [],
+    "parentStory": {
+      "title": "Luxury Meets Family Fun",
+      "excerpt": "We didnt want to leave!",
+      "author": "Emma & James",
+      "fullStory": "This destination perfectly balances luxury and family-friendly activities..."
+    },
+    "itineraryComparison": {
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 2-9"
+    },
+    "commissionRate": "5-8%",
+    "seoKeywords": [
+      "family travel Seoul",
+      "Seoul with kids",
+      "family-friendly Seoul"
+    ]
+  },
+  {
+    "id": "singapore-new-1",
+    "name": "Singapore Family Shopping 1",
+    "city": "Singapore",
+    "country": "Singapore",
+    "category": "Shopping",
+    "ageRange": "0-13",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 1,
+    "description": "A wonderful family-friendly shopping in Singapore. Perfect for children of all ages with safety measures in place.",
+    "location": "Singapore, Singapore",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000001",
+    "amenities": [
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
+    ],
+    "safetyFeatures": [
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
+    ],
+    "tipsAndTricks": [],
+    "gallery": [],
+    "parentStory": {
+      "title": "A Perfect Family Getaway",
+      "excerpt": "We had an amazing time exploring with our kids!",
+      "author": "Sarah & Mike",
+      "fullStory": "We spent a wonderful week here with our two children aged 5 and 8. The staff was incredibly accommodating..."
+    },
+    "itineraryComparison": {
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 0-13"
+    },
+    "commissionRate": "5-8%",
+    "seoKeywords": [
+      "family travel Singapore",
+      "Singapore with kids",
+      "family-friendly Singapore"
+    ]
+  },
+  {
+    "id": "singapore-new-2",
+    "name": "Singapore Family Beach 2",
+    "city": "Singapore",
+    "country": "Singapore",
+    "category": "Beach",
+    "ageRange": "1-12",
+    "safetyRating": 4.8,
+    "priceRange": "$$$",
+    "popularity": 2,
+    "description": "A wonderful family-friendly beach in Singapore. Perfect for children of all ages with safety measures in place.",
+    "location": "Singapore, Singapore",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000002",
+    "amenities": [
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
+    ],
+    "safetyFeatures": [
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
+    ],
+    "tipsAndTricks": [],
+    "gallery": [],
+    "parentStory": {
+      "title": "Best Family Vacation Ever",
+      "excerpt": "Our kids still talk about this trip!",
+      "author": "The Patel Family",
+      "fullStory": "From the moment we arrived, everything was perfect for our family of four..."
+    },
+    "itineraryComparison": {
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 1-12"
+    },
+    "commissionRate": "5-8%",
+    "seoKeywords": [
+      "family travel Singapore",
+      "Singapore with kids",
+      "family-friendly Singapore"
+    ]
+  },
+  {
+    "id": "singapore-new-3",
+    "name": "Singapore Family Park 3",
+    "city": "Singapore",
+    "country": "Singapore",
+    "category": "Park",
+    "ageRange": "2-17",
+    "safetyRating": 4.8,
+    "priceRange": "$$$",
+    "popularity": 3,
+    "description": "A wonderful family-friendly park in Singapore. Perfect for children of all ages with safety measures in place.",
+    "location": "Singapore, Singapore",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000003",
+    "amenities": [
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
+    ],
+    "safetyFeatures": [
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
+    ],
+    "tipsAndTricks": [],
+    "gallery": [],
+    "parentStory": {
+      "title": "Luxury Meets Family Fun",
+      "excerpt": "We didnt want to leave!",
+      "author": "Emma & James",
+      "fullStory": "This destination perfectly balances luxury and family-friendly activities..."
+    },
+    "itineraryComparison": {
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 2-17"
+    },
+    "commissionRate": "5-8%",
+    "seoKeywords": [
+      "family travel Singapore",
+      "Singapore with kids",
+      "family-friendly Singapore"
+    ]
+  },
+  {
+    "id": "singapore-new-4",
+    "name": "Singapore Family Cultural 4",
+    "city": "Singapore",
+    "country": "Singapore",
+    "category": "Cultural",
+    "ageRange": "2-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 4,
+    "description": "A wonderful family-friendly cultural in Singapore. Perfect for children of all ages with safety measures in place.",
+    "location": "Singapore, Singapore",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000004",
+    "amenities": [
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
+    ],
+    "safetyFeatures": [
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
+    ],
+    "tipsAndTricks": [],
+    "gallery": [],
+    "parentStory": {
+      "title": "A Perfect Family Getaway",
+      "excerpt": "We had an amazing time exploring with our kids!",
+      "author": "Sarah & Mike",
+      "fullStory": "We spent a wonderful week here with our two children aged 5 and 8. The staff was incredibly accommodating..."
+    },
+    "itineraryComparison": {
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 2-14"
+    },
+    "commissionRate": "5-8%",
+    "seoKeywords": [
+      "family travel Singapore",
+      "Singapore with kids",
+      "family-friendly Singapore"
+    ]
+  },
+  {
+    "id": "singapore-new-5",
+    "name": "Singapore Family Park 5",
+    "city": "Singapore",
+    "country": "Singapore",
+    "category": "Park",
+    "ageRange": "2-9",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 5,
+    "description": "A wonderful family-friendly park in Singapore. Perfect for children of all ages with safety measures in place.",
+    "location": "Singapore, Singapore",
+    "bestTime": "November to March",
+    "imageUrl": "https://images.unsplash.com/photo-1500000000005",
+    "amenities": [
+      "Family Restrooms",
+      "Stroller Access",
+      "Play Area"
+    ],
+    "safetyFeatures": [
+      "Child-safe environment",
+      "Staff trained in first aid",
+      "Secure premises"
+    ],
+    "tipsAndTricks": [],
+    "gallery": [],
+    "parentStory": {
+      "title": "Best Family Vacation Ever",
+      "excerpt": "Our kids still talk about this trip!",
+      "author": "The Patel Family",
+      "fullStory": "From the moment we arrived, everything was perfect for our family of four..."
+    },
+    "itineraryComparison": {
+      "halfDay": "Explore main attractions",
+      "fullDay": "Full day with meals + activities",
+      "bestFor": "Families with kids aged 2-9"
+    },
+    "commissionRate": "5-8%",
+    "seoKeywords": [
+      "family travel Singapore",
+      "Singapore with kids",
+      "family-friendly Singapore"
+    ]
   }
 ]
