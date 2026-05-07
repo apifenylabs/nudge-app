@@ -1,44 +1,23 @@
-import fs from 'fs';
-import path from 'path';
+// Blog data loaded from generated-blog-data.ts (static import — works on Vercel serverless)
+// To regenerate: run `npm run generate-blog-data`
 
-export interface BlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  author: string;
-  tags: string[];
-  readingTime: string;
-  content: string;
-  relatedStations: string[];
-}
+import allPosts, { BlogPost } from './generated-blog-data';
+
+export type { BlogPost };
 
 export function getAllPosts(): BlogPost[] {
-  const blogDir = path.join(process.cwd(), 'data', 'blog');
-  try {
-    const files = fs.readdirSync(blogDir).filter(f => f.endsWith('.json'));
-    const posts: BlogPost[] = files.map(file => {
-      const raw = fs.readFileSync(path.join(blogDir, file), 'utf-8');
-      return JSON.parse(raw);
-    });
-    posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    return posts;
-  } catch {
-    return [];
-  }
+  return allPosts;
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {
-  const posts = getAllPosts();
-  return posts.find(p => p.slug === slug) || null;
+  return allPosts.find(p => p.slug === slug) || null;
 }
 
 export function getRelatedPosts(currentSlug: string, limit: number = 3): BlogPost[] {
-  const posts = getAllPosts();
-  const current = posts.find(p => p.slug === currentSlug);
-  if (!current) return posts.filter(p => p.slug !== currentSlug).slice(0, limit);
+  const current = allPosts.find(p => p.slug === currentSlug);
+  if (!current) return allPosts.filter(p => p.slug !== currentSlug).slice(0, limit);
   const currentTags = current.tags.map(t => t.toLowerCase());
-  const scored = posts
+  const scored = allPosts
     .filter(p => p.slug !== currentSlug)
     .map(p => {
       const overlap = p.tags.filter(t => currentTags.includes(t.toLowerCase())).length;

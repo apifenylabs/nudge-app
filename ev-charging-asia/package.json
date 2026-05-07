@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate-blog-data && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-blog-data": "python3 scripts/generate-blog-data.py"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.0",
