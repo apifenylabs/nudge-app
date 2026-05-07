@@ -1,67 +1,386 @@
-# RULES.yaml - OpenClaw Execution Rules (Source of Truth)
+# ═══════════════════════════════════════════════════════════════
+# RULES.yaml — STRICT LLM ROUTING + AUTONOMY (LOCKED May 5 2026)
+# ═══════════════════════════════════════════════════════════════
+# DO NOT MODIFY without explicit human approval from Wosobu.
+# This is the FINAL, ZERO-AMBIGUITY, ZERO-GUESSING routing strategy.
+# FAILURE TO FOLLOW THESE RULES EXACTLY = SYSTEM DOWNTIME = UNACCEPTABLE.
+# All agents MUST follow the decision tree exactly, every single time.
+
+# ═══════════════════════════════════════════════════════════════
+# STRICT LLM HIERARCHY — Source of Truth (LOCKED May 5 2026)
+# ═══════════════════════════════════════════════════════════════
+# Kid analogy:
+#   - Easy (2+2 math) → Ollama local (fastest available)
+#   - Research → Gemini 2.5 Flash (free tier) ONLY, else Ollama
+#   - 80%+ of work (coding, writing, product) → DeepSeek-chat
+#   - Very high-stakes review → DeepSeek first, then Sonnet (only after 2 failures)
+#   - Final production approval → Opus ONLY with human approval
+#
+# CRITICAL RULES (NEVER BREAK):
+#   1. phi3:latest is an OLLAMA LOCAL MODEL, NOT a DeepSeek cloud model.
+#      All local models must be prefixed with "ollama:" to prevent cloud routing.
+#   2. If Gemini returns ANY error (429, quota, timeout) → IMMEDIATELY fallback to Ollama.
+#      Do NOT retry Gemini, do NOT cascade to Claude.
+#   3. Never attempt Claude Sonnet/Opus unless step 4 or step 5 conditions are explicitly met.
+#   4. On ANY model error → immediately try next safe model, do NOT stall or retry same model.
+#   5. Default/Safe model is DeepSeek-chat for everything except simple local tasks and research.
+#
+# CRITICAL LESSON FROM MAY 4 DISASTER:
+#   Gemini free tier exhausted → phi3 misrouted to cloud DeepSeek API → auth cooldown blocked
+#   DeepSeek-chat → Anthropic billing blocked → ALL MODELS FAILED.
+#   Root causes: (1) local models sent to cloud, (2) fallback chain put DeepSeek-chat too late,
+#   (3) no hard separation between local and cloud routing.
+#   FIXED: prefix all local models with ollama:, separate cloud and local fallback chains.
+# ═══════════════════════════════════════════════════════════════
 
 model_routing:
-  default: "deepseek-chat"                     # Cheapest high-quality model
-  fallback_chain:
-    - "local:qwen2.5-coder"                    # Local first for routine tasks
-    - "local:deepseek-coder-v2"                # Local fallback for coding
-    - "deepseek-chat"
-    - "kimi"
-    - "gemini-2.5-flash"
-    - "claude-sonnet-4.6"                        # Only with explicit user approval
+  aliases:
+    # ─── LOCAL OLLAMA MODELS (prefix ollama: = route to localhost:11434, NEVER cloud) ───
+    ollama_primary: "ollama:qwen3-coder:latest"    # Best local coder (pull in progress)
+    ollama_gemma4: "ollama:gemma4:latest"           # Fastest for light tasks
+    ollama_deepseek_local: "ollama:deepseek-r1:latest"  # Local reasoning
+    ollama_medium: "ollama:llama3.2:latest"         # 2GB — lightest fallback, confirmed working
 
-  # ── Hybrid Local/Cloud Routing ──
-  use_local_llm: true                           # Toggle: false = cloud only, true = local first
-  local_ollama_server: "http://localhost:11434"  # Ollama API endpoint
-  local_timeout_seconds: 60                      # Fall back to cloud if local times out
-  local_models:
-    coder: "qwen2.5-coder:3b"                   # Fast, small coding model
-    writer: "qwen2.5:7b"                         # General writing
-    researcher: "phi4:latest"                     # Research reasoning
+    # ─── CLOUD MODELS ───
+    gemini_research: "google/gemini-2.5-flash-preview"  # Research free tier
+    deepseek: "deepseek/deepseek-chat"                  # Main workhorse (quality + consistency)
+    deepseek_fallback: "deepseek/deepseek-v4-flash"     # Cheap DeepSeek alternative
+    sonnet: "anthropic/claude-sonnet-4-6"               # ONLY for step 4 escalation
+    opus: "anthropic/claude-opus-4-6"                   # ONLY for step 5 + human approval
 
-  task_type_mapping:
-    CEO: "deepseek-chat"                         # CEO stays cloud (needs full intelligence)
-    routine:
-      provider: "local"                          # Local model for boilerplate
-      model: "qwen2.5-coder:3b"
-    research:
-      provider: "local"                          # Local model for basic research
-      model: "phi4:latest"
-    researcher:
-      provider: "local"
-      model: "phi4:latest"
-    product_owner: "deepseek-chat"
+  # ─── STRICT DECISION TREE (follow exactly every time, zero guessing allowed) ───
+  decision_tree:
+    step_1:
+      condition: "EASY / repetitive / formatting / simple data work / basic writing / file operations"
+      meaning: "File renames, simple transformations, basic formatting, repetitive tasks, simple drafts, regex, data cleanup, file ops"
+      action: "Ollama local — priority by quality"
+      model: "ollama:qwen3-coder:latest"          # Primary: best local coder
+      secondary_model: "ollama:gemma4:latest"       # Secondary: fastest light tasks
+      tertiary_model: "ollama:deepseek-r1:latest"   # Tertiary: local reasoning
+      quaternary_model: "ollama:llama3.2:latest"    # Lightest fallback
+      on_error: "Immediately fallback to next local model in priority order. NEVER try cloud for easy tasks."
+      local_only: true
+
+    step_2:
+      condition: "RESEARCH / trend scanning / data gathering / competitor analysis / Google Trends / Reddit scanning"
+      meaning: "Google Trends, Reddit scanning, competitor research, trend analysis, daily news, market research"
+      action: "Gemini 2.5 Flash (free tier) ONLY"
+      model: "google/gemini-2.5-flash-preview"
+      on_error:
+        error_types: ["429", "rate_limit", "quota", "RESOURCE_EXHAUSTED", "any"]
+        action: "IMMEDIATELY fallback to Ollama local + web_search tool. Do NOT retry Gemini. Do NOT cascade to Claude."
+        fallback_model: "ollama:gemma4:latest"
+        fallback_tool: "web_search"
+      never_retry_on: "Gemini 429 or quota errors — assume free tier exhausted for the day, move on immediately"
+
+    step_3:
+      condition: "NORMAL WORK — coding / writing / SEO / Product Owner / UI Agent / Tester / Hype-Man / daily agent work"
+      meaning: "80%+ of all work. Code generation, content writing, SEO, product decisions, UI, tests, reviews, distribution. This is the main workhorse for quality and consistency."
+      action: "DeepSeek-chat (cloud) — quality first, cost-conscious"
+      model: "deepseek/deepseek-chat"
+      secondary: "DeepSeek local or Qwen3-Coder local"
+      secondary_condition: "Use local first when possible to save cost, but ONLY if quality is not compromised. For quality-critical work, always prefer DeepSeek-chat cloud."
+      preferred_local: "ollama:qwen3-coder:latest"
+      parallel_coding:
+        description: "When multiple coders are needed in parallel"
+        coder1_main: "deepseek/deepseek-chat (cloud)"
+        coder2_second_opinion: "ollama:qwen3-coder:latest"
+        condition: "Only spawn parallel coders when tasks are truly independent"
+      on_deepseek_error:
+        - error: "429 / rate_limit"
+          action: "Wait 30s and retry once. If still fails, use ollama:qwen3-coder:latest for this turn."
+        - error: "400 / format / auth"
+          action: "Immediately try ollama:qwen3-coder:latest. Do NOT cascade to Claude for format errors."
+        - error: "billing / quota"
+          action: "Immediately use ollama:qwen3-coder:latest. Do NOT cascade to Claude for billing issues."
+
+    step_4:
+      condition: "Final code review / complex reasoning / high-stakes decision / production audit"
+      meaning: "Production deployment review, architecture decision, budget > $10, security audit, critical bugs"
+      action: "DeepSeek-chat first"
+      model: "deepseek/deepseek-chat"
+      escalation: "anthropic/claude-sonnet-4-6"
+      escalation_condition: "ONLY after DeepSeek has tried twice on the SAME task AND failed, OR the task involves budget > $10 or security"
+      max_attempts_before_escalation: 2
+      skip_escalation: "If task is normal coding or routine review, do NOT escalate to Sonnet — DeepSeek suffices"
+
+    step_5:
+      condition: "Final production deployment approval / major strategic repositioning"
+      meaning: "End of MVP, planning next phase, big portfolio decision, going live to production"
+      action: "Claude Opus 4.6 — ONLY after explicit human approval"
+      model: "anthropic/claude-opus-4-6"
+      requires_human_approval: true
+      approval_message: "Ask Wosobu: 'This requires Claude Opus for production-level decision. Approve? Budget impact: $X'"
+      never_auto_call: "Opus is NEVER automatically called. Human must say yes first."
+
+  # ─── PER-ROLE MODEL ASSIGNMENT ───
+  # Every role has: primary + backup + escalation + strict rules
+  role_routing:
+    ceo_orchestrator:
+      primary: "deepseek/deepseek-chat"
+      backup_local: "ollama:llama3.2:latest"
+      easy: "ollama:llama3.2:latest"
+      escalation: "deepseek/deepseek-chat (retry) — only escalate to Sonnet after 2 failures + step 4 condition"
+      final_signoff: "anthropic/claude-opus-4-6 (requires human approval)"
+      description: "Captain — orchestrates entire system"
+
+    product_owner:
+      primary: "deepseek/deepseek-chat"
+      backup_local: "ollama:llama3.2:latest"
+      local_for_simple: true
+      escalation: "deepseek/deepseek-chat (retry)"
+      description: "PRDs, backlog, feature decisions"
+
     coder:
-      provider: "local"                          # Local model for routine coding
-      model: "qwen2.5-coder:3b"
-      fallback: "deepseek-chat"                 # Fall back on complex tasks
-    coder2:
-      provider: "local"
-      model: "qwen2.5-coder:3b"
-      fallback: "deepseek-chat"
-    coder3:
-      provider: "local"
-      model: "qwen2.5-coder:3b"
-      fallback: "deepseek-chat"
-    coder4:
-      provider: "local"
-      model: "qwen2.5-coder:3b"
-      fallback: "deepseek-chat"
-    coder5:
-      provider: "local"
-      model: "qwen2.5-coder:3b"
-      fallback: "deepseek-chat"
-    writer:
-      provider: "local"                          # Content writing via local LLM
-      model: "qwen2.5:7b"
-      fallback: "deepseek-chat"
-    reviewer_first:
-      provider: "local"                          # Cheap first pass review
-      model: "qwen2.5-coder:3b"
-      fallback: "deepseek-chat"
-    reviewer_final: "claude-sonnet-4.6"        # Quality gate: always cloud
-    high_stakes: "claude-opus-4.6"             # Strategic decisions: cloud only, requires approval
+      primary: "deepseek/deepseek-chat"
+      backup_local: "ollama:qwen3-coder:latest"
+      local_for_simple: true
+      escalation: "deepseek/deepseek-chat (retry)"
+      description: "All code — use local when possible to save cost"
 
+    writer:
+      primary: "deepseek/deepseek-chat"
+      backup_local: "ollama:llama3.2:latest"
+      local_for_simple: true
+      escalation: "deepseek/deepseek-chat (retry)"
+      description: "Blog posts, content, copywriting"
+
+    seo_agent:
+      primary: "deepseek/deepseek-chat"
+      backup_local: "ollama:llama3.2:latest"
+      local_for_simple: true
+      escalation: "deepseek/deepseek-chat (retry)"
+      description: "SEO optimization, metadata, structured data"
+
+    ui_agent:
+      primary: "deepseek/deepseek-chat"
+      backup_local: "ollama:qwen3-coder:latest"
+      local_for_simple: true
+      escalation: "deepseek/deepseek-chat (retry)"
+      description: "UI components, Tailwind, design"
+
+    tester_qa:
+      primary: "deepseek/deepseek-chat"
+      backup_local: "ollama:llama3.2:latest"
+      local_for_simple: true
+      escalation: "deepseek/deepseek-chat (retry)"
+      description: "Test cases, QA, test execution"
+
+    first_reviewer:
+      primary: "deepseek/deepseek-chat"
+      backup_local: "ollama:llama3.2:latest"
+      escalation: "deepseek/deepseek-chat (retry)"
+      description: "First-pass code/content review — DeepSeek suffices for 99% of reviews"
+
+    researcher:
+      primary: "google/gemini-2.5-flash-preview"
+      gemini_offline_fallback: "ollama:llama3.2:latest + web_search"
+      backup_local: "ollama:llama3.2:latest"
+      escalation: "deepseek/deepseek-chat"
+      description: "Trend scanning, market research — if Gemini fails (429/quota), use Ollama + web search immediately"
+
+    hype_man_distribution:
+      primary: "deepseek/deepseek-chat"
+      backup_local: "ollama:llama3.2:latest"
+      local_for_simple: true
+      escalation: "deepseek/deepseek-chat (retry)"
+      description: "Social content, build-in-public, distribution"
+
+    security_agent:
+      primary: "deepseek/deepseek-chat"
+      escalation: "deepseek/deepseek-chat (retry) then anthropic/claude-sonnet-4-6"
+      description: "Security audits — Sonnet only for critical findings"
+
+    final_reviewer:
+      primary: "deepseek/deepseek-chat"
+      escalation: "anthropic/claude-sonnet-4-6"
+      requires_human_approval_for_escalation: false
+      description: "Final review before production deployment — DeepSeek first, Sonnet only if DeepSeek identifies issues"
+
+    chief_editor_cto:
+      primary: "deepseek/deepseek-chat"
+      escalation: "anthropic/claude-sonnet-4-6"
+      final_signoff: "anthropic/claude-opus-4-6 (requires human approval)"
+      requires_human_approval_for_opus: true
+      description: "Final sign-off before deployment — Sonnet for review, Opus only with human OK"
+
+  # ─── SAFE FALLBACK CHAINS (FIXED May 5 — absolute separation of local vs cloud) ───
+  # Previous bug: phi3:latest was routed to DeepSeek cloud API, causing auth cooldown
+  # that blocked DeepSeek-chat. Now: all local models are prefixed with ollama: and
+  # cloud fallback chain is separate from local fallback chain.
+  fallback_chain:
+    # For standard / coding / writing tasks:
+    cloud_primary:
+      - "deepseek/deepseek-chat"            # Step 1: main workhorse
+      - "deepseek/deepseek-v4-flash"         # Step 2: cheap DeepSeek alternative
+      - "ollama:llama3.2:latest"             # Step 3: local fallback (no auth needed, no cooldown)
+      - "anthropic/claude-sonnet-4-6"        # Step 4: ONLY if step 4 conditions met
+      - "anthropic/claude-opus-4-6"          # Step 5: ONLY with human approval
+
+    # For simple / easy tasks (priority order by quality):
+    easy_tasks_local:
+      - "ollama:qwen3-coder:latest"          # 1st: best local coder
+      - "ollama:gemma4:latest"                # 2nd: fastest light tasks
+      - "ollama:deepseek-r1:latest"           # 3rd: local reasoning
+      - "ollama:llama3.2:latest"              # 4th: lightest fallback
+
+    # For research tasks:
+    research_fallback:
+      - "google/gemini-2.5-flash-preview"    # Try Gemini first
+      - "ollama:llama3.2:latest"             # IMMEDIATELY to local on any Gemini error
+      - "deepseek/deepseek-chat"             # Only if local also fails (rare)
+
+  # ─── CRITICAL: LOCAL MODEL ROUTING RULE (NEVER send local models to cloud APIs) ───
+  local_model_prefixes:
+    - "ollama:"   # All models prefixed with ollama: route to localhost:11434, NEVER to cloud
+
+  # ─── STRICT ERROR HANDLING (LOCKED May 5 — never stall or cascade-fail again) ───
+  strict_error_handling:
+    on_any_error:
+      action: "Immediately attempt next model in the appropriate fallback_chain. Do NOT stall, do NOT retry the same failing model more than once."
+      max_retries_same_model: 1
+    specific_errors:
+      "429":
+        action: "Provider quota exhausted for this period. Skip ALL models from this provider for the current turn."
+      "400":
+        action: "Model name invalid or misconfigured. Skip this exact model, try next in chain."
+      "billing":
+        action: "Provider billing issue. Skip ALL models from this provider until human fixes billing."
+      "timeout":
+        action: "Skip to next model in chain. Log the timeout for review."
+
+  # ─── OLLAMA LOCAL LLM CONFIG ───
+  use_local_llm: true
+  local_ollama_server: "http://localhost:11434"
+  local_timeout_seconds: 60
+  local_models:
+    primary: "qwen3-coder"                   # Best local coder (pull in progress)
+    gemma4: "gemma4"                          # Fastest for light tasks
+    deepseek_local: "deepseek-r1"             # Local reasoning
+    lightest: "llama3.2:latest"              # 2GB — confirmed working ✅
+
+# ═══════════════════════════════════════════════════════════════
+# CEO AUTONOMY & TASK COMPLETION RULES (LOCKED May 3 2026)
+# ═══════════════════════════════════════════════════════════════
+autonomy:
+  finish_what_you_started:
+    enabled: true
+    rule: "Once any task, report, or response begins, it MUST be completed fully. Never stop midway. If interrupted, immediately resume and finish."
+    self_recovery: "If stuck midway, self-recover, resume previous task, complete it."
+    enforcement: "strict"
+
+  continuous_operation:
+    enabled: true
+    rule: "Run the entire system continuously without waiting for human prompts. Work non-stop on current strategic priorities."
+    only_ask_human_for:
+      - "Major strategic decisions"
+      - "Final production sign-off"
+      - "Budget approval > $10"
+      - "Portfolio-level pivots"
+
+  auto_progression:
+    enabled: true
+    rule: "If no human input for 30+ minutes, self-trigger the next logical task from the priority list."
+    heartbeat_check_interval_minutes: 10  # Increased cadence: check every 10 min, not 30
+    daily_report_time_hkt: "20:00"
+    cron_jobs_required: true
+
+    ceo_responsibility:
+    enabled: true
+    rule: "CEO (DeepSeek) is fully responsible for driving progress 24/7. Proactively create and execute tasks based on overall strategy and priorities."
+    self_directed: true
+    human_input: "Only for major strategic decisions or final production approval"
+    proactive_mode: true
+    decision_framework: "CEO.md — 6-factor scoring"
+    research_cadence: "Every wake, alternate Research or Build. Research at least every 4th wake."
+    blocked_fallback: "MANDATORY: When blocked on user input, ALWAYS pick from the Zero-Excuse Build Queue in CEO.md. NEVER report blocked without shipping an alternative."
+    never_heartbeat_ok: true  # HARD RULE: Never emit HEARTBEAT_OK. Every wake produces output or spawns work.
+    build_or_die: true  # Every wake = measurable output. Code, content, deploy, or sub-agent spawn. Status-only is failure.
+    minimum_output_per_wake: "One of: (a) code deployed, (b) content published, (c) sub-agent spawned with clear brief, (d) research finding logged"
+    zero_excuse_queue: "CEO.md ZERO-EXCUSE BUILD QUEUE — 8 concrete tasks executable right now without Chris"
+    execution_loop: "CEO.md — SCAN(60s) → RESEARCH-or-BUILD → SCORE → ASSIGN-or-EXECUTE → LOOP. Mandatory, every wake."
+
+# ═══════════════════════════════════════════════════════════════
+# PAPERCLIP COORDINATION
+# ═══════════════════════════════════════════════════════════════
+paperclip:
+  enabled: true
+  config_file: "paperclip-config.json"
+  coordinator: "paperclip"
+  capabilities:
+    component_sharing: true
+    duplication_prevention: true
+    flywheel_linking: true
+    task_distribution: true
+    deployment_pipeline: true
+  orchestras_connected: 7
+  mention_in_every_report: true
+  last_status_check: null
+
+# ═══════════════════════════════════════════════════════════════
+# LONG-TERM VISION & MONETIZATION STRATEGY (LOCKED May 5 2026)
+# ═══════════════════════════════════════════════════════════════
+# SINGLE SOURCE OF TRUTH: monetization-playbook.md contains the full strategy.
+# This section is the executive summary — refer to the playbook for execution details.
+
+vision:
+  description: "10-directory portfolio organized into 3 pillars, each with a distinct role in the revenue flywheel"
+  locking_date: "2026-05-05"
+  status: "PERMANENTLY_LOCKED"
+  modification: "Requires explicit human approval from Wosobu"
+
+  pillars:
+    pillar_1_family_empire:
+      role: "Core Cash Cow — builds trust, authority, and consistent recurring affiliate revenue"
+      directories:
+        - name: "Family Travel Asia"
+          role: "Flagship — practical, trust-building, parent tips"
+          url: "familytravelasia.com"
+        - name: "Luxury Family Experiences Asia"
+          role: "Premium tier — aspirational, Cosme-style curated must-book luxury for wealthy families"
+          url: "luxuryfamilytravelasia.com"
+        - name: "EV-Friendly Family Travel Asia"
+          role: "Utility — EV road trips, charging-aware family travel"
+          url: "evfamilytravelasia.com"
+
+    pillar_2_sports_wellness:
+      role: "Community & Loyalty — niche audiences with high engagement and repeat visits"
+      directories:
+        - name: "Sports Tourism Asia"
+          description: "Major sporting events, tournaments, active travel"
+        - name: "Active Family / Kids-Sports"
+          description: "Family sports activities, kids' camps, youth tournaments"
+        - name: "Wellness & Multi-Gen Retreats"
+          description: "Wellness tourism, spa retreats, multi-generational trips"
+
+    pillar_3_ai_infrastructure:
+      role: "High-Multiple Exit Engine — scalable SaaS play"
+      directories:
+        - name: "Asia AI Tools & Playbooks Directory"
+          role: "AI tool aggregator"
+          url: "asiaaiempire.ai"
+        - name: "Directory Builder Template"
+          role: "Sell the template + AI agent squads as a product"
+        - name: "Agent Orchestra Platform"
+          role: "Platform where users buy pre-built agent orchestras (Pump.fun / Shopify model)"
+
+  core_differentiator: "Cosme-style aggregator + ranking engine inside every directory"
+
+  monetization:
+    description: "Every directory MUST follow these monetization rules. No exceptions."
+    mandatory_rules:
+      - "Use the Deep Link Engine built in Phases 1-5 across all directories"
+      - "Every recommendation must use specific product IDs where possible (Klook, Viator, Agoda, Booking, etc.)"
+      - "Always show Price Comparison Widget (Klook vs Viator vs others) to increase conversion"
+      - "Use contextual affiliate recommendations ('Book this activity + nearby luxury villa' or 'Book this AI tool + related playbook')"
+      - "Goal: Shorten the distance to dollars — make every click highly likely to result in a commission"
+      - "Track and optimize EPC (earnings per click) continuously"
+    reference_playbook: "monetization-playbook.md"
+    tracker: "Track EPC per directory in paperclip or monitoring system"
+
+# ═══════════════════════════════════════════════════════════════
+# BUDGET CONTROL
+# ═══════════════════════════════════════════════════════════════
 budget_control:
   daily_limit_usd: 1.0
   monthly_limit_usd: 30.0
@@ -77,105 +396,89 @@ reporting:
     - estimated_cost_usd
     - estimated_time_minutes
     - tiered_approval_status
+    - paperclip_coordination_status
 
-validation_playbook:
-  pre_sell_required_customers: 3
-  landing_page_visits_target: 200
-  email_signups_target: 20
-  interview_signals_required: 7
+# ═══════════════════════════════════════════════════════════════
+# AUTO-SPAWN PARALLEL WORK ENGINE (LOCKED May 4 2026)
+# ═══════════════════════════════════════════════════════════════
+parallel_work:
+  enabled: true
+  framework: "subagent-sessions"
+  rules:
+    max_parallel_sessions: 3
+    ram_guard:
+      enabled: true
+      command: "free -m | awk 'NR==2{print $7}'"
+      min_free_mb: 1536  # 1.5 GB minimum free RAM before spawning
+      action_below_min: "run_in_current_session_only — do NOT spawn sub-agents"
 
+    spawn_condition:
+      description: "Only spawn sub-agents when a task has 2+ truly independent subtasks"
+      examples:
+        valid: "Deploy site A AND improve site B — independent"
+        invalid: "Write code AND review same code — dependent, do sequentially"
+      check: "Can subtask B run without waiting for subtask A's output?"
+
+    worker_config:
+      mode: "run"  # one-shot, not persistent
+      runtime: "subagent"
+      model: "deepseek/deepseek-chat"  # cheapest effective
+      thinking: null
+      light_context: true
+      timeout_seconds:
+        normal: 600  # 10 min — P0/P1/P2/P4 tasks
+        expand: 1800  # 30 min — P3 EXPAND (new dirs, migrations, large content)
+
+    lifecycle:
+      solo_rule: "Do NOT spawn sub-agents if you have a spawned session already active"
+      check_before_spawn: "Run `subagents list` — if count >= 3, skip spawning"
+      recovery: "If a sub-agent doesn't complete in 10 minutes, assume failure, record error, continue without it"
+      no_orphans: "After spawning, write PIDs/session info to work-engine-state.md under backgroundPIDs"
+
+# ═══════════════════════════════════════════════════════════════
+# DEPLOYMENT PIPELINE
+# ═══════════════════════════════════════════════════════════════
 deployment_pipeline:
   mandatory: true
   steps:
     - step: "Product Owner"
       deliverable: "BRD + PRD with acceptance criteria"
-      template: "templates/BRD_TEMPLATE.md, templates/PRD_TEMPLATE.md"
     - step: "Coder"
       deliverable: "Implementation"
-      requirements: "Follow PRD acceptance criteria"
     - step: "UI Agent"
       deliverable: "Design review"
-      checklist: "design-principles.md"
     - step: "Tester"
       deliverable: "Test execution report"
-      template: "templates/TEST_STRATEGY_TEMPLATE.md, templates/TEST_CASE_TEMPLATE.md"
-      requirement: "Test cases reviewed by Product Owner before execution"
     - step: "SEO Agent"
       deliverable: "SEO optimization"
-      checklist: "agents/SEO_AGENT.md"
     - step: "Security Agent"
       deliverable: "Security audit report"
-      checklist: "agents/SECURITY_AGENT.md"
-      requirement: "Secrets, deps, auth, OWASP Top 10, infra checks — YAML output"
     - step: "Reviewer"
       deliverable: "Code quality review"
     - step: "Chief Editor + CTO"
       deliverable: "Final sign-off"
+      model: "anthropic/claude-sonnet-4-6"
+      escalation: "anthropic/claude-opus-4-6 (requires approval)"
     - step: "Deploy"
       deliverable: "Production release"
-  quality_gates:
-    - "All P0 acceptance criteria must pass testing"
-    - "Test coverage ≥95% of acceptance criteria"
-    - "No critical bugs blocking launch"
-    - "Design passes Apple-level standards"
-    - "SEO foundation complete"
 
-github_kanban:
-  enabled: true
-  repo: "your-username/your-repo"               # Change this later
-  board_name: "Validation Kanban"
-  columns:
-    - "Backlog"
-    - "Validation"
-    - "Build"
-    - "Done"
-
-escalation_rules:
-  max_attempts_per_task: 2
-  after_max_attempts: "create_github_issue_with_tag needs-human"
-
-design_quality:
-  required: true
-  checklist_file: "/home/captain/.openclaw/workspace/design-principles.md"
-  pre_deploy_checks:
-    - command: "npx tailwindcss -o /dev/null --stdin < src/index.css"
-      description: "Validate Tailwind CSS classes exist"
-      fail_action: "abort_deployment"
-    - command: "npx eslint src/**/*.tsx --max-warnings 0"
-      description: "Lint React components"
-      fail_action: "abort_deployment"
-  post_deploy_checks:
-    - command: "curl -s http://localhost:3001 | grep -q 'Kanban Board'"
-      description: "Verify UI loads"
-  human_review_required_for:
-    - landing_page
-    - core_app_screens
-    - dashboard
-  auto_audit: true
-
+# ═══════════════════════════════════════════════════════════════
+# ORCHESTRA MONITORING
+# ═══════════════════════════════════════════════════════════════
 orchestra_monitoring:
   watchdog_enabled: true
-  schedule: "*/5 * * * *"  # every 5 minutes
+  schedule: "*/5 * * * *"
   task: |
-    # Check if all 7 orchestras are running via PM2
     cd /home/captain/.openclaw/workspace
     RUNNING=$(pm2 jlist | jq '[.[] | .pm2_env.status] | contains(["online"])' )
     if [ "$RUNNING" != "true" ]; then
-      echo "One or more orchestras down. Restarting all..."
-      ./fix-sigkill.sh
-      # Send alert to Alpha-HQ (optional)
-      curl -X POST http://localhost:3004/api/alerts -d '{"source":"watchdog","message":"Orchestras restarted"}'
+      echo "Orchestras down. Restarting..."
+      pm2 resurrect 2>/dev/null || pm2 start pm2-ecosystem.config.js
     fi
-  alert_threshold: 2  # Number of failures before alert
+  alert_threshold: 2
   auto_restart: true
   health_check_endpoints:
     - directory_beast: "http://localhost:3000/health"
-    - social_beast: "http://localhost:3001/health"
-    - kidscan_beast: "http://localhost:3002/health"
-    - appfactory_beast: "http://localhost:3003/health"
-    - affiliate_beast: "http://localhost:3004/health"
-  required_orchestras: 7
+  required_orchestras: 2
   max_restart_attempts: 3
-  escalation_channel: "telegram:1741426794"  # Alert to you on Telegram
-
-EOF
+  escalation_channel: "telegram:1741426794"
