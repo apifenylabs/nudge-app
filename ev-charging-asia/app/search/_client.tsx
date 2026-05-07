@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Zap, MapPin, Search, ArrowUp, SlidersHorizontal, X, MapIcon, LayoutGrid, ChevronDown, ChevronUp } from 'lucide-react';
 import StationCard from '@/components/StationCard';
+import SiteFooter from '@/components/SiteFooter';
 import EvMapContainer from '@/components/EvMapContainer';
 import { Station, computeStationScore } from '@/lib/scoring';
 
@@ -40,6 +41,9 @@ export default function SearchPageContent({ meta, stations }: { meta: Meta; stat
   const [selectedCity, setSelectedCity] = useState(initialCity);
   const [speedFilter, setSpeedFilter] = useState('any');
   const [amenityFilters, setAmenityFilters] = useState<Record<string, boolean>>({});
+  const [familyFriendly, setFamilyFriendly] = useState(false);
+  const [luxuryOnly, setLuxuryOnly] = useState(false);
+  const [wellnessNearby, setWellnessNearby] = useState(false);
   const [sortBy, setSortBy] = useState('score');
   const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid');
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -95,6 +99,24 @@ export default function SearchPageContent({ meta, stations }: { meta: Meta; stat
     Object.entries(amenityFilters).forEach(([key, active]) => {
       if (active) f = f.filter(s => (s as unknown as Record<string, unknown>)[key] === true);
     });
+    // Family-friendly filter (2+ family amenities)
+    if (familyFriendly) {
+      f = f.filter(s => {
+        const amenities = [s.hasRestroomNearby, s.hasFoodNearby, s.hasCoveredParking, s.isMallParking];
+        return amenities.filter(Boolean).length >= 2;
+      });
+    }
+    // Luxury only filter (high rating + speed + amenities)
+    if (luxuryOnly) {
+      f = f.filter(s => {
+        const amenityCount = [s.hasRestroomNearby, s.hasFoodNearby, s.hasCoveredParking, s.has24by7Access].filter(Boolean).length;
+        return s.reliability >= 4.0 && s.chargerSpeed >= 150 && amenityCount >= 3;
+      });
+    }
+    // Wellness recovery stops (near food + restroom + mall parking = convenient stop)
+    if (wellnessNearby) {
+      f = f.filter(s => s.hasRestroomNearby && s.hasFoodNearby && (s.isMallParking || s.hasCoveredParking));
+    }
     // Sort
     f.sort((a, b) => {
       if (sortBy === 'speed') return b.chargerSpeed - a.chargerSpeed;
@@ -107,11 +129,11 @@ export default function SearchPageContent({ meta, stations }: { meta: Meta; stat
 
   const clearAll = () => {
     setSearchQuery(''); setSelectedChargerTypes([]); setSelectedCountry('All');
-    setSelectedCity('All'); setSpeedFilter('any'); setAmenityFilters({}); setSortBy('score');
+    setSelectedCity('All'); setSpeedFilter('any'); setAmenityFilters({}); setFamilyFriendly(false); setLuxuryOnly(false); setWellnessNearby(false); setSortBy('score');
   };
 
   const hasActiveFilters = searchQuery || selectedChargerTypes.length > 0 || selectedCountry !== 'All' ||
-    selectedCity !== 'All' || speedFilter !== 'any' || Object.values(amenityFilters).some(Boolean);
+    selectedCity !== 'All' || speedFilter !== 'any' || Object.values(amenityFilters).some(Boolean) || familyFriendly || luxuryOnly || wellnessNearby;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -207,6 +229,24 @@ export default function SearchPageContent({ meta, stations }: { meta: Meta; stat
                 ))}
               </div>
             )}
+            {/* Family-Friendly toggle */}
+            <div className="mt-2 flex flex-wrap gap-2">
+              <button onClick={() => setFamilyFriendly(!familyFriendly)}
+                className={`px-3 py-1 text-xs font-medium rounded-full border transition-colors ${
+                  familyFriendly ? 'bg-pink-50 text-pink-700 border-pink-300' : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300'
+                }`}
+              >👶 Family Friendly (restroom, food, parking)</button>
+              <button onClick={() => setLuxuryOnly(!luxuryOnly)}
+                className={`px-3 py-1 text-xs font-medium rounded-full border transition-colors ${
+                  luxuryOnly ? 'bg-amber-50 text-amber-700 border-amber-300' : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300'
+                }`}
+              >👑 Luxury Only (150kW+, 4★+, 3 amenities)</button>
+              <button onClick={() => setWellnessNearby(!wellnessNearby)}
+                className={`px-3 py-1 text-xs font-medium rounded-full border transition-colors ${
+                  wellnessNearby ? 'bg-emerald-50 text-emerald-700 border-emerald-300' : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300'
+                }`}
+              >🧘 Wellness Recovery Stops (food, restroom, parking)</button>
+            </div>
           </div>
 
           {/* Results count + view toggle */}
@@ -261,22 +301,7 @@ export default function SearchPageContent({ meta, stations }: { meta: Meta; stat
         </button>
       )}
 
-      <footer className="border-t border-gray-200 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-gray-500">
-              <Zap size={16} className="text-green-500" />
-              <span className="text-sm">EV Charging Asia</span>
-            </div>
-            <div className="flex items-center gap-6 text-sm text-gray-500">
-              <Link href="/blog" className="hover:text-gray-900">Blog</Link>
-              <Link href="/about" className="hover:text-gray-900">About</Link>
-              <Link href="/privacy" className="hover:text-gray-900">Privacy</Link>
-              <Link href="/contact" className="hover:text-gray-900">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

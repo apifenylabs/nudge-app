@@ -4,29 +4,29 @@ import { useEffect, useRef } from 'react';
 
 interface AdUnitProps {
   slot: string;
-  format?: 'auto' | 'rectangle' | 'horizontal' | 'vertical';
+  format?: 'auto' | 'rectangle' | 'horizontal' | 'vertical' | 'autorelaxed' | 'fluid';
+  layout?: string;
   className?: string;
+  label?: string;
 }
 
 /**
- * Google AdSense display ad unit.
- * Only loads on the client side once per ad slot.
+ * Google AdSense ad unit.
+ * Supports: display ads, multiplex (autorelaxed), in-article (fluid).
+ * Only loads on the client side.
  */
-export default function AdUnit({ slot, format = 'auto', className = '' }: AdUnitProps) {
+export default function AdUnit({ slot, format = 'auto', layout, className = '', label = 'Advertisement' }: AdUnitProps) {
   const adRef = useRef<HTMLDivElement>(null);
   const initialized = useRef(false);
 
   useEffect(() => {
-    // Skip if already initialized for this component instance
     if (initialized.current) return;
     initialized.current = true;
 
     try {
-      // Push the ad if Adsense is loaded
       if (typeof (window as any).adsbygoogle !== 'undefined') {
         (window as any).adsbygoogle.push({});
       } else {
-        // Retry after a short delay if Adsense hasn't loaded yet
         const timer = setTimeout(() => {
           if (typeof (window as any).adsbygoogle !== 'undefined') {
             (window as any).adsbygoogle.push({});
@@ -40,15 +40,16 @@ export default function AdUnit({ slot, format = 'auto', className = '' }: AdUnit
   }, []);
 
   return (
-    <div className={`bg-gray-50 rounded-2xl border border-gray-200 py-6 px-4 text-center ${className}`}>
-      <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-3">Advertisement</p>
-      <div ref={adRef} className="mx-auto" style={{ maxWidth: format === 'auto' ? '728px' : undefined }}>
+    <div className={`text-center ${className}`}>
+      <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-2">{label}</p>
+      <div ref={adRef} className="mx-auto overflow-hidden">
         <ins
           className="adsbygoogle"
           style={{ display: 'block' }}
           data-ad-client="ca-pub-6046953221141245"
           data-ad-slot={slot}
           data-ad-format={format}
+          data-ad-layout={layout || undefined}
           data-full-width-responsive="true"
         />
       </div>

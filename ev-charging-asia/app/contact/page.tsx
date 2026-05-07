@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Zap, Mail, MapPin } from 'lucide-react';
+import SiteFooter from '@/components/SiteFooter';
 
 export default function ContactPage() {
   return (
@@ -33,6 +34,8 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
+      <SiteFooter />
     </div>
   );
 }

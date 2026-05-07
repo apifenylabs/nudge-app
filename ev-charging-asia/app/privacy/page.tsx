@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Zap } from 'lucide-react';
+import SiteFooter from '@/components/SiteFooter';
 
 export default function PrivacyPage() {
   return (
@@ -24,6 +25,8 @@ export default function PrivacyPage() {
           <p>Questions? Contact us through our <Link href="/contact" className="text-sky-600 hover:underline">contact page</Link>.</p>
         </div>
       </div>
+
+      <SiteFooter />
     </div>
   );
 }

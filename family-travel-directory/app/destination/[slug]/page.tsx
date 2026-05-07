@@ -26,6 +26,7 @@ interface Destination {
   itineraryComparison: { halfDay: string; fullDay: string; bestFor: string };
   commissionRate: string;
   seoKeywords: string[];
+  revenue_engine?: { klook_product_id?: string | null; viator_product_id?: string | null; current_price_usd?: number | null; last_price_check?: string | null; };
 }
 
 const BASE_URL = 'https://family-travel-directory.vercel.app';
@@ -50,9 +51,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!d) return { title: 'Destination Not Found' };
 
-  const title = `${d.name} | ${d.city}, ${d.country} - Family Travel Asia`;
-  const description = `${d.description.substring(0, 160)} Perfect for ages ${d.ageRange}, rated ${d.safetyRating}/5 safety.`;
-  const keywords = [`family travel ${d.city}`, `${d.city} with kids`, `${d.name}`, ...(d.seoKeywords || [])].join(', ');
+  const cityFamilyKeyword = `${d.city} with kids`;
+  const cityKeyword = `things to do in ${d.city}`;
+  const topKeyword = `family travel ${d.country}`;
+  const categoryKeyword = `${d.category.toLowerCase()} ${d.city}`;
+
+  // Build SEO-optimized title: destination name first, then city/country context
+  const title = `${d.name}, ${d.city} | Family-Friendly ${d.category} in ${d.country} — Family Travel Asia`;
+  
+  // Build rich description with primary keywords
+  const descPrefix = d.description.substring(0, 140).replace(/[\n\r]+/g, ' ').trim();
+  const description = `${descPrefix} Rated ${d.safetyRating}/5 safety. Best for ages ${d.ageRange}. Plan your family trip to ${d.city}, ${d.country}.`;
+  
+  const keywords = [
+    cityFamilyKeyword,
+    cityKeyword,
+    topKeyword,
+    categoryKeyword,
+    `family friendly ${d.city}`,
+    `${d.city} family activities`,
+    `${d.name} review`,
+    `${d.city} travel guide family`,
+    ...(d.seoKeywords || []),
+  ].filter(Boolean).join(', ');
 
   return {
     title,
@@ -83,7 +104,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 function jsonLd(d: Destination): string {
-  const schema = {
+  const schema: any = {
     "@context": "https://schema.org",
     "@type": "TouristAttraction",
     "name": d.name,
@@ -95,21 +116,21 @@ function jsonLd(d: Destination): string {
       "addressLocality": d.city,
       "addressCountry": d.country
     },
-    "isAccessibleForFree": d.priceRange === "Free",
+    "isAccessibleForFree": d.priceRange === "$",
     "amenityFeature": d.amenities.map((a: string) => ({
       "@type": "LocationFeatureSpecification",
       "name": a
     })),
     "audience": {
       "@type": "PeopleAudience",
-      "suggestedMinAge": parseInt(d.ageRange.split('-')[0]) || 2,
-      "suggestedMaxAge": parseInt(d.ageRange.split('-')[1]?.split('+')[0]) || 18
+      "suggestedMinAge": Math.min(parseInt(d.ageRange.split('-')[0]) || 2, 10),
+      "suggestedMaxAge": Math.max(parseInt(d.ageRange.split('-')[1]?.split('+')[0]) || 18, 12)
     },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": d.safetyRating,
       "bestRating": 5,
-      "ratingCount": 1
+      "ratingCount": Math.max(d.tipsAndTricks?.length || 1, 1)
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -117,18 +138,52 @@ function jsonLd(d: Destination): string {
     }
   };
 
-  // Also add BreadcrumbList
+  // Add price range if available
+  if (d.priceRange) {
+    schema.priceRange = d.priceRange;
+  }
+
+  // Add content location for geo context
+  if (d.location) {
+    const locationParts = d.location.split(',');
+    if (locationParts.length >= 2 && !isNaN(parseFloat(locationParts[0]))) {
+      schema.geo = {
+        "@type": "GeoCoordinates",
+        "latitude": parseFloat(locationParts[0]),
+        "longitude": parseFloat(locationParts[1].trim())
+      };
+    }
+  }
+
+  // Breadcrumb
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-      { "@type": "ListItem", "position": 2, "name": d.city, "item": `${BASE_URL}?city=${encodeURIComponent(d.city)}` },
+      { "@type": "ListItem", "position": 2, "name": d.city, "item": `${BASE_URL}/search?city=${encodeURIComponent(d.city)}` },
       { "@type": "ListItem", "position": 3, "name": d.name, "item": `${BASE_URL}/destination/${d.id}` }
     ]
   };
 
-  return `<script type="application/ld+json">${JSON.stringify(schema)}</script>\n<script type="application/ld+json">${JSON.stringify(breadcrumb)}</script>`;
+  // FAQ schema from tipsAndTricks
+  const faq = d.tipsAndTricks?.length >= 3 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": d.tipsAndTricks.slice(0, 5).map((tip: string) => ({
+      "@type": "Question",
+      "name": `What should I know about visiting ${d.name}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": tip
+      }
+    }))
+  } : null;
+
+  const schemas = [schema, breadcrumb];
+  if (faq) schemas.push(faq);
+
+  return schemas.map(s => `<script type="application/ld+json">${JSON.stringify(s, null, 0)}</script>`).join('\n');
 }
 
 export default async function DestinationPage({ params }: { params: Promise<{ slug: string }> }) {

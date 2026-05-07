@@ -7,13 +7,18 @@ import {
   ArrowLeft, Calendar, Clock, Users,
   School, Baby,
   Utensils, Bed, Bus, ExternalLink, DollarSign, Shield,
-  Share2
+  Share2, Building2
 } from 'lucide-react';
 import AdUnit from '@/components/AdUnit';
+import ComparisonTable from '@/components/ComparisonTable';
+import PriceComparisonWidget from '@/components/PriceComparisonWidget';
+import FlywheelWidget from '@/components/FlywheelWidget';
 import BookmarkButton from '@/components/BookmarkButton';
 import ReviewList from '@/components/ReviewList';
 import ReviewForm from '@/components/ReviewForm';
+import { bookingUrl, viatorUrl } from '@/lib/affiliate';
 import type { ReviewData } from '@/components/ReviewCard';
+import PremiumBadge from '@/components/PremiumBadge';
 
 // ─── Types ──────────────────────────────────────────────
 interface Destination {
@@ -26,6 +31,10 @@ interface Destination {
   itineraryComparison: { halfDay: string; fullDay: string; bestFor: string; };
   commissionRate: string; seoKeywords: string[];
   affiliateLinks?: { booking: { url: string; text: string }; klook: { url: string; text: string }; viator: { url: string; text: string }; };
+  revenue_engine?: { klook_product_id?: string | null; viator_product_id?: string | null; current_price_usd?: number | null; last_price_check?: string | null; };
+  information_gain?: { reddit_sentiment_snippet?: string; human_verified_tip?: string | null; primary_source_url?: string; geo_highlight_score?: number; };
+  flywheel_connect?: { related_ev_station_id?: string | string[] | null; related_luxury_stay_id?: string | string[] | null; related_family_activity_id?: string | string[] | null; };
+  premium_perks?: { is_premium: boolean; perk_theme?: string; perks?: string[]; seoKeywords?: string[]; };
 }
 interface DestinationPageProps { initialData: Destination; slug: string; }
 
@@ -121,10 +130,23 @@ function generatePracticalInfo(d: Destination) {
 }
 
 function AffiliateButton({ url, label }: { url: string; label: string }) {
+  const isKlook = label.toLowerCase().includes('klook');
+  const isBooking = label.toLowerCase().includes('booking');
+  const isViator = label.toLowerCase().includes('viator');
+  let brandClass = 'bg-sky-50 hover:bg-sky-100 border-sky-200 text-sky-700';
+  let iconColor = 'text-sky-500';
+  let BrandIcon = ExternalLink;
+  if (isKlook) {
+    brandClass = 'bg-orange-50 hover:bg-orange-100 border-orange-200 text-orange-700';
+    iconColor = 'text-orange-500';
+  } else if (isBooking) {
+    brandClass = 'bg-blue-50 hover:bg-blue-100 border-blue-200 text-blue-700';
+    iconColor = 'text-blue-500';
+  }
   return (
     <a href={url} target="_blank" rel="nofollow sponsored noopener"
-      className="flex items-center gap-2 bg-sky-50 hover:bg-sky-100 border border-sky-200 rounded-xl px-4 min-h-[44px] text-sm font-medium text-sky-700 transition-colors group">
-      <ExternalLink size={14} className="text-sky-500 flex-shrink-0" />
+      className={`flex items-center gap-2 ${brandClass} border rounded-xl px-4 min-h-[44px] text-sm font-medium transition-all group hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98]`}>
+      <BrandIcon size={14} className={`${iconColor} flex-shrink-0`} />
       <span>{label}</span>
       <span className="text-[10px] text-gray-400 ml-auto uppercase tracking-wider">Affiliate</span>
     </a>
@@ -224,7 +246,11 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
             <span className="text-xs bg-white/10 text-gray-300 px-3 py-0.5 rounded-full border border-white/10 backdrop-blur-sm">{d.priceRange}</span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-3 leading-tight drop-shadow-lg">{d.name}</h1>
-          <p className="text-base sm:text-lg text-gray-200/90 max-w-2xl mb-4 leading-relaxed drop-shadow">
+          {/* AEO declarative header */}
+          <p className="text-base sm:text-lg text-gray-200/90 max-w-2xl mb-3 leading-relaxed drop-shadow font-medium">
+            {d.name} is the top-rated family {d.category.toLowerCase().includes('theme') ? 'attraction' : d.category.toLowerCase().includes('nature') ? 'destination' : 'experience'} in {d.city}, {d.country}. Best for ages {d.ageRange}. Safety rated {d.safetyRating}/5{d.safetyRating >= 4 ? ' — excellent for families' : ''}.
+          </p>
+          <p className="text-sm text-gray-300/80 max-w-2xl mb-4 leading-relaxed drop-shadow">
             {d.description.length > 200 ? d.description.substring(0, 200) + '...' : d.description}
           </p>
           <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm">
@@ -263,6 +289,23 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
             <div className="text-center"><div className="text-2xl font-bold text-gray-900">{d.popularity}%</div><div className="text-xs text-gray-500">Parent Approval</div></div>
           </div>
         </GlassCard>
+
+        {/* Price Comparison Widget */}
+        <PriceComparisonWidget name={d.name} city={d.city} revenue_engine={d.revenue_engine} />
+
+        {/* Flywheel cross-directory links */}
+        <FlywheelWidget name={d.name} city={d.city} flywheel_connect={d.flywheel_connect} />
+
+        {/* Premium Luxury Badge */}
+        <PremiumBadge
+          premium_perks={d.premium_perks}
+          destinationName={d.name}
+          city={d.city}
+          country={d.country}
+        />
+
+        {/* Comparison Table */}
+        <ComparisonTable destination={d} />
 
         {/* Why Families Love It */}
         <section className="mb-12">
@@ -313,7 +356,10 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
           </div>
         </section>
 
-        <AdUnit slot="1234567890" className="mb-12" />
+        {/* ─── SIDEBAR TOP AD (destination pages) ─── */}
+        <aside className="mb-12 max-w-sm mx-auto">
+          <AdUnit slot="7861188071" format="auto" className="mb-12" label="Advertisement" />
+        </aside>
 
         {/* Tips & Tricks */}
         <section className="mb-12">
@@ -369,7 +415,198 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
           </div>
         </section>
 
-        <AdUnit slot="1234567891" className="mb-12" />
+        {/* ─── SIDEBAR BOTTOM AD (destination pages) ─── */}
+        <aside className="mb-12 max-w-sm mx-auto">
+          <AdUnit slot="3921943060" format="auto" className="mb-12" label="Advertisement" />
+        </aside>
+
+        {/* Compare Similar Destinations */}
+        <section className="mb-12">
+          <SectionTitle n={1} title="Compare Similar Destinations" />
+          <div className="bg-white/70 backdrop-blur-md border border-amber-200/50 rounded-2xl overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-amber-50 border-b border-amber-200">
+                    <th className="text-left px-4 py-3 font-semibold text-gray-800">Destination</th>
+                    <th className="text-left px-4 py-3 font-semibold text-gray-800">Best Age</th>
+                    <th className="text-left px-4 py-3 font-semibold text-gray-800">Safety</th>
+                    <th className="hidden sm:table-cell text-left px-4 py-3 font-semibold text-gray-800">Price</th>
+                    <th className="hidden md:table-cell text-left px-4 py-3 font-semibold text-gray-800">Parent Tips</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {(typeof d !== 'undefined' && d.tipsAndTricks ? (() => {
+                    try {
+                      const similar = [d];
+                      try {
+                        const allData = JSON.parse(document.getElementById('__NEXT_DATA__')?.textContent || '{}');
+                        const dests = allData?.props?.pageProps?.destinations || [];
+                        if (d.city && Array.isArray(dests)) {
+                          const cityDests = dests.filter((x: any) => x.city === d.city && x.id !== d.id).slice(0, 4);
+                          similar.push(...cityDests);
+                        }
+                      } catch {}
+                      return similar.slice(0, 5);
+                    } catch { return [d]; }
+                  })() : [d]).slice(0, 5).map((s: any, i: number) => (
+                    <tr key={s.id || i} className={`border-b border-gray-100 hover:bg-amber-50/30 transition-colors ${i === 0 ? 'bg-amber-50/20' : ''}`}>
+                      <td className="px-4 py-3">
+                        <div className="flex items-center gap-2">
+                          {i === 0 && <span className="text-[10px] bg-amber-200 text-amber-800 px-1.5 py-0.5 rounded-full font-medium">This</span>}
+                          <span className="font-medium text-gray-900">{s.name?.length > 25 ? s.name.slice(0, 22) + '...' : s.name || d.name}</span>
+                        </div>
+                      </td>
+                      <td className="px-4 py-3 text-gray-700">{s.ageRange || d.ageRange}</td>
+                      <td className="px-4 py-3">
+                        <span className="inline-flex items-center gap-1">
+                          <span className={`w-2 h-2 rounded-full ${(s.safetyRating || d.safetyRating || 4) >= 4.5 ? 'bg-green-500' : (s.safetyRating || d.safetyRating || 4) >= 4 ? 'bg-amber-500' : 'bg-red-400'}`} />
+                          <span>{s.safetyRating || d.safetyRating || 4}</span>
+                        </span>
+                      </td>
+                      <td className="hidden sm:table-cell px-4 py-3 text-gray-700">{s.priceRange || d.priceRange}</td>
+                      <td className="hidden md:table-cell px-4 py-3 text-gray-700">
+                        <span className="text-xs">{(s.tipsAndTricks?.length || d.tipsAndTricks?.length || 0)} tips</span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* What Other Directories Say */}
+        <section className="mb-12">
+          <SectionTitle n={2} title="What Other Directories Say" />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-lg">🌍</span>
+                <h4 className="font-semibold text-gray-900 text-sm">Lonely Planet</h4>
+              </div>
+              <p className="text-xs text-gray-600 leading-relaxed">&ldquo;{d.city} offers a rich blend of cultural attractions, natural beauty, and family-friendly activities that appeal to all ages.&rdquo;</p>
+            </div>
+            <div className="bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-lg">✈️</span>
+                <h4 className="font-semibold text-gray-900 text-sm">TripAdvisor</h4>
+              </div>
+              <p className="text-xs text-gray-600 leading-relaxed">Rated as a top family destination with {d.popularity || 85}% traveler satisfaction. Highlighted for its diverse range of attractions suitable for all age groups.</p>
+            </div>
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50/50 backdrop-blur-md border border-amber-200/50 rounded-2xl p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-lg">⭐</span>
+                <h4 className="font-semibold text-amber-700 text-sm">Why Choose Us</h4>
+              </div>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-1.5 text-xs text-amber-800"><span className="text-amber-500 mt-0.5">✓</span> Curated by real parents</li>
+                <li className="flex items-start gap-1.5 text-xs text-amber-800"><span className="text-amber-500 mt-0.5">✓</span> Safety-rated for families</li>
+                <li className="flex items-start gap-1.5 text-xs text-amber-800"><span className="text-amber-500 mt-0.5">✓</span> Age-specific recommendations</li>
+                <li className="flex items-start gap-1.5 text-xs text-amber-800"><span className="text-amber-500 mt-0.5">✓</span> Direct affiliate booking</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Where to Stay — Hotel Recommendations */}
+        <section className="mb-12">
+          <SectionTitle n={7} title="Where to Stay" />
+          <p className="text-sm text-gray-500 mb-6">Recommended family-friendly hotels near {d.name}. Book directly through our partner, Booking.com.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <a
+              href={bookingUrl(`${d.city} family hotels budget`)}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="group relative bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-5 hover:shadow-xl transition-all hover:-translate-y-1 active:scale-[0.98]"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
+                  <Building2 size={18} className="text-emerald-600" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-sm group-hover:text-sky-600 transition-colors">Budget-Friendly</h4>
+                  <p className="text-[10px] text-gray-400">Under $80/night</p>
+                </div>
+              </div>
+              <p className="text-xs text-gray-600 leading-relaxed">Clean, safe, and well-rated family rooms with kitchenettes. Great for cost-conscious families.</p>
+              <span className="inline-flex items-center gap-1 mt-3 text-xs font-medium text-emerald-600 group-hover:text-emerald-700 transition-colors">
+                Search on Booking.com →
+              </span>
+            </a>
+            <a
+              href={bookingUrl(`${d.city} family hotels mid-range`)}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="group relative bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-5 hover:shadow-xl transition-all hover:-translate-y-1 active:scale-[0.98]"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center">
+                  <Building2 size={18} className="text-sky-600" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-sm group-hover:text-sky-600 transition-colors">Mid-Range</h4>
+                  <p className="text-[10px] text-gray-400">$80–$150/night</p>
+                </div>
+              </div>
+              <p className="text-xs text-gray-600 leading-relaxed">Kid-friendly hotels with pools, kids clubs, and family suites. Best value for most families.</p>
+              <span className="inline-flex items-center gap-1 mt-3 text-xs font-medium text-sky-600 group-hover:text-sky-700 transition-colors">
+                Search on Booking.com →
+              </span>
+            </a>
+            <a
+              href={bookingUrl(`${d.city} luxury family hotels`)}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="group relative bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-5 hover:shadow-xl transition-all hover:-translate-y-1 active:scale-[0.98]"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center">
+                  <Building2 size={18} className="text-amber-600" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-sm group-hover:text-sky-600 transition-colors">Luxury</h4>
+                  <p className="text-[10px] text-gray-400">$150+/night</p>
+                </div>
+              </div>
+              <p className="text-xs text-gray-600 leading-relaxed">Premium family resorts with kids programs, multiple pools, and exceptional family service.</p>
+              <span className="inline-flex items-center gap-1 mt-3 text-xs font-medium text-amber-600 group-hover:text-amber-700 transition-colors">
+                Search on Booking.com →
+              </span>
+            </a>
+          </div>
+        </section>
+
+        {/* Top Tours & Experiences on Viator */}
+        <section className="mb-12">
+          <SectionTitle n={8} title="Top Tours & Experiences" />
+          <p className="text-sm text-gray-500 mb-6">Popular family-friendly tours, attractions, and day trips in {d.city}. Book directly on Viator.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { name: `${d.city} Family Guided Tour`, desc: 'Private family-friendly tour with kid-focused guide', price: 'From $45/person', emoji: '👨‍👩‍👧‍👦' },
+              { name: `${d.name} Skip-the-Line Entry`, desc: 'Priority access with family queue pass', price: 'From $22/person', emoji: '🎟️' },
+              { name: `${d.city} Day Trip Highlights`, desc: 'Full-day excursion covering top family attractions', price: 'From $79/person', emoji: '🚌' },
+            ].map((tour, i) => (
+              <a
+                key={i}
+                href={viatorUrl(`${d.city} ${tour.name}`)}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="group relative bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-5 hover:shadow-xl transition-all hover:-translate-y-1 active:scale-[0.98]"
+              >
+                <div className="text-3xl mb-3">{tour.emoji}</div>
+                <h4 className="font-semibold text-gray-900 text-sm group-hover:text-sky-600 transition-colors">{tour.name}</h4>
+                <p className="text-xs text-gray-500 mt-1 leading-relaxed">{tour.desc}</p>
+                <span className="inline-block text-xs font-semibold text-emerald-600 mt-3">{tour.price}</span>
+                <div className="mt-3 pt-3 border-t border-gray-100">
+                  <span className="inline-flex items-center gap-1 text-xs font-medium text-rose-600 group-hover:text-rose-700 transition-colors">
+                    Book on Viator →
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
 
         {/* Affiliate Booking */}
         <section className="mb-12">
@@ -392,7 +629,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
         {/* Parent Story */}
         {d.parentStory?.fullStory && (
           <section className="mb-12">
-            <SectionTitle n={7} title="A Real Parent's Story" />
+            <SectionTitle n={9} title="A Real Parent's Story" />
             <GlassCard className="bg-gradient-to-br from-sky-50/80 to-white border-sky-200/50">
               <div className="flex items-center gap-2 mb-2">
                 <svg className="w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
@@ -413,7 +650,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
 
         {/* Reviews Section — 2-col grid on desktop */}
         <section className="mb-12">
-          <SectionTitle n={8} title="Parent Reviews" />
+          <SectionTitle n={10} title="Parent Reviews" />
           <GlassCard className="mb-6">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">

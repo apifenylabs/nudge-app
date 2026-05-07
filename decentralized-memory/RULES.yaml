@@ -1,0 +1,181 @@
+# RULES.yaml - OpenClaw Execution Rules (Source of Truth)
+
+model_routing:
+  default: "deepseek-chat"                     # Cheapest high-quality model
+  fallback_chain:
+    - "local:qwen2.5-coder"                    # Local first for routine tasks
+    - "local:deepseek-coder-v2"                # Local fallback for coding
+    - "deepseek-chat"
+    - "kimi"
+    - "gemini-2.5-flash"
+    - "claude-sonnet-4.6"                        # Only with explicit user approval
+
+  # ── Hybrid Local/Cloud Routing ──
+  use_local_llm: true                           # Toggle: false = cloud only, true = local first
+  local_ollama_server: "http://localhost:11434"  # Ollama API endpoint
+  local_timeout_seconds: 60                      # Fall back to cloud if local times out
+  local_models:
+    coder: "qwen2.5-coder:3b"                   # Fast, small coding model
+    writer: "qwen2.5:7b"                         # General writing
+    researcher: "phi4:latest"                     # Research reasoning
+
+  task_type_mapping:
+    CEO: "deepseek-chat"                         # CEO stays cloud (needs full intelligence)
+    routine:
+      provider: "local"                          # Local model for boilerplate
+      model: "qwen2.5-coder:3b"
+    research:
+      provider: "local"                          # Local model for basic research
+      model: "phi4:latest"
+    researcher:
+      provider: "local"
+      model: "phi4:latest"
+    product_owner: "deepseek-chat"
+    coder:
+      provider: "local"                          # Local model for routine coding
+      model: "qwen2.5-coder:3b"
+      fallback: "deepseek-chat"                 # Fall back on complex tasks
+    coder2:
+      provider: "local"
+      model: "qwen2.5-coder:3b"
+      fallback: "deepseek-chat"
+    coder3:
+      provider: "local"
+      model: "qwen2.5-coder:3b"
+      fallback: "deepseek-chat"
+    coder4:
+      provider: "local"
+      model: "qwen2.5-coder:3b"
+      fallback: "deepseek-chat"
+    coder5:
+      provider: "local"
+      model: "qwen2.5-coder:3b"
+      fallback: "deepseek-chat"
+    writer:
+      provider: "local"                          # Content writing via local LLM
+      model: "qwen2.5:7b"
+      fallback: "deepseek-chat"
+    reviewer_first:
+      provider: "local"                          # Cheap first pass review
+      model: "qwen2.5-coder:3b"
+      fallback: "deepseek-chat"
+    reviewer_final: "claude-sonnet-4.6"        # Quality gate: always cloud
+    high_stakes: "claude-opus-4.6"             # Strategic decisions: cloud only, requires approval
+
+budget_control:
+  daily_limit_usd: 1.0
+  monthly_limit_usd: 30.0
+  action_on_exceed: "pause_and_notify_user"
+  tiered_approval:
+    under_10: "auto_approve"
+    10_to_50: "notify_user"
+    over_50: "require_explicit_approval"
+
+reporting:
+  include_in_every_report:
+    - exact_token_usage
+    - estimated_cost_usd
+    - estimated_time_minutes
+    - tiered_approval_status
+
+validation_playbook:
+  pre_sell_required_customers: 3
+  landing_page_visits_target: 200
+  email_signups_target: 20
+  interview_signals_required: 7
+
+deployment_pipeline:
+  mandatory: true
+  steps:
+    - step: "Product Owner"
+      deliverable: "BRD + PRD with acceptance criteria"
+      template: "templates/BRD_TEMPLATE.md, templates/PRD_TEMPLATE.md"
+    - step: "Coder"
+      deliverable: "Implementation"
+      requirements: "Follow PRD acceptance criteria"
+    - step: "UI Agent"
+      deliverable: "Design review"
+      checklist: "design-principles.md"
+    - step: "Tester"
+      deliverable: "Test execution report"
+      template: "templates/TEST_STRATEGY_TEMPLATE.md, templates/TEST_CASE_TEMPLATE.md"
+      requirement: "Test cases reviewed by Product Owner before execution"
+    - step: "SEO Agent"
+      deliverable: "SEO optimization"
+      checklist: "agents/SEO_AGENT.md"
+    - step: "Security Agent"
+      deliverable: "Security audit report"
+      checklist: "agents/SECURITY_AGENT.md"
+      requirement: "Secrets, deps, auth, OWASP Top 10, infra checks — YAML output"
+    - step: "Reviewer"
+      deliverable: "Code quality review"
+    - step: "Chief Editor + CTO"
+      deliverable: "Final sign-off"
+    - step: "Deploy"
+      deliverable: "Production release"
+  quality_gates:
+    - "All P0 acceptance criteria must pass testing"
+    - "Test coverage ≥95% of acceptance criteria"
+    - "No critical bugs blocking launch"
+    - "Design passes Apple-level standards"
+    - "SEO foundation complete"
+
+github_kanban:
+  enabled: true
+  repo: "your-username/your-repo"               # Change this later
+  board_name: "Validation Kanban"
+  columns:
+    - "Backlog"
+    - "Validation"
+    - "Build"
+    - "Done"
+
+escalation_rules:
+  max_attempts_per_task: 2
+  after_max_attempts: "create_github_issue_with_tag needs-human"
+
+design_quality:
+  required: true
+  checklist_file: "/home/captain/.openclaw/workspace/design-principles.md"
+  pre_deploy_checks:
+    - command: "npx tailwindcss -o /dev/null --stdin < src/index.css"
+      description: "Validate Tailwind CSS classes exist"
+      fail_action: "abort_deployment"
+    - command: "npx eslint src/**/*.tsx --max-warnings 0"
+      description: "Lint React components"
+      fail_action: "abort_deployment"
+  post_deploy_checks:
+    - command: "curl -s http://localhost:3001 | grep -q 'Kanban Board'"
+      description: "Verify UI loads"
+  human_review_required_for:
+    - landing_page
+    - core_app_screens
+    - dashboard
+  auto_audit: true
+
+orchestra_monitoring:
+  watchdog_enabled: true
+  schedule: "*/5 * * * *"  # every 5 minutes
+  task: |
+    # Check if all 7 orchestras are running via PM2
+    cd /home/captain/.openclaw/workspace
+    RUNNING=$(pm2 jlist | jq '[.[] | .pm2_env.status] | contains(["online"])' )
+    if [ "$RUNNING" != "true" ]; then
+      echo "One or more orchestras down. Restarting all..."
+      ./fix-sigkill.sh
+      # Send alert to Alpha-HQ (optional)
+      curl -X POST http://localhost:3004/api/alerts -d '{"source":"watchdog","message":"Orchestras restarted"}'
+    fi
+  alert_threshold: 2  # Number of failures before alert
+  auto_restart: true
+  health_check_endpoints:
+    - directory_beast: "http://localhost:3000/health"
+    - social_beast: "http://localhost:3001/health"
+    - kidscan_beast: "http://localhost:3002/health"
+    - appfactory_beast: "http://localhost:3003/health"
+    - affiliate_beast: "http://localhost:3004/health"
+  required_orchestras: 7
+  max_restart_attempts: 3
+  escalation_channel: "telegram:1741426794"  # Alert to you on Telegram
+
+EOF

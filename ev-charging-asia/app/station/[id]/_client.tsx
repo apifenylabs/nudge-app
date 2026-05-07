@@ -2,10 +2,15 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import { Zap, MapPin, Star, ChevronLeft, Phone, Globe, Clock, BatteryCharging, Car, ExternalLink, Share2, Flag, CheckCircle, XCircle, AlertTriangle, Clock as ClockIcon } from 'lucide-react';
+import { MapPin, Star, ChevronLeft, Phone, Globe, Clock, BatteryCharging, Car, ExternalLink, Share2, Flag, CheckCircle, XCircle, AlertTriangle, Clock as ClockIcon, Zap } from 'lucide-react';
 import { Station, computeStationScore, scoreTier } from '@/lib/scoring';
+import SiteFooter from '@/components/SiteFooter';
 import EvMapContainer from '@/components/EvMapContainer';
 import StationCard from '@/components/StationCard';
+import AffiliateCTABar from '@/components/AffiliateCTABar';
+import PriceComparisonWidget from '@/components/PriceComparisonWidget';
+import StationTipForm from '@/components/StationTipForm';
+import { getAffiliatesForLocation, chargingCosts } from '@/lib/affiliate-links';
 
 const CHARGER_ICONS: Record<string, string> = { 'CCS2': '🔌', 'CHAdeMO': '⚡', 'Type 2': '🔋', 'GB/T': '🇨🇳', 'NACS': '🔌' };
 
@@ -120,6 +125,16 @@ export default function ClientStationPage({ station, allStations }: { station: S
   const nearbyStations = useMemo(() => {
     return allStations.filter(s => s.id !== station.id && (s.city === station.city || s.country === station.country)).slice(0, 4);
   }, [station, allStations]);
+
+  // Get affiliate links for this station's country/city
+  const affiliateItems = useMemo(() => {
+    return getAffiliatesForLocation(station.country, station.city);
+  }, [station.country, station.city]);
+
+  // Get charging cost data for this station's country
+  const stationCostData = useMemo(() => {
+    return chargingCosts;
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -306,6 +321,15 @@ export default function ClientStationPage({ station, allStations }: { station: S
           )}
         </div>
 
+        {/* Affiliate CTAs — Travel essentials near this charger */}
+        <AffiliateCTABar links={affiliateItems} title="Travel Essentials Near This Charger" />
+
+        {/* Family Tips — user ranking for family-friendliness */}
+        <StationTipForm stationId={station.id} stationName={station.name} />
+
+        {/* Charging Cost Comparison */}
+        <PriceComparisonWidget costs={stationCostData} selectedCountry={station.country} />
+
         {/* Map */}
         <div className="bg-white/80 backdrop-blur-md rounded-xl border border-gray-200/70 overflow-hidden mb-6">
           <div className="p-4 border-b border-gray-100"><h2 className="text-lg font-bold text-gray-900">Location</h2></div>
@@ -350,18 +374,7 @@ export default function ClientStationPage({ station, allStations }: { station: S
         )}
       </div>
 
-      <footer className="border-t border-gray-200 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-gray-500">
-            <Zap size={16} className="text-green-500" />
-            <span className="text-sm">EV Charging Asia</span>
-          </div>
-          <div className="flex items-center gap-4 text-sm text-gray-400">
-            <Link href="/about" className="hover:text-gray-600">About</Link>
-            <Link href="/privacy" className="hover:text-gray-600">Privacy</Link>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

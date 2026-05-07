@@ -1,0 +1,288 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ─── Premium Luxury Palette ─── */
+/* Background: warm white #F8F6F3 | Text: charcoal #1A1A1A / #0A0A0A | Accent: gold #D4AF37 | Card: white | Warm beige: #E8DCC6 */
+
+@theme {
+  --color-gold: #D4AF37;
+  --color-gold-light: #E8D5A3;
+  --color-gold-dark: #B89628;
+  --color-cream: #F5F0E8;
+  --color-cream-light: #FAF7F2;
+  --color-cream-dark: #E8DCC6;
+  --color-navy: #1A1A2E;
+  --color-navy-light: #2D2D4A;
+  --color-navy-dark: #0F0F1E;
+  --color-warm-white: #F8F6F3;
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-dark: #0A0A0A;
+}
+
+/* ─── Luxury Body Base ─── */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #F8F6F3;
+  color: #1A1A1A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #0A0A0A;
+}
+
+/* ─── Premium Selection ─── */
+::selection {
+  background: #D4AF37;
+  color: #0A0A0A;
+}
+
+/* Safe area padding for iPhone notch */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+@supports (padding-bottom: constant(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: constant(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: constant(safe-area-inset-top);
+  }
+}
+
+/* Custom utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+}
+
+/* Review form animations */
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+@keyframes slide-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes heart-beat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  50% { transform: scale(1.05); }
+  75% { transform: scale(1.15); }
+}
+.animate-slide-up { animation: slide-up 0.3s ease-out; }
+@media (min-width: 640px) {
+  .animate-slide-right { animation: slide-right 0.3s ease-out; }
+}
+.animate-fade-in { animation: fade-in 0.3s ease-out; }
+.animate-gradient-shift { background-size: 200% 200%; animation: gradient-shift 8s ease infinite; }
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-heart-beat { animation: heart-beat 0.5s ease-in-out; }
+
+/* Heart transition for bookmark */
+.heart-icon {
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ─── Luxury Card Styles ─── */
+.luxury-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(212, 175, 55, 0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
+
+/* ─── Gold Accent Utility ─── */
+.gold-accent {
+  position: relative;
+}
+.gold-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #D4AF37;
+}
+
+/* ─── Luxury Gradient Underline ─── */
+.luxury-underline {
+  display: inline-block;
+  position: relative;
+}
+.luxury-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #D4AF37, transparent);
+}
+
+/* ─── Parallax Hero Wrapper ─── */
+.parallax-hero {
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  min-height: 500px;
+}
+
+.parallax-hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+/* ─── Premium Fade-In Animation ─── */
+@keyframes premium-fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.premium-fade-in {
+  animation: premium-fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ─── Zen Stagger Reveal ─── */
+@keyframes zen-reveal {
+  from { opacity: 0; transform: translateY(12px); clip-path: inset(0 0 100% 0); }
+  to { opacity: 1; transform: translateY(0); clip-path: inset(0 0 0 0); }
+}
+.zen-reveal {
+  animation: zen-reveal 0.8s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+
+/* ─── Gentle Rise (for scroll reveals) ─── */
+@keyframes gentle-rise {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.gentle-rise {
+  animation: gentle-rise 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ─── Zen Border Glow ─── */
+@keyframes border-glow {
+  0%, 100% { border-color: rgba(201, 169, 110, 0.2); box-shadow: 0 0 0 rgba(201, 169, 110, 0); }
+  50% { border-color: rgba(201, 169, 110, 0.5); box-shadow: 0 0 20px rgba(201, 169, 110, 0.1); }
+}
+.zen-border-glow {
+  animation: border-glow 3s ease-in-out infinite;
+}
+
+/* ─── Zen Parallax Image Reveal ─── */
+@keyframes image-reveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+.image-reveal {
+  animation: image-reveal 1s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+
+/* ─── Gold shimmer ─── */
+@keyframes gold-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.gold-shimmer {
+  background: linear-gradient(90deg, rgba(201, 169, 110, 0.3) 25%, rgba(201, 169, 110, 0.6) 50%, rgba(201, 169, 110, 0.3) 75%);
+  background-size: 200% 100%;
+  animation: gold-shimmer 2s infinite;
+}
+
+/* ─── Pulsing gold dot ─── */
+@keyframes gold-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+.gold-pulse {
+  animation: gold-pulse 2s ease-in-out infinite;
+}
+
+/* ─── Count up animation ─── */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-count-up {
+  animation: count-up 0.5s ease-out both;
+}
+
+/* Custom scrollbar hide */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

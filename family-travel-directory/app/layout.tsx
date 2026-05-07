@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import BottomNav from "@/components/BottomNav";
+import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
-const BASE_URL = 'https://family-travel-directory.vercel.app';
+const BASE_URL = 'https://familytravelasia.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -18,7 +22,7 @@ export const metadata: Metadata = {
   creator: "Family Travel Directory",
   publisher: "Family Travel Directory",
   alternates: {
-    canonical: 'https://family-travel-directory.vercel.app',
+    canonical: 'https://familytravelasia.com',
   },
   robots: {
     index: true,
@@ -56,6 +60,17 @@ export const metadata: Metadata = {
     google: "", // Add Google Search Console verification code here
   },
   category: "travel",
+  other: {
+    'google-site-verification': '',
+  },
+  applicationName: "Asia Family Travel Directory",
+  generator: "Next.js",
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    telephone: true,
+    address: true,
+    email: true,
+  },
 };
 
 const inter = Inter({
@@ -64,20 +79,45 @@ const inter = Inter({
   display: "swap",
 });
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+  weight: ["500", "600", "700", "800", "900"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} h-full antialiased`}>
       <head>
         {/* Google AdSense */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6046953221141245" crossOrigin="anonymous" />
+        {/* Schema.org Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Asia Family Travel Directory",
+              "url": "https://familytravelasia.com",
+              "description": "29+ family-friendly destinations across Asia. Honest tips, real parent stories, and practical advice for traveling with kids.",
+              "sameAs": [],
+            }),
+          }}
+        />
       </head>
-      <body className="min-h-full bg-gray-50 text-gray-900 pb-safe pt-safe">
+      <body className="min-h-full bg-surface text-body pb-safe pt-safe font-body">
         {children}
+        <SiteFooter />
         <BottomNav />
+        <Analytics />
+        <SpeedInsights />
+        <GoogleAnalytics />
       </body>
     </html>
   );

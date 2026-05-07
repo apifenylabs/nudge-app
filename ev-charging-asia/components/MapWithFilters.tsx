@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { Search, X, SlidersHorizontal, ChevronDown, ChevronUp, Star, BatteryCharging, Gauge, Activity, Shield, Zap, DollarSign } from 'lucide-react';
+import { Search, X, SlidersHorizontal, ChevronDown, ChevronUp, BatteryCharging, Gauge, Activity, Shield, Zap, DollarSign } from 'lucide-react';
 import { Station, computeStationScore, scoreTier } from '@/lib/scoring';
 import MapLegend from './MapLegend';
 
@@ -15,6 +15,17 @@ interface Meta {
   countries: string[];
 }
 
+const COUNTRIES = ['Thailand', 'India', 'Japan', 'Indonesia', 'Malaysia', 'Singapore'];
+
+const COUNTRY_CITIES: Record<string, string[]> = {
+  'Thailand': ['Bangkok', 'Chiang Mai', 'Phuket', 'Pattaya', 'Khon Kaen', 'Hat Yai'],
+  'India': ['Mumbai', 'Delhi', 'Bangalore', 'Chennai', 'Hyderabad', 'Pune', 'Kolkata', 'Ahmedabad', 'Jaipur', 'Lucknow'],
+  'Japan': ['Tokyo', 'Osaka', 'Yokohama', 'Nagoya', 'Sapporo', 'Kyoto', 'Kobe', 'Hiroshima', 'Naha'],
+  'Indonesia': ['Jakarta', 'Surabaya', 'Bandung', 'Bali', 'Medan', 'Makassar'],
+  'Malaysia': ['Kuala Lumpur', 'George Town', 'Johor Bahru', 'Ipoh', 'Kota Kinabalu', 'Malacca', 'Kuching'],
+  'Singapore': ['Singapore'],
+};
+
 export default function MapWithFilters({ stations, meta }: { stations: Station[]; meta: Meta }) {
   const [mounted, setMounted] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -25,9 +36,14 @@ export default function MapWithFilters({ stations, meta }: { stations: Station[]
   const [statusFilter, setStatusFilter] = useState<'all' | 'working'>('all');
   const [amenityFilters, setAmenityFilters] = useState<Record<string, boolean>>({});
   const [selectedStation, setSelectedStation] = useState<Station | null>(null);
-  const [showFeatured, setShowFeatured] = useState(true);
   const [reliabilityFilter, setReliabilityFilter] = useState(0); // 0 = any, 4 = 4+ only
+  const [familyFriendly, setFamilyFriendly] = useState(false);
+  const [luxuryOnly, setLuxuryOnly] = useState(false);
+  const [wellnessNearby, setWellnessNearby] = useState(false);
   const [memberBenefits, setMemberBenefits] = useState<Record<string, boolean>>({});
+  const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
+  const [selectedCity, setSelectedCity] = useState<string | null>(null);
+  const [countryFilterOpen, setCountryFilterOpen] = useState(true);
 
   useEffect(() => { setMounted(true); }, []);
 
@@ -68,8 +84,31 @@ export default function MapWithFilters({ stations, meta }: { stations: Station[]
     setAmenityFilters({});
     setSearchQuery('');
     setReliabilityFilter(0);
+    setFamilyFriendly(false);
+    setLuxuryOnly(false);
+    setWellnessNearby(false);
     setMemberBenefits({});
+    setSelectedCountry(null);
+    setSelectedCity(null);
   }, []);
+
+  const handleCountrySelect = (country: string | null) => {
+    if (selectedCountry === country) {
+      setSelectedCountry(null);
+      setSelectedCity(null);
+    } else {
+      setSelectedCountry(country);
+      setSelectedCity(null);
+    }
+  };
+
+  const handleCitySelect = (city: string | null) => {
+    if (selectedCity === city) {
+      setSelectedCity(null);
+    } else {
+      setSelectedCity(city);
+    }
+  };
 
   const filtered = useMemo(() => {
     let f = [...stations];
@@ -82,6 +121,14 @@ export default function MapWithFilters({ stations, meta }: { stations: Station[]
         s.operator.toLowerCase().includes(q) ||
         s.chargerTypes.some(t => t.toLowerCase().includes(q))
       );
+    }
+    // Country filter
+    if (selectedCountry) {
+      f = f.filter(s => s.country === selectedCountry);
+    }
+    // City filter
+    if (selectedCity) {
+      f = f.filter(s => s.city === selectedCity);
     }
     // Connector types (OR logic)
     if (selectedTypes.length > 0) {
@@ -99,17 +146,33 @@ export default function MapWithFilters({ stations, meta }: { stations: Station[]
     Object.entries(amenityFilters).forEach(([key, active]) => {
       if (active) f = f.filter(s => (s as any)[key] === true);
     });
+    // Family-friendly filter (2+ family amenities)
+    if (familyFriendly) {
+      f = f.filter(s => {
+        const amenities = [s.hasRestroomNearby, s.hasFoodNearby, s.hasCoveredParking, s.isMallParking];
+        return amenities.filter(Boolean).length >= 2;
+      });
+    }
+    // Luxury only filter (high rating + speed + amenities)
+    if (luxuryOnly) {
+      f = f.filter(s => {
+        const amenityCount = [s.hasRestroomNearby, s.hasFoodNearby, s.hasCoveredParking, s.has24by7Access].filter(Boolean).length;
+        return s.reliability >= 4.0 && s.chargerSpeed >= 150 && amenityCount >= 3;
+      });
+    }
+    // Wellness recovery stops
+    if (wellnessNearby) {
+      f = f.filter(s => s.hasRestroomNearby && s.hasFoodNearby && (s.isMallParking || s.hasCoveredParking));
+    }
     // Member benefits
-    // freeParking → stations with covered parking or mall parking
     if (memberBenefits.freeParking) {
       f = f.filter(s => s.hasCoveredParking || s.isMallParking);
     }
-    // membership → stations that accept membership payment
     if (memberBenefits.membership) {
       f = f.filter(s => s.paymentMethods.includes('Membership'));
     }
     return f;
-  }, [stations, searchQuery, selectedTypes, powerLevel, statusFilter, amenityFilters, reliabilityFilter, memberBenefits]);
+  }, [stations, searchQuery, selectedCountry, selectedCity, selectedTypes, powerLevel, statusFilter, amenityFilters, reliabilityFilter, memberBenefits]);
 
   const featured = useMemo(() => {
     return [...stations].sort((a, b) => computeStationScore(b) - computeStationScore(a)).slice(0, 8);
@@ -131,7 +194,12 @@ export default function MapWithFilters({ stations, meta }: { stations: Station[]
     (powerLevel !== 'any' ? 1 : 0) +
     (statusFilter !== 'all' ? 1 : 0) +
     (reliabilityFilter > 0 ? 1 : 0) +
-    Object.values(memberBenefits).filter(Boolean).length;
+    (familyFriendly ? 1 : 0) +
+    (luxuryOnly ? 1 : 0) +
+    (wellnessNearby ? 1 : 0) +
+    Object.values(memberBenefits).filter(Boolean).length +
+    (selectedCountry ? 1 : 0) +
+    (selectedCity ? 1 : 0);
 
   if (!mounted) {
     return (
@@ -302,7 +370,7 @@ export default function MapWithFilters({ stations, meta }: { stations: Station[]
 
               {moreFiltersOpen && (
                 <div className="space-y-3">
-                  {/* Amenities */}
+                      {/* Amenities */}
                   <div>
                     <div className="text-xs font-semibold text-gray-500 mb-1.5">Amenities</div>
                     <div className="flex flex-wrap gap-1.5">
@@ -319,6 +387,45 @@ export default function MapWithFilters({ stations, meta }: { stations: Station[]
                           {a.label}
                         </button>
                       ))}
+                    </div>
+                  </div>
+
+                  {/* Family-Friendly */}
+                  <div>
+                    <div className="text-xs font-semibold text-gray-500 mb-1.5 flex items-center gap-1">
+                      👶 Family-Friendly
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      <button
+                        onClick={() => setFamilyFriendly(!familyFriendly)}
+                        className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-colors ${
+                          familyFriendly
+                            ? 'bg-pink-600 text-white border-pink-600'
+                            : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300'
+                        }`}
+                      >
+                        👶 Family Friendly (restroom, food, parking)
+                      </button>
+                      <button
+                        onClick={() => setLuxuryOnly(!luxuryOnly)}
+                        className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-colors ${
+                          luxuryOnly
+                            ? 'bg-amber-600 text-white border-amber-600'
+                            : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300'
+                        }`}
+                      >
+                        👑 Luxury Only (150kW+, 4★+, 3 amenities)
+                      </button>
+                      <button
+                        onClick={() => setWellnessNearby(!wellnessNearby)}
+                        className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-colors ${
+                          wellnessNearby
+                            ? 'bg-emerald-600 text-white border-emerald-600'
+                            : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300'
+                        }`}
+                      >
+                        🧘 Wellness Recovery (food, restroom, parking)
+                      </button>
                     </div>
                   </div>
 
@@ -350,7 +457,6 @@ export default function MapWithFilters({ stations, meta }: { stations: Station[]
                       </button>
                       <button
                         onClick={() => {
-                          // 24/7 access toggle is already in amenities
                           setAmenityFilters(prev => ({ ...prev, has24by7Access: !prev.has24by7Access }));
                         }}
                         className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-colors ${
@@ -378,6 +484,82 @@ export default function MapWithFilters({ stations, meta }: { stations: Station[]
         </div>
       </div>
 
+      {/* Country Filter Bar */}
+      <div className="absolute top-16 left-3 right-3 z-[1000] max-w-lg mx-auto">
+        <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          {/* Toggle button */}
+          <button
+            onClick={() => setCountryFilterOpen(!countryFilterOpen)}
+            className="flex items-center justify-between w-full px-3 py-2 text-xs font-semibold text-gray-700 hover:bg-gray-50/50 transition-colors"
+          >
+            <span>
+              {selectedCountry ? (
+                <span>
+                  Country: <span className="text-sky-600">{selectedCountry}</span>
+                  {selectedCity && <> / City: <span className="text-sky-600">{selectedCity}</span></>}
+                </span>
+              ) : (
+                'Browse by Country'
+              )}
+            </span>
+            <ChevronDown size={14} className={`text-gray-400 transition-transform ${countryFilterOpen ? 'rotate-180' : ''}`} />
+          </button>
+
+          {countryFilterOpen && (
+            <div className="px-3 pb-3 space-y-2 animate-fade-in">
+              {/* Country pills */}
+              <div className="flex flex-wrap gap-1.5">
+                <button
+                  onClick={() => { setSelectedCountry(null); setSelectedCity(null); }}
+                  className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-all ${
+                    !selectedCountry
+                      ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
+                      : 'bg-white text-gray-600 border-gray-200 hover:border-emerald-300 hover:text-emerald-600'
+                  }`}
+                >
+                  All Countries
+                </button>
+                {COUNTRIES.map(country => (
+                  <button
+                    key={country}
+                    onClick={() => handleCountrySelect(country)}
+                    className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-all ${
+                      selectedCountry === country
+                        ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
+                        : 'bg-white text-gray-600 border-gray-200 hover:border-emerald-300 hover:text-emerald-600'
+                    }`}
+                  >
+                    {country}
+                  </button>
+                ))}
+              </div>
+
+              {/* City pills (only when a country is selected) */}
+              {selectedCountry && COUNTRY_CITIES[selectedCountry] && (
+                <div>
+                  <div className="text-[10px] text-gray-400 mb-1.5 font-medium">Cities in {selectedCountry}</div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {COUNTRY_CITIES[selectedCountry].map(city => (
+                      <button
+                        key={city}
+                        onClick={() => handleCitySelect(city)}
+                        className={`px-2.5 py-1 rounded-full text-[11px] font-medium border transition-all ${
+                          selectedCity === city
+                            ? 'bg-sky-600 text-white border-sky-600 shadow-sm'
+                            : 'bg-white/70 text-gray-500 border-gray-200 hover:border-sky-300 hover:text-sky-600'
+                        }`}
+                      >
+                        {city}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+
       {/* Stats Badge */}
       <div className="absolute top-3 right-3 z-[1000] hidden md:block">
         <div className="bg-white/90 backdrop-blur-sm rounded-xl px-3 py-2 shadow-lg border border-gray-200 text-xs text-gray-600">
@@ -386,83 +568,30 @@ export default function MapWithFilters({ stations, meta }: { stations: Station[]
         </div>
       </div>
 
-      {/* No results */}
+      {/* No results - compact banner, not blocking */}
       {filtered.length === 0 && (
-        <div className="absolute inset-0 flex items-center justify-center z-[500] pointer-events-none">
-          <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200 text-center max-w-xs pointer-events-auto">
-            <BatteryCharging size={36} className="mx-auto text-gray-300 mb-2" />
-            <h3 className="font-semibold text-gray-900 text-sm mb-1">No stations match your filters</h3>
-            <p className="text-gray-500 text-xs mb-3">Try adjusting your search or filters.</p>
-            <button onClick={clearAll} className="px-4 py-2 bg-gray-900 text-white rounded-lg text-xs font-medium hover:bg-gray-800 transition-colors pointer-events-auto">
-              Clear all filters
+        <div className="absolute top-20 left-3 right-3 z-[500] max-w-md mx-auto pointer-events-auto">
+          <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <BatteryCharging size={16} className="text-gray-400 shrink-0" />
+              <span className="text-xs text-gray-600">No stations match your filters</span>
+            </div>
+            <button onClick={clearAll} className="px-3 py-1 text-[11px] font-medium text-white bg-gray-900 rounded-md hover:bg-gray-800 transition-colors">
+              Clear filters
             </button>
           </div>
         </div>
       )}
 
-      {/* Featured sidebar (desktop) */}
-      <div className={`absolute top-16 right-3 z-[1000] w-72 transition-all duration-300 hidden lg:block ${showFeatured ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-        <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-200 overflow-hidden max-h-[60vh] flex flex-col">
-          <div className="flex items-center justify-between px-3 py-2 border-b border-gray-100">
-            <span className="text-xs font-semibold text-gray-700 flex items-center gap-1"><Star size={12} className="text-amber-400 fill-amber-400" /> Featured</span>
-            <button onClick={() => setShowFeatured(false)} className="text-gray-400 hover:text-gray-600"><X size={14} /></button>
-          </div>
-          <div className="overflow-y-auto flex-1 divide-y divide-gray-100">
-            {featured.map(station => {
-              const score = computeStationScore(station);
-              return (
-                <Link
-                  key={station.id}
-                  href={`/station/${station.id}`}
-                  className="block px-3 py-2 hover:bg-gray-50 transition-colors"
-                >
-                  <div className="text-xs font-semibold text-gray-900 truncate">{station.name}</div>
-                  <div className="text-[11px] text-gray-500 truncate">{station.city}, {station.country}</div>
-                  <div className="flex items-center gap-1.5 mt-0.5">
-                    <span className={`px-1.5 py-0.5 rounded text-[10px] font-medium border ${scoreTier(score).color}`}>{score}</span>
-                    <span className="text-[11px] text-gray-400">{station.chargerSpeed}kW</span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      {/* Featured bottom sheet (mobile) - FIXED: below map, not overlapping */}
-      <div className={`absolute bottom-0 left-0 right-0 z-[1000] lg:hidden transition-all duration-300 ${showFeatured ? '' : 'translate-y-full'}`}>
-        <div className="bg-white rounded-t-xl shadow-lg border border-gray-200 max-h-[180px] flex flex-col pb-safe">
-          <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-100 shrink-0 min-h-[44px]">
-            <span className="text-xs font-semibold text-gray-700 flex items-center gap-1">
-              <Star size={12} className="text-amber-400 fill-amber-400" /> Featured Stations
-            </span>
-            <button onClick={() => setShowFeatured(false)} className="text-gray-400 hover:text-gray-600 p-1.5 min-w-[44px] min-h-[44px] flex items-center justify-center"><ChevronDown size={18} /></button>
-          </div>
-          <div className="overflow-x-auto flex gap-3 px-4 py-2.5">
-            {featured.slice(0, 5).map(station => (
-              <Link
-                key={station.id}
-                href={`/station/${station.id}`}
-                className="shrink-0 w-40 p-2.5 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors min-h-[44px]"
-              >
-                <div className="text-xs font-semibold text-gray-900 truncate">{station.name}</div>
-                <div className="text-[10px] text-gray-500">{station.city}</div>
-                <div className="text-[10px] text-green-600 font-medium">{station.chargerSpeed}kW</div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Toggle featured button */}
-      {!showFeatured && (
-        <button
-          onClick={() => setShowFeatured(true)}
-          className="absolute bottom-3 right-3 z-[1000] bg-white rounded-full shadow-lg border border-gray-200 p-2.5 hover:bg-gray-50 transition-colors"
+      {/* Quick Stats Badge (small, non-blocking) */}
+      <div className="absolute top-28 right-3 z-[1000] hidden md:block">
+        <Link
+          href="/search"
+          className="block bg-white/80 backdrop-blur-sm rounded-lg px-3 py-1.5 shadow border border-gray-200 text-[11px] text-gray-600 hover:bg-white transition-colors"
         >
-          <Star size={16} className="text-amber-400" />
-        </button>
-      )}
+          {filtered.length} stations · <span className="text-emerald-600 font-medium">Browse all →</span>
+        </Link>
+      </div>
     </div>
   );
 }

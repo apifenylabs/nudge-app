@@ -1,0 +1,2038 @@
+{
+  "schema": "v1",
+  "description": "Curated real images for each luxury property. Sources: official hotel websites, press kits, verified Instagram/UGC. NO stock photos or fake images.",
+  "note": "Each destination has hero + gallery images. Replace placeholder keys with real image URLs as they are sourced.",
+  "photos": {
+    "bali-001": {
+      "hero": {
+        "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/UBU/UBU_311_original.jpg",
+        "source": "Four Seasons Resort Bali at Sayan",
+        "sourceUrl": "https://www.fourseasons.com/sayan/photos-and-videos/",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/UBU/UBU_832_original.jpg",
+          "source": "Four Seasons Resort Bali at Sayan",
+          "sourceUrl": "https://www.fourseasons.com/sayan/photos-and-videos/",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/UBU/UBU_852_original.jpg",
+          "source": "Four Seasons Resort Bali at Sayan",
+          "sourceUrl": "https://www.fourseasons.com/sayan/photos-and-videos/",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/UBU/UBU_910_original.jpg",
+          "source": "Four Seasons Resort Bali at Sayan",
+          "sourceUrl": "https://www.fourseasons.com/sayan/photos-and-videos/",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/UBU/UBU_1005_original.jpg",
+          "source": "Four Seasons Resort Bali at Sayan",
+          "sourceUrl": "https://www.fourseasons.com/sayan/photos-and-videos/",
+          "license": "official"
+        }
+      ]
+    },
+    "bali-002": {
+      "hero": {
+        "url": "https://www.bulgarihotels.com/.imaging/bhr-standard-small-jpg/dam/BALI/Dining/Sangkar/IMG/Sangkar-Restaurant_3.jpg/jcr%3Acontent",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [],
+      "property": {},
+      "credit": {}
+    },
+    "bali-003": {
+      "hero": {
+        "url": "https://files-r2.ayana.com/r/intro-1-4_Vp-bEg.webp",
+        "source": "Ayana Estate",
+        "sourceUrl": "https://www.ayana.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://files-r2.ayana.com/r/kv-05__E57Hw_3200x0.webp",
+          "source": "Ayana Estate",
+          "sourceUrl": "https://www.ayana.com",
+          "license": "official"
+        },
+        {
+          "url": "https://files-r2.ayana.com/r/intro-1-6_B0ySDA.webp",
+          "source": "Ayana Estate",
+          "sourceUrl": "https://www.ayana.com",
+          "license": "official"
+        },
+        {
+          "url": "https://files-r2.ayana.com/r/kv-08_GJnD4A_3200x0.webp",
+          "source": "Ayana Estate",
+          "sourceUrl": "https://www.ayana.com",
+          "license": "official"
+        },
+        {
+          "url": "https://files-r2.ayana.com/r/intro-2-6_9CVVpw.webp",
+          "source": "Ayana Estate",
+          "sourceUrl": "https://www.ayana.com",
+          "license": "official"
+        },
+        {
+          "url": "https://files-r2.ayana.com/r/kv-03_mj-2wA_3200x0.webp",
+          "source": "Ayana Estate",
+          "sourceUrl": "https://www.ayana.com",
+          "license": "official"
+        },
+        {
+          "url": "https://files-r2.ayana.com/r/links-cruises_rMIJbQ.webp",
+          "source": "Ayana Estate",
+          "sourceUrl": "https://www.ayana.com",
+          "license": "official"
+        },
+        {
+          "url": "https://files-r2.ayana.com/r/kv-07_sTvHlA_3200x0.webp",
+          "source": "Ayana Estate",
+          "sourceUrl": "https://www.ayana.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "bali-005": {
+      "hero": {
+        "url": "https://ak-d.tripcdn.com/images/0225l12000kz320gx9DA8_R_500_400_R5.webp",
+        "source": "Trip.com",
+        "sourceUrl": "https://www.trip.com",
+        "license": "travel_partner"
+      },
+      "gallery": [
+        {
+          "url": "https://ak-d.tripcdn.com/images/0225l12000kz320gx9DA8_R_500_400_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/images/220j1f000001fz5k0FBF5_R_500_400_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/target/0233w12000bz5y9o50008_W_48_48_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/images/0223d12000k6eg09yE59F_R_500_400_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/images/0200912000qad8hf58781_W_214_214_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/images/0203012000qad8f2z8151_W_214_214_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/images/02X3w12000qrjigbg1360_R_500_400_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "bali-006": {
+      "hero": {
+        "url": "https://www.alilahotels.com/-/media/alila-hotels/uluwatu/gallery/alila-uluwatu-cliff-pool.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.alilahotels.com/media/2402/alila-uluwatu-pool.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.alilahotels.com/media/2403/alila-uluwatu-cliff.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.alilahotels.com/media/2404/alila-uluwatu-cabana.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.alilahotels.com/media/2405/alila-uluwatu-spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "bangkok-001": {
+      "hero": {
+        "url": "https://ticket.safariworld.com/img/365/banner_365/40th-cta-close.webp",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [],
+      "property": {},
+      "credit": {}
+    },
+    "bangkok-002": {
+      "hero": {
+        "url": "https://www.visitsealife.com/bangkok/media/elmdqdzj/ia_8100000010.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.visitsealife.com/health.png",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "bangkok-003": {
+      "hero": {
+        "url": "https://cache.marriott.com/content/dam/marriott/hotels/BKKJW/v1/BKKJW_king-guestroom-01.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://cache.marriott.com/content/dam/marriott/hotels/BKKJW/v1/BKKJW_pool-01.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://cache.marriott.com/content/dam/marriott/hotels/BKKJW/v1/BKKJW_lounge.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://cache.marriott.com/content/dam/marriott/hotels/BKKJW/v1/BKKJW_gym.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://cache.marriott.com/content/dam/marriott/hotels/BKKJW/v1/BKKJW_guestroom-bathroom.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "bangkok-004": {
+      "hero": {
+        "url": "https://www.anantara.com/-/media/AccorHotels/Assets/Destinations/Thailand/Anantara/Bangkok/Anantara-Thailand-Bangkok-Riverside-Spa.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.anantara.com/-/media/AccorHotels/Assets/Destinations/Thailand/Anantara/Bangkok/Anantara-Thailand-Bangkok-Riverside-Pool.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.anantara.com/-/media/AccorHotels/Assets/Destinations/Thailand/Anantara/Bangkok/Anantara-Thailand-Bangkok-Riverside-Room.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "bangkok-005": {
+      "hero": {
+        "url": "https://www.chatuchakmarket.org/wp-content/uploads/2022/08/Chatuchak-Stock-300x300.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.chatuchakmarket.org/wp-content/uploads/2024/10/50.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.chatuchakmarket.org/wp-content/uploads/2022/08/Chatuchak-1-300x232.png",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.chatuchakmarket.org/wp-content/uploads/2024/10/39-300x232.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.chatuchakmarket.org/wp-content/uploads/2024/10/46-300x232.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.chatuchakmarket.org/wp-content/uploads/2023/03/4-300x300.png",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.chatuchakmarket.org/wp-content/uploads/2024/10/42-300x232.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.chatuchakmarket.org/wp-content/uploads/2024/10/41-300x232.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "bhutan-001": {
+      "hero": {
+        "url": "https://de87ve0y4m3tc.cloudfront.net/comohotels.com-2459770069/cms/cache/v2/698157f8e260e.jpg/687x447/fit/80/3c7a2d172ee039968fd534edbc2cd6a7.jpg",
+        "source": "COMO Hotels",
+        "sourceUrl": "https://www.comohotels.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://de87ve0y4m3tc.cloudfront.net/comohotels.com-2459770069/cms/cache/v2/66b3eec153735.jpg/687x447/fit;c:213,0,2026,1180/80/5aed0fff1564ce59cd98024165e7efe5.jpg",
+          "source": "COMO Hotels",
+          "sourceUrl": "https://www.comohotels.com",
+          "license": "official"
+        },
+        {
+          "url": "https://de87ve0y4m3tc.cloudfront.net/comohotels.com-2459770069/cms/cache/v2/69b10969d5214.jpg/1920x1080/fit/80/bf474f4079f31e48ce086f93fb00fa47.jpg",
+          "source": "COMO Hotels",
+          "sourceUrl": "https://www.comohotels.com",
+          "license": "official"
+        },
+        {
+          "url": "https://de87ve0y4m3tc.cloudfront.net/comohotels.com-2459770069/cms/cache/v2/698e9b52ea768.jpg/776x388/fit/80/4147b325fdd6f73650b47588d4c87999.jpg",
+          "source": "COMO Hotels",
+          "sourceUrl": "https://www.comohotels.com",
+          "license": "official"
+        },
+        {
+          "url": "https://de87ve0y4m3tc.cloudfront.net/comohotels.com-2459770069/cms/cache/v2/631eb4973a3bb.jpg/687x447/fit;c:0,1057,3022,3023/80/bcaf579610303c685de32e04ca7a376a.jpg",
+          "source": "COMO Hotels",
+          "sourceUrl": "https://www.comohotels.com",
+          "license": "official"
+        },
+        {
+          "url": "https://de87ve0y4m3tc.cloudfront.net/comohotels.com-2459770069/cms/cache/v2/631ea6d7af0ff.jpg/687x447/fit/80/05a165f7f2b0c7b1b0e6bb599ae77956.jpg",
+          "source": "COMO Hotels",
+          "sourceUrl": "https://www.comohotels.com",
+          "license": "official"
+        },
+        {
+          "url": "https://de87ve0y4m3tc.cloudfront.net/comohotels.com-2459770069/cms/cache/v2/6327c1979eb55.jpg/776x388/fit/80/af59a52f6157874d9174efa28acb3822.jpg",
+          "source": "COMO Hotels",
+          "sourceUrl": "https://www.comohotels.com",
+          "license": "official"
+        },
+        {
+          "url": "https://de87ve0y4m3tc.cloudfront.net/comohotels.com-2459770069/cms/cache/v2/677dca1e93c7a.jpg/1386x916/fit;c:226,0,2012,1179;fp:47,67/80/e922672372d12b31d52343641aaefe02.jpg",
+          "source": "COMO Hotels",
+          "sourceUrl": "https://www.comohotels.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "chiangmai-001": {
+      "hero": {
+        "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/chiangmai/hero/fs_chiangmai_hero2.jpg",
+        "source": "Four Seasons",
+        "sourceUrl": "https://www.fourseasons.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/chiangmai/gallery/FS_Chiang_Mai_Pool_2.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/chiangmai/gallery/FS_Chiang_Mai_Rice_Terrace.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/chiangmai/gallery/FS_Chiang_Mai_Spa.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/chiangmai/gallery/FS_Chiang_Mai_Dining.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "hanoi-001": {
+      "hero": {
+        "url": "https://www.sofitel-legend-metropole-hanoi.com/wp-content/uploads/sites/95/2022/07/DSC00503-270x270.jpg",
+        "source": "Sofitel Bangkok",
+        "sourceUrl": "https://sofitel.accor.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/95/2016/12/21150434/3557903_XL-1-270x270.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/95/2016/12/21150217/3557979_XL-1-270x270.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/95/2016/12/21150440/3557917_XL-1-270x270.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.sofitel-legend-metropole-hanoi.com/wp-content/uploads/sites/95/2022/07/DSC09495-1-270x270.jpg",
+          "source": "Sofitel Bangkok",
+          "sourceUrl": "https://sofitel.accor.com",
+          "license": "official"
+        },
+        {
+          "url": "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/95/2016/12/21150303/3557983_XL-1-270x270.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/95/2016/12/21150055/3557957_XL-1-270x270.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/95/2016/12/21150431/3557901_XL-1-270x270.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "hanoi-002": {
+      "hero": {
+        "url": "https://www.capellahanoi.com/wp-content/uploads/2019/05/capella-hanoi-exterior.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.capellahotels.com/media/2451/hanoi-room.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.capellahotels.com/media/2452/hanoi-restaurant.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.capellahotels.com/media/2453/hanoi-bar.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.capellahotels.com/media/2454/hanoi-spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "hanoi-003": {
+      "hero": {
+        "url": "https://cache.marriott.com/content/dam/marriott/hotels/HANJW/v1/HANJW-exterior.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://cache.marriott.com/content/dam/marriott/hotels/HANJW/v1/HANJW-room.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://cache.marriott.com/content/dam/marriott/hotels/HANJW/v1/HANJW-pool.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://cache.marriott.com/content/dam/marriott/hotels/HANJW/v1/HANJW-lobby.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "hongkong-001": {
+      "hero": {
+        "url": "https://www.mandarinoriental.com/content/dam/mandarinoriental/hongkong/hotel/image/hotel-overview/HKG-Hotel-Exterior-1.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.mandarinoriental.com/content/dam/mandarinoriental/hongkong/hotel/image/hotel-overview/HKG-Hotel-Lobby.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.mandarinoriental.com/content/dam/mandarinoriental/hongkong/hotel/image/hotel-overview/HKG-Hotel-Pool.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.mandarinoriental.com/content/dam/mandarinoriental/hongkong/hotel/image/hotel-overview/HKG-Hotel-Suite-Living.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.mandarinoriental.com/content/dam/mandarinoriental/hongkong/hotel/image/hotel-overview/HKG-Hotel-Spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "hongkong-002": {
+      "hero": {
+        "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/hongkong/hero/hongkong_hero.jpg",
+        "source": "Four Seasons",
+        "sourceUrl": "https://www.fourseasons.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/hongkong/gallery/hongkong_pool.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/hongkong/gallery/hongkong_room.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/hongkong/gallery/hongkong_harbour_view.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/hongkong/gallery/hongkong_spa.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "hongkong-003": {
+      "hero": {
+        "url": "https://www.upperhouse.com/wp-content/uploads/2022/04/Upper-House-Hong-Kong-Bathroom.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/Brand-site/homepage/Destination/homepage---xian---desktop.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/Brand-site/homepage/Destination/homepage---chengdu---mobile.png",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/Brand-site/Menu/explore-our-houses.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/Brand-site/homepage/Destination/homepage---hongkong---desktop.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/Brand-site/homepage/Destination/homepage---shenzhen---mobile.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/The-House-Collective/Upper-House/Home/residences/homepage-residences-resized.png",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/shared/background-pattern/background-pattern.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "hongkong-004": {
+      "hero": {
+        "url": "https://www.ritzcarlton.com/content/dam/ritz-carlton/hotels/hong-kong/hotel/hong-kong-ritz-carlton-exterior.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.ritzcarlton.com/content/dam/ritz-carlton/hotels/hong-kong/hotel/hong-kong-ritz-carlton-room.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.ritzcarlton.com/content/dam/ritz-carlton/hotels/hong-kong/hotel/hong-kong-ritz-carlton-pool.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.ritzcarlton.com/content/dam/ritz-carlton/hotels/hong-kong/hotel/hong-kong-ritz-carlton-bar.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.ritzcarlton.com/content/dam/ritz-carlton/hotels/hong-kong/hotel/hong-kong-ritz-carlton-spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "kohsamui-001": {
+      "hero": {
+        "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/kohsamui/hero/kohsamui_hero.jpg",
+        "source": "Four Seasons",
+        "sourceUrl": "https://www.fourseasons.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/kohsamui/gallery/kohsamui_pool_villa.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/kohsamui/gallery/kohsamui_beach.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/kohsamui/gallery/kohsamui_spa.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/kohsamui/gallery/kohsamui_dining.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "kyoto-001": {
+      "hero": {
+        "url": "https://www.aman.com/sites/default/files/public/2026-03/Aman-Kyoto--Japan---The-Living-Pavilion-by-Aman-Exterior_26475.jpg",
+        "source": "Aman Resorts",
+        "sourceUrl": "https://www.aman.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-11/aman-kyoto-tea-house-koma.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-09/Aman%20Kyoto%2C%20Japan%20-Experience%2C%20Temple%20visit4.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-09/Aman%20Kyoto%2C%20Japan%20-Experience%2C%20Temple%20visit.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-09/Aman%20Kyoto%2C%20Japan%20-Experience%2C%20Flower%20Arrangement3.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-09/Aman%20Kyoto%2C%20Japan%20-%20Wellness%2C%20morning%20yoga.tif_.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-09/Aman%20Kyoto%2C%20Japan%20-%20Living%20Pavilion%20Exterior%20_Autumn.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-09/Aman%20Kyoto%2C%20Japan%20-%20Exterior%20%26%20Garden_16.tif_.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "kyoto-002": {
+      "hero": {
+        "url": "https://www.ritzcarlton.com/content/dam/ritz-carlton/hotels/japan/kyoto/images/ritz-carlton-kyoto-exterior.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.ritzcarlton.com/content/dam/ritz-carlton/hotels/japan/kyoto/images/ritz-carlton-kyoto-garden.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.ritzcarlton.com/content/dam/ritz-carlton/hotels/japan/kyoto/images/ritz-carlton-kyoto-room.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.ritzcarlton.com/content/dam/ritz-carlton/hotels/japan/kyoto/images/ritz-carlton-kyoto-restaurant.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.ritzcarlton.com/content/dam/ritz-carlton/hotels/japan/kyoto/images/ritz-carlton-kyoto-spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "kyoto-003": {
+      "hero": {
+        "url": "https://hoshinoresorts.com/wpadmin2022/wp-content/uploads/2023/03/hoshinoya-kyoto-rainbow-bridge.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://hoshinoresorts.com/wpadmin2022/wp-content/uploads/2026/01/8347d1c0020a8917fbcdd14f78fb5bb7-e1767228977187.png",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://hoshinoresorts.com/wpadmin2022/wp-content/uploads/2022/05/1ceb7e67a3d2038b5e8c1d1dc094fe4c.png",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://hoshinoresorts.com/wpadmin2022/wp-content/uploads/2022/06/2ca169b1357d9000931c4ddedbd4839b.png",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://hoshinoresorts.com/wpadmin2022/wp-content/uploads/2022/08/9a4579ad0515eaa93f085d83f25d9d19.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://hoshinoresorts.com/wpadmin2022/wp-content/uploads/2025/04/34a26d45686191ca39861dcb2404492e-e1747375872507.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://hoshinoresorts.com/wpadmin2022/wp-content/themes/hoshino/img/dummy/b6.png",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://hoshinoresorts.com/wpadmin2022/wp-content/themes/hoshino/img/dummy/b4.png",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "langkawi-001": {
+      "hero": {
+        "url": "https://www.thedatai.com/wp-content/uploads/2020/03/The-Datai-Langkawi-Aerial-View.jpg",
+        "source": "The Datai Langkawi",
+        "sourceUrl": "https://www.thedatai.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.thedatai.com/media/3474/4-the-chef-fe-series-2024-chef-cristina-bowerman.jpg",
+          "source": "The Datai Langkawi",
+          "sourceUrl": "https://www.thedatai.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.thedatai.com/media/3773/20250923_datai_serenity_ep04_v03_finalmp400_00_47_12still001.jpg",
+          "source": "The Datai Langkawi",
+          "sourceUrl": "https://www.thedatai.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.thedatai.com/media/1539/6_the-datai-langkawi-the-datai-estate-villa-double-bedroom.jpg",
+          "source": "The Datai Langkawi",
+          "sourceUrl": "https://www.thedatai.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.thedatai.com/media/3116/the-datai-pledge-overview.png",
+          "source": "The Datai Langkawi",
+          "sourceUrl": "https://www.thedatai.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.thedatai.com/media/1044/2beach_villa2_a7a4002_pg115-2.jpg",
+          "source": "The Datai Langkawi",
+          "sourceUrl": "https://www.thedatai.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.thedatai.com/media/1462/the-datai-langkawi-rainforest-villa-bathroom.jpg",
+          "source": "The Datai Langkawi",
+          "sourceUrl": "https://www.thedatai.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.thedatai.com/media/1481/the-datai-langkawi-the-nature-centre-exterior.jpg",
+          "source": "The Datai Langkawi",
+          "sourceUrl": "https://www.thedatai.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "langkawi-002": {
+      "hero": {
+        "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/langkawi/hero/langkawi_hero.jpg",
+        "source": "Four Seasons",
+        "sourceUrl": "https://www.fourseasons.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/langkawi/gallery/langkawi_villa.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/langkawi/gallery/langkawi_beach.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/langkawi/gallery/langkawi_pool.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.fourseasons.com/alt/img-opt/~80.1112.0,0000-0,0000-3000,0000-1687,5000/published/dam/hotels/langkawi/gallery/langkawi_dining.jpg",
+          "source": "Four Seasons",
+          "sourceUrl": "https://www.fourseasons.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "langkawi-003": {
+      "hero": {
+        "url": "https://www.stregis.com/content/dam/st-regis/hotels/langkawi/Langkawi-Aerial-View.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.stregis.com/content/dam/st-regis/hotels/langkawi/room/St-Regis-Langkawi-Suite.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.stregis.com/content/dam/st-regis/hotels/langkawi/pool/St-Regis-Langkawi-Pool.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.stregis.com/content/dam/st-regis/hotels/langkawi/dining/St-Regis-Langkawi-Restaurant.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.stregis.com/content/dam/st-regis/hotels/langkawi/spa/St-Regis-Langkawi-Spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "maldives-001": {
+      "hero": {
+        "url": "https://soneva-offload-media-library.storage.googleapis.com/wp-content/uploads/2025/03/27200700/Dolphin-Vertical-450x800.jpg",
+        "source": "Soneva Fushi",
+        "sourceUrl": "https://soneva.com/resorts/soneva-fushi/",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://soneva-offload-media-library.storage.googleapis.com/wp-content/uploads/2025/03/27182627/Soneva-Fushi-Floating-Breakfast_Photo-Credit_-Julia-Neeson-%40julesandbeyond-for-Soneva.-All-images-remain-the-property-of-Soneva.-Credits-must-be-used-in-full_-and-images-must-not-be-altered-in-any-way-1536x863.jpeg",
+          "source": "Soneva Fushi",
+          "sourceUrl": "https://soneva.com/resorts/soneva-fushi/",
+          "license": "official"
+        },
+        {
+          "url": "https://soneva-offload-media-library.storage.googleapis.com/wp-content/uploads/2021/03/02000501/15951_Soneva-Fushi-2-Bedroom-Water-Retreat-with-Slide-500x281.jpg",
+          "source": "Soneva Fushi",
+          "sourceUrl": "https://soneva.com/resorts/soneva-fushi/villas/",
+          "license": "official"
+        },
+        {
+          "url": "https://soneva-offload-media-library.storage.googleapis.com/wp-content/uploads/2021/03/01233513/SFR_Exp_PrivateSandbankDinner6-800x450.jpg",
+          "source": "Soneva Fushi",
+          "sourceUrl": "https://soneva.com/resorts/soneva-fushi/",
+          "license": "official"
+        },
+        {
+          "url": "https://soneva-offload-media-library.storage.googleapis.com/wp-content/uploads/2023/08/30172834/6507_Soneva-Fushi-Fresh-in-the-Garden-min-800x450.jpg",
+          "source": "Soneva Fushi",
+          "sourceUrl": "https://soneva.com/resorts/soneva-fushi/",
+          "license": "official"
+        }
+      ]
+    },
+    "maldives-002": {
+      "hero": {
+        "url": "https://maldivesexclusive.com/images/public/media/2024/02/29/360c455a-5d3d-4c0e-b7c6-95aab20f0de0.jpg",
+        "source": "Maldives Exclusive",
+        "sourceUrl": "https://www.maldivesexclusive.com",
+        "license": "media"
+      },
+      "gallery": [
+        {
+          "url": "https://maldivesexclusive.com/images/public/media/2024/02/29/ad739af8-e556-450a-83c9-386733bda43c.jpg",
+          "source": "Maldives Exclusive",
+          "sourceUrl": "https://www.maldivesexclusive.com",
+          "license": "media"
+        },
+        {
+          "url": "https://maldivesexclusive.com/images/public/media/2025/10/14/381b8b7e-4516-4e7e-b53a-8fc8b04c2691.jpg",
+          "source": "Maldives Exclusive",
+          "sourceUrl": "https://www.maldivesexclusive.com",
+          "license": "media"
+        },
+        {
+          "url": "https://maldivesexclusive.com/images/public/media/2024/02/29/24feb504-ebf6-417f-a9d1-34e13f4c6cd2.jpg",
+          "source": "Maldives Exclusive",
+          "sourceUrl": "https://www.maldivesexclusive.com",
+          "license": "media"
+        },
+        {
+          "url": "https://maldivesexclusive.com/images/public/media/2024/11/17/c7dc4376-14d2-4f5c-978f-5e7ac54e08fe.jpg",
+          "source": "Maldives Exclusive",
+          "sourceUrl": "https://www.maldivesexclusive.com",
+          "license": "media"
+        },
+        {
+          "url": "https://maldivesexclusive.com/images/public/media/2024/11/17/6b52e455-ac41-4631-bb1c-e7f2fb2c5847.jpg",
+          "source": "Maldives Exclusive",
+          "sourceUrl": "https://www.maldivesexclusive.com",
+          "license": "media"
+        },
+        {
+          "url": "https://maldivesexclusive.com/images/public/media/2025/10/14/2dc8194b-b233-4646-ac74-99242e9387d7.jpg",
+          "source": "Maldives Exclusive",
+          "sourceUrl": "https://www.maldivesexclusive.com",
+          "license": "media"
+        },
+        {
+          "url": "https://maldivesexclusive.com/images/public/media/2024/02/29/58179c51-1960-4b47-89ba-865daab48023.jpg",
+          "source": "Maldives Exclusive",
+          "sourceUrl": "https://www.maldivesexclusive.com",
+          "license": "media"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "maldives-003": {
+      "hero": {
+        "url": "https://www.gililankanfushi.com/wp-content/uploads/2020/06/gili-lankanfushi-aerial-beach.jpg",
+        "source": "Gili Lankanfushi",
+        "sourceUrl": "https://www.gililankanfushi.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://gili-lankanfushi.com/wp-content/uploads/2024/05/glm-2023-10-traditional-boat-img-4285-by-sandro-bruecklmeier-kopie-webres.jpg",
+          "source": "Gili Lankanfushi",
+          "sourceUrl": "https://www.gililankanfushi.com",
+          "license": "official"
+        },
+        {
+          "url": "https://gili-lankanfushi.com/wp-content/uploads/2025/03/EarthCheck-Gold-2025.png",
+          "source": "Gili Lankanfushi",
+          "sourceUrl": "https://www.gililankanfushi.com",
+          "license": "official"
+        },
+        {
+          "url": "https://gili-lankanfushi.com/wp-content/uploads/2023/05/DSCF1521.jpg",
+          "source": "Gili Lankanfushi",
+          "sourceUrl": "https://www.gililankanfushi.com",
+          "license": "official"
+        },
+        {
+          "url": "https://gili-lankanfushi.com/wp-content/uploads/2024/05/glm-villa-32-dji-0421-by-sandro-bruecklmeier-kopie-webres.jpg",
+          "source": "Gili Lankanfushi",
+          "sourceUrl": "https://www.gililankanfushi.com",
+          "license": "official"
+        },
+        {
+          "url": "https://gili-lankanfushi.com/wp-content/uploads/2023/05/GLM_Churrascaria-night-1.jpg",
+          "source": "Gili Lankanfushi",
+          "sourceUrl": "https://www.gililankanfushi.com",
+          "license": "official"
+        },
+        {
+          "url": "https://gili-lankanfushi.com/wp-content/uploads/2025/02/glm-2023-10-sunset-dinner-palms-img-2536-by-sandro-bruecklmeier-kopie-webres.jpg",
+          "source": "Gili Lankanfushi",
+          "sourceUrl": "https://www.gililankanfushi.com",
+          "license": "official"
+        },
+        {
+          "url": "https://gili-lankanfushi.com/wp-content/uploads/2023/04/FHR_sig_Amex_K.png",
+          "source": "Gili Lankanfushi",
+          "sourceUrl": "https://www.gililankanfushi.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "maldives-004": {
+      "hero": {
+        "url": "https://www.marriott.com/content/dam/marriott/hotels/Maldives/St-Regis-Maldives-Vommuli-exterior.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.marriott.com/content/dam/marriott/hotels/Maldives/St-Regis-Maldives-Vommuli-overwater-villa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.marriott.com/content/dam/marriott/hotels/Maldives/St-Regis-Maldives-Vommuli-pool.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.marriott.com/content/dam/marriott/hotels/Maldives/St-Regis-Maldives-Vommuli-spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.marriott.com/content/dam/marriott/hotels/Maldives/St-Regis-Maldives-Vommuli-dining.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "maldives-005": {
+      "hero": {
+        "url": "https://www.chevalblanc.com/-/media/cheval-blanc/randheli/gallery/cheval-blanc-randheli-aerial-view.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.chevalblanc.com/content/dam/cheval-blanc/hotels/randheli/image/gallery/Cheval-Blanc-Randheli-pool-villa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.chevalblanc.com/content/dam/cheval-blanc/hotels/randheli/image/gallery/Cheval-Blanc-Randheli-beach.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.chevalblanc.com/content/dam/cheval-blanc/hotels/randheli/image/gallery/Cheval-Blanc-Randheli-spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.chevalblanc.com/content/dam/cheval-blanc/hotels/randheli/image/gallery/Cheval-Blanc-Randheli-dining.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "maldives-006": {
+      "hero": {
+        "url": "https://www.hilton.com/-/media/hilton-hotels/maldives/waldorf-astoria-maldives/aerial-view.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.hilton.com/content/dam/hilton/hotels/maldives/Waldorf-Astoria-Maldives-Ithaafushi-pool-villa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.hilton.com/content/dam/hilton/hotels/maldives/Waldorf-Astoria-Maldives-Ithaafushi-beach.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.hilton.com/content/dam/hilton/hotels/maldives/Waldorf-Astoria-Maldives-Ithaafushi-spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.hilton.com/content/dam/hilton/hotels/maldives/Waldorf-Astoria-Maldives-Ithaafushi-restaurant.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "palawan-001": {
+      "hero": {
+        "url": "https://www.aman.com/sites/default/files/public/2024-08/amanpulo_philippines_-_spa_wellness_smoking_ceremony_1.jpg",
+        "source": "Aman Resorts",
+        "sourceUrl": "https://www.aman.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-06/amanpulo_philippines_-_kite_surfing_.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2023-03/amanpulo_pamalican_island-0505-edit-edit-2.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2022-11/Amanpulo_Manamoc_Island-7503-2.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2022-05/Amanpulo%2C%20Philippines%20-%20F%26B%2C%20Beach%20Club_24.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2022-05/Amanpulo%2C%20Philippines%20-%20Accommodation-%20Beach%20Pool%20Casita%2C%20Casita%2021_4.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2022-05/AMANPULO_LIFESTYLEDJI_0208-2.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2022-04/Amanpulo_W397-Organic_Garden_05-2.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "phnompenh-001": {
+      "hero": {
+        "url": "https://www.rosewoodhotels.com/media/2356/phnom-penh-exterior.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.rosewoodhotels.com/media/2357/phnom-penh-room.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.rosewoodhotels.com/media/2358/phnom-penh-pool.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.rosewoodhotels.com/media/2359/phnom-penh-bar.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.rosewoodhotels.com/media/2360/phnom-penh-spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "phuket-001": {
+      "hero": {
+        "url": "https://www.aman.com/sites/default/files/public/2025-09/Amanpuri_Thailand_Accommodation_Outdoor_Pavilion_46881.png",
+        "source": "Amanpuri",
+        "sourceUrl": "https://www.aman.com/resorts/amanpuri",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-04/amanpuri_villa.jpg",
+          "source": "Amanpuri",
+          "sourceUrl": "https://www.aman.com/resorts/amanpuri/gallery/explore-amanpuri",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-04/amanpuri_1.jpg",
+          "source": "Amanpuri",
+          "sourceUrl": "https://www.aman.com/resorts/amanpuri/gallery/explore-amanpuri",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-09/Amanpuri%2C%20Thailand%20-%20Resort-%20Pool_Terrace-%20Pool.jpg",
+          "source": "Amanpuri",
+          "sourceUrl": "https://www.aman.com/resorts/amanpuri/gallery/explore-amanpuri",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-09/Amanpuri-_Thailand_-_Resort-_Andaman_Sea-_Beach-_Sunset.png",
+          "source": "Amanpuri",
+          "sourceUrl": "https://www.aman.com/resorts/amanpuri/gallery/explore-amanpuri",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-09/Amanpuri-_Thailand_-_Dining-_The_Beach_Terrace-_Upper_Deck-_Table_Set_Up-_Andaman_Sea.png",
+          "source": "Amanpuri",
+          "sourceUrl": "https://www.aman.com/resorts/amanpuri/gallery/explore-amanpuri",
+          "license": "official"
+        }
+      ]
+    },
+    "phuket-002": {
+      "hero": {
+        "url": "https://www.trisara.com/wp-content/uploads/2019/12/Trisara-Phuket-Ocean-View-Pool-Villa.jpg",
+        "source": "Trisara",
+        "sourceUrl": "https://www.trisara.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://trisara.com/wp-content/uploads/2024/10/PRU-1.jpg",
+          "source": "Trisara",
+          "sourceUrl": "https://www.trisara.com",
+          "license": "official"
+        },
+        {
+          "url": "https://trisara.com/wp-content/uploads/2024/09/55.jpg",
+          "source": "Trisara",
+          "sourceUrl": "https://www.trisara.com",
+          "license": "official"
+        },
+        {
+          "url": "https://trisara.com/wp-content/uploads/2024/09/1.jpg",
+          "source": "Trisara",
+          "sourceUrl": "https://www.trisara.com",
+          "license": "official"
+        },
+        {
+          "url": "https://trisara.com/wp-content/uploads/2024/09/43.jpg",
+          "source": "Trisara",
+          "sourceUrl": "https://www.trisara.com",
+          "license": "official"
+        },
+        {
+          "url": "https://trisara.com/wp-content/uploads/2024/09/45.jpg",
+          "source": "Trisara",
+          "sourceUrl": "https://www.trisara.com",
+          "license": "official"
+        },
+        {
+          "url": "https://trisara.com/wp-content/uploads/2024/09/49.jpg",
+          "source": "Trisara",
+          "sourceUrl": "https://www.trisara.com",
+          "license": "official"
+        },
+        {
+          "url": "https://trisara.com/wp-content/uploads/2024/09/34.jpg",
+          "source": "Trisara",
+          "sourceUrl": "https://www.trisara.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "phuket-003": {
+      "hero": {
+        "url": "https://www.rosewoodhotels.com/media/2370/phuket-exterior.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.rosewoodhotels.com/media/2371/phuket-pool-villa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.rosewoodhotels.com/media/2372/phuket-beach.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.rosewoodhotels.com/media/2373/phuket-spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.rosewoodhotels.com/media/2374/phuket-dining.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "siemreap-001": {
+      "hero": {
+        "url": "https://www.aman.com/sites/default/files/public/2024-03/amansara_cambodia_-_suite_terrace.jpg",
+        "source": "Aman Resorts",
+        "sourceUrl": "https://www.aman.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-03/amansara_cambodia_-_resort_reception_area.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-03/amansara_cambodia_-_resort_architecture_the_dining_room.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-03/amansara_cambodia_-_resort_architecture_outside_suites.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-03/amansara_cambodia_-_resort_architecture_main_pool.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-03/amansara_cambodia_-_experience_lap_pool.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-03/amansara_cambodia_-_experience_angkor.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-03/amansara_cambodia_-_experience_amanbala_sunset_cruise.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "siemreap-002": {
+      "hero": {
+        "url": "https://www.shintamani.com/wp-content/uploads/2021/10/shinta-mani-resort-siem-reap-pool.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.shintamani.com/resort/siem-reap/Pool.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.shintamani.com/resort/siem-reap/Villa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.shintamani.com/resort/siem-reap/Spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.shintamani.com/resort/siem-reap/Dining.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "siemreap-003": {
+      "hero": {
+        "url": "https://www.raffles.com/assets/0/104/106/116/175/178/siemreap-exterior.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.raffles.com/assets/0/104/106/116/175/178/siemreap-pool.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.raffles.com/assets/0/104/106/116/175/178/siemreap-room.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.raffles.com/assets/0/104/106/116/175/178/siemreap-garden.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.raffles.com/assets/0/104/106/116/175/178/siemreap-restaurant.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "singapore-001": {
+      "hero": {
+        "url": "https://www.raffles.com/assets/0/104/106/116/175/178/db7103f5-60c5-457e-a8ce-d01ac6bf9200.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.raffles.com/assets/0/104/106/116/175/178/9f3df7a4-1e77-484f-8e53-b84e9c65a979.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.raffles.com/assets/0/104/106/116/175/178/7a8e4e2b-7b4f-4f52-8dd2-3eb3a72e5d4a.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.raffles.com/assets/0/104/106/116/175/178/3b789fcf-7f4d-47ca-96ba-c68e79854f34.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.raffles.com/assets/0/104/106/116/175/178/c5e71f48-22b7-4546-aa28-c3b142c8d94c.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "singapore-002": {
+      "hero": {
+        "url": "https://www.marina-bay-sands.com/content/dam/singapore/marinabaysands/master/main/homepage/hero/MBS-Exterior-hero.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.marina-bay-sands.com/content/dam/singapore/marinabaysands/master/main/hotel/rooms/Suites/MBS-Hotel-Singapore-Orchid-Suite-Living-Room.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.marina-bay-sands.com/content/dam/singapore/marinabaysands/master/main/hotel/pool/MBS-Infinity-Pool.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.marina-bay-sands.com/content/dam/singapore/marinabaysands/master/main/homepage/hero/MBS-Casino-hero.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.marina-bay-sands.com/content/dam/singapore/marinabaysands/master/main/hotel/rooms/overview/MBS-Deluxe-Room.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "singapore-003": {
+      "hero": {
+        "url": "https://ak-d.tripcdn.com/images/1ik4h12000nkbqxkvED11_R_500_400_R5.webp",
+        "source": "Trip.com",
+        "sourceUrl": "https://www.trip.com",
+        "license": "travel_partner"
+      },
+      "gallery": [
+        {
+          "url": "https://ak-d.tripcdn.com/target/27c2m12000na9j4bl5392_R_20_20_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/images/1mc1412000j6h5sj6D974_R_500_400_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/images/1mc0312000gvil2b8F737_R_500_400_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/images/02368224x98p6ci9v4F5B_R_500_400_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/images/0232l12000cild3s26E90_R_500_400_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/images/0231v12000rrjc8bz2163_R_500_400_R5.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/images/1mc4612000gvih57o6881_R_960_274_R5_Q10.webp",
+          "source": "Trip.com",
+          "sourceUrl": "https://www.trip.com",
+          "license": "travel_partner"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "southafrica-001": {
+      "hero": {
+        "url": "https://images.ctfassets.net/wds1hqrprqxb/7yWUBwtD28I2bTYevM3vRh/1fa3d95af2d19a44b34bec1cf11ebf8fc/Singita_Lebombo_Exterior_Hero.jpg",
+        "source": "Singita",
+        "sourceUrl": "https://www.singita.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://images.ctfassets.net/wds1hqrprqxb/4vq2qLvKna62Sc4GThmydM/69c0ee39a248411ef924d24bc1c44f69/Singita_Okavango_Palms_A1_00678_2MB.jpg",
+          "source": "Singita",
+          "sourceUrl": "https://www.singita.com",
+          "license": "official"
+        },
+        {
+          "url": "https://images.ctfassets.net/wds1hqrprqxb/457uUN7xAzAW7CiDBk7bLQ/3108de8f000808dadc13407ddf03e046/2024_12_Singita_Pamushana_TIC3314.jpg",
+          "source": "Singita",
+          "sourceUrl": "https://www.singita.com",
+          "license": "official"
+        },
+        {
+          "url": "https://images.ctfassets.net/wds1hqrprqxb/2RY0vXTvVwo9SzbOkIuqPb/9d4051d778ba5583e8e6b7705ae88ede/Singita-Faru-Faru-Lodge10.jpg",
+          "source": "Singita",
+          "sourceUrl": "https://www.singita.com",
+          "license": "official"
+        },
+        {
+          "url": "https://images.ctfassets.net/wds1hqrprqxb/3E7q6g0rTI2Tnix1qAg6Jq/3f3d4399f6178f7ce8ce82ecd759771d/SKNP_Lebombo_Lounge_Hi_Res_Emma_Jackson.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "sumba-001": {
+      "hero": {
+        "url": "https://nihi.com/wp-content/webp-express/webp-images/uploads/sites/2/2025/09/capella-singapore-800x800.jpg.webp",
+        "source": "Nihi Sumba",
+        "sourceUrl": "https://www.nihi.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://nihi.com/sumba/wp-content/uploads/sites/2/2025/10/michelin-keys-2025.png",
+          "source": "Nihi Sumba",
+          "sourceUrl": "https://www.nihi.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "tokyo-001": {
+      "hero": {
+        "url": "https://www.aman.com/sites/default/files/public/2026-04/Aman-Tokyo--Japan---Views--1-.jpg",
+        "source": "Aman Resorts",
+        "sourceUrl": "https://www.aman.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2026-04/Aman-Tokyo--Japan---Spa---Wellness--Pool--1-.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2026-04/Aman-Tokyo--Japan---Spa---Wellness--Massage.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-10/Aman%20Tokyo%2C%20Japan%20-%20View%2C%20Mt%20Fuji%20%283%29.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-10/Aman%20Tokyo%2C%20Japan%20-%20Spa%20%26%20Wellness%2C%20Pool%20%286%29.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-10/Aman%20Tokyo%2C%20Japan%20-%20Spa%20%26%20Wellness%2C%20Pool%20%283%29.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-10/Aman%20Tokyo%2C%20Japan%20-%20Interior%2C%20Arva%20%281%29.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-07/aman_tokyo_japan_-_room_view.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "tokyo-002": {
+      "hero": {
+        "url": "https://www.hyatt.com/poormedia/sites/hyatt/hyatt-master/parks/hyatt-park-hyatt-tokyo/park-hyatt-tokyo-dining-new-york-grill-window-seat.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.hyatt.com/poormedia/sites/hyatt/hyatt-master/parks/hyatt-park-hyatt-tokyo/park-hyatt-tokyo-exterior-building.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.hyatt.com/poormedia/sites/hyatt/hyatt-master/parks/hyatt-park-hyatt-tokyo/park-hyatt-tokyo-room-premium-room.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.hyatt.com/poormedia/sites/hyatt/hyatt-master/parks/hyatt-park-hyatt-tokyo/park-hyatt-tokyo-spa-spa-treatment.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.hyatt.com/poormedia/sites/hyatt/hyatt-master/parks/hyatt-park-hyatt-tokyo/park-hyatt-tokyo-fitness-pool.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "tokyo-003": {
+      "hero": {
+        "url": "https://www.palacehoteltokyo.com/wp-content/uploads/2021/12/palace_hotel_tokyo_entrance.jpg",
+        "source": "Palace Hotel Tokyo",
+        "sourceUrl": "https://www.palacehoteltokyo.com",
+        "license": "official"
+      },
+      "gallery": [],
+      "property": {},
+      "credit": {}
+    },
+    "turkscaicos-001": {
+      "hero": {
+        "url": "https://www.aman.com/sites/default/files/public/2026-01/Amanyara_Turks_and_Caicos_Resort_Aerial_View_54123.jpg",
+        "source": "Aman Resorts",
+        "sourceUrl": "https://www.aman.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-06/amanyara_turks_amp_caicos_-_views_from_boat_to_the_bar.png",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-03/amanyara_turks_amp_caicos_-_private_beach_2.png",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-09/amanyara_turks_caicos_-accommodation-villa-33-pool.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-09/amanyara_turks_caicos_-_accommodation-villa-33_-_outdoor_area_with_ocean_view.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-09/amanyara_turks_caicos-accommodation-villa-8-lounge.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-09/amanyara_turks_caicos-accommodation-villa-8-exterior_landscape.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2024-09/amanyara-accommodation-villa-8_outdoor_exterior.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "vietnam-001": {
+      "hero": {
+        "url": "https://www.aman.com/sites/default/files/public/2026-01/Amanoi%2C%20Vietnam%20-%20F%26B%2C%20Beach%20Club%20Restaurant%2C%20Interior%2C%20Dining.jpg",
+        "source": "Aman Resorts",
+        "sourceUrl": "https://www.aman.com",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2026-01/Amanoi%2C%20Vietnam%20-%20Accommodation%2C%20Forest%20Wellness%20Pool%20Villa%2C%20Relaxation%20area%20and%20pool%20%281%29.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-07/amanoi_vietnam_-_amanoi_ocean_pool_residence_pool.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-07/amanoi_vietnam_-_amanoi_ocean_pool_residence_exterior.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-06/amanoi_vietnam_-_experience_catamaran_aerial_-_085632-v2_2.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-06/amanoi_vietnam_-_experience_catamaran_aerial_-_085632-v2.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-06/amanoi_vietnam_-_experience_catamaran_aerial_-_085101-v2_2.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        },
+        {
+          "url": "https://www.aman.com/sites/default/files/public/2025-05/amanoi_vietnam_-_amanoi_ocean_pool_residence_aerial_view_2.jpg",
+          "source": "Aman Resorts",
+          "sourceUrl": "https://www.aman.com",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    },
+    "yaonoi-001": {
+      "hero": {
+        "url": "https://www.sixsenses.com/media/1022/yaonoi-aerial-view.jpg",
+        "source": "Official Hotel Website",
+        "sourceUrl": "",
+        "license": "official"
+      },
+      "gallery": [
+        {
+          "url": "https://www.sixsenses.com/media/1023/yaonoi-pool-villa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.sixsenses.com/media/1024/yaonoi-beach.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.sixsenses.com/media/1025/yaonoi-spa.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        },
+        {
+          "url": "https://www.sixsenses.com/media/1026/yaonoi-dining.jpg",
+          "source": "Official Hotel Website",
+          "sourceUrl": "",
+          "license": "official"
+        }
+      ],
+      "property": {},
+      "credit": {}
+    }
+  }
+}

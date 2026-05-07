@@ -1,0 +1,246 @@
+{
+  "lastUpdated": "2026-04-22T00:35:00Z",
+  "monitoringFrequency": "daily",
+  "sources": [
+    {
+      "id": "source-001",
+      "name": "Tokyo Disney Resort Official Blog",
+      "url": "https://www.tokyodisneyresort.jp/en/blog/",
+      "type": "official",
+      "focus": "Park updates, seasonal events, safety info",
+      "priority": "critical",
+      "checkFrequency": "daily",
+      "lastChecked": null,
+      "extractionPattern": "news articles, event announcements, safety updates"
+    },
+    {
+      "id": "source-002",
+      "name": "Japan National Tourism Organization",
+      "url": "https://www.japan.travel/en/",
+      "type": "official",
+      "focus": "Travel advisories, cultural events, family guidelines",
+      "priority": "high",
+      "checkFrequency": "daily",
+      "lastChecked": null,
+      "extractionPattern": "safety advisories, event calendars, family travel tips"
+    },
+    {
+      "id": "source-003",
+      "name": "TripAdvisor Tokyo Forum",
+      "url": "https://www.tripadvisor.com/Forum-g298184-Tokyo_Tokyo_Prefecture_Kanto.html",
+      "type": "community",
+      "focus": "Real traveler experiences, recent changes, hidden gems",
+      "priority": "high",
+      "checkFrequency": "daily",
+      "lastChecked": null,
+      "extractionPattern": "recent visitor reports, problem alerts, local insights"
+    },
+    {
+      "id": "source-004",
+      "name": "Time Out Tokyo Kids",
+      "url": "https://www.timeout.com/tokyo/kids",
+      "type": "media",
+      "focus": "Family activities, seasonal events, new openings",
+      "priority": "high",
+      "checkFrequency": "daily",
+      "lastChecked": null,
+      "extractionPattern": "new attractions, seasonal guides, age-specific recommendations"
+    },
+    {
+      "id": "source-005",
+      "name": "Inside the Magic (Disney News)",
+      "url": "https://insidethemagic.net/category/disney/tokyo-disney-resort/",
+      "type": "news",
+      "focus": "Disney-specific updates, ride changes, special events",
+      "priority": "medium",
+      "checkFrequency": "daily",
+      "lastChecked": null,
+      "extractionPattern": "ride refurbishments, new shows, ticket policy changes"
+    },
+    {
+      "id": "source-006",
+      "name": "Japan Guide - Family Travel",
+      "url": "https://www.japan-guide.com/e/e2422.html",
+      "type": "guide",
+      "focus": "Practical travel tips, transportation, cultural advice",
+      "priority": "medium",
+      "checkFrequency": "weekly",
+      "lastChecked": null,
+      "extractionPattern": "transportation tips, cultural norms, money-saving advice"
+    },
+    {
+      "id": "source-007",
+      "name": "Reddit r/JapanTravel",
+      "url": "https://www.reddit.com/r/JapanTravel/",
+      "type": "community",
+      "focus": "Recent traveler questions, problem-solving, itinerary reviews",
+      "priority": "medium",
+      "checkFrequency": "daily",
+      "lastChecked": null,
+      "extractionPattern": "common problems, recent changes, seasonal advice"
+    },
+    {
+      "id": "source-008",
+      "name": "Google Travel Tokyo",
+      "url": "https://www.google.com/travel/things-to-do/see-all?dest_mid=%2Fm%2F05qhw&hl=en",
+      "type": "aggregator",
+      "focus": "Popular times, wait times, visitor photos",
+      "priority": "medium",
+      "checkFrequency": "daily",
+      "lastChecked": null,
+      "extractionPattern": "crowd patterns, best visit times, photo trends"
+    },
+    {
+      "id": "source-009",
+      "name": "Klook Tokyo Activities",
+      "url": "https://www.klook.com/en-US/city/28-tokyo-things-to-do/",
+      "type": "booking",
+      "focus": "Package deals, skip-the-line options, family packages",
+      "priority": "low",
+      "checkFrequency": "weekly",
+      "lastChecked": null,
+      "extractionPattern": "discount offers, package deals, exclusive experiences"
+    },
+    {
+      "id": "source-010",
+      "name": "Viator Tokyo Tours",
+      "url": "https://www.viator.com/Tokyo/d334-ttd",
+      "type": "booking",
+      "focus": "Tour availability, guide reviews, family-friendly tours",
+      "priority": "low",
+      "checkFrequency": "weekly",
+      "lastChecked": null,
+      "extractionPattern": "tour availability, guide quality, family-specific tours"
+    },
+    {
+      "id": "source-011",
+      "name": "Japan Meteorological Agency",
+      "url": "https://www.jma.go.jp/jma/indexe.html",
+      "type": "official",
+      "focus": "Weather forecasts, typhoon warnings, seasonal patterns",
+      "priority": "critical",
+      "checkFrequency": "daily",
+      "lastChecked": null,
+      "extractionPattern": "weather alerts, seasonal forecasts, safety warnings"
+    },
+    {
+      "id": "source-012",
+      "name": "Tokyo Metro Official",
+      "url": "https://www.tokyometro.jp/en/",
+      "type": "official",
+      "focus": "Transportation updates, station closures, family passes",
+      "priority": "high",
+      "checkFrequency": "daily",
+      "lastChecked": null,
+      "extractionPattern": "schedule changes, station updates, family discount info"
+    },
+    {
+      "id": "source-013",
+      "name": "CDC Japan Travel Health",
+      "url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/japan",
+      "type": "official",
+      "focus": "Health advisories, vaccination requirements, medical facilities",
+      "priority": "critical",
+      "checkFrequency": "daily",
+      "lastChecked": null,
+      "extractionPattern": "health alerts, vaccination info, medical facility updates"
+    },
+    {
+      "id": "source-014",
+      "name": "Lonely Planet Tokyo Forum",
+      "url": "https://www.lonelyplanet.com/thorntree/forums/asia-north-east-asia/japan",
+      "type": "community",
+      "focus": "Budget travel, off-the-beaten-path, long-term travel tips",
+      "priority": "medium",
+      "checkFrequency": "weekly",
+      "lastChecked": null,
+      "extractionPattern": "budget tips, hidden locations, extended stay advice"
+    },
+    {
+      "id": "source-015",
+      "name": "YouTube Family Travel Vloggers",
+      "pattern": "search: 'Tokyo family vlog 2026', 'Japan with kids vlog'",
+      "type": "video",
+      "focus": "Visual experiences, real-time conditions, kid reactions",
+      "priority": "medium",
+      "checkFrequency": "weekly",
+      "lastChecked": null,
+      "extractionPattern": "visual conditions, kid enjoyment levels, practical demonstrations"
+    },
+    {
+      "id": "source-016",
+      "name": "Instagram #TokyoWithKids",
+      "pattern": "hashtag: #TokyoWithKids, #JapanFamilyTravel",
+      "type": "social",
+      "focus": "Photo trends, popular spots, visual appeal",
+      "priority": "low",
+      "checkFrequency": "weekly",
+      "lastChecked": null,
+      "extractionPattern": "photogenic spots, popular angles, seasonal decorations"
+    },
+    {
+      "id": "source-017",
+      "name": "Facebook Tokyo Family Travel Group",
+      "pattern": "group: 'Tokyo Travel with Kids', 'Japan Family Travel'",
+      "type": "community",
+      "focus": "Q&A, problem-solving, recent experiences",
+      "priority": "medium",
+      "checkFrequency": "daily",
+      "lastChecked": null,
+      "extractionPattern": "common questions, recent issues, local recommendations"
+    },
+    {
+      "id": "source-018",
+      "name": "Twitter #東京子連れ (#TokyoWithChildren)",
+      "pattern": "hashtag: #東京子連れ, #子連れ東京",
+      "type": "social",
+      "focus": "Japanese local tips, real-time updates, cultural insights",
+      "priority": "medium",
+      "checkFrequency": "daily",
+      "lastChecked": null,
+      "extractionPattern": "local insights, cultural tips, Japanese-language advice"
+    },
+    {
+      "id": "source-019",
+      "name": "Booking.com Tokyo Family Hotels",
+      "url": "https://www.booking.com/family/s/city/tokyo.ja.html",
+      "type": "booking",
+      "focus": "Family hotel availability, amenities, recent reviews",
+      "priority": "medium",
+      "checkFrequency": "weekly",
+      "lastChecked": null,
+      "extractionPattern": "family amenities, recent guest experiences, availability trends"
+    },
+    {
+      "id": "source-020",
+      "name": "Airbnb Tokyo Family Experiences",
+      "url": "https://www.airbnb.com/s/Tokyo--Japan/experiences?tab_id=experience_tab&refinement_paths%5B%5D=%2Fexperiences&flexible_trip_lengths%5B%5D=one_week&price_filter_input_type=0&price_filter_num_nights=5&channel=EXPLORE&query=Tokyo%2C%20Japan&place_id=ChIJ51cu8IcbXWARiRtXIothAS4&date_picker_type=calendar&checkin=2026-06-01&checkout=2026-06-08&adults=2&children=2&search_type=user_map_move&zoom_level=11&search_mode=regular_search&sw_lat=35.64839167092629&sw_lng=139.69140625&ne_lat=35.746512259918504&ne_lng=139.889892578125&zoom=11&search_by_map=true",
+      "type": "booking",
+      "focus": "Local experiences, family activities, unique tours",
+      "priority": "low",
+      "checkFrequency": "weekly",
+      "lastChecked": null,
+      "extractionPattern": "unique family activities, local guide availability, experience reviews"
+    }
+  ],
+  "extractionRules": {
+    "criticalUpdates": {
+      "action": "immediate alert + content update",
+      "examples": ["safety warnings", "park closures", "health advisories", "transportation strikes"]
+    },
+    "importantUpdates": {
+      "action": "update within 24 hours",
+      "examples": ["new attractions", "price changes", "seasonal events", "policy updates"]
+    },
+    "generalUpdates": {
+      "action": "weekly content refresh",
+      "examples": ["new reviews", "trending activities", "photo updates", "minor changes"]
+    }
+  },
+  "seoImpact": {
+    "freshnessFactor": "Daily updates improve Google 'freshness' score",
+    "comprehensiveness": "20 sources = authoritative coverage",
+    "userValue": "Practical, time-sensitive tips increase engagement",
+    "competitiveEdge": "Most directories don't monitor this many sources"
+  }
+}

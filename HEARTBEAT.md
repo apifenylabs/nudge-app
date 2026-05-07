@@ -19,6 +19,24 @@
 
 **Root cause:** WSL/system-level process drops still happening sporadically (~every 4-24h). Recovery working.
 
+## 🔄 AUTO-WORK MODE
+When idle, this session runs autonomous work. Do NOT wait for Chris.
+
+- If Chris hasn't messaged in 15+ min, check overnight-progress.md and continue work
+- If sub-agents are asleep, wake them up
+- Priority: Deploy → Build → Improve → Create
+- Track all progress in overnight-progress.md
+
+## Overnight (May 5→6) Completed ✅
+- [x] 24/24 tests passing (fixed SQLite thread issue)
+- [x] README, Dockerfile, production artifacts
+- [x] Phase 2 architecture doc written
+- [x] Plugin README written
+- [x] Frontend builds cleanly
+- [x] Both beasts: 5D uptime, zero restarts
+
 ## Awaiting Chris
-- Supabase SQL schemas
-- Next feature direction for either beast
+- Supabase service_role key (for both beasts + OmniMind Phase 2)
+- DEEPSEEK_API_KEY
+- GitHub PAT for remote push
+- Domain registration

@@ -18,6 +18,13 @@ interface FilterBarProps {
   cities: string[];
   resultsCount: number;
   onClearAll: () => void;
+  // New smart filters
+  familyFriendly?: boolean;
+  onFamilyFriendlyChange?: (v: boolean) => void;
+  luxuryOnly?: boolean;
+  onLuxuryChange?: (v: boolean) => void;
+  wellnessNearby?: boolean;
+  onWellnessChange?: (v: boolean) => void;
 }
 
 const CHARGER_TYPES = ['All', 'CCS2', 'CHAdeMO', 'Type 2', 'GB/T', 'NACS'];
@@ -41,7 +48,8 @@ export default function FilterBar({
   const [showAmenities, setShowAmenities] = useState(false);
 
   const hasActiveFilters = selectedChargerType !== 'All' || selectedCountry !== 'All' || selectedCity !== 'All' ||
-    Object.values(amenityFilters).some(Boolean) || sortBy !== 'score';
+    Object.values(amenityFilters).some(Boolean) || sortBy !== 'score' ||
+    familyFriendly || luxuryOnly || wellnessNearby;
 
   return (
     <section className="bg-white border-b border-gray-200">

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Zap, MapPin, Star, Globe, ChevronRight } from 'lucide-react';
+import SiteFooter from '@/components/SiteFooter';
 
 export const metadata: Metadata = {
   title: 'About — EV Charging Asia',
@@ -74,17 +75,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <footer className="border-t border-gray-200 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-gray-500">
-            <Zap size={16} className="text-green-500" />
-            <span className="text-sm">EV Charging Asia</span>
-          </div>
-          <div className="flex items-center gap-4 text-sm text-gray-400">
-            <Link href="/privacy" className="hover:text-gray-600">Privacy</Link>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

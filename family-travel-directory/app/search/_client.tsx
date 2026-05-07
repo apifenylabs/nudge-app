@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import {
   Search, MapPin, Star, Sparkles, Globe, MapIcon, LayoutGrid,
@@ -9,6 +9,8 @@ import {
 } from 'lucide-react';
 import DestinationCard from '@/components/DestinationCard';
 import SimpleMapContainer from '@/components/SimpleMapContainer';
+import AdUnit from '@/components/AdUnit';
+import AdSenseScript from '@/components/AdSenseScript';
 import { computeSimpleScore, scoreTier } from '@/lib/scoring';
 
 // ─── Types ──────────────────────────────────────────────────────
@@ -27,6 +29,7 @@ interface Destination {
   location?: string;
   amenities?: string[];
   tipsAndTricks?: string[];
+  information_gain?: { human_verified_tip?: string | null; };
 }
 
 interface Meta {
@@ -61,14 +64,16 @@ function useDebounce<T>(value: T, delay: number): T {
 
 export default function SearchPageContent({ meta }: SearchPageContentProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
-  // ── Search state ──
+  // ── Search state (init from URL params) ──
+  const urlCountry = searchParams.get('country') || '';
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('All');
   const [ageRange, setAgeRange] = useState('All');
   const [priceRange, setPriceRange] = useState('All');
   const [minSafety, setMinSafety] = useState(0);
-  const [country, setCountry] = useState('All');
+  const [country, setCountry] = useState(urlCountry || 'All');
   const [sort, setSort] = useState('score');
   const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid');
 
@@ -600,6 +605,12 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
           </>
         )}
 
+        {/* ── MULTIPLEX AD: Search page ── */}
+        <div className="mb-6">
+          <AdUnit slot="9811511645" format="autorelaxed" label="Related destinations" />
+          <AdUnit slot="3190262976" format="autorelaxed" className="mt-6" label="More destinations you may like" />
+        </div>
+
         {/* ── Results info ── */}
         <div className="flex items-center justify-between mb-4 bg-white/30 backdrop-blur-sm rounded-xl px-4 py-2 border border-white/10">
           <p className="text-sm text-gray-500">
@@ -672,6 +683,7 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
                 tipsCount={d.tipsAndTricks?.length || 0}
                 parentStory={false}
                 amenities={d.amenities}
+                human_verified_tip={d.information_gain?.human_verified_tip}
               />
             ))}
           </div>

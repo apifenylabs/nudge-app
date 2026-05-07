@@ -1,0 +1,891 @@
+[
+  {
+    "id": "hongkong-009",
+    "name": "Hong Kong Science Museum",
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "category": "Museums",
+    "ageRange": "3-15",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 86,
+    "description": "An enormous hands-on science museum with over 500 interactive exhibits. The centerpiece is the 22-meter-high Energy Machine, a kinetic sculpture that kids can trigger. Perfect for curious minds with dedicated sections for different scientific disciplines, a children's discovery zone, and regular special exhibitions.",
+    "location": "2 Science Museum Road, Tsim Sha Tsui East, Kowloon",
+    "bestTime": "Weekdays before 2pm, September-December",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Interactive Exhibits",
+      "Baby Changing Facilities",
+      "Lockers",
+      "Cafe",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Child-Proof Exhibit Design",
+      "Staff Supervision",
+      "Emergency Exits",
+      "First Aid Room",
+      "CCTV"
+    ],
+    "tipsAndTricks": [
+      "Wednesday is FREE admission day but also the busiest. Go on a Thursday instead for a fraction of the crowd.",
+      "The Energy Machine demonstration runs at specific times daily. Check the schedule at the front desk and arrive 10 minutes early for front-row seats.",
+      "Kids under 3 get in free. The Children's Discovery Zone is worth the small extra fee for ages 3-7.",
+      "Bring a light jacket. The AC in Hong Kong museums is arctic-level and you will freeze in 20 minutes.",
+      "Combine with the Hong Kong Museum of History next door. A combo ticket covers both and the history museum has a stunning full-size replica of a traditional fishing junk."
+    ],
+    "parentStory": {
+      "title": "My 5-year-old became a paleontologist for a day",
+      "excerpt": "She spent 45 minutes in the dinosaur fossil zone carefully brushing sand off a bone with total focus. I didn't think a museum could hold her attention that long.",
+      "author": "Emma, mom of 2 from Singapore",
+      "fullStory": "I took my daughter thinking we would last 30 minutes. Three hours later I had to drag her out. The fossil excavation station lets kids become junior paleontologists, brushing, measuring, and identifying bones. She took it so seriously she refused ice cream because real scientists don't eat on the job. We have been back four times since."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main exhibits plus Energy Machine demo plus Children's Discovery Zone (2-3 hours)",
+      "fullDay": "Science Museum plus History Museum combo, add Omni Theatre show, lunch at nearby eatery",
+      "bestFor": "Ages 5-12, curiosity-driven kids who love hands-on learning"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Hong Kong Science Museum",
+      "family museum Hong Kong",
+      "interactive science museum kids",
+      "best indoor activities Hong Kong"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "hongkong-010",
+    "name": "Ngong Ping 360 Cable Car and Village",
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "category": "Theme Parks",
+    "ageRange": "2-12",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 85,
+    "description": "A breathtaking 25-minute cable car ride from Tung Chung to Ngong Ping Village on Lantau Island. Crystal cabins with glass floors offer stunning views of the airport, South China Sea, and mountains. The village features a cultural theme park with rides, shows, and access to the iconic Tian Tan Buddha statue.",
+    "location": "Tung Chung Station, Lantau Island, Hong Kong",
+    "bestTime": "Morning arrival (9-10am), October-December",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+    "amenities": [
+      "Crystal Cabin Option",
+      "Stroller Access",
+      "Restaurants",
+      "Gift Shops",
+      "Photo Services"
+    ],
+    "safetyFeatures": [
+      "Regular Cable Inspections",
+      "Seat Belts in Cabins",
+      "Emergency Evacuation Plan",
+      "Trained Attendants",
+      "Weather Monitoring System"
+    ],
+    "tipsAndTricks": [
+      "Book the Crystal Cabin (glass floor) online in advance. The glass floor is the real magic for kids.",
+      "Go early. The 9:30 AM first departure means zero queues. By 11 AM you will wait 45-plus minutes.",
+      "If anyone in your family is scared of heights, sit facing inward. The view is still amazing without the drop sensation.",
+      "The cable car closes in high winds. Check the weather forecast the night before, especially July to September typhoon season.",
+      "Combine with the Tian Tan Buddha (free) and Po Lin Monastery. Count the 268 steps up to the Buddha, kids love counting challenges."
+    ],
+    "parentStory": {
+      "title": "When the clouds cleared we saw heaven",
+      "excerpt": "My 3-year-old pressed her face against the glass floor and screamed 'WE ARE FLYING DADDY' for 25 continuous minutes.",
+      "author": "Priya, mom of 1 from Mumbai",
+      "fullStory": "I booked the Crystal Cabin as a surprise. My daughter spent the entire 25 minutes lying flat on the glass floor pretending she was flying. My husband, terrified of heights, sat stiff as a statue but later admitted it was the best view of his life. At the top the Big Buddha was shrouded in mist, and when it cleared we sat eating vegetarian noodles at the monastery while my kid said it was better than Disneyland."
+    },
+    "itineraryComparison": {
+      "halfDay": "Cable car round trip plus Buddha visit plus lunch at village (3-4 hours)",
+      "fullDay": "Add Tai O fishing village boat tour, Ngong Ping Village attractions, hike around Lantau",
+      "bestFor": "Ages 3-10, first-time Hong Kong visitors, families who love scenic views"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Ngong Ping 360",
+      "Hong Kong cable car family",
+      "Lantau Island with kids",
+      "Big Buddha family trip Hong Kong"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80"
+    ]
+  },
+  {
+    "id": "chengdu-003",
+    "name": "Chengdu Research Base of Giant Panda Breeding",
+    "city": "Chengdu",
+    "country": "China",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.9,
+    "priceRange": "$",
+    "popularity": 95,
+    "description": "The world's most famous panda sanctuary, home to over 100 giant pandas in a natural bamboo forest setting. Watch baby pandas tumble and play in their nursery, see adults munch bamboo just feet away, and learn about conservation efforts. This is not a zoo, it is a research base with world-class animal welfare.",
+    "location": "1375 Panda Avenue, Chenghua District, Chengdu",
+    "bestTime": "7:30-10:00 AM, March-May or September-October",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restrooms Throughout",
+      "Cafe and Snack Stalls",
+      "Souvenir Shops",
+      "Shuttle Buses"
+    ],
+    "safetyFeatures": [
+      "Elevated Viewing Platforms",
+      "Glass Barriers",
+      "First Aid Station",
+      "Clearly Marked Paths",
+      "Security Staff"
+    ],
+    "tipsAndTricks": [
+      "ARRIVE AT 7:30 AM when gates open. Pandas are most active in the cool morning. By 10 AM they are napping and you will only see furry lumps.",
+      "The red panda area is less crowded and arguably more fun. They stay active longer and are way more playful than the giant pandas.",
+      "Skip the volunteer experience for kids under 12. They won't actually touch pandas due to safety rules. Spend that time at the nursery watching baby pandas instead.",
+      "Book tickets online at least 3 days in advance. Same-day tickets sell out by 8 AM during peak season.",
+      "Use the North Gate entrance. It is much less crowded than the main gate and you see the nursery first."
+    ],
+    "parentStory": {
+      "title": "My son declared he wants to be a panda now",
+      "excerpt": "He sat cross-legged watching a baby panda roll off a platform, climb back up, and roll off again. Seven times. Then he turned to me and said pandas have the best job.",
+      "author": "Mei-Lin, mom of 1 from Kuala Lumpur",
+      "fullStory": "The panda base is nothing like a zoo. The pandas have huge forested enclosures and the babies have their own nursery with climbing structures. My 4-year-old watched a baby panda fall off a log, roll, and immediately climb back to do it again, seven times. He laughed so hard he cried. Two years later he still talks about that panda that could not stay on the log."
+    },
+    "itineraryComparison": {
+      "halfDay": "Panda nursery plus adult panda viewing plus red panda area (2-3 hours)",
+      "fullDay": "Full base tour plus panda museum plus conservation film plus Jinli Ancient Street afternoon",
+      "bestFor": "Ages 2-12, animal lovers, any family visiting Chengdu"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Chengdu Panda Base",
+      "panda sanctuary China",
+      "see baby pandas Chengdu",
+      "family trip Chengdu"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ]
+  },
+  {
+    "id": "chengdu-004",
+    "name": "Jinli Ancient Street",
+    "city": "Chengdu",
+    "country": "China",
+    "category": "Parks & Nature",
+    "ageRange": "0-12",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "A beautifully restored ancient street in the heart of Chengdu, lined with Qing Dynasty-style architecture. While technically a shopping street, it offers kids a living history experience with traditional puppet shows, sugar painting artists, face-changing opera performances, and authentic Sichuan snacks in a pedestrian-friendly lane.",
+    "location": "231 Wuhouci Street, Wuhou District, Chengdu",
+    "bestTime": "Late afternoon (4-7pm), October-April",
+    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Public Restrooms",
+      "Street Food Stalls",
+      "Souvenir Shops",
+      "Benches and Seating Areas"
+    ],
+    "safetyFeatures": [
+      "Pedestrian-Only Street",
+      "Well-Lit Evening Paths",
+      "First Aid Point",
+      "Police Presence",
+      "CCTV"
+    ],
+    "tipsAndTricks": [
+      "Go at 4 PM. The street comes alive with evening performers, the heat fades, and the sunset light on ancient buildings is gorgeous.",
+      "The sugar painting artists are a must. Kids spin a wheel and the artist creates a dragon or bird in liquid sugar. Costs about $2 and makes a kid's entire day.",
+      "Face-changing opera shows happen on small stages throughout the street. They are free to watch and mesmerize kids of all ages.",
+      "Sichuan food is famously spicy. Most stalls have no-spice options. Just say 'bu yao la' (no spicy) and point, or bring snacks for picky eaters.",
+      "Combine with Wuhou Shrine next door, an ancient temple dedicated to the Three Kingdoms. The temple gardens are peaceful and kid-run-friendly."
+    ],
+    "parentStory": {
+      "title": "He tried stinky tofu because he saw a kid his age eating it",
+      "excerpt": "My 6-year-old who lives on chicken nuggets tried stinky tofu because the local boy next to him was enjoying it so much. He didn't like it. But he TRIED it. That is travel right there.",
+      "author": "David, dad of 2 from San Francisco",
+      "fullStory": "Jinli is touristy but in the best way. My kids loved the free puppet shows, the sugar painting where we got a dragon, and running around the old stone paths. The highlight was watching my picky eater see a local kid devour stinky tofu with such joy that he asked to try it. He made a face and spat it out, but he tried it. The ice cream I bought him afterward was the best compromise ever."
+    },
+    "itineraryComparison": {
+      "halfDay": "Stroll the street, sugar painting, puppet show, snacks (2-3 hours)",
+      "fullDay": "Add Wuhou Shrine morning plus Jinli sunset plus dinner at local Sichuan restaurant",
+      "bestFor": "Ages 3-12, families who enjoy cultural walking experiences"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Jinli Ancient Street",
+      "Chengdu family activities",
+      "ancient street China kids",
+      "Sichuan culture for children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ]
+  },
+  {
+    "id": "guangzhou-003",
+    "name": "Guangzhou Chimelong Safari Park",
+    "city": "Guangzhou",
+    "country": "China",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-15",
+    "safetyRating": 4.8,
+    "priceRange": "$$$",
+    "popularity": 92,
+    "description": "Asia's premier safari experience spanning 133 hectares with over 20,000 animals. Features a drive-through safari zone, the world's largest white tiger population, a cable car with animal-view cabins, and a dedicated children's petting zoo. The safari train lets families see lions, giraffes, and rhinos roaming freely.",
+    "location": "Daxiang Road, Panyu District, Guangzhou",
+    "bestTime": "Weekdays, October-November or March-April",
+    "imageUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Safari Train",
+      "Cable Car",
+      "Restaurants and Food Courts",
+      "Playgrounds",
+      "Baby Care Rooms"
+    ],
+    "safetyFeatures": [
+      "Vehicle-Mounted Animal Barriers",
+      "Trained Safari Guides",
+      "First Aid Stations",
+      "Lost Child Center",
+      "Emergency Vehicles on Site"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 9 AM and head straight for the safari train. It is the most popular attraction and the queue hits 90 minutes by 10:30 AM.",
+      "The White Tiger cable car is the highlight. Book a glass-bottom cabin for the best views of the tiger zone below.",
+      "Bring your own lunch. Park food is overpriced at $15-plus for a burger and queues during peak hours are brutal.",
+      "The children's petting zoo called Happy Farm is free with admission and lets kids feed goats, rabbits, and guinea pigs.",
+      "Combine with the Chimelong Circus show in the evening. It is a separate ticket but the acrobatics will blow your kids' minds."
+    ],
+    "parentStory": {
+      "title": "She fed a giraffe and has not stopped talking about it",
+      "excerpt": "The giraffe's tongue wrapped around my 4-year-old's hand as she offered it a leaf. She screamed, laughed, and screamed louder. Worth every penny of that expensive ticket.",
+      "author": "Julie, mom of 2 from Ho Chi Minh City",
+      "fullStory": "Chimelong is enormous in a way you don't expect. The safari train felt real, with giraffes, zebras, and rhinos walking right up to the vehicle. My kids were silent with wonder. But the giraffe feeding station in the walking zone was the showstopper. My 4-year-old was terrified but a keeper helped her hold the leaf. The tongue tickled her palm and she burst into laughter. She tells everyone she shook hands with a giraffe."
+    },
+    "itineraryComparison": {
+      "halfDay": "Safari train plus cable car plus panda house (3-4 hours)",
+      "fullDay": "Full park plus children's petting zoo plus safari walk-through plus Chimelong Circus evening show",
+      "bestFor": "Ages 3-12, animal-loving families willing to spend for a premium experience"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Chimelong Safari Park",
+      "Guangzhou family attractions",
+      "safari park China kids",
+      "best zoos in China"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "guangzhou-004",
+    "name": "Canton Tower Family Day",
+    "city": "Guangzhou",
+    "country": "China",
+    "category": "Parks & Nature",
+    "ageRange": "3-15",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 78,
+    "description": "A full family experience at Guangzhou's iconic 600-meter tower. The surrounding Canton Tower Square offers bike rentals, a canal-side promenade, children's play areas, and spectacular fountain shows. The tower has a sky-high observation deck with glass floors and a rotating Bubble Tram gondola with panoramic views.",
+    "location": "222 Yuejiang West Road, Haizhu District, Guangzhou",
+    "bestTime": "Late afternoon (4-6pm for park), sunset (6-7pm for tower view)",
+    "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Bike and Tandem Rentals",
+      "Children's Playground",
+      "Restaurants",
+      "Observation Deck",
+      "Fountain Show Area"
+    ],
+    "safetyFeatures": [
+      "Glass Floor Safety Harnesses",
+      "Guardrails Throughout",
+      "First Aid Room",
+      "Security Staff",
+      "Elevator Emergency Protocol"
+    ],
+    "tipsAndTricks": [
+      "Skip the tower during midday when it is expensive, crowded, and hazy. Come at 4pm to enjoy the park, then go up at sunset for spectacular views as city lights come on.",
+      "The Bubble Tram is a rotating glass gondola that circles the top of the tower. Kids love it and the rotation means everyone gets the view without fighting over window seats.",
+      "The fountain and light show at 7:30 PM on the ground level is FREE and better than paid shows in Hong Kong. Kids will be mesmerized.",
+      "Bring or rent a bike. The 3-km canal path is stroller and bike friendly with dedicated lanes.",
+      "There is a Sky Drop free-fall ride at the top. Skip it if your kids are under 10 or scared of heights. It is genuinely terrifying."
+    ],
+    "parentStory": {
+      "title": "The sunset view that made my 7-year-old cry",
+      "excerpt": "Not from fear. From beauty. She watched the sun sink behind the Pearl River and whispered 'It looks like the world is made of gold.'",
+      "author": "Maria, mom of 1 from Madrid",
+      "fullStory": "I almost skipped the tower thinking it was a tourist trap. But my daughter begged to go up. We timed it for sunset and the entire city turned amber. She stood on the glass floor, terrified but brave, and watched the river snake through the city. Then she started crying. Not scared tears, but overwhelmed-by-beauty tears. I held her hand and we stood there for 20 minutes. I will never forget it."
+    },
+    "itineraryComparison": {
+      "halfDay": "Park plus canal walk plus tower sunset visit plus fountain show (3-4 hours)",
+      "fullDay": "Add Guangzhou Opera House tour, Canton Tower Square shopping, river cruise dinner",
+      "bestFor": "Ages 5-15, families wanting city views with outdoor recreation"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Canton Tower family",
+      "Guangzhou with kids",
+      "best views Guangzhou",
+      "Guangzhou family day out"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "hangzhou-001",
+    "name": "Hangzhou Zoo",
+    "city": "Hangzhou",
+    "country": "China",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 74,
+    "description": "A classic hillside zoo with over 200 species set against lush greenery. Features a popular golden monkey exhibit, aquarium zone, and children's petting zoo. Elevated walkways offer unique views into enclosures and the hilly terrain provides plenty of shade on hot days. Budget-friendly and less crowded than Shanghai's zoo.",
+    "location": "40 Hupao Road, Xihu District, Hangzhou",
+    "bestTime": "Morning 8-10am, September-November",
+    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+    "amenities": [
+      "Stroller Access (limited)",
+      "Restrooms",
+      "Snack Vendors",
+      "Petting Zoo",
+      "Picnic Areas"
+    ],
+    "safetyFeatures": [
+      "Animal Enclosure Barriers",
+      "First Aid Station",
+      "Clear Signage",
+      "Staff Patrols"
+    ],
+    "tipsAndTricks": [
+      "The zoo is on a hill. Bring a baby carrier instead of a stroller. Some paths are steep and you will do more carrying than rolling.",
+      "The golden monkey exhibit is the hidden gem. They are incredibly active in the morning and twice as playful as the pandas.",
+      "Skip the zoo food. Pack a picnic and eat at one of the shaded tables near the children's zoo instead.",
+      "The aquarium section is small but delightful. The jellyfish tank mesmerizes toddlers for ages.",
+      "Combine with Tiger Dream Waterfall Park next door. For some sections it is the same ticket. The waterfall hike is gentle and kid-friendly."
+    ],
+    "parentStory": {
+      "title": "We saw a golden monkey steal a tourist's sunglasses",
+      "excerpt": "A golden monkey jumped from a branch, grabbed a man's sunglasses off his face, and inspected them like it was shopping. My toddler laughed so hard she snorted.",
+      "author": "Ryan, dad of 1 from Brisbane",
+      "fullStory": "The golden monkey enclosure is open-air with viewing platforms. A tourist leaned in too close and a monkey snatched his sunglasses clean off his face. It did not run. It sat there, put them on, looked around, and tossed them back. The whole crowd cracked up. My 3-year-old still asks where the monkey with glasses went every time she sees a photo."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo walk-through plus golden monkeys plus petting zoo (2-3 hours)",
+      "fullDay": "Zoo morning plus Tiger Dream Waterfall plus lunch plus West Lake afternoon",
+      "bestFor": "Ages 2-10, budget-conscious families staying in Hangzhou"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Hangzhou Zoo",
+      "Hangzhou with kids",
+      "best zoo Hangzhou",
+      "family activities Hangzhou"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80"
+    ]
+  },
+  {
+    "id": "hangzhou-002",
+    "name": "West Lake Family Boat Tour",
+    "city": "Hangzhou",
+    "country": "China",
+    "category": "Parks & Nature",
+    "ageRange": "0-12",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 88,
+    "description": "A UNESCO World Heritage site and China's most famous lake. Families can take a traditional wooden boat ride across serene waters, stop at islands with temples and gardens, and walk along willow-lined causeways. The lake is surrounded by pagodas, tea houses, and gentle hills, perfect for a full day of outdoor exploration.",
+    "location": "West Lake Scenic Area, Xihu District, Hangzhou",
+    "bestTime": "Sunset boat ride or early morning (6-8am), March-May and September-November",
+    "imageUrl": "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+    "amenities": [
+      "Boat Rentals (Various Types)",
+      "Public Restrooms",
+      "Tea Houses",
+      "Walking Paths",
+      "Bike Rentals",
+      "Paved Causeways"
+    ],
+    "safetyFeatures": [
+      "Life Jackets on Boats",
+      "Clear Pathways",
+      "Railing Along Causeways",
+      "First Aid Stations",
+      "Park Patrols"
+    ],
+    "tipsAndTricks": [
+      "Rent the self-paddle wooden boat near the south shore for 80-120 RMB per hour. It is cheaper than a guided tour and your kids can help row, which they will love.",
+      "Boat from Broken Bridge to Little Yingzhou Island. The island has four connecting pavilions that kids can explore like a tiny maze.",
+      "Bring bread or duck feed. The lake has hundreds of ducks and fish that swarm boaters. Your kids will be delighted.",
+      "Go at sunset. The lake turns gold, the mountains silhouette, and the lights on the pagodas come on. It is the most photographed moment in China for a reason.",
+      "The Leifeng Pagoda on the south shore has an elevator inside an ancient pagoda. Perfect for tired little legs with a great view at the top."
+    ],
+    "parentStory": {
+      "title": "The boat ride where my daughter became a captain",
+      "excerpt": "I let her hold the oar for 30 seconds. She steered us straight into a lotus patch. We got stuck for 15 minutes while ducks swam around us. She declared it the best accident ever.",
+      "author": "Tom, dad of 2 from Seattle",
+      "fullStory": "The lake is so calm you forget you are in a city of 10 million people. We rented a little wooden skiff with a canopy. My 5-year-old insisted she could steer. She managed to wedge us into a lotus flower patch where we sat laughing while ducks circled. The old boatman just smiled and lit a cigarette. He had seen this before. We floated there for 20 minutes, totally stuck, totally happy."
+    },
+    "itineraryComparison": {
+      "halfDay": "Boat ride to island plus causeway walk plus tea house stop (2-3 hours)",
+      "fullDay": "Sunrise walk plus boat tour plus Leifeng Pagoda plus lunch plus museum plus sunset boat",
+      "bestFor": "Ages 2-12, families who love water, nature, and peaceful settings"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "West Lake family boat",
+      "Hangzhou lake tour kids",
+      "UNESCO West Lake China",
+      "Hangzhou outdoor family activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80"
+    ]
+  },
+  {
+    "id": "xian-003",
+    "name": "Xi'an Qinling Wildlife Park",
+    "city": "Xi'an",
+    "country": "China",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.3,
+    "priceRange": "$$",
+    "popularity": 72,
+    "description": "A sprawling wildlife park at the foot of the Qinling Mountains, home to giant pandas, golden monkeys, and rare Siberian tigers. Features a safari bus that drives through predator zones, a large aviary, and a children's interactive area. Less polished than eastern Chinese zoos but more authentic and far less crowded.",
+    "location": "Qinling Wildlife Park, Chang'an District, Xi'an",
+    "bestTime": "Morning, March-May or September-October",
+    "imageUrl": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+    "amenities": [
+      "Safari Bus",
+      "Stroller Access",
+      "Restrooms",
+      "Snack Stalls",
+      "Souvenir Shops"
+    ],
+    "safetyFeatures": [
+      "Bus Safety Locks",
+      "Animal Barriers",
+      "First Aid",
+      "Park Security"
+    ],
+    "tipsAndTricks": [
+      "Take the safari bus (included with ticket) before walking the park. Predators are most active in the cool morning and you will see the best action.",
+      "The golden monkey area is fantastic. They are endemic to this region and the Qinling subspecies has the most beautiful golden fur.",
+      "Bring your own food. The park restaurants are limited and mediocre. There are plenty of picnic tables available.",
+      "Xi'an gets cold even in spring. Bring layers even if the morning feels warm. The mountain air shifts fast.",
+      "Combine with a trip to the Tang Dynasty Gardens on your way back, a lovely park with Tang-style architecture that kids can run around in."
+    ],
+    "parentStory": {
+      "title": "A tiger yawned right next to our safari bus window",
+      "excerpt": "This massive Siberian tiger stretched, yawned, and flopped down two feet from my daughter's window. She whispered that he is just a big cat. She was not wrong.",
+      "author": "Alex, dad of 1 from Chicago",
+      "fullStory": "The safari bus is a real beast with bars on the windows and thick steel doors. But when a tiger flopped down right next to the bus and yawned, showing teeth longer than my hand, my 6-year-old just said he is sleepy like my cat. The zoo is a bit rough around the edges in the best authentic way, but the animals look healthy and have huge enclosures. My daughter still draws that tiger."
+    },
+    "itineraryComparison": {
+      "halfDay": "Safari bus plus panda viewing plus golden monkeys (2-3 hours)",
+      "fullDay": "Full zoo plus Tang Dynasty Gardens plus Muslim Quarter dinner",
+      "bestFor": "Ages 3-12, families visiting Xi'an wanting a nature break from history"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Xi'an Qinling Wildlife Park",
+      "Xi'an with kids",
+      "safari park Xi'an",
+      "family activities Xi'an China"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80"
+    ]
+  },
+  {
+    "id": "xian-004",
+    "name": "Terracotta Warriors Museum",
+    "city": "Xi'an",
+    "country": "China",
+    "category": "Museums",
+    "ageRange": "4-15",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 96,
+    "description": "One of the world's greatest archaeological discoveries, the Terracotta Army features thousands of life-sized warriors, horses, and chariots buried with Emperor Qin over 2,200 years ago. Three massive pits display the army in battle formation, each soldier with unique facial features. An on-site museum explains the excavation history and ongoing restoration work.",
+    "location": "Qinling North Road, Lintong District, Xi'an",
+    "bestTime": "Arrive at 8:30 AM opening, Tuesday-Thursday, March-May or October-November",
+    "imageUrl": "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Audio Guides",
+      "Restrooms",
+      "Cafeteria",
+      "Souvenir Shops",
+      "Electric Cart Shuttles"
+    ],
+    "safetyFeatures": [
+      "Crowd Control Barriers",
+      "Elevated Walkways",
+      "First Aid Station",
+      "Security Guards",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 8:30 AM sharp when the gates open. The crowd builds fast and by 10 AM you will be shoulder-to-shoulder at Pit 1.",
+      "Pit 1 (the largest) is overwhelming. Walk to the back of the pit first. The view from the far end is spectacular and much less crowded.",
+      "Rent the audio guide for older kids (8+). It tells the story of Emperor Qin and each warrior type. Mine loved learning that every face is unique.",
+      "Skip the expensive souvenir shop inside. The vendors outside the complex sell the exact same mini warriors for 70 percent less.",
+      "Combine with the Huaqing Hot Springs Palace nearby. The Tang Dynasty palace grounds are beautiful and offer a peaceful contrast to the museum crowds."
+    ],
+    "parentStory": {
+      "title": "My daughter stared at one warrior for 10 minutes",
+      "excerpt": "She said he looked sad. She wondered if he missed his family. I realized this museum teaches empathy, not just history. The warriors are soldiers, not statues.",
+      "author": "Linda, mom of 2 from Vancouver",
+      "fullStory": "I expected my kids to be bored by old clay soldiers. Instead, my 7-year-old stood in front of one particular warrior and studied his face for 10 solid minutes. She said he looked worried, like he was thinking about his family. I had never thought about the Terracotta Army that way. They are not just artifacts. They are 8,000 individual soldiers frozen in time. My daughter saw their humanity."
+    },
+    "itineraryComparison": {
+      "halfDay": "Pits 1-2-3 plus museum plus short film (2-3 hours)",
+      "fullDay": "Full museum plus Huaqing Hot Springs plus Muslim Quarter lunch",
+      "bestFor": "Ages 6-15, history-loving families, anyone visiting Xi'an"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Terracotta Warriors Xi'an",
+      "Terracotta Army with kids",
+      "Xi'an history museum family",
+      "emperor Qin warriors children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80"
+    ]
+  },
+  {
+    "id": "kunming-001",
+    "name": "Yunnan Wild Animal Park",
+    "city": "Kunming",
+    "country": "China",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.3,
+    "priceRange": "$$",
+    "popularity": 70,
+    "description": "A large open-range zoo set against the stunning backdrop of Yunnan's mountains. Home to rare Yunnan golden monkeys, Asian elephants, and a drive-through herbivore zone where deer and zebras approach vehicles. The park emphasizes Yunnan's unique biodiversity with a dedicated zone for Southwest China species.",
+    "location": "Jindian Scenic Area, Panlong District, Kunming",
+    "bestTime": "Morning 9-11am, March-May or September-October",
+    "imageUrl": "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+    "amenities": [
+      "Drive-Through Zone",
+      "Stroller Access",
+      "Restrooms",
+      "Snack Stalls",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Vehicle Barriers",
+      "Animal Enclosures",
+      "First Aid",
+      "Park Rangers",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "Drive through the herbivore zone first. Deer and zebras will walk right up to your car and kids can feed them through the window. Bring carrots cut into strips.",
+      "The Yunnan golden monkey exhibit is the star. They are endemic to this region and much more colorful than their Sichuan cousins.",
+      "Skip the zoo food. The area around Jindian has excellent street food. Try the 'crossing-the-bridge noodles' after your visit.",
+      "Kunming sits at 1,900 meters elevation. You and the kids might get winded walking the hills. Take it slow and bring water.",
+      "Combine with the Jindian (Golden Temple) complex nearby. It is a stunning Taoist temple with copper buildings and century-old pine trees."
+    ],
+    "parentStory": {
+      "title": "A deer ate my map right out of my hand",
+      "excerpt": "I was checking directions when a deer walked up and calmly ate the map. My daughter laughed so hard she dropped her ice cream. The deer ate that too.",
+      "author": "Sophie, mom of 2 from Auckland",
+      "fullStory": "The drive-through zone is wonderfully chaotic. Deer and zebras just walk up to cars with zero fear. I was looking at the park map and a deer grabbed it right out of my hand and started chewing. Then my daughter's ice cream fell and another deer appeared like magic. We spent 20 minutes laughing in the car while deer walked around us like we were part of their world. My kids still ask if we can go back to see the map-eating deer."
+    },
+    "itineraryComparison": {
+      "halfDay": "Drive-through zone plus golden monkeys plus elephant area (2-3 hours)",
+      "fullDay": "Full zoo morning plus Golden Temple afternoon plus Yunnan cuisine dinner",
+      "bestFor": "Ages 3-10, families who love up-close animal experiences"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Yunnan Wild Animal Park",
+      "Kunming with kids",
+      "zoo Kunming Yunnan",
+      "family activities Kunming"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80"
+    ]
+  },
+  {
+    "id": "kunming-002",
+    "name": "Stone Forest Family Hike",
+    "city": "Kunming",
+    "country": "China",
+    "category": "Parks & Nature",
+    "ageRange": "3-15",
+    "safetyRating": 4.4,
+    "priceRange": "$$",
+    "popularity": 82,
+    "description": "A UNESCO World Heritage site featuring a surreal landscape of towering limestone karst formations that resemble a forest made of stone. Families can hike through the maze-like paths between giant stone pillars, explore caves, and watch traditional Yi minority dance performances. The park offers electric carts for tired little legs.",
+    "location": "Shilin Yi Autonomous County, Kunming, Yunnan",
+    "bestTime": "October-November or March-April, 8:30-11am",
+    "imageUrl": "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+    "amenities": [
+      "Electric Cart Rentals",
+      "Restrooms",
+      "Snack Stands",
+      "Walking Trails",
+      "Viewing Platforms",
+      "Cultural Shows"
+    ],
+    "safetyFeatures": [
+      "Clear Trail Markings",
+      "Railing on Steep Sections",
+      "First Aid",
+      "Park Rangers",
+      "Emergency Phones"
+    ],
+    "tipsAndTricks": [
+      "Hire a local guide at the entrance for about $20. They know the best kid-friendly routes and will show you hidden caves most tourists miss.",
+      "The electric cart is worth every yuan. The park is enormous and little legs will give out after 30 minutes of walking among the stones.",
+      "Visit the Yi minority village inside the park. The traditional dancing shows are free with admission and kids love the colorful costumes.",
+      "Bring a camera with a wide-angle lens. The stone pillars are massive and standard phone cameras cannot capture their scale.",
+      "The park takes 1.5 hours to reach from Kunming city center. Leave by 7 AM to arrive before tour buses. You will have the place nearly to yourself until 10 AM."
+    ],
+    "parentStory": {
+      "title": "They played hide and seek for an hour among the stones",
+      "excerpt": "I sat on a bench while my two kids disappeared into the stone maze, popping out from different gaps, shrieking with joy. The best part is you can see them from above. Worst part is they think they are ninjas.",
+      "author": "Mark, dad of 2 from London",
+      "fullStory": "The Stone Forest is like a natural playground designed by aliens. My kids spent an hour playing hide and seek among the giant stone pillars. From the elevated viewing platform I could see exactly where they were, but they thought they were master ninjas. Every time they popped out from a new gap, they screamed with laughter. We hiked the easy loop trail, took the cart back, and watched a Yi dance show. One of the most memorable family days we have ever had."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main stone path plus electric cart plus Yi village show (3 hours)",
+      "fullDay": "Full park hike morning plus lunch at Yi village plus cave exploration plus return",
+      "bestFor": "Ages 4-12, active families who love nature and geology"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Stone Forest Kunming",
+      "Shilin family hike",
+      "Yunnan nature with kids",
+      "UNESCO family day Kunming"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80",
+      "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80"
+    ]
+  },
+  {
+    "id": "shenzhen-001",
+    "name": "Shenzhen Safari Park",
+    "city": "Shenzhen",
+    "country": "China",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.4,
+    "priceRange": "$$",
+    "popularity": 79,
+    "description": "A sprawling safari park and zoo hybrid with over 300 species in themed zones. Features a drive-through safari section, a large bird park with free-flying flamingos, a sea lion show arena, and a dedicated children's petting farm with ponies and goats. The park is known for its white tigers and the rare South China tiger breeding program.",
+    "location": "Xili Lake, Nanshan District, Shenzhen",
+    "bestTime": "Weekday mornings, October-December or March-April",
+    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Safari Bus",
+      "Bird Park",
+      "Restaurants",
+      "Playground",
+      "Sea Lion Show Arena"
+    ],
+    "safetyFeatures": [
+      "Safari Bus Barriers",
+      "Animal Enclosures",
+      "First Aid Stations",
+      "Lost Child Services",
+      "Security Guards"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 9:30 AM and go straight to the safari bus. The animals are most active in the morning and the queue is shortest right when doors open.",
+      "The sea lion show runs three times daily. Aim for the 11 AM show when the animals are freshest and the audience is smallest.",
+      "The bird park section is underrated. Flamingos and peacocks roam freely and kids can feed them for a few yuan.",
+      "Bring snacks and water. The park food is mediocre and expensive. There are picnic tables near the children's farm.",
+      "Combine with a visit to Xili Lake Greenway afterwards. A lovely 4-km walking path along the reservoir. Easy for little legs."
+    ],
+    "parentStory": {
+      "title": "A peacock fanned its feathers right in front of my son",
+      "excerpt": "My 4-year-old froze, mouth open, as this magnificent peacock slowly turned and fanned its feathers. He whispered 'it is a rainbow bird.' That was worth the entire trip.",
+      "author": "Hannah, mom of 1 from Sydney",
+      "fullStory": "The bird park at Shenzhen Safari Park is magical. Peacocks and flamingos roam freely among visitors. My 4-year-old was eating a cookie when a peacock walked up, studied him, and fanned its feathers in a slow, deliberate turn. My son dropped his cookie and whispered 'rainbow bird.' He did not move for a full five minutes. I got the most incredible photo. We have it framed at home."
+    },
+    "itineraryComparison": {
+      "halfDay": "Safari bus plus sea lion show plus bird park (3 hours)",
+      "fullDay": "Full park plus children's farm plus Xili Lake walk plus dinner in Nanshan",
+      "bestFor": "Ages 2-10, families looking for a full day of animal activities"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Shenzhen Safari Park",
+      "Shenzhen with kids",
+      "zoo Shenzhen family",
+      "best Shenzhen attractions for children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80",
+      "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80"
+    ]
+  },
+  {
+    "id": "macau-003",
+    "name": "Macau Science Center",
+    "city": "Macau",
+    "country": "Macau",
+    "category": "Museums",
+    "ageRange": "3-15",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 76,
+    "description": "A world-class science museum housed in a striking geometric building on Macau's waterfront. Features over 200 interactive exhibits spread across 14 galleries, including a 3D planetarium with one of the largest domed screens in the region. Dedicated science demonstration areas and hands-on workshops make learning playful and engaging for all ages.",
+    "location": "Avenida Dr. Sun Yat Sen, Macau Peninsula",
+    "bestTime": "Weekday afternoons, October-May",
+    "imageUrl": "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80",
+    "amenities": [
+      "Interactive Galleries",
+      "Planetarium",
+      "Children's Workshop Area",
+      "Cafe",
+      "Souvenir Shop",
+      "Waterfront Promenade"
+    ],
+    "safetyFeatures": [
+      "Child-Friendly Exhibit Design",
+      "Staff Supervision",
+      "Emergency Exits",
+      "First Aid Room",
+      "CCTV"
+    ],
+    "tipsAndTricks": [
+      "The planetarium shows sell out fast. Book your show time slot online when you buy your entry ticket. The dome screen is incredible even for adults.",
+      "Start from the top floor and work your way down. The top floors have the most engaging hands-on exhibits and younger kids lose steam by floor 3.",
+      "The building exterior is an architectural marvel shaped like a spiral. Walk around it after your visit for amazing photo ops with the Macau skyline behind.",
+      "The science center is right on the Macau waterfront. Combine with a walk to the A-Ma Cultural Village nearby for a full afternoon of culture and science.",
+      "Wednesday is half-price admission. The center is well-managed even on busy days with timed entry slots."
+    ],
+    "parentStory": {
+      "title": "The planetarium made my 6-year-old want to be an astronaut",
+      "excerpt": "She leaned over halfway through the space show and whispered 'I am going to Mars.' That night she drew a rocket ship with her and me inside. Dreams start somewhere.",
+      "author": "Ken, dad of 1 from San Jose",
+      "fullStory": "I took my daughter to the Macau Science Center on a rainy afternoon as a filler activity. It turned into the highlight of our trip. The planetarium show about the solar system had her completely mesmerized. Halfway through she tugged my sleeve and whispered she was going to Mars. She spent the rest of the afternoon in the space exploration gallery pretending to pilot a rocket. That night she drew our family inside a spaceship with the note 'to Mars together.' I cried a little."
+    },
+    "itineraryComparison": {
+      "halfDay": "Planetarium show plus 3-4 galleries (2-3 hours)",
+      "fullDay": "All galleries plus planetarium plus waterfront walk plus A-Ma Cultural Village",
+      "bestFor": "Ages 4-12, rainy day activities, science-loving families"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Macau Science Center",
+      "Macau with kids",
+      "science museum Macau",
+      "family activities Macau non-gambling"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80",
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80"
+    ]
+  },
+  {
+    "id": "macau-004",
+    "name": "Macau Fishing Village Heritage Walk",
+    "city": "Macau",
+    "country": "Macau",
+    "category": "Parks & Nature",
+    "ageRange": "3-12",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 68,
+    "description": "A walking tour through Macau's authentic fishing heritage along the Coloane coast. Visit the charming A-Ma Village with traditional stilt houses, see fishermen mending nets, explore the Chapel of St. Francis Xavier, and walk the bamboo-lined paths to Hac Sa Beach. A peaceful glimpse of old Macau far from the casinos.",
+    "location": "Coloane Island, Macau",
+    "bestTime": "Late afternoon (3-6pm), October-April",
+    "imageUrl": "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80",
+    "amenities": [
+      "Walking Trails",
+      "Public Restrooms",
+      "Beach Access",
+      "Small Eateries",
+      "Benches and Lookout Points"
+    ],
+    "safetyFeatures": [
+      "Paved Walking Paths",
+      "Guardrails at Viewpoints",
+      "Life Guard at Beach",
+      "Clear Signage"
+    ],
+    "tipsAndTricks": [
+      "Start at the A-Ma Village around 3 PM when the fishermen return with their catch. Kids love seeing the boats come in and the fish auction on the dock.",
+      "The trail from the village to Hac Sa Beach is an easy 15-minute walk along a bamboo-shaded path. Stroller-friendly and beautiful.",
+      "Stop at Lord Stow's Bakery in Coloane Village for the original Macau egg tarts. The bakery is casual with outdoor tables and the tarts are world-famous for a reason.",
+      "Hac Sa Beach has black sand (hence the name). Bring a towel and let the kids play. The water is calm and shallow near the shore.",
+      "The Chapel of St. Francis Xavier has beautiful Portuguese azulejo tiles. The square in front is perfect for kids to run around while you rest."
+    ],
+    "parentStory": {
+      "title": "An old fisherman showed my son how to tie a knot",
+      "excerpt": "We watched an elderly fisherman repair his net. Without saying a word, he gestured for my son to come closer. He spent 10 minutes showing him knots. No common language, just hands and smiles.",
+      "author": "Yuki, mom of 1 from Tokyo",
+      "fullStory": "The fishing village walk was a last-minute addition to our Macau trip. It ended up being the most authentic experience we had. An old fisherman saw my son watching him mend his net and waved him over. For 10 minutes they communicated with hand gestures the fisherman showing how to tie different knots and my son trying to copy him. They did not speak a word of each other's language but they laughed together. My son still practices those knots at home."
+    },
+    "itineraryComparison": {
+      "halfDay": "A-Ma Village plus trail walk plus Hac Sa Beach plus egg tarts (3 hours)",
+      "fullDay": "Full Coloane day including hiking trail, beach time, Coloane Village lunch, and Heritage Walk",
+      "bestFor": "Ages 3-12, families wanting authentic cultural experiences away from tourist crowds"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Macau fishing village",
+      "Coloane family walk",
+      "Macau heritage with kids",
+      "Macau non-casino family activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80",
+      "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80",
+      "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80"
+    ]
+  }
+]

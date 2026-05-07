@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://social-beast-two.vercel.app/sitemap.xml
+Disallow: /api/

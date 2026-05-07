@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Beast — Content Pipeline Dashboard</title>
+  <title>Social Beast — Content Pipeline + Distribution Engine</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
@@ -16,10 +16,21 @@
     .pulse-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
     .pulse { animation: pulse 2s ease-in-out infinite; }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .slide-up { animation: slideUp 0.4s ease-out; }
+    @keyframes countUp { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); } }
+    .count-anim { animation: countUp 0.6s ease-out; }
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+    .hype-card { border-left: 3px solid transparent; }
+    .hype-card.twitter { border-left-color: #1d9bf0; }
+    .hype-card.linkedin { border-left-color: #0a66c2; }
+    .hype-card.instagram { border-left-color: #e4405f; }
+    .gradient-text { background: linear-gradient(135deg, #f97316, #e11d48); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .badge-orange { background: rgba(249,115,22,0.15); color: #fdba74; border: 1px solid rgba(249,115,22,0.3); }
+    .badge-amber { background: rgba(245,158,11,0.15); color: #fcd34d; border: 1px solid rgba(245,158,11,0.3); }
   </style>
 </head>
 <body class="text-gray-100 min-h-screen">
@@ -30,7 +41,7 @@
         <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-rose-600 flex items-center justify-center text-lg font-bold">SB</div>
         <div>
           <h1 class="text-xl font-bold tracking-tight">Social Beast</h1>
-          <p class="text-xs text-gray-500">Content Pipeline Dashboard</p>
+          <p class="text-xs text-gray-500">Content Pipeline + Distribution Engine</p>
         </div>
       </div>
       <div class="flex items-center gap-3 text-sm">
@@ -38,74 +49,403 @@
           <span class="pulse-dot bg-emerald-400 pulse"></span>
           Mock Mode
         </span>
-        <span class="text-gray-500" id="lastRunTime">2026-04-28 07:00 AM</span>
+        <span class="text-gray-500" id="lastRunTime">2026-05-01 01:42 AM</span>
         <button onclick="location.reload()" class="px-3 py-1.5 rounded-lg glass glass-hover text-sm text-gray-400 hover:text-white transition-colors">⟳ Refresh</button>
       </div>
     </header>
 
-    <!-- Stats Row -->
-    <div class="grid grid-cols-4 gap-4 mb-8" id="statsRow">
-      <!-- filled by JS -->
+    <!-- Navigation Tabs -->
+    <div class="flex gap-2 mb-6 overflow-x-auto pb-2" id="navTabs">
+      <button data-tab="pipeline" class="tab-btn px-4 py-2 rounded-lg text-sm bg-white/10 text-white font-medium">Pipeline</button>
+      <button data-tab="hypeman" class="tab-btn px-4 py-2 rounded-lg text-sm text-gray-400 hover:text-white transition-colors">🔥 Hype-Man Generator</button>
+      <button data-tab="distribution" class="tab-btn px-4 py-2 rounded-lg text-sm text-gray-400 hover:text-white transition-colors">📦 Distribution Tools</button>
+      <button data-tab="stickiness" class="tab-btn px-4 py-2 rounded-lg text-sm text-gray-400 hover:text-white transition-colors">📊 Stickiness</button>
+      <button data-tab="brand" class="tab-btn px-4 py-2 rounded-lg text-sm text-gray-400 hover:text-white transition-colors">🎨 Brand Guide</button>
     </div>
 
-    <!-- Platform Status -->
-    <div class="glass rounded-xl p-4 mb-6">
-      <div class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-medium">Platform Connections</div>
-      <div class="grid grid-cols-3 gap-4" id="platformStatus">
+    <!-- ============================================================ -->
+    <!-- TAB 1: PIPELINE (original dashboard) -->
+    <!-- ============================================================ -->
+    <div id="tab-pipeline" class="tab-content">
+
+      <!-- Stats Row -->
+      <div class="grid grid-cols-4 gap-4 mb-8" id="statsRow">
         <!-- filled by JS -->
       </div>
-    </div>
 
-    <!-- Source Items -->
-    <div class="mb-4">
-      <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-        Source Items
-        <span class="text-gray-600 font-normal normal-case" id="sourceCount">(3)</span>
-      </h2>
-      <div class="grid gap-3" id="sourceItems">
-        <!-- filled by JS -->
-      </div>
-    </div>
-
-    <!-- Transformed Content -->
-    <div class="mb-4">
-      <div class="flex items-center justify-between mb-3">
-        <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">
-          Transformed Content
-          <span class="text-gray-600 font-normal normal-case" id="transformCount">(9)</span>
-        </h2>
-        <div class="flex gap-2" id="filterBar">
-          <button data-filter="all" class="filter-btn px-3 py-1 rounded-lg text-xs bg-white/10 text-white font-medium">All</button>
-          <button data-filter="short_hook" class="filter-btn px-3 py-1 rounded-lg text-xs text-gray-400 hover:text-white transition-colors">Short Hook</button>
-          <button data-filter="thread" class="filter-btn px-3 py-1 rounded-lg text-xs text-gray-400 hover:text-white transition-colors">Thread</button>
-          <button data-filter="deep_dive" class="filter-btn px-3 py-1 rounded-lg text-xs text-gray-400 hover:text-white transition-colors">Deep Dive</button>
+      <!-- Empire Metrics -->
+      <div class="glass rounded-xl p-5 mb-6 slide-up">
+        <div class="text-xs text-gray-500 uppercase tracking-wider mb-4 font-medium flex items-center gap-2">
+          <span>🌐</span> Directory Engine Empire — Live Metrics
+        </div>
+        <div class="grid grid-cols-5 gap-3" id="empireMetrics">
+          <!-- filled by JS -->
         </div>
       </div>
-      <div class="grid gap-3" id="transformedItems">
+
+      <!-- Platform Status -->
+      <div class="glass rounded-xl p-4 mb-6">
+        <div class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-medium">Platform Connections</div>
+        <div class="grid grid-cols-3 gap-4" id="platformStatus">
+          <!-- filled by JS -->
+        </div>
+      </div>
+
+      <!-- Source Items -->
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+          Source Items
+          <span class="text-gray-600 font-normal normal-case" id="sourceCount">(3)</span>
+        </h2>
+        <div class="grid gap-3" id="sourceItems">
+          <!-- filled by JS -->
+        </div>
+      </div>
+
+      <!-- Transformed Content -->
+      <div class="mb-4">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+            Transformed Content
+            <span class="text-gray-600 font-normal normal-case" id="transformCount">(9)</span>
+          </h2>
+          <div class="flex gap-2" id="filterBar">
+            <button data-filter="all" class="filter-btn px-3 py-1 rounded-lg text-xs bg-white/10 text-white font-medium">All</button>
+            <button data-filter="short_hook" class="filter-btn px-3 py-1 rounded-lg text-xs text-gray-400 hover:text-white transition-colors">Short Hook</button>
+            <button data-filter="thread" class="filter-btn px-3 py-1 rounded-lg text-xs text-gray-400 hover:text-white transition-colors">Thread</button>
+            <button data-filter="deep_dive" class="filter-btn px-3 py-1 rounded-lg text-xs text-gray-400 hover:text-white transition-colors">Deep Dive</button>
+          </div>
+        </div>
+        <div class="grid gap-3" id="transformedItems">
+          <!-- filled by JS -->
+        </div>
+      </div>
+
+      <!-- Publishing History -->
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+          Publishing History
+          <span class="text-gray-600 font-normal normal-case" id="historyCount">(18)</span>
+        </h2>
+        <div class="overflow-x-auto rounded-xl glass">
+          <table class="w-full text-sm" id="historyTable">
+            <thead>
+              <tr class="text-left text-gray-500 border-b border-white/5">
+                <th class="py-3 px-4 font-medium">Time</th>
+                <th class="py-3 px-4 font-medium">Content</th>
+                <th class="py-3 px-4 font-medium">Platform</th>
+                <th class="py-3 px-4 font-medium">Status</th>
+              </tr>
+            </thead>
+            <tbody id="historyBody">
+              <!-- filled by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 2: HYPE-MAN GENERATOR -->
+    <!-- ============================================================ -->
+    <div id="tab-hypeman" class="tab-content" style="display:none">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-lg font-bold flex items-center gap-2">
+            <span>🔥</span> Hype-Man Generator
+          </h2>
+          <p class="text-sm text-gray-500 mt-1">Daily "build in public" posts. 5 variants. One metric per post.</p>
+        </div>
+        <button id="regenerateHype" class="px-4 py-2 rounded-lg glass glass-hover text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-2">
+          <span>⟳</span> Regenerate
+        </button>
+      </div>
+
+      <!-- Current Stats Banner -->
+      <div class="glass rounded-xl p-4 mb-6 flex items-center gap-4 flex-wrap slide-up">
+        <span class="text-sm text-gray-400">🎯 <span class="text-white font-medium">Today's Metrics:</span></span>
+        <span class="badge-orange px-3 py-1 rounded-full text-xs" id="hypeStat1">571 destinations live</span>
+        <span class="badge-amber px-3 py-1 rounded-full text-xs" id="hypeStat2">1,125 EV stations mapped</span>
+        <span class="badge-orange px-3 py-1 rounded-full text-xs" id="hypeStat3">3 directories running</span>
+        <span class="badge-amber px-3 py-1 rounded-full text-xs" id="hypeStat4">12 new this week</span>
+        <span class="badge-orange px-3 py-1 rounded-full text-xs" id="hypeStat5">🏆 $0→$X revenue</span>
+      </div>
+
+      <div class="grid gap-4" id="hypePosts">
         <!-- filled by JS -->
+      </div>
+
+      <!-- Batch Actions -->
+      <div class="glass rounded-xl p-4 mt-6 flex items-center justify-between">
+        <span class="text-sm text-gray-400">All 5 posts ready for approval pipeline</span>
+        <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-orange-500 to-rose-600 text-white text-sm font-medium hover:opacity-90 transition-opacity">
+          Send All to Approval Queue →
+        </button>
       </div>
     </div>
 
-    <!-- Publishing History -->
-    <div class="mb-4">
-      <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-        Publishing History
-        <span class="text-gray-600 font-normal normal-case" id="historyCount">(18)</span>
-      </h2>
+    <!-- ============================================================ -->
+    <!-- TAB 3: DISTRIBUTION TOOLS -->
+    <!-- ============================================================ -->
+    <div id="tab-distribution" class="tab-content" style="display:none">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-lg font-bold flex items-center gap-2">
+            <span>📦</span> Distribution Tools
+          </h2>
+          <p class="text-sm text-gray-500 mt-1">Free tools that funnel users into your directories. Build trust → drive traffic → convert.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4" id="distributionTools">
+        <!-- filled by JS -->
+      </div>
+
+      <!-- Embeddable Widgets -->
+      <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mt-8 mb-4">🔌 Embeddable Widgets for Travel Bloggers</h3>
+      <div class="grid gap-4" id="embedWidgets">
+        <!-- filled by JS -->
+      </div>
+
+      <!-- Funnel Strategy -->
+      <div class="glass rounded-xl p-5 mt-8 slide-up">
+        <div class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-medium">🧩 Distribution Funnel Strategy</div>
+        <div class="grid grid-cols-4 gap-4 text-center">
+          <div class="p-4 rounded-lg bg-white/[0.02]">
+            <div class="text-2xl mb-2">🎣</div>
+            <div class="text-sm font-medium text-orange-300">Free Tool</div>
+            <div class="text-xs text-gray-500 mt-1">Budget calc, safety score, route planner</div>
+          </div>
+          <div class="flex items-center justify-center text-gray-600 text-xl">→</div>
+          <div class="p-4 rounded-lg bg-white/[0.02]">
+            <div class="text-2xl mb-2">📋</div>
+            <div class="text-sm font-medium text-amber-300">Results + Recommendations</div>
+            <div class="text-xs text-gray-500 mt-1">Personalized matches to directory destinations</div>
+          </div>
+          <div class="flex items-center justify-center text-gray-600 text-xl">→</div>
+          <div class="p-4 rounded-lg bg-white/[0.02]">
+            <div class="text-2xl mb-2">💰</div>
+            <div class="text-sm font-medium text-emerald-300">Book & Earn</div>
+            <div class="text-xs text-gray-500 mt-1">Affiliate bookings through directory links</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 4: STICKINESS -->
+    <!-- ============================================================ -->
+    <div id="tab-stickiness" class="tab-content" style="display:none">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-lg font-bold flex items-center gap-2">
+            <span>📊</span> User Stickiness Features
+          </h2>
+          <p class="text-sm text-gray-500 mt-1">Retention mechanics that keep users coming back every trip-planning cycle.</p>
+        </div>
+      </div>
+
+      <!-- Social Proof Counters -->
+      <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <span>👥</span> Social Proof Counters
+      </h3>
+      <div class="grid grid-cols-4 gap-4 mb-8" id="proofCounters">
+        <!-- filled by JS -->
+      </div>
+
+      <!-- Weekly Digest Concept -->
+      <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <span>📧</span> Weekly Email Digest Concept
+      </h3>
+      <div class="glass rounded-xl p-5 mb-8 slide-up">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl flex-shrink-0">✉️</div>
+          <div class="flex-1">
+            <div class="font-medium text-base">"The Family Explorer" — Weekly Digest</div>
+            <div class="text-xs text-gray-500 mt-1">Every Monday morning, subscribers get:</div>
+            <div class="grid grid-cols-3 gap-3 mt-3">
+              <div class="p-3 rounded-lg bg-white/[0.02]">
+                <div class="text-orange-300 text-sm font-medium">🆕 New Destinations</div>
+                <div class="text-xs text-gray-500 mt-1">Top 5 destinations added this week, with parent reviews</div>
+              </div>
+              <div class="p-3 rounded-lg bg-white/[0.02]">
+                <div class="text-amber-300 text-sm font-medium">⭐ Featured Review</div>
+                <div class="text-xs text-gray-500 mt-1">One standout review from a verified parent, spotlighted</div>
+              </div>
+              <div class="p-3 rounded-lg bg-white/[0.02]">
+                <div class="text-orange-300 text-sm font-medium">🎯 Personalized Pick</div>
+                <div class="text-xs text-gray-500 mt-1">AI-recommended destination based on saved/bookmarked data</div>
+              </div>
+            </div>
+            <div class="mt-3 text-xs text-gray-600">
+              Email capture on homepage signup (email only, no password). Weekly sends via Resend free tier (100/day). Link tracking for affiliate attribution.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison Tool -->
+      <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <span>⚖️</span> Destination Comparison Tool Concept
+      </h3>
+      <div class="glass rounded-xl p-5 mb-8 slide-up">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl flex-shrink-0">⚖️</div>
+          <div class="flex-1">
+            <div class="font-medium text-base">Side-by-Side Destination Comparison</div>
+            <div class="text-xs text-gray-500 mt-1">Add 2-3 destinations and see them compared across parent-critical metrics:</div>
+            <div class="grid grid-cols-2 gap-3 mt-3">
+              <div>
+                <div class="text-xs text-gray-400 font-medium mb-1">Comparison Categories</div>
+                <ul class="text-xs text-gray-500 space-y-1">
+                  <li>• Safety ratings (overall + category breakdown)</li>
+                  <li>• Age suitability heat map</li>
+                  <li>• Price range ($$ vs $$$)</li>
+                  <li>• Number of verified parent reviews</li>
+                  <li>• Best time to visit overlap</li>
+                  <li>• Nearby affiliate bookable hotels</li>
+                </ul>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 font-medium mb-1">Engagement Hooks</div>
+                <ul class="text-xs text-gray-500 space-y-1">
+                  <li>• Shareable comparison URL (social viral loop)</li>
+                  <li>• "Which is better for YOUR family?" quiz</li>
+                  <li>• Comparison embed for travel bloggers</li>
+                  <li>• Email me the comparison PDF</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Engagement Features Matrix -->
+      <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+        <span>🎮</span> Engagement Feature Matrix
+      </h3>
       <div class="overflow-x-auto rounded-xl glass">
-        <table class="w-full text-sm" id="historyTable">
+        <table class="w-full text-sm">
           <thead>
             <tr class="text-left text-gray-500 border-b border-white/5">
-              <th class="py-3 px-4 font-medium">Time</th>
-              <th class="py-3 px-4 font-medium">Content</th>
-              <th class="py-3 px-4 font-medium">Platform</th>
-              <th class="py-3 px-4 font-medium">Status</th>
+              <th class="py-3 px-4 font-medium">Feature</th>
+              <th class="py-3 px-4 font-medium">Retention Driver</th>
+              <th class="py-3 px-4 font-medium">Effort to Build</th>
+              <th class="py-3 px-4 font-medium">Impact</th>
+              <th class="py-3 px-4 font-medium">Priority</th>
             </tr>
           </thead>
-          <tbody id="historyBody">
+          <tbody id="stickinessMatrix">
             <!-- filled by JS -->
           </tbody>
         </table>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 5: BRAND GUIDE -->
+    <!-- ============================================================ -->
+    <div id="tab-brand" class="tab-content" style="display:none">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-lg font-bold flex items-center gap-2">
+            <span>🎨</span> Brand Voice Guide
+          </h2>
+          <p class="text-sm text-gray-500 mt-1">"Building the directory engine empire." — Confident. Metric-focused. Unapologetic.</p>
+        </div>
+        <a href="/knowledge/research/social-beast-brand-voice.md" target="_blank" class="px-4 py-2 rounded-lg glass glass-hover text-sm text-gray-300 hover:text-white transition-colors">
+          📄 View Full Guide
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <!-- Voice Pillars -->
+        <div class="glass rounded-xl p-5">
+          <div class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-medium">🗣️ Voice Pillars</div>
+          <div class="space-y-3">
+            <div class="p-3 rounded-lg bg-white/[0.02] border-l-2 border-orange-500">
+              <div class="text-sm font-medium text-orange-300">Confidence</div>
+              <div class="text-xs text-gray-500 mt-0.5">No hedging. "Here's what we built." Never "we think."</div>
+            </div>
+            <div class="p-3 rounded-lg bg-white/[0.02] border-l-2 border-amber-500">
+              <div class="text-sm font-medium text-amber-300">Scale Obsession</div>
+              <div class="text-xs text-gray-500 mt-0.5">Every post ties to a number. "571 destinations." Not "lots of places."</div>
+            </div>
+            <div class="p-3 rounded-lg bg-white/[0.02] border-l-2 border-rose-500">
+              <div class="text-sm font-medium text-rose-300">Build in Public</div>
+              <div class="text-xs text-gray-500 mt-0.5">Wins AND losses. Deployments at 2 AM. The real story.</div>
+            </div>
+            <div class="p-3 rounded-lg bg-white/[0.02] border-l-2 border-emerald-500">
+              <div class="text-sm font-medium text-emerald-300">Family Value</div>
+              <div class="text-xs text-gray-500 mt-0.5">Every directory solves a real problem for real people.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hashtag Strategy -->
+        <div class="glass rounded-xl p-5">
+          <div class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-medium">#️⃣ Hashtag Strategy</div>
+          <div class="space-y-3">
+            <div class="p-3 rounded-lg bg-white/[0.02]">
+              <div class="text-sm font-medium text-white">Primary (every post)</div>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <span class="badge-orange px-2 py-0.5 rounded text-xs">#FamilyTravelAsia</span>
+                <span class="badge-orange px-2 py-0.5 rounded text-xs">#DirectoryEngine</span>
+                <span class="badge-orange px-2 py-0.5 rounded text-xs">#BuildInPublic</span>
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-white/[0.02]">
+              <div class="text-sm font-medium text-white">Secondary (rotate)</div>
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                <span class="badge-amber px-2 py-0.5 rounded text-xs">#IndieHacker</span>
+                <span class="badge-amber px-2 py-0.5 rounded text-xs">#AIAutomation</span>
+                <span class="badge-amber px-2 py-0.5 rounded text-xs">#FamilyTravel</span>
+                <span class="badge-amber px-2 py-0.5 rounded text-xs">#TravelTech</span>
+                <span class="badge-amber px-2 py-0.5 rounded text-xs">#DigitalNomad</span>
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-white/[0.02] border border-red-500/20">
+              <div class="text-sm font-medium text-red-400">🚫 Avoid</div>
+              <div class="text-xs text-gray-500 mt-1">#travel #wanderlust — too diluted. #twittergrowth — looks desperate.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Style -->
+      <div class="glass rounded-xl p-5 mb-6">
+        <div class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-medium">🎨 Visual Style</div>
+        <div class="grid grid-cols-4 gap-4">
+          <div class="p-4 rounded-lg text-center" style="background: linear-gradient(135deg, #f97316, #e11d48);">
+            <div class="text-xs font-medium text-white">Primary Gradient</div>
+            <div class="text-xs text-white/70 mt-1">Orange → Rose</div>
+          </div>
+          <div class="p-4 rounded-lg text-center" style="background: #0a0a0f; border: 1px solid rgba(255,255,255,0.1);">
+            <div class="text-xs font-medium text-white">Background</div>
+            <div class="text-xs text-gray-500 mt-1">#0a0a0f</div>
+          </div>
+          <div class="p-4 rounded-lg text-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+            <div class="text-xs font-medium text-white">Glass Card</div>
+            <div class="text-xs text-gray-500 mt-1">backdrop-blur</div>
+          </div>
+          <div class="p-4 rounded-lg text-center" style="background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.3);">
+            <div class="text-xs font-medium text-orange-300">Accent Badge</div>
+            <div class="text-xs text-orange-300/60 mt-1">rgba orange</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voice Examples -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="glass rounded-xl p-5">
+          <div class="text-xs text-red-400 uppercase tracking-wider mb-2 font-medium">❌ Before (flat)</div>
+          <div class="text-sm text-gray-400 italic">"We have a family travel directory with many destinations. You can search and find places to visit."</div>
+        </div>
+        <div class="glass rounded-xl p-5 border-l-2 border-emerald-500">
+          <div class="text-xs text-emerald-400 uppercase tracking-wider mb-2 font-medium">✅ After (Social Beast)</div>
+          <div class="text-sm text-gray-200">"571 family destinations across Asia. Each one safety-rated, parent-vetted, and affiliate-bookable. Not a travel blog — a directory engine."</div>
+        </div>
       </div>
     </div>
 
@@ -120,7 +460,7 @@
     // DATA
     // ============================================================
     const SAMPLE = {
-      lastRun: "2026-04-28 07:00 AM",
+      lastRun: "2026-05-01 01:42 AM",
       sources: [
         {
           id: "s1",
@@ -186,182 +526,10 @@
       ]
     };
 
-    // Try to load user data, fall back to sample
-    async function loadData() {
-      // In a real scenario we'd fetch credentials.json and data files
-      // For now, always use sample data
-      return SAMPLE;
-    }
-
-    // Helper: get source title by id
-    function getSourceTitle(id) {
-      const s = SAMPLE.sources.find(src => src.id === id);
-      return s ? s.title : 'Unknown';
-    }
-    function getSourceImage(id) {
-      const s = SAMPLE.sources.find(src => src.id === id);
-      return s ? s.image : '📄';
-    }
-
-    // Platform badge
-    function platformBadge(name) {
-      const colors = { twitter: 'bg-sky-500/20 text-sky-300 border-sky-500/30', telegram: 'bg-blue-500/20 text-blue-300 border-blue-500/30', linkedin: 'bg-blue-700/20 text-blue-300 border-blue-700/30' };
-      const icons = { twitter: '𝕏', telegram: '✈', linkedin: 'in' };
-      return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium border ${colors[name] || 'bg-gray-500/20 text-gray-400 border-gray-500/30'}">${icons[name] || name}</span>`;
-    }
-
-    // Status badge
-    function statusBadge(status) {
-      const map = {
-        ready: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/20',
-        pending: 'bg-amber-500/15 text-amber-300 border-amber-500/20',
-        published: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/20',
-        error: 'bg-red-500/15 text-red-300 border-red-500/20'
-      };
-      return `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-medium border ${map[status] || 'bg-gray-500/15 text-gray-400 border-gray-500/20'}"><span class="pulse-dot ${status === 'published' || status === 'ready' ? 'bg-emerald-400' : status === 'error' ? 'bg-red-400' : 'bg-amber-400'} ${status === 'ready' || status === 'pending' ? 'pulse' : ''}"></span>${status}</span>`;
-    }
-
-    // Transform type badge
-    function typeBadge(type) {
-      const labels = { short_hook: 'Short Hook', thread: 'Thread', deep_dive: 'Deep Dive' };
-      return `<span class="text-xs px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/10">${labels[type] || type}</span>`;
-    }
-
     // ============================================================
-    // RENDER
+    // HYPE-MAN: Build-in-Public Generator Data
     // ============================================================
-    function render(data) {
-      // Last run
-      document.getElementById('lastRunTime').textContent = data.lastRun;
-      document.getElementById('footerTime').textContent = new Date().toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' });
-
-      // Stats
-      const pending = data.transforms.filter(t => t.status === 'pending').length;
-      const ready = data.transforms.filter(t => t.status === 'ready').length;
-      const error = data.transforms.filter(t => t.status === 'error').length;
-      const published = data.history.filter(h => h.status === 'published').length;
-
-      document.getElementById('statsRow').innerHTML = `
-        <div class="glass rounded-xl p-4 card">
-          <div class="text-2xl font-bold text-emerald-400">${ready}</div>
-          <div class="text-xs text-gray-500 mt-1">Ready to Publish</div>
-        </div>
-        <div class="glass rounded-xl p-4 card">
-          <div class="text-2xl font-bold text-amber-400">${pending}</div>
-          <div class="text-xs text-gray-500 mt-1">Pending Review</div>
-        </div>
-        <div class="glass rounded-xl p-4 card">
-          <div class="text-2xl font-bold text-red-400">${error}</div>
-          <div class="text-xs text-gray-500 mt-1">Errors</div>
-        </div>
-        <div class="glass rounded-xl p-4 card">
-          <div class="text-2xl font-bold text-blue-400">${published}</div>
-          <div class="text-xs text-gray-500 mt-1">Published (all time)</div>
-        </div>
-      `;
-
-      // Platform status
-      document.getElementById('platformStatus').innerHTML = `
-        <div class="flex items-center gap-3 p-3 rounded-lg bg-white/[0.02]">
-          <span class="text-lg">𝕏</span>
-          <div>
-            <div class="text-sm font-medium">Twitter</div>
-            <div class="text-xs text-gray-500"><span class="text-emerald-400">🟢</span> Mock mode</div>
-          </div>
-        </div>
-        <div class="flex items-center gap-3 p-3 rounded-lg bg-white/[0.02]">
-          <span class="text-lg">✈</span>
-          <div>
-            <div class="text-sm font-medium">Telegram</div>
-            <div class="text-xs text-gray-500"><span class="text-emerald-400">🟢</span> Mock mode</div>
-          </div>
-        </div>
-        <div class="flex items-center gap-3 p-3 rounded-lg bg-white/[0.02]">
-          <span class="text-lg">in</span>
-          <div>
-            <div class="text-sm font-medium">LinkedIn</div>
-            <div class="text-xs text-gray-500"><span class="text-emerald-400">🟢</span> Mock mode</div>
-          </div>
-        </div>
-      `;
-
-      // Source count
-      document.getElementById('sourceCount').textContent = `(${data.sources.length})`;
-
-      // Source items
-      document.getElementById('sourceItems').innerHTML = data.sources.map(s => `
-        <div class="glass rounded-xl p-4 card flex items-start gap-4">
-          <div class="text-2xl flex-shrink-0">${s.image}</div>
-          <div class="flex-1 min-w-0">
-            <div class="font-medium text-sm truncate">${s.title}</div>
-            <div class="text-xs text-gray-500 mt-0.5">${s.source}</div>
-            <div class="text-xs text-gray-600 mt-1 truncate"><a href="${s.url}" class="hover:text-blue-400 transition-colors" target="_blank">${s.url}</a></div>
-          </div>
-          <div class="flex-shrink-0">${statusBadge(s.status)}</div>
-        </div>
-      `).join('');
-
-      // Transform count
-      document.getElementById('transformCount').textContent = `(${data.transforms.length})`;
-
-      // Transformed items
-      function renderTransforms(filter) {
-        const items = filter === 'all' ? data.transforms : data.transforms.filter(t => t.type === filter);
-        if (items.length === 0) {
-          return `<div class="glass rounded-xl p-8 text-center text-gray-500"><p>No items match this filter.</p></div>`;
-        }
-        return items.map(t => {
-          const sourceTitle = getSourceTitle(t.sourceId);
-          const sourceImage = getSourceImage(t.sourceId);
-          return `
-            <div class="glass rounded-xl p-4 card flex items-start gap-4">
-              <div class="text-lg flex-shrink-0">${sourceImage}</div>
-              <div class="flex-1 min-w-0">
-                <div class="text-sm font-medium truncate">${t.title}</div>
-                <div class="flex items-center gap-2 mt-1.5 flex-wrap">
-                  ${typeBadge(t.type)}
-                  ${t.target.map(p => platformBadge(p)).join(' ')}
-                </div>
-                <div class="text-xs text-gray-600 mt-1">Source: ${sourceTitle}</div>
-              </div>
-              <div class="flex-shrink-0">${statusBadge(t.status)}</div>
-            </div>
-          `;
-        }).join('');
-      }
-
-      document.getElementById('transformedItems').innerHTML = renderTransforms('all');
-
-      // Filter buttons
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-          document.querySelectorAll('.filter-btn').forEach(b => {
-            b.classList.remove('bg-white/10', 'text-white', 'font-medium');
-            b.classList.add('text-gray-400');
-          });
-          this.classList.add('bg-white/10', 'text-white', 'font-medium');
-          this.classList.remove('text-gray-400');
-          const filter = this.dataset.filter;
-          document.getElementById('transformedItems').innerHTML = renderTransforms(filter);
-        });
-      });
-
-      // History count
-      document.getElementById('historyCount').textContent = `(${data.history.length})`;
-
-      // History table
-      document.getElementById('historyBody').innerHTML = data.history.map(h => `
-        <tr class="border-b border-white/[0.03] hover:bg-white/[0.02] transition-colors">
-          <td class="py-3 px-4 text-gray-400 whitespace-nowrap">${h.time}</td>
-          <td class="py-3 px-4 text-gray-200">${h.content}</td>
-          <td class="py-3 px-4">${platformBadge(h.platform)}</td>
-          <td class="py-3 px-4">${statusBadge(h.status)}</td>
-        </tr>
-      `).join('');
-    }
-
-    // Boot
-    loadData().then(render);
-  </script>
-</body>
-</html>
+    const METRICS = [
+      { label: "Destinations Live", value: "571", icon: "🌍" },
+      { label: "EV Stations Mapped", value: "1,125", icon: "⚡" },
+      {

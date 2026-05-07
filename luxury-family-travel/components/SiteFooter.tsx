@@ -1,0 +1,120 @@
+import Link from "next/link";
+
+const sisterSites = [
+  { name: "Family Travel Asia", href: "https://www.familytravelasia.com", description: "Family-friendly destinations & tips" },
+  { name: "EV Charging Asia", href: "https://ev-charging-asia.vercel.app", description: "EV charging station directory" },
+  { name: "Apifeny AI Tools", href: "https://apifeny-ai.vercel.app", description: "Curated AI tool directory for Asia" },
+  { name: "Social Beast", href: "https://social-beast-two.vercel.app", description: "Social content scheduling & analytics" },
+  { name: "Nudge", href: "https://nudge-sigma-liart.vercel.app", description: "Family task management Telegram bot" },
+  { name: "Kids Activities Asia", href: "https://kids-activities-asia.vercel.app", description: "Kid-friendly activities across Asia" },
+];
+
+const quickLinks = [
+  { name: "Home", href: "/" },
+  { name: "Destinations", href: "/search" },
+  { name: "Blog", href: "/blog" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+];
+
+export default function SiteFooter() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="hidden md:block bg-charcoal text-gray-300 border-t border-gold/20">
+      <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16">
+        {/* Top grid: brand, quick links, sister sites */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 mb-10">
+          {/* Brand column */}
+          <div>
+            <h3 className="font-serif text-xl text-gold mb-3 tracking-wide">
+              Luxury Family Experiences Asia
+            </h3>
+            <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
+              Curated premium family experiences across Asia. 5-star resorts, private villas,
+              Michelin-star dining, and unforgettable adventures for discerning families.
+            </p>
+          </div>
+
+          {/* Quick links */}
+          <div>
+            <h4 className="font-serif text-base text-gold mb-4 tracking-wide">Quick Links</h4>
+            <ul className="space-y-2.5">
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-gold transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Sister sites */}
+          <div>
+            <h4 className="font-serif text-base text-gold mb-4 tracking-wide">Our Network</h4>
+            <ul className="space-y-3">
+              {sisterSites.map((site) => (
+                <li key={site.href}>
+                  <a
+                    href={site.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block text-sm text-gray-400 hover:text-gold transition-colors duration-200"
+                  >
+                    <span className="font-medium">{site.name}</span>
+                    <span className="block text-xs text-gray-500 group-hover:text-gray-400 transition-colors duration-200">
+                      {site.description}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent mb-8" />
+
+        {/* Bottom row: copyright + legal links + AdSense credit */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+          <p>
+            &copy; {currentYear} Luxury Family Travel Asia. All rights reserved.
+          </p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="hover:text-gold transition-colors duration-200">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-gold transition-colors duration-200">
+              Terms of Service
+            </Link>
+            <span className="text-gray-600">|</span>
+            <span className="text-gray-600">
+              Powered by{" "}
+              <a
+                href="https://apifeny-ai.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold transition-colors duration-200"
+              >
+                Apifeny AI
+              </a>{" "}
+              |{" "}
+              <a
+                href="https://social-beast-two.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold transition-colors duration-200"
+              >
+                Social Beast
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

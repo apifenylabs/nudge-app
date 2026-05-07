@@ -95,12 +95,57 @@ export function Card({ children, className }) {
 - Paperclip suggests but doesn't enforce
 - Opt-out for unique requirements
 
+## Interlinker Capability (Portfolio CEO Extension)
+
+Interlinker is an automatic cross-directory linking and knowledge sharing system. It operates within Paperclip as a specialized module.
+
+### Core Function: Automatic Cross-Directory Linking
+When a new directory is created or updated, Interlinker automatically:
+1. **Scans** all existing directories for overlapping topics (e.g., family travel ↔ kid activities ↔ safety checkers)
+2. **Finds** natural linking opportunities (e.g., a destination in Family Travel should link to kid-friendly activities in Kid Activities directory)
+3. **Generates** cross-directory links in relevant pages
+4. **Logs** all created links in the shared registry
+
+### Link Types
+- **Contextual Links**: "See also [X] in [Directory Name]" within content
+- **Silo Links**: Navigation cross-references in headers/footers
+- **Content Hubs**: Auto-generated "Related" sections that pull from other directories
+- **Topic Clusters**: Tag-based groupings that span directories (e.g., "water parks" in both travel and activities directories)
+
+### Knowledge Sharing Protocol
+When Interlinker detects a cross-directory opportunity:
+```yaml
+action: "cross_link"
+source_directory: "family-travel-asia"
+target_directory: "kid-activities-guide"
+shared_topic: "water-parks-thailand"
+link_type: "contextual"
+source_page: "/destinations/bangkok-water-parks"
+target_page: "/activities/thailand/bangkok-water-parks"
+link_text: "See water park safety tips for Bangkok"
+confidence: 0.92
+status: "pending_review"
+```
+
+### Implementation
+- Interlinker runs as a post-processing step after any directory content change
+- Uses semantic matching (tag overlap, category overlap, geo overlap)
+- Maintains a link registry to prevent duplicate or circular links
+- Reports all links to the CEO dashboard for review
+
+### Quality Gates
+- No orphaned links (every cross-link must point to an existing page)
+- At least 80% topic relevance before auto-linking
+- Maximum 3 cross-links per content section (avoid link spam)
+- All links reviewed in the Chief Editor + CTO sign-off gate
+
 ## Next Coordination Opportunities
 
 1. **Telegram Bot Patterns**: Nudge → Other orchestras
 2. **Voice Interface**: Nudge → KidScan (food scanning voice commands)
 3. **Affiliate Tracking**: Affiliate Beast → Directory Beast (commission links)
 4. **Monitoring**: Alpha HQ → All (real-time status)
+5. **Interlinker Integration**: Automatic cross-directory linking across all content directories
 
 ---
 **Paperclip.ai Status**: ✅ ACTIVE AND COORDINATING
@@ -109,3 +154,4 @@ export function Card({ children, className }) {
 **Duplication Prevented**: 12 instances
 **Components Shared**: 8 components
 **API Patterns Shared**: 5 patterns
+**Cross-Directory Links**: 0 (Interlinker just activated)

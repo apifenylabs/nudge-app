@@ -6,6 +6,7 @@ import { getPostBySlug, getRelatedPosts } from '@/lib/blog-data';
 import { readFileSync } from 'fs';
 import path from 'path';
 import type { BlogPost } from '@/lib/blog-data';
+import BlogAdSlots from './BlogAdSlots';
 
 const BASE_URL = 'https://family-travel-directory.vercel.app';
 
@@ -46,11 +47,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const title = `${post.title} | Asia Family Travel Directory`;
   const description = post.excerpt.substring(0, 160);
+  // Derive family-specific keywords from tags and title
+  const familyKeywords = `family travel, ${post.tags.filter(t => !t.includes('family')).slice(0, 4).join(', ')}, Asia family travel, tips for parents traveling Asia`.split(', ').join(', ');
 
   return {
     title,
     description,
-    keywords: post.tags.join(', '),
+    keywords: `${post.tags.join(', ')}, ${familyKeywords}`,
     alternates: { canonical: `${BASE_URL}/blog/${slug}` },
     openGraph: {
       title,
@@ -168,10 +171,15 @@ function markdownToHtml(markdown: string): string {
 function ArticleContent({ content }: { content: string }) {
   const html = markdownToHtml(content);
   return (
-    <div
-      className="prose-custom max-w-none"
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
+    <div className="prose-custom max-w-none">
+      {/* In-Article Ad: first third of content */}
+      <BlogAdSlots position="top" />
+      <div
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+      {/* In-Article Ad: below content */}
+      <BlogAdSlots position="bottom" />
+    </div>
   );
 }
 
