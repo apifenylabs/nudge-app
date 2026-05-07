@@ -9,12 +9,10 @@ interface Props {
   params: { id: string };
 }
 
-export async function generateStaticParams() {
-  const filePath = path.join(process.cwd(), 'data', 'stations.json');
-  const raw = await fs.readFile(filePath, 'utf8');
-  const stations: Station[] = JSON.parse(raw);
-  return stations.map(s => ({ id: s.id }));
-}
+// Dynamic rendering — pages generated on-demand from the data file at request time
+// SSG tried to generate 1,125 pages at build time, causing memory/timeout issues on Vercel
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const filePath = path.join(process.cwd(), 'data', 'stations.json');
