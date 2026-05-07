@@ -345,6 +345,260 @@ export const playbooks: Playbook[] = [
       'Use Canva\'s resize feature to adapt one video for multiple platforms',
     ],
   },
+
+  // ════════════════════════════════════════════════════
+  // AI PIPELINE PLAYBOOKS — Vibe Coding Flow
+  // ════════════════════════════════════════════════════
+
+  {
+    slug: 'best-llms-for-coding',
+    title: 'Best LLMs for Coding',
+    subtitle: 'Ranked & reviewed for real dev work',
+    description:
+      'A data-backed comparison of LLMs for software development. We rank Claude, Cursor, ChatGPT, Gemini, and Copilot across code generation, debugging, refactoring, and documentation. Includes real benchmarks and practical recommendations for each task type.',
+    related_tool_slugs: ['cursor', 'claude', 'chatgpt', 'gemini', 'devin'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '💻',
+    gradient: 'from-sky-500/30 to-indigo-500/30',
+    steps: [
+      {
+        title: 'Understand the coding LLM landscape',
+        description:
+          'The top contenders: Cursor (best IDE integration for daily coding), Claude Sonnet 4 (best reasoning for complex logic), ChatGPT (best all-rounder for quick scripts), Gemini (best long-context for large codebases), Copilot (best autocomplete for VS Code users).',
+        tip: 'Use Cursor for day-to-day development, Claude for debugging complex issues, and Gemini for refactoring large files.',
+      },
+      {
+        title: 'Code generation benchmarks',
+        description:
+          'In real-world tests: Cursor/Claude score highest on code generation (generates ~85% correct on first try for standard CRUD apps). ChatGPT scores 70-75%. Gemini scores 65-70% but handles 1M+ token contexts. Copilot excels at inline completions.',
+      },
+      {
+        title: 'Debugging & refactoring comparison',
+        description:
+          'For identifying bugs: Claude is #1 (reads code like a senior engineer, catches edge cases). For refactoring: ChatGPT with o3-mini is best (understands architectural intent). For automated fixes: Cursor\'s Agent mode can self-heal runtime errors.',
+        tip: 'When stuck on a bug, paste the full error + relevant file into Claude first, then use Cursor to apply the fix.',
+      },
+      {
+        title: 'Documentation & testing',
+        description:
+          'GitHub Copilot leads for inline documentation. ChatGPT/Claude are better for writing comprehensive READMEs and test suites. Gemini\'s long context helps it generate tests that cover more edge cases.',
+      },
+      {
+        title: 'Pick your stack for the job',
+        description:
+          'Rapid prototyping: Cursor + Claude combo. Full-stack app: Cursor\'s Agent mode. Code review: Claude. Legacy code refactor: Gemini (for its 1M context). API integration: ChatGPT (best docs comprehension).',
+        tip: 'Most professional devs use 2-3 LLMs in parallel. Don\'t pick one — build a pipeline.',
+      },
+    ],
+    pro_tips: [
+      'Use Cursor\'s Composer (Cmd+I) for multi-file changes that require architectural understanding',
+      'Keep a CLAUDE.md or CURSOR.md in your project root with tech stack preferences and conventions',
+      'For code review, paste the diff into Claude and ask \"What edge cases am I missing?\"',
+      'Use Gemini 2.5 Pro for reviewing entire codebases — its 1M context sees the whole picture',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Asking one LLM to do everything',
+        fix: 'Use Cursor for coding, Claude for reasoning, ChatGPT for documentation. Each has strengths.',
+      },
+      {
+        mistake: 'Accepting first-generated code without review',
+        fix: 'Always scan generated code for security issues (SQL injection, API key leaks) and edge cases.',
+      },
+    ],
+  },
+  {
+    slug: 'ai-pipeline-idea-to-deploy',
+    title: 'AI Pipeline: Idea to Deploy',
+    subtitle: 'Full vibe coding workflow',
+    description:
+      'End-to-end pipeline for building and shipping a SaaS app using AI. Covers strategic planning → product ownership → research → ideation → coding → review → testing → deployment. Based on real workflows from solopreneurs shipping in 1-2 weeks.',
+    related_tool_slugs: ['chatgpt', 'cursor', 'claude', 'perplexity', 'canva-ai'],
+    difficulty: 'Advanced',
+    read_time_minutes: 14,
+    icon: '🏗️',
+    gradient: 'from-neon/40 to-aqua/30',
+    steps: [
+      {
+        title: 'Phase 1 — Strategic Planning (Best LLM: ChatGPT o3)',
+        description:
+          'Define what you\'re building and why. Ask ChatGPT: "I want to build [idea]. Help me define the MVP scope, target users, monetization model, and key metrics." Use the LLM as a product strategist — challenge assumptions, identify risks.',
+        tip: 'Ask for a Lean Canvas output format. This structures your thinking and catches gaps.',
+      },
+      {
+        title: 'Phase 2 — Product Ownership (Best LLM: ChatGPT + Claude)',
+        description:
+          'Turn strategy into tickets. Use ChatGPT to break the MVP into epics and user stories. Then use Claude to review the product spec for edge cases and missing features. Create a backlog of 10-15 tickets for your first sprint.',
+        tip: 'Output as markdown files in your project repo. Cursor can read these directly.',
+      },
+      {
+        title: 'Phase 3 — Research (Best LLM: Perplexity + Gemini)',
+        description:
+          'Research your tech stack, competitors, and best practices. Use Perplexity for up-to-date documentation and API references. Use Gemini for deep-dive research into architecture patterns and edge cases.',
+      },
+      {
+        title: 'Phase 4 — Ideation & Architecture (Best LLM: Claude)',
+        description:
+          'Design your system architecture. Claude excels here — it understands the full picture. Ask for: data model, API routes, component tree, and state management plan. Review and iterate before writing code.',
+        tip: 'Ask Claude to generate a PRD (Product Requirements Document) — this becomes your blueprint.',
+      },
+      {
+        title: 'Phase 5 — Coding (Best LLM: Cursor + Claude)',
+        description:
+          'Start with Cursor\'s Agent mode. Provide your PRD + tickets and let it scaffold the project. For complex logic, switch to Claude for implementation. Use Cursor\'s Composer for multi-file changes.',
+      },
+      {
+        title: 'Phase 6 — Code Review (Best LLM: Claude)',
+        description:
+          'After each feature, paste the diff into Claude. Ask: "Review this for bugs, security issues, performance problems, and edge cases." Claude catches things human reviewers miss.',
+      },
+      {
+        title: 'Phase 7 — Testing (Best LLM: ChatGPT + Devin)',
+        description:
+          'Generate test suites with ChatGPT. For E2E testing, describe your user flows and let it write Playwright/Cypress tests. Devin can autonomously run and fix failing tests.',
+      },
+      {
+        title: 'Phase 8 — Deployment (Best LLM: ChatGPT)',
+        description:
+          'Use ChatGPT for DevOps: Dockerfile generation, CI/CD configuration, environment variable management. Deploy with Vercel for frontend, Railway/Render for backend. Let ChatGPT debug deployment errors.',
+        tip: 'Ask ChatGPT to write a deployment checklist — you\'ll follow it in <30 min.',
+      },
+    ],
+    pro_tips: [
+      'Keep a project-level markdown file with all decisions — feed it to every new LLM session for context',
+      'The full pipeline from idea to deploy takes 1-2 weeks for a solo dev using this workflow',
+      'Don\'t skip Phase 1-4 — 80% of projects fail because of poor planning, not bad code',
+      'Record your MVP build as content — \"Building in 2 weeks with AI\" is a top-performing format',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Jumping straight to coding without architecture planning',
+        fix: 'Spend 2 hours on phases 1-4. It will save you 20+ hours of refactoring later.',
+      },
+      {
+        mistake: 'Using one LLM for all pipeline stages',
+        fix: 'Each stage has a best-fit LLM. Use the recommendations above. The cost difference is negligible vs. the quality gain.',
+      },
+    ],
+  },
+  {
+    slug: 'best-llms-for-strategic-planning',
+    title: 'Best LLMs for Strategic Planning',
+    subtitle: 'Think bigger, plan smarter',
+    description:
+      'A comparison of how different LLMs perform as strategic advisors. Covering business planning, competitive analysis, go-to-market strategy, and risk assessment. Includes prompt patterns that produce VC-quality analysis.',
+    related_tool_slugs: ['chatgpt', 'claude', 'perplexity', 'gemini'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 9,
+    icon: '🧠',
+    gradient: 'from-violet-500/30 to-fuchsia-500/30',
+    steps: [
+      {
+        title: 'ChatGPT o3 — Best for brainstorming & iteration',
+        description:
+          'ChatGPT o3 is the best conversational strategist. Use it to: brainstorm business models, refine value propositions, explore pricing strategies, and iterate on ideas rapidly. Its fast response lets you explore 10+ angles in one session.',
+        tip: 'Use the "red team" technique: ask it to argue against your idea to find weaknesses.',
+      },
+      {
+        title: 'Claude — Best for deep analysis & risk assessment',
+        description:
+          'Claude excels at structured strategic thinking. Use it for: competitive analysis (can process 10+ competitor profiles), risk matrices, SWOT analysis, and go-to-market timing. Its reasoning is more methodical and nuanced.',
+      },
+      {
+        title: 'Perplexity — Best for market research',
+        description:
+          'Perplexity is your research layer. Use it for: finding market size data, reading analyst reports, checking competitor funding/news, and validating assumptions with cited sources. Every claim has a source you can verify.',
+      },
+      {
+        title: 'Gemini — Best for comprehensive analysis',
+        description:
+          'Gemini\'s 1M context can process your entire business plan, financial model, market research, and competitor analysis in one pass. Ask it to find contradictions, gaps, and opportunities across all documents.',
+        tip: 'Upload your pitch deck + financial model + competitor matrix into Gemini and ask for a strategic review.',
+      },
+      {
+        title: 'The winning strategy workflow',
+        description:
+          'Phase 1: ChatGPT o3 for idea generation + refinement. Phase 2: Perplexity for market validation. Phase 3: Claude for risk analysis. Phase 4: Gemini for comprehensive synthesis. This 4-phase workflow produces better strategy than most consulting firms.',
+      },
+    ],
+    pro_tips: [
+      'Create a \"Strategy Vault\" — save the best prompts as a reusable GPT or Claude project',
+      'For pricing strategy, always ask AI for 3 models: freemium, subscription, and usage-based — then compare',
+      'Use Claude Projects to maintain context across multiple strategic sessions',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Treating AI strategy as final answers instead of inputs',
+        fix: 'AI gives you options and analysis. Use your judgment for the final decision.',
+      },
+      {
+        mistake: 'Not verifying market size claims',
+        fix: 'Always ask for sources and verify with Perplexity before using data in pitches or plans.',
+      },
+    ],
+  },
+  {
+    slug: 'best-agent-roles-for-solopreneurs',
+    title: 'Best AI Agent Roles for Solopreneurs',
+    subtitle: 'Build your one-person team',
+    description:
+      'The most effective AI agent roles for solo founders, ranked by impact. From coding assistant to marketing agent to customer support — configure your AI team to maximize output with minimal overhead.',
+    related_tool_slugs: ['cursor', 'chatgpt', 'perplexity', 'claude', 'canva-ai', 'elevenlabs'],
+    difficulty: 'Beginner',
+    read_time_minutes: 11,
+    icon: '🤖',
+    gradient: 'from-amber-500/30 to-orange-500/30',
+    steps: [
+      {
+        title: 'Agent Role #1: The CTO (Coding Assistant)',
+        description:
+          'Best tools: Cursor (primary), Claude (secondary). Your CTO handles: architecture decisions, code generation, debugging, code review, and deployment. Set up Cursor with your project context and let it drive development.',
+        tip: 'Create a CLAUDE.md in your repo that lists your tech stack, coding conventions, and deployment process.',
+      },
+      {
+        title: 'Agent Role #2: The Marketing Lead (Content & Growth)',
+        description:
+          'Best tools: ChatGPT (strategy + copy), Canva AI (visuals), Perplexity (research). Your marketing lead handles: content calendars, blog posts, social media copy, email sequences, and SEO strategy.',
+      },
+      {
+        title: 'Agent Role #3: The Customer Support Rep',
+        description:
+          'Best tools: ChatGPT (response drafting), ElevenLabs (voice support). Create a knowledge base document of your FAQs, product specs, and policies. Feed it to ChatGPT for consistent, on-brand customer responses.',
+      },
+      {
+        title: 'Agent Role #4: The CFO/Accountant',
+        description:
+          'Best tools: ChatGPT (financial modeling), Gemini (document analysis). Handle: pricing analysis, cost projections, budget tracking, and invoice review. Upload spreadsheets to Gemini for comprehensive analysis.',
+      },
+      {
+        title: 'Agent Role #5: The Operations Manager',
+        description:
+          'Best tools: ChatGPT (process design), Perplexity (best practices). Your ops manager handles: workflow optimization, vendor evaluation, timeline management, and process documentation.',
+        tip: 'Ask ChatGPT to create standard operating procedures (SOPs) for recurring tasks. Save as markdown.',
+      },
+      {
+        title: 'Assemble your AI team',
+        description:
+          'Start with 2-3 roles and expand. Most solopreneurs find the CTO + Marketing Lead combo covers 80% of their needs. Add roles as your business grows. The total cost: ~$60-100/mo for all tools.',
+      },
+    ],
+    pro_tips: [
+      'Create a \"Company Wiki\" document — your AI agents need context about your business to be effective',
+      'Set up recurring AI meetings: Sunday planning (ChatGPT), Wednesday review (Claude), Friday execution check (Cursor)',
+      'Keep a \"Lessons Learned\" doc that you feed back into your AI agents — they get better over time',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Trying to use all AI agent roles at once',
+        fix: 'Start with CTO + Marketing. Add more when you feel the bottleneck. Over-automation kills productivity.',
+      },
+      {
+        mistake: 'Not maintaining context between sessions',
+        fix: 'Keep a running document that captures decisions, status, and next steps. Feed it to each AI session.',
+      },
+    ],
+  },
 ];
 
 export function getPlaybookBySlug(slug: string): Playbook | undefined {

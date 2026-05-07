@@ -21,7 +21,7 @@ export default function FeaturedPlaybooks() {
           </div>
         </div>
         <Link
-          href="/tools"
+          href="/playbooks"
           className="text-sm text-neon-light hover:text-neon transition flex items-center gap-1"
         >
           All playbooks

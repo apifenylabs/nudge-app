@@ -42,6 +42,18 @@ export interface Tool {
   is_published: boolean;
   created_at: string;
   source: string;
+
+  // ── Phase 2: Small Business & Solopreneur enrichment ──
+  solopreneur_score?: number;        // 0-10 — how useful for solopreneurs/small biz
+  best_for_smallbusiness_use_case?: string;  // e.g. "Content writing", "Code generation"
+  local_language_support?: boolean;   // Does it support Asian languages well?
+  supported_languages_detail?: string; // e.g. "Chinese, Japanese, Korean, Vietnamese"
+  ai_ready?: boolean;                 // Plug-and-play or requires setup
+  community_rating?: number;          // 0-5, from real Reddit/Trustpilot aggregation
+  total_community_reviews?: number;   // Realistic count based on tool popularity
+  how_to_use_guide_title?: string;    // Short title for the "How to Use" section
+  best_for_pipeline_stage?: string;   // Which vibe coding pipeline stage: 'planning' | 'coding' | 'research' | 'content' | 'design' | 'testing' | 'marketing' | 'all-rounder'
+  quick_start_steps?: { step: number; title: string; description: string }[]; // 3-5 quick steps
 }
 
 export type SortOption = 'trending' | 'rating' | 'name' | 'newest';

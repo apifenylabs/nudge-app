@@ -1,7 +1,7 @@
 // ══════════════════════════════════════════════════════════
 // APIFENY.AI — Curated Collections
 // ══════════════════════════════════════════════════════════
-// Cosme-style editorial collections for stickiness.
+// Editorial collections for stickiness.
 // Each collection curates tools around a theme.
 // ══════════════════════════════════════════════════════════
 
@@ -22,7 +22,7 @@ export interface Collection {
 }
 
 /**
- * Curated collections for Cosme-style editorial curation.
+ * Curated collections for editorial curation.
  * Tools are selected based on:
  *   - Relevance to the collection theme
  *   - Asia Score (minimum 5)
@@ -81,6 +81,45 @@ export const collections: Collection[] = [
     meta_title: 'Best AI Tools for Asian Languages — Apifeny AI',
     meta_description:
       'Curated AI tools with native Asian language support. Chinese, Japanese, Korean, Thai, Vietnamese, and more. Local pricing and Asia-ready features.',
+  },
+  {
+    slug: 'ai-coding-pipeline',
+    title: 'Best AI for the Coding Pipeline',
+    subtitle: 'Plan → Code → Review → Ship',
+    description:
+      'The best AI tools for each stage of the software development pipeline. From strategic planning and architecture to code generation, review, testing, and deployment.',
+    tool_slugs: ['chatgpt', 'cursor', 'claude', 'perplexity', 'devin', 'gemini'],
+    gradient: 'from-sky-500/30 to-indigo-500/30',
+    icon: '⚙️',
+    meta_title: 'Best AI Tools for the Coding Pipeline — Apifeny AI',
+    meta_description:
+      'Curated AI tools for every stage of software development: planning, architecture, coding, review, testing, and deployment. Built for solopreneurs.',
+  },
+  {
+    slug: 'ai-content-pipeline',
+    title: 'Best AI for Content Creation',
+    subtitle: 'Research → Write → Design → Publish',
+    description:
+      'AI tools for the full content creation workflow. Research with Perplexity, write with ChatGPT, design with Canva AI, produce video with Synthesia, and voiceover with ElevenLabs.',
+    tool_slugs: ['chatgpt', 'perplexity', 'canva-ai', 'synthesia', 'elevenlabs', 'midjourney'],
+    gradient: 'from-rose-500/30 to-amber-500/30',
+    icon: '📝',
+    meta_title: 'Best AI Tools for Content Creation Pipeline — Apifeny AI',
+    meta_description:
+      'The complete AI content creation pipeline: research, writing, design, video, and voiceover. Tools curated for Asian content creators.',
+  },
+  {
+    slug: 'ai-marketing-pipeline',
+    title: 'Best AI for Marketing Pipeline',
+    subtitle: 'Strategy → Content → Distribution → Analyze',
+    description:
+      'Full-stack AI marketing toolkit. Research markets, generate multilingual content, design visuals, produce localized video, and analyze performance — all with AI.',
+    tool_slugs: ['chatgpt', 'perplexity', 'canva-ai', 'midjourney', 'synthesia', 'elevenlabs'],
+    gradient: 'from-emerald-500/30 to-teal-500/30',
+    icon: '📊',
+    meta_title: 'Best AI Tools for Marketing Pipeline — Apifeny AI',
+    meta_description:
+      'AI-powered marketing pipeline for Asian markets. Research, multilingual content, visual design, video production, and analytics in one workflow.',
   },
 ];
 

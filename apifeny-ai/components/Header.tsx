@@ -86,13 +86,26 @@ export default function Header() {
                 Tools
               </Link>
               <Link
-                href="/tools"
+                href="/collections"
                 className={cn(
                   'px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-1.5',
-                  'text-tech-100 hover:text-white hover:bg-tech-700'
+                  pathname.startsWith('/collection')
+                    ? 'bg-neon/15 text-neon-light'
+                    : 'text-tech-100 hover:text-white hover:bg-tech-700'
                 )}
               >
                 Collections
+              </Link>
+              <Link
+                href="/playbooks"
+                className={cn(
+                  'px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-1.5',
+                  pathname.startsWith('/playbook')
+                    ? 'bg-neon/15 text-neon-light'
+                    : 'text-tech-100 hover:text-white hover:bg-tech-700'
+                )}
+              >
+                Playbooks
               </Link>
               <Link
                 href="/submit"
@@ -137,10 +150,16 @@ export default function Header() {
                 Tools
               </Link>
               <Link
-                href="/tools"
+                href="/collections"
                 className="block px-4 py-2.5 rounded-lg text-sm font-medium text-tech-100 hover:text-white hover:bg-tech-700 transition"
               >
                 Collections
+              </Link>
+              <Link
+                href="/playbooks"
+                className="block px-4 py-2.5 rounded-lg text-sm font-medium text-tech-100 hover:text-white hover:bg-tech-700 transition"
+              >
+                Playbooks
               </Link>
               <Link
                 href="/submit"

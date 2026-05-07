@@ -35,6 +35,7 @@ import ToolCard from './ToolCard';
 import AffiliateCTABar from './AffiliateCTABar';
 import PriceComparisonTable from './PriceComparisonTable';
 import ToolComments from './ToolComments';
+import HowToUse from './HowToUse';
 
 interface ToolDetailProps {
   tool: Tool;
@@ -118,6 +119,45 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
                 {tool.category}
               </span>
 
+              {/* Pipeline stage badge */}
+              {(tool as any).best_for_pipeline_stage && (
+                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-violet-500/15 text-violet-300 border border-violet-500/30">
+                  {(tool as any).best_for_pipeline_stage === 'all-rounder'
+                    ? '⚡ All-Rounder'
+                    : (tool as any).best_for_pipeline_stage === 'planning'
+                      ? '🧠 Planning'
+                      : (tool as any).best_for_pipeline_stage === 'coding'
+                        ? '💻 Coding'
+                        : (tool as any).best_for_pipeline_stage === 'research'
+                          ? '🔍 Research'
+                          : (tool as any).best_for_pipeline_stage === 'content'
+                            ? '📝 Content'
+                            : (tool as any).best_for_pipeline_stage === 'design'
+                              ? '🎨 Design'
+                              : (tool as any).best_for_pipeline_stage === 'testing'
+                                ? '🧪 Testing'
+                                : (tool as any).best_for_pipeline_stage === 'marketing'
+                                  ? '📊 Marketing'
+                                  : (tool as any).best_for_pipeline_stage}
+                </span>
+              )}
+
+              {/* Solopreneur score badge */}
+              {(tool as any).solopreneur_score !== undefined && (
+                <span
+                  className={cn(
+                    'inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium border',
+                    (tool as any).solopreneur_score >= 7
+                      ? 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30'
+                      : (tool as any).solopreneur_score >= 4
+                        ? 'bg-amber-500/15 text-amber-300 border-amber-500/30'
+                        : 'bg-tech-600/60 text-tech-200 border-tech-500/30'
+                  )}
+                >
+                  🚀 Solo {(tool as any).solopreneur_score}/10
+                </span>
+              )}
+
               {/* Asia Score */}
               <span
                 className={cn(
@@ -171,32 +211,16 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
             </p>
           </section>
 
-          {/* How to use */}
-          {tool.how_to_use_guide && (
-            <section>
-              <h2 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-neon-light" />
-                How to Use
-              </h2>
-              <p className="text-sm text-tech-100 mb-4">{tool.how_to_use_guide}</p>
-
-              {tool.playbook_steps && tool.playbook_steps.length > 0 && (
-                <div className="space-y-3">
-                  {tool.playbook_steps.map((step, i) => (
-                    <div key={i} className="flex gap-3 p-3 rounded-lg bg-tech-800/60 border border-tech-500/20">
-                      <div className="w-7 h-7 rounded-full bg-neon/15 text-neon-light flex items-center justify-center text-xs font-bold shrink-0">
-                        {i + 1}
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-medium text-white">{step.title}</h4>
-                        <p className="text-xs text-tech-200 mt-0.5">{step.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </section>
-          )}
+          {/* How to Use (interactive component) */}
+          <section>
+            <HowToUse
+              toolName={tool.name}
+              toolSlug={tool.slug}
+              guideTitle={(tool as any).how_to_use_guide_title}
+              quickStartSteps={(tool as any).quick_start_steps}
+              bestForPipelineStage={(tool as any).best_for_pipeline_stage}
+            />
+          </section>
 
           {/* Playbook use cases */}
           {tool.playbook_use_cases && tool.playbook_use_cases.length > 0 && (
