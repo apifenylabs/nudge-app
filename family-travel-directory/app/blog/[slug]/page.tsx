@@ -7,6 +7,7 @@ import { readFileSync } from 'fs';
 import path from 'path';
 import type { BlogPost } from '@/lib/blog-data';
 import BlogAdSlots from './BlogAdSlots';
+import BlogBookingCTA from './BlogBookingCTA';
 
 const BASE_URL = 'https://family-travel-directory.vercel.app';
 
@@ -335,6 +336,9 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
         <div className="prose-custom max-w-none">
           <ArticleContent content={post.content} />
         </div>
+
+        {/* Booking CTA — affiliate monetization */}
+        <BlogBookingCTA tags={post.tags} />
 
         {/* Related destinations */}
         {post.relatedDestinations.length > 0 && (

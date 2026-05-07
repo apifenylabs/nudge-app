@@ -37,7 +37,7 @@ export default function MustUseThisMonth() {
               </span>
             </h2>
             <p className="text-xs sm:text-sm text-tech-200">
-              Cosme-ranked: community rating × Asia fit × momentum
+              Editor-ranked: community rating × Asia fit × momentum
             </p>
           </div>
         </div>

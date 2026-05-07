@@ -19,7 +19,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-tech-200 text-sm max-w-md leading-relaxed mb-4">
-              The Cosme-style AI tools directory — curated rankings with Asia-ready filters.
+              Curated AI tools directory with Asia-ready filters.
               Find the perfect AI tool for every use case, built for solopreneurs and teams across Asia.
             </p>
             <p className="text-tech-300 text-xs flex items-center gap-2">

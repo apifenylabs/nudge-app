@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Zap, Calendar, BookOpen, Tag, ArrowLeft } from 'lucide-react';
 import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/lib/blog-data';
+import EvBookingCTA from './EvBookingCTA';
 
 interface Props {
   params: { slug: string };
@@ -64,6 +65,9 @@ export default function BlogPostPage({ params }: Props) {
             {post.content}
           </div>
         </div>
+
+        {/* Affiliate CTA — EV rentals, hotels, experiences */}
+        <EvBookingCTA tags={post.tags} />
 
         {related.length > 0 && (
           <div className="border-t border-gray-200 pt-8">

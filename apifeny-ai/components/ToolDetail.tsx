@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import {
   Star,
   Globe,
@@ -10,6 +11,7 @@ import {
   ChevronRight,
   ExternalLink,
   BookmarkPlus,
+  BookmarkCheck,
   Sparkles,
   Shield,
   DollarSign,
@@ -39,6 +41,26 @@ interface ToolDetailProps {
 }
 
 export default function ToolDetail({ tool }: ToolDetailProps) {
+  const [saved, setSaved] = useState(false);
+
+  useEffect(() => {
+    const stack = JSON.parse(localStorage.getItem('apifeny_stack') || '[]');
+    setSaved(stack.includes(tool.slug));
+  }, [tool.slug]);
+
+  const toggleSave = () => {
+    const stack = JSON.parse(localStorage.getItem('apifeny_stack') || '[]');
+    if (saved) {
+      const updated = stack.filter((s: string) => s !== tool.slug);
+      localStorage.setItem('apifeny_stack', JSON.stringify(updated));
+      setSaved(false);
+    } else {
+      stack.push(tool.slug);
+      localStorage.setItem('apifeny_stack', JSON.stringify(stack));
+      setSaved(true);
+    }
+  };
+
   const stars = renderStars(tool.avg_rating);
   const initials = tool.name
     .split(' ')
@@ -268,9 +290,16 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
               <ExternalLink className="w-4 h-4" />
               Visit Website
             </a>
-            <button className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-lg border border-tech-500/30 text-tech-100 hover:text-white hover:border-neon/30 hover:bg-tech-700 font-medium text-sm transition">
-              <BookmarkPlus className="w-4 h-4" />
-              Save to My Stack
+            <button
+              onClick={toggleSave}
+              className={`w-full flex items-center justify-center gap-2 px-5 py-3 rounded-lg border font-medium text-sm transition ${
+                saved
+                  ? 'bg-neon/20 border-neon/40 text-neon-light'
+                  : 'border-tech-500/30 text-tech-100 hover:text-white hover:border-neon/30 hover:bg-tech-700'
+              }`}
+            >
+              {saved ? <BookmarkCheck className="w-4 h-4" /> : <BookmarkPlus className="w-4 h-4" />}
+              {saved ? 'Saved to Stack' : 'Save to My Stack'}
             </button>
           </div>
 

@@ -67,7 +67,7 @@ export default function Header() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search 19,000+ AI tools and agents…"
+                  placeholder="Search AI tools and agents…"
                   className="w-72 lg:w-96 bg-tech-800 border border-tech-500/50 rounded-lg pl-10 pr-4 py-2 text-sm text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/50 focus:ring-1 focus:ring-neon/20 transition"
                 />
               </form>

@@ -54,7 +54,7 @@ export default function TermsPage() {
           <ul className="list-disc pl-5 space-y-1">
             <li>We make reasonable efforts to ensure accuracy but do not guarantee completeness</li>
             <li>Tool information is sourced from publicly available data and user submissions</li>
-            <li>Asia Scores and rankings are based on our proprietary Cosme-style algorithm</li>
+            <li>Asia Scores and rankings are based on our proprietary editorial algorithm</li>
             <li>We reserve the right to remove or modify listings at our discretion</li>
             <li>Listed tools may change pricing, features, or availability without notice</li>
           </ul>
@@ -72,7 +72,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-white mb-2">6. Intellectual Property</h2>
           <p className="leading-relaxed mb-3">
-            The Apifeny AI name, logo, design, and Cosme-style ranking system are our
+            The Apifeny AI name, logo, design, and editorial ranking system are our
             intellectual property. Our curated data, Asia Scores, and playbook content are
             protected by copyright.
           </p>

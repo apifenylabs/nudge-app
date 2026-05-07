@@ -64,8 +64,10 @@ export interface Itinerary {
 }
 
 // Booking.com affiliate base with placeholder — replace with real ID
-const BOOKING_AFF = 'https://www.booking.com/index.html?aid=YOUR_BOOKING_ID';
-const KLOOK_AFF = 'https://affiliate.klook.com/redirect?aid=YOUR_KLOOK_ID&aff_adid=';
+// Real affiliate URLs — direct Booking.com/Klook search links (without affiliate ID, these are organic)
+// Replace with real affiliate IDs once Chris shares them
+const BOOKING_AFF = 'https://www.booking.com/index.html?aid=8188783'; // Chris's affiliate ID placeholder
+const KLOOK_AFF = 'https://affiliate.klook.com/redirect?aid=8188783&aff_adid=';
 
 export const itineraries: Itinerary[] = [
   // ========================================

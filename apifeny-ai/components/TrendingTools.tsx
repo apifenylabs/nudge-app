@@ -48,7 +48,7 @@ export default function TrendingTools() {
           <div>
             <h2 className="text-xl sm:text-2xl font-bold text-white">Trending Now</h2>
             <p className="text-xs sm:text-sm text-tech-200">
-              Cosme-ranked by community score + momentum + Asia fit
+              Ranked by community score + momentum + Asia fit
             </p>
           </div>
         </div>

@@ -30,7 +30,7 @@ export default function ToolCard({ tool, rank, showRank = false }: ToolCardProps
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon/50'
       )}
     >
-      {/* Rank badge (Cosme-style) */}
+      {/* Rank badge */}
       {showRank && rank !== undefined && rank <= 3 && (
         <div
           className={cn(

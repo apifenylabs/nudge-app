@@ -22,9 +22,9 @@ export interface AffiliateLink {
 // --- Asia-specific affiliate links ---
 // NOTE: Replace placeholder IDs with your actual affiliate IDs from each network.
 
-const BOOKING_COM_AFFILIATE = 'https://www.booking.com/index.html?aid=YOUR_BOOKING_ID';
-const KLOOK_AFFILIATE = 'https://affiliate.klook.com/redirect?aid=YOUR_KLOOK_ID&aff_adid=';
-const VIATOR_AFFILIATE = 'https://www.viator.com/?pid=YOUR_VIATOR_ID';
+const BOOKING_COM_AFFILIATE = 'https://www.booking.com/index.html?aid=2875669';
+const KLOOK_AFFILIATE = 'https://affiliate.klook.com/redirect?aid=119991&aff_adid=';
+const VIATOR_AFFILIATE = 'https://www.viator.com/?pid=P00299136';
 const GETYOURGUIDE_AFFILIATE = 'https://www.getyourguide.com/?partner_id=YOUR_GYG_ID';
 const AMAZON_AFFILIATE = 'https://www.amazon.com/?tag=YOUR_AMAZON_TAG';
 

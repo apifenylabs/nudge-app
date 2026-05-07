@@ -32,10 +32,10 @@ export default function HomePage() {
   ];
 
   const stats = [
-    { icon: Layers, value: '19,000+', label: 'AI Tools', desc: 'Curated from around the web' },
-    { icon: BookOpen, value: '1,200+', label: 'Categories', desc: 'Organized by use case' },
-    { icon: TrendingUp, value: '8,500+', label: 'Playbooks', desc: 'How-to guides for every tool' },
-    { icon: Trophy, value: 'Asia-Ready', label: 'Rankings', desc: 'Built for Asian users' },
+    { icon: Layers, value: '20+', label: 'AI Tools', desc: 'Curated, reviewed, and ranked' },
+    { icon: BookOpen, value: '14+', label: 'Categories', desc: 'Organized by use case & role' },
+    { icon: TrendingUp, value: '6+', label: 'Playbooks', desc: 'Step-by-step how-to guides' },
+    { icon: Trophy, value: 'Asia-Ready', label: 'Rankings', desc: 'Editorial scores built for Asia' },
   ];
 
   return (
@@ -54,7 +54,7 @@ export default function HomePage() {
           {/* Beta badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon/10 border border-neon/20 text-neon-light text-xs font-medium mb-6 animate-fade-in">
             <Sparkles className="w-3.5 h-3.5" />
-            Cosme-Style AI Directory
+            Asia-Ready AI Directory
           </div>
 
           {/* Headline */}
@@ -69,7 +69,7 @@ export default function HomePage() {
 
           {/* Subtext */}
           <p className="text-base sm:text-lg text-tech-100/70 max-w-2xl mx-auto mb-8 sm:mb-10 animate-slide-up">
-            19,000+ curated tools. Cosme-style rankings. Asia-ready filters.
+            Curated tools. Editorial rankings. Asia-ready filters.
             Find the perfect AI tool, agent, or playbook for your next project.
           </p>
 
@@ -81,7 +81,7 @@ export default function HomePage() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search 19,000+ AI tools and agents…"
+                placeholder="Search AI tools and agents…"
                 className="w-full bg-tech-800/90 border border-tech-500/40 rounded-xl pl-12 pr-5 py-4 text-base text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/50 focus:ring-2 focus:ring-neon/10 transition shadow-lg shadow-black/20"
               />
               <button

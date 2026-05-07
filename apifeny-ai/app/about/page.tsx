@@ -3,7 +3,7 @@ import { BookOpen, Target, Globe, Shield } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Apifeny AI is a Cosme-style AI tools directory with Asia-ready filters. Our mission: make AI discovery accessible to everyone in Asia.',
+  description: 'Apifeny AI is a curated AI tools directory with Asia-ready filters. Our mission: make AI discovery accessible to everyone in Asia.',
 };
 
 const values = [
@@ -17,7 +17,7 @@ const values = [
     icon: BookOpen,
     title: 'Curated, Not Crowded',
     description:
-      'We don\'t just scrape the web. Every tool is reviewed and ranked using our Cosme-style scoring system that considers quality, Asia readiness, and real user feedback.',
+      'We don\'t just scrape the web. Every tool is reviewed and ranked using our editorial scoring system that considers quality, Asia readiness, and real user feedback.',
   },
   {
     icon: Globe,
@@ -43,7 +43,7 @@ export default function AboutPage() {
         </h1>
         <p className="text-base sm:text-lg text-tech-100 max-w-2xl mx-auto leading-relaxed">
           We believe the best AI tools should be discoverable by everyone — regardless of
-          language, location, or budget. Apifeny AI is the first Cosme-style AI tools
+          language, location, or budget. Apifeny AI is the first Asia-ready AI tools
           directory built specifically for the Asian market.
         </p>
       </div>
