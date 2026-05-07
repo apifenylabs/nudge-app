@@ -10,7 +10,10 @@ Every time you wake, you MUST produce measurable output. Not status checks. Not 
 
 ## 🧠 THE EXECUTION LOOP (MANDATORY — EVERY WAKE)
 
-### 0. YOU ARE NEVER "IDLE"
+### 0. READ THE COMPASS
+Read `long-term-vision.md` in full. This file is the strategic compass for every decision made in this session. If you don't know where you're going, you can't build anything that matters.
+
+### 0.5. YOU ARE NEVER "IDLE"
 There are 6 live sites, all broken in different ways. There is always something to build, fix, or ship. "Nothing to do" does not exist. If you think it does, re-read the strategic assessment until you find work.
 
 ### 1. SCAN (60 seconds max — no more)
