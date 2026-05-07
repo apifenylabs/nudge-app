@@ -1,0 +1,22 @@
+name: Deploy All Sites
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'luxury-family-travel-asia/**'
+      - 'apifeny-ai/**'
+      - 'nudge/**'
+      - 'social-beast/**'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        site: [luxury-family-travel-asia, apifeny-ai, nudge, social-beast]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Vercel CLI
+        run: npm i -g vercel
+      - name: Deploy ${{ matrix.site }} to Vercel
+        working-directory: ./${{ matrix.site }}
+        run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
