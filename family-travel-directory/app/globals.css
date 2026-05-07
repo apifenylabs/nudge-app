@@ -234,3 +234,24 @@ html {
 .animate-score-fill { animation: score-fill 1s ease-out forwards; }
 .animate-premium-glow { animation: premium-glow 2s ease-in-out infinite; }
 .animate-count-up { animation: count-up 0.5s ease-out forwards; }
+
+/* Cross-site contextual links */
+.cross-site-link {
+  display: inline-block;
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  font-size: 0.925rem;
+  line-height: 1.5;
+  color: #166534;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.cross-site-link:hover {
+  background: linear-gradient(135deg, #dcfce7 0%, #d1fae5 100%);
+  border-color: #86efac;
+  color: #14532d;
+  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.12);
+}
