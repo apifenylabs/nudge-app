@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Zap, ArrowLeft, Route, Clock, BatteryCharging, Calendar, MapPin, AlertTriangle, Users, Crown, Star, Wifi, Utensils, ShoppingBag, ChevronRight, ExternalLink } from 'lucide-react';
 import { getAllItineraries, getItineraryBySlug } from '@/data/itineraries';
 import RouteMap from '@/components/itineraries/RouteMap';
+import SeasonalRecommendations from '@/components/itineraries/SeasonalRecommendations';
 import { getRouteStations, getRecommendedStops, getKidFriendlyStations, getLuxuryStations, countRouteChargingStops, getRouteCities } from '@/data/route-stations';
 import stationsData from '@/data/stations.json';
 import { scoreTier } from '@/lib/scoring';
@@ -394,6 +395,11 @@ export default async function ItineraryDetailPage({ params }: Props) {
               <p className="text-xs text-sky-700">{it.chargingTips}</p>
             </div>
           </div>
+        </div>
+
+        {/* ===== SEASONAL RECOMMENDATIONS ===== */}
+        <div className="mb-6">
+          <SeasonalRecommendations bestSeason={it.bestSeason} countries={it.countries} />
         </div>
 
         {/* ===== RECOMMENDED CHARGING STOPS TABLE ===== */}

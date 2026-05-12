@@ -574,6 +574,123 @@ const allPosts: BlogPost[] = [
     "relatedDestinations": []
   },
   {
+    "slug": "bangkok-family-hotels-with-pools",
+    "title": "Best Family Hotels in Bangkok with Pools for Kids (2026)",
+    "author": "Captain",
+    "content": "# Best Family Hotels in Bangkok with Pools for Kids (2026)\n\nBangkok is hot. Really hot. And when you're traveling with kids, there's nothing better than returning to a hotel with a pool where everyone can cool off, burn energy, and reset before the next adventure.\n\nAfter testing dozens of Bangkok hotels with our own kids (ages 3 and 6), we've narrowed down the absolute best family-friendly hotels with pools that genuinely work for traveling families. These aren't just hotels that \"allow children\" — these are hotels designed with families in mind.\n\n## What Makes a Great Family Pool Hotel in Bangkok?\n\nBefore diving into the list, here's what we looked for:\n\n- **Pool depth and safety** — Shallow kids' sections or separate children's pools that go from 0.3m\n- **Pool hours** — Some pools close at 6 PM (useless after afternoon sightseeing)\n- **Location** — Near BTS or MRT for easy sightseeing access without taxis\n- **Room configuration** — Connecting rooms or family suites that comfortably sleep 4+\n- **Kids eat free** — Major savings on meals, especially at breakfast\n- **Nearby family activities** — Parks, playgrounds, and kid-friendly restaurants within walking distance\n\n## 1. Shangri-La Bangkok\n\n**Pool:** Massive free-form outdoor pool with dedicated kids' section (0.3m depth)\n\nThe Shangri-La's riverside pool area is legendary among travel parents. The pool is large enough for real swimming, with a shallow kids' section that's perfect for toddlers learning to paddle. There's a poolside playground and the staff bring fresh fruit without being asked.\n\n- **Best for:** Families who want luxury with genuine kid-friendliness\n- **Location:** Riverside, next to Saphan Taksin BTS with free shuttle boat\n- **Room tip:** Book Horizon Club rooms for lounge access (kids' snacks and drinks included)\n- **[Check rates on Booking.com →](https://www.booking.com/searchresults.html?ss=Bangkok&checkin=2026-06-01&checkout=2026-06-05&group_adults=2&group_children=2)**\n\n## 2. Siam Kempinski Hotel Bangkok\n\n**Pool:** Olympic-sized lagoon pool with dedicated kids' pool and splash zone\n\nConnected directly to Siam Paragon mall. The pool complex has a separate shallow kids' pool with water features, plus the main lagoon pool is huge. The \"Kempinski The Spa for Kids\" offers mini treatments for little ones too.\n\n- **Best for:** Families who want luxury shopping and pool in one location\n- **Location:** Siam Square — direct BTS connection via Siam Paragon\n- **Unique perk:** In-room kids' tent setup and kids' welcome amenities\n- **[Check rates on Booking.com →](https://www.booking.com/searchresults.html?ss=Bangkok&checkin=2026-06-01&checkout=2026-06-05&group_adults=2&group_children=2)**\n\n## 3. Centara Grand at CentralWorld\n\n**Pool:** 25m lap pool + children's pool with waterslide\n\nYes, a waterslide on the 25th floor! The pool deck has a dedicated children's pool with a small waterslide — enough to keep kids entertained for hours. The hotel connects directly to CentralWorld mall with massive kids' play areas, KidZania, and hundreds of dining options.\n\n- **Best for:** Families who want waterslide access without leaving the city center\n- **Location:** Chidlom BTS, direct mall access\n- **[Check rates on Booking.com →](https://www.booking.com/searchresults.html?ss=Bangkok&checkin=2026-06-01&checkout=2026-06-05&group_adults=2&group_children=2)**\n\n## 4. Anantara Siam Bangkok Hotel\n\n**Pool:** Resort-style 30m pool with shallow kids' wading area\n\nAn oasis in the heart of the city. The pool is surrounded by tropical gardens, and the shallow wading area is perfect for toddlers. The hotel's \"Kids' Club\" offers supervised activities from 9 AM to 6 PM, giving parents genuine time off.\n\n- **Best for:** Parents who want alone time (the kids' club is excellent)\n- **Location:** Ratchadamri BTS (2-minute walk)\n- **[Check rates on Booking.com →](https://www.booking.com/searchresults.html?ss=Bangkok&checkin=2026-06-01&checkout=2026-06-05&group_adults=2&group_children=2)**\n\n## 5. Novotel Bangkok Platinum\n\n**Pool:** Rooftop infinity pool with separate kids' splash pool\n\nThe best mid-range option. The rooftop pool has sweeping city views and a separate kids' splash pool. Connects to Platinum Fashion Mall and is steps from the BTS.\n\n- **Best for:** Budget-conscious families who still want a great pool\n- **Location:** Ratchathewi BTS (3-minute walk)\n- **[Check rates on Booking.com →](https://www.booking.com/searchresults.html?ss=Bangkok&checkin=2026-06-01&checkout=2026-06-05&group_adults=2&group_children=2)**\n\n## 6. The Okura Prestige Bangkok\n\n**Pool:** 25m infinity-edge pool with stunning city views\n\nThe pool is beautiful and kid-friendly, but the service is what sets this apart. Staff remember kids' names, bring special treats, and genuinely enjoy having families around.\n\n- **Best for:** Families who prioritize exceptional service\n- **Location:** Ploenchit BTS (direct skywalk connection)\n- **[Check rates on Booking.com →](https://www.booking.com/searchresults.html?ss=Bangkok&checkin=2026-06-01&checkout=2026-06-05&group_adults=2&group_children=2)**\n\n## 7. Holiday Inn Bangkok Sukhumvit\n\n**Pool:** Large outdoor pool with shallow kids' section and pool toys\n\nThe pool area includes inflatable toys, pool noodles, and a dedicated kids' menu at the restaurant. Their \"Kids Stay & Eat Free\" program is one of the best value deals in Bangkok.\n\n- **Best for:** Families on a budget who don't compromise on quality\n- **Location:** Nana BTS (2-minute walk)\n- **[Check rates on Booking.com →](https://www.booking.com/searchresults.html?ss=Bangkok&checkin=2026-06-01&checkout=2026-06-05&group_adults=2&group_children=2)**\n\n## 8. Swissotel Bangkok Ratchada\n\n**Pool:** 30m outdoor pool with children's pool and slide\n\nProper kids' slide and shallow pool section. Connecting family rooms available. Near the Esplanade mall with indoor playground and cinema.\n\n- **Best for:** Families exploring the Ratchada area\n- **Location:** Thailand Cultural Centre MRT\n- **[Check rates on Booking.com →](https://www.booking.com/searchresults.html?ss=Bangkok&checkin=2026-06-01&checkout=2026-06-05&group_adults=2&group_children=2)**\n\n## 9. Eastin Grand Hotel Sathorn\n\n**Pool:** Infinity pool on the 27th floor with stunning views\n\nThe shallow edge allows even small children to safely enjoy the water with supervision. Direct BTS connection via skywalk. Extensive breakfast buffet with options for picky eaters.\n\n- **Best for:** Families who want infinity pool views plus practical amenities\n- **Location:** Surasak BTS (direct skywalk connection)\n- **[Check rates on Booking.com →](https://www.booking.com/searchresults.html?ss=Bangkok&checkin=2026-06-01&checkout=2026-06-05&group_adults=2&group_children=2)**\n\n## 10. Amari Watergate Bangkok\n\n**Pool:** Large free-form pool with waterslide and kids' pool\n\nThe waterslide is a standout — kids spend hours going down it. The pool is surrounded by greenery with a dedicated kids' area. Connected to Platinum Mall.\n\n- **Best for:** Families who want waterslide fun at mid-range prices\n- **Location:** Ratchathewi area, 10-minute walk to BTS\n- **[Check rates on Booking.com →](https://www.booking.com/searchresults.html?ss=Bangkok&checkin=2026-06-01&checkout=2026-06-05&group_adults=2&group_children=2)**\n\n## Pool Safety Tips for Parents in Bangkok\n\n1. **Never leave kids unattended** — most Bangkok hotel pools don't have lifeguards\n2. **Watch the sun** — UV index is extreme. Swim before 10 AM or after 3 PM\n3. **Pool hours vary** — some close at 6 PM. Confirm before booking\n4. **Bring swim diapers** — expensive and hard to find locally\n5. **Rinse after swimming** — Bangkok pools are heavily chlorinated\n\n## The Verdict\n\nFor most families, **Centara Grand at CentralWorld** is our top pick — waterslide, mall connection, BTS access, reasonable rates. For luxury, **Siam Kempinski** is unbeatable.\n\n*Ready to book? [Compare Bangkok family hotels on Booking.com →](https://www.booking.com/searchresults.html?ss=Bangkok&checkin=2026-06-01&checkout=2026-06-05&group_adults=2&group_children=2)*\n\n## Frequently Asked Questions\n\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Which Bangkok hotels have the best pools for toddlers?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Shangri-La Bangkok has a dedicated shallow kids' pool section (0.3m). Siam Kempinski and Anantara Siam also have excellent shallow kids' pools with water features.\"}},{\"@type\":\"Question\",\"name\":\"Do Bangkok hotel pools have lifeguards?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Most Bangkok hotel pools do NOT have lifeguards. Parents must supervise children at all times.\"}},{\"@type\":\"Question\",\"name\":\"What is the best area in Bangkok for families?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Sukhumvit (near Asok/Phrom Phong BTS) and Siam Square are best for families — BTS access, shopping malls, playgrounds, and family hotels.\"}},{\"@type\":\"Question\",\"name\":\"Which Bangkok hotels have waterslides?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Centara Grand at CentralWorld and Amari Watergate Bangkok both have waterslides.\"}}]}\n</script>\n",
+    "tags": [
+      "bangkok",
+      "family-hotels",
+      "hotel-pools",
+      "thailand-family-travel",
+      "bangkok-hotels",
+      "family-friendly",
+      "travel-with-kids",
+      "kids-pools"
+    ],
+    "excerpt": "Bangkok's family hotels with pools are a game-changer for traveling parents. Our guide covers 10 top picks with splash zones, kids' clubs, and parent-tested tips for every budget.",
+    "readingTime": "12 min read",
+    "date": "2026-05-04",
+    "relatedDestinations": []
+  },
+  {
+    "slug": "best-family-all-inclusive-resorts-asia",
+    "title": "Best Family All-Inclusive Resorts in Asia (2026)",
+    "author": "Captain",
+    "content": "# Best Family All-Inclusive Resorts in Asia (2026)\n\nAll-inclusive resorts in Asia offer incredible value for families. Unlike the Caribbean, where all-inclusive dominates, Asia's best options are spread across Thailand, Bali, Vietnam, the Philippines, and Sri Lanka.\n\nAfter visiting and reviewing dozens of properties over the past three years, these are the family all-inclusive resorts in Asia that truly deliver.\n\n## Why Choose All-Inclusive in Asia?\n\n- **No math on vacation** — meals, drinks, activities included = no budget stress\n- **Kids eat free** — many Asian resorts actively welcome children with free or discounted stays\n- **Cultural activities built in** — cooking classes, batik making, temple visits included\n- **Weather backup** — rainy afternoon? Kids' club, indoor play areas, and included activities save the day\n- **Amazing value** — $150-300/night for a family of 4 at many top-tier resorts\n\n## 1. Club Med Phuket (Thailand) — The Gold Standard\n\nClub Med Phuket is purpose-built for families. The resort features a dedicated Petit Club (ages 2-3), Mini Club (4-10), and Passworld (11-17), all with trained G.O.s (Gentle Organizers). The pool complex includes a kids' pool with water features, and included activities range from trapeze school to sailing.\n\n- **Why it works:** Genuine guilt-free time off. Kids are happy, supervised, and fed while you enjoy adult-only spaces.\n- **Best for:** Families with kids aged 2-17\n- **Price:** ~$250-400/night for family of 3 (all inclusive)\n- **[Book on Klook](https://www.klook.com/en-US/activity/622-club-med-phuket/)**\n- **[Check rates on Booking.com](https://www.booking.com/searchresults.html?ss=Phuket&checkin=2026-06-01&checkout=2026-06-07&group_adults=2&group_children=1)**\n\n## 2. The Haven Bali (Indonesia) — Luxury Private Villas\n\nEvery villa at The Haven has its own private pool — game changer for families. The all-inclusive package covers all meals, afternoon tea, kids' activities, and airport transfers. Set among rice paddies in Seminyak.\n\n- **Why it works:** Private pool means zero stress about other guests or swim diaper rules\n- **Best for:** Families who want luxury privacy\n- **Price:** ~$300-500/night for family of 4\n- **[Check rates on Booking.com](https://www.booking.com/searchresults.html?ss=Bali&checkin=2026-06-01&checkout=2026-06-07&group_adults=2&group_children=2)**\n\n## 3. Mia Resort Nha Trang (Vietnam) — Best Value\n\nAll-inclusive for a family of 4 for under $200/night. Stunning beachfront, three pools including a kids' pool, and a spa with kids' treatments. Best for budget-conscious families.\n\n- **Price:** ~$150-250/night for family of 4\n- **[Book on Klook](https://www.klook.com/en-US/activity/4845-mia-resort-nha-trang/)**\n- **[Check rates on Booking.com](https://www.booking.com/searchresults.html?ss=Nha+Trang&checkin=2026-06-01&checkout=2026-06-07&group_adults=2&group_children=2)**\n\n## 4. Shangri-La's Boracay Resort (Philippines)\n\nBeachfront all-inclusive on one of Asia's best beaches. Dedicated kids' pool, adventure zone, and kids' club with Filipino cultural activities.\n\n- **Price:** ~$350-550/night for family of 4\n- **[Check rates on Booking.com](https://www.booking.com/searchresults.html?ss=Boracay&checkin=2026-06-01&checkout=2026-06-07&group_adults=2&group_children=2)**\n\n## 5. Heritance Kandalama (Sri Lanka) — Eco-Luxury\n\nSet on a jungle-covered mountain with infinity pool overlooking Sigiriya Rock. Combines culture and resort comfort.\n\n- **Price:** ~$180-280/night for family of 4\n- **[Check rates on Booking.com](https://www.booking.com/searchresults.html?ss=Sigiriya&checkin=2026-06-01&checkout=2026-06-07&group_adults=2&group_children=2)**\n\n## 6. The Oberoi Lombok (Indonesia) — Ultra-Luxury\n\nStunning beachfront villas with private garden and plunge pool. Excellent kids' club and calm reef-protected beach.\n\n- **Price:** ~$400-700/night for family of 4\n- **[Check rates on Booking.com](https://www.booking.com/searchresults.html?ss=Lombok&checkin=2026-06-01&checkout=2026-06-07&group_adults=2&group_children=2)**\n\n## 7. Anantara Vacation Club Mai Khao (Phuket)\n\nApartment-style with full kitchen plus all-inclusive meals. Longest lagoon pool in Phuket (300m).\n\n- **Price:** ~$200-350/night for 2-bedroom apartment\n- **[Check rates on Booking.com](https://www.booking.com/searchresults.html?ss=Phuket&checkin=2026-06-01&checkout=2026-06-10&group_adults=2&group_children=2)**\n\n## What to Consider Before Booking\n\n- **What's really included?** Some exclude alcoholic drinks, premium dining, motorized water sports\n- **Kids' ages matter** — some charge full price for kids over 6, others over 12\n- **Babysitting** — included or extra? Club Med includes evening babysitting in some packages\n- **Best time to book:** April-October for 30-50% discounts\n\n## The Verdict\n\nFor most families, **Club Med Phuket** is the safest choice. For luxury, **The Oberoi Lombok** is unmatched.\n\n## Frequently Asked Questions\n\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Are all-inclusive resorts in Asia cheaper than the Caribbean?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes, significantly. Asian all-inclusive resorts typically cost $150-400/night for a family of 4 compared to $400-800+ in the Caribbean.\"}},{\"@type\":\"Question\",\"name\":\"What is the best all-inclusive resort in Asia for toddlers?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Club Med Phuket with its dedicated Petit Club (ages 2-3) and shallow kids' pool. The Haven Bali is also excellent with private villa pools.\"}},{\"@type\":\"Question\",\"name\":\"Is all-inclusive worth it in Asia?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"For families, absolutely. The convenience of pre-paying meals and activities, plus included kids' clubs, makes budgeting simple and stress-free.\"}}]}\n</script>\n",
+    "tags": [
+      "all-inclusive",
+      "family-resorts",
+      "asia-family-travel",
+      "luxury-resorts",
+      "kids-clubs",
+      "thailand-resorts",
+      "bali-resorts",
+      "vietnam"
+    ],
+    "excerpt": "Asia's best all-inclusive resorts for families — tested by real parents. From Thailand to Bali, our picks include kids' clubs, waterslides, and stress-free dining.",
+    "readingTime": "12 min read",
+    "date": "2026-05-04",
+    "relatedDestinations": []
+  },
+  {
+    "slug": "best-time-to-visit-bali-with-kids-month-by-month",
+    "title": "Best Time to Visit Bali with Kids: Month-by-Month Guide (2026)",
+    "author": "Captain",
+    "content": "# Best Time to Visit Bali with Kids: Month-by-Month Guide (2026)\n\nPlanning a family trip to Bali but not sure when to go? Bali's tropical climate, school holiday crowds, and seasonal activities make timing critical — especially with kids.\n\n## Quick Overview\n\n| Season | Months | Weather | Crowds | Best For |\n|--------|--------|---------|--------|----------|\n| Peak Dry | May-Sept | Sunny, 27-32C | Very high | Beach, outdoor |\n| Shoulder | Apr, Oct | Mix sun/rain | Medium | Best value |\n| Wet Season | Nov-Mar | Rainy, 26-30C | Low-Med | Budget |\n\n## January - Wet Season, Low Crowds\n\nWeather: Rainy season peak. Afternoon downpours (1-2hrs). High humidity.\nCrowds: Low - post-New Year lull.\nActivities: Cooking classes, temple visits, museum days.\nPros: Lowest hotel prices of the year\nCons: Flooding risk in Ubud, Seminyak\n\n## February - Wet Season\n\nWeather: Similar to January. Nyepi on March 29 in 2026.\nCrowds: Low except Chinese New Year.\nActivities: Ubud Monkey Forest, cooking classes, waterfalls.\nPros: Best deals of the year\nCons: Beach days interrupted by rain\n\n## March - Transition Month\n\nWeather: Improving. Less rain, more sunshine.\nCrowds: Low - one of the quietest months.\nActivities: Mix of beach and culture.\nPros: Warm water, few tourists\nCons: Still some rain\n\nPro tip: Head to Sanur (east coast) - drier with calm waters for kids.\n\n## April - SHOULDER SEASON - Our Top Pick\n\nWeather: Dry season begins. Sunshine most days.\nCrowds: Moderate - Easter brings some families.\nActivities: Snorkeling, beach days, Waterbom Bali, temple visits.\nPros: Perfect weather, fewer crowds, great prices\nCons: Some Easter price hikes\n\n[Check Bali hotel deals on Booking.com](https://www.booking.com/searchresults.html?ss=Bali&checkin=2026-04-01&checkout=2026-04-07&group_adults=2&group_children=2)\n\n## May - Start of Peak Season\n\nWeather: Dry, sunny, beautiful.\nCrowds: Increasing - schools start summer breaks.\nActivities: Prime beach season, turtle release programs.\nPros: Guaranteed sunshine\nCons: Prices rising\n\n## June - Peak Season\n\nWeather: Perfect. Sunny and dry.\nCrowds: Very high - northern hemisphere summer holidays.\nActivities: All outdoor activities at 100%.\nPros: Perfect weather guaranteed\nCons: Highest prices, most crowded\n\n[Book Bali activities on Klook](https://www.klook.com/en-US/activity/2159-waterbom-bali/)\n\n## July - Peak Season\n\nWeather: Dry and sunny. Coolest month (still 27C+).\nCrowds: Maximum.\nActivities: Waterparks, beach clubs, Bali Arts Festival.\nPros: Coolest temperatures, events\nCons: Most expensive, most crowded\n\n## August - Peak Season\n\nWeather: Dry and sunny.\nCrowds: Still high.\nActivities: Best surfing, Bali Kite Festival.\nPros: Best conditions\nCons: Crowded everywhere\n\n## September - Shoulder Season\n\nWeather: Still dry and sunny.\nCrowds: Decreasing.\nActivities: Great all-around month.\nPros: Best weather + decreasing crowds\nCons: None significant\n\n## October - Shoulder Season\n\nWeather: Some rain. Warmest water.\nCrowds: Low.\nActivities: Swimming and snorkeling excellent.\nPros: Warmest water, few tourists\nCons: Some rain\n\n## November - Wet Season Begins\n\nWeather: Rain returns. Humidity climbs.\nCrowds: Low.\nActivities: Cultural focus.\nPros: Very low prices\nCons: Rain interrupts outdoor plans\n\n## December - Wet Season + Holidays\n\nWeather: Rainy season. Can rain for hours.\nCrowds: Christmas and New Year crowds.\nActivities: Holiday celebrations.\nPros: Festive atmosphere\nCons: Rainy + crowded + expensive\n\n## The Verdict\n\nBest months for families: April and September.\nBest weather guarantee: June-August.\nBest budget: February-March or October-November.\n\n[Browse Bali family hotels](https://www.booking.com/searchresults.html?ss=Bali&checkin=2026-04-01&checkout=2026-04-07&group_adults=2&group_children=2)\n\n## Frequently Asked Questions\n\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What is the best month to visit Bali with kids?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"April is our top pick. Dry season begins, crowds moderate, prices reasonable. September is a close second.\"}},{\"@type\":\"Question\",\"name\":\"Is Bali too hot for kids?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Bali is warm year-round (26-32C) but not extreme. With sun protection, hydration, and mid-day AC breaks, kids manage well.\"}},{\"@type\":\"Question\",\"name\":\"When is the cheapest time to visit Bali?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"January-March and October-November offer 40-60% below peak. Trade-off is more rain.\"}},{\"@type\":\"Question\",\"name\":\"When is Bali least crowded?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"February-March and October-November are the quietest months.\"}}]}\n</script>\n",
+    "tags": [
+      "bali",
+      "bali-with-kids",
+      "family-travel",
+      "best-time-to-visit",
+      "bali-weather",
+      "indonesia-family",
+      "travel-planning"
+    ],
+    "excerpt": "When is the best time for a Bali family vacation? Our month-by-month guide covers weather, crowds, prices, and kid-friendly activities for every season.",
+    "readingTime": "14 min read",
+    "date": "2026-05-04",
+    "relatedDestinations": []
+  },
+  {
+    "slug": "budget-family-travel-asia-100-per-day",
+    "title": "Budget Family Travel in Asia: $100 Per Day (2026)",
+    "author": "Captain",
+    "content": "# Budget Family Travel in Asia: $100 Per Day (2026)\n\nCan a family of four really travel Asia for $100 per day? Yes - with the right destinations and travel style.\n\n## The Budget Breakdown\n\n| Category | Daily Budget | Notes |\n|----------|-------------|-------|\n| Accommodation | $30-40 | Guesthouse or budget hotel |\n| Food | $20-25 | Street food and local restaurants |\n| Transport | $5-15 | Public transport |\n| Activities | $10-20 | One paid activity per day |\n| Misc | $10-15 | Water, snacks, SIM |\n| Total | $85-105 | Feasible in budget destinations |\n\n## 1. Vietnam - The King of Budget Travel\n\nVietnam is hands-down the best value in Asia. A family of four eats well for under $15/day, sleeps for $20-30.\n\nReal example (Hanoi):\n- Accommodation: $25/night - Old Quarter family room with AC\n- Breakfast: Pho at $1.50/bowl = $6\n- Lunch: Banh mi = $4 for four\n- Dinner: Local restaurant = $10-12\n- Transport: Grab rides = $5\n- Total: ~$48-52/day\n\nTop experiences:\n[Halong Bay day cruise on Klook](https://www.klook.com/en-US/activity/903-halong-bay-day-cruise/) - $25-35/person\n[Hoi An lantern-making on Viator](https://www.viator.com/Hoi-An-tours/Lantern-Making/d35514-g12?mcid=42383) - $5-8/person\nCu Chi Tunnels - $5/person\n\n[Browse Vietnam family hotels](https://www.booking.com/searchresults.html?ss=Vietnam&checkin=2026-06-01&checkout=2026-06-07&group_adults=2&group_children=2)\n\n## 2. Sri Lanka - Incredible Value Island\n\nGood hotel with breakfast: $25-40. Kandy-to-Ella train: $5-10 per person.\n\nReal example (Kandy):\n- Accommodation with breakfast: $30/night\n- Lunch: Rice and curry = $5\n- Dinner: Rice and curry = $8\n- Tuk-tuks: $3-5\n- Temple of the Tooth: $2/adult, kids free\n- Total: ~$48-50/day\n\nTop experiences:\nSigiriya Rock Fortress - $10/person\nYala National Park safari - $25-40/person\n\n## 3. Malaysia - Modern Comfort on a Budget\n\nBest infrastructure-to-price ratio in Asia. Clean public transport, English spoken, excellent food.\n\nReal example (Penang):\n- Accommodation in George Town: $30/night\n- All meals at hawker stalls: $15-18 total\n- Bus transport: $2\n- Total: ~$50/day\n\n## 4. Northern Thailand - Still Great Value\n\nChiang Mai, Pai remain very budget-friendly.\n\nReal example (Chiang Mai):\n- Accommodation in Old City: $25/night\n- All meals (street food): $15 total\n- Elephant sanctuary on Klook: $30/person\n- Red truck taxis: $3\n- Total: ~$43-45/day\n\n[Book Chiang Mai activities on Klook](https://www.klook.com/en-US/activity/2319-elephant-sanctuary-chiang-mai/)\n\n## 5. Cambodia - Incredible Value\n\nReal example (Siem Reap):\n- Accommodation: $20-30/night\n- All meals: $15-20/day\n- Angkor Wat: $37 for 1-day pass (kids under 12 free)\n- Total: ~$55-70/day with temple visits\n\n## Money-Saving Tips\n\n### Accommodation\n- Book direct - guesthouses offer 10-15% cash discounts\n- Use [Booking.com](https://www.booking.com/searchresults.html?ss=Asia&checkin=2026-06-01&checkout=2026-06-07&group_adults=2&group_children=2) for free cancellation\n- Negotiate weekly rates\n\n### Food\n- Eat where locals eat - street food is tastier AND cheaper\n- Avoid Western food - marked up 2-3x\n- Free breakfast at accommodation saves $10-15/day\n\n### Transport\n- Use local buses (10-20% of taxi cost)\n- Overnight trains save accommodation costs\n- Use Grab/Gojek - cheaper than street taxis\n- Walk in the mornings\n\n### Activities\n- Many temples, parks, and markets are free\n- Book on Klook - 20-50% cheaper than walk-in\n- Kids under 5-6 free at most attractions\n\n## Daily Cost by Destination\n\n| Destination | Budget | Mid-Range |\n|-------------|--------|-----------|\n| Vietnam | $50-70 | $80-120 |\n| Cambodia | $55-75 | $85-130 |\n| Sri Lanka | $60-80 | $90-140 |\n| Malaysia | $65-85 | $100-150 |\n| Thailand (North) | $55-75 | $90-140 |\n| Laos | $45-65 | $75-110 |\n| Bali | $70-100 | $120-200 |\n| Thai Islands | $80-120 | $150-250 |\n\n## The Verdict\n\n$100/day is achievable in Vietnam, Cambodia, Sri Lanka, Malaysia, Northern Thailand, and Laos. You'll need $150-200/day for Bali, Phuket, and Thai islands.\n\n[Browse budget family hotels in Asia](https://www.booking.com/searchresults.html?ss=Asia&checkin=2026-06-01&checkout=2026-06-07&group_adults=2&group_children=2)\n\n## Frequently Asked Questions\n\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Is $100 per day realistic for a family of four in Asia?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes, in budget destinations like Vietnam, Cambodia, Sri Lanka, and Northern Thailand. You'll need budget accommodation, street food, and public transport.\"}},{\"@type\":\"Question\",\"name\":\"What is the cheapest Asian country for families?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Vietnam is consistently the best value. A family of four can eat, sleep, and travel for $50-70/day in Hanoi or Hoi An.\"}},{\"@type\":\"Question\",\"name\":\"How can I save money on family travel in Asia?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Eat street food, use public transport, book activities on Klook, stay in guesthouses, and negotiate longer stays.\"}},{\"@type\":\"Question\",\"name\":\"Is it cheaper to book tours in advance or locally?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Booking locally is almost always cheaper - often 30-50% less. For popular tours like Halong Bay, pre-book on Klook for availability.\"}}]}\n</script>\n",
+    "tags": [
+      "budget-travel",
+      "family-travel",
+      "asia-travel",
+      "cheap-travel",
+      "budget-family",
+      "southeast-asia",
+      "travel-hacks",
+      "vietnam"
+    ],
+    "excerpt": "Traveling Asia as a family of four for $100 per day is absolutely possible. Our tested budgets from Vietnam, Sri Lanka, Malaysia, and Thailand show exactly how.",
+    "readingTime": "12 min read",
+    "date": "2026-05-04",
+    "relatedDestinations": []
+  },
+  {
+    "slug": "family-friendly-hiking-trails-asia",
+    "title": "Best Family-Friendly Hiking Trails in Asia Kids Will Love (2026)",
+    "author": "Captain",
+    "content": "# Best Family-Friendly Hiking Trails in Asia Kids Will Love (2026)\n\nGetting kids to enjoy hiking can be challenging. The key: short distances, interesting features, frequent breaks, and a rewarding finish.\n\n## What Makes a Trail Kid-Friendly?\n\n- Short distance (1-3 km for ages 3-6, 3-6 km for ages 7-12)\n- Gentle elevation (under 200m gain for young kids)\n- Interesting features (waterfalls, caves, suspension bridges, wildlife)\n- Shade (crucial in tropical climates)\n- Facilities (restrooms and water refill stations)\n\n## 1. Dragon's Back, Hong Kong\n\nDistance: 8.5 km (4 km out-and-back possible)\nElevation: 200m\nDifficulty: Easy-Moderate\nBest for: Ages 6+\n\nThe Dragon's Back is Hong Kong's most famous hike. The ridge walk offers stunning views of the South China Sea and Shek O Peak. The trail is well-maintained with gentle inclines.\n\nWhy kids love it: The name - it really looks like a dragon's spine. Plus, Big Wave Bay beach at the end.\n\nGetting there: Bus 9 from Shau Kei Wan MTR.\n\n[Book Hong Kong hiking tours on Klook](https://www.klook.com/en-US/activity/1033-hong-kong-hiking-tour/)\n\n## 2. Fushimi Inari Shrine, Kyoto, Japan\n\nDistance: 4 km full loop (partial sections fine)\nElevation: 150m\nDifficulty: Easy\nBest for: All ages\n\nThe thousand-torii gates of Fushimi Inari are part of a gentle hiking trail up Mount Inari. Families can do the lower section in 30 minutes.\n\nWhy kids love it: Walking through endless orange gates feels magical. Fox statues everywhere.\n\nPro tip: Go early (7-8 AM) to avoid crowds.\n\n[Book Kyoto family tours on Viator](https://www.viator.com/Kyoto-tours/Kids-Family-Friendly/d3317-g12?mcid=42383)\n\n## 3. Sapa Rice Terraces, Vietnam\n\nDistance: 3-10 km (choose your route)\nDifficulty: Easy-Moderate\nBest for: Ages 5+\n\nWalking through rice terraces is magical. Mostly flat dirt trails between terraced fields with bamboo bridges.\n\nWhy kids love it: Water buffalo! Local Hmong and Dao children often walk with tourists.\n\nPro tip: Hire a local guide ($15-20) who knows kid-friendly routes.\n\n[Book Sapa trekking on Klook](https://www.klook.com/en-US/activity/416-sapa-trekking-tour/)\n\n## 4. Ubud Monkey Forest, Bali\n\nDistance: 2 km\nElevation: 50m\nDifficulty: Very Easy\nBest for: All ages\n\nPaved, shaded trail through jungle with ancient temples and over 700 Balinese macaques.\n\nWhy kids love it: Monkeys everywhere! Kids can buy bananas from official vendors.\n\nPro tip: No shiny objects, no loose bags. Keep food hidden.\n\n[Book Ubud activities on Klook](https://www.klook.com/en-US/activity/522-ubud-monkey-forest/)\n\n## 5. Railay Beach Viewpoint, Krabi, Thailand\n\nDistance: 1 km one way\nElevation: 100m\nDifficulty: Moderate (rope sections)\nBest for: Ages 8+\n\nShort but requires some scrambling with ropes. Reward: spectacular panoramic views of limestone karsts.\n\nWhy kids love it: The rope climbing sections feel adventurous.\n\nPro tip: Go at 8 AM before the heat.\n\n[Book Krabi tours on Viator](https://www.viator.com/Krabi-tours/Outdoor-Activities/d34538-g4?mcid=42383)\n\n## 6. Doi Suthep Monk's Trail, Chiang Mai, Thailand\n\nDistance: 1 km\nElevation: 100m\nDifficulty: Easy-Moderate\nBest for: Ages 4+\n\nThe monk's trail to Doi Suthep temple is a 1 km forest path with a 300-step staircase at the end.\n\nWhy kids love it: The 300-step naga (dragon) staircase. Golden stupas and bells at the top.\n\n[Book Chiang Mai tours on Klook](https://www.klook.com/en-US/activity/1978-doi-suthep-temple-tour/)\n\n## 7. National Orchid Garden, Singapore Botanic Gardens\n\nDistance: 2 km paved paths\nElevation: Flat\nDifficulty: Very Easy (stroller-friendly)\nBest for: All ages\n\nOver 1,000 orchid species in beautifully landscaped gardens. Part of a UNESCO World Heritage site.\n\nWhy kids love it: Incredible colours. Giant lily pads. Secret garden sections.\n\nEntry: $5/adult, free for kids under 12.\n\n## 8. Bukit Brown Cemetery, Singapore\n\nDistance: 3 km\nElevation: Flat\nDifficulty: Very Easy (stroller-friendly)\nBest for: All ages\n\nPaved paths through lush forest with WW2 history, giant monitor lizards, monkeys, and incredible bird life.\n\nWhy kids love it: Spotting monitor lizards and monkeys feels like treasure hunting.\n\nPro tip: Join a free weekend guided tour.\n\n## 9. Jog Falls Trail, Karnataka, India\n\nDistance: 3 km\nElevation: 150m\nDifficulty: Moderate\nBest for: Ages 8+\n\nStone steps descend through tropical forest to India's second-highest waterfall.\n\nWhy kids love it: The thunderous sound before you see it. Rainbows in the mist.\n\nBest season: August-December at full flow.\n\n## 10. Phuket Gibbon Trek, Thailand\n\nDistance: 2-4 km\nElevation: 100m\nDifficulty: Easy\nBest for: Ages 3+\n\nShort guided forest walks at the Gibbon Rehabilitation Centre.\n\nWhy kids love it: Gibbons swinging through trees. Feeding sessions from a safe distance.\n\n[Book Phuket family activities on Klook](https://www.klook.com/en-US/activity/30999-phuket-gibbon-rehabilitation/)\n\n## Essential Hiking Tips for Families\n\n- Start early (before 8 AM) to avoid heat and crowds\n- Pack water, snacks, hats, sunscreen, insect repellent\n- Take breaks every 15-20 minutes for young kids\n- Promise a reward (ice cream) at the end\n- Carry a basic first-aid kit\n- Download offline maps - many trails lack phone signal\n- Know when to turn back - tired kids = unhappy hike\n\n## The Verdict\n\nDragon's Back in Hong Kong is our top pick for families with older kids. Ubud Monkey Forest is perfect for young children.\n\n[Browse family-friendly activities on Klook](https://www.klook.com/en-US/tag/30-family-kids/)\n\n## Frequently Asked Questions\n\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What is the best family-friendly hike in Asia?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Dragon's Back in Hong Kong offers stunning views, a well-maintained path, and a beach at the end. For younger kids, Ubud Monkey Forest in Bali is a short, paved trail with wildlife.\"}},{\"@type\":\"Question\",\"name\":\"How long should a family hike be with young children?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"For ages 3-6, aim for 1-3 km total with plenty of breaks. For ages 7-12, 4-8 km is manageable.\"}},{\"@type\":\"Question\",\"name\":\"What should I pack for a family hike in Asia?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Water (1L per person), snacks, hats, sunscreen, insect repellent, first-aid kit, wet wipes, and a portable fan. Rain jacket essential in tropical areas.\"}}]}\n</script>\n",
+    "tags": [
+      "hiking",
+      "family-hiking",
+      "asia-hiking",
+      "outdoor-family",
+      "nature-trails",
+      "kids-hiking",
+      "travel-with-kids"
+    ],
+    "excerpt": "Asia's best family-friendly hiking trails that kids actually enjoy. From Japan's Kumano Kodo to Hong Kong's Dragon's Back — real distances, difficulty levels, and parent tips.",
+    "readingTime": "11 min read",
+    "date": "2026-05-04",
+    "relatedDestinations": []
+  },
+  {
+    "slug": "family-friendly-resorts-phuket-kids-clubs",
+    "title": "Best Family-Friendly Resorts in Phuket with Kids Clubs (2026)",
+    "author": "Captain",
+    "content": "CONTENT_PLACEHOLDER_family-friendly-resorts-phuket-kids-clubs",
+    "tags": [
+      "phuket",
+      "family-resorts",
+      "kids-clubs",
+      "thailand-beach",
+      "phuket-hotels",
+      "family-vacation",
+      "beach-resorts"
+    ],
+    "excerpt": "Phuket's best family resorts with outstanding kids clubs. Waterslides, supervised activities, dedicated pools, and parent-tested reviews for the ultimate family beach vacation.",
+    "readingTime": "11 min read",
+    "date": "2026-05-04",
+    "relatedDestinations": []
+  },
+  {
     "slug": "flying-long-haul-kids-real-survival-guide",
     "title": "Surviving a 12-Hour Flight with Kids: Real Parent Hacks That Work",
     "excerpt": "From pre-flight prep to mid-air entertainment strategies — real parents share what actually works for long-haul flights to Asia with children.",
@@ -589,6 +706,25 @@ const allPosts: BlogPost[] = [
     ],
     "readingTime": "8 min read",
     "content": "## Surviving the Long Haul to Asia with Kids\n\nFlying from Europe or North America to Asia means 10-16 hours in the air. With kids. It's the barrier that stops many families from making the trip. But it's doable. Here's how.\n\n### Pre-Flight Prep (48 Hours Out)\n\n\"The biggest mistake I made on our first trip was not prepping the kids for what flying feels like. We watched cockpit videos on YouTube for a week. By the flight, my son was excited, not scared.\" — David, dad of 4-year-old\n\n**What works:**\n- YouTube cockpit tours + plane videos (demystify the experience)\n- Let them pack their own carry-on backpack (with your supervision)\n- Start shifting sleep schedule 2 days before (15 minutes earlier each night for eastbound flights)\n\n### The Carry-On Arsenal\n\n\"I packed 47 activities for my 3-year-old. She played with the window shade for 4 hours. Next time I'll bring just a window seat and a snack.\" — Jen, mom of toddler (laughing)\n\nBut seriously, here's what actually gets used:\n\n**The Non-Negotiables:**\n- **Snacks that take time to eat**: Cut grapes, cheese sticks, dried mango, edamame. Nothing messy, nothing sticky.\n- **A water bottle they can operate**: CamelBak or equivalent. Dehydration = meltdowns.\n- **One NEW toy per 4 hours**: Wrap them. The unwrapping is entertainment in itself.\n- **Noise-cancelling headphones**: Not earbuds. Over-ear. They stay on better.\n- **Melatonin (check with your doctor)**: Many parents swear by a low dose timed for landing.\n\n### The Seat Strategy\n\n\"We booked a window + aisle in the middle section. The empty middle seat was never taken (we checked that route's occupancy before booking). It gave us a row of 2 for the price of 2.\" — Tom, dad of 6-year-old\n\n**Better than bulkhead?** Some parents prefer rows a few behind the bulkhead — the bulkhead has floor space but no underseat storage and can be noisier (baby central).\n\n### Screen Time: Throw Out the Rules\n\n\"I carry a strict 'no more than 30 minutes of screen time' rule at home. On a plane, it's whatever works. My kid watched Moana 4 times. He was happy. Other passengers were happy. No regrets.\" — Mike, dad of two\n\n**Best kid apps for flights:**\n- **Endless Reader** (pre-readers, engaging)\n- **Sago Mini** (toddlers, offline play)\n- **PBS Kids** (download episodes before)\n- **LEGO DUPLO World** (preschoolers)\n\n### The In-Flight Meal Hack\n\n\"Don't order the children's meal. Order the regular meal. Kids' meals come at weird times and the food is blander. Your kid will eat your pasta anyway.\" — Rachel, frequent flying mom\n\n**Better strategy:** Request a special meal (vegetarian or child-friendly) for yourself and share. The special meals often come first.\n\n### Arrival Strategy: Land and Go Outside\n\n\"We landed at 6am in Tokyo. The kids wanted to sleep. We forced everyone outside into the sun. Walked around the hotel neighborhood for 30 minutes. Everyone slept at 7pm local time. Jet lag beaten in one day.\" — The Chen family\n\nThe science is clear: sunlight resets the circadian clock. Force that first day outside, even if everyone is exhausted.\n\n### Related Destinations\n\n| Destination | Flight from LAX | Best for First-Time Asia Flyers |\n|---|---|---|\n| Tokyo | 11 hours | Incredible service, family-friendly hotels |\n| Singapore | 17 hours | World's best airport (Jewel is amazing) |\n| Bangkok | 16 hours | Warm welcome, cheap everything |\n| Hong Kong | 14 hours | Short flight from most of Asia, English everywhere |\n\n### The Diaper Equation for Toddlers\n\nFormula: 1 diaper per 3 hours + 2. So for a 14-hour flight: 6-7 diapers. Plus 1 for the airport. Double-check availability at your destination (yes, even Japan has Pampers).\n\n**Bottom line:** Long-haul flying with kids is not fun. But it's temporary. Prep well, lower your standards for screen time, pack smart snacks, and remember: the jet lag will end. That 2-week trip will be worth the 14-hour flight.",
+    "relatedDestinations": []
+  },
+  {
+    "slug": "hong-kong-with-kids-3-day-itinerary",
+    "title": "Hong Kong with Kids: Perfect 3-Day Itinerary (2026)",
+    "author": "Captain",
+    "content": "CONTENT_PLACEHOLDER_hong-kong-with-kids-3-day-itinerary",
+    "tags": [
+      "hong-kong",
+      "family-itinerary",
+      "hong-kong-with-kids",
+      "disneyland",
+      "ocean-park",
+      "travel-itinerary",
+      "asia-family"
+    ],
+    "excerpt": "The perfect 3-day Hong Kong family itinerary tested by real parents. Disneyland, Ocean Park, Peak Tram, dim sum, and insider tips for traveling with kids.",
+    "readingTime": "10 min read",
+    "date": "2026-05-04",
     "relatedDestinations": []
   },
   {
@@ -614,6 +750,64 @@ const allPosts: BlogPost[] = [
       "male-001",
       "kohsamui-003"
     ]
+  },
+  {
+    "slug": "taiwan-with-kids-7-day-itinerary",
+    "title": "Taiwan with Kids: Complete 7-Day Itinerary (2026)",
+    "author": "Captain",
+    "content": "CONTENT_PLACEHOLDER_taiwan-with-kids-7-day-itinerary",
+    "tags": [
+      "taiwan",
+      "family-itinerary",
+      "taiwan-with-kids",
+      "taipei",
+      "taroko-gorge",
+      "jiufen",
+      "asia-family"
+    ],
+    "excerpt": "The ultimate 7-day Taiwan family itinerary. Taipei, Jiufen, Taroko Gorge, Sun Moon Lake, night markets, and insider tips from parents who've done it all with kids.",
+    "readingTime": "12 min read",
+    "date": "2026-05-04",
+    "relatedDestinations": []
+  },
+  {
+    "slug": "thailand-island-hopping-with-kids",
+    "title": "Thailand Island Hopping with Kids — Family Guide (2026)",
+    "author": "Captain",
+    "content": "CONTENT_PLACEHOLDER_thailand-island-hopping-with-kids",
+    "tags": [
+      "thailand",
+      "island-hopping",
+      "family-travel",
+      "koh-lanta",
+      "railay",
+      "koh-yao-noi",
+      "thailand-beaches"
+    ],
+    "excerpt": "Thailand island hopping with kids made easy. Ferries, kid-friendly islands, family hotels, and sample itineraries tested by real parents in Koh Lanta, Railay, and Koh Yao Noi.",
+    "readingTime": "12 min read",
+    "date": "2026-05-04",
+    "relatedDestinations": []
+  },
+  {
+    "slug": "vietnam-with-toddlers-complete-guide",
+    "title": "Vietnam with Toddlers: Complete Family Guide (2026)",
+    "author": "Captain",
+    "content": "CONTENT_PLACEHOLDER_vietnam-with-toddlers-complete-guide",
+    "tags": [
+      "vietnam",
+      "toddler-travel",
+      "family-travel",
+      "vietnam-with-kids",
+      "hanoi",
+      "hoi-an",
+      "ho-chi-minh",
+      "southeast-asia"
+    ],
+    "excerpt": "Everything parents need to know about Vietnam with toddlers. Destinations, transport, food safety, packing, and honest tips from families who've traveled Vietnam with little ones.",
+    "readingTime": "13 min read",
+    "date": "2026-05-04",
+    "relatedDestinations": []
   },
   {
     "slug": "bangkok-street-food-kids-parent-tips",
@@ -871,156 +1065,6 @@ const allPosts: BlogPost[] = [
     "date": "2026-01-15",
     "author": "Family Travel Asia",
     "readingTime": "10 min read",
-    "relatedDestinations": []
-  },
-  {
-    "slug": "bangkok-family-hotels-with-pools",
-    "title": "Best Family Hotels in Bangkok with Pools for Kids (2026)",
-    "author": "Captain",
-    "content": "[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]",
-    "tags": [
-      "family travel",
-      "asia",
-      "bangkok family hotels with pools"
-    ],
-    "excerpt": "A guide for family travel in Asia.",
-    "readingTime": "5 min read",
-    "date": "2026-01-01",
-    "relatedDestinations": []
-  },
-  {
-    "slug": "best-family-all-inclusive-resorts-asia",
-    "title": "Best Family All-Inclusive Resorts in Asia (2026 Review)",
-    "author": "Captain",
-    "content": "[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]",
-    "tags": [
-      "family travel",
-      "asia",
-      "best family all inclusive resorts asia"
-    ],
-    "excerpt": "A guide for family travel in Asia.",
-    "readingTime": "5 min read",
-    "date": "2026-01-01",
-    "relatedDestinations": []
-  },
-  {
-    "slug": "best-time-to-visit-bali-with-kids-month-by-month",
-    "title": "Best Time to Visit Bali with Kids: Month-by-Month Guide",
-    "author": "Captain",
-    "content": "[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]",
-    "tags": [
-      "family travel",
-      "asia",
-      "best time to visit bali with kids month by month"
-    ],
-    "excerpt": "A guide for family travel in Asia.",
-    "readingTime": "5 min read",
-    "date": "2026-01-01",
-    "relatedDestinations": []
-  },
-  {
-    "slug": "budget-family-travel-asia-100-per-day",
-    "title": "Budget Family Travel Asia: The $100/Day Challenge",
-    "author": "Captain",
-    "content": "[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]",
-    "tags": [
-      "family travel",
-      "asia",
-      "budget family travel asia 100 per day"
-    ],
-    "excerpt": "A guide for family travel in Asia.",
-    "readingTime": "5 min read",
-    "date": "2026-01-01",
-    "relatedDestinations": []
-  },
-  {
-    "slug": "family-friendly-hiking-trails-asia",
-    "title": "Family-Friendly Hiking Trails in Asia (Kid-Approved!)",
-    "author": "Captain",
-    "content": "[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]",
-    "tags": [
-      "family travel",
-      "asia",
-      "family friendly hiking trails asia"
-    ],
-    "excerpt": "A guide for family travel in Asia.",
-    "readingTime": "5 min read",
-    "date": "2026-01-01",
-    "relatedDestinations": []
-  },
-  {
-    "slug": "family-friendly-resorts-phuket-kids-clubs",
-    "title": "Family-Friendly Resorts in Phuket with Kids Clubs (2026)",
-    "author": "Captain",
-    "content": "[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]",
-    "tags": [
-      "family travel",
-      "asia",
-      "family friendly resorts phuket kids clubs"
-    ],
-    "excerpt": "A guide for family travel in Asia.",
-    "readingTime": "5 min read",
-    "date": "2026-01-01",
-    "relatedDestinations": []
-  },
-  {
-    "slug": "hong-kong-with-kids-3-day-itinerary",
-    "title": "Hong Kong with Kids: 3-Day Itinerary (Tested by Parents)",
-    "author": "Captain",
-    "content": "[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]",
-    "tags": [
-      "family travel",
-      "asia",
-      "hong kong with kids 3 day itinerary"
-    ],
-    "excerpt": "A guide for family travel in Asia.",
-    "readingTime": "5 min read",
-    "date": "2026-01-01",
-    "relatedDestinations": []
-  },
-  {
-    "slug": "taiwan-with-kids-7-day-itinerary",
-    "title": "Taiwan with Kids: 7-Day Itinerary for First-Timers (2026)",
-    "author": "Captain",
-    "content": "[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]",
-    "tags": [
-      "family travel",
-      "asia",
-      "taiwan with kids 7 day itinerary"
-    ],
-    "excerpt": "A guide for family travel in Asia.",
-    "readingTime": "5 min read",
-    "date": "2026-01-01",
-    "relatedDestinations": []
-  },
-  {
-    "slug": "thailand-island-hopping-with-kids",
-    "title": "Thailand Island Hopping with Kids: Real Parent Guide",
-    "author": "Captain",
-    "content": "[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]",
-    "tags": [
-      "family travel",
-      "asia",
-      "thailand island hopping with kids"
-    ],
-    "excerpt": "A guide for family travel in Asia.",
-    "readingTime": "5 min read",
-    "date": "2026-01-01",
-    "relatedDestinations": []
-  },
-  {
-    "slug": "vietnam-with-toddlers-complete-guide",
-    "title": "Complete Guide to Traveling Vietnam with Toddlers (2026)",
-    "author": "Captain",
-    "content": "[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]\n\n[object Object]",
-    "tags": [
-      "family travel",
-      "asia",
-      "vietnam with toddlers complete guide"
-    ],
-    "excerpt": "A guide for family travel in Asia.",
-    "readingTime": "5 min read",
-    "date": "2026-01-01",
     "relatedDestinations": []
   }
 ];

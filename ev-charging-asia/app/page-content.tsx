@@ -32,10 +32,10 @@ export default function HomeContent({ meta, stations, blogPosts: initialPosts = 
 
   // Popular route links
   const popularRoutes = [
-    { name: 'Singapore → Kuala Lumpur', slug: 'singapore-to-kuala-lumpur', distance: '350 km', duration: '3-4 days', difficulty: 'Easy' },
-    { name: 'Bangkok → Chiang Mai', slug: 'bangkok-to-chiang-mai', distance: '700 km', duration: '5-7 days', difficulty: 'Moderate' },
-    { name: 'Kuala Lumpur → Penang', slug: 'kl-to-penang', distance: '370 km', duration: '3-4 days', difficulty: 'Easy' },
-    { name: 'Tokyo → Hakone → Kyoto', slug: 'tokyo-to-kyoto', distance: '450 km', duration: '7-10 days', difficulty: 'Moderate' },
+    { name: 'Singapore → Kuala Lumpur', slug: 'singapore-to-kuala-lumpur-road-trip', distance: '350 km', duration: '3-4 days', difficulty: 'Easy' },
+    { name: 'Bangkok → Chiang Mai', slug: 'bangkok-to-chiang-mai-road-trip', distance: '700 km', duration: '5-7 days', difficulty: 'Moderate' },
+    { name: 'Kuala Lumpur → Penang', slug: 'kuala-lumpur-to-penang-road-trip', distance: '370 km', duration: '3-4 days', difficulty: 'Easy' },
+    { name: 'Tokyo → Hakone → Mt. Fuji', slug: 'tokyo-to-hakone-fuji-road-trip', distance: '450 km', duration: '7-10 days', difficulty: 'Moderate' },
   ];
 
   if (!mounted) {
@@ -199,8 +199,51 @@ export default function HomeContent({ meta, stations, blogPosts: initialPosts = 
                 <div className="flex items-center gap-2 text-[10px] text-gray-500">
                   <span>⏱ {route.duration}</span>
                 </div>
+                <div className="mt-2 pt-2 border-t border-gray-100 flex items-center gap-1 text-[10px] text-gray-400">
+                  <span>🔄 <Link href="/compare" onClick={e => e.stopPropagation()} className="text-sky-500 hover:text-sky-600">Compare routes</Link></span>
+                </div>
               </Link>
             ))}
+          </div>
+        </section>
+
+        {/* ═══════ SEASONAL EXPLORER ═══════ */}
+        <section className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-500">
+                <circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
+              </svg>
+              Discover Routes by Season
+            </h2>
+          </div>
+          <p className="text-sm text-gray-600 mb-6">
+            Check when each route is at its best — matching travel seasons with weather, crowds, and driving conditions.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {[
+              { season: '🌺 Spring (Mar–May)', routes: ['Bangkok → Chiang Mai', 'Tokyo → Hakone → Mt. Fuji', 'Osaka → Tokyo', 'Singapore → KL'] },
+              { season: '☀️ Summer (Jun–Aug)', routes: ['Bangkok → Phuket', 'Bali Loop', 'Hong Kong → Macau', 'Kuala Lumpur → Penang'] },
+              { season: '🍂 Autumn (Sep–Nov)', routes: ['Tokyo → Hakone → Mt. Fuji', 'Osaka → Tokyo', 'Chiang Mai → Pai → Mae Hong Son', 'Delhi → Jaipur → Agra'] },
+              { season: '❄️ Winter (Dec–Feb)', routes: ['Bangkok → Chiang Mai', 'Mumbai → Pune', 'Hanoi → Ha Long Bay', 'Bali Loop'] },
+            ].map(({ season, routes }) => (
+              <div key={season} className="bg-gradient-to-br from-gray-50 to-white rounded-xl border border-gray-200 p-4 hover:shadow-sm transition-all">
+                <h3 className="text-sm font-bold text-gray-900 mb-3">{season}</h3>
+                <ul className="space-y-2">
+                  {routes.map((route, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-gray-600">
+                      <span className="text-emerald-500 mt-0.5 shrink-0">✓</span>
+                      <span>{route}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 text-center">
+            <Link href="/routes" className="inline-flex items-center gap-1 text-xs text-sky-600 hover:text-sky-700 font-medium">
+              View all route seasonal guides →
+            </Link>
           </div>
         </section>
 

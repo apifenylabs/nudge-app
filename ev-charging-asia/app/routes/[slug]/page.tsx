@@ -45,7 +45,7 @@ export default function ItineraryDetailPage({ params }: Props) {
 
   const related = getRelatedItineraries(params.slug, 2);
 
-  // JSON-LD structured data for SEO
+  // JSON-LD structured data for SEO — with FAQ for rich results
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TouristTrip',
@@ -75,6 +75,45 @@ export default function ItineraryDetailPage({ params }: Props) {
       '@type': 'Offer',
       url: it.affiliateHotelUrl,
       description: `Book luxury hotels for ${it.title}`,
+    },
+    mainEntity: {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: `How long does the ${it.title} road trip take?`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `The ${it.title} EV road trip takes ${it.duration} and covers ${it.totalDistanceKm} km with approximately ${it.totalDrivingHours} hours of driving time.`,
+          },
+        },
+        {
+          '@type': 'Question',
+          name: `What is the best season for the ${it.title} road trip?`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `The best season is ${it.bestSeason}. The route is rated as ${it.difficulty} difficulty.`,
+          },
+        },
+        {
+          '@type': 'Question',
+          name: `How many charging stops are on the ${it.title} route?`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `You can expect approximately ${it.estimatedChargingStops}+ charging stops along the ${it.totalDistanceKm} km route through ${it.cities.join(', ')}.`,
+          },
+        },
+        {
+          '@type': 'Question',
+          name: `Is the ${it.title} EV route family-friendly?`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: it.familyHighlights.length > 0
+              ? `Yes! Family highlights include: ${it.familyHighlights.slice(0, 3).join(', ')}.`
+              : `Yes, with ${it.familyHighlights.length} family-friendly highlights and kid-focused stops throughout the route.`,
+          },
+        },
+      ],
     },
   };
 
