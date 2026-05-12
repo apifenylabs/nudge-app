@@ -13,6 +13,9 @@ const routeBgColors: Record<string, string> = {
   'Malaysia': 'from-amber-50 to-orange-50 border-amber-200',
   'Japan': 'from-rose-50 to-pink-50 border-rose-200',
   'Indonesia': 'from-lime-50 to-green-50 border-lime-200',
+  'India': 'from-violet-50 to-purple-50 border-violet-200',
+  'Vietnam': 'from-yellow-50 to-amber-50 border-yellow-200',
+  'China': 'from-red-50 to-rose-50 border-red-200',
 };
 
 const difficultyBadges: Record<string, string> = {

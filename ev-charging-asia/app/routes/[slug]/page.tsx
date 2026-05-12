@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Zap, ArrowLeft, Route, Clock, BatteryCharging, Calendar, MapPin, AlertTriangle } from 'lucide-react';
 import { getAllItineraries, getItineraryBySlug, getRelatedItineraries } from '@/data/itineraries';
+import RouteMap from '@/components/itineraries/RouteMap';
 import SiteFooter from '@/components/SiteFooter';
 import ItineraryDaysTimeline from '@/components/itineraries/ItineraryDaysTimeline';
 import ItineraryAffiliateCTA from '@/components/itineraries/ItineraryAffiliateCTA';
@@ -147,6 +148,15 @@ export default function ItineraryDetailPage({ params }: Props) {
             <span className="font-medium">Route:</span>
             <span className="text-gray-500">{it.cities.join(' → ')}</span>
           </div>
+        </div>
+
+        {/* Route Map */}
+        <div className="mb-6">
+          <h2 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <MapPin size={20} className="text-emerald-500" />
+            Route Map
+          </h2>
+          <RouteMap itinerary={it} height="350px" />
         </div>
 
         {/* Highway conditions */}

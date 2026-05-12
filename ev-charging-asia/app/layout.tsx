@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import SiteFooter from "@/components/SiteFooter";
 
 const BASE_URL = 'https://ev-charging-asia.vercel.app';
 
@@ -65,8 +66,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="min-h-full bg-gray-50 text-gray-900">
-        {children}
+      <body className="min-h-full bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+        <main className="flex-1">
+          {children}
+        </main>
+        <SiteFooter />
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics />

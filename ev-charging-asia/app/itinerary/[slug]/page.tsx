@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Zap, ArrowLeft, Route, Clock, BatteryCharging, Calendar, MapPin, AlertTriangle, Users, Crown, Star, Wifi, Utensils, ShoppingBag, ChevronRight, ExternalLink } from 'lucide-react';
 import { getAllItineraries, getItineraryBySlug } from '@/data/itineraries';
+import RouteMap from '@/components/itineraries/RouteMap';
 import { getRouteStations, getRecommendedStops, getKidFriendlyStations, getLuxuryStations, countRouteChargingStops, getRouteCities } from '@/data/route-stations';
 import stationsData from '@/data/stations.json';
 import { scoreTier } from '@/lib/scoring';
@@ -12,19 +13,28 @@ interface Props {
   params: { slug: string };
 }
 
-// Map slug to full itinerary slug
-const slugToItineraryMap: Record<string, string> = {
+// Map slug to full itinerary slug — covers all 12 routes
+export const slugToItineraryMap: Record<string, string> = {
   'bangkok-phuket': 'bangkok-to-phuket-road-trip',
   'bangkok-chiang-mai': 'bangkok-to-chiang-mai-road-trip',
   'singapore-kuala-lumpur': 'singapore-to-kuala-lumpur-road-trip',
   'bali-loop': 'bali-ev-road-trip-loop',
   'hong-kong-macau': 'hong-kong-to-macau-road-trip',
   'hanoi-ha-long': 'hanoi-to-ha-long-bay-road-trip',
+  'osaka-tokyo': 'osaka-to-tokyo-road-trip',
+  'kuala-lumpur-penang': 'kuala-lumpur-to-penang-road-trip',
+  'mumbai-pune': 'mumbai-to-pune-road-trip',
+  'tokyo-hakone-fuji': 'tokyo-to-hakone-fuji-road-trip',
+  'delhi-jaipur-agra': 'delhi-to-jaipur-agra-road-trip',
+  'chiang-mai-pai-mae-hong-son': 'chiang-mai-to-pai-mae-hong-son-road-trip',
 };
 
 export async function generateStaticParams() {
   return Object.keys(slugToItineraryMap).map(slug => ({ slug }));
 }
+
+// Note: getItineraryBySlug and getAllItineraries are imported directly above
+// from '@/data/itineraries' — no re-export needed
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const it = getItineraryBySlug(slugToItineraryMap[params.slug] || params.slug);
@@ -353,6 +363,15 @@ export default async function ItineraryDetailPage({ params }: Props) {
               </span>
             ))}
           </div>
+        </div>
+
+        {/* Route Map */}
+        <div className="mb-6">
+          <h2 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <MapPin size={20} className="text-emerald-500" />
+            Route Map
+          </h2>
+          <RouteMap itinerary={it} height="350px" />
         </div>
 
         {/* Highway Conditions */}

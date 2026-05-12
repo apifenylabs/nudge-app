@@ -24,6 +24,15 @@
       "static/chunks/604-a896c14e3f252243.js",
       "static/chunks/app/calendar/page-66df545156942e82.js"
     ],
+    "/create/page": [
+      "static/chunks/webpack-d757b501b8c835e1.js",
+      "static/chunks/fd9d1056-a55c5f950089544c.js",
+      "static/chunks/117-c844070d47526f33.js",
+      "static/chunks/main-app-c73745d71d37c46e.js",
+      "static/chunks/66-f17add4be9038095.js",
+      "static/chunks/810-520b3ef2d4926686.js",
+      "static/chunks/app/create/page-cab6abd0ceccdd23.js"
+    ],
     "/analytics/page": [
       "static/chunks/webpack-d757b501b8c835e1.js",
       "static/chunks/fd9d1056-a55c5f950089544c.js",
@@ -42,14 +51,15 @@
       "static/chunks/604-a896c14e3f252243.js",
       "static/chunks/app/community/page-3e24028222d53fb5.js"
     ],
-    "/create/page": [
+    "/posts/page": [
       "static/chunks/webpack-d757b501b8c835e1.js",
       "static/chunks/fd9d1056-a55c5f950089544c.js",
       "static/chunks/117-c844070d47526f33.js",
       "static/chunks/main-app-c73745d71d37c46e.js",
       "static/chunks/66-f17add4be9038095.js",
+      "static/chunks/604-a896c14e3f252243.js",
       "static/chunks/810-520b3ef2d4926686.js",
-      "static/chunks/app/create/page-cab6abd0ceccdd23.js"
+      "static/chunks/app/posts/page-b88c1e57b6ace93c.js"
     ],
     "/page": [
       "static/chunks/webpack-d757b501b8c835e1.js",
@@ -60,16 +70,6 @@
       "static/chunks/604-a896c14e3f252243.js",
       "static/chunks/810-520b3ef2d4926686.js",
       "static/chunks/app/page-eebfb31e42c0c6b4.js"
-    ],
-    "/posts/page": [
-      "static/chunks/webpack-d757b501b8c835e1.js",
-      "static/chunks/fd9d1056-a55c5f950089544c.js",
-      "static/chunks/117-c844070d47526f33.js",
-      "static/chunks/main-app-c73745d71d37c46e.js",
-      "static/chunks/66-f17add4be9038095.js",
-      "static/chunks/604-a896c14e3f252243.js",
-      "static/chunks/810-520b3ef2d4926686.js",
-      "static/chunks/app/posts/page-b88c1e57b6ace93c.js"
     ],
     "/settings/page": [
       "static/chunks/webpack-d757b501b8c835e1.js",
