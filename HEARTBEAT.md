@@ -35,8 +35,13 @@ When idle, this session runs autonomous work. Do NOT wait for Chris.
 - [x] Frontend builds cleanly
 - [x] Both beasts: 5D uptime, zero restarts
 
+## Built This Wake (00:04-00:20 HKT, May 13)
+- ✅ EV station [id] routing: replaced fs.readFile with direct JSON import — all 1,125 pages now 200
+- ✅ Luxury destination slug: fixed 5 IDs with spaces → URL-safe slugs, all 20 pages 200
+- ✅ Family Travel Directory redeployed to production (www.familytravelasia.com)
+- ✅ All 6 sites confirmed: 200 on home, sitemap, and key content pages
+
 ## Awaiting Chris
-- Supabase service_role key (for both beasts + OmniMind Phase 2)
-- DEEPSEEK_API_KEY
-- GitHub PAT for remote push
-- Domain registration
+- TELEGRAM_BOT_TOKEN (for Nudge webhook)
+- Vercel interactive login (for custom domain setup)
+- GitHub PAT (for remote push)

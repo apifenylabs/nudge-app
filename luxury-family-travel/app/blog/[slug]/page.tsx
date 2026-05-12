@@ -7,7 +7,7 @@ import { readFileSync } from 'fs';
 import path from 'path';
 import type { BlogPost } from '@/lib/blog-data';
 
-const BASE_URL = 'https://family-travel-directory.vercel.app';
+const BASE_URL = 'https://luxury-family-travel-asia.vercel.app';
 
 interface Destination {
   id: string;
@@ -343,9 +343,62 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
           <ArticleContent content={post.content} />
         </div>
 
+        {/* ─── AFFILIATE BOOKING CTA ─── */}
+        <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="rounded-2xl bg-gradient-to-br from-sky-50/80 to-amber-50/80 border border-sky-200/50 p-6">
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-sky-400 to-blue-500 shadow-sm">
+                <Sparkles size={18} className="text-white" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm">Book Your Family Adventure</h3>
+                <p className="text-xs text-gray-500">Curated luxury options — we may earn a commission</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <a
+                href={`https://www.booking.com/searchresults.html?ss=${encodeURIComponent(post.tags[0] || 'Asia')}&aid=2875669`}
+                target="_blank"
+                rel="nofollow sponsored noopener"
+                className="group flex items-center gap-3 px-4 py-3 rounded-xl border border-gray-100 bg-white hover:border-sky-200 hover:shadow-md transition-all"
+              >
+                <span className="text-xl">🏨</span>
+                <div className="min-w-0">
+                  <p className="text-sm font-bold text-gray-900 group-hover:text-sky-600">Hotels</p>
+                  <p className="text-xs text-gray-400">Luxury family stays</p>
+                </div>
+              </a>
+              <a
+                href={`https://www.klook.com/search/?keyword=${encodeURIComponent((post.tags[0] || 'Asia') + ' family activities')}&aid=119991`}
+                target="_blank"
+                rel="nofollow sponsored noopener"
+                className="group flex items-center gap-3 px-4 py-3 rounded-xl border border-gray-100 bg-white hover:border-emerald-200 hover:shadow-md transition-all"
+              >
+                <span className="text-xl">🎫</span>
+                <div className="min-w-0">
+                  <p className="text-sm font-bold text-gray-900 group-hover:text-emerald-600">Activities</p>
+                  <p className="text-xs text-gray-400">Tours & experiences</p>
+                </div>
+              </a>
+              <a
+                href={`https://www.viator.com/${encodeURIComponent((post.tags[0] || 'Asia').replace(/[^a-zA-Z]/g,''))}/things-to-do?aid=${'P00299136'}`}
+                target="_blank"
+                rel="nofollow sponsored noopener"
+                className="group flex items-center gap-3 px-4 py-3 rounded-xl border border-gray-100 bg-white hover:border-rose-200 hover:shadow-md transition-all"
+              >
+                <span className="text-xl">🌟</span>
+                <div className="min-w-0">
+                  <p className="text-sm font-bold text-gray-900 group-hover:text-rose-600">VIP Tours</p>
+                  <p className="text-xs text-gray-400">Curated experiences</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Related destinations */}
         {post.relatedDestinations.length > 0 && (
-          <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="mt-10 pt-8 border-t border-gray-200">
             <h3 className="text-lg font-bold text-gray-900 mb-4">Related Destinations</h3>
             <div className="flex flex-wrap gap-3">
               {post.relatedDestinations.map(destId => {

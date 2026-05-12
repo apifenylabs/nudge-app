@@ -123,6 +123,8 @@ def generate_signals_v3(
         # Trend filter
         if use_trend_filter and not np.isnan(ma50[i]):
             trend_up = closes[i] > ma50[i]
+        else:
+            trend_up = None
         
         for pair in reversed(swings):
             if pair["swing_end"]["index"] >= i:
@@ -159,6 +161,9 @@ def generate_signals_v3(
                 rsi_diff = rsi_current - rsi_start
                 if require_divergence and rsi_diff < divergence_threshold:
                     continue
+                # Trend filter: don't BUY in downtrend
+                if use_trend_filter and trend_up is not None and not trend_up:
+                    continue
                 entry = current_price
                 stop = entry - current_atr * atr_stop_mult
                 tp1 = entry + current_atr * atr_tp1_mult
@@ -167,6 +172,9 @@ def generate_signals_v3(
                 side = "SELL"
                 rsi_diff = rsi_start - rsi_current
                 if require_divergence and rsi_diff < divergence_threshold:
+                    continue
+                # Trend filter: don't SELL in uptrend
+                if use_trend_filter and trend_up is not None and trend_up:
                     continue
                 entry = current_price
                 stop = entry + current_atr * atr_stop_mult

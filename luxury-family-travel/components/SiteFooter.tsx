@@ -1,11 +1,10 @@
 import Link from "next/link";
 
 const sisterSites = [
-  { name: "Family Travel Asia", href: "https://www.familytravelasia.com", description: "Family-friendly destinations & tips" },
-  { name: "EV Charging Asia", href: "https://ev-charging-asia.vercel.app", description: "EV charging station directory" },
-  { name: "Apifeny AI Tools", href: "https://apifeny-ai.vercel.app", description: "Curated AI tool directory for Asia" },
-  { name: "Social Beast", href: "https://social-beast-two.vercel.app", description: "Social content scheduling & analytics" },
-  { name: "Nudge", href: "https://nudge-sigma-liart.vercel.app", description: "Family task management Telegram bot" },
+  { name: "Asia Family Travel Directory", href: "https://www.familytravelasia.com", description: "Family-friendly destinations & tips across Asia" },
+  { name: "EV Charging Asia", href: "https://ev-charging-asia.vercel.app", description: "EV charging station directory for Asia" },
+  { name: "Apifeny AI", href: "https://apifeny-ai.vercel.app", description: "Curated AI tools & agents directory" },
+  { name: "Nudge", href: "https://nudge-sigma-liart.vercel.app", description: "Voice-powered family task management app" },
   { name: "Kids Activities Asia", href: "https://kids-activities-asia.vercel.app", description: "Kid-friendly activities across Asia" },
 ];
 
@@ -101,15 +100,6 @@ export default function SiteFooter() {
                 className="hover:text-gold transition-colors duration-200"
               >
                 Apifeny AI
-              </a>{" "}
-              |{" "}
-              <a
-                href="https://social-beast-two.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gold transition-colors duration-200"
-              >
-                Social Beast
               </a>
             </span>
           </div>

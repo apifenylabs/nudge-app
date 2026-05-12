@@ -48,20 +48,20 @@ export default function SiteFooter() {
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-emerald-600 transition-colors"
                 >
-                  Family Travel Asia
+                  Asia Family Travel Directory
                 </a>
-                <p className="text-xs text-gray-400 mt-0.5">Asia family travel tips</p>
+                <p className="text-xs text-gray-400 mt-0.5">Family travel tips & destinations</p>
               </li>
               <li>
                 <a
-                  href="https://luxury-family-travel-asia.vercel.app"
+                  href="https://luxuryfamilytravelasia.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-amber-600 transition-colors"
                 >
-                  Luxury Family Travel
+                  Luxury Family Travel Asia
                 </a>
-                <p className="text-xs text-gray-400 mt-0.5">Premium family getaways</p>
+                <p className="text-xs text-gray-400 mt-0.5">Premium family getaways & 5-star resorts</p>
               </li>
               <li>
                 <a
@@ -70,20 +70,9 @@ export default function SiteFooter() {
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-purple-600 transition-colors"
                 >
-                  Apifeny AI Tools
+                  Apifeny AI
                 </a>
-                <p className="text-xs text-gray-400 mt-0.5">Curated AI directory</p>
-              </li>
-              <li>
-                <a
-                  href="https://social-beast-two.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-400 hover:text-sky-600 transition-colors"
-                >
-                  Social Beast
-                </a>
-                <p className="text-xs text-gray-400 mt-0.5">Social content scheduling</p>
+                <p className="text-xs text-gray-400 mt-0.5">Curated AI tools & agents directory</p>
               </li>
               <li>
                 <a
@@ -94,7 +83,7 @@ export default function SiteFooter() {
                 >
                   Nudge
                 </a>
-                <p className="text-xs text-gray-400 mt-0.5">Family task management</p>
+                <p className="text-xs text-gray-400 mt-0.5">Voice-powered family task management</p>
               </li>
             </ul>
           </div>

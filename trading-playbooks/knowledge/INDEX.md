@@ -7,6 +7,7 @@ This is the central knowledge base for the entire orchestra.
 - projects/ → Nudge and future apps
 - competitors/ → Competitive intelligence
 - market/ → Market signals and trends
+  - market/forex-profitability.md → Forex algo trading profitability research (May 2026)
 - content/ → What performs and why
 - clients/ → Client patterns and insights
 

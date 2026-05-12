@@ -1,12 +1,11 @@
 import Link from 'next/link';
 
 const sisterSites = [
-  { name: 'Luxury Family Travel', href: 'https://luxury-family-travel-asia.vercel.app', description: 'Premium family getaways' },
-  { name: 'EV Charging Asia', href: 'https://ev-charging-asia.vercel.app', description: 'EV road trips across Asia' },
-  { name: 'Apifeny AI Tools', href: 'https://apifeny-ai.vercel.app', description: 'Curated AI tool finder' },
-  { name: 'Social Beast', href: 'https://social-beast-two.vercel.app', description: 'Social media automation' },
-  { name: 'Nudge', href: 'https://nudge-sigma-liart.vercel.app', description: 'Family task management bot' },
-  { name: 'Kids Activities Asia', href: 'https://kids-activities-asia.vercel.app', description: 'Kid-friendly activities' },
+  { name: 'Luxury Family Travel Asia', href: 'https://luxuryfamilytravelasia.com', description: 'Premium family getaways & 5-star resorts' },
+  { name: 'EV Charging Asia', href: 'https://ev-charging-asia.vercel.app', description: 'EV road trips & charging stations across Asia' },
+  { name: 'Apifeny AI', href: 'https://apifeny-ai.vercel.app', description: 'Curated AI tools & agents directory' },
+  { name: 'Nudge', href: 'https://nudge-sigma-liart.vercel.app', description: 'Voice-powered family task management app' },
+  { name: 'Kids Activities Asia', href: 'https://kids-activities-asia.vercel.app', description: 'Kid-friendly activities & destinations' },
 ];
 
 export default function SiteFooter() {

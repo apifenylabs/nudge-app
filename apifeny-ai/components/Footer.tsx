@@ -60,25 +60,19 @@ export default function Footer() {
               <li>
                 <a href="https://www.familytravelasia.com" target="_blank" rel="noopener noreferrer" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
                   <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
-                  Family Travel Asia
+                  Asia Family Travel Directory
+                </a>
+              </li>
+              <li>
+                <a href="https://luxuryfamilytravelasia.com" target="_blank" rel="noopener noreferrer" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
+                  <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
+                  Luxury Family Travel Asia
                 </a>
               </li>
               <li>
                 <a href="https://ev-charging-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
                   <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
                   EV Charging Asia
-                </a>
-              </li>
-              <li>
-                <a href="https://luxury-family-travel-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
-                  <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
-                  Luxury Family Travel
-                </a>
-              </li>
-              <li>
-                <a href="https://social-beast-two.vercel.app" target="_blank" rel="noopener noreferrer" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
-                  <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
-                  Social Beast
                 </a>
               </li>
               <li>

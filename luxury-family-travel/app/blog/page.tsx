@@ -4,7 +4,7 @@ import { Calendar, Clock, Tag, ArrowRight, Compass, Sparkles } from 'lucide-reac
 import { getAllPosts } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data';
 
-const BASE_URL = 'https://family-travel-directory.vercel.app';
+const BASE_URL = 'https://luxury-family-travel-asia.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Family Travel Blog & Guides | Asia Family Travel Directory',

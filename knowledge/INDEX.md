@@ -13,7 +13,8 @@ This is the central knowledge base for the entire orchestra.
 **Key links**
 - concepts/orchestra-stack-roadmap.md → Paperclip-first roadmap, with Obsidian planned as the knowledge layer after runtime stability
 - concepts/context-compaction-protocol.md → Token-saving and state-compaction rules for long-running orchestration
+- omnimind.md → OmniMind AI memory API — data backbone for all directories & agents
 
 Every new piece of information the agents discover must be added here with proper links.
 
-Last updated: 2026-04-15
+Last updated: 2026-05-13

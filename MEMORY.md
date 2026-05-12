@@ -34,6 +34,19 @@
 - **51 properties in data** — slugs use `bali-001` format, need mapping to descriptive URLs
 - **Live at:** https://luxury-family-travel-asia.vercel.app
 
+### OmniMind — Zero-Knowledge AI Memory API
+- **Phase 1 (Plaintext MVP)**: FastAPI + Qdrant + SQLite/PostgreSQL + React dashboard
+- **Phase 2 Crypto done**: AES-256-GCM, HKDF key derivation, integrity check ✅
+- **Supabase schema**: RUN (omnimind.memories table live)
+- **Qdrant v1.17 fix**: Using query_points() API
+- **24/24 tests passing** ✅
+- **Full CRUD verified**: store, semantic search, list, delete, user isolation
+- **Plugin**: OpenClaw SDK refactored (definePluginEntry)
+- **Deploy**: scripts/deploy.sh (--fly, --railway, --docker)
+- **PRD**: Full venture deck with business model, $1B thesis
+- **Repo**: github.com/apifenylabs/omnimind
+- **Next**: Deploy backend + add Stripe billing
+
 ### Nudge — Premium Family Task Manager
 - **Stripe, pricing, dashboard, blog, auth — all built**
 - **BLOCKED:** Signup schema not run on Supabase project

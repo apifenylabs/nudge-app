@@ -135,12 +135,11 @@ def generate_v4_signals(df, params):
             else:
                 side = "BUY"
             
-            # Trend filter override
-            if use_tf and i >= trend_ma:
+            # Trend filter: only take trades WITH the trend
+            if use_tf and i >= trend_ma and not np.isnan(ma50[i]):
                 trend_up = c > ma50[i]
                 if (side == "BUY" and not trend_up) or (side == "SELL" and trend_up):
-                    continue  # Skip: can't buy in downtrend, can't sell in uptrend
-                    # NOTE: This filter is conservative. For aggressive: skip this check.
+                    continue
             
             entry = c
             atr_v = atr[i]
