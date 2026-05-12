@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import { Zap, ArrowLeft, ArrowRight, Check, X, Minus, Route as RouteIcon, Clock, BatteryCharging, Calendar, AlertTriangle, ArrowUpDown, Star } from 'lucide-react';
+import { Zap, ArrowLeft, ArrowRight, Check, X, Minus, Route as RouteIcon, Clock, BatteryCharging, Calendar, AlertTriangle, ArrowUpDown, Star, Table, List } from 'lucide-react';
 import { getAllItineraries } from '@/data/itineraries';
 import SiteFooter from '@/components/SiteFooter';
 import type { Itinerary } from '@/data/itineraries';
@@ -80,7 +80,7 @@ function getComparison(
     default:
       return { aComp: 'equal', bComp: 'equal' };
   }
-  const isLowerBetter = field !== 'duration'; // More duration days can be better
+  const isLowerBetter = field !== 'duration';
   const aComparedToB = compareValue(aVal, bVal, isLowerBetter);
   const bComparedToA = compareValue(bVal, aVal, isLowerBetter);
 
@@ -106,8 +106,30 @@ function familyRecommendation(a: Itinerary, b: Itinerary): string {
 }
 
 export default function ComparePage() {
-  const [routeA, setRouteA] = useState<string>(allItineraries[0]?.id || '');
-  const [routeB, setRouteB] = useState<string>(allItineraries[1]?.id || '');
+  const [routeA, setRouteA] = useState<string>('');
+  const [routeB, setRouteB] = useState<string>('');
+  const [showOverview, setShowOverview] = useState(false);
+
+  // Read URL params on mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const routeParam = params.get('route');
+    if (routeParam) {
+      const found = allItineraries.find(i => i.slug === routeParam || i.id === routeParam);
+      if (found) {
+        setRouteA(found.id);
+        // Set the second to a different route
+        const others = allItineraries.filter(i => i.id !== found.id);
+        if (others.length > 0) {
+          setRouteB(others[0].id);
+        }
+      }
+    } else {
+      // Default: first two routes
+      setRouteA(allItineraries[0]?.id || '');
+      setRouteB(allItineraries[1]?.id || '');
+    }
+  }, []);
 
   const itineraryA = useMemo(() => allItineraries.find(i => i.id === routeA), [routeA]);
   const itineraryB = useMemo(() => allItineraries.find(i => i.id === routeB), [routeB]);
@@ -148,9 +170,76 @@ export default function ComparePage() {
           <ArrowUpDown size={28} className="text-sky-500" />
           Compare EV Road Trip Routes
         </h1>
-        <p className="text-sm text-gray-600 mb-8">
+        <p className="text-sm text-gray-600 mb-4">
           Pick two itinerary routes to compare total distance, difficulty, family highlights, and luxury options side by side.
         </p>
+
+        {/* Toggle overview table button */}
+        <button
+          onClick={() => setShowOverview(!showOverview)}
+          className="flex items-center gap-1.5 text-xs text-sky-600 hover:text-sky-700 mb-6 font-medium"
+        >
+          {showOverview ? <List size={14} /> : <Table size={14} />}
+          {showOverview ? 'Show side-by-side comparison' : 'Show overview of all 12 routes'}
+        </button>
+
+        {/* All-routes overview table */}
+        {showOverview && (
+          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden mb-8">
+            <div className="px-4 py-3 bg-gradient-to-r from-gray-50 to-white border-b border-gray-100">
+              <h3 className="text-sm font-bold text-gray-900 flex items-center gap-2">
+                <Table size={16} className="text-sky-500" />
+                All {allItineraries.length} Routes at a Glance
+              </h3>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-xs">
+                <thead>
+                  <tr className="border-b border-gray-100 bg-gray-50/50">
+                    <th className="text-left px-3 py-2.5 font-semibold text-gray-500">Route</th>
+                    <th className="px-3 py-2.5 font-semibold text-gray-500 text-center">Country</th>
+                    <th className="px-3 py-2.5 font-semibold text-gray-500 text-center">Duration</th>
+                    <th className="px-3 py-2.5 font-semibold text-gray-500 text-center">Distance</th>
+                    <th className="px-3 py-2.5 font-semibold text-gray-500 text-center">Driving</th>
+                    <th className="px-3 py-2.5 font-semibold text-gray-500 text-center">Difficulty</th>
+                    <th className="px-3 py-2.5 font-semibold text-gray-500 text-center">Charges</th>
+                    <th className="px-3 py-2.5 font-semibold text-gray-500 text-center">Season</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {allItineraries.map((it, i) => (
+                    <tr
+                      key={it.id}
+                      className={`border-b border-gray-50 hover:bg-sky-50/30 transition-colors ${
+                        i % 2 === 0 ? 'bg-white' : 'bg-gray-50/30'
+                      }`}
+                    >
+                      <td className="px-3 py-2.5">
+                        <Link href={`/routes/${it.slug}`} className="font-medium text-gray-900 hover:text-sky-700">
+                          {it.title.split(':')[0] || it.title}
+                        </Link>
+                        <div className="text-[10px] text-gray-400 mt-0.5">{it.cities.slice(0, 3).join(' → ')}</div>
+                      </td>
+                      <td className="px-3 py-2.5 text-center text-gray-600">{it.countries[0]}</td>
+                      <td className="px-3 py-2.5 text-center font-medium text-gray-800">{it.duration}</td>
+                      <td className="px-3 py-2.5 text-center text-gray-700">{it.totalDistanceKm} km</td>
+                      <td className="px-3 py-2.5 text-center text-gray-700">{it.totalDrivingHours}h</td>
+                      <td className="px-3 py-2.5 text-center">
+                        <span className={`inline-block px-1.5 py-0.5 rounded text-[10px] font-semibold ${difficultyColors[it.difficulty] || 'bg-gray-100 text-gray-600'}`}>
+                          {it.difficulty}
+                        </span>
+                      </td>
+                      <td className="px-3 py-2.5 text-center text-gray-700">{it.estimatedChargingStops}+</td>
+                      <td className="px-3 py-2.5 text-center text-[10px] text-gray-500 max-w-[100px] truncate" title={it.bestSeason}>
+                        {it.bestSeason}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
 
         {/* Route selectors */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -163,7 +252,7 @@ export default function ComparePage() {
             >
               <option value="" disabled>Select a route...</option>
               {allItineraries.map(it => (
-                <option key={it.id} value={it.id}>{it.title}</option>
+                <option key={it.id} value={it.id}>{it.title.split(':')[0] || it.title}</option>
               ))}
             </select>
             {itineraryA && (
@@ -181,7 +270,7 @@ export default function ComparePage() {
             >
               <option value="" disabled>Select a route...</option>
               {allItineraries.map(it => (
-                <option key={it.id} value={it.id}>{it.title}</option>
+                <option key={it.id} value={it.id}>{it.title.split(':')[0] || it.title}</option>
               ))}
             </select>
             {itineraryB && (
@@ -198,140 +287,128 @@ export default function ComparePage() {
             <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden mb-8">
               <div className="grid grid-cols-3 border-b border-gray-100 bg-gray-50 px-4 py-3">
                 <div className="text-xs font-semibold text-gray-400 uppercase">Metric</div>
-                <div className="text-xs font-semibold text-gray-400 uppercase text-center">Route A</div>
-                <div className="text-xs font-semibold text-gray-400 uppercase text-center">Route B</div>
-              </div>
-
-              {/* Total distance */}
-              <div className="grid grid-cols-3 border-b border-gray-100 px-4 py-3 hover:bg-gray-50/50">
-                <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
-                  <RouteIcon size={14} className="text-amber-500" /> Total Distance
+                <div className="text-xs font-semibold text-gray-400 uppercase text-center">
+                  <Link href={`/routes/${itineraryA.slug}`} className="hover:text-sky-600">{itineraryA.title.split(':')[0]}</Link>
                 </div>
-                <div className="text-center">
-                  <ComparisonCell value={`${itineraryA.totalDistanceKm} km`} comparison={comparison?.distance.aComp} />
-                </div>
-                <div className="text-center">
-                  <ComparisonCell value={`${itineraryB.totalDistanceKm} km`} comparison={comparison?.distance.bComp} />
+                <div className="text-xs font-semibold text-gray-400 uppercase text-center">
+                  <Link href={`/routes/${itineraryB.slug}`} className="hover:text-sky-600">{itineraryB.title.split(':')[0]}</Link>
                 </div>
               </div>
 
-              {/* Driving time */}
-              <div className="grid grid-cols-3 border-b border-gray-100 px-4 py-3 hover:bg-gray-50/50">
-                <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
-                  <Clock size={14} className="text-sky-500" /> Driving Time
+              {[
+                {
+                  label: 'Total Distance',
+                  icon: <RouteIcon size={14} className="text-amber-500" />,
+                  render: () => (
+                    <>
+                      <ComparisonCell value={`${itineraryA.totalDistanceKm} km`} comparison={comparison?.distance.aComp} />
+                      <ComparisonCell value={`${itineraryB.totalDistanceKm} km`} comparison={comparison?.distance.bComp} />
+                    </>
+                  ),
+                },
+                {
+                  label: 'Driving Time',
+                  icon: <Clock size={14} className="text-sky-500" />,
+                  render: () => (
+                    <>
+                      <ComparisonCell value={`${itineraryA.totalDrivingHours} hours`} comparison={comparison?.drivingTime.aComp} />
+                      <ComparisonCell value={`${itineraryB.totalDrivingHours} hours`} comparison={comparison?.drivingTime.bComp} />
+                    </>
+                  ),
+                },
+                {
+                  label: 'Duration',
+                  icon: <Calendar size={14} className="text-purple-500" />,
+                  render: () => (
+                    <>
+                      <ComparisonCell value={itineraryA.duration} comparison={comparison?.duration.aComp} />
+                      <ComparisonCell value={itineraryB.duration} comparison={comparison?.duration.bComp} />
+                    </>
+                  ),
+                },
+                {
+                  label: 'Difficulty',
+                  icon: <AlertTriangle size={14} className="text-amber-500" />,
+                  render: () => (
+                    <>
+                      <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${difficultyColors[itineraryA.difficulty]}`}>
+                        {itineraryA.difficulty}
+                      </span>
+                      <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${difficultyColors[itineraryB.difficulty]}`}>
+                        {itineraryB.difficulty}
+                      </span>
+                    </>
+                  ),
+                },
+                {
+                  label: 'Charging Stops',
+                  icon: <BatteryCharging size={14} className="text-emerald-500" />,
+                  render: () => (
+                    <>
+                      <ComparisonCell value={`${itineraryA.estimatedChargingStops}+ stops`} comparison={comparison?.chargingStops.aComp} />
+                      <ComparisonCell value={`${itineraryB.estimatedChargingStops}+ stops`} comparison={comparison?.chargingStops.bComp} />
+                    </>
+                  ),
+                },
+                {
+                  label: 'Countries',
+                  icon: <span className="text-sm">🌍</span>,
+                  render: () => (
+                    <>
+                      <div className="text-xs text-gray-700">{itineraryA.countries.join(', ')}</div>
+                      <div className="text-xs text-gray-700">{itineraryB.countries.join(', ')}</div>
+                    </>
+                  ),
+                },
+                {
+                  label: 'Best Season',
+                  icon: <span className="text-sm">🌿</span>,
+                  render: () => (
+                    <>
+                      <div className="text-xs text-gray-700">{itineraryA.bestSeason}</div>
+                      <div className="text-xs text-gray-700">{itineraryB.bestSeason}</div>
+                    </>
+                  ),
+                },
+                {
+                  label: 'Family Highlights',
+                  icon: <span className="text-sm">👨‍👩‍👧‍👦</span>,
+                  render: () => (
+                    <>
+                      <ul className="space-y-0.5 text-[11px] text-gray-600">
+                        {itineraryA.familyHighlights.slice(0, 2).map((h, i) => <li key={i}>{h}</li>)}
+                      </ul>
+                      <ul className="space-y-0.5 text-[11px] text-gray-600">
+                        {itineraryB.familyHighlights.slice(0, 2).map((h, i) => <li key={i}>{h}</li>)}
+                      </ul>
+                    </>
+                  ),
+                },
+              ].map((row, i) => (
+                <div
+                  key={i}
+                  className={`grid grid-cols-3 ${i < 7 ? 'border-b border-gray-100' : ''} px-4 py-3 hover:bg-gray-50/50`}
+                >
+                  <div className="flex items-center gap-2 text-sm font-medium text-gray-900">{row.icon} {row.label}</div>
+                  <div className="text-center">{row.render().props ? row.render() : row.render().props.children[0]}</div>
+                  <div className="text-center">{row.render().props ? row.render().props.children[1] : null}</div>
                 </div>
-                <div className="text-center">
-                  <ComparisonCell value={`${itineraryA.totalDrivingHours} hours`} comparison={comparison?.drivingTime.aComp} />
-                </div>
-                <div className="text-center">
-                  <ComparisonCell value={`${itineraryB.totalDrivingHours} hours`} comparison={comparison?.drivingTime.bComp} />
-                </div>
-              </div>
-
-              {/* Duration */}
-              <div className="grid grid-cols-3 border-b border-gray-100 px-4 py-3 hover:bg-gray-50/50">
-                <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
-                  <Calendar size={14} className="text-purple-500" /> Duration
-                </div>
-                <div className="text-center">
-                  <ComparisonCell value={itineraryA.duration} comparison={comparison?.duration.aComp} />
-                </div>
-                <div className="text-center">
-                  <ComparisonCell value={itineraryB.duration} comparison={comparison?.duration.bComp} />
-                </div>
-              </div>
-
-              {/* Difficulty */}
-              <div className="grid grid-cols-3 border-b border-gray-100 px-4 py-3 hover:bg-gray-50/50">
-                <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
-                  <AlertTriangle size={14} className="text-amber-500" /> Difficulty
-                </div>
-                <div className="text-center">
-                  <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${difficultyColors[itineraryA.difficulty]}`}>
-                    {itineraryA.difficulty}
-                  </span>
-                </div>
-                <div className="text-center">
-                  <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${difficultyColors[itineraryB.difficulty]}`}>
-                    {itineraryB.difficulty}
-                  </span>
-                </div>
-              </div>
-
-              {/* Charging stops */}
-              <div className="grid grid-cols-3 border-b border-gray-100 px-4 py-3 hover:bg-gray-50/50">
-                <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
-                  <BatteryCharging size={14} className="text-emerald-500" /> Charging Stops
-                </div>
-                <div className="text-center">
-                  <ComparisonCell value={`${itineraryA.estimatedChargingStops}+ stops`} comparison={comparison?.chargingStops.aComp} />
-                </div>
-                <div className="text-center">
-                  <ComparisonCell value={`${itineraryB.estimatedChargingStops}+ stops`} comparison={comparison?.chargingStops.bComp} />
-                </div>
-              </div>
-
-              {/* Countries */}
-              <div className="grid grid-cols-3 border-b border-gray-100 px-4 py-3 hover:bg-gray-50/50">
-                <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
-                  🌍 Countries
-                </div>
-                <div className="text-center text-sm text-gray-700">
-                  {itineraryA.countries.join(', ')}
-                </div>
-                <div className="text-center text-sm text-gray-700">
-                  {itineraryB.countries.join(', ')}
-                </div>
-              </div>
-
-              {/* Best season */}
-              <div className="grid grid-cols-3 border-b border-gray-100 px-4 py-3 hover:bg-gray-50/50">
-                <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
-                  🌿 Best Season
-                </div>
-                <div className="text-center text-xs text-gray-700">
-                  {itineraryA.bestSeason}
-                </div>
-                <div className="text-center text-xs text-gray-700">
-                  {itineraryB.bestSeason}
-                </div>
-              </div>
-
-              {/* Family highlights */}
-              <div className="grid grid-cols-3 border-b border-gray-100 px-4 py-3 hover:bg-gray-50/50">
-                <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
-                  👨‍👩‍👧‍👦 Family Highlights
-                </div>
-                <div className="text-center">
-                  <ul className="space-y-1">
-                    {itineraryA.familyHighlights.slice(0, 3).map((h, i) => (
-                      <li key={i} className="text-[11px] text-gray-600">{h}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <ul className="space-y-1">
-                    {itineraryB.familyHighlights.slice(0, 3).map((h, i) => (
-                      <li key={i} className="text-[11px] text-gray-600">{h}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              ))}
 
               {/* Luxury highlights */}
               <div className="grid grid-cols-3 border-b border-gray-100 px-4 py-3 hover:bg-gray-50/50">
                 <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
-                  👑 Luxury Highlights
+                  <span className="text-sm">👑</span> Luxury Highlights
                 </div>
                 <div className="text-center">
-                  <ul className="space-y-1">
+                  <ul className="space-y-0.5">
                     {itineraryA.luxuryHighlights.slice(0, 2).map((h, i) => (
                       <li key={i} className="text-[11px] text-gray-600 italic">{h}</li>
                     ))}
                   </ul>
                 </div>
                 <div className="text-center">
-                  <ul className="space-y-1">
+                  <ul className="space-y-0.5">
                     {itineraryB.luxuryHighlights.slice(0, 2).map((h, i) => (
                       <li key={i} className="text-[11px] text-gray-600 italic">{h}</li>
                     ))}
@@ -339,7 +416,7 @@ export default function ComparePage() {
                 </div>
               </div>
 
-              {/* Route cities */}
+              {/* Route stops */}
               <div className="grid grid-cols-3 border-b border-gray-100 px-4 py-3 hover:bg-gray-50/50">
                 <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
                   <ArrowRight size={14} className="text-red-400" /> Route Stops
@@ -353,7 +430,7 @@ export default function ComparePage() {
               </div>
 
               {/* Tags */}
-              <div className="grid grid-cols-3 px-4 py-3 hover:bg-gray-50/50">
+              <div className="grid grid-cols-3 px-4 py-3 hover:bg-gray-50/50 rounded-b-2xl">
                 <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
                   <Star size={14} className="text-amber-400" /> Tags
                 </div>

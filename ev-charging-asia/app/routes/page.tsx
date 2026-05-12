@@ -4,14 +4,29 @@ import { Zap, Route as RouteIcon } from 'lucide-react';
 import { getAllItineraries } from '@/data/itineraries';
 import SiteFooter from '@/components/SiteFooter';
 import ItineraryCard from '@/components/itineraries/ItineraryCard';
+import RouteFilterBar from '@/components/itineraries/RouteFilterBar';
 
 export const metadata: Metadata = {
   title: 'Family EV Road Trip Itineraries — EV Charging Asia',
-  description: 'Curated family-friendly EV road trip routes across Asia. Bangkok to Phuket, Singapore to KL, Bali Loop, and more. Complete with charging stops, luxury hotels, and family activities.',
+  description: 'Curated family-friendly EV road trip routes across Asia. Bangkok to Phuket, Singapore to KL, Bali Loop, Japan, India, and more. Complete with charging stops, luxury hotels, family activities.',
+  alternates: {
+    canonical: 'https://ev-charging-asia.vercel.app/routes',
+  },
   openGraph: {
     title: 'Family EV Road Trip Itineraries — EV Charging Asia',
     description: 'Curated family-friendly EV road trip routes across Asia. Complete with charging stops, luxury hotels, and family activities.',
     url: 'https://ev-charging-asia.vercel.app/routes',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'EV Charging Asia',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Family EV Road Trip Itineraries — EV Charging Asia',
+    description: 'Curated family-friendly EV road trip routes across Asia. Complete with charging stops, luxury hotels.',
+  },
+  other: {
+    'keywords': 'EV road trip Asia, family EV road trip, electric vehicle road trip, Bangkok to Phuket EV, Singapore to KL EV, Bali EV road trip, Japan EV road trip, EV charging route Asia, family road trip EV, luxury EV road trip Asia',
   },
 };
 
@@ -64,19 +79,8 @@ export default function RoutesPage() {
           </div>
         </div>
 
-        {allItineraries.length === 0 ? (
-          <div className="text-center py-16 bg-white rounded-xl border border-gray-200">
-            <RouteIcon size={40} className="mx-auto text-gray-300 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-900 mb-1">No itineraries yet</h3>
-            <p className="text-gray-500 text-sm">Check back soon — we&apos;re adding new routes every week.</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allItineraries.map(itinerary => (
-              <ItineraryCard key={itinerary.id} itinerary={itinerary} />
-            ))}
-          </div>
-        )}
+        {/* Route filter bar */}
+        <RouteFilterBar allItineraries={allItineraries} />
 
         {/* Tools section */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -90,15 +94,16 @@ export default function RoutesPage() {
             </p>
             <div className="mt-3 text-sm font-medium text-sky-600">Try it now →</div>
           </Link>
-          <div className="bg-white rounded-2xl border border-gray-200 p-6">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">📅 Seasonal Info</h3>
+          <Link
+            href="/compare"
+            className="block bg-white rounded-2xl border border-gray-200 p-6 hover:border-sky-300 hover:shadow-sm transition-all"
+          >
+            <h3 className="text-lg font-bold text-gray-900 mb-2">📊 All 12 Routes Comparison</h3>
             <p className="text-sm text-gray-500">
-              Check month-by-month recommendations, weather tips, and packing lists on each route&apos;s detail page.
+              See the full table of all EV road trips with distance, difficulty, duration, countries, and charging stops side by side.
             </p>
-            <div className="mt-3 text-sm text-gray-400">
-              View weather guidance on any route page
-            </div>
-          </div>
+            <div className="mt-3 text-sm font-medium text-sky-600">Full comparison →</div>
+          </Link>
         </div>
       </div>
 

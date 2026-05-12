@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { Zap, ArrowLeft, Route, Clock, BatteryCharging, Calendar, MapPin, AlertTriangle } from 'lucide-react';
+import { Zap, ArrowLeft, Route, Clock, BatteryCharging, Calendar, MapPin, AlertTriangle, ExternalLink, Download } from 'lucide-react';
 import { getAllItineraries, getItineraryBySlug, getRelatedItineraries } from '@/data/itineraries';
 import RouteMap from '@/components/itineraries/RouteMap';
 import SiteFooter from '@/components/SiteFooter';
@@ -9,6 +9,9 @@ import ItineraryDaysTimeline from '@/components/itineraries/ItineraryDaysTimelin
 import ItineraryAffiliateCTA from '@/components/itineraries/ItineraryAffiliateCTA';
 import ItineraryCard from '@/components/itineraries/ItineraryCard';
 import SeasonalRecommendations from '@/components/itineraries/SeasonalRecommendations';
+import SeasonalComparisonTable from '@/components/itineraries/SeasonalComparisonTable';
+import ItinerarySEOSection from '@/components/itineraries/ItinerarySEOSection';
+import PrintButton from '@/components/itineraries/PrintButton';
 
 interface Props {
   params: { slug: string };
@@ -23,12 +26,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const it = getItineraryBySlug(params.slug);
   if (!it) return { title: 'Route Not Found' };
   return {
-    title: `${it.title} — Family EV Road Trip in ${it.countries.join(' & ')}`,
+    title: `${it.title} — Family EV Road Trip ${it.countries.length > 0 ? `in ${it.countries.join(' & ')}` : 'Across Asia'}`,
     description: it.description.slice(0, 160),
+    alternates: {
+      canonical: `https://ev-charging-asia.vercel.app/routes/${it.slug}`,
+    },
     openGraph: {
       title: `${it.title} | EV Charging Asia`,
       description: it.description.slice(0, 160),
       url: `https://ev-charging-asia.vercel.app/routes/${it.slug}`,
+      type: 'article',
+      locale: 'en_US',
+      siteName: 'EV Charging Asia',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${it.title} | EV Charging Asia`,
+      description: it.description.slice(0, 160),
+    },
+    other: {
+      'keywords': [
+        ...it.countries.map(c => `${c} EV road trip`),
+        ...it.cities.map(c => `${c} EV charging`),
+        `${it.difficulty} road trip`,
+        'family EV road trip Asia',
+        'electric vehicle road trip Asia',
+        'EV charging route',
+        ...it.cities.slice(0, 2).map(c => `${c} to ${it.cities[it.cities.length - 1]} EV`),
+      ].join(', '),
     },
   };
 }
@@ -255,15 +280,69 @@ export default function ItineraryDetailPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Seasonal Recommendations */}
-        <div className="mb-8">
+        {/* Seasonal Recommendations + Comparison Table */}
+        <div className="mb-8 space-y-4">
           <SeasonalRecommendations bestSeason={it.bestSeason} countries={it.countries} />
+          <SeasonalComparisonTable bestSeason={it.bestSeason} countries={it.countries} />
         </div>
 
         {/* Day-by-day itinerary */}
         <div className="mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">📅 Day-by-Day Itinerary</h2>
           <ItineraryDaysTimeline days={it.days} />
+        </div>
+
+        {/* Print-friendly summary section */}
+        <div className="mb-8 bg-gradient-to-r from-gray-50 to-white rounded-2xl border border-gray-200 p-4 md:p-5 print-section">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-base font-bold text-gray-900 flex items-center gap-2">
+              <Download size={16} className="text-gray-500" />
+              Quick Summary — {it.title}
+            </h2>
+            <PrintButton />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+            <div className="bg-white rounded-lg p-2.5 border border-gray-100">
+              <span className="text-gray-400">Distance</span>
+              <div className="font-bold text-gray-900">{it.totalDistanceKm} km</div>
+            </div>
+            <div className="bg-white rounded-lg p-2.5 border border-gray-100">
+              <span className="text-gray-400">Duration</span>
+              <div className="font-bold text-gray-900">{it.duration}</div>
+            </div>
+            <div className="bg-white rounded-lg p-2.5 border border-gray-100">
+              <span className="text-gray-400">Driving</span>
+              <div className="font-bold text-gray-900">{it.totalDrivingHours}h</div>
+            </div>
+            <div className="bg-white rounded-lg p-2.5 border border-gray-100">
+              <span className="text-gray-400">Difficulty</span>
+              <div className="font-bold text-gray-900 capitalize">{it.difficulty}</div>
+            </div>
+          </div>
+          <div className="mt-2 text-xs text-gray-500">
+            Route: {it.cities.join(' → ')}
+          </div>
+        </div>
+
+        {/* SEO FAQ section */}
+        <div className="mb-8">
+          <ItinerarySEOSection itinerary={it} />
+        </div>
+
+        {/* Compare route CTA */}
+        <div className="mb-8">
+          <Link
+            href={`/compare?route=${it.slug}`}
+            className="block bg-gradient-to-r from-sky-50 to-indigo-50 border border-sky-200 rounded-2xl p-5 hover:border-sky-300 hover:shadow-sm transition-all group"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-base font-bold text-gray-900 mb-1">🔄 Compare This Route</h3>
+                <p className="text-xs text-gray-600">See how {it.title.split(':')[0] || 'this route'} stacks up against other EV road trips in Asia.</p>
+              </div>
+              <ExternalLink size={18} className="text-sky-500 group-hover:translate-x-0.5 transition-transform shrink-0" />
+            </div>
+          </Link>
         </div>
 
         {/* Affiliate CTA repeated at bottom */}
