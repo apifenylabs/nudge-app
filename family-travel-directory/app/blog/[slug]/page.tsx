@@ -191,18 +191,25 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
 
   const relatedPosts = getRelatedPosts(slug, 3);
 
-  const jsonLd = {
+  const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
     "description": post.excerpt,
+    "image": `${BASE_URL}/og-image.jpg`,
     "author": {
       "@type": "Person",
       "name": post.author
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Asia Family Travel Directory"
+      "name": "Asia Family Travel Directory",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${BASE_URL}/og-image.jpg`,
+        "width": 1200,
+        "height": 630
+      }
     },
     "datePublished": post.date,
     "dateModified": post.date,
@@ -235,6 +242,14 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
+
+      {/* FAQ Schema — rendered if the post has FAQ data */}
+      {'faqSchema' in post && post.faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(post.faqSchema) }}
+        />
+      )}
 
       {/* ─── NAV ─── */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm">

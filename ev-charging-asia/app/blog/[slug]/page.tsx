@@ -23,14 +23,77 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+const BASE_URL = 'https://ev-charging-asia.vercel.app';
+
 export default function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
   const related = getRelatedPosts(params.slug, 2);
 
+  const jsonLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": `${BASE_URL}/og-image.jpg`,
+    "author": {
+      "@type": "Person",
+      "name": post.author || 'EV Charging Asia'
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EV Charging Asia",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${BASE_URL}/og-image.jpg`,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${BASE_URL}/blog/${params.slug}`
+    },
+    "keywords": (post.tags || []).join(', '),
+    "wordCount": (post.content || '').split(/\s+/).length,
+    "timeRequired": post.readingTime
+  };
+
+  const jsonLdBreadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${BASE_URL}/blog` },
+      { "@type": "ListItem", "position": 3, "name": post.title, "item": `${BASE_URL}/blog/${params.slug}` }
+    ]
+  };
+
+  const faqSchema = 'faqSchema' in post ? post.faqSchema : null;
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
+      {jsonLdBreadcrumb && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+        />
+      )}
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
