@@ -112,9 +112,10 @@
   display: none;
 }
 
-/* ========================================== */
-/* Color scheme (sage green)                  */
-/* ========================================== */
+/* ===================================================================== */
+/* Vibe Engine — Phase 2 Brand Identity                                  */
+/* Bold accent colors from vibe-coding content, dark/light mode ready     */
+/* ===================================================================== */
 :root {
   --background: #FAFAFA;
   --foreground: #0A0A0A;
@@ -129,6 +130,15 @@
   --radius-default: 0.75rem;
   --radius-card: 1rem;
   --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Vibe Engine accent palette — bold, modern, instantly recognizable */
+  --vibe-teal: #0D9488;
+  --vibe-coral: #F43F5E;
+  --vibe-amber: #F59E0B;
+  --vibe-plum: #7C3AED;
+  --vibe-sky: #0284C7;
+  --vibe-accent: #F43F5E;  /* Primary accent — pops against sage green */
+  --vibe-subtle: #FEF2F2;
 }
 
 body {
@@ -235,23 +245,59 @@ html {
 .animate-premium-glow { animation: premium-glow 2s ease-in-out infinite; }
 .animate-count-up { animation: count-up 0.5s ease-out forwards; }
 
-/* Cross-site contextual links */
+/* Cross-site contextual links — Vibe Engine style */
 .cross-site-link {
   display: inline-block;
   margin: 0.75rem 0;
   padding: 0.75rem 1rem;
-  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
-  border: 1px solid #bbf7d0;
+  background: linear-gradient(135deg, #FEF2F2 0%, #FFE4E6 100%);
+  border: 1px solid #FECDD3;
   border-radius: 8px;
   font-size: 0.925rem;
   line-height: 1.5;
-  color: #166534;
+  color: #BE123C;
   text-decoration: none;
   transition: all 0.2s ease;
+  font-weight: 500;
 }
 .cross-site-link:hover {
-  background: linear-gradient(135deg, #dcfce7 0%, #d1fae5 100%);
-  border-color: #86efac;
-  color: #14532d;
-  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.12);
+  background: linear-gradient(135deg, #FFE4E6 0%, #FECDD3 100%);
+  border-color: #FB7185;
+  color: #9F1239;
+  box-shadow: 0 2px 8px rgba(244, 63, 94, 0.15);
+}
+
+/* Vibe Engine brand badge */
+.vibe-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, var(--vibe-coral), var(--vibe-plum));
+  color: white;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(244, 63, 94, 0.25);
+}
+
+/* Vibe Engine comparison badge (for tables) */
+.vibe-compare {
+  border-left: 3px solid var(--vibe-accent);
+  padding-left: 0.75rem;
+}
+
+/* Mobile-first: larger tap targets */
+@media (max-width: 640px) {
+  .vibe-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .vibe-card-touch {
+    padding: 1rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    border-radius: 0.75rem;
+  }
 }

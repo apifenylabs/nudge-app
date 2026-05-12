@@ -105,11 +105,13 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Asia Family Travel Directory",
               "url": "https://familytravelasia.com",
-              "description": "29+ family-friendly destinations across Asia. Honest tips, real parent stories, and practical advice for traveling with kids.",
+              "description": "29+ family-friendly destinations across Asia. Honest tips, real parent stories, and practical advice for traveling with kids — curated by Vibe Engine.",
               "sameAs": [],
             }),
           }}
         />
+        {/* Mobile-first viewport */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
       </head>
       <body className="min-h-full bg-surface text-body pb-safe pt-safe font-body">
         {children}

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { ExternalLink, DollarSign, Tag, Search, Globe, TrendingUp, ChevronRight, Zap, Clock, Shield, CheckCircle, Sparkles, Star, BadgeCheck } from 'lucide-react';
 
@@ -25,19 +26,22 @@ interface PriceComparisonWidgetProps {
   revenue_engine?: RevenueEngine | null;
 }
 
-// ─── URL Builders ───────────────────────────────────────────────
-const AFFILIATE_ID = 'PLACEHOLDER_AFFILIATE_ID';
+// ─── Affiliate IDs from Env Vars ──────────────────────────────
+// Set KLOOK_AFFILIATE_ID and VIATOR_AFFILIATE_ID in Vercel env vars
+// Falls back to hardcoded defaults for local dev
+const KLOOK_AFFILIATE_ID = process.env.NEXT_PUBLIC_KLOOK_AFFILIATE_ID || '38VWJMX';
+const VIATOR_AFFILIATE_ID = process.env.NEXT_PUBLIC_VIATOR_AFFILIATE_ID || '455806';
 
 function klookUrl(name: string, city: string, productId?: string | null): string {
   const query = encodeURIComponent(`${name} ${city}`);
-  if (productId) return `https://www.klook.com/activity/${productId}/?aid=${AFFILIATE_ID}`;
-  return `https://www.klook.com/search/?keyword=${query}&aid=${AFFILIATE_ID}`;
+  if (productId) return `https://www.klook.com/activity/${productId}/?aid=${KLOOK_AFFILIATE_ID}`;
+  return `https://www.klook.com/search/?keyword=${query}&aid=${KLOOK_AFFILIATE_ID}`;
 }
 
 function viatorUrl(name: string, city: string, productId?: string | null): string {
   const query = encodeURIComponent(`${name} ${city}`);
-  if (productId) return `https://www.viator.com/tours/${productId}?pid=${AFFILIATE_ID}`;
-  return `https://www.viator.com/searchResults/all?text=${query}&pid=${AFFILIATE_ID}`;
+  if (productId) return `https://www.viator.com/tours/${productId}?pid=${VIATOR_AFFILIATE_ID}`;
+  return `https://www.viator.com/searchResults/all?text=${query}&pid=${VIATOR_AFFILIATE_ID}`;
 }
 
 function buildDeepLinks(name: string, city: string, re?: RevenueEngine | null): DeepLinkInfo {
@@ -232,4 +236,4 @@ export default function PriceComparisonWidget({ name, city, revenue_engine }: Pr
   );
 }
 
-import Link from 'next/link';
+
