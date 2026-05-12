@@ -4,8 +4,8 @@
 Every wake produces measurable output. No exceptions.
 
 ## Cursor Position
-lastWake: 2026-05-08T01:59+08:00
-lastOutput: [BUILD] 5 high-intent blog posts merged + 6 cross-site links injected (complete)
+lastWake: 2026-05-12T23:02+08:00
+lastOutput: [BUILD] 5 EV blog posts + 3 custom 404 pages + orphaned file cleanup + build fixes
 
 ## Zero-Excuse Build Queue
 ✅ P2 IMPROVE — Cross-site linking (65 links injected across 3 sites)
@@ -31,6 +31,27 @@ lastOutput: [BUILD] 5 high-intent blog posts merged + 6 cross-site links injecte
 - **EV Charging Asia (20 posts)**: 18 links to Family Travel Asia + Luxury Family Travel ✅
 - **Luxury Family Travel (29 posts)**: 27 links to Family Travel Asia + EV Charging Asia ✅
 - **Total: 65 contextual cross-site links** — passing PageRank through portfolio
+
+## Completed This Wake (23:02-23:16 HKT, May 12, 2026)
+
+### 🎯 5 EV Charging Blog Posts Generated ✅
+Sub-agent created 4, one hand-written after crash:
+1. "Top 5 EVs for Family Road Trips in Asia 2026" (3,021 words)
+2. "Best EV Charging Apps for Asia: Which Ones Actually Work [2026]" (2,743 words)
+3. "Hong Kong to Guangzhou EV Road Trip Guide: Cross-Border Charging" (2,741 words)
+4. "Philippines EV Charging Guide 2026: Manila to Baguio" (2,741 words)
+5. "Cost Analysis: EV vs Petrol Car for Family Travel in Thailand 2026" (2,685 words)
+Total: ~14,000 words of SEO content. EV blog post count: 20 → 25 (+25%)
+
+### 🎯 Custom 404 Pages for 3 Sites ✅
+- family-travel-directory: Created `app/not-found.tsx` with sister site cross-links
+- luxury-family-travel: Created `app/not-found.tsx` with sister site cross-links
+- apifeny-ai: Created `app/not-found.tsx` with sister site cross-links
+All build verified.
+
+### 🎯 Build Fixes ✅
+- Removed orphaned `lib/new-posts.ts` (unterminated template literal breaking family-travel build)
+- All 4 sites build clean: family-travel ✅ luxury ✅ ev-charging ✅ apifeny ✅
 
 **CSS styling added:** Green-themed `.cross-site-link` card component added to all 3 sites' `globals.css` for attractive in-article link presentation.
 
