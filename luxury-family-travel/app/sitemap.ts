@@ -2,6 +2,11 @@ import type { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+interface BlogPost {
+  slug: string;
+  date: string;
+}
+
 const BASE_URL = 'https://luxuryfamilytravelasia.com';
 
 interface Destination {
@@ -30,6 +35,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const filePath = path.join(process.cwd(), 'public', 'data', 'destinations.json');
   const raw = fs.readFileSync(filePath, 'utf-8');
   const destinations: Destination[] = JSON.parse(raw);
+
+  // Read blog posts from data/blog/*.json
+  let blogPosts: BlogPost[] = [];
+  try {
+    const blogDir = path.join(process.cwd(), 'data', 'blog');
+    const blogFiles = fs.readdirSync(blogDir).filter(f => f.endsWith('.json') && !f.endsWith('.raw'));
+    for (const bf of blogFiles) {
+      const rawPost = fs.readFileSync(path.join(blogDir, bf), 'utf-8');
+      const post = JSON.parse(rawPost);
+      if (post.slug) {
+        blogPosts.push({ slug: post.slug, date: post.date || new Date().toISOString() });
+      }
+    }
+  } catch (e) {
+    console.warn('Could not read blog posts for sitemap:', e);
+  }
 
   // Collect unique cities from actual data
   const seenCities = new Set<string>();
@@ -67,6 +88,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.5,
     },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/top10`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/compare`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.4,
+    },
   ];
 
   // City pages — dynamically generated from actual data only
@@ -93,10 +138,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // Blog post pages
+  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => {
+    let lastMod = new Date(post.date);
+    if (isNaN(lastMod.getTime())) lastMod = new Date();
+    return {
+      url: `${BASE_URL}/blog/${post.slug}`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    };
+  });
+
   return [
     ...staticEntries,
     ...cityEntries,
     ...destinationEntries,
     ...categoryEntries,
+    ...blogEntries,
   ];
 }
