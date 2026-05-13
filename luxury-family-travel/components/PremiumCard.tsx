@@ -5,6 +5,7 @@ import { Crown, Star, MapPin } from 'lucide-react';
 
 interface PremiumCardProps {
   id: string;
+  slug?: string;
   name: string;
   city: string;
   country: string;
@@ -22,7 +23,7 @@ interface PremiumCardProps {
 const priceDots = (price: string) => price.replace(/[^$]/g, '').length || 1;
 
 export default function PremiumCard({
-  id, name, city, country, category, description, imageUrl,
+  id, slug, name, city, country, category, description, imageUrl,
   priceRange, safetyRating, popularity, rank, badgeText, badgeGradient,
 }: PremiumCardProps) {
   const pdots = priceDots(priceRange);
@@ -30,7 +31,7 @@ export default function PremiumCard({
 
   return (
     <Link
-      href={`/destination/${id}`}
+      href={`/destination/${slug || id}`}
       className="group relative block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gold/10"
     >
       {/* Rank badge */}

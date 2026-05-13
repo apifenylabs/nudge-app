@@ -105,6 +105,14 @@ export default function SiteFooter() {
             </span>
           </div>
         </div>
+
+        {/* Affiliate Disclosure */}
+        <div className="mb-6 text-center">
+          <p className="text-[10px] text-gray-500">
+            Some links on this site are affiliate links. We may earn a commission at no extra cost to you.
+            As a Klook and Booking.com partner, we may earn from qualifying bookings.
+          </p>
+        </div>
       </div>
     </footer>
   );

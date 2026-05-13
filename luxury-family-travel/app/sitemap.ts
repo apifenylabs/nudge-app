@@ -11,6 +11,7 @@ const BASE_URL = 'https://luxuryfamilytravelasia.com';
 
 interface Destination {
   id: string;
+  slug?: string;
   name: string;
   city: string;
   country: string;
@@ -122,9 +123,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Individual destination pages
+  // Individual destination pages — use clean slug for SEO-friendly URLs
   const destinationEntries: MetadataRoute.Sitemap = destinations.map((dest) => ({
-    url: `${BASE_URL}/destination/${dest.id}`,
+    url: `${BASE_URL}/destination/${dest.slug || dest.id}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.7,

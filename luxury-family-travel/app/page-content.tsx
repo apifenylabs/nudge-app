@@ -20,6 +20,7 @@ import { computeSimpleScore } from '@/lib/scoring';
 // ─── Types ──────────────────────────────────────────────────────
 interface Destination {
   id: string;
+  slug?: string;
   name: string;
   city: string;
   country: string;
@@ -514,6 +515,7 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
                 <div className="transition-transform duration-200 hover:-translate-y-1">
                   <DestinationCard
                     id={dest.id}
+                    slug={dest.slug}
                     name={dest.name}
                     city={dest.city}
                     country={dest.country}
@@ -605,6 +607,7 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
                   <div className="transition-transform duration-200 hover:-translate-y-1">
                     <DestinationCard
                       id={dest.id}
+                      slug={dest.slug}
                       name={dest.name}
                       city={dest.city}
                       country={dest.country}
@@ -646,6 +649,7 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
                   <div className="relative transition-transform duration-200 hover:-translate-y-1">
                     <DestinationCard
                       id={dest.id}
+                      slug={dest.slug}
                       name={dest.name}
                       city={dest.city}
                       country={dest.country}
@@ -738,6 +742,7 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
                       <div className="transition-transform duration-200 hover:-translate-y-1">
                         <DestinationCard
                           id={dest.id}
+                          slug={dest.slug}
                           name={dest.name}
                           city={dest.city}
                           country={dest.country}

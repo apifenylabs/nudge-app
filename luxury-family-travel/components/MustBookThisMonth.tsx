@@ -5,6 +5,7 @@ import PremiumCard from './PremiumCard';
 
 interface MustBookDestination {
   id: string;
+  slug?: string;
   name: string;
   city: string;
   country: string;
@@ -71,6 +72,7 @@ export default function MustBookThisMonth({ destinations, month }: MustBookThisM
                 <div className="relative">
                   <PremiumCard
                     id={dest.id}
+                    slug={dest.slug}
                     name={dest.name}
                     city={dest.city}
                     country={dest.country}
@@ -97,6 +99,7 @@ export default function MustBookThisMonth({ destinations, month }: MustBookThisM
             ) : (
               <PremiumCard
                 id={dest.id}
+                slug={dest.slug}
                 name={dest.name}
                 city={dest.city}
                 country={dest.country}
@@ -121,6 +124,7 @@ export default function MustBookThisMonth({ destinations, month }: MustBookThisM
             <div key={dest.id} className="premium-fade-in" style={{ animationDelay: `${(i + 3) * 80}ms` }}>
               <PremiumCard
                 id={dest.id}
+                slug={dest.slug}
                 name={dest.name}
                 city={dest.city}
                 country={dest.country}

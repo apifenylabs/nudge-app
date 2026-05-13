@@ -58,8 +58,16 @@ export default function SiteFooter() {
           </div>
         </div>
 
+        {/* Affiliate Disclosure */}
+        <div className="mb-6 text-center">
+          <p className="text-[10px] text-sand-300">
+            Some links on this site are affiliate links. We may earn a commission at no extra cost to you.
+            As a Klook and Booking.com partner, we may earn from qualifying bookings.
+          </p>
+        </div>
+
         {/* Bottom bar */}
-        <div className="mt-6 md:mt-8 pt-6 border-t border-sand-200/30 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-6 border-t border-sand-200/30 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-sand-300">
             &copy; {new Date().getFullYear()} Family Travel Directory. All rights reserved.
           </p>

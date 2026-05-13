@@ -6,6 +6,7 @@ import PremiumCard from './PremiumCard';
 
 interface TrendingDestination {
   id: string;
+  slug?: string;
   name: string;
   city: string;
   country: string;
@@ -95,6 +96,7 @@ export default function TrendingNow({ destinations }: TrendingNowProps) {
               <div key={dest.id} className="w-[280px] shrink-0 snap-start premium-fade-in" style={{ animationDelay: `${i * 80}ms` }}>
                 <PremiumCard
                   id={dest.id}
+                  slug={dest.slug}
                   name={dest.name}
                   city={dest.city}
                   country={dest.country}

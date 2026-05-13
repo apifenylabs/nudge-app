@@ -41,7 +41,8 @@
       "family travel Bali",
       "Bali with kids",
       "family-friendly Bali"
-    ]
+    ],
+    "slug": "bali-family-park-1"
   },
   {
     "id": "bali-new-2",
@@ -85,7 +86,8 @@
       "family travel Bali",
       "Bali with kids",
       "family-friendly Bali"
-    ]
+    ],
+    "slug": "bali-family-beach-2"
   },
   {
     "id": "bali-new-3",
@@ -129,7 +131,8 @@
       "family travel Bali",
       "Bali with kids",
       "family-friendly Bali"
-    ]
+    ],
+    "slug": "bali-family-museum-3"
   },
   {
     "id": "bali-new-4",
@@ -173,7 +176,8 @@
       "family travel Bali",
       "Bali with kids",
       "family-friendly Bali"
-    ]
+    ],
+    "slug": "bali-family-beach-4"
   },
   {
     "id": "bali-new-5",
@@ -217,7 +221,8 @@
       "family travel Bali",
       "Bali with kids",
       "family-friendly Bali"
-    ]
+    ],
+    "slug": "bali-family-cultural-5"
   },
   {
     "id": "hong-kong-new-1",
@@ -261,7 +266,8 @@
       "family travel Hong Kong",
       "Hong Kong with kids",
       "family-friendly Hong Kong"
-    ]
+    ],
+    "slug": "hong-kong-family-restaurant-1"
   },
   {
     "id": "hong-kong-new-2",
@@ -305,7 +311,8 @@
       "family travel Hong Kong",
       "Hong Kong with kids",
       "family-friendly Hong Kong"
-    ]
+    ],
+    "slug": "hong-kong-family-beach-2"
   },
   {
     "id": "hong-kong-new-3",
@@ -349,7 +356,8 @@
       "family travel Hong Kong",
       "Hong Kong with kids",
       "family-friendly Hong Kong"
-    ]
+    ],
+    "slug": "hong-kong-family-cultural-3"
   },
   {
     "id": "hong-kong-new-4",
@@ -393,7 +401,8 @@
       "family travel Hong Kong",
       "Hong Kong with kids",
       "family-friendly Hong Kong"
-    ]
+    ],
+    "slug": "hong-kong-family-restaurant-4"
   },
   {
     "id": "hong-kong-new-5",
@@ -437,7 +446,8 @@
       "family travel Hong Kong",
       "Hong Kong with kids",
       "family-friendly Hong Kong"
-    ]
+    ],
+    "slug": "hong-kong-family-cultural-5"
   },
   {
     "id": "seoul-new-1",
@@ -481,7 +491,8 @@
       "family travel Seoul",
       "Seoul with kids",
       "family-friendly Seoul"
-    ]
+    ],
+    "slug": "seoul-family-cultural-1"
   },
   {
     "id": "seoul-new-2",
@@ -525,7 +536,8 @@
       "family travel Seoul",
       "Seoul with kids",
       "family-friendly Seoul"
-    ]
+    ],
+    "slug": "seoul-family-shopping-2"
   },
   {
     "id": "seoul-new-3",
@@ -569,7 +581,8 @@
       "family travel Seoul",
       "Seoul with kids",
       "family-friendly Seoul"
-    ]
+    ],
+    "slug": "seoul-family-park-3"
   },
   {
     "id": "seoul-new-4",
@@ -613,7 +626,8 @@
       "family travel Seoul",
       "Seoul with kids",
       "family-friendly Seoul"
-    ]
+    ],
+    "slug": "seoul-family-beach-4"
   },
   {
     "id": "seoul-new-5",
@@ -657,7 +671,8 @@
       "family travel Seoul",
       "Seoul with kids",
       "family-friendly Seoul"
-    ]
+    ],
+    "slug": "seoul-family-shopping-5"
   },
   {
     "id": "singapore-new-1",
@@ -701,7 +716,8 @@
       "family travel Singapore",
       "Singapore with kids",
       "family-friendly Singapore"
-    ]
+    ],
+    "slug": "singapore-family-shopping-1"
   },
   {
     "id": "singapore-new-2",
@@ -745,7 +761,8 @@
       "family travel Singapore",
       "Singapore with kids",
       "family-friendly Singapore"
-    ]
+    ],
+    "slug": "singapore-family-beach-2"
   },
   {
     "id": "singapore-new-3",
@@ -789,7 +806,8 @@
       "family travel Singapore",
       "Singapore with kids",
       "family-friendly Singapore"
-    ]
+    ],
+    "slug": "singapore-family-park-3"
   },
   {
     "id": "singapore-new-4",
@@ -833,7 +851,8 @@
       "family travel Singapore",
       "Singapore with kids",
       "family-friendly Singapore"
-    ]
+    ],
+    "slug": "singapore-family-cultural-4"
   },
   {
     "id": "singapore-new-5",
@@ -877,6 +896,7 @@
       "family travel Singapore",
       "Singapore with kids",
       "family-friendly Singapore"
-    ]
+    ],
+    "slug": "singapore-family-park-5"
   }
 ]

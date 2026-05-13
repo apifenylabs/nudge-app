@@ -67,8 +67,16 @@ export default function SiteFooter() {
           </div>
         </div>
 
+        {/* Affiliate Disclosure */}
+        <div className="mb-6 text-center">
+          <p className="text-[10px] text-gray-400">
+            Some links on this site are affiliate links. We may earn a commission at no extra cost to you.
+            As a Klook and Booking.com partner, we may earn from qualifying bookings.
+          </p>
+        </div>
+
         {/* Bottom bar */}
-        <div className="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
+        <div className="pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
           <span>&copy; {new Date().getFullYear()} Kids Activities Asia. All rights reserved.</span>
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="hover:text-gray-600 transition-colors">Privacy</Link>

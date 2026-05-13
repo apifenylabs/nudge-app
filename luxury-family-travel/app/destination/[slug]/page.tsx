@@ -6,6 +6,7 @@ import path from 'path';
 
 interface Destination {
   id: string;
+  slug?: string;
   name: string;
   city: string;
   country: string;
@@ -40,13 +41,15 @@ async function getDestinations(): Promise<Destination[]> {
 
 export async function generateStaticParams() {
   const destinations = await getDestinations();
-  return destinations.map((d) => ({ slug: d.id }));
+  // Use clean slug if available, fall back to id for backward compat
+  return destinations.map((d) => ({ slug: d.slug || d.id }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const destinations = await getDestinations();
-  const d = destinations.find((x) => x.id === slug);
+  // Match by slug first, then fall back to id for backward compat
+  const d = destinations.find((x) => x.slug === slug) || destinations.find((x) => x.id === slug);
 
   if (!d) return { title: 'Destination Not Found' };
 
@@ -82,13 +85,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-function jsonLd(d: Destination): string {
+function jsonLd(d: Destination, slug: string): string {
+  const cleanSlug = d.slug || d.id;
   const schema = {
     "@context": "https://schema.org",
     "@type": "TouristAttraction",
     "name": d.name,
     "description": d.description,
-    "url": `${BASE_URL}/destination/${d.id}`,
+    "url": `${BASE_URL}/destination/${cleanSlug}`,
     "image": d.imageUrl,
     "address": {
       "@type": "PostalAddress",
@@ -113,7 +117,7 @@ function jsonLd(d: Destination): string {
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `${BASE_URL}/destination/${d.id}`
+      "@id": `${BASE_URL}/destination/${cleanSlug}`
     }
   };
 
@@ -124,7 +128,7 @@ function jsonLd(d: Destination): string {
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
       { "@type": "ListItem", "position": 2, "name": d.city, "item": `${BASE_URL}?city=${encodeURIComponent(d.city)}` },
-      { "@type": "ListItem", "position": 3, "name": d.name, "item": `${BASE_URL}/destination/${d.id}` }
+      { "@type": "ListItem", "position": 3, "name": d.name, "item": `${BASE_URL}/destination/${cleanSlug}` }
     ]
   };
 
@@ -134,13 +138,13 @@ function jsonLd(d: Destination): string {
 export default async function DestinationPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const destinations = await getDestinations();
-  const found = destinations.find((d) => d.id === slug);
+  const found = destinations.find((d) => d.slug === slug) || destinations.find((d) => d.id === slug);
 
   if (!found) notFound();
 
   return (
     <>
-      <div dangerouslySetInnerHTML={{ __html: jsonLd(found) }} />
+      <div dangerouslySetInnerHTML={{ __html: jsonLd(found, slug) }} />
       <ClientDestinationPage initialData={found} slug={slug} />
     </>
   );

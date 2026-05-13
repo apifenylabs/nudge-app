@@ -69,6 +69,54 @@ export const chatbotAffiliates: AffiliateLink[] = [
     is_direct: false,
     badge: 'Free Tier',
   },
+  {
+    slug: 'poe',
+    referral_url: 'https://poe.com',
+    cta_label: 'Try Poe Free',
+    commission_note: 'Free tier available. Multi-model chatbot hub. Pro at $19.99/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'pi-ai',
+    referral_url: 'https://pi.ai',
+    cta_label: 'Chat with Pi Free',
+    commission_note: 'Completely free personal AI assistant by Inflection.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'doubao',
+    referral_url: 'https://www.doubao.com',
+    cta_label: 'Try Doubao Free',
+    commission_note: 'Free Chinese AI assistant by ByteDance. No payment needed.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'ernie-bot',
+    referral_url: 'https://yiyan.baidu.com',
+    cta_label: 'Use Ernie Bot Free',
+    commission_note: 'Free AI assistant by Baidu. Chinese-language focused.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'sparkdesk',
+    referral_url: 'https://xinghuo.xfyun.cn',
+    cta_label: 'Use SparkDesk Free',
+    commission_note: 'Free AI assistant by iFlytek. Supports Chinese NLP tasks.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'you-dot-com',
+    referral_url: 'https://you.com',
+    cta_label: 'Try You.com Free',
+    commission_note: 'Free tier available. AI search & writing assistant. Pro at $14.99/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
 ];
 
 // ─── Image Generation ───
@@ -155,6 +203,70 @@ export const codeAffiliates: AffiliateLink[] = [
     commission_note: 'AI software engineer from Cognition. Paid from $500/mo. Enterprise pricing.',
     is_direct: false,
     badge: 'Pro Pick',
+  },
+  {
+    slug: 'v0',
+    referral_url: 'https://v0.dev',
+    cta_label: 'Build with v0',
+    commission_note: 'Generative UI by Vercel. Free tier for prototyping. Pro from $20/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'replit-agent',
+    referral_url: 'https://replit.com',
+    cta_label: 'Try Replit Agent',
+    commission_note: 'Free tier with limited compute. Referral: $10 per friend upgrade. Core from $25/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'tabnine',
+    referral_url: 'https://tabnine.com',
+    cta_label: 'Try Tabnine Free',
+    commission_note: 'Free tier available. Code AI with local privacy. Pro from $12/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'aider',
+    referral_url: 'https://aider.chat',
+    cta_label: 'Use Aider Free',
+    commission_note: 'Open-source AI pair programming in terminal. Bring your own API key.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'claude-code',
+    referral_url: 'https://docs.anthropic.com/en/docs/claude-code',
+    cta_label: 'Try Claude Code',
+    commission_note: 'Paid terminal-based AI coding agent by Anthropic. API-key based pricing.',
+    is_direct: false,
+    badge: 'Pro Pick',
+  },
+  {
+    slug: 'cline',
+    referral_url: 'https://github.com/cline/cline',
+    cta_label: 'Use Cline Free',
+    commission_note: 'Open-source autonomous coding agent for VS Code. Bring your own API key.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'phind',
+    referral_url: 'https://www.phind.com',
+    cta_label: 'Search with Phind',
+    commission_note: 'Free tier with daily queries. Pro from $20/mo for unlimited searches.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'sourcegraph-cody',
+    referral_url: 'https://sourcegraph.com/cody',
+    cta_label: 'Try Cody Free',
+    commission_note: 'Free tier for individual devs. Context-aware AI coding with search. Pro from $9/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
   },
 ];
 
@@ -263,6 +375,175 @@ export const videoAffiliates: AffiliateLink[] = [
   },
 ];
 
+// ─── AI Agents ───
+
+export const aiAgentAffiliates: AffiliateLink[] = [
+  {
+    slug: 'openrouter',
+    referral_url: 'https://openrouter.ai',
+    cta_label: 'Try OpenRouter Free',
+    commission_note: 'Free tier with rate-limited access. Unified API for 200+ models.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'together-ai',
+    referral_url: 'https://together.ai',
+    cta_label: 'Build with Together AI',
+    commission_note: 'Free tier with limited credits. API access to open models from $0.10/M tokens.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'groq',
+    referral_url: 'https://groq.com',
+    cta_label: 'Use Groq Free',
+    commission_note: 'Free blazing-fast inference API. LPU-powered. No credit card needed.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'replicate',
+    referral_url: 'https://replicate.com',
+    cta_label: 'Try Replicate Free',
+    commission_note: 'Pay-as-you-go cloud ML platform. $5 free credits on signup.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'crewai',
+    referral_url: 'https://crewai.com',
+    cta_label: 'Use CrewAI Free',
+    commission_note: 'Open-source multi-agent orchestration. Bring your own API key.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'autogpt',
+    referral_url: 'https://autogpt.net',
+    cta_label: 'Try AutoGPT Free',
+    commission_note: 'Open-source autonomous AI agent. Self-hosted or cloud version.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+];
+
+// ─── No-Code & Automation ───
+
+export const noCodeAffiliates: AffiliateLink[] = [
+  {
+    slug: 'coze',
+    referral_url: 'https://www.coze.com',
+    cta_label: 'Build with Coze Free',
+    commission_note: 'Free AI bot builder by ByteDance. No coding required.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'dify',
+    referral_url: 'https://dify.ai',
+    cta_label: 'Use Dify Free',
+    commission_note: 'Open-source LLM app builder. Self-host or cloud. Free community edition.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'n8n',
+    referral_url: 'https://n8n.io',
+    cta_label: 'Try n8n Free',
+    commission_note: 'Open-source workflow automation. Self-host free or cloud from $20/mo.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'make',
+    referral_url: 'https://www.make.com',
+    cta_label: 'Start with Make Free',
+    commission_note: 'Free tier with 1000 ops/mo. Visual automation platform. Pro from $9/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'zapier-central',
+    referral_url: 'https://central.zapier.com',
+    cta_label: 'Try Zapier Central',
+    commission_note: 'AI-powered automation from Zapier. Paid from $19.99/mo. 14-day free trial.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'browse-ai',
+    referral_url: 'https://www.browse.ai',
+    cta_label: 'Try Browse AI Free',
+    commission_note: 'Free tier with 5 runs/mo. Web scraping & monitoring. Pro from $29/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+];
+
+// ─── Data & Analytics ───
+
+export const dataAffiliates: AffiliateLink[] = [
+  {
+    slug: 'llamaindex',
+    referral_url: 'https://llamaindex.ai',
+    cta_label: 'Build with LlamaIndex',
+    commission_note: 'Open-source data framework for LLM apps. Cloud from pay-as-you-go.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'firecrawl',
+    referral_url: 'https://firecrawl.dev',
+    cta_label: 'Try FireCrawl Free',
+    commission_note: 'Free tier with 500 pages. Web crawling for AI. Pro from $59/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'jina-ai',
+    referral_url: 'https://jina.ai',
+    cta_label: 'Use Jina AI Free',
+    commission_note: 'Free tier available. Neural search & embedding APIs. Pay-as-you-go.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+];
+
+// ─── Research & Analysis (extended) ───
+
+export const researchExtendedAffiliates: AffiliateLink[] = [
+  {
+    slug: 'tavily',
+    referral_url: 'https://tavily.com',
+    cta_label: 'Try Tavily Free',
+    commission_note: 'Free tier with 1000 queries/mo. AI-optimized search API. Pro from $50/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'exa',
+    referral_url: 'https://exa.ai',
+    cta_label: 'Try Exa Free',
+    commission_note: 'Free tier with 100 searches. Semantic web search for AI agents. Pro from $25/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+];
+
+// ─── Audio & Voice (extended) ───
+
+export const audioExtendedAffiliates: AffiliateLink[] = [
+  {
+    slug: 'krisp',
+    referral_url: 'https://krisp.ai',
+    cta_label: 'Try Krisp Free',
+    commission_note: 'Free tier with 60 mins/day. AI noise cancellation. Pro from $8/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+];
+
 // ─── Open Source & ML Platforms ───
 
 export const openSourceAffiliates: AffiliateLink[] = [
@@ -317,6 +598,11 @@ export const allAffiliateLinks: AffiliateLink[] = [
   ...designAffiliates,
   ...audioAffiliates,
   ...videoAffiliates,
+  ...aiAgentAffiliates,
+  ...noCodeAffiliates,
+  ...dataAffiliates,
+  ...researchExtendedAffiliates,
+  ...audioExtendedAffiliates,
   ...openSourceAffiliates,
   ...customerServiceAffiliates,
 ];
@@ -329,15 +615,18 @@ export function getAffiliateForTool(slug: string): AffiliateLink | undefined {
 /** Grouped by category — for highlighting sections on a page */
 export function getAffiliateGroup(category: string): AffiliateLink[] {
   const map: Record<string, string[]> = {
-    'Chatbots & Assistants': ['chatgpt', 'claude', 'gemini', 'deepseek', 'kimi'],
+    'Chatbots & Assistants': ['chatgpt', 'claude', 'gemini', 'deepseek', 'kimi', 'poe', 'pi-ai', 'doubao', 'ernie-bot', 'sparkdesk', 'you-dot-com'],
     'Image Generation': ['midjourney', 'leonardo-ai'],
-    'Research & Analysis': ['perplexity'],
-    'Code & Development': ['copilot', 'cursor', 'bolt-new', 'lovable', 'windsurf', 'devin'],
+    'Research & Analysis': ['perplexity', 'tavily', 'exa'],
+    'Code & Development': ['copilot', 'cursor', 'bolt-new', 'lovable', 'windsurf', 'devin', 'v0', 'replit-agent', 'tabnine', 'aider', 'claude-code', 'cline', 'phind', 'sourcegraph-cody'],
     'Productivity': ['notion-ai'],
     'Writing & Content': ['jasper', 'copy-ai', 'deepl'],
     'Design & Creative': ['canva-ai'],
-    'Audio & Music': ['elevenlabs', 'murf-ai'],
+    'Audio & Music': ['elevenlabs', 'murf-ai', 'krisp'],
     'Video & Animation': ['runway', 'synthesia', 'descript'],
+    'AI Agents': ['openrouter', 'together-ai', 'groq', 'replicate', 'crewai', 'autogpt'],
+    'No-Code & Automation': ['coze', 'dify', 'n8n', 'make', 'zapier-central', 'browse-ai'],
+    'Data & Analytics': ['llamaindex', 'firecrawl', 'jina-ai'],
     'Open Source & ML Platforms': ['hugging-face', 'langchain', 'qwen'],
     'Customer Service & Support': ['intercom-ai'],
   };

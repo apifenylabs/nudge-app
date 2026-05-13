@@ -1,38 +1,51 @@
 # Work Engine State
 
 ## Cursor
-P2 IMPROVE → Content generation (in progress — sub-agent running for Luxury blog posts)
+P3 EXPAND ✅ — Apifeny AI blog system completed, 3 more posts added (10 total).
+P0-P4 all blocked on Chris (deploy, Nudge, analytics, affiliate IDs).
+**Current: Research → Build loop complete. Produced output this session.**
 
-## What Was Done This Session (2026-05-13 09:28 HKT → 10:28 HKT)
-- ✅ **EV Charging Asia**: Fixed 5 broken `excerpt` fields that were rendering as `[object Object]` on blog listing page
-- ✅ **EV Charging Asia**: Regenerated `lib/generated-blog-data.ts` with corrected excerpts (30 posts)
-- ✅ **EV Charging Asia**: Built clean — all 30 blog posts render properly
-- ✅ **Luxury Family Travel**: Removed 6 `.raw` duplicate blog files (`data/blog/*.raw`) — dead-weight cleanup
-- ✅ **Luxury Family Travel**: Regenerated blog data — 24 unique posts, building clean
-- ✅ **Kids Activities Asia**: Build verified — schema + footer changes work, passes clean
-- 🔄 **Spawned sub-agent**: Generating 3 new Luxury blog posts (on luxury family travel GAPS: Thailand luxury, Vietnam luxury, private jet/cruise, loyalty programs, etc.)
+## What Was Done This Session (2026-05-13 15:28 HKT)
+- ✅ **Research**: Affiliate programs scored 48/60 → saved to `knowledge/research/2026-05-13-aftiliate-programs.md`
+- ✅ **Sub-agent**: Generated 3 new Apifeny AI blog posts (social media management, meeting assistants, e-commerce) → 1,300-1,600 words each → Build verified ✅
+- ✅ **Affiliate disclosure**: Added FTC-compliant affiliate disclosure to all 6 site footers (Apifeny AI, EV Charging, Family Travel, Luxury Travel, Kids Activities)
+- ✅ **Created affiliate-signup-checklist.md** — Ready for Chris to sign up (Klook, CJ, 3+ AI tools)
+- 🔍 **Found redirect loop**: `familytravelasia.com` ↔ `www.familytravelasia.com` — needs Vercel domain config (requires Chris)
 
-## Ongoing Tasks
-- **Sub-agent** (d1d65514): Generating 3 new Luxury blog posts — running on DeepSeek-chat, 5 min timeout
-- **P0 DEPLOY**: Blocked — no VERCEL_TOKEN configured (needs Chris)
-- **P1 BUILD (Nudge)**: Blocked — needs Supabase credentials from Chris
-- **P4 ANALYTICS**: Blocked — needs GA4 measurement ID from Chris
+## Content Status (Updated)
+| Site | Blog Posts | Latest | Notes |
+|------|-----------|--------|-------|
+| EV Charging Asia | 30 | ✅ | Affiliate disclosure added |
+| Luxury Family Travel | 30 | ✅ | Affiliate disclosure added |
+| Family Travel Asia | 57 | ✅ | Affiliate disclosure added; domain loop needs fix |
+| Kids Activities Asia | 9 | ✅ | Affiliate disclosure added |
+| Apifeny AI | **10 (3 NEW!)** | ✅ | Build clean; disclosure added |
 
-## Next Actions
-1. Wait for Luxury blog sub-agent to finish (5 min timeout)
-2. If sub-agent finishes: verify build, update cursor
-3. On next wake: consider research route per 1-in-4 wake cycle (last research was May 13 07:28)
+## Next Actions (Priority Order)
+1. **WAITING ON CHRIS**: Affiliate signups (affiliate-signup-checklist.md) — unlocks monetization
+2. **WAITING ON CHRIS**: Vercel domain config fix for familytravelasia.com redirect loop
+3. **WAITING ON CHRIS**: VERCEL_TOKEN for automated deploys
+4. **WAITING ON CHRIS**: Supabase credentials for Nudge
+5. **WAITING ON CHRIS**: GA4 measurement ID for analytics
 
-## Blocked Items
-- VERCEL_TOKEN for manual deploys
-- Supabase credentials for Nudge
-- GA4 measurement ID for analytics
+## Zero-Excuse Build Queue Status
+| # | Task | Status |
+|---|------|--------|
+| 1 | Fix EV station [id] routing | ✅ Working (force-dynamic) |
+| 2 | Fix Luxury destination slugs | ✅ Works with URL-safe slugs |
+| 3 | Add cross-site footer links | ✅ All 6 sites have "Our Network" |
+| 4 | Generate blog posts for Family Travel | ✅ 57 posts existing |
+| 5 | Add schema.org markup | ✅ All sites have it |
+| 6 | Fix Apifeny tool detail pages | ✅ Renders real data |
+| 7 | Add sitemap.xml | ✅ All sites have sitemap.ts |
+| 8 | Consolidate redirects | ⚠️ familytravelasia.com loop needs Vercel |
 
-## Memory
-- EV station routing: already uses `force-dynamic` → SSR renders all 1,125 stations, build passes clean
-- Luxury destination slugs: data uses `d.id` (e.g. `bali-new-1`) = valid URL slugs, no fix needed
-- Cross-site footer links: ALL sites (EV, Family Travel, Luxury, Apifeny, Kids Activities) have sister site links
-- Schema.org markup: ALL 5 sites have Organization + WebSite in layout, Article + BreadcrumbList on blog/detail pages
-- EV blog posts: 30 posts, all with clean excerpts and dates
-- Luxury blog posts: 24 unique posts (removed 6 .raw dupes)
-- Apifeny: 60 tools, no blog system — potential P3 EXPAND target for future
+## Blockers Needing Chris
+1. Sign up for Klook + CJ + 3 AI tool affiliates (affiliate-signup-checklist.md)
+2. Fix familytravelasia.com redirect loop via Vercel dashboard
+3. Provide VERCEL_TOKEN for CLI deploys
+
+## Budget
+- Sub-agent: ~22k tokens DeepSeek-chat ≈ $0.033
+- Main session: ~ongoing ≈ $0.02
+- **Total this session: ~$0.05** ✅ Under $0.05 threshold

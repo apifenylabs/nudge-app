@@ -14,6 +14,7 @@ import { computeSimpleScore, scoreTier } from '@/lib/scoring';
 // ─── Types ──────────────────────────────────────────────────────
 interface Destination {
   id: string;
+  slug?: string;
   name: string;
   city: string;
   country: string;
@@ -290,7 +291,7 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
               {suggestions.map(d => (
                 <Link
                   key={d.id}
-                  href={`/destination/${d.id}`}
+                  href={`/destination/${d.slug || d.id}`}
                   className="flex items-center gap-3 px-4 py-3 hover:bg-sky-50/50 transition-colors border-b border-gray-100/50 last:border-0"
                   onClick={() => setShowSuggestions(false)}
                 >
@@ -661,6 +662,7 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
               <DestinationCard
                 key={d.id}
                 id={d.id}
+                slug={d.slug}
                 name={d.name}
                 city={d.city}
                 country={d.country}

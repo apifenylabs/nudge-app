@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 interface Destination {
   id: string;
+  slug?: string;
   name: string;
   city: string;
   country: string;
@@ -244,7 +245,7 @@ export default function Top10Page() {
 
                   {/* CTA */}
                   <Link
-                    href={`/destination/${dest.id}`}
+                    href={`/destination/${dest.slug || dest.id}`}
                     className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white rounded-lg text-sm font-medium hover:bg-navy-light transition-all shadow-sm group/link"
                   >
                     View Full Review

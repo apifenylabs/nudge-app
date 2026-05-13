@@ -45,6 +45,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
+                  <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
                   <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
                   About Us
@@ -73,6 +79,12 @@ export default function Footer() {
                 <a href="https://ev-charging-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
                   <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
                   EV Charging Asia
+                </a>
+              </li>
+              <li>
+                <a href="https://kids-activities-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
+                  <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
+                  Kids Activities Asia
                 </a>
               </li>
               <li>
@@ -110,8 +122,16 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Affiliate Disclosure */}
+        <div className="mb-8 text-center">
+          <p className="text-tech-300 text-xs leading-relaxed">
+            Some links on this site are affiliate links. We may earn a commission at no extra cost to you.
+            As an Amazon Associate and Klook Partner, we earn from qualifying purchases.
+          </p>
+        </div>
+
         {/* Bottom bar */}
-        <div className="mt-10 pt-8 border-t border-tech-500/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-tech-500/20 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-tech-300 text-xs">
             &copy; {new Date().getFullYear()} Apifeny AI. All rights reserved.
           </p>

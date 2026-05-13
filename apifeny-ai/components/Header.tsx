@@ -108,6 +108,17 @@ export default function Header() {
                 Playbooks
               </Link>
               <Link
+                href="/blog"
+                className={cn(
+                  'px-4 py-2 rounded-lg text-sm font-medium transition',
+                  pathname.startsWith('/blog')
+                    ? 'bg-neon/15 text-neon-light'
+                    : 'text-tech-100 hover:text-white hover:bg-tech-700'
+                )}
+              >
+                Blog
+              </Link>
+              <Link
                 href="/build-in-public"
                 className={cn(
                   'px-4 py-2 rounded-lg text-sm font-medium transition',

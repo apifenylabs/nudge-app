@@ -14,6 +14,7 @@ interface BookmarkWithDestination {
 
 interface Destination {
   id: string
+  slug?: string
   name: string
   city: string
   country: string
@@ -142,7 +143,7 @@ function SavedDestinations() {
             }
             return (
               <div key={bm.id} className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-gray-300 transition-colors">
-                <Link href={`/destination/${d.id}`} className="flex items-center gap-4 p-4">
+                <Link href={`/destination/${d.slug || d.id}`} className="flex items-center gap-4 p-4">
                   <div className="w-20 h-16 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0">
                     {d.imageUrl ? (
                       <img src={d.imageUrl} alt={d.name} className="w-full h-full object-cover" />

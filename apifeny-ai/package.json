@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate-blog-data && next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx",
     "pm2:start": "pm2 start npm --name \"apifeny-beast\" -- run start",
     "pm2:stop": "pm2 stop apifeny-beast",
-    "pm2:restart": "pm2 restart apifeny-beast"
+    "pm2:restart": "pm2 restart apifeny-beast",
+    "generate-blog-data": "python3 scripts/generate-blog-data.py"
   },
   "dependencies": {
     "@supabase/ssr": "^0.10.2",

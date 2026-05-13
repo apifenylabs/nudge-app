@@ -11,7 +11,13 @@ export async function generateStaticParams() {
     const filePath = path.join(process.cwd(), 'public', 'data', 'destinations.json');
     const raw = await fs.readFile(filePath, 'utf-8');
     const destinations = JSON.parse(raw);
-    return destinations.map((d: { id: string }) => ({ slug: d.id }));
+    // Generate params for both old IDs and new slugs for backward compat
+    const params: { slug: string }[] = [];
+    for (const d of destinations) {
+      if (d.slug) params.push({ slug: d.slug });
+      if (d.id && d.id !== d.slug) params.push({ slug: d.id });
+    }
+    return params;
   } catch {
     return [];
   }

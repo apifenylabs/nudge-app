@@ -7,6 +7,7 @@ import BookmarkButton from './BookmarkButton';
 
 interface DestinationCardProps {
   id: string;
+  slug?: string;
   name: string;
   city: string;
   country: string;
@@ -32,7 +33,7 @@ const CATEGORY_MAP: Record<string, { emoji: string; cls: string }> = {
 };
 
 export default function DestinationCard({
-  id, name, city, country, category, ageRange, priceRange,
+  id, slug, name, city, country, category, ageRange, priceRange,
   safetyRating, description, imageUrl,
   tipsCount, reviewsCount = 0, popularity, parentStory,
 }: DestinationCardProps) {
@@ -48,7 +49,7 @@ export default function DestinationCard({
 
   return (
     <Link
-      href={`/destination/${id}`}
+      href={`/destination/${slug || id}`}
       className="block bg-white rounded-xl border border-gray-200/80 overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group"
     >
       {/* Image region — compact */}
