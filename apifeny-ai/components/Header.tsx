@@ -108,6 +108,17 @@ export default function Header() {
                 Playbooks
               </Link>
               <Link
+                href="/build-in-public"
+                className={cn(
+                  'px-4 py-2 rounded-lg text-sm font-medium transition',
+                  pathname.startsWith('/build-in-public')
+                    ? 'bg-neon/15 text-neon-light'
+                    : 'text-tech-100 hover:text-white hover:bg-tech-700'
+                )}
+              >
+                Build in Public
+              </Link>
+              <Link
                 href="/submit"
                 className="px-4 py-2 rounded-lg text-sm font-medium bg-neon hover:bg-neon-dark text-white transition flex items-center gap-1.5"
               >
@@ -160,6 +171,12 @@ export default function Header() {
                 className="block px-4 py-2.5 rounded-lg text-sm font-medium text-tech-100 hover:text-white hover:bg-tech-700 transition"
               >
                 Playbooks
+              </Link>
+              <Link
+                href="/build-in-public"
+                className="block px-4 py-2.5 rounded-lg text-sm font-medium text-tech-100 hover:text-white hover:bg-tech-700 transition"
+              >
+                Build in Public
               </Link>
               <Link
                 href="/submit"

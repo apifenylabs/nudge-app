@@ -797,7 +797,7 @@ const allPosts: BlogPost[] = [
       "ev-charging",
       "asia"
     ],
-    "excerpt": "{'type': 'paragraph', 'text': \"Hong Kong's used EV market is booming. With new EV registrations surging and the government phasing out petrol car ince...",
+    "excerpt": "Hong Kong's used EV market is booming. With new EV registrations surging and the government phasing out petrol car incentives, thousands of 3-5 year o",
     "date": "2026-05-04",
     "relatedStations": [],
     "readingTime": "7 min read"
@@ -816,7 +816,7 @@ const allPosts: BlogPost[] = [
       "ev-charging",
       "asia"
     ],
-    "excerpt": "{'type': 'paragraph', 'text': \"EV running costs vary wildly across Asia. Charge a 60kWh battery at home in Thailand and you'll pay roughly 156 THB (HK...",
+    "excerpt": "EV running costs vary wildly across Asia. Charge a 60kWh battery at home in Thailand and you'll pay roughly 156 THB (HK$34). Do the same in Japan and ",
     "date": "2026-05-04",
     "relatedStations": [],
     "readingTime": "8 min read"
@@ -835,7 +835,7 @@ const allPosts: BlogPost[] = [
       "ev-charging",
       "asia"
     ],
-    "excerpt": "{'type': 'paragraph', 'text': 'Malaysia and Singapore are less than an hour apart across the Causeway, but their EV charging ecosystems could hardly b...",
+    "excerpt": "Malaysia and Singapore are less than an hour apart across the Causeway, but their EV charging ecosystems could hardly be more different. Singapore has",
     "date": "2026-05-04",
     "relatedStations": [],
     "readingTime": "7 min read"
@@ -854,7 +854,7 @@ const allPosts: BlogPost[] = [
       "ev-charging",
       "asia"
     ],
-    "excerpt": "{'type': 'paragraph', 'text': \"Singapore has 46,000+ EVs on the road in 2026, and 43% of new car registrations are now electric. But here's the proble...",
+    "excerpt": "Singapore has 46,000+ EVs on the road in 2026, and 43% of new car registrations are now electric. But here's the problem most condo-dwellers face: you",
     "date": "2026-05-04",
     "relatedStations": [],
     "readingTime": "6 min read"
@@ -873,7 +873,7 @@ const allPosts: BlogPost[] = [
       "ev-charging",
       "asia"
     ],
-    "excerpt": "{'type': 'paragraph', 'text': \"You've moved to Asia. You bought an EV. Now you need to charge it at home. Simple, right? Not quite. Every city has dif...",
+    "excerpt": "You've moved to Asia. You bought an EV. Now you need to charge it at home. Simple, right? Not quite. Every city has different electrical standards, pe",
     "date": "2026-05-04",
     "relatedStations": [],
     "readingTime": "8 min read"

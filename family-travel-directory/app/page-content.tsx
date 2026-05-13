@@ -10,7 +10,6 @@ import {
   BadgeCheck, TrendingUp, ChevronDown, Mail, Facebook, Twitter, Instagram
 } from 'lucide-react';
 import HeroSection from '@/components/HeroSection';
-import BuildInPublicFeed from '@/components/BuildInPublicFeed';
 import PremiumLuxuryHero from '@/components/PremiumLuxuryHero';
 import FilterBar from '@/components/FilterBar';
 import DestinationCard from '@/components/DestinationCard';
@@ -765,8 +764,7 @@ export default function Home({ meta, blogPosts }: {
         </div>
       </section>
 
-      {/* ─── BUILD IN PUBLIC FEED ─── */}
-      <BuildInPublicFeed />
+
 
       {/* ─── SCROLL TO TOP ─── */}
       {showScrollTop && (

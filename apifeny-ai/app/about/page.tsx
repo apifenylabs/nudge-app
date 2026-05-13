@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
-import { BookOpen, Target, Globe, Shield } from 'lucide-react';
+import Link from 'next/link';
+import { BookOpen, Target, Globe, Shield, ArrowUpRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -65,6 +66,22 @@ export default function AboutPage() {
             </div>
           );
         })}
+      </div>
+
+      {/* Build in Public CTA */}
+      <div className="rounded-xl border border-neon/20 bg-neon/10 p-6 sm:p-8 mb-8 text-center">
+        <h2 className="text-xl font-bold text-white mb-2">Built in the Open</h2>
+        <p className="text-sm text-tech-100 max-w-xl mx-auto mb-4">
+          We share every step of building Apifeny AI — tools added, features shipped,
+          Asia Scores improved. No smoke and mirrors.
+        </p>
+        <Link
+          href="/build-in-public"
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium bg-neon hover:bg-neon-dark text-white transition"
+        >
+          See what we&apos;re building
+          <ArrowUpRight className="w-3.5 h-3.5" />
+        </Link>
       </div>
 
       {/* How it works */}
