@@ -562,7 +562,7 @@ export default async function ItineraryDetailPage({ params }: Props) {
         </div>
 
         {/* ===== BOOKING AFFILIATE BANNER AT BOTTOM ===== */}
-        <div className="bg-gradient-to-r from-amber-500 via-amber-400 to-orange-400 rounded-2xl p-6 md:p-8 text-white mb-8 shadow-lg">
+        <div className="bg-gradient-to-r from-amber-600 via-amber-500 to-orange-500 rounded-2xl p-6 md:p-8 text-white mb-8 shadow-lg">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
               <h3 className="text-lg font-bold mb-1">Ready for the road?</h3>

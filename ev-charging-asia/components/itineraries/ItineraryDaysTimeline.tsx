@@ -18,7 +18,7 @@ export default function ItineraryDaysTimeline({ days }: Props) {
           )}
 
           {/* Dot */}
-          <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-amber-500 text-white flex items-center justify-center text-xs font-bold shadow-md">
+          <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-bold shadow-md">
             {day.day}
           </div>
 

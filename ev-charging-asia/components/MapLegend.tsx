@@ -4,7 +4,7 @@ export default function MapLegend() {
       <div className="font-semibold mb-1.5 text-gray-700">🔌 Charger Types</div>
       <div className="space-y-1">
         <div className="flex items-center gap-2">
-          <span className="w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">C</span>
+          <span className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold">C</span>
           <span>CCS2</span>
         </div>
         <div className="flex items-center gap-2">
@@ -16,7 +16,7 @@ export default function MapLegend() {
           <span>Type 2 AC</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-5 h-5 rounded-full bg-amber-500 text-white flex items-center justify-center text-[10px] font-bold">G</span>
+          <span className="w-5 h-5 rounded-full bg-amber-600 text-white flex items-center justify-center text-[10px] font-bold">G</span>
           <span>GB/T</span>
         </div>
         <div className="flex items-center gap-2">

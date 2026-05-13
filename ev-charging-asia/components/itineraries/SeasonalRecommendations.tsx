@@ -180,7 +180,7 @@ export default function SeasonalRecommendations({ bestSeason, countries }: Seaso
   if (monthlyRecommendations.length === 0) return null;
 
   const colors: Record<MonthStatus, string> = {
-    'recommended': 'bg-emerald-500',
+    'recommended': 'bg-emerald-600',
     'acceptable': 'bg-amber-400',
     'not-recommended': 'bg-red-400',
   };

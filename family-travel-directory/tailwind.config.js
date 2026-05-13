@@ -8,6 +8,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Override core teal so text-teal-600 maps to darkened value
+        // (prevents #D9488 @ 3.7:1 — now #3D7A78 @ 4.9:1 ✅)
+        teal: {
+          50: '#F0FDFA',
+          100: '#CCFBF1',
+          200: '#99F6E4',
+          300: '#5EEAD4',
+          400: '#2DD4BF',
+          500: '#3D7A78',
+          600: '#3D7A78',
+          700: '#2D5C5A',
+          800: '#1E4040',
+          900: '#102A2A',
+        },
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         // WCAG AA-verified sage green palette

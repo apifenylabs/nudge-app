@@ -201,7 +201,7 @@ export default function SeasonalComparisonTable({ bestSeason, countries }: Seaso
   if (months.length === 0) return null;
 
   const statusColors: Record<MonthStatus, string> = {
-    peak: 'bg-emerald-500 text-white',
+    peak: 'bg-emerald-600 text-white',
     good: 'bg-sky-400 text-white',
     okay: 'bg-amber-300 text-amber-900',
     avoid: 'bg-red-400 text-white',

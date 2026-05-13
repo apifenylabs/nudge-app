@@ -46,26 +46,26 @@ export default function Header() {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${
       isScrolled
-        ? 'bg-white/95 backdrop-blur-xl shadow-sm border-b border-gray-100/50'
-        : 'bg-white/80 backdrop-blur-md border-b border-transparent'
+        ? 'bg-warm-white/95 backdrop-blur-xl shadow-sm border-b border-sand-200/50'
+        : 'bg-warm-white/80 backdrop-blur-md border-b border-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo — clean minimal */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center shadow-md shadow-teal-200 group-hover:shadow-lg group-hover:shadow-teal-200 transition-all">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-600 to-primary-500 flex items-center justify-center shadow-md shadow-primary-200 group-hover:shadow-lg group-hover:shadow-primary-200 transition-all">
               <Compass size={18} className="text-white" />
             </div>
             <div>
               <span className="font-heading text-lg font-bold text-heading tracking-tight">
-                Family Travel<span className="text-teal-600">.</span>
+                Family Travel<span className="text-primary-600">.</span>
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation — clean, spacious */}
           <nav className="hidden lg:flex items-center gap-8">
-            <Link href="/" className="text-sm font-medium text-body hover:text-heading transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-teal-500 after:transition-all after:duration-300 hover:after:w-full">
+            <Link href="/" className="text-sm font-medium text-body hover:text-heading transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">
               Explore
             </Link>
             <Link href="/search" className="text-sm font-medium text-body hover:text-heading transition-colors">
@@ -83,21 +83,21 @@ export default function Header() {
               </button>
               <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-30 overflow-hidden">
                 <div className="py-2">
-                  <Link href="/best-for/babies" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-colors">
+                  <Link href="/best-for/babies" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
                     <span className="text-lg">👶</span>
                     <div>
                       <div className="font-medium">Best for Babies</div>
                       <div className="text-xs text-gray-500">Under 2 years old</div>
                     </div>
                   </Link>
-                  <Link href="/best-for/teens" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-colors">
+                  <Link href="/best-for/teens" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
                     <span className="text-lg">🧑</span>
                     <div>
                       <div className="font-medium">Best for Teens</div>
                       <div className="text-xs text-gray-500">13-18 years old</div>
                     </div>
                   </Link>
-                  <Link href="/best-for/multigen" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-colors">
+                  <Link href="/best-for/multigen" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
                     <span className="text-lg">👨‍👩‍👧‍👦</span>
                     <div>
                       <div className="font-medium">Multi-Generational</div>
@@ -126,13 +126,13 @@ export default function Header() {
             {/* Auth */}
             <div className="hidden md:flex items-center">
               {authLoading ? (
-                <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-teal-500 animate-spin" />
+                <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-primary-500 animate-spin" />
               ) : user ? (
                 <UserMenu user={user} bookmarkCount={bookmarkCount} />
               ) : (
                 <Link
                   href="/auth/login"
-                  className="px-5 py-2 bg-teal-700 text-white text-sm font-semibold rounded-lg hover:bg-teal-800 transition-colors shadow-sm"
+                  className="px-5 py-2 bg-primary-700 text-white text-sm font-semibold rounded-lg hover:bg-primary-800 transition-colors shadow-sm"
                 >
                   Sign In
                 </Link>
@@ -153,12 +153,12 @@ export default function Header() {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col gap-1">
-              <Link href="/" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Explore</Link>
-              <Link href="/search" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Destinations</Link>
-              <Link href="/blog" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Blog</Link>
-              <Link href="/best-for/babies" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>👶 Best for Babies</Link>
-              <Link href="/best-for/teens" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>🧑 Best for Teens</Link>
-              <Link href="/best-for/multigen" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>👨‍👩‍👧‍👦 Multi-Generational</Link>
+              <Link href="/" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Explore</Link>
+              <Link href="/search" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Destinations</Link>
+              <Link href="/blog" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+              <Link href="/best-for/babies" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>👶 Best for Babies</Link>
+              <Link href="/best-for/teens" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>🧑 Best for Teens</Link>
+              <Link href="/best-for/multigen" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>👨‍👩‍👧‍👦 Multi-Generational</Link>
 
               <div className="mt-4 pt-4 border-t border-gray-100 space-y-2 px-4">
                 <Link
@@ -184,7 +184,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href="/auth/login"
-                    className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-teal-700 rounded-lg hover:bg-teal-800 transition-colors"
+                    className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-primary-700 rounded-lg hover:bg-primary-800 transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Sign In

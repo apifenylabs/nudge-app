@@ -61,7 +61,7 @@ function BlogCard({ post, featured = false }: { post: BlogPost; featured?: boole
           <div className="w-full h-full bg-gradient-to-br from-sky-100 via-sky-200 to-blue-200 flex items-center justify-center">
             <Compass size={48} className="text-sky-400/60" />
           </div>
-          <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500 text-white text-[10px] font-bold uppercase tracking-wider">
+          <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-600 text-white text-[10px] font-bold uppercase tracking-wider">
             Featured
           </div>
         </div>

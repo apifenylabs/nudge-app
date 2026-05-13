@@ -156,7 +156,7 @@ const FeaturedFamilyStops: FC<FeaturedFamilyStopsProps> = ({ stations }) => {
               key={i}
               onClick={() => setCurrentIndex(i * 3)}
               className={`w-1.5 h-1.5 rounded-full transition-all ${
-                i === Math.floor(currentIndex / 3) ? 'bg-amber-500 w-3' : 'bg-amber-300'
+                i === Math.floor(currentIndex / 3) ? 'bg-amber-600 w-3' : 'bg-amber-300'
               }`}
             />
           ))}
