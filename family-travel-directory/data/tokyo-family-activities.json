@@ -21,9 +21,9 @@
       "popularity": 98,
       "source": "TripAdvisor, Official Disney Site",
       "affiliateLinks": {
-        "klook": "https://www.klook.com/activity/135-tokyo-disneyland-tickets/?aid=OURCODE",
-        "viator": "https://www.viator.com/tours/Tokyo/Tokyo-Disneyland-1-Day-Pass/d334-2142TYO_TDL1?pid=OURCODE",
-        "getYourGuide": "https://www.getyourguide.com/tokyo-l193/tokyo-disneyland-or-disneysea-1-day-ticket-t395174/?partner_id=OURCODE"
+        "klook": "https://www.klook.com/activity/135-tokyo-disneyland-tickets/?aid=119991",
+        "viator": "https://www.viator.com/tours/Tokyo/Tokyo-Disneyland-1-Day-Pass/d334-2142TYO_TDL1?pid=119991",
+        "getYourGuide": "https://www.getyourguide.com/tokyo-l193/tokyo-disneyland-or-disneysea-1-day-ticket-t395174/?partner_id=119991"
       },
       "commissionRate": "8%"
     },
@@ -44,8 +44,8 @@
       "popularity": 87,
       "source": "Tokyo Tourism Board, Google Travel",
       "affiliateLinks": {
-        "klook": "https://www.klook.com/activity/5765-ueno-zoo-tokyo/?aid=OURCODE",
-        "viator": "https://www.viator.com/tours/Tokyo/Ueno-Zoo-and-Tokyo-National-Museum-Tour/d334-2142TYO_UENO?pid=OURCODE"
+        "klook": "https://www.klook.com/activity/5765-ueno-zoo-tokyo/?aid=119991",
+        "viator": "https://www.viator.com/tours/Tokyo/Ueno-Zoo-and-Tokyo-National-Museum-Tour/d334-2142TYO_UENO?pid=119991"
       },
       "commissionRate": "6%"
     },

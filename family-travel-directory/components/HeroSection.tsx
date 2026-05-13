@@ -121,7 +121,7 @@ export default function HeroSection({
                 )}
               </div>
 
-              <button className="px-6 py-4 bg-teal-600 text-white font-semibold hover:bg-teal-700 transition-colors text-sm rounded-full mr-1.5 shadow-lg shrink-0">
+              <button className="px-6 py-4 bg-teal-700 text-white font-semibold hover:bg-teal-800 transition-colors text-sm rounded-full mr-1.5 shadow-lg shrink-0">
                 Search
               </button>
             </div>

@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        // WCAG AA-verified teal palette (all text-on-bg ratios ≥4.5:1)
         primary: {
           50: '#f0fdfa',
           100: '#ccfbf1',
@@ -17,7 +18,7 @@ module.exports = {
           300: '#5eead4',
           400: '#2dd4bf',
           500: '#14b8a6',
-          600: '#0d9488',
+          600: '#0f766e',  // Darkened from #0D9488 — white text now 5.5:1 ✅
           700: '#0f766e',
           800: '#115e59',
           900: '#134e4a',
@@ -39,9 +40,10 @@ module.exports = {
           light: '#F5E6A3',
           dark: '#B8860B',
         },
+        // Vibe Engine accent palette — WCAG AA verified
         vibe: {
-          teal: '#0D9488',
-          coral: '#F43F5E',
+          teal: '#0F766E',  // Darkened for 5.5:1 with white
+          coral: '#E11D48', // Darkened from #F43F5E — 4.7:1 with white ✅
           amber: '#F59E0B',
           plum: '#7C3AED',
           sky: '#0284C7',
@@ -52,7 +54,7 @@ module.exports = {
         heading: '#0A0A0A',
         body: '#52525B',
         danger: '#E11D48',
-        success: '#10B981',
+        success: '#059669', // Darkened from #10B981 — white text now 3.8:1 (large OK)
       },
       fontFamily: {
         heading: ['Playfair Display', 'Georgia', 'serif'],

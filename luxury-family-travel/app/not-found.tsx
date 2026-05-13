@@ -18,7 +18,7 @@ export default function NotFound() {
         <div className="space-y-3">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors font-medium"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
           >
             <Crown size={18} />
             Back to Home

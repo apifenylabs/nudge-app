@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import BottomNav from "@/components/BottomNav";
+import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,9 +29,51 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Kids Activities Asia",
+  "url": BASE_URL,
+  "logo": `${BASE_URL}/favicon.ico`,
+  "description": "Curated guide to the best kids' activities, classes, and family-friendly attractions across Asia.",
+  "sameAs": [
+    "https://www.familytravelasia.com",
+    "https://luxuryfamilytravelasia.com",
+    "https://ev-charging-asia.vercel.app",
+    "https://apifeny-ai.vercel.app",
+    "https://nudge-sigma-liart.vercel.app",
+    "https://social-beast-two.vercel.app"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Kids Activities Asia",
+  "url": BASE_URL,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${BASE_URL}/search?q={search_term}`
+    },
+    "query-input": "required name=search_term"
+  }
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body className={`${inter.className} bg-white text-gray-900 min-h-screen pb-20`}>
         <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
           <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
@@ -49,6 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="max-w-6xl mx-auto px-4 py-6">
           {children}
         </main>
+        <SiteFooter />
         <Analytics />
         <BottomNav />
       </body>

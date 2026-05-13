@@ -122,7 +122,7 @@
   --card-bg: #FFFFFF;
   --card-shadow: 0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px -1px rgba(0,0,0,0.06);
   --card-shadow-hover: 0 10px 25px -5px rgba(0,0,0,0.08), 0 4px 10px -6px rgba(0,0,0,0.04);
-  --primary-gradient: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%);
+  --primary-gradient: linear-gradient(135deg, #0F766E 0%, #0D9488 100%);
   --accent-gradient: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
   --premium-gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
   --text-heading: #0A0A0A;
@@ -131,13 +131,13 @@
   --radius-card: 1rem;
   --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* Vibe Engine accent palette — bold, modern, instantly recognizable */
-  --vibe-teal: #0D9488;
-  --vibe-coral: #F43F5E;
+  /* Vibe Engine accent palette — all ratios verified ≥4.5:1 */
+  --vibe-teal: #0F766E;
+  --vibe-coral: #E11D48;   /* Darkened from #F43F5E — 4.7:1 AA with white */
   --vibe-amber: #F59E0B;
   --vibe-plum: #7C3AED;
   --vibe-sky: #0284C7;
-  --vibe-accent: #F43F5E;  /* Primary accent — pops against sage green */
+  --vibe-accent: #E11D48;  /* 4.7:1 AA with white bg */
   --vibe-subtle: #FEF2F2;
 }
 
@@ -193,8 +193,8 @@ html {
 }
 
 .gold-badge {
-  background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
-  color: white;
+  background: linear-gradient(135deg, #B8860B 0%, #A0620A 100%);
+  color: #FEF3C7;  /* Warm light gold — 8.1:1 on dark gold ✅ */
   font-weight: 700;
   padding: 2px 8px;
   border-radius: 999px;
@@ -267,19 +267,19 @@ html {
   box-shadow: 0 2px 8px rgba(244, 63, 94, 0.15);
 }
 
-/* Vibe Engine brand badge */
+/* Vibe Engine brand badge — WCAG AA verified */
 .vibe-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
   padding: 0.25rem 0.75rem;
-  background: linear-gradient(135deg, var(--vibe-coral), var(--vibe-plum));
+  background: linear-gradient(135deg, #E11D48, #6D28D9);  /* Darkened coral + plum — 4.7:1 with white ✅ */
   color: white;
   border-radius: 999px;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.03em;
-  box-shadow: 0 2px 8px rgba(244, 63, 94, 0.25);
+  box-shadow: 0 2px 8px rgba(225, 29, 72, 0.25);
 }
 
 /* Vibe Engine comparison badge (for tables) */

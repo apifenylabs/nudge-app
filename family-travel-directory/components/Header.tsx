@@ -132,7 +132,7 @@ export default function Header() {
               ) : (
                 <Link
                   href="/auth/login"
-                  className="px-5 py-2 bg-teal-600 text-white text-sm font-semibold rounded-lg hover:bg-teal-700 transition-colors shadow-sm"
+                  className="px-5 py-2 bg-teal-700 text-white text-sm font-semibold rounded-lg hover:bg-teal-800 transition-colors shadow-sm"
                 >
                   Sign In
                 </Link>
@@ -184,7 +184,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href="/auth/login"
-                    className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-colors"
+                    className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-teal-700 rounded-lg hover:bg-teal-800 transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Sign In

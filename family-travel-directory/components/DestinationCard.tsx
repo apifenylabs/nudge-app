@@ -54,10 +54,10 @@ function viatorSearchUrl(name: string, city: string): string {
 
 function SafetyScoreBar({ rating }: { rating: number }) {
   const scorePercent = (rating / 5) * 100;
-  const color = rating >= 4.5 ? 'bg-emerald-500'
-    : rating >= 4.0 ? 'bg-teal-500'
-    : rating >= 3.5 ? 'bg-amber-500'
-    : 'bg-rose-500';
+  const color = rating >= 4.5 ? 'bg-emerald-600'
+    : rating >= 4.0 ? 'bg-teal-600'
+    : rating >= 3.5 ? 'bg-amber-600'
+    : 'bg-rose-600';
 
   return (
     <div className="flex items-center gap-2">
@@ -109,9 +109,9 @@ export default function DestinationCard({
     : score >= 60 ? 'text-amber-600'
     : 'text-gray-500';
 
-  const scoreBarColor = score >= 90 ? 'bg-emerald-500'
-    : score >= 75 ? 'bg-teal-500'
-    : score >= 60 ? 'bg-amber-500'
+  const scoreBarColor = score >= 90 ? 'bg-emerald-600'
+    : score >= 75 ? 'bg-teal-600'
+    : score >= 60 ? 'bg-amber-600'
     : 'bg-gray-400';
 
   // Intersection observer for fade-in animation

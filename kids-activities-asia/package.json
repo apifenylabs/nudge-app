@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate-blog-data && next build",
+    "generate-blog-data": "npx tsx scripts/generate-blog-data.ts",
     "start": "next start",
     "lint": "next lint"
   },

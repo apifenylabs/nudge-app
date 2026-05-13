@@ -642,7 +642,7 @@ export default function Home({ meta, blogPosts }: {
             <div className="text-center mt-8">
               <Link
                 href="/search"
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-teal-600 text-white font-semibold rounded-xl hover:bg-teal-700 transition-all shadow-lg hover:shadow-teal-200 active:scale-[0.98]"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-teal-700 text-white font-semibold rounded-xl hover:bg-teal-800 transition-all shadow-lg hover:shadow-teal-300 active:scale-[0.98]"
               >
                 Browse All {totalDestinations} Destinations
                 <ChevronRight size={18} />
@@ -772,7 +772,7 @@ export default function Home({ meta, blogPosts }: {
       {showScrollTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-20 right-6 z-50 bg-teal-600 text-white p-3 rounded-full shadow-lg hover:bg-teal-700 transition-all active:scale-90 hover:shadow-teal-200"
+          className="fixed bottom-20 right-6 z-50 bg-teal-700 text-white p-3 rounded-full shadow-lg hover:bg-teal-800 transition-all active:scale-90 hover:shadow-teal-300"
         >
           <ArrowUp size={20} />
         </button>

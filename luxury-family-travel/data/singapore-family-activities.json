@@ -20,8 +20,8 @@
       "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e",
       "popularity": 96,
       "affiliateLinks": {
-        "klook": "https://www.klook.com/activity/455-universal-studios-singapore/?aid=OURCODE",
-        "viator": "https://www.viator.com/tours/Singapore/Universal-Studios-Singapore-Admission-Ticket/d18-5070SIN_UNIVERSAL?pid=OURCODE"
+        "klook": "https://www.klook.com/activity/455-universal-studios-singapore/?aid=119991",
+        "viator": "https://www.viator.com/tours/Singapore/Universal-Studios-Singapore-Admission-Ticket/d18-5070SIN_UNIVERSAL?pid=119991"
       },
       "commissionRate": "9%"
     },
@@ -41,8 +41,8 @@
       "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
       "popularity": 94,
       "affiliateLinks": {
-        "klook": "https://www.klook.com/activity/456-singapore-zoo-tickets/?aid=OURCODE",
-        "getYourGuide": "https://www.getyourguide.com/singapore-l169/singapore-zoo-ticket-t395176/?partner_id=OURCODE"
+        "klook": "https://www.klook.com/activity/456-singapore-zoo-tickets/?aid=119991",
+        "getYourGuide": "https://www.getyourguide.com/singapore-l169/singapore-zoo-ticket-t395176/?partner_id=119991"
       },
       "commissionRate": "8%"
     },
@@ -62,8 +62,8 @@
       "imageUrl": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd",
       "popularity": 95,
       "affiliateLinks": {
-        "klook": "https://www.klook.com/activity/457-gardens-by-the-bay/?aid=OURCODE",
-        "viator": "https://www.viator.com/tours/Singapore/Gardens-by-the-Bay-Ticket/d18-5070SIN_GARDENS?pid=OURCODE"
+        "klook": "https://www.klook.com/activity/457-gardens-by-the-bay/?aid=119991",
+        "viator": "https://www.viator.com/tours/Singapore/Gardens-by-the-Bay-Ticket/d18-5070SIN_GARDENS?pid=119991"
       },
       "commissionRate": "7%"
     },
@@ -83,7 +83,7 @@
       "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
       "popularity": 92,
       "affiliateLinks": {
-        "klook": "https://www.klook.com/activity/458-sea-aquarium-singapore/?aid=OURCODE"
+        "klook": "https://www.klook.com/activity/458-sea-aquarium-singapore/?aid=119991"
       },
       "commissionRate": "8%"
     },
@@ -103,7 +103,7 @@
       "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d",
       "popularity": 88,
       "affiliateLinks": {
-        "klook": "https://www.klook.com/activity/459-science-centre-singapore/?aid=OURCODE"
+        "klook": "https://www.klook.com/activity/459-science-centre-singapore/?aid=119991"
       },
       "commissionRate": "6%"
     },
@@ -123,8 +123,8 @@
       "imageUrl": "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3",
       "popularity": 90,
       "affiliateLinks": {
-        "klook": "https://www.klook.com/activity/460-singapore-flyer/?aid=OURCODE",
-        "viator": "https://www.viator.com/tours/Singapore/Singapore-Flyer-Ticket/d18-5070SIN_FLYER?pid=OURCODE"
+        "klook": "https://www.klook.com/activity/460-singapore-flyer/?aid=119991",
+        "viator": "https://www.viator.com/tours/Singapore/Singapore-Flyer-Ticket/d18-5070SIN_FLYER?pid=119991"
       },
       "commissionRate": "7%"
     }

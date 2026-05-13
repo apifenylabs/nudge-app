@@ -85,6 +85,28 @@ export default function SiteFooter() {
                 </a>
                 <p className="text-xs text-gray-400 mt-0.5">Voice-powered family task management</p>
               </li>
+              <li>
+                <a
+                  href="https://kids-activities-asia.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-400 hover:text-sky-600 transition-colors"
+                >
+                  Kids Activities Asia
+                </a>
+                <p className="text-xs text-gray-400 mt-0.5">Kid-friendly activities across Asia</p>
+              </li>
+              <li>
+                <a
+                  href="https://social-beast-two.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-400 hover:text-indigo-600 transition-colors"
+                >
+                  Social Beast
+                </a>
+                <p className="text-xs text-gray-400 mt-0.5">AI-powered content creation suite</p>
+              </li>
             </ul>
           </div>
         </div>

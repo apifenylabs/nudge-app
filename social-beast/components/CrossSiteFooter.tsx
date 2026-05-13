@@ -11,12 +11,12 @@ export default function CrossSiteFooter() {
           Family Travel Asia
         </a>
         <a
-          href="https://luxury-family-travel-asia.vercel.app"
+          href="https://luxuryfamilytravelasia.com"
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm text-muted transition-colors hover:text-cream dark:text-[#a3a3a3] dark:hover:text-cream"
         >
-          Luxury Family Travel
+          Luxury Family Travel Asia
         </a>
         <a
           href="https://ev-charging-asia.vercel.app"
@@ -41,6 +41,14 @@ export default function CrossSiteFooter() {
           className="text-sm text-muted transition-colors hover:text-cream dark:text-[#a3a3a3] dark:hover:text-cream"
         >
           Nudge
+        </a>
+        <a
+          href="https://kids-activities-asia.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-muted transition-colors hover:text-cream dark:text-[#a3a3a3] dark:hover:text-cream"
+        >
+          Kids Activities Asia
         </a>
       </div>
       <p className="mt-4 text-center text-xs text-muted dark:text-[#a3a3a3]">

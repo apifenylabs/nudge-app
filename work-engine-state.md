@@ -1,40 +1,32 @@
 # Work Engine State
-## Session: 2026-05-13 03:56 HKT (Heartbeat Build)
 
-### Completed Previous Session (02:28-03:00 HKT)
-1. ✅ EV Charging affiliate IDs fixed (Booking 2875669, Klook 119991)
-2. ✅ Luxury blog data regenerated (23 posts)
-3. ✅ Family Travel blog data regenerated (57 posts)
-4. ✅ Sitemap fix for Luxury Family Travel (added blog posts + missing pages)
-5. ✅ All 6 sites health-verified (all 200)
+## Cursor
+P2 IMPROVE → Zero-Excuse Build Queue (in progress this session)
 
-### Current Build (Heartbeat 03:56 HKT)
+## What Was Done This Session (2026-05-13 09:28 HKT)
+- ✅ **Kids Activities Asia**: Created `SiteFooter.tsx` with cross-site links to all 6 sister sites, wired into layout.tsx
+- ✅ **Kids Activities Asia**: Added schema.org Article + BreadcrumbList JSON-LD to blog/[slug]/page.tsx (6 blog pages)
+- ✅ **Build verification**: All current sites build clean (EV, Kids, Apifeny previously verified)
+- 🔄 **Spawned sub-agent**: Expanding Apifeny from 30→60 tools (deepseek-chat, P3 EXPAND, 30min timeout)
 
-**In Progress:**
-- 🔨 Sub-agent writing: "Malaysia EV Charging Crisis 2026" blog post (~2,500 words, SEO-optimized)
-  - Based on real Raya 2026 pain points (118% EV sales surge, 4,161 bays vs 10,000 target, community NIMBY issues)
-  - Scored 36/40 with 6-factor framework → EXECUTE IMMEDIATELY
-  - Includes practical solutions, affiliate-friendly sections, and build verification
+## Ongoing Tasks
+- **Sub-agent** (6ae1cd72): Expanding Apifeny tool directory — still running, no output yet
+- **P0 DEPLOY**: Blocked — no VERCEL_TOKEN configured
+- **P1 BUILD (Nudge)**: Blocked — needs Supabase credentials from Chris
+- **P4 ANALYTICS**: Blocked — needs GA4 measurement ID from Chris
 
-**Next in Queue (unblocked, can execute without Chris):**
-- P3 EXPAND: Research competitor AI tool directories for Apifeny data gap analysis
-- P3 EXPAND: Write 2-3 more EV Charging blog posts (Singapore charging reliability, Thailand route guide)
-- P4 ANALYTICS: GA4 setup — blocked (needs measurement ID from Chris)
-- P4 FIX: Orphaned `content/blog/*.md` files on luxury-family-travel (cosmetic only, not build-breaking)
+## Next Actions
+1. Wait for Apifeny sub-agent to finish (30 min timeout)
+2. If sub-agent finishes: verify build, update cursor to Next Action on Zero-Excuse Build Queue
+3. If sub-agent times out: record partial progress, move to next task
 
-### Known Blockers (Need Chris)
+## Blocked Items
 - VERCEL_TOKEN for manual deploys
-- GA4 measurement ID
-- Nudge Supabase ANON_KEY for Vercel env
-- Nudge signup flow (Supabase schema pasted? Not yet confirmed)
+- Supabase credentials for Nudge
+- GA4 measurement ID for analytics
 
-### Research Completed (This Wake)
-- Malaysia EV charging pain: Raya 2026 chaos, community NIMBY fighting installations, urban-rural gap
-- Family travel pain: Malaysia = underrated budget-friendly English-speaking destination
-- AI tools directory: 2,000+ companies tracked, growing market
-- Scored opportunity: Malaysia EV charging content at 36/40 → executing now
-
-### Cost This Wake
-- Main session: ~5k tokens DeepSeek-chat (~$0.002)
-- Sub-agent: TBD
-- **Total so far: ~$0.002**
+## Memory
+- EV station routing: already uses `force-dynamic` → SSR renders all 1,125 stations, build passes clean
+- Luxury destination slugs: data uses `d.id` (e.g. `bali-new-1`) = valid URL slugs, no fix needed for current 20 destinations
+- Cross-site footer links: ALL 4 major sites (EV, Family Travel, Luxury, Apifeny) already have sister site links. Kids Activities Asia now added.
+- Kids Activities Asia blog schema: Article + BreadcrumbList JSON-LD added to all 6 blog posts

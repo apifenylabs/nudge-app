@@ -53,6 +53,22 @@ export const chatbotAffiliates: AffiliateLink[] = [
     is_direct: false,
     badge: 'Free Tier',
   },
+  {
+    slug: 'deepseek',
+    referral_url: 'https://chat.deepseek.com',
+    cta_label: 'Chat with DeepSeek Free',
+    commission_note: 'Free to use. No account needed for basic chat.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'kimi',
+    referral_url: 'https://kimi.moonshot.cn',
+    cta_label: 'Try Kimi Free',
+    commission_note: 'Free Chinese AI assistant with long context support.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
 ];
 
 // ─── Image Generation ───
@@ -65,6 +81,14 @@ export const imageAffiliates: AffiliateLink[] = [
     commission_note: 'From $10/mo for basic plan.',
     is_direct: false,
     badge: 'Pro Pick',
+  },
+  {
+    slug: 'leonardo-ai',
+    referral_url: 'https://leonardo.ai',
+    cta_label: 'Try Leonardo AI Free',
+    commission_note: 'Free tier with daily tokens. Paid from $10/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
   },
 ];
 
@@ -100,6 +124,38 @@ export const codeAffiliates: AffiliateLink[] = [
     is_direct: false,
     badge: 'Free Trial',
   },
+  {
+    slug: 'bolt-new',
+    referral_url: 'https://bolt.new',
+    cta_label: 'Start Building with Bolt',
+    commission_note: 'Free tier available. Referral: 200K bonus tokens + 5M if friend upgrades.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'lovable',
+    referral_url: 'https://lovable.dev/affiliates',
+    cta_label: 'Try Lovable Free',
+    commission_note: 'Affiliate program available (10-20% commission). Paid from $29/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'windsurf',
+    referral_url: 'https://windsurf.com',
+    cta_label: 'Try Windsurf Free',
+    commission_note: 'Free tier included. Referral: 500 bonus flex credits. Pro from $15/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'devin',
+    referral_url: 'https://devin.ai',
+    cta_label: 'Try Devin',
+    commission_note: 'AI software engineer from Cognition. Paid from $500/mo. Enterprise pricing.',
+    is_direct: false,
+    badge: 'Pro Pick',
+  },
 ];
 
 // ─── Productivity ───
@@ -134,6 +190,14 @@ export const writingAffiliates: AffiliateLink[] = [
     is_direct: false,
     badge: 'Free Trial',
   },
+  {
+    slug: 'deepl',
+    referral_url: 'https://www.deepl.com/pro',
+    cta_label: 'Try DeepL Pro Free',
+    commission_note: 'Free tier available. Pro from $8.99/mo. Business partnerships available.',
+    is_direct: false,
+    badge: 'Best Value',
+  },
 ];
 
 // ─── Design & Creative ───
@@ -157,6 +221,14 @@ export const audioAffiliates: AffiliateLink[] = [
     referral_url: 'https://elevenlabs.io',
     cta_label: 'Try ElevenLabs Free',
     commission_note: 'Free tier with limited chars. Paid from $5/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'murf-ai',
+    referral_url: 'https://murf.ai',
+    cta_label: 'Try Murf AI Free',
+    commission_note: 'Affiliate: 20% recurring commission for 24 months. Paid from $19/mo.',
     is_direct: false,
     badge: 'Free Trial',
   },
@@ -191,6 +263,48 @@ export const videoAffiliates: AffiliateLink[] = [
   },
 ];
 
+// ─── Open Source & ML Platforms ───
+
+export const openSourceAffiliates: AffiliateLink[] = [
+  {
+    slug: 'hugging-face',
+    referral_url: 'https://huggingface.co',
+    cta_label: 'Explore Hugging Face',
+    commission_note: 'Free ML model & dataset hub. Pro inference from $9/mo.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'langchain',
+    referral_url: 'https://www.langchain.com',
+    cta_label: 'Build with LangChain',
+    commission_note: 'Open-source LLM framework. LangSmith paid from pay-as-you-go.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'qwen',
+    referral_url: 'https://tongyi.aliyun.com',
+    cta_label: 'Try Qwen Free',
+    commission_note: 'Free AI assistant by Alibaba. No signup needed for basic use.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+];
+
+// ─── Customer Service & Support ───
+
+export const customerServiceAffiliates: AffiliateLink[] = [
+  {
+    slug: 'intercom-ai',
+    referral_url: 'https://www.intercom.com',
+    cta_label: 'Try Intercom Free',
+    commission_note: 'Partner program with recurring commission. Paid from $39/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+];
+
 // ─── Aggregated lookup ───
 
 export const allAffiliateLinks: AffiliateLink[] = [
@@ -203,6 +317,8 @@ export const allAffiliateLinks: AffiliateLink[] = [
   ...designAffiliates,
   ...audioAffiliates,
   ...videoAffiliates,
+  ...openSourceAffiliates,
+  ...customerServiceAffiliates,
 ];
 
 /** Get affiliate link for a specific tool slug */
@@ -213,15 +329,17 @@ export function getAffiliateForTool(slug: string): AffiliateLink | undefined {
 /** Grouped by category — for highlighting sections on a page */
 export function getAffiliateGroup(category: string): AffiliateLink[] {
   const map: Record<string, string[]> = {
-    'Chatbots & Assistants': ['chatgpt', 'claude', 'gemini'],
-    'Image Generation': ['midjourney'],
+    'Chatbots & Assistants': ['chatgpt', 'claude', 'gemini', 'deepseek', 'kimi'],
+    'Image Generation': ['midjourney', 'leonardo-ai'],
     'Research & Analysis': ['perplexity'],
-    'Code & Development': ['copilot', 'cursor'],
+    'Code & Development': ['copilot', 'cursor', 'bolt-new', 'lovable', 'windsurf', 'devin'],
     'Productivity': ['notion-ai'],
-    'Writing & Content': ['jasper', 'copy-ai'],
+    'Writing & Content': ['jasper', 'copy-ai', 'deepl'],
     'Design & Creative': ['canva-ai'],
-    'Audio & Music': ['elevenlabs'],
+    'Audio & Music': ['elevenlabs', 'murf-ai'],
     'Video & Animation': ['runway', 'synthesia', 'descript'],
+    'Open Source & ML Platforms': ['hugging-face', 'langchain', 'qwen'],
+    'Customer Service & Support': ['intercom-ai'],
   };
   const slugs = map[category] || [];
   return allAffiliateLinks.filter((a) => slugs.includes(a.slug));

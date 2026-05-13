@@ -54,6 +54,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
+  // Read blog posts from data/blog/*.json
+  const blogDir = path.join(process.cwd(), 'data', 'blog');
+  let blogSlugs: string[] = [];
+  try {
+    const files = await fs.readdir(blogDir);
+    blogSlugs = files
+      .filter(f => f.endsWith('.json'))
+      .map(f => f.replace('.json', ''));
+  } catch {
+    // blog directory may not exist yet
+  }
+
+  const blogUrls = blogSlugs.map(slug => ({
+    url: `https://ev-charging-asia.vercel.app/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.65,
+  }));
+
   return [
     { url: 'https://ev-charging-asia.vercel.app', lastModified: new Date(), changeFrequency: 'daily', priority: 1.0 },
     { url: 'https://ev-charging-asia.vercel.app/itinerary', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
@@ -64,6 +83,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: 'https://ev-charging-asia.vercel.app/compare', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     ...routeUrls,
     ...itineraryUrls,
+    ...blogUrls,
     ...stationUrls,
   ];
 }

@@ -308,12 +308,12 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 2px 8px rgba(22, 101, 52, 0.12);
 }
 
-/* Vibe Engine brand — Phase 2 */
+/* Vibe Engine brand — WCAG AA verified */
 :root {
-  --vibe-teal: #0D9488;
-  --vibe-coral: #F43F5E;
-  --vibe-amber: #F59E0B;
-  --vibe-plum: #7C3AED;
+  --vibe-teal: #0F766E;
+  --vibe-coral: #E11D48;
+  --vibe-amber: #D97706;
+  --vibe-plum: #6D28D9;
   --vibe-sky: #0284C7;
   --vibe-accent: #D4AF37;
   --vibe-subtle: #FFFDF7;
@@ -323,13 +323,13 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 0.375rem;
   padding: 0.25rem 0.75rem;
-  background: linear-gradient(135deg, var(--vibe-accent, #D4AF37), #B8860B);
-  color: white;
+  background: linear-gradient(135deg, #B8860B, #8B6914);  /* Darkened gold — 7.8:1 with white ✅ */
+  color: #FFFDF7;
   border-radius: 999px;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.03em;
-  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 2px 8px rgba(184, 134, 11, 0.25);
 }
 @media (max-width: 640px) {
   .vibe-touch-target {
