@@ -70,6 +70,46 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* Schema.org WebApplication */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Social Beast",
+              "url": "https://social-beast-two.vercel.app",
+              "applicationCategory": "SocialMediaApplication",
+              "operatingSystem": "Web",
+              "description": "Create, schedule, and publish social content across all your platforms. AI-powered content engine for builders, founders, and creators.",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            }),
+          }}
+        />
+        {/* Schema.org WebSite with SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Social Beast",
+              "url": "https://social-beast-two.vercel.app",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://social-beast-two.vercel.app/posts?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            }),
+          }}
+        />
       </head>
       <body>
         {children}

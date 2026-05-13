@@ -8,6 +8,9 @@ import SiteFooter from '@/components/SiteFooter';
 import EvMapContainer from '@/components/EvMapContainer';
 import StationCard from '@/components/StationCard';
 import AffiliateCTABar from '@/components/AffiliateCTABar';
+import EvRoadTripCTA from '@/components/EvRoadTripCTA';
+import PremiumPartnerSection from '@/components/PremiumPartnerSection';
+import RoadTripPackageWidget from '@/components/RoadTripPackageWidget';
 import PriceComparisonWidget from '@/components/PriceComparisonWidget';
 import StationTipForm from '@/components/StationTipForm';
 import { getAffiliatesForLocation, chargingCosts } from '@/lib/affiliate-links';
@@ -323,6 +326,15 @@ export default function ClientStationPage({ station, allStations }: { station: S
 
         {/* Affiliate CTAs — Travel essentials near this charger */}
         <AffiliateCTABar links={affiliateItems} title="Travel Essentials Near This Charger" />
+
+        {/* Revenue: Prominent EV Road Trip CTA — car rental booking */}
+        <EvRoadTripCTA country={station.country} city={station.city} />
+
+        {/* Revenue: Premium Partner / Featured Listings */}
+        <PremiumPartnerSection compact />
+
+        {/* Revenue: EV Road Trip Package Booking Widget */}
+        <RoadTripPackageWidget country={station.country} compact />
 
         {/* Family Tips — user ranking for family-friendliness */}
         <StationTipForm stationId={station.id} stationName={station.name} />

@@ -1,51 +1,45 @@
 # Work Engine State
 
 ## Cursor
-P3 EXPAND ✅ — Apifeny AI blog system completed, 3 more posts added (10 total).
-P0-P4 all blocked on Chris (deploy, Nudge, analytics, affiliate IDs).
-**Current: Research → Build loop complete. Produced output this session.**
+**2026-05-14 00:40 HKT**: BUILD-OR-DIE mode. Chris asleep. OmniMind SDK + Docker Compose + agent integration shipped.
 
-## What Was Done This Session (2026-05-13 15:28 HKT)
-- ✅ **Research**: Affiliate programs scored 48/60 → saved to `knowledge/research/2026-05-13-aftiliate-programs.md`
-- ✅ **Sub-agent**: Generated 3 new Apifeny AI blog posts (social media management, meeting assistants, e-commerce) → 1,300-1,600 words each → Build verified ✅
-- ✅ **Affiliate disclosure**: Added FTC-compliant affiliate disclosure to all 6 site footers (Apifeny AI, EV Charging, Family Travel, Luxury Travel, Kids Activities)
-- ✅ **Created affiliate-signup-checklist.md** — Ready for Chris to sign up (Klook, CJ, 3+ AI tools)
-- 🔍 **Found redirect loop**: `familytravelasia.com` ↔ `www.familytravelasia.com` — needs Vercel domain config (requires Chris)
+## Completed This Wake (May 13→14 Overnight — OmniMind Focused)
+### OmniMind SDK & Infra
+- ✅ **Python client SDK** (`sdk/python/omnimind/`) — full store/query/list/delete with retry, typed errors, PyPI packaging
+  - Self-test: Health ✅ → Store ✅ → Search (score 0.744) ✅ → List ✅ → Delete ✅
+- ✅ **Production Docker Compose** (Qdrant v1.17 + FastAPI backend + Caddy reverse proxy with TLS/rate limiting)
+- ✅ **Agent integration module** (`sdk/agent-integration.py`) — standalone fallback, works without SDK installed
+- ✅ **Caddyfile** — TLS, rate limiting, security headers
+- ✅ **`.env.example`** — all 10 env vars documented
+- ✅ **All pushed to GitHub** (`ccc2e63`)
 
-## Content Status (Updated)
-| Site | Blog Posts | Latest | Notes |
-|------|-----------|--------|-------|
-| EV Charging Asia | 30 | ✅ | Affiliate disclosure added |
-| Luxury Family Travel | 30 | ✅ | Affiliate disclosure added |
-| Family Travel Asia | 57 | ✅ | Affiliate disclosure added; domain loop needs fix |
-| Kids Activities Asia | 9 | ✅ | Affiliate disclosure added |
-| Apifeny AI | **10 (3 NEW!)** | ✅ | Build clean; disclosure added |
+### Already Done (previous session)
+- ✅ PRD.md — full venture deck
+- ✅ AES-256-GCM Phase 2 crypto
+- ✅ Supabase schema deployed by Chris
+- ✅ Qdrant v1.17 API fix (query_points)
+- ✅ 24/24 tests passing
+- ✅ OpenClaw plugin `remember`/`recall` tools wired
 
-## Next Actions (Priority Order)
-1. **WAITING ON CHRIS**: Affiliate signups (affiliate-signup-checklist.md) — unlocks monetization
-2. **WAITING ON CHRIS**: Vercel domain config fix for familytravelasia.com redirect loop
-3. **WAITING ON CHRIS**: VERCEL_TOKEN for automated deploys
-4. **WAITING ON CHRIS**: Supabase credentials for Nudge
-5. **WAITING ON CHRIS**: GA4 measurement ID for analytics
+## Portfolio Health
+| Site | Status | Content |
+|------|--------|---------|
+| EV Charging Asia | ✅ 200 | 31 blog posts, 1125 stations |
+| Family Travel Directory | ✅ 200 | 57 blog posts, 555 destinations |
+| Luxury Family Travel | ✅ 200 | 20 destinations |
+| Apifeny AI | ✅ 200 | 60 tools |
+| Nudge | ✅ 200 | Cross-site links |
+| Social Beast | ✅ 200 | Cross-site links |
+| Senior-Friendly Travel | ✅ 200 | Clean build |
+| Kids Activities Asia | ✅ 200 | Clean build |
 
-## Zero-Excuse Build Queue Status
-| # | Task | Status |
-|---|------|--------|
-| 1 | Fix EV station [id] routing | ✅ Working (force-dynamic) |
-| 2 | Fix Luxury destination slugs | ✅ Works with URL-safe slugs |
-| 3 | Add cross-site footer links | ✅ All 6 sites have "Our Network" |
-| 4 | Generate blog posts for Family Travel | ✅ 57 posts existing |
-| 5 | Add schema.org markup | ✅ All sites have it |
-| 6 | Fix Apifeny tool detail pages | ✅ Renders real data |
-| 7 | Add sitemap.xml | ✅ All sites have sitemap.ts |
-| 8 | Consolidate redirects | ⚠️ familytravelasia.com loop needs Vercel |
-
-## Blockers Needing Chris
-1. Sign up for Klook + CJ + 3 AI tool affiliates (affiliate-signup-checklist.md)
-2. Fix familytravelasia.com redirect loop via Vercel dashboard
-3. Provide VERCEL_TOKEN for CLI deploys
+## Blockers (All Chris)
+- OmniMind deployment to Fly.io/Railway
+- SUPABASE_SERVICE_KEY + OMNIMIND_ENCRYPTION_SALT env vars
+- VERCEL_TOKEN for deploys
+- Affiliate program signup (Booking.com, Expedia, etc.)
+- Domain DNS config (custom domains)
 
 ## Budget
-- Sub-agent: ~22k tokens DeepSeek-chat ≈ $0.033
-- Main session: ~ongoing ≈ $0.02
-- **Total this session: ~$0.05** ✅ Under $0.05 threshold
+- ~14k tokens DeepSeek-chat (~$0.005)
+- **Total this wake: <$0.01**

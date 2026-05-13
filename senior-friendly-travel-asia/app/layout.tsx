@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import SiteFooter from "@/components/SiteFooter";
 
 const BASE_URL = 'https://seniorfriendlytravel.asia';
 
@@ -62,6 +63,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full bg-gray-50 text-gray-900 pb-safe pt-safe">
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

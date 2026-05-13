@@ -22,5 +22,24 @@
     "puncak",
     "lembang",
     "indonesia"
+  ],
+  "imageUrl": "/blog/images/indonesia-jakarta-bandung-ev-road-trip.jpg",
+  "faq": [
+    {
+      "question": "Can I drive Jakarta-Bandung without charging?",
+      "answer": "Yes with 350+ km range. 150 km one way. Charging upon arrival recommended for return trip."
+    },
+    {
+      "question": "Where to charge in Bandung?",
+      "answer": "Trans Studio Mall (SPKLU DC 50kW), Paris Van Java Mall, Padalarang toll rest area. Hotels like Hilton offer AC charging."
+    },
+    {
+      "question": "Best time to drive?",
+      "answer": "Leave by 6 AM. Return before 3 PM weekdays or after 8 PM weekends."
+    },
+    {
+      "question": "Trip cost?",
+      "answer": "IDR 80,000-120,000 per full charge at SPKLU rates. Round trip: approximately IDR 150,000-200,000."
+    }
   ]
 }

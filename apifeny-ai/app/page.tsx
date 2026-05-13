@@ -11,6 +11,8 @@ import MustUseThisMonth from '@/components/MustUseThisMonth';
 import FeaturedCollections from '@/components/FeaturedCollections';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import FeaturedPlaybooks from '@/components/FeaturedPlaybooks';
+import FeaturedRankings from '@/components/FeaturedRankings';
+import SuccessStories from '@/components/SuccessStories';
 
 export default function HomePage() {
   const router = useRouter();
@@ -184,6 +186,15 @@ export default function HomePage() {
       <section className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FeaturedPlaybooks />
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════ */}
+      {/* RANKINGS BY WORKFLOW                */}
+      {/* ════════════════════════════════════ */}
+      <section className="py-16 sm:py-20 bg-tech-800/30 border-y border-tech-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FeaturedRankings />
         </div>
       </section>
 

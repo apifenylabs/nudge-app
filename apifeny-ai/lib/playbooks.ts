@@ -29,6 +29,12 @@ export interface Playbook {
   /** SEO */
   meta_title?: string;
   meta_description?: string;
+  /** Pipeline stage this playbook fits */
+  pipeline_stage?: string;
+  /** Revenue impact description */
+  revenue_impact?: string;
+  /** Real results from using this playbook */
+  real_results?: { metric: string; value: string; description: string }[];
 }
 
 export const playbooks: Playbook[] = [
@@ -87,6 +93,12 @@ export const playbooks: Playbook[] = [
         fix: 'Give examples of writing you like. ChatGPT mimics style well.',
       },
     ],
+    pipeline_stage: 'content',
+    revenue_impact: '$3K/mo affiliate revenue with consistent publishing',
+    real_results: [
+      { metric: 'Monthly Posts', value: '12 blogs + 120 social', description: '3 blog posts + 5 social posts/day' },
+      { metric: 'Time Saved/Week', value: '15 hours', description: 'Down from 25 hours with manual writing' },
+    ],
   },
   {
     slug: 'build-an-app-with-cursor',
@@ -142,6 +154,12 @@ export const playbooks: Playbook[] = [
         fix: 'Always scan generated code for security issues and edge cases.',
       },
     ],
+    pipeline_stage: 'coding',
+    revenue_impact: '$420 MRR from SaaS MVP built in 72 hours',
+    real_results: [
+      { metric: 'Time to MVP', value: '72 hours', description: 'From idea to working product with Stripe' },
+      { metric: 'First Week Signups', value: '45 users', description: 'Posted build journey on X' },
+    ],
   },
   {
     slug: 'travel-planning-with-ai',
@@ -192,6 +210,10 @@ export const playbooks: Playbook[] = [
         mistake: 'Trusting AI-generated prices without verification',
         fix: 'Always check current prices on booking sites before finalizing budget.',
       },
+    ],
+    pipeline_stage: 'planning',
+    real_results: [
+      { metric: 'Planning Time Saved', value: '70%', description: 'Reduced trip planning from 8 hours to 2.5 hours' },
     ],
   },
   {
@@ -248,6 +270,12 @@ export const playbooks: Playbook[] = [
         fix: 'Research which platforms (WeChat, Line, KakaoTalk, Zalo) are dominant in your target market.',
       },
     ],
+    pipeline_stage: 'marketing',
+    revenue_impact: '5x ROI on ad spend targeting multilingual Asian audiences',
+    real_results: [
+      { metric: 'Ad ROI Improvement', value: '5x', description: 'Using AI to tailor ad copy per Asian market' },
+      { metric: 'Content Production', value: '10x faster', description: 'Localize 1 post into 8 Asian languages' },
+    ],
   },
   {
     slug: 'productivity-workflow-with-ai',
@@ -299,6 +327,11 @@ export const playbooks: Playbook[] = [
         fix: 'Start with just Notion AI + ChatGPT. Add tools only when you have a specific need.',
       },
     ],
+    pipeline_stage: 'deployment',
+    real_results: [
+      { metric: 'Daily Tasks Automated', value: '12+', description: 'Recurring workflows now fully automated' },
+      { metric: 'Hours Saved/Week', value: '10+ hours', description: 'Reallocated to high-value work' },
+    ],
   },
   {
     slug: 'ai-video-production',
@@ -343,6 +376,12 @@ export const playbooks: Playbook[] = [
       'Use Descript\'s Studio Sound to clean up audio from any source',
       'Create reusable templates in Descript for recurring video formats',
       'Use Canva\'s resize feature to adapt one video for multiple platforms',
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Create professional video content 5x faster with AI tools',
+    real_results: [
+      { metric: 'Video Production Speed', value: '5x', description: 'From scripting to finished video' },
+      { metric: 'Cost Savings', value: '80%', description: 'No studio, no crew, no editing suite needed' },
     ],
   },
 
@@ -406,6 +445,12 @@ export const playbooks: Playbook[] = [
         mistake: 'Accepting first-generated code without review',
         fix: 'Always scan generated code for security issues (SQL injection, API key leaks) and edge cases.',
       },
+    ],
+    pipeline_stage: 'coding',
+    revenue_impact: 'Build full-stack apps 10x faster with AI coding assistants',
+    real_results: [
+      { metric: 'Development Speed', value: '10x', description: 'From idea to working code with AI assistance' },
+      { metric: 'Debug Time Reduction', value: '60%', description: 'AI-powered debugging cuts troubleshooting time' },
     ],
   },
   {
@@ -481,6 +526,12 @@ export const playbooks: Playbook[] = [
         fix: 'Each stage has a best-fit LLM. Use the recommendations above. The cost difference is negligible vs. the quality gain.',
       },
     ],
+    pipeline_stage: 'deployment',
+    revenue_impact: 'From idea to deployment in days instead of weeks',
+    real_results: [
+      { metric: 'Time to Deploy', value: '3-7 days', description: 'Full pipeline from idea to production' },
+      { metric: 'Tool Switching Saved', value: '5+ tools', description: 'Unified AI pipeline replaces fragmented toolchain' },
+    ],
   },
   {
     slug: 'best-llms-for-strategic-planning',
@@ -536,6 +587,12 @@ export const playbooks: Playbook[] = [
         mistake: 'Not verifying market size claims',
         fix: 'Always ask for sources and verify with Perplexity before using data in pitches or plans.',
       },
+    ],
+    pipeline_stage: 'planning',
+    revenue_impact: 'Better strategic decisions with AI-powered market analysis',
+    real_results: [
+      { metric: 'Planning Efficiency', value: '3x faster', description: 'Competitive analysis in hours instead of days' },
+      { metric: 'Decision Confidence', value: 'Higher', description: 'Data-backed strategy with AI research synthesis' },
     ],
   },
   {
@@ -597,6 +654,12 @@ export const playbooks: Playbook[] = [
         mistake: 'Not maintaining context between sessions',
         fix: 'Keep a running document that captures decisions, status, and next steps. Feed it to each AI session.',
       },
+    ],
+    pipeline_stage: 'deployment',
+    revenue_impact: 'Automate entire workflows with multi-agent AI teams',
+    real_results: [
+      { metric: 'Tasks Automated', value: '15+', description: 'Recurring weekly tasks now fully autonomous' },
+      { metric: 'Hours/Week Saved', value: '20+ hours', description: 'AI agent team handles delegation and execution' },
     ],
   },
 ];

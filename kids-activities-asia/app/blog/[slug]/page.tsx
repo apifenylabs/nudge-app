@@ -9,6 +9,8 @@ interface Props {
   params: { slug: string };
 }
 
+const BASE_URL = 'https://kids-activities-asia.vercel.app';
+
 const TAG_COLORS: Record<string, { bg: string; text: string }> = {
   'parent-tips': { bg: 'bg-purple-100', text: 'text-purple-700' },
   'activities': { bg: 'bg-orange-100', text: 'text-orange-700' },
@@ -128,41 +130,54 @@ function ArticleContent({ content }: { content: string }) {
   );
 }
 
-function jsonLd(post: BlogPost): string {
+function JsonLdScripts({ post }: { post: BlogPost }) {
   const article = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": post.title,
-    "description": post.excerpt.slice(0, 160),
-    "datePublished": post.date,
-    "dateModified": post.date,
-    "author": post.author ? [{"@type": "Person", "name": post.author}] : [{"@type": "Organization", "name": "Kids Activities Asia"}],
-    "publisher": {
-      "@type": "Organization",
-      "name": "Kids Activities Asia",
-      "logo": {"@type": "ImageObject", "url": "https://kids-activities-asia.vercel.app/favicon.ico"}
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt.slice(0, 160),
+    image: post.imageUrl || `${BASE_URL}/og-image.jpg`,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: 'Kids Activities Asia',
     },
-    "image": post.imageUrl || undefined,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://kids-activities-asia.vercel.app/blog/${post.slug}`
+    publisher: {
+      '@type': 'Organization',
+      name: 'Kids Activities Asia',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${BASE_URL}/favicon.ico`,
+      },
     },
-    "keywords": post.tags.join(', '),
-    "articleSection": post.tags[0] || 'activities',
-    "wordCount": post.content.replace(/<[^>]*>/g, '').split(/\s+/).length,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${BASE_URL}/blog/${post.slug}`,
+    },
   };
 
   const breadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kids-activities-asia.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://kids-activities-asia.vercel.app/blog" },
-      { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://kids-activities-asia.vercel.app/blog/${post.slug}` }
-    ]
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${BASE_URL}/blog` },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `${BASE_URL}/blog/${post.slug}` },
+    ],
   };
 
-  return `<script type="application/ld+json">${JSON.stringify(article)}</script>\n<script type="application/ld+json">${JSON.stringify(breadcrumb)}</script>`;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+    </>
+  );
 }
 
 export default function BlogPostPage({ params }: Props) {
@@ -176,7 +191,7 @@ export default function BlogPostPage({ params }: Props) {
 
   return (
     <>
-      <div dangerouslySetInnerHTML={{ __html: jsonLd(post) }} />
+      <JsonLdScripts post={post} />
       <article className="max-w-4xl mx-auto">
       {/* Back Link */}
       <Link

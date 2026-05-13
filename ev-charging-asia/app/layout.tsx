@@ -65,6 +65,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }),
           }}
         />
+        {/* Schema.org WebSite with SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "EV Charging Asia",
+              "url": "https://ev-charging-asia.vercel.app",
+              "description": "Plan the ultimate family EV road trip across Asia. Find charging stations, book luxury EV-friendly hotels, discover family-friendly routes.",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://ev-charging-asia.vercel.app/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            }),
+          }}
+        />
       </head>
       <body className="min-h-full bg-gray-50 text-gray-900 flex flex-col min-h-screen">
         <main className="flex-1">

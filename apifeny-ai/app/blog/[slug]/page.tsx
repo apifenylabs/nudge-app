@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Calendar, Clock, Tag, ArrowLeft, ArrowRight, User, Sparkles, BookOpen } from 'lucide-react';
 import { getPostBySlug, getRelatedPosts } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data';
+import BlogAffiliateCTA from '../../components/BlogAffiliateCTA';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -123,8 +124,15 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <div dangerouslySetInnerHTML={{ __html: renderContent(post.content) }} />
         </div>
 
+        {/* Affiliate CTA — monetization block */}
+        <BlogAffiliateCTA
+          postSlug={post.slug}
+          postTags={post.tags}
+          postTitle={post.title}
+        />
+
         {/* Bottom Tags */}
-        <div className="mt-12 pt-8 border-t border-tech-500/20">
+        <div className="pt-8 border-t border-tech-500/20">
           <div className="flex flex-wrap items-center gap-2">
             <Tag className="w-4 h-4 text-tech-400" />
             {post.tags.map((tag) => (

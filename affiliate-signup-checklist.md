@@ -18,9 +18,9 @@
 
 | Program | URL | Cookie |
 |---------|-----|--------|
-| Klook | https://affiliate.klook.com | 30 days, 2-20% |
-| Viator (Tripadvisor) | https://www.viator.com/affiliates | 30 days, 6-8% |
-| Booking.com | Via CJ.com | 30-90 days, 4-5% |
+| Klook | https://affiliate.klook.com | 30 days, 15-25% (verified Apr 2026) |
+| Viator (Tripadvisor) | https://www.viator.com/affiliates | 30 days, ~8% |
+| Booking.com | Via CJ.com | 30-90 days, 25-40% (via intermediary) |
 | Agoda | Via CJ.com or direct | 30 days, 4-6% |
 
 ### Quickest Win: Klook

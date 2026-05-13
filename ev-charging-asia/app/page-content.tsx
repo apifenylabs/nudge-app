@@ -6,6 +6,9 @@ import { FC, useState, useEffect } from 'react';
 import { Station } from '@/lib/scoring';
 import { BlogPost } from '@/lib/blog-data';
 import { affiliateLinks, getAffiliatesForLocation } from '@/lib/affiliate-links';
+import EvRoadTripCTA from '@/components/EvRoadTripCTA';
+import PremiumPartnerSection from '@/components/PremiumPartnerSection';
+import RoadTripPackageWidget from '@/components/RoadTripPackageWidget';
 
 const MapWithFilters = dynamic(() => import('@/components/MapWithFilters'), { ssr: false });
 const FeaturedFamilyStops = dynamic(() => import('@/components/FeaturedFamilyStops'), { ssr: false });
@@ -161,6 +164,21 @@ export default function HomeContent({ meta, stations, blogPosts: initialPosts = 
       {/* Featured Carousel */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-10">
         <FeaturedFamilyStops stations={stations} />
+      </div>
+
+      {/* Revenue: EV Road Trip CTA — homepage */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <EvRoadTripCTA />
+      </div>
+
+      {/* Revenue: Premium Partners */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <PremiumPartnerSection />
+      </div>
+
+      {/* Revenue: Road Trip Packages */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <RoadTripPackageWidget />
       </div>
 
       {/* Content Sections */}

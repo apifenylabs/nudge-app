@@ -51,6 +51,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/playbooks" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
+                  <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
+                  Playbooks
+                </Link>
+              </li>
+              <li>
+                <Link href="/revenue" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
+                  <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
+                  Revenue Tracker
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
                   <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
                   About Us

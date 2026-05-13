@@ -93,6 +93,27 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* Schema.org WebSite with SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Luxury Family Travel Asia",
+              "url": "https://luxuryfamilytravelasia.com",
+              "description": "61 curated luxury family destinations across Asia. 5-star resorts, private villas, butler service, Michelin dining, and exclusive experiences for discerning families.",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://luxuryfamilytravelasia.com/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            }),
+          }}
+        />
       </head>
       <body className="min-h-full bg-gray-50 text-gray-900 pb-safe pt-safe">
         {children}

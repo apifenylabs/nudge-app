@@ -5,6 +5,7 @@ import { Zap, ArrowLeft, Route, Clock, BatteryCharging, Calendar, MapPin, AlertT
 import { getAllItineraries, getItineraryBySlug } from '@/data/itineraries';
 import RouteMap from '@/components/itineraries/RouteMap';
 import SeasonalRecommendations from '@/components/itineraries/SeasonalRecommendations';
+import ItineraryRevenueSection from '@/components/itineraries/ItineraryRevenueSection';
 import { getRouteStations, getRecommendedStops, getKidFriendlyStations, getLuxuryStations, countRouteChargingStops, getRouteCities } from '@/data/route-stations';
 import stationsData from '@/data/stations.json';
 import { scoreTier } from '@/lib/scoring';
@@ -459,6 +460,9 @@ export default async function ItineraryDetailPage({ params }: Props) {
             We earn a commission at no extra cost to you when you book through these links.
           </p>
         </div>
+
+        {/* ===== REVENUE: EV Road Trip CTA + Premium Partners + Packages ===== */}
+        <ItineraryRevenueSection country={it.countries[0] || ''} />
 
         {/* ===== HIGHLIGHTS ===== */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">

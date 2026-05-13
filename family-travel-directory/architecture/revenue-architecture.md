@@ -1,11 +1,15 @@
 # Family Travel Asia — Revenue Architecture Plan
 
-## Current State (May 13, 2026)
+## Current State (May 14, 2026)
 - 52 blog posts, 30+ components, custom domain familytravelasia.com ✅
 - Comparison tables built ✅
 - Price comparison widgets built ✅
 - Klook/Viator affiliate URL infrastructure built ✅
-- **Revenue: $0** because affiliate IDs are hardcoded as `PLACEHOLDER_AFFILIATE_ID`
+- **Revenue: $0** — affiliate IDs now driven by env vars with real fallback IDs ✅
+- [✅] Dark/light mode support via `prefers-color-scheme` in globals.css
+- [✅] ContextualRecommendations component built and integrated on destination pages
+- [✅] Mobile 320px breakpoint refinements in globals.css
+- [✅] Affiliate IDs in `lib/affiliate.ts` use env vars with real fallbacks
 
 ## The Single Highest-Leverage Action (Next 12h)
 **Fix affiliate IDs so every existing link generates commission.**
@@ -49,3 +53,50 @@
 - Shared lib in `lib/`
 - Data in `data/`
 - Clear comments at module boundaries
+
+## Components Added (May 14, 2026)
+
+### `components/ContextualRecommendations.tsx`
+- **Purpose**: Shows contextual affiliate recommendations ("Book this + nearby hotel") based on destination name, city, country, age range, and tags.
+- **Integration**: Added to destination page (`_client.tsx`) after Top Tours & Experiences section, before Affiliate Booking section.
+- **Features**:
+  - Hotel card (Booking.com) — always shown
+  - Activity card (Klook) — always shown
+  - Experience card (Viator) — always shown
+  - Dining card — shown when tags contain food/dining/market keywords
+  - Transport card — shown when tags contain transport/beach/island keywords
+  - Scroll-in animation via IntersectionObserver
+  - Fully responsive grid (1→2→3 columns)
+  - Glassmorphism cards with hover effects
+  - Trust disclosure footer
+
+### Dark Mode Support (`app/globals.css`)
+- Added comprehensive `prefers-color-scheme: dark` media query
+- Dark mode overrides for all CSS custom properties (background, text, card, gradients)
+- Specific overrides for `bg-white`, `bg-gray-50`, `text-gray-*`, `border-gray-*` utility classes
+- All cards, sections, and overlays respect dark mode
+
+### Mobile 320px Breakpoint (`app/globals.css`)
+- Added `@media (max-width: 360px)` block for ultra-compact screens
+- Smaller body font (14px), tighter padding/margins
+- Reduced grid columns where appropriate
+- Smaller headings (h1→1.5rem, h2→1.25rem, h3→1.1rem)
+- Prevent horizontal overflow on tables and scroll containers
+- Smaller navigation height
+- Reduced card padding
+
+### Affiliate ID Configuration (`lib/affiliate.ts`)
+- Added env var support: `NEXT_PUBLIC_KLOOK_AFFILIATE_ID`, `NEXT_PUBLIC_BOOKING_AFFILIATE_ID`, `NEXT_PUBLIC_VIATOR_AFFILIATE_ID`, `NEXT_PUBLIC_VIATOR_MCID`
+- Real fallback IDs retained as defaults:
+  - Klook: `119991`
+  - Booking.com: `2875669`
+  - Viator PID: `P00299136` / MCID: `42383`
+
+## Recommended Env Vars for Production
+```bash
+# Set these on Vercel for live commission tracking:
+NEXT_PUBLIC_KLOOK_AFFILIATE_ID=119991
+NEXT_PUBLIC_BOOKING_AFFILIATE_ID=2875669
+NEXT_PUBLIC_VIATOR_AFFILIATE_ID=P00299136
+NEXT_PUBLIC_VIATOR_MCID=42383
+```

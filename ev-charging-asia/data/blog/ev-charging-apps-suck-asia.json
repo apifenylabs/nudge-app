@@ -19,5 +19,24 @@
     "station-kl-sentral",
     "station-singapore-suntec",
     "station-bangkok-siam"
+  ],
+  "imageUrl": "/blog/images/ev-charging-apps-suck-asia.jpg",
+  "faq": [
+    {
+      "question": "Which EV charging app works best in Southeast Asia?",
+      "answer": "Gentari Go for Malaysia, PEA Volta for Thailand, SP Mobility for Singapore. Keep at least 3 apps installed when traveling."
+    },
+    {
+      "question": "Why do EV charging apps keep crashing?",
+      "answer": "Many apps are poorly maintained, especially smaller networks. Check PlugShare and always have a backup app installed."
+    },
+    {
+      "question": "Do I need to pre-load credit on every app?",
+      "answer": "Most apps let you pay-as-you-go with a credit card. Pre-loading credit to multiple apps wastes money."
+    },
+    {
+      "question": "Can I use one RFID card for all chargers?",
+      "answer": "Not yet. Gentari, Shell, and ChargEV each issue their own RFID cards. The Gentari Go card is the best single solution."
+    }
   ]
 }

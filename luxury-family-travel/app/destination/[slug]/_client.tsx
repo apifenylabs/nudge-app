@@ -15,6 +15,9 @@ import ReviewList from '@/components/ReviewList';
 import ReviewForm from '@/components/ReviewForm';
 import { bookingUrl, viatorUrl } from '@/lib/affiliate';
 import BookingCTA from '@/components/BookingCTA';
+import PriceComparisonWidget from '@/components/PriceComparisonWidget';
+import StickyBookBar from '@/components/StickyBookBar';
+import ContextualRecommendations from '@/components/ContextualRecommendations';
 import type { ReviewData } from '@/components/ReviewCard';
 
 // ─── Types ──────────────────────────────────────────────
@@ -33,7 +36,7 @@ interface DestinationPageProps { initialData: Destination; slug: string; }
 
 // ─── Glassmorphism Card ─────────────────────────────────
 function GlassCard({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  return <div className={`bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg p-6 ${className}`}>{children}</div>;
+  return <div className={`bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg p-4 sm:p-6 ${className}`}>{children}</div>;
 }
 
 function SectionTitle({ n, title }: { n: number; title: string }) {
@@ -271,7 +274,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
       </header>
 
       {/* Hero — full-bleed image + gradient overlay */}
-      <section className="relative h-[50vh] sm:h-[60vh] min-h-[360px] overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <section className="relative h-[45vh] sm:h-[60vh] min-h-[300px] sm:min-h-[360px] overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="absolute inset-0">
           <DestinationImage src={heroCredit?.url || d.imageUrl} alt={d.name} className="w-full h-full object-cover" credit={heroCredit} />
         </div>
@@ -559,6 +562,18 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
           </div>
         </section>
 
+        {/* Price Comparison Widget */}
+        <section className="mb-12">
+          <PriceComparisonWidget
+            destinationName={d.name}
+            city={d.city}
+            country={d.country}
+            category={d.category}
+            priceRange={d.priceRange}
+            destinationId={d.id}
+          />
+        </section>
+
         {/* Affiliate Booking */}
         <section className="mb-12">
           <BookingCTA hotelName={d.name} destinationId={d.id} priceRange={d.priceRange} className="mb-4" />
@@ -573,9 +588,34 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
               {d.affiliateLinks?.booking && <AffiliateButton url={d.affiliateLinks.booking.url} label={d.affiliateLinks.booking.text} />}
               {d.affiliateLinks?.klook && <AffiliateButton url={d.affiliateLinks.klook.url} label={d.affiliateLinks.klook.text} />}
               {d.affiliateLinks?.viator && <AffiliateButton url={d.affiliateLinks.viator.url} label={d.affiliateLinks.viator.text} />}
-              {!d.affiliateLinks?.booking && !d.affiliateLinks?.klook && !d.affiliateLinks?.viator && <p className="text-sm text-gray-400">Booking links coming soon.</p>}
+              {!d.affiliateLinks?.booking && !d.affiliateLinks?.klook && !d.affiliateLinks?.viator && (
+                <div className="flex flex-col gap-3">
+                  <AffiliateButton
+                    url={`https://www.booking.com/searchresults.html?ss=${encodeURIComponent(d.name)}%20${encodeURIComponent(d.city)}&aid=2875669`}
+                    label={`Book ${d.name} on Booking.com`}
+                  />
+                  <AffiliateButton
+                    url={`https://www.klook.com/search/?keyword=${encodeURIComponent(d.name)}%20${encodeURIComponent(d.city)}&aid=119991`}
+                    label={`Find tours for ${d.name} on Klook`}
+                  />
+                  <AffiliateButton
+                    url={`https://www.viator.com/${encodeURIComponent(d.city).replace(/%20/g, '')}/things-to-do?aid=P00299136`}
+                    label={`Discover ${d.city} on Viator`}
+                  />
+                </div>
+              )}
             </div>
           </GlassCard>
+        </section>
+
+        {/* Contextual Recommendations */}
+        <section className="mb-12">
+          <ContextualRecommendations
+            destinationName={d.name}
+            city={d.city}
+            country={d.country}
+            category={d.category}
+          />
         </section>
 
         {/* Parent Story */}
@@ -669,6 +709,13 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
             )}
           </GlassCard>
         </section>
+        {/* After all sections — mobile sticky booking bar */}
+        <StickyBookBar
+          destinationName={d.name}
+          city={d.city}
+          priceRange={d.priceRange}
+          destinationId={d.id}
+        />
       </main>
     </div>
   );

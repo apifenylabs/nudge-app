@@ -7,6 +7,8 @@ import { Zap, MapPin, Search, ArrowUp, SlidersHorizontal, X, MapIcon, LayoutGrid
 import StationCard from '@/components/StationCard';
 import SiteFooter from '@/components/SiteFooter';
 import EvMapContainer from '@/components/EvMapContainer';
+import EvRoadTripCTA from '@/components/EvRoadTripCTA';
+import RoadTripPackageWidget from '@/components/RoadTripPackageWidget';
 import { Station, computeStationScore } from '@/lib/scoring';
 
 interface Meta {
@@ -272,6 +274,12 @@ export default function SearchPageContent({ meta, stations }: { meta: Meta; stat
           </div>
         </div>
       </section>
+
+      {/* Revenue: Prominent EV Road Trip CTA on search page */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-2">
+        <EvRoadTripCTA compact />
+        <RoadTripPackageWidget compact maxDisplay={2} />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {viewMode === 'map' && filtered.length > 0 && (

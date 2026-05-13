@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Clock, ChevronRight } from 'lucide-react';
+import { Clock, ChevronRight, Sparkles, TrendingUp, DollarSign } from 'lucide-react';
 import { playbooks } from '@/lib/playbooks';
 import { cn } from '@/lib/utils';
 
@@ -64,6 +64,42 @@ export default function FeaturedPlaybooks() {
                   {pb.title}
                 </h3>
                 <p className="text-[11px] text-tech-200 line-clamp-2">{pb.description}</p>
+
+                {/* Real Results Metrics */}
+                {pb.real_results && pb.real_results.length > 0 && (
+                  <div className="grid grid-cols-2 gap-1.5 mt-2">
+                    {pb.real_results.slice(0, 2).map((r, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-1 p-1.5 rounded-lg bg-tech-600/50 border border-tech-500/20"
+                      >
+                        <span className="text-[10px] font-bold text-emerald-400 truncate">
+                          {r.value}
+                        </span>
+                        <span className="text-[9px] text-tech-300 truncate">{r.metric}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Revenue impact badge */}
+                {pb.revenue_impact && (
+                  <div className="flex items-center gap-1 mt-2 text-[10px] text-amber-400/80">
+                    <DollarSign className="w-3 h-3" />
+                    <span className="truncate">{pb.revenue_impact}</span>
+                  </div>
+                )}
+
+                {/* Pipeline stage badge */}
+                {pb.pipeline_stage && (
+                  <div className="flex items-center gap-1.5 mt-2">
+                    <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[8px] font-medium bg-tech-600/60 text-tech-300 border border-tech-500/20">
+                      <TrendingUp className="w-2.5 h-2.5" />
+                      {pb.pipeline_stage}
+                    </span>
+                  </div>
+                )}
+
                 <div className="flex items-center gap-1.5 mt-3 text-[10px] text-tech-300 group-hover:text-neon-light transition-colors">
                   Read playbook
                   <ChevronRight className="w-3 h-3" />

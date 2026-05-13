@@ -50,6 +50,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }),
           }}
         />
+        {/* Schema.org WebSite with SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Apifeny AI",
+              "url": "https://apifeny.ai",
+              "description": "Curated AI tools, agents, and playbooks with Asia-ready filters and editorial rankings.",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://apifeny.ai/tools?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            }),
+          }}
+        />
       </head>
       <body className="min-h-screen bg-tech-900 text-white flex flex-col">
         <Header />

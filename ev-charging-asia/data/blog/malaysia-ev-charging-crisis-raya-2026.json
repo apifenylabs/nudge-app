@@ -22,5 +22,24 @@
     "station-kl-sentral",
     "station-penang-gurney",
     "station-johor-bahru-city-square"
+  ],
+  "imageUrl": "/blog/images/malaysia-ev-charging-crisis-raya-2026.jpg",
+  "faq": [
+    {
+      "question": "Why did Malaysian EV chargers fail during Raya 2026?",
+      "answer": "EV sales grew 118% but charger deployment lagged, poorly maintained chargers broke under peak load, and no queue management."
+    },
+    {
+      "question": "Which networks performed best?",
+      "answer": "Gentari 180kW stations along PLUS highway. Tesla Superchargers were most reliable with queue-by-arrival systems."
+    },
+    {
+      "question": "How to avoid queues during holidays?",
+      "answer": "Leave early (before 6 AM), charge at less popular R&Rs, use hotel destination charging, and always have backup stations."
+    },
+    {
+      "question": "Is Malaysia EV charging improving?",
+      "answer": "Yes. Gentari announced 50 new 180kW stations. Mandatory 95% uptime requirements by 2027."
+    }
   ]
 }

@@ -25,5 +25,24 @@
     "tak",
     "ayutthaya",
     "thailand"
+  ],
+  "imageUrl": "/blog/images/thailand-bangkok-chiang-mai-ev-guide.jpg",
+  "faq": [
+    {
+      "question": "How many charging stops?",
+      "answer": "2-3 stops for 700 km: Nakhon Sawan (PEA Volta 120kW), Tak (Peak 150kW), Lampang (Elexa 60kW). 9-11 hours total."
+    },
+    {
+      "question": "Reliable charging on this route?",
+      "answer": "PEA Volta along Highway 1 is reliable. Peak covers most gaps. Download offline maps for rural areas."
+    },
+    {
+      "question": "One-way EV rental options?",
+      "answer": "EV Exchange Thailand, BYD Thailand Rentals, Tesla Rent offer one-way. Book 2+ weeks ahead."
+    },
+    {
+      "question": "Kid-friendly stops?",
+      "answer": "Bubble in the Forest Cafe, Elephant Nature Park, Mon Jam (strawberry farms, cool weather)."
+    }
   ]
 }

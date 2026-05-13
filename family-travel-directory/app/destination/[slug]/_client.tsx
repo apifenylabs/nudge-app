@@ -17,6 +17,7 @@ import BookmarkButton from '@/components/BookmarkButton';
 import ReviewList from '@/components/ReviewList';
 import ReviewForm from '@/components/ReviewForm';
 import { bookingUrl, viatorUrl } from '@/lib/affiliate';
+import ContextualRecommendations from '@/components/ContextualRecommendations';
 import type { ReviewData } from '@/components/ReviewCard';
 import PremiumBadge from '@/components/PremiumBadge';
 
@@ -607,6 +608,15 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
             ))}
           </div>
         </section>
+
+        {/* ─── Contextual Affiliate Recommendations ────────────── */}
+        <ContextualRecommendations
+          destination={d.name}
+          city={d.city}
+          country={d.country}
+          ageRange={d.ageRange}
+          tags={d.seoKeywords}
+        />
 
         {/* Affiliate Booking */}
         <section className="mb-12">

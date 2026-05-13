@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "npm run generate-blog-data && next build",
-    "generate-blog-data": "npx tsx scripts/generate-blog-data.ts",
+    "generate-blog-data": "node scripts/generate-blog-data-node.js",
     "start": "next start",
     "lint": "next lint"
   },

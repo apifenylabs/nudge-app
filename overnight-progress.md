@@ -1,75 +1,47 @@
-# Overnight Build Results — Wed May 7
+# Overnight Progress — May 13→14
 
-## All 6 Sites Online ✅
+## OmniMind Build Queue
 
-| Site | URL | Status | Key Issues Fixed |
-|------|-----|--------|-----------------|
-| Family Travel Asia | familytravelasia.com | ✅ 200 | Custom domain live |
-| Luxury Travel | luxury-family-travel-asia.vercel.app | ✅ 200 | Redirects deployed |
-| EV Charging Asia | ev-charging-asia.vercel.app | ✅ 200 | /contact, /privacy, /routes added |
-| Apifeny AI | apifeny-ai.vercel.app | ✅ 200 | Ranking algo, /collections redirect, /tools fixed |
-| Nudge | nudge-sigma-liart.vercel.app | ✅ 200 | /api/deploy-schema endpoint live |
-| Social Beast | social-beast-two.vercel.app | ✅ 200 | /create + seed data fixed |
+### ✅ Phase 1: Python Client SDK (omnimind)
+- `sdk/python/omnimind/__init__.py` — Full client with store/query/list/delete/health, retry logic, typed errors
+- `sdk/python/pyproject.toml` — PyPI-ready package config
+- `sdk/python/README.md` — Quickstart with code examples
+- **Self-test PASSED**: Health ✅ → Store ✅ → Search (score 0.744) ✅ → List ✅ → Delete ✅
 
-## Overnight Fix Sprint — Complete ✅
+### ✅ Phase 2: Production Docker Compose
+- `docker-compose.yml` — Qdrant v1.17 + backend + Caddy reverse proxy
+- `Caddyfile` — TLS, rate limiting, security headers, health check passthrough
+- `.env.example` — All env vars documented
 
-### ✅ Fix 1: Social Beast Creator Page
-- `/create` was 404 — now 200
-- Seed data (3 demo posts) auto-loads on first visit
-- Dashboard shows engagement data immediately
+### ✅ Phase 3: Agent Integration
+- `sdk/agent-integration.py` — Standalone module with dev fallback (works without SDK)
+- `integration/openclaw-plugin/index.js` — Already wired with `remember`/`recall` tools
 
-### ✅ Fix 2: Apifeny Cosme-Style Ranking Algorithm
-- `lib/ranking-algorithm.ts` — 5-factor weighted scoring
-- CommunityRating 35%, Trending 20%, Asia score 20%, Editor pick 15%, Saves 10%
-- `/tools` now renders sorted content (was blank)
-- `/collections` → redirect to `/collection`
-- `/playbooks` → redirect to `/playbook`
+### ⏭️ Phase 4: Supabase JWT Auth
+- Wrote `crypto_utils.py` — AES-256-GCM encryption (Phase 2 core)
+- Backend code already supports SUPABASE_URL + SUPABASE_SERVICE_KEY env vars
+- Schema already deployed by Chris ✅
+- **Blocked**: No SUPABASE_SERVICE_KEY in environment — needs Chris to set it
 
-### ✅ Fix 3: Site-Wide Routing
-- Luxury: `/properties/[slug]` → 307 to `/destination/[slug]`
-- EV: Added `/contact`, `/privacy`, `/routes` (all 200)
-- EV: `not-found.tsx` added for custom 404
-- Apifeny: `/collections` + `/playbooks` redirects
+## Portfolio Health
+- **All 8 sites 200 OK** ✅
+- EV Charging: 31 blog posts, 1125 stations
+- Family Travel: 57 blog posts, 555 destinations
+- Apifeny: 60 tools
+- Kids Activities, Senior-Friendly, Luxury, Nudge, Social Beast — all live
 
-### ⏳ Fix 4: Nudge DB Schema (PARTIALLY DONE)
-- `/api/deploy-schema` endpoint created and deployed
-- Returns full status JSON + SQL instructions
-- **BLOCKED**: `SUPABASE_SERVICE_ROLE_KEY` not in Vercel env
-- Both SQL files (main schema + billing migration) available at:
-  - `nudge/supabase-schema.sql` (315 lines)
-  - `nudge/supabase-migration-billing.sql` (99 lines)
+## Remaining for OmniMind Production
+1. Deploy backend (Fly.io / Railway) — needs flyctl or Chris using web UI
+2. Set SUPABASE_SERVICE_KEY env var — needs Chris
+3. Set OMNIMIND_ENCRYPTION_SALT — needs Chris
+4. Wire plugin into openclaw config — needs Chris
 
-## Strategic Assessment Completed
-- Full audit of all 6 sites: **3.5/10 overall**
-- `strategic-assessment-may-7.md` — 480 lines of honest analysis
+## Revenue Blockers (Chris-only)
+- Affiliate IDs (Booking.com, Expedia, ShareASale)
+- VERCEL_TOKEN for automated deployment
+- Domain DNS setup for custom domains
+- GA4 tracking IDs
 
-## Remaining Blockers
-
-### 🚫 BLOCKER: Nudge Signups
-**Root cause**: Supabase schema never run on the new project (`yrvnkepndpjmlrewecro`)
-
-**To fix (Chris):**
-1. Open https://supabase.com/dashboard/project/yrvnkepndpjmlrewecro/sql/new
-2. Copy contents of `nudge/supabase-schema.sql` (315 lines)
-3. Run it
-4. (Optional) Run `nudge/supabase-migration-billing.sql` for Stripe tables
-5. Signup will work
-
-**To fix (automated):**
-1. Chris shares `SUPABASE_SERVICE_ROLE_KEY` from Supabase Dashboard → Settings → API
-2. I add it to Vercel env for nudge project
-3. POST /api/deploy-schema runs both SQLs automatically
-
-### 🚫 BLOCKER: No Traffic
-- All 6 sites have zero distribution strategy
-- No SEO backlinks, no social presence, no ads
-
-## Costs
-- **Token cost tonight**: ~$0.30 across 3 sub-agents
-- **Infrastructure**: All Vercel free tier — $0
-- **Running total (all time)**: < $3
-
-## What Happens Next (Autonomous)
-- **01:30 HKT**: Overnight build runner cron (deploys all 6 sites)
-- **02:15 HKT**: Nudge enhancer cron (continues building Nudge)
-- **Hourly**: CEO 24/7 work engine (background improvements)
+## Costs This Build
+- DeepSeek-chat main session: ~15k tokens (~$0.006)
+- **Total overnight: ~$0.006**

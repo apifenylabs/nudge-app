@@ -482,3 +482,50 @@ orchestra_monitoring:
   required_orchestras: 2
   max_restart_attempts: 3
   escalation_channel: "telegram:1741426794"
+
+# ═══════════════════════════════════════════════════════════════
+# NEW PERMANENT RULES (LOCKED May 14 2026 - NEVER OVERRIDE)
+# ═══════════════════════════════════════════════════════════════
+
+# 1. CRON JOB RELIABILITY (LOCKED FOREVER)
+cron_reliability:
+  locked: true
+  max_timeout_seconds:
+    normal: 600  # 10 min — P0/P1/P2/P4
+    expand: 2700  # 45 min — P3 EXPAND and large tasks (increased from 1800)
+  ram_guard:
+    enabled: true
+    min_free_mb: 1536  # 1.5 GB minimum before spawning sessions
+    command: "free -m | awk 'NR==2{print $7}'"
+  max_parallel_sessions: 3  # Hard cap
+  long_task_rule: "Use /goal for any task expected to run >30 minutes"
+  timeout_notification: "Alert on timeout: accountId=telegram:1741426794"
+
+# 2. CEO PROACTIVE MODE (LOCKED FOREVER)
+ceo_proactive_mode:
+  locked: true
+  never_idle: true
+  no_immediate_task_action: "Create next highest-revenue or highest-leverage task from long-term vision"
+  productive_run_target: "8+ hours without human input"
+  fallback_queue: "CEO.md ZERO-EXCUSE BUILD QUEUE"
+  heartbeat_behavior: "NEVER HEARTBEAT_OK - always produce output or spawn work"
+  minimum_output_per_wake: "One of: (a) code deployed, (b) content published, (c) sub-agent spawned with clear brief, (d) research finding logged"
+
+# 3. GLOBAL STANDARDS (apply to EVERY project)
+global_standards:
+  mobile_first: true
+  vibe_engine_brand: true
+  design_requirements:
+    - "Mobile-first responsive design"
+    - "Apple-level clean UI"
+    - "Dark/light mode support"
+    - "Generous whitespace"
+    - "Elegant typography"
+    - "Instantly recognizable vibe-coding energy"
+  code_quality:
+    - "Senior-CTO clean code"
+    - "Modular folder structure"
+    - "TypeScript everywhere"
+    - "Clear comments"
+    - "Architecture docs updated first"
+  additive_only: true  # NEVER delete or break existing work

@@ -148,6 +148,62 @@ body {
   line-height: 1.6;
 }
 
+/* ─── DARK MODE ─────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0F172A;
+    --foreground: #E2E8F0;
+    --card-bg: #1E293B;
+    --card-shadow: 0 1px 3px 0 rgba(0,0,0,0.3), 0 1px 2px -1px rgba(0,0,0,0.2);
+    --card-shadow-hover: 0 10px 25px -5px rgba(0,0,0,0.4), 0 4px 10px -6px rgba(0,0,0,0.2);
+    --primary-gradient: linear-gradient(135deg, #6B9E73 0%, #5A9E6E 100%);
+    --accent-gradient: linear-gradient(135deg, #FBBF24 0%, #D4A843 100%);
+    --premium-gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+    --text-heading: #F1F5F9;
+    --text-body: #CBD5E1;
+    --vibe-teal: #5FA8A5;
+    --vibe-coral: #FB7185;
+    --vibe-amber: #FBBF24;
+    --vibe-plum: #A78BFA;
+    --vibe-sky: #38BDF8;
+    --vibe-accent: #5FA8A5;
+    --vibe-subtle: #1E293B;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-heading);
+  }
+
+  /* Override common bg-white and bg-gray-50 patterns in dark mode */
+  .bg-white,
+  .bg-gray-50,
+  .bg-white\/70,
+  .bg-white\/80,
+  .bg-white\/95,
+  .bg-gray-50\/60,
+  .bg-white\/\[\.\d+\] {
+    background-color: var(--card-bg);
+  }
+
+  .text-gray-900 { color: #F1F5F9; }
+  .text-gray-800 { color: #E2E8F0; }
+  .text-gray-700 { color: #CBD5E1; }
+  .text-gray-600 { color: #94A3B8; }
+  .text-gray-500 { color: #64748B; }
+  .text-gray-400 { color: #475569; }
+  .text-gray-300 { color: #334155; }
+
+  .border-gray-100 { border-color: rgba(51, 65, 85, 0.4); }
+  .border-gray-200 { border-color: rgba(51, 65, 85, 0.6); }
+  .border-gray-300 { border-color: rgba(51, 65, 85, 0.8); }
+  .shadow-sm, .shadow, .shadow-md, .shadow-lg { box-shadow: var(--card-shadow); }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', Georgia, serif;
   color: var(--text-heading);
@@ -299,5 +355,66 @@ html {
     margin-left: -0.5rem;
     margin-right: -0.5rem;
     border-radius: 0.75rem;
+  }
+}
+
+/* ─── MOBILE 320px BREAKPOINT — ultra-compact polish ───────── */
+@media (max-width: 360px) {
+  :root {
+    --radius-default: 0.5rem;
+    --radius-card: 0.75rem;
+  }
+
+  body { font-size: 14px; }
+
+  .container { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+
+  h1 { font-size: 1.5rem !important; line-height: 1.2 !important; }
+  h2 { font-size: 1.25rem !important; }
+  h3 { font-size: 1.1rem !important; }
+
+  /* No horizontal overflow */
+  .overflow-x-auto { max-width: 100vw; }
+
+  /* Reduce gaps in grid layouts */
+  .gap-6 { gap: 0.75rem; }
+  .gap-8 { gap: 1rem; }
+  .gap-10 { gap: 1rem; }
+
+  /* Fit cards to 1 column on 320px */
+  .grid-cols-2 { grid-template-columns: 1fr 1fr; }
+  .sm\:grid-cols-2 { grid-template-columns: 1fr 1fr !important; }
+  .sm\:grid-cols-3 { grid-template-columns: 1fr !important; }
+  .sm\:grid-cols-4 { grid-template-columns: 1fr 1fr !important; }
+
+  /* Tighter padding in cards */
+  .p-5 { padding: 0.75rem; }
+  .p-6 { padding: 0.75rem; }
+  .p-8 { padding: 0.75rem; }
+  .px-8 { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .px-5 { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .py-10 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+  .py-8 { padding-top: 1rem; padding-bottom: 1rem; }
+
+  /* Smaller nav */
+  .h-20 { height: 3.5rem; }
+  .h-14 { height: 3rem; }
+
+  /* Prevent table overflow */
+  table { font-size: 12px; }
+  table td, table th { padding: 0.5rem 0.5rem; }
+
+  /* Smaller hero */
+  .h-\[50vh\] { min-height: 280px; }
+  .h-\[60vh\] { min-height: 300px; }
+}
+
+/* ─── RESPONSIVE TEXT TRUNCATION ───────────────────────────── */
+@media (max-width: 400px) {
+  .truncate-320 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
   }
 }
