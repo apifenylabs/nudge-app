@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://senior-friendly-travel-asia.vercel.app/sitemap.xml
+Disallow: /api/

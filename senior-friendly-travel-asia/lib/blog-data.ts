@@ -42,6 +42,7 @@ import japanMultiGenTravel from '@/data/blog/japan-multi-generational-travel-202
 import vietnamFamilyReunion from '@/data/blog/vietnam-family-reunion-10-day-itinerary-2026.json';
 import seniorFriendlyCruises from '@/data/blog/senior-friendly-cruises-southeast-asia-2026.json';
 import accessibleBoutiqueHotelsBali from '@/data/blog/accessible-boutique-hotels-bali-multi-gen-2026.json';
+import medicalTourism from '@/data/blog/medical-tourism-seniors-asia.json';
 
 // Existing inline posts
 const existingPosts: BlogPost[] = [
@@ -128,6 +129,7 @@ const newPosts: BlogPost[] = [
   vietnamFamilyReunion as BlogPost,
   seniorFriendlyCruises as BlogPost,
   accessibleBoutiqueHotelsBali as BlogPost,
+  medicalTourism as BlogPost,
 ];
 
 const allPosts: BlogPost[] = [...existingPosts, ...newPosts];
