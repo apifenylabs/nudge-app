@@ -1,12 +1,13 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/calendar/page": "app/calendar/page.js",
-  "/create/page": "app/create/page.js",
   "/analytics/page": "app/analytics/page.js",
+  "/build-log/page": "app/build-log/page.js",
+  "/calendar/page": "app/calendar/page.js",
   "/community/page": "app/community/page.js",
+  "/create/page": "app/create/page.js",
   "/posts/page": "app/posts/page.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/robots.txt/route": "app/robots.txt/route.js",
-  "/page": "app/page.js",
-  "/settings/page": "app/settings/page.js"
+  "/settings/page": "app/settings/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/page": "app/page.js"
 }

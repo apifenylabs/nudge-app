@@ -12,11 +12,13 @@ import {
   Users,
   ChevronLeft,
   ChevronRight,
+  ScrollText,
 } from "lucide-react";
 import { useState } from "react";
 
 const NAV_ITEMS = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/build-log", label: "Build Log", icon: ScrollText },
   { href: "/calendar", label: "Calendar", icon: CalendarDays },
   { href: "/posts", label: "Posts", icon: FileText },
   { href: "/create", label: "Create", icon: PlusSquare },
