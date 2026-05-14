@@ -201,22 +201,22 @@
   },
   {
     "id": "41",
-    "name": "Doubao (\u8c46\u5305)",
+    "name": "Doubao (豆包)",
     "slug": "doubao"
   },
   {
     "id": "42",
-    "name": "Ernie Bot (\u6587\u5fc3\u4e00\u8a00)",
+    "name": "Ernie Bot (文心一言)",
     "slug": "ernie-bot"
   },
   {
     "id": "43",
-    "name": "SparkDesk (\u8baf\u98de\u661f\u706b)",
+    "name": "SparkDesk (讯飞星火)",
     "slug": "sparkdesk"
   },
   {
     "id": "44",
-    "name": "Coze (\u6263\u5b50)",
+    "name": "Coze (扣子)",
     "slug": "coze"
   },
   {
@@ -373,5 +373,55 @@
     "id": "75",
     "name": "Odyssey",
     "slug": "odyssey"
+  },
+  {
+    "id": "76",
+    "name": "Clay",
+    "slug": "clay"
+  },
+  {
+    "id": "77",
+    "name": "Beehiiv",
+    "slug": "beehiiv"
+  },
+  {
+    "id": "78",
+    "name": "Attio",
+    "slug": "attio"
+  },
+  {
+    "id": "79",
+    "name": "OpusClip",
+    "slug": "opusclip"
+  },
+  {
+    "id": "80",
+    "name": "Carly AI",
+    "slug": "carly-ai"
+  },
+  {
+    "id": "81",
+    "name": "Kick",
+    "slug": "kick"
+  },
+  {
+    "id": "82",
+    "name": "Loom",
+    "slug": "loom"
+  },
+  {
+    "id": "83",
+    "name": "Calendly",
+    "slug": "calendly"
+  },
+  {
+    "id": "84",
+    "name": "Instantly",
+    "slug": "instantly"
+  },
+  {
+    "id": "85",
+    "name": "QuickBooks (Intuit Assist)",
+    "slug": "quickbooks-intuit-assist"
   }
 ]
