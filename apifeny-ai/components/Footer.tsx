@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AffiliateLink from './affiliate/AffiliateLink';
 
 export default function Footer() {
   return (
@@ -137,6 +138,28 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Plan Your Trip — Monetization Bar */}
+        <div className="mb-8">
+          <h3 className="text-sm font-semibold text-neon mb-4 text-center uppercase tracking-wider">Plan Your Trip</h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            <AffiliateLink href="https://www.booking.com" provider="booking.com">
+              🏨 Hotels
+            </AffiliateLink>
+            <AffiliateLink href="https://www.klook.com" provider="klook">
+              🎫 Activities
+            </AffiliateLink>
+            <AffiliateLink href="https://www.viator.com" provider="viator">
+              🏛️ Tours
+            </AffiliateLink>
+            <AffiliateLink href="https://www.getyourguide.com" provider="getyourguide">
+              🌟 Experiences
+            </AffiliateLink>
+            <AffiliateLink href="https://www.expedia.com" provider="expedia">
+              🚗 Car Rental
+            </AffiliateLink>
           </div>
         </div>
 

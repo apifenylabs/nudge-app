@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AffiliateLink from './affiliate/AffiliateLink';
 
 const sisterSites = [
   { name: 'Senior-Friendly Travel Asia', href: 'https://senior-friendly-travel-asia.vercel.app', description: 'Accessible travel for older adults' },
@@ -59,11 +60,33 @@ export default function SiteFooter() {
           </div>
         </div>
 
+        {/* Plan Your Trip — Monetization Bar */}
+        <div className="mb-8">
+          <h4 className="text-sm font-semibold text-warm-white mb-3 text-center uppercase tracking-wider">Plan Your Trip</h4>
+          <div className="flex flex-wrap justify-center gap-3">
+            <AffiliateLink href="https://www.booking.com" provider="booking.com">
+              🏨 Hotels
+            </AffiliateLink>
+            <AffiliateLink href="https://www.klook.com" provider="klook">
+              🎫 Activities
+            </AffiliateLink>
+            <AffiliateLink href="https://www.viator.com" provider="viator">
+              🏛️ Tours
+            </AffiliateLink>
+            <AffiliateLink href="https://www.getyourguide.com" provider="getyourguide">
+              🌟 Experiences
+            </AffiliateLink>
+            <AffiliateLink href="https://www.expedia.com" provider="expedia">
+              🚗 Car Rental
+            </AffiliateLink>
+          </div>
+        </div>
+
         {/* Affiliate Disclosure */}
         <div className="mb-6 text-center">
           <p className="text-[10px] text-sand-300">
             Some links on this site are affiliate links. We may earn a commission at no extra cost to you.
-            As a Klook and Booking.com partner, we may earn from qualifying bookings.
+            As a Klook, Booking.com, Viator, GetYourGuide, and Expedia partner, we may earn from qualifying bookings.
           </p>
         </div>
 

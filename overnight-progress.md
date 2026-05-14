@@ -1,48 +1,46 @@
-# Overnight Progress — May 13→14 (Session Complete ✅)
+# Overnight Progress — May 13→14 (Completed ✅)
 
-## ✅ OmniMind Build (completed previous session)
-- Python client SDK — done, tested ✅
-- Docker Compose (Qdrant + backend + Caddy) — done ✅
-- Agent integration module — done ✅
-- **Blocked on Chris**: SUPABASE_SERVICE_KEY, deploy env vars, flyctl
+## OmniMind Build Queue — All Done
 
-## ✅ EV Charging Asia — SEO & Content
-- **RSS feed** (`/feed.xml`) — built and tested ✅
-- **Google News Sitemap** (`/news-sitemap.xml`) — built and tested ✅
-- **10 new blog posts** written and compiled:
-  1. Thailand EV Tax Incentives 2026
-  2. Philippines EV Charging Guide
-  3. Vietnam EV Market Guide
-  4. EV Battery Health Tropical Climates
-  5. Taiwan EV Road Trip Guide
-  6. South Korea EV Charging Network
-  7. EV Charging at Airports Asia
-  8. Electric Motorcycles vs EVs SEA
-  9. China EV Guide for Foreigners
-  10. EV Insurance Guide Asia
-- Total: 31 → **41 blog posts** ✅
-- Build passes clean with 0 errors ✅
+### ✅ Phase 1: Python Client SDK
+- `sdk/python/omnimind/` — Full store/query/list/delete with retry, typed errors, PyPI-config
+- **Self-test**: Health ✅ → Store ✅ → Search (score 0.744) ✅ → List ✅ → Delete ✅
 
-## ✅ Nudge SEO
-- Added **5 new blog posts** to blog page:
-  1. Best Family Chore Apps 2026
-  2. Stop Nagging Kids About Chores
-  3. Telegram Family Task Management
-  4. AI Task Parsing
-  5. 5 Family Routines Changed with Nudge
-- Total: 3 → **8 blog posts** ✅
+### ✅ Phase 2: Production Docker Compose
+- `docker-compose.yml` — Qdrant v1.17 + backend + Caddy (TLS, rate limiting, security headers)
+- `Caddyfile` — Reverse proxy config
+- `.env.example` — All 10 env vars documented
 
-## 🚫 STILL BLOCKED (Chris only)
-- VERCEL_TOKEN — can't auto-deploy
-- GitHub PAT — can't push content to trigger Vercel builds
-- Affiliate program signups (Booking.com, Expedia, ShareASale, etc.)
-- Domain DNS config (familytravelasia.com, luxuryfamilytravelasia.com)
-- Supabase keys for OmniMind backend deploy
-- GA4 tracking IDs
+### ✅ Phase 3: Supabase JWT Auth
+- `backend/auth.py` — Dual auth: JWT (Bearer token) or API key (X-API-Key header)
+- Graceful fallback: Phase 1 API key still works when JWT not configured
+- **Sub-agent tested**: Phase 1 passes, 401 works, 24/24 tests ✅
+- Pushed: `6100698`
 
-## 📊 Total Cost This Session
-- Main session: ~$0.01
-- Sub-agent 1 (EV content): ~$0.017
-- Sub-agent 2 (Nudge content): ~$0.006
-- Overnight cron session: ~$0.41
-- **Total: ~$0.43** (under $1 daily budget)
+### ✅ Phase 4: Stripe Billing Layer
+- `backend/billing.py` — Full Stripe integration:
+  - Tier system: Hobby ($0) → Pro ($19) → Team ($99) → Enterprise
+  - Checkout session creation, webhook handling
+  - Quota enforcement per tier
+  - FastAPI routes registered (inactive when no STRIPE_SECRET_KEY)
+- Pushed: `e7edefe`
+
+### ✅ Phase 5: Developer Landing Page
+- `docs/index.html` — Dark-mode developer docs site
+  - Quickstart with code example, full API reference, pricing tiers, deploy instructions
+  - Deployable via any static host or Vercel
+- Pushed: `e7edefe`
+
+## Configuration Copied to This Topic
+- **omnimind-config.md** — All deploy details: Supabase URLs, Fly/Railway commands, secrets
+- No more cross-topic dependency — this topic is self-contained
+
+## What's Left (Chris-only, no code to write)
+1. Deploy backend (Fly.io or Railway)
+2. Set secrets: `MEMORY_API_KEY`, `SUPABASE_SERVICE_KEY`, `SUPABASE_URL`, `OMNIMIND_ENCRYPTION_SALT`
+3. Wire OpenClaw plugin in config
+
+## Costs
+- Main session: ~$0.005
+- Sub-agent (JWT test + push): ~0.01
+- **Total overnight: ~$0.015**

@@ -117,6 +117,14 @@ export const chatbotAffiliates: AffiliateLink[] = [
     is_direct: false,
     badge: 'Free Trial',
   },
+  {
+    slug: 'grok-xai',
+    referral_url: 'https://grok.com',
+    cta_label: 'Try Grok Free',
+    commission_note: 'Free tier available. SuperGrok from $30/mo. Real-time X data access.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
 ];
 
 // ─── Image Generation ───
@@ -281,6 +289,38 @@ export const productivityAffiliates: AffiliateLink[] = [
     is_direct: true,
     badge: 'Best Value',
   },
+  {
+    slug: 'otter-ai',
+    referral_url: 'https://otter.ai',
+    cta_label: 'Try Otter.ai Free',
+    commission_note: 'Free tier with 300 mins/mo. AI meeting assistant. Pro from $16.99/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'fireflies-ai',
+    referral_url: 'https://fireflies.ai',
+    cta_label: 'Try Fireflies.ai Free',
+    commission_note: 'Free tier with 800 mins storage. AI meeting transcription. Pro from $10/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'mem',
+    referral_url: 'https://mem.ai',
+    cta_label: 'Try Mem Free',
+    commission_note: 'Free tier with auto-tags. AI knowledge management. Pro at $14.99/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'motion',
+    referral_url: 'https://www.usemotion.com',
+    cta_label: 'Start Motion Free Trial',
+    commission_note: 'AI calendar & project management. 7-day free trial. Paid from $19/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
 ];
 
 // ─── Writing & Content ───
@@ -310,6 +350,14 @@ export const writingAffiliates: AffiliateLink[] = [
     is_direct: false,
     badge: 'Best Value',
   },
+  {
+    slug: 'grammarly',
+    referral_url: 'https://www.grammarly.com',
+    cta_label: 'Try Grammarly Free',
+    commission_note: 'Free tier with basic checks. Premium from $12/mo. Tone detection & AI writing.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
 ];
 
 // ─── Design & Creative ───
@@ -322,6 +370,29 @@ export const designAffiliates: AffiliateLink[] = [
     commission_note: 'Free with generous limits. Pro at $13/mo.',
     is_direct: false,
     badge: 'Free Tier',
+  },
+  {
+    slug: 'canva-magic-studio',
+    referral_url: 'https://www.canva.com/magic-studio/',
+    cta_label: 'Try Canva Magic Studio',
+    commission_note: 'Free with generous limits. Pro at $13/mo for full Magic Studio access.',
+    is_direct: false,
+    badge: 'Free Tier',
+  },
+  {
+    slug: 'gamma',
+    referral_url: 'https://gamma.app',
+    cta_label: 'Try Gamma Free',
+    commission_note: 'Free tier with AI generation credits. Paid from $8/mo for unlimited AI.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'odyssey',
+    referral_url: 'https://odyssey.ai',
+    cta_label: 'Try Odyssey',
+    commission_note: 'AI 3D world generation. Free tier available for early access.',
+    is_direct: false,
   },
 ];
 
@@ -337,10 +408,34 @@ export const audioAffiliates: AffiliateLink[] = [
     badge: 'Free Trial',
   },
   {
+    slug: 'elevenlabs-studio',
+    referral_url: 'https://elevenlabs.io',
+    cta_label: 'Try ElevenLabs Studio',
+    commission_note: 'Free tier with limited chars. Studio for professional voice work from $99/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
     slug: 'murf-ai',
     referral_url: 'https://murf.ai',
     cta_label: 'Try Murf AI Free',
     commission_note: 'Affiliate: 20% recurring commission for 24 months. Paid from $19/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'suno',
+    referral_url: 'https://suno.com',
+    cta_label: 'Try Suno Free',
+    commission_note: 'Free tier with 50 credits/day. AI music generation. Pro from $10/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'udio',
+    referral_url: 'https://udio.com',
+    cta_label: 'Try Udio Free',
+    commission_note: 'Free tier with daily credits. High-fidelity AI music. Pro from $10/mo.',
     is_direct: false,
     badge: 'Free Trial',
   },
@@ -370,6 +465,30 @@ export const videoAffiliates: AffiliateLink[] = [
     referral_url: 'https://www.descript.com',
     cta_label: 'Try Descript Free',
     commission_note: 'Free tier with watermark. Paid from $12/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'heygen',
+    referral_url: 'https://heygen.com',
+    cta_label: 'Try HeyGen Free',
+    commission_note: 'Free tier with watermark. AI video avatars. Paid from $24/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'luma-ai',
+    referral_url: 'https://lumalabs.ai',
+    cta_label: 'Try Luma AI Free',
+    commission_note: 'Free tier with limited credits. AI video & 3D. Paid from $30/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
+  {
+    slug: 'pika',
+    referral_url: 'https://pika.art',
+    cta_label: 'Try Pika Free',
+    commission_note: 'Free tier with limits. AI video generation for creators. Paid from $10/mo.',
     is_direct: false,
     badge: 'Free Trial',
   },
@@ -479,6 +598,14 @@ export const noCodeAffiliates: AffiliateLink[] = [
     is_direct: false,
     badge: 'Free Trial',
   },
+  {
+    slug: 'lindy-ai',
+    referral_url: 'https://lindy.ai',
+    cta_label: 'Try Lindy AI Free',
+    commission_note: 'Free tier with limited automations. AI workflow assistant. Pro from $25/mo.',
+    is_direct: false,
+    badge: 'Free Trial',
+  },
 ];
 
 // ─── Data & Analytics ───
@@ -584,6 +711,105 @@ export const customerServiceAffiliates: AffiliateLink[] = [
     is_direct: false,
     badge: 'Free Trial',
   },
+  {
+    slug: 'intercom-fin',
+    referral_url: 'https://www.intercom.com/fin',
+    cta_label: 'Try Intercom Fin',
+    commission_note: 'AI agent for customer support. Part of Intercom platform. Paid from $39/mo.',
+    is_direct: false,
+    badge: 'Pro Pick',
+  },
+  {
+    slug: 'zendesk-answer-bot',
+    referral_url: 'https://www.zendesk.com/answer-bot/',
+    cta_label: 'Try Zendesk Answer Bot',
+    commission_note: 'AI-powered self-service. Part of Zendesk Suite. Paid from $19/mo.',
+    is_direct: false,
+    badge: 'Pro Pick',
+  },
+];
+
+// ─── Marketing & SEO ───
+
+export const marketingAffiliates: AffiliateLink[] = [
+  {
+    slug: 'ahrefs',
+    referral_url: 'https://ahrefs.com',
+    cta_label: 'Try Ahrefs',
+    commission_note: 'Paid from $99/mo. SEO toolkit with largest backlink index.',
+    is_direct: false,
+    badge: 'Pro Pick',
+  },
+  {
+    slug: 'semrush',
+    referral_url: 'https://www.semrush.com',
+    cta_label: 'Try Semrush',
+    commission_note: 'Paid from $139/mo. All-in-one marketing & SEO toolkit.',
+    is_direct: false,
+    badge: 'Pro Pick',
+  },
+  {
+    slug: 'surferseo',
+    referral_url: 'https://surferseo.com',
+    cta_label: 'Try SurferSEO',
+    commission_note: 'Paid from $69/mo. AI content optimization for better rankings.',
+    is_direct: false,
+    badge: 'Best Value',
+  },
+];
+
+// ─── Education & Learning ───
+
+export const educationAffiliates: AffiliateLink[] = [
+  {
+    slug: 'duolingo-max',
+    referral_url: 'https://www.duolingo.com/max',
+    cta_label: 'Try Duolingo Max',
+    commission_note: 'Premium AI-powered language learning. Paid from $30/mo.',
+    is_direct: false,
+    badge: 'Pro Pick',
+  },
+  {
+    slug: 'khanmigo',
+    referral_url: 'https://www.khanacademy.org/khan-labs',
+    cta_label: 'Try Khanmigo',
+    commission_note: 'AI tutor by Khan Academy. $44/mo or $44/yr. Socratic-style guidance.',
+    is_direct: false,
+    badge: 'Best Value',
+  },
+  {
+    slug: 'sana-ai',
+    referral_url: 'https://sana.ai',
+    cta_label: 'Try Sana AI',
+    commission_note: 'Enterprise AI learning platform. Contact for pricing.',
+    is_direct: false,
+  },
+];
+
+// ─── Enterprise ───
+
+export const enterpriseAffiliates: AffiliateLink[] = [
+  {
+    slug: 'glean',
+    referral_url: 'https://glean.com',
+    cta_label: 'Learn About Glean',
+    commission_note: 'Enterprise AI search platform. Contact for custom pricing.',
+    is_direct: false,
+    badge: 'Pro Pick',
+  },
+];
+
+// ─── Business Operations ───
+
+export const businessOpsAffiliates: AffiliateLink[] = [
+  {
+    slug: 'harvey-ai',
+    referral_url: 'https://harvey.ai',
+    cta_label: 'Learn About Harvey AI',
+    commission_note: 'Enterprise AI for legal professionals. Contact for pricing.',
+    is_direct: false,
+    badge: 'Pro Pick',
+  },
 ];
 
 // ─── Aggregated lookup ───
@@ -605,6 +831,10 @@ export const allAffiliateLinks: AffiliateLink[] = [
   ...audioExtendedAffiliates,
   ...openSourceAffiliates,
   ...customerServiceAffiliates,
+  ...marketingAffiliates,
+  ...educationAffiliates,
+  ...enterpriseAffiliates,
+  ...businessOpsAffiliates,
 ];
 
 /** Get affiliate link for a specific tool slug */
@@ -615,20 +845,24 @@ export function getAffiliateForTool(slug: string): AffiliateLink | undefined {
 /** Grouped by category — for highlighting sections on a page */
 export function getAffiliateGroup(category: string): AffiliateLink[] {
   const map: Record<string, string[]> = {
-    'Chatbots & Assistants': ['chatgpt', 'claude', 'gemini', 'deepseek', 'kimi', 'poe', 'pi-ai', 'doubao', 'ernie-bot', 'sparkdesk', 'you-dot-com'],
+    'Chatbots & Assistants': ['chatgpt', 'claude', 'gemini', 'deepseek', 'kimi', 'poe', 'pi-ai', 'doubao', 'ernie-bot', 'sparkdesk', 'you-dot-com', 'grok-xai'],
     'Image Generation': ['midjourney', 'leonardo-ai'],
     'Research & Analysis': ['perplexity', 'tavily', 'exa'],
     'Code & Development': ['copilot', 'cursor', 'bolt-new', 'lovable', 'windsurf', 'devin', 'v0', 'replit-agent', 'tabnine', 'aider', 'claude-code', 'cline', 'phind', 'sourcegraph-cody'],
-    'Productivity': ['notion-ai'],
-    'Writing & Content': ['jasper', 'copy-ai', 'deepl'],
-    'Design & Creative': ['canva-ai'],
-    'Audio & Music': ['elevenlabs', 'murf-ai', 'krisp'],
-    'Video & Animation': ['runway', 'synthesia', 'descript'],
+    'Productivity': ['notion-ai', 'otter-ai', 'fireflies-ai', 'mem', 'motion'],
+    'Writing & Content': ['jasper', 'copy-ai', 'deepl', 'grammarly'],
+    'Design & Creative': ['canva-ai', 'canva-magic-studio', 'gamma', 'odyssey'],
+    'Audio & Music': ['elevenlabs', 'elevenlabs-studio', 'murf-ai', 'krisp', 'suno', 'udio'],
+    'Video & Animation': ['runway', 'synthesia', 'descript', 'heygen', 'luma-ai', 'pika'],
     'AI Agents': ['openrouter', 'together-ai', 'groq', 'replicate', 'crewai', 'autogpt'],
-    'No-Code & Automation': ['coze', 'dify', 'n8n', 'make', 'zapier-central', 'browse-ai'],
+    'No-Code & Automation': ['coze', 'dify', 'n8n', 'make', 'zapier-central', 'browse-ai', 'lindy-ai'],
     'Data & Analytics': ['llamaindex', 'firecrawl', 'jina-ai'],
     'Open Source & ML Platforms': ['hugging-face', 'langchain', 'qwen'],
-    'Customer Service & Support': ['intercom-ai'],
+    'Customer Service & Support': ['intercom-ai', 'intercom-fin', 'zendesk-answer-bot'],
+    'Marketing & SEO': ['ahrefs', 'semrush', 'surferseo'],
+    'Education & Learning': ['duolingo-max', 'khanmigo', 'sana-ai'],
+    'Enterprise': ['glean'],
+    'Business Operations': ['harvey-ai'],
   };
   const slugs = map[category] || [];
   return allAffiliateLinks.filter((a) => slugs.includes(a.slug));

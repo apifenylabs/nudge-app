@@ -156,6 +156,17 @@ apifeny-ai/
 - Hover micro-interactions on scoring and pipeline badges
 - "Best For" color-coded pipeline stage badges on ToolCard.tsx
 
+## Phase 1.5 — Playbooks & Rankings Enhancement (May 14)
+- 14 editorial playbooks (added: ai-powered-market-research, ai-testing-qa-automation)
+- 5 community playbooks (added: deep-research-perplexity-gemini, ai-agents-langchain-claude)
+- PlaybookComments component for discussion/threaded comments on community playbook pages
+- Reading progress bar on community playbook detail pages
+- Region filter on rankings and community playbooks (Asia/NA/Europe/Global)
+- "Best For" pipeline stage badges on ToolCard component
+- Enhanced ranking page headers with "why this matters" callout + key stats
+- 140 total pages (up from 135)
+- Premium UI polish: micro-interactions, better typography, glow effects
+
 ## Future (Phase 2)
 - Supabase integration for persistent data
 - User accounts with profiles
@@ -164,3 +175,4 @@ apifeny-ai/
 - Monthly newsletter
 - API for external tool data ingestion
 - Multi-language support
+- Full community moderation and discussion system (backlogged)

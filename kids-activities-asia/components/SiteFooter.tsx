@@ -14,6 +14,67 @@ export default function SiteFooter() {
   return (
     <footer className="hidden sm:block border-t border-gray-200 bg-white mt-12">
       <div className="max-w-6xl mx-auto px-4 py-10">
+        {/* --- Cross-site monetization bar: book hotels, activities, tours --- */}
+        <div className="mb-8 pb-6 border-b border-gray-100">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+            Plan Your Trip
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <a
+              href="https://www.booking.com/index.html?aid=2875669"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium border border-gray-200 bg-white text-gray-600 hover:text-gray-900 hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm active:scale-[0.97] transition-all duration-150"
+              aria-label="Book hotels via Booking.com"
+            >
+              <span aria-hidden="true" className="text-sm">🏨</span>
+              <span>Hotels</span>
+            </a>
+            <a
+              href="https://affiliate.klook.com/redirect?aid=119991"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium border border-gray-200 bg-white text-gray-600 hover:text-gray-900 hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm active:scale-[0.97] transition-all duration-150"
+              aria-label="Book activities via Klook"
+            >
+              <span aria-hidden="true" className="text-sm">🎫</span>
+              <span>Activities</span>
+            </a>
+            <a
+              href="https://www.viator.com/?pid=P00299136"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium border border-gray-200 bg-white text-gray-600 hover:text-gray-900 hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm active:scale-[0.97] transition-all duration-150"
+              aria-label="Book tours via Viator"
+            >
+              <span aria-hidden="true" className="text-sm">🏛️</span>
+              <span>Tours</span>
+            </a>
+            <a
+              href="https://www.getyourguide.com/?partner_id=YOUR_GYG_ID"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium border border-gray-200 bg-white text-gray-600 hover:text-gray-900 hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm active:scale-[0.97] transition-all duration-150"
+              aria-label="Book experiences via GetYourGuide"
+            >
+              <span aria-hidden="true" className="text-sm">🌟</span>
+              <span>Experiences</span>
+            </a>
+            <a
+              href="https://www.expedia.com/?msp_cid=YOUR_EXPEDIA_ID"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium border border-gray-200 bg-white text-gray-600 hover:text-gray-900 hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm active:scale-[0.97] transition-all duration-150"
+              aria-label="Book car rental via Expedia"
+            >
+              <span aria-hidden="true" className="text-sm">🚗</span>
+              <span>Car Rental</span>
+            </a>
+          </div>
+          <p className="text-[10px] text-gray-400 mt-2">
+            Support this site — we may earn a commission when you book through these links, at no extra cost to you.
+          </p>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">

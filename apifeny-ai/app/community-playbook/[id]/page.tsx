@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { notFound, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
@@ -58,6 +58,21 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
     setShareUrl(getShareUrl(playbook.id));
   }, [playbook.id]);
 
+  // ── Reading Progress Bar ──
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0) {
+        setScrollProgress(Math.min((scrollTop / docHeight) * 100, 100));
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleVote = (vote: 'up' | 'down') => {
     if (userVote === vote) {
       removeVote(playbook.id);
@@ -88,7 +103,16 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <>
+      {/* Reading Progress Bar */}
+      <div className="fixed top-0 left-0 z-50 h-0.5 bg-tech-800 w-full">
+        <div
+          className="h-full bg-gradient-to-r from-neon to-aqua transition-all duration-150 ease-out"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       {/* Back */}
       <Link
         href="/community-playbook"
@@ -414,5 +438,6 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
         </section>
       )}
     </div>
+    </>
   );
 }

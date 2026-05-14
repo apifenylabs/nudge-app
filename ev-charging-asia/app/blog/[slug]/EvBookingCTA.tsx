@@ -13,6 +13,7 @@ const COUNTRY_TAGS: Record<string, { name: string; bookingCity: string; klookQue
   'japan': { name: 'Japan', bookingCity: 'Japan', klookQuery: 'Japan EV rental' },
   'indonesia': { name: 'Indonesia', bookingCity: 'Indonesia', klookQuery: 'Indonesia EV' },
   'china': { name: 'China', bookingCity: 'China', klookQuery: 'China EV' },
+  'yangtze-river-delta': { name: 'China', bookingCity: 'Shanghai, Hangzhou, Nanjing', klookQuery: 'China' },
   'india': { name: 'India', bookingCity: 'India', klookQuery: 'India EV' },
 };
 
@@ -45,7 +46,9 @@ export default function EvBookingCTA({ tags }: EvBookingCTAProps) {
   }, []);
 
   const hotelUrl = country
-    ? `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(country.name)}&aid=2875669`
+    ? (country.name === 'China'
+      ? `https://www.booking.com/searchresults.html?ss=Shanghai%2C+China&aid=2875669`
+      : `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(country.name)}&aid=2875669`)
     : `https://www.booking.com/searchresults.html?ss=Asia&aid=2875669`;
 
   const klookUrl = country

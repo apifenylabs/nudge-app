@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AffiliateLink from "./affiliate/AffiliateLink";
 
 const sisterSites = [
   { name: "Asia Family Travel Directory", href: "https://www.familytravelasia.com", description: "Family-friendly destinations & tips across Asia" },
@@ -74,6 +75,28 @@ export default function SiteFooter() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        {/* Plan Your Trip — Monetization Bar */}
+        <div className="mb-8">
+          <h4 className="text-sm font-semibold text-gold mb-3 text-center uppercase tracking-wider">Plan Your Trip</h4>
+          <div className="flex flex-wrap justify-center gap-3">
+            <AffiliateLink href="https://www.booking.com" provider="booking.com">
+              🏨 Hotels
+            </AffiliateLink>
+            <AffiliateLink href="https://www.klook.com" provider="klook">
+              🎫 Activities
+            </AffiliateLink>
+            <AffiliateLink href="https://www.viator.com" provider="viator">
+              🏛️ Tours
+            </AffiliateLink>
+            <AffiliateLink href="https://www.getyourguide.com" provider="getyourguide">
+              🌟 Experiences
+            </AffiliateLink>
+            <AffiliateLink href="https://www.expedia.com" provider="expedia">
+              🚗 Car Rental
+            </AffiliateLink>
           </div>
         </div>
 

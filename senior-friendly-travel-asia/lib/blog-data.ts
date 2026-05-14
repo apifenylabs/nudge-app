@@ -33,6 +33,15 @@ import volunteering from '@/data/blog/volunteering-cultural-immersion-seniors-as
 import airports from '@/data/blog/navigating-asian-airports-immigration-seniors.json';
 import soloTravel from '@/data/blog/solo-senior-travel-asia-best-destinations.json';
 import cuisineTips from '@/data/blog/cuisine-dietary-tips-senior-travelers-asia.json';
+import multiCountryItinerary from '@/data/blog/multi-country-itinerary-seniors-southeast-asia.json';
+import skipGenTravel from '@/data/blog/skip-generation-travel-asia-2026.json';
+
+// Multi-generational family trip posts (May 2026)
+import multiGenResortsThailand from '@/data/blog/multi-gen-resorts-thailand-2026.json';
+import japanMultiGenTravel from '@/data/blog/japan-multi-generational-travel-2026.json';
+import vietnamFamilyReunion from '@/data/blog/vietnam-family-reunion-10-day-itinerary-2026.json';
+import seniorFriendlyCruises from '@/data/blog/senior-friendly-cruises-southeast-asia-2026.json';
+import accessibleBoutiqueHotelsBali from '@/data/blog/accessible-boutique-hotels-bali-multi-gen-2026.json';
 
 // Existing inline posts
 const existingPosts: BlogPost[] = [
@@ -110,6 +119,15 @@ const newPosts: BlogPost[] = [
   airports as BlogPost,
   soloTravel as BlogPost,
   cuisineTips as BlogPost,
+  multiCountryItinerary as BlogPost,
+  skipGenTravel as BlogPost,
+  
+  // Multi-generational family trip posts (May 2026)
+  multiGenResortsThailand as BlogPost,
+  japanMultiGenTravel as BlogPost,
+  vietnamFamilyReunion as BlogPost,
+  seniorFriendlyCruises as BlogPost,
+  accessibleBoutiqueHotelsBali as BlogPost,
 ];
 
 const allPosts: BlogPost[] = [...existingPosts, ...newPosts];
