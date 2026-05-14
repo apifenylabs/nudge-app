@@ -1,36 +1,33 @@
-# HEARTBEAT.md — May 14 18:39 HKT
+# HEARTBEAT.md — May 14 21:59 HKT
 
-## STATUS
-- **Network: DOWN** — DNS resolution failure. git push + Vercel deploy impossible
-- **All build queue items complete** — routing, robots, env, affiliate infra, cross-site links all done
+## STATUS: 🟢 LIVE
+- **Network**: ✅ Working (WSL2 DNS resolved)
+- **Cron**: ✅ Hourly wakeup locked in
 
-## BUILT THIS WAKE (18:39 HKT)
-1. ✅ **EV Post #52** — "Thailand Coastal EV Road Trip: Phuket to Hua Hin via Khao Lak (2026)" (~3,500 words)
-2. ✅ **EV Post #53** — "5 Best Family-Friendly Hotels in Singapore with EV Charging (2026)" (~2,000 words)
-3. ✅ **Senior-Friendly Post #29** — "Senior-Friendly Walking Tours in Asian Cities: Self-Guided Routes" (~3,500+ words)
-4. ✅ All 3 builds verified local ✅
-5. ✅ Git committed: `3013868d`
+## BUILT THIS WAVE (12:31–21:59)
+1. ✅ **apifeny-ai Phase 1.5** — 151 pages, deployed live ✅
+2. ✅ 4 new playbooks (2 editorial + 2 community)
+3. ✅ PlaybookComments threaded discussion component
+4. ✅ Reading progress bar on community playbook pages
+5. ✅ Region filter on rankings + community playbooks
+6. ✅ "Best For" pipeline stage badges on ToolCard
+7. ✅ Enhanced ranking page headers (why this matters + stats)
+8. ✅ Git pushed to origin: `fbfa502b`
+9. ✅ Cron job set: hourly wakeup via openclaw
 
-## EV CHARGING ASIA — 53 BLOG POSTS TOTAL
+## ALL SITES HEALTHY (200s)
+- https://apifeny-ai.vercel.app ✅ — 151 pages, 90 tools, 14 playbooks
+- https://familytravelasia.com ✅ (768 pages)
+- All other sites building
 
-## SENIOR-FRIENDLY — 29 BLOG POSTS TOTAL
+## CURRENT QUEUE FOR NEXT BUILD
+1. **EV/ED/SUMMIT**: Now that nightly deploy time limits happen, write blog posts offline then push via git
+2. **Blog content**: EV Charging Asia (target 60 posts), Senior-Friendly (target 35 posts)
+3. **Social Beast**: Backlog — content automation
+4. **Nudge**: Backlog — needs Chris for Supabase schema
 
 ## BLOCKERS (need Chris)
 1. Domain DNS — 3 custom domains
 2. Affiliate signup — Booking.com, Klook, Viator, Expedia
 3. Social Beast — API keys missing
 4. GA4 tracking IDs — Set on Vercel
-5. **Network** — WSL2 DNS outage (nameserver 10.255.255.254 unreachable)
-
-## PENDING DEPLOYS (when network recovers)
-- `git push origin master` — has EV #50→#53, Senior #28→#29, robots.txt, env fixes
-- Nudge: `npx vercel --prod --yes` (Phase 17 ready)
-- EV: `npx vercel --prod --yes`
-- Senior: `npx vercel --prod --yes`
-
-## NEXT BUILD
-All buildable items done. Network must recover to push/deploy.
-- ~~EV Post #50~~ ✅
-- ~~EV Post #51 (Thailand Coastal)~~ ✅
-- ~~EV Post #52 (Singapore Family Hotels)~~ ✅
-- ~~Senior Post #29 (Walking Tours)~~ ✅
