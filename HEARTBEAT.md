@@ -1,36 +1,36 @@
-# HEARTBEAT.md — May 14 17:39 HKT
+# HEARTBEAT.md — May 14 18:39 HKT
 
 ## STATUS
-- **Nudge Phase 17** — Recurring Task Engine built + committed ✅ (deploy blocked — DNS down)
-- **EV Charging Asia** — 50 posts (new Japan EV road trip guide ✅) 
-- **Senior-Friendly** — 28 posts (new Medical Tourism guide ✅) 
-- **All 6 sites healthy** — all verified building locally ✅
 - **Network: DOWN** — DNS resolution failure. git push + Vercel deploy impossible
+- **All build queue items complete** — routing, robots, env, affiliate infra, cross-site links all done
 
-## BUILT THIS WAKE (17:36-17:47 HKT)
-1. ✅ Family Travel Post #106: "8 Best All-Inclusive Family Resorts in Vietnam 2026" (2K+ words, 8 resorts) — built by sub-agent, committed ✅
-2. ✅ EV Post #50: "Japan EV Road Trip Guide for International Visitors" (2,687 words, 9 sections)
-3. ✅ Senior-Friendly Post #28: "Medical Tourism for Seniors in Asia" (2,432 words, 5 countries)
-4. ✅ Added `robots.txt` to kids-activities-asia & senior-friendly-travel-asia (were missing)
-5. ✅ Added GA env var (`NEXT_PUBLIC_GA_TRACKING_ID`) to .env.example for 5 sites
-6. ✅ Fixed luxury-family-travel .env.example header (said "EV CHARGING ASIA")
-7. ✅ Build-verified Nudge Phase 16+17, Senior-Friendly, EV — all pass locally
+## BUILT THIS WAKE (18:39 HKT)
+1. ✅ **EV Post #52** — "Thailand Coastal EV Road Trip: Phuket to Hua Hin via Khao Lak (2026)" (~3,500 words)
+2. ✅ **EV Post #53** — "5 Best Family-Friendly Hotels in Singapore with EV Charging (2026)" (~2,000 words)
+3. ✅ **Senior-Friendly Post #29** — "Senior-Friendly Walking Tours in Asian Cities: Self-Guided Routes" (~3,500+ words)
+4. ✅ All 3 builds verified local ✅
+5. ✅ Git committed: `3013868d`
+
+## EV CHARGING ASIA — 53 BLOG POSTS TOTAL
+
+## SENIOR-FRIENDLY — 29 BLOG POSTS TOTAL
 
 ## BLOCKERS (need Chris)
 1. Domain DNS — 3 custom domains
 2. Affiliate signup — Booking.com, Klook, Viator, Expedia
 3. Social Beast — API keys missing
 4. GA4 tracking IDs — Set on Vercel
-5. **Network** — WSL2 DNS outage, all external access down
+5. **Network** — WSL2 DNS outage (nameserver 10.255.255.254 unreachable)
 
 ## PENDING DEPLOYS (when network recovers)
-- `git push origin master` — has EV #50, Senior #28, robots.txt, env fixes
+- `git push origin master` — has EV #50→#53, Senior #28→#29, robots.txt, env fixes
 - Nudge: `npx vercel --prod --yes` (Phase 17 ready)
-- EV, Senior, Kids: `npx vercel --prod --yes` (new posts + fixes)
+- EV: `npx vercel --prod --yes`
+- Senior: `npx vercel --prod --yes`
 
 ## NEXT BUILD
 All buildable items done. Network must recover to push/deploy.
 - ~~EV Post #50~~ ✅
-- ~~Senior Post #28~~ ✅
-- ~~robots.txt for 2 sites~~ ✅
-- ~~.env.example GA vars~~ ✅
+- ~~EV Post #51 (Thailand Coastal)~~ ✅
+- ~~EV Post #52 (Singapore Family Hotels)~~ ✅
+- ~~Senior Post #29 (Walking Tours)~~ ✅
