@@ -1,5 +1,4 @@
-// Blog data — will be moved to data/blog/*.json
-// Inline for now to ship page routes
+// Blog data — loaded from data/blog/*.json files
 
 export interface BlogPost {
   slug: string;
@@ -13,7 +12,30 @@ export interface BlogPost {
   imageUrl?: string;
 }
 
-const allPosts: BlogPost[] = [
+// Import blog post JSON files
+import beaches from '@/data/blog/senior-friendly-beaches-southeast-asia.json';
+import hotels from '@/data/blog/senior-friendly-hotel-chains-asia.json';
+import temples from '@/data/blog/temple-etiquette-seniors-asia.json';
+import weather from '@/data/blog/best-time-visit-asia-senior-travelers.json';
+import tours from '@/data/blog/group-tours-vs-independent-seniors-asia.json';
+import slowTravel from '@/data/blog/slow-travel-southeast-asia-seniors.json';
+import foodTours from '@/data/blog/senior-friendly-food-tours-asia.json';
+import connected from '@/data/blog/stay-connected-abroad-seniors-asia.json';
+import budget from '@/data/blog/senior-budget-travel-asia.json';
+import nature from '@/data/blog/accessible-nature-experiences-asia-seniors.json';
+import wellness from '@/data/blog/senior-wellness-retreats-thailand-bali.json';
+import guidedVsSelf from '@/data/blog/guided-vs-self-guided-tours-seniors-asia.json';
+import riverCruises from '@/data/blog/best-river-cruises-seniors-asia.json';
+import safetyTips from '@/data/blog/senior-travel-safety-tips-asia.json';
+import photography from '@/data/blog/photography-tours-seniors-asia.json';
+import japanHotels from '@/data/blog/senior-friendly-hotel-chains-japan.json';
+import volunteering from '@/data/blog/volunteering-cultural-immersion-seniors-asia.json';
+import airports from '@/data/blog/navigating-asian-airports-immigration-seniors.json';
+import soloTravel from '@/data/blog/solo-senior-travel-asia-best-destinations.json';
+import cuisineTips from '@/data/blog/cuisine-dietary-tips-senior-travelers-asia.json';
+
+// Existing inline posts
+const existingPosts: BlogPost[] = [
   {
     slug: 'best-cities-senior-travel-asia',
     title: '10 Best Cities in Asia for Senior Travelers in 2026',
@@ -65,6 +87,32 @@ const allPosts: BlogPost[] = [
     tags: ['packing', 'planning', 'healthcare', 'budget'],
   },
 ];
+
+// New posts loaded from JSON files (typed as BlogPost[])
+const newPosts: BlogPost[] = [
+  beaches as BlogPost,
+  hotels as BlogPost,
+  temples as BlogPost,
+  weather as BlogPost,
+  tours as BlogPost,
+  slowTravel as BlogPost,
+  foodTours as BlogPost,
+  connected as BlogPost,
+  budget as BlogPost,
+  nature as BlogPost,
+  wellness as BlogPost,
+  guidedVsSelf as BlogPost,
+  riverCruises as BlogPost,
+  safetyTips as BlogPost,
+  photography as BlogPost,
+  japanHotels as BlogPost,
+  volunteering as BlogPost,
+  airports as BlogPost,
+  soloTravel as BlogPost,
+  cuisineTips as BlogPost,
+];
+
+const allPosts: BlogPost[] = [...existingPosts, ...newPosts];
 
 export function getAllPosts(): BlogPost[] {
   return allPosts;

@@ -1,45 +1,64 @@
 # Work Engine State
 
 ## Cursor
-**2026-05-14 00:40 HKT**: BUILD-OR-DIE mode. Chris asleep. OmniMind SDK + Docker Compose + agent integration shipped.
+**2026-05-14 11:45 HKT**: Apifeny tools expanded 60→75 + sitemap fixed. Next: more content or research.
 
-## Completed This Wake (May 13→14 Overnight — OmniMind Focused)
-### OmniMind SDK & Infra
-- ✅ **Python client SDK** (`sdk/python/omnimind/`) — full store/query/list/delete with retry, typed errors, PyPI packaging
-  - Self-test: Health ✅ → Store ✅ → Search (score 0.744) ✅ → List ✅ → Delete ✅
-- ✅ **Production Docker Compose** (Qdrant v1.17 + FastAPI backend + Caddy reverse proxy with TLS/rate limiting)
-- ✅ **Agent integration module** (`sdk/agent-integration.py`) — standalone fallback, works without SDK installed
-- ✅ **Caddyfile** — TLS, rate limiting, security headers
-- ✅ **`.env.example`** — all 10 env vars documented
-- ✅ **All pushed to GitHub** (`ccc2e63`)
+## Completed This Wake (May 14 11:35-11:45)
 
-### Already Done (previous session)
-- ✅ PRD.md — full venture deck
-- ✅ AES-256-GCM Phase 2 crypto
-- ✅ Supabase schema deployed by Chris
-- ✅ Qdrant v1.17 API fix (query_points)
-- ✅ 24/24 tests passing
-- ✅ OpenClaw plugin `remember`/`recall` tools wired
+### ✅ Apifeny AI: 60→75 Tools Expansion + Sitemap Fix
+- **15 new tools added**: Grok (xAI), Gamma, Suno, Udio, Otter.ai, Fireflies.ai, Harvey AI, Lindy AI, Mem, Luma AI, Pika, HeyGen, Glean, Sana AI, Odyssey
+  - Categories: presentation AI, music gen, meeting assistants, legal AI, automation, knowledge mgmt, video gen, 3D world gen, enterprise search
+- **Sitemap fixed**: `data/tools.json` now generated from `lib/data.ts` (75 entries)
+- **Sitemap fixed**: `data/collections.json` now generated (7 collections)
+- All 15 new tools confirmed 200 ✅
+- Sitemap now has 75 individual tool pages + collections (was 0 for tools before!) ✅
+- Build passed, deployed to production ✅
 
-## Portfolio Health
-| Site | Status | Content |
-|------|--------|---------|
-| EV Charging Asia | ✅ 200 | 31 blog posts, 1125 stations |
-| Family Travel Directory | ✅ 200 | 57 blog posts, 555 destinations |
-| Luxury Family Travel | ✅ 200 | 20 destinations |
-| Apifeny AI | ✅ 200 | 60 tools |
-| Nudge | ✅ 200 | Cross-site links |
-| Social Beast | ✅ 200 | Cross-site links |
-| Senior-Friendly Travel | ✅ 200 | Clean build |
-| Kids Activities Asia | ✅ 200 | Clean build |
+### Previously Today (11:29 HKT):
+✅ All 8 zero-excuse build items DONE
+✅ All 6 sites healthy (3,000+ pages 200)
+✅ Research: AI + Travel trends May 2026
 
-## Blockers (All Chris)
-- OmniMind deployment to Fly.io/Railway
-- SUPABASE_SERVICE_KEY + OMNIMIND_ENCRYPTION_SALT env vars
-- VERCEL_TOKEN for deploys
-- Affiliate program signup (Booking.com, Expedia, etc.)
-- Domain DNS config (custom domains)
+## Portfolio Content Status
+| Site | Content | Status |
+|------|---------|:------:|
+| Family Travel Directory | 104 blog posts, 583 destinations | ✅ |
+| EV Charging Asia | 43 blog posts, 1,125 stations | ✅ |
+| Luxury Family Travel | 30 blog posts, 520 destinations, 538 properties | ✅ |
+| Kids Activities Asia | 31 blog posts | ✅ |
+| Apifeny AI | 21 blog posts, **75 tools**, 7 playbooks, 7 collections | ✅ |
+| Senior-Friendly Travel | 20 blog posts, schema.org ✅ | ✅ |
+| Nudge | PWA + Telegram Bot | ✅ |
+| Social Beast | Built, needs API keys | ⏸️ |
 
-## Budget
-- ~14k tokens DeepSeek-chat (~$0.005)
-- **Total this wake: <$0.01**
+## Site Health Audit (2026-05-14 11:45 HKT)
+
+### ✅ ALL 6 SITES — Healthy & Returning 200
+
+### ❌ Remaining Issues (ALL blocked on Chris)
+1. **3 custom domains** (luxuryfamilytravelasia.com, apifeny.ai, seniorfriendlytravel.asia) — DNS not set up
+2. **Affiliate links** — All sites need affiliate IDs (Booking.com, Klook, Viator, Expedia)
+3. **GA4 tracking IDs** — Components ready on all 6 sites, env var not set
+4. **Social Beast** — API keys missing for all platforms
+
+## Blockers (Chris — needs human action)
+1. Domain DNS — 3 custom domains
+2. Affiliate signup — Booking.com, Klook, Viator, Expedia
+3. Social Beast — All platform API keys
+4. GA4 tracking IDs — Set on Vercel
+
+## Next Build Opportunities (when Chris unblocks)
+1. **Domain DNS setup** — P0 highest impact
+2. **Affiliate integration** — Direct revenue path
+3. **Expand Apifeny tools** (75→100 tools) — More landing pages = more search traffic
+4. **Senior blog content** — Generate 5-10 more posts on multi-country itineraries
+5. **Family Travel blog** — Add 5 posts from JSON pattern
+
+## Cost This Wake
+| Item | Model | Cost |
+|------|-------|:----:|
+| Site health verification | N/A | N/A |
+| Sub-agent (Apifeny expansion) | DeepSeek-chat | ~$0.04 |
+| Build/deploy/verify | N/A | N/A |
+| **Total this wake** | | **~$0.04** |
+| **Cumulative today** | | **~$0.23** |

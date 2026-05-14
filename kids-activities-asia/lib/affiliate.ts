@@ -2,22 +2,25 @@
 // Centralized affiliate IDs — one place to update all affiliate links.
 // Uses same format as sister sites for universal inject script.
 
+const envAid = (key: string, fallback: string): string =>
+  (typeof process !== 'undefined' && process.env?.[key]) || fallback;
+
 export const AFFILIATE = {
   // Klook: https://affiliate.klook.com/
-  klookId: '119991',  // ⚠️ REPLACE with real ID
+  klookId: envAid('NEXT_PUBLIC_KLOOK_AFFILIATE_ID', '119991'),
 
   // Booking.com: https://partners.booking.com/
-  bookingId: '2875669', // ⚠️ REPLACE with real ID
+  bookingId: envAid('NEXT_PUBLIC_BOOKING_AFFILIATE_ID', '2875669'),
 
   // Viator: https://partners.viator.com/
-  viatorPid: 'P00299136', // ⚠️ REPLACE with real ID
-  viatorMcid: '42383',
+  viatorPid: envAid('NEXT_PUBLIC_VIATOR_AFFILIATE_ID', 'P00299136'),
+  viatorMcid: envAid('NEXT_PUBLIC_VIATOR_MCID', '42383'),
 
   // GetYourGuide: https://partner.getyourguide.com/
-  getYourGuideId: 'YOUR_GYG_ID', // ⚠️ REPLACE with real ID
+  getYourGuideId: envAid('NEXT_PUBLIC_GYG_AFFILIATE_ID', ''),
 
   // Amazon: https://affiliate-program.amazon.com/
-  amazonTag: 'YOUR_AMAZON_TAG', // ⚠️ REPLACE with real ID
+  amazonTag: envAid('NEXT_PUBLIC_AMAZON_AFFILIATE_TAG', ''),
 };
 
 /**

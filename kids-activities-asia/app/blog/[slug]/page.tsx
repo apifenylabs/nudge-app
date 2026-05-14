@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
 import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/lib/blog-data';
+import BlogBookingCTA from '@/components/BlogBookingCTA';
 import type { Metadata } from 'next';
 import type { BlogPost } from '@/lib/blog-data';
 
@@ -262,6 +263,11 @@ export default function BlogPostPage({ params }: Props) {
       {/* Article Body */}
       <div className="bg-white rounded-2xl border border-gray-100 p-6 md:p-10 lg:p-12">
         <ArticleContent content={post.content} />
+
+        {/* Affiliate CTA — tag-matched booking partners */}
+        <div className="mt-10 pt-6 border-t border-gray-100">
+          <BlogBookingCTA post={post} />
+        </div>
       </div>
 
       {/* Post Footer */}

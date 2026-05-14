@@ -7,14 +7,24 @@ import { Station, computeStationScore, scoreTier } from '@/lib/scoring';
 import { affiliateLinks, getAffiliatesForLocation } from '@/lib/affiliate-links';
 
 interface FeaturedFamilyStopsProps {
-  stations: Station[];
+  featuredStations?: Array<{
+    id: string;
+    name: string;
+    city: string;
+    country: string;
+    rating?: number;
+    popularity?: number;
+    ratingCount?: number;
+    chargerTypes?: string[];
+    connectorTypes?: string[];
+  }>;
 }
 
 /**
  * "Featured Family EV Stops" carousel — sponsored section for homepage and search results.
  * Shows top-rated stations with affiliate booking links.
  */
-const FeaturedFamilyStops: FC<FeaturedFamilyStopsProps> = ({ stations }) => {
+const FeaturedFamilyStops: FC<FeaturedFamilyStopsProps> = ({ featuredStations }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(true);
   const [mounted, setMounted] = useState(false);
@@ -22,13 +32,23 @@ const FeaturedFamilyStops: FC<FeaturedFamilyStopsProps> = ({ stations }) => {
 
   if (!mounted) return null;
 
-  // Select top family-friendly stations (2+ family amenities)
-  const familyFriendlyStations = stations
-    .filter(s => {
-      const amenities = [s.hasRestroomNearby, s.hasFoodNearby, s.hasCoveredParking, s.isMallParking];
-      return amenities.filter(Boolean).length >= 2;
-    })
-    .sort((a, b) => computeStationScore(b) - computeStationScore(a))
+  // Use pre-screened featured stations from homepage data, or load full list
+  const [fullStations, setFullStations] = useState<Station[]>([]);
+
+  useEffect(() => {
+    if (featuredStations && featuredStations.length > 0) return;
+    // If no featured stations provided, fetch full list
+    fetch('/api/stations')
+      .then(res => res.json())
+      .then(data => setFullStations(data.stations || data || []))
+      .catch(() => {});
+  }, [featuredStations]);
+
+  const sourceStations = featuredStations && featuredStations.length > 0
+    ? featuredStations
+    : fullStations;
+
+  const familyFriendlyStations = (sourceStations as any[])
     .slice(0, 10);
 
   if (familyFriendlyStations.length === 0) return null;

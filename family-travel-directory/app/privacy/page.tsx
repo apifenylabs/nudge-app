@@ -39,7 +39,7 @@ export default function PrivacyPage() {
                 Asia Family Travel Directory (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;)
                 is committed to protecting your privacy. This Privacy Policy explains how we collect,
                 use, disclose, and safeguard your information when you visit our website at
-                <strong> family-travel-directory.vercel.app</strong> (the &ldquo;Site&rdquo;).
+                <strong> familytravelasia.com</strong> (the &ldquo;Site&rdquo;).
                 Please read this policy carefully. If you do not agree with its terms, please do not
                 access the Site.
               </p>

@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SiteFooter from "@/components/SiteFooter";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const BASE_URL = 'https://seniorfriendlytravel.asia';
 
@@ -63,7 +67,40 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full bg-gray-50 text-gray-900 pb-safe pt-safe">
         {children}
+        <Analytics />
+        <SpeedInsights />
         <SiteFooter />
+        <GoogleAnalytics />
+        {/* Schema.org Organization */}
+        <Script
+          id="schema-org-organization"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Senior-Friendly Travel Asia",
+              "url": "https://seniorfriendlytravel.asia",
+              "description": "Curated directory of senior-friendly destinations across Asia. Accessible travel, mobility-friendly attractions, and practical advice for older adults exploring Asia.",
+              "sameAs": [],
+            }),
+          }}
+        />
+        {/* Schema.org WebSite */}
+        <Script
+          id="schema-org-website"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Senior-Friendly Travel Asia",
+              "url": "https://seniorfriendlytravel.asia",
+              "description": "Curated directory of senior-friendly destinations across Asia. Mobility-friendly attractions, accessible transport, and practical advice.",
+
+            }),
+          }}
+        />
       </body>
     </html>
   );

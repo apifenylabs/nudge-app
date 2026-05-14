@@ -14,7 +14,14 @@
  * - Trip.com     → Hotels, flights, trains (3-8%)
  * - Agoda        → Hotels in Asia (5-8%)
  * - Viator       → Experiences & day trips (8-10%)
+ *
+ * Real affiliate IDs are set from env vars with fallbacks.
+ * Set in Vercel environment for production.
  */
+
+// ─── Env Helper ────────────────────────────────────────────────
+const envAid = (key: string, fallback: string): string =>
+  (typeof process !== 'undefined' && process.env?.[key]) || fallback;
 
 type AffiliatePartner =
   | 'booking'
@@ -28,15 +35,28 @@ type AffiliatePartner =
   | 'discoveryprime'
   | 'worldnomads';
 
-interface AffiliateLink {
+export interface AffiliateLink {
   url: string;
   partner: AffiliatePartner;
   /** Commission tier or estimated rate for transparency */
   commission: string;
 }
 
-// --- TAG-TO-PARTNER MAPPING ---
-// Maps content tags to the most relevant booking partners
+// ─── Affiliate IDs ──────────────────────────────────────────────
+export const AFFILIATE = {
+  klookId: envAid('NEXT_PUBLIC_KLOOK_AFFILIATE_ID', '119991'),
+  bookingId: envAid('NEXT_PUBLIC_BOOKING_AFFILIATE_ID', '2875669'),
+  viatorPid: envAid('NEXT_PUBLIC_VIATOR_AFFILIATE_ID', 'P00299136'),
+  viatorMcid: envAid('NEXT_PUBLIC_VIATOR_MCID', '42383'),
+  getYourGuideId: envAid('NEXT_PUBLIC_GYG_AFFILIATE_ID', ''),
+  amazonTag: envAid('NEXT_PUBLIC_AMAZON_AFFILIATE_TAG', ''),
+  skyscannerId: envAid('NEXT_PUBLIC_SKYSCANNER_AFFILIATE_ID', ''),
+  nordvpnId: envAid('NEXT_PUBLIC_NORDVPN_AFFILIATE_ID', ''),
+  tripcomId: envAid('NEXT_PUBLIC_TRIPCOM_AFFILIATE_ID', ''),
+  worldnomadsId: envAid('NEXT_PUBLIC_WORLDNOMADS_AFFILIATE_ID', ''),
+};
+
+// ─── TAG-TO-PARTNER MAPPING ─────────────────────────────────────
 const TAG_TO_PARTNERS: Record<string, AffiliatePartner[]> = {
   'accommodation': ['booking', 'agoda', 'tripcom'],
   'hotel': ['booking', 'agoda', 'tripcom'],
@@ -48,7 +68,7 @@ const TAG_TO_PARTNERS: Record<string, AffiliatePartner[]> = {
   'transport': ['tripcom', 'skyscanner'],
   'beach': ['booking', 'agoda'],
   'nature': ['klook', 'getyourguide'],
-  'city': ['booking', 'agoda', 'klook'],
+  'city-guides': ['booking', 'agoda', 'klook'],
   'temple': ['klook', 'getyourguide'],
   'hotsprings': ['booking', 'agoda'],
   'shopping': ['getyourguide', 'klook'],
@@ -62,112 +82,113 @@ const TAG_TO_PARTNERS: Record<string, AffiliatePartner[]> = {
   'garden': ['klook', 'getyourguide'],
   'park': ['klook', 'getyourguide'],
   'heritage': ['getyourguide', 'klook'],
+  'planning': ['booking', 'skyscanner'],
+  'top-10': ['booking', 'klook'],
+  'budget': ['agoda', 'booking'],
+  'accessible': ['booking', 'klook'],
 };
 
-// --- PARTNER CONFIG ---
-const PARTNER_CONFIG: Record<AffiliatePartner, {
+// ─── PARTNER CONFIG ─────────────────────────────────────────────
+interface PartnerConfig {
   name: string;
   tagline: string;
-  baseUrl: string;
+  buildSearchUrl: (query: string, destSlug?: string) => string;
   icon: string;
   color: string;
-  // Search page with params
-  buildSearchUrl?: (query: string) => string;
-}> = {
+}
+
+const PARTNER_CONFIG: Record<AffiliatePartner, PartnerConfig> = {
   booking: {
     name: 'Booking.com',
-    tagline: 'Book senior-friendly hotels & resorts',
-    baseUrl: 'https://www.booking.com/index.html?aid=YOUR_AFFILIATE_ID',
+    tagline: 'Find senior-friendly hotels & resorts',
     icon: '🏨',
     color: '#003580',
     buildSearchUrl: (query: string) =>
-      `https://www.booking.com/searchresults.html?aid=YOUR_AFFILIATE_ID&ss=${encodeURIComponent(query)}&sb=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.html%3Faid%3DYOUR_AFFILIATE_ID&ssne=${encodeURIComponent(query)}&ssne_untouched=${encodeURIComponent(query)}&label=senior-travel-asia`,
+      `https://www.booking.com/searchresults.html?aid=${AFFILIATE.bookingId}&ss=${encodeURIComponent(query)}&sb=1&src=index&ssne=${encodeURIComponent(query)}&ssne_untouched=${encodeURIComponent(query)}&label=senior-travel-asia`,
   },
   klook: {
     name: 'Klook',
-    tagline: 'Book tours & attractions',
-    baseUrl: 'https://affiliate.klook.com/redirect?aid=YOUR_AFFILIATE_ID',
+    tagline: 'Book tours, attractions & activities',
     icon: '🎫',
     color: '#FF5A00',
     buildSearchUrl: (query: string) =>
-      `https://affiliate.klook.com/redirect?aid=YOUR_AFFILIATE_ID&text=${encodeURIComponent(query)}&k_srg=%2Factivity%2Fsearch%3Fkeyword%3D${encodeURIComponent(query)}`,
+      `https://www.klook.com/search/?keyword=${encodeURIComponent(query)}&aid=${AFFILIATE.klookId}`,
   },
   getyourguide: {
     name: 'GetYourGuide',
     tagline: 'Top-rated tours & day trips',
-    baseUrl: 'https://www.getyourguide.com/?partner_id=YOUR_PARTNER_ID&utm_medium=online_publisher&placement=content-middle',
     icon: '🗺️',
     color: '#FA5833',
     buildSearchUrl: (query: string) =>
-      `https://www.getyourguide.com/s/?q=${encodeURIComponent(query)}&partner_id=YOUR_PARTNER_ID&utm_medium=online_publisher&placement=content-middle`,
+      `https://www.getyourguide.com/s/?q=${encodeURIComponent(query)}&partner_id=${AFFILIATE.getYourGuideId}&utm_medium=online_publisher&placement=content-middle`,
   },
   skyscanner: {
     name: 'Skyscanner',
     tagline: 'Find the best flights',
-    baseUrl: 'https://www.skyscanner.net/g/referrals/v1/flights/home?adId=YOUR_AD_ID',
     icon: '✈️',
     color: '#FF5722',
+    buildSearchUrl: (query: string) =>
+      `https://www.skyscanner.net/g/referrals/v1/flights/home?adId=${AFFILIATE.skyscannerId}&q=${encodeURIComponent(query)}`,
   },
   nordvpn: {
     name: 'NordVPN',
-    tagline: 'Stay safe on public Wi-Fi',
-    baseUrl: 'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=YOUR_AFF_ID',
+    tagline: 'Stay safe on public Wi-Fi abroad',
     icon: '🔒',
     color: '#4687FF',
+    buildSearchUrl: (_query: string) =>
+      `https://go.nordvpn.net/aff_c?offer_id=15&aff_id=${AFFILIATE.nordvpnId}`,
   },
   tripcom: {
     name: 'Trip.com',
-    tagline: 'Hotels, flights & trains in Asia',
-    baseUrl: 'https://www.trip.com/?Allianceid=YOUR_ALLIANCE_ID&SID=YOUR_SID',
+    tagline: 'Hotels, flights & trains across Asia',
     icon: '🌏',
     color: '#287DFA',
     buildSearchUrl: (query: string) =>
-      `https://www.trip.com/hotels/?Allianceid=YOUR_ALLIANCE_ID&SID=YOUR_SID&keyword=${encodeURIComponent(query)}`,
+      `https://www.trip.com/hotels/?Allianceid=${AFFILIATE.tripcomId}&SID=&keyword=${encodeURIComponent(query)}`,
   },
   agoda: {
     name: 'Agoda',
-    tagline: 'Best hotel deals in Asia',
-    baseUrl: 'https://www.agoda.com/partners/partnersearch.aspx?asq=YOUR_ASQ_CODE',
+    tagline: 'Best hotel deals across Asia',
     icon: '🏢',
     color: '#003580',
     buildSearchUrl: (query: string) =>
-      `https://www.agoda.com/search?device=cid=YOUR_CID&selectedproperty=&city=${encodeURIComponent(query)}&checkIn=&checkOut=&rooms=1&adults=2&children=0&price=0`,
+      `https://www.agoda.com/search?device=cid=&selectedproperty=&city=${encodeURIComponent(query)}&checkIn=&checkOut=&rooms=1&adults=2&children=0`,
   },
   viator: {
     name: 'Viator',
-    tagline: 'Unique travel experiences',
-    baseUrl: 'https://www.viator.com/?pid=YOUR_PID&mcid=YOUR_MCID',
+    tagline: 'Unique travel experiences & day trips',
     icon: '🌟',
     color: '#E2231A',
     buildSearchUrl: (query: string) =>
-      `https://www.viator.com/searchResults/${encodeURIComponent(query)}?pid=YOUR_PID&mcid=YOUR_MCID`,
+      `https://www.viator.com/${encodeURIComponent(query.replace(/\s+/g, '').replace(/[^a-zA-Z]/g, ''))}/things-to-do?aid=${AFFILIATE.viatorPid}`,
   },
   discoveryprime: {
     name: 'Discovery Prime',
     tagline: 'Premium travel experiences',
-    baseUrl: 'https://www.discoveryprime.com/?ref=YOUR_REF',
     icon: '👑',
     color: '#1A1A2E',
+    buildSearchUrl: () => 'https://www.discoveryprime.com/',
   },
   worldnomads: {
     name: 'World Nomads',
-    tagline: 'Travel insurance for seniors',
-    baseUrl: 'https://www.worldnomads.com/affiliates/affiliate.aspx?affid=YOUR_AFFID&partner=YOUR_PARTNER',
+    tagline: 'Travel insurance built for seniors',
     icon: '🛡️',
     color: '#00B4D8',
+    buildSearchUrl: () =>
+      `https://www.worldnomads.com/affiliates/affiliate.aspx?affid=${AFFILIATE.worldnomadsId}&partner=senior-travel-asia`,
   },
 };
 
-// --- PUBLIC API ---
+// ─── PUBLIC API ─────────────────────────────────────────────────
 
 /**
- * Get the best affiliate link for a given search query / destination / tags.
- * Tags determine which partners are most relevant.
+ * Get affiliate links for a destination, inferred from tags.
+ * Falls back to hotel + tour if no tag matches.
  */
 export function getAffiliateLinks(
   destination: string,
-  tags: string[] = ['accommodation', 'tour'],
-  count: number = 2
+  tags: string[] = [],
+  count: number = 3
 ): AffiliateLink[] {
   const partners = new Set<AffiliatePartner>();
 
@@ -176,7 +197,6 @@ export function getAffiliateLinks(
     if (mapped) mapped.forEach((p) => partners.add(p));
   }
 
-  // If no matches from tags, add default partners
   if (partners.size === 0) {
     partners.add('booking');
     partners.add('klook');
@@ -186,27 +206,25 @@ export function getAffiliateLinks(
 
   return linkPartners.map((partner) => {
     const config = PARTNER_CONFIG[partner];
-    const url = config.buildSearchUrl?.(destination) ?? config.baseUrl;
-    return {
-      url,
-      partner,
-      commission: config.name,
-    };
+    const url = config.buildSearchUrl(destination);
+    return { url, partner, commission: config.name };
   });
 }
 
 /**
  * Get a specific partner's configuration for rendering affiliate CTAs.
  */
-export function getPartner(partner: AffiliatePartner) {
+export function getPartner(partner: AffiliatePartner): PartnerConfig | null {
   return PARTNER_CONFIG[partner] ?? null;
 }
 
 /**
  * Get all available partners (for directory pages, comparison tables, etc.)
  */
-export function getAllPartners(): Array<{ key: AffiliatePartner } & (typeof PARTNER_CONFIG)[AffiliatePartner]> {
-  return (Object.entries(PARTNER_CONFIG) as [AffiliatePartner, (typeof PARTNER_CONFIG)[AffiliatePartner]][]).map(
+export function getAllPartners(): Array<
+  { key: AffiliatePartner } & PartnerConfig
+> {
+  return (Object.entries(PARTNER_CONFIG) as [AffiliatePartner, PartnerConfig][]).map(
     ([key, config]) => ({ key, ...config })
   );
 }
@@ -215,14 +233,14 @@ export function getAllPartners(): Array<{ key: AffiliatePartner } & (typeof PART
  * Build a hotel search link for a destination.
  */
 export function hotelSearchLink(destination: string): string {
-  return `https://www.booking.com/searchresults.html?aid=YOUR_AFFILIATE_ID&ss=${encodeURIComponent(destination)}&sb=1&src=index&src_elem=sb&ssne=${encodeURIComponent(destination)}&label=senior-travel-asia`;
+  return `https://www.booking.com/searchresults.html?aid=${AFFILIATE.bookingId}&ss=${encodeURIComponent(destination)}&sb=1&src=index&ssne=${encodeURIComponent(destination)}&label=senior-travel-asia`;
 }
 
 /**
  * Build a tour search link for a destination.
  */
 export function tourSearchLink(destination: string): string {
-  return `https://affiliate.klook.com/redirect?aid=YOUR_AFFILIATE_ID&text=${encodeURIComponent(destination + ' tours')}&k_srg=%2Factivity%2Fsearch%3Fkeyword%3D${encodeURIComponent(destination)}`;
+  return `https://www.klook.com/search/?keyword=${encodeURIComponent(destination + ' tours')}&aid=${AFFILIATE.klookId}`;
 }
 
-export type { AffiliatePartner, AffiliateLink };
+export type { AffiliatePartner, PartnerConfig };

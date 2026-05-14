@@ -1,55 +1,17 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ClientDestinationPage from './_client';
-import { promises as fs } from 'fs';
-import path from 'path';
-
-interface Destination {
-  id: string;
-  slug?: string;
-  name: string;
-  city: string;
-  country: string;
-  category: string;
-  ageRange: string;
-  safetyRating: number;
-  priceRange: string;
-  popularity: number;
-  description: string;
-  location: string;
-  bestTime: string;
-  imageUrl: string;
-  amenities: string[];
-  safetyFeatures: string[];
-  tipsAndTricks: string[];
-  gallery?: string[];
-  parentStory: { title: string; excerpt: string; author: string; fullStory: string };
-  itineraryComparison: { halfDay: string; fullDay: string; bestFor: string };
-  commissionRate: string;
-  seoKeywords: string[];
-}
+import { allDestinations, getDestinationBySlug, type Destination } from '@/lib/data';
 
 const BASE_URL = 'https://luxuryfamilytravelasia.com';
 
-async function getDestinations(): Promise<Destination[]> {
-  try {
-    const filePath = path.join(process.cwd(), 'public', 'data', 'destinations.json');
-    const raw = await fs.readFile(filePath, 'utf-8');
-    return JSON.parse(raw);
-  } catch { return []; }
-}
-
-export async function generateStaticParams() {
-  const destinations = await getDestinations();
-  // Use clean slug if available, fall back to id for backward compat
-  return destinations.map((d) => ({ slug: d.slug || d.id }));
+export function generateStaticParams() {
+  return allDestinations.map((d) => ({ slug: d.slug || d.id }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const destinations = await getDestinations();
-  // Match by slug first, then fall back to id for backward compat
-  const d = destinations.find((x) => x.slug === slug) || destinations.find((x) => x.id === slug);
+  const d = getDestinationBySlug(slug);
 
   if (!d) return { title: 'Destination Not Found' };
 
@@ -121,7 +83,6 @@ function jsonLd(d: Destination, slug: string): string {
     }
   };
 
-  // Also add BreadcrumbList
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -137,8 +98,7 @@ function jsonLd(d: Destination, slug: string): string {
 
 export default async function DestinationPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const destinations = await getDestinations();
-  const found = destinations.find((d) => d.slug === slug) || destinations.find((d) => d.id === slug);
+  const found = getDestinationBySlug(slug);
 
   if (!found) notFound();
 

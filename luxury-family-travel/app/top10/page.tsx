@@ -1,8 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Crown, Star, MapPin, Users, Award, ChevronRight } from 'lucide-react';
-import fs from 'fs';
-import path from 'path';
+import { allDestinations, type Destination } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Top 10 Luxury Family Resorts in Asia | Editorially Curated',
@@ -14,33 +13,11 @@ export const metadata: Metadata = {
   },
 };
 
-interface Destination {
-  id: string;
-  slug?: string;
-  name: string;
-  city: string;
-  country: string;
-  category: string;
-  ageRange: string;
-  safetyRating: number;
-  priceRange: string;
-  popularity: number;
-  description: string;
-  location: string;
-  bestTime: string;
-  tipsAndTricks: string[];
-  amenities: string[];
-}
-
-function getImageUrl(id: string): string | null {
-  try {
-    const filePath = path.join(process.cwd(), 'public', 'data', 'image-map.json');
-    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-    const photo = data.photos?.[id];
-    return photo?.hero?.url || null;
-  } catch {
-    return null;
-  }
+function getImageUrlFromData(d: Destination): string | null {
+  // Try structured image paths first, then fall back to destination imageUrl
+  if (d.gallery && d.gallery.length > 0) return d.gallery[0];
+  if (d.imageUrl) return d.imageUrl;
+  return null;
 }
 
 const curatedReview = (dest: Destination): string => {
@@ -65,23 +42,7 @@ const bestTimeMap: Record<string, string> = {
   'Mar-Sep': 'March to September sees minimal rainfall and abundant sunshine. Shoulder months (March-April and September) offer the best value without compromising weather.',
 };
 
-const top10Image = {
-  'phuket-001': '/images/top10/amanpuri.jpg',
-  'tokyo-001': '/images/top10/aman-tokyo.jpg',
-  'maldives-001': '/images/top10/soneva-fushi.jpg',
-  'maldives-002': '/images/top10/velaa.jpg',
-  'kyoto-001': '/images/top10/aman-kyoto.jpg',
-  'bali-001': '/images/top10/fs-sayan.jpg',
-  'hongkong-002': '/images/top10/fs-hongkong.jpg',
-  'palawan-001': '/images/top10/amanpulo.jpg',
-  'phuket-002': '/images/top10/trisara.jpg',
-  'hongkong-001': '/images/top10/mandarin-oriental.jpg',
-};
-
 export default function Top10Page() {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'destinations.json');
-  const allDestinations: Destination[] = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-
   const scored = allDestinations.map(d => {
     const score = (d.popularity || 0) * 0.6 + (d.safetyRating || 0) * 20 * 0.4;
     return { ...d, score };
@@ -141,7 +102,7 @@ export default function Top10Page() {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="space-y-10">
           {top10.map((dest, index) => {
-            const heroUrl = getImageUrl(dest.id);
+            const heroUrl = getImageUrlFromData(dest);
             return (
               <article
                 key={dest.id}

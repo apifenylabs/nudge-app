@@ -20,6 +20,8 @@ import { toolsData } from '@/lib/data';
 import { playbookSuccessStories } from '@/lib/success-stories';
 import { cn } from '@/lib/utils';
 import ToolCard from '@/components/ToolCard';
+import ReadingProgressBar from '@/components/ReadingProgressBar';
+import PlaybookTOC from '@/components/PlaybookTOC';
 
 interface PlaybookPageProps {
   params: { slug: string };
@@ -79,6 +81,7 @@ export default function PlaybookPage({ params }: PlaybookPageProps) {
 
   return (
     <>
+      <ReadingProgressBar />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -124,13 +127,13 @@ export default function PlaybookPage({ params }: PlaybookPageProps) {
             )}
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">{playbook.title}</h1>
-          <p className="text-sm sm:text-base text-tech-100 max-w-2xl mb-2">{playbook.description}</p>
+          <p className="text-sm sm:text-base text-tech-100 max-w-2xl mb-2 leading-relaxed tracking-wide">{playbook.description}</p>
 
           {/* Revenue impact callout */}
           {playbook.revenue_impact && (
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20 mb-3">
-              <DollarSign className="w-4 h-4 text-amber-400" />
-              <span className="text-xs text-amber-300 font-medium">{playbook.revenue_impact}</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20 mb-3 group/revenue transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/20 hover:border-amber-500/40 hover:scale-[1.02]">
+              <DollarSign className="w-4 h-4 text-amber-400 group-hover/revenue:scale-110 transition-transform" />
+              <span className="text-xs text-amber-300 font-medium group-hover/revenue:text-amber-200 transition-colors">{playbook.revenue_impact}</span>
             </div>
           )}
 
@@ -153,25 +156,7 @@ export default function PlaybookPage({ params }: PlaybookPageProps) {
       </div>
 
       {/* Table of Contents */}
-      {showToc && (
-        <div className="mb-8 rounded-xl border border-tech-500/30 bg-tech-700/60 p-4 sm:p-5">
-          <h2 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-            <BookOpen className="w-4 h-4 text-neon-light" />
-            Table of Contents
-          </h2>
-          <nav className="space-y-1.5">
-            {playbook.steps.map((step, i) => (
-              <a
-                key={i}
-                href={`#step-${i + 1}`}
-                className="block text-xs text-tech-200 hover:text-neon-light transition pl-3 border-l-2 border-tech-500/30 hover:border-neon-light py-0.5"
-              >
-                Step {i + 1}: {step.title}
-              </a>
-            ))}
-          </nav>
-        </div>
-      )}
+      {showToc && <PlaybookTOC steps={playbook.steps} />}
 
       {/* Step-by-Step Guide */}
       <section className="mb-8 sm:mb-10">

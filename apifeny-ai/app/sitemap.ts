@@ -16,6 +16,21 @@ interface Collection {
   slug: string;
 }
 
+interface BlogPost {
+  slug: string;
+  title: string;
+}
+
+interface Playbook {
+  slug: string;
+  title: string;
+}
+
+interface RankingCategory {
+  slug: string;
+  title: string;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   // Load dynamic data at build time
   const tools: Tool[] = (() => {
@@ -34,6 +49,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     } catch { return []; }
   })();
 
+  // Blog posts from blog-data (which wraps generated-blog-data)
+  const blogPosts: BlogPost[] = (() => {
+    try {
+      const { getAllPosts } = require('../lib/blog-data');
+      return getAllPosts();
+    } catch { return []; }
+  })();
+
+  // Playbooks from lib
+  const playbooks: Playbook[] = (() => {
+    try {
+      const { playbooks: pbs } = require('../lib/playbooks');
+      return pbs;
+    } catch { return []; }
+  })();
+
+  // Ranking categories from lib
+  const rankingCategories: RankingCategory[] = (() => {
+    try {
+      const { RANKING_CATEGORIES } = require('../lib/ranking-categories');
+      return RANKING_CATEGORIES;
+    } catch { return []; }
+  })();
+
   // Static pages
   const staticEntries: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: new Date(), changeFrequency: 'daily', priority: 1.0 },
@@ -42,33 +81,58 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/privacy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
     { url: `${BASE_URL}/terms`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
+    { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
   ];
 
   // Tool pages
-  const toolEntries: MetadataRoute.Sitemap = tools.map((tool) => ({
+  const toolEntries: MetadataRoute.Sitemap = tools.map((tool): MetadataRoute.Sitemap[number] => ({
     url: `${BASE_URL}/tools/${tool.slug || tool.id}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
   }));
 
-  // Collection pages
-  const collectionEntries: MetadataRoute.Sitemap = collections.map((col) => ({
+  // Collection detail pages (from collections.json)
+  const collectionEntries: MetadataRoute.Sitemap = collections.map((col): MetadataRoute.Sitemap[number] => ({
     url: `${BASE_URL}/collections/${col.slug || col.id}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.7,
   }));
 
-  // Playbook pages
+  // Blog detail pages
+  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post): MetadataRoute.Sitemap[number] => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }));
+
+  // Playbook pages (index + individual)
   const playbookEntries: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/playbook`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    ...playbooks.map((p): MetadataRoute.Sitemap[number] => ({
+      url: `${BASE_URL}/playbook/${p.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    })),
   ];
+
+  // Ranking category pages
+  const rankingEntries: MetadataRoute.Sitemap = rankingCategories.map((rc): MetadataRoute.Sitemap[number] => ({
+    url: `${BASE_URL}/rankings/${rc.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  }));
 
   return [
     ...staticEntries,
     ...toolEntries,
     ...collectionEntries,
+    ...blogEntries,
     ...playbookEntries,
+    ...rankingEntries,
   ];
 }

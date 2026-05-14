@@ -1,13 +1,11 @@
 import { MetadataRoute } from 'next';
-import { promises as fs } from 'fs';
-import path from 'path';
 import type { Station } from '@/lib/scoring';
 import { getAllItineraries } from '@/data/itineraries';
+import stationsData from '@/data/stations.json';
+import blogIndex from '@/data/blog-index.json';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const filePath = path.join(process.cwd(), 'data', 'stations.json');
-  const raw = await fs.readFile(filePath, 'utf8');
-  const stations: Station[] = JSON.parse(raw);
+  const stations: Station[] = stationsData as Station[];
 
   const stationUrls = stations.map(s => ({
     url: `https://ev-charging-asia.vercel.app/station/${s.id}`,
@@ -23,14 +21,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: 'weekly' as const,
     priority: 0.9,
   }));
-
-  // Short-slug itinerary pages (/itinerary/[slug])
-  const shortSlugs = allRoutes.map(r => {
-    const slugParts = r.slug.split('-');
-    // Build short slug from the first two meaningful parts
-    // Use explicit map for known routes
-    return r.slug;
-  });
 
   const slugMapping: Record<string, string> = {
     'bangkok-to-phuket-road-trip': 'bangkok-phuket',
@@ -54,18 +44,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  // Read blog posts from data/blog/*.json
-  const blogDir = path.join(process.cwd(), 'data', 'blog');
-  let blogSlugs: string[] = [];
-  try {
-    const files = await fs.readdir(blogDir);
-    blogSlugs = files
-      .filter(f => f.endsWith('.json'))
-      .map(f => f.replace('.json', ''));
-  } catch {
-    // blog directory may not exist yet
-  }
-
+  const blogSlugs = (blogIndex as Array<{ slug: string; date: string }>).map(b => b.slug);
   const blogUrls = blogSlugs.map(slug => ({
     url: `https://ev-charging-asia.vercel.app/blog/${slug}`,
     lastModified: new Date(),

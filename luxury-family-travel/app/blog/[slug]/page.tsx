@@ -3,33 +3,13 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Calendar, Clock, Tag, ArrowLeft, ArrowRight, User, Sparkles, Compass } from 'lucide-react';
 import { getPostBySlug, getRelatedPosts } from '@/lib/blog-data';
-import { readFileSync } from 'fs';
-import path from 'path';
 import type { BlogPost } from '@/lib/blog-data';
+import { allDestinations } from '@/lib/data';
 
 const BASE_URL = 'https://luxury-family-travel-asia.vercel.app';
 
-interface Destination {
-  id: string;
-  name: string;
-  city: string;
-  country: string;
-  category: string;
-}
-
-function getDestinations(): Destination[] {
-  try {
-    const filePath = path.join(process.cwd(), 'public', 'data', 'destinations.json');
-    const raw = readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw);
-  } catch {
-    return [];
-  }
-}
-
 function getDestinationName(destId: string): string | null {
-  const dests = getDestinations();
-  const found = dests.find(d => d.id === destId);
+  const found = allDestinations.find((d: { id: string; name: string; city: string }) => d.id === destId);
   if (found) return `${found.name}, ${found.city}`;
   return null;
 }

@@ -35,6 +35,7 @@ import {
 } from '@/lib/community-playbooks';
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
+import PlaybookComments from '@/components/PlaybookComments';
 import { cn } from '@/lib/utils';
 
 interface CommunityPlaybookPageProps {
@@ -358,6 +359,11 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Discussion / Comments */}
+      <section className="mb-8">
+        <PlaybookComments playbookId={playbook.id} playbookTitle={playbook.title} />
       </section>
 
       {/* Common Mistakes */}

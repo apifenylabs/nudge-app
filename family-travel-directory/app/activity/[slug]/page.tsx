@@ -74,6 +74,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const page = index.find(p => p.slug === params.slug);
   if (!page) return { title: 'Page Not Found' };
 
+  const ogImage = `https://familytravelasia.com/activity-og-${page.slug}.jpg`;
+
   return {
     title: page.meta_title,
     description: page.meta_description,
@@ -81,7 +83,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: page.meta_title,
       description: page.meta_description,
       url: `https://www.familytravelasia.com/activity/${page.slug}`,
+      siteName: 'Asia Family Travel Directory',
       type: 'website',
+      images: [{ url: ogImage, width: 1200, height: 630, alt: page.h1 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: page.meta_title,
+      description: page.meta_description,
+      images: [ogImage],
     },
     alternates: {
       canonical: `https://www.familytravelasia.com/activity/${page.slug}`,

@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 const sisterSites = [
   { name: 'Asia Family Travel Directory', href: 'https://www.familytravelasia.com', description: 'Family-friendly destinations & tips' },
-  { name: 'Luxury Family Travel Asia', href: 'https://luxuryfamilytravelasia.com', description: 'Premium family getaways & 5-star resorts' },
+  { name: 'Senior-Friendly Travel Asia', href: 'https://senior-friendly-travel-asia.vercel.app', description: 'Accessible travel for older adults' },
+  { name: 'Luxury Family Travel Asia', href: 'https://luxury-family-travel-asia.vercel.app', description: 'Premium family getaways & 5-star resorts' },
   { name: 'EV Charging Asia', href: 'https://ev-charging-asia.vercel.app', description: 'EV road trips & charging stations' },
   { name: 'Apifeny AI', href: 'https://apifeny-ai.vercel.app', description: 'Curated AI tools & agents directory' },
   { name: 'Nudge', href: 'https://nudge-sigma-liart.vercel.app', description: 'Voice-powered family task management' },

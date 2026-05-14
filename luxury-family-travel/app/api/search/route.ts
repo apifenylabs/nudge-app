@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import path from 'path';
-import fs from 'fs';
+import { allDestinations } from '@/lib/data';
 
 interface Destination {
   id: string;
@@ -17,19 +16,12 @@ interface Destination {
   tipsAndTricks?: string[];
 }
 
-function loadData(): Destination[] {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'destinations.json');
-  const raw = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(raw);
-}
-
 export async function POST(request: NextRequest) {
   try {
-    const all = loadData();
+    const all = allDestinations as Destination[];
     const { query, category, ageRange, priceRange, minSafety, country, sort } = await request.json();
     let filtered = [...all];
 
-    // Full-text search
     if (query && typeof query === 'string' && query.trim()) {
       const q = query.toLowerCase().trim();
       filtered = filtered.filter((d) =>
@@ -40,12 +32,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Category filter
     if (category && category !== 'All') {
       filtered = filtered.filter((d) => d.category === category);
     }
 
-    // Age range filter
     if (ageRange && ageRange !== 'All') {
       filtered = filtered.filter((d) => {
         const parts = d.ageRange.split('-');
@@ -59,7 +49,6 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // Price range filter
     if (priceRange && priceRange !== 'All') {
       const priceLen = priceRange.replace(/[^$]/g, '').length || 1;
       filtered = filtered.filter((d) => {
@@ -68,17 +57,14 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // Minimum safety rating
     if (minSafety && minSafety > 0) {
       filtered = filtered.filter((d) => d.safetyRating >= minSafety);
     }
 
-    // Country filter
     if (country && country !== 'All') {
       filtered = filtered.filter((d) => d.country === country);
     }
 
-    // Sort
     if (sort) {
       filtered.sort((a, b) => {
         if (sort === 'popularity') return b.popularity - a.popularity;

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const sisterSites = [
   { name: "Family Travel Asia", url: "https://www.familytravelasia.com" },
-  { name: "Luxury Family Travel Asia", url: "https://luxuryfamilytravelasia.com" },
+  { name: "Luxury Family Travel Asia", url: "https://luxury-family-travel-asia.vercel.app" },
   { name: "EV Charging Asia", url: "https://ev-charging-asia.vercel.app" },
   { name: "Kids Activities Asia", url: "https://kids-activities-asia.vercel.app" },
   { name: "Apifeny AI", url: "https://apifeny-ai.vercel.app" },

@@ -29,7 +29,7 @@ interface Destination {
   revenue_engine?: { klook_product_id?: string | null; viator_product_id?: string | null; current_price_usd?: number | null; last_price_check?: string | null; };
 }
 
-const BASE_URL = 'https://family-travel-directory.vercel.app';
+const BASE_URL = 'https://familytravelasia.com';
 
 async function getDestinations(): Promise<Destination[]> {
   try {

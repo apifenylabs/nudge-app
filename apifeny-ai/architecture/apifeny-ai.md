@@ -43,12 +43,15 @@ apifeny-ai/
 ├── components/                   # Reusable UI components
 │   ├── Header.tsx               # Main navigation
 │   ├── Footer.tsx               # Footer with links
-│   ├── ToolCard.tsx             # Tool card (grid item)
+│   ├── ToolCard.tsx             # Tool card (grid item) — includes "Best For" pipeline stage badges
 │   ├── ToolGrid.tsx             # Grid with filter/sort logic
 │   ├── ToolFilters.tsx          # Full filter sidebar (search, category, pricing, use case, agent role, region, toggles)
 │   ├── ToolDetail.tsx           # Full tool detail layout
 │   ├── ToolCommunityPlaybooks.tsx # Related community playbooks on tool detail
-│   ├── ToolComments.tsx         # Client-side comment system
+│   ├── ToolComments.tsx         # Client-side comment system (single-thread)
+│   ├── PlaybookComments.tsx     # Client-side threaded comment/discussion system for community playbooks (localStorage)
+│   ├── PlaybookTOC.tsx          # Client-side TOC with smooth scroll for editorial playbooks
+│   ├── ReadingProgressBar.tsx   # Fixed-position scroll progress indicator
 │   ├── HowToUse.tsx             # Quick-start steps component
 │   ├── PriceComparisonTable.tsx # Pricing comparison component
 │   ├── AffiliateCTABar.tsx      # Tool website link CTA
@@ -66,8 +69,8 @@ apifeny-ai/
 │   ├── types.ts                 # TypeScript interfaces + constants (incl. regions)
 │   ├── ranking-algorithm.ts     # Cosme-style 5-factor ranking engine
 │   ├── ranking-categories.ts    # 10 workflow-based ranking category definitions
-│   ├── playbooks.ts             # 12 editorial playbooks
-│   ├── community-playbooks.ts   # 3 seed community playbooks + voting/sharing system
+│   ├── playbooks.ts             # 14 editorial playbooks (12 original + AI-Powered Market Research + AI Testing & QA Automation)
+│   ├── community-playbooks.ts   # 5 seed community playbooks (3 original + Deep Research w/ Perplexity+Gemini + AI Agents w/ LangChain+Claude) + voting/sharing system
 │   ├── collections.ts           # 5 curated collections
 │   ├── blog-data.ts             # Blog content
 │   ├── generated-blog-data.ts   # Auto-generated blog posts
@@ -100,12 +103,14 @@ apifeny-ai/
 - Dedicated `/rankings/[slug]` pages with score badges and explanation
 - Homepage featured section
 
-### 4. Editorial Playbooks (12)
+### 4. Editorial Playbooks (14)
 - Step-by-step guides with difficulty, read time, related tools
 - Pro tips, common mistakes sections
 - Linked to tool detail pages via HowToUse component
+- Includes: AI-Powered Market Research (research pipeline stage), AI Testing & QA Automation (testing pipeline stage)
+- Premium polish: reading progress bar, smooth-scroll TOC, revenue callout glow animation, enhanced typography
 
-### 5. Community Playbooks (3 seed)
+### 5. Community Playbooks (5 seed)
 - Real-world workflows with:
   - Author attribution
   - Exact prompts used (with what worked/didn't)
@@ -130,10 +135,26 @@ apifeny-ai/
 
 ### 8. Comments & Voting
 - Built-in commenting on tool pages (localStorage)
+- Threaded comments on community playbook detail pages (localStorage, with replies)
+- Comment counts shown on community playbook cards
 - Voting on community playbooks (upvote/downvote)
 
 ### 9. Global + Region Filter
 - Filter tools by region: Asia, North America, Europe, Southeast Asia, East Asia, etc.
+- Region filter dropdown on ranking pages and community playbook pages
+
+### 10. Ranking Page Enhancements
+- Enhanced hero section with:
+  - "Why this matters" callout explaining workflow stage criticality
+  - Key stats box (tools ranked, adoption rate, savings)
+  - "Start here if..." tip suggesting who the ranking is for
+
+### 11. Premium UI Polish
+- Reading progress bar (fixed top, gradient) on editorial + ranking pages
+- Smooth-scroll Table of Contents on editorial playbook detail
+- Revenue callout with glow animation on hover
+- Hover micro-interactions on scoring and pipeline badges
+- "Best For" color-coded pipeline stage badges on ToolCard.tsx
 
 ## Future (Phase 2)
 - Supabase integration for persistent data

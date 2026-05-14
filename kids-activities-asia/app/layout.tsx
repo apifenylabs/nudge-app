@@ -4,6 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import BottomNav from "@/components/BottomNav";
 import SiteFooter from "@/components/SiteFooter";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -95,6 +96,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteFooter />
         <Analytics />
         <BottomNav />
+        <GoogleAnalytics />
       </body>
     </html>
   );

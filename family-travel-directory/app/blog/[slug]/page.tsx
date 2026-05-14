@@ -8,8 +8,9 @@ import path from 'path';
 import type { BlogPost } from '@/lib/blog-data';
 import BlogAdSlots from './BlogAdSlots';
 import BlogBookingCTA from './BlogBookingCTA';
+import SiteFooter from '@/components/SiteFooter';
 
-const BASE_URL = 'https://family-travel-directory.vercel.app';
+const BASE_URL = 'https://familytravelasia.com';
 
 interface Destination {
   id: string;
@@ -416,24 +417,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
       )}
 
       {/* ─── FOOTER ─── */}
-      <footer className="border-t border-gray-200 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-gray-500">
-              <Compass size={16} className="text-sky-600" />
-              <span className="text-sm">Asia Family Travel Directory</span>
-            </div>
-            <div className="flex items-center gap-6 text-sm text-gray-500">
-              <Link href="/" className="hover:text-gray-900 transition-colors">Home</Link>
-              <Link href="/blog" className="hover:text-gray-900 transition-colors">Blog</Link>
-              <a href="#" className="hover:text-gray-900 transition-colors">About</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">Privacy</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">Contact</a>
-            </div>
-            <p className="text-sm text-gray-400">&copy; 2026 Asia Family Travel Directory. Curated by parents, for parents.</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

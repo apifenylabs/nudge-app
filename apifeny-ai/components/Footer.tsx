@@ -82,6 +82,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="https://senior-friendly-travel-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
+                  <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
+                  Senior-Friendly Travel Asia
+                </a>
+              </li>
+              <li>
                 <a href="https://luxuryfamilytravelasia.com" target="_blank" rel="noopener noreferrer" className="text-tech-200 hover:text-white text-sm transition flex items-center gap-1.5 group">
                   <span className="w-1 h-1 rounded-full bg-tech-500 group-hover:bg-neon transition" />
                   Luxury Family Travel Asia

@@ -662,6 +662,153 @@ export const playbooks: Playbook[] = [
       { metric: 'Hours/Week Saved', value: '20+ hours', description: 'AI agent team handles delegation and execution' },
     ],
   },
+
+  // ════════════════════════════════════════════════════
+  // NEW PLAYBOOK: AI-Powered Market Research
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'ai-powered-market-research',
+    title: 'AI-Powered Market Research',
+    subtitle: 'Competitive analysis, market sizing & customer research',
+    description:
+      'Learn how to use AI tools for comprehensive market research: competitive analysis, market sizing, customer persona development, and trend spotting. Replace weeks of manual research with AI-powered analysis in hours.',
+    related_tool_slugs: ['perplexity', 'gemini', 'chatgpt'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '🔬',
+    gradient: 'from-sky-500/30 to-cyan-500/30',
+    steps: [
+      {
+        title: 'Define your research scope with ChatGPT',
+        description:
+          'Start by asking ChatGPT to structure your research. Provide your industry, target market, and key questions. Get a research framework with hypotheses to test, data points to collect, and sources to investigate.',
+        tip: 'Use the prompt: \'Act as a market research consultant. I need to understand [industry/market]. Create a research framework with: 5 key questions, data sources, competitor categories, and success metrics.\'',
+      },
+      {
+        title: 'Deep-dive competitive analysis with Perplexity',
+        description:
+          'Use Perplexity to research each competitor: funding history, product features, pricing, customer reviews, and market positioning. Perplexity cites sources, so you can verify claims and cite original research.',
+        tip: 'Create a Perplexity Collection per competitor. Ask: \'What are [Competitor]\'s latest features, pricing changes, and customer sentiment in Q1 2026?\' Save all sources.',
+      },
+      {
+        title: 'Market sizing with Gemini long-context',
+        description:
+          'Upload industry reports, analyst PDFs, and competitor financials into Gemini (1M context). Ask it to: extract market size data, identify growth rates per segment, and build a TAM/SAM/SOM model.',
+        tip: 'Gemini can process 10+ industry reports simultaneously. Ask for a market sizing table with sources for each data point.',
+      },
+      {
+        title: 'Customer persona development with ChatGPT',
+        description:
+          'Feed ChatGPT customer interview transcripts, support tickets, and review data. Ask it to identify patterns, create detailed personas, and map customer journeys. Validate personas with real data.',
+        tip: 'Upload anonymized support transcripts. Ask \'Identify 3 distinct customer segments based on the problems they describe. Create a persona for each.\'',
+      },
+      {
+        title: 'Trend spotting with Perplexity + ChatGPT',
+        description:
+          'Ask Perplexity for emerging trends with recently published sources. Then use ChatGPT to synthesize trends, identify patterns, and create a trend impact matrix (probability × impact).',
+      },
+      {
+        title: 'Synthesize findings into a research report',
+        description:
+          'Use ChatGPT to combine all findings into a structured report: executive summary, competitive landscape, market sizing, customer personas, trends, and recommendations. Add a SWOT analysis and action plan.',
+        tip: 'Ask for the report in a startup-pitch format: 10 slides max, investor-ready. Then export to Google Slides via AI.',
+      },
+    ],
+    pro_tips: [
+      'Create a \'Research Dashboard\' in Perplexity — organize competitors and topics into collections for one-click updates',
+      'Always ask AI for \'What am I missing?\' as a final question — it catches blind spots',
+      'Use Gemini\'s 1M context to compare 3+ competitor pricing pages simultaneously',
+      'Save every research output to a shared workspace (Notion/Google Docs) for team access',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Relying on a single AI source for market data',
+        fix: 'Cross-verify all market claims across Perplexity (cited sources) and Gemini (analyst reports). AI can hallucinate statistics.',
+      },
+      {
+        mistake: 'Not updating research periodically',
+        fix: 'Set a monthly Perplexity search for each competitor. Markets change fast — stale data is worse than no data.',
+      },
+    ],
+    pipeline_stage: 'research',
+    revenue_impact: 'Save $5K-15K on market research consulting fees and 2-3 weeks per project',
+    real_results: [
+      { metric: 'Research Time Saved', value: '80%', description: 'Competitive analysis in 2 hours vs 2 weeks manually' },
+      { metric: 'Cost Savings', value: '$5-15K', description: 'Replaces agency/consultant market research fees' },
+      { metric: 'Persona Accuracy', value: '90%+', description: 'AI-derived personas validated against real customer data' },
+    ],
+  },
+
+  // ════════════════════════════════════════════════════
+  // NEW PLAYBOOK: AI Testing & QA Automation
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'ai-testing-qa-automation',
+    title: 'AI Testing & QA Automation',
+    subtitle: 'Automated testing, bug detection & code quality',
+    description:
+      'Use AI to automate testing and quality assurance: generate test suites, detect edge cases, review code for bugs, and ensure production readiness. Essential for solopreneurs shipping without a dedicated QA team.',
+    related_tool_slugs: ['claude', 'chatgpt', 'cursor'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 9,
+    icon: '✅',
+    gradient: 'from-green-500/30 to-emerald-500/30',
+    steps: [
+      {
+        title: 'Generate comprehensive test suites with ChatGPT',
+        description:
+          'Describe your feature and ask ChatGPT to generate unit tests, integration tests, and edge case tests. Provide your tech stack (Jest, Playwright, Cypress) and let it write complete test files.',
+        tip: 'Prompt: \'Generate Jest tests for this React component. Include: 5 happy-path tests, 5 edge cases, and 3 error-state tests. Use @testing-library/react.\'',
+      },
+      {
+        title: 'AI-powered code review with Claude',
+        description:
+          'Paste your code diff or entire files into Claude. Ask it to review for: security vulnerabilities, performance bottlenecks, race conditions, memory leaks, and logic errors. Claude reads code like a senior engineer.',
+        tip: 'Create a Claude Project with your codebase context. Paste the diff and ask \'What edge cases am I missing? What security issues exist?\'',
+      },
+      {
+        title: 'Automated bug detection with Cursor Agent',
+        description:
+          'Use Cursor\'s Agent mode to auto-detect bugs. Run your app, encounter an error, paste the error into Cursor\'s chat. It will trace the stack, identify the root cause, and propose a fix.',
+        tip: 'Cursor\'s Agent can self-heal runtime errors. Let it read the error, trace the call stack, and apply a fix. Review before accepting.',
+      },
+      {
+        title: 'End-to-end testing with Playwright + AI',
+        description:
+          'Describe your user flows and let ChatGPT generate Playwright/Cypress E2E tests. Include: login flows, payment flows, error handling, and responsive layouts.',
+        tip: 'Prompt: \'Write 10 Playwright E2E tests for a SaaS app: signup, login, create project, invite teammate, process payment, cancel subscription. Use page object model.\'',
+      },
+      {
+        title: 'Regression testing with AI diff analysis',
+        description:
+          'After code changes, paste the before/after diff into Claude. Ask it to identify: unintended side effects, broken functionality, API contract changes, and UI regressions.',
+        tip: 'Set up a CI step that runs diffs through Claude automatically on each PR. Catches regressions before they reach production.',
+      },
+    ],
+    pro_tips: [
+      'Create a \'Test Spec Document\' in your repo — feed it to AI every time you generate tests for consistency',
+      'Use Claude\'s 200K context to review your entire codebase at once for cross-cutting security issues',
+      'Set up GitHub Actions + Claude API for automated PR reviews — catches bugs before you even see the code',
+      'Generate accessibility (a11y) tests with AI: ask ChatGPT to check for ARIA labels, keyboard navigation, and contrast ratios',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Generating tests without running them first',
+        fix: 'Always run generated tests immediately. AI occasionally imports wrong libraries or uses incorrect API patterns.',
+      },
+      {
+        mistake: 'Skipping edge case generation',
+        fix: 'Explicitly ask AI for edge cases: \'Generate tests for: empty state, loading state, error state, network failure, rate limiting, concurrency, and invalid input.\'',
+      },
+    ],
+    pipeline_stage: 'review',
+    revenue_impact: 'Reduce QA costs by 70% and catch 3x more bugs before production',
+    real_results: [
+      { metric: 'Bugs Caught Pre-Production', value: '3x more', description: 'AI review catches edge cases human reviewers miss' },
+      { metric: 'QA Time Reduction', value: '70%', description: 'Automated test generation + AI review replaces manual QA' },
+      { metric: 'Test Coverage', value: '90%+', description: 'AI generates comprehensive edge-case tests in minutes' },
+    ],
+  },
 ];
 
 export function getPlaybookBySlug(slug: string): Playbook | undefined {

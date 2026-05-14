@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
-const BASE_URL = 'https://familytravelasia.com';
+const BASE_URL = 'https://www.familytravelasia.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   creator: "Family Travel Directory",
   publisher: "Family Travel Directory",
   alternates: {
-    canonical: 'https://familytravelasia.com',
+    canonical: 'https://www.familytravelasia.com',
   },
   robots: {
     index: true,
@@ -106,7 +106,33 @@ export default function RootLayout({
               "name": "Asia Family Travel Directory",
               "url": "https://familytravelasia.com",
               "description": "29+ family-friendly destinations across Asia. Honest tips, real parent stories, and practical advice for traveling with kids — curated by Vibe Engine.",
-              "sameAs": [],
+              "sameAs": [
+                "https://ev-charging-asia.vercel.app",
+                "https://kids-activities-asia.vercel.app",
+                "https://luxury-family-travel.vercel.app",
+                "https://apifeny-ai.vercel.app"
+              ],
+            }),
+          }}
+        />
+        {/* Schema.org WebSite with SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Asia Family Travel Directory",
+              "url": "https://familytravelasia.com",
+              "description": "29+ family-friendly destinations across Asia. Honest tips, real parent stories, and practical advice for traveling with kids.",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://familytravelasia.com/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
             }),
           }}
         />

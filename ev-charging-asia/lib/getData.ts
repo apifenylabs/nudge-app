@@ -1,6 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-import { Station } from './scoring';
+/**
+ * Data loader for EV Charging Asia.
+ * Imports JSON directly (bundled by Next.js at build time) instead of
+ * using fs.readFile which fails on Vercel serverless.
+ */
+import stationsData from '@/data/stations.json';
+import type { Station } from './scoring';
 
 export interface MetaData {
   totalStations: number;
@@ -8,10 +12,17 @@ export interface MetaData {
   countries: string[];
 }
 
+/** All stations — direct import, no fs */
+export function getAllStations(): Station[] {
+  return stationsData as Station[];
+}
+
+export function getStationById(id: string): Station | null {
+  return (stationsData as Station[]).find(s => s.id === id) || null;
+}
+
 export function getMeta(): MetaData {
-  const filePath = path.join(process.cwd(), 'data', 'stations.json');
-  const raw = fs.readFileSync(filePath, 'utf8');
-  const all: Station[] = JSON.parse(raw);
+  const all = stationsData as Station[];
 
   const seenCities = new Set<string>();
   const cities = all.filter(d => {
@@ -32,13 +43,28 @@ export function getMeta(): MetaData {
   return { totalStations: all.length, cities, countries };
 }
 
-export function getAllStations(): Station[] {
-  const filePath = path.join(process.cwd(), 'data', 'stations.json');
-  const raw = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(raw);
-}
-
-export function getStationById(id: string): Station | null {
-  const stations = getAllStations();
-  return stations.find(s => s.id === id) || null;
+/** Lightweight station subset for homepage (avoids serializing 1,125 stations to client) */
+export function getHomepageData() {
+  const all = stationsData as Station[];
+  return {
+    totalStations: all.length,
+    totalCities: new Set(all.map(s => s.city)).size,
+    totalCountries: new Set(all.map(s => s.country)).size,
+    // Just return top stations by popularity/city count for featured display
+    featuredStations: all
+      .filter(s => s.popularity && s.popularity > 60)
+      .slice(0, 12)
+      .map(s => ({
+        id: s.id,
+        name: s.name,
+        city: s.city,
+        country: s.country,
+        rating: s.rating,
+        popularity: s.popularity,
+        ratingCount: s.ratingCount,
+        chargerTypes: s.chargerTypes?.slice(0, 3) || [],
+        connectorTypes: s.connectorTypes?.slice(0, 3) || [],
+      })),
+    popularCities: [...new Set(all.filter(s => s.popularity && s.popularity > 50).map(s => s.city))].slice(0, 20),
+  };
 }

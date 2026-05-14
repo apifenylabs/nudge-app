@@ -1,10 +1,10 @@
-import { getMeta, getAllStations } from '@/lib/getData';
+import { getMeta, getHomepageData } from '@/lib/getData';
 import { getAllPosts } from '@/lib/blog-data';
 import HomeContent from './page-content';
 
 export default function Page() {
   const meta = getMeta();
-  const stations = getAllStations();
-  const posts = getAllPosts();
-  return <HomeContent meta={meta} stations={stations} blogPosts={posts} />;
+  const homepageData = getHomepageData();
+  const posts = getAllPosts().slice(0, 6);
+  return <HomeContent meta={meta} homepageData={homepageData} blogPosts={posts} />;
 }

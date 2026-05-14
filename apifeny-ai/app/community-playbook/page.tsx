@@ -33,14 +33,30 @@ import {
 } from '@/lib/community-playbooks';
 import { cn } from '@/lib/utils';
 
+// ─── Helper to load comment count from localStorage ─────────────────────
+
+function getCommentCount(playbookId: string): number {
+  if (typeof window === 'undefined') return 0;
+  try {
+    const data = localStorage.getItem(`apifeny_cp_comments_${playbookId}`);
+    if (!data) return 0;
+    const comments = JSON.parse(data);
+    return comments.reduce((sum: number, c: { replies?: unknown[] }) => sum + 1 + (c.replies?.length || 0), 0);
+  } catch {
+    return 0;
+  }
+}
+
 // ─── Individual Playbook Card ─────────────────────────────────────────────
 
 function CommunityPlaybookCard({
   playbook,
   rank,
+  commentCount,
 }: {
   playbook: CommunityPlaybook;
   rank?: number;
+  commentCount: number;
 }) {
   const [userVote, setUserVote] = useState<'up' | 'down' | null>(getUserVote(playbook.id));
   const [upvotes, setUpvotes] = useState(playbook.upvotes);
@@ -218,6 +234,12 @@ function CommunityPlaybookCard({
               <MessageSquare className="w-3 h-3" />
               {playbook.steps.length} steps
             </span>
+            {commentCount > 0 && (
+              <span className="flex items-center gap-1">
+                <MessageSquare className="w-3 h-3" />
+                {commentCount}
+              </span>
+            )}
             <span className="flex items-center gap-1">
               <Clock className="w-3 h-3" />
               {new Date(playbook.createdAt).toLocaleDateString()}
@@ -274,6 +296,7 @@ export default function CommunityPlaybooksPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [tagFilter, setTagFilter] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<'votes' | 'newest'>('votes');
+  const [regionFilter, setRegionFilter] = useState<string>('global');
 
   const allTags = useMemo(() => {
     const tagSet = new Set<string>();
@@ -298,6 +321,14 @@ export default function CommunityPlaybooksPage() {
     // Tag filter
     if (tagFilter) {
       result = result.filter((cp) => cp.tags.includes(tagFilter));
+    }
+
+    // Region filter
+    if (regionFilter !== 'global') {
+      result = result.filter((cp) => {
+        const regionMatch = cp.tags.some((t) => t.toLowerCase().includes(regionFilter));
+        return regionMatch;
+      });
     }
 
     // Sort
@@ -355,6 +386,18 @@ export default function CommunityPlaybooksPage() {
 
       {/* Search & Filters */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-6">
+        {/* Region filter */}
+        <select
+          value={regionFilter}
+          onChange={(e) => setRegionFilter(e.target.value)}
+          className="bg-tech-800 border border-tech-500/50 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500/50 transition"
+        >
+          <option value="global">🌍 Global</option>
+          <option value="asia">🌏 Asia</option>
+          <option value="north-america">🌎 North America</option>
+          <option value="europe">🌍 Europe</option>
+        </select>
+
         {/* Search */}
         <div className="relative flex-1 max-w-md">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-tech-300" />
@@ -414,7 +457,7 @@ export default function CommunityPlaybooksPage() {
 
         {/* Playbook cards */}
         {filtered.map((cp) => (
-          <CommunityPlaybookCard key={cp.id} playbook={cp} />
+          <CommunityPlaybookCard key={cp.id} playbook={cp} commentCount={getCommentCount(cp.id)} />
         ))}
       </div>
 

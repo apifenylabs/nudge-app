@@ -54,7 +54,18 @@ export default function SiteFooter() {
               </li>
               <li>
                 <a
-                  href="https://luxuryfamilytravelasia.com"
+                  href="https://senior-friendly-travel-asia.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-400 hover:text-teal-600 transition-colors"
+                >
+                  Senior-Friendly Travel Asia
+                </a>
+                <p className="text-xs text-gray-400 mt-0.5">Accessible travel for older adults</p>
+              </li>
+              <li>
+                <a
+                  href="https://luxury-family-travel-asia.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-amber-600 transition-colors"

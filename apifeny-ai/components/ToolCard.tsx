@@ -4,13 +4,47 @@ import Link from 'next/link';
 import { Star, TrendingUp } from 'lucide-react';
 import { Tool } from '@/lib/types';
 import { cn, getPricingLabel, getPricingColor, getAsiaScoreColor, getAsiaScoreBg, renderStars, formatNumber } from '@/lib/utils';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Zap } from 'lucide-react';
 
 interface ToolCardProps {
   tool: Tool;
   rank?: number;
   showRank?: boolean;
 }
+
+// ─── Pipeline Stage Labels & Colors ──────────────────────────────────────────
+
+const PIPELINE_COLORS: Record<string, string> = {
+  'planning': 'bg-violet-500/15 text-violet-400 border-violet-500/30',
+  'research': 'bg-sky-500/15 text-sky-400 border-sky-500/30',
+  'ideation': 'bg-pink-500/15 text-pink-400 border-pink-500/30',
+  'coding': 'bg-blue-500/15 text-blue-400 border-blue-500/30',
+  'review': 'bg-amber-500/15 text-amber-400 border-amber-500/30',
+  'testing': 'bg-orange-500/15 text-orange-400 border-orange-500/30',
+  'deployment': 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30',
+  'content': 'bg-rose-500/15 text-rose-400 border-rose-500/30',
+  'marketing': 'bg-fuchsia-500/15 text-fuchsia-400 border-fuchsia-500/30',
+  'automation': 'bg-cyan-500/15 text-cyan-400 border-cyan-500/30',
+  'multimodal': 'bg-teal-500/15 text-teal-400 border-teal-500/30',
+  'all-rounder': 'bg-neon/15 text-neon-light border-neon/30',
+};
+
+const PIPELINE_LABELS: Record<string, string> = {
+  'planning': 'Planning',
+  'research': 'Research',
+  'ideation': 'Ideation',
+  'coding': 'Coding',
+  'review': 'Code Review',
+  'testing': 'Testing',
+  'deployment': 'Deploy',
+  'content': 'Content',
+  'marketing': 'Marketing',
+  'automation': 'Automation',
+  'multimodal': 'Multimodal',
+  'all-rounder': 'All-Rounder',
+};
+
+// ─── Component ────────────────────────────────────────────────────────────────
 
 export default function ToolCard({ tool, rank, showRank = false }: ToolCardProps) {
   const stars = renderStars(tool.avg_rating);
@@ -60,6 +94,21 @@ export default function ToolCard({ tool, rank, showRank = false }: ToolCardProps
           </p>
         </div>
       </div>
+
+      {/* Best For badge */}
+      {tool.best_for_pipeline_stage && (
+        <div className="mb-2">
+          <span
+            className={cn(
+              'inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-medium border transition hover:scale-105',
+              PIPELINE_COLORS[tool.best_for_pipeline_stage] || 'bg-tech-800 border-tech-500/30 text-tech-300'
+            )}
+          >
+            <Zap className="w-2.5 h-2.5" />
+            {PIPELINE_LABELS[tool.best_for_pipeline_stage] || tool.best_for_pipeline_stage}
+          </span>
+        </div>
+      )}
 
       {/* Badges */}
       <div className="flex flex-wrap items-center gap-2 mb-3">

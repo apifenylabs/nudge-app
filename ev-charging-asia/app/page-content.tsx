@@ -3,7 +3,6 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { FC, useState, useEffect } from 'react';
-import { Station } from '@/lib/scoring';
 import { BlogPost } from '@/lib/blog-data';
 import { affiliateLinks, getAffiliatesForLocation } from '@/lib/affiliate-links';
 import EvRoadTripCTA from '@/components/EvRoadTripCTA';
@@ -19,7 +18,25 @@ interface Meta {
   countries: string[];
 }
 
-export default function HomeContent({ meta, stations, blogPosts: initialPosts = [] }: { meta: Meta; stations: Station[]; blogPosts?: BlogPost[] }) {
+interface HomepageData {
+  totalStations: number;
+  totalCities: number;
+  totalCountries: number;
+  featuredStations: Array<{
+    id: string;
+    name: string;
+    city: string;
+    country: string;
+    rating?: number;
+    popularity?: number;
+    ratingCount?: number;
+    chargerTypes?: string[];
+    connectorTypes?: string[];
+  }>;
+  popularCities: string[];
+}
+
+export default function HomeContent({ meta, homepageData, blogPosts: initialPosts = [] }: { meta: Meta; homepageData: HomepageData; blogPosts?: BlogPost[] }) {
   const [mounted, setMounted] = useState(false);
   const [showMap, setShowMap] = useState(false);
 
@@ -30,8 +47,8 @@ export default function HomeContent({ meta, stations, blogPosts: initialPosts = 
   const blogPosts = initialPosts.slice(0, 6);
 
   // Top countries for quick stats
-  const topCountries = [...new Set(stations.map(s => s.country))];
-  const topCities = [...new Set(stations.map(s => s.city))];
+  const topCountries = meta.countries;
+  const topCities = meta.cities;
 
   // Popular route links
   const popularRoutes = [
@@ -158,12 +175,13 @@ export default function HomeContent({ meta, stations, blogPosts: initialPosts = 
         >
           {showMap ? 'Show Content' : 'Show Map'}
         </button>
-        <MapWithFilters stations={stations} meta={meta} />
+        {/* MapWithFilters loads stations via its own data hook */}
+        <MapWithFilters meta={meta} />
       </div>
 
       {/* Featured Carousel */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-10">
-        <FeaturedFamilyStops stations={stations} />
+        <FeaturedFamilyStops featuredStations={homepageData.featuredStations} />
       </div>
 
       {/* Revenue: EV Road Trip CTA — homepage */}

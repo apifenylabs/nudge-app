@@ -12,6 +12,7 @@ import SeasonalRecommendations from '@/components/itineraries/SeasonalRecommenda
 import SeasonalComparisonTable from '@/components/itineraries/SeasonalComparisonTable';
 import ItinerarySEOSection from '@/components/itineraries/ItinerarySEOSection';
 import PrintButton from '@/components/itineraries/PrintButton';
+import RouteShareBar from '@/components/itineraries/RouteShareBar';
 
 interface Props {
   params: { slug: string };
@@ -207,10 +208,16 @@ export default function ItineraryDetailPage({ params }: Props) {
           </div>
 
           {/* Route cities */}
-          <div className="flex items-center gap-1.5 text-sm text-gray-600">
+          <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-4">
             <MapPin size={14} className="text-red-400" />
             <span className="font-medium">Route:</span>
             <span className="text-gray-500">{it.cities.join(' → ')}</span>
+          </div>
+
+          {/* Share & Print Tools */}
+          <div className="flex items-center justify-between border-t border-gray-100 pt-4">
+            <RouteShareBar title={it.title} slug={it.slug} />
+            <PrintButton />
           </div>
         </div>
 

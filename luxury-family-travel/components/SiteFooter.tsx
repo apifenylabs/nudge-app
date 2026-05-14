@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const sisterSites = [
   { name: "Asia Family Travel Directory", href: "https://www.familytravelasia.com", description: "Family-friendly destinations & tips across Asia" },
+  { name: "Senior-Friendly Travel Asia", href: "https://senior-friendly-travel-asia.vercel.app", description: "Accessible travel for older adults" },
   { name: "EV Charging Asia", href: "https://ev-charging-asia.vercel.app", description: "EV charging station directory for Asia" },
   { name: "Apifeny AI", href: "https://apifeny-ai.vercel.app", description: "Curated AI tools & agents directory" },
   { name: "Nudge", href: "https://nudge-sigma-liart.vercel.app", description: "Voice-powered family task management app" },

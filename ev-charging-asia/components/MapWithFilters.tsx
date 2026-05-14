@@ -26,8 +26,9 @@ const COUNTRY_CITIES: Record<string, string[]> = {
   'Singapore': ['Singapore'],
 };
 
-export default function MapWithFilters({ stations, meta }: { stations: Station[]; meta: Meta }) {
+export default function MapWithFilters({ meta }: { meta: Meta }) {
   const [mounted, setMounted] = useState(false);
+  const [stations, setStations] = useState<Station[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [moreFiltersOpen, setMoreFiltersOpen] = useState(false);
@@ -45,7 +46,12 @@ export default function MapWithFilters({ stations, meta }: { stations: Station[]
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
   const [countryFilterOpen, setCountryFilterOpen] = useState(true);
 
-  useEffect(() => { setMounted(true); }, []);
+  useEffect(() => { setMounted(true);
+    fetch('/api/stations')
+      .then(res => res.json())
+      .then(data => setStations(data.stations || data || []))
+      .catch(() => console.error('Failed to load stations'));
+  }, []);
 
   const allTypes = ['CCS2', 'CHAdeMO', 'Type 2', 'GB/T', 'NACS'];
   const powerOptions = [

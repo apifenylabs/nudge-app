@@ -49,184 +49,190 @@ export interface CommunityPlaybook {
   icon: string;
   /** Gradient for card */
   gradient: string;
-  /** Metadata */
+  /** Creation date (ISO string) */
   createdAt: string;
-  is_verified: boolean; // verified by editorial team
+  /** Verified by editors */
+  is_verified: boolean;
 }
 
-/**
- * Seed community playbooks — real-world workflows with actual results.
- */
+// ─── Seed Data ─────────────────────────────────────────────────────────────────
+
 export const communityPlaybooks: CommunityPlaybook[] = [
+  // ════════════════════════════════════════════════════
+  // EXISTING PLAYBOOK 1: Perfect Pitching with ChatGPT
+  // ════════════════════════════════════════════════════
   {
-    id: 'cp-001',
-    title: 'Building a SaaS MVP with Cursor + Claude',
-    subtitle: 'From idea to paid users in 72 hours',
+    id: 'perfect-pitching-chatgpt',
+    title: 'Perfect Pitching with ChatGPT',
+    subtitle: 'Land a $5K retainer client in one month using AI-powered sales',
     description:
-      'How I built a working SaaS MVP using Cursor as my IDE and Claude for architecture decisions. Deployed to Vercel with Stripe payments in 72 hours flat.',
+      'I used ChatGPT to research, write, and personalize 50 outreach emails in a single afternoon. Landed 3 meetings, two proposals, and one $5K/mo retainer client. Total AI cost: $0 (ChatGPT Free).',
     author: {
-      name: 'Alex Chen',
-      handle: '@alexchen_builds',
+      name: 'Marcus Rivera',
+      handle: '@marcus_rivera',
     },
-    related_tool_slugs: ['cursor', 'claude', 'bolt-new', 'v0'],
-    difficulty: 'Intermediate',
-    icon: '🏗️',
-    gradient: 'from-violet-500/20 to-blue-500/10',
+    related_tool_slugs: ['chatgpt', 'perplexity'],
+    difficulty: 'Beginner',
+    icon: '🎯',
+    gradient: 'from-amber-500/20 to-orange-500/10',
     steps: [
       {
-        title: 'Define your MVP scope ruthlessly',
+        title: 'Research 10 target prospects with Perplexity',
         description:
-          'Write a ONE-page spec. Not a PRD — a single doc covering: what problem, who it\'s for, core flow, NOT doing. I used Claude to pressure-test my assumptions.',
-        tip: 'Ask Claude "Play devil\'s advocate: why would this MVP fail?" — it saved me from building features nobody needed.',
+          'For each prospect, ask Perplexity to find their recent news, product launches, funding rounds, and public pain points. Create a briefing doc for each.',
+        tip: 'Search for "[company name] challenges 2026" and "[company name] recent news" to find current pain points.',
       },
       {
-        title: 'Set up the foundation with Cursor',
+        title: 'Generate personalized outreach with ChatGPT',
         description:
-          'Initialised a Next.js app with Cursor. Used Cursor\'s agent mode to scaffold: auth (NextAuth), DB schema (Prisma + SQLite for dev), and API routes. Took 2 hours.',
-        tip: 'Keep Cursor in agent mode for boilerplate, switch to edit mode for logic decisions.',
+          'Feed each briefing doc into ChatGPT with: "Write a cold email to [CEO name] at [company] offering my AI consulting services. Reference their recent [specific challenge]. Be concise and value-first."',
+        tip: 'Ask ChatGPT to generate 3 subject line variants per email. Open rates jumped from 38% to 62%.',
       },
       {
-        title: 'Design the UI with v0',
+        title: 'Create a follow-up sequence',
         description:
-          'Described my landing page and dashboard to v0. It generated 3 variants. Picked the best, exported to JSX, dropped into my Cursor project. 30 minutes.',
+          'Use ChatGPT to write a 4-email follow-up sequence: day 3 (value add article), day 7 (case study), day 14 (breaking news hook), day 21 (breakup email).',
       },
       {
-        title: 'Implement core feature with Claude',
+        title: 'A/B test subject lines',
         description:
-          'For the main feature (AI-powered feedback analysis), I wrote the logic in Claude first, testing with sample data, then moved it to Cursor.',
-        tip: 'Generate and test complex logic in Claude (144k context), then paste the working version into Cursor. Saves token costs.',
+          'Run 2-3 subject line variants per batch. Track open rates manually (it\'s only 50 emails). Double down on what works.',
+        tip: 'Ask ChatGPT: "Write 10 subject lines for a cold email to [industry] CEOs. Use curiosity gaps and specific results."',
       },
       {
-        title: 'Add payments with Bolt.new Stripe template',
+        title: 'Close with an AI-crafted proposal',
         description:
-          'Used Bolt.new to spin up a ready-made Stripe integration. Copied the webhook handler and checkout components into my project.',
-      },
-      {
-        title: 'Deploy and get first users',
-        description:
-          'Deployed to Vercel. Posted the journey on Twitter/X with screenshots of the build process. 45 signups in the first 24 hours.',
+          'After the intro call, use ChatGPT to generate a tailored proposal: scope, timeline, pricing. Feed it the call notes for maximum relevance.',
       },
     ],
     pro_tips: [
-      'Use Cursor\'s "Composer" to edit multiple files at once — it\'s the killer feature',
-      'Keep a CLAUDE.md file in your project root with architecture decisions — Cursor reads it automatically',
-      'Ship the backend first, then polish the UI. Users forgive ugly, they don\'t forgive broken',
+      'Use Perplexity for research, ChatGPT for writing — they complement each other perfectly',
+      'Keep a "Cold Email Playbook" doc with your best-performing templates. Update monthly with AI help',
+      'Personalization beyond [name] and [company] increases reply rates by 3x — mention specific recent events',
     ],
     common_mistakes: [
       {
-        mistake: 'Over-engineering auth from day one',
-        fix: 'Start with a simple magic link or Google OAuth. Add role-based access later when you have users.',
+        mistake: 'Using AI to write generic outreach',
+        fix: 'Always add specific context: "Reference their Series A announcement last month" or "Mention their new product launch."',
       },
       {
-        mistake: 'Writing tests before product-market fit',
-        fix: 'Skip tests until you have paying users. Fix bugs fast, refactor later.',
+        mistake: 'Skipping the research step',
+        fix: '5 minutes of Perplexity research per prospect = 10x better emails. Non-negotiable.',
       },
     ],
     real_results: [
-      { metric: 'Time to MVP', value: '72 hours', description: 'From idea to working product with Stripe payments' },
-      { metric: 'Signups (24h)', value: '45 users', description: 'Posted the build journey on Twitter/X' },
-      { metric: 'MRR (Month 1)', value: '$420', description: '10 paid users at $42/mo' },
+      { metric: 'Emails sent', value: '50', description: 'With personalized AI research for each' },
+      { metric: 'Meetings booked', value: '3', description: '6% conversion rate (above 2% industry average)' },
+      { metric: 'Retainer signed', value: '$5,000/mo', description: 'One retainer client from the campaign' },
     ],
     sample_prompts: [
       {
-        prompt: '"Build me a Next.js 14 app with NextAuth, Prisma SQLite, and a /dashboard that shows user count. Typescript strict."',
-        output_summary: 'Cursor scaffolded the entire app structure in one agent mode session. Created 14 files with proper routing, middleware, and DB schema.',
-        what_worked: 'Agent mode handles boilerplate perfectly. It created files I would have forgotten.',
-        what_didnt: 'Auth callback URLs were wrong — had to fix manually. Test the auth flow immediately.',
+        prompt: '"Write a cold email to a SaaS founder who just raised a $2M seed round. Mention their AI product feature as context. I offer AI workflow consulting."',
+        output_summary: 'ChatGPT generated a 4-paragraph email: subject line (curiosity gap), compliment on recent funding, specific value prop for post-funding companies, low-friction CTA (15-min call).',
+        what_worked: 'The "congratulations on the funding" opener had a 70% open rate.',
+        what_didnt: 'One variant that was too direct ("I can save you $10K/mo") got zero replies. Felt like spam.',
       },
     ],
-    revenue_impact: '$420 MRR in first month from 10 users',
-    upvotes: 47,
+    revenue_impact: '$5,000/mo retainer client (first month)',
+    upvotes: 87,
     downvotes: 2,
-    shares: 23,
-    tags: ['saas', 'mvp', 'cursor', 'stripe', 'solopreneur'],
-    pipeline_stage: 'coding',
-    createdAt: '2026-05-01',
+    shares: 45,
+    tags: ['sales', 'outreach', 'email', 'cold-email'],
+    pipeline_stage: 'marketing',
+    createdAt: '2026-04-15',
     is_verified: true,
   },
+
+  // ════════════════════════════════════════════════════
+  // EXISTING PLAYBOOK 2: TikTok Content Factory
+  // ════════════════════════════════════════════════════
   {
-    id: 'cp-002',
-    title: 'Automating Content Marketing with ChatGPT + Perplexity',
-    subtitle: '$3K/mo content engine',
+    id: 'tiktok-content-factory',
+    title: 'TikTok Content Factory',
+    subtitle: 'From 0 to 150K followers in 60 days using AI-generated scripts',
     description:
-      'How I built a content marketing engine that publishes 3 blog posts/week and 5 social posts/day using ChatGPT for writing and Perplexity for research. $3K/mo in affiliate revenue.',
+      'I built a TikTok content factory using ChatGPT for scripts, Canva AI for visuals, and ElevenLabs for voiceovers. Grew from 0 to 150K followers in 60 days posting 3x/day. Total cost: $47/mo.',
     author: {
-      name: 'Maya S.',
-      handle: '@mayacontent',
+      name: 'Priya Sharma',
+      handle: '@priya_growth',
     },
-    related_tool_slugs: ['chatgpt', 'perplexity', 'canva-ai', 'jasper'],
+    related_tool_slugs: ['chatgpt', 'canva-ai', 'elevenlabs'],
     difficulty: 'Beginner',
-    icon: '📝',
-    gradient: 'from-orange-500/20 to-pink-500/10',
+    icon: '📱',
+    gradient: 'from-pink-500/20 to-rose-500/10',
     steps: [
       {
-        title: 'Build your content calendar with ChatGPT',
+        title: 'Generate 30-day content calendar with ChatGPT',
         description:
-          'Give ChatGPT your niche, audience, and content goals. Ask for a 30-day content calendar with blog posts, social media, and email topics.',
-        tip: 'Use the prompt: "I run a site about [niche]. My audience is [demographic]. Create 30 days of content that solves their [top 3 problems]."',
+          'Define your niche and target audience. Ask ChatGPT for 90 content ideas (30 days x 3 posts/day) categorized by: educational, entertaining, trending, and promotional.',
+        tip: 'Categories matter: 40% educational, 30% entertaining, 20% trending, 10% promotional is the sweet spot.',
       },
       {
-        title: 'Research each topic with Perplexity',
+        title: 'Create AI script templates',
         description:
-          'For each content topic, use Perplexity to gather recent statistics, quotes from experts, and competitor analysis. Always ask for sources.',
-        tip: 'Ask Perplexity "Find me the 5 most recent statistics about [topic] with sources from 2026." Save the cited URLs.',
+          'For each content category, ask ChatGPT to create a script template. Educational: hook → problem → solution → CTA. Entertaining: hook → setup → punchline → CTA.',
       },
       {
-        title: 'Write the first draft with ChatGPT',
+        title: 'Generate AI voiceovers with ElevenLabs',
         description:
-          'Feed ChatGPT your research and ask it to write a comprehensive draft. Use a custom GPT trained on your brand voice if you have one.',
-      },
-      {
-        title: 'Edit for voice (this is non-negotiable)',
-        description:
-          'AI writes generic. Your voice is your moat. Rewrite the intro and conclusion manually. Add personal stories and opinions.',
-        tip: 'I spend 40% of time editing. The AI gives me 80% of the substance, I add the soul.',
+          'Feed your scripts into ElevenLabs. Choose a voice that matches your brand personality. (I use "Rachel" for educational content and "Mark" for trending content.)',
+        tip: 'Use a different voice per content category. It creates subconscious brand recognition.',
       },
       {
         title: 'Create visuals with Canva AI',
         description:
-          'Use Canva Magic Studio to generate featured images, social graphics, and infographics from your content. 2 minutes per visual.',
+          'Use Canva Magic Studio: generate background images with AI, auto-caption your videos, and create consistent branded templates.',
+      },
+      {
+        title: 'Schedule and post using native tools',
+        description:
+          'Post 3x/day at optimal times: 7AM, 12PM, 8PM. Use TikTok\'s native scheduler or a free tool like Later.',
       },
     ],
     pro_tips: [
-      'Batch your content: write 4 blog posts in one day, schedule for the month',
-      'Use Perplexity Pages as a research template — it creates formatted research briefs',
-      'Repurpose each blog post into 5 pieces: LinkedIn post, Twitter thread, email summary, Instagram carousel, short video script',
+      'Use ChatGPT to analyze your top-performing videos: "Based on these 10 best-performing videos, what patterns do you see?"',
+      'Create 20 scripts in one ChatGPT session. Batch recording saves hours.',
+      'ElevenLabs voice isolation removes background noise from on-location recordings — game changer.',
     ],
     common_mistakes: [
       {
-        mistake: 'Publishing AI content without fact-checking',
-        fix: 'Use Perplexity to verify every statistic. AI hallucinates confidently.',
+        mistake: 'Using AI voices without editing pacing',
+        fix: 'Add pauses, emphasis, and tone changes in ElevenLabs. Robotic voices kill engagement.',
       },
       {
-        mistake: 'Not adding personal stories',
-        fix: 'Readers can smell generic content. Add one real experience per post.',
+        mistake: 'Posting without trend analysis',
+        fix: 'Ask ChatGPT weekly: "What are the top 5 trending sounds/hashtags in [niche] right now?" Incorporate into next batch.',
       },
     ],
     real_results: [
-      { metric: 'Monthly Posts', value: '12 blogs + 120 social', description: '3 blog posts + 5 social posts/day' },
-      { metric: 'Monthly Traffic', value: '28K visitors', description: 'Organic + social referral' },
-      { metric: 'Affiliate Revenue', value: '$3,200/mo', description: 'Amazon + tool affiliate programs' },
+      { metric: 'Followers', value: '150K', description: 'From 0 in 60 days' },
+      { metric: 'Monthly cost', value: '$47', description: 'ChatGPT ($20) + Canva ($13) + ElevenLabs ($14)' },
+      { metric: 'Avg views/video', value: '12K', description: 'By day 30, 5x higher than first week' },
     ],
     sample_prompts: [
       {
-        prompt: '"Research: What are the top 5 challenges Asian solopreneurs face when adopting AI tools in 2026? Find 3 statistics for each."',
-        output_summary: 'Perplexity returned 15 cited statistics with sources from Gartner, McKinsey, and regional surveys. Included competitor content analysis.',
-        what_worked: 'The cited sources made the article authoritative. It got picked up by a Medium publication.',
+        prompt: '"Write 5 TikTok scripts about AI tools for small business owners. Each under 60 seconds. Hook: shocking statistic. Format: hook → problem → solution → CTA."',
+        output_summary: 'ChatGPT generated 5 scripts with 2 hooks each, 3 key points per script, and specific CTAs (follow, save, comment).',
+        what_worked: 'The "shocking statistic" hooks (e.g., "80% of small businesses waste 20 hours/week on admin") got 3x more saves.',
+        what_didnt: 'Scripts over 60 seconds had 50%+ drop-off. Kept them at 45-55 seconds after analysis.',
       },
     ],
-    revenue_impact: '$3,200/mo in affiliate revenue',
-    upvotes: 38,
-    downvotes: 1,
-    shares: 45,
-    tags: ['content-marketing', 'affiliate', 'blogging', 'automation'],
-    pipeline_stage: 'marketing',
-    createdAt: '2026-04-28',
+    revenue_impact: 'Brand deals worth $2K/mo starting month 3',
+    upvotes: 73,
+    downvotes: 5,
+    shares: 38,
+    tags: ['tiktok', 'content', 'growth', 'social-media', 'video'],
+    pipeline_stage: 'content',
+    createdAt: '2026-04-18',
     is_verified: true,
   },
+
+  // ════════════════════════════════════════════════════
+  // EXISTING PLAYBOOK 3: AI Support Bot (LangChain + OpenAI)
+  // ════════════════════════════════════════════════════
   {
-    id: 'cp-003',
-    title: 'AI-Powered Customer Support with $0 Spend',
+    id: 'ai-support-bot-langchain',
+    title: 'AI Support Bot with LangChain',
     subtitle: 'Replaced a $2K/mo support tool with AI',
     description:
       'I replaced Intercom ($2K/mo) with a custom AI support bot built using LangChain + OpenAI. Handles 85% of tickets automatically. Total cost: $47/mo in API calls.',
@@ -297,6 +303,179 @@ export const communityPlaybooks: CommunityPlaybook[] = [
     tags: ['customer-support', 'rag', 'langchain', 'automation'],
     pipeline_stage: 'deployment',
     createdAt: '2026-04-20',
+    is_verified: true,
+  },
+
+  // ════════════════════════════════════════════════════
+  // NEW PLAYBOOK 4: Deep Research with Perplexity + Gemini
+  // ════════════════════════════════════════════════════
+  {
+    id: 'deep-research-perplexity-gemini',
+    title: 'Deep Research with Perplexity + Gemini',
+    subtitle: 'Competitive analysis in 2 hours using AI-powered multi-source research',
+    description:
+      'I use Perplexity for real-time source-cited research combined with Gemini\'s 1M context window to analyze entire competitor ecosystems. This workflow helped me generate a 50-page competitive analysis report in 2 hours that my client paid $8K for.',
+    author: {
+      name: 'Sarah Chen',
+      handle: '@sarahchen_research',
+    },
+    related_tool_slugs: ['perplexity', 'gemini', 'chatgpt'],
+    difficulty: 'Intermediate',
+    icon: '🔍',
+    gradient: 'from-sky-500/20 to-cyan-500/10',
+    steps: [
+      {
+        title: 'Define research scope in ChatGPT',
+        description:
+          'Start with ChatGPT to structure your research: define competitors, key questions, and metrics. Get a research template.',
+        tip: 'Ask ChatGPT: \'Create a competitive analysis framework for [industry]. Include: market share, pricing, features, tech stack, customer sentiment, and growth strategy.\'',
+      },
+      {
+        title: 'Deep competitor search with Perplexity',
+        description:
+          'For each competitor, run a Perplexity Pro search with custom instruction: \'Act as a market analyst. Find funding rounds, product launches, customer reviews, and strategic moves from the last 6 months. Cite every source.\'',
+        tip: 'Create a Perplexity Collection per competitor to track ongoing research. Use \'Pro Search\' for deep dives.',
+      },
+      {
+        title: 'Batch analyze competitor data with Gemini',
+        description:
+          'Export Perplexity results and paste all competitor data into Gemini. Ask Gemini to: compare pricing, identify feature gaps, analyze customer sentiment, and build a competitive positioning map.',
+        tip: 'Gemini handles 1M context — dump all competitors at once and ask for a comparative analysis table.',
+      },
+      {
+        title: 'Validate with primary sources',
+        description:
+          'Ask Perplexity to find actual customer reviews from G2, Capterra, Reddit, and Twitter. Compare AI-generated analysis with real user sentiment.',
+      },
+      {
+        title: 'Synthesize into client-ready report',
+        description:
+          'Use ChatGPT to combine all findings into a structured report: executive summary, competitive landscape, market sizing, customer personas, trends, and recommendations.',
+      },
+    ],
+    pro_tips: [
+      'Use Perplexity\'s \'Focus\' mode for different sources: Academic for research papers, Reddit for honest opinions, News for recent developments',
+      'Always ask Perplexity: \'What\'s the data source and publication date?\' to avoid stale info',
+      'Feed your final report back into ChatGPT and ask \'What ethical concerns does this analysis raise?\' — catches blind spots',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Accepting AI-generated numbers without verification',
+        fix: 'Cross-reference every statistic with Perplexity\'s source URLs. AI can hallucinate market data.',
+      },
+      {
+        mistake: 'Researching in silos instead of comparatively',
+        fix: 'Always ask for side-by-side comparisons. \'Compare these 5 competitors across pricing, features, and customer satisfaction.\'',
+      },
+    ],
+    real_results: [
+      { metric: 'Report time', value: '2 hours', description: 'From 2 weeks manually (90% faster)' },
+      { metric: 'Client value', value: '$8,000', description: 'Paid for competitive analysis report' },
+      { metric: 'Sources verified', value: '45+', description: 'Cited sources across 8 competitors' },
+    ],
+    sample_prompts: [
+      {
+        prompt: '"Analyze these 5 competitors in the AI writing space: Jasper, Copy.ai, Writesonic, Rytr, and Sudowrite. Compare pricing, features, target audience, and recent updates from the last 3 months."',
+        output_summary: 'Perplexity returned 15 cited sources per competitor. Gemini then synthesized a comparison table across 12 dimensions. ChatGPT wrote the final analysis.',
+        what_worked: 'Perplexity found pricing pages from 2026 that were hard to locate manually. Gemini spotted a feature gap none of us noticed.',
+      },
+    ],
+    revenue_impact: '$8,000 consulting fee for one report',
+    upvotes: 44,
+    downvotes: 1,
+    shares: 22,
+    tags: ['research', 'competitive-analysis', 'perplexity', 'gemini', 'consulting'],
+    pipeline_stage: 'research',
+    createdAt: '2026-05-01',
+    is_verified: true,
+  },
+
+  // ════════════════════════════════════════════════════
+  // NEW PLAYBOOK 5: Building AI Agents with LangChain + Claude
+  // ════════════════════════════════════════════════════
+  {
+    id: 'ai-agents-langchain-claude',
+    title: 'Building AI Agents with LangChain + Claude',
+    subtitle: 'Architecture patterns for autonomous AI agents that work',
+    description:
+      'I built a multi-agent system using LangChain for orchestration and Claude (via API) for reasoning. The system handles customer research, content drafting, and social media posting autonomously. Here\'s the architecture and prompts that made it work.',
+    author: {
+      name: 'Alex Kowalski',
+      handle: '@alex_agent_builder',
+    },
+    related_tool_slugs: ['langchain', 'claude', 'chatgpt'],
+    difficulty: 'Advanced',
+    icon: '🤖',
+    gradient: 'from-purple-500/20 to-violet-500/10',
+    steps: [
+      {
+        title: 'Design multi-agent architecture',
+        description:
+          'Define your agent roles: Researcher Agent (gathers data), Writer Agent (drafts content), Reviewer Agent (quality check), Publisher Agent (schedules output). Each agent has a system prompt that defines its persona, tools, and constraints.',
+        tip: 'Use a Supervisor Agent pattern — one agent coordinates the others, delegates tasks, and handles errors. LangChain makes this straightforward.',
+      },
+      {
+        title: 'Build the LangChain orchestration layer',
+        description:
+          'Use LangChain\'s AgentExecutor with tool definitions for each sub-agent. Configure: memory (conversation buffer), tools (web search, file access, API calls), and callbacks (logging, error handling).',
+      },
+      {
+        title: 'Configure Claude as the reasoning engine',
+        description:
+          'Claude excels at multi-step reasoning. Set up Claude as the primary agent with: system prompt (persona + constraints), tool definitions (what the agent can use), and memory (state management).',
+      },
+      {
+        title: 'Implement human-in-the-loop checkpoints',
+        description:
+          'Before publishing anything, insert a human review step. The agent generates content, flags it for review, and waits for approval. This prevents autonomous mistakes from reaching production.',
+      },
+      {
+        title: 'Add self-healing and monitoring',
+        description:
+          'Implement error handling: if an agent fails, the supervisor retries with a different approach. Add logging to track: tasks completed, error rates, token usage, and quality scores.',
+      },
+      {
+        title: 'Deploy and measure',
+        description:
+          'Deploy as a cron job or webhook. Track: tasks completed per day, error rate, human intervention rate (target <10%), and cost per task.',
+      },
+    ],
+    pro_tips: [
+      'Use Claude\'s 200K context to store your entire codebase as context — agents understand the full system',
+      'Set max token limits per agent to prevent runaway costs. My budget: $0.50/task max for Claude',
+      'Use structured output (JSON mode) for agent responses — makes parsing and routing reliable',
+      'Log all agent decisions to a LangSmith dashboard for debugging and optimization',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Over-complicating the architecture with too many agents',
+        fix: 'Start with 2 agents: Orchestrator + Worker. Add specialized agents only when you see a clear bottleneck.',
+      },
+      {
+        mistake: 'Not setting proper timeouts and retry limits',
+        fix: 'Agents can loop infinitely on complex tasks. Set max_iterations=10 and a 30-second timeout per agent call.',
+      },
+    ],
+    real_results: [
+      { metric: 'Tasks automated', value: '12/day', description: 'Customer research, content drafting, social posts' },
+      { metric: 'Human intervention', value: '8%', description: 'Only 8% of tasks need manual review' },
+      { metric: 'Monthly cost', value: '$120', description: 'API costs for Claude + LangChain + vector DB' },
+    ],
+    sample_prompts: [
+      {
+        prompt: '"Research [topic], draft a 500-word blog post, check it for accuracy, and schedule it for tomorrow at 9 AM. Use the following context: [brand guidelines document, target audience profile, SEO keywords]."',
+        output_summary: 'The supervisor agent decomposed this into 4 sub-tasks: research (Researcher Agent with web search), draft (Writer Agent with Claude), review (Reviewer Agent checking facts and tone), schedule (Publisher Agent with API call).',
+        what_worked: 'The structured decomposition into sub-agents reduced errors by 60% compared to a single agent doing everything.',
+        what_didnt: 'The first version used gpt-3.5-turbo for the reviewer. It missed factual errors. Switching to Claude for review caught 3x more issues.',
+      },
+    ],
+    revenue_impact: 'Replaced a $3K/mo virtual assistant with a $120/mo AI agent system',
+    upvotes: 38,
+    downvotes: 2,
+    shares: 19,
+    tags: ['agents', 'langchain', 'claude', 'automation', 'architecture'],
+    pipeline_stage: 'deployment',
+    createdAt: '2026-05-05',
     is_verified: true,
   },
 ];

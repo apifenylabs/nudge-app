@@ -24,8 +24,16 @@ for f in sorted(glob.glob(os.path.join(BLOG_DIR, '*.json'))):
 
 posts.sort(key=lambda p: p.get('date', ''), reverse=True)
 
-# Detect the related field name from data
-related_field = 'relatedDestinations' if posts and 'relatedDestinations' in posts[0] else 'relatedStations'
+# Detect the related field name from data — check all posts, not just the first
+all_have_destinations = all('relatedDestinations' in p for p in posts)
+all_have_stations = all('relatedStations' in p for p in posts)
+any_has_destinations = any('relatedDestinations' in p for p in posts)
+if all_have_stations:
+    related_field = 'relatedStations'
+elif any_has_destinations:
+    related_field = 'relatedDestinations'
+else:
+    related_field = 'relatedDestinations'  # default
 
 ts = f'''// Auto-generated from data/blog/*.json — DO NOT EDIT DIRECTLY
 // Run: npm run generate-blog-data

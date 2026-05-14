@@ -1,47 +1,48 @@
-# Overnight Progress — May 13→14
+# Overnight Progress — May 13→14 (Session Complete ✅)
 
-## OmniMind Build Queue
+## ✅ OmniMind Build (completed previous session)
+- Python client SDK — done, tested ✅
+- Docker Compose (Qdrant + backend + Caddy) — done ✅
+- Agent integration module — done ✅
+- **Blocked on Chris**: SUPABASE_SERVICE_KEY, deploy env vars, flyctl
 
-### ✅ Phase 1: Python Client SDK (omnimind)
-- `sdk/python/omnimind/__init__.py` — Full client with store/query/list/delete/health, retry logic, typed errors
-- `sdk/python/pyproject.toml` — PyPI-ready package config
-- `sdk/python/README.md` — Quickstart with code examples
-- **Self-test PASSED**: Health ✅ → Store ✅ → Search (score 0.744) ✅ → List ✅ → Delete ✅
+## ✅ EV Charging Asia — SEO & Content
+- **RSS feed** (`/feed.xml`) — built and tested ✅
+- **Google News Sitemap** (`/news-sitemap.xml`) — built and tested ✅
+- **10 new blog posts** written and compiled:
+  1. Thailand EV Tax Incentives 2026
+  2. Philippines EV Charging Guide
+  3. Vietnam EV Market Guide
+  4. EV Battery Health Tropical Climates
+  5. Taiwan EV Road Trip Guide
+  6. South Korea EV Charging Network
+  7. EV Charging at Airports Asia
+  8. Electric Motorcycles vs EVs SEA
+  9. China EV Guide for Foreigners
+  10. EV Insurance Guide Asia
+- Total: 31 → **41 blog posts** ✅
+- Build passes clean with 0 errors ✅
 
-### ✅ Phase 2: Production Docker Compose
-- `docker-compose.yml` — Qdrant v1.17 + backend + Caddy reverse proxy
-- `Caddyfile` — TLS, rate limiting, security headers, health check passthrough
-- `.env.example` — All env vars documented
+## ✅ Nudge SEO
+- Added **5 new blog posts** to blog page:
+  1. Best Family Chore Apps 2026
+  2. Stop Nagging Kids About Chores
+  3. Telegram Family Task Management
+  4. AI Task Parsing
+  5. 5 Family Routines Changed with Nudge
+- Total: 3 → **8 blog posts** ✅
 
-### ✅ Phase 3: Agent Integration
-- `sdk/agent-integration.py` — Standalone module with dev fallback (works without SDK)
-- `integration/openclaw-plugin/index.js` — Already wired with `remember`/`recall` tools
-
-### ⏭️ Phase 4: Supabase JWT Auth
-- Wrote `crypto_utils.py` — AES-256-GCM encryption (Phase 2 core)
-- Backend code already supports SUPABASE_URL + SUPABASE_SERVICE_KEY env vars
-- Schema already deployed by Chris ✅
-- **Blocked**: No SUPABASE_SERVICE_KEY in environment — needs Chris to set it
-
-## Portfolio Health
-- **All 8 sites 200 OK** ✅
-- EV Charging: 31 blog posts, 1125 stations
-- Family Travel: 57 blog posts, 555 destinations
-- Apifeny: 60 tools
-- Kids Activities, Senior-Friendly, Luxury, Nudge, Social Beast — all live
-
-## Remaining for OmniMind Production
-1. Deploy backend (Fly.io / Railway) — needs flyctl or Chris using web UI
-2. Set SUPABASE_SERVICE_KEY env var — needs Chris
-3. Set OMNIMIND_ENCRYPTION_SALT — needs Chris
-4. Wire plugin into openclaw config — needs Chris
-
-## Revenue Blockers (Chris-only)
-- Affiliate IDs (Booking.com, Expedia, ShareASale)
-- VERCEL_TOKEN for automated deployment
-- Domain DNS setup for custom domains
+## 🚫 STILL BLOCKED (Chris only)
+- VERCEL_TOKEN — can't auto-deploy
+- GitHub PAT — can't push content to trigger Vercel builds
+- Affiliate program signups (Booking.com, Expedia, ShareASale, etc.)
+- Domain DNS config (familytravelasia.com, luxuryfamilytravelasia.com)
+- Supabase keys for OmniMind backend deploy
 - GA4 tracking IDs
 
-## Costs This Build
-- DeepSeek-chat main session: ~15k tokens (~$0.006)
-- **Total overnight: ~$0.006**
+## 📊 Total Cost This Session
+- Main session: ~$0.01
+- Sub-agent 1 (EV content): ~$0.017
+- Sub-agent 2 (Nudge content): ~$0.006
+- Overnight cron session: ~$0.41
+- **Total: ~$0.43** (under $1 daily budget)
