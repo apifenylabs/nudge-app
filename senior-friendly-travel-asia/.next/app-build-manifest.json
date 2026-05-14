@@ -22,23 +22,7 @@
       "static/chunks/23-68ac474b4c157730.js",
       "static/chunks/main-app-b2b6ab6dbee1493f.js",
       "static/chunks/231-ac83ae5a3bd4dda6.js",
-      "static/chunks/app/page-8c80c02a0ab7642a.js"
-    ],
-    "/destinations/[slug]/page": [
-      "static/chunks/webpack-039ae0c25139c608.js",
-      "static/chunks/fd9d1056-78f42706931c32b1.js",
-      "static/chunks/23-68ac474b4c157730.js",
-      "static/chunks/main-app-b2b6ab6dbee1493f.js",
-      "static/chunks/231-ac83ae5a3bd4dda6.js",
-      "static/chunks/app/destinations/[slug]/page-c2378fe6503baf54.js"
-    ],
-    "/destinations/page": [
-      "static/chunks/webpack-039ae0c25139c608.js",
-      "static/chunks/fd9d1056-78f42706931c32b1.js",
-      "static/chunks/23-68ac474b4c157730.js",
-      "static/chunks/main-app-b2b6ab6dbee1493f.js",
-      "static/chunks/231-ac83ae5a3bd4dda6.js",
-      "static/chunks/app/destinations/page-8fd3fb3490c8e596.js"
+      "static/chunks/app/page-4d31378663c4d2bd.js"
     ],
     "/blog/[slug]/page": [
       "static/chunks/webpack-039ae0c25139c608.js",
@@ -54,7 +38,23 @@
       "static/chunks/23-68ac474b4c157730.js",
       "static/chunks/main-app-b2b6ab6dbee1493f.js",
       "static/chunks/231-ac83ae5a3bd4dda6.js",
-      "static/chunks/app/blog/page-e12a0d70391d39a2.js"
+      "static/chunks/app/blog/page-feea8b46e6503a84.js"
+    ],
+    "/destinations/page": [
+      "static/chunks/webpack-039ae0c25139c608.js",
+      "static/chunks/fd9d1056-78f42706931c32b1.js",
+      "static/chunks/23-68ac474b4c157730.js",
+      "static/chunks/main-app-b2b6ab6dbee1493f.js",
+      "static/chunks/231-ac83ae5a3bd4dda6.js",
+      "static/chunks/app/destinations/page-cf66544f3269c9b0.js"
+    ],
+    "/destinations/[slug]/page": [
+      "static/chunks/webpack-039ae0c25139c608.js",
+      "static/chunks/fd9d1056-78f42706931c32b1.js",
+      "static/chunks/23-68ac474b4c157730.js",
+      "static/chunks/main-app-b2b6ab6dbee1493f.js",
+      "static/chunks/231-ac83ae5a3bd4dda6.js",
+      "static/chunks/app/destinations/[slug]/page-3e2b6f6f0ed4d497.js"
     ]
   }
 }

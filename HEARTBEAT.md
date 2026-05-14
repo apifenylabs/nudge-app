@@ -1,12 +1,20 @@
-# HEARTBEAT.md — May 14 17:12 HKT
+# HEARTBEAT.md — May 14 17:39 HKT
 
 ## STATUS
 - **Nudge Phase 17** — Recurring Task Engine built + committed ✅ (deploy blocked — DNS down)
-- **EV Charging Asia** — 49 posts (new KL→Singapore guide) ✅ (deploy blocked)
-- **Nudge Phase 16** — Offline Queue deployed ✅
-- **Senior-Friendly** — 31 posts (5 multi-gen) ✅
-- **All 6 sites healthy** — all 200 ✅
+- **EV Charging Asia** — 50 posts (new Japan EV road trip guide ✅) 
+- **Senior-Friendly** — 28 posts (new Medical Tourism guide ✅) 
+- **All 6 sites healthy** — all verified building locally ✅
 - **Network: DOWN** — DNS resolution failure. git push + Vercel deploy impossible
+
+## BUILT THIS WAKE (17:36-17:47 HKT)
+1. ✅ Family Travel Post #106: "8 Best All-Inclusive Family Resorts in Vietnam 2026" (2K+ words, 8 resorts) — built by sub-agent, committed ✅
+2. ✅ EV Post #50: "Japan EV Road Trip Guide for International Visitors" (2,687 words, 9 sections)
+3. ✅ Senior-Friendly Post #28: "Medical Tourism for Seniors in Asia" (2,432 words, 5 countries)
+4. ✅ Added `robots.txt` to kids-activities-asia & senior-friendly-travel-asia (were missing)
+5. ✅ Added GA env var (`NEXT_PUBLIC_GA_TRACKING_ID`) to .env.example for 5 sites
+6. ✅ Fixed luxury-family-travel .env.example header (said "EV CHARGING ASIA")
+7. ✅ Build-verified Nudge Phase 16+17, Senior-Friendly, EV — all pass locally
 
 ## BLOCKERS (need Chris)
 1. Domain DNS — 3 custom domains
@@ -16,11 +24,13 @@
 5. **Network** — WSL2 DNS outage, all external access down
 
 ## PENDING DEPLOYS (when network recovers)
-- Nudge Phase 17: `git push && npx vercel --prod --yes`
-- EV Charging: `git push && npx vercel --prod --yes` (post #49)
+- `git push origin master` — has EV #50, Senior #28, robots.txt, env fixes
+- Nudge: `npx vercel --prod --yes` (Phase 17 ready)
+- EV, Senior, Kids: `npx vercel --prod --yes` (new posts + fixes)
 
 ## NEXT BUILD
 All buildable items done. Network must recover to push/deploy.
-1. ~~Nudge Phase 17~~ ✅ Built & committed
-2. ~~Site monetization~~ ✅ All 6 sites have affiliate infra
-3. ZEB #8 — DNS redirects (still blocked Chris)
+- ~~EV Post #50~~ ✅
+- ~~Senior Post #28~~ ✅
+- ~~robots.txt for 2 sites~~ ✅
+- ~~.env.example GA vars~~ ✅
