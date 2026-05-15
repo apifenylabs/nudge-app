@@ -529,3 +529,118 @@ global_standards:
     - "Clear comments"
     - "Architecture docs updated first"
   additive_only: true  # NEVER delete or break existing work
+
+# ═══════════════════════════════════════════════════════════════
+# OVERNIGHT AUTONOMY MODE (LOCKED May 16 2026 - NEVER OVERRIDE)
+# ═══════════════════════════════════════════════════════════════
+# Chris sleeps 8+ hours. System runs FULLY autonomous. No human input.
+# These rules are PERMANENT and override all other rules during overnight.
+
+overnight_autonomy:
+  locked: true
+  lock_date: "2026-05-16"
+  
+  # ─── MODE ───
+  mode: "FULL_PROACTIVE_STRATEGIC"
+  description: >
+    The CEO agent stays in proactive, strategic, data-driven mode 24/7.
+    It continuously generates and assigns high-value tasks across ALL projects.
+    Never goes idle. If no immediate task, creates the next logical high-value task from long-term vision.
+  
+  # ─── EVALUATION ───
+  evaluate_independently: true
+  evaluation_per_project:
+    description: "Evaluate each stream independently using its own key metrics"
+    metrics:
+      - nudge: "$0.00 MRR, blocked by schema"
+      - family_travel: "0 traffic, 0 affiliates"
+      - luxury: "0 traffic, 51 properties need premium pivot"
+      - ev_charging: "0 traffic, 67 blog posts, 1,125 stations"
+      - apifeny_ai: "151 pages live, 90 tools, 14 playbooks"
+      - social_beast: "internal tool, seed data deployed"
+  
+  only_high_value_tasks: true
+  task_quality_rule: "Only assign tasks that move closer to $1B goal. Never do work for the sake of doing work."
+  
+  # ─── OVERNIGHT PRIORITY QUEUE (LOCKED - execute in order, parallel where possible) ───
+  overnight_priority_1_apifeny_ai:
+    target_hours: 2-3
+    tasks:
+      - "Phase 6 continued: rankings + playbooks + user value features"
+      - "Landing page redesign with visuals (CSS/SVG pipeline - no image dependencies)"
+      - "Replace 'Trending Now' with use-case-driven sections"
+      - "Add substance-first hero: problem → playbook → tools needed"
+      - "Add more playbooks (target 25+)"
+      - "SEO improvements"
+  
+  overnight_priority_2_family_travel:
+    target_hours: 1-2
+    tasks:
+      - "10/10 polish — fix UI/color issues"
+      - "Strengthen monetization: affiliate links, price comparison"
+      - "Cross-site footer links to other directories"
+  
+  overnight_priority_3_luxury:
+    target_hours: 1-2
+    tasks:
+      - "Cosme-style premium pivot — make distinctly aspirational"
+      - "Fix destination slugs to match data"
+      - "Visual/styling upgrade to differentiate from Family"
+  
+  overnight_priority_4_ev_charging:
+    target_hours: 1-2
+    tasks:
+      - "Build family + luxury EV road trip itineraries"
+      - "Add destination rankings (top 10 EV-friendly hotels, etc.)"
+      - "Fix station [id] routing"
+  
+  overnight_priority_5_social_beast:
+    target_hours: 1
+    tasks:
+      - "Continue content generation and distribution improvements"
+      - "Cross-promote all directories"
+  
+  overnight_priority_6_nudge:
+    target_hours: 1
+    tasks:
+      - "Continue subscription management polish"
+      - "Prepare for when Supabase schema is unblocked"
+  
+  # ─── BUDGET ───
+  overnight_budget:
+    max_usd: 0.50
+    duration_hours: 12
+    default_model: "deepseek/deepseek-chat"
+    expensive_task_warning: "Flag any single task expected to cost >$0.10"
+  
+  # ─── PARALLEL WORK (Overnight) ───
+  parallel_work:
+    enabled: true
+    max_parallel_subagents: 3
+    ram_guard_mb: 1536
+    project_distribution: "Use sub-agents for independent project work. Each sub-agent covers one project."
+    subagent_pool:
+      - project: "apifeny-ai"
+        priority: 1
+      - project: "family_travel_asia"
+        priority: 2
+      - project: "luxury_travel"
+        priority: 3
+      - project: "ev_charging"
+        priority: 4
+      - project: "social_beast"
+        priority: 5
+      - project: "nudge"
+        priority: 6
+  
+  # ─── REPORTING ───
+  progress_summary:
+    enabled: true
+    cadence: "Every 2-3 hours overnight"
+    format: "bullet list of builds completed, page counts, deploy status"
+    channel: "telegram"
+    account: "1741426794"
+  
+  # ─── AUTO-SHUTDOWN — NEVER ───
+  auto_shutdown: false
+  description: "System runs continuously. Never self-terminates. Always produces output."

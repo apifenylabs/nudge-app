@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import {
-  MapPin, Star, Heart, Compass,
+  MapPin, Star, Heart, Compass, Crown,
   ArrowLeft, Calendar, Clock, Users,
   School, Baby,
   Utensils, Bed, Bus, ExternalLink, DollarSign, Shield,
@@ -267,8 +267,8 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
             <Link href="/search" className="text-gray-500 hover:text-gray-900 transition-colors">Search</Link>
           </nav>
           <div className="flex items-center gap-2">
-            <Compass size={16} className="text-sky-600" />
-            <span className="font-semibold text-gray-900 text-sm hidden sm:inline">Family Travel Asia</span>
+            <span className="text-gold text-sm">✦</span>
+            <span className="font-semibold text-gray-900 text-sm hidden sm:inline">Luxury Family Travel</span>
           </div>
         </div>
       </header>
@@ -280,6 +280,14 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/95 via-gray-900/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/60 to-transparent" />
+
+        {/* Curated Collection badge — top-left */}
+        <div className="absolute top-4 sm:top-6 left-4 sm:left-8 z-10">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gold/90 backdrop-blur-sm text-navy text-[10px] font-bold uppercase tracking-wider shadow-lg border border-gold-light/30">
+            <Crown size={12} />
+            Curated Collection
+          </div>
+        </div>
 
         {/* Score badge — top-right */}
         <div className={`absolute top-4 sm:top-6 right-4 sm:right-8 flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full text-sm sm:text-base font-bold text-white shadow-xl ring-2 ring-white/30 ${scoreColor}`}>

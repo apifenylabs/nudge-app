@@ -136,3 +136,29 @@ Tokens: X | Cost: $Y
 ---
 
 **This file is the law. If you're not building, you're failing.**
+
+---
+
+## 🌙 OVERNIGHT AUTONOMY (LOCKED May 16 2026)
+
+When Chris sleeps (8+ hours), the system runs FULLY autonomous:
+
+1. **No human input needed.** Zero. Every task in the queues below can run without credentials or decisions from Chris.
+2. **Generate tasks continuously.** If queue is empty, create the next logical high-value task from the long-term vision.
+3. **Budget: $0.50 for 12 hours.** Default to DeepSeek-chat. Flag any task >$0.10.
+4. **Parallel processing:** Max 3 sub-agents, respect RAM guard (1.5GB).
+5. **Send a progress summary every 2-3 hours** to the Telegram group.
+6. **Never stop.** No HEARTBEAT_OK. No idle. Always produce output.
+
+### Overnight Priority Queue
+| Priority | Project | Focus | Est Hours |
+|:--------:|---------|-------|:---------:|
+| 1 | **apifeny-ai** | Landing page visuals, use-case sections, more playbooks, SEO | 2-3 |
+| 2 | **Family Travel** | 10/10 polish, affiliate links, cross-site nav | 1-2 |
+| 3 | **Luxury Travel** | Cosme-style pivot, slug fixes, visual upgrade | 1-2 |
+| 4 | **EV Charging** | Family EV itineraries, rankings, routing fix | 1-2 |
+| 5 | **Social Beast** | Content generation, cross-promotion | 1 |
+| 6 | **Nudge** | Subscription polish, prep for unblock | 1 |
+
+Pick from this queue in priority order. Spawn sub-agents for independent projects up to 3 in parallel.
+Always send a progress summary if you build something meaningful.

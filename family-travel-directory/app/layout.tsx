@@ -109,8 +109,11 @@ export default function RootLayout({
               "sameAs": [
                 "https://ev-charging-asia.vercel.app",
                 "https://kids-activities-asia.vercel.app",
-                "https://luxury-family-travel.vercel.app",
-                "https://apifeny-ai.vercel.app"
+                "https://luxury-family-travel-asia.vercel.app",
+                "https://apifeny-ai.vercel.app",
+                "https://senior-friendly-travel-asia.vercel.app",
+                "https://social-beast-two.vercel.app",
+                "https://nudge-sigma-liart.vercel.app"
               ],
             }),
           }}

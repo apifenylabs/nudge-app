@@ -1,68 +1,97 @@
 # Work Engine State
 
 ## Cursor
-**2026-05-15 01:43 HKT**: Research wake (every 4th). Completed:
-- ✅ EV ASEAN CCS-2 Cross-Border Travel Guide (post #51) — build verified
-- ✅ 10 new AI tools added to Apifeny directory (85 tools total)
-- ✅ Research saved: knowledge/research/2026-05-15.md
-- ✅ Top finding scored 42/60 — EV content executed immediately
+**2026-05-15 22:29 HKT**: Autonomous work wake. P0 DEPLOY completed.
 
-## Completed This Wake (May 15 01:21-01:43 HKT)
+### ✅ P0 DEPLOY: Apifeny AI redeployed with 5 new blog posts
+- `vercel --prod` successful — 156 pages live (26 blog posts, 85 tools, 12 playbooks, 7 collections)
+- https://apifeny-ai.vercel.app — latest content deployed
+- Git commit: `2c9ca9ba` — "apifeny-ai: rebuild + deploy 5 new blog posts (26 total, 156 pages)"
 
-### ✅ Research (Every 4th Wake)
-Top finding: ASEAN unifies EV charging with CCS-2 standard by 2026.
-- Thailand leads with 10,000+ stations
-- Dual-protocol chargers at China borders
-- 42/60 score → immediate execution
+### ✅ P0 DEPLOY: All other sites checked — already deployed (within 20-21h)
+- family-travel-directory ✅ (105 posts, 583 destinations)
+- luxury-family-travel ✅ (30 posts, 520 destinations, 538 properties)
+- ev-charging-asia ✅ (67 posts, 1,125 stations)
+- nudge ✅ (Phase 15.5, deployed 20h ago)
+- social-beast ✅
+- senior-friendly-travel-asia ✅
+- kids-activities-asia ✅
 
-### ✅ Content Generation
-- **EV Post #51**: "ASEAN Unifies EV Charging with CCS-2: Cross-Border EV Travel Guide 2026" — comprehensive guide with country breakdowns, route recommendations, practical tips
+### ✅ Sub-agent spawned: Content generation
+- Label: `content-gen-kids-senior` (DeepSeek-chat, 10 min timeout)
+- Task: Generate 3 new blog posts for kids-activities-asia + 3 for senior-friendly-travel-asia
+- Currently running (spawned at 22:29 HKT)
 
-### ✅ Apifeny AI Directory Expansion
-- **10 new AI tools** added via sub-agent (Clay, Beehiiv, Attio, OpusClip, Carly AI, Kick, Loom, Calendly, Instantly, QuickBooks)
-- Directory now 85 tools total
-- JSON validated, no duplicates
+### ✅ SITE HEALTH AUDIT (23:38 HKT)
+- All 6 sites: 🟢 UP
+- Fixed Family Travel sitemap BASE_URL → www canonical (was non-www, causing 1002 redirects)
+- Fixed Senior-Friendly robots BASE_URL and sitemap (was pointing to wrong domain, sitemap had 404 pages)
+- Identified stale affiliate IDs on EV Charging (Expedia, GetYourGuide - still placeholders)
+- Full report in memory/2026-05-15.md
 
-### ✅ Build Verification
-- EV Charging: `npm run build` ✅ (post #51 included)
-- Apifeny: data file validated ✅
-
-### ✅ Research Logging
-- Saved to `knowledge/research/2026-05-15.md`
-- Top finding executed (EV blog post)
-- Score 42/60 → immediate content generated
-
-## What's Blocked on Chris (unchanged)
-1. Deploy blocked by WSL2 DNS resolution on local machine
-2. All 3 custom domain DNS not set up
-3. GA4 tracking IDs not set in Vercel env vars
-4. Affiliate signups (Booking.com, Klook, Viator, Expedia)
-5. Social Beast API keys missing
-
-## Portfolio Content Status
-| Site | Content | Status |
-|------|---------|:------:|
-| Family Travel Directory | 105 blog posts (+2 today), 583 destinations | ✅ |
-| EV Charging Asia | **51 blog posts** +1, 1,125 stations + affiliate infra | ✅ |
-| Luxury Family Travel | 30 blog posts, 520 destinations, 538 properties | ✅ |
-| Kids Activities Asia | 31 blog posts, 583 destinations | ✅ |
-| Apifeny AI | 21 blog posts, **85 tools** +10, 7 playbooks, 7 collections | ✅ |
-| Senior-Friendly Travel | 28 blog posts, 15 destinations | ✅ |
-| Social Beast | Built, needs API keys | ⏸️ |
+### ⚠️ P1 BUILD: Nudge — notifications migration blocked
+- **Blocker**: `supabase-migration-notifications.sql` needs to be applied to Supabase
+- Nudge has `/api/run-migration` endpoint deployed on Vercel that can execute the SQL
+- Requires `SUPABASE_DB_URL` env var on Vercel which needs the Supabase DB password
+- Password requires Supabase Management PAT or manual Dashboard access
+- **Action needed**: Chris needs to either:
+  a) Set SUPABASE_DB_URL on Vercel: `vercel env add SUPABASE_DB_URL` with value from Supabase Dashboard > Settings > Database > Connection string
+  b) Or run the SQL manually in Supabase Dashboard > SQL Editor
+- Migration SQL path: `/home/captain/.openclaw/workspace/nudge/supabase-migration-notifications.sql`
 
 ## Cost This Wake
 | Item | Model | Cost |
 |------|-------|:----:|
-| Research (3 web searches) | DeepSeek-chat | ~$0.01 |
-| EV Post #51 (content) | DeepSeek-chat | ~$0.02 |
-| Apifeny 10 tools (sub-agent) | DeepSeek-chat | ~$0.02 |
-| Main session (build, env, research logging) | DeepSeek-chat | ~$0.01 |
-| Family Travel Directory posts (Japan + KL) | DeepSeek-chat | ~$0.02 |
-| **Total this wake** | | **~$0.08** |
-| **Cumulative today** | | **~$0.08** |
+| Apifeny deploy + build | DeepSeek-chat | ~$0.01 |
+| Sub-agent (content-gen-kids-senior) | DeepSeek-chat | ~$0.02 |
+| **Total this wake** | | **~$0.03** |
+| **Cumulative today** | | **~$0.14** |
+
+## Site Content Status
+| Site | Blog Posts | Status |
+|------|:----------:|:------:|
+| Family Travel Directory | 105 | ✅ |
+| EV Charging Asia | 67 | ✅ |
+| Senior-Friendly Travel | 35 | ✅ |
+| Kids Activities Asia | 31 | ✅ (+3 coming from sub-agent) |
+| Luxury Family Travel | 30 | ✅ |
+| Apifeny AI | 26 | ✅ |
+| **Total** | **294** | |
 
 ## Next Action
-- ✅ Family Travel: 2 new blog posts (Japan family guide + KL budget activities)
-- ❌ DNS/WSL2 still blocking deploys
-- Next wake: ZEB #2 (Fix luxury destination slugs) or ZEB #1 (verify EV station routing is working)
-- Next research: ~May 18 (every 4th wake)
+- **P0 DEPLOY**: ✅ Done. All 6 main sites deployed. Re-deploy when new content is generated.
+- **P1 BUILD (Nudge)**: Apply notifications migration (requires Supabase DB password from Chris)
+- **P2 IMPROVE (Directory-beast)**: Visual polish, UX improvements, monetization
+- **P3 EXPAND**: Content gen sub-agent running for kids-activities-asia + senior-friendly-travel-asia
+- **P4 ANALYTICS**: Vercel Analytics + GA4 on all deployed sites
+
+## backgroundPIDs
+- Sub-agent: `content-gen-kids-senior` (session: agent:main:subagent:138c84aa-b160-4137-bffa-1550774c05ad)
+
+### Sub-agent: luxury-cosme-pivot
+**Status**: ✅ Complete
+**Changes made**:
+
+#### Task A — Destination [slug] routing
+- **No changes needed**: Routing already correct — `getDestinationBySlug()` falls back to id-matching, `notFound()` properly called for unmatched slugs
+- Added `dynamicParams = true` for ISR fallback support
+- 520 slugs generated via `generateStaticParams()` ✓
+
+#### Task B — Cosme-style Premium Visual Upgrade
+- **Fixed hero stats**: Changed hardcoded "30" → dynamic `{totalDestinations}+`, "10 Countries" → `{totalCities}`, added `{totalTips}+ Insider Tips`
+- **Added "Top 10 Curated Experiences" section** (editorial Cosme-style):
+  - Grid layout (5 cols on desktop) with numbered rank badges
+  - "Editor's Choice" badge on #1 pick
+  - Image hover zoom + gradient overlay
+  - Price dots + popularity percentage per card
+  - Positioned between Must-Book-This-Month and Top Picks
+- Added `Award`, `Medal`, `BadgePercent` lucide-react imports
+
+#### Task C — SEO Meta Improvements
+- **Destination pages**: Luxury-focused description builder with structured snippet, expanded OG image alt text, 1200x630 OG dimensions, richer keywords, `max-snippet:-1`
+- **Blog listing page**: Updated title/desc/keywords/OG to "Luxury Family Travel" branding, fixed BASE_URL to `luxuryfamilytravelasia.com`
+- **Blog [slug] page**: Same branding/URL updates, richer keywords
+
+#### Build
+- `npm run build` ✅ — zero errors, all 520 destination slugs + 30 blog slugs generated
+- **Not deployed** (per instructions)

@@ -4,25 +4,25 @@ import { Calendar, Clock, Tag, ArrowRight, Compass, Sparkles } from 'lucide-reac
 import { getAllPosts } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data';
 
-const BASE_URL = 'https://luxury-family-travel-asia.vercel.app';
+const BASE_URL = 'https://luxuryfamilytravelasia.com';
 
 export const metadata: Metadata = {
-  title: 'Family Travel Blog & Guides | Asia Family Travel Directory',
-  description: 'Expert guides, honest comparisons, and practical tips for family travel in Asia. Real parent advice for Tokyo, Bangkok, Singapore, Hong Kong, and more.',
-  keywords: ['family travel blog', 'Asia travel guides', 'parent travel tips', 'family vacation planning', 'kid-friendly destinations Asia'],
+  title: 'Luxury Family Travel Blog & Guides | Premium Family Experiences in Asia',
+  description: 'Curated guides and insider tips for luxury family travel across Asia. 5-star resorts, private villas, Michelin dining with kids, and exclusive experiences from our editorially ranked collection.',
+  keywords: ['luxury family travel blog', 'premium family experiences Asia', '5-star family resorts', 'luxury travel with children', 'exclusive family getaways', 'Michelin dining with kids', 'private villa Asia'],
   alternates: { canonical: `${BASE_URL}/blog` },
   openGraph: {
-    title: 'Family Travel Blog & Guides | Asia Family Travel Directory',
-    description: 'Expert guides, honest comparisons, and practical tips for family travel in Asia.',
+    title: 'Luxury Family Travel Blog & Guides | Premium Family Experiences in Asia',
+    description: 'Curated guides and insider tips for luxury family travel across Asia.',
     url: `${BASE_URL}/blog`,
-    siteName: 'Asia Family Travel Directory',
+    siteName: 'Luxury Family Travel Asia',
     type: 'website',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Asia Family Travel Directory Blog' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Luxury Family Travel Asia - Blog & Guides' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Family Travel Blog & Guides',
-    description: 'Expert guides, honest comparisons, and practical tips for family travel in Asia.',
+    title: 'Luxury Family Travel Blog & Guides',
+    description: 'Curated guides and insider tips for luxury family travel across Asia.',
     images: ['/og-image.jpg'],
   },
 };

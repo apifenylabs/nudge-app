@@ -809,6 +809,378 @@ export const playbooks: Playbook[] = [
       { metric: 'Test Coverage', value: '90%+', description: 'AI generates comprehensive edge-case tests in minutes' },
     ],
   },
+
+  // ════════════════════════════════════════════════════
+  // PHASE 6 — NEW PLAYBOOK: AI for Education
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-education-and-tutoring',
+    title: 'AI for Education & Tutoring',
+    subtitle: 'Personalized learning with AI tutors',
+    description:
+      'Use AI tools to create personalized learning experiences: AI tutoring, lesson planning, quiz generation, and progress tracking. Ideal for teachers, tutors, students, and self-learners who want to accelerate learning with AI assistance.',
+    related_tool_slugs: ['chatgpt', 'gemini', 'khanmigo', 'duolingo-max', 'notion-ai', 'perplexity'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '📚',
+    gradient: 'from-blue-500/30 to-indigo-500/30',
+    steps: [
+      {
+        title: 'Set up AI tutoring with Khanmigo',
+        description:
+          'Khanmigo is the best AI tutor for structured subjects (math, science, history). It uses Socratic questioning — it doesn\'t give answers, it guides students to find them. Perfect for homework help and concept mastery.',
+        tip: 'Khanmigo is free for teachers and $44/year for students. Use it as your primary tutoring assistant.',
+      },
+      {
+        title: 'Generate lesson plans with ChatGPT',
+        description:
+          'Feed ChatGPT your curriculum, grade level, and learning objectives. Ask for: complete lesson plans, slide outlines, discussion questions, and assessment rubrics. Customize for different learning styles.',
+        tip: 'Prompt: "Create a 45-minute lesson plan for [topic] at [grade level]. Include: hook activity, 3 learning stations, discussion questions, exit ticket, and differentiation for ELL students."',
+      },
+      {
+        title: 'Create interactive quizzes with Gemini',
+        description:
+          'Use Gemini to generate quizzes with distractors, explanations for wrong answers, and adaptive difficulty. Its long 1M context can process entire textbooks to create comprehensive assessments.',
+      },
+      {
+        title: 'Build a study guide with Notion AI',
+        description:
+          'Use Notion AI to compile notes, flashcards, and study guides. Ask Notion AI to summarize chapters, create concept maps, and generate practice problems.',
+        tip: 'Create a Notion template with: key concepts, vocabulary, practice problems, and self-assessment checklist.',
+      },
+      {
+        title: 'Practice language learning with Duolingo Max',
+        description:
+          'Duolingo Max uses GPT-4 for roleplay exercises and explain-my-answer features. Use Gemini for immersion: ask it to write stories at your language level, then read and translate.',
+      },
+      {
+        title: 'Research topics with Perplexity',
+        description:
+          'Students can use Perplexity for research projects. Every answer comes with citations, teaching source evaluation and critical thinking. Perplexity Pro includes academic mode for paper citations.',
+      },
+    ],
+    pro_tips: [
+      'Create a "Learning Journey" document in Notion — track what you study, AI-generated summaries, and progress',
+      'Use ChatGPT to explain concepts at different levels: "Explain quantum computing to a 10-year-old" then "Explain it at a graduate level"',
+      'Teachers: Use AI to generate 3 differentiation levels for every lesson (remedial, standard, advanced)',
+      'Students: Ask AI for mnemonics and memory techniques for any subject you\'re studying',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Letting AI tutor give answers instead of guiding',
+        fix: 'Use Khanmigo or prompt ChatGPT: "Don\'t give me the answer, ask me guiding questions instead."',
+      },
+      {
+        mistake: 'Not verifying AI-generated content for accuracy',
+        fix: 'Cross-reference AI quiz questions and lesson content with your curriculum standards and textbooks.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Teachers save 10+ hours/week on lesson planning with AI-generated materials',
+    real_results: [
+      { metric: 'Planning Time Saved', value: '10+ hours/week', description: 'AI lesson plans, quizzes, and worksheets replace manual prep' },
+      { metric: 'Student Engagement', value: '+25%', description: 'Personalized AI tutoring improves comprehension and retention' },
+      { metric: 'Tutoring Cost', value: '90% less', description: 'AI tutor vs. human tutor for daily homework help' },
+    ],
+  },
+
+  // ════════════════════════════════════════════════════
+  // PHASE 6 — NEW PLAYBOOK: AI for Customer Support
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-customer-support',
+    title: 'AI for Customer Support',
+    subtitle: 'Automate support with AI agents',
+    description:
+      'Build an AI-powered customer support system that handles 80%+ of tickets automatically. Using RAG pipelines, AI chatbots, and smart escalation. Cut support costs while improving response times and customer satisfaction.',
+    related_tool_slugs: ['intercom-ai', 'zendesk-answer-bot', 'chatgpt', 'langchain', 'intercom-fin', 'deepl'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '💬',
+    gradient: 'from-emerald-500/30 to-teal-500/30',
+    steps: [
+      {
+        title: 'Audit your current support volume',
+        description:
+          'Export your last 3 months of support tickets. Categorize by topic, frequency, and resolution time. The top 5-10 categories (usually 60-70% of volume) are candidates for AI automation.',
+        tip: 'Ask ChatGPT to analyze your ticket export: "Categorize these 500 support tickets. Identify the top 10 recurring issues and their frequency."',
+      },
+      {
+        title: 'Build your knowledge base',
+        description:
+          'Document solutions for the most common issues. Use ChatGPT to turn past ticket resolutions into clear Q&A articles. Each entry: problem, solution, common variations, and escalation criteria.',
+        tip: 'Format your knowledge base as markdown files organized by category. This feeds directly into RAG pipelines.',
+      },
+      {
+        title: 'Set up an AI chatbot',
+        description:
+          'Use Intercom Fin for a managed solution (connects to your knowledge base, handles 50%+ instantly) or build a custom RAG chatbot with LangChain + OpenAI for more control and lower cost at scale.',
+        tip: 'Intercom Fin is best for quick setup (<1 hour). LangChain custom build is better if you have 10K+ monthly tickets.',
+      },
+      {
+        title: 'Implement smart escalation',
+        description:
+          'Set confidence thresholds: 90%+ confidence → auto-respond. 70-90% → AI drafts response, human approves. <70% → route to human immediately. Review weekly to improve the knowledge base.',
+      },
+      {
+        title: 'Add multilingual support',
+        description:
+          'Use DeepL API to translate customer messages and AI responses. This doubles your coverage with minimal cost (~$0.02/translation). Configure auto-detection of customer language.',
+      },
+      {
+        title: 'Monitor and improve continuously',
+        description:
+          'Track: auto-resolution rate, CSAT for AI vs human, escalation rate, and top unresolved topics. Every week, add solutions for the top unresolved issues to your knowledge base.',
+      },
+    ],
+    pro_tips: [
+      'Always give customers an easy "talk to human" option — AI support with no escape route frustrates users',
+      'Use sentiment analysis: when customer sentiment drops below a threshold, auto-escalate to a human',
+      'Create an internal Slack/Teams channel for AI escalations with pre-formatted context summaries',
+      'Start with email/ticket support before adding live chat — async support is easier to automate well',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Launching AI support without testing edge cases',
+        fix: 'Run 100 random historical tickets through your AI system first. Check whether responses are accurate, on-brand, and helpful.',
+      },
+      {
+        mistake: 'Not updating the knowledge base regularly',
+        fix: 'Set a weekly review of tickets the AI couldn\'t handle. Add 5-10 new Q&A entries each week.',
+      },
+    ],
+    pipeline_stage: 'deployment',
+    revenue_impact: 'Reduce support costs by 60-80% while maintaining or improving CSAT scores',
+    real_results: [
+      { metric: 'Auto-Resolution Rate', value: '75-85%', description: 'Tickets resolved without human intervention' },
+      { metric: 'Cost Reduction', value: '60-80%', description: 'From $2K/mo support tool + staff to $200/mo AI system' },
+      { metric: 'Response Time', value: '<5 seconds', description: 'Down from 4-24 hour average with AI responses' },
+    ],
+  },
+
+  // ════════════════════════════════════════════════════
+  // PHASE 6 — NEW PLAYBOOK: AI for Design & Creative
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-design-and-creative',
+    title: 'AI for Design & Creative',
+    subtitle: 'Design everything with AI',
+    description:
+      'Master AI-powered design tools for creating visual content: logos, marketing materials, UI mockups, product photography, and video assets. No design skills required — just clear vision and the right tools.',
+    related_tool_slugs: ['canva-ai', 'midjourney', 'leonardo-ai', 'runway', 'gamma', 'chatgpt', 'pika', 'sana-ai'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '🎨',
+    gradient: 'from-rose-500/30 to-violet-500/30',
+    steps: [
+      {
+        title: 'Generate brand assets with Midjourney',
+        description:
+          'Use Midjourney to create logos, brand illustrations, and visual identity elements. Describe your brand style in detail: "Professional fintech brand, clean lines, blue and gold palette, minimalist, 3D isometric style."',
+        tip: 'Use Midjourney\'s style reference (--sref) to maintain consistency across all generated assets.',
+      },
+      {
+        title: 'Create marketing visuals with Canva AI',
+        description:
+          'Canva Magic Studio offers: Magic Design (generates complete templates from text), Magic Eraser (removes backgrounds), Magic Expand (extends images), and Magic Animate (adds motion). Use it for social media, ads, and presentations.',
+        tip: 'Create a Canva Brand Kit with your colors, fonts, and logos. AI will auto-apply your brand to every design.',
+      },
+      {
+        title: 'Generate product photography with Leonardo AI',
+        description:
+          'Leonardo AI excels at product mockups and photography. Create photorealistic product images on any background. Use the \'Product Photography\' preset for consistent, e-commerce-ready outputs.',
+      },
+      {
+        title: 'Create presentations with Gamma',
+        description:
+          'Gamma generates complete slide decks from a prompt. Upload your content and pick a theme. It creates coherent, well-designed presentations with charts, images, and layouts in minutes.',
+      },
+      {
+        title: 'Edit and animate with Runway',
+        description:
+          'Runway Gen-3 handles: text-to-video for background clips, video-to-video for style transfers, inpainting for frame editing, and motion brush for animation. Use it to bring static designs to life.',
+        tip: 'Start with Gen-3 Turbo for speed, use Gen-3 Alpha for quality. Export at consistent settings for your platform.',
+      },
+      {
+        title: 'Polish UI mockups with ChatGPT',
+        description:
+          'Describe your UI vision to ChatGPT for layout suggestions, component descriptions, and design rationale. Use it to write design specs that Midjourney or Canva can execute.',
+      },
+    ],
+    pro_tips: [
+      'Create a \'Prompt Library\' in Notion — save your best prompts organized by asset type (logo, social, presentation, mockup)',
+      'For brand consistency, always include style references: color palette, mood board images, and brand voice description',
+      'Batch-generate: run 20 prompts at once, pick the best 5, refine, then finalize. Don\'t generate one at a time',
+      'Use Leonardo AI\'s API for automated batch product photography at scale',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Not using style references for brand consistency',
+        fix: 'Every tool has a style reference feature. Always include brand colors, style keywords, and reference images.',
+      },
+      {
+        mistake: 'Generating high-res before nailing the concept',
+        fix: 'Start with quick drafts (512x512, low quality) to iterate on ideas. Only render final quality once you\'re satisfied.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Design costs drop from $5K/mo agency to $100/mo AI tooling for a startup',
+    real_results: [
+      { metric: 'Design Output', value: '5x faster', description: 'From brief to final design in hours instead of days' },
+      { metric: 'Cost Savings', value: '90%+', description: 'Replaces agency/contractor design costs for startups' },
+      { metric: 'Iteration Speed', value: '10x', description: 'Generate, review, refine — AI enables rapid design iteration' },
+    ],
+  },
+
+  // ════════════════════════════════════════════════════
+  // PHASE 6 — NEW PLAYBOOK: AI for Finance & Analysis
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-finance-and-analysis',
+    title: 'AI for Finance & Analysis',
+    subtitle: 'Financial analysis, modeling & reporting with AI',
+    description:
+      'Use AI tools for financial analysis: financial modeling, market research, report generation, budget tracking, and investment research. Designed for analysts, CFOs, investors, and business owners who need faster, data-backed financial decisions.',
+    related_tool_slugs: ['gemini', 'chatgpt', 'perplexity', 'exa', 'notion-ai', 'claude'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '📊',
+    gradient: 'from-amber-500/30 to-yellow-500/30',
+    steps: [
+      {
+        title: 'Build financial models with ChatGPT',
+        description:
+          'Describe your business model and ask ChatGPT to build a financial model: revenue projections, cost structure, unit economics, cash flow, and breakeven analysis. It can output as spreadsheet formulas or Python code.',
+        tip: 'Prompt: "Build a 3-year financial model for a SaaS startup with $100/mo subscription, 5% monthly growth, 30% churn year 1, 60% gross margin. Include revenue, costs, cash flow, and key metrics."',
+      },
+      {
+        title: 'Analyze financial documents with Gemini',
+        description:
+          'Upload earnings reports, 10-K filings, balance sheets, or investment memoranda into Gemini. Its 1M context processes entire documents at once. Ask for: key metrics extraction, trend analysis, risk factors, and peer comparison.',
+        tip: 'Upload 5 competitor quarterly reports simultaneously and ask Gemini for a comparative financial health analysis.',
+      },
+      {
+        title: 'Research markets with Perplexity',
+        description:
+          'Use Perplexity for investment research: market trends, sector performance, competitor analysis, and macroeconomic indicators. Every claim has cited sources you can verify and use in reports.',
+        tip: 'Set up Perplexity Collections for each stock/industry you track. Run weekly \'Pro Search\' for updates.',
+      },
+      {
+        title: 'Deep-dive company research with Exa',
+        description:
+          'Exa is purpose-built for company and industry research. Use it to find: funding history, partnership announcements, product launches, leadership changes, and customer sentiment from across the web.',
+      },
+      {
+        title: 'Automate financial reporting with Claude',
+        description:
+          'Feed Claude raw financial data and ask it to generate: board reports, investor updates, variance analysis, and KPI dashboards. Claude\'s structured output makes it perfect for consistent, professional financial communications.',
+      },
+      {
+        title: 'Track budgets with Notion AI',
+        description:
+          'Set up a Notion database for budget tracking with categories, actuals, and forecasts. Use Notion AI to: summarize monthly spending, flag overages, and generate budget vs actual reports.',
+        tip: 'Create a Notion template with: monthly budget, actual spending, variance, and AI-generated insights.',
+      },
+    ],
+    pro_tips: [
+      'Always export AI-generated financial models as CSV/Excel and validate with your own formulas before using for decisions',
+      'Use Gemini for document analysis (best at processing long PDFs), ChatGPT for model building (best at structured output), Perplexity for research (best at cited sources)',
+      'Create a \'Financial Dashboard\' in Notion with AI-generated weekly summaries pulled from your data',
+      'For investment research, always do the final check yourself — AI can hallucinate stock prices and financial metrics',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Relying on AI for final investment decisions',
+        fix: 'Use AI for research and analysis. Final investment decisions require human judgment and risk assessment.',
+      },
+      {
+        mistake: 'Not verifying AI-generated financial projections',
+        fix: 'Always check: are growth rates realistic? Are cost assumptions aligned with industry benchmarks? Does the model handle edge cases?',
+      },
+    ],
+    pipeline_stage: 'research',
+    revenue_impact: 'Financial analysis tasks in hours instead of days, saving $2K-5K/week in analyst time',
+    real_results: [
+      { metric: 'Report Creation Time', value: '80% faster', description: 'From 2 days to 2 hours for quarterly financial reports' },
+      { metric: 'Model Accuracy', value: '95%+', description: 'AI-generated models match manual models after validation' },
+      { metric: 'Research Coverage', value: '3x more', description: 'Cover 30+ companies/assets/week with AI-assisted research' },
+    ],
+  },
+
+  // ════════════════════════════════════════════════════
+  // PHASE 6 — NEW PLAYBOOK: AI for Marketing Automation
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-marketing-automation',
+    title: 'AI for Marketing Automation',
+    subtitle: 'Full-stack marketing with AI from strategy to analytics',
+    description:
+      'Automate your entire marketing workflow with AI: strategy development, content creation, SEO optimization, email campaigns, social media management, and performance analytics. Built for marketing teams and solopreneurs who want agency-quality output at a fraction of the cost.',
+    related_tool_slugs: ['chatgpt', 'perplexity', 'semrush', 'ahrefs', 'surferseo', 'copy-ai', 'canva-ai', 'jasper', 'exa'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 11,
+    icon: '📈',
+    gradient: 'from-fuchsia-500/30 to-rose-500/30',
+    steps: [
+      {
+        title: 'Develop your marketing strategy with ChatGPT',
+        description:
+          'Describe your product, target audience, and budget. Ask ChatGPT for: go-to-market strategy, customer segments, channel mix, content themes, and campaign calendar. Iterate with follow-up questions.',
+        tip: 'Prompt: "Create a 90-day marketing plan for a B2B SaaS tool targeting APAC SMBs. Budget: $3K/mo. Include: channel strategy, content calendar, KPI targets, and budget allocation."',
+      },
+      {
+        title: 'Research keywords and SEO with Semrush',
+        description:
+          'Use Semrush for keyword research, competitor SEO analysis, and content gap analysis. Export findings and feed into ChatGPT for content briefs. Surfer SEO optimizes content for ranking while you write.',
+        tip: 'Semrush + ChatGPT combo: export keyword clusters, paste into ChatGPT, get optimized content briefs with headings and key points.',
+      },
+      {
+        title: 'Create content at scale with Copy.ai',
+        description:
+          'Copy.ai is purpose-built for marketing content: blog posts, landing pages, email sequences, social media copy, ad copy, and PR. Create workflows that generate 10+ content pieces from one strategy doc.',
+      },
+      {
+        title: 'Optimize content for search with Surfer SEO',
+        description:
+          'Use Surfer SEO\'s AI content editor that scores your writing against top-ranking pages. It recommends: word count, headings, keywords, images, and readability. Write in Surfer or paste ChatGPT output for optimization.',
+        tip: 'Write the first draft in ChatGPT, paste into Surfer SEO, follow its recommendations, and you\'ll rank page 1 for mid-competition keywords.',
+      },
+      {
+        title: 'Create email campaigns with Jasper',
+        description:
+          'Jasper excels at email marketing: sequence design, subject lines, body copy, CTAs, and A/B testing variants. Use its brand voice feature to ensure consistency across all email touchpoints.',
+        tip: 'Create a \'Brand Voice\' profile in Jasper with your tone, vocabulary, and constraints. All marketing copy will sound like you.',
+      },
+      {
+        title: 'Analyze performance with ChatGPT + Exa',
+        description:
+          'Export your marketing analytics (Google Analytics, social media insights, email stats) and upload to ChatGPT for analysis. Use Exa to benchmark your performance against competitors and industry standards.',
+      },
+    ],
+    pro_tips: [
+      'Create a \'Marketing Command Center\' in Notion — one dashboard with strategy docs, content calendar, campaign tracker, and KPI dashboard',
+      'Use AI for A/B testing: generate 10 subject line variants, 5 email templates, 3 landing page versions — test all in one campaign',
+      'Set up a weekly AI marketing review: paste this week\'s analytics into ChatGPT for automated insights and recommendations',
+      'Build a 30-day content bank: 30 blog posts, 60 social posts, 15 email sequences — generated, optimized, and scheduled in one weekend',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Using AI content without SEO optimization',
+        fix: 'Always run AI-generated content through Surfer SEO or your preferred optimization tool. Unoptimized AI content rarely ranks.',
+      },
+      {
+        mistake: 'Not maintaining a consistent brand voice',
+        fix: 'Use tools with brand voice features (Jasper, Copy.ai) or include brand voice guidelines in every ChatGPT prompt.',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: 'Replace a $10K/mo marketing agency with $300/mo in AI tools for in-house content creation',
+    real_results: [
+      { metric: 'Content Output', value: '5x more', description: '10 blog posts + 30 social posts + 5 emails per week vs 2 blog posts manually' },
+      { metric: 'Cost Savings', value: '97%', description: 'From $10K/mo agency to $300/mo AI tooling' },
+      { metric: 'Organic Traffic Growth', value: '+200%', description: 'SEO-optimized AI content drives measurable traffic increases' },
+    ],
+  },
 ];
 
 export function getPlaybookBySlug(slug: string): Playbook | undefined {

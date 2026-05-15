@@ -5,7 +5,10 @@ import { Zap, ArrowLeft, Route, Clock, BatteryCharging, Calendar, MapPin, AlertT
 import { getAllItineraries, getItineraryBySlug } from '@/data/itineraries';
 import RouteMap from '@/components/itineraries/RouteMap';
 import SeasonalRecommendations from '@/components/itineraries/SeasonalRecommendations';
+import SeasonalComparisonTable from '@/components/itineraries/SeasonalComparisonTable';
+import ItinerarySEOSection from '@/components/itineraries/ItinerarySEOSection';
 import ItineraryRevenueSection from '@/components/itineraries/ItineraryRevenueSection';
+import ItineraryTipsSection from '@/components/itineraries/ItineraryTipsSection';
 import { getRouteStations, getRecommendedStops, getKidFriendlyStations, getLuxuryStations, countRouteChargingStops, getRouteCities } from '@/data/route-stations';
 import stationsData from '@/data/stations.json';
 import { scoreTier } from '@/lib/scoring';
@@ -29,6 +32,8 @@ export const slugToItineraryMap: Record<string, string> = {
   'tokyo-hakone-fuji': 'tokyo-to-hakone-fuji-road-trip',
   'delhi-jaipur-agra': 'delhi-to-jaipur-agra-road-trip',
   'chiang-mai-pai-mae-hong-son': 'chiang-mai-to-pai-mae-hong-son-road-trip',
+  'seoul-busan': 'seoul-to-busan-road-trip',
+  'manila-baguio': 'manila-to-baguio-road-trip',
 };
 
 export async function generateStaticParams() {
@@ -403,6 +408,14 @@ export default async function ItineraryDetailPage({ params }: Props) {
           <SeasonalRecommendations bestSeason={it.bestSeason} countries={it.countries} />
         </div>
 
+        {/* ===== SEASONAL COMPARISON TABLE ===== */}
+        <div className="mb-6">
+          <SeasonalComparisonTable bestSeason={it.bestSeason} countries={it.countries} />
+        </div>
+
+        {/* ===== SEO STRUCTURED DATA ===== */}
+        <ItinerarySEOSection itinerary={it} />
+
         {/* ===== RECOMMENDED CHARGING STOPS TABLE ===== */}
         <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-6 shadow-sm">
           <h2 className="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
@@ -460,6 +473,9 @@ export default async function ItineraryDetailPage({ params }: Props) {
             We earn a commission at no extra cost to you when you book through these links.
           </p>
         </div>
+
+        {/* ===== TRAVELER TIPS & REVIEWS ===== */}
+        <ItineraryTipsSection routeSlug={params.slug} routeName={it.title} />
 
         {/* ===== REVENUE: EV Road Trip CTA + Premium Partners + Packages ===== */}
         <ItineraryRevenueSection country={it.countries[0] || ''} />
@@ -596,6 +612,41 @@ export default async function ItineraryDetailPage({ params }: Props) {
             View All Charging Stations on Map
           </Link>
         </div>
+
+        {/* ===== JSON-LD STRUCTURED DATA (Trip + TouristicRoute) ===== */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Trip',
+              name: it.title,
+              description: it.description.slice(0, 300),
+              url: `https://ev-charging-asia.vercel.app/itinerary/${params.slug}`,
+              itineraryType: 'Route',
+              subTrip: it.days.map(day => ({
+                '@type': 'Trip',
+                name: day.title,
+                description: day.description.slice(0, 200),
+                startDate: undefined,
+                endDate: undefined,
+                departureLocation: { '@type': 'City', name: day.startCity },
+                arrivalLocation: { '@type': 'City', name: day.endCity },
+                distance: { '@type': 'Distance', name: `${day.distanceKm} km` },
+              })),
+              offers: {
+                '@type': 'Offer',
+                url: it.affiliateHotelUrl,
+                availability: 'https://schema.org/InStock',
+              },
+              provider: {
+                '@type': 'Organization',
+                name: 'EV Charging Asia',
+                url: 'https://ev-charging-asia.vercel.app',
+              },
+            }),
+          }}
+        />
 
       </div>
 

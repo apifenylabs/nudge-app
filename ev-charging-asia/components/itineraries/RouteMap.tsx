@@ -66,6 +66,14 @@ const CITY_COORDS: Record<string, [number, number]> = {
   'Mae Hong Son': [19.3013, 97.9683],
   'Fatehpur Sikri': [27.0946, 77.6616],
   'Bharatpur': [27.2167, 77.4833],
+  'Sejong': [36.4800, 127.2890],
+  'Gyeongju': [35.8562, 129.2247],
+  'Busan': [35.1796, 129.0756],
+  'Seoul': [37.5665, 126.9780],
+  'Manila': [14.5995, 120.9842],
+  'Pampanga': [15.1167, 120.6500],
+  'Tarlac': [15.5000, 120.5667],
+  'Baguio': [16.4169, 120.5933],
 };
 
 export default function RouteMap({ itinerary, height = '400px' }: RouteMapProps) {

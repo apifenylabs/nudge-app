@@ -6,7 +6,7 @@ import { getPostBySlug, getRelatedPosts } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data';
 import { allDestinations } from '@/lib/data';
 
-const BASE_URL = 'https://luxury-family-travel-asia.vercel.app';
+const BASE_URL = 'https://luxuryfamilytravelasia.com';
 
 function getDestinationName(destId: string): string | null {
   const found = allDestinations.find((d: { id: string; name: string; city: string }) => d.id === destId);
@@ -24,24 +24,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getPostBySlug(slug);
   if (!post) return { title: 'Article Not Found' };
 
-  const title = `${post.title} | Asia Family Travel Directory`;
-  const description = post.excerpt.substring(0, 160);
+  const title = `${post.title} | Luxury Family Travel Asia`;
+  const description = post.excerpt.substring(0, 165);
 
   return {
     title,
     description,
-    keywords: post.tags.join(', '),
+    keywords: [...post.tags, 'luxury family travel', 'premium family experiences Asia'].join(', '),
     alternates: { canonical: `${BASE_URL}/blog/${slug}` },
     openGraph: {
       title,
       description,
       url: `${BASE_URL}/blog/${slug}`,
-      siteName: 'Asia Family Travel Directory',
+      siteName: 'Luxury Family Travel Asia',
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
-      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: post.title }],
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: `${post.title} - Luxury Family Travel Asia` }],
     },
     twitter: {
       card: 'summary_large_image',

@@ -6,7 +6,8 @@ import {
   Search, MapPin, Sparkles, Globe, Users, Star,
   ChevronDown, ChevronRight, Clock, Compass,
   Lightbulb, Heart, Filter, BookOpen,
-  SlidersHorizontal, ArrowUp, Calendar, Tag, ChevronLeft, Crown
+  SlidersHorizontal, ArrowUp, Calendar, Tag, ChevronLeft, Crown,
+  Award, Medal, BadgePercent
 } from 'lucide-react';
 import HeroSection from '@/components/HeroSection';
 import FilterBar from '@/components/FilterBar';
@@ -418,16 +419,16 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gold">30</div>
+                <div className="text-2xl font-bold text-gold">{totalDestinations}+</div>
                 <div className="text-xs text-cream/60 uppercase tracking-wider">Properties</div>
               </div>
               <div className="text-center border-x border-gold/20">
-                <div className="text-2xl font-bold text-gold">10</div>
+                <div className="text-2xl font-bold text-gold">{totalCities}</div>
                 <div className="text-xs text-cream/60 uppercase tracking-wider">Countries</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gold">5-Star</div>
-                <div className="text-xs text-cream/60 uppercase tracking-wider">Curation</div>
+                <div className="text-2xl font-bold text-gold">{totalTips}+</div>
+                <div className="text-xs text-cream/60 uppercase tracking-wider">Insider Tips</div>
               </div>
             </div>
           </div>
@@ -494,6 +495,78 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
                 : undefined,
             }))}
           />
+        </section>
+      </div>
+
+      {/* ─── TOP 10 CURATED EXPERIENCES (Editorial Cosme-style) ─── */}
+      <div
+        ref={(el) => observeSection('top-10', el)}
+        className={`transition-all duration-700 ${visibleSections.has('top-10') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+      >
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
+          <SectionHeading
+            title={<span className="flex items-center gap-2"><Medal size={22} className="text-gold" /> The 10 Must-Book Luxury Experiences</span>}
+            subtitle={`Curated from ${totalDestinations}+ properties — the experiences every discerning family should book this year`}
+            linkHref="/search"
+            linkText="View all 10 →"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {topPicks.slice(0, 10).map((dest, index) => (
+              <Link
+                key={dest.id}
+                href={`/destination/${dest.slug || dest.id}`}
+                className="group relative bg-white rounded-xl overflow-hidden border border-gold/10 hover:border-gold/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+              >
+                {/* Rank number - large editorial style */}
+                <div className="absolute top-0 left-0 z-10 w-12 h-12 bg-gradient-to-br from-gold to-gold-dark text-navy font-bold text-lg flex items-center justify-center rounded-br-xl shadow-lg">
+                  {index + 1}
+                </div>
+
+                {/* Editorial badge */}
+                {index === 0 && (
+                  <div className="absolute top-0 right-0 z-10 px-2.5 py-1 bg-gradient-to-r from-amber-500 to-rose-500 text-white text-[9px] font-bold uppercase tracking-wider rounded-bl-xl shadow-lg">
+                    Editor&apos;s Choice
+                  </div>
+                )}
+
+                {/* Image */}
+                <div className="aspect-[4/3] bg-cream overflow-hidden">
+                  {dest.imageUrl && !dest.imageUrl.includes('placeholder') ? (
+                    <img src={dest.imageUrl} alt={dest.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-navy via-navy-light to-navy flex items-center justify-center">
+                      <Crown size={28} className="text-gold/30" />
+                    </div>
+                  )}
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
+
+                {/* Content */}
+                <div className="p-3.5">
+                  <div className="flex items-start justify-between gap-2 mb-1">
+                    <h3 className="font-semibold text-navy text-sm leading-tight group-hover:text-gold-dark transition-colors line-clamp-1">
+                      {dest.name}
+                    </h3>
+                    <span className="flex items-center gap-0.5 text-xs text-navy-light/60 shrink-0">
+                      <Star size={10} className="text-gold fill-gold" />
+                      {dest.safetyRating}
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-navy-light/50 mb-1.5">{dest.city}, {dest.country}</p>
+                  <p className="text-xs text-navy-light/70 line-clamp-2 leading-relaxed">{dest.description}</p>
+                  <div className="mt-2 flex items-center justify-between">
+                    <div className="flex items-center gap-0.5">
+                      {Array.from({ length: 3 }).map((_, i) => (
+                        <span key={i} className={`text-[10px] font-bold ${i < dest.priceRange.replace(/[^$]/g, '').length ? 'text-gold' : 'text-cream'}`}>$</span>
+                      ))}
+                    </div>
+                    <span className="text-[10px] text-navy-light/40">{dest.popularity}% approved</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </section>
       </div>
 
@@ -692,7 +765,7 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
             <SectionHeading
               title="All Luxury Destinations"
-              subtitle={`${filtered.length} ${filtered.length === 1 ? 'property' : 'properties'} across Asia`}
+              subtitle={`${loading ? '...' : filtered.length} ${loading ? '' : (filtered.length === 1 ? 'property' : 'properties across Asia')}`}
               linkHref="/search"
               linkText="View All →"
             />

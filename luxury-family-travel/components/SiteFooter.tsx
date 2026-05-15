@@ -9,6 +9,9 @@ const sisterSites = [
   { name: "Nudge", href: "https://nudge-sigma-liart.vercel.app", description: "Voice-powered family task management app" },
   { name: "Kids Activities Asia", href: "https://kids-activities-asia.vercel.app", description: "Kid-friendly activities across Asia" },
   { name: "Social Beast", href: "https://social-beast-two.vercel.app", description: "AI-powered content creation suite" },
+  { name: "Hike Japan", href: "https://hike-japan.vercel.app", description: "Hiking trails & outdoor adventures in Japan" },
+  { name: "Dog-Friendly Japan", href: "https://dog-friendly-japan.vercel.app", description: "Pet-friendly destinations across Japan" },
+  { name: "Japan Itineraries", href: "https://japan-itineraries.vercel.app", description: "Perfect Japan travel plans & day trips" },
 ];
 
 const quickLinks = [
