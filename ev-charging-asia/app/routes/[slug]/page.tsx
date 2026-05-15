@@ -13,6 +13,7 @@ import SeasonalComparisonTable from '@/components/itineraries/SeasonalComparison
 import ItinerarySEOSection from '@/components/itineraries/ItinerarySEOSection';
 import PrintButton from '@/components/itineraries/PrintButton';
 import RouteShareBar from '@/components/itineraries/RouteShareBar';
+import DownloadRouteGuide from '@/components/itineraries/DownloadRouteGuide';
 
 interface Props {
   params: { slug: string };
@@ -217,7 +218,10 @@ export default function ItineraryDetailPage({ params }: Props) {
           {/* Share & Print Tools */}
           <div className="flex items-center justify-between border-t border-gray-100 pt-4">
             <RouteShareBar title={it.title} slug={it.slug} />
-            <PrintButton />
+            <div className="flex items-center gap-2">
+              <DownloadRouteGuide itinerary={it} />
+              <PrintButton />
+            </div>
           </div>
         </div>
 

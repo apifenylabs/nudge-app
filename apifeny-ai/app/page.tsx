@@ -12,6 +12,7 @@ import FeaturedCollections from '@/components/FeaturedCollections';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import FeaturedPlaybooks from '@/components/FeaturedPlaybooks';
 import FeaturedRankings from '@/components/FeaturedRankings';
+import { playbooks } from '@/lib/playbooks';
 import SuccessStories from '@/components/SuccessStories';
 import PipelineVisual from '@/components/PipelineVisual';
 
@@ -84,7 +85,8 @@ export default function HomePage() {
       title: 'For Educators & Students',
       subtitle: 'AI tutoring, lesson planning, and personalized learning',
       playbookSlug: 'ai-for-education-and-tutoring',
-      tag: 'NEW',
+      categorySlug: 'education',
+      tag: 'POPULAR',
       bgGrad: 'from-blue-500/20 via-indigo-500/10 to-transparent',
       borderGlow: 'hover:border-blue-500/50',
     },
@@ -93,7 +95,8 @@ export default function HomePage() {
       title: 'For Customer Support Teams',
       subtitle: 'Automate 80% of tickets with AI chatbots and RAG',
       playbookSlug: 'ai-for-customer-support',
-      tag: 'NEW',
+      categorySlug: 'customer-support',
+      tag: 'POPULAR',
       bgGrad: 'from-emerald-500/20 via-teal-500/10 to-transparent',
       borderGlow: 'hover:border-emerald-500/50',
     },
@@ -102,7 +105,8 @@ export default function HomePage() {
       title: 'For Designers & Creatives',
       subtitle: 'Design everything with AI — from logos to video',
       playbookSlug: 'ai-for-design-and-creative',
-      tag: 'NEW',
+      categorySlug: 'design',
+      tag: 'POPULAR',
       bgGrad: 'from-rose-500/20 via-violet-500/10 to-transparent',
       borderGlow: 'hover:border-rose-500/50',
     },
@@ -111,7 +115,8 @@ export default function HomePage() {
       title: 'For Analysts & CFOs',
       subtitle: 'Financial modeling, research, and reporting with AI',
       playbookSlug: 'ai-for-finance-and-analysis',
-      tag: 'NEW',
+      categorySlug: 'finance',
+      tag: 'POPULAR',
       bgGrad: 'from-amber-500/20 via-yellow-500/10 to-transparent',
       borderGlow: 'hover:border-amber-500/50',
     },
@@ -120,9 +125,90 @@ export default function HomePage() {
       title: 'For Marketers',
       subtitle: 'Full-stack marketing automation from strategy to analytics',
       playbookSlug: 'ai-for-marketing-automation',
-      tag: 'NEW',
+      categorySlug: 'marketing',
+      tag: 'POPULAR',
       bgGrad: 'from-fuchsia-500/20 via-rose-500/10 to-transparent',
       borderGlow: 'hover:border-fuchsia-500/50',
+    },
+    {
+      icon: '🏠',
+      title: 'For Real Estate Agents',
+      subtitle: 'Property valuation, virtual staging and lead gen',
+      playbookSlug: 'ai-for-real-estate',
+      categorySlug: 'real-estate',
+      tag: 'NEW',
+      bgGrad: 'from-sky-500/20 via-blue-500/10 to-transparent',
+      borderGlow: 'hover:border-sky-500/50',
+    },
+    {
+      icon: '🏥',
+      title: 'For Healthcare Professionals',
+      subtitle: 'Medical research, patient comms and clinical workflows',
+      playbookSlug: 'ai-for-healthcare',
+      categorySlug: 'healthcare',
+      tag: 'NEW',
+      bgGrad: 'from-emerald-500/20 via-teal-500/10 to-transparent',
+      borderGlow: 'hover:border-emerald-500/50',
+    },
+    {
+      icon: '🛒',
+      title: 'For Ecommerce Owners',
+      subtitle: 'Product descriptions, chatbot, inventory and personalization',
+      playbookSlug: 'ai-for-ecommerce',
+      categorySlug: 'ecommerce',
+      tag: 'NEW',
+      bgGrad: 'from-orange-500/20 via-amber-500/10 to-transparent',
+      borderGlow: 'hover:border-orange-500/50',
+    },
+    {
+      icon: '👥',
+      title: 'For HR & Recruiting',
+      subtitle: 'Resume screening, interview prep and onboarding',
+      playbookSlug: 'ai-for-hr-and-recruiting',
+      categorySlug: 'hr',
+      tag: 'NEW',
+      bgGrad: 'from-violet-500/20 via-purple-500/10 to-transparent',
+      borderGlow: 'hover:border-violet-500/50',
+    },
+    {
+      icon: '⚖️',
+      title: 'For Legal Professionals',
+      subtitle: 'Contract review, legal research and document automation',
+      playbookSlug: 'ai-for-legal',
+      categorySlug: 'legal',
+      tag: 'NEW',
+      bgGrad: 'from-stone-500/20 via-slate-500/10 to-transparent',
+      borderGlow: 'hover:border-stone-500/50',
+    },
+    {
+      icon: '🍽️',
+      title: 'For Food & Hospitality',
+      subtitle: 'Menu planning, recipe dev and restaurant ops',
+      playbookSlug: 'ai-for-food-and-hospitality',
+      categorySlug: 'food-hospitality',
+      tag: 'NEW',
+      bgGrad: 'from-red-500/20 via-rose-500/10 to-transparent',
+      borderGlow: 'hover:border-red-500/50',
+    },
+    {
+      icon: '🎮',
+      title: 'For Gaming & Entertainment',
+      subtitle: 'Game dev, asset creation and streaming',
+      playbookSlug: 'ai-for-gaming-and-entertainment',
+      categorySlug: 'gaming',
+      tag: 'NEW',
+      bgGrad: 'from-indigo-500/20 via-fuchsia-500/10 to-transparent',
+      borderGlow: 'hover:border-indigo-500/50',
+    },
+    {
+      icon: '🚀',
+      title: 'For Startups & Venture',
+      subtitle: 'Pitch decks, market sizing and investor comms',
+      playbookSlug: 'ai-for-startups-and-venture',
+      categorySlug: 'startups',
+      tag: 'NEW',
+      bgGrad: 'from-cyan-500/20 via-blue-500/10 to-transparent',
+      borderGlow: 'hover:border-cyan-500/50',
     },
   ];
 
@@ -135,7 +221,7 @@ export default function HomePage() {
   ];
 
   const stats = [
-    { icon: BookOpen, value: '17', label: 'AI Playbooks', desc: 'Step-by-step guides that work' },
+    { icon: BookOpen, value: '25', label: 'AI Playbooks', desc: 'Step-by-step guides that work' },
     { icon: Layers, value: '90+', label: 'AI Tools', desc: 'Curated, reviewed & ranked' },
     { icon: TrendingUp, value: '5', label: 'Pipeline Stages', desc: 'Idea → Research → Build → Market → Scale' },
     { icon: Trophy, value: 'Asia', label: 'Ranked', desc: 'Editorial scores for Asia' },
@@ -277,7 +363,7 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════ */}
-      {/* BROWSE BY USE CASE — New playbooks  */}
+      {/* BROWSE BY USE CASE — 13 categories  */}
       {/* ════════════════════════════════════ */}
       <section className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -290,34 +376,118 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {browseByUseCase.map((uc) => (
-              <Link
-                key={uc.title}
-                href={`/playbook/${uc.playbookSlug}`}
-                className={`group relative rounded-xl bg-gradient-to-br ${uc.bgGrad} bg-tech-700 border border-tech-500/30 p-5 ${uc.borderGlow} transition-all hover:-translate-y-1 overflow-hidden`}
-              >
-                <div className="absolute inset-0 bg-tech-grid opacity-10" />
-                <div className="relative">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-2xl">{uc.icon}</span>
-                    {uc.tag && (
-                      <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider bg-neon/20 text-neon-light border border-neon/30">
-                        {uc.tag}
+              <div key={uc.title} className="group relative">
+                {/* Category card */}
+                <Link
+                  href={`/playbooks?category=${uc.categorySlug}`}
+                  className={`absolute -top-2 -right-2 z-10 px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider bg-tech-700/80 border border-tech-500/30 text-tech-200 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-neon/20 hover:text-neon-light hover:border-neon/30`}
+                >
+                  All {uc.categorySlug}
+                </Link>
+                <Link
+                  href={`/playbook/${uc.playbookSlug}`}
+                  className={`block relative rounded-xl bg-gradient-to-br ${uc.bgGrad} bg-tech-700 border border-tech-500/30 p-5 ${uc.borderGlow} transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:shadow-neon/5 overflow-hidden`}
+                >
+                  <div className="absolute inset-0 bg-tech-grid opacity-10" />
+                  {/* Hover glow effect */}
+                  <div className={`absolute -inset-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-radial from-white/5 to-transparent pointer-events-none`} />
+                  <div className="relative">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-2xl group-hover:scale-110 transition-transform duration-300">{uc.icon}</span>
+                      {uc.tag && (
+                        <span className={`px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider ${
+                          uc.tag === 'NEW' 
+                            ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' 
+                            : 'bg-neon/20 text-neon-light border border-neon/30'
+                        }`}
+                        >
+                          {uc.tag}
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="text-base font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
+                      {uc.title}
+                    </h3>
+                    <p className="text-xs text-tech-200 mb-3 line-clamp-2">{uc.subtitle}</p>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-xs text-neon-light group-hover:gap-2 transition-all flex items-center gap-1">
+                        View playbook
+                        <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                       </span>
-                    )}
+                    </div>
                   </div>
-                  <h3 className="text-base font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
-                    {uc.title}
-                  </h3>
-                  <p className="text-xs text-tech-200 mb-3">{uc.subtitle}</p>
-                  <div className="flex items-center gap-1 text-xs text-neon-light group-hover:gap-2 transition-all">
-                    <span>View playbook</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              </div>
             ))}
+          </div>
+
+          {/* Browse All CTA */}
+          <div className="text-center mt-6">
+            <Link
+              href="/playbooks"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-tech-700 border border-tech-500/30 hover:border-neon/40 text-white text-sm font-medium transition hover:-translate-y-0.5"
+            >
+              <BookOpen className="w-4 h-4" />
+              Browse all {browseByUseCase.length} playbooks
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════ */}
+      {/* FEATURED PLAYBOOK SPOTLIGHT        */}
+      {/* ════════════════════════════════════ */}
+      <section className="py-12 sm:py-16 bg-tech-800/20 border-y border-tech-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+              <Sparkles className="w-6 h-6 inline-block text-amber-400 mr-2" />
+              Featured playbooks
+            </h2>
+            <p className="text-tech-200 text-sm sm:text-base max-w-xl mx-auto">
+              Our most popular step-by-step guides — handpicked to get you results fast.
+            </p>
+          </div>
+
+          {/* Horizontal scrollable carousel */}
+          <div className="relative">
+            <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-track-tech-800 scrollbar-thumb-tech-500/50">
+              {playbooks.slice(0, 6).map((pb) => (
+                <Link
+                  key={pb.slug}
+                  href={`/playbook/${pb.slug}`}
+                  className={`snap-start flex-shrink-0 w-[280px] sm:w-[300px] relative rounded-xl bg-gradient-to-br ${pb.gradient} bg-tech-700 border border-tech-500/30 p-5 hover:border-neon/40 transition-all hover:-translate-y-1 overflow-hidden group`}
+                >
+                  <div className="absolute inset-0 bg-tech-grid opacity-10" />
+                  <div className="relative">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-2xl">{pb.icon}</span>
+                      <span className="px-1.5 py-0.5 rounded text-[9px] font-medium border border-tech-500/30 text-tech-200">
+                        {pb.difficulty === 'Beginner' ? '🌟 Beginner' : pb.difficulty === 'Intermediate' ? '⚡ Intermediate' : '🔥 Advanced'}
+                      </span>
+                    </div>
+                    <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1.5 line-clamp-1">
+                      {pb.title}
+                    </h3>
+                    <p className="text-xs text-tech-200 line-clamp-2 mb-3 leading-relaxed">
+                      {pb.description}
+                    </p>
+                    <div className="flex items-center gap-3 text-[10px] text-tech-300">
+                      <span>{pb.steps.length} steps</span>
+                      <span>•</span>
+                      <span>{pb.read_time_minutes} min read</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            {/* Scroll hint */}
+            <div className="text-center mt-2 text-[10px] text-tech-400">
+              Scroll for more playbooks →
+            </div>
           </div>
         </div>
       </section>

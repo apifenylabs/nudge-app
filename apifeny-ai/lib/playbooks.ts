@@ -1181,6 +1181,600 @@ export const playbooks: Playbook[] = [
       { metric: 'Organic Traffic Growth', value: '+200%', description: 'SEO-optimized AI content drives measurable traffic increases' },
     ],
   },
+
+  // ════════════════════════════════════════════════════
+  // PHASE 7 — NEW PLAYBOOKS (for Real Estate, Healthcare, Ecommerce, HR, Legal, F&B, Gaming, Startups)
+  // ════════════════════════════════════════════════════
+
+  // --- 1: AI for Real Estate ---
+  {
+    slug: 'ai-for-real-estate',
+    title: 'AI for Real Estate',
+    subtitle: 'Property valuation, virtual staging & lead gen with AI',
+    description:
+      'Transform your real estate business with AI: automated property valuations, virtual staging, lead generation, market analysis, listing copywriting, and client communication. Built for agents, brokers, investors, and property managers looking to close deals faster with less overhead.',
+    related_tool_slugs: ['chatgpt', 'gemini', 'canva-ai', 'midjourney', 'perplexity', 'claude', 'elevenlabs'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '🏠',
+    gradient: 'from-sky-500/30 to-blue-500/30',
+    steps: [
+      {
+        title: 'Generate property valuations with ChatGPT',
+        description:
+          'Describe a property (location, size, beds/baths, condition, recent comps) and ask ChatGPT for a valuation range, price-per-sqft analysis, and market positioning strategy. Use structured prompts for consistent CMAs across your portfolio.',
+        tip: 'Prompt: "You are a real estate analyst. Given: 3-bed 2-bath condo in Sai Kung, 850 sqft, renovated 2022, last sold for HK$8M in 2020. Recent comps: unit 5A sold HK$9.2M, unit 12C sold HK$9.8M. Generate CMA with price recommendation, risk factors, and optimal listing strategy."',
+      },
+      {
+        title: 'Create virtual staging images with Midjourney',
+        description:
+          'Photograph empty rooms, upload the images to Midjourney, and use reference-based generation to furnish rooms virtually. Create multiple design styles (modern, minimalist, Scandinavian, luxury) for the same space to appeal to different buyers.',
+        tip: 'Use Midjourney\'s image-to-image: upload empty room photo + prompt "furnished modern living room with natural light, Scandinavian furniture, potted plants, cozy atmosphere --iw 0.5" for realistic staging.',
+      },
+      {
+        title: 'Design marketing materials with Canva AI',
+        description:
+          'Use Canva AI to create property brochures, flyers, open house signs, social media posts, and video intros from one property template. Canva Magic Write generates listing descriptions in your brand voice.',
+      },
+      {
+        title: 'Research markets with Perplexity + Gemini',
+        description:
+          'Use Perplexity for neighborhood research: schools, transport, crime rates, development plans, and price trends. Upload master plans and district reports into Gemini for synthesized market intelligence.',
+        tip: 'Create a Perplexity Collection per district. Run weekly deep dives on new developments, zoning changes, and infrastructure projects.',
+      },
+      {
+        title: 'Automate client outreach with Claude',
+        description:
+          'Use Claude to draft personalized listing emails, follow-ups, open house invitations, and market update newsletters. Claude handles tone and personalization at scale.',
+      },
+      {
+        title: 'Create property video walkthroughs with AI',
+        description:
+          'Use ElevenLabs for voiceover narration and AI video tools for walkthrough montages. Script the tour, generate narration, and match to property photos/video clips.',
+        tip: 'Generate 3 versions: 60s social media teaser, 2-min full tour, 5-min deep dive for serious buyers.',
+      },
+    ],
+    pro_tips: [
+      'Build a property database in Notion with AI fields: auto-generated CMA summaries from ChatGPT API',
+      'Use Midjourney to stage the same room in 3 styles — modern, minimalist, and luxury — and let buyers vote on their favorite',
+      'Automate social media: one ChatGPT prompt generates 30 days of property posts, tips, and market updates',
+      'Always disclose AI-generated staging images — some markets have disclosure requirements',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Using AI for legal or contractual advice',
+        fix: 'AI-generated lease terms and contracts can contain errors. Always have a licensed attorney review legal documents.',
+      },
+      {
+        mistake: 'Over-staging with unrealistic AI images',
+        fix: 'Keep virtual staging realistic — furniture that could actually fit, proper lighting, and accurate room dimensions.',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: 'Save $500-2K/listing on staging + photography, close 2x faster with AI-powered lead responses',
+    real_results: [
+      { metric: 'Listing Response Time', value: '90% faster', description: 'From 4 hours to 15 min for personalized client responses' },
+      { metric: 'Content Output', value: '10x more', description: '30 property posts + 5 brochures + 3 video tours per week vs 3 posts manually' },
+      { metric: 'Cost Savings', value: '$1.5K/listing', description: 'Eliminated professional staging ($800) + photographer ($700) using AI alternatives' },
+    ],
+  },
+
+  // --- 2: AI for Healthcare ---
+  {
+    slug: 'ai-for-healthcare',
+    title: 'AI for Healthcare',
+    subtitle: 'Medical research, patient comms & clinical workflows with AI',
+    description:
+      'Leverage AI in healthcare: accelerate medical research, draft patient communications, analyze clinical data, summarize health records, and streamline administrative workflows. Designed for clinicians, researchers, healthcare administrators, and medical students who need HIPAA-aware AI usage.',
+    related_tool_slugs: ['perplexity', 'claude', 'chatgpt', 'gemini', 'notion-ai', 'exa'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '🏥',
+    gradient: 'from-emerald-500/30 to-teal-500/30',
+    steps: [
+      {
+        title: 'Research medical literature with Perplexity Pro',
+        description:
+          'Use Perplexity Pro with its deep research mode to search medical databases (PubMed, Cochrane, clinicaltrials.gov). Get cited, up-to-date answers on treatments, drug interactions, clinical guidelines, and emerging research.',
+        tip: 'Use focused prompts: "Summarize the latest RCTs on GLP-1 agonists for weight management in non-diabetic patients from 2023-2025, with citations and study design limitations."',
+      },
+      {
+        title: 'Analyze clinical data with Claude',
+        description:
+          'Upload de-identified clinical data, lab results, or patient cohort data into Claude for analysis. Claude\'s 200K context handles large datasets, identifies patterns, and generates summary reports with statistical insights.',
+        tip: 'Always de-identify data before uploading. Use Claude\'s structured output for consistent reporting formats across cohorts.',
+      },
+      {
+        title: 'Draft patient communications with ChatGPT',
+        description:
+          'Generate patient letters, discharge summaries, referral notes, and educational materials. Customize reading level (5th grade for patients, professional for colleagues) and language.',
+        tip: 'Create templates in ChatGPT: "Draft a discharge summary for a 58yo male post-hip replacement, reading level 6, in English and Spanish."',
+      },
+      {
+        title: 'Summarize medical records with Gemini',
+        description:
+          'Upload patient records, chart notes, or full histories into Gemini. Its massive context window processes entire patient timelines and generates concise summaries with key findings, medication changes, and care plan updates.',
+      },
+      {
+        title: 'Track research with Notion AI + Exa',
+        description:
+          'Build a Notion research database: track papers, clinical trials, and drug developments. Use Exa for automated web research updates. Notion AI summarizes new entries and flags relevant findings.',
+        tip: 'Set up a weekly Notion automation: Exa searches for new papers on your topics of interest → auto-created database entries → Notion AI generates one-paragraph summaries.',
+      },
+      {
+        title: 'Create medical education content with AI',
+        description:
+          'Use ChatGPT or Claude to create study materials, flashcards, case studies, and presentations. Generate MCQs with explanations for medical student training.',
+        tip: 'Prompt: "Create 10 USMLE-style questions on cardiology with answer explanations referencing latest ACC/AHA guidelines."',
+      },
+    ],
+    pro_tips: [
+      'Never upload PHI/PII to public AI tools. Use enterprise/HIPAA-compliant instances or de-identify all data first',
+      'Perplexity Pro is best for real-time clinical answers with citations — use it as a clinical decision support adjunct',
+      'Claude\'s structured outputs are perfect for creating standardized clinical report templates',
+      'Create a \'Medical Research Assistant\' system: Perplexity for discovery → Claude for analysis → Notion for storage',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Entering patient-identifiable information into public AI tools',
+        fix: 'Always strip names, DOBs, addresses, IDs. Use anonymized patient IDs (Patient-001). Check your institution\'s AI usage policy.',
+      },
+      {
+        mistake: 'Treating AI output as clinical decision-making authority',
+        fix: 'AI is an adjunct tool, not a replacement for clinical judgment. Always verify AI-generated recommendations against guidelines.',
+      },
+    ],
+    pipeline_stage: 'research',
+    revenue_impact: 'Reduce documentation time by 70%, saving $20K-50K/year per clinician in administrative overhead',
+    real_results: [
+      { metric: 'Documentation Time', value: '75% faster', description: 'Discharge summaries from 45 min to 10 min per patient' },
+      { metric: 'Research Coverage', value: '5x more', description: 'Literature searches cover 5x more sources in the same time' },
+      { metric: 'Patient Satisfaction', value: '+25%', description: 'Faster, clearer patient communications improve satisfaction scores' },
+    ],
+  },
+
+  // --- 3: AI for Ecommerce ---
+  {
+    slug: 'ai-for-ecommerce',
+    title: 'AI for Ecommerce',
+    subtitle: 'Product descriptions, chatbot, inventory & personalization',
+    description:
+      'Supercharge your online store with AI: bulk product descriptions, AI-powered chatbots, inventory forecasting, personalized recommendations, and automated customer support. Built for Shopify, WooCommerce, and custom store owners who want to scale without hiring a team.',
+    related_tool_slugs: ['chatgpt', 'canva-ai', 'copy-ai', 'midjourney', 'jasper', 'gemini', 'perplexity', 'exa'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '🛒',
+    gradient: 'from-orange-500/30 to-amber-500/30',
+    steps: [
+      {
+        title: 'Generate bulk product descriptions with ChatGPT',
+        description:
+          'Upload your product catalog (CSV/JSON) to ChatGPT and generate SEO-optimized product descriptions in bulk. Specify tone, word count, keywords, and format. Generate titles, meta descriptions, bullet points, and long descriptions all at once.',
+        tip: 'Prompt: "I have 200 products in this CSV. Generate: SEO title (60 chars), meta desc (160 chars), 3 bullet features, 2-paragraph description. Tone: friendly expert. Keywords: [list]. Output as CSV."',
+      },
+      {
+        title: 'Create product images with Midjourney',
+        description:
+          'Generate product images, lifestyle shots, and variations. Use image-to-image for consistent backgrounds. Create seasonal versions, color variants, and use-case scenes without photo shoots.',
+        tip: 'Create a brand style reference in Midjourney: consistent background, lighting, angle. Use --cref for consistent character/product appearance across shots.',
+      },
+      {
+        title: 'Design store visuals with Canva AI',
+        description:
+          'Use Canva AI to create: store banners, product collages, social media ads, email headers, and promotional graphics — all from one brand kit. Canva Magic Studio suggests layouts based on your products.',
+      },
+      {
+        title: 'Set up AI chatbot for customer support',
+        description:
+          'Use ChatGPT API or a chatbot platform to build a store assistant that answers: order status, shipping questions, size guides, return policies, and product recommendations. Train it on your product catalog and policies.',
+        tip: 'Start with FAQ-only mode to prevent hallucinations. Gradually expand to order lookups with read-only API access to your store backend.',
+      },
+      {
+        title: 'Optimize inventory with Perplexity + Gemini',
+        description:
+          'Use Perplexity for market trend analysis and demand forecasting. Feed insights into Gemini along with your sales history for inventory recommendations: reorder points, seasonal stock levels, and slow-mover alerts.',
+      },
+      {
+        title: 'Create email campaigns with Jasper',
+        description:
+          'Build email sequences: abandoned cart recovery, post-purchase follow-up, back-in-stock alerts, seasonal promotions, and loyalty offers. Jasper generates personalized variants based on customer segments.',
+        tip: 'Run A/B tests on subject lines and CTAs. Jasper can generate 10+ variants for each campaign in minutes.',
+      },
+    ],
+    pro_tips: [
+      'Create a product content factory: CSV → ChatGPT → Google Sheets → Shopify import. One pipeline handles 500+ products',
+      'Use Perplexity to monitor competitor pricing and promotions weekly — feed insights into your pricing strategy',
+      'Set up an AI-powered FAQ system before hiring support staff. Most stores can handle 60-80% of queries with AI',
+      'Generate seasonal product variants (Christmas, summer, back-to-school) two months ahead using AI image generation',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Generic AI descriptions that sound like every other store',
+        fix: 'Include unique brand voice, specific product measurements, real materials, and actual use cases. Edit AI outputs for authenticity.',
+      },
+      {
+        mistake: 'AI chatbot giving wrong product information',
+        fix: 'Always constrain your chatbot to verified product data. Use RAG (retrieval augmented generation) with your actual inventory database.',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: 'Reduce product listing time by 90%, increase conversion through personalized recommendations',
+    real_results: [
+      { metric: 'Listing Creation Time', value: '95% faster', description: '500 products listed in 2 days vs 4 weeks manually' },
+      { metric: 'Conversion Rate', value: '+18%', description: 'AI-generated descriptions and images improved conversion vs generic listings' },
+      { metric: 'Support Tickets Automated', value: '70%', description: 'AI chatbot resolved 7 out of 10 customer queries without human intervention' },
+    ],
+  },
+
+  // --- 4: AI for HR & Recruiting ---
+  {
+    slug: 'ai-for-hr-and-recruiting',
+    title: 'AI for HR & Recruiting',
+    subtitle: 'Resume screening, interview prep & onboarding automation',
+    description:
+      'Revolutionize your HR workflows with AI: automated resume screening, structured interview guides, personalized onboarding, performance review drafting, and employee sentiment analysis. Designed for HR professionals, recruiters, and team leads at growing companies.',
+    related_tool_slugs: ['chatgpt', 'claude', 'gemini', 'notion-ai', 'perplexity', 'exa'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '👥',
+    gradient: 'from-violet-500/30 to-purple-500/30',
+    steps: [
+      {
+        title: 'Automate resume screening with ChatGPT',
+        description:
+          'Upload batches of resumes (anonymized) to ChatGPT and ask for: candidate ranking against job requirements, skill gap analysis, experience level, culture-fit indicators, and red flags. Use structured output for ATS integration.',
+        tip: 'Prompt: "You are a senior recruiter. Screen these 20 resumes for a Senior Product Manager role (requirements included). Output: candidate ID, match score 0-100, top 3 strengths, top 3 gaps, interview recommendation (yes/no/maybe). Output as table."',
+      },
+      {
+        title: 'Generate interview guides with Claude',
+        description:
+          'Give Claude the job description and candidate profile. Generate: role-specific interview questions, behavioral questions (STAR method), technical assessment prompts, and scoring rubrics. Tailored to each candidate\'s experience.',
+        tip: 'Create interview kits: Claude generates 10 situational questions + 5 role-specific questions + 3 take-home challenge options per role template.',
+      },
+      {
+        title: 'Create personalized onboarding with Notion AI',
+        description:
+          'Build Notion onboarding templates: day-1 checklists, role-specific learning paths, team introductions, and policy documents. Notion AI auto-fills templates with role, department, and manager details.',
+        tip: 'Create a master onboarding template in Notion. Notion AI generates: personalized welcome doc, first-week schedule, tool access checklist, and team directory.',
+      },
+      {
+        title: 'Draft performance reviews with ChatGPT',
+        description:
+          'Feed in employee accomplishments, peer feedback, and OKR progress. ChatGPT drafts balanced performance reviews with strengths, areas for improvement, goals, and development plans.',
+        tip: 'Prompt: "Employee achieved [X], received feedback [Y], missed [Z]. Write a balanced performance review with: achievements, growth areas, 3 SMART goals for next quarter, and recommended training."',
+      },
+      {
+        title: 'Analyze employee sentiment with Exa + Gemini',
+        description:
+          'Use Exa to gather employee reviews (Glassdoor, Indeed) and industry benchmarks. Upload survey results to Gemini for sentiment analysis, trend detection, and actionable recommendations.',
+      },
+      {
+        title: 'Automate HR communications with Claude',
+        description:
+          'Generate offer letters, rejection emails, policy updates, company announcements, and benefits communications. Claude maintains consistent professional tone across all HR touchpoints.',
+        tip: 'Create a \'HR Communications\' knowledge base in Claude Projects with your company\'s tone, legal disclaimers, and brand guidelines.',
+      },
+    ],
+    pro_tips: [
+      'Always anonymize resumes before AI screening (remove names, photos, schools, ages) to reduce bias',
+      'Use AI for initial screening, not final decisions — humans should always make the hiring call',
+      'Create a \'Recruiting Hub\' in Notion: job descriptions, interview guides, candidate tracker, and offer templates — AI-generated and consistent',
+      'Set up automated onboarding: offer accepted → Notion AI generates personalized onboarding plan → sent to new hire week before start date',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'AI screening introducing bias against qualified candidates',
+        fix: 'Regularly audit AI screening decisions for bias. Rotate screening criteria. Always have a human review "no" recommendations.',
+      },
+      {
+        mistake: 'Generic AI-generated rejection emails that damage employer brand',
+        fix: 'Personalize rejection communications: mention specific qualifications appreciated, suggest future roles, and leave the door open.',
+      },
+    ],
+    pipeline_stage: 'research',
+    revenue_impact: 'Reduce time-to-hire by 50% and save $10K-20K per hire in recruiter hours and agency fees',
+    real_results: [
+      { metric: 'Screening Time', value: '85% faster', description: '100 resumes reviewed in 30 min vs 8 hours manually' },
+      { metric: 'Time-to-Hire', value: '45% reduction', description: 'From 45 days to 25 days average time-to-hire' },
+      { metric: 'Onboarding Completion', value: '90%', description: 'AI-guided onboarding increased first-week task completion by 40%' },
+    ],
+  },
+
+  // --- 5: AI for Legal ---
+  {
+    slug: 'ai-for-legal',
+    title: 'AI for Legal',
+    subtitle: 'Contract review, legal research & document automation',
+    description:
+      'Transform legal workflows with AI: contract review and redlining, legal research, document drafting, due diligence analysis, and compliance monitoring. Built for lawyers, paralegals, legal ops teams, and in-house counsel who need faster, more thorough legal work.',
+    related_tool_slugs: ['claude', 'perplexity', 'chatgpt', 'gemini', 'exa', 'notion-ai'],
+    difficulty: 'Advanced',
+    read_time_minutes: 11,
+    icon: '⚖️',
+    gradient: 'from-stone-500/30 to-slate-500/30',
+    steps: [
+      {
+        title: 'Review contracts with Claude',
+        description:
+          'Upload contracts to Claude (up to 200K tokens = ~150 pages). Ask for: clause-by-clause analysis, risk flags, unfavorable terms, missing provisions, and negotiation recommendations. Claude excels at structured document analysis.',
+        tip: 'Prompt: "Review this SaaS agreement. Flag: liability caps, indemnification scope, termination for convenience, auto-renewal, data ownership, SLA commitments, and non-compete. For each flag: severity (high/medium/low), risk explanation, and recommended counter."',
+      },
+      {
+        title: 'Conduct legal research with Perplexity Pro',
+        description:
+          'Use Perplexity Pro for legal research: case law, statutes, regulations, and commentary. Get cited answers with jurisdiction filters. Perplexity\'s academic/legal search covers Westlaw, LexisNexis, and law review sources.',
+        tip: 'Prompt with jurisdiction: "Under Delaware corporate law, what are the fiduciary duties of directors in a change-of-control transaction? Cite relevant cases and statutes."',
+      },
+      {
+        title: 'Draft legal documents with ChatGPT',
+        description:
+          'Generate first drafts of legal documents: NDAs, service agreements, MOU, letters of intent, settlement agreements, and client engagement letters. Use detailed prompts with jurisdiction, parties, and key terms.',
+        tip: 'Prompt: "Draft a mutual NDA between [Company A] (Delaware corp) and [Company B] (Singapore Pte Ltd). Term: 3 years. Governing law: Singapore. Include: definition of confidential info, exclusions, return of materials, injunctive relief, and governing law."',
+      },
+      {
+        title: 'Auto-redline agreements with Gemini',
+        description:
+          'Upload a contract and your preferred terms. Gemini compares both, highlights differences, and suggests redlines. Its document intelligence identifies non-standard clauses faster than manual review.',
+      },
+      {
+        title: 'Track compliance with Notion AI + Exa',
+        description:
+          'Build a compliance database: regulatory deadlines, filing requirements, policy changes. Use Exa to monitor regulatory updates. Notion AI drafts compliance status reports and flags upcoming obligations.',
+        tip: 'Set up Notion database with auto-created entries from Exa searches on regulatory changes in your jurisdictions.',
+      },
+      {
+        title: 'Conduct due diligence with Claude',
+        description:
+          'Upload due diligence documents (financials, contracts, IP filings, corporate records) into Claude for analysis. Generate due diligence reports with findings organized by risk category, severity, and recommended actions.',
+      },
+    ],
+    pro_tips: [
+      'Never upload privileged or confidential client data to AI without client consent and security review',
+      'Always cite AI-generated legal arguments back to primary sources — AI can hallucinate case citations',
+      'Use Claude for contract review (best at structured document analysis), Perplexity for research (best at sourced answers)',
+      'Create a \'Playbook\' for each practice area: standard clauses, common counter-arguments, filing templates — AI-generated and attorney-reviewed',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Relying on AI for legal advice without attorney review',
+        fix: 'AI is a drafting and research assistant. Every legal document and strategy must be reviewed by a licensed attorney.',
+      },
+      {
+        mistake: 'Accepting AI-generated case citations without verification',
+        fix: 'AI can hallucinate case names and citations. Always verify in Westlaw/LexisNexis. Use Perplexity for grounded research with real citations.',
+      },
+    ],
+    pipeline_stage: 'research',
+    revenue_impact: 'Reduce document review time by 60-80%, saving $50K-150K/year in billable hours and contract review costs',
+    real_results: [
+      { metric: 'Review Speed', value: '4x faster', description: '50-page contract reviewed in 45 min vs 3 hours manually' },
+      { metric: 'Research Time', value: '65% reduction', description: 'Legal research from 4 hours to 1.5 hours with AI-assisted search' },
+      { metric: 'First Draft Time', value: '80% faster', description: 'Standard agreements drafted in 30 min vs 2.5 hours' },
+    ],
+  },
+
+  // --- 6: AI for Food & Hospitality ---
+  {
+    slug: 'ai-for-food-and-hospitality',
+    title: 'AI for Food & Hospitality',
+    subtitle: 'Menu planning, recipe development & restaurant ops with AI',
+    description:
+      'Elevate your food and hospitality business with AI: menu engineering, recipe creation and scaling, inventory management, customer feedback analysis, social media marketing, and staff training. Built for chefs, restaurateurs, hoteliers, and food entrepreneurs who want to innovate faster and run leaner.',
+    related_tool_slugs: ['chatgpt', 'midjourney', 'canva-ai', 'perplexity', 'gemini', 'notion-ai', 'elevenlabs'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '🍽️',
+    gradient: 'from-red-500/30 to-rose-500/30',
+    steps: [
+      {
+        title: 'Design menus with ChatGPT',
+        description:
+          'Describe your cuisine, price point, and concept. ChatGPT generates: menu structure, dish descriptions, pricing strategy, pairings, and seasonal rotation plans. Optimize for food cost percentage and popularity.',
+        tip: 'Prompt: "You are a restaurant menu consultant. Create a 25-item menu for a modern Cantonese restaurant in Hong Kong. Average check HK$400. Include: 6 appetizers, 8 mains, 4 sides, 3 desserts, 4 drinks. For each: name, description, price, food cost %, and why it belongs on the menu."',
+      },
+      {
+        title: 'Develop and scale recipes with Gemini',
+        description:
+          'Upload existing recipes and ask Gemini to: scale for volume production, substitute ingredients, adjust for dietary restrictions, calculate nutritional info, and suggest plating variations. Gemini handles the math and logic.',
+        tip: 'Gemini\'s 1M context can process an entire recipe book: "Scale this pastry recipe from 12 portions to 200. Convert grams to cups. Suggest 3 dairy-free substitutions."',
+      },
+      {
+        title: 'Create food photography with Midjourney',
+        description:
+          'Generate professional food photography for menus, social media, and delivery apps. Describe the dish, plating style, lighting, and background. Midjourney produces studio-quality images without a photo shoot.',
+        tip: 'Prompt: "Bowl of wonton noodle soup, overhead shot, warm lighting, ceramic bowl, chopsticks, steam rising, minimalist table setting, depth of field --ar 4:3"',
+      },
+      {
+        title: 'Manage inventory with Perplexity + Notion AI',
+        description:
+          'Use Perplexity to track ingredient prices, seasonal availability, and supplier alternatives. Record inventory in Notion. Use Notion AI to: forecast reorder points, flag price increases, and suggest substitutions.',
+        tip: 'Set up weekly Perplexity searches for your top 20 ingredients. Notion AI auto-generates: reorder alerts, substitution suggestions, and cost trend reports.',
+      },
+      {
+        title: 'Create marketing content with Canva AI',
+        description:
+          'Use Canva AI to create: daily specials posters, social media campaigns, email newsletters, delivery app images, and event flyers. Canva Magic Write generates menu descriptions and promotional copy.',
+      },
+      {
+        title: 'Analyze customer feedback with ChatGPT',
+        description:
+          'Export reviews from Google, OpenRice, Deliveroo, and social media. ChatGPT analyzes: common praise, complaints, request patterns, sentiment trends, and actionable improvements.',
+        tip: 'Run a weekly analysis: paste the week\'s reviews into ChatGPT and get: top 3 positives, top 3 negatives, and 3 actionable recommendations.',
+      },
+    ],
+    pro_tips: [
+      'Create a \'Digital Recipe Book\' in Notion: ingredients, prep steps, plating guides, photos, and cost cards — AI-generated and consistent',
+      'Use Midjourney to visualize new dishes before they hit the menu — test customer reactions on social media first',
+      'Automate social media: one generative session produces 30 posts from seasonal specials, behind-the-scenes, and customer reviews',
+      'Build an AI training manual for staff: ChatGPT generates recipes, plating guides, and allergen info from your menu',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Using AI recipes without testing food safety',
+        fix: 'AI-generated recipes may not account for food safety (cooking temps, cross-contamination, shelf life). Always test and validate with a qualified chef.',
+      },
+      {
+        mistake: 'AI-generated menus that sound generic or over-designed',
+        fix: 'Add your restaurant\'s personality, sourcing stories, and chef\'s background to descriptions. Authenticity sells.',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: 'Reduce menu development from weeks to days, save $2K-5K/month on photography and design',
+    real_results: [
+      { metric: 'Menu Development', value: '70% faster', description: 'New seasonal menu created in 3 days vs 2 weeks' },
+      { metric: 'Social Media Output', value: '8x more', description: 'From 4 posts/week to 30+ AI-assisted posts/week' },
+      { metric: 'Food Cost Optimization', value: '-12%', description: 'AI-driven menu engineering reduced food cost by 12% while maintaining margins' },
+    ],
+  },
+
+  // --- 7: AI for Gaming & Entertainment ---
+  {
+    slug: 'ai-for-gaming-and-entertainment',
+    title: 'AI for Gaming & Entertainment',
+    subtitle: 'Game dev, asset creation & streaming with AI',
+    description:
+      'Create games and entertainment content with AI: game concept development, asset generation (2D/3D art, audio, animations), level design, narrative writing, code assistance, and streaming content production. Built for indie game developers, content creators, and entertainment studios who want to ship faster without large teams.',
+    related_tool_slugs: ['chatgpt', 'midjourney', 'claude', 'gemini', 'elevenlabs', 'perplexity', 'canva-ai'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 11,
+    icon: '🎮',
+    gradient: 'from-indigo-500/30 to-fuchsia-500/30',
+    steps: [
+      {
+        title: 'Concept and design games with ChatGPT',
+        description:
+          'Describe your game idea and ChatGPT helps with: game design document, core mechanics, progression systems, economy balance, narrative structure, and monetization strategy. Iterate on mechanics and get detailed breakdowns.',
+        tip: 'Prompt: "Design a 2D platformer where the player controls a shapeshifting AI. Core mechanic: transform between 4 forms (speed, strength, stealth, flight). Generate: game design doc, level progression, ability unlock tree, enemy types, and boss fight concepts."',
+      },
+      {
+        title: 'Generate game art with Midjourney',
+        description:
+          'Create 2D sprites, backgrounds, UI elements, concept art, and promotional artwork. Use consistent style references across all assets. Create animation sprite sheets and tileable backgrounds.',
+        tip: 'Use --sref (style reference) for consistent game art: same artist style across characters, environments, and UI. Generate sprite sheets with consistent lighting and POV.',
+      },
+      {
+        title: 'Write game narrative with Claude',
+        description:
+          'Claude excels at narrative design: dialogue trees, branching storylines, character backstories, quest descriptions, and lore documents. Its structured output is perfect for game narrative databases.',
+        tip: 'Generate branching dialogue with JSON output: Claude creates dialogue trees with conditions, variables, and branching paths ready for game engine import.',
+      },
+      {
+        title: 'Create audio and voice acting with ElevenLabs',
+        description:
+          'Use ElevenLabs for: character voice generation (multiple voices), sound effect descriptions, narrator voiceovers, and dynamic dialogue. Generate consistent character voices across all in-game dialogue.',
+      },
+      {
+        title: 'Get coding assistance with ChatGPT + Gemini',
+        description:
+          'Use AI for game code: Unity/C# scripts, Unreal/Blueprint logic, Godot/GDScript, shader code, AI behaviors, physics systems, and UI code. Debug errors and optimize performance.',
+        tip: 'Prompt: "Write a C# script for Unity: 2D top-down character movement with WASD, smooth acceleration/deceleration, animation state machine integration, and collision detection."',
+      },
+      {
+        title: 'Market your game with Canva AI + ChatGPT',
+        description:
+          'Create: Steam page assets, trailer scripts, press kits, social media campaigns, and developer blog posts. ChatGPT writes compelling game descriptions and pitch emails. Canva AI creates store art and promotional banners.',
+        tip: 'Generate a press kit in one session: ChatGPT writes game description, dev bio, and pitch email. Canva creates banner, screenshots layout, and logo variations.',
+      },
+    ],
+    pro_tips: [
+      'Create a \'Game Bible\' in Notion with AI-generated sections: lore, characters, mechanics, dialogue trees, and quests',
+      'Use style references in Midjourney to maintain consistent art direction from first concept to final asset',
+      'For indie devs: AI handles 80% of scripting, prototyping, and asset creation — focus your time on gameplay tuning',
+      'Generate demo content for Steam Next Fest: trailer script, screenshots, dev blog posts — all AI-assisted in one weekend',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'AI-generated art with inconsistent style across the game',
+        fix: 'Use consistent style references and seed values. Create a style guide document and reference it in every generation prompt.',
+      },
+      {
+        mistake: 'Over-relying on AI for game code without understanding the logic',
+        fix: 'Use AI as a coding assistant, not a replacement. Review every AI-generated script for edge cases, performance issues, and architectural fit.',
+      },
+    ],
+    pipeline_stage: 'build',
+    revenue_impact: 'Reduce indie game development cost by 60-80%, from $100K+ to under $20K with AI-assisted development',
+    real_results: [
+      { metric: 'Dev Time', value: '70% faster', description: 'Prototype to playable demo in 2 weeks vs 2 months traditional' },
+      { metric: 'Asset Creation Cost', value: '85% savings', description: 'AI-generated art and audio instead of hiring artists and sound designers' },
+      { metric: 'Iteration Speed', value: '10x faster', description: 'Rapid prototyping with AI: 10 game mechanic variations tested in a day' },
+    ],
+  },
+
+  // --- 8: AI for Startups & Venture ---
+  {
+    slug: 'ai-for-startups-and-venture',
+    title: 'AI for Startups & Venture',
+    subtitle: 'Pitch decks, market sizing & investor comms with AI',
+    description:
+      'Accelerate your startup journey with AI: pitch deck creation, market sizing, competitive analysis, financial modeling, investor updates, SAFe documentation, and fundraising strategy. Built for founders, VCs, and angel investors who want data-backed decisions and faster fundraising cycles.',
+    related_tool_slugs: ['chatgpt', 'perplexity', 'claude', 'gemini', 'exa', 'canva-ai', 'notion-ai', 'semrush'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 11,
+    icon: '🚀',
+    gradient: 'from-cyan-500/30 to-blue-500/30',
+    steps: [
+      {
+        title: 'Build your pitch deck with Canva AI + ChatGPT',
+        description:
+          'First, use ChatGPT to structure your pitch: problem, solution, market size, business model, traction, team, and ask. Then use Canva AI to design the deck with professional templates, AI-generated slide content, and data visualizations.',
+        tip: 'Prompt for ChatGPT: "I am building a pitch deck for [product]. Generate: investor-ready slide titles, key data points for each slide, compelling narratives, and 3 one-liner value propositions. Target: Series A VCs."',
+      },
+      {
+        title: 'Size your market with Perplexity + Exa',
+        description:
+          'Use Perplexity to find TAM/SAM/SOM data, industry reports, growth forecasts, and analyst projections. Exa deep-dives into competitor funding, partnerships, and product launches. Cross-reference multiple sources for accuracy.',
+        tip: 'Prompt for Perplexity Pro: "Give me TAM/SAM/SOM for the AI-powered customer support market in APAC. Include: market size, CAGR, key players, funding rounds, and growth drivers. Cite all sources."',
+      },
+      {
+        title: 'Analyze competitors with Exa + Gemini',
+        description:
+          'Exa searches the entire web for competitor intelligence: funding, product launches, hiring trends, customer sentiment, and partnership announcements. Feed into Gemini for a structured competitive landscape with positioning maps.',
+        tip: 'Set up weekly Exa searches for your top 10 competitors. Upload results to Gemini for a living competitive analysis document.',
+      },
+      {
+        title: 'Create financial projections with ChatGPT',
+        description:
+          'Describe your business model, pricing, growth assumptions, and costs. ChatGPT builds: 3-year financial projections, unit economics, burn rate analysis, fundraising requirements, and scenario planning.',
+        tip: 'Prompt: "Build a 3-year financial model for a B2B SaaS with 3 pricing tiers, 5% monthly growth, 20% churn, $50K seed. Include: P&L, cash flow, customer acquisition cost, LTV, and fundraising timeline. Output as table."',
+      },
+      {
+        title: 'Draft investor communications with Claude',
+        description:
+          'Generate: investor updates, board decks, executive summaries, one-pagers, and due diligence responses. Claude maintains consistent messaging and tone across all investor-facing materials.',
+        tip: 'Create a \'Investor Updates\' template in Claude Projects with your KPIs, milestones, and tone guide. Generate monthly updates in 10 minutes.',
+      },
+      {
+        title: 'Research investors with Perplexity + Notion AI',
+        description:
+          'Research target investors: portfolio fit, check size, stage preference, sector focus, and recent deals. Track in Notion with AI-generated investor profiles and outreach sequences.',
+        tip: 'Build a target investor list in Notion. Use Perplexity to research each firm. Notion AI generates: personalized outreach drafts and follow-up templates.',
+      },
+    ],
+    pro_tips: [
+      'Never send AI-generated investor materials without human editing — investors can tell and it damages credibility',
+      'Use AI for research and first drafts, spend saved time on relationship building — VCs invest in people, not documents',
+      'Build a \'Fundraising Hub\' in Notion: pitch deck, financial model, investor tracker, due diligence documents, and update templates',
+      'Create a data room: use ChatGPT to generate all standard documents (one-pager, executive summary, product deck, financial model) from one business description',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Using generic AI-generated market sizing without validation',
+        fix: 'Every market size figure must trace back to a credible source. Use Perplexity for cited data and verify against industry reports.',
+      },
+      {
+        mistake: 'AI-generated pitch decks that lack the founder\'s authentic voice',
+        fix: 'Use AI for structure and data, but rewrite the narrative in your own words. Investors invest in your story and vision.',
+      },
+    ],
+    pipeline_stage: 'research',
+    revenue_impact: 'Reduce fundraising prep from 3 months to 3 weeks, saving $5K-15K in consultants and design services',
+    real_results: [
+      { metric: 'Fundraising Prep Time', value: '80% faster', description: 'From 12 weeks to 3 weeks for full fundraising materials' },
+      { metric: 'Pitch Deck Quality', value: '+40%', description: 'AI-optimized decks have higher clarity scores on peer review' },
+      { metric: 'Investor Meetings', value: '3x more', description: 'Faster prep means more time for meetings and relationship building' },
+    ],
+  },
 ];
 
 export function getPlaybookBySlug(slug: string): Playbook | undefined {

@@ -5,6 +5,7 @@ import { getAllItineraries } from '@/data/itineraries';
 import SiteFooter from '@/components/SiteFooter';
 import ItineraryCard from '@/components/itineraries/ItineraryCard';
 import RouteFilterBar from '@/components/itineraries/RouteFilterBar';
+import RouteFinderQuiz from '@/components/RouteFinderQuiz';
 
 export const metadata: Metadata = {
   title: 'Family EV Road Trip Itineraries — EV Charging Asia',
@@ -81,6 +82,15 @@ export default function RoutesPage() {
 
         {/* Route filter bar */}
         <RouteFilterBar allItineraries={allItineraries} />
+
+        {/* Find Your Route — Interactive Quiz */}
+        <div className="mt-12">
+          <div className="text-center mb-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-2">🎯 Find Your Perfect Route</h2>
+            <p className="text-sm text-gray-500">Answer 6 quick questions and we'll recommend the ideal EV road trip for you.</p>
+          </div>
+          <RouteFinderQuiz />
+        </div>
 
         {/* Tools section */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">

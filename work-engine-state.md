@@ -1,38 +1,33 @@
-### Sub-agent: apifeny-ai Phase 6
+# Work Engine State
 
-**Status:** ✅ Complete — all 3 tasks done, build passes (161 pages, 0 errors).
+## Cursor: P1 — Content generation in progress (3 sub-agents running)
+**Last updated:** 2026-05-16 03:44 HKT
 
-#### Task A — Landing Page Redesign (`app/page.tsx`)
-- **Rewrote hero**: Problem-first headline "You have a goal. We have the playbook." with substance-driven subtext explaining the problem/solution
-- **Added "Browse by Use Case" section**: 5 new cards linking to the new playbooks (Education, Customer Support, Design, Finance, Marketing) with "NEW" badges
-- **Updated stats**: From "14+" to "17" playbooks
-- **Kept existing**: All existing components (FeaturedPlaybooks, TrendingTools, PipelineVisual, etc.), use-case grid for 4 original playbooks
+## Background PIDs / Sessions
+| Session | Project | Task | Started | Status |
+|---------|---------|------|---------|--------|
+| deploy-luxury | luxury-family-travel | Vercel deploy --prod | 02:44 | ✅ DONE |
+| deploy-ev | ev-charging-asia | Vercel deploy --prod | 02:44 | ✅ DONE |
+| deploy-apifeny | apifeny-ai | Vercel deploy --prod | 02:44 | ✅ DONE (retry) |
+| subagent:family-content | family-travel-directory | Generate 5 blog posts | 03:44 | 🔄 RUNNING |
+| subagent:ev-content | ev-charging-asia | Generate 3 blog posts | 03:44 | 🔄 RUNNING |
+| subagent:luxury-content | luxury-family-travel | Generate 3 blog posts + regenerate | 03:44 | 🔄 RUNNING |
 
-#### Task B — 5 New Playbooks (`lib/playbooks.ts`)
-- Removed 3 broken/incomplete playbook entries from end of file
-- Added 5 fully structured playbooks following the existing `Playbook` TypeScript interface:
-  1. `ai-for-education-and-tutoring` — AI tutoring, lesson plans, quizzes (6 steps, uses ChatGPT/Gemini/Khanmigo/Duolingo Max/Notion AI/Perplexity)
-  2. `ai-for-customer-support` — AI chatbots, RAG pipelines, smart escalation (6 steps, uses Intercom AI/Zendesk/ChatGPT/LangChain/DeepL)
-  3. `ai-for-design-and-creative` — Logo design, marketing visuals, video (6 steps, uses Canva AI/Midjourney/Leonardo AI/Runway/Gamma)
-  4. `ai-for-finance-and-analysis` — Financial modeling, market research, reporting (6 steps, uses Gemini/ChatGPT/Perplexity/Exa/Claude)
-  5. `ai-for-marketing-automation` — SEO, content creation, email campaigns, analytics (6 steps, uses ChatGPT/Perplexity/Semrush/Ahrefs/Surfer SEO/Copy.ai/Canva AI/Jasper/Exa)
-- Each playbook has: all required fields (steps, pro_tips, common_mistakes, pipeline_stage, revenue_impact, real_results)
+## Completed Tasks
 
-#### Task C — Tool Detail Pages (`app/tools/[slug]/page.tsx`)
-- **Already implemented**: The page already fetches real tool data from `lib/data.ts` and real playbook data from `lib/playbooks.ts`
-- **"Related Playbooks" section**: Already exists and correctly filters playbooks by `related_tool_slugs` matching the tool slug
-- **"Ranking Position" section**: Already displays editorial ranking categories
+### P0 DEPLOY — All 3 sites deployed to Vercel ✅
+- **apifeny-ai** → https://apifeny-ai.vercel.app (151+ pages, 90 tools, 17 playbooks)
+- **ev-charging-asia** → https://ev-charging-asia-jju0nknwa-apifenylabs-2612s-projects.vercel.app (118 pages, 79 blog posts, 1,125 stations)
+- **luxury-family-travel** → https://luxury-family-travel-asia-2unqtuabz-apifenylabs-2612s-projects.vercel.app (1,146 pages, 527 destinations, 554+ properties)
 
-#### Build Results
-- `npm run build` — **passed** (161 static pages generated, 0 errors)
-- TypeScript compilation — clean
-- All 5 new playbook pages pre-rendered as SSG routes
+### All Cross-Site Footer Links ✅ (verified)
+- All 3 sites have comprehensive sister site networks in footers
 
-#### Files Modified
-1. `lib/playbooks.ts` — Replaced last ~11 broken lines with 5 new playbooks (now 1192 lines, 17 total playbooks)
-2. `app/page.tsx` — Updated hero, added "Browse by Use Case" section, updated stats (now ~370 lines)
+### Build Verification ✅ (all 3 pass cleanly)
 
-#### What's NOT Changed
-- `layout.tsx`, `globals.css`, `node_modules`, `package.json` — untouched as required
-- All existing components, pages, and blog posts — unchanged
-- No deployment done
+## Priority Queue
+| Priority | Project | Task | Status |
+|:--------:|---------|------|--------|
+| P1 | family-travel-asia | Generate blog content (5+ posts) | QUEUED |
+| P1 | social-beast | Content generation | QUEUED |
+| P2 | nudge | Subscription polish (waiting on schema) | BLOCKED |

@@ -14,21 +14,21 @@ const BASE_URL = 'https://apifeny.ai';
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: { default: "Apifeny AI — Discover the Best AI Tools & Agents", template: "%s | Apifeny AI" },
-  description: "Curated AI tools, agents, and playbooks with Asia-ready filters. Find the perfect AI tool for every use case, built for Asia.",
-  keywords: ["AI tools directory", "best AI agents", "AI tools for solopreneurs", "Asia-ready AI", "AI playbooks", "AI tools for business"],
+  description: "25+ AI playbooks and 90+ curated AI tools with Asia-ready filters. Step-by-step guides for content creation, app building, marketing, finance, healthcare, real estate, ecommerce, HR, legal, gaming, and more. Built for Asia.",
+  keywords: ["AI tools directory", "best AI agents", "AI tools for solopreneurs", "Asia-ready AI", "AI playbooks", "AI tools for business", "AI playbook guides", "AI use cases"],
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Apifeny AI",
     title: "Apifeny AI — Discover the Best AI Tools & Agents",
-    description: "Curated AI tools with Asia-ready filters and editorial rankings. Find, compare, and discover the best AI for your needs.",
+    description: "25+ AI playbooks and 90+ curated AI tools with Asia-ready filters. Step-by-step guides for every use case.",
     url: BASE_URL,
     images: [{ url: "/og", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Apifeny AI",
-    description: "Curated AI tools with Asia-ready filters. Find, compare, and discover the best AI for your workflow.",
+    description: "25+ AI playbooks and 90+ curated tools. Real workflows for real results.",
   },
   robots: { index: true, follow: true },
 };

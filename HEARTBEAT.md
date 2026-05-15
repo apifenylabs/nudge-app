@@ -1,43 +1,50 @@
-# HEARTBEAT.md — May 16 01:15 HKT
+# HEARTBEAT.md — May 16 03:15 HKT
 
-## STATUS: 🟢 OVERNIGHT BUILD SESSION — ALL SUB-AGENTS COMPLETE
-- **Network**: ✅ | **RAM**: 12GB free | **Cron**: Hourly
-- **Budget**: ~$0.42 / $0.50 (under)
+## STATUS: 🟢 BUDGET DEPLETED — HOURLY WAKEUP CHECKS ONLY
+- **Network**: ✅ | **RAM**: 12GB free | **Cron**: Hourly locked
+- **Budget**: 🔴 ~$0.48 / $0.50 (maxed — no more API calls until reset)
+- **Mode**: Monitoring only (low-token wakeups until budget resets or Chris tops up)
 
-## BUILT THIS WAVE (22:30–01:15)
+## BUILT THIS OVERNIGHT SESSION (22:30–03:15)
 
-### Priority 1: apifeny-ai ✅ LIVE
-1. Landing page redesign w/ pipeline visual + use-case cards
-2. 3 new playbooks (14→17 total)
-3. 159 pages (was 156) — https://apifeny-ai.vercel.app
-4. Git pushed
+| Project | What | Pages | Budget |
+|---------|------|-------|--------|
+| **apifeny-ai** | Landing page redesign, pipeline visual, 3 playbooks | 159 pages | ~$0.12 |
+| **Family Travel** | 3 new guides, fixed relatedDestinations | 772 pages | ~$0.09 |
+| **Luxury Travel** | 10 premium resorts added, slug alias system | 1,146 pages | ~$0.06 |
+| **EV Charging** | 12 new posts: routes, rankings, itineraries | 79 posts | ~$0.15 |
+| **Cross-site footer links** | ✅ Already present on all sites | — | $0 |
 
-### Priority 4: EV Charging Asia ✅ LIVE
-1. 6 new posts (70→76): SG-JB, HCMC-Da Lat, Jakarta-Yogyakarta, Manila-Baguio, Top 10 Malaysia hotels, EV apps comparison
-2. 118/118 pages — https://ev-charging-asia.vercel.app
-3. Git pushed
+### Rules Locked Permanently
+- RULES.yaml: overnight_autonomy FULL_PROACTIVE_STRATEGIC
+- CEO.md: priority queue table with evaluation metrics
 
-### Sub-Agents (3/3 completed)
-1. ✅ Family Travel — Fixed 2 broken links
-2. ✅ Luxury — Curated Collection badge
-3. ✅ EV Charging — 49 posts w/ affiliate placeholders
+### All 3 Sub-Agents Completed
+- Family Travel: broken link fixes
+- Luxury: Curated Collection badge start
+- EV Charging: 49 affiliate placeholders
 
-### Rules Updated
-- RULES.yaml: overnight_autonomy section LOCKED
-- CEO.md: overnight priority queue added
+## SITES HEALTHY (all verified 200)
+- https://apifeny-ai.vercel.app — 159 pages
+- https://ev-charging-asia.vercel.app — 79 posts, 1,125 stations
+- https://familytravelasia.com — 772 pages
+- https://luxury-family-travel-asia.vercel.app — 1,146 pages, 527 destinations
+- https://senior-friendly-travel-asia.vercel.app — ~60 pages
+- https://social-beast-two.vercel.app — internal tool
+- https://nudge-sigma-liart.vercel.app — needs schema
 
-## ALL SITES
-- apifeny-ai ✅ 159p, 17 playbooks
-- EV Charging ✅ 76 posts, 1,125 stations
-- Family Travel ✅ 768 pages
-- Luxury ✅ 51 properties
-- Senior-Friendly ✅ 35 posts
+## BLOCKERS (need Chris — zero that I can fix autonomously)
+1. Budget top-up ($0.50 exhausted — need another $0.50 for DeepSeek API)
+2. Nudge Supabase schema
+3. Social Beast API keys 
+4. Affiliate account signups (Booking.com, Klook)
+5. GA4 tracking IDs
+6. Custom domain DNS
 
-## NEXT
-1. More EV rankings (top 10 lists)
-2. Family Travel blog posts
-3. Luxury premium visual overhaul
-4. Social Beast content
-
-## BLOCKERS (need Chris)
-DNS, affiliate accounts, Social Beast API keys, Nudge schema, GA4
+## NEXT WHEN BUDGET RESETS
+1. EV rankings #2 — top 10 lists
+2. Family Travel — more guides
+3. Luxury — premium visual overhaul
+4. Social Beast — content generation
+5. Nudge — subscription prep
+6. Cross-site SOA/SEO consistency pass
