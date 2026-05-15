@@ -78,11 +78,52 @@ export default function HomePage() {
     },
   ];
 
-  const stats = [
-    { icon: BookOpen, value: '14+', label: 'AI Playbooks', desc: 'Step-by-step guides that work' },
-    { icon: Layers, value: '90+', label: 'AI Tools', desc: 'Curated, reviewed & ranked' },
-    { icon: TrendingUp, value: '5', label: 'Pipeline Stages', desc: 'Idea → Research → Build → Market → Scale' },
-    { icon: Trophy, value: 'Asia', label: 'Ranked', desc: 'Editorial scores for Asia' },
+  const browseByUseCase = [
+    {
+      icon: '📚',
+      title: 'For Educators & Students',
+      subtitle: 'AI tutoring, lesson planning, and personalized learning',
+      playbookSlug: 'ai-for-education-and-tutoring',
+      tag: 'NEW',
+      bgGrad: 'from-blue-500/20 via-indigo-500/10 to-transparent',
+      borderGlow: 'hover:border-blue-500/50',
+    },
+    {
+      icon: '💬',
+      title: 'For Customer Support Teams',
+      subtitle: 'Automate 80% of tickets with AI chatbots and RAG',
+      playbookSlug: 'ai-for-customer-support',
+      tag: 'NEW',
+      bgGrad: 'from-emerald-500/20 via-teal-500/10 to-transparent',
+      borderGlow: 'hover:border-emerald-500/50',
+    },
+    {
+      icon: '🎨',
+      title: 'For Designers & Creatives',
+      subtitle: 'Design everything with AI — from logos to video',
+      playbookSlug: 'ai-for-design-and-creative',
+      tag: 'NEW',
+      bgGrad: 'from-rose-500/20 via-violet-500/10 to-transparent',
+      borderGlow: 'hover:border-rose-500/50',
+    },
+    {
+      icon: '📊',
+      title: 'For Analysts & CFOs',
+      subtitle: 'Financial modeling, research, and reporting with AI',
+      playbookSlug: 'ai-for-finance-and-analysis',
+      tag: 'NEW',
+      bgGrad: 'from-amber-500/20 via-yellow-500/10 to-transparent',
+      borderGlow: 'hover:border-amber-500/50',
+    },
+    {
+      icon: '📈',
+      title: 'For Marketers',
+      subtitle: 'Full-stack marketing automation from strategy to analytics',
+      playbookSlug: 'ai-for-marketing-automation',
+      tag: 'NEW',
+      bgGrad: 'from-fuchsia-500/20 via-rose-500/10 to-transparent',
+      borderGlow: 'hover:border-fuchsia-500/50',
+    },
   ];
 
   const pipelineItems = [
@@ -91,6 +132,13 @@ export default function HomePage() {
     { stage: '⚡ Build', color: 'from-fuchsia-500 to-pink-600', desc: 'Ship fast with AI-assisted coding.' },
     { stage: '🚀 Market', color: 'from-amber-500 to-orange-600', desc: 'Launch and grow your audience.' },
     { stage: '📈 Scale', color: 'from-emerald-500 to-teal-600', desc: 'Automate and optimize at scale.' },
+  ];
+
+  const stats = [
+    { icon: BookOpen, value: '17', label: 'AI Playbooks', desc: 'Step-by-step guides that work' },
+    { icon: Layers, value: '90+', label: 'AI Tools', desc: 'Curated, reviewed & ranked' },
+    { icon: TrendingUp, value: '5', label: 'Pipeline Stages', desc: 'Idea → Research → Build → Market → Scale' },
+    { icon: Trophy, value: 'Asia', label: 'Ranked', desc: 'Editorial scores for Asia' },
   ];
 
   return (
@@ -112,18 +160,20 @@ export default function HomePage() {
             AI Tools + Playbooks That Actually Work
           </div>
 
-          {/* Headline — sharper, benefit-driven */}
+          {/* Headline — substance-first: problem → playbook → tools */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-3 sm:mb-4 animate-slide-up">
-            Stop browsing AI tools.{' '}
+            You have a goal.{' '}
             <span className="bg-gradient-to-r from-neon-light via-aqua to-asia bg-clip-text text-transparent">
-              Start shipping.
+              We have the playbook.
             </span>
           </h1>
 
-          {/* Subtext */}
+          {/* Subtext — problem statement first */}
           <p className="text-base sm:text-lg text-tech-100/70 max-w-2xl mx-auto mb-6 sm:mb-8 animate-slide-up">
-            Curated AI tools matched with step-by-step playbooks. Pick what you want to build, 
-            find the right tools, and follow a proven workflow — not another list of 10,000 apps.
+            The problem isn&apos;t finding AI tools — it&apos;s knowing how to use them together. 
+            Every playbook on this site solves a real problem: write content that ranks, ship an 
+            MVP tonight, market to Asia, or automate your support. Pick your goal, get the tools, 
+            follow the workflow.
           </p>
 
           {/* Search bar */}
@@ -217,6 +267,52 @@ export default function HomePage() {
                   {/* CTA */}
                   <div className="flex items-center gap-1 text-xs text-neon-light group-hover:gap-2 transition-all">
                     <span>{uc.playbookLabel}</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════ */}
+      {/* BROWSE BY USE CASE — New playbooks  */}
+      {/* ════════════════════════════════════ */}
+      <section className="py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+              Browse by use case
+            </h2>
+            <p className="text-tech-200 text-sm sm:text-base max-w-xl mx-auto">
+              Not sure where to start? Pick your role and follow a complete playbook.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {browseByUseCase.map((uc) => (
+              <Link
+                key={uc.title}
+                href={`/playbook/${uc.playbookSlug}`}
+                className={`group relative rounded-xl bg-gradient-to-br ${uc.bgGrad} bg-tech-700 border border-tech-500/30 p-5 ${uc.borderGlow} transition-all hover:-translate-y-1 overflow-hidden`}
+              >
+                <div className="absolute inset-0 bg-tech-grid opacity-10" />
+                <div className="relative">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl">{uc.icon}</span>
+                    {uc.tag && (
+                      <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider bg-neon/20 text-neon-light border border-neon/30">
+                        {uc.tag}
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-base font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
+                    {uc.title}
+                  </h3>
+                  <p className="text-xs text-tech-200 mb-3">{uc.subtitle}</p>
+                  <div className="flex items-center gap-1 text-xs text-neon-light group-hover:gap-2 transition-all">
+                    <span>View playbook</span>
                     <ArrowRight className="w-3 h-3" />
                   </div>
                 </div>
