@@ -34,8 +34,54 @@ export interface Destination {
 // Cast and export — single source of truth for all pages/APIs
 export const allDestinations: Destination[] = destinationsData as Destination[];
 
+/**
+ * Slug alias map — maps legacy IDs used in editorial pages (top10, compare)
+ * to actual destination slugs. Prevents 404s from hardcoded references.
+ */
+export const slugAliases: Record<string, string> = {};
+
+// Build alias map lazily
+function buildAliases(): Record<string, string> {
+  const aliases: Record<string, string> = {};
+  
+  // First pass: set all direct id->slug mappings
+  for (const d of allDestinations) {
+    if (d.id && d.slug) {
+      // Don't overwrite if alias already set — first id wins
+      if (!aliases[d.id]) {
+        aliases[d.id] = d.slug;
+      }
+    }
+  }
+  
+  // Second pass: set city-001 aliases, preferring premium entries
+  for (const d of allDestinations) {
+    if (!d.slug) continue;
+    const city = (d.city || '').toLowerCase().replace(/\s+/g, '-');
+    const cityKey = `${city}-001`;
+    
+    // Prefer known luxury brand over generic "aquarium" or "park" entries
+    const isPremium = /(aman|four seasons|mandarin|soneva|velaa|trisara|ritz|peninsula|st. regis|six senses)/i.test(d.name);
+    if (!aliases[cityKey] || isPremium) {
+      aliases[cityKey] = d.slug;
+    }
+  }
+  
+  return aliases;
+}
+
+// Cache the alias map
+const aliasMap: Record<string, string> = buildAliases();
+
+export function resolveSlug(input: string): string {
+  // Check alias map first
+  if (aliasMap[input]) return aliasMap[input];
+  return input;
+}
+
 export function getDestinationBySlug(slug: string): Destination | undefined {
-  return allDestinations.find((d) => d.slug === slug) || allDestinations.find((d) => d.id === slug);
+  const resolved = resolveSlug(slug);
+  return allDestinations.find((d) => d.slug === resolved) || allDestinations.find((d) => d.id === slug);
 }
 
 export function getDestinationById(id: string): Destination | undefined {

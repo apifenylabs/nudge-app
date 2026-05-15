@@ -13768,61 +13768,51 @@
   },
   {
     "id": "kyoto-001",
-    "name": "Kyoto Aquarium",
+    "slug": "aman-kyoto",
+    "name": "Aman Kyoto",
     "city": "Kyoto",
     "country": "Japan",
-    "category": "Zoos & Aquariums",
-    "ageRange": "2-14",
-    "safetyRating": 4.6,
-    "priceRange": "$$",
-    "popularity": 70,
-    "description": "A modern downtown aquarium focused on Kyoto's connection to water \u2014 from mountain streams to the sea. The highlight is the massive dolphin stadium where kids can watch dolphins leap just meters away, plus touch pools with rays and friendly sharks.",
-    "location": "Umekoji Park, Shimogyo-ku, Kyoto",
-    "bestTime": "Weekday mornings for dolphin show at 10:30am",
-    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+    "category": "Luxury Resort",
+    "ageRange": "0-16",
+    "safetyRating": 4.9,
+    "priceRange": "$$$$",
+    "popularity": 96,
+    "bestTime": "Mar-May, Oct-Nov",
     "amenities": [
-      "Stroller Rental",
-      "Baby Care",
-      "Nursing Room",
-      "Restaurants",
-      "Lockers",
-      "Wheelchair Access"
+      "Garden",
+      "Spa",
+      "Tea House",
+      "Private Tours"
     ],
+    "description": "A 32-acre moss garden sanctuary with 26 pavilions, walking distance to Kinkaku-ji Temple.",
+    "location": "Kyoto hills",
+    "imageUrl": "/images/placeholder.png",
     "safetyFeatures": [
-      "Glass Barriers",
-      "Staff on Site",
-      "Emergency Exits",
-      "Non-Slip Floors",
-      "Life Jackets"
+      "Gated",
+      "Security",
+      "Child-safe paths"
     ],
     "tipsAndTricks": [
-      "The dolphin show schedule is posted online \u2014 book the first show to beat crowds and get front-row splash zone seats.",
-      "The 'Kyoto River' exhibit traces a river from mountain to ocean \u2014 kids can press buttons to trigger fish migrations and waterfalls.",
-      "Combine with the adjacent Umekoji Steam Train Museum for a train-and-fish double feature that kids love."
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80",
-      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
-      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80"
+      "Morning garden walks are the most peaceful hours",
+      "Book a private tea ceremony for the family"
     ],
     "parentStory": {
-      "title": "A fantastic downtown escape from temple fatigue",
-      "excerpt": "After 3 temples in a row, the dolphin show was the reset button we desperately needed. My daughter was spellbound.",
-      "author": "James, dad of 2 from Melbourne",
-      "fullStory": "Day three in Kyoto and the kids were done with shrines. The aquarium saved our trip. The dolphin stadium is compact enough that every seat is a good seat, and the trainers clearly love the animals. The touch pool area has staff explaining each creature in Japanese and English. We spent 2.5 hours here and it was the happiest the kids had been all trip. Right next to Kyoto Station too \u2014 super convenient."
+      "title": "Temple and Garden",
+      "excerpt": "Where tranquility meets Japanese tradition.",
+      "author": "Editorial Team",
+      "fullStory": "Walking through the moss garden with our children was like stepping into a different century."
     },
     "itineraryComparison": {
-      "halfDay": "Aquarium + dolphin show + Umekoji Steam Train Museum",
-      "fullDay": "Add Kyoto Railway Museum and afternoon at Umekoji Park playground",
-      "bestFor": "Ages 2-14, temple-fatigue antidote, marine life fans"
+      "halfDay": "Garden and temple stroll",
+      "fullDay": "Cultural Kyoto tour",
+      "bestFor": "Culture and tranquility"
     },
-    "commissionRate": "5%",
+    "commissionRate": "6%",
     "seoKeywords": [
-      "Kyoto Aquarium",
-      "Kyoto with kids",
-      "dolphin show Kyoto"
-    ],
-    "slug": "kyoto-001"
+      "Aman Kyoto family",
+      "Kyoto luxury resort",
+      "luxury Japan with kids"
+    ]
   },
   {
     "id": "kyoto-002",
@@ -25321,66 +25311,51 @@
   },
   {
     "id": "maldives-002",
-    "name": "Maldives National Museum",
-    "city": "Male",
+    "slug": "velaa-private-island",
+    "name": "Velaa Private Island",
+    "city": "Maldives",
     "country": "Maldives",
-    "category": "Museums",
-    "ageRange": "5-16",
-    "safetyRating": 4.5,
-    "priceRange": "$",
-    "popularity": 60,
-    "description": "A fascinating museum housed in the Sultan Park grounds within the Maldives' only UNESCO World Heritage site area. Showcasing Maldivian history through three galleries of artifacts including ancient coral stone carvings, lacquerwork, sultanate-era weaponry, and pre-Islamic Buddhist artefacts from the country's early kingdoms.",
-    "location": "Chandhanee Magu, Male, Maldives",
-    "bestTime": "9:30 AM - 12 PM, Sunday-Thursday",
-    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "category": "Luxury Resort",
+    "ageRange": "0-16",
+    "safetyRating": 4.9,
+    "priceRange": "$$$$$",
+    "popularity": 96,
+    "bestTime": "Nov-Apr",
     "amenities": [
-      "Air Conditioning",
-      "Restrooms",
-      "Gift Shop",
-      "Bookstore",
-      "Sultan Park Access",
-      "Water Fountains"
+      "Kids Club",
+      "Private Yacht",
+      "Submarine",
+      "Wine Cellar"
     ],
+    "description": "Maldives at its most exclusive \u2014 just 47 villas, private submarine, and dedicated yacht.",
+    "location": "Noonu Atoll",
+    "imageUrl": "/images/placeholder.png",
     "safetyFeatures": [
-      "Security Staff",
-      "Exhibit Barriers",
-      "Smooth Floors",
-      "Well-Lit Galleries",
-      "Emergency Exits"
+      "Private island",
+      "24hr security",
+      "Medical suite"
     ],
     "tipsAndTricks": [
-      "The museum is small (3 galleries, 90 minutes max) so don't plan a full day. Combine with other Male attractions like the nearby Grand Friday Mosque.",
-      "The top floor has an exhibit on traditional Maldivian boats (dhoni) that kids find surprisingly fascinating - there is a model they can touch.",
-      "Photography is allowed but no flash. The coral stone carvings in the first gallery are incredibly delicate and light-sensitive.",
-      "The museum is closed on Fridays and public holidays. Check before you go - many tourists have made this mistake.",
-      "Sultan Park attached to the museum is a nice shaded playground break for kids who need to run around after the indoor galleries.",
-      "Air conditioning is strong. Bring a light jacket even in Male's heat - the contrast going from 35C outside to 18C inside is jarring.",
-      "The highlight for most kids is the throne of Sultan Mohamed Shamsuddeen III - it is glittering gold and they can get within arm's reach of it."
+      "Book the private submarine experience months in advance",
+      "Asia's finest wine cellar is worth a tasting"
     ],
     "parentStory": {
-      "title": "A break from the beach that everyone needed",
-      "excerpt": "Three days of sun and sand had our kids lobster-red and restless. The museum was a cool, quiet break where they actually learned something.",
-      "author": "Priya, mom of 2 from Mumbai",
-      "fullStory": "We were on a resort island for a week but took the speedboat to Male for a cultural day. The National Museum was a surprise hit. Our 8-year-old loved the sultan's gold throne and asked a hundred questions. Our 10-year-old was fascinated by the Buddhist artefacts - she did not know the Maldives was Buddhist before Islam. Two hours of air-conditioned learning then ice cream at the park."
+      "title": "Exclusive Escape at Velaa",
+      "excerpt": "Absolute privacy with world-class service.",
+      "author": "Editorial Team",
+      "fullStory": "The marine biology program for children was exceptional. Our daughter still talks about the sea turtles."
     },
     "itineraryComparison": {
-      "halfDay": "1.5 hours museum + 30 min Sultan Park + 30 min Grand Friday Mosque + lunch in Male",
-      "fullDay": "Half-day Male walking tour: National Museum + fish market + Sultan Park + local market + afternoon at a nearby cafe",
-      "bestFor": "Culture-curious families, ages 5+, a break from beach time"
+      "halfDay": "Pool and spa",
+      "fullDay": "Yacht excursion",
+      "bestFor": "Ultra-luxury privacy"
     },
-    "commissionRate": "5%",
+    "commissionRate": "6%",
     "seoKeywords": [
-      "Maldives National Museum",
-      "Male with kids",
-      "Maldives family activities",
-      "Maldives museum"
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
-      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
-      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
-    ],
-    "slug": "maldives-002"
+      "Velaa Maldives",
+      "private island Maldives",
+      "ultra luxury family Maldives"
+    ]
   },
   {
     "id": "bangkok-007",
@@ -27050,61 +27025,51 @@
   },
   {
     "id": "palawan-001",
-    "name": "Puerto Princesa Subterranean River",
+    "slug": "amanpulo-palawan",
+    "name": "Amanpulo",
     "city": "Palawan",
     "country": "Philippines",
-    "category": "Parks & Nature",
-    "ageRange": "3-16",
-    "safetyRating": 4.0,
-    "priceRange": "$$",
-    "popularity": 92,
-    "description": "UNESCO World Heritage Site and New 7 Wonders of Nature. Kids paddle through an 8km underground river spotting stalactites, bats, and rock formations.",
-    "location": "Puerto Princesa Subterranean River National Park, Palawan",
-    "bestTime": "November-May dry season, 7am slot",
-    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "category": "Luxury Resort",
+    "ageRange": "0-16",
+    "safetyRating": 4.9,
+    "priceRange": "$$$$",
+    "popularity": 96,
+    "bestTime": "Nov-May",
     "amenities": [
-      "Restrooms",
-      "Picnic Areas",
-      "Souvenir Shops",
-      "Parking",
-      "Info Center"
+      "Private Island",
+      "Spa",
+      "Diving",
+      "Beach Club"
     ],
+    "description": "The ultimate castaway fantasy on Pamalican Island with powdery white sand and reef snorkeling.",
+    "location": "Pamalican Island, Palawan",
+    "imageUrl": "/images/placeholder.png",
     "safetyFeatures": [
-      "Life jackets mandatory",
-      "Hard hats provided",
-      "Trained guides",
-      "Emergency radios"
+      "Private island",
+      "Marine guides",
+      "Medical evacuation"
     ],
     "tipsAndTricks": [
-      "Book 7am or 8am slot to avoid 2-hour queues.",
-      "Light jacket inside cave \u2014 it's humid but boat ride creates chill.",
-      "Kids under 3 may find it scary. Show pictures first, sit in middle of boat.",
-      "Monkeys at entrance steal snacks. Keep bags zipped.",
-      "Mangrove paddleboat tour is worth 200 PHP extra."
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1603270038118-fb09f3f4c81c?w=800&q=80",
-      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
-      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+      "Private beach dinners are unforgettable",
+      "Reef snorkeling with the marine biologist is a must"
     ],
     "parentStory": {
-      "title": "My 4-year-old called it the 'dragon cave'",
-      "excerpt": "She saw a stalactite shaped like a dragon's tooth. She whispered so she wouldn't wake it.",
-      "author": "Carla, mom of 1 from Manila",
-      "fullStory": "I worried the underground river would be too scary for my 4-year-old. The guide pointed out shapes in the rocks. She spotted a stalactite and insisted it was a dragon's tooth. She whispered the entire 45-minute ride so she wouldn't wake the dragon."
+      "title": "Our Private Island",
+      "excerpt": "Powder sand, coral reefs, and total privacy.",
+      "author": "Editorial Team",
+      "fullStory": "Amanpulo feels like your own private island. The staff arranged a treasure hunt that kept our children entertained for hours."
     },
     "itineraryComparison": {
-      "halfDay": "7am cave tour, mangrove paddleboat, Sabang lunch, return 1pm",
-      "fullDay": "Add Sabang beach, Ugong Rock Adventures, late lunch",
-      "bestFor": "Ages 3-12, adventure families, nature lovers"
+      "halfDay": "Beach and snorkeling",
+      "fullDay": "Island exploration",
+      "bestFor": "Ultimate privacy"
     },
     "commissionRate": "6%",
     "seoKeywords": [
-      "Puerto Princesa Subterranean River kids",
-      "Palawan with children",
-      "Philippines underground river"
-    ],
-    "slug": "palawan-001"
+      "Amanpulo",
+      "Palawan luxury resort",
+      "private island Philippines"
+    ]
   },
   {
     "id": "palawan-002",
@@ -30725,5 +30690,341 @@
       "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80"
     ],
     "slug": "oslo-001"
+  },
+  {
+    "id": "phuket-001",
+    "slug": "amanpuri-phuket",
+    "name": "Amanpuri",
+    "city": "Phuket",
+    "country": "Thailand",
+    "category": "Luxury Resort",
+    "ageRange": "0-16",
+    "safetyRating": 4.9,
+    "priceRange": "$$$$",
+    "popularity": 98,
+    "bestTime": "Nov-May",
+    "amenities": [
+      "Kids Club",
+      "Butler Service",
+      "Private Beach",
+      "Spa"
+    ],
+    "description": "Aman's first property on a private peninsula in Phuket. The benchmark for barefoot luxury.",
+    "location": "Phuket west coast",
+    "imageUrl": "/images/placeholder.png",
+    "safetyFeatures": [
+      "Gated",
+      "Lifeguards",
+      "Medical nearby"
+    ],
+    "tipsAndTricks": [
+      "Book a hillside pavilion for maximum privacy",
+      "Request the daily sundowner in advance"
+    ],
+    "parentStory": {
+      "title": "Our Amanpuri Family Holiday",
+      "excerpt": "The kind of trip that makes children grateful and parents relaxed.",
+      "author": "Editorial Team",
+      "fullStory": "Amanpuri exceeded every expectation. The staff knew our children by name by day two."
+    },
+    "itineraryComparison": {
+      "halfDay": "Pool and beach",
+      "fullDay": "Spa and water sports",
+      "bestFor": "Complete relaxation"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Amanpuri family",
+      "Phuket luxury resort",
+      "luxury family travel Thailand"
+    ]
+  },
+  {
+    "id": "tokyo-001",
+    "slug": "aman-tokyo",
+    "name": "Aman Tokyo",
+    "city": "Tokyo",
+    "country": "Japan",
+    "category": "Luxury Hotel",
+    "ageRange": "0-16",
+    "safetyRating": 4.9,
+    "priceRange": "$$$$",
+    "popularity": 98,
+    "bestTime": "Mar-May, Oct-Nov",
+    "amenities": [
+      "Indoor Pool",
+      "Spa",
+      "Concierge",
+      "Kids Welcome"
+    ],
+    "description": "Top 6 floors of Otemachi Tower with panoramic views of Imperial Palace gardens.",
+    "location": "Otemachi, Tokyo",
+    "imageUrl": "/images/placeholder.png",
+    "safetyFeatures": [
+      "24hr Security",
+      "In-room safe",
+      "Childproofing available"
+    ],
+    "tipsAndTricks": [
+      "Book a corner suite for dual-aspect city views",
+      "Arrange a private sushi masterclass for the family"
+    ],
+    "parentStory": {
+      "title": "Tokyo's Highest Family Adventure",
+      "excerpt": "Views that stretch from the Imperial Palace to Mount Fuji.",
+      "author": "Editorial Team",
+      "fullStory": "Our children were mesmerized by the 34-meter indoor pool. The concierge arranged a sumo wrestling viewing that became the highlight of our trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Hotel amenities and spa",
+      "fullDay": "City exploration with concierge",
+      "bestFor": "Urban luxury with cultural access"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Aman Tokyo family",
+      "Tokyo luxury hotel",
+      "luxury Tokyo with kids"
+    ]
+  },
+  {
+    "id": "maldives-001",
+    "slug": "soneva-fushi-maldives",
+    "name": "Soneva Fushi",
+    "city": "Maldives",
+    "country": "Maldives",
+    "category": "Luxury Resort",
+    "ageRange": "0-16",
+    "safetyRating": 4.9,
+    "priceRange": "$$$$",
+    "popularity": 97,
+    "bestTime": "Nov-Apr",
+    "amenities": [
+      "Kids Club",
+      "Waterslides",
+      "Observatory",
+      "Spa"
+    ],
+    "description": "The ultimate family fantasy island with waterslides, a chocolate room, and astronomy.",
+    "location": "Baa Atoll",
+    "imageUrl": "/images/placeholder.png",
+    "safetyFeatures": [
+      "Private island",
+      "Lifeguards",
+      "Medical center"
+    ],
+    "tipsAndTricks": [
+      "The chocolate room is open daily \u2014 book a tasting session",
+      "Stargazing at the observatory is magical for all ages"
+    ],
+    "parentStory": {
+      "title": "Island Life at Soneva Fushi",
+      "excerpt": "No shoes, no news \u2014 just pure family joy.",
+      "author": "Editorial Team",
+      "fullStory": "The waterslides from the villas into the ocean were a daily highlight. The children's club taught our kids about marine conservation."
+    },
+    "itineraryComparison": {
+      "halfDay": "Snorkeling and beach",
+      "fullDay": "Island exploration",
+      "bestFor": "Active family adventures"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Soneva Fushi family",
+      "Maldives luxury resort",
+      "luxury Maldives with kids"
+    ]
+  },
+  {
+    "id": "bali-001",
+    "slug": "four-seasons-sayan-bali",
+    "name": "Four Seasons Sayan",
+    "city": "Bali",
+    "country": "Indonesia",
+    "category": "Luxury Resort",
+    "ageRange": "0-16",
+    "safetyRating": 4.9,
+    "priceRange": "$$$$",
+    "popularity": 95,
+    "bestTime": "Apr-Oct",
+    "amenities": [
+      "Kids Club",
+      "Butler Service",
+      "Rice Terrace",
+      "Spa"
+    ],
+    "description": "Bali's most romantic family resort hidden in the Ayung River valley with iconic suspension bridge.",
+    "location": "Ubud, Bali",
+    "imageUrl": "/images/placeholder.png",
+    "safetyFeatures": [
+      "Security",
+      "Lifeguards",
+      "Child club supervision"
+    ],
+    "tipsAndTricks": [
+      "Take the Balinese cooking class as a family",
+      "Request a river-facing suite for the sound of water at night"
+    ],
+    "parentStory": {
+      "title": "Bali's Secret Valley",
+      "excerpt": "Cross the suspension bridge into another world.",
+      "author": "Editorial Team",
+      "fullStory": "The Kids' Club introduced Balinese dance and offering-making. The river-view infinity pool is pure magic."
+    },
+    "itineraryComparison": {
+      "halfDay": "Pool and spa",
+      "fullDay": "Ubud temples and market",
+      "bestFor": "Cultural family immersion"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Four Seasons Sayan",
+      "Bali luxury resort",
+      "Ubud family resort"
+    ]
+  },
+  {
+    "id": "hongkong-002",
+    "slug": "four-seasons-hong-kong",
+    "name": "Four Seasons Hong Kong",
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "category": "Luxury Hotel",
+    "ageRange": "0-16",
+    "safetyRating": 4.8,
+    "priceRange": "$$$$",
+    "popularity": 95,
+    "bestTime": "Oct-Dec",
+    "amenities": [
+      "Pool",
+      "Spa",
+      "Michelin Dining",
+      "Concierge"
+    ],
+    "description": "IFC tower luxury with Victoria Harbour infinity pool and two Michelin-starred restaurants.",
+    "location": "Central, Hong Kong",
+    "imageUrl": "/images/placeholder.png",
+    "safetyFeatures": [
+      "24hr Security",
+      "In-room safe",
+      "Child amenities"
+    ],
+    "tipsAndTricks": [
+      "Book Lung King Heen for Sunday dim sum",
+      "Helicopter tour booking requires 48hr notice"
+    ],
+    "parentStory": {
+      "title": "Harbour Views and Dim Sum",
+      "excerpt": "Hong Kong luxury at its finest.",
+      "author": "Editorial Team",
+      "fullStory": "The infinity pool with Victoria Harbour views is unforgettable. Our children still ask when we can go back."
+    },
+    "itineraryComparison": {
+      "halfDay": "Pool and spa",
+      "fullDay": "Hong Kong island tour",
+      "bestFor": "City luxury with dining"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Four Seasons Hong Kong",
+      "Hong Kong luxury hotel",
+      "luxury Hong Kong with kids"
+    ]
+  },
+  {
+    "id": "phuket-002",
+    "slug": "trisara-phuket",
+    "name": "Trisara",
+    "city": "Phuket",
+    "country": "Thailand",
+    "category": "Luxury Resort",
+    "ageRange": "0-16",
+    "safetyRating": 4.8,
+    "priceRange": "$$$$",
+    "popularity": 94,
+    "bestTime": "Nov-Apr",
+    "amenities": [
+      "Pool",
+      "Spa",
+      "Michelin Dining",
+      "Butler"
+    ],
+    "description": "\"The garden in the third heaven\" \u2014 private-pool villas overlooking a serene bay in northwest Phuket.",
+    "location": "Northwest Phuket",
+    "imageUrl": "/images/placeholder.png",
+    "safetyFeatures": [
+      "Gated",
+      "Security",
+      "Child-safe villa pools"
+    ],
+    "tipsAndTricks": [
+      "Pru Michelin-starred restaurant is unforgettable",
+      "The sundowner cocktail party is the social highlight"
+    ],
+    "parentStory": {
+      "title": "Phuket's Hidden Garden",
+      "excerpt": "Where every villa has its own infinity pool.",
+      "author": "Editorial Team",
+      "fullStory": "The private pool villas are among the most generous in Asia. Our children loved the infinity pool overlooking the bay."
+    },
+    "itineraryComparison": {
+      "halfDay": "Pool and spa",
+      "fullDay": "Phuket old town tour",
+      "bestFor": "Romantic family escape"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Trisara Phuket",
+      "Phuket luxury villa",
+      "luxury Phuket with kids"
+    ]
+  },
+  {
+    "id": "hongkong-001",
+    "slug": "mandarin-oriental-hong-kong",
+    "name": "Mandarin Oriental Hong Kong",
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "category": "Luxury Hotel",
+    "ageRange": "0-16",
+    "safetyRating": 4.8,
+    "priceRange": "$$$$",
+    "popularity": 94,
+    "bestTime": "Oct-Dec",
+    "amenities": [
+      "Spa",
+      "Michelin Dining",
+      "Concierge",
+      "Kids VIP"
+    ],
+    "description": "Harbour icon since 1963 with suites that blend heritage and contemporary design.",
+    "location": "Central, Hong Kong",
+    "imageUrl": "/images/placeholder.png",
+    "safetyFeatures": [
+      "24hr Security",
+      "Childproof suites",
+      "Kids amenities"
+    ],
+    "tipsAndTricks": [
+      "Mandarin Grill is a must for special occasions",
+      "Central location makes exploration effortless"
+    ],
+    "parentStory": {
+      "title": "Harbour Icon",
+      "excerpt": "Heritage meets contemporary luxury in Central.",
+      "author": "Editorial Team",
+      "fullStory": "The recently renovated suites are stunning. Children receive VIP treatment from check-in."
+    },
+    "itineraryComparison": {
+      "halfDay": "Pool and spa",
+      "fullDay": "Central and TST exploration",
+      "bestFor": "Classic Hong Kong luxury"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Mandarin Oriental Hong Kong",
+      "Hong Kong luxury hotel",
+      "classic Hong Kong family"
+    ]
   }
 ]
