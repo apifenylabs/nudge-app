@@ -199,9 +199,19 @@ export default function InteractiveMealPlanning() {
   const topRef = useRef<HTMLDivElement>(null);
 
   const currentQ = QUESTIONS[qIdx];
-  const isQuestionStep = step >= 1 && step <= 7;
+  const isQuestionStep = step >= 1 && step <= 8;
 
-  const progressPct = isQuestionStep ? ((qIdx + 1) / 7) * 100 : step === 8 ? 85 : step === 9 ? 92 : step === 10 ? 100 : 0;
+  const progressPct = isQuestionStep ? ((qIdx + 1) / 8) * 100 : step === 8 ? 85 : step === 9 ? 92 : step === 10 ? 100 : 0;
+
+  const DAY_PHOTOS = [
+    "1490645935967-10de6ba17061",
+    "1546069901-ba9599a7e63c",
+    "1504674900247-0877df9cc836",
+    "1565299624946-b28f40a0ae38",
+    "1567620905732-2d1ec7ab7445",
+    "1482049995570-408f7c3f7f30",
+    "1490645935967-10de6ba17061",
+  ];
 
   useEffect(() => { topRef.current?.scrollIntoView({ behavior: "smooth" }); }, [step, qIdx]);
 
@@ -291,7 +301,7 @@ export default function InteractiveMealPlanning() {
       {/* FOOD PHOTOGRAPHY HEADER */}
       <div className="relative h-32 sm:h-44 overflow-hidden bg-gradient-to-b from-meal/40 to-transparent">
         <div className="absolute inset-0 bg-cover bg-center opacity-35"
-          style={{ backgroundImage: "url(https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&h=400&fit=crop)" }} />
+          style={{ backgroundImage: "url(https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=1200&h=400&fit=crop)" }} />
         <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-meal/20" />
         <div className="absolute inset-0 pointer-events-none select-none">
           <span className="absolute top-4 left-[12%] text-2xl food-float">{'\u{1F957}'}</span>
@@ -523,7 +533,7 @@ export default function InteractiveMealPlanning() {
 
             {/* Day meals card with photo background */}
             <div className="recipe-card mb-6">
-              <div className="h-32 bg-cover bg-center opacity-30" style={{backgroundImage: `url(https://images.unsplash.com/photo-${selectedDay % 2 === 0 ? "1490645935967-10de6ba17061" : "1546069901-ba9599a7e63c"}?w=600&h=200&fit=crop)`}} />
+              <div className="h-32 bg-cover bg-center opacity-30" style={{backgroundImage: `url(https://images.unsplash.com/photo-${DAY_PHOTOS[selectedDay]}?w=600&h=200&fit=crop)`}} />
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-ink">{SAMPLE_WEEK[selectedDay].day}</h3>

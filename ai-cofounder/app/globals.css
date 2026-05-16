@@ -146,23 +146,16 @@
   }
 }
 
-/* Dark mode overrides */
+/* Dark mode overrides — force light theme regardless of browser preference */
 .dark {
   body {
-    @apply bg-surfaceDark text-cream;
+    @apply bg-cream text-ink;
   }
-  .card {
-    @apply bg-surfaceDark border-darkBorder;
-  }
-  .card:hover {
-    @apply border-accent/30;
-  }
-  .input-field {
-    @apply bg-surfaceDark border-darkBorder text-cream placeholder:text-muted/40;
-  }
-  .btn-secondary {
-    @apply bg-surfaceDark border-darkBorder text-cream hover:border-accent/30;
-  }
+}
+
+/* Keep browser from auto-switching to dark scheme */
+:root {
+  color-scheme: light;
 }
 
 /* PWA & mobile responsiveness */
@@ -392,73 +385,4 @@ input[type="range"]::-webkit-slider-thumb {
   transform: translateY(-3px);
 }
 
-/* ===== DARK MODE OVERRIDES FOR LANDING PAGE (Phase 3) ===== */
-/* The landing page (app/page.tsx) was built without dark: classes,
-   so we fix all contrast issues via CSS cascade. */
 
-.dark .bg-cream {
-  background-color: #1a1a2e !important;
-}
-
-.dark .bg-white {
-  background-color: #1e1e32 !important;
-}
-
-.dark .bg-rose-50\/30 {
-  background-color: rgba(255, 228, 230, 0.08) !important;
-}
-
-.dark .bg-amber-50\/30 {
-  background-color: rgba(255, 251, 235, 0.08) !important;
-}
-
-.dark .bg-meal\/5 {
-  background-color: rgba(16, 185, 129, 0.08) !important;
-}
-
-.dark .text-ink {
-  color: #f0e6d3 !important;
-}
-
-.dark .text-ink\/80 {
-  color: rgba(240, 230, 211, 0.8) !important;
-}
-
-.dark .text-muted {
-  color: rgba(240, 230, 211, 0.55) !important;
-}
-
-.dark .border-border,
-.dark .border-border\/30,
-.dark .border-border\/50 {
-  border-color: rgba(240, 230, 211, 0.1) !important;
-}
-
-.dark .kitchen-card,
-.dark .recipe-card,
-.dark .before-after-card {
-  background-color: #242440 !important;
-  border-color: rgba(240, 230, 211, 0.1) !important;
-}
-
-.dark .kitchen-card:hover {
-  border-color: rgba(124, 58, 237, 0.3) !important;
-}
-
-.dark .recipe-card:hover {
-  border-color: rgba(16, 185, 129, 0.3) !important;
-}
-
-.dark .bg-gradient-to-b.from-cream.to-white,
-.dark .bg-gradient-to-b.from-cream,
-.dark .\[background\:linear-gradient\(to_bottom\,_var\(--tw-gradient-stops\)\)\] {
-  --tw-gradient-from: #1a1a2e !important;
-  --tw-gradient-to: #1e1e32 !important;
-}
-
-.dark .text-rose-400,
-.dark .text-rose-500,
-.dark .text-amber-500,
-.dark .text-amber-600 {
-  opacity: 0.7;
-}
