@@ -1,248 +1,135 @@
 #!/usr/bin/env python3
-"""Generate 5 luxury family travel blog posts using Ollama's llama3.2."""
+"""Generate 5 SEO-optimized blog post JSON files using local Ollama llama3.2."""
+import subprocess, json, os, sys, time
 
-import json
-import subprocess
-import re
-import os
-
-BLOG_DIR = "/home/captain/.openclaw/workspace/luxury-family-travel/data/blog"
+BLOG_DIR = os.path.dirname(os.path.abspath(__file__))
 
 POSTS = [
     {
-        "slug": "hong-kong-luxury-family-weekend",
-        "title": "Hong Kong Luxury Family Weekend: Peninsula Stay, Peak Tram, and Michelin Dining",
-        "excerpt": "Plan the ultimate luxury family weekend in Hong Kong with a Peninsula Hotel stay, Peak Tram adventures, and Michelin-starred dining that delights parents and children alike.",
-        "tags": ["Hong Kong", "luxury family weekend", "Michelin dining", "Peninsula Hotel", "Asia luxury travel"],
-        "relatedDestinations": ["hong-kong-new-1", "hong-kong-new-2", "hong-kong-new-3", "hongkong-001", "hongkong-002", "hongkong-009"],
-        "prompt": """Write a detailed luxury family travel blog article about a weekend in Hong Kong for families with children aged 5-16. 
-
-Focus on:
-- Staying at The Peninsula Hong Kong (mention afternoon tea, pool, kids programs)
-- Taking the Peak Tram to Victoria Peak
-- Michelin-starred dining suitable for families (Lung King Heen, Amber, 8 1/2 Otto e Mezzo)
-- Hong Kong Disneyland
-- Ngong Ping 360 cable car to see Big Buddha
-- Star Ferry across Victoria Harbour
-- Klook-bookable experiences (Priority Peak Tram tickets, Disneyland packages)
-- Suggestions for tweens and teens (shopping at Harbour City, Nathan Road)
-
-Tone: Premium, aspirational, Cosme-style curation. 
-Format: Use <h2> for section headings and <p> for paragraphs. Write 2500-4000 characters of HTML content. No markdown in the output, pure HTML.""",
-        "readingTime": "7 min read"
+        "slug": "best-luxury-private-villas-bali-2026",
+        "title": "Top 10 Luxury Private Villas in Bali for Families — 2026 Review",
+        "excerpt": "Discover Bali's most exclusive private villas perfect for luxury family holidays. From cliffside infinity pools to private chefs and dedicated kids' clubs.",
+        "readingTime": "10 min read",
+        "tags": ["luxury-travel", "asia", "family", "bali", "villas", "indonesia", "private-pool"],
+        "prompt": "Write a detailed, SEO-optimized blog post titled 'Top 10 Luxury Private Villas in Bali for Families — 2026 Review' for a luxury family travel website. Include an introduction about why families choose Bali for luxury travel, then list 10 top villas with descriptions of what makes each special for families (kids clubs, pools, nannies, dining, activities), and end with practical tips (best time to visit, booking advice, nanny services, pool safety). Write at least 1500 words of rich, engaging content in British English. Write in a warm, sophisticated tone that appeals to affluent parents. Use markdown headings for each villa and section.",
+        "relatedDestinations": ["bali", "seminyak", "ubud", "canggu", "jimbaran", "nusa-dua", "indonesia"]
     },
     {
-        "slug": "singapore-luxury-family-guide-marina-bay-sands",
-        "title": "Singapore Luxury Family Guide: Marina Bay Sands, Gardens by the Bay, and Sentosa Premium Experiences",
-        "excerpt": "Discover Singapore's finest luxury family experiences from Marina Bay Sands' infinity pool to Gardens by the Bay's Supertree Grove and Sentosa's most exclusive attractions.",
-        "tags": ["Singapore", "Marina Bay Sands", "Gardens by the Bay", "Sentosa", "luxury family travel", "Asia travel"],
-        "relatedDestinations": ["singapore-new-1", "singapore-new-2", "singapore-new-3", "singapore-new-4", "singapore-new-5", "singapore-011"],
-        "prompt": """Write a detailed luxury family travel blog article about Singapore for families with children aged 4-17.
-
-Focus on:
-- Staying at Marina Bay Sands (infinity pool access, family suites, SkyPark views)
-- Gardens by the Bay (Supertree Grove light show, Cloud Forest, Flower Dome)
-- Sentosa premium experiences (S.E.A. Aquarium, Universal Studios Singapore Express Passes)
-- Luxury shopping at Orchard Road with teen-friendly stores
-- Singapore Zoo and Night Safari private guided tours
-- Jewel Changi Airport (Rain Vortex, Canopy Park)
-- Klook-bookable experiences (Universal Studios Express Passes, Night Safari tram rides)
-- Dining recommendations (Odette, Burnt Ends, CUT by Wolfgang Puck — mention kid-friendly options)
-- Tips for families with teens vs. younger children
-
-Tone: Premium, aspirational, Cosme-style curation.
-Format: Use <h2> for section headings and <p> for paragraphs. Write 2500-4000 characters of HTML content. No markdown in the output, pure HTML.""",
-        "readingTime": "8 min read"
+        "slug": "maldives-family-overwater-villas-2026",
+        "title": "Best Overwater Villas in the Maldives for Families with Kids — 2026",
+        "excerpt": "The Maldives isn't just for honeymooners. Discover the best overwater villas that truly welcome children, with kids' clubs, shallow lagoons, and family-friendly dining.",
+        "readingTime": "12 min read",
+        "tags": ["luxury-travel", "asia", "family", "maldives", "overwater-villas", "kids-club", "snorkeling"],
+        "prompt": "Write a detailed, SEO-optimized blog post titled 'Best Overwater Villas in the Maldives for Families with Kids — 2026' for a luxury family travel website. Start by explaining that the Maldives is now incredibly family-friendly, not just for couples. Then list 10 top overwater villa resorts that welcome children, describing each resort's family amenities: kids clubs, shallow lagoons for safe swimming, family-friendly dining, babysitting services, teen programmes, and water sports. Include sections on best time to visit, how to choose the right atoll, seaplane tips with kids, and what to pack. Write at least 1800 words in British English. Warm, sophisticated tone for affluent parents. Use markdown headings.",
+        "relatedDestinations": ["maldives", "north-male-atoll", "south-male-atoll", "baa-atoll", "ari-atoll"]
     },
     {
-        "slug": "top-10-luxury-resorts-bali-families-teens-2026",
-        "title": "Top 10 Luxury Resorts in Bali for Families with Teens 2026",
-        "excerpt": "The definitive guide to Bali's best luxury resorts for families traveling with teenagers in 2026, from private pool villas at Four Seasons to surf camps at COMO Uma Canggu.",
-        "tags": ["Bali", "luxury resorts", "family travel with teens", "Bali 2026", "Asia luxury resorts"],
-        "relatedDestinations": ["bali-new-1", "bali-new-2", "bali-new-3", "bali-new-4", "bali-new-5", "bali-001", "bali-008"],
-        "prompt": """Write a detailed luxury family travel blog article about the Top 10 luxury resorts in Bali specifically for families traveling with teenagers (ages 13-19) in 2026.
-
-Include these 10 resorts with specific details:
-1. Four Seasons Resort Bali at Sayan (Ubud — teen yoga, rice terrace treks, river rafting)
-2. COMO Uma Canggu (surfing, beach club vibe, wellness programs for teens)
-3. Bulgari Resort Bali (cliff-top infinity pool, private beach, teen spa treatments)
-4. The St. Regis Bali Resort (butler service, lagoon pool, afternoon tea, watersports)
-5. Mandapa, a Ritz-Carlton Reserve (Ubud — whitewater rafting, cycling tours, cooking classes)
-6. Alila Villas Uluwatu (architectural wonder, sunset cabanas, surf lessons)
-7. Capella Ubud (glamping meets luxury, jungle treks, stargazing)
-8. Soori Bali (private villas, rice terrace views, teen-friendly bike tours)
-9. Amandari (cultural immersion, silver-making classes, temple visits)
-10. W Bali – Seminyak (vibrant, beach club, teen dance workshops, surf)
-
-For each: mention teen-focused amenities, activities bookable via Klook or booking.com experiences, dining options, and why teens love it.
-
-Tone: Premium, aspirational, Cosme-style curation with practical detail.
-Format: Use <h2> for section headings and <p> for paragraphs. Write 2500-4000 characters of HTML content. No markdown in the output, pure HTML.""",
-        "readingTime": "10 min read"
+        "slug": "private-jet-travel-families-asia",
+        "title": "Private Jet Travel for Families in Asia — Complete Guide 2026",
+        "excerpt": "Everything affluent families need to know about flying private in Asia: costs, charter companies, empty-leg deals, and how to make long-haul travel effortless with children.",
+        "readingTime": "10 min read",
+        "tags": ["luxury-travel", "asia", "family", "private-jet", "VIP", "exclusive", "travel-tips"],
+        "prompt": "Write a detailed, SEO-optimized blog post titled 'Private Jet Travel for Families in Asia — Complete Guide 2026' for a luxury family travel website. Cover: why families choose private jets in Asia, major charter companies (VistaJet, Air Charter Service, etc.), costs and how pricing works, empty-leg opportunities, popular routes (Singapore to Maldives, Hong Kong to Bali, etc.), what to expect on board with children, catering for kids, pet policies, and booking tips. Include a comparison section and practical advice for first-time private jet travellers. Write at least 1500 words in British English. Warm, sophisticated tone. Use markdown headings.",
+        "relatedDestinations": ["singapore", "hong-kong", "bali", "maldives", "bangkok", "tokyo", "asia"]
     },
     {
-        "slug": "seoul-luxury-family-guide-k-culture",
-        "title": "Seoul Luxury Family Guide: 5-Star Hotels, K-Culture Experiences, and Premium Shopping for Families",
-        "excerpt": "Experience Seoul in style with your family — from palatial 5-star hotels and K-pop dance workshops to Gangnam luxury shopping and royal palace tours designed for kids and teens.",
-        "tags": ["Seoul", "South Korea", "K-culture", "luxury family travel", "Seoul shopping", "Asia travel"],
-        "relatedDestinations": ["seoul-new-1", "seoul-new-2", "seoul-new-3", "seoul-new-4", "seoul-new-5", "seoul-011"],
-        "prompt": """Write a detailed luxury family travel blog article about Seoul, South Korea for families with children aged 6-18.
-
-Focus on:
-- 5-star hotel recommendations (Signiel Seoul, Four Seasons Hotel Seoul, The Shilla Seoul — mention family suites, kids clubs, pools)
-- K-culture experiences (K-pop dance workshops, private K-beauty classes for teens, Hanbok rental at Gyeongbokgung Palace)
-- Premium shopping (Gangnam's COEX Mall, luxury department stores Shinsegae and Lotte, K-pop merchandise at SM Town)
-- Kid and teen-friendly activities (Lotte World, Everland, COEX Aquarium)
-- Food (tasting menus at Jungsik and La Yeon, Korean BBQ with kids, street food tours via Klook)
-- Royal palace tours with private child-friendly guides
-- DMZ tour for older teens
-- Bookable experiences via Klook (Everland shuttle tickets, palace tour guides, cooking classes)
-
-Tone: Premium, aspirational, Cosme-style curation.
-Format: Use <h2> for section headings and <p> for paragraphs. Write 2500-4000 characters of HTML content. No markdown in the output, pure HTML.""",
-        "readingTime": "8 min read"
+        "slug": "best-michelin-restaurants-tokyo-family-friendly",
+        "title": "Best Michelin-Starred Restaurants in Tokyo That Welcome Kids — 2026 Guide",
+        "excerpt": "Tokyo has more Michelin stars than any city on earth. Here are the starred restaurants where children are genuinely welcomed, with tips on booking, menus, and dining etiquette.",
+        "readingTime": "8 min read",
+        "tags": ["luxury-travel", "asia", "family", "tokyo", "michelin", "dining", "japan", "food"],
+        "prompt": "Write a detailed, SEO-optimized blog post titled 'Best Michelin-Starred Restaurants in Tokyo That Welcome Kids — 2026 Guide' for a luxury family travel website. Introduce Tokyo as the Michelin capital of the world and explain that many starred restaurants now welcome well-behaved children. List 8-10 Michelin-starred restaurants in Tokyo that are genuinely family-friendly, describing the cuisine, atmosphere, children's menu options (if any), dress code, and how to book. Include a section on dining etiquette in Japan with children, what time to book, and how to handle picky eaters at high-end restaurants. Write at least 1300 words in British English. Warm, sophisticated tone. Use markdown headings.",
+        "relatedDestinations": ["tokyo", "japan", "ginza", "roppongi", "shibuya", "shinjuku"]
     },
     {
-        "slug": "phuket-5-most-exclusive-family-friendly-resorts-2026",
-        "title": "Phuket's 5 Most Exclusive Family-Friendly Resorts 2026",
-        "excerpt": "Phuket's crème de la crème of family luxury: five ultra-exclusive resorts where privacy, world-class amenities, and unforgettable experiences await discerning families in 2026.",
-        "tags": ["Phuket", "Thailand", "luxury resorts", "exclusive family resorts", "Phuket 2026", "beach resorts"],
-        "relatedDestinations": ["phuket-001", "phuket-002", "phuket-005", "phuket-006", "phuket-003"],
-        "prompt": """Write a detailed luxury family travel blog article about Phuket's 5 most exclusive family-friendly resorts in 2026. These should be ultra-luxury properties perfect for families with children aged 2-17.
-
-Include these 5 resorts:
-1. Amanpuri (Phuket's original ultra-luxury resort — private pool pavilions, world-class service, private beach, teen programs, Thai cooking classes, beach club)
-2. Trisara (private pool villas, six-sensory spa, private dining on the pier, kids cooking classes, dive center for teens, spectacular sunset views)
-3. Rosewood Phuket (mountainside enclave, three-bedroom residences, kids club with Thai crafts, multi-generational suites, incredible dining)
-4. InterContinental Phuket Resort (beachfront luxury, planet trekkers kids club, family pool, multiple dining venues, close to Patong for teen excursions)
-5. Banyan Tree Phuket (lagoon pool villas, spa sanctuary, family activities including snorkeling, kayaking, teen adventure programs, fine dining)
-
-For each: describe the property, specific family amenities, dining for kids/teens, activities bookable via Klook (elephant sanctuaries, Phang Nga Bay tours, island hopping), and why they stand out for multi-generational or nuclear families.
-
-Tone: Premium, exclusive, aspirational — think Condé Nast Traveller meets Cosme.
-Format: Use <h2> for section headings and <p> for paragraphs. Write 2500-4000 characters of HTML content. No markdown in the output, pure HTML.""",
-        "readingTime": "9 min read"
+        "slug": "luxury-safari-thailand-eco-resorts",
+        "title": "Luxury Safari & Eco-Resorts in Thailand for Families — Top Picks 2026",
+        "excerpt": "Thailand's wild side: from ethical elephant sanctuaries to jungle-canopy treehouses, discover the most extraordinary safari-style eco-luxury resorts for families.",
+        "readingTime": "10 min read",
+        "tags": ["luxury-travel", "asia", "family", "thailand", "safari", "eco-resorts", "nature", "elephant-sanctuaries"],
+        "prompt": "Write a detailed, SEO-optimized blog post titled 'Luxury Safari & Eco-Resorts in Thailand for Families — Top Picks 2026' for a luxury family travel website. Cover Thailand's best safari and eco-luxury experiences suitable for families. List 8-10 top properties and experiences: ethical elephant sanctuaries (Elephant Hills, etc.), national park lodges (Khao Sok, etc.), rainforest resorts, glamping experiences, and conservation-focused properties. For each, describe family amenities, age suitability, wildlife viewing opportunities, and sustainability credentials. Include practical tips: best time to visit, what to pack for jungle with kids, health considerations, and how to choose ethical animal experiences. Write at least 1500 words in British English. Warm, sophisticated tone. Use markdown headings.",
+        "relatedDestinations": ["thailand", "chiang-mai", "chiang-rai", "khao-sok", "kanchanaburi", "khao-yai", "phuket"]
     }
 ]
 
+def call_ollama(prompt_text):
+    """Call local Ollama llama3.2 and return generated text."""
+    payload = {
+        "model": "llama3.2",
+        "prompt": prompt_text,
+        "stream": False,
+        "options": {
+            "temperature": 0.7,
+            "num_predict": 4096
+        }
+    }
+    try:
+        result = subprocess.run(
+            ["ollama", "run", "llama3.2", prompt_text],
+            capture_output=True, text=True, timeout=300
+        )
+        return result.stdout.strip()
+    except subprocess.TimeoutExpired:
+        print("  [TIMEOUT]")
+        return ""
+    except Exception as e:
+        print(f"  [ERROR] {e}")
+        return ""
 
-def call_ollama(prompt):
-    """Call llama3.2 via Ollama and return the response text."""
-    full_prompt = f"""You are a luxury family travel writer for Cosme-style content. Write a premium travel blog article.
-
-{prompt}
-
-ONLY output the HTML content inside <article> tags. No preamble, no "here is your article", no markdown inside the HTML."""
-    
-    result = subprocess.run(
-        ["ollama", "run", "llama3.2", full_prompt],
-        capture_output=True,
-        text=True,
-        timeout=120
-    )
-    text = result.stdout.strip()
-    if not text:
-        text = result.stderr.strip()
+def clean_content(text, title):
+    """Clean up generated content."""
+    # Remove the prompt/title if repeated at start
+    lines = text.split('\n')
+    cleaned = []
+    for line in lines:
+        # Skip lines that are just the title repeated
+        if line.strip().strip('#').strip() == title.strip():
+            continue
+        cleaned.append(line)
+    text = '\n'.join(cleaned).strip()
+    # Ensure it starts with an introduction paragraph
+    if not text.startswith('#') and not text.startswith('Introduction'):
+        text = text
     return text
 
-
-def clean_html(text):
-    """Extract clean HTML from response, fall back to wrapping raw text."""
-    # Remove any markdown code fences
-    text = re.sub(r'```(?:html)?\s*', '', text)
-    text = re.sub(r'\s*```', '', text)
-    
-    # Try to extract content between <article> tags
-    m = re.search(r'<article>(.*?)</article>', text, re.DOTALL)
-    if m:
-        return m.group(1).strip()
-    
-    # Try to extract anything that looks like HTML with h2 and p tags
-    m = re.search(r'(<h2>.*</h2>.*)', text, re.DOTALL)
-    if m:
-        return m.group(1).strip()
-    
-    # Fallback: wrap paragraphs properly
-    lines = text.strip().split('\n')
-    html_parts = []
-    current_section = None
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
-        if line.startswith('<'):
-            html_parts.append(line)
-        elif line.startswith('#'):
-            title = line.lstrip('#').strip()
-            html_parts.append(f'<h2>{title}</h2>')
-        else:
-            # Check if this looks like a heading (bold text)
-            if line.startswith('**') and line.endswith('**'):
-                title = line.strip('*')
-                html_parts.append(f'<h2>{title}</h2>')
-            else:
-                html_parts.append(f'<p>{line}</p>')
-    
-    return '\n'.join(html_parts)
-
-
-def count_content_chars(html):
-    """Count characters excluding HTML tags."""
-    text = re.sub(r'<[^>]+>', '', html)
-    return len(text)
-
-
-def generate_post(post_spec):
-    """Generate a single blog post using Ollama and save it."""
-    slug = post_spec["slug"]
-    filepath = os.path.join(BLOG_DIR, f"{slug}.json")
-    
+for i, post in enumerate(POSTS, 1):
     print(f"\n{'='*60}")
-    print(f"Generating: {post_spec['title']}")
-    print(f"{'='*60}")
+    print(f"[{i}/5] Generating: {post['title']}")
+    print(f"  Slug: {post['slug']}")
     
-    raw = call_ollama(post_spec["prompt"])
+    content = call_ollama(post['prompt'])
     
-    content = clean_html(raw)
-    char_count = count_content_chars(content)
-    print(f"Content length: {char_count} chars (content only)")
+    if not content or len(content) < 200:
+        print(f"  [WARN] Short or empty content ({len(content)} chars), retrying once...")
+        time.sleep(5)
+        content = call_ollama(post['prompt'])
     
-    # If too short, try regenerating
-    if char_count < 2000:
-        print(f"Content too short ({char_count}), retrying...")
-        raw2 = call_ollama(post_spec["prompt"] + "\n\nIMPORTANT: Write at least 2500 characters of actual content. Be very detailed.")
-        content2 = clean_html(raw2)
-        char_count2 = count_content_chars(content2)
-        print(f"Retry content length: {char_count2} chars")
-        if char_count2 > char_count:
-            content = content2
-            char_count = char_count2
+    content = clean_content(content, post['title'])
     
-    # Build the post JSON
-    post = {
-        "slug": slug,
-        "title": post_spec["title"],
-        "excerpt": post_spec["excerpt"],
-        "date": "2026-05-16",
-        "author": "The Luxury Explorer",
-        "tags": post_spec["tags"],
-        "readingTime": post_spec["readingTime"],
+    blog_json = {
+        "slug": post['slug'],
+        "title": post['title'],
+        "excerpt": post['excerpt'],
+        "date": "2026-05-17",
+        "author": "Luxury Family Travel Asia Team",
+        "tags": post['tags'],
+        "readingTime": post['readingTime'],
         "content": content,
-        "relatedDestinations": post_spec["relatedDestinations"]
+        "relatedDestinations": post['relatedDestinations']
     }
     
-    with open(filepath, 'w', encoding='utf-8') as f:
-        json.dump(post, f, indent=2, ensure_ascii=False)
+    outpath = os.path.join(BLOG_DIR, f"{post['slug']}.json")
+    with open(outpath, 'w') as f:
+        json.dump(blog_json, f, indent=2, ensure_ascii=False)
     
-    print(f"✓ Saved: {filepath} ({char_count} content chars)")
-    return True
-
-
-if __name__ == "__main__":
-    for post in POSTS:
-        try:
-            generate_post(post)
-        except Exception as e:
-            print(f"✗ Error generating {post['slug']}: {e}")
+    char_count = len(content)
+    word_count = len(content.split())
+    print(f"  ✓ Written to {outpath}")
+    print(f"  ✓ Content: {char_count} chars, ~{word_count} words")
     
-    print("\n\nDone! All posts generated.")
+    # Small delay between generation calls
+    if i < 5:
+        time.sleep(3)
+
+print(f"\n{'='*60}")
+print("All 5 posts generated successfully!")

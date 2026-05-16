@@ -1,0 +1,27 @@
+{
+  "slug": "bali-family-ev-road-trip-loop",
+  "title": "Bali Family EV Road Trip Loop: Ubud → Seminyak → Uluwatu Guide 2026",
+  "subtitle": "A 5-day electric family adventure through Bali's rice terraces, beaches, and cliff temples with zero charging anxiety",
+  "route": [
+    {"day": 1, "from": "Ngurah Rai Airport", "to": "Seminyak", "distance": "12 km", "drivingTime": "30 min", "charger": "Beachwalk Mall (60kW) or hotel overnight AC charging", "kidActivities": "Seminyak Beach sunset, Double Six Beach playground, Finns Recreation Club"},
+    {"day": 2, "from": "Seminyak", "to": "Ubud", "distance": "35 km", "drivingTime": "1.5 hours", "charger": "Trans Studio Mall Denpasar (90kW) or Ubud Palace area", "kidActivities": "Ubud Monkey Forest, Tegalalang Rice Terraces, Bali Bird Park"},
+    {"day": 3, "from": "Ubud", "to": "Sanur", "distance": "30 km", "drivingTime": "1 hour", "charger": "Go-Ion Sanur (60kW) or Sanur Beach hotel", "kidActivities": "Bali Safari & Marine Park, Sanur Beach calm waters, Ubud Art Market (morning)"},
+    {"day": 4, "from": "Sanur", "to": "Uluwatu", "distance": "40 km", "drivingTime": "1.5 hours", "charger": "Bali Collection Nusa Dua (90kW) or Uluwatu hotel", "kidActivities": "Uluwatu Temple and Kecak dance, Pandawa Beach caves, GWK Cultural Park"},
+    {"day": 5, "from": "Uluwatu", "to": "Ngurah Rai Airport", "distance": "20 km", "drivingTime": "45 min", "charger": "Ion Ciputra World (final charge before return)", "kidActivities": "Waterbom Bali water park (on the way to airport), Jimbaran Bay seafood lunch"}
+  ],
+  "totalDistance": "137 km",
+  "totalChargingCost": "IDR 150,000-250,000 (~$10-15 USD)",
+  "bestFor": "Families visiting Bali for the first time who want to see the island without renting a scooter or hiring a driver",
+  "carRecommendations": ["BYD Dolphin", "Hyundai Ioniq 5", "Wuling Air EV", "MG4"],
+  "tips": [
+    "Rent a family-friendly EV from Go-Ion Bali (BYD Dolphin starts at IDR 600k/day) — they deliver to the airport",
+    "Bali traffic is real — allow 2x Google Maps time between Ubud and Seminyak",
+    "Many villas now offer wall outlet (230V) overnight charging — bring your Type 2 cable",
+    "Uluwatu's Kecak fire dance show is at sunset — kids under 6 may find the fire scary, prepare them in advance",
+    "Waterbom Bali is on the way from Uluwatu to the airport — perfect final-day activity before your flight",
+    "Download the Go-Ion app for live charger availability — it's the most reliable network on the island",
+    "Best time: April-October (dry season). Avoid January-February when monsoon rains flood narrow Balinese roads"
+  ],
+  "metaTitle": "Bali Family EV Road Trip Loop: Ubud to Uluwatu Guide 2026 | EV Family Travel",
+  "metaDescription": "5-day Bali EV road trip loop through Ubud, Seminyak, and Uluwatu. Kid-friendly attractions, charging stations, rental tips, and everything families need to drive electric in paradise."
+}
