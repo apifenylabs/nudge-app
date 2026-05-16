@@ -98,67 +98,76 @@ export default function HomeContent({ meta, homepageData, blogPosts: initialPost
         </nav>
       </header>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 via-white to-sky-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+      {/* Hero Section — Premium Redesign */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-900 border-b border-emerald-800/30">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(16,185,129,0.3) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(56,189,248,0.2) 0%, transparent 50%)',
+          }} />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-800/50 text-emerald-200 rounded-full text-xs font-medium mb-4 border border-emerald-700/50 backdrop-blur-sm">
               <ZapIcon /> #1 EV Road Trip Planner for Asia
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
-              Plan the Ultimate Family<br />
-              <span className="text-emerald-600">EV Road Trip Across Asia</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
+              The Ultimate Family
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-sky-300">EV Road Trip Across Asia</span>
             </h1>
-            <p className="text-base sm:text-lg text-gray-600 mb-6 max-w-2xl">
-              Find charging stations, book EV-friendly hotels, and discover family-approved routes 
-              from Bangkok to Bali. {meta.totalStations}+ verified stations across {topCountries.length} countries.
+            <p className="text-base sm:text-lg text-emerald-100/70 mb-8 max-w-2xl leading-relaxed">
+              Discover {meta.totalStations}+ verified charging stations, book EV-friendly luxury hotels, 
+              and follow family-approved routes from Bangkok to Bali. Zero-emission adventures 
+              across {topCountries.length} countries.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/search"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 text-white rounded-lg font-medium text-sm hover:bg-emerald-700 transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-400 to-emerald-500 text-emerald-950 rounded-xl font-semibold text-sm hover:from-emerald-300 hover:to-emerald-400 transition-all shadow-lg shadow-emerald-500/25"
               >
-                <SearchIcon /> Browse All Stations
+                <SearchIcon /> Browse Charging Stations
               </Link>
               <Link
                 href="/routes"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 rounded-lg font-medium text-sm border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-xl font-medium text-sm border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all backdrop-blur-sm"
               >
                 <RouteIcon /> Plan a Route
               </Link>
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 rounded-lg font-medium text-sm border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-xl font-medium text-sm border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all backdrop-blur-sm"
               >
                 <BookIcon /> Read Guides
               </Link>
+            </div>
+            {/* Stats micro-row */}
+            <div className="flex flex-wrap items-center gap-6 mt-10 pt-8 border-t border-white/10">
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                <span className="text-xs text-emerald-200/60">{meta.totalStations} stations</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-teal-400" />
+                <span className="text-xs text-emerald-200/60">{meta.cities.length} cities</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-sky-400" />
+                <span className="text-xs text-emerald-200/60">{topCountries.length} countries</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                <span className="text-xs text-emerald-200/60">{blogPosts.length || 16} guides</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Quick Stats Bar */}
-      <div className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between gap-4 text-center sm:text-left">
-          <div className="flex items-center gap-8">
-            <div>
-              <div className="text-2xl font-bold text-gray-900">{meta.totalStations}</div>
-              <div className="text-[10px] text-gray-500 uppercase tracking-wider">Stations</div>
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-2xl font-bold text-gray-900">{meta.cities.length}</div>
-              <div className="text-[10px] text-gray-500 uppercase tracking-wider">Cities</div>
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-2xl font-bold text-gray-900">{topCountries.length}</div>
-              <div className="text-[10px] text-gray-500 uppercase tracking-wider">Countries</div>
-            </div>
-            <div className="hidden md:block">
-              <div className="text-2xl font-bold text-gray-900">{blogPosts.length || 16}</div>
-              <div className="text-[10px] text-gray-500 uppercase tracking-wider">Guides</div>
-            </div>
-          </div>
+      {/* Quick Stats Bar — Simplified */}
+      <div className="bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
           <div className="flex gap-4 text-xs text-gray-400">
+            <span className="font-medium text-gray-600 dark:text-gray-300">Connectors:</span>
             <span>CCS2</span>
             <span>CHAdeMO</span>
             <span>GB/T</span>

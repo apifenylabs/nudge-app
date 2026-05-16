@@ -1,30 +1,51 @@
-# HEARTBEAT.md — May 17 04:50 HKT
+# HEARTBEAT.md — May 17 04:25 HKT
 
-## STATUS: 🟢 2 BUILDING, 1 DONE | 6 SITES HEALTHY
+## STATUS: 🟢 ALL 3 AGENTS DONE | 6 SITES HEALTHY
 
 ## SITES (ALL ✅)
-| Site | Status | Notes |
-|------|--------|-------|
-| Apifeny AI | ✅ 200 | Phase 6 v2, 37 playbooks, 98 tools |
-| EV Charging Asia | ✅ 200 | 93 blog posts, live on Vercel |
-| Family Travel Asia | ✅ 200 | 120 posts, www redirect works |
-| Luxury Travel Asia | ✅ 200 | Destination slugs fixed |
-| Senior Friendly Travel | ✅ 200 | **58 posts** (+5), build passes ✅ |
-| Agent HQ | ✅ 200 | — |
-| AI Cofounder | ✅ 200 | — |
+| Site | Posts | Status | Notes |
+|------|:-----:|:------:|-------|
+| Apifeny AI | 37 playbooks | ✅ 200 | Phase 6 v2 live |
+| EV Charging Asia | 93 blog + 3 itin | ✅ 200 | +3 family road trip itineraries |
+| Family Travel Asia | 120 blog | ✅ 200 | www.familytravelasia.com |
+| Luxury Travel Asia | 51 blog | ✅ 200 | +5 deployed to Vercel |
+| Senior Friendly Travel | 58 blog | ✅ 200 | +5, build verified |
+| Agent HQ | — | ✅ 200 | — |
+| AI Cofounder | — | ✅ 200 | — |
 
-## ACTIVE BUILDS (2 sub-agents)
-1. 🔄 Luxury Travel: 5 new blog posts (6m running)
-2. 🔄 EV Family Itineraries: 3 road trip itineraries (4m running)
+## LAST BUILD (04:00-04:20 HKT)
+- ✅ Senior Travel: 5 posts (KL hotels, Japan temples, solo SEA, Thai nomad, SG medical)
+- ✅ Luxury Travel: 5 posts (Bali villas, Maldives, private jets, Tokyo dining, Thailand safari) **→ Deployed**
+- ✅ EV Family Itineraries: 3 road trips (KL→Penang, SG→KL, Bali loop) **→ Committed**
 
 ## BLOCKERS (need Chris)
 - Nudge: Supabase service_role key
 - Affiliates: Join Booking.com/Viator/Klook
-- Vercel: Family Travel deploy pipeline jammed
 
 ## BUDGET
-- Today: ~$0.18 / $0.50 overnight cap
-- Default DeepSeek-chat
+- Today: ~$0.20 / $0.50 overnight cap
+- All 3 sub-agents completed
 
 ---
 _Watchdog every 15min_
+
+---
+_Watchdog 2026-05-17 04:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 04:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 05:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 05:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 05:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 05:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 06:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
