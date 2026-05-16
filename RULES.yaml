@@ -669,6 +669,41 @@ mission_1b:
     - "Every cron job must serve this mission"
 
 # ═══════════════════════════════════════════════════════════════
+# REVENUE-FIRST FILTER (LOCKED May 17 2026 — NEVER OVERRIDE)
+# ═══════════════════════════════════════════════════════════════
+# Chris directive: Before ANY task, filter through revenue lens.
+# No busy work. Everything must drive money this week.
+
+revenue_first_filter:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  mandatory_questions:
+    - "Does this directly create or increase revenue this week?"
+    - "Is this the simplest version that can make money fastest?"
+    - "Can we ship it today without asking Chris for anything?"
+  pass_criteria: "Answer YES to #1, OR reframe the task until the answer becomes YES"
+  deprioritization:
+    condition: "Answer to #1 is NO and cannot be reframed"
+    action: "Deprioritize. If the task has long-term value, turn it into a revenue-generating version first."
+    examples:
+      - "Redesigning a landing page with no CTA improvement → add affiliate CTA or price comparison widget first"
+      - "Adding dark mode to a site with no traffic → deprioritize until traffic justifies UX investment"
+      - "Building a new feature for nudge before schema is run → create a prep guide Chris can execute in 5min instead"
+  logging:
+    enabled: true
+    log_to: "~/life/Resources/ceo-decisions.md"
+    format: |
+      ## [YYYY-MM-DD] Revenue-First Filter Decision
+      - Task: <task name>
+      - Q1 (direct revenue this week?): YES/NO
+      - Q2 (simplest money-making version?): YES/NO
+      - Q3 (ship today without Chris?): YES/NO
+      - Decision: <pass / reframe / deprioritize>
+      - Rationale: <one-liner>
+  override_condition: "Only Override for: (a) security fix, (b) site-down recovery, (c) explicit Chris request"
+
+# ═══════════════════════════════════════════════════════════════
 # BOTTLENECK ELIMINATION RULE (LOCKED May 16 2026 — NEVER OVERRIDE)
 # ═══════════════════════════════════════════════════════════════
 # Whenever the agent needs Chris for something, it MUST ask:
