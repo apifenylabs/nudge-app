@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Zap, Calendar, BookOpen, Tag, ArrowLeft } from 'lucide-react';
 import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/lib/blog-data';
+import { renderMarkdown } from '@/lib/markdown-render';
 import EvBookingCTA from './EvBookingCTA';
 
 interface Props {
@@ -124,8 +125,8 @@ export default function BlogPostPage({ params }: Props) {
         </div>
 
         <div className="bg-white rounded-xl border border-gray-200 p-6 md:p-8 mb-8">
-          <div className="prose prose-gray max-w-none text-sm leading-relaxed whitespace-pre-line">
-            {post.content}
+          <div className="prose prose-gray max-w-none text-sm leading-relaxed">
+            {renderMarkdown(post.content)}
           </div>
         </div>
 

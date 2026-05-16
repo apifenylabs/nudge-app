@@ -102,7 +102,7 @@ export default function SiteFooter() {
 
           {/* Sister Sites */}
           <div>
-            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Our Network</h4>
+            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">🌏 Network Sites</h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -111,7 +111,7 @@ export default function SiteFooter() {
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-emerald-600 transition-colors"
                 >
-                  Asia Family Travel Directory
+                  Family Travel Asia
                 </a>
                 <p className="text-xs text-gray-400 mt-0.5">Family travel tips & destinations</p>
               </li>
@@ -128,7 +128,7 @@ export default function SiteFooter() {
               </li>
               <li>
                 <a
-                  href="https://luxury-family-travel-asia.vercel.app"
+                  href="https://luxuryfamilytravelasia.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-amber-600 transition-colors"
