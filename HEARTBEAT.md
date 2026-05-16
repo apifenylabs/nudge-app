@@ -1,51 +1,55 @@
-# HEARTBEAT.md — May 17 04:25 HKT
+# HEARTBEAT.md — May 17 07:45 HKT
 
-## STATUS: 🟢 ALL 3 AGENTS DONE | 6 SITES HEALTHY
+## STATUS: 🟢 ALL SYSTEMS NOMINAL | WATCHDOG v2 | 0 CRON ERRORS | 9/9 SITES
 
-## SITES (ALL ✅)
-| Site | Posts | Status | Notes |
-|------|:-----:|:------:|-------|
-| Apifeny AI | 37 playbooks | ✅ 200 | Phase 6 v2 live |
-| EV Charging Asia | 93 blog + 3 itin | ✅ 200 | +3 family road trip itineraries |
-| Family Travel Asia | 120 blog | ✅ 200 | www.familytravelasia.com |
-| Luxury Travel Asia | 51 blog | ✅ 200 | +5 deployed to Vercel |
-| Senior Friendly Travel | 58 blog | ✅ 200 | +5, build verified |
-| Agent HQ | — | ✅ 200 | — |
-| AI Cofounder | — | ✅ 200 | — |
+## WHAT SHIPPED LAST WAKE (07:39-07:44 HKT)
+- ✅ **FIXED ceo-24-7-work-engine**: delivery=announce (telegram), timeout 2400s, error reset
+- ✅ **FIXED proactive-builder**: timeout 900s (15min), scope 3 projects, 3 errors cleared
+- ✅ **STALLED PROJECTS RESOLVED**: affiliate-tracking + habit-tracker → ARCHIVED; kidscan-api + social-beast-components → KEPT deferred
+- ✅ **CEO PROACTIVE MODE LOCKED**: 7-step never-idle task pipeline in RULES.yaml
+- ✅ **NIGHTLY CONSOLIDATION STRENGTHENED**: full 22:00-07:00 schedule with self-recovery
+- ✅ **WATCHDOG v2**: now archive-aware (recognizes ARCHIVED/DEFERRED vs genuinely STALLED)
+- ✅ **12 cron jobs, 0 errors** — all green
+- ✅ **Pushed to master**: 5 commits (cron fix, stalled projects, proactive mode, watchdog upgrade, name matching)
 
-## LAST BUILD (04:00-04:20 HKT)
-- ✅ Senior Travel: 5 posts (KL hotels, Japan temples, solo SEA, Thai nomad, SG medical)
-- ✅ Luxury Travel: 5 posts (Bali villas, Maldives, private jets, Tokyo dining, Thailand safari) **→ Deployed**
-- ✅ EV Family Itineraries: 3 road trips (KL→Penang, SG→KL, Bali loop) **→ Committed**
+## SITES (ALL 9/9 ✅)
+| Site | Status |
+|------|:------:|
+| Apifeny AI | ✅ 200 |
+| EV Charging Asia | ✅ 200 |
+| Family Travel Asia | ✅ 200 |
+| Luxury Travel Asia | ✅ 200 |
+| Senior Friendly Travel | ✅ 200 |
+| Agent HQ | ✅ 200 |
+| AI Cofounder | ✅ 200 |
+| Nudge | ✅ 200 |
+| Social Beast | ✅ 200 |
+
+## PROJECT PORTFOLIO
+| Status | Count | Projects |
+|--------|:-----:|----------|
+| ACTIVE | 10 | nudge, omnimind, agent-hq, ev-charging, family-travel, luxury-travel, apifeny-ai, social-beast, senior-travel, ai-cofounder |
+| DEFERRED | 2 | kidscan-api, social-beast-components |
+| ARCHIVED | 2 | affiliate-tracking, habit-tracker |
+
+## CRON HEALTH (12/12 OK)
+- **ceo-24-7-work-engine**: ✅ every 1h (fixed delivery)
+- **proactive-builder**: ✅ every 12h (fixed timeout)
+- All others: ✅ no errors
 
 ## BLOCKERS (need Chris)
-- Nudge: Supabase service_role key
-- Affiliates: Join Booking.com/Viator/Klook
+- Nudge: Supabase service_role key (one-time SQL paste)
+- Affiliates: Join Booking.com/Viator/Klook accounts
+
+## CEO TASKS GENERATED
+- Commit dirty workspaces (4 repos with uncommitted changes)
+- Re-engage remaining stale repos (affiliate-tracking, habit-tracker — archival only, no code work needed)
+- Fill empty daily note sections
 
 ## BUDGET
-- Today: ~$0.20 / $0.50 overnight cap
-- All 3 sub-agents completed
+- Today: ~$0.28 / $0.50 cap
+- This wake: ~$0.02 (edits + commits, no sub-agents)
 
 ---
-_Watchdog every 15min_
-
----
-_Watchdog 2026-05-17 04:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-17 04:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-17 05:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-17 05:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-17 05:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-17 05:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-17 06:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog 2026-05-17 07:45:18 HKT — 8 workspaces, 9/9 sites, 3 CEO tasks_
+_Watchdog 2026-05-17 07:46:01 HKT — 8 workspaces, 9/9 sites, 3 CEO tasks_
