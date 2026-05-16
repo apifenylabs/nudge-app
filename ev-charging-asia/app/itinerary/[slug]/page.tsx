@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Zap, ArrowLeft, Route, Clock, BatteryCharging, Calendar, MapPin, AlertTriangle, Users, Crown, Star, Wifi, Utensils, ShoppingBag, ChevronRight, ExternalLink } from 'lucide-react';
-import { getAllItineraries, getItineraryBySlug } from '@/data/itineraries';
+import { getAllItineraries, getItineraryBySlug, getRelatedItineraries } from '@/data/itineraries';
 import RouteMap from '@/components/itineraries/RouteMap';
 import SeasonalRecommendations from '@/components/itineraries/SeasonalRecommendations';
 import SeasonalComparisonTable from '@/components/itineraries/SeasonalComparisonTable';
@@ -10,6 +10,8 @@ import ItinerarySEOSection from '@/components/itineraries/ItinerarySEOSection';
 import ItineraryRevenueSection from '@/components/itineraries/ItineraryRevenueSection';
 import ItineraryTipsSection from '@/components/itineraries/ItineraryTipsSection';
 import { getRouteStations, getRecommendedStops, getKidFriendlyStations, getLuxuryStations, countRouteChargingStops, getRouteCities } from '@/data/route-stations';
+import RelatedBlogPosts from '@/components/itineraries/RelatedBlogPosts';
+import ItineraryCard from '@/components/itineraries/ItineraryCard';
 import stationsData from '@/data/stations.json';
 import { scoreTier } from '@/lib/scoring';
 import type { Station } from '@/lib/scoring';
@@ -46,14 +48,29 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const it = getItineraryBySlug(slugToItineraryMap[params.slug] || params.slug);
   if (!it) return { title: 'Route Not Found' };
+  const fullSlug = slugToItineraryMap[params.slug];
   return {
-    title: `${it.title} — Family EV Road Trip Guide`,
+    title: `${it.title} — Family EV Road Trip ${it.countries.length > 0 ? `in ${it.countries.join(' & ')}` : 'Across Asia'}`,
     description: it.description.slice(0, 160),
-    keywords: [...it.tags, 'EV road trip', 'family travel', 'electric vehicle', 'Asia road trip'].join(', '),
+    keywords: [...it.tags, 'EV road trip', 'family travel', 'electric vehicle', 'Asia road trip', ...it.countries.map(c => `${c} EV road trip`), ...it.cities.slice(0, 3).map(c => `${c} to ${it.cities[it.cities.length - 1]} EV driving`)].join(', '),
+    alternates: {
+      canonical: fullSlug ? `https://ev-charging-asia.vercel.app/routes/${fullSlug}` : undefined,
+    },
     openGraph: {
       title: `${it.title} | EV Charging Asia`,
       description: it.description.slice(0, 160),
-      url: `https://ev-charging-asia.vercel.app/itinerary/${params.slug}`,
+      url: fullSlug ? `https://ev-charging-asia.vercel.app/routes/${fullSlug}` : `https://ev-charging-asia.vercel.app/itinerary/${params.slug}`,
+      type: 'article',
+      locale: 'en_US',
+      siteName: 'EV Charging Asia',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${it.title} | EV Charging Asia`,
+      description: it.description.slice(0, 160),
+    },
+    other: {
+      'article:tag': it.tags.slice(0, 6).join(','),
     },
   };
 }
@@ -474,6 +491,9 @@ export default async function ItineraryDetailPage({ params }: Props) {
           </p>
         </div>
 
+        {/* ===== RELATED BLOG POSTS ===== */}
+        <RelatedBlogPosts keywords={it.tags} countries={it.countries} limit={3} />
+
         {/* ===== TRAVELER TIPS & REVIEWS ===== */}
         <ItineraryTipsSection routeSlug={params.slug} routeName={it.title} />
 
@@ -601,6 +621,18 @@ export default async function ItineraryDetailPage({ params }: Props) {
             </a>
           </div>
         </div>
+
+        {/* ===== RELATED ROUTES ===== */}
+        {(() => { const related = getRelatedItineraries(slugToItineraryMap[params.slug] || params.slug, 2); if (related.length === 0) return null; return (
+          <div className="mb-8">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Similar EV Road Trips You Might Like</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {related.map(r => (
+                <ItineraryCard key={r.id} itinerary={r} />
+              ))}
+            </div>
+          </div>
+        ); })()}
 
         {/* ===== STATION MAP LINK ===== */}
         <div className="text-center mb-8">

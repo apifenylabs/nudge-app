@@ -105,6 +105,7 @@ function familyRecommendation(a: Itinerary, b: Itinerary): string {
   }
 }
 
+// SEO handled via Head component since this is a client component
 export default function ComparePage() {
   const [routeA, setRouteA] = useState<string>('');
   const [routeB, setRouteB] = useState<string>('');
@@ -146,6 +147,13 @@ export default function ComparePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* SEO metadata for client-side page */}
+      <head>
+        <title>Compare EV Road Trip Routes — EV Charging Asia</title>
+        <meta name="description" content="Compare EV road trip routes across Asia. See side-by-side distance, difficulty, family highlights, charging stops, and luxury options for all routes." />
+        <meta name="keywords" content="EV road trip comparison, compare EV routes Asia, electric vehicle road trip comparison, Thailand vs Malaysia EV, best EV road trip Asia" />
+        <link rel="canonical" href="https://ev-charging-asia.vercel.app/compare" />
+      </head>
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">

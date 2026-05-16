@@ -6,6 +6,7 @@ import { getAllItineraries, getItineraryBySlug, getRelatedItineraries } from '@/
 import RouteMap from '@/components/itineraries/RouteMap';
 import SiteFooter from '@/components/SiteFooter';
 import ItineraryDaysTimeline from '@/components/itineraries/ItineraryDaysTimeline';
+import RelatedBlogPosts from '@/components/itineraries/RelatedBlogPosts';
 import ItineraryAffiliateCTA from '@/components/itineraries/ItineraryAffiliateCTA';
 import ItineraryCard from '@/components/itineraries/ItineraryCard';
 import SeasonalRecommendations from '@/components/itineraries/SeasonalRecommendations';
@@ -339,6 +340,9 @@ export default function ItineraryDetailPage({ params }: Props) {
         <div className="mb-8">
           <ItinerarySEOSection itinerary={it} />
         </div>
+
+        {/* Related Blog Posts */}
+        <RelatedBlogPosts keywords={it.tags} countries={it.countries} limit={3} />
 
         {/* Compare route CTA */}
         <div className="mb-8">
