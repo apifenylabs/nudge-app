@@ -462,17 +462,27 @@ _generate_ceo_tasks() {
     ((tasks++))
   fi
   
-  # Task 2: Stalled projects
+  # Task 2: Stalled projects (only genuinely stalled, not archived)
   local stalled
   stalled=$(grep "STALLED" "$LOG" 2>/dev/null | head -5)
   if [ -n "$stalled" ]; then
-    log "$WARN **TASK:** Re-engage stalled projects"
-    echo "$stalled" | while read -r line; do
+    # Filter out archived/deferred projects
+    local real_stalled=""
+    while read -r line; do
       local proj_name
-      proj_name=$(echo "$line" | sed 's/.*\*\*\(.*\)\*\*.*/\1/')
-      log "  $INFO Suggested: Investigate $proj_name — commit pending work or unpause"
-    done
-    ((tasks++))
+      proj_name=$(echo "$line" | sed 's/.*\*\*\(.[^:*]*\)[:**].*/\1/')
+      local arch="/home/captain/.openclaw/workspace/life/Archives/stalled-projects/$proj_name.md"
+      if [ ! -f "$arch" ]; then
+        real_stalled="$real_stalled$proj_name "
+      fi
+    done <<< "$stalled"
+    if [ -n "$real_stalled" ]; then
+      log "$WARN **TASK:** Re-engage stalled projects: $real_stalled"
+      echo "$real_stalled" | while read -r proj; do
+        [ -n "$proj" ] && log "  $INFO Suggested: Investigate $proj — commit pending work or unpause"
+      done
+      ((tasks++))
+    fi
   fi
   
   # Task 3: PARA issues
