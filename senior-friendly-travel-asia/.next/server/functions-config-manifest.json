@@ -1,1 +1,1 @@
-{"version":1,"functions":{"/blog/[slug]":{},"/blog":{},"/destinations":{},"/destinations/[slug]":{}}}
+{"version":1,"functions":{"/destinations":{},"/blog":{},"/blog/[slug]":{},"/destinations/[slug]":{}}}

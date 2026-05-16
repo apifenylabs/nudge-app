@@ -82,7 +82,15 @@ export default function RootLayout({
               "name": "Senior-Friendly Travel Asia",
               "url": "https://seniorfriendlytravel.asia",
               "description": "Curated directory of senior-friendly destinations across Asia. Accessible travel, mobility-friendly attractions, and practical advice for older adults exploring Asia.",
-              "sameAs": [],
+              "sameAs": [
+                "https://www.familytravelasia.com",
+                "https://luxury-family-travel-asia.vercel.app",
+                "https://ev-charging-asia.vercel.app",
+                "https://apifeny-ai.vercel.app",
+                "https://kids-activities-asia.vercel.app",
+                "https://nudge-sigma-liart.vercel.app",
+                "https://social-beast-two.vercel.app"
+              ],
             }),
           }}
         />
@@ -97,7 +105,14 @@ export default function RootLayout({
               "name": "Senior-Friendly Travel Asia",
               "url": "https://seniorfriendlytravel.asia",
               "description": "Curated directory of senior-friendly destinations across Asia. Mobility-friendly attractions, accessible transport, and practical advice.",
-
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://seniorfriendlytravel.asia/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
             }),
           }}
         />

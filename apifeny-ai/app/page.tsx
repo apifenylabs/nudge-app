@@ -1,9 +1,12 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Search, Sparkles, TrendingUp, Layers, BookOpen, Trophy, ArrowRight } from 'lucide-react';
+import {
+  Search, Sparkles, TrendingUp, Layers, BookOpen, Trophy, ArrowRight,
+  Zap, ChevronRight
+} from 'lucide-react';
 import FeaturedCategories from '@/components/FeaturedCategories';
 import TrendingTools from '@/components/TrendingTools';
 import SponsoredToolSpot from '@/components/SponsoredToolSpot';
@@ -12,9 +15,300 @@ import FeaturedCollections from '@/components/FeaturedCollections';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import FeaturedPlaybooks from '@/components/FeaturedPlaybooks';
 import FeaturedRankings from '@/components/FeaturedRankings';
-import { playbooks } from '@/lib/playbooks';
 import SuccessStories from '@/components/SuccessStories';
 import PipelineVisual from '@/components/PipelineVisual';
+
+// ─── Inline SVG Components ──────────────────────────────────
+
+function HeroIllustration() {
+  return (
+    <svg
+      viewBox="0 0 600 420"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full max-w-lg mx-auto h-auto"
+    >
+      <defs>
+        <linearGradient id="hero-grad-1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#7C3AED" stopOpacity="0.25" />
+          <stop offset="100%" stopColor="#06B6D4" stopOpacity="0.1" />
+        </linearGradient>
+        <linearGradient id="hero-grad-2" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#22D3EE" stopOpacity="0.3" />
+        </linearGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="8" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+
+      {/* Background glow */}
+      <ellipse cx="300" cy="210" rx="220" ry="160" fill="url(#hero-grad-1)" />
+
+      {/* Central node */}
+      <circle cx="300" cy="200" r="20" fill="#7C3AED" opacity="0.35" />
+      <circle cx="300" cy="200" r="10" fill="#8B5CF6" opacity="0.6" filter="url(#glow)" />
+
+      {/* Connecting lines */}
+      <line x1="180" y1="160" x2="290" y2="195" stroke="#7C3AED" strokeWidth="1.5" strokeOpacity="0.3" strokeDasharray="4 3" />
+      <line x1="420" y1="160" x2="310" y2="195" stroke="#22D3EE" strokeWidth="1.5" strokeOpacity="0.3" strokeDasharray="4 3" />
+      <line x1="180" y1="250" x2="290" y2="210" stroke="#7C3AED" strokeWidth="1.5" strokeOpacity="0.25" strokeDasharray="4 3" />
+      <line x1="420" y1="250" x2="310" y2="210" stroke="#22D3EE" strokeWidth="1.5" strokeOpacity="0.25" strokeDasharray="4 3" />
+
+      {/* Node: Your Goal */}
+      <g>
+        <rect x="100" y="135" width="90" height="40" rx="20" fill="#111125" stroke="#7C3AED" strokeWidth="1.5" strokeOpacity="0.5" />
+        <text x="145" y="160" textAnchor="middle" fill="#8B5CF6" fontSize="12" fontFamily="sans-serif" fontWeight="600">Your Goal</text>
+        <text x="145" y="130" textAnchor="middle" fill="#555578" fontSize="9" fontFamily="sans-serif">🎯 Problem</text>
+      </g>
+
+      {/* Node: Playbook */}
+      <g filter="url(#glow)">
+        <rect x="245" y="175" width="110" height="50" rx="25" fill="#1A1A30" stroke="#7C3AED" strokeWidth="1.5" />
+        <text x="300" y="200" textAnchor="middle" fill="#C4B5FD" fontSize="12" fontFamily="sans-serif" fontWeight="600">📖 Playbook</text>
+        <text x="300" y="216" textAnchor="middle" fill="#8888AA" fontSize="9" fontFamily="sans-serif">Step-by-step guide</text>
+      </g>
+
+      {/* Node: Tools */}
+      <g>
+        <rect x="410" y="135" width="90" height="40" rx="20" fill="#111125" stroke="#22D3EE" strokeWidth="1.5" strokeOpacity="0.5" />
+        <text x="455" y="160" textAnchor="middle" fill="#22D3EE" fontSize="12" fontFamily="sans-serif" fontWeight="600">Tools</text>
+        <text x="455" y="130" textAnchor="middle" fill="#555578" fontSize="9" fontFamily="sans-serif">🔧 Solution</text>
+      </g>
+
+      {/* Results node */}
+      <line x1="300" y1="225" x2="300" y2="260" stroke="#7C3AED" strokeWidth="1.5" strokeOpacity="0.25" strokeDasharray="4 3" />
+      <g>
+        <rect x="230" y="260" width="140" height="36" rx="18" fill="url(#hero-grad-2)" stroke="#8B5CF6" strokeWidth="1" strokeOpacity="0.3" />
+        <text x="300" y="283" textAnchor="middle" fill="#E8E8F0" fontSize="12" fontFamily="sans-serif" fontWeight="600">✨ Results</text>
+      </g>
+
+      {/* Floating tool indicators */}
+      <g opacity="0.6">
+        <rect x="140" y="295" width="28" height="28" rx="8" fill="#111125" stroke="#555578" strokeWidth="0.8" />
+        <text x="154" y="314" textAnchor="middle" fill="#8888AA" fontSize="11" fontFamily="sans-serif">W</text>
+      </g>
+      <g opacity="0.6">
+        <rect x="190" y="310" width="28" height="28" rx="8" fill="#111125" stroke="#555578" strokeWidth="0.8" />
+        <text x="204" y="329" textAnchor="middle" fill="#8888AA" fontSize="11" fontFamily="sans-serif">C</text>
+      </g>
+      <g opacity="0.6">
+        <rect x="380" y="295" width="28" height="28" rx="8" fill="#111125" stroke="#555578" strokeWidth="0.8" />
+        <text x="394" y="314" textAnchor="middle" fill="#8888AA" fontSize="11" fontFamily="sans-serif">G</text>
+      </g>
+      <g opacity="0.6">
+        <rect x="430" y="310" width="28" height="28" rx="8" fill="#111125" stroke="#555578" strokeWidth="0.8" />
+        <text x="444" y="329" textAnchor="middle" fill="#8888AA" fontSize="11" fontFamily="sans-serif">M</text>
+      </g>
+    </svg>
+  );
+}
+
+function UseCaseIcon({ type }: { type: string }) {
+  switch (type) {
+    case 'content':
+      return (
+        <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12 flex-shrink-0">
+          <rect x="4" y="8" width="40" height="32" rx="6" stroke="#8B5CF6" strokeWidth="1.5" fill="#111125" fillOpacity="0.5" />
+          <line x1="14" y1="18" x2="34" y2="18" stroke="#8B5CF6" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
+          <line x1="14" y1="24" x2="30" y2="24" stroke="#8B5CF6" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
+          <line x1="14" y1="30" x2="26" y2="30" stroke="#8B5CF6" strokeWidth="1.5" strokeLinecap="round" opacity="0.3" />
+          <circle cx="38" cy="12" r="6" fill="#7C3AED" opacity="0.3" />
+          <path d="M36 12h4M38 10v4" stroke="#8B5CF6" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      );
+    case 'code':
+      return (
+        <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12 flex-shrink-0">
+          <rect x="6" y="10" width="36" height="28" rx="4" stroke="#22D3EE" strokeWidth="1.5" fill="#111125" fillOpacity="0.5" />
+          <circle cx="12" cy="16" r="2" fill="#22D3EE" opacity="0.5" />
+          <circle cx="18" cy="16" r="2" fill="#22D3EE" opacity="0.5" />
+          <rect x="10" y="22" width="28" height="2" rx="1" fill="#22D3EE" opacity="0.3" />
+          <rect x="10" y="28" width="20" height="2" rx="1" fill="#22D3EE" opacity="0.2" />
+          <path d="M36 22l4 4-4 4" stroke="#22D3EE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.6" />
+        </svg>
+      );
+    case 'research':
+      return (
+        <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12 flex-shrink-0">
+          <circle cx="24" cy="24" r="14" stroke="#FFD700" strokeWidth="1.5" fill="#111125" fillOpacity="0.5" />
+          <circle cx="24" cy="24" r="8" stroke="#FFD700" strokeWidth="1" opacity="0.4" />
+          <path d="M24 10v4M24 34v4M10 24h4M34 24h4" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
+          <circle cx="24" cy="24" r="3" fill="#FFD700" opacity="0.3" />
+        </svg>
+      );
+    case 'design':
+      return (
+        <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12 flex-shrink-0">
+          <rect x="8" y="12" width="32" height="24" rx="4" stroke="#F43F5E" strokeWidth="1.5" fill="#111125" fillOpacity="0.5" />
+          <rect x="14" y="16" width="20" height="12" rx="2" stroke="#F43F5E" strokeWidth="1" opacity="0.3" />
+          <circle cx="24" cy="22" r="4" fill="#F43F5E" opacity="0.3" />
+          <circle cx="24" cy="22" r="2" fill="#F43F5E" opacity="0.5" />
+          <path d="M8 30h32" stroke="#F43F5E" strokeWidth="1" opacity="0.2" />
+        </svg>
+      );
+    case 'marketing':
+      return (
+        <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12 flex-shrink-0">
+          <rect x="4" y="14" width="16" height="20" rx="3" stroke="#10B981" strokeWidth="1.5" fill="#111125" fillOpacity="0.5" />
+          <rect x="28" y="14" width="16" height="20" rx="3" stroke="#10B981" strokeWidth="1.5" fill="#111125" fillOpacity="0.5" />
+          <line x1="12" y1="34" x2="12" y2="40" stroke="#10B981" strokeWidth="1.5" opacity="0.4" />
+          <line x1="36" y1="34" x2="36" y2="40" stroke="#10B981" strokeWidth="1.5" opacity="0.4" />
+          <line x1="12" y1="40" x2="36" y2="40" stroke="#10B981" strokeWidth="1.5" opacity="0.3" />
+          <path d="M22 12l4 4M22 36l4-4" stroke="#10B981" strokeWidth="1" opacity="0.3" />
+          <circle cx="24" cy="24" r="3" fill="#10B981" opacity="0.2" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
+// ─── Data ──────────────────────────────────────────────────
+
+interface ToolItem {
+  name: string;
+  slug: string;
+  tagline?: string;
+}
+
+interface UseCaseSection {
+  id: string;
+  icon: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  tools: ToolItem[];
+  playbookSlug: string;
+  categorySlug: string;
+  gradient: string;
+  borderGlow: string;
+  svgType: string;
+}
+
+const useCaseSections: UseCaseSection[] = [
+  {
+    id: 'content-creation',
+    icon: '\u270d\ufe0f',
+    title: 'Content Creation',
+    subtitle: 'Blog posts \u00b7 Social media \u00b7 Email \u00b7 Scripts',
+    description: 'The problem: staring at a blank page, hours of drafting, inconsistent quality. The playbook: use ChatGPT for outlines, Claude for long-form drafts, Perplexity for research, Canva for visuals. Publish 3x faster without sacrificing quality.',
+    tools: [
+      { name: 'ChatGPT', slug: 'chatgpt', tagline: 'Versatile writing assistant' },
+      { name: 'Claude', slug: 'claude', tagline: 'Long-form specialist' },
+      { name: 'Perplexity', slug: 'perplexity', tagline: 'Research engine' },
+      { name: 'Canva AI', slug: 'canva-ai', tagline: 'Visual content' },
+      { name: 'Jasper', slug: 'jasper', tagline: 'Marketing copy' },
+    ],
+    playbookSlug: 'content-creation-with-chatgpt',
+    categorySlug: 'content-creation',
+    gradient: 'from-violet-500/20 via-fuchsia-500/10 to-transparent',
+    borderGlow: 'hover:border-violet-500/50',
+    svgType: 'content',
+  },
+  {
+    id: 'code-dev',
+    icon: '\u26a1',
+    title: 'Code & Development',
+    subtitle: 'Ship apps \u00b7 Automate workflows \u00b7 Better code',
+    description: 'The problem: slow dev cycles, debugging hell, context switching. The playbook: Cursor + Claude for pair programming, GitHub Copilot for autocomplete, Devin for autonomous PRs. Go from idea to deployed MVP in hours.',
+    tools: [
+      { name: 'Cursor', slug: 'cursor', tagline: 'AI-native IDE' },
+      { name: 'Claude', slug: 'claude', tagline: 'Complex reasoning' },
+      { name: 'GitHub Copilot', slug: 'copilot', tagline: 'Code autocomplete' },
+      { name: 'Devin', slug: 'devin', tagline: 'Autonomous engineer' },
+      { name: 'Gemini', slug: 'gemini', tagline: 'Multi-language code' },
+    ],
+    playbookSlug: 'build-an-app-with-cursor',
+    categorySlug: 'code-development',
+    gradient: 'from-cyan-500/20 via-blue-500/10 to-transparent',
+    borderGlow: 'hover:border-cyan-500/50',
+    svgType: 'code',
+  },
+  {
+    id: 'research',
+    icon: '\ud83d\udd0d',
+    title: 'Research & Analysis',
+    subtitle: 'Deep research \u00b7 Data analysis \u00b7 Intelligence',
+    description: 'The problem: information overload, slow research, drawing wrong conclusions. The playbook: Perplexity for real-time research, Claude for 200K-token document analysis, Gemini for Google integration, ChatGPT for synthesis. Find answers in minutes.',
+    tools: [
+      { name: 'Perplexity', slug: 'perplexity', tagline: 'Web research engine' },
+      { name: 'Claude', slug: 'claude', tagline: 'Document analysis' },
+      { name: 'Gemini', slug: 'gemini', tagline: 'Google integration' },
+      { name: 'ChatGPT', slug: 'chatgpt', tagline: 'Synthesis' },
+      { name: 'Notion AI', slug: 'notion-ai', tagline: 'Notes & knowledge' },
+    ],
+    playbookSlug: 'ai-for-data-analysis',
+    categorySlug: 'research-analysis',
+    gradient: 'from-emerald-500/20 via-teal-500/10 to-transparent',
+    borderGlow: 'hover:border-emerald-500/50',
+    svgType: 'research',
+  },
+  {
+    id: 'design',
+    icon: '\ud83c\udfa8',
+    title: 'Design & Creative',
+    subtitle: 'Visuals \u00b7 Videos \u00b7 Presentations \u00b7 Brand',
+    description: 'The problem: expensive designers, slow iterations, inconsistent branding. The playbook: Canva AI for instant designs, Midjourney for custom imagery, Runway for video editing, Suno for music. Professional assets without a design degree.',
+    tools: [
+      { name: 'Canva AI', slug: 'canva-ai', tagline: 'All-in-one design' },
+      { name: 'Midjourney', slug: 'midjourney', tagline: 'AI image generation' },
+      { name: 'Runway', slug: 'runway', tagline: 'Video editing AI' },
+      { name: 'Descript', slug: 'descript', tagline: 'Audio & video' },
+      { name: 'Suno', slug: 'suno', tagline: 'Music generation' },
+    ],
+    playbookSlug: 'ai-video-production',
+    categorySlug: 'design',
+    gradient: 'from-rose-500/20 via-pink-500/10 to-transparent',
+    borderGlow: 'hover:border-rose-500/50',
+    svgType: 'design',
+  },
+  {
+    id: 'marketing',
+    icon: '\ud83d\udcc8',
+    title: 'Marketing & Growth',
+    subtitle: 'SEO \u00b7 Email \u00b7 Social \u00b7 Ads',
+    description: 'The problem: scattered campaigns, low conversion, guessing what works. The playbook: ChatGPT for strategy, Perplexity for keyword research, Synthesia for video, Intercom AI for chatbots. Data-driven marketing that converts.',
+    tools: [
+      { name: 'ChatGPT', slug: 'chatgpt', tagline: 'Strategy & copy' },
+      { name: 'Perplexity', slug: 'perplexity', tagline: 'SEO research' },
+      { name: 'Synthesia', slug: 'synthesia', tagline: 'AI video marketing' },
+      { name: 'Intercom AI', slug: 'intercom-ai', tagline: 'Chatbot automation' },
+      { name: 'Canva AI', slug: 'canva-ai', tagline: 'Campaign visuals' },
+    ],
+    playbookSlug: 'ai-marketing-for-asia',
+    categorySlug: 'marketing',
+    gradient: 'from-amber-500/20 via-orange-500/10 to-transparent',
+    borderGlow: 'hover:border-amber-500/50',
+    svgType: 'marketing',
+  },
+];
+
+const pipelineItems = [
+  { stage: '\ud83d\udca1 Idea', color: 'from-violet-500 to-purple-600', desc: 'Can\'t think what to build? Start here.' },
+  { stage: '\ud83d\udd0d Research', color: 'from-cyan-500 to-blue-600', desc: 'Validate your idea before you build.' },
+  { stage: '\u26a1 Build', color: 'from-fuchsia-500 to-pink-600', desc: 'Ship fast with AI-assisted coding.' },
+  { stage: '\ud83d\ude80 Market', color: 'from-amber-500 to-orange-600', desc: 'Launch and grow your audience.' },
+  { stage: '\ud83d\udcc8 Scale', color: 'from-emerald-500 to-teal-600', desc: 'Automate and optimize at scale.' },
+];
+
+const stats = [
+  { icon: BookOpen, value: '37', label: 'AI Playbooks', desc: 'Step-by-step guides that work' },
+  { icon: Layers, value: '90+', label: 'AI Tools', desc: 'Curated, reviewed & ranked' },
+  { icon: TrendingUp, value: '5', label: 'Pipeline Stages', desc: 'Idea \u2192 Research \u2192 Build \u2192 Market \u2192 Scale' },
+  { icon: Trophy, value: 'Asia', label: 'Ranked', desc: 'Editorial scores for Asia' },
+];
+
+const filterPills = [
+  { label: 'Free', filter: 'pricing=Free' },
+  { label: 'Paid', filter: 'pricing=Paid' },
+  { label: 'Agentic', filter: 'agentic=true' },
+  { label: 'Multimodal', filter: 'multimodal=true' },
+  { label: 'Asia-Ready', filter: 'asiaReady=true' },
+];
+
+// ─── Page Component ───────────────────────────────────────
 
 export default function HomePage() {
   const router = useRouter();
@@ -28,642 +322,204 @@ export default function HomePage() {
     }
   };
 
-  const filterPills = [
-    { label: 'Free', filter: 'pricing=Free' },
-    { label: 'Paid', filter: 'pricing=Paid' },
-    { label: 'Agentic', filter: 'agentic=true' },
-    { label: 'Multimodal', filter: 'multimodal=true' },
-    { label: 'Asia-Ready', filter: 'asiaReady=true' },
-  ];
-
-  const useCases = [
-    {
-      icon: '✍️',
-      title: 'Write content that ranks',
-      subtitle: 'Blog posts, social, email — with ChatGPT + Perplexity',
-      playbookSlug: 'content-creation-with-chatgpt',
-      playbookLabel: 'Content Creation Playbook',
-      tools: ['ChatGPT', 'Perplexity'],
-      bgGrad: 'from-violet-500/20 via-fuchsia-500/10 to-transparent',
-      borderGlow: 'hover:border-violet-500/50',
-    },
-    {
-      icon: '⚡',
-      title: 'Ship an app tonight',
-      subtitle: 'From idea to deployed MVP with Cursor + Claude',
-      playbookSlug: 'build-an-app-with-cursor',
-      playbookLabel: 'Build App Playbook',
-      tools: ['Cursor', 'Claude', 'Vercel'],
-      bgGrad: 'from-cyan-500/20 via-blue-500/10 to-transparent',
-      borderGlow: 'hover:border-cyan-500/50',
-    },
-    {
-      icon: '🎯',
-      title: 'Market to Asian audiences',
-      subtitle: 'Multilingual campaigns that actually convert',
-      playbookSlug: 'ai-marketing-for-asia',
-      playbookLabel: 'Asia Marketing Playbook',
-      tools: ['ChatGPT', 'Canva', 'Synthesia', 'ElevenLabs'],
-      bgGrad: 'from-emerald-500/20 via-teal-500/10 to-transparent',
-      borderGlow: 'hover:border-emerald-500/50',
-    },
-    {
-      icon: '📹',
-      title: 'Create pro videos with AI',
-      subtitle: 'Full pipeline: script → voiceover → visuals → publish',
-      playbookSlug: 'ai-video-production',
-      playbookLabel: 'Video Production Playbook',
-      tools: ['ChatGPT', 'ElevenLabs', 'Runway', 'Descript'],
-      bgGrad: 'from-amber-500/20 via-orange-500/10 to-transparent',
-      borderGlow: 'hover:border-amber-500/50',
-    },
-    {
-      icon: '🔍',
-      title: 'Rank on page 1',
-      subtitle: 'SEO keyword research + content optimization with AI',
-      playbookSlug: 'ai-for-seo',
-      playbookLabel: 'SEO Playbook',
-      tools: ['ChatGPT', 'Perplexity', 'Semrush'],
-      bgGrad: 'from-emerald-500/20 via-green-500/10 to-transparent',
-      borderGlow: 'hover:border-emerald-500/50',
-    },
-    {
-      icon: '📊',
-      title: 'Analyze data like an analyst',
-      subtitle: 'CSV to insights with AI-powered analytics',
-      playbookSlug: 'ai-for-data-analysis',
-      playbookLabel: 'Data Analysis Playbook',
-      tools: ['ChatGPT', 'Gemini', 'Claude'],
-      bgGrad: 'from-indigo-500/20 via-violet-500/10 to-transparent',
-      borderGlow: 'hover:border-indigo-500/50',
-    },
-    {
-      icon: '♫',
-      title: 'Produce music with AI',
-      subtitle: 'Generate tracks, design sounds, mix & master',
-      playbookSlug: 'ai-for-music-and-audio-production',
-      playbookLabel: 'Music Production Playbook',
-      tools: ['Suno', 'ElevenLabs', 'Descript'],
-      bgGrad: 'from-rose-500/20 via-pink-500/10 to-transparent',
-      borderGlow: 'hover:border-rose-500/50',
-    },
-    {
-      icon: '📱',
-      title: 'Manage social media with AI',
-      subtitle: 'Content calendars, captions, and growth',
-      playbookSlug: 'ai-for-social-media-management',
-      playbookLabel: 'Social Media Playbook',
-      tools: ['ChatGPT', 'Canva AI', 'Perplexity'],
-      bgGrad: 'from-pink-500/20 via-rose-500/10 to-transparent',
-      borderGlow: 'hover:border-pink-500/50',
-    },
-  ];
-
-  const browseByUseCase = [
-    {
-      icon: '📱',
-      title: 'For Social Media Managers',
-      subtitle: 'Content calendars, captions, and audience growth with AI',
-      playbookSlug: 'ai-for-social-media-management',
-      categorySlug: 'social-media',
-      tag: 'NEW',
-      bgGrad: 'from-pink-500/20 via-rose-500/10 to-transparent',
-      borderGlow: 'hover:border-pink-500/50',
-    },
-    {
-      icon: '🎙️',
-      title: 'For Podcasters',
-      subtitle: 'Full podcast production: record, edit, publish, repurpose',
-      playbookSlug: 'ai-for-podcast-production',
-      categorySlug: 'podcast',
-      tag: 'NEW',
-      bgGrad: 'from-purple-500/20 via-violet-500/10 to-transparent',
-      borderGlow: 'hover:border-purple-500/50',
-    },
-    {
-      icon: '📧',
-      title: 'For Email Marketers',
-      subtitle: 'High-converting sequences with AI personalization',
-      playbookSlug: 'ai-for-email-marketing',
-      categorySlug: 'email',
-      tag: 'NEW',
-      bgGrad: 'from-blue-500/20 via-indigo-500/10 to-transparent',
-      borderGlow: 'hover:border-blue-500/50',
-    },
-    {
-      icon: '📝',
-      title: 'For Meeting-Heavy Teams',
-      subtitle: 'AI summaries, action items, and follow-up automation',
-      playbookSlug: 'ai-for-meeting-notes-and-summarization',
-      categorySlug: 'meetings',
-      tag: 'NEW',
-      bgGrad: 'from-cyan-500/20 via-teal-500/10 to-transparent',
-      borderGlow: 'hover:border-cyan-500/50',
-    },
-    {
-      icon: '🌐',
-      title: 'For Language Learners',
-      subtitle: 'AI tutors, conversation practice, and pronunciation',
-      playbookSlug: 'ai-for-language-learning',
-      categorySlug: 'language',
-      tag: 'NEW',
-      bgGrad: 'from-green-500/20 via-emerald-500/10 to-transparent',
-      borderGlow: 'hover:border-green-500/50',
-    },
-    {
-      icon: '💼',
-      title: 'For Job Seekers',
-      subtitle: 'Resume optimization, interview prep, and salary negotiation',
-      playbookSlug: 'ai-for-resume-and-job-applications',
-      categorySlug: 'career',
-      tag: 'NEW',
-      bgGrad: 'from-sky-500/20 via-blue-500/10 to-transparent',
-      borderGlow: 'hover:border-sky-500/50',
-    },
-    {
-      icon: '💰',
-      title: 'For Personal Finance',
-      subtitle: 'Budgeting, investment research, and tax prep with AI',
-      playbookSlug: 'ai-for-personal-finance-and-budgeting',
-      categorySlug: 'finance',
-      tag: 'NEW',
-      bgGrad: 'from-yellow-500/20 via-amber-500/10 to-transparent',
-      borderGlow: 'hover:border-yellow-500/50',
-    },
-    {
-      icon: '💪',
-      title: 'For Fitness Enthusiasts',
-      subtitle: 'AI workouts, nutrition plans, and progress tracking',
-      playbookSlug: 'ai-for-fitness-and-health-tracking',
-      categorySlug: 'fitness',
-      tag: 'NEW',
-      bgGrad: 'from-emerald-500/20 via-green-500/10 to-transparent',
-      borderGlow: 'hover:border-emerald-500/50',
-    },
-    {
-      icon: '📽️',
-      title: 'For Presenters',
-      subtitle: 'Beautiful slide decks with AI from outline to design',
-      playbookSlug: 'ai-for-presentation-design',
-      categorySlug: 'presentation',
-      tag: 'NEW',
-      bgGrad: 'from-amber-500/20 via-orange-500/10 to-transparent',
-      borderGlow: 'hover:border-amber-500/50',
-    },
-    {
-      icon: '📚',
-      title: 'For Educators & Students',
-      subtitle: 'AI tutoring, lesson planning, and personalized learning',
-      playbookSlug: 'ai-for-education-and-tutoring',
-      categorySlug: 'education',
-      tag: 'POPULAR',
-      bgGrad: 'from-blue-500/20 via-indigo-500/10 to-transparent',
-      borderGlow: 'hover:border-blue-500/50',
-    },
-    {
-      icon: '💬',
-      title: 'For Customer Support Teams',
-      subtitle: 'Automate 80% of tickets with AI chatbots and RAG',
-      playbookSlug: 'ai-for-customer-support',
-      categorySlug: 'customer-support',
-      tag: 'POPULAR',
-      bgGrad: 'from-emerald-500/20 via-teal-500/10 to-transparent',
-      borderGlow: 'hover:border-emerald-500/50',
-    },
-    {
-      icon: '🎨',
-      title: 'For Designers & Creatives',
-      subtitle: 'Design everything with AI — from logos to video',
-      playbookSlug: 'ai-for-design-and-creative',
-      categorySlug: 'design',
-      tag: 'POPULAR',
-      bgGrad: 'from-rose-500/20 via-violet-500/10 to-transparent',
-      borderGlow: 'hover:border-rose-500/50',
-    },
-    {
-      icon: '📊',
-      title: 'For Analysts & CFOs',
-      subtitle: 'Financial modeling, research, and reporting with AI',
-      playbookSlug: 'ai-for-finance-and-analysis',
-      categorySlug: 'finance',
-      tag: 'POPULAR',
-      bgGrad: 'from-amber-500/20 via-yellow-500/10 to-transparent',
-      borderGlow: 'hover:border-amber-500/50',
-    },
-    {
-      icon: '📈',
-      title: 'For Marketers',
-      subtitle: 'Full-stack marketing automation from strategy to analytics',
-      playbookSlug: 'ai-for-marketing-automation',
-      categorySlug: 'marketing',
-      tag: 'POPULAR',
-      bgGrad: 'from-fuchsia-500/20 via-rose-500/10 to-transparent',
-      borderGlow: 'hover:border-fuchsia-500/50',
-    },
-    {
-      icon: '🏠',
-      title: 'For Real Estate Agents',
-      subtitle: 'Property valuation, virtual staging and lead gen',
-      playbookSlug: 'ai-for-real-estate',
-      categorySlug: 'real-estate',
-      tag: 'NEW',
-      bgGrad: 'from-sky-500/20 via-blue-500/10 to-transparent',
-      borderGlow: 'hover:border-sky-500/50',
-    },
-    {
-      icon: '🏥',
-      title: 'For Healthcare Professionals',
-      subtitle: 'Medical research, patient comms and clinical workflows',
-      playbookSlug: 'ai-for-healthcare',
-      categorySlug: 'healthcare',
-      tag: 'NEW',
-      bgGrad: 'from-emerald-500/20 via-teal-500/10 to-transparent',
-      borderGlow: 'hover:border-emerald-500/50',
-    },
-    {
-      icon: '🛒',
-      title: 'For Ecommerce Owners',
-      subtitle: 'Product descriptions, chatbot, inventory and personalization',
-      playbookSlug: 'ai-for-ecommerce',
-      categorySlug: 'ecommerce',
-      tag: 'NEW',
-      bgGrad: 'from-orange-500/20 via-amber-500/10 to-transparent',
-      borderGlow: 'hover:border-orange-500/50',
-    },
-    {
-      icon: '👥',
-      title: 'For HR & Recruiting',
-      subtitle: 'Resume screening, interview prep and onboarding',
-      playbookSlug: 'ai-for-hr-and-recruiting',
-      categorySlug: 'hr',
-      tag: 'NEW',
-      bgGrad: 'from-violet-500/20 via-purple-500/10 to-transparent',
-      borderGlow: 'hover:border-violet-500/50',
-    },
-    {
-      icon: '⚖️',
-      title: 'For Legal Professionals',
-      subtitle: 'Contract review, legal research and document automation',
-      playbookSlug: 'ai-for-legal',
-      categorySlug: 'legal',
-      tag: 'NEW',
-      bgGrad: 'from-stone-500/20 via-slate-500/10 to-transparent',
-      borderGlow: 'hover:border-stone-500/50',
-    },
-    {
-      icon: '🍽️',
-      title: 'For Food & Hospitality',
-      subtitle: 'Menu planning, recipe dev and restaurant ops',
-      playbookSlug: 'ai-for-food-and-hospitality',
-      categorySlug: 'food-hospitality',
-      tag: 'NEW',
-      bgGrad: 'from-red-500/20 via-rose-500/10 to-transparent',
-      borderGlow: 'hover:border-red-500/50',
-    },
-    {
-      icon: '🎮',
-      title: 'For Gaming & Entertainment',
-      subtitle: 'Game dev, asset creation and streaming',
-      playbookSlug: 'ai-for-gaming-and-entertainment',
-      categorySlug: 'gaming',
-      tag: 'NEW',
-      bgGrad: 'from-indigo-500/20 via-fuchsia-500/10 to-transparent',
-      borderGlow: 'hover:border-indigo-500/50',
-    },
-    {
-      icon: '🚀',
-      title: 'For Startups & Venture',
-      subtitle: 'Pitch decks, market sizing and investor comms',
-      playbookSlug: 'ai-for-startups-and-venture',
-      categorySlug: 'startups',
-      tag: 'NEW',
-      bgGrad: 'from-cyan-500/20 via-blue-500/10 to-transparent',
-      borderGlow: 'hover:border-cyan-500/50',
-    },
-  ];
-
-  const pipelineItems = [
-    { stage: '💡 Idea', color: 'from-violet-500 to-purple-600', desc: 'Can\'t think what to build? Start here.' },
-    { stage: '🔍 Research', color: 'from-cyan-500 to-blue-600', desc: 'Validate your idea before you build.' },
-    { stage: '⚡ Build', color: 'from-fuchsia-500 to-pink-600', desc: 'Ship fast with AI-assisted coding.' },
-    { stage: '🚀 Market', color: 'from-amber-500 to-orange-600', desc: 'Launch and grow your audience.' },
-    { stage: '📈 Scale', color: 'from-emerald-500 to-teal-600', desc: 'Automate and optimize at scale.' },
-  ];
-
-  const stats = [
-    { icon: BookOpen, value: '37', label: 'AI Playbooks', desc: 'Step-by-step guides that work' },
-    { icon: Layers, value: '90+', label: 'AI Tools', desc: 'Curated, reviewed & ranked' },
-    { icon: TrendingUp, value: '5', label: 'Pipeline Stages', desc: 'Idea → Research → Build → Market → Scale' },
-    { icon: Trophy, value: 'Asia', label: 'Ranked', desc: 'Editorial scores for Asia' },
-  ];
-
   return (
     <div>
-      {/* ════════════════════════════════════ */}
-      {/* HERO — REBUILT WITH VISUALS       */}
-      {/* ════════════════════════════════════ */}
-      <section className="relative overflow-hidden">
-        {/* Animated gradient background */}
+      {/* ════════════════════════════════════════════════ */}
+      {/* HERO — Problem -> Playbook -> Tools            */}
+      {/* ════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden pt-8 sm:pt-12 pb-4">
+        {/* Animated bg */}
         <div className="absolute inset-0 bg-tech-grid opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-b from-neon/5 via-transparent to-transparent" />
-        <div className="absolute top-10 left-1/3 w-[500px] h-[500px] bg-neon/10 rounded-full blur-[120px] animate-pulse-glow" />
-        <div className="absolute top-20 right-1/4 w-80 h-80 bg-aqua/10 rounded-full blur-[100px] animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-10 left-1/3 w-[600px] h-[600px] bg-neon/8 rounded-full blur-[150px] animate-pulse-glow pointer-events-none" />
+        <div className="absolute top-20 right-1/4 w-80 h-80 bg-aqua/8 rounded-full blur-[120px] animate-pulse-glow pointer-events-none" style={{ animationDelay: '1.5s' }} />
 
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-8 sm:pb-10 text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon/10 border border-neon/20 text-neon-light text-xs font-medium mb-4 sm:mb-5 animate-fade-in">
-            <Sparkles className="w-3.5 h-3.5" />
-            AI Tools + Playbooks That Actually Work
-          </div>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left: text */}
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon/10 border border-neon/20 text-neon-light text-xs font-medium mb-4 sm:mb-5 animate-fade-in">
+                <Sparkles className="w-3.5 h-3.5" />
+                AI Tools + Playbooks That Actually Work
+              </div>
 
-          {/* Headline — substance-first: problem → playbook → tools */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-3 sm:mb-4 animate-slide-up">
-            You have a goal.{' '}
-            <span className="bg-gradient-to-r from-neon-light via-aqua to-asia bg-clip-text text-transparent">
-              We have the playbook.
-            </span>
-          </h1>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3 animate-slide-up">
+                Too many AI tools.{' '}
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-neon-light via-aqua to-asia">
+                  Not enough results.
+                </span>
+              </h1>
 
-          {/* Subtext — problem statement first */}
-          <p className="text-base sm:text-lg text-tech-100/70 max-w-2xl mx-auto mb-6 sm:mb-8 animate-slide-up">
-            The problem isn&apos;t finding AI tools — it&apos;s knowing how to use them together. 
-            Every playbook on this site solves a real problem: write content that ranks, ship an 
-            MVP tonight, market to Asia, or automate your support. Pick your goal, get the tools, 
-            follow the workflow.
-          </p>
+              <p className="text-base sm:text-lg text-tech-100/70 max-w-xl mb-4 animate-slide-up leading-relaxed">
+                We know the problem. You sign up for every new AI tool but nothing ships.{' '}
+                <strong className="text-white">Apifeny AI solves that.</strong> Each playbook
+                connects your goal to the right tools in a repeatable workflow. Pick what you
+                want to do &mdash; we&apos;ll show you exactly how.
+              </p>
 
-          {/* Search bar */}
-          <form onSubmit={handleSearch} className="max-w-xl mx-auto mb-5 animate-slide-up">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-tech-300" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search AI tools and playbooks…"
-                className="w-full bg-tech-800/90 border border-tech-500/40 rounded-xl pl-12 pr-5 py-4 text-base text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/50 focus:ring-2 focus:ring-neon/10 transition shadow-lg shadow-black/20"
-              />
-              <button
-                type="submit"
-                className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-2 rounded-lg bg-neon hover:bg-neon-dark text-white text-sm font-medium transition"
-              >
-                Search
-              </button>
+              <form onSubmit={handleSearch} className="max-w-lg mb-4 animate-slide-up">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-tech-300" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="What do you want to build?"
+                    className="w-full bg-tech-800/90 border border-tech-500/40 rounded-xl pl-12 pr-24 py-4 text-base text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/50 focus:ring-2 focus:ring-neon/10 shadow-lg shadow-black/20"
+                  />
+                  <button
+                    type="submit"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-2 rounded-lg bg-neon hover:bg-neon-dark text-white text-sm font-medium transition"
+                  >
+                    Search
+                  </button>
+                </div>
+              </form>
+
+              <div className="flex flex-wrap items-center gap-2 animate-fade-in">
+                {filterPills.map((pill) => (
+                  <Link
+                    key={pill.label}
+                    href={`/tools?${pill.filter}`}
+                    className="px-3 py-1.5 rounded-full border border-tech-500/30 bg-tech-700/60 text-tech-100 hover:text-white hover:border-neon/40 hover:bg-tech-700 text-xs sm:text-sm font-medium transition"
+                  >
+                    {pill.label}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </form>
 
-          {/* Filter pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 animate-fade-in mb-2">
-            {filterPills.map((pill) => (
-              <Link
-                key={pill.label}
-                href={`/tools?${pill.filter}`}
-                className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-tech-500/30 bg-tech-700/60 text-tech-100 hover:text-white hover:border-neon/40 hover:bg-tech-700 text-xs sm:text-sm font-medium transition"
-              >
-                {pill.label}
-              </Link>
-            ))}
+            {/* Right: SVG */}
+            <div className="hidden lg:block animate-fade-in">
+              <HeroIllustration />
+            </div>
           </div>
-        </div>
 
-        {/* Pipeline visual */}
-        <div className="max-w-3xl mx-auto px-4 pb-4">
-          <PipelineVisual />
+          <div className="mt-6 lg:mt-8">
+            <PipelineVisual />
+          </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════ */}
-      {/* VALUE PROPOSITION — "What do you want to build?"  */}
-      {/* ════════════════════════════════════ */}
-      <section className="py-12 sm:py-16 border-t border-tech-500/20">
+      {/* ════════════════════════════════════════════════ */}
+      {/* USE CASE SECTIONS                              */}
+      {/* ════════════════════════════════════════════════ */}
+      <section className="py-12 sm:py-16 border-t border-tech-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-              What do you want to build today?
+          <div className="text-center mb-10 sm:mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neon/10 border border-neon/15 text-neon-light text-xs font-medium mb-4">
+              <Zap className="w-3.5 h-3.5" />
+              Problem &rarr; Playbook &rarr; Tools
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">
+              Find your workflow
             </h2>
-            <p className="text-tech-200 text-sm sm:text-base max-w-xl mx-auto">
-              Pick a goal. We&apos;ll match you with the tools and playbook to make it happen.
+            <p className="text-tech-200 text-sm sm:text-base max-w-2xl mx-auto">
+              Every section starts with a real problem, gives you the playbook,
+              and matches the exact tools you need. No fluff. No directories of 10,000 tools.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-            {useCases.map((uc) => (
-              <Link
-                key={uc.title}
-                href={`/playbook/${uc.playbookSlug}`}
-                className={`group relative rounded-xl bg-gradient-to-br ${uc.bgGrad} bg-tech-700 border border-tech-500/30 p-5 ${uc.borderGlow} transition-all hover:-translate-y-1 overflow-hidden`}
+          <div className="space-y-6 sm:space-y-8">
+            {useCaseSections.map((section) => (
+              <div
+                key={section.id}
+                className={`group relative rounded-2xl bg-gradient-to-br ${section.gradient} bg-tech-700 border border-tech-500/20 ${section.borderGlow} transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-neon/5 overflow-hidden`}
               >
-                {/* Subtle grid overlay */}
-                <div className="absolute inset-0 bg-tech-grid opacity-10" />
-                
-                <div className="relative">
-                  {/* Icon */}
-                  <div className="text-2xl mb-3">{uc.icon}</div>
-                  
-                  {/* Title */}
-                  <h3 className="text-base font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
-                    {uc.title}
-                  </h3>
-                  
-                  {/* Subtitle */}
-                  <p className="text-xs text-tech-200 mb-3">{uc.subtitle}</p>
-                  
-                  {/* Tools used */}
-                  <div className="flex flex-wrap gap-1.5 mb-3">
-                    {uc.tools.map((tool) => (
-                      <span
-                        key={tool}
-                        className="px-2 py-0.5 rounded text-[10px] font-medium bg-tech-600/60 text-tech-200 border border-tech-500/20"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  {/* CTA */}
-                  <div className="flex items-center gap-1 text-xs text-neon-light group-hover:gap-2 transition-all">
-                    <span>{uc.playbookLabel}</span>
-                    <ArrowRight className="w-3 h-3" />
+                <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
+
+                <div className="relative p-6 sm:p-8">
+                  <div className="flex flex-col lg:flex-row lg:items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <UseCaseIcon type={section.svgType} />
+                    </div>
+
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="text-2xl">{section.icon}</span>
+                        <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-neon-light transition-colors">
+                          {section.title}
+                        </h3>
+                      </div>
+                      <p className="text-xs text-tech-200 mb-2 uppercase tracking-wider font-medium">
+                        {section.subtitle}
+                      </p>
+
+                      <p className="text-sm text-tech-100/70 leading-relaxed mb-4">
+                        {section.description}
+                      </p>
+
+                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 mb-4">
+                        {section.tools.map((tool) => (
+                          <Link
+                            key={tool.slug}
+                            href={`/tools/${tool.slug}`}
+                            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-tech-600/50 border border-tech-500/15 hover:bg-tech-600/80 hover:border-neon/30 transition group/tool"
+                          >
+                            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-neon/30 to-aqua/20 flex items-center justify-center text-[10px] font-bold text-neon-light flex-shrink-0">
+                              {tool.name[0]}
+                            </div>
+                            <div className="min-w-0">
+                              <div className="text-xs font-medium text-white truncate">{tool.name}</div>
+                              {tool.tagline && (
+                                <div className="text-[9px] text-tech-300 truncate">{tool.tagline}</div>
+                              )}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+
+                      <div className="flex flex-wrap items-center gap-3">
+                        <Link
+                          href={`/playbook/${section.playbookSlug}`}
+                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-neon/15 border border-neon/20 text-neon-light text-xs font-medium hover:bg-neon/25 transition"
+                        >
+                          <BookOpen className="w-3.5 h-3.5" />
+                          View playbook
+                          <ArrowRight className="w-3 h-3" />
+                        </Link>
+                        <Link
+                          href={`/categories/${section.categorySlug}`}
+                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-tech-600/50 border border-tech-500/20 text-tech-200 text-xs font-medium hover:text-white hover:border-tech-400/30 transition"
+                        >
+                          Browse all tools
+                          <ChevronRight className="w-3 h-3" />
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ════════════════════════════════════ */}
-      {/* BROWSE BY USE CASE — 13 categories  */}
-      {/* ════════════════════════════════════ */}
-      <section className="py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-              Browse by use case
-            </h2>
-            <p className="text-tech-200 text-sm sm:text-base max-w-xl mx-auto">
-              Not sure where to start? Pick your role and follow a complete playbook.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {browseByUseCase.map((uc) => (
-              <div key={uc.title} className="group relative">
-                {/* Category card */}
-                <Link
-                  href={`/playbooks?category=${uc.categorySlug}`}
-                  className={`absolute -top-2 -right-2 z-10 px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider bg-tech-700/80 border border-tech-500/30 text-tech-200 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-neon/20 hover:text-neon-light hover:border-neon/30`}
-                >
-                  All {uc.categorySlug}
-                </Link>
-                <Link
-                  href={`/playbook/${uc.playbookSlug}`}
-                  className={`block relative rounded-xl bg-gradient-to-br ${uc.bgGrad} bg-tech-700 border border-tech-500/30 p-5 ${uc.borderGlow} transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:shadow-neon/5 overflow-hidden`}
-                >
-                  <div className="absolute inset-0 bg-tech-grid opacity-10" />
-                  {/* Hover glow effect */}
-                  <div className={`absolute -inset-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-radial from-white/5 to-transparent pointer-events-none`} />
-                  <div className="relative">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-2xl group-hover:scale-110 transition-transform duration-300">{uc.icon}</span>
-                      {uc.tag && (
-                        <span className={`px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider ${
-                          uc.tag === 'NEW' 
-                            ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' 
-                            : 'bg-neon/20 text-neon-light border border-neon/30'
-                        }`}
-                        >
-                          {uc.tag}
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="text-base font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
-                      {uc.title}
-                    </h3>
-                    <p className="text-xs text-tech-200 mb-3 line-clamp-2">{uc.subtitle}</p>
-                    <div className="flex items-center gap-1.5">
-                      <span className="text-xs text-neon-light group-hover:gap-2 transition-all flex items-center gap-1">
-                        View playbook
-                        <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
               </div>
             ))}
           </div>
 
-          {/* Browse All CTA */}
-          <div className="text-center mt-6">
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
             <Link
               href="/playbooks"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-tech-700 border border-tech-500/30 hover:border-neon/40 text-white text-sm font-medium transition hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-neon/10 border border-neon/25 text-neon-light text-sm font-medium hover:bg-neon/20 transition hover:-translate-y-0.5"
             >
               <BookOpen className="w-4 h-4" />
-              Browse all {browseByUseCase.length} playbooks
+              Browse all {useCaseSections.length} playbooks
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/tools"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-tech-700 border border-tech-500/30 text-white text-sm font-medium hover:border-tech-400/50 transition hover:-translate-y-0.5"
+            >
+              <Layers className="w-4 h-4" />
+              All 90+ tools
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════ */}
-      {/* FEATURED PLAYBOOK SPOTLIGHT        */}
-      {/* ════════════════════════════════════ */}
-      <section className="py-12 sm:py-16 bg-tech-800/20 border-y border-tech-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-              <Sparkles className="w-6 h-6 inline-block text-amber-400 mr-2" />
-              Featured playbooks
-            </h2>
-            <p className="text-tech-200 text-sm sm:text-base max-w-xl mx-auto">
-              Our most popular step-by-step guides — handpicked to get you results fast.
-            </p>
-          </div>
-
-          {/* Horizontal scrollable carousel */}
-          <div className="relative">
-            <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-track-tech-800 scrollbar-thumb-tech-500/50">
-              {playbooks.slice(0, 6).map((pb) => (
-                <Link
-                  key={pb.slug}
-                  href={`/playbook/${pb.slug}`}
-                  className={`snap-start flex-shrink-0 w-[280px] sm:w-[300px] relative rounded-xl bg-gradient-to-br ${pb.gradient} bg-tech-700 border border-tech-500/30 p-5 hover:border-neon/40 transition-all hover:-translate-y-1 overflow-hidden group`}
-                >
-                  <div className="absolute inset-0 bg-tech-grid opacity-10" />
-                  <div className="relative">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="text-2xl">{pb.icon}</span>
-                      <span className="px-1.5 py-0.5 rounded text-[9px] font-medium border border-tech-500/30 text-tech-200">
-                        {pb.difficulty === 'Beginner' ? '🌟 Beginner' : pb.difficulty === 'Intermediate' ? '⚡ Intermediate' : '🔥 Advanced'}
-                      </span>
-                    </div>
-                    <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1.5 line-clamp-1">
-                      {pb.title}
-                    </h3>
-                    <p className="text-xs text-tech-200 line-clamp-2 mb-3 leading-relaxed">
-                      {pb.description}
-                    </p>
-                    <div className="flex items-center gap-3 text-[10px] text-tech-300">
-                      <span>{pb.steps.length} steps</span>
-                      <span>•</span>
-                      <span>{pb.read_time_minutes} min read</span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-            {/* Scroll hint */}
-            <div className="text-center mt-2 text-[10px] text-tech-400">
-              Scroll for more playbooks →
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ════════════════════════════════════ */}
-      {/* PIPELINE STAGES — Visual nav        */}
-      {/* ════════════════════════════════════ */}
-      <section className="py-12 sm:py-16 bg-tech-800/30 border-y border-tech-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-1">
-              Follow a pipeline, not a directory
-            </h2>
-            <p className="text-sm text-tech-200">
-              Every playbook fits into one of these stages. Pick where you are.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-3">
-            {pipelineItems.map((item) => (
-              <Link
-                key={item.stage}
-                href={`/rankings/${item.stage.toLowerCase().replace('💡 ', '').replace('🔍 ', '').replace('⚡ ', '').replace('🚀 ', '').replace('📈 ', '')}`}
-                className="group relative px-5 py-3 rounded-xl bg-tech-700 border border-tech-500/30 hover:border-transparent transition-all hover:-translate-y-0.5 overflow-hidden"
-              >
-                {/* Hover gradient */}
-                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-r ${item.color}`} />
-                <div className="relative flex items-center gap-2">
-                  <span className="text-base">{item.stage}</span>
-                  <ArrowRight className="w-3 h-3 text-tech-300 group-hover:text-white transition-colors" />
-                </div>
-                <p className="relative text-[10px] text-tech-300 group-hover:text-white/80 transition-colors mt-0.5">
-                  {item.desc}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ════════════════════════════════════ */}
-      {/* STATS BAR                          */}
-      {/* ════════════════════════════════════ */}
+      {/* ════════════════════════════════════════════════ */}
+      {/* STATS BAR                                      */}
+      {/* ════════════════════════════════════════════════ */}
       <section
         ref={statsRef}
-        className="relative py-10 sm:py-12 border-b border-tech-500/20 bg-tech-800/40"
+        className="relative py-10 sm:py-12 border-y border-tech-500/20 bg-tech-800/40"
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
@@ -684,60 +540,91 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════ */}
-      {/* FEATURED CATEGORIES                 */}
-      {/* ════════════════════════════════════ */}
-      <section className="py-16 sm:py-20">
+      {/* ════════════════════════════════════════════════ */}
+      {/* PIPELINE STAGES                                */}
+      {/* ════════════════════════════════════════════════ */}
+      <section className="py-12 sm:py-16 bg-tech-800/30 border-t border-tech-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FeaturedCategories />
+          <div className="text-center mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-1">
+              Follow a pipeline, not a directory
+            </h2>
+            <p className="text-sm text-tech-200">
+              Every playbook fits into one of these stages. Pick where you are.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3">
+            {pipelineItems.map((item) => (
+              <Link
+                key={item.stage}
+                href={`/playbooks?pipeline=${item.stage.replace(/[^\w]/g, '').toLowerCase()}`}
+                className="group relative px-5 py-3 rounded-xl bg-tech-700 border border-tech-500/30 hover:border-transparent transition-all hover:-translate-y-0.5 overflow-hidden"
+              >
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-r ${item.color}`} />
+                <div className="relative flex items-center gap-2">
+                  <span className="text-base">{item.stage}</span>
+                  <ArrowRight className="w-3 h-3 text-tech-300 group-hover:text-white transition-colors" />
+                </div>
+                <p className="relative text-[10px] text-tech-300 group-hover:text-white/80 transition-colors mt-0.5">
+                  {item.desc}
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════ */}
-      {/* TRENDING PLAYBOOKS (replaces Trending Tools) */}
-      {/* ════════════════════════════════════ */}
-      <section className="py-16 sm:py-20 bg-tech-800/30 border-y border-tech-500/10">
+      {/* ─── FEATURED PLAYBOOKS ─── */}
+      <section className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FeaturedPlaybooks />
         </div>
       </section>
 
-      {/* ════════════════════════════════════ */}
-      {/* MUST-USE THIS MONTH                 */}
-      {/* ════════════════════════════════════ */}
-      <section className="py-16 sm:py-20">
+      {/* ─── MUST-USE THIS MONTH ─── */}
+      <section className="py-16 sm:py-20 bg-tech-800/30 border-y border-tech-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <MustUseThisMonth />
         </div>
       </section>
 
-      {/* ════════════════════════════════════ */}
-      {/* TRENDING TOOLS — moved down, still present */}
-      {/* ════════════════════════════════════ */}
-      <section className="py-16 sm:py-20 bg-tech-800/30 border-y border-tech-500/10">
+      {/* ─── TRENDING TOOLS ─── */}
+      <section className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <TrendingTools />
         </div>
       </section>
 
-      {/* ════════════════════════════════════ */}
-      {/* RANKINGS BY WORKFLOW                */}
-      {/* ════════════════════════════════════ */}
+      {/* ─── FEATURED CATEGORIES ─── */}
       <section className="py-16 sm:py-20 bg-tech-800/30 border-y border-tech-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FeaturedCategories />
+        </div>
+      </section>
+
+      {/* ─── RANKINGS ─── */}
+      <section className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FeaturedRankings />
         </div>
       </section>
 
-      {/* ════════════════════════════════════ */}
-      {/* SPONSORED + NEWSLETTER             */}
-      {/* ════════════════════════════════════ */}
+      {/* ─── SUCCESS STORIES ─── */}
+      <section className="py-16 sm:py-20 bg-tech-800/30 border-y border-tech-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SuccessStories />
+        </div>
+      </section>
+
+      {/* ─── SPONSORED ─── */}
       <section className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SponsoredToolSpot />
         </div>
       </section>
 
+      {/* ─── NEWSLETTER ─── */}
       <section className="py-16 sm:py-20">
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
           <NewsletterSignup source="homepage-cta" />

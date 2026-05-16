@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-const BASE_URL = 'https://apifeny-ai.vercel.app';
+const BASE_URL = 'https://apifeny.ai';
 
 interface Tool {
   id: string;

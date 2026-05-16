@@ -40,14 +40,6 @@
       "static/chunks/231-ac83ae5a3bd4dda6.js",
       "static/chunks/app/destinations/page-cf66544f3269c9b0.js"
     ],
-    "/destinations/[slug]/page": [
-      "static/chunks/webpack-039ae0c25139c608.js",
-      "static/chunks/fd9d1056-78f42706931c32b1.js",
-      "static/chunks/23-68ac474b4c157730.js",
-      "static/chunks/main-app-b2b6ab6dbee1493f.js",
-      "static/chunks/231-ac83ae5a3bd4dda6.js",
-      "static/chunks/app/destinations/[slug]/page-3e2b6f6f0ed4d497.js"
-    ],
     "/blog/[slug]/page": [
       "static/chunks/webpack-039ae0c25139c608.js",
       "static/chunks/fd9d1056-78f42706931c32b1.js",
@@ -55,6 +47,14 @@
       "static/chunks/main-app-b2b6ab6dbee1493f.js",
       "static/chunks/231-ac83ae5a3bd4dda6.js",
       "static/chunks/app/blog/[slug]/page-226cbbfde01f99b3.js"
+    ],
+    "/destinations/[slug]/page": [
+      "static/chunks/webpack-039ae0c25139c608.js",
+      "static/chunks/fd9d1056-78f42706931c32b1.js",
+      "static/chunks/23-68ac474b4c157730.js",
+      "static/chunks/main-app-b2b6ab6dbee1493f.js",
+      "static/chunks/231-ac83ae5a3bd4dda6.js",
+      "static/chunks/app/destinations/[slug]/page-3e2b6f6f0ed4d497.js"
     ]
   }
 }

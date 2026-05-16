@@ -61,7 +61,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "name": "EV Charging Asia",
               "url": "https://ev-charging-asia.vercel.app",
               "description": "Plan the ultimate family EV road trip across Asia. Find charging stations, book luxury EV-friendly hotels, discover family-friendly routes.",
-              "sameAs": [],
+              "sameAs": [
+                "https://www.familytravelasia.com",
+                "https://luxury-family-travel-asia.vercel.app",
+                "https://apifeny-ai.vercel.app",
+                "https://kids-activities-asia.vercel.app",
+                "https://senior-friendly-travel-asia.vercel.app",
+                "https://nudge-sigma-liart.vercel.app",
+                "https://social-beast-two.vercel.app"
+              ],
             }),
           }}
         />

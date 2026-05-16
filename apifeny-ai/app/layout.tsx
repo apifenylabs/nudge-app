@@ -13,22 +13,22 @@ const BASE_URL = 'https://apifeny.ai';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: { default: "Apifeny AI — Discover the Best AI Tools & Agents", template: "%s | Apifeny AI" },
-  description: "25+ AI playbooks and 90+ curated AI tools with Asia-ready filters. Step-by-step guides for content creation, app building, marketing, finance, healthcare, real estate, ecommerce, HR, legal, gaming, and more. Built for Asia.",
-  keywords: ["AI tools directory", "best AI agents", "AI tools for solopreneurs", "Asia-ready AI", "AI playbooks", "AI tools for business", "AI playbook guides", "AI use cases"],
+  title: { default: "Apifeny AI — AI Tools & Playbooks That Actually Work", template: "%s | Apifeny AI" },
+  description: "Stop collecting AI tools, start shipping. 37 AI playbooks and 90+ curated tools organized by workflow — content creation, coding, marketing, design, research. Asia-ready filters and editorial rankings.",
+  keywords: ["AI tools directory", "best AI agents", "AI playbooks", "AI tools for solopreneurs", "Asia-ready AI", "AI tools for business", "AI workflow guides", "AI use cases", "AI for Asia", "AI tool rankings", "AI coding tools", "AI content creation"],
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Apifeny AI",
-    title: "Apifeny AI — Discover the Best AI Tools & Agents",
-    description: "25+ AI playbooks and 90+ curated AI tools with Asia-ready filters. Step-by-step guides for every use case.",
+    title: "Apifeny AI — AI Tools & Playbooks That Actually Work",
+    description: "Problem -> Playbook -> Tools. 37 step-by-step AI playbooks with 90+ curated tools. Built for Asia.",
     url: BASE_URL,
     images: [{ url: "/og", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Apifeny AI",
-    description: "25+ AI playbooks and 90+ curated tools. Real workflows for real results.",
+    title: "Apifeny AI — AI Tools & Playbooks",
+    description: "Problem -> Playbook -> Tools. 37 playbooks, 90+ curated tools, Asia-ready filters.",
   },
   robots: { index: true, follow: true },
 };
@@ -47,7 +47,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "name": "Apifeny AI",
               "url": "https://apifeny.ai",
               "description": "Curated AI tools, agents, and playbooks with Asia-ready filters and editorial rankings.",
-              "sameAs": [],
+              "sameAs": [
+                "https://www.familytravelasia.com",
+                "https://luxury-family-travel-asia.vercel.app",
+                "https://ev-charging-asia.vercel.app",
+                "https://kids-activities-asia.vercel.app",
+                "https://senior-friendly-travel-asia.vercel.app",
+                "https://nudge-sigma-liart.vercel.app",
+                "https://social-beast-two.vercel.app"
+              ],
             }),
           }}
         />

@@ -100,7 +100,15 @@ export default function RootLayout({
               "name": "Luxury Family Travel Asia",
               "url": "https://luxury-family-travel-asia.vercel.app",
               "description": "61 curated luxury family destinations across Asia. 5-star resorts, private villas, butler service, Michelin dining, and exclusive experiences for discerning families.",
-              "sameAs": [],
+              "sameAs": [
+                "https://www.familytravelasia.com",
+                "https://ev-charging-asia.vercel.app",
+                "https://apifeny-ai.vercel.app",
+                "https://kids-activities-asia.vercel.app",
+                "https://senior-friendly-travel-asia.vercel.app",
+                "https://nudge-sigma-liart.vercel.app",
+                "https://social-beast-two.vercel.app"
+              ],
             }),
           }}
         />

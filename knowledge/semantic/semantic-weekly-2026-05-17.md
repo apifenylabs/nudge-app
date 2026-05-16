@@ -56,6 +56,7 @@ Compressed from episodic memories.
 - **build**: Build success (2026-05-16)
 - **deployment**: Deployment event (2026-05-16)
 - **deployment**: Deployment event (2026-05-17)
+- **fix**: Fix: CSS dark mode overrides in globals.css — `.dark .text-ink`, `.dark .bg-cream`, `.dark .kitchen-card` etc. (2026-05-17)
 
 ## Engineering
 
@@ -195,4 +196,8 @@ Compressed from episodic memories.
 - **content**: 45 blog post (2026-05-16)
 - **content**: 10 new blog post (2026-05-16)
 - **content**: 5 new blog post (2026-05-16)
+
+## Lessons
+
+- **lesson**: Sub-agents rewriting pages drop dark mode handling unless explicitly told. Future directives must include "INCLUDE dark mode classes (dark:text-cream/80) on every text element on dark backgrounds." (2026-05-17)
 
