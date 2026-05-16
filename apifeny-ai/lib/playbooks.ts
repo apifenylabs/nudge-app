@@ -3478,6 +3478,626 @@ export const playbooks: Playbook[] = [
     ],
   },
 
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 49: Build a No-Code AI Chatbot for Your Business
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'build-no-code-ai-chatbot',
+    title: 'Build a No-Code AI Chatbot for Your Business',
+    subtitle: 'Launch a customer-facing AI chatbot without writing code',
+    description:
+      'Create an AI chatbot for your business website or messaging channels using no-code platforms like Voiceflow, Botpress, or Tidio. Perfect for customer support, lead qualification, and FAQ automation — zero coding required.',
+    meta_title: 'Build a No-Code AI Chatbot — Apifeny AI Playbook',
+    meta_description: 'Build an AI chatbot for your business with no coding. Use Voiceflow, Botpress, Tidio, or ManyChat for customer support, lead gen, and FAQ automation.',
+    related_tool_slugs: ['chatgpt', 'zapier-central'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '🤖',
+    gradient: 'from-cyan-500/30 to-blue-500/30',
+    steps: [
+      {
+        title: 'Define your chatbot goal and scope',
+        description:
+          'Before building, decide: will this chatbot handle customer support, capture leads, book appointments, or answer FAQs? Map out the 5-10 most common questions or actions users will need. This scope document becomes your build blueprint.',
+        tip: 'Export 3 months of support tickets or sales conversations. The top 10 recurring questions should cover 60-80% of your chatbot workload.',
+      },
+      {
+        title: 'Choose your no-code platform',
+        description:
+          'Voiceflow is best for complex conversational flows with AI branching logic. Botpress excels at GPT-powered chatbots with knowledge base integration. Tidio is ideal for simple FAQ bots with live chat handoff. ManyChat is purpose-built for Facebook Messenger and Instagram DM bots.',
+        tip: 'Start with Tidio if you want a live chat + chatbot hybrid. Go with Voiceflow if you need complex branching conversations with dynamic AI responses.',
+      },
+      {
+        title: 'Design the conversation flow',
+        description:
+          'Map out the user journey: greeting, intent detection, question handling, resolution, escalation (if needed), and feedback. Use the platform visual flow builder. Add fallback responses for unrecognized questions and a clear "talk to human" path.',
+        tip: 'Design for the 80% case first: the happy path where the user asks a common question and gets a perfect answer. Add edge cases and error handling in v2.',
+      },
+      {
+        title: 'Train your chatbot on your data',
+        description:
+          'Upload your knowledge base, FAQs, product documentation, and policy pages to the platform. For AI-powered chatbots, this creates a RAG (Retrieval Augmented Generation) system. The AI answers from your specific content, not the open internet.',
+        tip: 'Write answers as complete sentences, not bullet points. AI chatbots read full paragraphs better. Include links to relevant pages for follow-up on complex topics.',
+      },
+      {
+        title: 'Test exhaustively before launch',
+        description:
+          'Run through every conversation path. Test edge cases: typos, slang, partial questions, multi-language inputs, and unexpected requests. Have 3 people who have never seen the bot test it blind — they will find things you missed.',
+        tip: 'Ask testers to try to break the bot. Push toward escalation paths. Verify that handoff to human agents includes the full conversation history. No one wants to repeat themselves.',
+      },
+      {
+        title: 'Deploy, monitor, and iterate',
+        description:
+          'Deploy on your website, Facebook Messenger, WhatsApp, or your own app. Track: conversation completion rate, escalation rate, user satisfaction, and unanswered questions. Every week, add answers for the most common unanswered questions.',
+        tip: 'Run a two-week trial before full launch. Monitor daily. Most bots need 3-5 rounds of iteration before hitting 80%+ auto-resolution rates.',
+      },
+    ],
+    pro_tips: [
+      'Start with 10-15 conversation paths maximum. Too many paths at launch creates a brittle system that breaks in unpredictable ways',
+      'Always offer a "talk to human" escape hatch. Chatbots that trap users destroy satisfaction faster than bad answers',
+      'Use chatbot analytics to discover what questions customers actually ask — then update your website and knowledge base accordingly',
+      'Add a conversational greeting that sets expectations: "Hi! I am an AI assistant. I can answer common questions 24/7, or I can connect you with a human."',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Building too many conversation paths before testing the core ones',
+        fix: 'Launch with 5 core paths. Collect real user data for 2 weeks. Expand based on actual questions people ask, not what you guess they will ask.',
+      },
+      {
+        mistake: 'Not handling handoff to human agents gracefully',
+        fix: 'Include the full conversation transcript when escalating. No one wants to repeat themselves. Train human agents on bot handoffs during onboarding.',
+      },
+    ],
+    pipeline_stage: 'deployment',
+    revenue_impact: 'Handle 70%+ of customer inquiries automatically with 24/7 AI chatbot availability',
+    real_results: [
+      { metric: 'Auto-Resolution Rate', value: '70-85%', description: 'AI chatbot handles majority of customer inquiries without human involvement' },
+      { metric: 'Response Time', value: '<5 seconds', description: 'Down from hours or days with email-based support systems' },
+      { metric: 'Support Cost Reduction', value: '60%', description: 'No-code chatbot eliminates tier-1 support staffing for common queries' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 50: Automate SEO Content Creation with AI
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'automate-seo-content-creation',
+    title: 'Automate SEO Content Creation with AI',
+    subtitle: 'From keyword research to published articles with AI',
+    description:
+      'An end-to-end SEO content pipeline: keyword research, AI-generated content briefs, AI writing, human editing, SEO optimization, and publishing. Combines Surfer SEO, Jasper, Claude, and ChatGPT for content that actually ranks on search engines.',
+    meta_title: 'Automate SEO Content Creation with AI — Apifeny AI Playbook',
+    meta_description: 'End-to-end SEO content pipeline: keyword research, content briefs, AI writing, human editing, SEO optimization. Use Surfer SEO, Jasper, and ChatGPT.',
+    related_tool_slugs: ['chatgpt', 'surferseo', 'jasper', 'claude', 'semrush', 'ahrefs', 'perplexity'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '🔍',
+    gradient: 'from-emerald-500/30 to-green-500/30',
+    steps: [
+      {
+        title: 'Find high-opportunity keywords',
+        description:
+          'Use Semrush or Ahrefs to find keywords with: decent search volume (>500/mo), low difficulty (<40), and commercial intent (buy, best, vs, review, alternatives, guide). Export 20-30 target keywords for your content batch.',
+        tip: 'Look for clusterable keywords: 5-10 related keywords that can be covered in one comprehensive article. Cluster content ranks 3x better and is easier to write.',
+      },
+      {
+        title: 'Generate detailed content briefs with Claude',
+        description:
+          'Feed Claude your target keyword, top 5 ranking URLs, and target word count. Ask for: recommended headings, key points to cover, entities to mention, related questions to answer, and word count per section.',
+        tip: 'Prompt: "Analyze the top 5 ranking articles for [keyword]. Create a content brief with H2/H3 structure, 8 key entities, 5 related questions, recommended word count, and differentiation angle."',
+      },
+      {
+        title: 'Write the first draft with Jasper',
+        description:
+          'Use Jasper long-form assistant with the content brief as context. It writes in your brand voice and handles 2,000-5,000 word articles. Use Boss Mode for better control over tone and section-by-section structure.',
+        tip: 'Write one section at a time. Review and approve each H2 section before moving to the next. This produces higher quality than generating the full article at once.',
+      },
+      {
+        title: 'Human editing pass for quality and voice',
+        description:
+          'Read every AI-generated article aloud. Fix awkward phrasing, factual errors, missing examples, weak transitions, and generic statements. Add original insights, personal experience, and specific data points. This 30-minute edit turns 7/10 AI content into 9/10 publishable material.',
+        tip: 'Use Grammarly during editing for grammar, clarity, and tone. The hybrid human+AI approach consistently outperforms pure AI or pure human writing in both quality and speed.',
+      },
+      {
+        title: 'Optimize for SEO with Surfer SEO',
+        description:
+          'Paste your edited article into Surfer SEO content editor. It scores your content against top-ranking pages and recommends: additional keywords, optimal word count, heading structure adjustments, image alt text, and internal linking opportunities.',
+        tip: 'Aim for a Surfer score of 75+. Articles scoring 75+ rank in the top 10 for mid-competition keywords about 80% of the time within 3 months of publication.',
+      },
+      {
+        title: 'Publish and promote systematically',
+        description:
+          'Publish with proper meta titles, descriptions, and URL slugs. Internal link to 3-5 related articles. Submit to Google Search Console. Then promote: share on social media, include in email newsletter, and reach out to 5 relevant sites for backlinks.',
+        tip: 'Build a content calendar: publish 4-8 optimized articles per month. Consistency beats virality for long-term organic traffic. Batch-write a month of content in 2 days using this pipeline.',
+      },
+    ],
+    pro_tips: [
+      'Use Perplexity to find unique angles: "What aspects of [topic] are NOT covered in the top 10 ranking articles?" Differentiated content ranks faster than copycat content',
+      'Create article templates in Jasper for different content types: listicles, how-to guides, comparisons, and ultimate guides. Templates reduce drafting time by 50%',
+      'Batch your workflow into a weekly rhythm: Monday = research + briefs, Tuesday-Wednesday = AI writing, Thursday = editing + SEO optimization, Friday = publishing + promotion',
+      'Use Claude for content gap analysis: compare your article against the top 10 ranking pages and identify missing subtopics, questions, and entities',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Publishing AI content without SEO optimization',
+        fix: 'Always run AI-generated content through Surfer SEO or similar. Unoptimized AI content rarely ranks — optimized AI content can outrank human-written content.',
+      },
+      {
+        mistake: 'Skipping the human editing pass entirely',
+        fix: 'AI generates competent first drafts. The human editing pass is where authority, originality, and trustworthiness come from. Never publish AI content completely unedited.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Rank for 50+ keywords in 6 months with consistent AI-optimized content publishing',
+    real_results: [
+      { metric: 'Content Output', value: '12 articles/month', description: 'AI pipeline produces 3x more content than a single full-time writer' },
+      { metric: 'Time per Article', value: '2.5 hours', description: 'From keyword research to published article. Down from 8+ hours manually' },
+      { metric: 'Organic Traffic Growth', value: '+180%', description: 'SEO-optimized AI content drives measurable organic traffic within 90 days' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 51: Create AI-Generated Art for Social Media
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-generated-art-for-social-media',
+    title: 'Create AI-Generated Art for Social Media',
+    subtitle: 'Eye-catching visuals that stop the scroll',
+    description:
+      'Master AI image generation for social media content: prompt engineering, style consistency, batch production, and brand alignment. Use Midjourney, DALL-E 3, Leonardo AI, and Canva AI to create scroll-stopping visuals for every platform.',
+    meta_title: 'Create AI-Generated Art for Social Media — Apifeny AI Playbook',
+    meta_description: 'Master AI art generation for social media. Use Midjourney, DALL-E 3, Leonardo AI, and Canva AI for scroll-stopping brand visuals without design skills.',
+    related_tool_slugs: ['midjourney', 'leonardo-ai', 'canva-ai', 'canva-magic-studio', 'chatgpt'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '🎨',
+    gradient: 'from-pink-500/30 to-purple-500/30',
+    steps: [
+      {
+        title: 'Develop your visual concept',
+        description:
+          'Start with a clear concept before generating anything. What emotion should the image evoke? What is the core message? What platform is it for (Instagram, TikTok, LinkedIn, Twitter)? Write a one-sentence creative brief that guides all generation decisions.',
+        tip: 'Use ChatGPT to brainstorm visual concepts: "Give me 10 visual concepts for a LinkedIn post about AI productivity tools. Include mood, color palette, composition, and typography suggestion for each."',
+      },
+      {
+        title: 'Master prompt engineering for images',
+        description:
+          'A great AI art prompt has 5 parts: subject (what is in the image), style (photorealistic, vector, 3D, watercolor), mood (professional, whimsical, dramatic), lighting (studio, natural, cinematic), and technical specs (aspect ratio, quality settings).',
+        tip: 'Save your best prompts in a Notion Prompt Library organized by use: social posts, blog headers, ads, backgrounds. Reuse and iterate rather than starting from scratch every time.',
+      },
+      {
+        title: 'Generate core images with Midjourney',
+        description:
+          'Midjourney produces the highest quality artistic images for social. Use version 6 for photorealistic results and fine detail. Key workflows: text-to-image for fresh concepts, image-to-image for brand consistency, and style reference (--sref) for consistent aesthetic across posts.',
+        tip: 'Batch 10 prompts at once, review results, refine the best ones with Vary (Region) for targeted edits. Save all generated images in a library organized by campaign.',
+      },
+      {
+        title: 'Create variations with Leonardo AI',
+        description:
+          'Leonardo AI excels at creating multiple variations of the same concept. Use image-to-image generation to maintain brand consistency while exploring different compositions, color schemes, and styles. Its preset system is excellent for social media formats.',
+        tip: 'Create Leonardo presets for each platform: one for Instagram (vibrant, 4:5 vertical), one for LinkedIn (professional clean, 1:1), one for Twitter/X (bold compact, 16:9).',
+      },
+      {
+        title: 'Polishing and branding in Canva AI',
+        description:
+          'Import AI-generated images into Canva. Use Magic Edit to refine details, Magic Eraser for unwanted elements, Magic Expand to adjust composition, and Magic Animate for motion. Apply your brand kit and add text overlays in one click.',
+        tip: 'Use Canva Magic Studio to generate complete social templates: add AI art as background, overlay branded text, resize for every platform. One visual becomes 6 platform-ready posts in minutes.',
+      },
+      {
+        title: 'Build a consistent visual style system',
+        description:
+          'Create a style guide for AI-generated art: color palette (3-5 colors), font pairings (1 display + 1 body), image treatment (aspect ratio + quality), and recurring visual motifs. Generate 20-30 brand-aligned images in one session to build a content bank.',
+        tip: 'Schedule posts 2-4 weeks ahead. Batch creation on one day per month is the secret to consistent high-quality social media presence without daily design stress.',
+      },
+    ],
+    pro_tips: [
+      'Create a Midjourney style reference image embodying your brand. Use --sref in every prompt. All your AI art will share a consistent aesthetic instantly',
+      'Use ChatGPT to write Midjourney prompts: "Write a Midjourney v6 prompt for a modern tech startup social media graphic about AI tools. Style: minimal, isometric, blue-purple palette."',
+      'For Instagram always generate square (1:1) or portrait (4:5). Midjourney defaults to landscape — add --ar 1:1 or --ar 4:5 to every social media prompt',
+      'Build a visual vocabulary: 10-20 consistent elements (specific colors, shapes, characters, backgrounds) appearing across all art for instant brand recognition',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Inconsistent style across posts because every prompt starts from scratch',
+        fix: 'Always reference previous images. Use Midjourney image reference (--cref) or style reference (--sref). Consistency builds recognition — recognition builds trust.',
+      },
+      {
+        mistake: 'Ignoring platform-specific dimensions and text placement zones',
+        fix: 'Generate at the correct aspect ratio for your platform from the start. Leave space for text overlays (center or bottom third). Canva Magic Expand can fix issues, but planning avoids the need.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Replace $3K/mo design agency with $100/mo AI art tools for consistent social media visuals',
+    real_results: [
+      { metric: 'Visual Output', value: '30+ posts/week', description: 'AI art pipeline produces a month of social visuals in one 3-hour session' },
+      { metric: 'Engagement Rate', value: '+35%', description: 'Consistent high-quality AI-generated visuals improved Instagram and LinkedIn engagement' },
+      { metric: 'Design Cost Savings', value: '95%', description: 'From $3K/mo graphic designer to $150/mo in AI art tool subscriptions' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 52: Build an AI-Powered Newsletter with Zero Coding
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-powered-newsletter-zero-coding',
+    title: 'Build an AI-Powered Newsletter with Zero Coding',
+    subtitle: 'Write, curate, and monetize with AI',
+    description:
+      'Launch and grow a profitable newsletter using AI tools for content creation, curation, personalization, and monetization. Use ChatGPT, Claude, Beehiiv AI, and Substack AI to build a newsletter that writes itself — no coding or design skills needed.',
+    meta_title: 'Build an AI-Powered Newsletter — Apifeny AI Playbook',
+    meta_description: 'Launch a profitable newsletter with AI. Use ChatGPT, Claude, Beehiiv AI, and Substack AI to create, curate, personalize, and monetize with zero coding.',
+    related_tool_slugs: ['chatgpt', 'claude', 'perplexity', 'canva-ai', 'elevenlabs'],
+    difficulty: 'Beginner',
+    read_time_minutes: 10,
+    icon: '📰',
+    gradient: 'from-orange-500/30 to-amber-500/30',
+    steps: [
+      {
+        title: 'Choose your niche and content format',
+        description:
+          'Pick a specific niche where AI research and synthesis adds real value. Popular formats: curated industry news with AI commentary, deep-dive analysis on a single topic, AI-generated summaries of books or podcasts, or personal experiments with AI tools documented weekly.',
+        tip: 'Test 3 niches before committing. Write one sample issue for each. The one that excites you most to write or generates the fastest positive response is your winner.',
+      },
+      {
+        title: 'Set up your newsletter platform',
+        description:
+          'Beehiiv offers built-in AI writing tools, growth analytics, referral programs, and monetization (ads, subscriptions, affiliate links). Substack has the largest built-in reader network but fewer AI-native features. Start with Beehiiv for the AI-powered experience.',
+        tip: 'Use Beehiiv AI writing assistant for subject lines, summaries, and social promotion copy. It saves 2-3 hours per issue on non-content tasks like formatting and distribution.',
+      },
+      {
+        title: 'Build an AI content pipeline',
+        description:
+          'Create a weekly rhythm: Monday = Perplexity research (trending topics in your niche with cited sources). Tuesday = Claude draft (2000-3000 word analysis with your unique angle). Wednesday = ChatGPT revisions (tone, structure, clarity). Thursday = final human edit. Friday = publish.',
+        tip: 'Use Claude for the first draft — its 200K context lets you feed a week of articles, tweets, and research. Ask: "Synthesize these 10 sources into 2000 words with an intro, 3 key insights, and actionable takeaways."',
+      },
+      {
+        title: 'Curate and personalize with AI',
+        description:
+          'Segment your audience by interest and send personalized versions. Beehiiv AI can auto-personalize subject lines, content sections, and CTAs based on subscriber behavior. Even simple personalization (name + topic preference) increases open rates by 14-26%.',
+        tip: 'Create 2-3 content blocks per issue: news roundup, deep dive analysis, and recommended tool. Let AI reorder or customize blocks per subscriber segment for maximum relevance.',
+      },
+      {
+        title: 'Monetize your newsletter with AI workflows',
+        description:
+          'AI helps monetize in 4 ways: sponsored content (use Perplexity to research sponsorship rates in your niche), premium subscriptions (use ChatGPT to draft compelling upgrade copy), affiliate products (AI generates contextual product recommendations), and digital products (AI creates lead magnets like PDFs and templates).',
+        tip: 'Generate 5 sponsorship decks with Claude. Pitch 20 potential sponsors per month. Use AI to personalize each pitch based on the sponsor company background.',
+      },
+      {
+        title: 'Grow your subscriber base with AI promotion',
+        description:
+          'Use Claude or ChatGPT to generate: social media threads promoting each issue, cross-promotion swap copy for other newsletters, SEO-optimized landing pages, and welcome sequences for new subscribers. AI handles the promotion so you focus on content.',
+        tip: 'Automate welcome sequences: when someone subscribes, AI generates a 5-email welcome series with your best content. This converts trial readers into long-term subscribers at 2-3x the rate of single-welcome emails.',
+      },
+    ],
+    pro_tips: [
+      'Create a brand voice document and feed it to every AI tool. Consistent voice keeps readers subscribed even when the content is AI-assisted',
+      'Use Beehiiv referral program + AI-generated referral copy: "Share this newsletter with 3 friends who love [topic]" performs 3x better than generic referral asks',
+      'Repurpose each newsletter into 5+ social media posts using ChatGPT. One issue = one week of LinkedIn/Twitter content. Multiply your reach without extra work',
+      'Track the open rate for AI-written vs human-written issues. Often the AI versions perform equally well once you establish the voice',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Writing every issue manually and burning out after 3 months',
+        fix: 'Start with the AI pipeline from day one. Consistency matters more than perfection. An AI-powered issue published weekly beats perfect handwritten issues published monthly.',
+      },
+      {
+        mistake: 'Not adding personal perspective to AI-generated content',
+        fix: 'AI can synthesize and structure. You must add: personal stories, opinions on industry news, and unique experiences. These are why readers subscribe to you, not a generic AI feed.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Build a newsletter generating $5K-20K/mo through subscriptions + sponsorships with 5 hours/week of work',
+    real_results: [
+      { metric: 'Time per Issue', value: '2.5 hours', description: 'From research to published newsletter. Down from 8-10 hours writing manually' },
+      { metric: 'Subscriber Growth', value: '+300%', description: 'AI-powered welcome sequences and referral program accelerated growth in 6 months' },
+      { metric: 'Monetization', value: '$2K-5K/mo', description: 'Combined sponsorships and premium subscriptions using AI-generated pitch decks' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 53: Create AI Video Content for TikTok & Reels
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-video-content-tiktok-reels',
+    title: 'Create AI Video Content for TikTok & Reels',
+    subtitle: 'Short-form video pipeline from script to viral',
+    description:
+      'Produce short-form video content for TikTok, Instagram Reels, and YouTube Shorts using AI tools. From AI-generated scripts and voiceovers to video clips and editing — build a pipeline that produces scroll-stopping short-form video at scale.',
+    meta_title: 'Create AI Video for TikTok & Reels — Apifeny AI Playbook',
+    meta_description: 'Produce short-form video for TikTok, Instagram Reels, and YouTube Shorts with AI. Script, voiceover, generate clips, and edit with Runway, Pika, and CapCut AI.',
+    related_tool_slugs: ['runway', 'elevenlabs', 'chatgpt', 'heygen', 'pika', 'descript', 'leonardo-ai', 'synthesia'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '🎥',
+    gradient: 'from-rose-500/30 to-pink-500/30',
+    steps: [
+      {
+        title: 'Script your short-form video with ChatGPT',
+        description:
+          'Write a hook-first script optimized for short attention spans. First 3 seconds must hook the viewer. Structure: hook (0-3s), problem/curiosity (3-10s), solution/reveal (10-25s), CTA (25-30s). Generate 5 script versions and pick the strongest.',
+        tip: 'Prompt: "Write a 30-second TikTok script about [topic]. Must have: pattern-interrupt hook in first 3 seconds, fast pacing, text overlays at key moments, and a comment-prompting CTA." ChatGPT generates TikTok-native scripts.',
+      },
+      {
+        title: 'Generate AI voiceover with ElevenLabs',
+        description:
+          'ElevenLabs produces the most natural AI voiceovers for short-form video. Select a voice that matches your brand: energetic for TikTok, professional for LinkedIn video, educational for YouTube. Adjust stability and clarity settings for social media delivery.',
+        tip: 'Use ElevenLabs voice cloning: record 3 minutes of your own voice and clone it. Your videos will sound authentically like you, not a generic AI voice. Viewers trust real voices more.',
+      },
+      {
+        title: 'Create visual clips with Runway Gen-3',
+        description:
+          'Use Runway Gen-3 to generate visual clips matching your script. For TikTok/Reels: trending visual styles (clean aesthetic, glitch transitions, text animations), fast-paced B-roll, and background footage. Generate in vertical 9:16 format.',
+        tip: 'Create a visual style reference in Runway. Consistent aesthetic across videos helps with algorithm favorability. TikTok and Instagram reward accounts that maintain a recognizable style.',
+      },
+      {
+        title: 'Generate AI avatars with Synthesia or HeyGen',
+        description:
+          'For talking-head videos, use Synthesia or HeyGen AI avatars. Upload your script, select an avatar that matches your brand, and generate a studio-quality video in minutes. No camera, lighting, or recording equipment needed.',
+        tip: 'HeyGen offers the most realistic avatars for short-form. Create a custom avatar from a 5-minute video recording of yourself. Then generate unlimited videos with your digital twin reading any script.',
+      },
+      {
+        title: 'Edit and add effects with CapCut AI',
+        description:
+          'CapCut is the industry standard for TikTok/Reel editing with powerful AI features: auto-captions (essential for silent viewing), auto-cut (removes silences), AI color correction, and trending transition packs. Its mobile app is optimized for short-form workflows.',
+        tip: 'Use CapCut auto-captions with the bounce animation style. Text-on-screen boosts watch time by 30%+ for silent viewers. Caption style consistency also helps brand recognition on the For You page.',
+      },
+      {
+        title: 'Post, optimize, and analyze',
+        description:
+          'Post at peak engagement times (check your analytics). Write platform-optimized captions with ChatGPT. Use 3-5 relevant hashtags + 1 branded hashtag. After 24 hours, analyze: retention graph (where do viewers drop off?), completion rate, saves, shares, and comments.',
+        tip: 'Feed your best-performing video script + analytics into ChatGPT. Ask: "Why did this video perform well? Generate 5 follow-up video concepts that double down on these elements." The algorithm rewards series and related content.',
+      },
+    ],
+    pro_tips: [
+      'The hook is everything: first 3 seconds decide if anyone watches the rest. Write 10 hooks per script and pick the strongest one before filming anything',
+      'Use Pika Labs for cinematic B-roll clips: abstract visuals, slow-motion effects, and atmospheric backgrounds elevate production quality without a camera',
+      'Create a content batching system: generate 10 scripts in one session, record/produce 10 videos the next day, schedule posts over 2 weeks. Batch creation prevents daily production burnout',
+      'Always add captions. 68% of TikTok and 85% of Instagram Reels are watched without sound. Auto-captions are the single highest-ROI production step for short-form video',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Making videos too long for the platform',
+        fix: 'TikTok sweet spot: 21-34 seconds. Reels sweet spot: 15-30 seconds. Longer videos only work if retention is above 70% at the halfway point. Cut ruthlessly.',
+      },
+      {
+        mistake: 'Using generic AI voices that sound obviously synthetic',
+        fix: 'Invest in ElevenLabs voice cloning or HeyGen custom avatars. Authentic-sounding voices and real faces outperform generic AI voices 3:1 in engagement metrics.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Grow a short-form video channel to 100K followers in 6 months with consistent AI-produced content',
+    real_results: [
+      { metric: 'Video Production Speed', value: '8x faster', description: 'From script to finished video in 45 minutes vs 6 hours with traditional production' },
+      { metric: 'Weekly Output', value: '10-15 videos', description: 'Consistent posting schedule achievable without a production team using AI pipeline' },
+      { metric: 'Follower Growth', value: '+50K', description: 'AI-produced short-form content delivered consistent growth over 90 days of daily posting' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 54: Use AI for Resume & Job Application Optimization
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'resume-job-application-optimization',
+    title: 'Use AI for Resume & Job Application Optimization',
+    subtitle: 'Tailor your resume and ace interviews with AI',
+    description:
+      'Optimize every job application with AI: analyze job descriptions, tailor resumes, optimize for ATS systems, generate cover letters, and practice interviews. Use ChatGPT, Claude, Kickresume, and Jobscan to land more interviews with less effort.',
+    meta_title: 'AI for Resume & Job Application Optimization — Apifeny AI Playbook',
+    meta_description: 'Optimize job applications with AI. Tailor resumes, generate cover letters, practice interviews, and beat ATS systems with ChatGPT, Claude, and Jobscan.',
+    related_tool_slugs: ['chatgpt', 'claude', 'canva-ai', 'grammarly'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '📄',
+    gradient: 'from-sky-500/30 to-indigo-500/30',
+    steps: [
+      {
+        title: 'Analyze the job description',
+        description:
+          'Copy the job description into ChatGPT or Claude. Ask for: a ranked list of key requirements, must-have vs nice-to-have skills, company culture indicators from the description language, and the 3 most important qualifications to highlight. This analysis guides your entire application strategy.',
+        tip: 'Prompt: "Analyze this job description. (1) Rank the top 10 requirements. (2) Identify 5 company culture signals from word choice. (3) List the 3 skills I must demonstrate in my resume and cover letter."',
+      },
+      {
+        title: 'Tailor your resume with keyword optimization',
+        description:
+          'Paste your existing resume and the JD into ChatGPT. Ask it to: integrate missing keywords naturally, rephrase bullet points using active language, quantify achievements, and optimize for ATS parsing. The goal is 80%+ keyword match with 0% keyword stuffing.',
+        tip: 'Create a master resume with all your experience. For each application, feed both documents into Claude and ask: "Rewrite my resume targeting this specific job. Use my experience but emphasize the skills and achievements most relevant to this role."',
+      },
+      {
+        title: 'Generate a tailored cover letter with AI',
+        description:
+          'Feed ChatGPT the job description, your tailored resume, and 2-3 specific things you genuinely find interesting about the company. Ask for a cover letter that: opens with a hook, connects your experience to their needs, shows company-specific knowledge, and ends with a confident call to action.',
+        tip: 'The most obvious AI-generated cover letters start with "I am writing to express my enthusiastic interest." Avoid this. Ask ChatGPT for a non-generic opener: "Start with a specific achievement that relates to their biggest challenge."',
+      },
+      {
+        title: 'Practice interviews with AI',
+        description:
+          'Use ChatGPT or Claude for mock interviews. Paste the job description and ask: "Act as a hiring manager for this role. Ask me 10 behavioral interview questions based on this JD. After each answer, give me feedback on how to improve it using the STAR method."',
+        tip: 'Record your practice sessions on your phone. Feed the transcript back into ChatGPT: "Rate my interview answers for confidence, relevance, and STAR structure. Suggest specific improvements for each answer." Self-awareness accelerates interview skill growth.',
+      },
+      {
+        title: 'Negotiate your offer with AI',
+        description:
+          'Research salary ranges using Perplexity (levels.fyi, Glassdoor, Blind). Then paste an actual offer letter (anonymized) into ChatGPT. Ask for: negotiation strategy, talking points, market rate comparison, and a draft email to negotiate respectfully.',
+        tip: 'Prompt: "Here is my offer: [details]. My background: [years of experience, location, skills]. I want to negotiate for: [more base salary, equity, signing bonus, remote flexibility]. Draft a professional negotiation email and give me talking points for the phone call."',
+      },
+    ],
+    pro_tips: [
+      'Use Claude for resume optimization — its large context window fits your full resume + full job description + company background in one prompt without losing track',
+      'Create a "job search dashboard" in Notion: track applications, store tailored resumes, log interview questions, and use Notion AI to generate weekly progress summaries',
+      'Every job description contains hidden requirements — words used 3+ times are likely ATS keyword targets. Highlight every repeated term and ensure your resume uses them',
+      'Use Grammarly to final-check any AI-generated cover letter or resume. AI can hallucinate job titles or dates. A human review pass catches these before they reach a recruiter',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Using the same generic resume for every application',
+        fix: 'AI makes tailored applications fast. If a job is worth applying to, it is worth spending 10 minutes to tailor your resume. Submit better, not more.',
+      },
+      {
+        mistake: 'Blindly sending AI-generated cover letters without personalization',
+        fix: 'Always add at least one original paragraph: a personal connection to the company, a specific project you admire, or a unique experience that only you bring. Generic cover letters get filtered in seconds.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Applications with AI-optimized resumes and cover letters receive 3x more interview callbacks',
+    real_results: [
+      { metric: 'Interview Callback Rate', value: '3x increase', description: 'ATS-optimized resumes with targeted keywords receive significantly more recruiter responses' },
+      { metric: 'Time per Application', value: '15 minutes', description: 'Down from 45-60 minutes when writing each cover letter and tailoring resume manually' },
+      { metric: 'Interview Confidence', value: '78%', description: '82% of AI-practice users report higher confidence in behavioral interviews after 3+ mock sessions' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 55: Use AI for Market Research & Competitive Analysis
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-market-research-competitive-analysis',
+    title: 'Use AI for Market Research & Competitive Analysis',
+    subtitle: 'Understand your market and outsmart competitors with AI',
+    description:
+      'Transform market research with AI: uncover competitor strategies, analyze market trends, identify white space opportunities, and generate actionable strategic insights. Use ChatGPT, Perplexity, and specialized tools to conduct research that would take a full agency team weeks to produce.',
+    meta_title: 'AI for Market Research & Competitive Analysis — Apifeny AI Playbook',
+    meta_description: 'Conduct market research and competitive analysis with AI. Use ChatGPT, Perplexity, and data tools for competitor analysis, market trends, and strategic insights.',
+    related_tool_slugs: ['chatgpt', 'perplexity', 'claude', 'exa'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '📊',
+    gradient: 'from-violet-500/30 to-indigo-500/30',
+    steps: [
+      {
+        title: 'Define your research framework with AI',
+        description:
+          'Before gathering data, structure your research. Use ChatGPT to create a research framework: key questions to answer, competitors to analyze, market dimensions (size, growth, trends, segments), data sources, and deliverable format. A structured framework prevents research rabbit holes.',
+        tip: 'Prompt: "Create a competitive analysis framework for [industry]. Include: (1) Top 5 competitors to analyze, (2) 7 analysis dimensions (product, pricing, marketing, distribution, customer experience, tech stack, funding), (3) 5 data sources for each dimension."',
+      },
+      {
+        title: 'Gather market intelligence with Perplexity',
+        description:
+          'Perplexity excels at cited market research. Ask about: market size and CAGR, recent funding rounds in the space, regulatory changes affecting the industry, emerging technology trends, and demographic shifts. Every answer comes with sources you can verify.',
+        tip: 'Use Perplexity collections to organize research by competitor or topic. Create a collection for Competitor A, Competitor B, Market Trends, and Customer Pain Points. Build a living research repository updated weekly.',
+      },
+      {
+        title: 'Analyze competitor positioning',
+        description:
+          'Use Claude (great for large-scale analysis) to examine competitor websites, social media, product reviews, and pricing pages. Ask for: positioning analysis (how each competitor differentiates), messaging themes, target customer segments, pricing strategy, and competitive vulnerabilities.',
+        tip: 'Create a positioning matrix: map competitors on 2 axes (e.g., price vs features, or enterprise vs consumer). Claude can generate this table from unstructured research notes. Visual positioning maps reveal white space opportunities no one is serving.',
+      },
+      {
+        title: 'Analyze customer sentiment at scale',
+        description:
+          'Feed competitor reviews, social media comments, and Reddit discussions into ChatGPT or Claude. Ask for: common complaints, frequently requested features, what customers love, pricing sentiment analysis, and unmet needs. This is raw gold for product strategy.',
+        tip: 'Prompt: "Analyze these 50 customer reviews for [competitor]. Extract: (1) Top 10 complaints ranked by frequency, (2) 5 requested features not yet offered, (3) 3 pricing sentiment categories, (4) 5 unmet customer needs that represent market opportunities."',
+      },
+      {
+        title: 'Generate strategic recommendations',
+        description:
+          'Compile all research findings and feed them into ChatGPT or Claude. Ask for: SWOT analysis, strategic recommendations (3 short-term, 3 medium-term, 3 long-term), competitive threats and opportunities, differentiation strategy, and a prioritized action plan.',
+        tip: 'Prompt: "Based on this competitive analysis, generate a strategic recommendation report. Include: (1) Top 3 immediate actions to improve our competitive position, (2) Long-term strategic bets, (3) 2 competitive risks we should monitor monthly, (4) Recommended positioning pivot."',
+      },
+    ],
+    pro_tips: [
+      'Use Exa (exa.ai) for semantic web search — it finds content traditional search engines miss, like niche forum discussions and emerging competitor pages',
+      'Set up a weekly Perplexity research routine: "What changed this week in [industry]?" 10 minutes per week keeps your competitive intelligence current without constant research sessions',
+      'Create a competitive intelligence dashboard in Notion with weekly AI-generated reports. Use Notion AI to summarize changes and flag important developments',
+      'When analyzing competitors, look at their job postings. New job categories signal strategic pivots. AI tools like Perplexity can track competitor hiring trends',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Doing a one-time research project instead of continuous monitoring',
+        fix: 'Set up a weekly AI research loop: 30 minutes of Perplexity research, 15 minutes of Claude analysis, 15 minutes of strategy notes. Markets move fast — static research goes stale in 2-3 months.',
+      },
+      {
+        mistake: 'Over-relying on AI analysis without primary research',
+        fix: 'Use AI for synthesis and pattern recognition, but validate key findings by talking to actual customers. AI can tell you what reviews say — it cannot tell you why a customer said it.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Save $5K-15K per research project while producing deeper analysis than traditional competitive intelligence agencies',
+    real_results: [
+      { metric: 'Research Time', value: '4 hours', description: 'AI-powered competitive analysis produces in 4 hours what takes an agency 2-3 weeks' },
+      { metric: 'White Space Opportunities', value: '5-10 per project', description: 'AI analysis of customer sentiment and competitor positioning identifies untapped market opportunities' },
+      { metric: 'Strategic Accuracy', value: '85%+', description: 'AI-generated competitive intelligence aligns with market outcomes when cross-referenced with primary data' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 56: Automate Customer Support with AI Agents
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'automate-customer-support-with-ai',
+    title: 'Automate Customer Support with AI Agents',
+    subtitle: 'Scale your support without scaling your team',
+    description:
+      'Implement AI-powered customer support automation using agents from Intercom Fin, Zendesk AI, and dedicated AI platforms. Build a system that resolves common issues autonomously, escalates complex cases to humans, and improves over time with every interaction.',
+    meta_title: 'Automate Customer Support with AI Agents — Apifeny AI Playbook',
+    meta_description: 'Scale customer support with AI agents. Use Intercom Fin, Zendesk AI, and Ada for autonomous ticket resolution, smart escalation, and CSAT improvement.',
+    related_tool_slugs: ['intercom-ai', 'intercom-fin', 'zendesk-answer-bot', 'chatgpt', 'tavily'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '🎧',
+    gradient: 'from-teal-500/30 to-cyan-500/30',
+    steps: [
+      {
+        title: 'Audit your current support operations',
+        description:
+          'Before automating, understand what you are automating. Export 3 months of support tickets and categorize them: password/reset issues (30%), account setup questions (25%), billing inquiries (20%), feature requests (10%), bugs (10%), other (5%). This audit reveals your automation potential.',
+        tip: 'Use Claude or ChatGPT to categorize your ticket export: "Categorize these 500 support tickets into recurring issue types. Show the frequency, average resolution time, and sentiment score for each category." Tickets requiring <5 minutes of work are automation candidates.',
+      },
+      {
+        title: 'Choose your AI support platform',
+        description:
+          'Intercom Fin excels for SaaS companies already on Intercom. Zendesk AI is best for enterprises with existing Zendesk infrastructure. Ada offers standalone AI automation with deep customization. Forethought specializes in ticket deflection and agent assist. Choose based on your existing stack.',
+        tip: 'If you are starting fresh: Intercom Fin has the best out-of-box experience for SMBs and mid-market. It deploys in days, not weeks, and supports RAG from your help center articles.',
+      },
+      {
+        title: 'Train your AI agent on your knowledge base',
+        description:
+          'Upload all support documentation, help center articles, FAQs, product guides, policy documents, and past resolved tickets to train the AI agent. For RAG-based systems, the quality of your knowledge base directly determines resolution accuracy.',
+        tip: 'Audit every help article before training: is it accurate? Is it current? Does it answer the actual questions customers ask? AI trained on bad documentation gives bad answers at scale. Clean your knowledge base first.',
+      },
+      {
+        title: 'Design the human handoff flow',
+        description:
+          'Not every issue should be handled by AI. Define escalation triggers: sentiment threshold (frustrated customer = escalate), issue type (billing disputes, legal, account security), failed resolution (3+ failed AI attempts), and explicit human request. The handoff must include full conversation context.',
+        tip: 'Design the AI greeting to set expectations: "Hi! I am an AI support agent. I can handle common questions instantly. If you need help with something complex or prefer to talk to a human, just say so!" Transparency builds trust.',
+      },
+      {
+        title: 'Measure CSAT and iterate continuously',
+        description:
+          'Track: auto-resolution rate (target: 60-80%), CSAT for AI-handled vs human-handled conversations (target AI CSAT >4/5), escalation rate (target: <30%), first response time (target: <10 seconds), and resolution time comparison.',
+        tip: 'Run A/B tests: let the AI agent handle 50% of tickets and humans handle 50%. Compare CSAT, resolution time, and cost per ticket. The data will tell you where AI adds value and where it hurts the experience.',
+      },
+      {
+        title: 'Scale and optimize with feedback loops',
+        description:
+          'Set up a weekly review of AI missteps: tickets the AI handled incorrectly or unnecessarily escalated. Feed these edge cases back as training data. Every mistake becomes a learning opportunity. Within 3 months, auto-resolution rates should climb from 50% to 75%+ with consistent feedback loops.',
+        tip: 'Create a weekly AI review prompt: "Review these 50 AI support conversations. Identify: (1) 5 conversations where the AI gave a wrong or incomplete answer, (2) 3 conversations that should have been escalated but were not, (3) 5 opportunities to improve the knowledge base."',
+      },
+    ],
+    pro_tips: [
+      'Start with the 3 most common issue types covering 50%+ of your tickets. Automate those perfectly before expanding. 80% of value comes from the first 20% of automation scope',
+      'Use Tavily or Perplexity for real-time data: if your AI agent needs current pricing, product status, or known issues, connect it to a live search API rather than relying on static training data',
+      'Never launch AI support without a monitoring dashboard. If CSAT drops by even 0.1 in the first week, pause and investigate. Recovery from a bad support experience costs 12x more than getting it right the first time',
+      'Build a quarterly knowledge base review process. Products change, documentation ages, and AI agents confidently share outdated information. Schedule a human review of all help content every 90 days',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Launching AI support without a human fallback for complex issues',
+        fix: 'Always offer a clear path to a human. An AI that traps frustrated users damages brand loyalty faster than slow human support ever could.',
+      },
+      {
+        mistake: 'Training the AI on outdated or poorly written documentation',
+        fix: 'Clean your knowledge base before training the AI. Bad documentation produces bad AI answers at scale. A 10-hour documentation audit saves 100+ hours of unhappy customer conversations.',
+      },
+    ],
+    pipeline_stage: 'deployment',
+    revenue_impact: 'Reduce support costs by 50-70% while maintaining or improving CSAT scores',
+    real_results: [
+      { metric: 'Auto-Resolution Rate', value: '65-82%', description: 'AI agents resolve majority of common support tickets without human involvement' },
+      { metric: 'First Response Time', value: '<5 seconds', description: 'Down from 4-24 hours with email-based support queues' },
+      { metric: 'Support Cost per Ticket', value: '80% reduction', description: 'From $8-15/ticket with human agents to $1-3/ticket with AI automation' },
+    ],
+  },
+
 ];
 
 export function getPlaybookBySlug(slug: string): Playbook | undefined {
