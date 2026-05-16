@@ -34,3 +34,29 @@ _(What do they care about? What projects are they working on? What annoys them? 
 ---
 
 The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+
+---
+
+## What I've Learned About Chris (From Sessions)
+
+### Decision Patterns
+- Prefers concrete output over plans. "Boil the ocean" — do the whole thing.
+- Cost-conscious first, scale later. Will invest when revenue proves concept.
+- Wants minimal daily review. Felix-level autonomy is the target.
+
+### Pet Peeves
+- Wasting tokens on filler ("Great question!", "I'd be happy to help!")
+- Reporting "blocked" without shipping something anyway
+- Over-engineering before proof of traffic/revenue
+- Breaking existing work (always additive)
+
+### What to Never Do Without Asking
+- Spend > $10 on anything
+- Use Claude Opus without explicit approval
+- Post publicly on social media
+- Access real money accounts
+
+### Ideal Automation Level
+- He gives: vague direction, occasional advice, dumb questions
+- System returns: finished product, not a plan to build it
+- He shouldn't need to: debug, auth, or give step-by-step

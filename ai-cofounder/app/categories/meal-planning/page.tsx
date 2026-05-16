@@ -111,7 +111,7 @@ export default function MealPlanningPage() {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Link href="/waitlist" className="btn-primary bg-meal hover:bg-meal/90 text-lg px-8 py-3.5 shadow-lg shadow-meal/20 hover:shadow-xl hover:shadow-meal/30">
+              <Link href="/categories/meal-planning/interactive" className="btn-primary bg-meal hover:bg-meal/90 text-lg px-8 py-3.5 shadow-lg shadow-meal/20 hover:shadow-xl hover:shadow-meal/30">
                 Get Your First Meal Plan — Free
                 <ArrowRight size={18} />
               </Link>
