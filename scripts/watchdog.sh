@@ -420,8 +420,24 @@ _check_projects_blockers() {
     now_ts=$(date +%s)
     local age_hours=$(( (now_ts - days_since) / 3600 ))
     
-    if [ "$age_hours" -gt 72 ]; then
+    # Check if project is officially archived or deferred
+    local arch_path="/home/captain/.openclaw/workspace/life/Archives/stalled-projects/$proj.md"
+    local is_archived=false
+    local is_deferred=false
+    if [ -f "$arch_path" ]; then
+      if grep -q "ARCHIVED" "$arch_path" 2>/dev/null; then
+        is_archived=true
+      elif grep -q "KEPT" "$arch_path" 2>/dev/null; then
+        is_deferred=true
+      fi
+    fi
+    
+    if [ "$is_archived" = true ]; then
+      log "$SKIP **$proj:** ARCHIVED — $age_hours hours stale (see ~/life/Archives/stalled-projects/)"
+    elif [ "$age_hours" -gt 72 ] && [ "$is_deferred" = false ]; then
       log "$ERR **$proj:** STALLED — $age_hours hours since last commit: \"$last_commit\""
+    elif [ "$age_hours" -gt 72 ] && [ "$is_deferred" = true ]; then
+      log "$SKIP **$proj:** Deferred — $age_hours hours idle (core product, kept per Chris directive)"
     elif [ "$age_hours" -gt 24 ]; then
       log "$WARN **$proj:** Low activity — $age_hours hours: \"$last_commit\""
     else
