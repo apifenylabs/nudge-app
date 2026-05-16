@@ -1,0 +1,1164 @@
+[
+  {
+    "type": "cost",
+    "label": "Cost data: $16.80 (2026-04-10)",
+    "evidence": "{\"text\":\"\\n**Status:** SUCCESS - Finally created planning document!\\n\\n**Progress since last check:**\\n- ✅ CREATE\",\"date\":\"2026-04-10\",\"section\":\"Heartbeat Check - 04:49 AM HKT\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-10)",
+    "evidence": "{\"context\":\"\\n**STATUS: PROACTIVE WORK INITIATED**\\n\\n**Situation:**\\n- 08:00 HKT report: 4 hours 54 minutes overdue\",\"date\":\"2026-04-10\",\"section\":\"Heartbeat Check - 12:54 PM HKT\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: see evidence",
+    "evidence": "{\"text\":\"\\n**STATUS: PROACTIVE WORK INITIATED**\\n\\n**Situation:**\\n- 08:00 HKT report: 4 hours 54 minutes overdue\\n- User: Cannot connect due to pairing issue\\n\\n**IMPORTANT ACTION TAKEN:**\\n- ✅ Created `orchestra-imp\",\"date\":\"2026-04-10\",\"section\":\"Heartbeat Check - 12:54 PM HKT\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: `orchestra-implementation-details",
+    "evidence": "{\"text\":\"\\n**STATUS: PROACTIVE WORK INITIATED**\\n\\n**Situation:**\\n- 08:00 HKT report: 4 hours 54 minutes overdue\",\"date\":\"2026-04-10\",\"section\":\"Heartbeat Check - 12:54 PM HKT\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: by pairing",
+    "evidence": "{\"text\":\"\\n**STATUS: VERIFICATION & PLANNING**\\n\\n**Situation:**\\n- 08:00 HKT report: 5 hours 24 minutes overdue\\n- User: Cannot connect due to pairing issue\\n\\n**Document verification:**\\n- ✅ `orchestra-implementatio\",\"date\":\"2026-04-10\",\"section\":\"Heartbeat Check - 13:24 PM HKT\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: `daily-report-2026-04-10",
+    "evidence": "{\"text\":\"\\n**STATUS: 20:00 DAILY REPORT PREPARED**\\n\\n**Situation:**\\n- 08:00 HKT report: 5 hours 54 minutes over\",\"date\":\"2026-04-10\",\"section\":\"Heartbeat Check - 13:54 PM HKT\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-12)",
+    "evidence": "{\"context\":\"\\n**Key Achievements:**\\n- Agent HQ dashboard successfully deployed to Vercel: https://agent-hq-dashbo\",\"date\":\"2026-04-12\",\"section\":\"2026-04-12 01:56 AM HK - Memory Flush\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-04-12)",
+    "evidence": "{\"result\":\"Build scalable infrastructure (Paperclip) for future orchestras\",\"date\":\"2026-04-12\",\"section\":\"2026-04-12 01:56 AM HK - Memory Flush\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.40 (2026-04-12)",
+    "evidence": "{\"text\":\"\\n**Key Achievements:**\\n- Agent HQ dashboard successfully deployed to Vercel: https://agent-hq-dashbo\",\"date\":\"2026-04-12\",\"section\":\"2026-04-12 01:56 AM HK - Memory Flush\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: `ACCELERATED_EXECUTION",
+    "evidence": "{\"text\":\"- Created `ACCELERATED_EXECUTION.md` with 48-hour action plan\\n- Hour 1-4: Supabase + Next.js setup s\",\"date\":\"2026-04-17\",\"section\":\"Execution Status:\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-04-17)",
+    "evidence": "{\"result\":\"Build core components (header, search, listing cards, filters)\",\"date\":\"2026-04-17\",\"section\":\"Next Immediate Actions:\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-17)",
+    "evidence": "{\"context\":\"- Technical: Next.js + Supabase deployed, 20+ listings, family filters\\n- Ecosystem: Social Beast + N\",\"date\":\"2026-04-17\",\"section\":\"Success Metrics (7-10 days):\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-04-18)",
+    "evidence": "{\"result\":\"Build successful:** Next.js build passes, TypeScript clean\",\"date\":\"2026-04-18\",\"section\":\"2. Real Work Started (Within 1 Hour of Feedback)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-18)",
+    "evidence": "{\"context\":\"1. **Directory Beast:** Coding (Next.js + Supabase) ✅\\n2. **Social Beast:** Project created, starting\",\"date\":\"2026-04-18\",\"section\":\"Agents Actually Working: 5/7\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: - **KidScan Beast:** 5,125 byte API specification",
+    "evidence": "{\"text\":\"- **Social Beast:** Next.js project created\\n- **KidScan Beast:** 5,125 byte API specification\\n- **Af\",\"date\":\"2026-04-18\",\"section\":\"Other Orchestras (Verifiable):\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.30 (2026-04-18)",
+    "evidence": "{\"text\":\"- **Tokens used since feedback:** ~15,000\\n- **Estimated cost:** $0.30 (under $0.35 limit)\\n- **Model:\",\"date\":\"2026-04-18\",\"section\":\"Budget Status:\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-19)",
+    "evidence": "{\"context\":\"- **14:08 HKT:** User requested configuration of automatic heartbeats and cron jobs\\n- **14:08-14:15:\",\"date\":\"2026-04-19\",\"section\":\"Morning (00:00-12:00)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: comprehensive system for autonomous operation:",
+    "evidence": "{\"text\":\"- **14:08 HKT:** User requested configuration of automatic heartbeats and cron jobs\\n- **14:08-14:15:\",\"date\":\"2026-04-19\",\"section\":\"Morning (00:00-12:00)\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-04-19)",
+    "evidence": "{\"result\":\"pass\",\"date\":\"2026-04-19\",\"section\":\"Current Status (14:19 HKT)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.60 (2026-04-19)",
+    "evidence": "{\"text\":\"- **Directory Beast:** Complete Next.js app, build passes, ready for deployment\\n- **All 7 orchestras\",\"date\":\"2026-04-19\",\"section\":\"Current Status (14:19 HKT)\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: all necessary scripts for autonomous operation",
+    "evidence": "{\"text\":\"- **Directory Beast:** Complete Next.js app, build passes, ready for deployment\\n- **All 7 orchestras\",\"date\":\"2026-04-19\",\"section\":\"Current Status (14:19 HKT)\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: ** Cannot deploy without credentials and stable servers",
+    "evidence": "{\"text\":\"1. **SIGKILL not fixed:** User hasn't run ./fix-sigkill.sh\\n2. **Credentials not configured:** SAFE_CREDENTIAL_GUIDE.md not followed\\n3. **Orchestras not running:** All 7 orchestras have code but not ex\",\"date\":\"2026-04-19\",\"section\":\"Current Blockers (17:03 HKT)\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: ** User action required to proceed",
+    "evidence": "{\"text\":\"- ✅ **Code complete:** All 7 orchestras have production-ready code\\n- ✅ **Build passes:** Directory Beast builds successfully\\n- ✅ **System scripts:** All automation scripts created and tested\\n- ❌ **Exe\",\"date\":\"2026-04-19\",\"section\":\"Autonomous System Status\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-04-21)",
+    "evidence": "{\"result\":\"pass\",\"date\":\"2026-04-21\",\"section\":\"Morning Status\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.20 (2026-04-21)",
+    "evidence": "{\"text\":\"- Received instructions from Wosobu in Alpha Orchestras HQ Telegram group\\n- Priorities: Fix Nudge bu\",\"date\":\"2026-04-21\",\"section\":\"Morning Status\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "fix",
+    "label": "Fix: by creating `eslint",
+    "evidence": "{\"detail\":\"- Identified issue: ESLint configuration prompt was blocking build\\n- Fixed by creating `eslint.config.js` with Next.js core-web-vitals config\\n- Verifi\",\"date\":\"2026-04-21\",\"section\":\"1. Fixed Nudge Build Error\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-21)",
+    "evidence": "{\"context\":\"- Created GitHub repository: apifenylabs/family-travel-directory\\n- Initial commit: 76f2116 \\\"Initial \",\"date\":\"2026-04-21\",\"section\":\"2. Directory Beast GitHub Deployment ✅\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: GitHub repository: apifenylabs/family-travel-directory",
+    "evidence": "{\"text\":\"- Created GitHub repository: apifenylabs/family-travel-directory\\n- Initial commit: 76f2116 \\\"Initial \",\"date\":\"2026-04-21\",\"section\":\"2. Directory Beast GitHub Deployment ✅\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: comprehensive QA test report for Directory Beast",
+    "evidence": "{\"text\":\"- Created comprehensive QA test report for Directory Beast\\n- All builds validated: 6/6 orchestras bu\",\"date\":\"2026-04-21\",\"section\":\"5. Tester/QA Role Activated ✅\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.10 (2026-04-21)",
+    "evidence": "{\"text\":\"- Still using DeepSeek-chat only\\n- Estimated overnight cost: <$0.10\\n- Total estimated cost: <$0.20 (\",\"date\":\"2026-04-21\",\"section\":\"7. Budget Tracking\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: Shared Knowledge Base:**",
+    "evidence": "{\"text\":\"**Updated All 6 Orchestras with Mandatory Rules:**\\n- Directory Beast: Now automatically feeds listin\",\"date\":\"2026-04-21\",\"section\":\"3. Cross-Orchestra Synergy Implementation\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-22)",
+    "evidence": "{\"context\":\"- **Alpha HQ Real-Time Implementation**: Deployed real-time dashboard with API routes (/activity, /o\",\"date\":\"2026-04-22\",\"section\":\"Morning (00:00-01:00)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-04-22)",
+    "evidence": "{\"result\":\"pass\",\"date\":\"2026-04-22\",\"section\":\"Key Achievements\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.50 (2026-04-22)",
+    "evidence": "{\"text\":\"- All 6 Beast orchestras running via PM2\\n- Alpha HQ monitoring real-time activity\\n- GitHub + Vercel \",\"date\":\"2026-04-22\",\"section\":\"Current Status\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "fix",
+    "label": "Fix: truncated page",
+    "evidence": "{\"detail\":\"- BusinessListingCard: City/country badges, affiliate booking buttons, safety ratings\\n- ComparisonTable: Interactive decision helper (ready for post-M\",\"date\":\"2026-04-22\",\"section\":\"UI Components Enhanced\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "fix",
+    "label": "Fix: by editing lines 528-545",
+    "evidence": "{\"detail\":\"- **Write tool truncation bug discovered**: `write()` capped at ~30KB. Workaround: write first half, then `cat >>` to append second half. Causes poten\",\"date\":\"2026-04-22\",\"section\":\"16:38 - Page.tsx Build & Vercel Deployment Complete\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: agents/SEO_AGENT",
+    "evidence": "{\"text\":\"- Nudge Telegram bot not tested (needs user to test token on Telegram)\\n- Nudge Vercel deployment err\",\"date\":\"2026-04-22\",\"section\":\"Open Issues\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "fix",
+    "label": "Fix: Social Beast with proper build → start process (now stable on port 3002)",
+    "evidence": "{\"detail\":\"- **CEO Governance Update**: Wosobu clarified 7-orchestra vision and forbade deletions/pauses without approval\\n- **Orchestra Purposes Confirmed**:\\n  1\",\"date\":\"2026-04-22\",\"section\":\"Evening (22:00-23:18)\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.15 (2026-04-22)",
+    "evidence": "{\"text\":\"- **CEO Governance Update**: Wosobu clarified 7-orchestra vision and forbade deletions/pauses withou\",\"date\":\"2026-04-22\",\"section\":\"Evening (22:00-23:18)\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: as proper apps)",
+    "evidence": "{\"text\":\"- **CEO Governance Update**: Wosobu clarified 7-orchestra vision and forbade deletions/pauses withou\",\"date\":\"2026-04-22\",\"section\":\"Evening (22:00-23:18)\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-04-24)",
+    "evidence": "{\"result\":\"Build Preflight: Dynamic loading confirmed for 29+ destinations\",\"date\":\"2026-04-24\",\"section\":\"Morning (10:29-10:33)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.02 (2026-04-24)",
+    "evidence": "{\"text\":\"- **User returned**: Chris (@Wosobu) messaged at 10:29 HK time after ~13 days offline\\n- **Morning Re\",\"date\":\"2026-04-24\",\"section\":\"Morning (10:29-10:33)\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-25)",
+    "evidence": "{\"context\":\"- Rewrote `_client.tsx` with full 9-section directory layout (not blog posts)\\n- Sections: Hero, Quic\",\"date\":\"2026-04-25\",\"section\":\"Page Restructuring (~10:00)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: ** 2GB binary download times out from HK WSL (~200KB/s). Setup script at `setup-",
+    "evidence": "{\"text\":\"- Updated `RULES.yaml` with local/cloud hybrid routing\\n- Local: Qwen2.5-Coder (coding), Qwen2.5 (writing), Phi4 (research)\\n- Cloud: CEO (DeepSeek), Final Reviewer (Claude Sonnet), High-stakes (Claude \",\"date\":\"2026-04-25\",\"section\":\"Hybrid LLM Routing Setup (~14:44-15:00)\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: on network, no API costs)",
+    "evidence": "{\"text\":\"- Total overnight spend: <$0.50 across all subagents\\n- Image fix + page rewrite: $0 (local file operations only)\\n- Ollama setup: $0 (blocked on network, no API costs)\\n\",\"date\":\"2026-04-25\",\"section\":\"Budget Summary\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.50 (2026-04-25)",
+    "evidence": "{\"text\":\"- Total overnight spend: <$0.50 across all subagents\\n- Image fix + page rewrite: $0 (local file oper\",\"date\":\"2026-04-25\",\"section\":\"Budget Summary\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $1 (2026-04-25)",
+    "evidence": "{\"text\":\"- Roll with **\\\"stop adding data, fix quality\\\"** directive\\n- Next session: restructure destination pa\",\"date\":\"2026-04-25\",\"section\":\"Decision\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.20 (2026-04-26)",
+    "evidence": "{\"text\":\"\\n**Time:** ~23:00-00:10 HK\\n**Budget:** Under $0.20, DeepSeek-chat only.\\n\",\"date\":\"2026-04-26\",\"section\":\"Directory Beast — Final Polish Pass\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-26)",
+    "evidence": "{\"context\":\"\\n**9-Section Destination Page Structure** — Rewrote `_client.tsx` for all 506 destinations:\\n1. Hero \",\"date\":\"2026-04-26\",\"section\":\"What was done\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-04-26)",
+    "evidence": "{\"result\":\"Build & Deploy** — Build passed (506 SSG pages), git committed, deployed to Vercel.\",\"date\":\"2026-04-26\",\"section\":\"What was done\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: (`agents/SECURITY_AGENT",
+    "evidence": "{\"text\":\"- Security Agent role created (`agents/SECURITY_AGENT.md`)\\n- Pipeline: Product Owner → Coder → UI Ag\",\"date\":\"2026-04-26\",\"section\":\"Pipeline status\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.30 (2026-04-26)",
+    "evidence": "{\"text\":\"\\n**Time:** ~01:00-04:00 HK\\n**Budget:** Under $0.30, DeepSeek-chat only.\\n\",\"date\":\"2026-04-26\",\"section\":\"Late Night — Revenue Features + Launch Prep\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: `LAUNCH_CHECKLIST",
+    "evidence": "{\"text\":\"\\n**Affiliate Links Deployment** — Added to all 506 destination pages:\\n- Booking.com: Search links fo\",\"date\":\"2026-04-26\",\"section\":\"What was done\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "metric",
+    "label": "Site metric (2026-04-26)",
+    "evidence": "{\"context\":\"\\n**Affiliate Links Deployment** — Added to all 506 destination pages:\\n- Booking.com: Search links fo\",\"date\":\"2026-04-26\",\"section\":\"What was done\"}",
+    "category": "analytics",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: on data, not code",
+    "evidence": "{\"text\":\"- Revenue features deployed before soft launch as planned\\n- Full directory to 506 destinations via batch agents completed successfully with zero bugs\\n- 3 missing categories remain (Beaches, Cities, Fo\",\"date\":\"2026-04-26\",\"section\":\"Key decisions\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.15 (2026-04-26)",
+    "evidence": "{\"text\":\"\\n**Time:** 21:46-21:50 HK\\n**Budget:** Under $0.15, DeepSeek-chat only.\\n\",\"date\":\"2026-04-26\",\"section\":\"Morning Status Check (21:46 HK)\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0 (2026-04-26)",
+    "evidence": "{\"text\":\"- **Install:** `npx paperclipai onboard --yes --bind lan` (1 command)\\n- **Integration:** Create 7 ag\",\"date\":\"2026-04-26\",\"section\":\"Installation plan provided\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.02 (2026-04-26)",
+    "evidence": "{\"text\":\"\\n**Time:** 23:11-23:20 HK\\n**Channel:** Telegram — Alpha Orchestras HQ (topic #2)\\n**Budget:** ~$0.02 \",\"date\":\"2026-04-26\",\"section\":\"Paperclip AI — Installed and Running (23:11-23:20 HK)\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $50 (2026-04-26)",
+    "evidence": "{\"text\":\"- 4 projects: Directory Beast, Nudge, Social Beast, GeneralScan\\n- 1 company goal: \\\"Build revenue-gen\",\"date\":\"2026-04-26\",\"section\":\"Company: \\\"Alpha Orchestras\\\"\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "decision",
+    "label": "Architecture change (2026-04-26)",
+    "evidence": "{\"context\":\"- Initially used `openclaw_gateway` adapter with gateway URL ws://127.0.0.1:18789 + auth token\\n- Fir\",\"date\":\"2026-04-26\",\"section\":\"Adapter: OpenClaw Gateway → Process\"}",
+    "category": "architecture",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-04-27)",
+    "evidence": "{\"result\":\"Build Social Beast Phase 1 — universal content engine pulling from all projects.\",\"date\":\"2026-04-27\",\"section\":\"Gateway Fix: Paperclip ↔ OpenClaw Gateway Auth\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "decision",
+    "label": "Architecture change (2026-04-27)",
+    "evidence": "{\"context\":\"\\n**Root Cause Found (3 issues):**\\n1. **`client.mode: \\\"operator\\\"`** → Paperclip adapter was sending `\",\"date\":\"2026-04-27\",\"section\":\"Gateway Fix: Paperclip ↔ OpenClaw Gateway Auth\"}",
+    "category": "architecture",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "metric",
+    "label": "Site metric (2026-04-27)",
+    "evidence": "{\"context\":\"\\n**Root Cause Found (3 issues):**\\n1. **`client.mode: \\\"operator\\\"`** → Paperclip adapter was sending `\",\"date\":\"2026-04-27\",\"section\":\"Gateway Fix: Paperclip ↔ OpenClaw Gateway Auth\"}",
+    "category": "analytics",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.03 (2026-04-27)",
+    "evidence": "{\"text\":\"\\n**39 files, 2,481 total lines** — built and fully tested in a single sub-agent session (6m59s, $0.0\",\"date\":\"2026-04-27\",\"section\":\"Social Beast Phase 1 — Complete (01:10 HKT)\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: with all 3 platforms (Telegram, Twitter, LinkedIn) — PLACEHO",
+    "evidence": "{\"text\":\"- `publish-twitter.js` — Real OAuth 1.0a client for X API v2 (`POST /2/tweets` + threads via `reply.\",\"date\":\"2026-04-27\",\"section\":\"Agent 1: Twitter + LinkedIn Publish (3m32s)\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.08 (2026-04-27)",
+    "evidence": "{\"text\":\"\\n**Cost so far: ~$0.08 total overnight**\\n- Gateway debug: 3 attempts, $0.03\\n- Social Beast build: 39\",\"date\":\"2026-04-27\",\"section\":\"17:32 Status Report (to Chris)\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-27)",
+    "evidence": "{\"context\":\"\",\"date\":\"2026-04-27\",\"section\":\"Late Session (23:00-23:58 HKT) — Directory Beast AdSense + Blog + Nudge Deploy + ScanWise\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: `components/AdUnit",
+    "evidence": "{\"text\":\"- **AdSense ID**: `ca-pub-6046953221141245`\\n- Added to `app/layout.tsx` — client-side script push in\",\"date\":\"2026-04-27\",\"section\":\"Directory Beast — Google AdSense (23:00-23:14 HKT)\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-28)",
+    "evidence": "{\"context\":\"- Runtime: 00:00–10:49 HKT\\n- Focus: Directory Beast upgrade planning, EV Charging PRD, Nudge deploy \",\"date\":\"2026-04-28\",\"section\":\"Session Overview\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.14 (2026-04-28)",
+    "evidence": "{\"text\":\"- Runtime: 00:00–10:49 HKT\\n- Focus: Directory Beast upgrade planning, EV Charging PRD, Nudge deploy \",\"date\":\"2026-04-28\",\"section\":\"Session Overview\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-04-28)",
+    "evidence": "{\"result\":\"pass\",\"date\":\"2026-04-28\",\"section\":\"Done Today\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: on credentials from Chris",
+    "evidence": "{\"text\":\"- **Nudge: Fixed Vercel deploy** — 12 days of failures, all resolved:\\n  - TypeScript strict mode fixes: `cookiesToSet` type annotation in `lib/supabase/server.ts` + `middleware.ts`\\n  - Module-scope Su\",\"date\":\"2026-04-28\",\"section\":\"Done Today\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "metric",
+    "label": "Site metric (2026-04-29)",
+    "evidence": "{\"context\":\"- **Step 1**: Generated 1,125 stations across 6 countries (Thailand 180, India 275, Indonesia 180, M\",\"date\":\"2026-04-29\",\"section\":\"What was done\"}",
+    "category": "analytics",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-29)",
+    "evidence": "{\"context\":\"- Local build: ✅ Clean (1,142 SSG pages)\\n- Vercel deploy: ✅ Live at ev-charging-asia.vercel.app\\n- Al\",\"date\":\"2026-04-29\",\"section\":\"Build\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-04-29)",
+    "evidence": "{\"result\":\"pass\",\"date\":\"2026-04-29\",\"section\":\"Build\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: by 403",
+    "evidence": "{\"text\":\"- OpenChargeMap API key needed for real data — currently blocked by 403\\n- D2C: Monitor Vercel build logs, check Google Search Console for indexing\\n- Consider adding user reviews/check-in feature\\n# 202\",\"date\":\"2026-04-29\",\"section\":\"Next steps\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "fix",
+    "label": "Fix: build error: SectionHeading prop type `title: string` vs JSX element",
+    "evidence": "{\"detail\":\"- Built via sub-agent (DeepSeek-chat): `app/page-content.tsx` rewritten as 750-line hybrid carousel\\n- Sections: Hero → Top Picks (6 highest-scored, ho\",\"date\":\"2026-04-29\",\"section\":\"Landing Page Redesign — Netflix/Klook Hybrid Layout\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.02 (2026-04-29)",
+    "evidence": "{\"text\":\"- **Config**: Created `lib/affiliate.ts` with `KLOOK_AFFILIATE_ID = '119991'` shared constant\\n- **Da\",\"date\":\"2026-04-29\",\"section\":\"Klook Affiliate Integration (aid=119991)\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: `lib/affiliate",
+    "evidence": "{\"text\":\"- **Config**: Created `lib/affiliate.ts` with `KLOOK_AFFILIATE_ID = '119991'` shared constant\\n- **Da\",\"date\":\"2026-04-29\",\"section\":\"Klook Affiliate Integration (aid=119991)\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-04-30)",
+    "evidence": "{\"context\":\"\\n**Bug:** Clicking country \\\"See all\\\" links on landing page caused blank page.\\n\\n**Root cause:** Count\",\"date\":\"2026-04-30\",\"section\":\"\\\"See More\\\" Blank Page Fix (23:34 HKT)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-04-30)",
+    "evidence": "{\"result\":\"pass\",\"date\":\"2026-04-30\",\"section\":\"\\\"See More\\\" Blank Page Fix (23:34 HKT)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.01 (2026-04-30)",
+    "evidence": "{\"text\":\"\\n**Request:** Re-focus Nudge as voice-first family task management app. Voice recording → Whisper AI\",\"date\":\"2026-04-30\",\"section\":\"00:07 HKT — Nudge Voice-First Refocus (Wosobu request)\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: (OpenAI Whisper with mock fallback for dev)",
+    "evidence": "{\"text\":\"\\n**Request:** Re-focus Nudge as voice-first family task management app. Voice recording → Whisper AI\",\"date\":\"2026-04-30\",\"section\":\"00:07 HKT — Nudge Voice-First Refocus (Wosobu request)\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: `components/AffiliateButton",
+    "evidence": "{\"text\":\"\\n**Request:** Update Booking.com affiliate ID from placeholder 'ftd' to '2875669' across Directory B\",\"date\":\"2026-04-30\",\"section\":\"00:07 HKT — Booking.com Affiliate ID Update\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: 65 new family destinations across previously thin Asian coun",
+    "evidence": "{\"text\":\"- Created 65 new family destinations across previously thin Asian countries\\n- **New countries expand\",\"date\":\"2026-04-30\",\"section\":\"Directory Beast: 65 New Asian Destinations Added\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "7 blog post (2026-04-30)",
+    "evidence": "{\"text\":\"- 571 destinations live at https://www.familytravelasia.com\\n- \\\"Just Added\\\" section live with 10 featured new destinations\\n- 7 blog posts total (was 5,\",\"date\":\"2026-04-30\",\"section\":\"01:30 HKT — Directory Beast Destination Expansion Complete\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.02 (2026-04-30)",
+    "evidence": "{\"text\":\"- **Sub-agent completed** in 16m27s, 96K tokens (30K in / 65K out), model: DeepSeek-chat\\n- **Directo\",\"date\":\"2026-04-30\",\"section\":\"01:50-02:10 HKT — Luxury Family Travel Asia Built & Deployed\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.001 (2026-04-30)",
+    "evidence": "{\"text\":\"| Item | Cost |\\n|---|---|\\n| 65 new dest Python script | ~$0.001 |\\n| 2 blog posts generation | ~$0.01\",\"date\":\"2026-04-30\",\"section\":\"Cost Tracking\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "2 blog post (2026-04-30)",
+    "evidence": "{\"text\":\"| Item | Cost |\\n|---|---|\\n| 65 new dest Python script | ~$0.001 |\\n| 2 blog posts generation | ~$0.01 |\\n| Seasonal Picks + New! badge | ~$0.002 |\\n| Lux\",\"date\":\"2026-04-30\",\"section\":\"Cost Tracking\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "deployed deployed",
+    "evidence": "{\"what\":\"deployed on Vercel. The Vercel live site had carousel sections (Seasonal Picks, To\",\"date\":\"2026-05-02\",\"section\":\"Directory Beast — Blank Space Fix\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-05-02)",
+    "evidence": "{\"result\":\"pass\",\"date\":\"2026-05-02\",\"section\":\"Directory Beast — Blank Space Fix\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "8 blog post (2026-05-02)",
+    "evidence": "{\"text\":\"- 583 destinations live\\n- Blank space bug diagnosed and fixed (loading guards + spacing collapse)\\n- Japan blog post live\\n- 8 blog posts total\\n\",\"date\":\"2026-05-02\",\"section\":\"Directory Beast ✅\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-02)",
+    "evidence": "{\"context\":\"- 46 destinations across 13 countries\\n- 16 ultra-luxury properties added\\n- 4 new countries: Bhutan, \",\"date\":\"2026-05-02\",\"section\":\"Luxury Family Travel ✅\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: (correctly)",
+    "evidence": "{\"text\":\"\\n**Additive schema migration**: Appended 4 new modules to all 583 destinations in `public/data/desti\",\"date\":\"2026-05-02\",\"section\":\"Schema Hardening Phase 1 (22:47-22:50 HK) ✅\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "decision",
+    "label": "Architecture change (2026-05-02)",
+    "evidence": "{\"context\":\"\\n**Additive schema migration**: Appended 4 new modules to all 583 destinations in `public/data/desti\",\"date\":\"2026-05-02\",\"section\":\"Schema Hardening Phase 1 (22:47-22:50 HK) ✅\"}",
+    "category": "architecture",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-05-03)",
+    "evidence": "{\"result\":\"Build passes: 590 pages cleanly compiled\",\"date\":\"2026-05-03\",\"section\":\"Integrity verified\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "metric",
+    "label": "Site metric (2026-05-03)",
+    "evidence": "{\"context\":\"- Zero existing keys modified\\n- Phase 1 (revenue_engine, geo_metadata, flywheel_connect) untouched\\n-\",\"date\":\"2026-05-03\",\"section\":\"Integrity verified\"}",
+    "category": "analytics",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-03)",
+    "evidence": "{\"context\":\"| File | Role |\\n|------|------|\\n| `scripts/information-gain-population-v3.js` | Migration script |\\n|\",\"date\":\"2026-05-03\",\"section\":\"Key file locations\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "16 blog post (2026-05-03)",
+    "evidence": "{\"text\":\"1. **SEO & Visibility Boost** — Sitemap updated with all 51 long-tail activity pages, 16 blog posts, search/contact/review pages; 649 total pages comp\",\"date\":\"2026-05-03\",\"section\":\"Completed (Wosobu directive)\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.00 (2026-05-03)",
+    "evidence": "{\"text\":\"- 583 destinations unchanged, 649 pages compiled, zero build errors\\n- Cost: $0.00 (all DeepSeek-chat\",\"date\":\"2026-05-03\",\"section\":\"Integrity\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "21 blog post (2026-05-03)",
+    "evidence": "{\"text\":\"- Full directory: 583 destinations, 21 blog posts, 67 luxury pages, 51 long-tail activity pages\\n- Both beasts (directory-beast port 3000, nudge-beast \",\"date\":\"2026-05-03\",\"section\":\"Current state\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: `AdSenseScript",
+    "evidence": "{\"text\":\"- **AdSense placements 6/7 done**: Multiplex_Search (slot 9811511645) placed in search page results \",\"date\":\"2026-05-04\",\"section\":\"00:10-00:40 HKT — Pre-Sleep Work\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: `overnight-ceo-nightwatch` cron job that fires every 30min w",
+    "evidence": "{\"text\":\"- Work stopped at 00:40 — nothing ran overnight after session ended\\n- **Root cause identified**: Per\",\"date\":\"2026-05-04\",\"section\":\"07:15 HKT — Morning Report to Wosobu\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-04)",
+    "evidence": "{\"context\":\"- **directory-beast**: Running on localhost:3000, NOT deployed to Vercel (no internet visibility)\\n- \",\"date\":\"2026-05-04\",\"section\":\"System State\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: on Chris input:",
+    "evidence": "{\"text\":\"- All 4 sites live and verified (200 OK)\\n- All priorities blocked on Chris input:\\n  - P1: Nudge needs SUPABASE_SERVICE_ROLE_KEY + DEEPSEEK_API_KEY\\n  - P3: Awaiting next directory idea (seniors cancell\",\"date\":\"2026-05-05\",\"section\":\"05:34 HKT — CEO Work Engine (Idle)\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-05-05)",
+    "evidence": "{\"result\":\"pass\",\"date\":\"2026-05-05\",\"section\":\"What Changed\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "decision",
+    "label": "Architecture change (2026-05-05)",
+    "evidence": "{\"context\":\"- **Test suite fixed**: Root cause was SQLite `:memory:` doesn't work across TestClient threads (eac\",\"date\":\"2026-05-05\",\"section\":\"What Changed\"}",
+    "category": "architecture",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "metric",
+    "label": "Site metric (2026-05-05)",
+    "evidence": "{\"context\":\"- **Test suite fixed**: Root cause was SQLite `:memory:` doesn't work across TestClient threads (eac\",\"date\":\"2026-05-05\",\"section\":\"What Changed\"}",
+    "category": "analytics",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: on Chris input. No progress since 08:34.",
+    "evidence": "{\"text\":\"- Hourly check: All 4 sites still 200 OK. No new env vars set.\\n- All priorities still blocked on Chris input. No progress since 08:34.\\n- Memory: 12.8 GB free RAM. No sub-agents active.\\n- Idle cycle co\",\"date\":\"2026-05-05\",\"section\":\"09:34 HKT — CEO Work Engine (Still Idle)\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-05)",
+    "evidence": "{\"context\":\"- Both local beasts: 5D uptime, 0 restarts, 200 OK on :3000/:3001\\n- family-travel-directory: 200 ✅\\n-\",\"date\":\"2026-05-05\",\"section\":\"21:40 HKT — Heartbeat Check\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: on Chris (Supabase keys, API keys, GA4 IDs, domain registration)",
+    "evidence": "{\"text\":\"- Both local beasts: 5D uptime, 0 restarts, 200 OK on :3000/:3001\\n- family-travel-directory: 200 ✅\\n- ev-charging-asia: 200 ✅\\n- luxury-hotels-asia.com: NXDOMAIN — domain doesn't resolve in DNS (Status \",\"date\":\"2026-05-05\",\"section\":\"21:40 HKT — Heartbeat Check\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.08 (2026-05-05)",
+    "evidence": "{\"text\":\"- DeepSeek-chat throughout\\n- Estimated: ~$0.08-0.10 total for tonight's work\\n- Under the $0.20 budge\",\"date\":\"2026-05-05\",\"section\":\"Cost\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-06)",
+    "evidence": "{\"context\":\"- 4 new components deployed: AffiliateCTABar, PriceComparisonWidget, FeaturedFamilyStops, affiliate-\",\"date\":\"2026-05-06\",\"section\":\"EV Road Trip Planner — Phase 1 Complete\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-05-06)",
+    "evidence": "{\"result\":\"pass\",\"date\":\"2026-05-06\",\"section\":\"EV Road Trip Planner — Phase 1 Complete\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.12 (2026-05-06)",
+    "evidence": "{\"text\":\"- 4 new components deployed: AffiliateCTABar, PriceComparisonWidget, FeaturedFamilyStops, affiliate-\",\"date\":\"2026-05-06\",\"section\":\"EV Road Trip Planner — Phase 1 Complete\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: with chain-by-chain sourcing URLs",
+    "evidence": "{\"text\":\"- 3 properties sourced (Amanpuri, Soneva Fushi, Four Seasons Sayan)\\n- 48 remaining — need manual sou\",\"date\":\"2026-05-06\",\"section\":\"Luxury Family Travel — Image Infrastructure Deployed\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "metric",
+    "label": "Site metric (2026-05-06)",
+    "evidence": "{\"context\":\"- Family Travel Asia needs Phase 2 (rankings) + Phase 3 (monetization) — next cron will handle\\n- all\",\"date\":\"2026-05-06\",\"section\":\"Next Actions\"}",
+    "category": "analytics",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.30 (2026-05-06)",
+    "evidence": "{\"text\":\"- ~$0.30 in tokens across all agents overnight\\n- Vercel free tier (hobby) for all 6 sites\\n- No real \",\"date\":\"2026-05-06\",\"section\":\"Estimated Costs\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-05-07)",
+    "evidence": "{\"result\":\"Build Queue: 8 concrete tasks executable without Chris\",\"date\":\"2026-05-07\",\"section\":\"CEO Upgrade: BUILD-OR-DIE Mode (19:43 HKT)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: fallback: MANDATORY to pick from build queue, never just \"blocked\"",
+    "evidence": "{\"text\":\"- `never_heartbeat_ok: true` — never emit HEARTBEAT_OK, ever\\n- `build_or_die: true`\\n- Blocked fallback: MANDATORY to pick from build queue, never just \\\"blocked\\\"\\n\",\"date\":\"2026-05-07\",\"section\":\"RULES.yaml Hardened\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-07)",
+    "evidence": "{\"context\":\"- Switched `/station/[id]` from SSG (tried generating 1,125 pages at build) to force-dynamic renderi\",\"date\":\"2026-05-07\",\"section\":\"EV Station Pages Fixed\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "decision",
+    "label": "Architecture change (2026-05-07)",
+    "evidence": "{\"context\":\"- Switched `/station/[id]` from SSG (tried generating 1,125 pages at build) to force-dynamic renderi\",\"date\":\"2026-05-07\",\"section\":\"EV Station Pages Fixed\"}",
+    "category": "architecture",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "metric",
+    "label": "Site metric (2026-05-07)",
+    "evidence": "{\"context\":\"- Switched `/station/[id]` from SSG (tried generating 1,125 pages at build) to force-dynamic renderi\",\"date\":\"2026-05-07\",\"section\":\"EV Station Pages Fixed\"}",
+    "category": "analytics",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: by node_modules in monorepo",
+    "evidence": "{\"text\":\"- 4 new blog posts: Philippines (12k), Cambodia (12k), India (15k), Sri Lanka (13k)\\n- Blog total: 40 posts, 40 build paths verified\\n- Schema.org Organization markup on all 6 sites (build clean)\\n- Verc\",\"date\":\"2026-05-07\",\"section\":\"20:11 HKT - BUILD-OR-DIE Output (3rd heartbeat)\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $1.00 (2026-05-07)",
+    "evidence": "{\"text\":\"- 4 new blog posts: Philippines (12k), Cambodia (12k), India (15k), Sri Lanka (13k)\\n- Blog total: 40\",\"date\":\"2026-05-07\",\"section\":\"20:11 HKT - BUILD-OR-DIE Output (3rd heartbeat)\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: (292 lines) — $1B Holding Co compass document, committed and",
+    "evidence": "{\"text\":\"- **long-term-vision.md** created (292 lines) — $1B Holding Co compass document, committed and pushe\",\"date\":\"2026-05-07\",\"section\":\"20:13-20:17 HKT Build Session\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "16 post (2026-05-07)",
+    "evidence": "{\"text\":\"- **3 EV road trip blog posts written & built** (ev-charging-asia):\\n  1. Best Family-Friendly EV Road Trips in Southeast Asia (2,526 words)\\n  2. Singa\",\"date\":\"2026-05-07\",\"section\":\"21:03-21:10 HKT Build Session\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "17 post (2026-05-07)",
+    "evidence": "{\"text\":\"- **EV Vietnam blog post (#17)**: Hanoi→Phong Nha, Da Nang→Hoi An→Hue, HCMC→Da Lat→Mui Ne. Build clean, pushed.\\n- **Blog routing fix — ALL 3 SITES** (\",\"date\":\"2026-05-07\",\"section\":\"22:06-22:10 HKT Build Session\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.85 (2026-05-07)",
+    "evidence": "{\"text\":\"- **Heartbeats today**: ~6 total, all produced BUILDS (posts, code, config). Zero HEARTBEAT_OK.\\n- **\",\"date\":\"2026-05-07\",\"section\":\"21:48 HKT — Memory Flush (Pre-compaction)\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-05-08)",
+    "evidence": "{\"result\":\"pass\",\"date\":\"2026-05-08\",\"section\":\"Summary\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: `scripts/analyze-cross-links",
+    "evidence": "{\"text\":\"- **65 cross-site links injected** across 3 sites (Family Travel 52 posts, EV Charging 20 posts, Lux\",\"date\":\"2026-05-08\",\"section\":\"1. Cross-Site Contextual Linking (Main Session)\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-08)",
+    "evidence": "{\"context\":\"- Vercel login needed for deployment\\n- DNS for familytravelasia.com\\n- SUPABASE_SERVICE_ROLE_KEY for \",\"date\":\"2026-05-08\",\"section\":\"Blockers\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-12)",
+    "evidence": "{\"context\":\"- **Discovered** the site already had 12 itineraries (not 6), with separate `/routes/[slug]` and `/i\",\"date\":\"2026-05-12\",\"section\":\"What was done\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "metric",
+    "label": "Site metric (2026-05-12)",
+    "evidence": "{\"context\":\"- **Discovered** the site already had 12 itineraries (not 6), with separate `/routes/[slug]` and `/i\",\"date\":\"2026-05-12\",\"section\":\"What was done\"}",
+    "category": "analytics",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-05-12)",
+    "evidence": "{\"result\":\"Build passes cleanly: 62 static pages generated, including 12 `/routes/[slug]` and 12 `/itinerary/[slug]` each\",\"date\":\"2026-05-12\",\"section\":\"Key details\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.005 (2026-05-12)",
+    "evidence": "{\"text\":\"- Build + deploy: ~1 session\\n- EV blog gen sub-agent: ~8 min DeepSeek-chat (~60k tokens, ~$0.005)\\n- \",\"date\":\"2026-05-12\",\"section\":\"Token cost\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "fix",
+    "label": "Fix: build error (removed orphaned `lib/post-data",
+    "evidence": "{\"detail\":\"- **Family Travel Directory**: Fixed build error (removed orphaned `lib/post-data.ts` with mismatched BlogPost type). 52 posts clean. Build passes.\\n- \",\"date\":\"2026-05-12\",\"section\":\"23:36-23:52 Build Session\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.002 (2026-05-12)",
+    "evidence": "{\"text\":\"- **Family Travel Directory**: Fixed build error (removed orphaned `lib/post-data.ts` with mismatche\",\"date\":\"2026-05-12\",\"section\":\"23:36-23:52 Build Session\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "52 post (2026-05-12)",
+    "evidence": "{\"text\":\"- **Family Travel Directory**: Fixed build error (removed orphaned `lib/post-data.ts` with mismatched BlogPost type). 52 posts clean. Build passes.\\n- \",\"date\":\"2026-05-12\",\"section\":\"23:36-23:52 Build Session\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-13)",
+    "evidence": "{\"context\":\"- VERCEL_TOKEN needed to deploy all updates\\n- Affiliate program signup needs Chris approval\\n- luxury\",\"date\":\"2026-05-13\",\"section\":\"Blockers (repeated, waiting on Chris)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.025 (2026-05-13)",
+    "evidence": "{\"text\":\"- ~$0.025 (under $0.05 threshold)\\n- Senior-Friendly sub-agent: 13K tokens = ~$0.013\\n- Blog sub-agent\",\"date\":\"2026-05-13\",\"section\":\"Budget\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-05-13)",
+    "evidence": "{\"result\":\"Build:** ✅ Compiles. All 21 blog pages + 60 tool pages pass.\",\"date\":\"2026-05-13\",\"section\":\"CEU 23:13 HKT — Apifeny Blog Affiliate Monetization\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.50 (2026-05-13)",
+    "evidence": "{\"text\":\"\\n**Task:** Add affiliate CTAs to all Apifeny blog posts to monetize existing content\\n\\n**What was bui\",\"date\":\"2026-05-13\",\"section\":\"CEU 23:13 HKT — Apifeny Blog Affiliate Monetization\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "21 blog post (2026-05-13)",
+    "evidence": "{\"text\":\"\\n**Task:** Add affiliate CTAs to all Apifeny blog posts to monetize existing content\\n\\n**What was built:**\\n1. `app/components/BlogAffiliateCTA.tsx` — S\",\"date\":\"2026-05-13\",\"section\":\"CEU 23:13 HKT — Apifeny Blog Affiliate Monetization\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.05 (2026-05-13)",
+    "evidence": "{\"text\":\"- **Deployed** senior-friendly-travel-asia to Vercel production — aliased to `senior-friendly-travel\",\"date\":\"2026-05-13\",\"section\":\"23:18-23:20 HKT — Senior-Friendly Deployed ✅\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "metric",
+    "label": "Site metric (2026-05-13)",
+    "evidence": "{\"context\":\"- **Deployed** senior-friendly-travel-asia to Vercel production — aliased to `senior-friendly-travel\",\"date\":\"2026-05-13\",\"section\":\"23:18-23:20 HKT — Senior-Friendly Deployed ✅\"}",
+    "category": "analytics",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.01 (2026-05-13)",
+    "evidence": "{\"text\":\"- **Both orchestras online:** directory-beast (port 3000), nudge-beast (port 3001) ✅\\n- **EV FAQ/imag\",\"date\":\"2026-05-13\",\"section\":\"Status\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.02 (2026-05-13)",
+    "evidence": "{\"text\":\"\\n**Changes applied via Python brace-counted parsing:**\\n- **31/31** posts: added `\\\"imageUrl\\\": \\\"/blog/\",\"date\":\"2026-05-13\",\"section\":\"EV Charging Asia — Full blog post enhancement finished\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-14)",
+    "evidence": "{\"context\":\"- **Notifications table NOT applied to DB** — no direct DB connection available\\n- PostgREST schema c\",\"date\":\"2026-05-14\",\"section\":\"Blockers\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-05-14)",
+    "evidence": "{\"result\":\"Build: ✅ Passes\",\"date\":\"2026-05-14\",\"section\":\"Key Info\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-15)",
+    "evidence": "{\"context\":\"1. **PM2 clean restart** around 22:28 — old PIDs 9753/570 (2D uptime) replaced by 554/549. Clean sla\",\"date\":\"2026-05-15\",\"section\":\"Significant Events\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-05-15)",
+    "evidence": "{\"result\":\"Build: 112/112 pages clean, deployed to Vercel\",\"date\":\"2026-05-15\",\"section\":\"Significant Events\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "15 new blog post (2026-05-15)",
+    "evidence": "{\"text\":\"1. **PM2 clean restart** around 22:28 — old PIDs 9753/570 (2D uptime) replaced by 554/549. Clean slate, 0 failures.\\n2. **EV Charging Asia: 15 new blog\",\"date\":\"2026-05-15\",\"section\":\"Significant Events\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "metric",
+    "label": "Site metric (2026-05-15)",
+    "evidence": "{\"context\":\"1. **PM2 clean restart** around 22:28 — old PIDs 9753/570 (2D uptime) replaced by 554/549. Clean sla\",\"date\":\"2026-05-15\",\"section\":\"Significant Events\"}",
+    "category": "analytics",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-05-16)",
+    "evidence": "{\"result\":\"pass\",\"date\":\"2026-05-16\",\"section\":\"Timeline (HK time)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: as directory, not single file",
+    "evidence": "{\"text\":\"- `conn.execute()` requires a PreparedStatement object (prepare first)\\n- `conn.querySync(sql_string)\",\"date\":\"2026-05-16\",\"section\":\"Kuzu v0.9.0 API learned\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-16)",
+    "evidence": "{\"context\":\"- Luxury Family Travel deployed (45 blog posts, cross-site footer links fixed)\\n- EV Charging Asia de\",\"date\":\"2026-05-16\",\"section\":\"18:54 HKT — Deployed 3 Sites to Vercel ✅\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "45 blog post (2026-05-16)",
+    "evidence": "{\"text\":\"- Luxury Family Travel deployed (45 blog posts, cross-site footer links fixed)\\n- EV Charging Asia deployed (1260 static pages, 86 blog posts)\\n- Apifen\",\"date\":\"2026-05-16\",\"section\":\"18:54 HKT — Deployed 3 Sites to Vercel ✅\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: on P1 Vercel deploy (needs Chris: vercel login)",
+    "evidence": "{\"text\":\"- All P3 content verified complete\\n- 3 sub-agents spawned in parallel:\\n  1. Family Travel: 10 new blog posts via Ollama batch gen\\n  2. Luxury Travel: 5 new blog posts\\n  3. Cross-site footer links (all\",\"date\":\"2026-05-16\",\"section\":\"17:54 HKT — Build Queue Execution (Cron)\"}",
+    "category": "management",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "10 new blog post (2026-05-16)",
+    "evidence": "{\"text\":\"- All P3 content verified complete\\n- 3 sub-agents spawned in parallel:\\n  1. Family Travel: 10 new blog posts via Ollama batch gen\\n  2. Luxury Travel: \",\"date\":\"2026-05-16\",\"section\":\"17:54 HKT — Build Queue Execution (Cron)\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "metric",
+    "label": "Site metric (2026-05-16)",
+    "evidence": "{\"context\":\"- Sitemaps generated for all 4 sites:\\n  - EV Charging Asia: 96 URLs\\n  - Luxury Family Travel: 1,104 \",\"date\":\"2026-05-16\",\"section\":\"17:58 HKT — Sitemap Sub-agent Complete ✅\"}",
+    "category": "analytics",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "content",
+    "label": "5 new blog post (2026-05-16)",
+    "evidence": "{\"text\":\"- Spawned sub-agent: 5 new blog posts for family-travel-directory using DeepSeek-chat (6m2s, 53k tokens)\\n- Topics: Airbnb vs hotels comparison, family\",\"date\":\"2026-05-16\",\"section\":\"20:20 HKT — Content Generation Run (cron session)\"}",
+    "category": "content",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: in data/blog/, generate-blog-data compiled: 117 total posts ",
+    "evidence": "{\"text\":\"- Spawned sub-agent: 5 new blog posts for family-travel-directory using DeepSeek-chat (6m2s, 53k tok\",\"date\":\"2026-05-16\",\"section\":\"20:20 HKT — Content Generation Run (cron session)\"}",
+    "category": "engineering",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.08 (2026-05-16)",
+    "evidence": "{\"text\":\"- PR #3 shipped with all fixes\\n- All 6 sites healthy\\n- Budget ~$0.08 for the day (well under $0.50 c\",\"date\":\"2026-05-16\",\"section\":\"HEARTBEAT.md updated to reflect:\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.12 (2026-05-16)",
+    "evidence": "{\"text\":\"- Sub-agent 1 started: Apifeny AI improvements (landing, fill empty categories, SEO)\\n- Sub-agent 2 s\",\"date\":\"2026-05-16\",\"section\":\"23:32 HKT — Overnight Mode Activated\"}",
+    "category": "operations",
+    "created": "2026-05-16"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-17)",
+    "evidence": "{\"context\":\"- **Problem**: Phase 3 sub-agent rewrote app/page.tsx with full food photography/UGC design but drop\",\"date\":\"2026-05-17\",\"section\":\"Overnight Fix (00:00)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-16"
+  }
+]

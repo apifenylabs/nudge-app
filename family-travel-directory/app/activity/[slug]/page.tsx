@@ -90,7 +90,7 @@ export default async function LongTailPage({ params }: { params: Promise<{ slug:
 
   const destinations: Destination[] = page.destination_ids
     .map(id => allDestinations.find(d => d.id === id))
-    .filter((d): d is Destination => d !== undefined);
+    .filter((d): d is NonNullable<typeof d> => d !== undefined);
 
   const ageLabels: Record<string, string> = {
     'toddlers': 'Toddler-Friendly (Ages 0-3)',

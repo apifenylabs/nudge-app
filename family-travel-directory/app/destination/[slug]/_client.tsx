@@ -31,7 +31,7 @@ interface Destination {
   parentStory: { title: string; excerpt: string; author: string; fullStory: string; };
   itineraryComparison: { halfDay: string; fullDay: string; bestFor: string; };
   commissionRate: string; seoKeywords: string[];
-  affiliateLinks?: { booking: { url: string; text: string }; klook: { url: string; text: string }; viator: { url: string; text: string }; };
+  affiliateLinks?: { booking?: { url: string; text: string }; klook?: { url: string; text: string }; viator?: { url: string; text: string }; };
   revenue_engine?: { klook_product_id?: string | null; viator_product_id?: string | null; current_price_usd?: number | null; last_price_check?: string | null; };
   information_gain?: { reddit_sentiment_snippet?: string; human_verified_tip?: string | null; primary_source_url?: string; geo_highlight_score?: number; };
   flywheel_connect?: { related_ev_station_id?: string | string[] | null; related_luxury_stay_id?: string | string[] | null; related_family_activity_id?: string | string[] | null; };

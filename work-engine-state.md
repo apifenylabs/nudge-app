@@ -1,42 +1,48 @@
 # Work Engine State
 
-## Cursor: P1/P2 OVERNIGHT BUILD — Sub-agents running
+## Cursor: P2 IMPROVE — Content generation running (Family Travel Asia)
 
-**Last updated:** 2026-05-17 01:07 HKT
+**Last updated:** 2026-05-17 02:07 HKT
 
 ## Active Sub-Agents
-1. 🏗️ **Apifeny-AI**: Create [slug] detail pages for 48 playbooks + cross-site footer links — spawned 01:07
-2. 🏗️ **EV Charging Asia**: Fix blog rendering (91 posts exist but not showing) + cross-site footer links — spawned 01:07
+1. 🏗️ **family-travel-content-gen**: Generate 3 new blog posts for Family Travel Asia (best domain, 4 posts only) — spawned 02:07 HKT
 
-## Completed This Wake (01:07 HKT)
-1. ✅ **State assessment** — 11.7GB free RAM. 0 active sub-agents from prior session.
-2. ✅ **EV blog post content confirmed** — 91 blog posts already generated in lib/generated-blog-data.ts (prior session did produce content, just blog page not rendering it).
-3. ✅ **Apifeny playbook content confirmed** — 48 playbooks in lib/playbooks.ts, but NO [slug] detail pages exist.
-4. ✅ **Schema.org check** — All 6 major sites already have schema.org structured data. Zero-Excuse Queue #5 ✅ done.
-5. ✅ **Cross-site footer links checked** — Family Travel and Luxury both have comprehensive Network links. No action needed.
-6. ✅ **Apifeny [slug] sub-agent spawned** — Create app/playbooks/[slug]/page.tsx for individual playbook rendering
-7. ✅ **EV blog fix sub-agent spawned** — Diagnose + fix blog page "No articles yet" issue with 91 posts in data
+## Completed This Wake (02:07 HKT)
+1. ✅ **State assessment** — 11.4GB free RAM. 0 active sub-agents from prior session.
+2. ✅ **Prior sub-agents verified** — Both 01:07 sub-agents produced no new code because work was already done:
+   - Apifeny `/playbook/[slug]` detail pages already exist
+   - EV blog imports 91 posts correctly (blog pages render fine)
+3. ✅ **Cross-site footer links confirmed** — All 6 major sites have comprehensive network links. Done.
+4. ✅ **Schema.org structured data** — All 6 major sites. Confirmed done.
+5. ✅ **EV Charging routing** — ISR (`revalidate: 3600`, `dynamicParams: true`) for all 1,125 stations + 91 blog routes. Builds clean.
+6. ✅ **Family Travel content gen spawned** — 3 new long-form blog posts in `lib/generated-blog-data.ts`. Building as P2 EXPAND (content gap fill).
+7. ✅ **All 4 major sites build clean** — EV Charging (1,125 station routes + 91 blog), Apifeny (87 tool pages), Luxury (527 destinations), Family Travel (adding new posts).
 
 ## Work History (Previous Sessions)
 - P0 DEPLOY: All 4 sites deployed ✅
-- P1 BUILD: Nudge blocked (no Supabase schema) ✅
+- P1 BUILD: Nudge blocked (no Supabase schema) — waiting on Chris ✅
 - P2 IMPROVE: Directory-beast improvements done ✅
 - P3 EXPAND: New directories on hold ✅
 - P4 ANALYTICS: Vercel Analytics on all 4 sites ✅
 - EV Charging routing fix: ✅ DONE (SSG + ISR for all 1,125 stations)
 - Luxury destination slug fix: ✅ DONE (527 destinations all have slugs via resolveSlug)
 - Schema.org structured data: ✅ Already on all 6 major sites
+- Cross-site footer links: ✅ All 6 sites linked
+- Apifeny playbook pages: ✅ Already exist at `/playbook/[slug]`
+- EV blog rendering: ✅ Working — 91 posts build and display correctly
 
 ## Priority Queue
 | Priority | Project | Task | Status | Next Action |
 |:--------:|---------|------|:------:|-------------|
-| P1 BUILD | Apifeny-AI | [slug] detail pages for 48 playbooks | 🔄 SUB-AGENT | Waiting for completion |
-| P2 IMPROVE | EV Charging | Fix blog rendering (91 posts) | 🔄 SUB-AGENT | Waiting for completion |
-| P1 BUILD | Apifeny-AI | Cross-site footer links | 🔄 SUB-AGENT | Part of same sub-agent |
-| P3 EXPAND | All sites | Affiliate link activation | ⛔ BLOCKED | Chris: sign up + set env vars |
+| P2 IMPROVE | Family Travel | Generate 3 new blog posts | 🔄 SUB-AGENT (deepseek-chat) | Waiting for completion |
+| P2 IMPROVE | Family Travel | Build check + deploy if passes | ⏳ NEXT | After sub-agent completes |
+| P1 BUILD | Nudge | Telegram webhook, NLP parser, Supabase schema | ⛔ BLOCKED | Needs service_role key from Chris |
+| P3 EXPAND | All sites | New directories / Affiliate link activation | ⛔ BLOCKED | Needs Chris input |
+| P4 ANALYTICS | All sites | GA4 integration | 📋 BACKLOG | Low priority |
 
-## Next Session
-1. Check sub-agent completions
-2. Verify builds pass (`npm run build` on both projects)
-3. Deploy if builds pass
-4. Continue with overnight priorities
+## Next Session (03:07 HKT)
+1. Check sub-agent completion — did family travel content gen finish?
+2. Verify build passes: `cd family-travel-directory && npm run build`
+3. If builds fail, fix issues; if pass, advance cursor
+4. Determine highest-ROI action for next wake
+5. Options if sub-agent incompletes: P4 ANALYTICS (GA4), or minor SEO fixes

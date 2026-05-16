@@ -44,7 +44,29 @@ export interface Destination {
     current_price_usd?: number | null;
     last_price_check?: string | null;
   };
-  affiliateLinks?: Record<string, string>;
+  affiliateLinks?: {
+    booking?: { url: string; text: string };
+    klook?: { url: string; text: string };
+    viator?: { url: string; text: string };
+    [key: string]: { url: string; text: string } | undefined;
+  };
+  information_gain?: {
+    reddit_sentiment_snippet?: string;
+    human_verified_tip?: string | null;
+    primary_source_url?: string;
+    geo_highlight_score?: number;
+  };
+  flywheel_connect?: {
+    related_ev_station_id?: string | string[] | null;
+    related_luxury_stay_id?: string | string[] | null;
+    related_family_activity_id?: string | string[] | null;
+  };
+  premium_perks?: {
+    is_premium: boolean;
+    perk_theme?: string;
+    perks?: string[];
+    seoKeywords?: string[];
+  };
 }
 
 // Cast and export — single source of truth for all pages/APIs
