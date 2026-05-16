@@ -644,3 +644,31 @@ overnight_autonomy:
   # ─── AUTO-SHUTDOWN — NEVER ───
   auto_shutdown: false
   description: "System runs continuously. Never self-terminates. Always produces output."
+
+# ═══════════════════════════════════════════════════════════════
+# BOTTLENECK ELIMINATION RULE (LOCKED May 16 2026 — NEVER OVERRIDE)
+# ═══════════════════════════════════════════════════════════════
+# Whenever the agent needs Chris for something, it MUST ask:
+# "Can I remove this bottleneck so you never have to ask me again?"
+# Then implement the fix immediately.
+
+bottleneck_elimination:
+  enabled: true
+  locked: true
+  lock_date: "2026-05-16"
+  trigger: "Every time you need human input for a recurring blocker"
+  question: "Can I remove this bottleneck so Chris never has to deal with it again?"
+  examples:
+    - blocker: "Vercel auth expired — needs Chris to re-login"
+      fix: "Save the Vercel token permanently in an env file with restricted permissions, or switch to a long-lived API token so deploys never need re-auth"
+    - blocker: "Supabase schema not run — needs Chris to paste SQL"
+      fix: "Create a one-click SQL runner script that applies schema directly, or pre-generate a complete SQL file Chris can paste in 5 seconds with zero debugging"
+    - blocker: "Affiliate accounts not configured"
+      fix: "Create a complete setup guide with exact URLs, signup fields, and copy-paste text for each affiliate program."
+  documentation: "Log each eliminated bottleneck to ~/life/Resources/eliminated-bottlenecks.md"
+  log_format: |
+    ## [YYYY-MM-DD] Eliminated: <bottleneck name>
+    - Blocked: <what needed Chris>
+    - Fix: <what we built instead>
+    - Result: <impact>
+    - Category: deploy | schema | affiliate | credentials | research
