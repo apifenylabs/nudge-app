@@ -25,7 +25,7 @@ export default function WaitlistPage() {
               <h1 className="text-3xl sm:text-4xl font-bold text-ink dark:text-cream mb-3">
                 Join the Waitlist
               </h1>
-              <p className="text-muted">
+              <p className="text-muted dark:text-cream/80">
                 Be the first to get access to your AI Cofounder. We'll notify you when your vertical is ready.
               </p>
             </div>
@@ -38,7 +38,7 @@ export default function WaitlistPage() {
                 <h2 className="text-xl font-semibold text-ink dark:text-cream mb-2">
                   You're on the list!
                 </h2>
-                <p className="text-muted text-sm">
+                <p className="text-muted dark:text-cream/80 text-sm">
                   We'll email you at <strong className="text-ink dark:text-cream">{email}</strong> when the AI Cofounder for{" "}
                   {vertical && <strong className="text-accent">{vertical}</strong>} is ready.
                 </p>
@@ -80,7 +80,7 @@ export default function WaitlistPage() {
                   <button type="submit" className="btn-primary w-full justify-center text-base py-3">
                     Join the Waitlist <ArrowRight size={18} />
                   </button>
-                  <p className="text-xs text-muted text-center">
+                  <p className="text-xs text-muted dark:text-cream/60 text-center">
                     No spam. Unsubscribe anytime. We'll only email you about your AI Cofounder.
                   </p>
                 </div>

@@ -93,7 +93,7 @@ export default function MealPlanningPage() {
         <div className="section-container">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             {/* Badge */}
-            <div className="animate-fade-in inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-meal/10 text-meal text-sm font-medium border border-meal/20">
+            <div className="animate-fade-in inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-meal/10 dark:bg-meal/10 text-meal dark:text-meal/80 text-sm font-medium border border-meal/20 dark:border-meal/30">
               <Sparkles size={14} />
               Coming Soon
             </div>
@@ -103,7 +103,7 @@ export default function MealPlanningPage() {
               🥗 AI Meal Planner —{" "}
               <span className="text-meal">Your Personal Nutrition Cofounder</span>
             </h1>
-            <p className="text-lg sm:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted dark:text-cream/80 max-w-2xl mx-auto leading-relaxed">
               Stop staring at your fridge. Get a personalized weekly meal plan
               based on your preferences, dietary needs, and what&apos;s in your
               pantry. No more &ldquo;what&apos;s for dinner?&rdquo;
@@ -136,7 +136,7 @@ export default function MealPlanningPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-ink dark:text-cream mb-4">
               How It Works
             </h2>
-            <p className="text-muted text-lg max-w-xl mx-auto">
+            <p className="text-muted dark:text-cream/80 text-lg max-w-xl mx-auto">
               Four steps to never asking &ldquo;what&apos;s for dinner?&rdquo; again.
             </p>
           </div>
@@ -176,7 +176,7 @@ export default function MealPlanningPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-ink dark:text-cream mb-4">
               Sample Plan Preview
             </h2>
-            <p className="text-muted text-lg max-w-xl mx-auto">
+            <p className="text-muted dark:text-cream/80 text-lg max-w-xl mx-auto">
               This is what your actual AI-generated plan looks like — real meals, no repeats.
             </p>
           </div>
@@ -189,13 +189,13 @@ export default function MealPlanningPage() {
                   <th className="p-4 font-semibold text-ink dark:text-cream border-r border-border dark:border-darkBorder">
                     Day
                   </th>
-                  <th className="p-4 font-semibold text-meal border-r border-border dark:border-darkBorder">
+                  <th className="p-4 font-semibold text-meal dark:text-meal/80 border-r border-border dark:border-darkBorder">
                     <Sun size={14} className="inline mr-1" /> Breakfast
                   </th>
-                  <th className="p-4 font-semibold text-amber-600 border-r border-border dark:border-darkBorder">
+                  <th className="p-4 font-semibold text-amber-600 dark:text-amber-400 border-r border-border dark:border-darkBorder">
                     <Utensils size={14} className="inline mr-1" /> Lunch
                   </th>
-                  <th className="p-4 font-semibold text-indigo-600">
+                  <th className="p-4 font-semibold text-indigo-600 dark:text-indigo-400">
                     <Moon size={14} className="inline mr-1" /> Dinner
                   </th>
                 </tr>
@@ -272,7 +272,7 @@ export default function MealPlanningPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-ink dark:text-cream mb-4">
               What&apos;s Coming
             </h2>
-            <p className="text-muted text-lg max-w-xl mx-auto">
+            <p className="text-muted dark:text-cream/80 text-lg max-w-xl mx-auto">
               We&apos;re building the full nutrition OS. Here&apos;s what&apos;s on the roadmap.
             </p>
           </div>
@@ -298,10 +298,10 @@ export default function MealPlanningPage() {
 
           <div className="text-center mt-12">
             <Link
-              href="/waitlist"
+              href="/categories/meal-planning/interactive"
               className="btn-primary bg-meal hover:bg-meal/90 text-lg px-8 py-3.5 shadow-lg shadow-meal/20"
             >
-              Join the Waitlist
+              Try the Interactive Planner
               <ArrowRight size={18} />
             </Link>
           </div>
@@ -319,7 +319,7 @@ export default function MealPlanningPage() {
             from day one.
           </p>
           <Link
-            href="/waitlist"
+            href="/categories/meal-planning/interactive"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-meal rounded-xl font-semibold text-lg hover:bg-white/90 active:scale-[0.98] transition-all shadow-xl"
           >
             Get Your First Meal Plan — Free

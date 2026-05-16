@@ -2,8 +2,8 @@ import Link from 'next/link';
 import AffiliateLink from './affiliate/AffiliateLink';
 
 const sisterSites = [
-  { name: 'Asia AI Empire', href: 'https://apifeny-ai.vercel.app', description: 'Curated AI tools & agents directory', badge: 'AI Hub' },
-  { name: 'EV Charging Asia', href: 'https://evfamilytravelasia.com', description: 'EV road trips & charging stations across Asia', badge: 'New' },
+  { name: 'Apifeny AI', href: 'https://apifeny-ai.vercel.app', description: 'Curated AI tools & agents directory', badge: 'AI Hub' },
+  { name: 'EV Charging Asia', href: 'https://ev-charging-asia.vercel.app', description: 'EV road trips & charging stations across Asia', badge: 'New' },
   { name: 'Luxury Family Travel Asia', href: 'https://luxury-family-travel-asia.vercel.app', description: 'Premium family getaways & 5-star resorts', badge: 'Luxury' },
   { name: 'Senior-Friendly Travel Asia', href: 'https://senior-friendly-travel-asia.vercel.app', description: 'Accessible travel for older adults' },
   { name: 'Kids Activities Asia', href: 'https://kids-activities-asia.vercel.app', description: 'Kid-friendly activities & destinations' },

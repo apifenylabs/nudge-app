@@ -77,7 +77,7 @@ export default function TravelPage() {
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-ink dark:text-cream mb-4">
             How It Works
           </h2>
-          <p className="text-muted text-center max-w-xl mx-auto mb-12">
+          <p className="text-muted dark:text-cream/80 text-center max-w-xl mx-auto mb-12">
             Five questions. One complete trip. No tabs required.
           </p>
           <div className="relative">

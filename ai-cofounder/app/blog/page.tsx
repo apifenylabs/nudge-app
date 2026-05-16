@@ -13,17 +13,17 @@ export default function BlogPage() {
               <h1 className="text-3xl sm:text-4xl font-bold text-ink dark:text-cream mb-3">
                 Cofounder Blog
               </h1>
-              <p className="text-muted max-w-lg mx-auto">
+              <p className="text-muted dark:text-cream/80 max-w-lg mx-auto">
                 Insights, stories, and guides on building with AI. From vertical agents to solopreneur strategies — curated by your AI Cofounder.
               </p>
             </div>
 
             <div className="text-center py-20">
-              <FileText size={48} className="mx-auto mb-4 text-muted" />
+              <FileText size={48} className="mx-auto mb-4 text-muted dark:text-cream/60" />
               <h2 className="text-xl font-semibold text-ink dark:text-cream mb-2">
                 Posts coming soon
               </h2>
-              <p className="text-muted mb-6 max-w-md mx-auto">
+              <p className="text-muted dark:text-cream/80 mb-6 max-w-md mx-auto">
                 We're crafting deep-dive guides on AI-powered meal planning, personal finance automation, and more.
               </p>
               <Link href="/waitlist" className="btn-primary">

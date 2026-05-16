@@ -1,57 +1,38 @@
-# HEARTBEAT.md — May 16 22:15 HKT
+# HEARTBEAT.md — May 16 23:10 HKT
 
-## STATUS: 🟢 APIFENY PHASE 5 SHIPPED
-- **Apifeny AI**: 🚀 Phase 5 live — 41 playbooks (+4 new), 198 pages (was ~159)
+## STATUS: 🟢 CRITICAL BUG FIXES SHIPPED
+- **AI Cofounder**: ✅ Two bugs fixed + redeployed
 - **All other sites**: ✅ Healthy
-- **Budget**: ~$0.28 used today (under $0.50 cap)
 
-## SHIPPED TODAY
-
-### Phase 5 — Apifeny Playbooks & Community Enhancement (21:55→22:15)
-**New Playbooks** (+4, now 41 total):
-- AI Agent Building: Multi-Agent Architecture Patterns
-- Testing AI Apps: QA Pipeline
-- Monetization with AI: From Free to $1K MRR
-- Voice-First App Building
-
-**New Community Playbooks** (+3, now 8 total):
-- Zero to $500 MRR: AI Newsletter
-- Automated SEO Content Engine
-- Freelance AI Consulting Playbook
-
-**New Success Stories** (+3, now 16 total):
-- $2.5K/mo from AI-powered newsletter
-- Built and sold AI tool for $15K
-- Replaced $5K/mo agency with AI automation
-
-**Build-in-Public** (+5 entries, now 12 total)
-**Pipeline Stage Badge System** — lib/utils.ts
-**Deployed:** 198 pages, all 200s ✅
-
-**Nudge Pricing Fix:** Price text changed to explicit `text-gray-900 dark:text-white`
-- Build verifed locally ✅, but needs Vercel re-deploy (auth issue)
+## JUST SHIPPED (23:05 HKT)
+1. **Categories layout → proper layout** — `app/categories/layout.tsx` no longer swallows `{children}`. Created `app/categories/page.tsx` with the overview content. This was the root cause of both bugs.
+2. **"Dark background" fix** — Interactive page now shows `bg-cream` without being overridden by categories layout
+3. **"Meal planning does nothing" fix** — Categories overview cards now link to `/categories/meal-planning/interactive` directly. Meal planning page CTAs also link to interactive instead of `/waitlist`.
 
 ## ALL SITES
 | Site | Status |
 |------|--------|
-| Apifeny AI | ✅ 198 pages, Phase 5 live |
-| AI Cofounder | ✅ 16 pages |
+| AI Cofounder | ✅ Landing, categories, meal-planning, interactive — all 200 |
+| Apifeny AI | ✅ Live |
 | EV Charging Asia | ✅ Live |
-| Family Travel Asia | ✅ Live (redeploy blocked: Vercel auth) |
+| Family Travel Asia | ✅ Live |
 | Luxury Travel Asia | ✅ Live |
 | Senior Friendly Travel | ✅ Live |
-| Nudge | ✅ Live, price fix built |
+| Nudge | ✅ Live (schema blocked) |
 
 ## NEXT EXECUTABLE
-1. Re-deploy Nudge with pricing fix (Chris: `vercel login` then `vercel --prod`)
-2. Family Travel redeploy with new MDX posts
+1. ~~Fix categories layout bug~~ ✅ Done
+2. ~~Fix interactive page routing~~ ✅ Done
+3. Family Travel redeploy with new MDX posts
+4. Affiliate IDs config (Amazon, Instacart, Booking.com)
 
 ## BLOCKERS (need Chris)
-1. Vercel auth not persisting on this machine
-2. Affiliate account signups (Booking.com, Klook, Amazon)
+1. Vercel auth expired → Family Travel redeploy blocked
+2. Affiliate account signups
 3. Nudge Supabase schema
 4. Social Beast API keys
+5. GA4 tracking
 
 ## BUDGET TRACKING
-- Total today: ~$0.28 (sub-agent for Phase 5 content)
-- Daily cap: $0.50 — $0.22 remaining
+- Total today: ~$0.10 (DeepSeek-chat)
+- Daily cap: $0.50 — plenty of room

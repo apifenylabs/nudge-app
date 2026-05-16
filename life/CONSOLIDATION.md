@@ -10,15 +10,16 @@ Self-improvement loop: review today's sessions and make the system smarter so Ch
 
 ### Step 1: Read today's session data
 - Read today's `memory/YYYY-MM-DD.md`
-- Review recent cron outcomes: `openclaw cron runs ceo-consolidation-primary`
+- Review recent cron outcomes: List ALL cron jobs with `openclaw cron list` — focus on consecutive errors, timeouts, delivery failures
 
 ### Step 2: Identify improvements
 For each day, identify:
 
 a) **Bottlenecks** — anything that needed Chris. Add to bottleneck log.
-b) **Patterns** — recurring requests, questions, or frustrations Chris expresses
-c) **Prompt improvements** — instructions in RULES.yaml, SOUL.md, or AGENTS.md that were unclear or incomplete
-d) **Knowledge gaps** — things the system didn't know that would have helped
+b) **Cron health issues** — jobs with 2+ consecutive errors, timeouts sinking resources, delivery failures blocking output. Note root cause + suggested fix.
+c) **Patterns** — recurring requests, questions, or frustrations Chris expresses
+d) **Prompt improvements** — instructions in RULES.yaml, SOUL.md, or AGENTS.md that were unclear or incomplete
+e) **Knowledge gaps** — things the system didn't know that would have helped
 
 ### Step 3: Implement (additive only)
 For each finding, make ONE minimal improvement:

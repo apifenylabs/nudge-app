@@ -12,15 +12,15 @@ export default function MealPlanningSavedMoney() {
           <div className="mb-10 animate-fade-in">
             <div className="flex items-center gap-3 mb-4">
               <span className="badge badge-meal">Personal Story</span>
-              <span className="text-xs text-muted">May 16, 2026 • 8 min read</span>
+              <span className="text-xs text-muted dark:text-cream/70">May 16, 2026 • 8 min read</span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink dark:text-cream mb-4 leading-tight">
               How AI Meal Planning Saved Me $200/Month in 2026
             </h1>
-            <p className="text-lg text-muted leading-relaxed">
+            <p className="text-lg text-muted dark:text-cream/80 leading-relaxed">
               I used to spend $600+ on groceries and still ordered takeout three times a week. Then I let an AI cofounder plan my meals. Here&apos;s exactly what happened.
             </p>
-            <div className="flex items-center gap-4 mt-6 text-sm text-muted">
+            <div className="flex items-center gap-4 mt-6 text-sm text-muted dark:text-cream/70">
               <div className="flex items-center gap-1.5">
                 <Sparkles size={14} className="text-accent" />
                 <span>Real story · Your AI Cofounder</span>
@@ -60,18 +60,18 @@ export default function MealPlanningSavedMoney() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="text-center">
                   <p className="text-3xl font-bold text-ink dark:text-cream">$600</p>
-                  <p className="text-xs text-muted">groceries / month</p>
+                  <p className="text-xs text-muted dark:text-cream/70">groceries / month</p>
                 </div>
                 <div className="text-center">
                   <p className="text-3xl font-bold text-ink dark:text-cream">$240</p>
-                  <p className="text-xs text-muted">takeout / month</p>
+                  <p className="text-xs text-muted dark:text-cream/70">takeout / month</p>
                 </div>
                 <div className="text-center">
                   <p className="text-3xl font-bold text-red-400">$840</p>
-                  <p className="text-xs text-muted">total / month</p>
+                  <p className="text-xs text-muted dark:text-cream/70">total / month</p>
                 </div>
               </div>
-              <div className="mt-3 text-xs text-muted text-center">
+              <div className="mt-3 text-xs text-muted dark:text-cream/60 text-center">
                 $10,080 / year. On food. For one person.
               </div>
             </div>
@@ -105,18 +105,18 @@ export default function MealPlanningSavedMoney() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="text-center">
                   <p className="text-3xl font-bold text-meal">$420</p>
-                  <p className="text-xs text-muted">groceries / month</p>
+                  <p className="text-xs text-muted dark:text-cream/70">groceries / month</p>
                 </div>
                 <div className="text-center">
                   <p className="text-3xl font-bold text-meal">$100</p>
-                  <p className="text-xs text-muted">takeout / month</p>
+                  <p className="text-xs text-muted dark:text-cream/70">takeout / month</p>
                 </div>
                 <div className="text-center">
                   <p className="text-3xl font-bold text-meal">$520</p>
-                  <p className="text-xs text-muted">total / month</p>
+                  <p className="text-xs text-muted dark:text-cream/70">total / month</p>
                 </div>
               </div>
-              <div className="mt-3 text-xs text-muted text-center">
+              <div className="mt-3 text-xs text-muted dark:text-cream/60 text-center">
                 That&apos;s $320 / month saved.
               </div>
             </div>
@@ -125,7 +125,7 @@ export default function MealPlanningSavedMoney() {
               <p className="text-lg font-bold text-ink dark:text-cream">
                 $320 / month × 12 = <span className="text-meal text-2xl">$3,840 / year</span>
               </p>
-              <p className="text-sm text-muted mt-1">
+              <p className="text-sm text-muted dark:text-cream/80 mt-1">
                 I&apos;ll take that $3,840/year — and that&apos;s not counting the time saved.
               </p>
             </div>
@@ -143,35 +143,35 @@ export default function MealPlanningSavedMoney() {
                 <CheckCircle2 size={20} className="text-meal mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-ink dark:text-cream">You shop without a list.</strong>
-                  <p className="text-sm text-muted">Walking into a store without a plan means every aisle is an impulse trap. Studies show unplanned purchases add 23-40% to your grocery bill.</p>
+                  <p className="text-sm text-muted dark:text-cream/80">Walking into a store without a plan means every aisle is an impulse trap. Studies show unplanned purchases add 23-40% to your grocery bill.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 size={20} className="text-meal mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-ink dark:text-cream">Your pantry is a black box.</strong>
-                  <p className="text-sm text-muted">You buy the same staples every week because you don&apos;t track what you already have. That&apos;s how you end up with three jars of cumin and no meal to use them in.</p>
+                  <p className="text-sm text-muted dark:text-cream/80">You buy the same staples every week because you don&apos;t track what you already have. That&apos;s how you end up with three jars of cumin and no meal to use them in.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 size={20} className="text-meal mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-ink dark:text-cream">Decision fatigue at 6 PM.</strong>
-                  <p className="text-sm text-muted">After a full day of work, deciding what to cook — and summoning the energy to do it — is genuinely hard. Takeout wins by default because it requires zero decisions.</p>
+                  <p className="text-sm text-muted dark:text-cream/80">After a full day of work, deciding what to cook — and summoning the energy to do it — is genuinely hard. Takeout wins by default because it requires zero decisions.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 size={20} className="text-meal mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-ink dark:text-cream">You don&apos;t account for food waste.</strong>
-                  <p className="text-sm text-muted">The average American household throws away $1,200+ in food every year. That&apos;s not &ldquo;the cost of fresh food&rdquo; — that&apos;s a planning failure dressed up as normal.</p>
+                  <p className="text-sm text-muted dark:text-cream/80">The average American household throws away $1,200+ in food every year. That&apos;s not &ldquo;the cost of fresh food&rdquo; — that&apos;s a planning failure dressed up as normal.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 size={20} className="text-meal mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-ink dark:text-cream">You&apos;re solving the wrong problem.</strong>
-                  <p className="text-sm text-muted">More recipes aren&apos;t the answer. You don&apos;t need better ideas — you need a system that removes the mental overhead of food decisions. The meal plan itself is secondary to having <em>any</em> plan at all.</p>
+                  <p className="text-sm text-muted dark:text-cream/80">More recipes aren&apos;t the answer. You don&apos;t need better ideas — you need a system that removes the mental overhead of food decisions. The meal plan itself is secondary to having <em>any</em> plan at all.</p>
                 </div>
               </li>
             </ul>
@@ -189,49 +189,49 @@ export default function MealPlanningSavedMoney() {
                 <span className="w-7 h-7 rounded-full bg-meal/10 text-meal text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
                 <div>
                   <p className="font-medium text-ink dark:text-cream">What&apos;s your dietary preference?</p>
-                  <p className="text-sm text-muted">Balanced? Vegetarian? Keto? Your eating style determines the recipe universe you&apos;re drawing from.</p>
+                  <p className="text-sm text-muted dark:text-cream/80">Balanced? Vegetarian? Keto? Your eating style determines the recipe universe you&apos;re drawing from.</p>
                 </div>
               </div>
               <div className="card p-4 flex items-start gap-3">
                 <span className="w-7 h-7 rounded-full bg-meal/10 text-meal text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
                 <div>
                   <p className="font-medium text-ink dark:text-cream">Any food allergies or restrictions?</p>
-                  <p className="text-sm text-muted">Dairy, nuts, shellfish, gluten — the AI needs to know what to avoid. This is where generic meal plans fall apart.</p>
+                  <p className="text-sm text-muted dark:text-cream/80">Dairy, nuts, shellfish, gluten — the AI needs to know what to avoid. This is where generic meal plans fall apart.</p>
                 </div>
               </div>
               <div className="card p-4 flex items-start gap-3">
                 <span className="w-7 h-7 rounded-full bg-meal/10 text-meal text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
                 <div>
                   <p className="font-medium text-ink dark:text-cream">How many people are you cooking for?</p>
-                  <p className="text-sm text-muted">Cooking for one is different than cooking for four. Portion sizing, leftovers strategy, and cost all change.</p>
+                  <p className="text-sm text-muted dark:text-cream/80">Cooking for one is different than cooking for four. Portion sizing, leftovers strategy, and cost all change.</p>
                 </div>
               </div>
               <div className="card p-4 flex items-start gap-3">
                 <span className="w-7 h-7 rounded-full bg-meal/10 text-meal text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">4</span>
                 <div>
                   <p className="font-medium text-ink dark:text-cream">What&apos;s your primary nutrition goal?</p>
-                  <p className="text-sm text-muted">Weight loss, muscle gain, more energy, or just eating better on a budget. Your goal determines macro targets and portion sizes.</p>
+                  <p className="text-sm text-muted dark:text-cream/80">Weight loss, muscle gain, more energy, or just eating better on a budget. Your goal determines macro targets and portion sizes.</p>
                 </div>
               </div>
               <div className="card p-4 flex items-start gap-3">
                 <span className="w-7 h-7 rounded-full bg-meal/10 text-meal text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">5</span>
                 <div>
                   <p className="font-medium text-ink dark:text-cream">How much time can you cook per meal?</p>
-                  <p className="text-sm text-muted">Be honest. If you only have 15 minutes, the plan should feature sheet-pan dinners and one-pot meals — not recipes that take an hour of prep.</p>
+                  <p className="text-sm text-muted dark:text-cream/80">Be honest. If you only have 15 minutes, the plan should feature sheet-pan dinners and one-pot meals — not recipes that take an hour of prep.</p>
                 </div>
               </div>
               <div className="card p-4 flex items-start gap-3">
                 <span className="w-7 h-7 rounded-full bg-meal/10 text-meal text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">6</span>
                 <div>
                   <p className="font-medium text-ink dark:text-cream">What&apos;s already in your pantry?</p>
-                  <p className="text-sm text-muted">This is the secret weapon. When the AI knows you have chicken, rice, and eggs, it builds meals around what you already <em>have</em> — not what the recipe thinks you should buy.</p>
+                  <p className="text-sm text-muted dark:text-cream/80">This is the secret weapon. When the AI knows you have chicken, rice, and eggs, it builds meals around what you already <em>have</em> — not what the recipe thinks you should buy.</p>
                 </div>
               </div>
               <div className="card p-4 flex items-start gap-3">
                 <span className="w-7 h-7 rounded-full bg-meal/10 text-meal text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">7</span>
                 <div>
                   <p className="font-medium text-ink dark:text-cream">What&apos;s your weekly grocery budget?</p>
-                  <p className="text-sm text-muted">The AI optimizes every meal to fit within your budget. Under $50/week? It&apos;ll recommend lentils, eggs, and seasonal veggies over imported beef and out-of-season berries.</p>
+                  <p className="text-sm text-muted dark:text-cream/80">The AI optimizes every meal to fit within your budget. Under $50/week? It&apos;ll recommend lentils, eggs, and seasonal veggies over imported beef and out-of-season berries.</p>
                 </div>
               </div>
             </div>
@@ -308,7 +308,7 @@ export default function MealPlanningSavedMoney() {
             <h3 className="text-2xl font-bold text-ink dark:text-cream mb-3">
               Try the AI Meal Planner That Changed Everything
             </h3>
-            <p className="text-muted mb-6 max-w-md mx-auto">
+            <p className="text-muted dark:text-cream/80 mb-6 max-w-md mx-auto">
               Answer 7 questions. Get a full personalized meal plan + grocery list. Free, no credit card, no signup.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -323,28 +323,28 @@ export default function MealPlanningSavedMoney() {
 
           {/* Related articles + cross-links */}
           <div className="mt-12 pt-8 border-t border-border">
-            <h3 className="text-sm font-semibold text-muted uppercase tracking-wider mb-4">Explore More</h3>
+            <h3 className="text-sm font-semibold text-muted dark:text-cream/60 uppercase tracking-wider mb-4">Explore More</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <Link href="/blog/meal-planning-ai-guide" className="card p-4 hover:border-meal/30 transition-colors">
                 <span className="text-sm font-medium text-ink dark:text-cream flex items-center gap-1.5">
                   <UtensilsCrossed size={14} className="text-meal" />
                   Stop Wasting $1,200/Year on Food
                 </span>
-                <p className="text-xs text-muted mt-1">The full AI meal planning guide</p>
+                <p className="text-xs text-muted dark:text-cream/70 mt-1">The full AI meal planning guide</p>
               </Link>
               <Link href="/categories/personal-finance" className="card p-4 hover:border-finance/30 transition-colors">
                 <span className="text-sm font-medium text-ink dark:text-cream flex items-center gap-1.5">
                   <DollarSign size={14} className="text-finance" />
                   Personal Finance AI
                 </span>
-                <p className="text-xs text-muted mt-1">Automate your budget and savings</p>
+                <p className="text-xs text-muted dark:text-cream/70 mt-1">Automate your budget and savings</p>
               </Link>
               <Link href="/categories/solopreneur" className="card p-4 hover:border-solopreneur/30 transition-colors">
                 <span className="text-sm font-medium text-ink dark:text-cream flex items-center gap-1.5">
                   <Leaf size={14} className="text-solopreneur" />
                   Solopreneur AI Playbook
                 </span>
-                <p className="text-xs text-muted mt-1">One-person business with AI</p>
+                <p className="text-xs text-muted dark:text-cream/70 mt-1">One-person business with AI</p>
               </Link>
             </div>
           </div>

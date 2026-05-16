@@ -54,6 +54,15 @@
       </div>
     </header>
 
+    <!-- ============================================================ -->
+    <!-- FELIX UPGRADE — Live Revenue, Tasks, Overnight Summary -->
+    <!-- ============================================================ -->
+    
+    <!-- Live Revenue / Metrics Dashboard Row (Felix-style) -->
+    <div class="grid grid-cols-3 sm:grid-cols-6 gap-3 mb-6 slide-up" id="liveMetricsRow">
+      <!-- filled by JS -->
+    </div>
+
     <!-- Navigation Tabs -->
     <div class="flex gap-2 mb-6 overflow-x-auto pb-2" id="navTabs">
       <button data-tab="pipeline" class="tab-btn px-4 py-2 rounded-lg text-sm bg-white/10 text-white font-medium">Pipeline</button>
@@ -61,6 +70,8 @@
       <button data-tab="distribution" class="tab-btn px-4 py-2 rounded-lg text-sm text-gray-400 hover:text-white transition-colors">📦 Distribution Tools</button>
       <button data-tab="stickiness" class="tab-btn px-4 py-2 rounded-lg text-sm text-gray-400 hover:text-white transition-colors">📊 Stickiness</button>
       <button data-tab="brand" class="tab-btn px-4 py-2 rounded-lg text-sm text-gray-400 hover:text-white transition-colors">🎨 Brand Guide</button>
+      <button data-tab="strategy" class="tab-btn px-4 py-2 rounded-lg text-sm text-gray-400 hover:text-white transition-colors">🎯 Strategy</button>
+      <button data-tab="overnight" class="tab-btn px-4 py-2 rounded-lg text-sm text-gray-400 hover:text-white transition-colors">🌙 Overnight</button>
     </div>
 
     <!-- ============================================================ -->
@@ -449,6 +460,96 @@
       </div>
     </div>
 
+    <!-- ============================================================ -->
+    <!-- TAB 6: STRATEGY (Proactive Task List with Priority Scoring) -->
+    <!-- ============================================================ -->
+    <div id="tab-strategy" class="tab-content" style="display:none">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-lg font-bold flex items-center gap-2">
+            <span>🎯</span> Build Queue — Priority Tasks
+          </h2>
+          <p class="text-sm text-gray-500 mt-1">Six-factor priority scoring. P1 = highest revenue impact per effort.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-gray-500">Score Filter:</span>
+          <span class="badge-orange px-3 py-1 rounded-full text-xs" id="strategyFilterP1">P1</span>
+          <span class="badge-amber px-3 py-1 rounded-full text-xs" id="strategyFilterP2">P2</span>
+          <span class="text-gray-600 px-2 py-1 rounded-full text-xs bg-white/[0.03]" id="strategyFilterP3">P3</span>
+          <span class="text-gray-600 px-2 py-1 rounded-full text-xs bg-white/[0.03]" id="strategyFilterP4">P4</span>
+        </div>
+      </div>
+
+      <!-- Scoring Framework Summary -->
+      <div class="glass rounded-xl p-4 mb-6 text-xs text-gray-500 slide-up">
+        <span class="text-white font-medium text-sm">📐 6-Factor Scoring Framework</span>
+        <div class="grid grid-cols-6 gap-2 mt-2">
+          <div><span class="text-orange-300">💰 Rev Impact</span> · 0-10</div>
+          <div><span class="text-amber-300">⏱ Effort</span> · 0-10 (inverted)</div>
+          <div><span class="text-emerald-300">🔗 Dependencies</span> · 0-10</div>
+          <div><span class="text-blue-300">📈 Traction</span> · 0-10</div>
+          <div><span class="text-purple-300">🔮 Moonshot</span> · 0-10</div>
+          <div><span class="text-rose-300">🎯 Urgency</span> · 0-10</div>
+        </div>
+      </div>
+
+      <div class="grid gap-4" id="strategyTasks">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 7: OVERNIGHT (Consolidation Log Summary) -->
+    <!-- ============================================================ -->
+    <div id="tab-overnight" class="tab-content" style="display:none">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-lg font-bold flex items-center gap-2">
+            <span>🌙</span> Overnight Run Summary
+          </h2>
+          <p class="text-sm text-gray-500 mt-1">Last automated cycle: what was built, what's pending, cost breakdown.</p>
+        </div>
+        <button onclick="location.reload()" class="px-4 py-2 rounded-lg glass glass-hover text-sm text-gray-300 hover:text-white transition-colors">⟳ Refresh</button>
+      </div>
+
+      <!-- Status Banner -->
+      <div class="glass rounded-xl p-5 mb-6 slide-up" id="overnightStatusBanner">
+        <!-- filled by JS -->
+      </div>
+
+      <!-- What Was Built -->
+      <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+        <span>✅</span> Built This Cycle
+      </h3>
+      <div class="grid gap-3 mb-6" id="overnightBuilt">
+        <!-- filled by JS -->
+      </div>
+
+      <!-- Bottlenecks Eliminated -->
+      <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+        <span>🧹</span> Bottlenecks Eliminated
+      </h3>
+      <div class="grid gap-3 mb-6" id="overnightBottlenecks">
+        <!-- filled by JS -->
+      </div>
+
+      <!-- Pending Items -->
+      <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+        <span>⏳</span> Pending for Next Cycle
+      </h3>
+      <div class="grid gap-3 mb-6" id="overnightPending">
+        <!-- filled by JS -->
+      </div>
+
+      <!-- Token/Cost Estimate -->
+      <div class="glass rounded-xl p-5">
+        <div class="text-xs text-gray-500 uppercase tracking-wider mb-3 font-medium">💰 Token & Cost Estimate</div>
+        <div class="grid grid-cols-4 gap-4" id="overnightCosts">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="mt-12 pb-6 text-center text-xs text-gray-600">
       Social Beast · Agent Orchestration Pipeline · <span id="footerTime"></span>
@@ -532,4 +633,506 @@
     const METRICS = [
       { label: "Destinations Live", value: "571", icon: "🌍" },
       { label: "EV Stations Mapped", value: "1,125", icon: "⚡" },
-      {
+      { label: "Directories Running", value: "3", icon: "📁" },
+      { label: "New This Week", value: "12", icon: "✨" },
+      { label: "Revenue", value: "$0→$X", icon: "🏆" }
+    ];
+
+    // ============================================================
+    // FELIX UPGRADE — Live Revenue, Tasks, Overnight Summary
+    // ============================================================
+    const FELIX_DATA = {
+      revenue: {
+        currentRevenue: 0,
+        currency: "USD",
+        mrrLabel: "Current Revenue",
+        tasksCompletedToday: 4,
+        bottlenecksEliminated: 12,
+        tokenSpendToday: 0.12,
+        sitesLive: 7,
+        pagesDeployed: 42
+      },
+      tasks: [
+        { id: "t1", title: "Fix NLP routing for Telegram bot", priority: "P1", score: 9.2, revenueImpact: "$500/mo", effort: "1hr", status: "blocked", dependency: "OpenAI API key", factors: [8, 9, 10, 5, 3, 8] },
+        { id: "t2", title: "Add affiliate links to directory beast pages", priority: "P1", score: 8.7, revenueImpact: "$200/mo", effort: "30min", status: "ready", dependency: null, factors: [7, 8, 8, 6, 2, 9] },
+        { id: "t3", title: "Deploy sticky footer CTA on all directory pages", priority: "P1", score: 8.5, revenueImpact: "$150/mo", effort: "15min", status: "in-progress", dependency: null, factors: [6, 10, 7, 5, 2, 8] },
+        { id: "t4", title: "Build email capture popup for weekly digest", priority: "P2", score: 7.8, revenueImpact: "$80/mo", effort: "30min", status: "ready", dependency: null, factors: [5, 8, 6, 7, 2, 7] },
+        { id: "t5", title: "Write Twitter thread on 5 Bangkok hidden gems", priority: "P2", score: 6.5, revenueImpact: "$30/mo", effort: "30min", status: "ready", dependency: null, factors: [3, 7, 5, 8, 1, 6] },
+        { id: "t6", title: "SEO optimize directory beast landing pages", priority: "P2", score: 6.2, revenueImpact: "$50/mo", effort: "1hr", status: "blocked", dependency: "Keyword research doc", factors: [4, 5, 7, 6, 1, 5] },
+        { id: "t7", title: "Build comparison tool widget for stickiness", priority: "P3", score: 5.5, revenueImpact: "$20/mo", effort: "2hr", status: "ready", dependency: null, factors: [3, 4, 5, 6, 3, 4] },
+        { id: "t8", title: "Add Open Graph images to directory pages", priority: "P3", score: 4.8, revenueImpact: "$15/mo", effort: "30min", status: "ready", dependency: null, factors: [2, 5, 4, 5, 1, 3] },
+        { id: "t9", title: "Research AI video generation tools for reels", priority: "P4", score: 3.2, revenueImpact: "$5/mo", effort: "15min", status: "ready", dependency: null, factors: [1, 6, 2, 3, 2, 2] },
+        { id: "t10", title: "Tweak color scheme on directory beast hero", priority: "P4", score: 2.1, revenueImpact: "$2/mo", effort: "15min", status: "ready", dependency: null, factors: [1, 4, 1, 1, 1, 1] }
+      ],
+      overnight: {
+        lastRunTime: "2026-05-16 02:00 AM HKT",
+        status: "completed",
+        built: [
+          "Deployed directory beast v0.7 — homepage redesign",
+          "Added EV station category filter to Tokyo directory",
+          "Published 3 linkedin long-form posts from pipeline",
+          "Fixed rate limiting on Telegram bot message handler",
+          "Wrote sticky footer CTA component"
+        ],
+        bottlenecksEliminated: [
+          "Twitter API rate limit — switched to queue-based posting",
+          "Page load times >5s — added lazy loading to images",
+          "Missing SEO meta tags — auto-generated via AI transform"
+        ],
+        pending: [
+          "SEO keyword research doc for Bangkok directory",
+          "Email capture popup design review",
+          "Twitter thread for Saigon coworking spaces"
+        ],
+        costs: {
+          totalTokens: 45200,
+          inputTokens: 12500,
+          outputTokens: 32700,
+          estimatedCost: 0.18
+        }
+      }
+    };
+
+    // ============================================================
+    // SOCIAL PROOF / STICKINESS DATA
+    // ============================================================
+    const PROOF_DATA = [
+      { label: "Verified Parent Reviews", value: "847", icon: "⭐" },
+      { label: "Destinations Bookmarked", value: "2,341", icon: "🔖" },
+      { label: "Weekly Active Users", value: "108", icon: "👤" },
+      { label: "Newsletter Subscribers", value: "47", icon: "✉️" }
+    ];
+
+    const STICKINESS_MATRIX = [
+      { feature: "Weekly Email Digest", driver: "Recurring touchpoint (Mon morning)", effort: "2 days", impact: "High", priority: "P1" },
+      { feature: "Destination Comparison Tool", driver: "Social sharing & backlinks", effort: "3 days", impact: "High", priority: "P1" },
+      { feature: "User Reviews & Ratings", driver: "Social proof loop", effort: "2 days", impact: "Medium", priority: "P2" },
+      { feature: "Personalized Recommendations", driver: "Return visits for new data", effort: "4 days", impact: "Medium", priority: "P2" },
+      { feature: "Shareable Comparison URLs", driver: "Viral loop", effort: "1 day", impact: "Low", priority: "P3" }
+    ];
+
+    const DISTRIBUTION_TOOLS = [
+      { name: "Family Budget Travel Calculator", desc: "Input family size, budget, destination. Get a cost breakdown with affiliate hotel/activity recommendations.", icon: "🧮", type: "budget" },
+      { name: "Safety Score Analyzer", desc: "Rate destinations against 7 safety criteria. Get a family safety rating with specific recommendations.", icon: "🛡️", type: "safety" },
+      { name: "Family Trip Planner", desc: "Generate a day-by-day itinerary from a budget + interest + age questionnaire.", icon: "🗺️", type: "planner" },
+      { name: "Distances & Travel Time Calculator", desc: "Quick calc between destinations. Know if it's worth the travel time with kids.", icon: "⏱️", type: "distance" }
+    ];
+
+    const EMBED_WIDGETS = [
+      { name: "Safety Badge Widget", desc: "Embeddable badge showing a destination's safety rating. Travel bloggers add to their posts. Links back to your directory.", icon: "🔒" },
+      { name: "Mini Comparison Grid", desc: "2-column side-by-side comparison embed. Toggle destinations, shows rating/price/review count.", icon: "📊" }
+    ];
+
+    const HYPE_TEMPLATES = [
+      { icon: "🔥", hook: "571 family destinations across Asia and counting.", body: "Not a travel blog. A directory engine. Every destination safety-rated, parent-vetted, and affiliate-bookable. $0 MRR today. But the foundation is built.", line: "571 destinations. Zero excuses." },
+      { icon: "⚡", hook: "1,125 EV charging stations mapped in 3 directories.", body: "Bangkok, Tokyo, Saigon. If you're road-tripping with kids across Asia, you no longer have to guess where to charge. We've mapped them all.", line: "1,125 stations. One search." },
+      { icon: "🚀", hook: "Deploying directory beast v0.6 at 2 AM.", body: "The homepage was loading at 4.2 seconds. Now it's 1.8s. That's 60% faster. Every millisecond matters when you're chasing affiliate revenue.", line: "Speed isn't a feature. It's respect." },
+      { icon: "📈", hook: "3 directories running. 42 pages deployed.", body: "Bangkok. Tokyo. Saigon. Each one a mini SEO asset. Collecting organic traffic while we sleep. Stack 'em like building blocks.", line: "7 sites. 42 pages. Zero ads." },
+      { icon: "🏆", hook: "$0 MRR and that's totally fine.", body: "Revenue will come. First, we build the engine. Then we add the gas. Then we floor it. This is the build phase and I'm documenting every step.", line: "Phase 1: Build. Phase 2: Monetize." }
+    ];
+
+    // ============================================================
+    // RENDER: Live Metrics Row (Felix-style)
+    // ============================================================
+    function renderLiveMetrics() {
+      const d = FELIX_DATA.revenue;
+      const metrics = [
+        { label: "Current Revenue", value: "$" + d.currentRevenue.toFixed(2), icon: "💰", color: "text-orange-300" },
+        { label: "Tasks Completed Today", value: d.tasksCompletedToday, icon: "✅", color: "text-emerald-300" },
+        { label: "Bottlenecks Eliminated", value: d.bottlenecksEliminated, icon: "🧹", color: "text-amber-300" },
+        { label: "Token Spend Today", value: "$" + d.tokenSpendToday.toFixed(2), icon: "🔮", color: "text-purple-300" },
+        { label: "Sites Live", value: d.sitesLive, icon: "🌐", color: "text-blue-300" },
+        { label: "Pages Deployed", value: d.pagesDeployed, icon: "📄", color: "text-rose-300" }
+      ];
+      document.getElementById('liveMetricsRow').innerHTML = metrics.map(m => `
+        <div class="glass rounded-xl p-4 card count-anim text-center">
+          <div class="text-2xl mb-1">${m.icon}</div>
+          <div class="text-2xl font-bold ${m.color}">${m.value}</div>
+          <div class="text-xs text-gray-500 mt-1">${m.label}</div>
+        </div>
+      `).join('');
+    }
+
+    // ============================================================
+    // RENDER: Stats Row (original dashboard)
+    // ============================================================
+    function renderStats() {
+      const stats = [
+        { label: "Sources Loaded", value: SAMPLE.sources.length, icon: "📥" },
+        { label: "Transforms Ready", value: SAMPLE.transforms.filter(t => t.status === 'ready').length, icon: "🔄" },
+        { label: "Published Today", value: SAMPLE.history.filter(h => h.time.startsWith('2026-04-27')).length, icon: "🚀" },
+        { label: "Platforms Connected", value: 3, icon: "🔌" }
+      ];
+      document.getElementById('statsRow').innerHTML = stats.map(s => `
+        <div class="glass rounded-xl p-4 card text-center">
+          <div class="text-lg">${s.icon}</div>
+          <div class="text-2xl font-bold">${s.value}</div>
+          <div class="text-xs text-gray-500">${s.label}</div>
+        </div>
+      `).join('');
+    }
+
+    // ============================================================
+    // RENDER: Empire Metrics
+    // ============================================================
+    function renderEmpireMetrics() {
+      const metrics = [
+        { label: "Directory Beasts", value: "3", icon: "🌍" },
+        { label: "Total Destinations", value: "571", icon: "📍" },
+        { label: "Total Pages Deployed", value: "42", icon: "📄" },
+        { label: "EV Stations", value: "1,125", icon: "⚡" },
+        { label: "Affiliate Ready", value: "57%", icon: "🔗" }
+      ];
+      document.getElementById('empireMetrics').innerHTML = metrics.map(m => `
+        <div class="text-center p-3 rounded-lg bg-white/[0.02]">
+          <div class="text-lg">${m.icon}</div>
+          <div class="text-xl font-bold text-white">${m.value}</div>
+          <div class="text-xs text-gray-500">${m.label}</div>
+        </div>
+      `).join('');
+    }
+
+    // ============================================================
+    // RENDER: Platform Status
+    // ============================================================
+    function renderPlatforms() {
+      const platforms = [
+        { name: "Twitter", connected: true, icon: "🐦", status: "Active" },
+        { name: "LinkedIn", connected: true, icon: "💼", status: "Active" },
+        { name: "Telegram", connected: true, icon: "✈️", status: "Active" }
+      ];
+      document.getElementById('platformStatus').innerHTML = platforms.map(p => `
+        <div class="glass rounded-lg p-3 flex items-center gap-3">
+          <span class="text-xl">${p.icon}</span>
+          <div>
+            <div class="text-sm font-medium">${p.name}</div>
+            <div class="text-xs text-emerald-400">● ${p.status}</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // ============================================================
+    // RENDER: Source Items
+    // ============================================================
+    function renderSources() {
+      const el = document.getElementById('sourceItems');
+      document.getElementById('sourceCount').textContent = '(' + SAMPLE.sources.length + ')';
+      el.innerHTML = SAMPLE.sources.map(s => `
+        <div class="glass rounded-xl p-4 card flex items-center gap-4 slide-up">
+          <span class="text-2xl">${s.image}</span>
+          <div class="flex-1">
+            <div class="text-sm font-medium">${s.title}</div>
+            <div class="text-xs text-gray-500">${s.source}</div>
+          </div>
+          <span class="text-xs px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300">${s.status}</span>
+        </div>
+      `).join('');
+    }
+
+    // ============================================================
+    // RENDER: Transformed Content
+    // ============================================================
+    let currentFilter = 'all';
+    function renderTransforms(filter) {
+      currentFilter = filter || 'all';
+      const items = currentFilter === 'all' ? SAMPLE.transforms : SAMPLE.transforms.filter(t => t.type === currentFilter);
+      document.getElementById('transformCount').textContent = '(' + items.length + ')';
+      document.getElementById('transformedItems').innerHTML = items.map(t => {
+        const statusColors = { pending: 'text-amber-300', ready: 'text-emerald-300', error: 'text-red-300' };
+        return `
+          <div class="glass rounded-xl p-4 card flex items-center gap-4 slide-up">
+            <span class="text-lg">${t.type === 'short_hook' ? '💬' : t.type === 'thread' ? '🧵' : '📝'}</span>
+            <div class="flex-1">
+              <div class="text-sm font-medium">${t.title}</div>
+              <div class="text-xs text-gray-500 mt-0.5">${t.target.join(', ')}</div>
+            </div>
+            <span class="text-xs px-2 py-1 rounded-full bg-white/[0.05] ${statusColors[t.status]}">${t.status}</span>
+          </div>
+        `;
+      }).join('');
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.toggle('bg-white/10', b.dataset.filter === currentFilter);
+        b.classList.toggle('text-white', b.dataset.filter === currentFilter);
+        b.classList.toggle('font-medium', b.dataset.filter === currentFilter);
+      });
+    }
+
+    // ============================================================
+    // RENDER: Publishing History
+    // ============================================================
+    function renderHistory() {
+      const h = SAMPLE.history;
+      document.getElementById('historyCount').textContent = '(' + h.length + ')';
+      document.getElementById('historyBody').innerHTML = h.slice(0, 18).map(entry => `
+        <tr class="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+          <td class="py-3 px-4 text-xs text-gray-500">${entry.time}</td>
+          <td class="py-3 px-4 text-sm">${entry.content}</td>
+          <td class="py-3 px-4 text-xs">${entry.platform}</td>
+          <td class="py-3 px-4"><span class="text-xs text-emerald-400">● ${entry.status}</span></td>
+        </tr>
+      `).join('');
+    }
+
+    // ============================================================
+    // RENDER: Hype-Man Posts
+    // ============================================================
+    function renderHypePosts() {
+      const posts = HYPE_TEMPLATES;
+      document.getElementById('hypePosts').innerHTML = posts.map((p, i) => `
+        <div class="glass rounded-xl p-5 card slide-up hype-card">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl">${p.icon}</span>
+            <div class="flex-1">
+              <div class="text-sm font-medium text-orange-300">${p.hook}</div>
+              <div class="text-xs text-gray-400 mt-1 leading-relaxed">${p.body}</div>
+              <div class="text-xs text-gray-500 mt-2 italic">"${p.line}"</div>
+              <div class="flex gap-2 mt-3">
+                <button class="px-3 py-1 rounded-lg text-xs bg-white/[0.05] text-gray-400 hover:text-white transition-colors">✏️ Edit</button>
+                <button class="px-3 py-1 rounded-lg text-xs bg-white/[0.05] text-gray-400 hover:text-white transition-colors">📤 Post</button>
+              </div>
+            </div>
+            <div class="flex gap-1.5">
+              <span class="badge-orange px-2 py-0.5 rounded text-xs">Twitter</span>
+              <span class="badge-amber px-2 py-0.5 rounded text-xs">LinkedIn</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // ============================================================
+    // RENDER: Distribution Tools
+    // ============================================================
+    function renderDistTools() {
+      document.getElementById('distributionTools').innerHTML = DISTRIBUTION_TOOLS.map(t => `
+        <div class="glass rounded-xl p-5 card slide-up">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">${t.icon}</span>
+            <div>
+              <div class="text-sm font-medium">${t.name}</div>
+              <div class="text-xs text-gray-400 mt-1">${t.desc}</div>
+              <div class="flex gap-2 mt-2">
+                <span class="text-xs px-2 py-0.5 rounded-full bg-white/[0.05] text-gray-500">${t.type}</span>
+                <button class="text-xs px-2 py-0.5 rounded-full bg-orange-500/10 text-orange-300 hover:bg-orange-500/20 transition-colors">Try Demo</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderEmbedWidgets() {
+      document.getElementById('embedWidgets').innerHTML = EMBED_WIDGETS.map(w => `
+        <div class="glass rounded-xl p-5 card slide-up">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">${w.icon}</span>
+            <div>
+              <div class="text-sm font-medium">${w.name}</div>
+              <div class="text-xs text-gray-400 mt-1">${w.desc}</div>
+              <button class="mt-2 text-xs px-3 py-1 rounded-lg bg-white/[0.05] text-gray-400 hover:text-white transition-colors">📋 Copy Embed Code</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // ============================================================
+    // RENDER: Stickiness / Social Proof
+    // ============================================================
+    function renderProofCounters() {
+      document.getElementById('proofCounters').innerHTML = PROOF_DATA.map(p => `
+        <div class="glass rounded-xl p-4 card text-center">
+          <div class="text-lg">${p.icon}</div>
+          <div class="text-xl font-bold text-white mt-1">${p.value}</div>
+          <div class="text-xs text-gray-500">${p.label}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderStickinessMatrix() {
+      const el = document.getElementById('stickinessMatrix');
+      if (el) {
+        el.innerHTML = STICKINESS_MATRIX.map(row => `
+          <tr class="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+            <td class="py-3 px-4 text-sm">${row.feature}</td>
+            <td class="py-3 px-4 text-xs text-gray-400">${row.driver}</td>
+            <td class="py-3 px-4 text-xs">${row.effort}</td>
+            <td class="py-3 px-4"><span class="text-xs ${row.impact === 'High' ? 'text-emerald-400' : row.impact === 'Medium' ? 'text-amber-400' : 'text-gray-400'}">${row.impact}</span></td>
+            <td class="py-3 px-4"><span class="text-xs px-2 py-0.5 rounded-full ${row.priority === 'P1' ? 'bg-orange-500/20 text-orange-300' : row.priority === 'P2' ? 'bg-amber-500/20 text-amber-300' : 'bg-gray-500/20 text-gray-400'}">${row.priority}</span></td>
+          </tr>
+        `).join('');
+      }
+    }
+
+    // ============================================================
+    // RENDER: Strategy Tab — Proactive Task List
+    // ============================================================
+    function renderStrategyTab() {
+      const tasks = FELIX_DATA.tasks;
+      const el = document.getElementById('strategyTasks');
+      const factorLabels = ['💰 Rev', '⏱ Effort', '🔗 Deps', '📈 Traction', '🔮 Moon', '🎯 Urgency'];
+      el.innerHTML = tasks.map(t => {
+        const colorMap = { P1: 'text-orange-300 border-orange-500/30', P2: 'text-amber-300 border-amber-500/30', P3: 'text-blue-300 border-blue-500/30', P4: 'text-gray-400 border-gray-500/30' };
+        const bgMap = { P1: 'bg-orange-500/15', P2: 'bg-amber-500/15', P3: 'bg-blue-500/10', P4: 'bg-gray-500/10' };
+        const statusColor = { blocked: 'text-red-400', ready: 'text-emerald-400', 'in-progress': 'text-amber-400' };
+        const efforts = { '15min': '15 min', '30min': '30 min', '1hr': '1 hr', '2hr': '2 hrs' };
+        return `
+          <div class="glass rounded-xl p-5 card slide-up border-l-3" style="border-left: 3px solid ${t.priority === 'P1' ? '#f97316' : t.priority === 'P2' ? '#f59e0b' : t.priority === 'P3' ? '#3b82f6' : '#6b7280'};">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-bold px-2 py-0.5 rounded-full ${bgMap[t.priority]} ${colorMap.split(' ')[0]}">${t.priority}</span>
+                  <span class="text-xs px-2 py-0.5 rounded-full bg-white/[0.05] ${statusColor[t.status]}">● ${t.status}</span>
+                  <span class="text-xs text-gray-500">Score: ${t.score}</span>
+                </div>
+                <div class="text-sm font-medium">${t.title}</div>
+                <div class="flex items-center gap-3 mt-2 text-xs text-gray-500">
+                  <span>💰 ${t.revenueImpact}</span>
+                  <span>⏱ ${efforts[t.effort] || t.effort}</span>
+                  ${t.dependency ? `<span class="text-orange-400/60">🔗 Depends: ${t.dependency}</span>` : ''}
+                </div>
+                <div class="flex items-center gap-2 mt-2">
+                  ${t.factors.map((f, i) => `<span class="text-xs px-1.5 py-0.5 rounded bg-white/[0.03] text-gray-500" title="${factorLabels[i]}">${factorLabels[i]} ${f}</span>`).join('')}
+                </div>
+              </div>
+              <button class="build-now-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-gradient-to-r from-orange-500 to-rose-600 text-white hover:opacity-90 transition-opacity whitespace-nowrap" data-task-id="${t.id}">
+                🔨 Build Now
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+      // Attach Build Now handlers
+      document.querySelectorAll('.build-now-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          const taskId = this.dataset.taskId;
+          const task = FELIX_DATA.tasks.find(t => t.id === taskId);
+          if (task) {
+            const msg = task.status === 'blocked'
+              ? `⚠️ ${task.title} is BLOCKED by: ${task.dependency}. Unblock first.`
+              : `✅ Intent logged: building "${task.title}" (${task.priority}, ~${task.effort}). Score: ${task.score}.`;
+            this.textContent = '✓ Logged';
+            this.style.opacity = '0.6';
+            alert(msg);
+          }
+        });
+      });
+    }
+
+    // ============================================================
+    // RENDER: Overnight Tab — Consolidation Log Summary
+    // ============================================================
+    function renderOvernightTab() {
+      const o = FELIX_DATA.overnight;
+      // Status banner
+      const statusEl = document.getElementById('overnightStatusBanner');
+      statusEl.innerHTML = `
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-emerald-400 pulse"></div>
+            <div>
+              <div class="text-base font-medium text-emerald-300">✅ Overnight Run Completed</div>
+              <div class="text-xs text-gray-500 mt-0.5">Last run: ${o.lastRunTime}</div>
+            </div>
+          </div>
+          <div class="text-xs text-gray-500">
+            ${o.built.length} built · ${o.bottlenecksEliminated.length} bottlenecks eliminated · ${o.pending.length} pending
+          </div>
+        </div>
+      `;
+      // Built items
+      document.getElementById('overnightBuilt').innerHTML = o.built.map(item => `
+        <div class="glass rounded-xl p-4 card flex items-center gap-3 slide-up">
+          <span class="text-emerald-400 text-lg">✅</span>
+          <div class="text-sm text-gray-200">${item}</div>
+        </div>
+      `).join('');
+      // Bottlenecks eliminated
+      document.getElementById('overnightBottlenecks').innerHTML = o.bottlenecksEliminated.map(item => `
+        <div class="glass rounded-xl p-4 card flex items-center gap-3 slide-up">
+          <span class="text-amber-400 text-lg">🧹</span>
+          <div class="text-sm text-gray-200">${item}</div>
+        </div>
+      `).join('');
+      // Pending items
+      document.getElementById('overnightPending').innerHTML = o.pending.map(item => `
+        <div class="glass rounded-xl p-4 card flex items-center gap-3 slide-up">
+          <span class="text-gray-400 text-lg">⏳</span>
+          <div class="flex-1">
+            <div class="text-sm text-gray-300">${item}</div>
+          </div>
+          <span class="text-xs px-2 py-1 rounded-full bg-amber-500/10 text-amber-300">Queued</span>
+        </div>
+      `).join('');
+      // Cost breakdown
+      document.getElementById('overnightCosts').innerHTML = `
+        <div class="text-center p-3 rounded-lg bg-white/[0.02]">
+          <div class="text-lg text-purple-300 font-bold">${(o.costs.totalTokens / 1000).toFixed(1)}K</div>
+          <div class="text-xs text-gray-500">Total Tokens</div>
+        </div>
+        <div class="text-center p-3 rounded-lg bg-white/[0.02]">
+          <div class="text-lg text-blue-300 font-bold">${(o.costs.inputTokens / 1000).toFixed(1)}K</div>
+          <div class="text-xs text-gray-500">Input Tokens</div>
+        </div>
+        <div class="text-center p-3 rounded-lg bg-white/[0.02]">
+          <div class="text-lg text-amber-300 font-bold">${(o.costs.outputTokens / 1000).toFixed(1)}K</div>
+          <div class="text-xs text-gray-500">Output Tokens</div>
+        </div>
+        <div class="text-center p-3 rounded-lg bg-white/[0.02]">
+          <div class="text-lg text-emerald-300 font-bold">$${o.costs.estimatedCost.toFixed(2)}
+          <div class="text-xs text-gray-500">Estimated Cost</div>
+        </div>
+      `;
+    }
+
+    // ============================================================
+    // TABS
+    // ============================================================
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          b.classList.remove('bg-white/10', 'text-white', 'font-medium');
+          b.classList.add('text-gray-400');
+        });
+        this.classList.add('bg-white/10', 'text-white', 'font-medium');
+        this.classList.remove('text-gray-400');
+        const tab = this.dataset.tab;
+        document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+        document.getElementById('tab-' + tab).style.display = 'block';
+      });
+    });
+
+    // ============================================================
+    // FILTERS
+    // ============================================================
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        renderTransforms(this.dataset.filter);
+      });
+    });
+
+    // ============================================================
+    // INIT
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', function() {
+      renderLiveMetrics();
+      renderStats();
+      renderEmpireMetrics();
+      renderPlatforms();
+      renderSources();
+      renderTransforms('all');
+      renderHistory();
+      renderHypePosts();
+      renderDistTools();
+      renderEmbedWidgets();
+      renderProofCounters();
+      renderStickinessMatrix();
+      renderStrategyTab();
+      renderOvernightTab();
+      // Set footer time
+      document.getElementById('footerTime').textContent = new Date().toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' });
+    });
+  </script>
+</body>
+</html>

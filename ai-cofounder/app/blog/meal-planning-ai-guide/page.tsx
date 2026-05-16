@@ -12,15 +12,15 @@ export default function MealPlanBlogPost() {
           <div className="mb-10 animate-fade-in">
             <div className="flex items-center gap-3 mb-4">
               <span className="badge badge-meal">Guide</span>
-              <span className="text-xs text-muted">May 16, 2026 • 6 min read</span>
+              <span className="text-xs text-muted dark:text-cream/70">May 16, 2026 • 6 min read</span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink dark:text-cream mb-4 leading-tight">
               Stop Wasting $1,200/Year on Food: How AI Meal Planning Actually Works
             </h1>
-            <p className="text-lg text-muted leading-relaxed">
+            <p className="text-lg text-muted dark:text-cream/80 leading-relaxed">
               The average family throws away 30% of groceries. Here&apos;s how AI-powered meal planning eliminates waste, saves money, and makes dinnertime effortless.
             </p>
-            <div className="flex items-center gap-4 mt-6 text-sm text-muted">
+            <div className="flex items-center gap-4 mt-6 text-sm text-muted dark:text-cream/70">
               <div className="flex items-center gap-1.5">
                 <Sparkles size={14} className="text-accent" />
                 <span>AI Cofounder Team</span>
@@ -54,17 +54,17 @@ export default function MealPlanBlogPost() {
               <div className="card p-5 text-center">
                 <DollarSign size={28} className="mx-auto mb-2 text-meal" />
                 <p className="text-2xl font-bold text-ink dark:text-cream">$1,200</p>
-                <p className="text-xs text-muted mt-1">Average food waste per family/year</p>
+                <p className="text-xs text-muted dark:text-cream/70 mt-1">Average food waste per family/year</p>
               </div>
               <div className="card p-5 text-center">
                 <Clock size={28} className="mx-auto mb-2 text-meal" />
                 <p className="text-2xl font-bold text-ink dark:text-cream">2+ hrs</p>
-                <p className="text-xs text-muted mt-1">Weekly meal planning time</p>
+                <p className="text-xs text-muted dark:text-cream/70 mt-1">Weekly meal planning time</p>
               </div>
               <div className="card p-5 text-center">
                 <UtensilsCrossed size={28} className="mx-auto mb-2 text-meal" />
                 <p className="text-2xl font-bold text-ink dark:text-cream">30%</p>
-                <p className="text-xs text-muted mt-1">Groceries that get thrown out</p>
+                <p className="text-xs text-muted dark:text-cream/70 mt-1">Groceries that get thrown out</p>
               </div>
             </div>
 
@@ -187,24 +187,24 @@ Here&apos;s a sample day from our AI Cofounder Meal Planner for a family of four
 <div className="card p-6 my-8 space-y-4">
 <div className="flex items-center justify-between pb-3 border-b border-border">
 <span className="text-sm font-semibold text-ink dark:text-cream">Breakfast</span>
-<span className="text-xs text-muted">10 min prep</span>
+<span className="text-xs text-muted dark:text-cream/70">10 min prep</span>
 </div>
 <p className="text-sm">Overnight oats with berries, almond butter, and a dash of cinnamon. Made the night before — zero morning effort.</p>
 
 <div className="flex items-center justify-between pb-3 border-b border-border pt-3">
 <span className="text-sm font-semibold text-ink dark:text-cream">Lunch</span>
-<span className="text-xs text-muted">15 min prep (use leftovers)</span>
+<span className="text-xs text-muted dark:text-cream/70">15 min prep (use leftovers)</span>
 </div>
 <p className="text-sm">Quinoa bowl with roasted veggies, chickpeas, and tahini dressing. Uses half the veggies from dinner prep the night before.</p>
 
 <div className="flex items-center justify-between pb-3 border-b border-border pt-3">
 <span className="text-sm font-semibold text-ink dark:text-cream">Dinner</span>
-<span className="text-xs text-muted">25 min cooking</span>
+<span className="text-xs text-muted dark:text-cream/70">25 min cooking</span>
 </div>
 <p className="text-sm">One-pan lemon herb chicken with asparagus and sweet potatoes. Minimal cleanup, maximum flavor. Leftovers = tomorrow&apos;s lunch.</p>
 
 <div className="pt-3">
-<span className="text-xs text-muted">Total daily cost: <strong className="text-meal">$22</strong> for 4 people ($5.50/person)</span>
+<span className="text-xs text-muted dark:text-cream/70">Total daily cost: <strong className="text-meal">$22</strong> for 4 people ($5.50/person)</span>
 </div>
 </div>
 
@@ -245,7 +245,7 @@ The future of dinner isn&apos;t more recipes on Pinterest. It&apos;s an AI that 
   <h3 className="text-2xl font-bold text-ink dark:text-cream mb-3">
     Get Your First AI-Generated Meal Plan
   </h3>
-  <p className="text-muted mb-6 max-w-md mx-auto">
+  <p className="text-muted dark:text-cream/80 mb-6 max-w-md mx-auto">
     Answer 6 quick questions. Get a full week of personalized meals + grocery list. Free, no credit card.
   </p>
   <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -260,15 +260,15 @@ The future of dinner isn&apos;t more recipes on Pinterest. It&apos;s an AI that 
 
 {/* Related */}
 <div className="mt-12 pt-8 border-t border-border">
-  <h3 className="text-sm font-semibold text-muted uppercase tracking-wider mb-4">More from Cofounder</h3>
+  <h3 className="text-sm font-semibold text-muted dark:text-cream/60 uppercase tracking-wider mb-4">More from Cofounder</h3>
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
     <Link href="/categories/personal-finance" className="card p-4 hover:border-finance/30 transition-colors">
       <span className="text-sm font-medium text-ink dark:text-cream">💰 AI Personal Finance Guide</span>
-      <p className="text-xs text-muted mt-1">Automate your budget, optimize spending, build wealth</p>
+      <p className="text-xs text-muted dark:text-cream/70 mt-1">Automate your budget, optimize spending, build wealth</p>
     </Link>
     <Link href="/categories/solopreneur" className="card p-4 hover:border-solopreneur/30 transition-colors">
       <span className="text-sm font-medium text-ink dark:text-cream">⚡ Solopreneur AI Playbook</span>
-      <p className="text-xs text-muted mt-1">From idea to $1k MRR with AI as your cofounder</p>
+      <p className="text-xs text-muted dark:text-cream/70 mt-1">From idea to $1k MRR with AI as your cofounder</p>
     </Link>
   </div>
 </div>

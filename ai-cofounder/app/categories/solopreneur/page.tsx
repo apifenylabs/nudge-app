@@ -84,7 +84,7 @@ export default function SolopreneurPage() {
               ⚡ AI Solopreneur —{" "}
               <span className="text-solopreneur">Your Business Cofounder</span>
             </h1>
-            <p className="text-lg sm:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted dark:text-cream/80 max-w-2xl mx-auto leading-relaxed">
               The AI operating system for solo founders. Ideate, validate, build,
               launch, and scale — all guided by your AI cofounder that never
               sleeps.
@@ -120,7 +120,7 @@ export default function SolopreneurPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-ink dark:text-cream mb-4">
               How It Works
             </h2>
-            <p className="text-muted text-lg max-w-xl mx-auto">
+            <p className="text-muted dark:text-cream/80 text-lg max-w-xl mx-auto">
               From napkin sketch to shipped product. No cofounder needed.
             </p>
           </div>
@@ -145,7 +145,7 @@ export default function SolopreneurPage() {
                   <h3 className="text-lg font-semibold text-ink dark:text-cream mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-muted text-sm leading-relaxed">{step.desc}</p>
+                  <p className="text-muted dark:text-cream/80 text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -161,7 +161,7 @@ export default function SolopreneurPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-ink dark:text-cream mb-4">
                 Your First 4-Week Build Plan
               </h2>
-              <p className="text-muted text-lg max-w-xl mx-auto">
+              <p className="text-muted dark:text-cream/80 text-lg max-w-xl mx-auto">
                 This is what a real AI-generated build plan looks like.
                 Every task is scoped to your skills and timeline.
               </p>
@@ -186,7 +186,7 @@ export default function SolopreneurPage() {
                       style={{ backgroundColor: stage.color }}
                     />
                     <div>
-                      <span className="text-xs font-semibold uppercase tracking-widest text-muted">
+                      <span className="text-xs font-semibold uppercase tracking-widest text-muted dark:text-cream/60">
                         {stage.week}
                       </span>
                       <h3 className="text-lg font-semibold text-ink dark:text-cream">
@@ -214,7 +214,7 @@ export default function SolopreneurPage() {
                           key={task}
                           className="flex items-center gap-3 py-2 text-sm text-ink/70 dark:text-cream/70"
                         >
-                          <CheckCircle size={14} className="text-muted flex-shrink-0" />
+                          <CheckCircle size={14} className="text-muted dark:text-cream/70 flex-shrink-0" />
                           {task}
                         </div>
                       ))}
@@ -225,7 +225,7 @@ export default function SolopreneurPage() {
             </div>
 
             <div className="text-center mt-8">
-              <p className="text-muted text-sm">
+              <p className="text-muted dark:text-cream/80 text-sm">
                 * Your actual plan adapts to your idea, skills, and timeline.
                 This is a sample for a typical SaaS MVP.
               </p>
@@ -247,7 +247,7 @@ export default function SolopreneurPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-ink dark:text-cream mb-4">
               What&apos;s Coming
             </h2>
-            <p className="text-muted text-lg max-w-xl mx-auto">
+            <p className="text-muted dark:text-cream/80 text-lg max-w-xl mx-auto">
               The full solopreneur OS. Here&apos;s what we&apos;re building next.
             </p>
           </div>
@@ -264,7 +264,7 @@ export default function SolopreneurPage() {
                 <h3 className="font-semibold text-ink dark:text-cream mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-muted text-sm leading-relaxed">
+                <p className="text-muted dark:text-cream/80 text-sm leading-relaxed">
                   {feature.desc}
                 </p>
               </div>

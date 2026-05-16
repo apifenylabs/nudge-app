@@ -84,7 +84,7 @@ export default function PersonalFinancePage() {
               💰 AI Finance Coach —{" "}
               <span className="text-finance">Your Money Cofounder</span>
             </h1>
-            <p className="text-lg sm:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted dark:text-cream/80 max-w-2xl mx-auto leading-relaxed">
               Stop guessing. Get a personalized financial plan, budget breakdown,
               and investment roadmap — built by AI that understands your goals.
             </p>
@@ -119,7 +119,7 @@ export default function PersonalFinancePage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-ink dark:text-cream mb-4">
               How It Works
             </h2>
-            <p className="text-muted text-lg max-w-xl mx-auto">
+            <p className="text-muted dark:text-cream/80 text-lg max-w-xl mx-auto">
               From chaos to clarity in four steps. No spreadsheets required.
             </p>
           </div>
@@ -145,7 +145,7 @@ export default function PersonalFinancePage() {
                     <h3 className="text-xl font-semibold text-ink dark:text-cream mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-muted leading-relaxed">{step.desc}</p>
+                    <p className="text-muted dark:text-cream/80 leading-relaxed">{step.desc}</p>
                   </div>
                 </div>
               ))}
@@ -162,7 +162,7 @@ export default function PersonalFinancePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-ink dark:text-cream mb-4">
                 Your Budget, Visualized
               </h2>
-              <p className="text-muted text-lg max-w-xl mx-auto">
+              <p className="text-muted dark:text-cream/80 text-lg max-w-xl mx-auto">
                 This is what a real AI-generated budget breakdown looks like.
                 Every percentage is backed by your actual spending data.
               </p>
@@ -232,7 +232,7 @@ export default function PersonalFinancePage() {
                   ))}
 
                   <div className="pt-4 border-t border-border dark:border-darkBorder mt-4">
-                    <p className="text-muted text-sm">
+                    <p className="text-muted dark:text-cream/80 text-sm">
                       Your actual percentages will adjust based on income,
                       location, goals, and debt. This is a sample for a typical
                       professional in their 30s.
@@ -258,7 +258,7 @@ export default function PersonalFinancePage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-ink dark:text-cream mb-4">
               What&apos;s Coming
             </h2>
-            <p className="text-muted text-lg max-w-xl mx-auto">
+            <p className="text-muted dark:text-cream/80 text-lg max-w-xl mx-auto">
               We&apos;re building the complete financial AI. Here&apos;s what&apos;s next.
             </p>
           </div>
@@ -275,7 +275,7 @@ export default function PersonalFinancePage() {
                 <h3 className="font-semibold text-ink dark:text-cream mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-muted text-sm leading-relaxed">
+                <p className="text-muted dark:text-cream/80 text-sm leading-relaxed">
                   {feature.desc}
                 </p>
               </div>
