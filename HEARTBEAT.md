@@ -1,52 +1,70 @@
-# HEARTBEAT.md — May 17 00:56 HKT
+# HEARTBEAT.md — May 17 01:27 HKT
 
-## STATUS: 🟢 FULL AUTONOMOUS SYSTEM RUNNING
-- **Agent HQ Dashboard**: Felix upgrade complete — 3 new components live at agent-hq-alpha.vercel.app
-- **8am cron**: Removed and recreated with upgraded payload — $1B mission + dumb question + VISION alignment ✅
-- **All 9 sites**: Healthy, verified 200s across the board
-- **Budget**: ~$0.45 today (under $0.50 cap)
+## STATUS: 🟢 WATCHDOG UPGRADED — FULL COVERAGE
+- **Watchdog v2**: Now scans ALL 8 git repos, 9 sites, PARA health, cron health, stalled detection
+- **Felix v0.4**: Shipped to omnimind (71/71 tests, 10 new API endpoints)
+- **Life/PARA**: Green — all forms present
 
-## CRON STATUS (5 active, 1 new)
-| Cron | Schedule | Status |
-|------|----------|--------|
-| ceo-morning-summary (UPGRADED) | 08:00 HKT | ✅ recreated, manual test queued |
-| ceo-consolidation-primary | 23:00 HKT | ✅ ok |
-| ceo-consolidation-backup | 23:30 HKT | ✅ ok |
-| 24/7 work engine | hourly | ✅ ok |
-| Proactive builder | 12h | ❌ 3 timeouts (needs shorter payload) |
-| Overnight build runner | 01:30 | ✅ ok |
-| Nudge enhancer | 02:15, 14:15 | ✅ ok |
-| EV itinerary expander | 03:45 | ✅ ok |
+## WATCHDOG COVERAGE (every 15min via crontab)
 
-## ALL 9 SITES
+### What It Scans
+| Check | Coverage | 
+|-------|----------|
+| Gateway | ✅ Running |
+| Git repos | 8 (across ~/.openclaw/workspace + ~/workspaces) |
+| Uncommitted | 5 dirty repos |
+| Deployed Sites | 9/9 healthy |
+| PARA Structure | ✅ All 5 forms present |
+| Cron Jobs | 12 total (7 ok, 3 idle, 2 error) |
+| Stalled Projects | 4 flagged (>4 weeks stale) |
+| CEO Tasks | 4 generated |
+
+### Stalled Projects (need attention)
+- affiliate-tracking (25d stale)
+- habit-tracker (25d stale)
+- kidscan-api (25d stale)
+- social-beast-components (25d stale)
+
+### Failing Cron Jobs (need Chris)
+- ceo-24-7-work-engine (delivery channel broken)
+- proactive-builder (timeout — needs shorter payload)
+
+### Active Projects
+- nudge — 11h ago, 2 uncommitted
+- agent-hq — 2h ago, 4 uncommitted
+- omnimind — <5min ago, clean
+
+## LOG FILES
+- cron-health.md — Verbose cycle output (auto-trimmed at 500 lines)
+- watchdog-log.md — Structured table summaries (auto-trimmed at 300 lines)
+
+## CRON SCHEDULE
+| Name | Schedule | Purpose |
+|------|----------|---------|
+| watchdog.sh | */15 min | Shell watchdog (gateway + workspaces + PARA + sites) |
+| Orchestra Health Check | every 30min | OpenClaw internal health |
+| omnimind-consolidation | 02:00 + 03:00 | Memify nightly |
+| ceo-24-7-work-engine | hourly | 24/7 task execution |
+| ceo-morning-summary | 08:00 | Daily briefing |
+| proactive-builder | every 12h | Autonomous builds |
+| ceo-consolidation | 23:00 + 23:30 | Felix CEO consolidation |
+| nudge-enhancer | 02:15, 14:15 | Nudge improvements |
+| ev-itinerary-expander | 03:45 | EV content |
+| overnight-build-runner | 01:30 | Build queue |
+
+## ALL SITES
 | Site | Status |
 |------|--------|
-| AI Cofounder | ✅ 200 (16 pages + interactive flow) |
-| Apifeny AI | ✅ 200 (198 pages) |
+| AI Cofounder | ✅ 200 |
+| Apifeny AI | ✅ 200 |
 | EV Charging Asia | ✅ 200 |
 | Family Travel Asia | ✅ 200 |
 | Luxury Travel Asia | ✅ 200 |
 | Senior Friendly Travel | ✅ 200 |
 | Nudge | ✅ 200 (schema blocked) |
-| Social Beast Dashboard | ✅ 200 |
-| Agent HQ Dashboard | ✅ 200 (Felix upgrade) |
-
-## NEW FELIX FEATURES SHIPPED (This session)
-1. **FelixPublicRevenue** — 8-stream revenue dashboard w/ monthly/annual toggle + Felix comparison
-2. **FelixActionFeed** — Live action feed auto-refreshing every 30s with type filters
-3. **SystemStatusBar** — Always-on bar: 9/9 sites, $0.40 cost, last action, uptime
-
-## NEXT EXECUTABLE
-1. Fix EV station [id] dynamic routing (unblocks 1,125 pages)
-2. Family Travel redeploy with new MDX posts
-3. Fix proactive builder timeout (shorter payload)
-
-## BLOCKERS (need Chris)
-1. Vercel auth expired → Family Travel redeploy blocked
-2. Affiliate account signups (Booking.com, Klook, Amazon, Agoda)
-3. Nudge Supabase schema
-4. GA4 tracking across all sites
+| Social Beast | ✅ 200 |
+| Agent HQ | ✅ 200 |
 
 ## BUDGET
-- Today: ~$0.45 (DeepSeek-chat + builds + deploys)
-- Daily cap: $0.50 — $0.05 remaining
+- Today: ~$0.45 (DeepSeek-chat + omnimind upgrade testing)
+- Daily cap: $0.50
