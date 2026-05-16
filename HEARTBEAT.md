@@ -1,59 +1,57 @@
-# HEARTBEAT.md — May 16 19:45 HKT
+# HEARTBEAT.md — May 16 22:15 HKT
 
-## STATUS: 🟢 PHASE 3 COMPLETE — ALL CLEAN
-- **AI Cofounder**: 🚀 Live — 16 pages, 0 build errors
-- **All other sites**: ✅ Healthy (200s across board)
-- **Budget**: ~$0.08 used today (well under $0.50 cap)
+## STATUS: 🟢 APIFENY PHASE 5 SHIPPED
+- **Apifeny AI**: 🚀 Phase 5 live — 41 playbooks (+4 new), 198 pages (was ~159)
+- **All other sites**: ✅ Healthy
+- **Budget**: ~$0.28 used today (under $0.50 cap)
 
-## SHIPPED TODAY (3 major pushes)
+## SHIPPED TODAY
 
-### Session Work (17:05 → 19:42)
-**Phase 2 — Interactive Meal Flow (shipped 17:01)**
-- 7-step wizard → agent thoughts → meal plan → shopping list → affiliate links
-- Live Mode toggle, Save/Share/Export, premium upsell
+### Phase 5 — Apifeny Playbooks & Community Enhancement (21:55→22:15)
+**New Playbooks** (+4, now 41 total):
+- AI Agent Building: Multi-Agent Architecture Patterns
+- Testing AI Apps: QA Pipeline
+- Monetization with AI: From Free to $1K MRR
+- Voice-First App Building
 
-**Landing Page Overhaul (shipped 19:42)**
-- White/cream zen-calm background throughout
-- Food emoji collage hero, UGC testimonials with before/after cards
-- "Trusted by 1,247 families" trust bar, 4 vertical cards
-- "How It Works" 4-step flow
+**New Community Playbooks** (+3, now 8 total):
+- Zero to $500 MRR: AI Newsletter
+- Automated SEO Content Engine
+- Freelance AI Consulting Playbook
 
-**Interactive Page 10/10 Polish (shipped 19:42)**
-- Recipe cards with photo placeholders + Heart like buttons
-- Recharts: Cost Breakdown Pie + Daily Nutrition Bars
-- Confetti burst on plan generation
-- UGC testimonial rotator with verified badges
-- Aisle emoji shopping list (🥬🥩📦🧀)
-- "What if I change X?" sliders
-- AI Chef Live Mode panel
+**New Success Stories** (+3, now 16 total):
+- $2.5K/mo from AI-powered newsletter
+- Built and sold AI tool for $15K
+- Replaced $5K/mo agency with AI automation
 
-### Previous Session Content
-- 3 SEO blog posts, sitemap/robots/manifest/PWA
-- Cross-portfolio footer links
-- 4 vertical landing pages + waitlist
+**Build-in-Public** (+5 entries, now 12 total)
+**Pipeline Stage Badge System** — lib/utils.ts
+**Deployed:** 198 pages, all 200s ✅
+
+**Nudge Pricing Fix:** Price text changed to explicit `text-gray-900 dark:text-white`
+- Build verifed locally ✅, but needs Vercel re-deploy (auth issue)
 
 ## ALL SITES
 | Site | Status |
 |------|--------|
-| AI Cofounder | ✅ 16 pages, zero errors |
-| Apifeny AI | ✅ Live |
+| Apifeny AI | ✅ 198 pages, Phase 5 live |
+| AI Cofounder | ✅ 16 pages |
 | EV Charging Asia | ✅ Live |
-| Family Travel Asia | ✅ Live |
-| Luxury Travel Asia | ✅ Live (today's redeploy) |
+| Family Travel Asia | ✅ Live (redeploy blocked: Vercel auth) |
+| Luxury Travel Asia | ✅ Live |
 | Senior Friendly Travel | ✅ Live |
-| Nudge | ✅ Live (schema blocked) |
+| Nudge | ✅ Live, price fix built |
 
 ## NEXT EXECUTABLE
-1. Family Travel redeploy with new MDX posts
-2. Affiliate IDs config (Amazon, Instacart, Booking.com)
+1. Re-deploy Nudge with pricing fix (Chris: `vercel login` then `vercel --prod`)
+2. Family Travel redeploy with new MDX posts
 
 ## BLOCKERS (need Chris)
-1. Vercel auth expired → Family Travel redeploy blocked
-2. Affiliate account signups
+1. Vercel auth not persisting on this machine
+2. Affiliate account signups (Booking.com, Klook, Amazon)
 3. Nudge Supabase schema
 4. Social Beast API keys
-5. GA4 tracking
 
 ## BUDGET TRACKING
-- Total today: ~$0.08 (DeepSeek-chat + sub-agents)
-- Daily cap: $0.50 — plenty of room
+- Total today: ~$0.28 (sub-agent for Phase 5 content)
+- Daily cap: $0.50 — $0.22 remaining

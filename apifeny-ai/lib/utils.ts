@@ -69,3 +69,23 @@ export function renderStars(rating: number): ('full' | 'half' | 'empty')[] {
   }
   return stars;
 }
+
+/**
+ * Pipeline Stage Badge System
+ * Maps pipeline stages to display badges with label, color, and icon.
+ */
+export function getPipelineStageBadge(stage: string): { label: string; color: string; icon: string } {
+  const badges: Record<string, { label: string; color: string; icon: string }> = {
+    'planning':     { label: 'Strategic Planning', color: 'bg-violet-500/20 text-violet-400 border-violet-500/30', icon: '🧠' },
+    'ideation':     { label: 'Ideation',           color: 'bg-fuchsia-500/20 text-fuchsia-400 border-fuchsia-500/30', icon: '💡' },
+    'research':     { label: 'Research',           color: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30', icon: '🔬' },
+    'coding':       { label: 'Coding',             color: 'bg-blue-500/20 text-blue-400 border-blue-500/30', icon: '💻' },
+    'review':       { label: 'Review/Testing',     color: 'bg-amber-500/20 text-amber-400 border-amber-500/30', icon: '✅' },
+    'deployment':   { label: 'Deployment',         color: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30', icon: '🚀' },
+    'content':      { label: 'Content',            color: 'bg-pink-500/20 text-pink-400 border-pink-500/30', icon: '✍️' },
+    'marketing':    { label: 'Marketing',          color: 'bg-orange-500/20 text-orange-400 border-orange-500/30', icon: '📊' },
+    'build':        { label: 'Agent Building',     color: 'bg-purple-500/20 text-purple-400 border-purple-500/30', icon: '🤖' },
+    'monetization': { label: 'Monetization',       color: 'bg-green-500/20 text-green-400 border-green-500/30', icon: '💰' },
+  };
+  return badges[stage] || { label: 'General', color: 'bg-gray-500/20 text-gray-400 border-gray-500/30', icon: '📌' };
+}

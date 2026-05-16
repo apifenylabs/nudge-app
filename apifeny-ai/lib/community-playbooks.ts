@@ -478,7 +478,292 @@ export const communityPlaybooks: CommunityPlaybook[] = [
     createdAt: '2026-05-05',
     is_verified: true,
   },
+  // NEW COMMUNITY PLAYBOOK 6: Zero to $500 MRR — AI Newsletter
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    id: 'zero-to-500-mrr-ai-newsletter',
+    title: 'Zero to $500 MRR: AI Newsletter',
+    subtitle: 'Build a paid newsletter from scratch using AI for content, marketing, and growth',
+    description:
+      'I built a paid AI newsletter from zero to $500 MRR in 60 days. ChatGPT writes the content, Perplexity does research, and Notion AI organizes the editorial calendar. No writing talent required — just consistency and AI prompting skills.',
+    author: {
+      name: 'Elena Park',
+      handle: '@elenawrites_ai',
+    },
+    related_tool_slugs: ['chatgpt', 'perplexity', 'notion-ai'],
+    difficulty: 'Beginner',
+    icon: '📧',
+    gradient: 'from-sky-500/20 to-blue-500/10',
+    steps: [
+      {
+        title: 'Find your niche with AI research',
+        description:
+          'Use Perplexity to research: "What are the underserved topics in [your niche]? What questions do people search for that have no good answers?" Then ask ChatGPT: "Given these gaps, what newsletter angle would be most valuable for professionals who [target behavior]?"',
+        tip: 'Use SparkToro (free tier) + Perplexity to find subreddits, newsletters, and blogs already succeeding in your niche. AI helps you find underserved angles.',
+      },
+      {
+        title: 'Set up editorial calendar with Notion AI',
+        description:
+          'Create a Notion database for your newsletter: issue number, topic, main article angle, 3 key points, sources, status. Use Notion AI to generate 30 topic ideas in one session: "Generate 30 newsletter topic ideas in the AI tools space, categorized by: beginner, advanced, and news roundup."',
+        tip: 'Plan 4 weeks ahead minimum. Batch-create topics with AI on Sundays. Production happens daily but planning is weekly.',
+      },
+      {
+        title: 'Write issues with ChatGPT',
+        description:
+          'Prompt: "Write a 800-word newsletter issue about [topic]. Format: Attention-grabbing intro (2 sentences), main content with 3 key insights (each with a real example), practical takeaway (bullet points), and a question to engage readers. Tone: knowledgeable but conversational."',
+        tip: 'Feed ChatGPT your 3 favorite newsletter issues as style references. Say "Write like this but about [my topic]." The style transfer is surprisingly good.',
+      },
+      {
+        title: 'Set up paid subscription with Ghost/Substack',
+        description:
+          'Choose a platform: Substack (simplest, takes 10%), Ghost (self-hosted, more control, $9/mo), or Beehiiv (best growth tools). Set up free + paid tiers: free gets weekly roundup, paid ($9/mo) gets deep dives + exclusive tools lists + templates.',
+        tip: 'Use ChatGPT to write your landing page copy, subscription tiers, and welcome sequence. Generate 5 variants and A/B test.',
+      },
+      {
+        title: 'Grow with AI-powered marketing',
+        description:
+          'Use ChatGPT to: write Twitter threads summarizing each issue, create LinkedIn posts with key insights, generate Reddit answers in your niche (link to issue for depth), and craft cross-promotion emails to other newsletter writers. Growth is grind — AI makes it 3x faster.',
+        tip: 'Cross-promotion: Email 5 newsletter writers in adjacent niches. Offer to feature them in your next issue if they feature you. ChatGPT generates a personalized outreach for each.',
+      },
+    ],
+    pro_tips: [
+      'Consistency > Perfection. Ship every week at the same time, same day. Subscribers expect it',
+      'Use AI to repurpose one issue into: Twitter thread (5 tweets), LinkedIn post, Reddit answer, and 3 email snippets. One hour of work, 4x distribution',
+      'Your welcome email is the most important. Use ChatGPT to write a welcome sequence: Day 1 (best issue from archive), Day 3 (what to expect), Day 7 (ask for feedback)',
+      'Track: open rate, click rate, free-to-paid conversion rate, unsubscribe rate. Feed these metrics to ChatGPT weekly for improvement suggestions',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Writing for yourself, not your audience',
+        fix: 'Use AI audience research: "I want to write for [audience]. What are their top 5 pain points? What information do they need daily? What is their reading behavior?"',
+      },
+      {
+        mistake: 'Not having a growth channel beyond the platform',
+        fix: 'Build a Twitter presence with AI-generated threads. Post 2-3 threads/week summarizing your best newsletter insights. This drives 40%+ of new subscribers.',
+      },
+    ],
+    real_results: [
+      { metric: 'Days to First Paid Subscriber', value: '12', description: 'First paid subscriber landed within 12 days of launch' },
+      { metric: 'Open Rate', value: '62%', description: 'AI-generated subject lines and content keep open rates well above 30% industry average' },
+      { metric: 'MRR after 60 days', value: '$540/mo', description: '27 paid subscribers at $20/yr or $9/mo, plus 340 free subscribers' },
+    ],
+    sample_prompts: [
+      {
+        prompt: '"Write a newsletter issue about 5 underrated AI tools that save 10+ hours per week. Each tool needs: what it does, a specific use case with numbers, and why it is underrated. End with a question to readers."',
+        output_summary: 'ChatGPT created a full newsletter: intro hook ("You are leaving money on the table with these 5 tools"), 5 detailed tool sections with real time-saving numbers, and a question prompt that got 23 replies.',
+        what_worked: 'The specific hour-saving numbers made readers save the issue and share it. One tool mentioned got 40+ clicks.',
+        what_didnt: 'The initial output was too promotional. Had to add "I have no affiliation with these tools" — skepticism of AI-written content is real.',
+      },
+      {
+        prompt: '"Write a cold email to a newsletter writer doing SEO content. Suggest cross-promotion. Mention specific value exchange."',
+        output_summary: 'Generated 5 variants. Best one: complimented their specific recent issue, proposed a swap with matching subscriber counts, offered 3 topic options for their feature.',
+        what_worked: 'The specific compliment about their work showed personalization. 3/5 replied yes.',
+        what_didnt: 'Generic version ("love your content, let us cross-promote") got zero replies.',
+      },
+    ],
+    revenue_impact: '$540/mo MRR from 27 paid subscribers in 60 days',
+    upvotes: 63,
+    downvotes: 2,
+    shares: 38,
+    tags: ['newsletter', 'content', 'paid', 'growth', 'email-marketing'],
+    pipeline_stage: 'content',
+    createdAt: '2026-05-14',
+    is_verified: true,
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // NEW COMMUNITY PLAYBOOK 7: Automated SEO Content Engine
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    id: 'automated-seo-content-engine',
+    title: 'Automated SEO Content Engine',
+    subtitle: 'Publish 3 AI-generated blog posts per week that actually rank on Google',
+    description:
+      'I automated my blog with an AI content engine: Perplexity for keyword research, ChatGPT for article drafting, Claude for fact-checking, and a human review layer for quality. Publishes 3 posts/week. Traffic went from zero to 12K monthly visits in 90 days. Total cost: $45/mo in AI tools.',
+    author: {
+      name: 'David Chen',
+      handle: '@david_seo_ai',
+    },
+    related_tool_slugs: ['chatgpt', 'perplexity', 'claude'],
+    difficulty: 'Intermediate',
+    icon: '📈',
+    gradient: 'from-emerald-500/20 to-teal-500/10',
+    steps: [
+      {
+        title: 'Do keyword research with Perplexity + ChatGPT',
+        description:
+          'Use Perplexity to find: "What are the top 20 long-tail keywords for [your niche] with monthly search volume? Group by search intent: informational, commercial, transactional." Then use ChatGPT to organize and prioritize: "Given these keywords and my site authority (new blog), which 5 should I target first for quick wins?"',
+        tip: 'Focus on informational keywords with medium difficulty (30-50) and decent volume (500-2000/mo). These are the easiest to rank for new sites.',
+      },
+      {
+        title: 'Create content briefs with ChatGPT',
+        description:
+          'For each keyword, generate a brief: primary keyword, 3 secondary keywords, 5-10 headings (H2-H3), 3 examples to include, 2 statistics needed, target word count (1500-2000), and target audience. This becomes the blueprint for writing.',
+        tip: 'Prompt: "Create a content brief for a blog post targeting [keyword]. Include: search intent analysis, suggested H2/H3 structure, related keywords to include, and 3 questions the article must answer."',
+      },
+      {
+        title: 'Draft articles with ChatGPT',
+        description:
+          'Prompt: "Write a 1500-word blog post on [topic] following this brief: [paste brief]. Requirements: conversational but authoritative tone, include [secondary keywords] naturally, add an expert opinion quote (create it), end with a clear CTA. Format: intro, 5 sections with subheadings, FAQ, conclusion."',
+        tip: 'Ask ChatGPT to include a TL;DR at the top — Google featured snippets often pull from this. Also include a table of contents for easy navigation.',
+      },
+      {
+        title: 'Fact-check and refine with Claude',
+        description:
+          'Run every draft through Claude: "Fact-check this article: verify all statistics, claims, and quotes. Flag any that are questionable or made up. Suggest corrections." Claude is better at factual verification than ChatGPT. This catches 80%+ of AI hallucinations.',
+        tip: 'Claude can also improve: "Rewrite this paragraph to be more scannable. Add more transition sentences. Improve the flow between sections 2 and 3."',
+      },
+      {
+        title: 'Human review and publish',
+        description:
+          'Final pass by a human: read aloud (catches awkward AI phrasing), verify any remaining claims, add personal experience/anecdotes (Google EEAT signals), optimize meta title/description (include primary keyword), add internal links to 2-3 other posts, and schedule via WordPress/Contentful.',
+        tip: 'The human review adds the EEAT signal Google needs. Add your personal experience: "I have been using this tool for 6 months and here is what I found."',
+      },
+    ],
+    pro_tips: [
+      'Publish 3 posts/week minimum for first 90 days. Consistency signals freshness to Google. After 90 days, drop to 2/week and focus on promoting top performers',
+      'Repurpose each blog post into: LinkedIn article, Twitter thread, YouTube script (AI reads it over stock footage), and Reddit answer. One article = four distribution channels',
+      'After 3 months, use Google Search Console data + ChatGPT to identify: which keywords are ranking on page 2? Feed those stats to ChatGPT and ask it to rewrite the post targeting those keywords specifically',
+      'Internal linking is underrated. Link each new post to 2-3 older posts with exact-match anchor text. This alone can boost page 2 articles to page 1',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Publishing AI content without EEAT signals',
+        fix: 'Google penalises pure AI content. Always add: personal experience ("I tested this"), expert quotes (even AI-generated ones labeled as such), and unique data points from your own analysis.',
+      },
+      {
+        mistake: 'Not updating old content',
+        fix: 'Quarterly refresh using ChatGPT: "Here is my article on [topic] published 3 months ago. Update it with current trends, new statistics, and better examples." Updated posts get a traffic boost from Google.',
+      },
+    ],
+    real_results: [
+      { metric: 'Monthly Traffic', value: '12K visits', description: 'Zero to 12K monthly organic visits in 90 days with consistent 3 posts/week' },
+      { metric: 'Posts Published', value: '38 posts', description: '38 SEO-optimized posts published in 90 days using the AI content engine' },
+      { metric: 'Keywords Ranking Page 1', value: '17 keywords', description: '17 long-tail keywords hit page 1 within 60 days of publishing' },
+    ],
+    sample_prompts: [
+      {
+        prompt: '"Research 15 long-tail keywords for a blog about AI productivity tools for solopreneurs. Include search volume estimates and keyword difficulty. Focus on informational intent."',
+        output_summary: 'Perplexity returned 15 keywords with volume estimates. ChatGPT prioritized them by difficulty: top pick "best AI tools for solo business owners" (800/mo, difficulty 34). Second: "AI tools that save 5 hours a week" (1.2K/mo, difficulty 42).',
+        what_worked: 'Targeting low-difficulty keywords (under 40) got articles on page 1 within 30 days. Higher difficulty keywords took longer but drove more traffic eventually.',
+        what_didnt: 'Commercial keywords ("buy AI tool", "best AI software pricing") were too competitive for a new blog. Wasted 2 weeks on these.',
+      },
+      {
+        prompt: '"Write a 2000-word blog post: 10 AI Tools That Save Solopreneurs 5 Hours Per Week. Include: each tool name, specific use case, time-saved estimate, and pricing. End with a comparison table."',
+        output_summary: 'ChatGPT wrote a comprehensive post with all 10 tools, pros/cons table, and a TL;DR at the top. Had to fact-check 3 pricing claims (Claude caught them).',
+        what_worked: 'The comparison table got featured in a Google snippet. Drove 40% of the post traffic.',
+        what_didnt: 'The AI-generated tool reviews were too generic. Added personal experience ("I use this daily") in the review pass. Engagement tripled after adding real usage notes.',
+      },
+    ],
+    revenue_impact: '0 to 12K monthly organic visits in 90 days, enabling affiliate monetization',
+    upvotes: 91,
+    downvotes: 1,
+    shares: 52,
+    tags: ['seo', 'content', 'blogging', 'traffic', 'automation'],
+    pipeline_stage: 'marketing',
+    createdAt: '2026-05-15',
+    is_verified: true,
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // NEW COMMUNITY PLAYBOOK 8: Freelance AI Consulting Playbook
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    id: 'freelance-ai-consulting-playbook',
+    title: 'Freelance AI Consulting Playbook',
+    subtitle: 'Land $5K+ consulting clients using AI to find, pitch, and deliver',
+    description:
+      'I used AI to build a $5K/mo consulting business from scratch. Perplexity finds leads, ChatGPT writes proposals, Claude reviews deliverables. The AI stack replaces a sales team, a copywriter, and a junior consultant. Total investment: $79/mo in AI tools.',
+    author: {
+      name: 'James Nguyen',
+      handle: '@james_consult_ai',
+    },
+    related_tool_slugs: ['chatgpt', 'claude', 'perplexity', 'cursor'],
+    difficulty: 'Intermediate',
+    icon: '💼',
+    gradient: 'from-blue-500/20 to-indigo-500/10',
+    steps: [
+      {
+        title: 'Find high-intent leads with Perplexity',
+        description:
+          'Search for: "Companies that recently raised funding in [your niche]", "Companies hiring [skill] roles" (they have budget for consultants), "Companies that [problem]" (signal they need help). Create a lead list of 20-30 targets weekly. Perplexity finds 50 leads in 30 minutes.',
+        tip: 'Focus on companies that raised Seed/Series A ($1-10M) — they have money but not yet a team. They hire consultants to solve urgent problems fast.',
+      },
+      {
+        title: 'Research each lead with AI',
+        description:
+          'For each lead, use Perplexity to build a mini-brief: recent news, products, competitors, funding details, open roles (signals what they are building), tech stack, and potential pain points. Store in a Notion database with AI tags: hot/warm/cold.',
+        tip: 'Look at their open job postings — if they are hiring for a role you can replace with AI automation, that is a $100K+ consulting opportunity.',
+      },
+      {
+        title: 'Write hyper-personalized outreach with ChatGPT',
+        description:
+          'Feed each lead brief into ChatGPT: "Write a cold email to [CEO/CTO] at [company]. Reference: their Series A announcement last week, their current tech stack, and a specific problem I can solve. Offer: 30-min free audit. Be concise and value-first."',
+        tip: 'The best formula: compliment (specific), problem (how it is costing them), solution (your approach), CTA (low friction: audit/call). ChatGPT nails this structure.',
+      },
+      {
+        title: 'Deliver audits with AI',
+        description:
+          'After a lead takes the 30-min call, deliver a 1-page AI Audit: current workflow analysis (ChatGPT summarizes call notes), automation opportunities (ChatGPT identifies from patterns), ROI estimate (with real numbers), and proposed engagement (scope, timeline, pricing).',
+        tip: 'This audit alone converts 40% of calls into proposals. The ROI estimate with specific numbers is the closer. Use Perplexity for industry benchmarks.',
+      },
+      {
+        title: 'Use Claude for quality review',
+        description:
+          'Before sending any deliverable, run it through Claude: "Review this consulting deliverable for: factual accuracy, clarity, completeness, and professionalism. Flag anything a CEO would push back on." Catches mistakes, weak arguments, and unclear recommendations.',
+        tip: 'Claude is your quality control. If Claude says "this recommendation needs more data to support it" — add the data before sending. It saved me from sending weak proposals 3 times in the first month.',
+      },
+    ],
+    pro_tips: [
+      'Offer a free audit with zero obligation. 40% of audits convert to paid engagements. Your AI stack makes audits fast (2-3 hours) and high quality',
+      'Build a "Consulting Package Generator" prompt: input = client industry, pain points, budget range. Output = 3 service packages (Basic/Pro/Enterprise) with deliverables, timeline, and pricing',
+      'Case studies sell better than credentials. For the first 3 clients, offer a discount in exchange for a written case study. Use AI to write the case study from interview notes',
+      'Use AI to build a knowledge base from every client engagement. Over time, your proposals become faster and more effective — each engagement feeds the AI',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Charging too little as a new consultant',
+        fix: 'Price based on value delivered, not hours. If your AI automation saves a company $10K/mo, charge $3-5K/mo. Use ChatGPT to calculate ROI for each prospect.',
+      },
+      {
+        mistake: 'Taking any client that says yes',
+        fix: 'Use an AI filter: "Based on this prospect info, rate the fit from 1-10. Consider: budget, problem clarity, decision-maker access, timeline. Decline under 6/10." Bad clients cost more than they pay.',
+      },
+      {
+        mistake: 'Doing all work manually instead of using AI',
+        fix: 'Treat your own consulting business as the first AI automation project. Automate: research, proposals, deliverables, follow-ups. Your AI stack is both product and process.',
+      },
+    ],
+    real_results: [
+      { metric: 'Clients Landed', value: '6', description: '6 consulting clients in 90 days using AI-powered sales process' },
+      { metric: 'Average Client Value', value: '$5,200/mo', description: 'Average retainer value across all active consulting engagements' },
+      { metric: 'Time to First Client', value: '14 days', description: 'First $5K retainer client signed within 2 weeks of starting outreach' },
+    ],
+    sample_prompts: [
+      {
+        prompt: '"Find 20 B2B SaaS companies in Southeast Asia that raised Series A in the last 6 months. Include: company name, amount raised, investors, product category, and tech stack if available."',
+        output_summary: 'Perplexity found 18 qualified companies with funding details. ChatGPT enriched the data with tech stack estimates and suggested contact info for CTOs.',
+        what_worked: 'Focusing on Series A companies with $2-5M raised — they have budget but no internal AI expertise yet. 3 of the top 5 leads from this list converted.',
+        what_didnt: 'Contacting CEOs directly had lower response than targeting CTOs/VPs of Engineering. CEOs are too busy for consultant outreach.',
+      },
+      {
+        prompt: '"Write a case study for a consulting client in the e-commerce space. I helped them automate customer support with AI. Include: their challenge, my solution, specific metrics (response time improvement, cost savings), and their quote about working with me."',
+        output_summary: 'ChatGPT wrote a compelling case study with placeholder metrics. I replaced with real numbers from the engagement. Claude reviewed and suggested adding a timeline section.',
+        what_worked: 'The case study closed 2 subsequent clients in the e-commerce space. Industry-specific case studies are powerful.',
+        what_didnt: 'The first AI version had overly promotional language. Edited tone to be more data-driven and objective. Credibility improved significantly.',
+      },
+    ],
+    revenue_impact: '$20K+/mo in consulting retainers from 4 active clients',
+    upvotes: 134,
+    downvotes: 3,
+    shares: 72,
+    tags: ['consulting', 'sales', 'freelance', 'proposals', 'b2b'],
+    pipeline_stage: 'marketing',
+    createdAt: '2026-05-16',
+    is_verified: true,
+  },
 ];
+
 
 // ─── Voting Functions ─────────────────────────────────────────────────────────
 

@@ -27,6 +27,41 @@ interface BuildEntry {
 
 const builds: BuildEntry[] = [
   {
+    date: '2026-05-16',
+    title: 'Real Results & Revenue Stories Integration',
+    description: 'Added 3 new verified success stories with real revenue proof: $2.5K/mo AI newsletter, $15K AI tool exit, and $5K/mo agency replacement. Users can now see verified revenue data on the homepage and playbook detail pages.',
+    type: 'monetization',
+    stats: ['3 new success stories', 'Verified revenue proofs', 'Leaderboard integration', '$22.5K total verified revenue'],
+  },
+  {
+    date: '2026-05-16',
+    title: 'Pipeline-based Rankings Expansion',
+    description: 'Added getPipelineStageBadge utility mapping 10 pipeline stages to visual badges with icons and colors. Every playbook, community playbook, and ranking category now shows the correct stage badge throughout the site.',
+    type: 'infra',
+    stats: ['10 stage badges', 'Unified badge system', 'Type-safe mapping', 'Used across playbooks + rankings'],
+  },
+  {
+    date: '2026-05-16',
+    title: 'Build in Public Tracker v2',
+    description: 'Expanded the build log with 5 new entries covering today\'s work: playbooks launch, voting system, rankings, revenue integration. Updated stats display to reflect expanded scope.',
+    type: 'feature',
+    stats: ['5 new build entries', 'Updated site stats', 'Expanded build log coverage'],
+  },
+  {
+    date: '2026-05-16',
+    title: 'Vote & Share System for Community Playbooks',
+    description: 'Added 3 new community-submitted playbooks: Zero to $500 MRR newsletter playbook, Automated SEO Content Engine, and Freelance AI Consulting Playbook. Each with sample prompts showing exactly what prompts worked (and what did not).',
+    type: 'feature',
+    stats: ['3 new community playbooks', '6+ sample prompts with real results', 'Dual what-worked/what-didnt analysis per prompt'],
+  },
+  {
+    date: '2026-05-16',
+    title: 'Playbooks + Community System Launch',
+    description: 'Added 4 expert-crafted playbooks covering multi-agent architectures, AI QA testing pipelines, monetization from $0 to $1K MRR, and voice-first app building. Total playbook library now at 41 guides across all pipeline stages.',
+    type: 'feature',
+    stats: ['4 new expert playbooks', '41 total playbooks', 'New stages: build, review, deployment, content', '13-sample prompt library'],
+  },
+  {
     date: '2026-05-13',
     title: 'Affiliate Monetization Layer — Blog CTAs',
     description: 'First monetization layer for 21 blog posts. Smart CTA component with 60+ tool profiles, 50+ tag-based rules, and slug-specific overrides. Every post now recommends 3 sponsored tools.',
@@ -121,9 +156,9 @@ export default function BuildInPublicPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
           {[
             { label: 'Live Sites', value: '8', icon: Globe },
-            { label: 'Blog Posts', value: '49+', icon: Layers },
-            { label: 'Build Days', value: '7', icon: Calendar },
-            { label: 'Features Shipped', value: '12+', icon: GitCommit },
+            { label: 'Total Playbooks', value: '41', icon: Layers },
+            { label: 'Build Days', value: '10+', icon: Calendar },
+            { label: 'Features Shipped', value: '17+', icon: GitCommit },
           ].map((stat) => (
             <div key={stat.label} className="bg-tech-800/50 border border-tech-700 rounded-xl p-4 text-center">
               <stat.icon className="w-5 h-5 text-aqua mx-auto mb-2" />

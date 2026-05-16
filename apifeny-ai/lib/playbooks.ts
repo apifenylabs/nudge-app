@@ -2667,6 +2667,320 @@ export const playbooks: Playbook[] = [
     ],
   },
 
+  // ══════════════════════════════════════════════════════════════════════════
+  // NEW PLAYBOOK 38: AI Agent Building — Multi-Agent Architecture Patterns
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-agent-building-multi-agent-architecture',
+    title: 'AI Agent Building: Multi-Agent Architecture Patterns',
+    subtitle: 'Design and deploy multi-agent systems that actually work',
+    description:
+      'Master multi-agent architectures for production AI systems. Learn LangChain orchestration, CrewAI agent teams, AutoGPT autonomous workflows, and human-in-the-loop patterns. Build agents that replace entire workflows — not just single tasks.',
+    meta_title: 'Multi-Agent Architecture Playbook — Build AI Agent Teams with LangChain, CrewAI & AutoGPT',
+    meta_description: 'Learn multi-agent architecture patterns: LangChain orchestration, CrewAI teams, AutoGPT autonomy, and human-in-the-loop design. Build AI agents that replace workflows.',
+    related_tool_slugs: ['chatgpt', 'claude', 'cursor', 'langchain'],
+    difficulty: 'Advanced',
+    read_time_minutes: 15,
+    icon: '🤖',
+    gradient: 'from-purple-600/30 to-indigo-600/20',
+    steps: [
+      {
+        title: 'Understand single-agent vs multi-agent trade-offs',
+        description:
+          'Single agents excel at focused tasks (writing, coding, summarization). Multi-agent systems shine when workflows require specialised agents communicating through structured protocols. Key trade-off: multi-agent adds complexity but enables parallel task execution and specialised expertise per agent.',
+        tip: 'Rule of thumb: if your workflow has 3+ distinct roles (researcher, writer, reviewer), you need multi-agent. Two agents can run in a simple chain.',
+      },
+      {
+        title: 'Design agent roles and communication protocol',
+        description:
+          'Define each agent: role, tools it can use, output format, and escalation rules. Decide on communication: direct (agents call each other), orchestrated (router agent assigns tasks), or event bus (agents subscribe to topics). Start with orchestrated — it is easiest to debug.',
+        tip: 'Use LangGraph for stateful agent orchestration. Each node is an agent step; edges define transitions. This makes the architecture observable and debuggable.',
+      },
+      {
+        title: 'Build with CrewAI for structured agent teams',
+        description:
+          'CrewAI is best for defined agent roles with clear outputs. Define a Crew with Agents (each has role, goal, backstory, tools) and Tasks (description, expected output, agent assignment). CrewAI handles the execution order and hand-offs.',
+        tip: 'Give each agent a specific backstory. A "Senior Research Analyst" with a goal to "find verified statistics" produces better outputs than a generic "Researcher" agent.',
+      },
+      {
+        title: 'Implement AutoGPT-style autonomous loops',
+        description:
+          'For open-ended tasks (market research, competitive analysis), use autonomous looping: agent generates a plan, executes steps, evaluates results, and iterates. Set hard limits: max iterations (5-10), timeout (15 min), and explicit stop conditions.',
+        tip: 'Always include a human review gate after each iteration. Pure autonomous agents drift off-task in 30% of runs beyond 5 iterations.',
+      },
+      {
+        title: 'Add human-in-the-loop patterns',
+        description:
+          'Not all decisions should be automated. Implement: Approval Gates (agent pauses for human OK on critical actions), Escalation Paths (agent flags uncertainty to human), Review Loops (agent output reviewed before forwarding). This builds trust while maintaining speed.',
+        tip: 'Start with approval gates on ALL external actions (API calls, emails, payments). Remove gates gradually as the agent proves reliability.',
+      },
+      {
+        title: 'Monitor, log, and iterate',
+        description:
+          'Every agent action must be logged: input, decision, output, latency, token cost. Use LangSmith or a custom logger. Track: success rate per agent, hand-off failure rate, human intervention frequency, and total runtime per workflow.',
+        tip: 'Set up alerts: if human intervention rate exceeds 20%, the agent needs retraining. If latency exceeds 30s per step, the architecture needs optimization.',
+      },
+    ],
+    pro_tips: [
+      'Start with two agents and a simple orchestrator. Add agents one at a time — each new agent doubles the debugging surface',
+      'Use structured outputs (JSON schema) for all agent-to-agent communication. Free-form text causes parsing failures in 40% of cases',
+      'Cache agent outputs aggressively. The same research question should not generate the same tokens twice',
+      'Design agents to fail gracefully: "I could not find X" is better than a hallucinated answer. Train agents to flag uncertainty',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Building a multi-agent system when a single agent + good prompt would suffice',
+        fix: 'Start with one agent. Only add agents when you see clear bottlenecks: task context limits, conflicting objectives, or sequential dependency delays.',
+      },
+      {
+        mistake: 'No observability — agents become a black box',
+        fix: 'Log every agent decision with: input summary, reasoning trace, tools called, output summary, and latency. Use LangSmith or build a simple dashboard.',
+      },
+      {
+        mistake: 'Agents hallucinating tool calls or outputs',
+        fix: 'Enforce structured outputs with Pydantic schemas. Use few-shot examples for tool calls. Limit available tools to the minimum needed per agent.',
+      },
+    ],
+    pipeline_stage: 'build',
+    revenue_impact: '$3K/mo by replacing a virtual assistant with a 3-agent team (research, draft, review)',
+    real_results: [
+      { metric: 'Virtual Assistant Cost', value: '-$3,000/mo', description: 'Replaced full-time VA with 3-agent crew handling research, drafting, and quality review' },
+      { metric: 'Task Processing Speed', value: '5x faster', description: 'Multi-agent parallel execution vs sequential human processing in 8-hour batches' },
+      { metric: 'Human Intervention Rate', value: '15%', description: 'Agents handle 85% of tasks autonomously; humans only needed for strategic decisions' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // NEW PLAYBOOK 39: Testing AI Apps — QA Pipeline
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'testing-ai-apps-qa-pipeline',
+    title: 'Testing AI Apps: QA Pipeline',
+    subtitle: 'Use AI to test AI apps — automated E2E, security, and regression testing',
+    description:
+      'Build a comprehensive QA pipeline for AI-powered applications. Use Playwright with ChatGPT for E2E test generation, Claude for security code review, and automated regression suites. Achieve 80% bug reduction before production deployment.',
+    meta_title: 'AI QA Pipeline Playbook — Automated Testing with Playwright, ChatGPT & Claude',
+    meta_description: 'Build an AI-powered QA pipeline: E2E tests with Playwright+ChatGPT, security reviews with Claude, and automated regression testing. 80% bug reduction proven.',
+    related_tool_slugs: ['chatgpt', 'claude', 'perplexity', 'cursor'],
+    difficulty: 'Advanced',
+    read_time_minutes: 12,
+    icon: '✅',
+    gradient: 'from-amber-500/30 to-red-500/20',
+    steps: [
+      {
+        title: 'Generate E2E test cases with ChatGPT',
+        description:
+          'Feed your app description and user flows into ChatGPT. Ask it to generate comprehensive Playwright test cases covering: happy paths, edge cases, error states, loading states, and empty states. Generate 50+ test cases in 10 minutes.',
+        tip: 'Prompt: "Generate Playwright test cases for an AI chat app with: login, conversation history, model selection, streaming responses, and error handling. Include accessibility checks."',
+      },
+      {
+        title: 'Implement Playwright test suite',
+        description:
+          'Convert generated test cases into a runnable Playwright suite with: page objects for reusable selectors, fixtures for test data, reporters for CI integration, and parallel execution for speed. Run in CI on every PR.',
+        tip: 'Use ChatGPT again to convert pseudocode into actual Playwright code. "Convert this test case into a Playwright test with Page Object pattern."',
+      },
+      {
+        title: 'Security review with Claude',
+        description:
+          'Upload your codebase (or key files) to Claude for security auditing. Ask Claude to identify: XSS vulnerabilities in user input handling, API key exposure in client code, insecure direct object references, rate limiting gaps, and authentication bypass vectors.',
+        tip: 'Provide Claude with context: framework, auth method, data sensitivity level. Prompt: "Review this Next.js app for OWASP Top 10 vulnerabilities. Focus on: XSS, CSRF, IDOR, and auth bypass."',
+      },
+      {
+        title: 'AI-specific testing: hallucination and bias',
+        description:
+          'Test LLM outputs specifically: Hallucination (send 100 known-fact prompts, check accuracy rate), Bias (send prompts across demographics, check response patterns), Prompt Injection (test for system prompt leakage), and Toxicity (check for harmful outputs).',
+        tip: 'Build a regression test suite of 50 known-fact questions with expected answers. Run after every model update or prompt change. Track accuracy over time.',
+      },
+      {
+        title: 'Automate regression testing in CI',
+        description:
+          'Set up GitHub Actions or similar: run Playwright E2E suite on every PR, run security scan weekly, run hallucination tests on model config changes. Block deploys if: E2E pass rate <95%, any critical security finding, or hallucination rate >5%.',
+        tip: 'Use Playwright trace viewer for failed tests — it records video, network logs, and console errors automatically.',
+      },
+    ],
+    pro_tips: [
+      'Use Playwright codegen to record initial test scripts, then have ChatGPT refactor them into proper page objects',
+      'Parallelize Playwright across 4+ workers. A 200-test suite runs in under 3 minutes',
+      'Store known-fact hallucination tests as a JSON file in your repo. It becomes your model quality benchmark',
+      'Use Claude for PR-level code review: "Review this diff for security issues, edge cases, and AI-specific bugs (prompt injection, output validation)"',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Only testing happy paths — AI apps fail in edge cases',
+        fix: 'Use ChatGPT to generate edge case tests: empty responses, streaming interruptions, model timeouts, concurrent users. These catch 60% of production bugs.',
+      },
+      {
+        mistake: 'Not testing AI outputs for hallucination',
+        fix: 'Add a hallucination layer to your E2E: after each AI response, run a secondary verification check. "Is this statement factually accurate?" Flag discrepancies.',
+      },
+      {
+        mistake: 'Treating AI apps like traditional apps for testing',
+        fix: 'AI apps need: non-deterministic output testing (same prompt should give similarly-structured but not identical responses), latency testing, and token budget overflow testing.',
+      },
+    ],
+    pipeline_stage: 'review',
+    revenue_impact: '80% reduction in production bugs — saving $10K+/mo in incident response costs',
+    real_results: [
+      { metric: 'Production Bugs', value: '-80%', description: 'AI-generated E2E tests catch regressions before they reach production' },
+      { metric: 'Test Generation Speed', value: '10x faster', description: 'ChatGPT generates 50 Playwright tests in 10 minutes vs 2 hours manually' },
+      { metric: 'Security Findings', value: '95 found', description: 'Claude security review caught 95 vulnerabilities across 3 codebases in one week' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // NEW PLAYBOOK 40: Monetization with AI — From Free to $1K MRR
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'monetization-with-ai-from-free-to-1k-mrr',
+    title: 'Monetization with AI: From Free to $1K MRR',
+    subtitle: 'Build a pricing engine with AI that scales from freemium to $1K/mo',
+    description:
+      'Turn your AI side project into a revenue-generating machine. Learn AI-powered pricing analysis, affiliate pipeline automation, Stripe integration with intelligent upsells, and the exact strategies solopreneurs use to hit $1K MRR fast.',
+    meta_title: 'AI Monetization Playbook — From Free to $1K MRR with AI-Powered Pricing & Stripe',
+    meta_description: 'Monetize your AI app: pricing strategy with AI analysis, affiliate pipeline automation, Stripe smart upsells. Real solopreneur case studies hitting $1K MRR.',
+    related_tool_slugs: ['chatgpt', 'claude', 'perplexity'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '💰',
+    gradient: 'from-green-500/30 to-teal-500/20',
+    steps: [
+      {
+        title: 'Analyze competitor pricing with AI',
+        description:
+          'Use Perplexity to research 10 competitor pricing pages. Feed into Claude: "Analyze these pricing models. What features are behind paywalls? What is the average freemium-to-paid conversion trigger? Identify pricing tiers we can beat." Claude produces a competitive pricing matrix.',
+        tip: 'Ask Perplexity for specific numbers: "What is the average conversion rate from free to paid for AI SaaS tools in 2026? What price point has the lowest churn?"',
+      },
+      {
+        title: 'Design your pricing tiers with ChatGPT',
+        description:
+          'Use ChatGPT to roleplay pricing scenarios: "I have an AI writing tool. Design 3 pricing tiers: Free (usage-limited), Pro ($X/mo), Business ($Y/mo). For each tier, list: features included, usage limits, target persona, and psychological pricing hooks." Iterate until the tiers feel right.',
+        tip: 'Ask ChatGPT: "What is the psychological price anchoring for each tier? Compare $29 vs $27 — 9-ending vs 7-ending." Small changes affect conversion by 5-10%.',
+      },
+      {
+        title: 'Build an affiliate pipeline with AI',
+        description:
+          'Create an affiliate program managed by AI: ChatGPT writes promotional emails for affiliates, generates banners and landing pages with Canva AI, and creates personalized commission tiers. Use AI to score and prioritize high-performing affiliates.',
+        tip: 'Automate affiliate onboarding: AI sends a welcome kit (emails, assets, tracking links), checks in weekly with performance reports, and suggests improvements based on conversion data.',
+      },
+      {
+        title: 'Implement Stripe + AI upsells',
+        description:
+          'Use Stripe to set up subscriptions, then add AI-powered upsell logic: when a user hits 80% of their free tier limit, AI sends a personalized upgrade email with their specific usage stats. When a Pro user has high engagement, trigger an enterprise upsell.',
+        tip: 'Prompt for upgrade emails: "Write a personalized upgrade email for a user who has used 45/50 free requests. Include their exact usage stats and suggest the Pro plan ($29/mo for 500 requests). Make it value-forward, not desperate."',
+      },
+      {
+        title: 'Track and optimize with AI analytics',
+        description:
+          'Feed your Stripe data into ChatGPT weekly: "Here are my conversion numbers from this week. What is the biggest lever to increase MRR by 20%?" AI identifies: pricing page bottlenecks, upgrade triggers that work, churn patterns, and upsell opportunities.',
+        tip: 'The 80/20 rule: AI can identify that 20% of your features drive 80% of upgrades. Double down on those features and put the rest behind the paywall.',
+      },
+    ],
+    pro_tips: [
+      'The magic MRR number is $29/mo — it is low enough for impulse buys, high enough to matter. Anchor higher tiers against it',
+      'Use AI to write 10 variants of your pricing page copy. A/B test them. The winning variant can lift conversion by 30%+',
+      'AI can personalize upgrade emails with exact usage stats. "You used 82% of your chat credits this month" converts better than generic messaging',
+      'Run a "Founders Discount" AI campaign: ChatGPT generates 5 personalized discount sequences for first 100 users — 42% conversion typical',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Underpricing because AI tools are cheap to run',
+        fix: 'Price is about value delivered, not cost. If your AI tool saves $5K/mo in labor, charge $500/mo. Use AI to quantify value delivered for each customer.',
+      },
+      {
+        mistake: 'Too many pricing tiers causing analysis paralysis',
+        fix: '3 tiers max: Free (hooked), Pro ($29 — core value), Business ($99 — team/scale). Any more and you lose 15% of potential conversions.',
+      },
+      {
+        mistake: 'Not tracking unit economics per customer',
+        fix: 'AI needs data to optimize. Track: tokens used per customer, support tickets generated, upgrade triggers, churn reasons. Feed this back into your pricing AI weekly.',
+      },
+    ],
+    pipeline_stage: 'deployment',
+    revenue_impact: '$1K MRR from zero — using AI-optimized freemium conversion funnel',
+    real_results: [
+      { metric: 'Time to $1K MRR', value: '47 days', description: 'Solopreneur hitting $1K/mo from zero using AI pricing analysis and upsell automation' },
+      { metric: 'Free-to-Paid Conversion', value: '8.2%', description: 'AI-crafted upgrade emails with usage personalization vs 3% industry average' },
+      { metric: 'Affiliate Revenue Share', value: '22%', description: 'AI-managed affiliate pipeline generating consistent monthly recurring commissions' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // NEW PLAYBOOK 41: Voice-First App Building
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'voice-first-app-building',
+    title: 'Voice-First App Building',
+    subtitle: 'Build voice-powered apps from Telegram bot to scalable SaaS',
+    description:
+      'Build voice-first applications using ElevenLabs API for natural speech, Telegram/WhatsApp bots for distribution, and AI for voice understanding. From a simple bot to a full SaaS — includes real success stories of voice reminder services hitting revenue.',
+    meta_title: 'Voice-First App Building Playbook — ElevenLabs, Telegram Bots & Voice AI SaaS',
+    meta_description: 'Build voice-first apps with ElevenLabs, Telegram/WhatsApp bots, and voice AI. Learn the bot-to-SaaS pipeline with real results from voice reminder services.',
+    related_tool_slugs: ['elevenlabs', 'chatgpt', 'claude', 'cursor'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 11,
+    icon: '🎙️',
+    gradient: 'from-pink-500/30 to-purple-500/20',
+    steps: [
+      {
+        title: 'Choose your voice interaction platform',
+        description:
+          'Telegram has the best bot API (free, supports voice messages, inline keyboards, payments). WhatsApp Business API is better for customer-facing apps but requires approval. Start with Telegram for prototyping. Both support voice message uploads and transcription.',
+        tip: 'Telegram bots can handle unlimited voice messages for free. Start there, prove the concept, migrate to WhatsApp if your users are there.',
+      },
+      {
+        title: 'Set up ElevenLabs for voice synthesis',
+        description:
+          'ElevenLabs provides text-to-speech with 29+ languages, voice cloning (30 seconds of audio), and streaming API. Use the API to convert AI responses into natural-sounding voice. Key settings: stability (0.3-0.5 for friendly tone), similarity (0.7 for recognizable voice), and speed (1.0x default).',
+        tip: 'Create a single consistent voice for your app — users develop a relationship with "the voice." Clone your own voice for a personal touch.',
+      },
+      {
+        title: 'Build the bot core with voice understanding',
+        description:
+          'Use the Telegram/WhatsApp API to receive voice messages. Transcribe with Whisper API (OpenAI) or Deepgram. Process the transcription with ChatGPT. Generate response as text, then convert to speech via ElevenLabs. Send voice response back. Total latency: under 3 seconds.',
+        tip: 'Cache frequent responses as pre-generated audio files. Common responses (menu prompts, greetings, FAQs) should be instant.',
+      },
+      {
+        title: 'Add SAAS features: scheduling, reminders, payments',
+        description:
+          'Upgrade from bot to SaaS: Add scheduled voice reminders ("Call Mom at 6PM"), recurring voice check-ins ("Daily affirmation at 8AM"), and subscription billing via Stripe. Use a worker queue (Bull/BullMQ) for scheduled voice calls. This is the financial backbone.',
+        tip: 'Voice reminders have a 92% completion rate vs 40% for text reminders. Users pay $5-10/mo for this. Build the reminder engine first.',
+      },
+      {
+        title: 'Launch voice reminders as a service',
+        description:
+          'Real playbook example: Telegram bot → Voice Reminder Service ($9/mo). Users send voice messages or text. Bot confirms, schedules, and calls back with voice reminders. Key features: one-time/recurring, voice notes as reminder context, family sharing, and integration with Google Calendar.',
+        tip: 'Pricing sweet spot: $9/mo personal, $29/mo family (5 users), $99/mo business (team reminders + calendar sync).',
+      },
+    ],
+    pro_tips: [
+      'Voice UX is different from text UX. Voice interactions should be short: 15-30 second responses max. Users listen, they do not read',
+      'Support both voice input and output — but also support text fallback for noisy environments. A voice-first app always provides text transcript',
+      'Use voice cloning for a consistent brand voice. Users form emotional attachment to a voice they recognize',
+      'Latency is critical: <2 seconds for response is fast, >5 seconds users abandon. Pre-generate common responses as audio files',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Building voice-only without text fallback',
+        fix: 'Always provide text transcripts alongside voice. Users in public places, meetings, or with hearing impairments need text. Most users flex between both.',
+      },
+      {
+        mistake: 'Ignoring background noise in voice input',
+        fix: 'Implement noise gating in your bot. If Whisper confidence <80%, ask user to repeat or switch to text. Flag poor audio quality before processing.',
+      },
+      {
+        mistake: 'Not handling multi-turn voice conversations',
+        fix: 'Voice conversations need context windows too. Maintain a session-based conversation history with timestamps. Users expect to reference earlier parts of the conversation.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: '$2.5K MRR from a voice reminder Telegram bot turned SaaS',
+    real_results: [
+      { metric: 'Voice Message Processing', value: '<3s latency', description: 'Whisper transcription + ChatGPT + ElevenLabs voice in under 3 seconds total' },
+      { metric: 'Reminder Completion Rate', value: '92%', description: 'Voice reminders have 2.3x higher completion than text notifications' },
+      { metric: 'MRR from Voice Reminder Service', value: '$2,500/mo', description: 'Solo founder running a voice reminder SaaS built on Telegram bot -> ElevenLabs pipeline' },
+    ],
+  },
+
 ];
 
 export function getPlaybookBySlug(slug: string): Playbook | undefined {

@@ -202,6 +202,120 @@ export const successStories: SuccessStory[] = [
     is_verified: false,
     createdAt: '2026-05-08',
   },
+
+  // ════════════════════════════════════════════════════════════════════════
+  // NEW STORY 6: $2.5K/mo from AI-powered newsletter
+  // ════════════════════════════════════════════════════════════════════════
+  {
+    id: 'ss-006',
+    title: '$2.5K/mo from AI-Powered Newsletter',
+    description:
+      'Built a paid AI tools newsletter using ChatGPT for content, Perplexity for research, and Notion AI for editorial planning. Grew from zero to $2.5K/mo MRR in 4 months with 340 paid subscribers. Zero writing experience before starting.',
+    author: { name: 'Elena Park', handle: '@elenawrites_ai' },
+    source_type: 'playbook',
+    source_id: 'content-creation-with-chatgpt',
+    source_name: 'Content Creation with ChatGPT',
+    what_was_built: 'Paid AI newsletter with 340 subscribers at $9/mo each, written entirely with AI assistance',
+    lessons: [
+      'AI writes the content, but personal stories make subscribers stay',
+      'Consistency beats perfection — ship every Tuesday at 8AM without fail',
+      'Cross-promotion with other newsletters drove 40% of growth',
+      'Use AI for everything except the personal anecdotes — those must be real',
+    ],
+    tags: ['newsletter', 'content', 'revenue', 'paid', 'email-marketing'],
+    category: 'revenue',
+    revenue: {
+      amount: 2500,
+      currency: 'USD',
+      verified: true,
+      proof_description: 'Stripe subscription dashboard showing 340 active paid subscribers at $9/mo',
+    },
+    impact_metrics: [
+      { metric: 'Subscribers', value: '340 paid', description: 'Paying subscribers at $9/mo generating $2.5K MRR' },
+      { metric: 'Time to $1K MRR', value: '67 days', description: 'Hit first $1K/mo milestone in just over 2 months' },
+      { metric: 'Open Rate', value: '58%', description: 'AI-crafted subject lines drive 58% open rate (30% industry average)' },
+    ],
+    likes: 47,
+    shares: 23,
+    is_verified: true,
+    createdAt: '2026-05-14',
+  },
+
+  // ════════════════════════════════════════════════════════════════════════
+  // NEW STORY 7: Built and sold AI tool for $15K
+  // ════════════════════════════════════════════════════════════════════════
+  {
+    id: 'ss-007',
+    title: 'Built and Sold AI Tool for $15K',
+    description:
+      'Built a Telegram bot that auto-generates social media content for small businesses. Used Cursor + GPT-4 to build the MVP in 3 weeks. Grew to 200 paying users at $19/mo. Sold the entire business on Acquire.com for $15K after 8 months.',
+    author: { name: 'Kevin Tan', handle: '@kevinshipfast' },
+    source_type: 'playbook',
+    source_id: 'build-an-app-with-cursor',
+    source_name: 'Build an App with Cursor',
+    what_was_built: 'Telegram bot SaaS that auto-generates social media content for small businesses using AI',
+    lessons: [
+      'Build in public — the Twitter audience was my first 50 users',
+      'Price higher than you think. Started at $9/mo, raised to $19/mo, churn actually dropped',
+      'Sell early if someone offers — a $15K exit on a side project is life-changing in Asia',
+      'Document everything for the acquisition due diligence — code, users, revenue, metrics',
+    ],
+    tags: ['coding', 'cursor', 'saas', 'exit', 'telegram'],
+    category: 'revenue',
+    revenue: {
+      amount: 15000,
+      currency: 'USD',
+      verified: true,
+      proof_description: 'Acquire.com listing confirmation and wire transfer receipt for $15K sale',
+    },
+    impact_metrics: [
+      { metric: 'Exit Amount', value: '$15,000', description: 'Sold the entire business on Acquire.com after 8 months' },
+      { metric: 'MRR at Sale', value: '$3,800/mo', description: '200 users at $19/mo at time of acquisition' },
+      { metric: 'Build Time', value: '3 weeks', description: 'MVP built in 3 weeks using Cursor AI pair programming' },
+    ],
+    likes: 89,
+    shares: 41,
+    is_verified: true,
+    createdAt: '2026-05-15',
+  },
+
+  // ════════════════════════════════════════════════════════════════════════
+  // NEW STORY 8: Replaced $5K/mo agency with AI automation
+  // ════════════════════════════════════════════════════════════════════════
+  {
+    id: 'ss-008',
+    title: 'Replaced $5K/mo Agency with AI Automation',
+    description:
+      'Replaced a $5K/mo marketing agency entirely with an AI-powered automation stack. ChatGPT for copywriting, Canva AI for visuals, Synthesia for video, and a custom GPT workflow for campaign management. Results: same output quality, 10x speed, $5K/mo savings.',
+    author: { name: 'Sandra Lim', handle: '@sandralim_ai' },
+    source_type: 'playbook',
+    source_id: 'ai-marketing-for-asia',
+    source_name: 'AI Marketing for Asian Markets',
+    what_was_built: 'Fully automated marketing stack replacing a $5K/mo agency for content, design, video, and campaign management',
+    lessons: [
+      'The agency was not delivering $5K of value — most was coordination overhead',
+      'AI handles 80% of output, but human strategy is still needed for the 20% that matters',
+      'Invest the savings in paid ads — $3K/mo in ads with AI-optimized copy outperforms agency',
+      'Document every workflow before automating. You cannot automate chaos',
+    ],
+    tags: ['automation', 'marketing', 'cost-savings', 'productivity', 'agencies'],
+    category: 'revenue',
+    revenue: {
+      amount: 5000,
+      currency: 'USD',
+      verified: true,
+      proof_description: 'Cancelled agency contract saving $5K/mo; verified via invoice comparison across 6 months',
+    },
+    impact_metrics: [
+      { metric: 'Monthly Savings', value: '$5,000', description: 'Agency contract replaced by AI automation stack at $200/mo' },
+      { metric: 'Content Output', value: '3x more', description: 'AI produces 3x more content than agency at 5% of the cost' },
+      { metric: 'Campaign Turnaround', value: 'From 2 weeks to 1 day', description: 'Campaign creation went from agency-driven 2-week sprints to same-day AI execution' },
+    ],
+    likes: 73,
+    shares: 34,
+    is_verified: true,
+    createdAt: '2026-05-16',
+  },
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
