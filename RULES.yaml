@@ -704,6 +704,34 @@ revenue_first_filter:
   override_condition: "Only Override for: (a) security fix, (b) site-down recovery, (c) explicit Chris request"
 
 # ═══════════════════════════════════════════════════════════════
+# DUMB QUESTIONS RULE (LOCKED May 17 2026 — NEVER OVERRIDE)
+# ═══════════════════════════════════════════════════════════════
+# Every time you feel stuck or want to ask Chris something,
+# first ask yourself the dumbest possible question.
+
+dumb_questions_rule:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  trigger: "Every time you feel stuck or need to ask Chris a question"
+  dumbest_possible_question: "Is there a way I can remove this bottleneck forever so Chris never has to deal with it again?"
+  sequence:
+    step_1: "Pause. Recognize you're about to ask Chris."
+    step_2: "Ask the Dumb Questions Rule question."
+    step_3: "Try to implement the fix now. Even if it's imperfect, ship it."
+    step_4: "Only ask Chris AFTER attempting a fix, and report what you tried."
+  examples:
+    - "Vercel auth expired → generate a long-lived API token so it never expires again"
+    - "Supabase schema needs manual SQL → create a one-click runner script, present the exact SQL for copy-paste"
+    - "Need affiliate accounts → generate a complete sign-up guide Chris can execute in 5 minutes"
+    - "Blocked on a design decision → ship the simplest version and iterate based on data"
+    - "Deploy failing with cryptic error → grep the error in logs and generate a fix script before asking"
+  exceptions:
+    - "Genuinely cannot be fixed without Chris (e.g., credit card on file, legal identity verification)"
+    - "Fix would cost >$10 without authorization"
+  result_log: "Log removed bottlenecks to ~/life/Resources/eliminated-bottlenecks.md"
+
+# ═══════════════════════════════════════════════════════════════
 # BOTTLENECK ELIMINATION RULE (LOCKED May 16 2026 — NEVER OVERRIDE)
 # ═══════════════════════════════════════════════════════════════
 # Whenever the agent needs Chris for something, it MUST ask:
