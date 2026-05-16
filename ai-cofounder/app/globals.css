@@ -276,3 +276,189 @@ input[type="range"]::-webkit-slider-thumb {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* NEW: Kitchen table animations */
+@keyframes food-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(2deg); }
+  75% { transform: translateY(4px) rotate(-1deg); }
+}
+.food-float {
+  animation: food-float 6s ease-in-out infinite;
+}
+.food-float-delayed {
+  animation: food-float 7s ease-in-out infinite;
+  animation-delay: -3s;
+}
+.food-float-slow {
+  animation: food-float 8s ease-in-out infinite;
+  animation-delay: -1.5s;
+}
+
+@keyframes hearbeat-pulse {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  50% { transform: scale(1); }
+}
+.heart-pulse {
+  animation: hearbeat-pulse 0.4s ease-in-out;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+.wiggle-hover:hover {
+  animation: wiggle 0.3s ease-in-out;
+}
+
+/* Emoji rain / collage animations */
+@keyframes emoji-drift-1 {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.15; }
+  50% { transform: translateY(-20px) translateX(10px) rotate(10deg); opacity: 0.25; }
+  100% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.15; }
+}
+.emoji-drift {
+  animation: emoji-drift-1 8s ease-in-out infinite;
+}
+.emoji-drift-2 {
+  animation: emoji-drift-1 10s ease-in-out infinite;
+  animation-delay: -2s;
+}
+.emoji-drift-3 {
+  animation: emoji-drift-1 7s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+/* Kitchen table card - warm shadow */
+.kitchen-card {
+  @apply bg-white rounded-2xl border border-border/50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] 
+         transition-all duration-300;
+}
+.kitchen-card:hover {
+  @apply shadow-[0_8px_24px_rgba(0,0,0,0.08)] border-accent/20;
+  transform: translateY(-2px);
+}
+
+/* UGC carousel */
+@keyframes ugc-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ugc-track {
+  animation: ugc-scroll 30s linear infinite;
+}
+.ugc-track:hover {
+  animation-play-state: paused;
+}
+
+/* Before/after cards */
+.before-after-card {
+  @apply relative overflow-hidden rounded-2xl border border-border/50 transition-all duration-300;
+}
+
+/* Photo zoom on hover */
+.photo-zoom {
+  @apply overflow-hidden rounded-2xl;
+}
+.photo-zoom img {
+  @apply transition-all duration-500;
+}
+.photo-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Comparison slider */
+.comparison-slider {
+  @apply relative overflow-hidden rounded-2xl cursor-col-resize select-none;
+}
+
+/* Recipe card - kitchen table style */
+.recipe-card {
+  @apply bg-white rounded-2xl border border-border/50 shadow-[0_2px_8px_rgba(0,0,0,0.04)]
+         transition-all duration-300 overflow-hidden;
+}
+.recipe-card:hover {
+  @apply shadow-[0_8px_24px_rgba(0,0,0,0.08)] border-meal/30;
+  transform: translateY(-3px);
+}
+
+/* ===== DARK MODE OVERRIDES FOR LANDING PAGE (Phase 3) ===== */
+/* The landing page (app/page.tsx) was built without dark: classes,
+   so we fix all contrast issues via CSS cascade. */
+
+.dark .bg-cream {
+  background-color: #1a1a2e !important;
+}
+
+.dark .bg-white {
+  background-color: #1e1e32 !important;
+}
+
+.dark .bg-rose-50\/30 {
+  background-color: rgba(255, 228, 230, 0.08) !important;
+}
+
+.dark .bg-amber-50\/30 {
+  background-color: rgba(255, 251, 235, 0.08) !important;
+}
+
+.dark .bg-meal\/5 {
+  background-color: rgba(16, 185, 129, 0.08) !important;
+}
+
+.dark .text-ink {
+  color: #f0e6d3 !important;
+}
+
+.dark .text-ink\/80 {
+  color: rgba(240, 230, 211, 0.8) !important;
+}
+
+.dark .text-muted {
+  color: rgba(240, 230, 211, 0.55) !important;
+}
+
+.dark .border-border,
+.dark .border-border\/30,
+.dark .border-border\/50 {
+  border-color: rgba(240, 230, 211, 0.1) !important;
+}
+
+.dark .kitchen-card,
+.dark .recipe-card,
+.dark .before-after-card {
+  background-color: #242440 !important;
+  border-color: rgba(240, 230, 211, 0.1) !important;
+}
+
+.dark .kitchen-card:hover {
+  border-color: rgba(124, 58, 237, 0.3) !important;
+}
+
+.dark .recipe-card:hover {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+.dark .bg-gradient-to-b.from-cream.to-white,
+.dark .bg-gradient-to-b.from-cream,
+.dark .\[background\:linear-gradient\(to_bottom\,_var\(--tw-gradient-stops\)\)\] {
+  --tw-gradient-from: #1a1a2e !important;
+  --tw-gradient-to: #1e1e32 !important;
+}
+
+.dark .text-rose-400,
+.dark .text-rose-500,
+.dark .text-amber-500,
+.dark .text-amber-600 {
+  opacity: 0.7;
+}

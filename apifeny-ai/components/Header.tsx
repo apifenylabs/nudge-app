@@ -129,6 +129,45 @@ export default function Header() {
               >
                 Build in Public
               </Link>
+
+              {/* Sister Sites Dropdown */}
+              <div className="relative group">
+                <button className="px-3 py-2 rounded-lg text-xs font-medium text-tech-100 hover:text-white hover:bg-tech-700 transition flex items-center gap-1">
+                  <span className="text-[10px]">🌐</span>
+                  Network
+                  <svg className="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0">
+                  <div className="bg-tech-800 border border-tech-500/40 rounded-xl p-2 shadow-xl shadow-neon/10 min-w-[200px]">
+                    <a
+                      href="https://family-travel-asia.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-3 py-2 rounded-lg text-xs text-tech-100 hover:text-white hover:bg-tech-700 transition"
+                    >
+                      🧳 Family Travel Asia
+                    </a>
+                    <a
+                      href="https://luxury-family-travel-asia.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-3 py-2 rounded-lg text-xs text-tech-100 hover:text-white hover:bg-tech-700 transition"
+                    >
+                      ✨ Luxury Family Travel
+                    </a>
+                    <a
+                      href="https://ev-charging-asia.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-3 py-2 rounded-lg text-xs text-tech-100 hover:text-white hover:bg-tech-700 transition"
+                    >
+                      ⚡ EV Charging Asia
+                    </a>
+                  </div>
+                </div>
+              </div>
               <Link
                 href="/submit"
                 className="px-4 py-2 rounded-lg text-sm font-medium bg-neon hover:bg-neon-dark text-white transition flex items-center gap-1.5"
@@ -189,6 +228,36 @@ export default function Header() {
               >
                 Build in Public
               </Link>
+
+              {/* Mobile Sister Sites */}
+              <div className="pt-2 border-t border-tech-500/20">
+                <p className="px-4 pb-1.5 text-[10px] font-medium text-tech-300 uppercase tracking-wider">Sister Sites</p>
+                <a
+                  href="https://family-travel-asia.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-tech-100 hover:text-white hover:bg-tech-700 transition"
+                >
+                  🧳 Family Travel Asia
+                </a>
+                <a
+                  href="https://luxury-family-travel-asia.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-tech-100 hover:text-white hover:bg-tech-700 transition"
+                >
+                  ✨ Luxury Family Travel
+                </a>
+                <a
+                  href="https://ev-charging-asia.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-tech-100 hover:text-white hover:bg-tech-700 transition"
+                >
+                  ⚡ EV Charging Asia
+                </a>
+              </div>
+
               <Link
                 href="/submit"
                 className="block px-4 py-2.5 rounded-lg text-sm font-medium bg-neon hover:bg-neon-dark text-white transition text-center"

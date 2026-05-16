@@ -77,11 +77,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: new Date(), changeFrequency: 'daily', priority: 1.0 },
     { url: `${BASE_URL}/tools`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
+    { url: `${BASE_URL}/collections`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${BASE_URL}/categories`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${BASE_URL}/rankings`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE_URL}/submit`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/privacy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
     { url: `${BASE_URL}/terms`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
     { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${BASE_URL}/playbooks`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
   ];
 
   // Tool pages
@@ -127,6 +131,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // Category pages
+  interface CategoryEntry {
+    slug: string;
+    name: string;
+  }
+  const categories: CategoryEntry[] = (() => {
+    try {
+      const { CATEGORIES } = require('../lib/category-data');
+      return Object.values(CATEGORIES);
+    } catch { return []; }
+  })();
+
+  const categoryEntries: MetadataRoute.Sitemap = categories.map((cat): MetadataRoute.Sitemap[number] => ({
+    url: `${BASE_URL}/categories/${cat.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  }));
+
   return [
     ...staticEntries,
     ...toolEntries,
@@ -134,5 +157,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogEntries,
     ...playbookEntries,
     ...rankingEntries,
+    ...categoryEntries,
   ];
 }

@@ -1,31 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import path from 'path';
-import fs from 'fs';
-
-interface Destination {
-  id: string;
-  name: string;
-  city: string;
-  country: string;
-  category: string;
-  ageRange: string;
-  safetyRating: number;
-  priceRange: string;
-  popularity: number;
-  description: string;
-  imageUrl: string;
-  tipsAndTricks?: string[];
-}
-
-function loadData(): Destination[] {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'destinations.json');
-  const raw = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(raw);
-}
+import { allDestinations } from '@/lib/data';
+import type { Destination } from '@/lib/data';
 
 export async function POST(request: NextRequest) {
   try {
-    const all = loadData();
+    const all: Destination[] = allDestinations;
     const { query, category, ageRange, priceRange, minSafety, country, sort } = await request.json();
     let filtered = [...all];
 

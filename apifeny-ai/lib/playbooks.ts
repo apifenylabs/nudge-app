@@ -2981,6 +2981,503 @@ export const playbooks: Playbook[] = [
     ],
   },
 
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 42: AI for Customer Success & Retention
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-customer-success',
+    title: 'AI for Customer Success & Retention',
+    subtitle: 'Keep customers happy and reduce churn with AI',
+    description:
+      'Build a customer success engine using AI to predict churn, automate check-ins, personalize onboarding, and surface at-risk accounts before they cancel. Uses Intercom AI for proactive support, Zapier for workflow automation, and ChatGPT for personalized communication.',
+    meta_title: 'AI for Customer Success — Churn Reduction Playbook | Apifeny AI',
+    meta_description: 'Reduce churn with AI. Use Intercom AI, Zapier, and ChatGPT to predict at-risk accounts, automate check-ins, and personalize onboarding at scale.',
+    related_tool_slugs: ['intercom-ai', 'zapier-central', 'chatgpt', 'notion-ai'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 9,
+    icon: '🎯',
+    gradient: 'from-green-500/30 to-teal-500/20',
+    steps: [
+      {
+        title: 'Identify churn signals with AI',
+        description:
+          'Use Intercom AI to analyze customer behavior patterns — login frequency, feature usage, support ticket volume, sentiment analysis from conversations. Set up automated alerts when a customer shows 3+ churn signals.',
+        tip: 'Top churn signals: no login in 7 days, 2+ support tickets in 24 hours, negative sentiment in chat, downgraded plan, unused primary feature.',
+      },
+      {
+        title: 'Build an automated check-in sequence',
+        description:
+          'Create a Zapier workflow that triggers personalized check-in emails based on customer behavior stages: Day 1 (welcome + setup tips), Day 7 (check usage), Day 30 (check-in + ask for feedback), and at-risk triggers (low usage → re-engagement offer).',
+        tip: 'Segment check-ins by ACV (Annual Contract Value). High-value accounts get a real person + AI draft. Low-value accounts get fully automated AI emails.',
+      },
+      {
+        title: 'Personalize onboarding with AI',
+        description:
+          'Use ChatGPT to generate customized onboarding plans based on the customer\'s industry, team size, and stated goals. Send the plan as a Notion page with embedded video tutorials and milestone tracking.',
+        tip: 'Ask customers one question on signup: "What\'s the one thing you want to achieve with our product?" Use the answer to tailor the entire onboarding flow.',
+      },
+      {
+        title: 'Monitor NPS and sentiment at scale',
+        description:
+          'Use Intercom AI sentiment analysis on every support conversation. Set up weekly NPS surveys via Zapier. Automatically flag any customer whose sentiment drops below threshold for a personal outreach from the CEO.',
+        tip: 'Respond to detractors within 24 hours, not 7 days. Speed of response is the #1 predictor of churn recovery.',
+      },
+      {
+        title: 'Build a self-serve success portal',
+        description:
+          'Create a Notion-powered help center with AI search. Use ChatGPT to generate help articles from your internal knowledge base. Let customers self-serve 80% of questions.',
+        tip: 'Track self-serve vs human-serve ratio. Every 10% increase in self-serve = ~5% reduction in support costs.',
+      },
+    ],
+    pro_tips: [
+      'Focus retention on your top 20% of customers by revenue — defending existing high-value relationships is 5x cheaper than acquiring new ones',
+      'Use AI to draft responses but always have a human approve sensitive communications like churn recovery or price increases',
+      'Set up a weekly \"churn radar\" report — AI scans all customer data and surfaces accounts needing attention ranked by churn probability',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Treating all customers with the same playbook',
+        fix: 'Segment: Power users (2+ activations/week) need advanced tips. Dormant users (<1/week) need re-engagement. At-risk users need support.',
+      },
+      {
+        mistake: 'Automating everything and losing the human touch',
+        fix: 'Use AI for triage and drafts. Humans handle sentiment-heavy communications. An AI-signed \"We miss you\" email feels hollow.',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: '30-50% churn reduction = $10K-$50K annual revenue saved for a $100K ARR SaaS',
+    real_results: [
+      { metric: 'Churn Reduction', value: '34%', description: 'AI-powered proactive outreach reduced monthly churn from 5.2% to 3.4% in 90 days' },
+      { metric: 'Self-Serve Resolution Rate', value: '82%', description: 'AI help center handles 82% of all support queries without human touch' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 43: AI for Lead Generation & Sales Prospecting
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-lead-generation',
+    title: 'AI for Lead Generation & Sales Prospecting',
+    subtitle: 'Fill your pipeline with AI-powered outbound',
+    description:
+      'Generate high-quality B2B leads using AI for research, personalization, and outreach. Combines Clay for enrichment, ChatGPT for personalized email drafting, and Zapier for multi-channel sequences. Perfect for solopreneurs and small sales teams.',
+    meta_title: 'AI for Lead Generation — B2B Sales Prospecting Playbook | Apifeny AI',
+    meta_description: 'Generate B2B leads with AI. Use Clay, ChatGPT, and Zapier to research prospects, personalize outreach, and automate multi-channel sequences.',
+    related_tool_slugs: ['clay', 'chatgpt', 'zapier-central', 'perplexity', 'instantly'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '📈',
+    gradient: 'from-amber-500/30 to-orange-500/20',
+    steps: [
+      {
+        title: 'Define your ICP and build prospect lists',
+        description:
+          'Use Perplexity to research your Ideal Customer Profile — industry, company size, job titles, pain points. Then use Clay to find matching contacts with intent signals (recent funding, hiring spree, product launches).',
+        tip: 'Focus on \"trigger events\" — recently funded companies, new executives, product launches. These prospects are 3x more likely to respond.',
+      },
+      {
+        title: 'Enrich prospects with AI research',
+        description:
+          'Use Clay\'s AI enrichment to gather: company size, tech stack, recent news, LinkedIn activity, common connections. Each prospect should have 5+ data points for personalization.',
+        tip: 'Include a personal touch point in every outreach — a recent blog post they wrote, a podcast appearance, or a mutual connection mention.',
+      },
+      {
+        title: 'Draft hyper-personalized emails with ChatGPT',
+        description:
+          'Feed prospect data into ChatGPT and generate a personalized email draft. Include: reference to a recent achievement, relevant pain point you solve, and a specific low-commitment CTA.',
+        tip: 'Keep emails under 150 words. Open with a genuine compliment or observation. Never open with "I hope this email finds you well."',
+      },
+      {
+        title: 'Set up multi-channel sequences',
+        description:
+          'Use Instantly for email delivery (warm-up, deliverability, A/B testing). Connect via Zapier to trigger LinkedIn messages and Twitter DMs. Sequence: Day 1 (email), Day 3 (LinkedIn), Day 7 (email follow-up), Day 14 (Twitter DM).',
+        tip: '3-touch sequences convert at 1-3%. 7+ touch sequences convert at 5-8%. Most salespeople stop after 2 touches.',
+      },
+      {
+        title: 'Track and optimize with AI',
+        description:
+          'Use ChatGPT to analyze reply patterns and suggest subject line improvements. A/B test: personalization depth, CTA type, send time. Focus on reply rate, not open rate.',
+        tip: 'Best send times across industries: Tue/Wed/Thu 8-11am local time. Friday afternoons and Mondays before noon have lowest reply rates.',
+      },
+    ],
+    pro_tips: [
+      'Never send a cold email without warming up the domain first (Instantly handles this). Start with 10 emails/day, double every week',
+      'Use ChatGPT to analyze your best-performing emails and generate variants that maintain the same structure but target different segments',
+      'Track the \"cost per qualified lead\" metric. Target under $10 for SMB, under $100 for enterprise',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Sending generic \"spray and pray\" emails',
+        fix: 'Every email must reference something specific about the prospect\'s business. If you can\'t personalize, don\'t send.',
+      },
+      {
+        mistake: 'Scaling before messaging is proven',
+        fix: 'Send 50 emails manually first. Track reply rate. Optimize. Then scale with automation once you have a 5%+ reply rate.',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: '$5K-$15K/mo in pipeline from a solo operator running AI-powered outbound',
+    real_results: [
+      { metric: 'Reply Rate', value: '8.3%', description: 'AI-personalized outreach achieved 8.3% reply rate vs 1.5% industry average' },
+      { metric: 'Meetings Booked/Month', value: '15-20', description: 'Solo founder running 200 emails/week books 15-20 qualified meetings monthly' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 44: AI for Personal Finance & Budgeting
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-personal-finance',
+    title: 'AI for Personal Finance & Budgeting',
+    subtitle: 'Manage money smarter with AI-powered tracking and analysis',
+    description:
+      'Use AI to track spending, optimize budgets, analyze investments, and reduce financial stress. Combines QuickBooks Intuit Assist for accounting, ChatGPT for personalized advice, and Notion AI for goal tracking. No finance degree required.',
+    meta_title: 'AI for Personal Finance — Budgeting & Investment Playbook | Apifeny AI',
+    meta_description: 'Take control of your finances with AI. Track spending, optimize budgets, analyze investments using QuickBooks, ChatGPT, and Notion AI.',
+    related_tool_slugs: ['quickbooks-intuit-assist', 'chatgpt', 'notion-ai', 'perplexity'],
+    difficulty: 'Beginner',
+    read_time_minutes: 8,
+    icon: '💰',
+    gradient: 'from-emerald-500/30 to-green-500/20',
+    steps: [
+      {
+        title: 'Connect your financial accounts',
+        description:
+          'Use QuickBooks Intuit Assist to link bank accounts, credit cards, investment accounts, and loans. The AI automatically categorizes transactions, detects duplicates, and identifies recurring charges.',
+        tip: 'Use the AI\'s \"spending personality\" feature to see if you\'re a "Sprinkler" (lots of small purchases) or a "Fire Hose" (few big purchases). This helps choose the right budgeting strategy.',
+      },
+      {
+        title: 'Create an AI-powered budget',
+        description:
+          'Use ChatGPT to analyze your last 3 months of spending and create a personalized budget. Provide your income, fixed costs, and savings goals. ChatGPT will suggest budget categories and amounts tailored to your patterns.',
+        tip: 'Use the 50/30/20 rule as a starting point: 50% needs, 30% wants, 20% savings/debt. But let AI adjust based on your real spending data and location.',
+      },
+      {
+        title: 'Track goals in Notion AI',
+        description:
+          'Set up a Notion dashboard with: savings goals (with progress bars), debt payoff timeline, investment tracker, and monthly net worth calculation. Use Notion AI to generate weekly summaries of your financial health.',
+        tip: 'Add a weekly \"money date\" reminder in Notion. 30 minutes every Sunday to review spending, adjust budget, and celebrate wins.',
+      },
+      {
+        title: 'Analyze investments with Perplexity',
+        description:
+          'Use Perplexity to research stocks, ETFs, and crypto with cited sources. Ask: "What are the top-rated ETFs for Asian markets?" or "Compare VOO vs VWRA for long-term holding." Always verify citations.',
+        tip: 'Ask Perplexity for contrarian views: "What are the bear cases for holding VWRA in 2026?" Understanding risks is more valuable than confirmation bias.',
+      },
+      {
+        title: 'Review and optimize monthly',
+        description:
+          'Feed your monthly statements into ChatGPT. Ask: "Find 3 subscriptions I\'m not using" and "Suggest one lifestyle change to save $200/month." Use the AI to negotiation-letter drafts for lowering bills.',
+        tip: 'The best ROI action: call your insurance/internet provider and ask for a loyalty discount. AI can draft the script. Average savings: $50-100/month.',
+      },
+    ],
+    pro_tips: [
+      'Set up automated alerts in QuickBooks for: unusual large transactions, approaching budget limits, and recurring charges you haven\'t used in 90 days',
+      'Use ChatGPT for \"what if\" scenarios: "What if I invest $500/month in VWRA vs paying off my mortgage early?" Get data-driven answers',
+      'Create a \"financial audit\" quarterly — scan all subscriptions, optimize insurance, check credit score, rebalance investments. AI can do 80% of the analysis',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Over-complicating the budget with too many categories',
+        fix: 'Stick to 5-7 categories maximum. The more granular you get, the less likely you are to stick with it. AI can handle complexity; you just need the overview.',
+      },
+      {
+        mistake: 'Treating AI financial advice as professional advice',
+        fix: 'AI is a research and analysis tool, not a licensed financial advisor. Always verify critical investment decisions with a qualified professional.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Save $200-500/month through AI-identified optimizations = $2,400-$6,000/year',
+    real_results: [
+      { metric: 'Monthly Savings Identified', value: '$340/mo', description: 'AI audit found 3 unused subscriptions ($67/mo), renegotiated internet bill ($30/mo), optimized grocery spending ($243/mo)' },
+      { metric: 'Investment Research Time', value: '45 min → 8 min', description: 'Perplexity cut stock/ETF research time from 45 minutes to 8 minutes with cited sources' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 45: AI for Email Marketing
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-email-campaigns',
+    title: 'AI for Email Campaigns',
+    subtitle: 'Build high-converting email campaigns with AI',
+    description:
+      'Use AI to write, personalize, and optimize email marketing campaigns that convert. Combines Beehiiv for delivery, ChatGPT for copywriting, Copy.ai for variants, and Instantly for warmup and deliverability. From welcome sequences to newsletters to sales campaigns.',
+    meta_title: 'AI for Email Marketing — Campaign Optimization Playbook | Apifeny AI',
+    meta_description: 'Build AI-powered email campaigns. Use Beehiiv, ChatGPT, and Copy.ai to write welcome sequences, newsletters, and sales emails that drive conversions.',
+    related_tool_slugs: ['beehiiv', 'chatgpt', 'copy-ai', 'instantly', 'perplexity'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '✉️',
+    gradient: 'from-blue-500/30 to-indigo-500/20',
+    steps: [
+      {
+        title: 'Define your email strategy and segments',
+        description:
+          'Use ChatGPT to define your email strategy: audience segments, goals per sequence (welcome, nurture, sales, re-engagement), and key metrics. Ask ChatGPT to generate a 90-day email content calendar.',
+        tip: 'Start with 3 core sequences: Welcome (5 emails over 10 days), Nurture (weekly newsletter), and Re-engagement (3 emails over 2 weeks for inactive subscribers).',
+      },
+      {
+        title: 'Write high-converting emails with ChatGPT',
+        description:
+          'Use ChatGPT with structured prompts: "Write a welcome email for [segment] with [benefit] as the main hook. Include a personalized subject line, a story-driven opening, a clear CTA, and a P.S. with social proof." Generate 5 variants per email.',
+        tip: 'Best-performing email structures: Problem → Story → Solution → CTA. Keep subject lines under 50 characters. Use personalization tokens in the first sentence.',
+      },
+      {
+        title: 'Personalize at scale with Copy.ai',
+        description:
+          'Use Copy.ai\'s workflows to generate personalized email variants for different segments. Feed it customer data (industry, role, pain points) and it generates versions that speak directly to each segment.',
+        tip: 'Dynamic content blocks: change the opening paragraph, testimonial, and CTA per segment while keeping the core message the same.',
+      },
+      {
+        title: 'Warm up domains and optimize deliverability',
+        description:
+          'Use Instantly to warm up your sending domain before launching campaigns. Monitor: spam rate (<0.1%), bounce rate (<2%), and inbox placement rate (>95%). AI can optimize send times per subscriber.',
+        tip: 'Never cold email from a new domain. Warm up 1 email/day → 50 emails/day over 3 weeks before any campaign. Skip this and you\'ll land in spam.',
+      },
+      {
+        title: 'Analyze, A/B test, and iterate with AI',
+        description:
+          'Use ChatGPT to analyze open rates, click rates, and conversion data by segment. Generate A/B test hypotheses. Ask: "What subject line patterns drove highest opens last month?" and "Which CTA generated most clicks in the nurture sequence?"',
+        tip: 'Test one variable at a time: subject line, CTA, offer, or send time. Let the AI find statistical significance before declaring a winner.',
+      },
+    ],
+    pro_tips: [
+      'Use Perplexity to research what\'s working in your niche: "What email subject lines are trending in SaaS newsletters?" Get real examples',
+      'Set up a \"swipe file\" in Notion — save your top-performing AI-generated emails with notes on why they worked. Use it as reference for future campaigns',
+      'Send a \"segmentation survey\" email asking subscribers about their interests. AI can analyze responses and automatically re-tag subscribers',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Writing all emails in the same tone',
+        fix: 'Different sequences need different tones: Welcome = warm and helpful. Sales = confident and urgent. Re-engagement = empathetic and casual. ChatGPT handles tonal shifts well.',
+      },
+      {
+        mistake: 'Ignoring mobile formatting',
+        fix: '60%+ of emails are opened on mobile. Use AI to check: Are CTAs big enough for thumbs? Is the subject line cut off after 40 chars? Are images loading?',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: '$2K-$8K/mo from email marketing for a solopreneur using AI-generated campaigns',
+    real_results: [
+      { metric: 'Open Rate', value: '42.3%', description: 'AI-crafted welcome sequence achieved 42.3% open rate vs 22% industry average' },
+      { metric: 'Click-Through Rate', value: '8.7%', description: 'Personalized nurture emails hit 8.7% CTR vs 2.6% industry baseline' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 46: AI for Content Repurposing & Distribution
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-content-repurposing',
+    title: 'AI for Content Repurposing & Distribution',
+    subtitle: 'Turn one piece of content into 20+ assets with AI',
+    description:
+      'Create once, publish everywhere. Use AI to transform a single blog post or video into social media posts, email newsletters, LinkedIn threads, Twitter threads, captions, summaries, and more. Save 20+ hours per week while maintaining consistent quality.',
+    meta_title: 'AI Content Repurposing — Turn 1 Asset into 20+ | Apifeny AI',
+    meta_description: 'Turn one piece of content into 20+ assets with AI. Transform blogs into social posts, newsletters, LinkedIn threads, and more using ChatGPT, Canva, and Descript.',
+    related_tool_slugs: ['chatgpt', 'canva-ai', 'descript', 'opusclip', 'claude'],
+    difficulty: 'Beginner',
+    read_time_minutes: 8,
+    icon: '🔄',
+    gradient: 'from-cyan-500/30 to-blue-500/20',
+    steps: [
+      {
+        title: 'Create your pillar content',
+        description:
+          'Write or record your primary piece of content: a 1500-word blog post, a 10-minute YouTube video, or a 30-minute podcast episode. This is your source material. Everything else is derived from this.',
+        tip: 'Pillar content should be evergreen and comprehensive. The better your source material, the better all derived content will be.',
+      },
+      {
+        title: 'Generate distribution formats with ChatGPT',
+        description:
+          'Feed your pillar content into ChatGPT. Ask for: 5 Twitter/X threads (280 chars each), 3 LinkedIn posts (150 words each with hooks), 1 email newsletter version (500 words), and 10 Instagram captions (with hashtags). Generate them all at once.',
+        tip: 'Create a custom GPT with a \"Repurpose Engine\" prompt that consistently outputs structured formats. Saves 30 minutes per content cycle.',
+      },
+      {
+        title: 'Create visual assets with Canva AI',
+        description:
+          'Use Canva Magic Studio to auto-generate: LinkedIn banner (1200x627), Twitter/X card (1200x675), Instagram story (1080x1920), and Pinterest pin (1000x1500). Let AI suggest layouts based on the transcript/keywords.',
+        tip: 'Create a Canva template set with your brand colors and fonts. Generate visuals in batches of 10. Takes 15 minutes for a week\'s worth of visuals.',
+      },
+      {
+        title: 'Edit video into clips with Descript/OpusClip',
+        description:
+          'Upload your long-form video to Descript or OpusClip. Use AI to auto-detect highlights, generate captions, and create 30-60 second clips optimized for TikTok, Reels, and Shorts. Each clip gets auto-captions and aspect-ratio adjustments.',
+        tip: 'Focus clips on: controversial takes, surprising statistics, actionable tips, and emotional stories. These 4 formats get the most engagement.',
+      },
+      {
+        title: 'Schedule and distribute across platforms',
+        description:
+          'Use a scheduling tool to distribute repurposed content over 7-14 days. Post 1 LinkedIn post/day, 2-3 tweets/day, 1 Instagram post/day, and 1 short-form video/day. Space out so you don\'t burn through content.',
+        tip: 'One pillar piece should give you 7-10 days of content. 3 pillar pieces/month = full content calendar. No daily creation stress.',
+      },
+    ],
+    pro_tips: [
+      'Use Claude for repurposing long-form content — it handles 100K+ token contexts so you can feed the entire pillar piece in one go',
+      'Create a \"content matrix\": rows = topics, columns = formats (blog, LinkedIn, Twitter, email, video). Fill one row per pillar piece. AI fills the cells',
+      'Repurpose in reverse too: compile your best Twitter threads into a blog post. Cross-platform content extends lifespan by 3x',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Reposting the exact same content across all platforms',
+        fix: 'Adapt the tone and format per platform: LinkedIn = professional storytelling, Twitter = short spicy takes, Instagram = visual + micro-caption.',
+      },
+      {
+        mistake: 'Skipping human editing of AI-generated repurposed content',
+        fix: 'AI often loses the original voice. Read each piece aloud before posting. Keep your unique phrasing — that\'s what makes you memorable.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Save 15-20 hours/week in content production = capacity to run 3x more campaigns',
+    real_results: [
+      { metric: 'Content Output', value: '22 pieces/week', description: 'One pillar blog post repurposed into 22 unique pieces across 6 platforms' },
+      { metric: 'Time Saved', value: '18 hrs/week', description: 'Down from 22 hours of manual content creation to 4 hours using AI repurposing' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 47: AI for Event Planning & Management
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-event-planning',
+    title: 'AI for Event Planning & Management',
+    subtitle: 'Plan memorable events with AI-powered coordination',
+    description:
+      'Use AI to plan, coordinate, and manage events from small meetups to conferences. Leverage ChatGPT for vendor research and scheduling, Notion AI for task management, and Zapier for attendee communication automation.',
+    meta_title: 'AI for Event Planning — Conferences, Meetups & Workshops | Apifeny AI',
+    meta_description: 'Plan events with AI. Use ChatGPT, Notion AI, and Zapier for vendor research, task management, attendee communication, and post-event follow-up.',
+    related_tool_slugs: ['chatgpt', 'notion-ai', 'zapier-central', 'perplexity', 'calendly'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '📅',
+    gradient: 'from-violet-500/30 to-purple-500/20',
+    steps: [
+      {
+        title: 'Define event scope and generate a plan',
+        description:
+          'Use ChatGPT to create a complete event plan: budget breakdown, timeline (12 weeks out to event day), vendor checklist, and risk matrix. Provide event type, expected attendees, and budget. ChatGPT generates a comprehensive project plan.',
+        tip: 'Include a "worst case scenario" in your risk matrix. What if the venue cancels? Speaker no-shows? Rain? Catering fails? AI can help you prepare contingency plans for each.',
+      },
+      {
+        title: 'Research vendors with Perplexity',
+        description:
+          'Use Perplexity to find and compare vendors: venues, caterers, AV equipment, photographers, and decorators. Ask for citations and recent reviews. Create a comparison table with pricing, capacity, and availability.',
+        tip: 'Search with city + event type + "reviews". Example: "best event venues for 100-person tech meetup in Singapore 2026 reviews" Get cited sources, not just page 1 Google results.',
+      },
+      {
+        title: 'Build a Notion event dashboard',
+        description:
+          'Create a Notion database with: task tracker (due dates, assignees, status), budget tracker (estimated vs actual by category), vendor directory (contact info, contracts, payments), and attendee list (RSVPs, dietary preferences, special needs).',
+        tip: 'Use Notion AI to auto-generate weekly event planning summaries. Ask: "What\'s overdue this week?" and "What\'s coming up in the next 7 days?"',
+      },
+      {
+        title: 'Automate attendee communication',
+        description:
+          'Set up Zapier workflows: new RSVP → send confirmation email, 1 week before → send logistics reminder, 1 day before → send final details with QR code, and post-event → send thank you and survey. Use ChatGPT to draft all email templates.',
+        tip: 'Segment communications: speakers get different info than attendees. VIPs get a personal check-in. Sponsors get pre-event marketing materials. Zapier can handle all segments.',
+      },
+      {
+        title: 'Post-event follow-up with AI',
+        description:
+          'Use ChatGPT to analyze survey responses, generate a post-event report, and draft thank-you notes for speakers, sponsors, and volunteers. Create a retrospective document in Notion capturing lessons learned.',
+        tip: 'Send the survey within 2 hours of event end. Use ChatGPT with GPT-4 survey analysis to extract actionable insights from open-ended responses. Feed insights into the next event plan.',
+      },
+    ],
+    pro_tips: [
+      'Create a reusable event template in Notion — same structure, fresh data. AI fills in the specifics for each new event. Saves 5+ hours per event',
+      'Use Calendly for speaker coordination: speakers book their preferred time slot, it auto-syncs to your event schedule, and sends reminders',
+      'Generate a \"day-of runbook\" with ChatGPT: minute-by-minute schedule, who does what, emergency contacts, and backup plans. Print it for every staff member',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Over-relying on AI for creative decisions like themes and decorations',
+        fix: 'Use AI for research and efficiency. Creative direction, atmosphere, and emotional tone should come from the human planner.',
+      },
+      {
+        mistake: 'Not testing automated communications before sending',
+        fix: 'Send every automated email to yourself first. Check: correct date/time, venue location, proper personalization tokens, and mobile formatting.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Save 20+ hours of planning time per event = capacity to run 2-3x more events per quarter',
+    real_results: [
+      { metric: 'Planning Time Saved', value: '22 hrs/event', description: 'Down from 35 hours to 13 hours using AI for vendor research, templates, and communications' },
+      { metric: 'Attendee Satisfaction', value: '4.7/5.0', description: 'AI-optimized communications and scheduling contributed to top-quartile satisfaction scores' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 48: AI for Fitness & Wellness
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-fitness-wellness',
+    title: 'AI for Fitness & Wellness',
+    subtitle: 'Build personalized health and fitness routines with AI',
+    description:
+      'Use AI to create personalized workout plans, meal prep guides, sleep optimization routines, and habit tracking systems. Combines ChatGPT for plan creation, Notion AI for tracking, and Perplexity for evidence-based health research.',
+    meta_title: 'AI for Fitness & Wellness — Personalized Health Playbook | Apifeny AI',
+    meta_description: 'Build AI-powered fitness and wellness routines. Create personalized workouts, meal plans, and habit trackers using ChatGPT, Notion AI, and Perplexity.',
+    related_tool_slugs: ['chatgpt', 'notion-ai', 'perplexity', 'claude'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '💪',
+    gradient: 'from-red-500/30 to-rose-500/20',
+    steps: [
+      {
+        title: 'Assess your current state with AI',
+        description:
+          'Have an honest conversation with ChatGPT about your fitness level, health goals, diet, sleep patterns, and stress levels. The more honest you are (yes, including that midnight ice cream), the better the AI plan will be.',
+        tip: 'Share your weekly schedule too. An AI plan that doesn\'t fit your life is a plan you won\'t follow. \"I have 30 mins before work and 45 mins after\" is perfect context.',
+      },
+      {
+        title: 'Generate a personalized workout plan',
+        description:
+          'Ask ChatGPT for a workout plan based on your: fitness level (beginner/intermediate/advanced), available equipment (gym/home/bodyweight), time per session, days per week, and specific goals (strength/hypertrophy/endurance/weight loss).',
+        tip: 'Ask for 3 versions: \"optimal\" (5 days/week), \"practical\" (3 days/week), and \"minimum viable\" (2 days/week). You\'ll often do the minimum but knowing the ideal helps.',
+      },
+      {
+        title: 'Create a meal prep guide with AI',
+        description:
+          'Use Perplexity to research evidence-based nutrition: macro breakdowns for your goal, meal timing science, and supplement recommendations. Then ask ChatGPT to create a weekly meal plan with recipes, shopping lists, and prep instructions.',
+        tip: 'Ask for a \"reductionist\" meal plan: meals with <5 ingredients, <30 min prep. The simpler the plan, the more likely you are to follow it for more than 2 weeks.',
+      },
+      {
+        title: 'Build a habit tracker in Notion',
+        description:
+          'Set up a Notion dashboard with: daily habit checklist (workout, water intake, sleep time, meditation), weekly review template, progress photos, and key metrics (weight, body fat %, strength numbers). Use Notion AI for weekly reflection prompts.',
+        tip: 'Track the process, not just outcomes. Mark \"did I work out today?" not just weight. Process metrics predict outcomes 4-6 weeks before scale shows it.',
+      },
+      {
+        title: 'Iterate and adapt with AI analysis',
+        description:
+          'Monthly check-in: feed your progress data into Claude (handles larger context than ChatGPT). Ask: \"Based on my last 4 weeks of training data, sleep logs, and diet, what should I change?\" Let the AI spot patterns you miss.',
+        tip: 'Share detailed logs. \"Slept 6 hours, trained legs, ate maintenance\" gives better advice than \"had an okay week.\" Garbage in, garbage out applies to AI fitness coaching too.',
+      },
+    ],
+    pro_tips: [
+      'Use Claude for meal planning — its large context window lets you dump a week of food photos/diary and get detailed macro analysis',
+      'Create a \"weekly health snapshot\" prompt: \"Based on my sleep (avg 6.8 hrs), workouts (4/7 days), diet (80% clean), and stress (moderate), what should I focus on this week?\" One-shot actionable advice',
+      'Use Perplexity to fact-check every health claim. \"Does cold plunging actually reduce inflammation? Show me peer-reviewed studies.\" AI can give confident-sounding wrong answers about health',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Following AI-generated plans that are too aggressive',
+        fix: 'Start with the \"minimum viable\" version of any plan. The best fitness plan is the one you actually do. AI can\'t motivate you — it can only guide.',
+      },
+      {
+        mistake: 'Trusting AI health advice without verification',
+        fix: 'Cross-reference all AI health recommendations with Perplexity cited sources. AI is a helpful trainer, not your doctor. Never follow a radical diet or supplement plan without professional input.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Build an AI-powered fitness coaching SaaS or newsletter as a side revenue stream',
+    real_results: [
+      { metric: 'Workout Consistency', value: '78% → 91%', description: 'AI-generated plans matched to user availability increased workout adherence from 78% to 91% over 12 weeks' },
+      { metric: 'Meal Prep Time', value: '3 hrs → 45 min', description: 'AI-generated weekly meal plans with integrated shopping lists cut meal prep time by 75%' },
+    ],
+  },
+
 ];
 
 export function getPlaybookBySlug(slug: string): Playbook | undefined {

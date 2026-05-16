@@ -1,10 +1,12 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { promises as fs } from 'fs';
-import path from 'path';
-import { MapPin, Star, Calendar, ChevronRight, ExternalLink, Lightbulb, Sparkles, Compass, Zap } from 'lucide-react';
+import { MapPin, Star, ChevronRight, ExternalLink, Sparkles, Compass } from 'lucide-react';
 import DestinationCard from '@/components/DestinationCard';
+import { allDestinations } from '@/lib/data';
+
+// Import long-tail index directly
+import longtailIndex from '@/data/longtail-index.json';
 
 interface LongTailPage {
   slug: string;
@@ -22,7 +24,7 @@ interface LongTailPage {
   primary_age_tier: string;
   slug_phrases: string[];
   destination_ids: string[];
-  graph: any;
+  graph: Record<string, unknown>;
 }
 
 interface Destination {
@@ -40,41 +42,23 @@ interface Destination {
   tipsAndTricks: string[];
   amenities?: string[];
   isNew?: boolean;
-  parentStory?: any;
+  parentStory?: unknown;
   information_gain?: { human_verified_tip?: string | null; };
 }
 
-async function getIndex(): Promise<LongTailPage[]> {
-  try {
-    const filePath = path.join(process.cwd(), 'public', 'data', 'longtail-index.json');
-    const raw = await fs.readFile(filePath, 'utf-8');
-    return JSON.parse(raw);
-  } catch {
-    return [];
-  }
-}
+const index: LongTailPage[] = longtailIndex as LongTailPage[];
 
-async function getDestinations(): Promise<Destination[]> {
-  try {
-    const filePath = path.join(process.cwd(), 'public', 'data', 'destinations.json');
-    const raw = await fs.readFile(filePath, 'utf-8');
-    return JSON.parse(raw);
-  } catch {
-    return [];
-  }
-}
+export const dynamicParams = true;
+export const revalidate = 86400;
 
 export async function generateStaticParams() {
-  const index = await getIndex();
   return index.map(page => ({ slug: page.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const index = await getIndex();
-  const page = index.find(p => p.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const page = index.find(p => p.slug === slug);
   if (!page) return { title: 'Page Not Found' };
-
-  const ogImage = `https://familytravelasia.com/activity-og-${page.slug}.jpg`;
 
   return {
     title: page.meta_title,
@@ -85,13 +69,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       url: `https://www.familytravelasia.com/activity/${page.slug}`,
       siteName: 'Asia Family Travel Directory',
       type: 'website',
-      images: [{ url: ogImage, width: 1200, height: 630, alt: page.h1 }],
+      images: [{ url: `https://familytravelasia.com/activity-og-${page.slug}.jpg`, width: 1200, height: 630, alt: page.h1 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: page.meta_title,
       description: page.meta_description,
-      images: [ogImage],
+      images: [`https://familytravelasia.com/activity-og-${page.slug}.jpg`],
     },
     alternates: {
       canonical: `https://www.familytravelasia.com/activity/${page.slug}`,
@@ -99,16 +83,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function LongTailPage({ params }: { params: { slug: string } }) {
-  const [index, allDestinations] = await Promise.all([getIndex(), getDestinations()]);
-  const page = index.find(p => p.slug === params.slug);
+export default async function LongTailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const page = index.find(p => p.slug === slug);
   if (!page) notFound();
 
-  const destinations = page.destination_ids
+  const destinations: Destination[] = page.destination_ids
     .map(id => allDestinations.find(d => d.id === id))
     .filter((d): d is Destination => d !== undefined);
 
-  // Age tier label
   const ageLabels: Record<string, string> = {
     'toddlers': 'Toddler-Friendly (Ages 0-3)',
     'preschoolers': 'Preschooler-Friendly (Ages 4-5)',
@@ -120,16 +103,13 @@ export default async function LongTailPage({ params }: { params: { slug: string 
 
   return (
     <main className="min-h-screen bg-gray-50">
-      {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(page.graph) }}
       />
 
-      {/* Hero */}
       <section className="bg-gradient-to-br from-sky-600 via-sky-700 to-indigo-800 text-white">
         <div className="max-w-6xl mx-auto px-4 py-12 sm:py-16">
-          {/* Breadcrumb */}
           <nav className="flex items-center gap-1 text-sm text-sky-200 mb-4">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight size={12} />
@@ -150,7 +130,6 @@ export default async function LongTailPage({ params }: { params: { slug: string 
         </div>
       </section>
 
-      {/* Destinations Grid */}
       <section className="max-w-6xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {destinations.map(d => (
@@ -167,7 +146,6 @@ export default async function LongTailPage({ params }: { params: { slug: string 
           ))}
         </div>
 
-        {/* Age-specific navigation */}
         {page.slug_phrases.length > 1 && (
           <div className="mt-10 p-5 bg-white border border-gray-200 rounded-2xl">
             <h3 className="font-semibold text-gray-900 mb-3 text-sm">More Ways to Explore {page.city}</h3>
@@ -185,7 +163,6 @@ export default async function LongTailPage({ params }: { params: { slug: string 
           </div>
         )}
 
-        {/* Outro */}
         <div className="mt-10 p-6 bg-white border border-gray-200 rounded-2xl">
           <div className="flex items-center gap-2 mb-3">
             <Sparkles size={16} className="text-sky-600" />

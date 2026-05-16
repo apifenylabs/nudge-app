@@ -1,10 +1,5 @@
 import type { MetadataRoute } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-const BASE_URL = 'https://www.familytravelasia.com';
-
-// ─── Types ──────────────────────────────────────────────────────
+import { allDestinations } from '@/lib/data';
 
 interface Destination {
   id: string;
@@ -21,67 +16,40 @@ interface LongTailPage {
   destination_count: number;
 }
 
-/**
- * Convert a name to a URL-safe slug.
- */
-function slugify(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '');
-}
+// Blog posts loaded via static import
+import blogPosts from '@/data/blog-posts.json';
+
+const BASE_URL = 'https://www.familytravelasia.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // ─── Load destinations ─────────────────────────────────────────
-  const destPath = path.join(process.cwd(), 'public', 'data', 'destinations.json');
-  const raw = fs.readFileSync(destPath, 'utf-8');
-  const destinations: Destination[] = JSON.parse(raw);
+  const destinations: Destination[] = allDestinations as Destination[];
 
-  // ─── Load long-tail index ──────────────────────────────────────
+  // Load long-tail index (silently fail if missing)
   let longTailPages: LongTailPage[] = [];
   try {
-    const ltPath = path.join(process.cwd(), 'public', 'data', 'longtail-index.json');
-    longTailPages = JSON.parse(fs.readFileSync(ltPath, 'utf-8'));
+    // Dynamic import will work at build time
+    longTailPages = require('@/data/longtail-index.json') as LongTailPage[];
   } catch {
-    // long-tail index may not exist yet
+    // long-tail index may not exist — it's in public/data/ not data/
   }
 
-  // ─── Collect unique cities & categories ───────────────────────
-  const seenCities = new Set<string>();
-  const uniqueCities: { slug: string; name: string }[] = [];
-  for (const dest of destinations) {
-    if (!seenCities.has(dest.city)) {
-      seenCities.add(dest.city);
-      uniqueCities.push({ slug: slugify(dest.city), name: dest.city });
-    }
-  }
-
+  // Collect unique cities & categories for potential future use
   const seenCategories = new Set<string>();
   const uniqueCategories: { slug: string; name: string }[] = [];
   for (const dest of destinations) {
     if (!seenCategories.has(dest.category)) {
       seenCategories.add(dest.category);
-      uniqueCategories.push({ slug: slugify(dest.category), name: dest.category });
+      uniqueCategories.push({
+        slug: dest.category.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, ''),
+        name: dest.category,
+      });
     }
   }
 
-  // ─── Get blog posts ────────────────────────────────────────────
-  let blogSlugs: string[] = [];
-  try {
-    const blogDir = path.join(process.cwd(), 'data', 'blog');
-    if (fs.existsSync(blogDir)) {
-      blogSlugs = fs.readdirSync(blogDir)
-        .filter(f => f.endsWith('.json'))
-        .map(f => JSON.parse(fs.readFileSync(path.join(blogDir, f), 'utf-8')))
-        .map((p: any) => p.slug);
-    }
-  } catch {
-    // blog dir may not exist
-  }
-
-  // ─── Entries ──────────────────────────────────────────────────
+  // Get blog slugs from static data
+  const blogSlugs: string[] = (blogPosts as Array<{ slug: string }>)
+    .map(p => p.slug)
+    .filter(Boolean);
 
   const entries: MetadataRoute.Sitemap = [
     // Static pages
@@ -94,12 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/review`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
     { url: `${BASE_URL}/health`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.1 },
 
-    // City pages disabled: /city/[slug] routes are NOT implemented.
-    // Re-enable when app/city/[slug]/page.tsx is created.
-    // Category pages disabled: /category/[slug] routes are NOT implemented.
-    // Re-enable when app/category/[slug]/page.tsx is created.
-
-    // Destination pages
+    // Destination pages (via slug = id for family-travel-directory)
     ...destinations.map((dest) => ({
       url: `${BASE_URL}/destination/${dest.id}`,
       lastModified: new Date(),
