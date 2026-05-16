@@ -61,13 +61,13 @@ function SafetyScoreBar({ rating }: { rating: number }) {
 
   return (
     <div className="flex items-center gap-2">
-      <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+      <div className="flex-1 h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
         <div
           className={`h-full rounded-full ${color}`}
           style={{ width: `${scorePercent}%` }}
         />
       </div>
-      <span className="text-[11px] font-semibold text-gray-700 min-w-[28px] text-right">{rating.toFixed(1)}</span>
+      <span className="text-[11px] font-semibold text-gray-700 dark:text-gray-300 min-w-[28px] text-right">{rating.toFixed(1)}</span>
     </div>
   );
 }
@@ -80,7 +80,7 @@ function PriceDots({ range }: { range: string }) {
         <span
           key={i}
           className={`w-1.5 h-1.5 rounded-full ${
-            i <= dots ? 'bg-teal-500' : 'bg-gray-200'
+            i <= dots ? 'bg-teal-500' : 'bg-gray-200 dark:bg-gray-600'
           }`}
         />
       ))}
@@ -152,13 +152,13 @@ export default function DestinationCard({
     >
       <div
         ref={cardRef}
-        className={`relative bg-white rounded-xl border border-gray-100 overflow-hidden transition-all duration-300
+        className={`relative bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
-          group-hover:shadow-card-hover group-hover:-translate-y-1 group-hover:border-gray-200
-          ${isPremium ? 'ring-1 ring-amber-200/50' : ''}`}
+          group-hover:shadow-card-hover group-hover:-translate-y-1 group-hover:border-gray-200 dark:group-hover:border-gray-500
+          ${isPremium ? 'ring-1 ring-amber-200/50 dark:ring-amber-800/50' : ''}`}
       >
         {/* Image region */}
-        <div className="relative aspect-[4/3] bg-gray-50 overflow-hidden">
+        <div className="relative aspect-[4/3] bg-gray-50 dark:bg-gray-800 overflow-hidden">
           {!imageFailed && imageUrl && !imageUrl.includes('placeholder') ? (
             <img
               src={imageUrl}
@@ -168,7 +168,7 @@ export default function DestinationCard({
               onError={() => setImageFailed(true)}
             />
           ) : (
-            <div className="w-full h-full bg-gradient-to-br from-teal-50 via-teal-100 to-emerald-100 flex items-center justify-center">
+            <div className="w-full h-full bg-gradient-to-br from-teal-50 dark:from-teal-900/50 via-teal-100 dark:via-teal-800/50 to-emerald-100 dark:to-emerald-900/50 flex items-center justify-center">
               <MapPin size={28} className="text-teal-300/60" />
             </div>
           )}
@@ -210,12 +210,12 @@ export default function DestinationCard({
           </div>
 
           {/* Age range badge on image */}
-          <div className="absolute bottom-3 left-3 z-20 bg-white/90 backdrop-blur-sm text-gray-800 text-[10px] font-semibold px-2 py-1 rounded-full shadow-sm">
+          <div className="absolute bottom-3 left-3 z-20 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm text-gray-800 dark:text-gray-200 text-[10px] font-semibold px-2 py-1 rounded-full shadow-sm">
             👶 Ages {ageRange}
           </div>
 
           {/* Price level */}
-          <div className="absolute bottom-3 right-3 z-20 flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-sm">
+          <div className="absolute bottom-3 right-3 z-20 flex items-center gap-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-sm">
             <PriceDots range={priceRange} />
           </div>
         </div>
@@ -224,7 +224,7 @@ export default function DestinationCard({
         <div className="p-4 space-y-2.5">
           {/* Title + badge row */}
           <div className="flex items-start gap-2">
-            <h3 className="text-base font-semibold text-heading leading-snug flex-1 min-w-0 line-clamp-1 group-hover:text-teal-600 transition-colors" title={aeoTagline}>
+            <h3 className="text-base font-semibold text-heading dark:text-gray-100 leading-snug flex-1 min-w-0 line-clamp-1 group-hover:text-teal-600 transition-colors" title={aeoTagline}>
               {name}
             </h3>
             {parentStory && (
@@ -233,12 +233,12 @@ export default function DestinationCard({
           </div>
 
           {/* City + Category */}
-          <div className="flex items-center gap-2 text-xs text-gray-500">
+          <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
             <span className="flex items-center gap-1">
               <MapPin size={10} className="text-teal-500" />
               {city}, {country}
             </span>
-            <span className="text-gray-300">·</span>
+            <span className="text-gray-300 dark:text-gray-600">·</span>
             <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-medium ${cat.cls}`}>
               {cat.emoji} {category.split('&')[0].trim()}
             </span>
@@ -247,35 +247,35 @@ export default function DestinationCard({
           {/* Safety Score Bar */}
           <div className="pt-1">
             <div className="flex items-center justify-between mb-1">
-              <span className="flex items-center gap-1 text-[11px] font-medium text-gray-600">
+              <span className="flex items-center gap-1 text-[11px] font-medium text-gray-600 dark:text-gray-400">
                 <Shield size={10} className="text-teal-500" />
                 Safety Score
               </span>
-              <span className="text-[11px] font-semibold text-gray-700">{safetyRating.toFixed(1)} / 5.0</span>
+              <span className="text-[11px] font-semibold text-gray-700 dark:text-gray-300">{safetyRating.toFixed(1)} / 5.0</span>
             </div>
             <SafetyScoreBar rating={safetyRating} />
           </div>
 
           {/* Smart description snippet */}
           {description && (
-            <p className="text-xs text-body leading-relaxed line-clamp-2">
+            <p className="text-xs text-body dark:text-gray-400 leading-relaxed line-clamp-2">
               {description}
             </p>
           )}
 
           {/* Information Gain: Real Talk tip */}
           {human_verified_tip && (
-            <div className="bg-amber-50/80 border border-amber-200/60 rounded-lg px-3 py-2">
+            <div className="bg-amber-50/80 dark:bg-amber-900/30 dark:border-amber-800/50 border border-amber-200/60 rounded-lg px-3 py-2">
               <div className="flex items-start gap-1.5">
                 <MessageSquare size={11} className="text-amber-600 shrink-0 mt-0.5" />
-                <p className="text-[11px] text-amber-900 leading-snug line-clamp-2">{human_verified_tip}</p>
+                <p className="text-[11px] text-amber-900 dark:text-amber-200 leading-snug line-clamp-2">{human_verified_tip}</p>
               </div>
             </div>
           )}
 
           {/* Metrics row */}
-          <div className="flex items-center justify-between pt-1 border-t border-gray-100">
-            <div className="flex items-center gap-3 text-[11px] text-gray-500">
+          <div className="flex items-center justify-between pt-1 border-t border-gray-100 dark:border-gray-700">
+            <div className="flex items-center gap-3 text-[11px] text-gray-500 dark:text-gray-400">
               <span className="flex items-center gap-1 text-teal-600 font-medium">
                 <Lightbulb size={10} />
                 {tipsCount} {tipsCount === 1 ? 'tip' : 'tips'}

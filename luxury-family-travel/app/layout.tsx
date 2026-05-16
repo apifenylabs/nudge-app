@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import BottomNav from "@/components/BottomNav";
 import Link from "next/link";
@@ -8,8 +8,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import SiteFooter from "@/components/SiteFooter";
 import Script from "next/script";
+import PremiumThemeInitializer from "@/components/PremiumThemeInitializer";
 
-const BASE_URL = 'https://luxuryfamilytravelasia.com';
+const BASE_URL = 'https://luxury-family-travel-asia.vercel.app';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   creator: "Luxury Family Travel Asia",
   publisher: "Luxury Family Travel Asia",
   alternates: {
-    canonical: 'https://luxuryfamilytravelasia.com',
+    canonical: 'https://luxury-family-travel-asia.vercel.app',
   },
   robots: {
     index: true,
@@ -63,9 +64,19 @@ export const metadata: Metadata = {
   category: "travel",
 };
 
+export const viewport: Viewport = {
+  colorScheme: "light dark",
+};
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -75,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} h-full antialiased`}>
       <head>
         {/* Google AdSense */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6046953221141245" crossOrigin="anonymous" />
@@ -87,7 +98,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Luxury Family Travel Asia",
-              "url": "https://luxuryfamilytravelasia.com",
+              "url": "https://luxury-family-travel-asia.vercel.app",
               "description": "61 curated luxury family destinations across Asia. 5-star resorts, private villas, butler service, Michelin dining, and exclusive experiences for discerning families.",
               "sameAs": [],
             }),
@@ -101,13 +112,13 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Luxury Family Travel Asia",
-              "url": "https://luxuryfamilytravelasia.com",
+              "url": "https://luxury-family-travel-asia.vercel.app",
               "description": "61 curated luxury family destinations across Asia. 5-star resorts, private villas, butler service, Michelin dining, and exclusive experiences for discerning families.",
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://luxuryfamilytravelasia.com/search?q={search_term_string}"
+                  "urlTemplate": "https://luxury-family-travel-asia.vercel.app/search?q={search_term_string}"
                 },
                 "query-input": "required name=search_term_string"
               }
@@ -115,7 +126,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full bg-gray-50 text-gray-900 pb-safe pt-safe">
+      <body className="min-h-full bg-warm-white text-charcoal pb-safe pt-safe">
+        {/* Theme color scheme initializer */}
+        <PremiumThemeInitializer />
         {children}
         <SiteFooter />
         <BottomNav />

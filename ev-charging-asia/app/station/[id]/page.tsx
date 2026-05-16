@@ -11,12 +11,19 @@ interface Props {
   params: { id: string };
 }
 
-// Dynamic rendering — pages generated on-demand from the data file at request time
-// SSG tried to generate 1,125 pages at build time, causing memory/timeout issues on Vercel
-export const dynamic = 'force-dynamic';
+// 🧱 Pre-render all 1,125 station pages at build time for instant loads + SEO
+// If a station doesn't exist in build data, dynamicParams: true renders it on-demand.
+// Revalidate via ISR so new/modified stations get picked up periodically.
 export const dynamicParams = true;
+export const revalidate = 3600; // ISR: revalidate every hour
 
 const stations: Station[] = stationsData as Station[];
+
+export async function generateStaticParams() {
+  return stations.map((station) => ({
+    id: station.id,
+  }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const station = stations.find(s => s.id === params.id);

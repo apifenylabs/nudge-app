@@ -1,10 +1,11 @@
 'use client';
 
-import { MapPin, Search, Globe, Menu, X, User, Sparkles, ChevronDown, Heart, Plus, Compass } from 'lucide-react';
+import { MapPin, Search, Globe, Menu, X, User, Sparkles, ChevronDown, Heart, Plus, Compass, Sun, Moon } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { createBrowserSupabaseClient } from '@/lib/supabase-browser';
 import UserMenu from './UserMenu';
+import DarkModeToggle from './DarkModeToggle';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 
 export default function Header() {
@@ -57,7 +58,7 @@ export default function Header() {
               <Compass size={18} className="text-white" />
             </div>
             <div>
-              <span className="font-heading text-lg font-bold text-heading tracking-tight">
+              <span className="font-heading text-lg font-bold text-heading tracking-tight dark:text-gray-100">
                 Family Travel<span className="text-primary-600">.</span>
               </span>
             </div>
@@ -77,31 +78,31 @@ export default function Header() {
 
             {/* For Families dropdown — inline links for now */}
             <div className="relative group">
-              <button className="flex items-center gap-1 text-sm font-medium text-body hover:text-heading transition-colors">
+              <button className="flex items-center gap-1 text-sm font-medium text-body hover:text-heading dark:text-gray-300 dark:hover:text-gray-100 transition-colors">
                 For Families
                 <ChevronDown size={14} />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-30 overflow-hidden">
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-30 overflow-hidden">
                 <div className="py-2">
-                  <Link href="/best-for/babies" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
+                  <Link href="/best-for/babies" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">
                     <span className="text-lg">👶</span>
                     <div>
-                      <div className="font-medium">Best for Babies</div>
-                      <div className="text-xs text-gray-500">Under 2 years old</div>
+                      <div className="font-medium dark:text-gray-200">Best for Babies</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">Under 2 years old</div>
                     </div>
                   </Link>
-                  <Link href="/best-for/teens" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
+                  <Link href="/best-for/teens" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">
                     <span className="text-lg">🧑</span>
                     <div>
-                      <div className="font-medium">Best for Teens</div>
-                      <div className="text-xs text-gray-500">13-18 years old</div>
+                      <div className="font-medium dark:text-gray-200">Best for Teens</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">13-18 years old</div>
                     </div>
                   </Link>
-                  <Link href="/best-for/multigen" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
+                  <Link href="/best-for/multigen" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">
                     <span className="text-lg">👨‍👩‍👧‍👦</span>
                     <div>
-                      <div className="font-medium">Multi-Generational</div>
-                      <div className="text-xs text-gray-500">Grandparents &amp; kids</div>
+                      <div className="font-medium dark:text-gray-200">Multi-Generational</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">Grandparents &amp; kids</div>
                     </div>
                   </Link>
                 </div>
@@ -110,23 +111,26 @@ export default function Header() {
           </nav>
 
           {/* Right side */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
+            {/* Dark Mode Toggle */}
+            <DarkModeToggle />
+            
             {/* Bookmark/Saved */}
             <Link
               href={user ? '/account/saved' : '/auth/login'}
-              className="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-body hover:text-heading hover:bg-gray-100 transition-colors"
+              className="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-body dark:text-gray-300 hover:text-heading dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
             >
               <Heart size={16} />
               <span>Saved</span>
               {bookmarkCount > 0 && (
-                <span className="text-xs px-1.5 py-0.5 rounded-full bg-rose-50 text-rose-600 font-medium ml-1">{bookmarkCount}</span>
+                <span className="text-xs px-1.5 py-0.5 rounded-full bg-rose-50 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400 font-medium ml-1">{bookmarkCount}</span>
               )}
             </Link>
 
             {/* Auth */}
             <div className="hidden md:flex items-center">
               {authLoading ? (
-                <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-primary-500 animate-spin" />
+                <div className="w-8 h-8 rounded-full border-2 border-gray-200 dark:border-gray-600 border-t-primary-500 animate-spin" />
               ) : user ? (
                 <UserMenu user={user} bookmarkCount={bookmarkCount} />
               ) : (
@@ -141,7 +145,7 @@ export default function Header() {
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+              className="lg:hidden min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -153,29 +157,29 @@ export default function Header() {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col gap-1">
-              <Link href="/" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Explore</Link>
-              <Link href="/search" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Destinations</Link>
-              <Link href="/blog" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Blog</Link>
-              <Link href="/best-for/babies" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>👶 Best for Babies</Link>
-              <Link href="/best-for/teens" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>🧑 Best for Teens</Link>
-              <Link href="/best-for/multigen" className="px-4 py-3 text-sm font-medium text-gray-700 hover:bg-primary-50 hover:text-primary-700 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>👨‍👩‍👧‍👦 Multi-Generational</Link>
+              <Link href="/" className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Explore</Link>
+              <Link href="/search" className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Destinations</Link>
+              <Link href="/blog" className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+              <Link href="/best-for/babies" className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>👶 Best for Babies</Link>
+              <Link href="/best-for/teens" className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>🧑 Best for Teens</Link>
+              <Link href="/best-for/multigen" className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>👨‍👩‍👧‍👦 Multi-Generational</Link>
 
-              <div className="mt-4 pt-4 border-t border-gray-100 space-y-2 px-4">
+              <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 space-y-2 px-4">
                 <Link
                   href={user ? '/account/saved' : '/auth/login'}
-                  className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-700 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <Heart size={16} />
                   Saved Places
                   {bookmarkCount > 0 && (
-                    <span className="text-xs px-1.5 py-0.5 rounded-full bg-rose-50 text-rose-600 ml-auto">{bookmarkCount}</span>
+                    <span className="text-xs px-1.5 py-0.5 rounded-full bg-rose-50 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400 ml-auto">{bookmarkCount}</span>
                   )}
                 </Link>
                 {user ? (
                   <Link
                     href="/account"
-                    className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-700 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <User size={16} />

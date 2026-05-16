@@ -2,12 +2,12 @@ import Link from 'next/link';
 import AffiliateLink from './affiliate/AffiliateLink';
 
 const sisterSites = [
+  { name: 'Asia AI Empire', href: 'https://apifeny-ai.vercel.app', description: 'Curated AI tools & agents directory', badge: 'AI Hub' },
+  { name: 'EV Charging Asia', href: 'https://evfamilytravelasia.com', description: 'EV road trips & charging stations across Asia', badge: 'New' },
+  { name: 'Luxury Family Travel Asia', href: 'https://luxury-family-travel-asia.vercel.app', description: 'Premium family getaways & 5-star resorts', badge: 'Luxury' },
   { name: 'Senior-Friendly Travel Asia', href: 'https://senior-friendly-travel-asia.vercel.app', description: 'Accessible travel for older adults' },
-  { name: 'Luxury Family Travel Asia', href: 'https://luxury-family-travel-asia.vercel.app', description: 'Premium family getaways & 5-star resorts' },
-  { name: 'EV Charging Asia', href: 'https://ev-charging-asia.vercel.app', description: 'EV road trips & charging stations across Asia' },
-  { name: 'Apifeny AI', href: 'https://apifeny-ai.vercel.app', description: 'Curated AI tools & agents directory' },
-  { name: 'Nudge', href: 'https://nudge-sigma-liart.vercel.app', description: 'Voice-powered family task management app' },
   { name: 'Kids Activities Asia', href: 'https://kids-activities-asia.vercel.app', description: 'Kid-friendly activities & destinations' },
+  { name: 'Nudge', href: 'https://nudge-sigma-liart.vercel.app', description: 'Voice-powered family task management app' },
   { name: 'Social Beast', href: 'https://social-beast-two.vercel.app', description: 'AI-powered content creation suite' },
 ];
 
@@ -51,8 +51,13 @@ export default function SiteFooter() {
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-accent group-hover:bg-accent-light transition-colors" />
                     <span className="font-medium text-warm-white">{site.name}</span>
-                    <span className="text-sand-300">—</span>
-                    <span className="text-sand-200">{site.description}</span>
+                    {site.badge && (
+                      <span className="text-[9px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded-full bg-accent/20 text-accent-light border border-accent/30">
+                        {site.badge}
+                      </span>
+                    )}
+                    <span className="text-sand-300 hidden sm:inline">—</span>
+                    <span className="text-sand-200 hidden sm:inline">{site.description}</span>
                   </a>
                 </li>
               ))}

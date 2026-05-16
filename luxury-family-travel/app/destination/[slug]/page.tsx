@@ -3,9 +3,9 @@ import { notFound } from 'next/navigation';
 import ClientDestinationPage from './_client';
 import { allDestinations, getDestinationBySlug, type Destination } from '@/lib/data';
 
-const BASE_URL = 'https://luxuryfamilytravelasia.com';
+const BASE_URL = 'https://luxury-family-travel-asia.vercel.app';
 
-// Generate static params for all 520 destinations at build time
+// Generate static params for all destinations at build time
 export function generateStaticParams() {
   return allDestinations.map((d) => ({ slug: d.slug || d.id }));
 }
@@ -41,11 +41,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title,
     description,
     keywords,
-    alternates: { canonical: `${BASE_URL}/destination/${slug}` },
+    alternates: { canonical: `${BASE_URL}/destination/${d.slug || d.id}` },
     openGraph: {
       title,
       description,
-      url: `${BASE_URL}/destination/${slug}`,
+      url: `${BASE_URL}/destination/${d.slug || d.id}`,
       siteName: 'Luxury Family Travel Asia',
       images: [{
         url: d.imageUrl,

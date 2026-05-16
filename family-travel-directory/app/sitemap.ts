@@ -94,21 +94,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/review`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
     { url: `${BASE_URL}/health`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.1 },
 
-    // City pages
-    ...uniqueCities.map((city) => ({
-      url: `${BASE_URL}/city/${city.slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    })),
-
-    // Category pages
-    ...uniqueCategories.map((cat) => ({
-      url: `${BASE_URL}/category/${cat.slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    })),
+    // City pages disabled: /city/[slug] routes are NOT implemented.
+    // Re-enable when app/city/[slug]/page.tsx is created.
+    // Category pages disabled: /category/[slug] routes are NOT implemented.
+    // Re-enable when app/category/[slug]/page.tsx is created.
 
     // Destination pages
     ...destinations.map((dest) => ({

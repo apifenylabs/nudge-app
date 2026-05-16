@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import {
@@ -76,6 +76,8 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
   const [country, setCountry] = useState(urlCountry || 'All');
   const [sort, setSort] = useState('score');
   const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid');
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 36;
 
   // ── Data ──
   const [allDestinations, setAllDestinations] = useState<Destination[]>([]);
@@ -205,6 +207,20 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
     return results;
   }, [allDestinations, query, category, ageRange, priceRange, minSafety, country, sort]);
 
+  // Reset page when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [query, category, ageRange, priceRange, minSafety, country, sort]);
+
+  // Pagination
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const safePage = Math.min(currentPage, totalPages || 1);
+  if (safePage !== currentPage) setCurrentPage(safePage);
+  const paginatedItems = filtered.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
   // Map data
   const mapDestinations = useMemo(() => {
     return filtered.map(d => ({
@@ -238,26 +254,26 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Header — glassmorphism */}
-      <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200/80">
+      <header className="sticky top-0 z-40 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-200/80 dark:border-gray-700/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="h-14 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 min-h-[44px]">
               <Compass size={18} className="text-sky-600" />
-              <span className="font-semibold text-gray-900 text-sm">Family Travel</span>
+              <span className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Family Travel</span>
             </Link>
             <nav className="hidden sm:flex items-center gap-6 text-sm">
-              <Link href="/" className="text-gray-500 hover:text-gray-900 transition-colors">Home</Link>
-              <Link href="/blog" className="text-gray-500 hover:text-gray-900 transition-colors">Blog</Link>
-              <Link href="/search" className="text-gray-900 font-medium transition-colors">Search</Link>
+              <Link href="/" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Home</Link>
+              <Link href="/blog" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Blog</Link>
+              <Link href="/search" className="text-gray-900 dark:text-gray-100 font-medium transition-colors">Search</Link>
             </nav>
             <div className="flex items-center gap-3">
-              <span className="text-xs text-gray-500 hidden sm:block">
+              <span className="text-xs text-gray-500 dark:text-gray-400 hidden sm:block">
                 {meta.totalDestinations} destinations
               </span>
-              <Link href="/account/saved" className="p-2 hover:bg-gray-100 rounded-lg transition-colors min-h-[44px] flex items-center">
-                <Heart size={16} className="text-gray-500" />
+              <Link href="/account/saved" className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors min-h-[44px] flex items-center">
+                <Heart size={16} className="text-gray-500 dark:text-gray-400" />
               </Link>
             </div>
           </div>
@@ -268,19 +284,19 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
         {/* ── Search bar — glassmorphism */}
         <div ref={searchRef} className="relative mb-6">
           <div className="relative">
-            <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+            <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500" />
             <input
               type="text"
               value={query}
               onChange={e => { setQuery(e.target.value); setShowSuggestions(true); }}
               onFocus={() => { if (suggestions.length > 0) setShowSuggestions(true); }}
               placeholder="Search destinations, cities, countries..."
-              className="w-full pl-11 pr-10 py-3.5 rounded-xl border border-white/20 bg-white/70 backdrop-blur-sm text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 shadow-lg"
+              className="w-full pl-11 pr-10 py-3.5 rounded-xl border border-white/20 dark:border-gray-600/20 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 shadow-lg"
             />
             {query && (
               <button
                 onClick={() => { setQuery(''); setSuggestions([]); }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 min-h-[44px] flex items-center"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 min-h-[44px] flex items-center"
               >
                 <X size={16} />
               </button>
@@ -289,28 +305,28 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
 
           {/* Suggestions dropdown — glassmorphism */}
           {showSuggestions && suggestions.length > 0 && (
-            <div className="absolute top-full left-0 right-0 mt-1 bg-white/90 backdrop-blur-lg rounded-xl border border-white/20 shadow-xl overflow-hidden z-30">
+            <div className="absolute top-full left-0 right-0 mt-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg rounded-xl border border-white/20 dark:border-gray-600/20 shadow-xl overflow-hidden z-30">
               {suggestions.map(d => (
                 <Link
                   key={d.id}
                   href={`/destination/${d.id}`}
-                  className="flex items-center gap-3 px-4 py-3 hover:bg-sky-50/50 transition-colors border-b border-gray-100/50 last:border-0"
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-sky-50/50 dark:hover:bg-sky-900/30 transition-colors border-b border-gray-100/50 dark:border-gray-700/50 last:border-0"
                   onClick={() => setShowSuggestions(false)}
                 >
-                  <div className="w-10 h-10 rounded-lg bg-white/70 flex items-center justify-center flex-shrink-0 overflow-hidden border border-white/20">
+                  <div className="w-10 h-10 rounded-lg bg-white/70 dark:bg-gray-800/70 flex items-center justify-center flex-shrink-0 overflow-hidden border border-white/20 dark:border-gray-600/20">
                     {d.imageUrl ? (
                       <img src={d.imageUrl} alt={d.name} className="w-full h-full object-cover" />
                     ) : (
-                      <MapPin size={16} className="text-gray-400" />
+                      <MapPin size={16} className="text-gray-400 dark:text-gray-500" />
                     )}
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="text-sm font-medium text-gray-900 truncate">{d.name}</p>
-                    <p className="text-xs text-gray-500 truncate">{d.city}, {d.country}</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100 truncate">{d.name}</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{d.city}, {d.country}</p>
                   </div>
                   <div className="flex items-center gap-1 text-xs">
                     <Star size={10} className="text-amber-400 fill-amber-400" />
-                    <span className="text-gray-600">{d.safetyRating.toFixed(1)}</span>
+                    <span className="text-gray-600 dark:text-gray-400">{d.safetyRating.toFixed(1)}</span>
                   </div>
                 </Link>
               ))}
@@ -325,8 +341,8 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
               onClick={() => setShowFilters(!showFilters)}
               className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium border transition-colors ${
                 showFilters
-                  ? 'bg-sky-50 border-sky-200 text-sky-700'
-                  : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
+                  ? 'bg-sky-50 dark:bg-sky-900/50 border-sky-200 dark:border-sky-800 text-sky-700 dark:text-sky-300'
+                  : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700'
               }`}
             >
               <SlidersHorizontal size={13} />
@@ -370,7 +386,7 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
               </span>
             )}
             {activeFilterCount > 0 && (
-              <button onClick={clearFilters} className="text-xs text-gray-500 hover:text-gray-700 underline ml-1">
+              <button onClick={clearFilters} className="text-xs text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 underline ml-1">
                 Clear all
               </button>
             )}
@@ -381,23 +397,23 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
             <select
               value={sort}
               onChange={e => setSort(e.target.value)}
-              className="text-xs border border-gray-200 rounded-lg px-2.5 py-2 bg-white focus:outline-none focus:ring-1 focus:ring-sky-500"
+              className="text-xs border border-gray-200 dark:border-gray-700 rounded-lg px-2.5 py-2 bg-white dark:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-sky-500"
             >
               {SORT_OPTIONS.map(o => (
                 <option key={o.value} value={o.value}>{o.label}</option>
               ))}
             </select>
-            <div className="flex items-center border border-gray-200 rounded-lg overflow-hidden bg-white">
+            <div className="flex items-center border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-gray-800">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`p-2 transition-colors ${viewMode === 'grid' ? 'bg-sky-50 text-sky-600' : 'text-gray-400 hover:text-gray-600'}`}
+                className={`p-2 transition-colors ${viewMode === 'grid' ? 'bg-sky-50 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'}`}
                 title="Grid view"
               >
                 <LayoutGrid size={15} />
               </button>
               <button
                 onClick={() => setViewMode('map')}
-                className={`p-2 transition-colors ${viewMode === 'map' ? 'bg-sky-50 text-sky-600' : 'text-gray-400 hover:text-gray-600'}`}
+                className={`p-2 transition-colors ${viewMode === 'map' ? 'bg-sky-50 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'}`}
                 title="Map view"
               >
                 <MapIcon size={15} />
@@ -410,15 +426,15 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
         {showFilters && (
           <>
             {/* Desktop: inline panel */}
-            <div className="hidden sm:block mb-6 bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg p-4 sm:p-6">
+            <div className="hidden sm:block mb-6 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-white/20 dark:border-gray-600/20 rounded-2xl shadow-lg p-4 sm:p-6">
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
                 {/* Category */}
                 <div>
-                  <label className="block text-xs font-medium text-gray-500 mb-1.5">Category</label>
+                  <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1.5">Category</label>
                   <select
                     value={category}
                     onChange={e => setCategory(e.target.value)}
-                    className="w-full text-sm border border-gray-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+                    className="w-full text-sm border border-gray-200 dark:border-gray-700 rounded-xl px-3 py-2.5 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-sky-500/20"
                   >
                     {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
                   </select>
@@ -426,11 +442,11 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
 
                 {/* Age Range */}
                 <div>
-                  <label className="block text-xs font-medium text-gray-500 mb-1.5">Age Range</label>
+                  <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1.5">Age Range</label>
                   <select
                     value={ageRange}
                     onChange={e => setAgeRange(e.target.value)}
-                    className="w-full text-sm border border-gray-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+                    className="w-full text-sm border border-gray-200 dark:border-gray-700 rounded-xl px-3 py-2.5 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-sky-500/20"
                   >
                     {AGE_RANGES.map(a => <option key={a} value={a}>{a === 'All' ? 'All Ages' : `${a} years`}</option>)}
                   </select>
@@ -438,11 +454,11 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
 
                 {/* Price Range */}
                 <div>
-                  <label className="block text-xs font-medium text-gray-500 mb-1.5">Price Range</label>
+                  <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1.5">Price Range</label>
                   <select
                     value={priceRange}
                     onChange={e => setPriceRange(e.target.value)}
-                    className="w-full text-sm border border-gray-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+                    className="w-full text-sm border border-gray-200 dark:border-gray-700 rounded-xl px-3 py-2.5 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-sky-500/20"
                   >
                     {PRICE_RANGES.map(p => <option key={p} value={p}>{p === 'All' ? 'Any Price' : p}</option>)}
                   </select>
@@ -450,11 +466,11 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
 
                 {/* Country */}
                 <div>
-                  <label className="block text-xs font-medium text-gray-500 mb-1.5">Country</label>
+                  <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1.5">Country</label>
                   <select
                     value={country}
                     onChange={e => setCountry(e.target.value)}
-                    className="w-full text-sm border border-gray-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+                    className="w-full text-sm border border-gray-200 dark:border-gray-700 rounded-xl px-3 py-2.5 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-sky-500/20"
                   >
                     <option value="All">All Countries</option>
                     {countries.map(c => <option key={c} value={c}>{c}</option>)}
@@ -463,7 +479,7 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
 
                 {/* Min Safety */}
                 <div>
-                  <label className="block text-xs font-medium text-gray-500 mb-1.5">
+                  <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1.5">
                     Min Safety: {minSafety}★
                   </label>
                   <input
@@ -475,7 +491,7 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
                     onChange={e => setMinSafety(parseFloat(e.target.value))}
                     className="w-full accent-sky-500"
                   />
-                  <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                  <div className="flex justify-between text-[10px] text-gray-400 dark:text-gray-500 mt-0.5">
                     <span>Any</span>
                     <span>5★</span>
                   </div>
@@ -487,9 +503,9 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
             {/* Mobile: slide-in drawer from bottom */}
             <div className="sm:hidden">
               <div className="fixed inset-0 bg-black/40 z-50" onClick={() => setShowFilters(false)} />
-              <div className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-2xl shadow-xl max-h-[80vh] overflow-y-auto animate-slide-up">
-                <div className="sticky top-0 bg-white border-b border-gray-100 px-5 py-4 flex items-center justify-between rounded-t-2xl">
-                  <h3 className="font-semibold text-gray-900 text-sm flex items-center gap-2">
+              <div className="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 rounded-t-2xl shadow-xl max-h-[80vh] overflow-y-auto animate-slide-up">
+                <div className="sticky top-0 bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 px-5 py-4 flex items-center justify-between rounded-t-2xl">
+                  <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm flex items-center gap-2">
                     <SlidersHorizontal size={15} />
                     Filters
                     {activeFilterCount > 0 && (
@@ -498,20 +514,20 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
                       </span>
                     )}
                   </h3>
-                  <button onClick={() => setShowFilters(false)} className="p-1.5 hover:bg-gray-100 rounded-lg">
-                    <X size={18} className="text-gray-500" />
+                  <button onClick={() => setShowFilters(false)} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                    <X size={18} className="text-gray-500 dark:text-gray-400" />
                   </button>
                 </div>
                 <div className="p-5 space-y-5">
                   {/* Category */}
                   <div>
-                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Category</label>
+                    <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Category</label>
                     <div className="flex flex-wrap gap-2">
                       {CATEGORIES.map(c => (
                         <button
                           key={c}
                           onClick={() => setCategory(c)}
-                          className={`px-3.5 py-2 rounded-lg text-sm font-medium border transition-all ${category === c ? 'bg-sky-100 text-sky-700 border-sky-200' : 'bg-white text-gray-600 border-gray-200'}`}
+                          className={`px-3.5 py-2 rounded-lg text-sm font-medium border transition-all ${category === c ? 'bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 border-sky-200 dark:border-sky-800' : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700'}`}
                         >
                           {c}
                         </button>
@@ -521,13 +537,13 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
 
                   {/* Age Range */}
                   <div>
-                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Age Range</label>
+                    <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Age Range</label>
                     <div className="flex flex-wrap gap-2">
                       {AGE_RANGES.map(a => (
                         <button
                           key={a}
                           onClick={() => setAgeRange(a)}
-                          className={`px-3.5 py-2 rounded-lg text-sm font-medium border transition-all ${ageRange === a ? 'bg-emerald-100 text-emerald-700 border-emerald-200' : 'bg-white text-gray-600 border-gray-200'}`}
+                          className={`px-3.5 py-2 rounded-lg text-sm font-medium border transition-all ${ageRange === a ? 'bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800' : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700'}`}
                         >
                           {a === 'All' ? 'All Ages' : `${a} years`}
                         </button>
@@ -537,13 +553,13 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
 
                   {/* Price Range */}
                   <div>
-                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Price Range</label>
+                    <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Price Range</label>
                     <div className="flex flex-wrap gap-2">
                       {PRICE_RANGES.map(p => (
                         <button
                           key={p}
                           onClick={() => setPriceRange(p)}
-                          className={`px-3.5 py-2 rounded-lg text-sm font-medium border transition-all ${priceRange === p ? 'bg-amber-100 text-amber-700 border-amber-200' : 'bg-white text-gray-600 border-gray-200'}`}
+                          className={`px-3.5 py-2 rounded-lg text-sm font-medium border transition-all ${priceRange === p ? 'bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800' : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700'}`}
                         >
                           {p === 'All' ? 'Any Price' : p}
                         </button>
@@ -553,11 +569,11 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
 
                   {/* Country */}
                   <div>
-                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Country</label>
+                    <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Country</label>
                     <select
                       value={country}
                       onChange={e => setCountry(e.target.value)}
-                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 bg-white"
+                      className="w-full border border-gray-200 dark:border-gray-700 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 bg-white dark:bg-gray-800"
                     >
                       <option value="All">All Countries</option>
                       {countries.map(c => <option key={c} value={c}>{c}</option>)}
@@ -566,7 +582,7 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
 
                   {/* Min Safety */}
                   <div>
-                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
                       Min Safety: {minSafety}★
                     </label>
                     <input
@@ -578,7 +594,7 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
                       onChange={e => setMinSafety(parseFloat(e.target.value))}
                       className="w-full accent-sky-500"
                     />
-                    <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                    <div className="flex justify-between text-[10px] text-gray-400 dark:text-gray-500 mt-0.5">
                       <span>Any</span>
                       <span>5★</span>
                     </div>
@@ -588,13 +604,13 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
                   <div className="flex gap-3 pt-2">
                     <button
                       onClick={() => { clearFilters(); setShowFilters(false); }}
-                      className="flex-1 px-4 py-2.5 rounded-xl border border-gray-200 text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors"
+                      className="flex-1 px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                     >
                       Clear All
                     </button>
                     <button
                       onClick={() => setShowFilters(false)}
-                      className="flex-1 px-4 py-2.5 rounded-xl bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-colors"
+                      className="flex-1 px-4 py-2.5 rounded-xl bg-gray-900 dark:bg-gray-700 text-white text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
                     >
                       Apply Filters
                     </button>
@@ -612,17 +628,22 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
         </div>
 
         {/* ── Results info ── */}
-        <div className="flex items-center justify-between mb-4 bg-white/30 backdrop-blur-sm rounded-xl px-4 py-2 border border-white/10">
-          <p className="text-sm text-gray-500">
+        <div className="flex items-center justify-between mb-4 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm rounded-xl px-4 py-2 border border-white/10 dark:border-gray-600/10">
+          <p className="text-sm text-gray-500 dark:text-gray-400">
             {loading ? (
               <span className="flex items-center gap-2">
-                <span className="w-3 h-3 border-2 border-gray-200 border-t-sky-500 rounded-full animate-spin" />
+                <span className="w-3 h-3 border-2 border-gray-200 dark:border-gray-700 border-t-sky-500 rounded-full animate-spin" />
                 Loading...
               </span>
             ) : (
               <>
-                <strong className="text-gray-900">{filtered.length}</strong> destination{filtered.length !== 1 ? 's' : ''} found
-                {query && <span className="text-gray-400"> for &ldquo;{query}&rdquo;</span>}
+                <strong className="text-gray-900 dark:text-gray-100">{filtered.length}</strong> destination{filtered.length !== 1 ? 's' : ''} found
+                {query && <span className="text-gray-400 dark:text-gray-500"> for &ldquo;{query}&rdquo;</span>}
+                {totalPages > 1 && viewMode === 'grid' && (
+                  <span className="text-gray-400 dark:text-gray-500 ml-1">
+                    &mdash; Page {currentPage} of {totalPages}
+                  </span>
+                )}
               </>
             )}
           </p>
@@ -632,61 +653,118 @@ export default function SearchPageContent({ meta }: SearchPageContentProps) {
         {loading ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
             {Array.from({ length: 12 }).map((_, i) => (
-              <div key={i} className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-pulse">
-                <div className="aspect-[4/3] bg-gray-200" />
+              <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden animate-pulse">
+                <div className="aspect-[4/3] bg-gray-200 dark:bg-gray-700" />
                 <div className="p-3 space-y-2">
-                  <div className="h-3 bg-gray-200 rounded w-3/4" />
-                  <div className="h-2 bg-gray-100 rounded w-1/2" />
-                  <div className="h-2 bg-gray-100 rounded w-2/3" />
+                  <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-3/4" />
+                  <div className="h-2 bg-gray-100 dark:bg-gray-600 rounded w-1/2" />
+                  <div className="h-2 bg-gray-100 dark:bg-gray-600 rounded w-2/3" />
                 </div>
               </div>
             ))}
           </div>
         ) : filtered.length === 0 ? (
-          <div className="bg-white rounded-2xl border border-gray-200 p-12 text-center">
-            <Search size={48} className="mx-auto text-gray-300 mb-4" />
-            <h2 className="text-lg font-semibold text-gray-900 mb-2">No destinations found</h2>
-            <p className="text-sm text-gray-500 mb-6">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-12 text-center">
+            <Search size={48} className="mx-auto text-gray-300 dark:text-gray-600 mb-4" />
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">No destinations found</h2>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
               Try adjusting your filters or search term
             </p>
             <button
               onClick={clearFilters}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-xl text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
             >
               <X size={14} />
               Clear all filters
             </button>
           </div>
         ) : viewMode === 'map' ? (
-          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden" style={{ height: '70vh', minHeight: '400px' }}>
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ height: '70vh', minHeight: '400px' }}>
             <SimpleMapContainer
               destinations={mapDestinations}
               height="100%"
             />
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
-            {filtered.map(d => (
-              <DestinationCard
-                key={d.id}
-                id={d.id}
-                name={d.name}
-                city={d.city}
-                country={d.country}
-                category={d.category}
-                ageRange={d.ageRange}
-                safetyRating={d.safetyRating}
-                priceRange={d.priceRange}
-                popularity={d.popularity}
-                description={d.description}
-                imageUrl={d.imageUrl}
-                tipsCount={d.tipsAndTricks?.length || 0}
-                parentStory={false}
-                amenities={d.amenities}
-                human_verified_tip={d.information_gain?.human_verified_tip}
-              />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+              {paginatedItems.map(d => (
+                <DestinationCard
+                  key={d.id}
+                  id={d.id}
+                  name={d.name}
+                  city={d.city}
+                  country={d.country}
+                  category={d.category}
+                  ageRange={d.ageRange}
+                  safetyRating={d.safetyRating}
+                  priceRange={d.priceRange}
+                  popularity={d.popularity}
+                  description={d.description}
+                  imageUrl={d.imageUrl}
+                  tipsCount={d.tipsAndTricks?.length || 0}
+                  parentStory={false}
+                  amenities={d.amenities}
+                  human_verified_tip={d.information_gain?.human_verified_tip}
+                />
+              ))}
+            </div>
+
+            {/* Pagination bar */}
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 mt-8 mb-4">
+                <button
+                  onClick={() => setCurrentPage(1)}
+                  disabled={currentPage === 1}
+                  className="min-h-[44px] px-3 py-1.5 text-xs font-medium rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                >
+                  First
+                </button>
+                <button
+                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                  disabled={currentPage === 1}
+                  className="min-h-[44px] px-3 py-1.5 text-xs font-medium rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                >
+                  Previous
+                </button>
+
+                {Array.from({ length: totalPages }, (_, i) => i + 1)
+                  .filter(p => p === 1 || p === totalPages || Math.abs(p - currentPage) <= 2)
+                  .map((p, idx, arr) => (
+                    <React.Fragment key={p}>
+                      {idx > 0 && arr[idx - 1] !== p - 1 && (
+                        <span className="text-xs text-gray-400 dark:text-gray-500 px-1">...</span>
+                      )}
+                      <button
+                        onClick={() => setCurrentPage(p)}
+                        className={`min-h-[44px] px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+                          p === currentPage
+                            ? 'bg-sky-500 text-white'
+                            : 'border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700'
+                        }`}
+                      >
+                        {p}
+                      </button>
+                    </React.Fragment>
+                  ))}
+
+                <button
+                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                  disabled={currentPage === totalPages}
+                  className="min-h-[44px] px-3 py-1.5 text-xs font-medium rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                >
+                  Next
+                </button>
+                <button
+                  onClick={() => setCurrentPage(totalPages)}
+                  disabled={currentPage === totalPages}
+                  className="min-h-[44px] px-3 py-1.5 text-xs font-medium rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                >
+                  Last
+                </button>
+              </div>
+            )}
+          </>
         )}
       </main>
     </div>

@@ -17,6 +17,7 @@ import MustBookThisMonth from '@/components/MustBookThisMonth';
 import FlywheelCTA from '@/components/FlywheelCTA';
 import FeaturedReviews from '@/components/FeaturedReviews';
 import { computeSimpleScore } from '@/lib/scoring';
+import EditorBadge from '@/components/EditorBadge';
 
 // ─── Types ──────────────────────────────────────────────────────
 interface Destination {
@@ -60,7 +61,7 @@ const categories = [
 
 const defaultCities = ["Bali", "Phuket", "Maldives", "Singapore", "Tokyo", "Hong Kong", "Kyoto", "Langkawi", "Hanoi", "Siem Reap", "Bangkok"];
 
-const BASE_URL = 'https://luxuryfamilytravelasia.com';
+const BASE_URL = 'https://luxury-family-travel-asia.vercel.app';
 
 // ─── Popular luxury countries ───
 const POPULAR_COUNTRIES: { name: string; flag: string }[] = [
@@ -146,8 +147,8 @@ function SectionHeading({ title, subtitle, linkHref, linkText }: { title: string
   return (
     <div className="flex items-end justify-between mb-4">
       <div>
-        <h2 className="text-xl sm:text-2xl font-bold text-navy">{title}</h2>
-        {subtitle && <p className="text-navy-light/70 text-sm mt-0.5">{subtitle}</p>}
+        <h2 className="text-xl sm:text-2xl font-bold dark:text-cream text-navy luxury-serif-heading">{title}</h2>
+        {subtitle && <p className="dark:text-cream/60 text-navy-light/70 text-sm mt-0.5">{subtitle}</p>}
       </div>
       {linkHref && linkText && (
         <Link href={linkHref} className="flex items-center gap-1 text-sm font-medium text-gold hover:text-gold-dark transition-colors whitespace-nowrap">
@@ -477,6 +478,10 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
         className={`transition-all duration-700 ${visibleSections.has('trending-now') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
       >
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
+          <SectionHeading
+            title={<span className="flex items-center gap-2"><Sparkles size={20} className="text-gold" /> Trending Now</span>}
+            subtitle="Asia's most sought-after luxury family experiences this season"
+          />
           <TrendingNow destinations={topPicks.slice(0, 10)} />
         </section>
       </div>
@@ -487,6 +492,10 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
         className={`transition-all duration-700 ${visibleSections.has('must-book') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
       >
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
+          <SectionHeading
+            title={<span className="flex items-center gap-2"><Award size={20} className="text-gold" /> Must-Book This Month</span>}
+            subtitle="Our editors' top picks for luxury family travel this season"
+          />
           <MustBookThisMonth
             destinations={topPicks.slice(0, 6).map((d, i) => ({
               ...d,
@@ -522,10 +531,25 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
                   {index + 1}
                 </div>
 
-                {/* Editorial badge */}
+                {/* Editorial badge — Cosme-style gold */}
                 {index === 0 && (
-                  <div className="absolute top-0 right-0 z-10 px-2.5 py-1 bg-gradient-to-r from-amber-500 to-rose-500 text-white text-[9px] font-bold uppercase tracking-wider rounded-bl-xl shadow-lg">
-                    Editor&apos;s Choice
+                  <div className="absolute top-0 right-0 z-10">
+                    <EditorBadge variant="editor-pick" label="Editor&apos;s Pick" />
+                  </div>
+                )}
+                {index === 1 && (
+                  <div className="absolute top-0 right-0 z-10">
+                    <EditorBadge variant="exclusive" label="Top Rated" />
+                  </div>
+                )}
+                {index === 2 && (
+                  <div className="absolute top-0 right-0 z-10">
+                    <EditorBadge variant="curated" label="Curated" />
+                  </div>
+                )}
+                {index === 3 && (
+                  <div className="absolute top-0 right-0 z-10">
+                    <EditorBadge variant="top-rated" label="Premium" />
                   </div>
                 )}
 
@@ -946,20 +970,70 @@ export default function Home({ meta, blogPosts }: { meta?: { totalDestinations: 
               <a href="/contact" className="hover:text-gold transition-colors">Contact</a>
             </div>
           </div>
-          <div className="mt-6 pt-6 border-t border-gold/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-cream/40">
-            <span className="text-cream/60 font-medium">Sister Sites:</span>
-            <a href="https://www.familytravelasia.com" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
-              🌏 Family Travel Asia
-            </a>
-            <a href="https://ev-charging-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
-              ⚡ EV Charging Asia
-            </a>
-            <a href="https://apifeny-ai.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">
-              🤖 AI Tools Directory
-            </a>
+
+          {/* Gold divider */}
+          <div className="mt-6 pt-6 border-t border-gold/10">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-cream/40">
+              <span className="text-cream/60 font-medium tracking-wide uppercase text-xs">Our Network</span>
+              <a href="https://www.familytravelasia.com" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
+                🌏 Family Travel Asia
+              </a>
+              <a href="https://senior-friendly-travel-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">
+                🧓 Senior-Friendly Travel
+              </a>
+              <a href="https://ev-charging-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
+                ⚡ EV Charging Asia
+              </a>
+              <a href="https://apifeny-ai.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">
+                🤖 AI Tools Directory
+              </a>
+              <a href="https://kids-activities-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                🎨 Kids Activities Asia
+              </a>
+              <a href="https://hike-japan.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">
+                🏔️ Hike Japan
+              </a>
+              <a href="https://dog-friendly-japan.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                🐕 Dog-Friendly Japan
+              </a>
+              <a href="https://japan-itineraries.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-rose-400 transition-colors">
+                🗾 Japan Itineraries
+              </a>
+            </div>
           </div>
+
+          {/* Affiliate booking bar */}
+          <div className="mt-5 pt-5 border-t border-gold/10">
+            <p className="text-xs text-cream/30 text-center mb-3 uppercase tracking-wider">Plan Your Trip</p>
+            <div className="flex flex-wrap justify-center gap-3 text-xs">
+              <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 rounded-full border border-gold/20 text-cream/50 hover:text-gold hover:border-gold/40 transition-all">
+                🏨 Hotels
+              </a>
+              <a href="https://www.klook.com" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 rounded-full border border-gold/20 text-cream/50 hover:text-gold hover:border-gold/40 transition-all">
+                🎫 Activities
+              </a>
+              <a href="https://www.viator.com" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 rounded-full border border-gold/20 text-cream/50 hover:text-gold hover:border-gold/40 transition-all">
+                🏛️ Tours
+              </a>
+              <a href="https://www.getyourguide.com" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 rounded-full border border-gold/20 text-cream/50 hover:text-gold hover:border-gold/40 transition-all">
+                🌟 Experiences
+              </a>
+              <a href="https://www.expedia.com" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 rounded-full border border-gold/20 text-cream/50 hover:text-gold hover:border-gold/40 transition-all">
+                🚗 Car Rental
+              </a>
+            </div>
+          </div>
+
           <div className="mt-4 flex justify-center">
             <p className="text-sm text-cream/30">&copy; 2026 Luxury Family Travel Asia. Curated for discerning families.</p>
+          </div>
+
+          {/* Affiliate Disclosure */}
+          <div className="mt-4 text-center">
+            <p className="text-[10px] text-cream/20">
+              Some links on this site are affiliate links. We may earn a commission at no extra cost to you.
+              As a Klook and Booking.com partner, we may earn from qualifying bookings.
+            </p>
           </div>
         </div>
       </footer>

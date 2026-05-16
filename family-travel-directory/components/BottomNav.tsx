@@ -50,7 +50,7 @@ export default function BottomNav() {
 
   return (
     <nav
-      className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-t border-gray-100 shadow-[0_-1px_10px_rgba(0,0,0,0.05)]"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-t border-gray-100 dark:border-gray-700 shadow-[0_-1px_10px_rgba(0,0,0,0.05)]"
       style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
     >
       <div className="flex items-center justify-around h-16 max-w-lg mx-auto px-2">
@@ -64,13 +64,13 @@ export default function BottomNav() {
               key={item.label}
               href={item.href}
               className={`flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] rounded-xl px-2 transition-colors ${
-                isActive ? 'text-teal-600' : 'text-gray-400 hover:text-gray-600'
+                isActive ? 'text-teal-600' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
               }`}
             >
-              <div className={`p-1.5 rounded-lg transition-colors ${isActive ? 'bg-teal-50' : ''}`}>
+              <div className={`p-1.5 rounded-lg transition-colors ${isActive ? 'bg-teal-50 dark:bg-teal-900/30' : ''}`}>
                 <item.icon active={isActive} />
               </div>
-              <span className={`text-[10px] leading-tight font-medium ${isActive ? 'text-teal-600 font-semibold' : 'text-gray-400'}`}>
+              <span className={`text-[10px] leading-tight font-medium ${isActive ? 'text-teal-600 font-semibold' : 'text-gray-400 dark:text-gray-500'}`}>
                 {item.label}
               </span>
             </Link>

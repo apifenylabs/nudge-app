@@ -67,6 +67,19 @@ function buildAliases(): Record<string, string> {
     }
   }
   
+  // Third pass: set bare city name -> premium slug for that city
+  // This enables /destination/tokyo to resolve to "tokyo-family-activity-001"
+  for (const d of allDestinations) {
+    if (!d.slug) continue;
+    const city = (d.city || '').toLowerCase().replace(/\s+/g, '-');
+    if (!city) continue;
+    // Prefer premium or higher safety-rating for bare city alias
+    const isPremium = /(aman|four seasons|mandarin|soneva|velaa|trisara|ritz|peninsula|st. regis|six senses)/i.test(d.name);
+    if (!aliases[city] || isPremium) {
+      aliases[city] = d.slug;
+    }
+  }
+  
   return aliases;
 }
 

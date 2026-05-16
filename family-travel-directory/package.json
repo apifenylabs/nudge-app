@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "generate-blog-data": "python3 scripts/generate-blog-data.py",
+    "generate-blog-data": "node scripts/generate-blog-data.mjs",
     "build": "npm run generate-blog-data && next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",

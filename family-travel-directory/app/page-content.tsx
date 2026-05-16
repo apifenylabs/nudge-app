@@ -102,10 +102,10 @@ function SectionHeading({ title, subtitle, linkHref, linkText, gold }: {
   return (
     <div className="flex items-end justify-between mb-6">
       <div>
-        <h2 className={`text-2xl sm:text-3xl font-heading font-bold ${gold ? 'bg-gradient-to-r from-premium-gold to-amber-600 bg-clip-text text-transparent' : 'text-heading'}`}>
+        <h2 className={`text-2xl sm:text-3xl font-heading font-bold ${gold ? 'bg-gradient-to-r from-premium-gold to-amber-600 bg-clip-text text-transparent' : 'text-heading dark:text-gray-100'}`}>
           {title}
         </h2>
-        {subtitle && <p className="text-body text-sm mt-1">{subtitle}</p>}
+        {subtitle && <p className="text-body dark:text-gray-400 text-sm mt-1">{subtitle}</p>}
       </div>
       {linkHref && linkText && (
         <Link href={linkHref} className="flex items-center gap-1 text-sm font-medium text-teal-600 hover:text-teal-700 transition-colors whitespace-nowrap group">
@@ -126,17 +126,17 @@ function Carousel({ children }: { children: React.ReactNode }) {
     <div className="group/carousel relative">
       <button
         onClick={() => scroll('left')}
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 shadow-md border border-gray-200 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity hover:bg-white hover:shadow-lg"
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 dark:bg-gray-800/90 shadow-md border border-gray-200 dark:border-gray-700 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity hover:bg-white dark:hover:bg-gray-800 hover:shadow-lg"
         aria-label="Scroll left"
       >
-        <ChevronLeft size={18} className="text-gray-700" />
+        <ChevronLeft size={18} className="text-gray-700 dark:text-gray-300" />
       </button>
       <button
         onClick={() => scroll('right')}
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 shadow-md border border-gray-200 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity hover:bg-white hover:shadow-lg"
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 dark:bg-gray-800/90 shadow-md border border-gray-200 dark:border-gray-700 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity hover:bg-white dark:hover:bg-gray-800 hover:shadow-lg"
         aria-label="Scroll right"
       >
-        <ChevronRight size={18} className="text-gray-700" />
+        <ChevronRight size={18} className="text-gray-700 dark:text-gray-300" />
       </button>
       <div
         ref={ref}
@@ -155,7 +155,7 @@ function CarouselSlide({ children }: { children: React.ReactNode }) {
 
 function StatsBar() {
   return (
-    <section className="bg-white border-y border-gray-100">
+    <section className="bg-white dark:bg-gray-900 border-y border-gray-100 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           <div className="text-center">
@@ -344,12 +344,12 @@ export default function Home({ meta, blogPosts }: {
   const loadingSkeleton = (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">
       {Array.from({ length: 10 }).map((_, i) => (
-        <div key={i} className="bg-white rounded-xl border border-gray-100 overflow-hidden animate-pulse">
-          <div className="aspect-[4/3] bg-gray-100" />
+        <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 overflow-hidden animate-pulse">
+          <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-700" />
           <div className="p-4 space-y-3">
-            <div className="h-4 bg-gray-100 rounded w-3/4" />
-            <div className="h-3 bg-gray-50 rounded w-1/2" />
-            <div className="h-3 bg-gray-50 rounded w-2/3" />
+            <div className="h-4 bg-gray-100 dark:bg-gray-700 rounded w-3/4" />
+            <div className="h-3 bg-gray-50 dark:bg-gray-700 rounded w-1/2" />
+            <div className="h-3 bg-gray-50 dark:bg-gray-700 rounded w-2/3" />
           </div>
         </div>
       ))}
@@ -357,7 +357,7 @@ export default function Home({ meta, blogPosts }: {
   );
 
   return (
-    <div className="min-h-screen bg-surface">
+    <div className="min-h-screen bg-surface dark:bg-gray-900">
       {/* ─── HERO ─── */}
       <HeroSection
         searchQuery={searchQuery}
@@ -436,8 +436,8 @@ export default function Home({ meta, blogPosts }: {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
               {mustBook.map((d, i) => (
                 <Link key={d.id} href={`/destination/${d.id}`} className="group relative">
-                  <div className="bg-white rounded-xl border border-amber-100 overflow-hidden transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
-                    <div className="relative aspect-[4/3] bg-gray-50 overflow-hidden">
+                  <div className="bg-white dark:bg-gray-800 rounded-xl border border-amber-100 dark:border-amber-900/50 overflow-hidden transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
+                    <div className="relative aspect-[4/3] bg-gray-50 dark:bg-gray-800 overflow-hidden">
                       <img src={d.imageUrl} alt={d.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
@@ -448,14 +448,14 @@ export default function Home({ meta, blogPosts }: {
                       </div>
 
                       {/* Rank number */}
-                      <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-premium-gold font-bold text-xs px-2 py-1 rounded-full shadow">
+                      <div className="absolute top-3 right-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm text-premium-gold font-bold text-xs px-2 py-1 rounded-full shadow">
                         #{i + 1} Pick
                       </div>
                     </div>
                     <div className="p-4">
-                      <h3 className="font-heading font-bold text-heading text-base mb-1 group-hover:text-teal-600 transition-colors">{d.name}</h3>
-                      <p className="text-xs text-body mb-2">{d.city}, {d.country}</p>
-                      <p className="text-xs text-amber-700 bg-amber-50 border border-amber-100 rounded-lg px-3 py-2 leading-relaxed">
+                      <h3 className="font-heading font-bold text-heading dark:text-gray-100 text-base mb-1 group-hover:text-teal-600 transition-colors">{d.name}</h3>
+                      <p className="text-xs text-body dark:text-gray-400 mb-2">{d.city}, {d.country}</p>
+                      <p className="text-xs text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-900/30 border border-amber-100 dark:border-amber-800/50 rounded-lg px-3 py-2 leading-relaxed">
                         💡 {MUST_BOOK_NOTES[d.id] || 'Top pick this month'}
                       </p>
                     </div>
@@ -481,15 +481,15 @@ export default function Home({ meta, blogPosts }: {
                 <Link
                   key={cat.name}
                   href={`/search?category=${encodeURIComponent(cat.name)}`}
-                  className="group relative bg-white rounded-xl border border-gray-100 p-6 hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-300"
+                  className="group relative bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 p-6 hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-300"
                 >
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-xl bg-teal-50 text-teal-600 group-hover:bg-teal-100 transition-colors">
                       <cat.icon size={22} />
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-heading text-sm mb-0.5">{cat.name}</h3>
-                      <p className="text-xs text-body">{cat.desc}</p>
+                      <h3 className="font-heading font-bold text-heading dark:text-gray-100 text-sm mb-0.5">{cat.name}</h3>
+                      <p className="text-xs text-body dark:text-gray-400">{cat.desc}</p>
                       <span className="text-xs font-medium text-teal-600 mt-1 inline-block">{count} destinations</span>
                     </div>
                   </div>
@@ -653,7 +653,7 @@ export default function Home({ meta, blogPosts }: {
 
       {/* ─── BLOG PREVIEW ─── */}
       {blogPosts && blogPosts.length > 0 && (
-        <section className="bg-white border-y border-gray-100" id="blog-section">
+        <section className="bg-white dark:bg-gray-800 border-y border-gray-100 dark:border-gray-700" id="blog-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <SectionHeading
               title="Latest from Our Blog"
@@ -666,10 +666,10 @@ export default function Home({ meta, blogPosts }: {
                 <a
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-card-hover hover:border-gray-200 transition-all duration-300"
+                  className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-card-hover hover:border-gray-200 dark:hover:border-gray-500 transition-all duration-300"
                 >
                   <div className="p-6">
-                    <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                    <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400 mb-3">
                       <span className="flex items-center gap-1">
                         <Calendar size={12} />
                         {post.date}
@@ -679,17 +679,17 @@ export default function Home({ meta, blogPosts }: {
                         {post.readingTime}
                       </span>
                     </div>
-                    <h3 className="font-heading text-lg font-bold text-heading group-hover:text-teal-600 transition-colors mb-2 line-clamp-2">
+                    <h3 className="font-heading text-lg font-bold text-heading dark:text-gray-100 group-hover:text-teal-600 transition-colors mb-2 line-clamp-2">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-body line-clamp-3 mb-4">
+                    <p className="text-sm text-body dark:text-gray-400 line-clamp-3 mb-4">
                       {post.excerpt}
                     </p>
                     <div className="flex flex-wrap gap-1.5">
                       {post.tags.slice(0, 3).map((tag) => (
                         <span
                           key={tag}
-                          className="inline-flex items-center gap-1 px-2.5 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                          className="inline-flex items-center gap-1 px-2.5 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded-full text-xs"
                         >
                           <Tag size={10} />
                           {tag.replace(/-/g, ' ')}
@@ -741,24 +741,44 @@ export default function Home({ meta, blogPosts }: {
       </section>
 
       {/* ─── CROSS-LINKS ─── */}
-      <section className="bg-white border-t border-gray-100">
+      <section className="bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center mb-6">
+            <h3 className="font-heading text-xl font-bold text-heading dark:text-gray-100 mb-1">Explore Our Network</h3>
+            <p className="text-sm text-body dark:text-gray-400">More resources for your family&apos;s Asia journey</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="https://luxury-family-travel-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="group bg-gradient-to-br from-amber-50 to-amber-100/50 rounded-xl p-6 border border-amber-200/50 hover:shadow-lg transition-all">
+            <a href="https://luxury-family-travel-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="group bg-gradient-to-br from-amber-50 dark:from-amber-900/30 to-amber-100/50 dark:to-amber-800/30 rounded-xl p-6 border border-amber-200/50 dark:border-amber-800/50 hover:shadow-lg transition-all">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">✨</span>
-                <h3 className="font-heading font-bold text-heading group-hover:text-amber-700 transition-colors">Looking for Something More Exclusive?</h3>
+                <h3 className="font-heading font-bold text-heading dark:text-gray-100 group-hover:text-amber-700 transition-colors">Looking for Something More Exclusive?</h3>
               </div>
-              <p className="text-sm text-body mb-3">Discover our curated selection of 5-star luxury family resorts across Asia. VIP experiences, private villas, and white-glove service.</p>
+              <p className="text-sm text-body dark:text-gray-400 mb-3">Discover our curated selection of 5-star luxury family resorts across Asia. VIP experiences, private villas, and white-glove service.</p>
               <span className="text-sm font-semibold text-amber-600 group-hover:text-amber-700">Explore Luxury Collection →</span>
             </a>
-            <a href="https://ev-charging-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="group bg-gradient-to-br from-emerald-50 to-teal-100/50 rounded-xl p-6 border border-emerald-200/50 hover:shadow-lg transition-all">
+            <a href="https://ev-charging-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="group bg-gradient-to-br from-emerald-50 dark:from-emerald-900/30 to-teal-100/50 dark:to-teal-800/30 rounded-xl p-6 border border-emerald-200/50 dark:border-emerald-800/50 hover:shadow-lg transition-all">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">⚡</span>
-                <h3 className="font-heading font-bold text-heading group-hover:text-emerald-700 transition-colors">Planning a Road Trip with the Family?</h3>
+                <h3 className="font-heading font-bold text-heading dark:text-gray-100 group-hover:text-emerald-700 transition-colors">Planning a Road Trip with the Family?</h3>
               </div>
-              <p className="text-sm text-body mb-3">Find EV charging stations across Asia for your family adventure. Perfect for families driving between destinations.</p>
+              <p className="text-sm text-body dark:text-gray-400 mb-3">Find EV charging stations across Asia for your family adventure. Perfect for families driving between destinations.</p>
               <span className="text-sm font-semibold text-emerald-600 group-hover:text-emerald-700">Find EV Charging →</span>
+            </a>
+            <a href="https://apifeny-ai.vercel.app" target="_blank" rel="noopener noreferrer" className="group bg-gradient-to-br from-purple-50 dark:from-purple-900/30 to-violet-100/50 dark:to-violet-800/30 rounded-xl p-6 border border-purple-200/50 dark:border-purple-800/50 hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🤖</span>
+                <h3 className="font-heading font-bold text-heading dark:text-gray-100 group-hover:text-purple-700 transition-colors">Supercharge Your Workflow with AI</h3>
+              </div>
+              <p className="text-sm text-body dark:text-gray-400 mb-3">Curated directory of AI tools and agents to help you plan faster, write better, and automate the busywork.</p>
+              <span className="text-sm font-semibold text-purple-600 group-hover:text-purple-700">Visit AI Hub →</span>
+            </a>
+            <a href="https://senior-friendly-travel-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="group bg-gradient-to-br from-sky-50 dark:from-sky-900/30 to-blue-100/50 dark:to-blue-800/30 rounded-xl p-6 border border-sky-200/50 dark:border-sky-800/50 hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">👴</span>
+                <h3 className="font-heading font-bold text-heading dark:text-gray-100 group-hover:text-sky-700 transition-colors">Traveling with Grandparents?</h3>
+              </div>
+              <p className="text-sm text-body dark:text-gray-400 mb-3">Accessible travel guides for older adults and multi-generational family trips across Asia. Senior-friendly destinations and tips.</p>
+              <span className="text-sm font-semibold text-sky-600 group-hover:text-sky-700">Senior-Friendly Travel →</span>
             </a>
           </div>
         </div>
@@ -777,24 +797,24 @@ export default function Home({ meta, blogPosts }: {
       )}
 
       {/* ─── FOOTER ─── */}
-      <footer className="border-t border-gray-100 bg-white">
+      <footer className="border-t border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
               <div className="flex items-center gap-2 mb-3">
                 <Compass size={18} className="text-teal-600" />
-                <span className="font-heading font-bold text-heading text-lg">Family Travel<span className="text-teal-600">.</span></span>
+                <span className="font-heading font-bold text-heading dark:text-gray-100 text-lg">Family Travel<span className="text-teal-600">.</span></span>
               </div>
-              <p className="text-sm text-body max-w-sm">Curated by parents, for parents. We find the best family-friendly destinations across Asia so you don&apos;t have to.</p>
+              <p className="text-sm text-body dark:text-gray-400 max-w-sm">Curated by parents, for parents. We find the best family-friendly destinations across Asia so you don&apos;t have to.</p>
               <div className="flex items-center gap-3 mt-4">
-                <a href="#" className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-500 hover:text-teal-600 hover:bg-teal-50 transition-colors"><Twitter size={15} /></a>
-                <a href="#" className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-500 hover:text-teal-600 hover:bg-teal-50 transition-colors"><Instagram size={15} /></a>
-                <a href="#" className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-500 hover:text-teal-600 hover:bg-teal-50 transition-colors"><Facebook size={15} /></a>
+                <a href="#" className="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/30 transition-colors"><Twitter size={15} /></a>
+                <a href="#" className="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/30 transition-colors"><Instagram size={15} /></a>
+                <a href="#" className="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/30 transition-colors"><Facebook size={15} /></a>
               </div>
             </div>
             <div>
-              <h4 className="font-semibold text-sm text-heading mb-3">Explore</h4>
-              <div className="flex flex-col gap-2 text-sm text-body">
+              <h4 className="font-semibold text-sm text-heading dark:text-gray-100 mb-3">Explore</h4>
+              <div className="flex flex-col gap-2 text-sm text-body dark:text-gray-400">
                 <Link href="/search" className="hover:text-teal-600 transition-colors">All Destinations</Link>
                 <Link href="/top10" className="hover:text-teal-600 transition-colors">Top 10</Link>
                 <Link href="/best-for/babies" className="hover:text-teal-600 transition-colors">Best for Babies</Link>
@@ -802,8 +822,8 @@ export default function Home({ meta, blogPosts }: {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold text-sm text-heading mb-3">Company</h4>
-              <div className="flex flex-col gap-2 text-sm text-body">
+              <h4 className="font-semibold text-sm text-heading dark:text-gray-100 mb-3">Company</h4>
+              <div className="flex flex-col gap-2 text-sm text-body dark:text-gray-400">
                 <Link href="/about" className="hover:text-teal-600 transition-colors">About</Link>
                 <Link href="/blog" className="hover:text-teal-600 transition-colors">Blog</Link>
                 <Link href="/privacy" className="hover:text-teal-600 transition-colors">Privacy</Link>
@@ -811,9 +831,9 @@ export default function Home({ meta, blogPosts }: {
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-100 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-gray-400">&copy; 2026 Family Travel Asia. Curated by parents, for parents.</p>
-            <p className="text-xs text-gray-400">Made with 💚 for families exploring Asia</p>
+          <div className="border-t border-gray-100 dark:border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-gray-400 dark:text-gray-500">&copy; 2026 Family Travel Asia. Curated by parents, for parents.</p>
+            <p className="text-xs text-gray-400 dark:text-gray-500">Made with 💚 for families exploring Asia</p>
           </div>
         </div>
       </footer>

@@ -149,59 +149,26 @@ body {
 }
 
 /* ─── DARK MODE ─────────────────────────────────────────────────── */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0F172A;
-    --foreground: #E2E8F0;
-    --card-bg: #1E293B;
-    --card-shadow: 0 1px 3px 0 rgba(0,0,0,0.3), 0 1px 2px -1px rgba(0,0,0,0.2);
-    --card-shadow-hover: 0 10px 25px -5px rgba(0,0,0,0.4), 0 4px 10px -6px rgba(0,0,0,0.2);
-    --primary-gradient: linear-gradient(135deg, #6B9E73 0%, #5A9E6E 100%);
-    --accent-gradient: linear-gradient(135deg, #FBBF24 0%, #D4A843 100%);
-    --premium-gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
-    --text-heading: #F1F5F9;
-    --text-body: #CBD5E1;
-    --vibe-teal: #5FA8A5;
-    --vibe-coral: #FB7185;
-    --vibe-amber: #FBBF24;
-    --vibe-plum: #A78BFA;
-    --vibe-sky: #38BDF8;
-    --vibe-accent: #5FA8A5;
-    --vibe-subtle: #1E293B;
-  }
-
-  body {
-    background-color: var(--background);
-    color: var(--text-body);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--text-heading);
-  }
-
-  /* Override common bg-white and bg-gray-50 patterns in dark mode */
-  .bg-white,
-  .bg-gray-50,
-  .bg-white\/70,
-  .bg-white\/80,
-  .bg-white\/95,
-  .bg-gray-50\/60,
-  .bg-white\/\[\.\d+\] {
-    background-color: var(--card-bg);
-  }
-
-  .text-gray-900 { color: #F1F5F9; }
-  .text-gray-800 { color: #E2E8F0; }
-  .text-gray-700 { color: #CBD5E1; }
-  .text-gray-600 { color: #94A3B8; }
-  .text-gray-500 { color: #64748B; }
-  .text-gray-400 { color: #475569; }
-  .text-gray-300 { color: #334155; }
-
-  .border-gray-100 { border-color: rgba(51, 65, 85, 0.4); }
-  .border-gray-200 { border-color: rgba(51, 65, 85, 0.6); }
-  .border-gray-300 { border-color: rgba(51, 65, 85, 0.8); }
-  .shadow-sm, .shadow, .shadow-md, .shadow-lg { box-shadow: var(--card-shadow); }
+/* Support BOTH class-based toggle AND system prefers-color-scheme */
+/* Order: .dark class first (highest priority), then system preference */
+html.dark {
+  --background: #0F172A;
+  --foreground: #E2E8F0;
+  --card-bg: #1E293B;
+  --card-shadow: 0 1px 3px 0 rgba(0,0,0,0.3), 0 1px 2px -1px rgba(0,0,0,0.2);
+  --card-shadow-hover: 0 10px 25px -5px rgba(0,0,0,0.4), 0 4px 10px -6px rgba(0,0,0,0.2);
+  --primary-gradient: linear-gradient(135deg, #6B9E73 0%, #5A9E6E 100%);
+  --accent-gradient: linear-gradient(135deg, #FBBF24 0%, #D4A843 100%);
+  --premium-gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  --text-heading: #F1F5F9;
+  --text-body: #CBD5E1;
+  --vibe-teal: #5FA8A5;
+  --vibe-coral: #FB7185;
+  --vibe-amber: #FBBF24;
+  --vibe-plum: #A78BFA;
+  --vibe-sky: #38BDF8;
+  --vibe-accent: #5FA8A5;
+  --vibe-subtle: #1E293B;
 }
 
 h1, h2, h3, h4, h5, h6 {

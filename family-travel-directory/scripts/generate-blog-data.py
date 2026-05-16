@@ -18,13 +18,11 @@ posts = []
 for f in sorted(glob.glob(os.path.join(BLOG_DIR, '*.json'))):
     with open(f) as fh:
         raw = json.load(fh)
-    # Strip any fields not in the BlogPost interface
     clean = {k: v for k, v in raw.items() if k in ALLOWED_FIELDS}
     posts.append(clean)
 
 posts.sort(key=lambda p: p.get('date', ''), reverse=True)
 
-# Detect the related field name from data — check all posts, not just the first
 all_have_destinations = all('relatedDestinations' in p for p in posts)
 all_have_stations = all('relatedStations' in p for p in posts)
 any_has_destinations = any('relatedDestinations' in p for p in posts)
@@ -33,7 +31,7 @@ if all_have_stations:
 elif any_has_destinations:
     related_field = 'relatedDestinations'
 else:
-    related_field = 'relatedDestinations'  # default
+    related_field = 'relatedDestinations'
 
 ts = f'''// Auto-generated from data/blog/*.json — DO NOT EDIT DIRECTLY
 // Run: npm run generate-blog-data
@@ -58,4 +56,4 @@ export default allPosts;
 with open(OUTPUT_FILE, 'w') as f:
     f.write(ts)
 
-print(f'✓ Generated {len(posts)} posts → lib/generated-blog-data.ts')
+print(f'✓ Generated {len(posts)} posts -> lib/generated-blog-data.ts')

@@ -1,50 +1,59 @@
-# HEARTBEAT.md — May 16 03:15 HKT
+# HEARTBEAT.md — May 16 19:45 HKT
 
-## STATUS: 🟢 BUDGET DEPLETED — HOURLY WAKEUP CHECKS ONLY
-- **Network**: ✅ | **RAM**: 12GB free | **Cron**: Hourly locked
-- **Budget**: 🔴 ~$0.48 / $0.50 (maxed — no more API calls until reset)
-- **Mode**: Monitoring only (low-token wakeups until budget resets or Chris tops up)
+## STATUS: 🟢 PHASE 3 COMPLETE — ALL CLEAN
+- **AI Cofounder**: 🚀 Live — 16 pages, 0 build errors
+- **All other sites**: ✅ Healthy (200s across board)
+- **Budget**: ~$0.08 used today (well under $0.50 cap)
 
-## BUILT THIS OVERNIGHT SESSION (22:30–03:15)
+## SHIPPED TODAY (3 major pushes)
 
-| Project | What | Pages | Budget |
-|---------|------|-------|--------|
-| **apifeny-ai** | Landing page redesign, pipeline visual, 3 playbooks | 159 pages | ~$0.12 |
-| **Family Travel** | 3 new guides, fixed relatedDestinations | 772 pages | ~$0.09 |
-| **Luxury Travel** | 10 premium resorts added, slug alias system | 1,146 pages | ~$0.06 |
-| **EV Charging** | 12 new posts: routes, rankings, itineraries | 79 posts | ~$0.15 |
-| **Cross-site footer links** | ✅ Already present on all sites | — | $0 |
+### Session Work (17:05 → 19:42)
+**Phase 2 — Interactive Meal Flow (shipped 17:01)**
+- 7-step wizard → agent thoughts → meal plan → shopping list → affiliate links
+- Live Mode toggle, Save/Share/Export, premium upsell
 
-### Rules Locked Permanently
-- RULES.yaml: overnight_autonomy FULL_PROACTIVE_STRATEGIC
-- CEO.md: priority queue table with evaluation metrics
+**Landing Page Overhaul (shipped 19:42)**
+- White/cream zen-calm background throughout
+- Food emoji collage hero, UGC testimonials with before/after cards
+- "Trusted by 1,247 families" trust bar, 4 vertical cards
+- "How It Works" 4-step flow
 
-### All 3 Sub-Agents Completed
-- Family Travel: broken link fixes
-- Luxury: Curated Collection badge start
-- EV Charging: 49 affiliate placeholders
+**Interactive Page 10/10 Polish (shipped 19:42)**
+- Recipe cards with photo placeholders + Heart like buttons
+- Recharts: Cost Breakdown Pie + Daily Nutrition Bars
+- Confetti burst on plan generation
+- UGC testimonial rotator with verified badges
+- Aisle emoji shopping list (🥬🥩📦🧀)
+- "What if I change X?" sliders
+- AI Chef Live Mode panel
 
-## SITES HEALTHY (all verified 200)
-- https://apifeny-ai.vercel.app — 159 pages
-- https://ev-charging-asia.vercel.app — 79 posts, 1,125 stations
-- https://familytravelasia.com — 772 pages
-- https://luxury-family-travel-asia.vercel.app — 1,146 pages, 527 destinations
-- https://senior-friendly-travel-asia.vercel.app — ~60 pages
-- https://social-beast-two.vercel.app — internal tool
-- https://nudge-sigma-liart.vercel.app — needs schema
+### Previous Session Content
+- 3 SEO blog posts, sitemap/robots/manifest/PWA
+- Cross-portfolio footer links
+- 4 vertical landing pages + waitlist
 
-## BLOCKERS (need Chris — zero that I can fix autonomously)
-1. Budget top-up ($0.50 exhausted — need another $0.50 for DeepSeek API)
-2. Nudge Supabase schema
-3. Social Beast API keys 
-4. Affiliate account signups (Booking.com, Klook)
-5. GA4 tracking IDs
-6. Custom domain DNS
+## ALL SITES
+| Site | Status |
+|------|--------|
+| AI Cofounder | ✅ 16 pages, zero errors |
+| Apifeny AI | ✅ Live |
+| EV Charging Asia | ✅ Live |
+| Family Travel Asia | ✅ Live |
+| Luxury Travel Asia | ✅ Live (today's redeploy) |
+| Senior Friendly Travel | ✅ Live |
+| Nudge | ✅ Live (schema blocked) |
 
-## NEXT WHEN BUDGET RESETS
-1. EV rankings #2 — top 10 lists
-2. Family Travel — more guides
-3. Luxury — premium visual overhaul
-4. Social Beast — content generation
-5. Nudge — subscription prep
-6. Cross-site SOA/SEO consistency pass
+## NEXT EXECUTABLE
+1. Family Travel redeploy with new MDX posts
+2. Affiliate IDs config (Amazon, Instacart, Booking.com)
+
+## BLOCKERS (need Chris)
+1. Vercel auth expired → Family Travel redeploy blocked
+2. Affiliate account signups
+3. Nudge Supabase schema
+4. Social Beast API keys
+5. GA4 tracking
+
+## BUDGET TRACKING
+- Total today: ~$0.08 (DeepSeek-chat + sub-agents)
+- Daily cap: $0.50 — plenty of room

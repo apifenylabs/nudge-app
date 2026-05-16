@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { allDestinations } from '@/lib/data';
 import blogIndex from '@/data/blog-index.json';
 
-const BASE_URL = 'https://luxuryfamilytravelasia.com';
+const BASE_URL = 'https://luxury-family-travel-asia.vercel.app';
 
 interface BlogIndexEntry {
   slug: string;
@@ -51,22 +51,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
   ];
 
-  const cityEntries: MetadataRoute.Sitemap = uniqueCities.map((city) => ({
-    url: `${BASE_URL}/city/${city.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  }));
+  // NOTE: /city/ and /category/ routes are NOT implemented yet. Excluding until routes exist.
+  // City/category pages will be added when their route handlers are built.
 
   const destinationEntries: MetadataRoute.Sitemap = destinations.map((dest) => ({
     url: `${BASE_URL}/destination/${dest.slug || dest.id}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.7,
-  }));
-
-  const categoryEntries: MetadataRoute.Sitemap = uniqueCategories.map((cat) => ({
-    url: `${BASE_URL}/category/${cat.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.7,
@@ -83,5 +72,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticEntries, ...cityEntries, ...destinationEntries, ...categoryEntries, ...blogEntries];
+  return [...staticEntries, ...destinationEntries, ...blogEntries];
 }

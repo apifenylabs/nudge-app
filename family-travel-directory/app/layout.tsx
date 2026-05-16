@@ -92,8 +92,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
+        {/* Dark mode init — prevents FOUC */}
+        <script dangerouslySetInnerHTML={{
+          __html: `(function(){try{var m=localStorage.getItem('theme');if(m==='dark'||(!m&&window.matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.classList.add('dark');else document.documentElement.classList.remove('dark');}catch(e){}})()`,
+        }} />
         {/* Google AdSense */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6046953221141245" crossOrigin="anonymous" />
         {/* Schema.org Organization */}
@@ -139,10 +143,62 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* Schema.org FAQ (rendered client-side as JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What are the best family-friendly destinations in Asia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Top family-friendly destinations in Asia include Tokyo (Japan), Singapore, Bangkok (Thailand), Bali (Indonesia), Hong Kong, Seoul (South Korea), Kuala Lumpur (Malaysia), and Da Nang (Vietnam). Each offers kid-safe attractions, family-friendly accommodation, and activities suitable for all ages."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is Asia safe for family travel with young children?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, many Asian destinations are very safe for family travel. Singapore, Japan, South Korea, and Taiwan consistently rank among the safest countries for families. Our directory rates each destination by safety score based on parent reviews and on-the-ground research."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the best time of year to visit Southeast Asia with kids?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The best time depends on the country. Generally, November to February offers cooler, drier weather across most of Southeast Asia — ideal for family travel. Avoid monsoon seasons (June-October in Thailand/Vietnam). Japan and Korea are best in spring (March-May) or autumn (September-November)."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How can I find kid-friendly activities near me in Asia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use our directory to browse 29+ destinations across Asia, filter by age range (babies, toddlers, tweens, teens), safety rating, category (theme parks, nature, cultural sites), and price range. Each listing includes parent tips, safety scores, and booking options via Klook and Viator."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I need travel insurance for family trips in Asia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, comprehensive travel insurance is strongly recommended for family travel in Asia. Look for policies that cover medical evacuation, trip cancellation, lost luggage, and adventure activities. Many Asian countries require proof of insurance for visa applications."
+                  }
+                }
+              ]
+            }),
+          }}
+        />
         {/* Mobile-first viewport */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
       </head>
-      <body className="min-h-full bg-surface text-body pb-safe pt-safe font-body">
+      <body className="min-h-full bg-surface text-body pb-safe pt-safe font-body dark:bg-gray-900 dark:text-gray-100">
         {children}
         <SiteFooter />
         <BottomNav />

@@ -6,7 +6,7 @@ import { getPostBySlug, getRelatedPosts } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data';
 import { allDestinations } from '@/lib/data';
 
-const BASE_URL = 'https://luxuryfamilytravelasia.com';
+const BASE_URL = 'https://luxury-family-travel-asia.vercel.app';
 
 function getDestinationName(destId: string): string | null {
   const found = allDestinations.find((d: { id: string; name: string; city: string }) => d.id === destId);

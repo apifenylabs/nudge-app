@@ -44,6 +44,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Write better content faster',
     description:
       'Master ChatGPT for content creation — from blog posts to social media. Learn prompt engineering techniques that work.',
+    meta_title: 'Content Creation with ChatGPT — Step-by-Step AI Writing Guide',
+    meta_description: 'Master AI content creation with ChatGPT. Learn prompt engineering, Fact-check with Perplexity, and build a content pipeline that saves 15 hours per week.',
     related_tool_slugs: ['chatgpt', 'perplexity'],
     difficulty: 'Beginner',
     read_time_minutes: 8,
@@ -106,6 +108,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'From idea to MVP in hours',
     description:
       'Use Cursor\'s AI agent mode to build a full-stack web application from scratch. No prior coding experience needed.',
+      meta_title: 'Build an App with Cursor — Apifeny AI Playbook',
+      meta_description: 'Use Cursor AI agent mode to build a full-stack web app from scratch with no coding experience. Deploy to Vercel in hours.',
     related_tool_slugs: ['cursor', 'chatgpt', 'langchain'],
     difficulty: 'Intermediate',
     read_time_minutes: 12,
@@ -167,6 +171,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Plan smarter family vacations',
     description:
       'Use Gemini, ChatGPT, and Perplexity together to plan the perfect family vacation in Asia. Itineraries, budgets, translations, and more.',
+      meta_title: 'AI-Powered Family Travel Planning — Apifeny AI Playbook',
+      meta_description: 'Plan family vacations in Asia with AI. Use Gemini, ChatGPT and Perplexity for itineraries, budgets, translations and packing lists.',
     related_tool_slugs: ['gemini', 'chatgpt', 'perplexity', 'canva-ai'],
     difficulty: 'Beginner',
     read_time_minutes: 10,
@@ -222,6 +228,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Reach Asian audiences authentically',
     description:
       'Combine AI tools for multilingual marketing campaigns targeting Asian markets. From copywriting to visual content.',
+      meta_title: 'AI Marketing for Asian Markets — Apifeny AI Playbook',
+      meta_description: 'Multilingual marketing with AI for Asian audiences. Localize copy, design visuals, and produce video with ChatGPT, Canva, Midjourney, and Synthesia.',
     related_tool_slugs: ['chatgpt', 'canva-ai', 'midjourney', 'synthesia', 'elevenlabs'],
     difficulty: 'Intermediate',
     read_time_minutes: 10,
@@ -283,6 +291,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Automate your daily tasks',
     description:
       'Set up an AI-powered productivity system using Notion AI, ChatGPT, and automation tools. Save 10+ hours per week.',
+      meta_title: 'AI Productivity Workflow — Apifeny AI Playbook',
+      meta_description: 'Automate daily tasks with Notion AI, ChatGPT, and Perplexity. Save 10+ hours per week with an AI-powered productivity system.',
     related_tool_slugs: ['notion-ai', 'chatgpt', 'perplexity'],
     difficulty: 'Beginner',
     read_time_minutes: 7,
@@ -339,6 +349,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'From script to published video',
     description:
       'Full video production workflow using AI tools: scriptwriting, voiceover, visuals, and editing.',
+      meta_title: 'AI Video Production Pipeline — Apifeny AI Playbook',
+      meta_description: 'Full video production with AI: scriptwriting, voiceover, visuals, and editing. Use ChatGPT, ElevenLabs, Runway, and Descript.',
     related_tool_slugs: ['runway', 'elevenlabs', 'chatgpt', 'canva-ai', 'descript'],
     difficulty: 'Intermediate',
     read_time_minutes: 9,
@@ -395,6 +407,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Ranked & reviewed for real dev work',
     description:
       'A data-backed comparison of LLMs for software development. We rank Claude, Cursor, ChatGPT, Gemini, and Copilot across code generation, debugging, refactoring, and documentation. Includes real benchmarks and practical recommendations for each task type.',
+      meta_title: 'Best LLMs for Coding — Apifeny AI Playbook',
+      meta_description: 'Compare Cursor, Claude, ChatGPT, Gemini, and Copilot for code generation, debugging, refactoring, and documentation with real benchmarks.',
     related_tool_slugs: ['cursor', 'claude', 'chatgpt', 'gemini', 'devin'],
     difficulty: 'Intermediate',
     read_time_minutes: 10,
@@ -459,6 +473,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Full vibe coding workflow',
     description:
       'End-to-end pipeline for building and shipping a SaaS app using AI. Covers strategic planning → product ownership → research → ideation → coding → review → testing → deployment. Based on real workflows from solopreneurs shipping in 1-2 weeks.',
+      meta_title: 'AI Pipeline: Idea to Deploy — Apifeny AI Playbook',
+      meta_description: 'End-to-end pipeline for building and shipping a SaaS app using AI. Covers planning, research, coding, review, testing, and deployment.',
     related_tool_slugs: ['chatgpt', 'cursor', 'claude', 'perplexity', 'canva-ai'],
     difficulty: 'Advanced',
     read_time_minutes: 14,
@@ -539,6 +555,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Think bigger, plan smarter',
     description:
       'A comparison of how different LLMs perform as strategic advisors. Covering business planning, competitive analysis, go-to-market strategy, and risk assessment. Includes prompt patterns that produce VC-quality analysis.',
+      meta_title: 'Best LLMs for Strategic Planning — Apifeny AI Playbook',
+      meta_description: 'Compare ChatGPT, Claude, Perplexity, and Gemini as strategic advisors for business planning, competitive analysis, and risk assessment.',
     related_tool_slugs: ['chatgpt', 'claude', 'perplexity', 'gemini'],
     difficulty: 'Intermediate',
     read_time_minutes: 9,
@@ -601,6 +619,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Build your one-person team',
     description:
       'The most effective AI agent roles for solo founders, ranked by impact. From coding assistant to marketing agent to customer support — configure your AI team to maximize output with minimal overhead.',
+      meta_title: 'Best AI Agent Roles for Solopreneurs — Apifeny AI Playbook',
+      meta_description: 'Build your one-person AI team: CTO, marketing lead, customer support, CFO, and operations manager using AI tools.',
     related_tool_slugs: ['cursor', 'chatgpt', 'perplexity', 'claude', 'canva-ai', 'elevenlabs'],
     difficulty: 'Beginner',
     read_time_minutes: 11,
@@ -672,6 +692,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Competitive analysis, market sizing & customer research',
     description:
       'Learn how to use AI tools for comprehensive market research: competitive analysis, market sizing, customer persona development, and trend spotting. Replace weeks of manual research with AI-powered analysis in hours.',
+      meta_title: 'AI-Powered Market Research — Apifeny AI Playbook',
+      meta_description: 'Replace weeks of manual market research with AI-powered competitive analysis, market sizing, customer persona development, and trend spotting.',
     related_tool_slugs: ['perplexity', 'gemini', 'chatgpt'],
     difficulty: 'Intermediate',
     read_time_minutes: 10,
@@ -748,6 +770,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Automated testing, bug detection & code quality',
     description:
       'Use AI to automate testing and quality assurance: generate test suites, detect edge cases, review code for bugs, and ensure production readiness. Essential for solopreneurs shipping without a dedicated QA team.',
+      meta_title: 'AI Testing & QA Automation — Apifeny AI Playbook',
+      meta_description: 'Automate testing and QA with AI: generate test suites, detect bugs, review code, and ensure production readiness without a dedicated QA team.',
     related_tool_slugs: ['claude', 'chatgpt', 'cursor'],
     difficulty: 'Intermediate',
     read_time_minutes: 9,
@@ -819,6 +843,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Personalized learning with AI tutors',
     description:
       'Use AI tools to create personalized learning experiences: AI tutoring, lesson planning, quiz generation, and progress tracking. Ideal for teachers, tutors, students, and self-learners who want to accelerate learning with AI assistance.',
+      meta_title: 'AI for Education & Tutoring — Apifeny AI Playbook',
+      meta_description: 'Personalized learning with AI tutors, lesson planning, quiz generation, and progress tracking for teachers, tutors, and self-learners.',
     related_tool_slugs: ['chatgpt', 'gemini', 'khanmigo', 'duolingo-max', 'notion-ai', 'perplexity'],
     difficulty: 'Beginner',
     read_time_minutes: 9,
@@ -893,6 +919,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Automate support with AI agents',
     description:
       'Build an AI-powered customer support system that handles 80%+ of tickets automatically. Using RAG pipelines, AI chatbots, and smart escalation. Cut support costs while improving response times and customer satisfaction.',
+      meta_title: 'AI for Customer Support — Apifeny AI Playbook',
+      meta_description: 'Build an AI-powered customer support system that handles 80% of tickets automatically using RAG pipelines and smart escalation.',
     related_tool_slugs: ['intercom-ai', 'zendesk-answer-bot', 'chatgpt', 'langchain', 'intercom-fin', 'deepl'],
     difficulty: 'Intermediate',
     read_time_minutes: 10,
@@ -967,6 +995,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Design everything with AI',
     description:
       'Master AI-powered design tools for creating visual content: logos, marketing materials, UI mockups, product photography, and video assets. No design skills required — just clear vision and the right tools.',
+      meta_title: 'AI for Design & Creative — Apifeny AI Playbook',
+      meta_description: 'Design everything with AI: logos, marketing visuals, UI mockups, product photography, and video assets using Canva, Midjourney, and Runway.',
     related_tool_slugs: ['canva-ai', 'midjourney', 'leonardo-ai', 'runway', 'gamma', 'chatgpt', 'pika', 'sana-ai'],
     difficulty: 'Beginner',
     read_time_minutes: 9,
@@ -1041,6 +1071,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Financial analysis, modeling & reporting with AI',
     description:
       'Use AI tools for financial analysis: financial modeling, market research, report generation, budget tracking, and investment research. Designed for analysts, CFOs, investors, and business owners who need faster, data-backed financial decisions.',
+      meta_title: 'AI for Finance & Analysis — Apifeny AI Playbook',
+      meta_description: 'Financial analysis and modeling with AI. Build models, analyze documents, research markets, and automate reporting with ChatGPT, Gemini, and Perplexity.',
     related_tool_slugs: ['gemini', 'chatgpt', 'perplexity', 'exa', 'notion-ai', 'claude'],
     difficulty: 'Intermediate',
     read_time_minutes: 10,
@@ -1116,6 +1148,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Full-stack marketing with AI from strategy to analytics',
     description:
       'Automate your entire marketing workflow with AI: strategy development, content creation, SEO optimization, email campaigns, social media management, and performance analytics. Built for marketing teams and solopreneurs who want agency-quality output at a fraction of the cost.',
+      meta_title: 'AI for Marketing Automation — Apifeny AI Playbook',
+      meta_description: 'Full-stack marketing automation with AI: strategy, content creation, SEO, email campaigns, social media, and analytics all in one workflow.',
     related_tool_slugs: ['chatgpt', 'perplexity', 'semrush', 'ahrefs', 'surferseo', 'copy-ai', 'canva-ai', 'jasper', 'exa'],
     difficulty: 'Intermediate',
     read_time_minutes: 11,
@@ -1193,6 +1227,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Property valuation, virtual staging & lead gen with AI',
     description:
       'Transform your real estate business with AI: automated property valuations, virtual staging, lead generation, market analysis, listing copywriting, and client communication. Built for agents, brokers, investors, and property managers looking to close deals faster with less overhead.',
+      meta_title: 'AI for Real Estate — Apifeny AI Playbook',
+      meta_description: 'Property valuation, virtual staging, and lead generation with AI tools. Transform real estate workflows with AI-powered analysis and marketing.',
     related_tool_slugs: ['chatgpt', 'gemini', 'canva-ai', 'midjourney', 'perplexity', 'claude', 'elevenlabs'],
     difficulty: 'Beginner',
     read_time_minutes: 9,
@@ -1266,6 +1302,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Medical research, patient comms & clinical workflows with AI',
     description:
       'Leverage AI in healthcare: accelerate medical research, draft patient communications, analyze clinical data, summarize health records, and streamline administrative workflows. Designed for clinicians, researchers, healthcare administrators, and medical students who need HIPAA-aware AI usage.',
+      meta_title: 'AI for Healthcare Professionals — Apifeny AI Playbook',
+      meta_description: 'Medical research, patient communication, and clinical workflows enhanced with AI. Improve patient outcomes with AI-powered tools and analysis.',
     related_tool_slugs: ['perplexity', 'claude', 'chatgpt', 'gemini', 'notion-ai', 'exa'],
     difficulty: 'Intermediate',
     read_time_minutes: 10,
@@ -1340,6 +1378,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Product descriptions, chatbot, inventory & personalization',
     description:
       'Supercharge your online store with AI: bulk product descriptions, AI-powered chatbots, inventory forecasting, personalized recommendations, and automated customer support. Built for Shopify, WooCommerce, and custom store owners who want to scale without hiring a team.',
+      meta_title: 'AI for E-commerce — Apifeny AI Playbook',
+      meta_description: 'Boost e-commerce with AI: product descriptions, personalized recommendations, customer service chatbots, inventory management, and sales analytics.',
     related_tool_slugs: ['chatgpt', 'canva-ai', 'copy-ai', 'midjourney', 'jasper', 'gemini', 'perplexity', 'exa'],
     difficulty: 'Beginner',
     read_time_minutes: 9,
@@ -1413,6 +1453,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Resume screening, interview prep & onboarding automation',
     description:
       'Revolutionize your HR workflows with AI: automated resume screening, structured interview guides, personalized onboarding, performance review drafting, and employee sentiment analysis. Designed for HR professionals, recruiters, and team leads at growing companies.',
+      meta_title: 'AI for HR & Recruiting — Apifeny AI Playbook',
+      meta_description: 'Streamline hiring with AI: resume screening, interview preparation, skills assessments, candidate matching, and onboarding automation.',
     related_tool_slugs: ['chatgpt', 'claude', 'gemini', 'notion-ai', 'perplexity', 'exa'],
     difficulty: 'Beginner',
     read_time_minutes: 9,
@@ -1487,6 +1529,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Contract review, legal research & document automation',
     description:
       'Transform legal workflows with AI: contract review and redlining, legal research, document drafting, due diligence analysis, and compliance monitoring. Built for lawyers, paralegals, legal ops teams, and in-house counsel who need faster, more thorough legal work.',
+      meta_title: 'AI for Legal Professionals — Apifeny AI Playbook',
+      meta_description: 'Contract review, legal research, document automation, and case analysis with AI. Work faster with AI-powered legal tools and workflows.',
     related_tool_slugs: ['claude', 'perplexity', 'chatgpt', 'gemini', 'exa', 'notion-ai'],
     difficulty: 'Advanced',
     read_time_minutes: 11,
@@ -1560,6 +1604,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Menu planning, recipe development & restaurant ops with AI',
     description:
       'Elevate your food and hospitality business with AI: menu engineering, recipe creation and scaling, inventory management, customer feedback analysis, social media marketing, and staff training. Built for chefs, restaurateurs, hoteliers, and food entrepreneurs who want to innovate faster and run leaner.',
+      meta_title: 'AI for Food & Hospitality — Apifeny AI Playbook',
+      meta_description: 'Menu planning, recipe development, restaurant operations, and customer experience optimization with AI tools for the food industry.',
     related_tool_slugs: ['chatgpt', 'midjourney', 'canva-ai', 'perplexity', 'gemini', 'notion-ai', 'elevenlabs'],
     difficulty: 'Beginner',
     read_time_minutes: 9,
@@ -1634,6 +1680,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Game dev, asset creation & streaming with AI',
     description:
       'Create games and entertainment content with AI: game concept development, asset generation (2D/3D art, audio, animations), level design, narrative writing, code assistance, and streaming content production. Built for indie game developers, content creators, and entertainment studios who want to ship faster without large teams.',
+      meta_title: 'AI for Gaming & Entertainment — Apifeny AI Playbook',
+      meta_description: 'Game development, 3D asset creation, narrative design, and streaming enhancement with AI tools for indie devs and studios.',
     related_tool_slugs: ['chatgpt', 'midjourney', 'claude', 'gemini', 'elevenlabs', 'perplexity', 'canva-ai'],
     difficulty: 'Intermediate',
     read_time_minutes: 11,
@@ -1708,6 +1756,8 @@ export const playbooks: Playbook[] = [
     subtitle: 'Pitch decks, market sizing & investor comms with AI',
     description:
       'Accelerate your startup journey with AI: pitch deck creation, market sizing, competitive analysis, financial modeling, investor updates, SAFe documentation, and fundraising strategy. Built for founders, VCs, and angel investors who want data-backed decisions and faster fundraising cycles.',
+      meta_title: 'AI for Startups & Venture — Apifeny AI Playbook',
+      meta_description: 'Pitch deck creation, market sizing, competitive analysis, financial modeling, and fundraising strategy with AI for founders and VCs.',
     related_tool_slugs: ['chatgpt', 'perplexity', 'claude', 'gemini', 'exa', 'canva-ai', 'notion-ai', 'semrush'],
     difficulty: 'Intermediate',
     read_time_minutes: 11,
@@ -1775,6 +1825,848 @@ export const playbooks: Playbook[] = [
       { metric: 'Investor Meetings', value: '3x more', description: 'Faster prep means more time for meetings and relationship building' },
     ],
   },
+  {
+    slug: 'ai-for-seo',
+    title: 'AI for SEO: Keyword Research & Content Optimization',
+    subtitle: 'Rank higher with AI-powered SEO',
+    description:
+      'Master AI tools for search engine optimization: keyword research, content optimization, technical SEO, competitor analysis, and performance tracking. Learn how to combine ChatGPT, Perplexity, Surfer SEO, and Semrush to build a content machine that consistently ranks on page 1.',
+      meta_title: 'AI for SEO: Keyword Research & Content Optimization — Apifeny AI Playbook',
+      meta_description: 'Master AI-powered SEO with ChatGPT, Perplexity, Surfer SEO, and Semrush. Keyword research, content optimization, technical SEO, and ranking tracking.',
+    related_tool_slugs: ['chatgpt', 'perplexity', 'semrush', 'surferseo', 'ahrefs'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '🔍',
+    gradient: 'from-emerald-500/30 to-teal-500/30',
+    steps: [
+      {
+        title: 'Discover keywords with Semrush + ChatGPT',
+        description:
+          'Use Semrush Keyword Magic Tool to find high-volume, low-competition keywords in your niche. Export 50-100 keywords. Paste into ChatGPT and ask for: keyword clusters by search intent, content gap analysis vs top competitors, and prioritization based on traffic potential + difficulty score.',
+        tip: 'Prompt: "Cluster these 50 keywords by search intent (informational, commercial, transactional, navigational). For each cluster, suggest a pillar page topic and 5 supporting articles."',
+      },
+      {
+        title: 'Research search intent with Perplexity',
+        description:
+          'Search your target keywords on Perplexity to understand what ranks currently. Analyze: content format, length, structure, and authority signals. Perplexity cites sources so you can study exactly what Google rewards.',
+        tip: 'Ask Perplexity: "Analyze the top 10 results for [keyword]. What content format dominates? Average word count? Authority patterns? What are the common sub-topics covered?"',
+      },
+      {
+        title: 'Write SEO-optimized content with Surfer SEO',
+        description:
+          'Write directly in Surfer SEO content editor or paste ChatGPT drafts for real-time optimization. Surfer scores your content against top-ranking pages and recommends: NLP keywords to include, heading structure, word count, image count, and readability improvements.',
+        tip: 'Write first draft in ChatGPT, paste into Surfer SEO, follow its recommendations in order: first NLP keywords, then headings, then readability. This boosts your content score from ~40 to 80+ in 15 minutes.',
+      },
+      {
+        title: 'Optimize technical SEO with ChatGPT',
+        description:
+          'Describe your website to ChatGPT. Ask for: meta description templates, schema markup (FAQ, HowTo, Article), internal linking structure, URL structure optimization, and Core Web Vitals improvement strategies.',
+        tip: 'Prompt: "Generate JSON-LD FAQ schema markup for this article about [topic]. Include 5 questions with answers. Also suggest internal linking opportunities from existing articles."',
+      },
+      {
+        title: 'Build topical authority with content clusters',
+        description:
+          'Use Ahrefs Content Explorer to find what is already ranking. Then use ChatGPT to plan a content cluster: 1 pillar page covering the broad topic, 10+ cluster articles covering specific sub-topics, all interlinked. This is Google preferred structure for topical authority.',
+      },
+      {
+        title: 'Track rankings and iterate with AI',
+        description:
+          'Export ranking data weekly. Paste into ChatGPT and ask: "Which keywords are gaining? Losing? What pattern do you see? What content updates would you recommend?" Use insights to refresh and improve existing content.',
+        tip: 'Set up a weekly SEO dashboard: export rankings, GSC data, and traffic, paste into ChatGPT, get automated recommendations for content updates.',
+      },
+    ],
+    pro_tips: [
+      'Create a SEO Brief Template: every blog post starts with a ChatGPT-generated SEO brief including target keyword, search intent, competitor URLs, recommended word count, and NLP keywords',
+      'Use Perplexity for People Also Ask research: search your keyword and Perplexity shows the exact Q&A formats Google features in position zero',
+      'Batch content creation: research 5 keywords on Sunday, write 5 SEO-optimized articles on Monday with Surfer SEO, schedule and publish by Wednesday',
+      'Build a topical authority map: use ChatGPT to identify all sub-topics for your niche, then systematically create content for each using AI',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Writing AI content without Surfer SEO optimization',
+        fix: 'AI-generated content without SEO optimization scores ~40-50/100. Always run through Surfer SEO to reach 70+ before publishing.',
+      },
+      {
+        mistake: 'Targeting keywords with zero search intent analysis',
+        fix: 'Every keyword has an intent. Commercial keywords need product comparisons. Informational keywords need guides. Use ChatGPT to classify intent before writing.',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: 'Grow organic traffic 3-5x in 90 days with AI-powered SEO content strategy',
+    real_results: [
+      { metric: 'Organic Traffic Growth', value: '3-5x', description: '90-day traffic increase with AI SEO content strategy' },
+      { metric: 'Content Output', value: '5x faster', description: 'SEO-optimized content in 45 min vs 4 hours manually' },
+      { metric: 'Avg Keyword Position', value: 'Improved', description: 'From page 3-4 to page 1-2 with Surfer SEO optimized AI content' },
+    ],
+  },
+
+  {
+    slug: 'ai-for-data-analysis',
+    title: 'AI for Data Analysis: Spreadsheets to Insights',
+    subtitle: 'Analyze data faster with AI',
+    description:
+      'Use AI tools to supercharge your data analysis workflow: cleaning messy data, creating dashboards, running statistical analysis, generating insights, and building reports. Works with spreadsheets, databases, CSVs, and APIs. From analyst to executive, everyone makes better decisions with AI-powered analytics.',
+      meta_title: 'AI for Data Analysis: Spreadsheets to Insights — Apifeny AI Playbook',
+      meta_description: 'Supercharge data analysis with AI: clean data, build dashboards, run statistical analysis, and automate reports using ChatGPT, Gemini, and Claude.',
+    related_tool_slugs: ['chatgpt', 'gemini', 'claude', 'perplexity', 'notion-ai'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '📊',
+    gradient: 'from-indigo-500/30 to-violet-500/30',
+    steps: [
+      {
+        title: 'Clean and prepare data with ChatGPT',
+        description:
+          'Upload your CSV or paste a sample of your dataset into ChatGPT with Code Interpreter. Ask it to: detect and fix formatting issues, identify outliers, fill missing values, standardize column names, and remove duplicates.',
+        tip: 'Prompt: "Clean this dataset: (1) detect and explain anomalies, (2) suggest how to handle each, (3) apply fixes, (4) show before/after summary. Prioritize preserving data integrity."',
+      },
+      {
+        title: 'Run exploratory analysis with Gemini',
+        description:
+          'Upload your dataset to Gemini. Its 1M context processes entire datasets at once. Ask for: distribution analysis, correlation matrices, trend identification, and summary statistics. Gemini generates visualizations and explains patterns in plain language.',
+        tip: 'Upload 3 datasets simultaneously and ask Gemini to join them, find correlations across all variables, and identify the top 5 insights a business leader should know.',
+      },
+      {
+        title: 'Build interactive dashboards with AI',
+        description:
+          'Describe your data and metrics. Ask ChatGPT to generate Python code for a Streamlit dashboard, Google Sheets formulas for live dashboards, or lookup formulas for Excel. Specify KPIs, filters, chart types, and update frequency.',
+      },
+      {
+        title: 'Statistical analysis with Claude',
+        description:
+          'Claude excels at rigorous statistical analysis. Upload your data and ask for: hypothesis testing, confidence intervals, regression analysis, A/B test evaluation, and significance testing. Claude explains methodology and limitations.',
+        tip: 'Prompt: "Run an A/B test analysis on this dataset. Calculate: conversion rates per variant, statistical significance (p-value), confidence intervals, minimum detectable effect, and recommend which variant to deploy."',
+      },
+      {
+        title: 'Generate narrative insights with ChatGPT',
+        description:
+          'Feed ChatGPT your cleaned data and analysis results. Ask for: executive summary, key findings, actionable recommendations, data storytelling narrative, and presentation-ready charts with annotations.',
+      },
+      {
+        title: 'Automate recurring reports with Notion AI',
+        description:
+          'Set up a Notion database connected to your data sources. Use Notion AI to: generate weekly summary reports, highlight changes from previous period, flag anomalies, and create action items based on data trends.',
+      },
+    ],
+    pro_tips: [
+      'Always use ChatGPT Code Interpreter for data analysis: it writes and runs Python code, generates plots, and handles files up to 512MB',
+      'Create a Data Analysis Playbook in Notion with standard prompts for common analyses (cohort analysis, funnel analysis, RFM segmentation, time series)',
+      'For sensitive data use Claude or a local LLM. Never upload PII or confidential data to public AI services',
+      'Build a prompt chain: Clean, Analyze, Visualize, Report. Each step feeds into the next for a complete data pipeline',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Not validating AI-generated data cleaning steps',
+        fix: 'AI can introduce errors when cleaning data. Always ask for a summary of changes made and spot-check 10-20 rows before proceeding.',
+      },
+      {
+        mistake: 'Uploading sensitive or confidential data to public AI tools',
+        fix: 'Use Claude for sensitive data (better privacy policy) or run local LLMs like Llama or Mistral for truly confidential datasets.',
+      },
+    ],
+    pipeline_stage: 'research',
+    revenue_impact: 'Replace $5K/mo data analyst contractor with $100/mo AI tools for standard analysis needs',
+    real_results: [
+      { metric: 'Analysis Speed', value: '10x faster', description: 'From raw data to insights in 30 min vs 5 hours manually' },
+      { metric: 'Report Generation', value: '80% faster', description: 'Weekly reports generated in 10 min with AI automation' },
+      { metric: 'Insights Discovered', value: '2x more', description: 'AI finds patterns humans miss in large datasets' },
+    ],
+  },
+
+  {
+    slug: 'ai-for-language-learning',
+    title: 'AI for Language Learning: Translation & Tutoring',
+    subtitle: 'Learn any language with AI tutors',
+    description:
+      'Accelerate language learning with AI tools: AI conversation partners, real-time translation, grammar analysis, vocabulary building, and pronunciation coaching. Combine ChatGPT, Duolingo Max, Google Translate, and ElevenLabs for an immersive, personalized learning experience.',
+      meta_title: 'AI for Language Learning: Translation & Tutoring — Apifeny AI Playbook',
+      meta_description: 'Learn any language faster with AI tutors, conversation partners, translation tools, and pronunciation coaching using ChatGPT and Duolingo Max.',
+    related_tool_slugs: ['chatgpt', 'duolingo-max', 'elevenlabs', 'gemini', 'deepl'],
+    difficulty: 'Beginner',
+    read_time_minutes: 8,
+    icon: '🌐',
+    gradient: 'from-green-500/30 to-blue-500/30',
+    steps: [
+      {
+        title: 'Set up your AI conversation partner with ChatGPT',
+        description:
+          'Configure ChatGPT as a language tutor. Set Custom Instructions: "You are a [language] tutor. Correct my grammar gently, explain mistakes, and suggest natural alternatives. Speak at [level: beginner/intermediate/advanced]."',
+        tip: 'Enable voice mode on ChatGPT mobile for spoken conversation practice. The voice interaction makes it feel like a real tutor.',
+      },
+      {
+        title: 'Practice daily with Duolingo Max',
+        description:
+          'Duolingo Max includes GPT-4 powered features: Roleplay (simulates real conversations like ordering food, checking into a hotel) and Explain My Answer (AI explains exactly why your answer was right or wrong). These bridge the gap between drill exercises and real-world use.',
+      },
+      {
+        title: 'Use Gemini for immersive reading practice',
+        description:
+          'Ask Gemini to write short stories at your language level. Start with A1 (simple present tense, 50 words) and progress to B2 (complex sentences, 500 words). Ask for comprehension questions, vocabulary lists, grammar breakdowns, and cultural notes.',
+        tip: 'Prompt: "Write a 300-word story in [language] at B1 level about daily life in [city]. Include dialogue, 10 new vocabulary words with definitions, and 5 comprehension questions."',
+      },
+      {
+        title: 'Perfect pronunciation with ElevenLabs',
+        description:
+          'Use ElevenLabs text-to-speech to hear correct pronunciation of any text. Choose a native speaker voice. Slow down playback for difficult words. Practice shadowing: listen and repeat immediately.',
+      },
+      {
+        title: 'Translate with context using DeepL',
+        description:
+          'DeepL provides more natural translations than Google Translate. Write in your target language, paste into DeepL to check accuracy. Use the dictionary feature to understand why certain words were chosen.',
+      },
+    ],
+    pro_tips: [
+      'Create a Daily Language Routine in ChatGPT: every morning, ChatGPT sends you 5 new words, a short story, and a conversation prompt in your target language',
+      'Use ChatGPT voice mode for 15-minute daily conversations. Pick a topic: describe your weekend, order food, give directions, real-world scenarios',
+      'Save interesting sentences you encounter. Ask Gemini to explain the grammar, suggest 3 variations, and create a fill-in-the-blank exercise',
+      'Combine tools: Duolingo Max for structure, ChatGPT for conversation, DeepL for writing, ElevenLabs for pronunciation',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Only using AI for passive learning (reading/listening) without active practice',
+        fix: 'Always speak or write actively. Use voice mode with ChatGPT, write journal entries in DeepL, and do roleplay exercises on Duolingo Max.',
+      },
+      {
+        mistake: 'Relying solely on translation instead of building comprehension',
+        fix: 'Use AI to provide translations only after you try to understand first. Ask ChatGPT: "Do not translate yet. Give me hints first."',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Replace $60/hr language tutors with $20-40/mo AI tool subscriptions',
+    real_results: [
+      { metric: 'Daily Practice Time', value: '2x more', description: 'AI tutor available 24/7 removes scheduling barriers' },
+      { metric: 'Cost Savings', value: '95%', description: 'vs $60/hr human tutor: $20-40/mo for all AI tools combined' },
+      { metric: 'Vocabulary Retention', value: '+40%', description: 'AI-powered spaced repetition and personalized practice' },
+    ],
+  },
+
+  {
+    slug: 'ai-for-music-and-audio-production',
+    title: 'AI for Music & Audio Production',
+    subtitle: 'Create music, sound design & audio content with AI',
+    description:
+      'Use AI tools to produce music and audio content: music generation, sound design, mixing assistance, audio restoration, voice synthesis, and podcast production. From bedroom producers to professional studios, AI is transforming audio creation.',
+      meta_title: 'AI for Music & Audio Production — Apifeny AI Playbook',
+      meta_description: 'Produce music and audio with AI: music generation, sound design, mixing, audio restoration, and voice synthesis for producers and podcasters.',
+    related_tool_slugs: ['elevenlabs', 'runway', 'chatgpt', 'descript'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 9,
+    icon: '🎵',
+    gradient: 'from-rose-500/30 to-violet-500/30',
+    steps: [
+      {
+        title: 'Generate music with AI tools',
+        description:
+          'Use AI music generators like Suno, Udio, or Stable Audio for: full song generation from text prompts, instrumental tracks, background music, and sound effects. Describe genre, mood, tempo, instruments, and structure.',
+        tip: 'Prompt pattern: "[Genre], [mood], [tempo] bpm, instruments: [list], structure: intro-verse-chorus-verse-chorus-bridge-outro." Example: "Lo-fi hip hop, chill, 85 bpm, piano + vinyl crackle, 3 minutes."',
+      },
+      {
+        title: 'Design sounds with AI-powered synthesis',
+        description:
+          'Use tools like Krea AI or AudioCraft for sound design. Describe the sound you need: deep cinematic boom, warm analog pad, digital glitch effect. AI generates audio samples you can use in your productions.',
+      },
+      {
+        title: 'Mix and master with AI assistants',
+        description:
+          'Use AI-powered mixing tools like LANDR, iZotope Neutron, or Sonible for: automatic mix balancing, EQ suggestions, compression settings, stereo field optimization, and mastering. Upload your stems and get AI-recommended settings.',
+        tip: 'Start with AI auto-mix as a baseline, then manually tweak. This saves 2+ hours of initial mix setup and gives you a professional starting point.',
+      },
+      {
+        title: 'Restore and clean audio with AI',
+        description:
+          'Use tools like Adobe Podcast Enhance, Descript Studio Sound, or iZotope RX for: removing background noise, de-essing, click/pop removal, audio upscaling (low to high quality), and room tone removal.',
+      },
+      {
+        title: 'Create custom voice samples with ElevenLabs',
+        description:
+          'Use ElevenLabs for: voice synthesis (narration, vocals), voice cloning (brand voice for audio content), multilingual voiceovers, and sound generation. ElevenLabs Sound Effects can generate SFX from text.',
+      },
+    ],
+    pro_tips: [
+      'Create a Sound Library in your DAW: batch-generate 50 AI sounds (drum hits, textures, FX), organize by type, and pull from this library in every production',
+      'Use ChatGPT to write lyrics, structure songs, and suggest chord progressions. Describe the mood, genre, and theme for structured lyrics with verse-chorus-bridge format',
+      'For podcast intros: generate music with Suno, voiceover with ElevenLabs, mix with Descript, all in one morning',
+      'Export AI-generated elements in high quality (WAV, 48kHz, 24-bit) for professional mixing',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Using AI-generated music without human arrangement',
+        fix: 'AI generates great raw material but lacks arrangement nuance. Treat AI outputs as samples to arrange, not finished tracks.',
+      },
+      {
+        mistake: 'Over-processing AI-generated audio',
+        fix: 'AI audio often sounds clean on its own. Apply minimal processing since AI outputs need less EQ and compression than recorded audio.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Produce music and audio content 10x faster, saving thousands in studio time and session musicians',
+    real_results: [
+      { metric: 'Production Speed', value: '10x faster', description: 'From idea to finished demo in hours instead of days' },
+      { metric: 'Studio Cost Savings', value: '90%', description: 'AI tools replace studio rental, session musicians, and mixing engineers' },
+      { metric: 'Sound Library Size', value: '1000+ sounds', description: 'AI-generated sample library built in one weekend vs months manually' },
+    ],
+  },
+
+  {
+    slug: 'ai-for-resume-and-job-applications',
+    title: 'AI for Resume & Job Applications',
+    subtitle: 'Land your dream job with AI-optimized applications',
+    description:
+      'Use AI tools to supercharge your job search: resume optimization, cover letter generation, interview preparation, salary negotiation, and career planning. From fresh graduates to executives, AI helps you present your best professional self.',
+      meta_title: 'AI for Resume & Job Applications — Apifeny AI Playbook',
+      meta_description: 'Land your dream job with AI-optimized resumes, cover letters, interview practice, and salary negotiation using ChatGPT and Perplexity.',
+    related_tool_slugs: ['chatgpt', 'gemini', 'perplexity', 'canva-ai', 'notion-ai'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '💼',
+    gradient: 'from-blue-500/30 to-sky-500/30',
+    steps: [
+      {
+        title: 'Optimize your resume for ATS with ChatGPT',
+        description:
+          'Paste your resume and the job description into ChatGPT. Ask it to: match keywords from the JD, quantify achievements (add numbers), rephrase bullet points using action verbs, fix ATS-unfriendly formatting, and suggest missing skills.',
+        tip: 'Prompt: "Optimize my resume for this job description. (1) Identify the top 15 keywords from the JD and ensure they appear in my resume naturally. (2) Rewrite each bullet point with quantified achievements. (3) Flag any ATS formatting issues."',
+      },
+      {
+        title: 'Write tailored cover letters with ChatGPT',
+        description:
+          'Use a structured prompt: paste the job description, your resume, company background, and ask for a cover letter. Include specific company references, achievement highlights, and your genuine motivation.',
+        tip: 'Create a Master Cover Letter template. For each application, provide the JD, company info, and 2 specific achievements. ChatGPT generates a tailored letter in 2 minutes.',
+      },
+      {
+        title: 'Research companies with Perplexity',
+        description:
+          'Before each interview, use Perplexity to research recent company news, product launches, financial performance, company culture, interview experiences, and competitor positioning.',
+      },
+      {
+        title: 'Practice interviews with ChatGPT voice mode',
+        description:
+          'Use ChatGPT voice mode for realistic interview practice. Describe the role, company, and interview format (behavioral, technical, case). ChatGPT asks questions, listens to your answers, and provides constructive feedback.',
+        tip: 'Prompt: "Conduct a mock behavioral interview for [role] at [company]. Ask STAR-format questions. After each answer, give feedback on clarity, structure, relevance, and improvements."',
+      },
+      {
+        title: 'Negotiate salary with ChatGPT',
+        description:
+          'Use ChatGPT to prepare salary negotiation: research market rates, craft your value proposition, script responses to common questions, and practice negotiation scenarios.',
+      },
+      {
+        title: 'Build a career portfolio with Canva AI',
+        description:
+          'Use Canva AI to create: professional resume design, portfolio website mockups, case study presentations, LinkedIn banner, and personal brand assets. Canva AI generates complete designs from text descriptions.',
+      },
+    ],
+    pro_tips: [
+      'Create a Job Search Dashboard in Notion: track applications (company, role, status, date), use Notion AI to draft follow-up emails, and auto-generate weekly progress summaries',
+      'For each application, run your resume through ChatGPT with the specific JD. Never send the same resume twice since AI makes personalization instant',
+      'Use ChatGPT to research salary ranges by city, experience level, and company size',
+      'Build an Achievements Bank in Notion: list every achievement with quantified results for ChatGPT to pull from',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Sending AI-generated cover letters without personalization',
+        fix: 'Always add a personal paragraph about why YOU specifically want THIS company. AI cannot fake genuine enthusiasm for a specific mission.',
+      },
+      {
+        mistake: 'Keyword stuffing your resume for ATS',
+        fix: 'Keywords must appear naturally in context. AI-optimized resumes should read well for humans too. Ask ChatGPT to read the resume as a human hiring manager would.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Increase callback rate by 3x with AI-optimized applications and interview preparation',
+    real_results: [
+      { metric: 'Callback Rate', value: '3x higher', description: 'ATS-optimized resumes get 3x more interview invitations' },
+      { metric: 'Application Time', value: '75% faster', description: 'Tailored resume + cover letter in 15 min vs 1 hour manually' },
+      { metric: 'Interview Success Rate', value: '+50%', description: 'AI mock interview practice improves confidence and performance' },
+    ],
+  },
+
+  {
+    slug: 'ai-for-personal-finance-and-budgeting',
+    title: 'AI for Personal Finance & Budgeting',
+    subtitle: 'Take control of your money with AI',
+    description:
+      'Use AI tools to manage your personal finances: budget tracking, expense analysis, investment research, tax planning, and financial goal setting. From paying off debt to building wealth, AI helps you make smarter money decisions with data-driven insights.',
+      meta_title: 'AI for Personal Finance & Budgeting — Apifeny AI Playbook',
+      meta_description: 'Take control of your finances with AI: budget tracking, expense analysis, investment research, and tax planning using ChatGPT and Gemini.',
+    related_tool_slugs: ['chatgpt', 'gemini', 'perplexity', 'notion-ai'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '💰',
+    gradient: 'from-yellow-500/30 to-amber-500/30',
+    steps: [
+      {
+        title: 'Analyze your spending with ChatGPT',
+        description:
+          'Export your bank/credit card transactions as CSV. Upload to ChatGPT Code Interpreter and ask for: spending categorization, monthly trends, average spending per category, top expenses, savings rate calculation, and anomaly detection.',
+        tip: 'Prompt: "Analyze my 6 months of transactions. (1) Categorize every transaction. (2) Show monthly spending by category as a stacked bar chart. (3) Calculate my savings rate. (4) Identify unusual expenses. (5) Suggest 3 changes to save $X/month."',
+      },
+      {
+        title: 'Build a budget with Notion AI',
+        description:
+          'Set up a Notion database for budget tracking. Create categories with monthly limits. Use Notion AI to categorize imported transactions, alert you when approaching limits, generate monthly budget vs actual reports, and suggest adjustments.',
+      },
+      {
+        title: 'Research investments with Perplexity',
+        description:
+          'Before investing, use Perplexity to research: stock fundamentals, fund performance, sector outlook, risk factors, and analyst ratings for stocks, ETFs, or crypto. Every source is cited for verification.',
+      },
+      {
+        title: 'Plan your financial goals with Gemini',
+        description:
+          'Use Gemini long context to process your entire financial picture: upload bank statements, investment accounts, debts, and income. Ask for a comprehensive financial plan, debt payoff strategy, and retirement projections.',
+      },
+      {
+        title: 'Prepare for tax season with ChatGPT',
+        description:
+          'Use ChatGPT to organize tax documents: categorize deductible expenses, calculate estimated tax liability, identify potential deductions, and generate a tax preparation checklist. Always verify with a tax professional.',
+      },
+    ],
+    pro_tips: [
+      'Set up a Weekly Money Review: every Sunday, upload your week transactions to ChatGPT for analysis and recommendations',
+      'Use ChatGPT to calculate cost of delay on financial decisions',
+      'Create separate Notion databases for: Budget (monthly tracking), Net Worth (quarterly update), Investments (portfolio tracker), Debts (paydown progress)',
+      'For investment research, always cross-reference Perplexity data with official sources like SEC filings before investing',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Sharing sensitive financial data with public AI tools',
+        fix: 'Remove personal identifiers before uploading. Use Gemini (better privacy) or run local LLMs for highly sensitive financial data.',
+      },
+      {
+        mistake: 'Treating AI tax advice as professional tax guidance',
+        fix: 'AI is great for organization and initial analysis. Always verify AI tax recommendations with a licensed tax professional.',
+      },
+    ],
+    pipeline_stage: 'research',
+    revenue_impact: 'Save $5K-20K/year with AI-identified savings opportunities and investment optimization',
+    real_results: [
+      { metric: 'Monthly Savings', value: '+$200-500', description: 'AI-identified spending cuts and optimization opportunities' },
+      { metric: 'Budget Review Time', value: '80% faster', description: 'Sunday review in 15 min vs 1 hour manually' },
+      { metric: 'Investment Research', value: '3x more efficient', description: 'AI-powered screening replaces hours of manual research' },
+    ],
+  },
+
+  {
+    slug: 'ai-for-fitness-and-health-tracking',
+    title: 'AI for Fitness & Health Tracking',
+    subtitle: 'Personalized workouts, nutrition & wellness with AI',
+    description:
+      'Use AI to optimize your fitness and health journey: personalized workout plans, nutrition tracking, sleep analysis, form correction, progress monitoring, and habit building. Whether you are a beginner or an athlete, AI creates a coaching experience tailored to your body and goals.',
+      meta_title: 'AI for Fitness & Health Tracking — Apifeny AI Playbook',
+      meta_description: 'Personalized workouts, nutrition planning, and health tracking with AI. Get a virtual coach with ChatGPT, Gemini, and Notion AI.',
+    related_tool_slugs: ['chatgpt', 'gemini', 'perplexity', 'notion-ai'],
+    difficulty: 'Beginner',
+    read_time_minutes: 8,
+    icon: '💪',
+    gradient: 'from-green-500/30 to-emerald-500/30',
+    steps: [
+      {
+        title: 'Get a personalized workout plan with ChatGPT',
+        description:
+          'Describe your fitness level, goals (muscle gain, fat loss, endurance), available equipment, schedule, injuries, and preferences. ChatGPT creates a detailed, progressive workout plan.',
+        tip: 'Prompt: "Create a 12-week workout plan: I am intermediate, goal is muscle gain, have a full gym, can train 4 days/week, prefer push-pull-legs split. Include exercises, sets, reps, rest times, and progression scheme."',
+      },
+      {
+        title: 'Plan nutrition with Gemini',
+        description:
+          'Tell Gemini your stats (height, weight, age, activity level) and goals. Ask for daily calorie target, macronutrient breakdown, meal plan template, and recipe ideas.',
+      },
+      {
+        title: 'Track progress with Notion AI',
+        description:
+          'Create a Notion fitness dashboard: workout log, body measurements, progress photos, nutrition tracker, and habit tracker. Use Notion AI to generate weekly summaries and identify patterns.',
+      },
+      {
+        title: 'Research science-backed methods with Perplexity',
+        description:
+          'Use Perplexity to research: exercise science, nutrition research, supplement efficacy, recovery methods, and injury prevention. Every claim has cited sources from peer-reviewed studies.',
+      },
+      {
+        title: 'Get form feedback with AI video analysis',
+        description:
+          'Record your exercise form and use AI tools that analyze your movement patterns. They detect incorrect form, asymmetries, range of motion issues, and injury risk patterns.',
+      },
+    ],
+    pro_tips: [
+      'Create a Fitness Command Center in Notion: workout logs, meal plans, progress photos, measurements, and weekly AI reviews, all in one place',
+      'Use ChatGPT to calculate progressive overload based on your last 4 weeks of training data',
+      'Set up a daily check-in bot with ChatGPT: morning weigh-in, energy level, sleep quality, then ChatGPT adjusts the days workout and nutrition automatically',
+      'Use Gemini to analyze anonymized blood work and lab results',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Following AI-generated workout plans without listening to your body',
+        fix: 'Use AI plans as a guide, not gospel. Adjust intensity, volume, and exercises based on how your body feels.',
+      },
+      {
+        mistake: 'AI nutrition plans that do not account for food allergies or intolerances',
+        fix: 'Always specify restrictions in your prompt and verify AI meal plans against your known safe foods.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Replace $200-500/mo personal trainer with $20-40/mo AI tools for personalized fitness guidance',
+    real_results: [
+      { metric: 'Workout Consistency', value: '+60%', description: 'AI-generated plans keep you accountable with daily check-ins' },
+      { metric: 'Cost Savings', value: '90%', description: 'vs $200-500/mo personal trainer: $20-40/mo for all AI tools' },
+      { metric: 'Goal Achievement Rate', value: '2x higher', description: 'Personalized AI plans adapt to progress faster than generic programs' },
+    ],
+  },
+
+  {
+    slug: 'ai-for-social-media-management',
+    title: 'AI for Social Media Management',
+    subtitle: 'Content calendars, captions & growth with AI',
+    description:
+      'Manage your entire social media presence with AI: content strategy, post generation, scheduling, analytics, and audience engagement across platforms. From solo creators to brand teams, AI handles the heavy lifting while you focus on community.',
+      meta_title: 'AI for Social Media Management — Apifeny AI Playbook',
+      meta_description: 'Manage social media with AI: content calendars, captions, visuals, scheduling, and analytics across platforms using ChatGPT and Canva AI.',
+    related_tool_slugs: ['chatgpt', 'canva-ai', 'perplexity', 'gemini'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '📱',
+    gradient: 'from-pink-500/30 to-rose-500/30',
+    steps: [
+      {
+        title: 'Define your social media strategy with ChatGPT',
+        description:
+          'Describe your brand, target audience, platforms, and goals. ChatGPT creates: platform-specific content strategies, posting calendars, content pillars, hashtag strategies, and engagement tactics.',
+        tip: 'Prompt: "Create a 30-day social media strategy for a B2B SaaS brand targeting APAC startups on LinkedIn and X. Include: content pillars, post frequency, engagement tactics, and KPI targets for each platform."',
+      },
+      {
+        title: 'Generate platform-optimized captions with ChatGPT',
+        description:
+          'Write one key message and ask ChatGPT for platform-specific versions: short punchy for X, professional for LinkedIn, casual for Instagram, trending for TikTok. Each platform has its own voice and format.',
+        tip: 'Prompt: "Take this message and adapt it for: (1) LinkedIn: professional thought leadership, (2) X: short with hook, (3) Instagram: visual-first story. Include emojis and hashtags where appropriate."',
+      },
+      {
+        title: 'Design visuals with Canva AI',
+        description:
+          'Use Canva Magic Design to generate complete social media posts from text. Canva creates: Instagram posts, LinkedIn banners, X headers, story templates, and Reels covers. Your Brand Kit auto-applies colors and fonts.',
+        tip: 'Create a Canva Brand Kit with logo, fonts, colors, and imagery. Every AI-generated design is on-brand automatically.',
+      },
+      {
+        title: 'Research trends with Perplexity',
+        description:
+          'Stay ahead of trends in your niche. Use Perplexity to research: trending topics, viral formats, competitor content strategies, platform algorithm changes, and audience sentiment.',
+      },
+      {
+        title: 'Analyze performance with Gemini',
+        description:
+          'Export your social media analytics (engagement, reach, followers, clicks) and upload to Gemini. Ask for: performance trends, best-performing content analysis, audience insights, and optimization recommendations.',
+      },
+    ],
+    pro_tips: [
+      'Create a Monthly Content Calendar in Notion: each post has AI-generated caption, Canva design, scheduled date, and performance tracking',
+      'Batch create: use ChatGPT to generate 30 captions, Canva AI to design 30 visuals, then schedule everything with a scheduler like Buffer or Hootsuite',
+      'Use ChatGPT to repurpose long-form content: one blog post can become 5 LinkedIn posts, 3 Tweets, 1 Instagram carousel, and 1 newsletter',
+      'Set up a weekly analytics review: paste metrics into ChatGPT for automated recommendations on what is working and what to improve',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Posting the same content format across all platforms',
+        fix: 'Each platform requires a unique format and voice. Always use ChatGPT to adapt content specifically for each platform.',
+      },
+      {
+        mistake: 'AI-generated content that sounds robotic or generic',
+        fix: 'Include brand voice guidelines in every ChatGPT prompt. Add real personal anecdotes and opinions to AI drafts.',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: 'Replace a $3K/mo social media manager with $200/mo AI tools for content creation and scheduling',
+    real_results: [
+      { metric: 'Post Output', value: '5x more', description: 'AI generates 30+ posts/month vs 5-6 manually' },
+      { metric: 'Time Spent/Week', value: '80% less', description: 'Social media management down from 20+ hours to 4 hours' },
+      { metric: 'Engagement Rate', value: '+35%', description: 'AI-optimized posting times and content formats drive higher engagement' },
+    ],
+  },
+
+  {
+    slug: 'ai-for-email-marketing',
+    title: 'AI for Email Marketing',
+    subtitle: 'Sequences, personalization & conversions with AI',
+    description:
+      'Build high-converting email campaigns with AI: strategy, copywriting, personalization, A/B testing, and analytics. Whether you are sending a welcome sequence, weekly newsletter, or sales campaign, AI helps you write emails that get opened, clicked, and converted.',
+      meta_title: 'AI for Email Marketing — Apifeny AI Playbook',
+      meta_description: 'Build high-converting email campaigns with AI: sequences, personalization, A/B testing, and analytics for better open rates and conversions.',
+    related_tool_slugs: ['chatgpt', 'perplexity', 'gemini', 'canva-ai'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 9,
+    icon: '📧',
+    gradient: 'from-blue-500/30 to-indigo-500/30',
+    steps: [
+      {
+        title: 'Plan your email strategy with ChatGPT',
+        description:
+          'Describe your audience, goals, and product. ChatGPT creates: email sequence maps, funnel-stage content plans, segmentation strategies, and conversion goals for each touchpoint.',
+        tip: 'Prompt: "Design a 7-email welcome sequence for new SaaS trial users. Goal: convert to paid. Include: timing, subject line hooks, body goals, CTAs, and success metric for each email."',
+      },
+      {
+        title: 'Write high-converting subject lines with ChatGPT',
+        description:
+          'Paste your email body and ask ChatGPT for: 10 subject line variants (curiosity, urgency, benefit-driven, how-to), A/B test pairs, and preview text optimization. Test open rates to find what resonates.',
+        tip: 'Prompt: "Write 10 subject lines for this email about [topic]. Include: 3 curiosity-based, 3 benefit-driven, 2 urgency (without being spammy), and 2 personalized variants. Then create 5 preview text options."',
+      },
+      {
+        title: 'Generate email body copy with AI',
+        description:
+          'For each email in your sequence, provide: goal of the email, target segment, key message, and desired action. ChatGPT writes the body with: strong opening hook, value-driven middle, clear CTA, and PS section.',
+      },
+      {
+        title: 'Personalize at scale with Gemini',
+        description:
+          'Use Gemini to analyze your subscriber data and create: dynamic content rules (show different content based on behavior), personalized product recommendations, and triggered email logic based on user actions.',
+        tip: 'Upload your subscriber segments and past email performance to Gemini. Ask for: "Which content resonates with which segment? Create personalization rules for each segment."',
+      },
+      {
+        title: 'Design email templates with Canva AI',
+        description:
+          'Use Canva AI to design: email header images, banners, product showcase layouts, and CTA buttons. Export optimized for email (compressed PNG, max 600px width).',
+      },
+      {
+        title: 'Analyze and optimize with ChatGPT',
+        description:
+          'Export your email marketing analytics (open rates, CTR, conversion rates, unsubscribe rates). Upload to ChatGPT for: campaign performance analysis, A/B test winner recommendations, and optimization suggestions for underperforming emails.',
+      },
+    ],
+    pro_tips: [
+      'Build an Email Library in Notion: organize AI-generated emails by type (welcome, nurture, promo, re-engagement, transactional) for reuse and iteration',
+      'Always A/B test subject lines. ChatGPT generates 10 variants, test 2 pairs each week, let data guide your next batch of AI-generated options',
+      'Use ChatGPT to write preheader text (the preview line after the subject). This is often ignored but significantly impacts open rates',
+      'Create triggered email automation flows: welcome series, abandoned cart, re-engagement, post-purchase upsell, and win-back campaigns, all outlined by ChatGPT',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Sending plain text AI emails without personalization tokens',
+        fix: 'Always include dynamic tags: [First Name], [Company], [Recent Activity]. ChatGPT can generate versions with placeholders you fill from your email platform.',
+      },
+      {
+        mistake: 'Over-optimizing for opens and ignoring conversions',
+        fix: 'Subject lines get opens, body copy gets clicks. Use ChatGPT to optimize for both: generate click-worthy CTAs and conversion-focused body copy.',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: 'Increase email revenue by 3-5x with AI-optimized sequences and personalization',
+    real_results: [
+      { metric: 'Open Rate', value: '+40%', description: 'AI-optimized subject lines and preview text drive higher opens' },
+      { metric: 'Click-Through Rate', value: '+60%', description: 'Personalized content and strong CTAs improve conversion' },
+      { metric: 'Email Production Time', value: '80% less', description: 'Full campaign from strategy to copy in 1 hour vs 5 hours manually' },
+    ],
+  },
+
+  {
+    slug: 'ai-for-podcast-production',
+    title: 'AI for Podcast Production',
+    subtitle: 'Record, edit, and publish with AI',
+    description:
+      'Full podcast production workflow with AI: topic research, scriptwriting, recording, editing, show notes, transcription, and distribution. From solo creators to interview shows, AI handles the production pipeline so you can focus on great conversations.',
+      meta_title: 'AI for Podcast Production — Apifeny AI Playbook',
+      meta_description: 'Full podcast production workflow with AI: topic research, recording, editing, show notes, transcription, and distribution using Descript and ChatGPT.',
+    related_tool_slugs: ['descript', 'elevenlabs', 'chatgpt', 'perplexity', 'canva-ai', 'gemini'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 9,
+    icon: '🎙️',
+    gradient: 'from-purple-500/30 to-indigo-500/30',
+    steps: [
+      {
+        title: 'Research topics and guests with Perplexity',
+        description:
+          'For each episode, use Perplexity to research: trending topics in your niche, guest background and expertise, recent developments, and discussion angles. Create a Perplexity Collection per episode for organized notes.',
+        tip: 'Create a Perplexity Collection for your podcast. For guest episodes, research: "What is [Guest Name] latest work? Controversial opinions? Unique expertise?" Have cited sources ready for discussion.',
+      },
+      {
+        title: 'Write episode outlines with ChatGPT',
+        description:
+          'Use research notes to generate: episode structure (hook, segments, key questions, takeaways), intro script, outro with CTA, and timestamps. ChatGPT creates a production-ready outline.',
+        tip: 'Prompt: "Create a 45-minute podcast episode outline about [topic]. Include: 2-min hook, 4 segments (10 min each), key questions per segment, soundbite opportunities, and 3 key takeaways."',
+      },
+      {
+        title: 'Record and transcribe with Descript',
+        description:
+          'Record directly in Descript or import your audio. Descript transcribes in real-time. You can edit the podcast by editing the transcript text (delete words, rearrange sentences). Descript regenerates audio automatically.',
+        tip: 'Use Descript Studio Sound to clean up audio from any source. It removes background noise, echoes, and room tone with one click.',
+      },
+      {
+        title: 'Generate show notes with AI',
+        description:
+          'Upload your transcript to ChatGPT or Gemini. Generate: episode summary, timestamped key points, guest bio, resource links, quotes for social media, and SEO-optimized description for Apple Podcasts and Spotify.',
+        tip: 'Prompt: "From this transcript, generate: (1) 200-word episode summary, (2) 5 timestamped key takeaways, (3) 3 quotable moments with timestamps, (4) SEO-optimized show notes, (5) 10 social media posts promoting the episode."',
+      },
+      {
+        title: 'Design cover art and social graphics with Canva AI',
+        description:
+          'Use Canva AI to create: podcast cover art (Apple Podcasts spec: 3000x3000px), episode quote graphics, audiogram videos, and promotional banners for social platforms.',
+        tip: 'Create a Canva template for your podcast: cover art, quote cards, episode announcement, and clip teasers. AI generates each in minutes.',
+      },
+      {
+        title: 'Repurpose content across platforms',
+        description:
+          'Use ChatGPT to repurpose your podcast transcript into: blog posts (transcribe and edit), newsletter (key takeaways), social threads (5-10 tweets), LinkedIn posts (thought leadership), and short video clips (AI identifies best moments).',
+      },
+    ],
+    pro_tips: [
+      'Create a Podcast Template in Descript: intro music, outro, bumper, and your voice profile. Every episode starts from the same template',
+      'Use ElevenLabs to generate podcast intros and sponsorship reads with a consistent brand voice',
+      'Batch record 3-4 episodes in one session, then use AI to edit and publish weekly',
+      'Create a Content Repurposing workflow: transcript goes to ChatGPT, generates blog, newsletter, social posts, and video scripts automatically',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Spending more time on production than content',
+        fix: 'Use AI for editing, show notes, and distribution. Spend 80% of your time on great content and guest preparation.',
+      },
+      {
+        mistake: 'Not optimizing podcast metadata for search',
+        fix: 'AI-generated show notes must include SEO keywords. Ask ChatGPT: "Optimize these show notes for search in Apple Podcasts and Spotify for keywords [list]."',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Produce a professional podcast for under $100/mo instead of $1K+/mo for editing and production services',
+    real_results: [
+      { metric: 'Episode Production Time', value: '80% faster', description: 'From recording to published episode in 2 hours vs 10 hours manually' },
+      { metric: 'Weekly Output', value: '2x more', description: 'AI editing + repurposing enables 2 episodes/week vs 1' },
+      { metric: 'Cost Savings', value: '90%', description: 'AI replaces podcast editor, show notes writer, and social media promoter' },
+    ],
+  },
+
+  {
+    slug: 'ai-for-presentation-design',
+    title: 'AI for Presentation Design',
+    subtitle: 'Beautiful slide decks from any content',
+    description:
+      'Create stunning presentations with AI: from content outline to designed slides, speaker notes, and handouts. Using Gamma, ChatGPT, Canva AI, and other tools, you can go from a rough idea to a polished deck in under an hour.',
+      meta_title: 'AI for Presentation Design — Apifeny AI Playbook',
+      meta_description: 'Create stunning presentations with AI: outlines, slides, speaker notes, and handouts using Gamma, ChatGPT, and Canva AI in under an hour.',
+    related_tool_slugs: ['gamma', 'canva-ai', 'chatgpt', 'gemini', 'midjourney'],
+    difficulty: 'Beginner',
+    read_time_minutes: 8,
+    icon: '📽️',
+    gradient: 'from-amber-500/30 to-orange-500/30',
+    steps: [
+      {
+        title: 'Outline your presentation with ChatGPT',
+        description:
+          'Describe your topic, audience, and key message. ChatGPT creates: presentation structure, slide-by-slide content plan, key data points to include, and narrative arc (problem, solution, proof, action).',
+        tip: 'Prompt: "Create a 15-slide investor pitch presentation outline for my AI-powered [product]. Audience: Series A VCs. Include: slide titles, key points per slide, data to visualize, and talking points."',
+      },
+      {
+        title: 'Generate slides instantly with Gamma',
+        description:
+          'Paste your ChatGPT outline into Gamma. It generates a complete presentation with: professional design, AI-generated images, charts from data, and consistent layout. Pick from multiple design templates.',
+        tip: 'Gamma saves hours of manual slide building. The key is a good outline from ChatGPT. Better outline = better presentation.',
+      },
+      {
+        title: 'Design custom slides with Canva AI',
+        description:
+          'Use Canva Magic Design to create: title slides, section dividers, data visualization slides, and closing slides. Canva AI generates complete designs from text descriptions with your brand colors and fonts.',
+        tip: 'Create a Canva Brand Kit with your presentation colors, fonts, and logo. Every AI-generated slide is on-brand automatically.',
+      },
+      {
+        title: 'Create custom visuals with Midjourney',
+        description:
+          'For high-impact custom images (not stock photos), use Midjourney to generate: conceptual illustrations, product mockups, team photos (AI-generated), and data visualization backgrounds.',
+      },
+      {
+        title: 'Write speaker notes with ChatGPT',
+        description:
+          'For each slide, ask ChatGPT to generate: speaker notes (what to say), transition scripts (moving between slides), talking points (key messages), and potential Q&A answers.',
+        tip: 'Prompt: "For this slide about [topic], write: (1) 60-second speaker script, (2) transition from previous slide, (3) 3 potential audience questions with answers, (4) one memorable quote or statistic to emphasize."',
+      },
+    ],
+    pro_tips: [
+      'Build a Slide Library in Canva: reusable templates for different formats (pitch deck, team all-hands, quarterly review, conference talk)',
+      'Use ChatGPT to reduce text on slides: "Condense this paragraph into a 5-word headline and 3 bullet points." Slides are for the audience, speaker notes are for you',
+      'Generate data visualizations with ChatGPT Code Interpreter: upload your data, describe the chart type, and get high-res chart images for your presentation',
+      'Create a pre-meeting handout with AI: from your presentation, ChatGPT generates a one-page executive summary for attendees to read beforehand',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Putting too much text on slides (death by PowerPoint)',
+        fix: 'Slides should support your talk, not replace it. Use ChatGPT to distill each slide to: 1 headline, 3-5 words max of supporting text, and 1 visual.',
+      },
+      {
+        mistake: 'Using AI-generated visuals that look obviously AI (dated aesthetic)',
+        fix: 'Use Gamma for modern, professional designs. For custom images, specify style: "clean corporate photography, minimalist, actual people" to avoid obvious AI look.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Save $2K-5K per deck on design agency fees with AI-powered presentation creation',
+    real_results: [
+      { metric: 'Deck Creation Time', value: '90% faster', description: 'From 8+ hours manually to 45 min with AI from outline to finished deck' },
+      { metric: 'Design Cost Savings', value: '95%', description: 'vs $2K-5K agency deck: $20-40/mo AI tool subscriptions' },
+      { metric: 'Iteration Speed', value: '10x faster', description: 'Regenerate full decks in minutes for different audiences or formats' },
+    ],
+  },
+
+  {
+    slug: 'ai-for-meeting-notes-and-summarization',
+    title: 'AI for Meeting Notes & Summarization',
+    subtitle: 'Never miss a detail with AI meeting assistants',
+    description:
+      'Transform how you handle meetings with AI: automatic transcription, smart summarization, action item extraction, follow-up generation, and knowledge management. Save hours per week and never lose track of decisions again.',
+      meta_title: 'AI for Meeting Notes & Summarization — Apifeny AI Playbook',
+      meta_description: 'Transform meetings with AI: automatic transcription, smart summarization, action item extraction, and automated follow-ups. Save hours weekly.',
+    related_tool_slugs: ['chatgpt', 'gemini', 'notion-ai', 'descript'],
+    difficulty: 'Beginner',
+    read_time_minutes: 8,
+    icon: '📝',
+    gradient: 'from-cyan-500/30 to-teal-500/30',
+    steps: [
+      {
+        title: 'Set up AI meeting transcription',
+        description:
+          'Use tools like Otter.ai, Fireflies.ai, or Descript to automatically record, transcribe, and summarize your meetings. Connect to your calendar (Google/Outlook) for auto-join. These tools capture everything said and generate searchable transcripts.',
+        tip: 'Start with one meeting recording tool for all meetings. Set it to auto-join your recurring meetings. Within a week you will have a searchable library.',
+      },
+      {
+        title: 'Generate AI summaries with ChatGPT',
+        description:
+          'Paste your meeting transcript into ChatGPT. Ask for: executive summary (1 paragraph), key decisions made, action items with owners, open questions, and next steps with deadlines.',
+        tip: 'Prompt: "Summarize this 60-min meeting transcript. Format: (1) TLDR one-liner, (2) 5 key decisions made, (3) Action items by person [Owner: Task: Due Date], (4) Questions still open, (5) Follow-up meeting needed? If so, what agenda?"',
+      },
+      {
+        title: 'Extract action items with Gemini',
+        description:
+          'Gemini long context processes entire meeting transcripts for deeper extraction. Ask for: commitment extraction (who promised what by when), risk identification (what could go wrong based on discussion), and dependency mapping.',
+        tip: 'Upload all weekly meeting transcripts to Gemini at once. Ask for: "Extract all commitments across these 5 meetings. Group by person. Flag any that are overdue or have no clear owner."',
+      },
+      {
+        title: 'Save and organize in Notion AI',
+        description:
+          'Create a Notion Meetings database: auto-import summaries, tag by project/team/client, link to related documents. Notion AI makes the entire library searchable and can answer questions about past meetings.',
+        tip: 'Create a Notion template for meeting notes: attendees, date, AI summary, action items, decisions, and links to related projects. Tag everything for search.',
+      },
+      {
+        title: 'Automate follow-ups with AI',
+        description:
+          'Use AI to generate: meeting recap emails, Slack summaries for team members who missed the meeting, follow-up reminders for action items, and weekly meeting digest for stakeholders.',
+        tip: 'Prompt: "From this meeting summary, generate: (1) 5-line Slack recap for the team, (2) formal email to stakeholders with decisions and next steps, (3) reminder schedule for 3 action items."',
+      },
+    ],
+    pro_tips: [
+      'Create a Meeting Knowledge Base in Notion: every meeting transcript, summary, and action item becomes searchable. Ask Notion AI: "What did we decide about [topic] in last months meetings?"',
+      'Tag action items with priority and due date in Notion. Have ChatGPT generate a daily "Today Action Items" summary from your Notion database',
+      'Use Gemini to find patterns across meetings: "What topics keep coming up without resolution? Which decisions keep getting revisited? Is there a pattern in missed deadlines?"',
+      'Share AI meeting summaries before the meeting ends. Take 2 minutes at the end of the meeting to review and correct the AI summary',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Relying on AI summaries without human review',
+        fix: 'AI can miss nuance, sarcasm, or implied commitments. Always review AI summaries within 15 minutes of the meeting while memory is fresh.',
+      },
+      {
+        mistake: 'Not tagging action items with owners and deadlines',
+        fix: 'Instruct your AI: "For every action item, extract: who specifically is responsible, what exactly needs to be done, and by when. If unclear, flag it."',
+      },
+    ],
+    pipeline_stage: 'deployment',
+    revenue_impact: 'Save 5+ hours/week on meeting follow-up and eliminate missed action items',
+    real_results: [
+      { metric: 'Meeting Follow-Up Time', value: '80% less', description: 'AI handles notes, summaries, and action item tracking in minutes' },
+      { metric: 'Action Item Completion', value: '+50%', description: 'Clear AI-extracted owners, tasks, and deadlines improve accountability' },
+      { metric: 'Meeting Knowledge Retention', value: '95%', description: 'Searchable meeting library ensures nothing gets lost or forgotten' },
+    ],
+  },
+
 ];
 
 export function getPlaybookBySlug(slug: string): Playbook | undefined {

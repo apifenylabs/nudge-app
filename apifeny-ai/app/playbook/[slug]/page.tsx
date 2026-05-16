@@ -59,11 +59,21 @@ export default function PlaybookPage({ params }: PlaybookPageProps) {
     Advanced: 'bg-neon/20 text-neon-light border-neon/30',
   };
 
-  const jsonLd = {
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://apifeny-ai.vercel.app' },
+      { '@type': 'ListItem', position: 2, name: 'Playbooks', item: 'https://apifeny-ai.vercel.app/playbooks' },
+      { '@type': 'ListItem', position: 3, name: playbook.title, item: `https://apifeny-ai.vercel.app/playbook/${playbook.slug}` },
+    ],
+  };
+
+  const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: playbook.title,
-    description: playbook.description,
+    description: playbook.meta_description || playbook.description,
     author: { '@type': 'Organization', name: 'Apifeny AI' },
     datePublished: '2026-01-01',
     publisher: { '@type': 'Organization', name: 'Apifeny AI' },
@@ -77,6 +87,21 @@ export default function PlaybookPage({ params }: PlaybookPageProps) {
     },
   };
 
+  const faqJsonLd = playbook.common_mistakes && playbook.common_mistakes.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: playbook.common_mistakes.map((item) => ({
+          '@type': 'Question',
+          name: item.mistake,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.fix,
+          },
+        })),
+      }
+    : null;
+
   const showToc = playbook.steps.length > 3;
 
   return (
@@ -84,12 +109,39 @@ export default function PlaybookPage({ params }: PlaybookPageProps) {
       <ReadingProgressBar />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      {/* Breadcrumb navigation */}
+      <nav aria-label="Breadcrumb" className="mb-4">
+        <ol className="flex flex-wrap items-center gap-1.5 text-xs text-tech-300">
+          <li>
+            <Link href="/" className="hover:text-white transition">Home</Link>
+          </li>
+          <li className="text-tech-500">/</li>
+          <li>
+            <Link href="/playbooks" className="hover:text-white transition">Playbooks</Link>
+          </li>
+          <li className="text-tech-500">/</li>
+          <li className="text-tech-100 truncate max-w-[200px]" title={playbook.title}>
+            {playbook.title}
+          </li>
+        </ol>
+      </nav>
+
       {/* Back link */}
       <Link
-        href="/tools"
+        href="/playbooks"
         className="inline-flex items-center gap-1.5 text-sm text-tech-200 hover:text-white transition mb-6 group"
       >
         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition" />
