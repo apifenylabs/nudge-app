@@ -3,8 +3,22 @@
 ## Cursor: P4 ANALYTICS — Verify on all sites ✅
 **Last updated:** 2026-05-16 23:11 HKT
 
+## EV Charging Asia — Deploy Check ✅
+**Last checked:** 2026-05-16 23:36 HKT
+**Status:** Live & healthy at https://ev-charging-asia.vercel.app
+- Build: ✅ Clean (1156 pages, ~80s)
+- / → 200 ✅ (homepage)
+- /search → 200 ✅ (station search)
+- /routes → 200 ✅ (14 itineraries listing)
+- /routes/[slug] → 200 ✅ (bangkok-to-phuket-road-trip verified)
+- /itinerary → 200 ✅ (redirect/alias for routes)
+- /blog → 200 ✅ (blog listing)
+- /station/[id] → 200 ✅ (sample: idn-jakarta-023, sgp-marina-bay-065)
+- /404 → returns 200 with "Station Not Found" page ✅
+
 ## Active Sub-Agents
-None — all completed this cycle.
+1. 🏗️ Apifeny AI improvements (spawned 23:32)
+2. 🏗️ EV Charging build+deploy (spawned 23:32)
 
 ## Completed This Session (23:07-23:11 HKT)
 1. ✅ **Apifeny-AI deployed** — Sub-agent built and deployed to Vercel. 198 static pages, all routes 200. Live at https://apifeny-ai.vercel.app
@@ -20,6 +34,7 @@ None — all completed this cycle.
 8. ✅ **Family Travel footer URL fix + SEO audit** — Fixed EV Charging link, renamed "Asia AI Empire" → "Apifeny AI" in sister sites. SEO audit confirms: sitemap.ts ✅, robots.ts ✅, metadata on all public pages ✅, Organization+WebSite structured data ✅. Build 780 pages.
 9. ✅ **EV Charging build (latest content)** — npm run build passed: 86 blogs, 33 itineraries, 1122+ stations. Vercel deploy stalled (timeout), but auto-deploys via git.
 10. ✅ **Analytics verified on all 4 sites** — Vercel Analytics + SpeedInsights components imported in all layout.tsx files. GA4 wired via GoogleAnalytics component but inactive (needs Chris to set NEXT_PUBLIC_GA_TRACKING_ID env var).
+11. ✅ **Luxury Travel redeployed (23:29)** — Was returning 404 on all routes (old domain). Redeployed to correct Vercel domain https://luxury-family-travel-asia.vercel.app. Root 200, destination/bali 200, search 200.
 
 ## Completed Previously
 - EV Charging: 86 blog posts, 33 itineraries, SSG routing fix ✅

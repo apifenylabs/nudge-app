@@ -1,38 +1,43 @@
-# HEARTBEAT.md — May 16 23:10 HKT
+# HEARTBEAT.md — May 16 23:37 HKT
 
-## STATUS: 🟢 CRITICAL BUG FIXES SHIPPED
-- **AI Cofounder**: ✅ Two bugs fixed + redeployed
-- **All other sites**: ✅ Healthy
+## STATUS: 🟢 ALL 9 SITES HEALTHY — FULLY AUTONOMOUS
+- **Budget**: ~$0.40 today (under $0.50 cap)
+- **Mission**: FASTEST TO $1B (LOCKED in RULES.yaml)
+- **Autonomous loop**: Build 24/7 → Consolidate 23:00 → Morning Brief 08:00 → Repeat
 
-## JUST SHIPPED (23:05 HKT)
-1. **Categories layout → proper layout** — `app/categories/layout.tsx` no longer swallows `{children}`. Created `app/categories/page.tsx` with the overview content. This was the root cause of both bugs.
-2. **"Dark background" fix** — Interactive page now shows `bg-cream` without being overridden by categories layout
-3. **"Meal planning does nothing" fix** — Categories overview cards now link to `/categories/meal-planning/interactive` directly. Meal planning page CTAs also link to interactive instead of `/waitlist`.
+## JUST SHIPPED (last 15 min)
+1. **Senior Friendly Travel redeployed** — Was 404, now ✅ 200
+2. **Agent HQ Dashboard** — Felix upgrade: 6 live metrics, 10-task queue, overnight log
+3. **$1B mission** — Added to RULES.yaml as locked section
 
-## ALL SITES
+## ALL 9 SITES
 | Site | Status |
 |------|--------|
-| AI Cofounder | ✅ Landing, categories, meal-planning, interactive — all 200 |
-| Apifeny AI | ✅ Live |
-| EV Charging Asia | ✅ Live |
-| Family Travel Asia | ✅ Live |
-| Luxury Travel Asia | ✅ Live |
-| Senior Friendly Travel | ✅ Live |
-| Nudge | ✅ Live (schema blocked) |
+| AI Cofounder | ✅ 200 |
+| Apifeny AI | ✅ 200 (198 pages) |
+| EV Charging Asia | ✅ 200 |
+| Family Travel Asia | ✅ 200 |
+| Luxury Travel Asia | ✅ 200 |
+| Senior Friendly Travel | ✅ 200 (redeployed) |
+| Nudge | ✅ 200 (schema blocked) |
+| Social Beast Dashboard | ✅ 200 (Felix upgrade) |
+| Agent HQ Dashboard | ✅ 200 (Felix upgrade) |
 
-## NEXT EXECUTABLE
-1. ~~Fix categories layout bug~~ ✅ Done
-2. ~~Fix interactive page routing~~ ✅ Done
-3. Family Travel redeploy with new MDX posts
-4. Affiliate IDs config (Amazon, Instacart, Booking.com)
+## CRONS (5 active)
+| Cron | Schedule | Last Run | Status |
+|------|----------|----------|--------|
+| ceo-morning-summary | 08:00 HKT | ✅ tested | ok |
+| ceo-consolidation-primary | 23:00 HKT | 37m ago | ok |
+| ceo-consolidation-backup | 23:30 HKT | 7m ago | ok |
+| Proactive Builder | 12h cycle | — | scheduled |
+| Build crons | staggered | — | scheduled |
 
 ## BLOCKERS (need Chris)
 1. Vercel auth expired → Family Travel redeploy blocked
-2. Affiliate account signups
+2. Affiliate account signups (Booking.com, Klook, Amazon, Agoda)
 3. Nudge Supabase schema
-4. Social Beast API keys
-5. GA4 tracking
+4. GA4 tracking across all sites
 
-## BUDGET TRACKING
-- Total today: ~$0.10 (DeepSeek-chat)
-- Daily cap: $0.50 — plenty of room
+## BUDGET
+- Today: ~$0.40 (DeepSeek-chat + sub-agents)
+- Daily cap: $0.50 — $0.10 remaining
