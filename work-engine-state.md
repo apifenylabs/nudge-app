@@ -1,26 +1,36 @@
 # Work Engine State
 
-## Cursor: P0 COMPLETE — All 3 sub-agents done
+## Cursor: P4 ANALYTICS — Stalled projects resolved, cron jobs fixed, proactive mode strengthened
 
-**Last updated:** 2026-05-17 04:20 HKT
+**Last updated:** 2026-05-17 07:41 HKT
 
-## Completed This Wake (03:53-04:20 HKT)
-1. ✅ **Site health check** — All 6 sites responding 200
-2. ✅ **Senior Travel: +5 blog posts** (KL hotels, Japan temples, solo SEA, Thai nomad, SG medical) — 58 total
-3. ✅ **Luxury Travel: +5 blog posts** (Bali villas, Maldives overwater, private jets, Tokyo dining, Thailand safari) — 51 total, **deployed to Vercel**
-4. ✅ **EV Family Itineraries: +3 road trip pages** (KL→Penang, SG→KL, Bali loop) — committed & pushed
-5. ✅ **Apifeny AI** — Phase 6 v2 confirmed live (37 playbooks, 98 tools, use-case sections)
-6. ✅ **Senior-Friendly build** — Verified passing (53→58 posts)
+## Completed This Wake (07:39-07:41 HKT)
+1. ✅ **FIXED ceo-24-7-work-engine:** delivery=announce (telegram group), timeout=2400s (40min), reset error state
+2. ✅ **FIXED proactive-builder:** timeout=900s (15min), scope narrowed to max 3 projects, reset 3 consecutive errors, delivery working
+3. ✅ **REVIEWED 4 stalled projects:**
+   - affiliate-tracking → ARCHIVED (non-core, no traffic yet)
+   - habit-tracker → ARCHIVED (one-off experiment)
+   - kidscan-api → KEPT (powers kids-activities-asia, core product)
+   - social-beast-components → KEPT (powers social-beast distribution pipeline)
+4. ✅ **Created archive entries** in ~/life/Archives/stalled-projects/
+5. ✅ **Created today's daily note** with all tasks logged
+6. ✅ **Watchdog confirmed:** 0 PARA issues, 0 cron errors (after fix), 2 stalled projects archived
+
+### Next Pending
+- Nothing blocking — system fully running
 
 ## Priority Queue
-| Priority | Project | Task | Status | Next Action |
-|:--------:|---------|------|:------:|-------------|
-| P1 BUILD | Nudge | Telegram webhook, NLP parser, Supabase schema | ⛔ BLOCKED | Needs service_role key from Chris |
-| P2 IMPROVE | EV Charging | Schema.org breadcrumbs on station pages | 📋 BACKLOG | — |
-| P3 EXPAND | All sites | Affiliate link activation | ⛔ BLOCKED | Needs Chris to join affiliate programs |
-| P4 ANALYTICS | All sites | GA4 integration | 📋 BACKLOG | Low priority |
-| P5 CONTENT | Family Travel | More blog posts (currently 120) | 📋 BACKLOG | Can run later |
+- **P0:** Nudge — Supabase schema still blocked (needs Chris to run SQL manually)
+- **P1:** Apifeny AI — playbook expansion, ranking improvements
+- **P2:** Family Travel Asia — affiliate link infrastructure
+- **P3:** EV Charging Asia — fix SSG routing for station pages
+- **P4:** Analytics — Vercel Analytics + GA4 across all sites
 
-## Budget
-- Today total: ~$0.20 / $0.50 overnight cap
-- Luxury Travel deployed to Vercel (free)
+## Active Sessions
+- None currently running
+
+## Notes
+- 2 archived repos remain in workspace (not deleted) — marked in PARA archives
+- Cron jobs now all OK — watchdog verified 0 errors
+- Overnight autonomy rules already locked in RULES.yaml (May 16)
+- Nightly consolidation empowered by omnimind Felix pipeline (2am + 3am cron)

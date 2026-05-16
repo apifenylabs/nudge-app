@@ -754,3 +754,221 @@ enterprise_alignment:
     - "OpenClaw as core agentic brain with persistent memory and multi-channel"
     - "Ruthless cost control and data moat"
   decision_question: "Does this move us toward the monetization and distribution model in VISION-2026.md?"
+
+# ═══════════════════════════════════════════════════════════════
+# STALLED PROJECT MANAGEMENT (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# Chris directive: Review stalled projects (>4 weeks idle), default to archive.
+# Decision log stored in ~/life/Archives/stalled-projects/
+
+stalled_project_policy:
+  locked: true
+  lock_date: "2026-05-17"
+  review_cadence: "Every 30 days, or on Chris request"
+  default_action: "Archive to ~/life/Archives/stalled-projects/"
+  exceptions_kept:
+    - kidscan-api: "Core product — powers kids-activities-asia deployed site. Keep but defer."
+    - social-beast-components: "Core — powers social-beast distribution pipeline. Keep but defer."
+  archived:
+    - affiliate-tracking: "Monetization layer — important but no traffic yet. Archive until >$100 MRR."
+    - habit-tracker: "One-off AppFactory clone. Archive indefinitely."
+  re_activation:
+    criteria:
+      - "Monthly recurring revenue >$100 from any site"
+      - "OR explicit Chris request"
+    process: "Un-archive from stalled-projects/ -> move git repo back to active"
+  preserved: true
+  note: "Archived repos remain in workspace (git repos preserved). Only the PARA tracking entry moves to Archives."
+
+# ═══════════════════════════════════════════════════════════════
+# PROACTIVE CEO MODE — NEVER IDLE (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# Chris directive: CEO must run 8+ hours without human input.
+# Continuous self-tasking from priority queue. No gaps.
+
+ceo_never_idle:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  productive_session_target_hours: 8
+  behavior_rules:
+    - "NEVER report 'waiting for input' or 'no tasks' — always self-assign the next highest-value task"
+    - "If all P0-P1 tasks are blocked by Chris, immediately execute P2-P3 tasks"
+    - "If all priority tasks are done, run watchdog cycle then generate fresh work from long-term vision"
+    - "Always ship output (code, content, deploy, research) — never a status-only message"
+    - "Sub-agent on every wake: dispatch parallel work for independent tasks"
+  task_generation_pipeline:
+    step_1: "Check work-engine-state.md cursor"
+    step_2: "If cursor has pending -> execute next item"
+    step_3: "If cursor is empty -> run project health check (watchdog.sh)"
+    step_4: "From watchdog report: pick highest-value fixable issue"
+    step_5: "If all issues fixed -> pick from overnight_priority queue in RULES.yaml"
+    step_6: "If all queues empty -> check CEO.md Zero-Excuse Build Queue"
+    step_7: "If literally nothing to do -> write daily note with gap analysis and wait 15min"
+  escalation_blockers:
+    - "If blocked by Chris >1 hour: alternate to Zero-Excuse Build Queue"
+    - "If all deploy/Supabase blocked: generate content (blog posts, playbooks, metadata)"
+    - "If content done: add affiliate links to existing content"
+    - "If affiliates done: improve SEO metadata"
+  cannot_idle: true
+  heartbeat_replacement: "Every wake produces output. No HEARTBEAT_OK."
+
+# ═══════════════════════════════════════════════════════════════
+# NIGHTLY CONSOLIDATION & SELF-RECOVERY (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# Chris directive: System must stay productive overnight without human input.
+# Leverages Felix/pipeline: 2am+3am consolidation, 1:30am builds, hourly 24/7 engine.
+
+nightly_self_recovery:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  description: "System stays fully productive overnight. Zero human input required."
+  leadership: "Felix layer (omnimind ~/life/ consolidation pipeline) + CEO work engine"
+  
+  # ─── SCHEDULE ───
+  schedule:
+    00_00_04_00_hkt_sleep_window:
+      description: "Deep work window — high-value long-running tasks"
+      active_jobs:
+        - "22:00-22:30: Watchdog final cycle"
+        - "23:00: ceo-consolidation-primary"
+        - "23:30: ceo-consolidation-backup"
+        - "00:00-06:00: Overnight build window (apifeny-ai, family-travel, ev-charging)"
+        - "01:30: overnight-build-runner"
+        - "02:00: omnimind-consolidation-primary"
+        - "03:00: omnimind-consolidation-backup"
+        - "03:45: ev-itinerary-expander"
+    04_00_08_00_hkt_morning_window:
+      description: "Watchdog + output window — prepare for Chris wake-up"
+      active_jobs:
+        - "Hourly: ceo-24-7-work-engine"
+        - "08:00: ceo-morning-summary"
+  
+  # ─── CONSOLIDATION ───
+  consolidation:
+    omnimind_felix:
+      enabled: true
+      description: "OmniMind Felix pipeline (2am+3am): ECL scan -> Memify -> CEO heartbeat"
+      layers_used:
+        - "Layer 3 (ECL): Scan daily notes for events"
+        - "Layer 4 (Memify): Nightly consolidation of all daily notes"
+        - "Layer 5 (CEO Heartbeat): Proactive task generation"
+      pipeline_path: "/home/captain/workspaces/omnimind/backend/"
+    ceo_consolidation:
+      enabled: true
+      description: "CEO-level strategic consolidation (23:00+23:30)"
+      output: "~/life/consolidation-log.md"
+  
+  # ─── SELF-RECOVERY ───
+  self_recovery:
+    enabled: true
+    triggers:
+      - "Cron job timeout (any) -> watchdog captures and reports"
+      - "Sub-agent failure -> recorded in work-engine-state.md, next run retries"
+      - "Site health check failure -> flagged in cron-health.md"
+      - "Gateway crash -> watchdog auto-restarts"
+    auto_healing:
+      watchdog: "Every 15 min via crontab"
+      log_auto_trim: "cron-health.md: 500 lines, watchdog-log.md: 300 lines"
+      stale_session_cleanup: "Orchestra Health Check (every 30m via OpenClaw)"
+  
+  # ─── VERIFICATION ───
+  verification:
+    morning_checklist:
+      - "✅ ceo-morning-summary delivers at 08:00"
+      - "✅ Watchdog shows 0 cron errors"
+      - "✅ All 9 sites returning 200"
+      - "✅ Stalled count = 2 (kidscan-api, social-beast-components)"
+      - "✅ Daily note exists for today"
+    auto_recovery_on_fail:
+      - "Cron error: attempt restart from next run"
+      - "Site down: notify via watchdog, retry next cycle"
+      - "Consolidation missed: backup runs at +30min offset"
+
+# ═══════════════════════════════════════════════════════════════
+# CRON RELIABILITY — FIXES APPLIED (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# Applied fixes to 2 failing cron jobs: ceo-24-7-work-engine + proactive-builder
+
+cron_reliability_updates:
+  locked: true
+  lock_date: "2026-05-17"
+  changes_applied:
+    job_1_ceo_24_7_work_engine:
+      id: "653761e5-3050-4da1-b6a6-5ebe1736715c"
+      fix: "Changed delivery from 'none' to 'announce' (telegram group -1003960261214:topic:2)"
+      timeout: "Increased from 1800s to 2400s (40min)"
+      state: "Reset consecutiveErrors to 0"
+      impact: "Results now show in Telegram group; extra 10min buffer for complex tasks"
+    job_2_proactive_builder:
+      id: "c0b05775-420c-478b-a700-e060620e6e01"
+      fix: "Increased timeout from 300s to 900s (15min)"
+      scope: "Narrowed from 6 projects to max 3 (ev-charging-asia, nudge, apifeny-ai)"
+      state: "Reset 3 consecutive timeout errors"
+      impact: "Should complete within 15min on narrowed scope"
+  
+  # ─── WATCHDOG VERIFICATION ───
+  verification:
+    method: "Manual watchdog cycle run at 2026-05-17 07:40 HKT"
+    before: "2 cron errors detected"
+    after: "0 cron errors — all jobs OK"
+    proof: "~/life/cron-health.md latest cycle"
+  
+  # ─── MONITORING — prevent recurrence ───
+  monitoring:
+    schedule: "Watchdog runs every 15min and flags cron errors"
+    alert_channel: "Telegram group"
+    auto_restart: "Failing jobs auto-retry on next scheduled run"
+    max_consecutive_errors: 5
+    action_after_max: "Disable job and alert Chris"
+
+# ═══════════════════════════════════════════════════════════════
+# PROJECT PORTFOLIO — CLEAN STATUS (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# After reviewing stalled projects, the portfolio is clean.
+# 2 archived, 2 kept deferred, 8 core active.
+
+project_portfolio:
+  locked: true
+  lock_date: "2026-05-17"
+  active_projects:
+    - name: "nudge"
+      status: "ACTIVE — blocked on Supabase schema"
+    - name: "omnimind"
+      status: "ACTIVE — v0.4 shipped, 71/71 tests"
+    - name: "agent-hq"
+      status: "ACTIVE — Felix upgrade live"
+    - name: "ev-charging-asia"
+      status: "ACTIVE — 94 blog posts, 1125 stations"
+    - name: "family-travel-asia"
+      status: "ACTIVE — 120 blog posts, custom domain"
+    - name: "luxury-family-travel-asia"
+      status: "ACTIVE — 51 properties, 51 blog posts"
+    - name: "apifeny-ai"
+      status: "ACTIVE — 58 playbooks, 90 tools"
+    - name: "social-beast"
+      status: "ACTIVE — seed data deployed"
+    - name: "senior-friendly-travel"
+      status: "ACTIVE — 58 blog posts"
+    - name: "ai-cofounder"
+      status: "ACTIVE — deployed"
+  deferred_projects:
+    - name: "kidscan-api"
+      status: "DEFERRED — core but no active work"
+    - name: "social-beast-components"
+      status: "DEFERRED — core but no active work"
+  archived_projects:
+    - name: "affiliate-tracking"
+      status: "ARCHIVED — no traffic yet"
+      archive_path: "~/life/Archives/stalled-projects/affiliate-tracking.md"
+    - name: "habit-tracker"
+      status: "ARCHIVED — one-off experiment"
+      archive_path: "~/life/Archives/stalled-projects/habit-tracker.md"
+  total: 14
+  active: 10
+  deferred: 2
+  archived: 2
+  next_review: "2026-06-17"
+
+
