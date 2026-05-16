@@ -1,5 +1,5 @@
-// Auto-generated from data/blog/*.json — DO NOT EDIT DIRECTLY
-// Run: npm run generate-blog-data
+// Auto-generated from data/blog/*.json - DO NOT EDIT DIRECTLY
+// Run: python scripts/generate-blog-data.py
 
 export interface BlogPost {
   slug: string;

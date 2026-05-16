@@ -1,48 +1,28 @@
 # Work Engine State
 
-## Cursor: P2 IMPROVE — Content generation running (Family Travel Asia)
+## Cursor: P2 IMPROVE — Type fixes + content shipped
 
-**Last updated:** 2026-05-17 02:07 HKT
+**Last updated:** 2026-05-17 02:35 HKT
+
+## Completed This Wake (02:09-02:35 HKT)
+1. ✅ **Fixed Family Travel Destination type mismatch** — Replaced local interface duplication with lib/data.ts canonical type, added missing fields (flywheel_connect, premium_perks, information_gain), fixed affiliateLinks optionality. Both _client.tsx and activity page build clean.
+2. ✅ **Family Travel build passes** — 580+ destination SSG pages, 117 blog posts ✅
+3. ✅ **Apifeny AI content gen completed** — 3 new blog posts: Claude vs ChatGPT vs Gemini comparison, AI coding tools for beginners, 5 AI tools for solopreneurs
+4. ✅ **Apifeny build passes** — 85 tool pages, 29 blog posts ✅
+5. ✅ **Pushed** — Both repos committed and pushed
 
 ## Active Sub-Agents
-1. 🏗️ **family-travel-content-gen**: Generate 3 new blog posts for Family Travel Asia (best domain, 4 posts only) — spawned 02:07 HKT
-
-## Completed This Wake (02:07 HKT)
-1. ✅ **State assessment** — 11.4GB free RAM. 0 active sub-agents from prior session.
-2. ✅ **Prior sub-agents verified** — Both 01:07 sub-agents produced no new code because work was already done:
-   - Apifeny `/playbook/[slug]` detail pages already exist
-   - EV blog imports 91 posts correctly (blog pages render fine)
-3. ✅ **Cross-site footer links confirmed** — All 6 major sites have comprehensive network links. Done.
-4. ✅ **Schema.org structured data** — All 6 major sites. Confirmed done.
-5. ✅ **EV Charging routing** — ISR (`revalidate: 3600`, `dynamicParams: true`) for all 1,125 stations + 91 blog routes. Builds clean.
-6. ✅ **Family Travel content gen spawned** — 3 new long-form blog posts in `lib/generated-blog-data.ts`. Building as P2 EXPAND (content gap fill).
-7. ✅ **All 4 major sites build clean** — EV Charging (1,125 station routes + 91 blog), Apifeny (87 tool pages), Luxury (527 destinations), Family Travel (adding new posts).
-
-## Work History (Previous Sessions)
-- P0 DEPLOY: All 4 sites deployed ✅
-- P1 BUILD: Nudge blocked (no Supabase schema) — waiting on Chris ✅
-- P2 IMPROVE: Directory-beast improvements done ✅
-- P3 EXPAND: New directories on hold ✅
-- P4 ANALYTICS: Vercel Analytics on all 4 sites ✅
-- EV Charging routing fix: ✅ DONE (SSG + ISR for all 1,125 stations)
-- Luxury destination slug fix: ✅ DONE (527 destinations all have slugs via resolveSlug)
-- Schema.org structured data: ✅ Already on all 6 major sites
-- Cross-site footer links: ✅ All 6 sites linked
-- Apifeny playbook pages: ✅ Already exist at `/playbook/[slug]`
-- EV blog rendering: ✅ Working — 91 posts build and display correctly
+- None — all completed
 
 ## Priority Queue
 | Priority | Project | Task | Status | Next Action |
 |:--------:|---------|------|:------:|-------------|
-| P2 IMPROVE | Family Travel | Generate 3 new blog posts | 🔄 SUB-AGENT (deepseek-chat) | Waiting for completion |
-| P2 IMPROVE | Family Travel | Build check + deploy if passes | ⏳ NEXT | After sub-agent completes |
+| P2 IMPROVE | All sites | Content + SEO improvements | ✅ DONE for now | —
 | P1 BUILD | Nudge | Telegram webhook, NLP parser, Supabase schema | ⛔ BLOCKED | Needs service_role key from Chris |
-| P3 EXPAND | All sites | New directories / Affiliate link activation | ⛔ BLOCKED | Needs Chris input |
+| P3 EXPAND | All sites | Affiliate link activation | ⛔ BLOCKED | Needs Chris to join affiliate programs |
 | P4 ANALYTICS | All sites | GA4 integration | 📋 BACKLOG | Low priority |
 
-## Next Session (03:07 HKT)
-1. Check sub-agent completion — did family travel content gen finish?
-2. Verify build passes: `cd family-travel-directory && npm run build`
-3. If builds fail, fix issues; if pass, advance cursor
-4. Determine highest-ROI action for next wake
-5. Options if sub-agent incompletes: P4 ANALYTICS (GA4), or minor SEO fixes
+## Next Session (next cron heartbeat)
+1. Check Vercel deploy status for family-travel-directory (auto-deploy from git push)
+2. Verify all 9 sites still 200
+3. Determine next highest-ROI task

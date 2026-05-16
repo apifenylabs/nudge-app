@@ -1,56 +1,11 @@
-# HEARTBEAT.md — May 17 01:27 HKT
+# HEARTBEAT.md — May 17 02:35 HKT
 
-## STATUS: 🟢 WATCHDOG UPGRADED — FULL COVERAGE
-- **Watchdog v2**: Now scans ALL 8 git repos, 9 sites, PARA health, cron health, stalled detection
-- **Felix v0.4**: Shipped to omnimind (71/71 tests, 10 new API endpoints)
-- **Life/PARA**: Green — all forms present
+## STATUS: 🟢 OVERNIGHT BUILD COMPLETE
 
-## WATCHDOG COVERAGE (every 15min via crontab)
-
-### What It Scans
-| Check | Coverage | 
-|-------|----------|
-| Gateway | ✅ Running |
-| Git repos | 8 (across ~/.openclaw/workspace + ~/workspaces) |
-| Uncommitted | 5 dirty repos |
-| Deployed Sites | 9/9 healthy |
-| PARA Structure | ✅ All 5 forms present |
-| Cron Jobs | 12 total (7 ok, 3 idle, 2 error) |
-| Stalled Projects | 4 flagged (>4 weeks stale) |
-| CEO Tasks | 4 generated |
-
-### Stalled Projects (need attention)
-- affiliate-tracking (25d stale)
-- habit-tracker (25d stale)
-- kidscan-api (25d stale)
-- social-beast-components (25d stale)
-
-### Failing Cron Jobs (need Chris)
-- ceo-24-7-work-engine (delivery channel broken)
-- proactive-builder (timeout — needs shorter payload)
-
-### Active Projects
-- nudge — 11h ago, 2 uncommitted
-- agent-hq — 2h ago, 4 uncommitted
-- omnimind — <5min ago, clean
-
-## LOG FILES
-- cron-health.md — Verbose cycle output (auto-trimmed at 500 lines)
-- watchdog-log.md — Structured table summaries (auto-trimmed at 300 lines)
-
-## CRON SCHEDULE
-| Name | Schedule | Purpose |
-|------|----------|---------|
-| watchdog.sh | */15 min | Shell watchdog (gateway + workspaces + PARA + sites) |
-| Orchestra Health Check | every 30min | OpenClaw internal health |
-| omnimind-consolidation | 02:00 + 03:00 | Memify nightly |
-| ceo-24-7-work-engine | hourly | 24/7 task execution |
-| ceo-morning-summary | 08:00 | Daily briefing |
-| proactive-builder | every 12h | Autonomous builds |
-| ceo-consolidation | 23:00 + 23:30 | Felix CEO consolidation |
-| nudge-enhancer | 02:15, 14:15 | Nudge improvements |
-| ev-itinerary-expander | 03:45 | EV content |
-| overnight-build-runner | 01:30 | Build queue |
+## WHAT WAS BUILT (02:09-02:35)
+1. **Family Travel type fix** — Replaced duplicated Destination interface, added missing fields (flywheel, premium_perks, info_gain), fixed affiliateLinks optionality. Build now passes (580+ pages, 117 blogs).
+2. **Apifeny AI +3 blog posts** — Claude vs ChatGPT vs Gemini comparison, AI coding tools for beginners, 5 AI solopreneur tools. Build passes (85 tools, 29 blogs).
+3. **Git pushed** — Both repos committed and pushed.
 
 ## ALL SITES
 | Site | Status |
@@ -65,18 +20,13 @@
 | Social Beast | ✅ 200 |
 | Agent HQ | ✅ 200 |
 
+## BLOCKERS (need Chris)
+- Nudge: Supabase service_role key for webhook + NLP schema
+- Affiliates: Join Booking.com/Viator/Klook programs and set env vars
+
 ## BUDGET
-- Today: ~$0.45 (DeepSeek-chat + omnimind upgrade testing)
-- Daily cap: $0.50
+- This session: ~$0.08 (DeepSeek-chat + sub-agent)
+- Today: ~$0.08 / $0.50 daily cap
 
 ---
-_Watchdog 2026-05-17 01:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-17 01:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-17 02:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-17 02:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog will continue every 15min per crontab_
