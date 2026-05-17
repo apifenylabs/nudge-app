@@ -289,4 +289,19 @@ When any site plateaus for 2+ weeks:
 
 ---
 
+## ═══════════════════════════════════════════
+## NEW PROJECT GUARDRAIL (LOCKED May 17 2026)
+## ═══════════════════════════════════════════
+
+**Active until:** Consistent revenue >$1k MRR from existing sites
+
+Any new project or new domain REQUIRES:
+1. **Data-backed research** showing high-volume pain points and strong projected revenue
+2. **Clear business case** with estimated setup cost vs projected MRR and flywheel synergy
+3. **Explicit human approval** for domain purchase and final go-live
+
+**Does NOT apply to:** content expansion, SEO, affiliate link additions, playbook generation, or UI polish on existing sites.
+
+---
+
 **LOCKED May 7, 2026 — This file is the CEO's compass. Read at start of every session.**

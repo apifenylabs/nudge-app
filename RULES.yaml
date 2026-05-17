@@ -710,10 +710,26 @@ revenue_first_filter:
     lock_date: "2026-05-17"
     active_until: "Consistent revenue >$1k MRR from existing sites"
     requirements:
-      - "Data-backed research showing strong revenue potential and high-volume pain points"
-      - "Clear business case with estimated setup cost vs projected MRR"
+      - "Data-backed research showing high-volume pain points and strong projected revenue"
+      - "Clear business case with estimated setup cost vs projected MRR and flywheel synergy"
       - "Explicit human approval for domain purchase and final go-live"
-    affected_by: "Applies to: new directories, new domains, new product launches. Does NOT apply to: content expansion, SEO, affiliate link additions, or UI polish on existing sites."
+    affected_by: "Applies to: new directories, new domains, new product launches. Does NOT apply to: content expansion, SEO, affiliate link additions, playbook generation, or UI polish on existing sites."
+  
+  # ─── TREASURY AWARENESS (LOCKED May 17 2026) ───
+  treasury_awareness:
+    locked: true
+    lock_date: "2026-05-17"
+    enabled: true
+    description: "Revenue Agents must track MRR/ARR across all products and flag spending against revenue."
+    tracking:
+      required_fields:
+        - "Current MRR per product"
+        - "Current ARR per product"
+        - "Total spend per product (tokens, APIs, domains, hosting)"
+        - "Spend-to-revenue ratio"
+      source: "Agent reports + CEO consolidation. Logged in ~/life/Resources/treasury.md"
+    spending_rule: "Flag any single spend >$1 that isn't directly tied to revenue. Budget seeding only when revenue justifies it."
+    seeding_policy: "Only propose new budget for (a) proven revenue channels scaling up, or (b) new projects that pass the New Project Guardrail."
 
 # ═══════════════════════════════════════════════════════════════
 # DUMB QUESTIONS RULE (LOCKED May 17 2026 — NEVER OVERRIDE)
@@ -1132,8 +1148,18 @@ revenue_agents:
       - "Agent HQ: orchestration dashboard"
       - "Evaluate new product ideas through Revenue-First Filter"
       - "New project guardrail: data-backed research + business case before launch"
-    budget_priority: "P1 (apifeny) / P4 (new ideas)"
-    default_action_when_idle: "Expand playbooks on apifeny-ai, improve ranking, fix SEO"
+      - "PDF playbook sales (Nate Eliason-style): sell downloadable playbook PDFs on apifeny-ai"
+    core_monetization_tactics:
+      pdf_playbook_sales:
+        description: "Sell $9-$29 downloadable AI playbook PDFs (Nate Eliason model)"
+        status: "CORE MONETIZATION TACTIC — locked"
+        target_products: "AI workflow playbooks, directory-building templates, agent orchestration guides"
+        distribution: "Apifeny AI + Social Beast cross-promotion"
+      community_features: "Paid community access for AI builders"
+      tool_subscription: "Unlisted or premium tool access"
+      affiliate: "Tool recommendations with affiliate links"
+    budget_priority: "P1 (apifeny playbooks + PDF sales) / P4 (new ideas)"
+    default_action_when_idle: "Create new playbook PDF drafts, expand playbooks on apifeny-ai, improve ranking, fix SEO"
   
   # ─── OVERLAP PREVENTION ───
   overlap_prevention:
