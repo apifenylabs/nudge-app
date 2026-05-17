@@ -1026,33 +1026,39 @@ project_portfolio:
   active_projects:
     - name: "nudge"
       status: "ACTIVE — blocked on Supabase schema"
-    - name: "omnimind"
-      status: "ACTIVE — v0.4 shipped, 71/71 tests"
-    - name: "agent-hq"
-      status: "ACTIVE — Felix upgrade live"
-    - name: "ev-charging-asia"
-      status: "ACTIVE — 94 blog posts, 1125 stations"
-    - name: "family-travel-asia"
-      status: "ACTIVE — 120 blog posts, custom domain"
-    - name: "luxury-family-travel-asia"
-      status: "ACTIVE — 51 properties, 51 blog posts"
+      location: "_projects/nudge/"
     - name: "apifeny-ai"
-      status: "ACTIVE — 58 playbooks, 90 tools"
-    - name: "social-beast"
-      status: "ACTIVE — seed data deployed"
+      status: "ACTIVE — 58 playbooks, 90 tools, 3 PDF landing pages"
+      location: "_projects/apifeny-ai/"
     - name: "ai-cofounder"
       status: "ACTIVE — deployed"
+      location: "_projects/ai-cofounder/"
+    - name: "social-beast"
+      status: "ACTIVE — seed data deployed"
+      location: "_projects/social-beast/"
+    - name: "ev-charging-asia"
+      status: "ACTIVE — 94 blog posts, 1125 stations"
+      location: "_projects/ev-charging-asia/"
+    - name: "family-travel-asia"
+      status: "ACTIVE — 120 blog posts, custom domain"
+      location: "_projects/family-travel-directory/"
+    - name: "luxury-family-travel-asia"
+      status: "ACTIVE — 51 properties, 51 blog posts"
+      location: "_projects/luxury-family-travel/"
+    - name: "omnimind"
+      status: "ACTIVE — v0.4 shipped, 71/71 tests (multi-workspace)"
+      location: "~/workspaces/omnimind/"
+    - name: "agent-hq"
+      status: "ACTIVE — Felix upgrade live (internal tool)"
+      location: "_archive/agent-hq/"
   deprioritized_projects:
-    - name: "senior-friendly-travel"
+    - name: "senior-friendly-travel-asia"
       status: "DEPRIORITIZED — zero effort until $1k MRR. No domain purchase. No new content."
-    - name: "kidscan-api"
-      status: "DEPRIORITIZED — moved from deferred. No effort until $1k MRR.
+      location: "_projects/senior-friendly-travel-asia/"
+    - name: "kids-activities-asia"
+      status: "DEPRIORITIZED — zero effort until $1k MRR. No domain purchase. No new content."
+      location: "_projects/kids-activities-asia/"
 
-  deferred_projects:
-    - name: "kidscan-api"
-      status: "DEFERRED — core but no active work"
-    - name: "social-beast-components"
-      status: "DEFERRED — core but no active work"
   archived_projects:
     - name: "affiliate-tracking"
       status: "ARCHIVED — no traffic yet"
@@ -1369,6 +1375,49 @@ multi_workspace_strategy:
   ceo_responsibility:
     description: "CEO agent must know about all workspaces. No workspace is invisible."
     check: "Every session startup: verify all workspace topic logs are synced in ceo-central-log.md"
+
+# ═══════════════════════════════════════════════════════════════
+# WORKSPACE CONSOLIDATION (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# Single OpenClaw gateway. CEO agent oversees everything from main workspace.
+
+workspace_consolidation:
+  locked: true
+  lock_date: "2026-05-17"
+  root: "~/"
+  description: "All projects under ~/.openclaw/workspace/. Symlinks preserve backward compat."
+  
+  structure:
+    main_center: "~/life/ — logs, Empire-Graph/, indexes, treasury, idea repository"
+    active_under: "~/_projects/ — 9 symlinked project folders"
+    archive: "~/_archive/ — 20 non-core projects (3.2GB cleaned, git history preserved)"
+  
+  active_projects_by_location:
+    - "_projects/nudge/ — Sprint P1 (blocked)"
+    - "_projects/apifeny-ai/ — Sprint P0 (playbooks)"
+    - "_projects/ai-cofounder/ — Active"
+    - "_projects/social-beast/ — Sprint P2 (blocked)"
+    - "_projects/ev-charging-asia/ — Waiting on affiliates"
+    - "_projects/family-travel-directory/ — Waiting on affiliates"
+    - "_projects/luxury-family-travel/ — Waiting on affiliates"
+    - "_projects/senior-friendly-travel-asia/ — DEPRIORITIZED"
+    - "_projects/kids-activities-asia/ — DEPRIORITIZED"
+  
+  multi_workspace_projects:
+    - "omnimind — ~/workspaces/omnimind/ (separate git)"
+  
+  archived:_20_total:
+    - "agent-hq, habit-tracker, scanwise, generalscan, app-factory, appfactory-beast"
+    - "kidscan-beast, kidscan-api, directory-beast, family-directory"
+    - "decentralized-memory, trading-playbooks, social-beast-dashboard"
+    - "social-beast-logs, social-beast-approvals, socialos, social, shared-knowledge"
+    - "paperclip-archive, pending-posts"
+  
+  rules_for_new:
+    - "Add new project to _projects/<name>/ (not workspace root)"
+    - "Non-revenue projects stalled >60 days auto-archive"
+    - "Archive preserves git history — nothing deleted permanently"
+    - "Symlink from old location kept for backward compatibility"
 
 # ═══════════════════════════════════════════════════════════════
 # RESEARCH AGENT SOP (LOCKED May 17 2026)

@@ -7,3 +7,39 @@ build/
 .env.local
 *.log
 .DS_Store
+
+# Archived projects (moved to _archive/)
+_archive/
+
+# Project symlinks (point to _projects/ or _archive/)
+# These are virtual — don't commit them
+nudge
+apifeny-ai
+ai-cofounder
+social-beast
+ev-charging-asia
+family-travel-directory
+luxury-family-travel
+senior-friendly-travel-asia
+kids-activities-asia
+agent-hq
+habit-tracker
+scanwise
+generalscan
+app-factory
+appfactory-beast
+kidscan-beast
+kidscan-api
+directory-beast
+family-directory
+decentralized-memory
+trading-playbooks
+social-beast-dashboard
+social-beast-logs
+social-beast-approvals
+socialos
+social
+shared-knowledge
+paperclip-archive
+pending-posts
+kidscan
