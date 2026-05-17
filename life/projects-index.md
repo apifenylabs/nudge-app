@@ -18,7 +18,7 @@
 | 6 | Luxury Family Travel Asia | luxury-family-travel-asia | Directory Revenue Agent | $3k (premium) | ACTIVE — 51 blog posts | luxury-family-travel-asia.vercel.app |
 | 7 | Apifeny AI | apifeny-ai | AI/Innovation Revenue Agent | $3k (playbooks + ads) | ACTIVE — 58 playbooks, 90 tools, PDF playbook launched | apifeny-ai.vercel.app |
 | 8 | Social Beast | social-beast | Social Beast Revenue Agent | $1k (distribution) | ACTIVE — seed data deployed | social-beast-two.vercel.app |
-| 9 | AI Cofounder | ai-cofounder | AI/Innovation Revenue Agent | TBD | ACTIVE — deployed | ai-cofounder.vercel.app |
+| 9 | AI Cofounder | lifeos | AI/Innovation Revenue Agent | TBD | ACTIVE — deployed | lifeos.vercel.app |
 
 ## Deprioritized Projects (Zero Effort until $1k MRR)
 

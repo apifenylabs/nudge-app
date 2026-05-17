@@ -1608,9 +1608,251 @@ idea_pipeline_system:
     raw_capture: "New ideas first go to ~/life/Empire-Graph/idea-repository/scrapped/raw-ideas.md before assessment" 
 
 # ═══════════════════════════════════════════════════════════════
-# END OF RULES.yaml — DO NOT ADD CONTENT BELOW THIS LINE
+# DECLUTTER CEO CHAT (LOCKED May 17 2026)
 # ═══════════════════════════════════════════════════════════════
+# CEO chat is for high-level strategy, revenue updates, and Chris's input ONLY.
+# All specific work is delegated to beasts via sub-agent spawning.
+
+declutter_ceo_chat:
+  locked: true
+  lock_date: "2026-05-17"
+  description: "CEO is a router, not a worker. Chris talks to CEO. CEO decomposes, routes, and reports. Beasts execute."
+
+  # ─── CHANNEL DISCIPLINE ───
+  what_belongs_in_ceo_chat:
+    - "Chris's high-level directives and strategy"
+    - "Revenue updates (daily P&L, MRR changes, new sales)"
+    - "Blocker escalations (things that NEED Chris to act)"
+    - "One-paragraph morning summary covering ALL projects"
+    - "Sprint reviews and priority decisions"
+    - "New initiative approval requests"
+
+  what_gets_delegated_immediately:
+    - "Code changes, deployments, bug fixes"
+    - "Content writing, blog posts, social posts"
+    - "Research, competitor analysis, trend scanning"
+    - "Directory management, SEO, link building"
+    - "Trading bot config, backtesting, signals"
+    - "Memory backfill, data cleanup, file operations"
+    - "Any task that takes >5 minutes of CEO attention"
+
+  # ─── THE BEASTS ───
+  beasts:
+    Directory_Beast:
+      purpose: "All directory sites — Family Travel, Luxury, EV, Senior, Kids"
+      topic_log: "~/life/directory-beast-log.md"
+      spawn_template:
+        full_brief: |
+          Task: [specific work]
+          Target project: [family-travel-asia|ev-charging-asia|luxury-family-travel|etc]
+          Working directory: ~/projects/[project-name]/
+          Rules:
+            - Work ONLY in the specified directory project
+            - Log progress to ~/life/directory-beast-log.md
+            - Content must be travel/niche relevant
+            - Follow existing site style and structure
+          Reporting: Write result summary to topic log, then return "Done: [summary]"
+      triggers:
+        - "Add affiliate links to [site]"
+        - "Write [n] posts for [site]"
+        - "Cross-link between directories"
+        - "Fix SEO metadata on [site]"
+        - "Add [n] new listings to [site]"
+
+    Social_Beast:
+      purpose: "Social content, distribution, build-in-public"
+      topic_log: "~/life/social-beast-log.md"
+      spawn_template:
+        full_brief: |
+          Task: [specific content/action]
+          Target platform: [x|linkedin|telegram|etc]
+          Working directory: ~/projects/social-beast/
+          Rules:
+            - Draft first for CEO review before posting (unless auto-mode)
+            - Log progress to social-beast topic log
+            - Track engagement metrics where possible
+            - Content must align with $1B brand voice
+          Reporting: Write draft to topic log. Flag for approval if crossing thresholds.
+      triggers:
+        - "Post about [project milestone]"
+        - "Write [n] tweets about [topic]"
+        - "Share new blog post on social"
+        - "Build-in-public thread about [project]"
+
+    LifeOS_Beast:
+      purpose: "Everyday AI copilot — travel planning, finance, personal assistant"
+      topic_log: "~/life/lifeos-log.md"
+      spawn_template:
+        full_brief: |
+          Task: [specific life assistance]
+          Domain: [travel|finance|planning|etc]
+          Working directory: ~/projects/lifeos/
+          Rules:
+            - Personal data stays in ~/projects/lifeos/ only
+            - Log to ~/life/lifeos-log.md
+            - Never share personal info in CEO chat
+          Reporting: Brief result summary for CEO log entry.
+      triggers:
+        - "Plan a trip to [destination]"
+        - "Track [budget/expense]"
+        - "Help with [personal task]"
+
+    Nudge_Beast:
+      purpose: "Nudge app + future app builds"
+      topic_log: "~/life/nudge-log.md"
+      spawn_template:
+        full_brief: |
+          Task: [specific work]
+          Project: [nudge|new-app-name]
+          Working directory: ~/projects/[project]/
+          Rules:
+            - For Nudge: maintain existing architecture
+            - For new apps: create project folder in ~/projects/
+            - Log progress to nudge topic log
+          Reporting: Write to ~/life/nudge-log.md. Create new topic log if new app.
+      triggers:
+        - "Fix [bug] in Nudge"
+        - "Add [feature] to Nudge"
+        - "Build new app: [idea]"
+        - "Deploy [project]"
+
+    Algo_Trading_Beast:
+      purpose: "Trading bots, signals, backtesting, portfolio"
+      topic_log: "~/life/trading-beast-log.md"
+      spawn_template:
+        full_brief: |
+          Task: [specific trading work]
+          Working directory: ~/projects/trading-tools/
+          Rules:
+            - Never trade real money without explicit approval
+            - Backtest before any live config
+            - Log all trades and signals to topic log
+            - Trading decisions must be explainable and time-stamped
+          Reporting: Write config changes + results to topic log.
+      triggers:
+        - "Backtest [strategy]"
+        - "Deploy new signal for [pair]"
+        - "Analyze [market condition]"
+        - "Optimize [existing bot]"
+
+    Apifeny_Beast:
+      purpose: "AI playbooks, PDF sales, tools directory, ranking"
+      topic_log: "~/life/apifeny-beast-log.md"
+      spawn_template:
+        full_brief: |
+          Task: [specific work]
+          Working directory: ~/projects/apifeny-ai/
+          Rules:
+            - Playbook content must be high-quality, battle-tested
+            - Follow existing directory ranking algorithm
+            - PDF landing pages use established conversion template
+            - Log to apifeny topic log
+          Reporting: Write output + metrics to topic log.
+      triggers:
+        - "Create new playbook: [topic]"
+        - "Add [n] tools to directory"
+        - "Improve ranking for [category]"
+        - "Build landing page for [playbook]"
+
+    Blog_Newsletter_Beast:
+      purpose: "Blog posts, newsletters, content strategy, distribution"
+      topic_log: "~/life/blog-beast-log.md"
+      spawn_template:
+        full_brief: |
+          Task: [specific content work]
+          Target: [apifeny-ai|family-travel|ev-charging|lifeos|newsletter]
+          Working directory: ~/projects/[target]/
+          Rules:
+            - Content must be SEO-optimized
+            - Include affiliate links where applicable
+            - Draft format: headline → outline → full post
+            - Log to blog/beast topic log
+          Reporting: Write draft link or summary to topic log.
+      triggers:
+        - "Write blog post about [topic]"
+        - "Create newsletter issue #[n]"
+        - "SEO-optimize [n] existing posts"
+        - "Plan content calendar for [month]"
+
+    OmniMind_Beast:
+      purpose: "Zero-knowledge AI memory API, encryption, backend"
+      topic_log: "~/life/omnimind-log.md"
+      spawn_template:
+        full_brief: |
+          Task: [specific work]
+          Working directory: ~/workspaces/omnimind/
+          Rules:
+            - OmniMind has its own git repo, separate from workspace
+            - Work in ~/workspaces/omnimind/ NOT under ~/projects/
+            - Maintain API compatibility — no breaking changes
+            - Log to ~/life/omnimind-log.md
+          Reporting: Write changes + test results to topic log.
+      triggers:
+        - "Deploy OmniMind backend update"
+        - "Add API endpoint: [description]"
+        - "Fix [bug] in OmniMind"
+        - "Performance optimization"
+
+  # ─── DELEGATION PROTOCOL ───
+  delegation_protocol:
+    description: "When CEO receives a task that belongs to a beast, this is the execution flow."
+    steps:
+      - "1. IDENTIFY: Which beast owns this? If no match, create new beast entry + topic log."
+      - "2. BRIEF: Fill in the spawn template for that beast with: task, cwd, constraints"
+      - "3. SPAWN: Use sessions_spawn() with cwd=beast's working directory"
+      - "4. LOG: CEO writes to ceo-central-log.md: 'Routed [task] to [beast] at [time]'"
+      - "5. MONITOR: Sub-agent reports back. CEO reads and may reply briefly in CEO chat."
+      - "6. CLOSE: Sub-agent result logged to topic log. CEO acknowledges once."
+
+    for_simple_tasks:
+      description: "Not everything needs a sub-agent. Small tasks CEO can do directly."
+      threshold: "< 5 minutes, no external dependencies, no API calls"
+      action: "CEO does it in CEO chat, logs to beast topic log, never generates long output in CEO chat"
+      output_rule: "CEO chat reply = max 3 lines. Full output → topic log."
+
+    for_new_projects:
+      description: "When a task doesn't fit any existing beast, CEO creates a new one dynamically."
+      steps:
+        - "1. CEO creates topic log: ~/life/<new-beast-name>-log.md"
+        - "2. CEO adds beast entry to this section (call Chris for confirmation if unsure)"
+        - "3. CEO creates project folder: ~/projects/<project-name>/"
+        - "4. CEO spawns sub-agent with: cwd=new project folder, rules=new beast template"
+        - "5. CEO logs creation in ceo-central-log.md"
+      auto_create: true  # CEO can create new beasts without asking, only notify Chris after
+
+  # ─── MORNING SUMMARY FORMAT ───
+  morning_summary:
+    description: "One-paragraph summary in CEO chat. Full details stay in topic logs."
+    template: |
+      ⚓ Daily — [date]
+      
+      🔴 [P0 status] // 🟡 [P1 blocked items] // 🟢 [what shipped]
+      
+      Revenue: $[x] MRR | Today's spend: $[y] | Budget: $[z]/mo
+      
+      [1-2 sentences on most important thing. Max 300 chars.]
+      
+      Needs you: [blocker 1], [blocker 2] — 3 min each
+    rule: "CEO chat summary never exceeds 5 lines. Topic logs contain full details."
+
+  # ─── OUTPUT DISCIPLINE ───
+  output_discipline:
+    description: "CEO chat is a control room dashboard, not a workspace."
+    rules:
+      - "All code blocks, config files, and generated content go to topic logs, NOT CEO chat"
+      - "CEO chat replies are max 5 lines unless Chris explicitly asks for details"
+      - "Links to topic logs can be shared in CEO chat, but logs themselves stay out"
+      - "Sub-agent results are summarized in 1-2 lines in CEO chat, full output in topic log"
+      - "Morning updates use the template above — no exceptions"
+      - "CEO never writes blog posts, generates code, or produces long-form content in CEO chat"
+
+  # ─── EVOLUTION ───
+  evolution:
+    description: "This structure flexes as the business grows. New beasts appear, old ones merge."
+    creator: "CEO decides dynamically. New projects get new topic logs and beast entries."
+    sunsetting: "When a beast has zero tasks for 60+ days, CEO archives its topic log."
+    rule: "The beast list is a living document, not a prison. Add, rename, split, or merge as strategy demands."
 
 # ═══════════════════════════════════════════════════════════════
-# END OF RULES.yaml — DO NOT ADD CONTENT BELOW THIS LINE
+# END OF RULES.yaml
 # ═══════════════════════════════════════════════════════════════

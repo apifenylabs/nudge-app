@@ -1,0 +1,388 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  :root {
+    --radius: 12px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-ink;
+  }
+
+  /* Premium scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted/30 rounded-full hover:bg-muted/50 transition-colors;
+  }
+}
+
+@layer utilities {
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+@layer components {
+  /* Cards — zen calm with generous whitespace */
+  .card {
+    @apply bg-white rounded-2xl border border-border/50 shadow-sm 
+           transition-all duration-200;
+  }
+  .card:hover {
+    @apply shadow-md border-border;
+  }
+  .card-dark {
+    @apply bg-surfaceDark border-darkBorder text-cream;
+  }
+  .card-dark:hover {
+    @apply border-accent/30;
+  }
+
+  /* Buttons — tactile, intentional */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 
+           bg-accent text-white rounded-xl font-medium text-sm
+           hover:bg-accentDark active:scale-[0.98] 
+           transition-all duration-150 
+           shadow-sm hover:shadow-md
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 
+           bg-white text-ink rounded-xl font-medium text-sm
+           border border-border hover:border-accent/30 hover:bg-accent/5
+           active:scale-[0.98] transition-all duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2
+           text-muted hover:text-ink rounded-xl text-sm font-medium
+           hover:bg-accent/5 transition-all duration-150;
+  }
+
+  /* Input fields */
+  .input-field {
+    @apply w-full px-4 py-2.5 bg-white border border-border rounded-xl 
+           text-sm text-ink placeholder:text-muted/60
+           focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent
+           transition-all duration-150;
+  }
+  .input-field-dark {
+    @apply bg-surfaceDark border-darkBorder text-cream 
+           placeholder:text-muted/40 focus:ring-accent/40 focus:border-accent;
+  }
+
+  /* Tags & badges */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-meal { @apply bg-meal/10 text-meal; }
+  .badge-finance { @apply bg-finance/10 text-finance; }
+  .badge-solopreneur { @apply bg-solopreneur/10 text-solopreneur; }
+  .badge-travel { @apply bg-travel/10 text-travel; }
+  .badge-accent { @apply bg-accent/10 text-accent; }
+  .badge-success { @apply bg-success/10 text-success; }
+
+  /* Step indicators */
+  .step-number {
+    @apply w-8 h-8 rounded-full bg-accent/10 text-accent 
+           flex items-center justify-center text-sm font-semibold;
+  }
+  .step-active .step-number {
+    @apply bg-accent text-white;
+  }
+  .step-done .step-number {
+    @apply bg-success/10 text-success;
+  }
+
+  /* Agent thought bubbles */
+  .agent-thought {
+    @apply bg-accent/5 border border-accent/10 rounded-2xl p-4 
+           text-sm text-ink/70 italic;
+  }
+
+  /* Section containers */
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-padding {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  /* Gradient text for hero */
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent via-accentLight to-highlight 
+           bg-clip-text text-transparent;
+  }
+
+  /* Divider */
+  .divider {
+    @apply h-px bg-gradient-to-r from-transparent via-border to-transparent my-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Dark mode overrides — force light theme regardless of browser preference */
+.dark {
+  body {
+    @apply bg-cream text-ink;
+  }
+}
+
+/* Keep browser from auto-switching to dark scheme */
+:root {
+  color-scheme: light;
+}
+
+/* PWA & mobile responsiveness */
+@media (display-mode: standalone) {
+  body {
+    @apply pt-safe;
+  }
+}
+
+/* Confetti & success */
+@keyframes confetti-fall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+@keyframes confetti-pop {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.confetti-piece {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  animation: confetti-fall 3s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+.confetti-pop {
+  animation: confetti-pop 0.5s ease-out forwards;
+}
+
+/* Testimonial cards */
+.testimonial-card {
+  background-color: white;
+  border-radius: 1rem;
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.testimonial-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  border-color: rgba(229, 231, 235, 1);
+}
+.testimonial-card::before {
+  content: '""';
+  position: absolute;
+  top: -0.5rem;
+  left: -0.25rem;
+  color: rgba(124, 58, 237, 0.1);
+  font-size: 3.75rem;
+  font-family: serif;
+  line-height: 1;
+}
+.testimonial-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Verified badge */
+.verified-badge {
+  @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-success/10 text-success;
+}
+
+/* UGC quote bubble */
+.ugc-bubble {
+  @apply bg-white rounded-2xl p-4 shadow-sm border border-border/50 
+         relative before:content-[''] before:absolute before:bottom-[-6px] 
+         before:left-8 before:w-3 before:h-3 before:bg-white before:border-r before:border-b 
+         before:border-border/50 before:rotate-45;
+}
+
+/* Image placeholder for meal photos */
+.meal-photo-placeholder {
+  @apply bg-gradient-to-br from-meal/10 to-accent/5 rounded-xl overflow-hidden;
+}
+
+/* Pulse ring for live button */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+.live-pulse {
+  animation: pulse-ring 2s infinite;
+}
+
+/* Slider styling */
+input[type="range"] {
+  @apply h-2 rounded-full appearance-none cursor-pointer bg-border;
+}
+input[type="range"]::-webkit-slider-thumb {
+  @apply appearance-none w-5 h-5 rounded-full bg-accent shadow-md cursor-pointer;
+  -webkit-appearance: none;
+}
+
+/* Animations on scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* NEW: Kitchen table animations */
+@keyframes food-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(2deg); }
+  75% { transform: translateY(4px) rotate(-1deg); }
+}
+.food-float {
+  animation: food-float 6s ease-in-out infinite;
+}
+.food-float-delayed {
+  animation: food-float 7s ease-in-out infinite;
+  animation-delay: -3s;
+}
+.food-float-slow {
+  animation: food-float 8s ease-in-out infinite;
+  animation-delay: -1.5s;
+}
+
+@keyframes hearbeat-pulse {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  50% { transform: scale(1); }
+}
+.heart-pulse {
+  animation: hearbeat-pulse 0.4s ease-in-out;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+.wiggle-hover:hover {
+  animation: wiggle 0.3s ease-in-out;
+}
+
+/* Emoji rain / collage animations */
+@keyframes emoji-drift-1 {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.15; }
+  50% { transform: translateY(-20px) translateX(10px) rotate(10deg); opacity: 0.25; }
+  100% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.15; }
+}
+.emoji-drift {
+  animation: emoji-drift-1 8s ease-in-out infinite;
+}
+.emoji-drift-2 {
+  animation: emoji-drift-1 10s ease-in-out infinite;
+  animation-delay: -2s;
+}
+.emoji-drift-3 {
+  animation: emoji-drift-1 7s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+/* Kitchen table card - warm shadow */
+.kitchen-card {
+  @apply bg-white rounded-2xl border border-border/50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] 
+         transition-all duration-300;
+}
+.kitchen-card:hover {
+  @apply shadow-[0_8px_24px_rgba(0,0,0,0.08)] border-accent/20;
+  transform: translateY(-2px);
+}
+
+/* UGC carousel */
+@keyframes ugc-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ugc-track {
+  animation: ugc-scroll 30s linear infinite;
+}
+.ugc-track:hover {
+  animation-play-state: paused;
+}
+
+/* Before/after cards */
+.before-after-card {
+  @apply relative overflow-hidden rounded-2xl border border-border/50 transition-all duration-300;
+}
+
+/* Photo zoom on hover */
+.photo-zoom {
+  @apply overflow-hidden rounded-2xl;
+}
+.photo-zoom img {
+  @apply transition-all duration-500;
+}
+.photo-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Comparison slider */
+.comparison-slider {
+  @apply relative overflow-hidden rounded-2xl cursor-col-resize select-none;
+}
+
+/* Recipe card - kitchen table style */
+.recipe-card {
+  @apply bg-white rounded-2xl border border-border/50 shadow-[0_2px_8px_rgba(0,0,0,0.04)]
+         transition-all duration-300 overflow-hidden;
+}
+.recipe-card:hover {
+  @apply shadow-[0_8px_24px_rgba(0,0,0,0.08)] border-meal/30;
+  transform: translateY(-3px);
+}
+
+

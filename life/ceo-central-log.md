@@ -65,7 +65,7 @@ Created dedicated topic logs for every active project:
 - `life/ev-charging-log.md` — EV Charging Asia
 - `life/family-travel-log.md` — Family Travel Asia (flagship)
 - `life/senior-travel-log.md` — Senior Friendly Travel
-- `life/ai-cofounder-log.md` — AI Cofounder
+- `life/lifeos-log.md` — AI Cofounder
 - `life/omnimind-log.md` — OmniMind memory API
 - `life/agent-hq-log.md` — Agent HQ dashboard
 - `life/kids-activities-log.md` — Kids Activities Asia (deferred)
@@ -88,7 +88,7 @@ Created dedicated topic logs for every active project:
 | ev-charging-log.md | EV Charging | Directory |
 | family-travel-log.md | Family Travel (flagship) | Directory |
 | senior-travel-log.md | Senior Travel | Directory (sub) |
-| ai-cofounder-log.md | AI Cofounder | AI/Innovation |
+| lifeos-log.md | AI Cofounder | AI/Innovation |
 | omnimind-log.md | OmniMind | AI/Innovation |
 | agent-hq-log.md | Agent HQ | AI/Innovation |
 | kids-activities-log.md | Kids Activities | Directory (sub) |
@@ -110,3 +110,20 @@ Created dedicated topic logs for every active project:
 - Each agent has detailed daily SOP, revenue tracking with milestones, blocked-on list, unblock strategy.
 - Global rules: Revenue-First Filter on every action, track own MRR/ARR in treasury, proposals must be revenue-positive.
 - Idle actions clearly defined for each agent.
+
+---
+
+## 2026-05-17 20:58 HKT — CEO Chat Decluttered
+
+**What changed:**
+- RULES.yaml: DECLUTTER CEO CHAT section locked
+- 8 beasts defined (Directory, Social, LifeOS, Nudge, Algo Trading, Apifeny, Blog/Newsletter, OmniMind)
+- Each beast has: purpose, topic log, spawn template, trigger examples
+- Delegation protocol: 6-step flow (IDENTIFY → BRIEF → SPAWN → LOG → MONITOR → CLOSE)
+- New topic logs created: directory-beast, social-beast, trading-beast, apifeny-beast, blog-beast
+- Work engine state (sprint backlog) initialized
+- Output discipline rules: CEO chat = max 5 lines, full output → topic logs
+- Morning summary template: 5-line max with revenue/spend/blockers
+- Evolution clause: CEO creates new beasts dynamically without asking
+
+**Routing flow:** Chris → CEO Chat (high-level) → Beast Topic Log (sub-agent spawn) → Topic Log (output) → CEO Chat (1-line ack)

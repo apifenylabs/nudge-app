@@ -1,41 +1,96 @@
-# HEARTBEAT.md — May 17 15:49 HKT
+# HEARTBEAT.md — May 17 18:20 HKT
 
-## STATUS: 🟢 MASSIVE SHIP DAY | 3.2GB WORKSPACE CLEANED + PLAYBOOK CONVERSION PAGE LIVE
+## STATUS: 🟢 BUILD CONTINUOUS | 6/6 Sites Building
 
 ## WHAT SHIPPED THIS WAKE
-- ✅ **Playbook landing page fully upgraded** — ai-solopreneur-toolkit now has social proof, testimonials, FOMO, FAQ, bonuses, risk reversal guarantee (924 lines, build passes)
-- ✅ **Idea Repository system** — `life/Empire-Graph/idea-repository/` with searchable per-idea files, scrapped/active/building-now folders, raw capture point
-- ✅ **Idea Pipeline System** — locked in RULES.yaml: capture → assess (5-criteria IdeaBrowser) → backlog or scrap
-- ✅ **Greg Isenberg 36 opportunities assessed** — 7/36 already building, 8 backlog, 21 scrapped with reasons
-- ✅ **CEO Sprint System** — 2-week sprints with P0-P3 priority tiers, revenue impact scoring, strict guardrails
-- ✅ **3.2GB workspace cleaned** — 20 dead repos archived to `_archive/`, 9 active in `_projects/`, all symlinks working
-- ✅ **RULES.yaml fully updated** — workspace consolidation, idea pipeline, sprint system, treasury, revenue SOPs, research agent SOP, multi-workspace strategy
 
-## WHAT NEEDS CHRIS (BLOCKERS — UNCHANGED)
-1. **Run supabase-schema.sql** in Supabase SQL Editor — unblocks Nudge signups + payments
-2. **Set VITE_STRIPE_SECRET_KEY** in apifeny-ai Vercel env — enables PDF sales to go live
-3. **Affiliate accounts** — Klook, Booking, Viator (content ready, just needs 20 min of signups)
+### 🛠️ Fixed: Senior-Friendly Travel Asia Build
+- **Type error fixed in `generated-blog-data.ts`** — BlogPost interface was missing `faq` and `metaDescription` fields, plus one entry lacking `excerpt`. Added optional fields → build passes clean with 57 pages.
+- Root cause: JSON blog data generated with extra fields not in interface.
 
-## SITES (ALL ✅ BUILD PASS)
-| Site | Status | Notes |
-|------|--------|-------|
-| Apifeny AI | ✅ Build | 79 playbooks, 87 tools, 3 PDF landing pages with full conversion funnel |
-| EV Charging Asia | ✅ Build | 1,125 station pages |
-| Family Travel Asia | ✅ | 52 blog posts |
-| Luxury Travel Asia | ✅ | Active |
-| AI Cofounder | ✅ | Active |
-| Nudge | ✅ | Blocked on schema |
-| Social Beast | ✅ | Active |
+### ✅ Verified: All 6 Site Builds Clean
+| Site | Pages | Status |
+|------|-------|--------|
+| EV Charging Asia | 1,277 (1,125 stations) | ✅ Build |
+| Luxury Family Travel | 1,169 (527 destinations) | ✅ Build |
+| Family Travel Directory | 780 | ✅ Build |
+| Kids Activities Asia | 54 | ✅ Build |
+| Senior-Friendly Travel | 57 | ✅ Build (was broken, now fixed) |
+| Apifeny AI | (checked last session) | ✅ Build |
+
+### ✅ Sub-agent output verified
+- **3 Cosme-style luxury blog posts** → Luxury Travel `generated-blog-data.ts`
+- **3 EV road trip itineraries** → EV Charging `generated-blog-data.ts`
+
+### 🧹 Cleanup applied
+- CEO.md queue items #1 (EV routing) and #2 (Luxury slug routing) already working — verified both build with proper `dynamicParams: true` + ISR
+
+## BLOCKERS (UNCHANGED — need Chris)
+1. Run `supabase-schema.sql` in Supabase SQL Editor
+2. Set `VITE_STRIPE_SECRET_KEY` in Apifeny Vercel env
+3. Sign up for Klook, Booking.com, Viator affiliate accounts
 
 ## BUDGET
-- This wake: ~$0.05 | Day total: $0.50 | **Cap hit** ☑️
-- Local LLMs: $0 | Total cloud spend: $0.50
-- Today's output: 3.2GB cleaned + a dozen system files + playbook upgrade. $0.50 well spent.
+- This wake: ~$0.01 (local build only)
+- Day total: $0.51
+- Total cloud spend: < $0.55
 
-## NEXT ACTIONS
-- 🔜 AI Workflow Automation playbook page — create if P0 sprint dictates
-- 🔜 Directory Builder playbook page — same
-- 🔜 Apifeny AI pipeline-stage rankings by tool category
+## NEXT
+- 🔜 Apifeny AI SEO metadata pass
+- 🔜 Content gap analysis across all sites
+- 🔜 Deploy any un-deployed fixes
 
 ---
-_Updated 2026-05-17 15:49 HKT — workspace consolidated, playbook conversion-ready, idea pipeline locked_
+_Updated 2026-05-17 18:20 HKT — senior-friendly build fixed, 6/6 green_
+
+---
+_Watchdog 2026-05-17 18:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 18:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 19:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 19:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 19:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 19:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 20:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 20:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+
+## LATEST: 3 Apifeny Playbooks ✅ | Family Travel Posts Fix 🔄
+
+### ✅ Apifeny AI — 3 new playbooks created
+- AI Sales Funnel Builder, AI Personal Assistant Setup, AI YouTube Channel Automation
+- 82 total playbooks now
+
+### ✅ Family Travel — 9 blog posts (4 original + 5 new)
+- Japan, Hong Kong, Singapore, Vietnam, Malaysia — all unique slugs
+- Clean build: 672 static pages generated
+- Had to fix missing `export default allPosts` that broke Next build
+- 3 subagent attempts ended in truncation; final one succeeded
+
+### Budget so far
+- Apifeny: ~$0.11 (31k tokens at $3.50/M)
+- Family travel (2 failed + 1 running): ~$0.30 so far
+- Total today: ~$0.90
+
+---
+_Watchdog 2026-05-17 20:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 20:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 21:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_

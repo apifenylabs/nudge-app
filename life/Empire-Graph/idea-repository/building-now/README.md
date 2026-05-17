@@ -22,7 +22,7 @@
 ## 🟢 AI Cofounder — AI Product Builder
 
 - **Tag:** `[ai-saas][cofounder]`
-- **Log:** `~/life/ai-cofounder-log.md`
+- **Log:** `~/life/lifeos-log.md`
 - **Sprint:** Active
 - **Revenue:** TBD (freemium)
 

@@ -1,7 +1,7 @@
 # AI Cofounder Topic Log
 
-> Project: AI Cofounder — AI Product-Building Tool + Travel Copilot
-> Owner Agent: AI/Innovation Revenue Agent
+> Project: LifeOS — Everyday AI Copilot — AI Product-Building Tool + Travel Copilot
+> Owner Agent: CEO (LifeOS subsystem)
 > Status: ACTIVE — deployed
 > Revenue Target: TBD
 > Deployed: ai-cofounder.vercel.app
