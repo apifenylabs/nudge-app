@@ -1,11 +1,14 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Zap, Route as RouteIcon } from 'lucide-react';
+import { Zap, Route as RouteIcon, ChevronRight } from 'lucide-react';
 import { getAllItineraries } from '@/data/itineraries';
 import SiteFooter from '@/components/SiteFooter';
 import ItineraryCard from '@/components/itineraries/ItineraryCard';
 import RouteFilterBar from '@/components/itineraries/RouteFilterBar';
 import RouteFinderQuiz from '@/components/RouteFinderQuiz';
+import { BreadcrumbSchemaSSR } from '@/components/SchemaOrg';
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: 'Family EV Road Trip Itineraries — EV Charging Asia',
@@ -35,17 +38,21 @@ export default function RoutesPage() {
   const allItineraries = getAllItineraries();
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b border-gray-200">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+      <BreadcrumbSchemaSSR items={[
+        { name: 'Home', url: '/' },
+        { name: 'Routes', url: '/routes' },
+      ]} />
+      <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Zap size={20} className="text-green-500" />
-            <span className="font-semibold text-gray-900 text-sm">EV Charging Asia</span>
+            <span className="font-semibold text-gray-900 dark:text-gray-100 text-sm">EV Charging Asia</span>
           </Link>
-          <nav className="flex items-center gap-4 text-sm text-gray-500">
-            <Link href="/search" className="hover:text-gray-900">Chargers</Link>
-            <Link href="/compare" className="hover:text-gray-900">Compare</Link>
-            <Link href="/blog" className="hover:text-gray-900">Blog</Link>
+          <nav className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+            <Link href="/search" className="hover:text-gray-900 dark:hover:text-gray-200">Chargers</Link>
+            <Link href="/compare" className="hover:text-gray-900 dark:hover:text-gray-200">Compare</Link>
+            <Link href="/blog" className="hover:text-gray-900 dark:hover:text-gray-200">Blog</Link>
           </nav>
         </div>
       </header>

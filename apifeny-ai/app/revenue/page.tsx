@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import Link from 'next/link';
 import { playbookSuccessStories, SuccessStory } from '@/lib/success-stories';
 import {
@@ -19,6 +20,9 @@ import {
 import { cn } from '@/lib/utils';
 
 export default function RevenuePage() {
+  useEffect(() => {
+    document.title = 'AI Revenue & Success Stories — Apifeny AI';
+  }, []);
   // Sort stories by revenue
   const revenueStories = [...playbookSuccessStories]
     .filter((s) => s.revenue)

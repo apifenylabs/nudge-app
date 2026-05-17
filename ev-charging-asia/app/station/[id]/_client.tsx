@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
+import ThemeToggle from '@/components/ThemeToggle';
+import TrustBadges from '@/components/TrustBadges';
 import Link from 'next/link';
 import { MapPin, Star, ChevronLeft, Phone, Globe, Clock, BatteryCharging, Car, ExternalLink, Share2, Flag, CheckCircle, XCircle, AlertTriangle, Clock as ClockIcon, Zap } from 'lucide-react';
 import { Station, computeStationScore, scoreTier } from '@/lib/scoring';
@@ -140,18 +142,19 @@ export default function ClientStationPage({ station, allStations }: { station: S
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b border-gray-200">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+      <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Zap size={20} className="text-green-500" />
-            <span className="font-semibold text-gray-900 text-sm">EV Charging Asia</span>
+            <span className="font-semibold text-gray-900 dark:text-gray-100 text-sm">EV Charging Asia</span>
           </Link>
-          <div className="flex items-center gap-3">
-            <button onClick={handleShare} className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <button onClick={handleShare} className="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300">
               <Share2 size={14} /> Share
             </button>
-            <Link href="/search" className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
+            <Link href="/search" className="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300">
               <ChevronLeft size={14} /> Back
             </Link>
           </div>
@@ -167,7 +170,11 @@ export default function ClientStationPage({ station, allStations }: { station: S
         </div>
 
         {/* Header */}
-        <div className="bg-white/80 backdrop-blur-md rounded-xl border border-gray-200/70 p-6 md:p-8 mb-6">
+        <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-xl border border-gray-200/70 dark:border-gray-800/70 p-6 md:p-8 mb-6">
+          {/* Trust badges */}
+          <div className="mb-4">
+            <TrustBadges variant="compact" />
+          </div>
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
             <div>
               <div className="flex items-center gap-3 mb-2">

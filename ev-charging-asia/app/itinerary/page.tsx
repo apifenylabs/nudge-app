@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllItineraries } from '@/data/itineraries';
+import { BreadcrumbSchemaSSR } from '@/components/SchemaOrg';
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: 'EV Road Trip Itineraries — EV Charging Asia',
@@ -28,16 +31,20 @@ export default function ItinerariesPage() {
   const itineraries = getAllItineraries();
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b border-gray-200">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+      <BreadcrumbSchemaSSR items={[
+        { name: 'Home', url: '/' },
+        { name: 'Itineraries', url: '/itinerary' },
+      ]} />
+      <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
             </svg>
-            <span className="font-semibold text-gray-900 text-sm">EV Charging Asia</span>
+            <span className="font-semibold text-gray-900 dark:text-gray-100 text-sm">EV Charging Asia</span>
           </Link>
-          <nav className="flex items-center gap-4 text-xs text-gray-500">
+          <nav className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
             <Link href="/search" className="hover:text-gray-900">Search</Link>
             <Link href="/routes" className="hover:text-gray-900">Routes</Link>
             <Link href="/blog" className="hover:text-gray-900">Blog</Link>

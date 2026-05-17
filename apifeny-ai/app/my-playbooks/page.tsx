@@ -34,6 +34,9 @@ interface MyResult {
 }
 
 export default function MyPlaybooksPage() {
+  useEffect(() => {
+    document.title = 'My Playbooks — Apifeny AI';
+  }, []);
   const [trackedSlugs, setTrackedSlugs] = useState<string[]>([]);
   const [myResults, setMyResults] = useState<MyResult[]>([]);
   const [storyTitle, setStoryTitle] = useState('');

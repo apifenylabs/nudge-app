@@ -1,12 +1,15 @@
 'use client';
 
-import { useState, useCallback, Suspense } from 'react';
+import { useState, useCallback, Suspense, useEffect } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { FilterState } from '@/lib/types';
 import ToolFilters from '@/components/ToolFilters';
 import ToolGrid from '@/components/ToolGrid';
 
 function ToolsPageContent() {
+  useEffect(() => {
+    document.title = 'AI Tools Directory — 90+ Curated AI Tools | Apifeny AI';
+  }, []);
   const searchParams = useSearchParams();
   const router = useRouter();
   const [showMobileFilters, setShowMobileFilters] = useState(false);

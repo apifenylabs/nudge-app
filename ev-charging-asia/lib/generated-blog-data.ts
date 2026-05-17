@@ -1,5 +1,5 @@
 // Auto-generated from data/blog/*.json — DO NOT EDIT DIRECTLY
-// Run: node generate-blog.mjs
+// Run: node scripts/generate-blog-data-node.js
 
 export interface BlogPost {
   slug: string;

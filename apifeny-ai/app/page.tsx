@@ -294,7 +294,7 @@ const pipelineItems = [
 ];
 
 const stats = [
-  { icon: BookOpen, value: '37', label: 'AI Playbooks', desc: 'Step-by-step guides that work' },
+  { icon: BookOpen, value: '71', label: 'AI Playbooks', desc: 'Step-by-step guides that work' },
   { icon: Layers, value: '90+', label: 'AI Tools', desc: 'Curated, reviewed & ranked' },
   { icon: TrendingUp, value: '5', label: 'Pipeline Stages', desc: 'Idea \u2192 Research \u2192 Build \u2192 Market \u2192 Scale' },
   { icon: Trophy, value: 'Asia', label: 'Ranked', desc: 'Editorial scores for Asia' },
@@ -329,43 +329,45 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden pt-8 sm:pt-12 pb-4">
         {/* Animated bg */}
-        <div className="absolute inset-0 bg-tech-grid opacity-50" />
-        <div className="absolute inset-0 bg-gradient-to-b from-neon/5 via-transparent to-transparent" />
-        <div className="absolute top-10 left-1/3 w-[600px] h-[600px] bg-neon/8 rounded-full blur-[150px] animate-pulse-glow pointer-events-none" />
-        <div className="absolute top-20 right-1/4 w-80 h-80 bg-aqua/8 rounded-full blur-[120px] animate-pulse-glow pointer-events-none" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute inset-0 bg-tech-grid opacity-40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-neon/8 via-transparent to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neon/40 to-transparent" />
+        <div className="absolute top-10 left-1/3 w-[600px] h-[600px] bg-neon/10 rounded-full blur-[150px] animate-pulse-glow pointer-events-none" />
+        <div className="absolute top-20 right-1/4 w-80 h-80 bg-aqua/10 rounded-full blur-[120px] animate-pulse-glow pointer-events-none" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-violet-500/5 rounded-full blur-[100px] animate-pulse-glow pointer-events-none" style={{ animationDelay: '3s' }} />
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left: text */}
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon/10 border border-neon/20 text-neon-light text-xs font-medium mb-4 sm:mb-5 animate-fade-in">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon/10 border border-neon/20 text-neon-light text-xs font-medium mb-4 sm:mb-5 animate-fade-in shadow-[0_0_20px_rgba(139,92,246,0.15)]">
                 <Sparkles className="w-3.5 h-3.5" />
-                AI Tools + Playbooks That Actually Work
+                71 Playbooks &middot; Curated Tools &middot; Real Results
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3 animate-slide-up">
-                Too many AI tools.{' '}
+                Stop collecting AI tools.{' '}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-neon-light via-aqua to-asia">
-                  Not enough results.
+                  Start shipping results.
                 </span>
               </h1>
 
               <p className="text-base sm:text-lg text-tech-100/70 max-w-xl mb-4 animate-slide-up leading-relaxed">
-                We know the problem. You sign up for every new AI tool but nothing ships.{' '}
-                <strong className="text-white">Apifeny AI solves that.</strong> Each playbook
-                connects your goal to the right tools in a repeatable workflow. Pick what you
-                want to do &mdash; we&apos;ll show you exactly how.
+                71 step-by-step playbooks. 90+ curated tools. One clear path from problem to solution.{' '}
+                <strong className="text-white">Pick what you want to do &mdash; we show you exactly how.</strong>
+                No endless directories. No hype. Just workflows that ship.
               </p>
 
               <form onSubmit={handleSearch} className="max-w-lg mb-4 animate-slide-up">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-tech-300" />
+                <div className="relative group">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-neon via-aqua to-asia rounded-xl opacity-0 group-focus-within:opacity-30 blur-sm transition-opacity duration-300" />
+                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-tech-300 z-10" />
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="What do you want to build?"
-                    className="w-full bg-tech-800/90 border border-tech-500/40 rounded-xl pl-12 pr-24 py-4 text-base text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/50 focus:ring-2 focus:ring-neon/10 shadow-lg shadow-black/20"
+                    placeholder="What do you want to build or automate?"
+                    className="relative w-full bg-tech-900/95 border border-tech-500/30 rounded-xl pl-12 pr-24 py-4 text-base text-white placeholder:text-tech-400/70 focus:outline-none focus:border-neon/60 focus:ring-2 focus:ring-neon/15 shadow-lg shadow-black/30 backdrop-blur-sm transition-all duration-200"
                   />
                   <button
                     type="submit"
@@ -407,16 +409,16 @@ export default function HomePage() {
       <section className="py-12 sm:py-16 border-t border-tech-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neon/10 border border-neon/15 text-neon-light text-xs font-medium mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-neon/10 to-aqua/10 border border-neon/15 text-neon-light text-xs font-medium mb-4 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
               <Zap className="w-3.5 h-3.5" />
               Problem &rarr; Playbook &rarr; Tools
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">
-              Find your workflow
+              What do you want to accomplish?
             </h2>
             <p className="text-tech-200 text-sm sm:text-base max-w-2xl mx-auto">
-              Every section starts with a real problem, gives you the playbook,
-              and matches the exact tools you need. No fluff. No directories of 10,000 tools.
+              Every workflow starts with a real problem. Pick yours &mdash; we give you the
+              playbook and the tools. No database of 10,000 tools. Just what works.
             </p>
           </div>
 
@@ -424,7 +426,7 @@ export default function HomePage() {
             {useCaseSections.map((section) => (
               <div
                 key={section.id}
-                className={`group relative rounded-2xl bg-gradient-to-br ${section.gradient} bg-tech-700 border border-tech-500/20 ${section.borderGlow} transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-neon/5 overflow-hidden`}
+                className={`group relative rounded-2xl bg-gradient-to-br ${section.gradient} bg-tech-700/50 border border-tech-500/20 ${section.borderGlow} transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-neon/10 overflow-hidden backdrop-blur-sm`}
               >
                 <div className="absolute inset-0 bg-tech-grid opacity-5 pointer-events-none" />
 
@@ -496,15 +498,15 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
             <Link
               href="/playbooks"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-neon/10 border border-neon/25 text-neon-light text-sm font-medium hover:bg-neon/20 transition hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-neon/15 to-aqua/10 border border-neon/25 text-neon-light text-sm font-medium hover:bg-neon/20 transition hover:-translate-y-0.5 shadow-lg shadow-neon/5"
             >
               <BookOpen className="w-4 h-4" />
-              Browse all {useCaseSections.length} playbooks
+              Browse all 71 playbooks
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/tools"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-tech-700 border border-tech-500/30 text-white text-sm font-medium hover:border-tech-400/50 transition hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-tech-700/80 border border-tech-500/30 text-white text-sm font-medium hover:border-tech-400/50 transition hover:-translate-y-0.5 backdrop-blur-sm"
             >
               <Layers className="w-4 h-4" />
               All 90+ tools

@@ -3,6 +3,8 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { FC, useState, useEffect } from 'react';
+import ThemeToggle from '@/components/ThemeToggle';
+import TrustBadges from '@/components/TrustBadges';
 import { BlogPost } from '@/lib/blog-data';
 import { affiliateLinks, getAffiliatesForLocation } from '@/lib/affiliate-links';
 import EvRoadTripCTA from '@/components/EvRoadTripCTA';
@@ -81,11 +83,12 @@ export default function HomeContent({ meta, homepageData, blogPosts: initialPost
             {meta.totalStations} stations · {meta.cities.length} cities
           </span>
         </div>
-        <nav className="flex items-center gap-4 text-xs text-gray-500">
-          <Link href="/search" className="hover:text-gray-900 font-medium">Browse Stations</Link>
-          <Link href="/routes" className="hover:text-gray-900 font-medium">Routes</Link>
-          <Link href="/itinerary" className="hover:text-gray-900 font-medium">Itineraries</Link>
-          <Link href="/blog" className="hover:text-gray-900 font-medium">Blog</Link>
+        <nav className="flex items-center gap-3 text-xs text-gray-500">
+          <Link href="/search" className="hover:text-gray-900 dark:hover:text-gray-300 font-medium hidden sm:inline">Browse Stations</Link>
+          <Link href="/routes" className="hover:text-gray-900 dark:hover:text-gray-300 font-medium hidden sm:inline">Routes</Link>
+          <Link href="/itinerary" className="hover:text-gray-900 dark:hover:text-gray-300 font-medium hidden sm:inline">Itineraries</Link>
+          <Link href="/blog" className="hover:text-gray-900 dark:hover:text-gray-300 font-medium hidden sm:inline">Blog</Link>
+          <ThemeToggle />
           <a href="https://apifeny-ai.vercel.app" className="hidden sm:flex items-center gap-1 text-purple-600 hover:text-purple-700 font-medium" target="_blank" rel="noopener noreferrer">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
@@ -139,6 +142,10 @@ export default function HomeContent({ meta, homepageData, blogPosts: initialPost
               >
                 <BookIcon /> Read Guides
               </Link>
+            </div>
+            {/* Trust badges */}
+            <div className="mt-6">
+              <TrustBadges variant="compact" />
             </div>
             {/* Stats micro-row */}
             <div className="flex flex-wrap items-center gap-6 mt-10 pt-8 border-t border-white/10">

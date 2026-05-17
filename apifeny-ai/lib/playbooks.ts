@@ -4098,6 +4098,1087 @@ export const playbooks: Playbook[] = [
     ],
   },
 
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 57: AI for Personal Brand Building
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-personal-brand-building',
+    title: 'AI for Personal Brand Building',
+    subtitle: 'Grow your professional influence with AI',
+    description:
+      'Build and scale your personal brand using AI: content ideation, writing, scheduling, audience analysis, and engagement automation. Use ChatGPT for content creation, Perplexity for trend research, Canva for visuals, and Buffer for scheduling.',
+    meta_title: 'AI for Personal Brand Building — Apifeny AI Playbook',
+    meta_description: 'Build your personal brand with AI: content ideation, writing, trend research, visual creation, and scheduling automation with ChatGPT, Canva, and Buffer.',
+    related_tool_slugs: ['chatgpt', 'perplexity', 'canva-ai', 'elevenlabs', 'notion-ai'],
+    difficulty: 'Beginner',
+    read_time_minutes: 8,
+    icon: '🌟',
+    gradient: 'from-amber-500/30 to-yellow-500/30',
+    steps: [
+      {
+        title: 'Define your brand positioning with ChatGPT',
+        description:
+          'Start by clarifying your niche, audience, and unique value. Ask ChatGPT: "Help me define my personal brand positioning. I am a [role] in [industry]. My audience is [demographic]. My expertise is [topics]. Create a positioning statement, 5 content pillars, and a brand voice guide."',
+        tip: 'Save your brand voice guide as a reference document. Feed it to ChatGPT before every session for consistent tone across all content.',
+      },
+      {
+        title: 'Research trending topics with Perplexity',
+        description:
+          'Stay ahead of conversations in your niche. Use Perplexity to find: trending discussions, frequently asked questions, emerging topics, and content gaps. Organize findings into Perplexity Collections by content pillar.',
+        tip: 'Run a weekly Perplexity search: "What are the top discussions about [niche] this week?" Keep a running ideas document.',
+      },
+      {
+        title: 'Create content with ChatGPT',
+        description:
+          'Turn your research into posts, threads, articles, and videos. Use consistent formats: hot takes, how-to guides, personal stories, and curated resources. Generate 10 posts in one session using your brand voice guide.',
+        tip: 'Batch-create: generate 10 LinkedIn posts, 5 Twitter threads, 2 newsletter editions, and 1 long-form article in one AI session.',
+      },
+      {
+        title: 'Design visuals with Canva AI',
+        description:
+          'Create branded visuals for every post. Use Canva Magic Design to generate carousels, quote cards, and infographics from text. Save your brand kit (colors, fonts, logo) for instant application.',
+        tip: 'Create Canva templates for recurring formats: LinkedIn carousel, Twitter card, Instagram story, newsletter header. Fill with AI content in minutes.',
+      },
+      {
+        title: 'Schedule and analyze',
+        description:
+          'Use Buffer or Hypefury to schedule content across platforms. Track: impressions, engagement rate, follower growth, and top-performing content types. Feed analytics into ChatGPT for optimization recommendations.',
+        tip: 'Use Hypefury for Twitter/LinkedIn scheduling with AI-powered thread writing and evergreen recycling built in.',
+      },
+    ],
+    pro_tips: [
+      "Post consistently: 3-5x/week on LinkedIn, daily on Twitter/X. Consistency beats perfection every time",
+      'Use ElevenLabs voice cloning for audio content: turn written posts into 2-minute audio clips for Spotify or podcast distribution',
+      'Create a content repurposing pipeline: one long-form post → 3 Twitter threads → 2 LinkedIn posts → 1 newsletter edition → 1 video script',
+      "Engage authentically: use AI for drafting replies to comments, but personalize before posting. Authenticity can't be automated",
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Posting generic AI-generated content without personal voice',
+        fix: 'Always inject personal experience, opinions, or stories into AI drafts. Your unique perspective is your brand.',
+      },
+      {
+        mistake: 'Posting inconsistently or burning out',
+        fix: 'Use batching: create all content for the week in one 2-hour session. Schedule everything on Sunday.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Build a professional brand that generates inbound leads, speaking opportunities, and partnerships',
+    real_results: [
+      { metric: 'Content Output', value: '5x more', description: 'AI-assisted content creation enables 5x more posts without quality degradation' },
+      { metric: 'Follower Growth', value: '+2,000/mo', description: 'Consistent AI-powered posting drives steady professional audience growth' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 58: AI for Sales Outreach & CRM
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-sales-outreach',
+    title: 'AI for Sales Outreach & CRM',
+    subtitle: 'Personalized cold outreach at scale',
+    description:
+      'Supercharge your sales pipeline with AI: personalized cold emails, LinkedIn outreach, follow-up sequences, lead scoring, and CRM automation. Use ChatGPT for copywriting, Claude for prospect research, and tools like Apollo and Clay for data enrichment.',
+    meta_title: 'AI for Sales Outreach & CRM — Apifeny AI Playbook',
+    meta_description: 'Supercharge sales outreach with AI: personalized cold emails, LinkedIn messaging, lead scoring, and CRM automation with ChatGPT, Claude, and Apollo.',
+    related_tool_slugs: ['chatgpt', 'claude', 'perplexity', 'notion-ai'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 9,
+    icon: '📞',
+    gradient: 'from-green-500/30 to-teal-500/30',
+    steps: [
+      {
+        title: 'Build your ideal customer profile with ChatGPT',
+        description:
+          'Define your ICP (Ideal Customer Profile) with ChatGPT. Include: industry, company size, role, pain points, budget range, and buying triggers. This profile guides every outreach effort.',
+        tip: 'Prompt: "Create a detailed ICP for [product/service]. Include: 3 target industries, 5 decision-maker roles, 7 common pain points, budget range, and buying seasonality."',
+      },
+      {
+        title: 'Research prospects with Perplexity',
+        description:
+          'Before reaching out, research each prospect: recent company news, funding announcements, job changes, personal interests, and mutual connections. Perplexity provides cited sources for every finding.',
+        tip: 'Create a Perplexity Collection per prospect. Research company news, personal background, and common connections before writing any outreach.',
+      },
+      {
+        title: 'Write personalized outreach with Claude',
+        description:
+          'Feed Claude your ICP, prospect research, and value proposition. Ask for: subject lines (5 variants), opening hooks (3-5 options), value-driven body, social proof, and clear CTA. Personalization at scale without sounding templated.',
+        tip: 'Prompt: "Write a cold email for [prospect name] at [company]. Research shows they recently [event]. My product solves [problem]. Include: personalized hook referencing their recent activity, 2 value bullets, social proof, and a low-friction CTA."',
+      },
+      {
+        title: 'Set up follow-up sequences',
+        description:
+          'Create multi-channel sequences: Day 1 email, Day 3 LinkedIn connection request, Day 7 follow-up email with new value, Day 14 phone/video call request. Use Notion AI to track sequence status and optimize timing.',
+        tip: 'The best follow-ups add new value: share a relevant article, mention an event they are attending, or offer a free resource. Never just say "just checking in."',
+      },
+      {
+        title: 'Track and optimize with data',
+        description:
+          'Track: open rates, reply rates, meeting booked rate, and conversion to customer. Feed your best-performing emails into ChatGPT for pattern analysis: "Analyze these 20 replies I got. What subject lines, hooks, and CTAs correlated with positive responses?"',
+        tip: 'Use Notion databases to track the full pipeline: prospect, company, outreach date, channel, response, next action. Notion AI can flag overdue follow-ups and recommend next steps.',
+      },
+    ],
+    pro_tips: [
+      'Use Apollo or Clay for data enrichment: company size, tech stack, recent hires, and funding. Feed this data into Claude for hyper-personalized outreach',
+      'Test 3 subject line variants in batches of 50. After 150 sends, analyze which variant wins and double down. AI can generate and track A/B tests automatically',
+      'Write like a human, not a sales bot. Use contractions, ask questions, show personality. The best-performing B2B emails read like a peer reaching out, not a sales script',
+      'Use video outreach for high-value prospects. Loom or Vidyard plus a personalized intro from an AI-generated script outperforms text-only emails 3:1',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Sending mass emails that feel templated despite AI',
+        fix: 'Personalize more than just the first name. Reference the prospect\'s recent achievement, company milestone, or personal interest. Real personalization requires research, not just a mail merge.',
+      },
+      {
+        mistake: 'Following up too aggressively',
+        fix: 'Maximum 5 touches over 14 days across 2 channels. If no response after 5 touches, move to nurture sequence (monthly check-ins with value add). Respect prospects\' time.',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: 'Personalized AI outreach generates 3-5x more meetings than generic mass email campaigns',
+    real_results: [
+      { metric: 'Reply Rate', value: '3x higher', description: 'AI-personalized outreach outperforms generic templates 3:1 in reply rates' },
+      { metric: 'Meetings Booked', value: '5x more', description: 'Research-backed personalization + follow-up sequences drive meeting conversion' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 59: AI for API Integration & Backend Automation
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-api-integration',
+    title: 'AI for API Integration & Backend Automation',
+    subtitle: 'Connect services without writing glue code',
+    description:
+      'Use AI tools to design, implement, and debug API integrations: REST APIs, webhooks, authentication flows, data transformation, and error handling. Cursor and ChatGPT generate integration code from natural language descriptions.',
+    meta_title: 'AI for API Integration & Backend Automation — Apifeny AI Playbook',
+    meta_description: 'Design, implement, and debug API integrations with AI. Connect services, handle authentication, transform data, and automate backend workflows with Cursor and ChatGPT.',
+    related_tool_slugs: ['cursor', 'chatgpt', 'claude', 'deepseek', 'windsurf'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 9,
+    icon: '🔗',
+    gradient: 'from-cyan-500/30 to-blue-500/30',
+    steps: [
+      {
+        title: 'Design the integration architecture with Claude',
+        description:
+          'Describe the services you want to connect: "I need to sync Stripe subscriptions to a Google Sheet and send a Slack notification on each new subscription." Claude will design the architecture: components, data flow, authentication methods, and error handling strategy.',
+        tip: 'Ask Claude to generate a sequence diagram in Mermaid format. Visualizing the data flow catches design issues before you write code.',
+      },
+      {
+        title: 'Generate authentication code with ChatGPT',
+        description:
+          'API authentication is the hardest part of integration. Describe your auth method (OAuth2, API key, JWT) and ask ChatGPT to generate the complete auth flow with token refresh, error handling, and secure storage.',
+        tip: 'Prompt: "Generate OAuth2 client credentials flow for [API]. Include: token request, token refresh, error handling for expired tokens, and secure environment variable loading."',
+      },
+      {
+        title: 'Build the integration with Cursor',
+        description:
+          'Open your project in Cursor and describe the integration in Agent mode. Cursor reads your existing codebase context and generates integration code that matches your architecture, style, and dependencies.',
+        tip: '@-mention your database schema and existing API routes. Cursor generates integrations that connect properly with your existing services.',
+      },
+      {
+        title: 'Debug integration issues with help from AI',
+        description:
+          'When an integration fails, paste the error, request log, and API documentation into Claude. It will identify the issue — missing header, wrong endpoint, rate limiting, or data format mismatch — and suggest the exact fix.',
+        tip: 'Create a debugging prompt template: "Here is the error: [error]. Here is the request: [log]. Here is the API doc: [doc]. What is wrong and how do I fix it?"',
+      },
+      {
+        title: 'Add error handling and monitoring',
+        description:
+          'Ask ChatGPT to add: retry logic with exponential backoff, webhook signature verification, dead letter queue for failed messages, and logging at every integration step. Production-ready integrations need these guardrails.',
+        tip: 'Set up a health check endpoint that tests each integration. Use Cursor to write tests that verify the integration works end-to-end before deployment.',
+      },
+    ],
+    pro_tips: [
+      'Use Claude with API documentation PDFs uploaded for accurate integration code. It reads the docs and produces working code',
+      'Build a shared integration library in your codebase. Cursor generates reusable integration patterns you can reference across projects',
+      'For complex integrations with 5+ services, use Cursor\'s Composer to generate all integration files in one pass',
+      'Always mock external API calls in development. Use ChatGPT to generate mock servers from API docs',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Hardcoding API keys and secrets in integration code',
+        fix: 'Use environment variables and secret managers. Ask ChatGPT to rewrite your integration with proper secrets handling.',
+      },
+      {
+        mistake: 'Not handling rate limits',
+        fix: 'Ask ChatGPT to add rate limit handling: check rate limit headers, implement queues, and add backoff logic.',
+      },
+    ],
+    pipeline_stage: 'coding',
+    revenue_impact: 'Reduce API integration time from days to hours, enabling faster product launches',
+    real_results: [
+      { metric: 'Integration Time', value: '6 hours', description: 'Complex 5-API integration completed in 6 hours with AI assistance' },
+      { metric: 'Debug Speed', value: '4x faster', description: 'AI identifies root cause of integration errors 4x faster than manual debugging' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 60: AI for Data Visualization & Dashboards
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-data-visualization',
+    title: 'AI for Data Visualization & Dashboards',
+    subtitle: 'Turn data into insight with AI-powered charts',
+    description:
+      'Create stunning data visualizations and dashboards using AI: generate charts from natural language, build interactive dashboards, automate reporting, and uncover insights your data is hiding. Use ChatGPT for chart code and analysis, Gemini for large dataset exploration, and Looker Studio for dashboards.',
+    meta_title: 'AI for Data Visualization & Dashboards — Apifeny AI Playbook',
+    meta_description: 'Create stunning data visualizations and dashboards with AI. Generate charts from natural language, analyze datasets, and automate reporting with ChatGPT and Gemini.',
+    related_tool_slugs: ['chatgpt', 'gemini', 'claude', 'notion-ai'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 9,
+    icon: '📈',
+    gradient: 'from-indigo-500/30 to-violet-500/30',
+    steps: [
+      {
+        title: 'Explore your data with ChatGPT',
+        description:
+          'Upload your dataset (CSV, Excel, or Google Sheets) to ChatGPT. Ask for: data summary, column descriptions, missing values, outliers, correlations, and initial insights. ChatGPT analyzes the data and suggests visualization opportunities.',
+        tip: 'Prompt: "Analyze this CSV. For each column: data type, missing %, unique values, min/max, and distribution. Then suggest 5 visualizations that would reveal the most important insights."',
+      },
+      {
+        title: 'Generate chart code with ChatGPT',
+        description:
+          'Describe the chart you want: "Create an interactive line chart showing monthly revenue by product category for 2025. Use D3.js with tooltips, smooth curves, and a legend." ChatGPT generates complete, working code.',
+        tip: 'Specify the library (D3.js, Chart.js, Recharts, Plotly) and your tech stack. ChatGPT generates code that integrates with your existing frontend components.',
+      },
+      {
+        title: 'Analyze large datasets with Gemini',
+        description:
+          'Gemini\'s 1M token context can process entire datasets, multi-tab spreadsheets, and multiple CSVs simultaneously. Upload your data and ask for: cross-tab analysis, trend identification, anomaly detection, and segment comparisons.',
+        tip: 'Upload 3 years of sales data and ask Gemini: "Show me YoY growth by quarter, identify our best and worst performing months, and find 3 anomalies in the data."',
+      },
+      {
+        title: 'Build dashboards with Claude + Looker Studio',
+        description:
+          'Describe your dashboard needs to Claude: "I need a marketing dashboard showing: traffic by source, conversion rate by channel, cost per acquisition, and ROI by campaign." Claude generates the dashboard specification with chart types, dimensions, and metrics.',
+        tip: 'Connect Looker Studio (free Google tool) to your data sources. Implement Claude\'s dashboard spec directly in Looker Studio for interactive, shareable dashboards.',
+      },
+      {
+        title: 'Automate reporting with Notion AI',
+        description:
+          'Create a Notion database connected to your data sources. Use Notion AI to: generate weekly summary reports, highlight changes vs last period, flag anomalies, and draft commentary for stakeholder distribution.',
+        tip: 'Set up Notion AI to auto-generate a weekly dashboard summary: "Summarize this week\'s KPIs. Compare to last week. Flag any metrics outside normal range. Suggest 3 focus areas for next week."',
+      },
+    ],
+    pro_tips: [
+      'Use Claude with Mermaid chart syntax for quick drafts: describe a chart, get instant Mermaid code, render in your docs or slides',
+      'Create a visualization library: save your best chart code from ChatGPT in a shared repo. Reuse and customize for future projects',
+      'For executive dashboards, ask ChatGPT to generate chart annotations: "Add callout boxes for the most important data points with explanation text"',
+      'Use color-blind-friendly palettes. Ask ChatGPT: "Use the Viridis color palette" or "Use a color-blind accessible palette" for every chart',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Generating pretty charts that hide meaningful insights',
+        fix: 'Start with questions, not visualizations: "What are my top 3 customer segments by LTV?" Then build charts that answer those questions.',
+      },
+      {
+        mistake: 'Not handling real-time data refresh',
+        fix: 'Connect dashboards to live data sources (Looker Studio, Metabase) instead of static exports. Ask AI for refresh scheduling recommendations.',
+      },
+    ],
+    pipeline_stage: 'research',
+    revenue_impact: 'Data-driven decision making that is 5x faster with automated AI analysis and visualization',
+    real_results: [
+      { metric: 'Report Creation Time', value: '90% faster', description: 'Weekly reports generated in 10 minutes instead of 2 hours' },
+      { metric: 'Insights Discovered', value: '3x more', description: 'AI analysis reveals patterns and anomalies manual review misses' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 61: AI for Contract Review & Legal Analysis
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-contract-review',
+    title: 'AI for Contract Review & Legal Analysis',
+    subtitle: 'Review contracts and legal documents faster',
+    description:
+      'Use AI tools to review contracts, identify risks, summarize legal documents, and draft standard clauses. Claude and Gemini excel at processing complex legal documents. Always have a real lawyer review final agreements.',
+    meta_title: 'AI for Contract Review & Legal Analysis — Apifeny AI Playbook',
+    meta_description: 'Review contracts and legal documents with AI. Use Claude and Gemini to identify risks, summarize terms, and draft standard clauses. Disclaimer: always consult a real lawyer.',
+    related_tool_slugs: ['claude', 'gemini', 'chatgpt'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 8,
+    icon: '⚖️',
+    gradient: 'from-slate-500/30 to-gray-500/30',
+    steps: [
+      {
+        title: 'Upload contracts to Claude for comprehensive review',
+        description:
+          'Upload your contract (NDA, SaaS agreement, employment contract, partnership agreement) to Claude. Ask it to: identify key terms, flag unusual clauses, summarize obligations for each party, highlight termination conditions, and note renewal/automatic renewal clauses.',
+        tip: 'Claude\'s 200K context handles contracts of 50+ pages in one upload. Ask: "Review this contract like a legal expert. Flag: (1) Unusual or unfavorable terms, (2) Missing standard protections, (3) Ambiguous language, (4) Risk areas, (5) Negotiation opportunities."',
+      },
+      {
+        title: 'Compare contracts side by side with Gemini',
+        description:
+          'Gemini\'s 1M context allows uploading multiple contracts simultaneously. Ask it to: compare terms across documents, find inconsistencies, identify the most favorable terms from each, and create a redline summary.',
+        tip: 'Upload your current contract + competitor/vendor contract and ask: "Compare these two SaaS agreements. Show me: (1) Differences in liability caps, (2) SLA differences, (3) Termination differences, (4) Which terms favor which party."',
+      },
+      {
+        title: 'Generate contract clauses with ChatGPT',
+        description:
+          'For standard clauses, describe what you need: "Generate a data processing addendum (DPA) compliant with APAC privacy regulations including PDPA, PIPA, and PIPL." ChatGPT produces a solid first draft for your lawyer to finalize.',
+        tip: 'Prompt structure: "Draft a [clause type] for [context]. Must include: [key elements]. Ensure compliance with [jurisdiction/regulation]. Mark sections requiring lawyer review with [LAWYER REVIEW]."',
+      },
+      {
+        title: 'Extract and summarize key terms',
+        description:
+          'Upload a contract and ask ChatGPT or Claude to create: a one-page executive summary, key dates calendar (renewals, opt-outs, expirations), obligation matrix showing what each party must do, and risk register showing potential issues.',
+        tip: 'Create a contract summary template: Party Names, Effective Date, Term, Payment Terms, IP Ownership, Liability Cap, Termination Conditions, Auto-Renewal, Governing Law, Dispute Resolution.',
+      },
+      {
+        title: 'Review for compliance with local regulations',
+        description:
+          'Check contracts against relevant regulations: GDPR (Europe), PDPA (Singapore/Thailand), PIPA (Japan), PIPL (China), or CCPA (California). Upload both the contract and regulation summary into Claude for compliance cross-check.',
+        tip: 'Ask Claude: "Review this contract for compliance with [regulation]. Flag specific clauses that may violate requirements. Suggest compliant alternatives for each flagged clause."',
+      },
+    ],
+    pro_tips: [
+      'Create a Claude Project named "Contract Review" with your review framework as a system prompt. Every upload gets consistent analysis without re-prompting',
+      'Build a contract clause library in Notion. Use Notion AI to organize clauses by type (NDA, IP, Limitation of Liability) and jurisdiction',
+      'Set up a contract review checklist in Notion AI: use the same checklist for every contract to ensure consistent coverage of key items',
+      'Never finalize a contract based solely on AI review. AI catches obvious issues but may miss nuanced legal risks. Always get a real lawyer\'s final review',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Using AI as a replacement for legal counsel',
+        fix: 'AI is a review tool, not a lawyer. Use it to speed up initial review and identify areas for your lawyer to focus on. Never sign a contract based solely on AI analysis.',
+      },
+      {
+        mistake: 'Uploading confidential contracts to public AI models',
+        fix: 'Use enterprise-grade AI (Claude Enterprise, ChatGPT Enterprise) with data protection commitments. Or use open-source models running locally with Ollama.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Reduce legal review time by 70% and save $500-2K per contract in preliminary legal fees',
+    real_results: [
+      { metric: 'Contract Review Time', value: '75% faster', description: 'From 2 hours per contract to 30 minutes with AI-assisted review' },
+      { metric: 'Risks Identified', value: '2x more', description: 'AI catches clauses that human reviewers often skim past' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 62: AI for E-commerce Product Optimization
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-ecommerce-product-optimization',
+    title: 'AI for E-commerce Product Optimization',
+    subtitle: 'Optimize listings, descriptions, and conversions',
+    description:
+      'Boost e-commerce sales with AI: optimize product listings for search, write compelling descriptions, generate product photography, analyze customer reviews, and automate pricing. Use ChatGPT for copy, Midjourney for images, and tools for SEO.',
+    meta_title: 'AI for E-commerce Product Optimization — Apifeny AI Playbook',
+    meta_description: 'Boost e-commerce sales with AI: optimize product listings, write descriptions, generate photography, analyze reviews, and automate pricing for Shopify and Amazon.',
+    related_tool_slugs: ['chatgpt', 'midjourney', 'perplexity', 'canva-ai', 'claude'],
+    difficulty: 'Beginner',
+    read_time_minutes: 9,
+    icon: '🛒',
+    gradient: 'from-orange-500/30 to-amber-500/30',
+    steps: [
+      {
+        title: 'Research keywords and trends with Perplexity',
+        description:
+          'Identify the keywords customers use to find products like yours. Use Perplexity to research: top search terms, trending product categories, competitor pricing, and customer preferences in your target markets.',
+        tip: 'Prompt: "What are the top 20 search terms people use to find [product type] on Amazon and Google? Include search volume estimates and trend direction (rising/falling/stable)."',
+      },
+      {
+        title: 'Write optimized product titles and descriptions',
+        description:
+          'Create product titles that rank: include primary keyword, key feature, brand, and size/color where relevant. Write descriptions that convert: feature bullets, benefits, social proof, and SEO-friendly body copy.',
+        tip: 'Prompt: "Write an Amazon-optimized product listing for [product]. Include: (1) Title under 200 chars with primary keyword, (2) 5 feature bullets with benefits, (3) SEO description with secondary keywords, (4) Size/color/variant table."',
+      },
+      {
+        title: 'Generate product photography with Midjourney',
+        description:
+          'Create product images without a photo studio. Generate white background product shots, lifestyle images (product in use), detail close-ups, and comparison images. Leonardo AI offers product photography presets for consistent results.',
+        tip: 'Prompt: "Product photography. A [product] on a clean white surface. Studio lighting, soft shadows, 8K, photorealistic, e-commerce ready. --ar 4:5" for Amazon/Shopify format.',
+      },
+      {
+        title: 'Analyze customer reviews with Claude',
+        description:
+          'Export product reviews from your e-commerce platform. Feed into Claude: "Analyze these 200 product reviews. Extract: (1) Top 10 features customers love, (2) Top 5 complaints, (3) 3 product improvement opportunities, (4) 5 keywords to add to our listing."',
+        tip: 'Review analysis reveals exactly what to improve. If customers consistently complain about packaging, update your listing to clarify packaging standards and add a photo.',
+      },
+      {
+        title: 'A/B test with AI-generated variants',
+        description:
+          'Generate 5 title variants, 3 description formats, and 3 image styles using AI. Run A/B tests: test titles for 2 weeks, descriptions for 2 weeks, images for 2 weeks. The winning combination becomes your new baseline. Repeat monthly.',
+        tip: 'Use ChatGPT to analyze A/B test results: "These 3 title variants got these click rates. Generate 5 new titles combining the winning elements from each."',
+      },
+    ],
+    pro_tips: [
+      'Create an e-commerce brand kit in Notion: brand voice, keyword list, image style guide, target customer persona, and competitor benchmarks',
+      'Use ChatGPT to generate FAQ content for product pages: anticipate customer questions and answer them in your description. FAQ-rich listings convert better',
+      'Leverage local market data: for Asia markets, ask Perplexity about platform-specific trends (Shopee, Lazada, Tokopedia have different search patterns than Amazon)',
+      'Automate repricing with AI: feed competitor price data into ChatGPT and ask for optimal pricing recommendations based on margin targets and competitive positioning',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Keyword stuffing in product titles and descriptions',
+        fix: 'Ask ChatGPT for natural keyword integration. Search engines penalize stuffing. Write for humans first, optimize for search second.',
+      },
+      {
+        mistake: 'Using generic product images that look AI-generated',
+        fix: 'Add your product\'s actual branding, labels, and packaging to AI-generated images. Customers can tell when images are fully synthetic and trust real photos more.',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: 'AI-optimized product listings see 15-30% improvement in conversion rates',
+    real_results: [
+      { metric: 'Conversion Rate', value: '+22%', description: 'AI-optimized titles, descriptions, and images boost conversion' },
+      { metric: 'Listings Optimized', value: '50+ per week', description: 'AI enables product listing optimization at scale without a copywriting team' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 63: AI for Project Management & Team Productivity
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-project-management',
+    title: 'AI for Project Management & Team Productivity',
+    subtitle: 'Run projects better with AI assistance',
+    description:
+      'Supercharge your project management workflow: generate project plans, automate status updates, analyze team velocity, create sprint reports, and manage stakeholders. Use ChatGPT for planning, Notion AI for documentation, and Claude for analysis.',
+    meta_title: 'AI for Project Management & Team Productivity — Apifeny AI Playbook',
+    meta_description: 'Run projects better with AI: generate plans, automate status updates, analyze velocity, create sprint reports, and manage stakeholders with ChatGPT, Notion AI, and Claude.',
+    related_tool_slugs: ['chatgpt', 'claude', 'notion-ai', 'perplexity'],
+    difficulty: 'Beginner',
+    read_time_minutes: 8,
+    icon: '📋',
+    gradient: 'from-blue-500/30 to-indigo-500/30',
+    steps: [
+      {
+        title: 'Generate project plans with ChatGPT',
+        description:
+          'Describe your project goal, timeline, team size, and constraints. Ask ChatGPT for: complete project plan with phases and milestones, task breakdown (WBS), resource allocation, risk register, communication plan, and quality metrics. The AI produces a structured plan you can export directly to Jira, Asana, or Notion.',
+        tip: 'Prompt: "Create a project plan for [project] with a [timeline] timeline, [size] team. Include: phases with deliverables, task dependencies, resource loading, risk register with mitigations, and communication cadence."',
+      },
+      {
+        title: 'Automate status updates with AI',
+        description:
+          'Generate weekly or daily status reports by feeding your project tracker into ChatGPT: current sprint tasks, completed items, blockers, next steps, and team velocity. The AI synthesizes raw data into stakeholder-ready updates.',
+        tip: 'Create a Notion database connected to your project management tool. Use Notion AI to auto-generate daily standup notes and weekly status reports from database entries.',
+      },
+      {
+        title: 'Analyze team velocity with Claude',
+        description:
+          'Feed Claude your sprint data (story points, completed tasks, bugs, capacity) and ask for: velocity trend analysis, bottleneck identification, team capacity recommendations, and process improvement suggestions.',
+        tip: 'Prompt: "Analyze these 6 sprints of data. Show me: (1) Velocity trend with variance, (2) Top 3 bottlenecks, (3) Task completion rate by type, (4) Recommendations to improve throughput by 20%."',
+      },
+      {
+        title: 'Generate sprint retrospectives',
+        description:
+          'Feed sprint data into ChatGPT and ask for a retro summary: what went well, what could improve, action items, team sentiment analysis, and a retrospective report ready for team review.',
+        tip: 'Prompt: "Generate a structured sprint retrospective from this data. Include: (1) 3 things that went well with data evidence, (2) 3 improvement areas with root cause analysis, (3) 3 concrete action items with owners."',
+      },
+      {
+        title: 'Manage stakeholder communication',
+        description:
+          'Use AI to draft: executive summaries, sponsor updates, steering committee reports, and risk notifications. Feed project data into ChatGPT with audience context (executives need high-level vs engineers need details).',
+        tip: 'Create AI templates: "Exec Update" (3 bullets max), "Team Update" (detailed with blockers), "Client Update" (progress focused). Each audience gets the right level of detail.',
+      },
+    ],
+    pro_tips: [
+      'Create a Project Management AI Assistant in ChatGPT with custom instructions based on your project management methodology (Scrum, Kanban, Waterfall, or hybrid)',
+      'Use Notion AI databases for project tracking with auto-generated reports. The AI surfaces at-risk tasks before they become blockers',
+      'For multi-project programs, use Claude to analyze resource allocation across projects and identify overload conflicts',
+      'Save your best project plan prompts as ChatGPT snippets. Reusable templates save 2+ hours per project planning session',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Using AI to replace project management tools entirely',
+        fix: 'AI augments, not replaces, PM tools. Use AI for analysis and drafting, but keep your project data in Jira, Asana, or Notion for team collaboration.',
+      },
+      {
+        mistake: 'Not customizing AI reports for different stakeholders',
+        fix: 'Executives need decisions and progress. Teams need tasks and blockers. Clients need milestones and deliverables. Customize AI prompts for each audience.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Save 10+ hours per week on project admin tasks with AI automation',
+    real_results: [
+      { metric: 'Status Report Time', value: '90% faster', description: 'Weekly status reports generated in 5 minutes instead of 45' },
+      { metric: 'Sprint Planning Time', value: '50% faster', description: 'AI-assisted sprint planning reduces planning meeting time by half' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 64: AI for Cold Email Marketing
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-cold-email-marketing',
+    title: 'AI for Cold Email Marketing',
+    subtitle: 'Build and scale cold email campaigns that land',
+    description:
+      'Launch high-converting cold email campaigns using AI: generate prospect lists, write personalized sequences, optimize deliverability, run A/B tests, and analyze performance. Use ChatGPT for copy, Claude for research, and tools like Lemlist for delivery.',
+    meta_title: 'AI for Cold Email Marketing — Apifeny AI Playbook',
+    meta_description: 'Launch high-converting cold email campaigns with AI: prospect lists, personalized sequences, deliverability optimization, A/B testing with ChatGPT, Claude, and Lemlist.',
+    related_tool_slugs: ['chatgpt', 'claude', 'perplexity', 'notion-ai'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 9,
+    icon: '📧',
+    gradient: 'from-red-500/30 to-orange-500/30',
+    steps: [
+      {
+        title: 'Build targeted prospect lists with Perplexity',
+        description:
+          'Research your ideal prospects: decision-makers in target companies, their contact info, recent company news, and personal interests. Perplexity sources from LinkedIn, Crunchbase, and company websites with citations.',
+        tip: 'Prompt: "Find me 20 decision-makers in [industry] companies with [characteristic]. Include: name, title, company, LinkedIn URL, recent company news, and personal interests for personalization."',
+      },
+      {
+        title: 'Write hyper-personalized email templates',
+        description:
+          'Feed Claude each prospect\'s research data and ask for a personalized email. Include: reference to their recent work, a specific observation about their company, your value prop tailored to their context, and a low-friction CTA.',
+        tip: 'Prospect template: "Write a cold email for [name], CEO of [company]. They recently [achievement]. My product helps [value prop]. Keep under 100 words, show you researched them, end with a specific CTA."',
+      },
+      {
+        title: 'Set up multi-step sequences',
+        description:
+          'Create email sequences: Day 1 — intro email, Day 3 — value add (case study/article), Day 7 — social proof (testimonial), Day 14 — break-up email. Use tools like Lemlist or Instantly for automated sending with inbox rotation.',
+        tip: 'The best cold email sequences use 4-5 touches over 14 days. After that, move leads to a monthly nurture campaign. Respect inboxes and not every non-reply means disinterest.',
+      },
+      {
+        title: 'Optimize deliverability with AI',
+        description:
+          'Ask ChatGPT to review your emails for spam triggers: excessive exclamation marks, all-caps words, too many links, spammy words (free, guarantee, act now). Also set up proper SPF, DKIM, and DMARC for your sending domain.',
+        tip: 'Prompt: "Review this cold email for spam triggers. Flag: spam words, excessive punctuation, link density, subject line issues, and formatting problems. Score it out of 100 for deliverability."',
+      },
+      {
+        title: 'Analyze and iterate with ChatGPT',
+        description:
+          'Feed your campaign metrics (open rate, reply rate, bounce rate, meeting booked rate) into ChatGPT. Ask: "Analyze these 4 email variants. Which subject lines and body structures performed best? Generate 3 new variants that combine winning elements."',
+        tip: 'Track per-variant performance: 2 subject lines × 2 body styles × 2 CTAs = 8 variants. Test each on 50 prospects. After 400 sends, you know exactly what works for your audience.',
+      },
+    ],
+    pro_tips: [
+      'Set up a custom tracking domain to protect your sender reputation. Main domains used for cold email get blacklisted — use a subdomain like outreach.yourcompany.com',
+      'Warm up new sending domains for 2 weeks before launching campaigns. Send 5-10 emails/day initially, increasing to 50+ over 14 days',
+      'Use Claude to write the first email and ChatGPT to write follow-ups. Each model has a slightly different tone — variation across a sequence feels more natural',
+      'Aim for 0.5-2% reply rate on cold email. Higher than 3% suggests your list is too warm/small. Lower than 0.3% means your copy or targeting needs work',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Using a single email template for all prospects',
+        fix: 'Personalize every email using prospect research. Even one personalized line referencing their work outperforms generic templates 3:1.',
+      },
+      {
+        mistake: 'Sending from unverified domains without proper email authentication',
+        fix: 'Set up SPF, DKIM, and DMARC before sending. Use tools like MXToolbox to verify your email setup. Undelivered email = zero ROI.',
+      },
+    ],
+    pipeline_stage: 'marketing',
+    revenue_impact: 'AI-personalized cold email campaigns generate 3-10x ROI compared to spray-and-pray outreach',
+    real_results: [
+      { metric: 'Reply Rate', value: '2.1%', description: 'AI-personalized cold email campaigns average 2-5% reply rates vs 0.3-1% for generic outreach' },
+      { metric: 'Campaign Build Time', value: '75% less', description: 'From 20 hours to 5 hours to research, write, and launch a cold email campaign' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 65: AI for Database Design & SQL Queries
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-database-design-sql',
+    title: 'AI for Database Design & SQL Queries',
+    subtitle: 'Design databases and write SQL with plain English',
+    description:
+      'Design relational databases, write complex SQL queries, optimize performance, and generate database documentation using AI. Describe what you need in plain English and let ChatGPT, Claude, or Cursor generate the schema and queries.',
+    meta_title: 'AI for Database Design & SQL Queries — Apifeny AI Playbook',
+    meta_description: 'Design databases and write SQL with plain English. Generate schemas, complex queries, and performance optimizations using ChatGPT, Claude, and Cursor.',
+    related_tool_slugs: ['chatgpt', 'claude', 'cursor', 'devin', 'windsurf'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 8,
+    icon: '🗄️',
+    gradient: 'from-sky-500/30 to-blue-500/30',
+    steps: [
+      {
+        title: 'Design the database schema in plain English',
+        description:
+          'Describe your application to ChatGPT: "I am building a SaaS platform with users, organizations, subscriptions, invoices, and teams. Each user can belong to multiple organizations. Design the database schema." ChatGPT generates normalized tables with relationships, keys, and indexes.',
+        tip: 'Include your expected query patterns: "Users will search by email and org name. Subscriptions are billed monthly. We need to report on MRR by month." This helps AI optimize the schema for your actual usage.',
+      },
+      {
+        title: 'Generate complex SQL queries from descriptions',
+        description:
+          'Describe the data you need in plain English: "Show me monthly recurring revenue for the last 12 months, broken down by plan tier, excluding churned customers in the first 30 days." ChatGPT generates the exact SQL.',
+        tip: 'Always include your schema when asking for queries: paste the CREATE TABLE statements + your question. Without schema context, the SQL uses guessed columns that probably do not match your actual database.',
+      },
+      {
+        title: 'Optimize slow queries with Claude',
+        description:
+          'Paste your slow query + EXPLAIN ANALYZE results into Claude. Ask: "This query takes 8 seconds on a 2M row table. Analyze the execution plan and suggest indexes, query rewrites, or schema changes." Claude identifies missing indexes and design issues.',
+        tip: 'Ask Claude to generate the migration SQL alongside the optimization: "Generate the CREATE INDEX statements and query rewrite in one migration file."',
+      },
+      {
+        title: 'Generate database documentation with Cursor',
+        description:
+          'Use Cursor to analyze your existing migration files or schema definitions and auto-generate: entity relationship descriptions, column documentation, relationship diagrams in Mermaid format, and data dictionary.',
+        tip: 'Create a /docs/database.md file and have Cursor maintain it. Every time you add a migration, ask Cursor to update the documentation. Living docs stay useful.',
+      },
+      {
+        title: 'Write data migration scripts',
+        description:
+          'Describe your migration: "I need to add a timezone column to users table, backfill from existing timestamp data, and update all queries to use the new column." ChatGPT generates the migration with up/down scripts, backfill logic, and rollback plan.',
+        tip: 'Ask AI to add safety checks: "Add validation that the backfilled timezone data is valid. Add a dry-run mode. Generate both forward and rollback scripts."',
+      },
+    ],
+    pro_tips: [
+      'Use cursorless SQL generation: describe your query to ChatGPT while sharing your database diagram/schema screenshot for maximum accuracy',
+      'Create a SQL library in Notion: save your best AI-generated queries by category (analytics, reporting, data cleaning, migrations). Reuse and adapt instead of regenerating',
+      'For complex 5+ JOIN queries, ask Claude to first draw a query plan in Mermaid, then generate the SQL. Visualizing the joins catches logical errors',
+      'Use ChatGPT Code Interpreter (Advanced Data Analysis) to test queries on sample data before running on production',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Running AI-generated SQL without reviewing for production data',
+        fix: 'Always add LIMIT 100 to generated queries first. Check for missing WHERE clauses. Use transactions for migrations. Test on a staging copy of production data.',
+      },
+      {
+        mistake: 'Not providing schema context when asking for queries',
+        fix: 'Always paste the CREATE TABLE or describe the columns. SQL without schema context uses guessed column names that rarely match your actual database.',
+      },
+    ],
+    pipeline_stage: 'coding',
+    revenue_impact: 'Reduce database design and query time by 60%, enabling faster development cycles',
+    real_results: [
+      { metric: 'Query Writing Time', value: '80% faster', description: 'Complex 10-line SQL queries written in 30 seconds instead of 5-10 minutes' },
+      { metric: 'Migration Accuracy', value: '95%', description: 'AI-generated migrations pass first review on 19 of 20 attempts when well-specified' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 66: AI for Travel Planning & Itinerary Design
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-travel-planning-itinerary',
+    title: 'AI for Travel Planning & Itinerary Design',
+    subtitle: 'Plan perfect trips with AI travel agents',
+    description:
+      'Plan entire trips with AI: research destinations, design day-by-day itineraries, find the best flights and hotels, create budgets, and generate travel guides. Claude and Gemini excel at creating detailed, personalized itineraries.',
+    meta_title: 'AI for Travel Planning & Itinerary Design — Apifeny AI Playbook',
+    meta_description: 'Plan perfect trips with AI agents. Research destinations, design itineraries, find flights, create budgets, and generate travel guides with Claude and Gemini.',
+    related_tool_slugs: ['claude', 'gemini', 'chatgpt', 'perplexity'],
+    difficulty: 'Beginner',
+    read_time_minutes: 7,
+    icon: '✈️',
+    gradient: 'from-teal-500/30 to-emerald-500/30',
+    steps: [
+      {
+        title: 'Research destinations with Perplexity',
+        description:
+          'Compare destinations based on budget, season, interests, and travel style. Perplexity provides: safety information, visa requirements, best seasons to visit, cost of living comparisons, and hidden gem recommendations with cited sources.',
+        tip: 'Prompt: "Compare [destination A] vs [destination B] for a [duration] trip in [month]. Consider: budget (mid-range), safety for solo travelers, food scene, must-see attractions, and 3 off-the-beaten-path experiences."',
+      },
+      {
+        title: 'Design detailed itineraries with Claude',
+        description:
+          'Claude\'s large context handles multi-day itineraries with: day-by-day breakdown, timing suggestions, restaurant recommendations with cuisine type, transit information, and backup plans for bad weather.',
+        tip: 'Prompt: "Create a 7-day itinerary for [City]. 2 adults, mid-range budget, love food and art, hate crowded tourist traps. Include: breakfast spots, morning activity, lunch, afternoon exploration, dinner, and evening option. Add weather contingency for each day."',
+      },
+      {
+        title: 'Optimize budget with ChatGPT',
+        description:
+          'Create a detailed trip budget: flights, accommodation, daily meals, activities, transit, and contingency. ChatGPT helps optimize: where to save, where to splurge, and cost comparisons between alternatives.',
+        tip: 'Prompt: "Create a budget for a [duration] trip to [City] for [travelers]. Itemize: flights, hotels (mid-range), meals (3 tiers), activities, transit, misc. Show a low-end and mid-range version. Suggest 3 money-saving swaps."',
+      },
+      {
+        title: 'Generate packing and preparation lists',
+        description:
+          'Ask ChatGPT for a tailored packing list: weather-appropriate clothing, electronics adapters, cultural considerations, health preparations, and documents checklist. Specify destination, season, and activities planned.',
+        tip: 'Prompt: "Create a packing checklist for a [duration] trip to [destination] in [season]. Activities: [activities]. Include: clothing, toiletries, electronics, documents, health items, and cultural considerations."',
+      },
+      {
+        title: 'Create a travel guide document with Gemini',
+        description:
+          'Compile all research, itinerary, budget, and tips into one comprehensive travel guide. Gemini\'s large context handles the entire document in one pass. Export as PDF for offline access during your trip.',
+        tip: 'Ask Gemini to generate the guide in Markdown format. Import into Notion for easy editing and sharing with travel companions.',
+      },
+    ],
+    pro_tips: [
+      'Create a \"My Trips\" Notion database: store itineraries, budgets, documents, and checklists for every trip. Use Notion AI to quickly compare past trips',
+      'For group trips, have Claude generate a shared decision document: everyone votes on activities, restaurants, and budgets before you finalize',
+      'Use Perplexity for real-time updates: "Any travel advisories, weather warnings, or event closures in [city] this week?" before you leave',
+      'Combine AI planning with Google Maps: have ChatGPT output locations with Google Maps links for easy navigation during the trip',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Relying on AI for outdated or incorrect operational hours',
+        fix: 'Always verify opening hours, prices, and availability on official websites or Google Maps. AI\'s knowledge cutoff may mean stale data for time-sensitive details.',
+      },
+      {
+        mistake: 'Over-scheduling every hour of the trip',
+        fix: 'Leave 1-2 free blocks per day for spontaneous discovery. The best travel experiences are often unplanned. AI plans the structure, you add the serendipity.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Save 10+ hours of trip research and planning time per vacation while discovering better options',
+    real_results: [
+      { metric: 'Planning Time', value: '80% less', description: 'Trip planned in 1 hour vs 5-8 hours of manual research and comparison' },
+      { metric: 'Destination Discovery', value: '3x more', description: 'AI suggests off-the-beaten-path options travelers might not find through standard research' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 67: AI for UI/UX Design Prototyping
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-ui-ux-design-prototyping',
+    title: 'AI for UI/UX Design Prototyping',
+    subtitle: 'Design interfaces and prototypes faster with AI',
+    description:
+      'Accelerate UI/UX design workflows: generate wireframes from text descriptions, create design systems, write component code, generate user flows, and run usability analysis. Use Claude for UX copy, ChatGPT for frontend code, and Figma AI for design.',
+    meta_title: 'AI for UI/UX Design Prototyping — Apifeny AI Playbook',
+    meta_description: 'Design interfaces and prototypes faster with AI. Generate wireframes, design systems, component code, user flows, and usability analysis with Claude, ChatGPT, and Figma AI.',
+    related_tool_slugs: ['cursor', 'chatgpt', 'claude', 'gemini'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 9,
+    icon: '🎨',
+    gradient: 'from-pink-500/30 to-rose-500/30',
+    steps: [
+      {
+        title: 'Generate wireframes from text with ChatGPT',
+        description:
+          'Describe your interface: "A mobile app dashboard showing: user stats at the top, a line chart for weekly engagement, a list of recent activities, and a bottom navigation bar with 4 tabs." ChatGPT generates HTML/CSS wireframes you can immediately view in the browser.',
+        tip: 'Use ChatGPT to generate single-file HTML wireframes. Preview in browser, iterate in seconds. No design tool needed for early prototyping.',
+      },
+      {
+        title: 'Create a design system with Claude',
+        description:
+          'Describe your brand and have Claude generate a complete design system: color palette, typography scale, spacing system, component styles (buttons, inputs, cards), and usage guidelines. Export as CSS variables or design tokens.',
+        tip: 'Prompt: "Create a design system for a B2B SaaS brand. Modern, clean, professional. Include: (1) Color palette with primary, secondary, neutral, success, warning, error, (2) Typography scale, (3) Spacing scale, (4) Shadow/elevation system, (5) Border radius scale."',
+      },
+      {
+        title: 'Generate frontend components with Cursor',
+        description:
+          'Describe the component you need and Cursor generates production-ready React, Vue, or Swift UI components. Include: states (loading, empty, error, success), responsive design, accessibility, and animations.',
+        tip: 'Describe the component with its states: "Generate a product card component with: image, title, price, rating, add-to-cart button. Include loading skeleton, error state, and empty state. Mobile-first responsive."',
+      },
+      {
+        title: 'Write UX copy with Claude',
+        description:
+          'Describe the user\'s context and desired action. Claude writes: button labels, error messages, onboarding copy, empty states, tooltips, confirmation dialogs, and microcopy that guides users naturally.',
+        tip: 'Prompt: "Write the onboarding flow copy for a project management app. 3 screens: (1) Value prop and signup, (2) Create first project, (3) Invite team. Keep under 15 words per screen. Friendly but professional tone."',
+      },
+      {
+        title: 'Run usability analysis with AI',
+        description:
+          'Upload screenshots of your interface to Claude and ask for a heuristic review: identify usability issues, accessibility problems, visual hierarchy issues, layout improvements, and mobile responsiveness concerns.',
+        tip: 'Prompt: "Review this interface for: (1) Nielsen\'s 10 usability heuristics violations, (2) WCAG 2.1 AA accessibility issues, (3) Visual hierarchy problems, (4) 5 specific improvements ranked by impact."',
+      },
+    ],
+    pro_tips: [
+      'Use Cursor Composer for multi-component generation: describe a screen, get all components, state management, and styles in one go',
+      'Create a reusable design prompt library: save prompts that produce consistent design output. Brand guidelines, component patterns, and layout templates',
+      'For mobile-first design, specify breakpoint behavior explicitly: "Design for mobile first, then tablet (768px), then desktop (1024px). Show how this layout adapts to each."',
+      'Use Claude for visual design critique: upload screenshots, get detailed design feedback with specific recommendations. It excels at identifying spacing, alignment, and hierarchy issues',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Skipping the design thinking phase and jumping straight to AI-generated UIs',
+        fix: 'Start with user needs and flows, then use AI for implementation. AI generates screens fast but cannot replace understanding your users.',
+      },
+      {
+        mistake: 'Accepting AI-generated accessibility defaults without review',
+        fix: 'Ask Claude to specifically review for WCAG compliance. AI-generated UIs often miss: keyboard navigation, screen reader labels, color contrast, and focus indicators.',
+      },
+    ],
+    pipeline_stage: 'coding',
+    revenue_impact: 'Reduce UI prototype time from days to hours, enabling faster design iteration and stakeholder alignment',
+    real_results: [
+      { metric: 'Prototype Speed', value: '5x faster', description: 'From idea to clickable prototype in 2 hours instead of 2 days' },
+      { metric: 'Component Generation', value: '10x faster', description: 'AI generates production-ready components 10x faster than manual coding' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 68: AI for Product Roadmap & Strategy
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-product-roadmap-strategy',
+    title: 'AI for Product Roadmap & Strategy',
+    subtitle: 'Build better product strategies with AI analysis',
+    description:
+      'Use AI to build data-driven product roadmaps: analyze user feedback, prioritize features, identify market opportunities, create OKRs, and communicate strategy. ChatGPT and Claude help product managers make better strategic decisions faster.',
+    meta_title: 'AI for Product Roadmap & Strategy — Apifeny AI Playbook',
+    meta_description: 'Build data-driven product roadmaps with AI. Analyze user feedback, prioritize features, identify market opportunities, create OKRs, and communicate strategy with ChatGPT and Claude.',
+    related_tool_slugs: ['chatgpt', 'claude', 'perplexity', 'exa'],
+    difficulty: 'Advanced',
+    read_time_minutes: 10,
+    icon: '🗺️',
+    gradient: 'from-emerald-500/30 to-teal-500/30',
+    steps: [
+      {
+        title: 'Analyze user feedback at scale with Claude',
+        description:
+          'Export all user feedback sources: support tickets, app store reviews, NPS comments, customer interviews, and social media mentions. Feed into Claude: "Categorize, rank by frequency, identify themes, and flag feature requests vs bugs vs complaints."',
+        tip: 'Claude handles 200K+ tokens, enough for thousands of feedback items. Ask for: "Top 10 feature requests ranked by frequency, top 5 pain points ranked by sentiment severity, and 3 quick wins vs 3 strategic bets."',
+      },
+      {
+        title: 'Prioritize features with AI-assisted frameworks',
+        description:
+          'Use ChatGPT to apply prioritization frameworks: RICE (Reach, Impact, Confidence, Effort), ICE (Impact, Confidence, Ease), or Value vs Complexity matrix. Feed feature descriptions and ask ChatGPT to score and rank them.',
+        tip: 'Prompt: "Score these 15 features using RICE. For each: estimated reach (users/mo), impact (1-5), confidence (1-5), effort (engineering weeks). Then rank by RICE score and create a prioritization quadrant."',
+      },
+      {
+        title: 'Identify market opportunities with Perplexity + Claude',
+        description:
+          'Research: competitor features and gaps, analyst reports, emerging technology trends, and market shifts. Perplexity gathers intelligence, Claude synthesizes into: white space opportunities, competitive vulnerabilities, and strategic recommendations.',
+        tip: 'Create a weekly competitive intelligence workflow: Perplexity for research (15 min) → Claude for synthesis (10 min) → Notion for tracking (5 min). 30 min/week keeps your strategy data-driven.',
+      },
+      {
+        title: 'Create OKRs and measurable goals',
+        description:
+          'Describe your product vision and strategic priorities. Ask ChatGPT to generate: OKRs (objectives and key results), quarterly goals with measurable targets, leading vs lagging indicators, and progress tracking cadence.',
+        tip: 'Prompt: "Create OKRs for a [product] in [quarter]. Strategic priority: [priority]. Generate 3 objectives, each with 3 key results that are measurable and time-bound. Include leading indicators we can track weekly."',
+      },
+      {
+        title: 'Communicate strategy to stakeholders',
+        description:
+          'Generate different versions of your roadmap for different audiences: executive summary (1 page), board deck (5 slides), team implementation plan (detailed), and customer-facing what\'s new (marketing copy).',
+        tip: 'Same data, different framing: executives want themes and investment levels, teams want epics and timelines, customers want benefits and dates. AI tailors the same roadmap data for each audience.',
+      },
+    ],
+    pro_tips: [
+      'Create a Product Management AI Assistant with custom instructions: your product domain, users, business model, and strategic context. Every analysis is grounded in your specific situation',
+      'Use Notion AI for living roadmaps: connect your feedback database, project tracker, and OKRs. AI surfaces misalignments and suggests reprioritization',
+      'When using RICE scoring, start with confidence values at 50% and let AI help refine. Overconfident scoring is the most common prioritization mistake',
+      'For strategic decisions, use multiple AI models: ask ChatGPT, Claude, and Gemini the same strategic question and compare. Different perspectives reveal blind spots',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Letting AI replace product intuition and customer conversations',
+        fix: 'AI analyzes existing data but cannot replace talking to customers. Use AI to surface patterns, validate with customer conversations, then decide.',
+      },
+      {
+        mistake: 'Creating overly detailed roadmaps that become quickly outdated',
+        fix: 'Use rolling quarterly roadmaps. Detail only the current quarter. Next quarters are themes, not commitments. AI helps regenerate the roadmap each quarter.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Data-driven roadmapping with AI reduces time-to-priority-shift by 60%',
+    real_results: [
+      { metric: 'Roadmap Creation Time', value: '75% faster', description: 'Quarterly roadmap created in 2 hours instead of 2 days' },
+      { metric: 'Feature Prioritization Accuracy', value: '+30%', description: 'AI-assisted RICE scoring aligns better with shipped-impact outcomes than gut-feel prioritization' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 69: AI for Recruitment & Talent Sourcing
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-recruitment-talent-sourcing',
+    title: 'AI for Recruitment & Talent Sourcing',
+    subtitle: 'Find and hire top talent faster with AI',
+    description:
+      'Transform your recruitment process with AI: write better job descriptions, source candidates, screen resumes, prepare interview questions, and create offer packages. Use ChatGPT for JD writing, Claude for resume screening, and Perplexity for market research.',
+    meta_title: 'AI for Recruitment & Talent Sourcing — Apifeny AI Playbook',
+    meta_description: 'Transform recruitment with AI: write job descriptions, source candidates, screen resumes, prepare interview questions, and create offer packages with ChatGPT and Claude.',
+    related_tool_slugs: ['chatgpt', 'claude', 'perplexity', 'gemini'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 8,
+    icon: '👥',
+    gradient: 'from-purple-500/30 to-violet-500/30',
+    steps: [
+      {
+        title: 'Write inclusive job descriptions with ChatGPT',
+        description:
+          'Describe the role: title, team, responsibilities, requirements, and culture. Ask ChatGPT to write a JD that is: inclusive and avoids gendered language, clear about expectations, appealing to passive candidates, and optimized for job boards.',
+        tip: 'Prompt: "Write a job description for [role] at [company]. Must be: (1) Inclusive, avoid gendered language, (2) Clear about must-have vs nice-to-have, (3) Highlight remote/hybrid options, (4) Optimized for LinkedIn and Indeed search. Include a Why Work Here section."',
+      },
+      {
+        title: 'Screen resumes with Claude',
+        description:
+          'Upload batches of resumes to Claude (up to 200K tokens). Ask for: ranked candidates against your JD requirements, key strengths and gaps per candidate, hidden potential (career changers, growth trajectory), and reasons to exclude (red flags, clear mismatches).',
+        tip: 'Create a scoring rubric in your prompt: "Score each candidate 1-5 on: technical skills match, experience level, culture fit signals, growth trajectory, and location/timezone. Rank by composite score and explain the top 5 candidates."',
+      },
+      {
+        title: 'Generate structured interview questions',
+        description:
+          'Feed the selected candidate\'s resume and the JD into ChatGPT. Ask for: 10 role-specific questions, 5 behavioral questions (STAR format), 3 technical assessment tasks, culture fit questions, and red flag probes based on resume gaps.',
+        tip: 'Prompt: "Generate interview questions for a [role] candidate. Resume highlights: [bullet points]. Focus on: [key skills to assess]. Include: 5 STAR behavioral questions, 5 technical questions, and 3 red flag probes based on their career timeline."',
+      },
+      {
+        title: 'Research market compensation with Perplexity',
+        description:
+          'Use Perplexity to research: salary benchmarks by role and location, total compensation trends, equity averages, and benefits standard. Perplexity cites sources from levels.fyi, Glassdoor, and industry surveys.',
+        tip: 'Prompt: "What is the market salary range for a [role] in [city/country]? Include: base salary range, typical equity, bonus percentage, and common benefits. Compare mid-market vs top-of-market."',
+      },
+      {
+        title: 'Draft offer letters and negotiation',
+        description:
+          'Generate offer letters and prepare for negotiation. ChatgPT drafts: compelling offer letters, talking points for the offer call, responses to common candidate objections, and counter-offer strategies.',
+        tip: 'Prompt: "Draft a recruitment offer letter for [candidate] for [role]. The offer includes: salary [X], equity [Y], start date [Z]. Also generate 5 talking points for the offer call and responses to: competing offers, counter-salary requests, and equity concerns."',
+      },
+    ],
+    pro_tips: [
+      'Create a candidate evaluation matrix in Notion with AI-assisted scoring. Notion AI auto-calculates scores and flags top candidates based on custom criteria',
+      'Use ChatGPT to analyze interview feedback: paste transcripts of all interviewers\' notes and ask for a synthesized evaluation, bias check, and hiring recommendation',
+      'For high-volume hiring, batch-screen resumes with Claude weekly. Set up a consistent rubric and threshold for moving candidates to interview stage',
+      'Build a company culture deck in ChatGPT\'s custom instructions. Every JD, interview question, and offer letter reflects your actual culture, not generic corporate speak',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Using AI screening that introduces algorithmic bias',
+        fix: 'Regularly audit AI screening decisions for bias. Ask Claude to check: "Review these screening decisions. Does any pattern suggest bias based on gender, ethnicity, age, or educational background?"',
+      },
+      {
+        mistake: 'Writing job descriptions with inflated or unrealistic requirements',
+        fix: 'Ask ChatGPT to check your JD for unreasonable requirements. "Highlight any requirements that might exclude qualified candidates. Suggest realistic alternatives."',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Reduce time-to-hire by 40% and improve candidate quality scores with AI-assisted screening',
+    real_results: [
+      { metric: 'Time-to-Hire', value: '40% faster', description: 'AI resume screening and question generation cuts hiring cycle time significantly' },
+      { metric: 'Candidate Quality', value: '+35%', description: 'AI-screened shortlists produce higher-rated hires by manager satisfaction scores' },
+      { metric: 'JD Writing Time', value: '75% less', description: 'From 2 hours to 30 minutes for inclusive, optimized job descriptions' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 70: AI for No-Code Business Automation
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-no-code-business-automation',
+    title: 'AI for No-Code Business Automation',
+    subtitle: 'Automate business processes without writing code',
+    description:
+      'Build powerful business automations without engineering resources: connect apps, automate workflows, process data, and generate reports using no-code AI tools. Use Zapier AI, Make.com, and n8n with ChatGPT integration.',
+    meta_title: 'AI for No-Code Business Automation — Apifeny AI Playbook',
+    meta_description: 'Automate business processes without writing code. Connect apps, build workflows, process data, and generate reports using Zapier AI, Make.com, n8n, and ChatGPT.',
+    related_tool_slugs: ['chatgpt', 'claude', 'notion-ai'],
+    difficulty: 'Beginner',
+    read_time_minutes: 8,
+    icon: '⚡',
+    gradient: 'from-yellow-500/30 to-amber-500/30',
+    steps: [
+      {
+        title: 'Map your manual processes with ChatGPT',
+        description:
+          'List every manual, repetitive process in your business. Ask ChatGPT: "I do these 10 manual tasks each week. Which ones can be automated? Rank by automation feasibility and time saved. Suggest the best tool for each."',
+        tip: 'Prompt: "Here are my weekly manual tasks: [list]. For each: (1) Can it be automated? (2) What tool? (3) Time saved per week? (4) Implementation complexity (1-5). Prioritize by ROI score (time saved × frequency / complexity)."',
+      },
+      {
+        title: 'Build integrations with Zapier AI',
+        description:
+          'Zapier\'s natural language interface creates automations from descriptions: "When a new Stripe customer subscribes, add them to Mailchimp, create a Notion database entry, and send a Slack notification." AI generates the Zap instantly.',
+        tip: 'Describe your automation in one sentence: structure: WHEN [trigger] → THEN [action 1] → THEN [action 2]. Zapier AI understands complex multi-step workflows from plain English.',
+      },
+      {
+        title: 'Automate data processing with Make.com',
+        description:
+          'Make excels at data-heavy automations: transform CSV data, generate PDFs, organize files, send custom emails, and update databases. Connect 1000+ apps without code.',
+        tip: 'Use AI to design complex Make scenarios: describe your data flow and ChatGPT generates the scenario structure, filter conditions, and data transformation formulas.',
+      },
+      {
+        title: 'Build internal tools with n8n + ChatGPT',
+        description:
+          'n8n provides self-hosted workflow automation with AI capabilities. Use ChatGPT to generate n8n workflows: describe your automation and get the complete n8n JSON workflow importable in one click.',
+        tip: 'Prompt: "Generate an n8n workflow that: receives webhook, parses JSON, checks Notion database for existing record, creates or updates, sends email notification. Output as importable JSON."',
+      },
+      {
+        title: 'Monitor and optimize automations',
+        description:
+          'Set up monitoring: error notifications, usage tracking, processing volumes, and cost tracking. Ask ChatGPT: "What are the most common errors in no-code automations? Create a monitoring checklist for my 15 automations."',
+        tip: 'Build a maintenance schedule: review automation logs weekly, check for API changes monthly, and audit processes quarterly. AI can flag failing automations before users notice.',
+      },
+    ],
+    pro_tips: [
+      'Start with one automation that saves 5+ hours/week. Perfect it before building more. Most failed automation initiatives come from trying to do everything at once',
+      'Build automations in layers: (1) Simple single-step, (2) Multi-step with conditions, (3) Multi-step with error handling, (4) AI-powered decision automations. Master each layer before advancing',
+      'Use Notion as your automation HQ: connect all automations to a Notion database for unified logs and error tracking. Notion AI can summarize weekly automation performance',
+      'Document every automation: trigger, steps, error handling, and owner. When the creator leaves or APIs change, good documentation saves hours of reverse-engineering',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Building complex automations without error handling',
+        fix: 'Every automation needs: error notification, data backup, manual fallback path, and a kill switch. Start simple and add error handling before expanding.',
+      },
+      {
+        mistake: 'Automating processes that should not exist',
+        fix: 'Before automating a process, ask: "Should this process exist at all?" Automating a bad process just creates bad results faster. Fix the process first, then automate.',
+      },
+    ],
+    pipeline_stage: 'deployment',
+    revenue_impact: 'Automate 20+ hours of manual work per week per business process, freeing teams for high-value work',
+    real_results: [
+      { metric: 'Hours Saved/Week', value: '20+ hours', description: 'A single well-built automation can save 5-20 hours of manual work weekly' },
+      { metric: 'Automation Success Rate', value: '92%', description: 'Well-planned no-code automations achieve 90%+ reliability with proper monitoring' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PLAYBOOK 71: AI for User Research & Customer Discovery
+  // ══════════════════════════════════════════════════════════════════════════
+  {
+    slug: 'ai-for-user-research-customer-discovery',
+    title: 'AI for User Research & Customer Discovery',
+    subtitle: 'Understand your users faster with AI analysis',
+    description:
+      'Supercharge user research with AI: design research studies, analyze interview transcripts, identify user segments, uncover jobs-to-be-done, and generate insight reports. Claude excels at transcript analysis while ChatGPT handles research design.',
+    meta_title: 'AI for User Research & Customer Discovery — Apifeny AI Playbook',
+    meta_description: 'Supercharge user research with AI: design studies, analyze transcripts, identify user segments, uncover jobs-to-be-done, and generate insight reports with Claude and ChatGPT.',
+    related_tool_slugs: ['chatgpt', 'claude', 'gemini', 'notion-ai'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 9,
+    icon: '🔍',
+    gradient: 'from-cyan-500/30 to-sky-500/30',
+    steps: [
+      {
+        title: 'Design your research study with ChatGPT',
+        description:
+          'Describe your research goals: target users, what you need to learn, and what decisions the research will inform. ChatGPT designs the study: methodology (interviews, surveys, usability tests), participant criteria, sample size, and discussion guide.',
+        tip: 'Prompt: "Design a user research study for [product/service]. Goal: Understand user pain points and willingness to pay. Create: participant screener, discussion guide (10 questions), session structure, and analysis framework."',
+      },
+      {
+        title: 'Analyze interview transcripts with Claude',
+        description:
+          'Upload interview transcripts (multiple interviews at once — Claude handles 200K tokens). Ask for: themes and patterns across interviews, direct user quotes for each theme, frequency and intensity of each pain point, Jobs-to-be-Done statements, and user needs vs wants analysis.',
+        tip: 'Prompt: "Analyze these 8 user interview transcripts. For each: (1) Top 5 themes with supporting quotes, (2) JTBD statements, (3) Unmet needs, (4) Pain point intensity ranking. Compare themes across customer segments."',
+      },
+      {
+        title: 'Create user personas with AI',
+        description:
+          'Feed Claude your interview analysis + demographic data. Ask for: detailed user personas with goals, frustrations, behaviors, and decision criteria. Include the research evidence behind each persona attribute.',
+        tip: 'Create evidence-backed personas: each attribute must link back to a user quote or data point. AI-generated personas are only useful when rooted in real research data.',
+      },
+      {
+        title: 'Map customer journeys with AI',
+        description:
+          'Describe your user workflow step by step. Ask ChatGPT to: create a customer journey map with emotional states, identify pain points and opportunities at each stage, recommend touchpoint improvements, and generate a Mermaid diagram of the journey.',
+        tip: 'Ask ChatGPT to create the journey map in a table format: Stage | User Action | Touchpoint | Emotional State | Pain Points | Opportunity. Export to Notion or Miro for team collaboration.',
+      },
+      {
+        title: 'Generate insight reports with Notion AI',
+        description:
+          'Compile all research findings into a Notion database. Use Notion AI to: generate executive summaries, create insight briefs for different teams (product, design, marketing), identify conflicting findings, and recommend next research actions.',
+        tip: 'Create a research repository in Notion: one database per study, linked to personas and journey maps. Notion AI can cross-reference findings across multiple studies.',
+      },
+    ],
+    pro_tips: [
+      'Use a consistent interview guide across all participants. AI analysis works best when transcripts have comparable structure. Change questions strategically, not casually',
+      'After AI analysis, read 2-3 full transcripts yourself. The depth of understanding from raw reading cannot be replaced by AI synthesis. AI finds patterns, you find meaning',
+      'Combine AI analysis with affinity mapping: let Claude extract themes, then manually group them into a Miro board. AI speeds up, humans structure',
+      'For international research, use Gemini for multilingual transcript analysis. It handles code-switching and mixed-language interviews better than other models',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Over-relying on AI analysis without reading the raw data',
+        fix: 'AI summarizes but loses nuance. Read the full transcripts of at least 20% of interviews, especially edge cases and negative feedback.',
+      },
+      {
+        mistake: 'Confirmation bias in AI prompts',
+        fix: 'Ask neutral questions: "What themes emerge?" not "Do users want feature X?" Leading prompts produce findings that confirm what you already believe.',
+      },
+    ],
+    pipeline_stage: 'research',
+    revenue_impact: 'Reduce user research analysis time by 80% while uncovering deeper insights',
+    real_results: [
+      { metric: 'Transcript Analysis Time', value: '80% faster', description: '8 hours of interview transcripts analyzed in 90 minutes with Claude' },
+      { metric: 'Insight Depth', value: '2x deeper', description: 'AI identifies patterns across interviews that human analysts miss in manual review' },
+    ],
+  },
+
 ];
 
 export function getPlaybookBySlug(slug: string): Playbook | undefined {

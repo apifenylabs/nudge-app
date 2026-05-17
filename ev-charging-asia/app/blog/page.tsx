@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { Zap, Calendar, BookOpen, Tag, ChevronRight } from 'lucide-react';
 import SiteFooter from '@/components/SiteFooter';
 import { getAllPosts } from '@/lib/blog-data';
+import { BreadcrumbSchemaSSR } from '@/components/SchemaOrg';
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: 'Blog — EV Charging Asia',
@@ -13,23 +16,32 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b border-gray-200">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+      <BreadcrumbSchemaSSR items={[
+        { name: 'Home', url: '/' },
+        { name: 'Blog', url: '/blog' },
+      ]} />
+      <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Zap size={20} className="text-green-500" />
-            <span className="font-semibold text-gray-900 text-sm">EV Charging Asia</span>
+            <span className="font-semibold text-gray-900 dark:text-gray-100 text-sm">EV Charging Asia</span>
           </Link>
-          <nav className="flex items-center gap-4 text-sm text-gray-500">
-            <Link href="/search" className="hover:text-gray-900">Search</Link>
-            <Link href="/about" className="hover:text-gray-900">About</Link>
+          <nav className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+            <Link href="/search" className="hover:text-gray-900 dark:hover:text-gray-200">Search</Link>
+            <Link href="/about" className="hover:text-gray-900 dark:hover:text-gray-200">About</Link>
           </nav>
         </div>
       </header>
 
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Blog</h1>
-        <p className="text-gray-500 mb-8">EV charging guides, comparisons, and tips for Asia</p>
+        <nav className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500 mb-4">
+          <Link href="/" className="hover:text-gray-700 dark:hover:text-gray-300">Home</Link>
+          <ChevronRight size={10} />
+          <span className="text-gray-900 dark:text-gray-100 font-medium">Blog</span>
+        </nav>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">Blog</h1>
+        <p className="text-gray-500 dark:text-gray-400 mb-8">EV charging guides, comparisons, and tips for Asia</p>
 
         {posts.length === 0 && (
           <div className="text-center py-16 bg-white rounded-xl border border-gray-200">

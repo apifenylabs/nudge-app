@@ -41,6 +41,8 @@ export const slugToItineraryMap: Record<string, string> = {
   'manila-baguio': 'manila-to-baguio-road-trip',
 };
 
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
   return Object.keys(slugToItineraryMap).map(slug => ({ slug }));
 }

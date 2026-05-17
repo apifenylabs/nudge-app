@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ClientStationPage from './_client';
 import { Station } from '@/lib/scoring';
+import { BreadcrumbSchemaSSR } from '@/components/SchemaOrg';
 
 // Import JSON directly — Next.js bundles it into the server bundle at build time.
 // This avoids fs.readFile which fails on Vercel serverless (process.cwd() mismatch).
@@ -37,5 +38,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function StationPage({ params }: Props) {
   const station = stations.find(s => s.id === params.id);
   if (!station) notFound();
-  return <ClientStationPage station={station} allStations={stations} />;
+  return (
+    <>
+      <BreadcrumbSchemaSSR items={[
+        { name: 'Home', url: '/' },
+        { name: 'Charging Stations', url: '/search' },
+        { name: station.name, url: `/station/${station.id}` },
+      ]} />
+      <ClientStationPage station={station} allStations={stations} />
+    </>
+  );
 }

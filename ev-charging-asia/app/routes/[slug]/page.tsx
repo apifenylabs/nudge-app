@@ -20,6 +20,8 @@ interface Props {
   params: { slug: string };
 }
 
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
   const all = getAllItineraries();
   return all.map(i => ({ slug: i.slug }));

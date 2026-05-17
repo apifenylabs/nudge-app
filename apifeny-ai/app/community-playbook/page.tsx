@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import {
   Sparkles,
   ThumbsUp,
@@ -293,6 +293,9 @@ function SubmitPlaybookCard() {
 // ─── Main Page ───────────────────────────────────────────────────────────
 
 export default function CommunityPlaybooksPage() {
+  useEffect(() => {
+    document.title = 'Community AI Playbooks — Apifeny AI';
+  }, []);
   const [searchQuery, setSearchQuery] = useState('');
   const [tagFilter, setTagFilter] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<'votes' | 'newest'>('votes');

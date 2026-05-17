@@ -3,7 +3,7 @@ import { Zap } from 'lucide-react';
 
 export default function SiteFooter() {
   return (
-    <footer className="border-t border-gray-200 bg-white">
+    <footer className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* --- Cross-site monetization bar: book hotels, activities, rentals --- */}
         {/* Visible on every page – subtle, informative, non-intrusive */}
@@ -128,7 +128,7 @@ export default function SiteFooter() {
               </li>
               <li>
                 <a
-                  href="https://luxuryfamilytravelasia.com"
+                  href="https://luxury-family-travel-asia.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-amber-600 transition-colors"

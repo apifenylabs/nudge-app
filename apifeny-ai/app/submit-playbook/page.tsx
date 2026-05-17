@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
@@ -99,6 +99,9 @@ const ICON_OPTIONS = ['🚀', '🏗️', '📝', '🎯', '💡', '⚡', '🤖', 
 // ─── Component ────────────────────────────────────────────────────────
 
 export default function SubmitPlaybookPage() {
+  useEffect(() => {
+    document.title = 'Submit an AI Playbook — Apifeny AI';
+  }, []);
   const router = useRouter();
   const [form, setForm] = useState<FormData>(INITIAL_FORM);
   const [submitted, setSubmitted] = useState(false);

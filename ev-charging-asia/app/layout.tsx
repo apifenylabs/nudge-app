@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import SiteFooter from "@/components/SiteFooter";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const BASE_URL = 'https://ev-charging-asia.vercel.app';
 
@@ -47,7 +48,7 @@ const inter = Inter({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
         {/* Google AdSense */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6046953221141245" crossOrigin="anonymous" />
@@ -95,11 +96,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="min-h-full bg-gray-50 text-gray-900 flex flex-col min-h-screen">
-        <main className="flex-1">
-          {children}
-        </main>
-        <SiteFooter />
+      <body className="min-h-full bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 flex flex-col min-h-screen">
+        <ThemeProvider>
+          <main className="flex-1">
+            {children}
+          </main>
+          <SiteFooter />
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics />

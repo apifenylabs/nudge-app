@@ -14,7 +14,7 @@ const BASE_URL = 'https://apifeny.ai';
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: { default: "Apifeny AI — AI Tools & Playbooks That Actually Work", template: "%s | Apifeny AI" },
-  description: "Stop collecting AI tools, start shipping. 37 AI playbooks and 90+ curated tools organized by workflow — content creation, coding, marketing, design, research. Asia-ready filters and editorial rankings.",
+  description: "Stop collecting AI tools, start shipping. 71 AI playbooks and 90+ curated tools organized by workflow — content creation, coding, marketing, design, research, customer support, sales, and more. Asia-ready filters and editorial rankings.",
   keywords: ["AI tools directory", "best AI agents", "AI playbooks", "AI tools for solopreneurs", "Asia-ready AI", "AI tools for business", "AI workflow guides", "AI use cases", "AI for Asia", "AI tool rankings", "AI coding tools", "AI content creation"],
   openGraph: {
     type: "website",
