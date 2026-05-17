@@ -1174,3 +1174,60 @@ revenue_agents:
         social_beast: "15%"
       adjustment: "CEO can shift budget based on weekly revenue data and Chris direction"
 
+# ═══════════════════════════════════════════════════════════════
+# CHANGE MANAGEMENT FRAMEWORK (LOCKED May 17 2026 — NEVER OVERRIDE)
+# ═══════════════════════════════════════════════════════════════
+# Enterprise-grade change management for all project additions, edits, and lifecycle events.
+# Full framework lives in ~/life/Empire-Graph/
+
+change_management_framework:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  scope: "ALL new projects, project edits, status changes, lifecycle events"
+  framework_root: "~/life/Empire-Graph/"
+  supporting_indexes:
+    - "~/life/projects-index.md"
+    - "~/life/cross-project-synergies.md"
+    - "~/life/ceo-central-log.md"
+  
+  new_project_onboarding:
+    mandatory_steps:
+      1: "Create dedicated topic log: ~/life/Empire-Graph/<project>-log.md"
+      2: "Add entry to ~/life/projects-index.md with status, revenue target, owner agent"
+      3: "Update ~/life/cross-project-synergies.md with flywheel connections"
+      4: "Update ~/life/ceo-central-log.md with summary"
+      5: "Run full ~/life/Empire-Graph/new-project-checklist.md and complete all items"
+      6: "Require human approval for domain purchase and go-live (until $10k MRR)"
+      7: "Log entry in ~/life/Empire-Graph/project-edit-log.md with [LAUNCH] tag"
+    pre_checks:
+      - "Revenue-First Filter: project must pass 3-question gate (direct revenue? simplest version? ship without Chris?)"
+      - "New Project Guardrail: data-backed research + business case with flywheel synergy + projected MRR"
+      - "Owner agent assigned: one of Directory, Nudge, Social Beast, AI/Innovation"
+  
+  edit_update_process:
+    mandatory_steps:
+      1: "Log change in ~/life/Empire-Graph/project-edit-log.md with:"
+      details:
+        - "What changed"
+        - "Why it changed"
+        - "Which downstream logs/indexes were updated"
+        - "Date and agent responsible"
+      2: "Verify central index (~/life/projects-index.md) and relevant topic logs are synced"
+      3: "If status changed, update status in index AND update cross-project-synergies.md if affected"
+    sync_verification:
+      enabled: true
+      description: "CEO agent MUST verify index consistency after every edit"
+      check_against:
+        - "~/life/projects-index.md"
+        - "~/life/ceo-central-log.md"
+        - "RULES.yaml project_portfolio section"
+      on_mismatch: "Flag as [SYNC-ERROR] in ceo-central-log.md and fix immediately"
+  
+  ceo_responsibility:
+    description: "CEO agent is responsible for maintaining accuracy of projects-index.md and ceo-central-log.md at all times."
+    cadence: "Every session startup + after every project change"
+    violation_handling:
+      on_detect: "Log [SYNC-ERROR] in ceo-central-log.md, fix all affected files, record in project-edit-log.md as [SELF-HEAL]"
+      chronic: "If 3+ SYNC-ERRORS occur in 7 days, escalate to Chris for process review"
+

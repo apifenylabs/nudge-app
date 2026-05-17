@@ -684,6 +684,68 @@ export const playbooks: Playbook[] = [
   },
 
   // ════════════════════════════════════════════════════
+  // PDF PLAYBOOK: AI Solopreneur Toolkit
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'ai-solopreneur-toolkit',
+    title: 'AI Solopreneur Toolkit',
+    subtitle: '5 AI tools that replaced $2,200/month in services for $70/month',
+    description:
+      'A comprehensive PDF playbook showing you exactly how to replace $2,200/month in paid services with just $70/month in AI tools. Covers customer support automation, content creation, design, SEO, and finance — all with real workflows and exact prompts.',
+    meta_title: 'AI Solopreneur Toolkit — $9 PDF Playbook | Apifeny AI',
+    meta_description: 'Replace $2,200/month in services with $70/month in AI tools. Download the PDF playbook with exact workflows, prompts, and setup guides.',
+    related_tool_slugs: ['chatgpt', 'perplexity', 'cursor', 'claude'],
+    difficulty: 'Beginner',
+    read_time_minutes: 15,
+    icon: '📦',
+    gradient: 'from-amber-500/30 to-orange-500/30',
+    steps: [
+      {
+        title: 'Customer Support Automation — Replace $2K/mo Intercom',
+        description: 'Build a custom AI support bot using LangChain + OpenAI that handles 85% of tickets automatically for $47/mo. Step-by-step setup with RAG pipeline and Telegram integration.',
+      },
+      {
+        title: 'Content Factory — Replace $150/mo Writers',
+        description: 'Use ChatGPT + Perplexity + Claude to produce 12 blog posts, 120 social media posts, and a weekly newsletter for $20/mo. Exact prompts, editorial calendar templates, and SEO optimization techniques.',
+      },
+      {
+        title: 'Design Studio — Replace $200/mo Designers',
+        description: 'Generate logos, marketing visuals, product photography, and presentations using Canva AI + Midjourney for $13/mo. Brand kit setup, prompt library, and batch production workflow.',
+      },
+      {
+        title: 'SEO Engine — Replace $500/mo SEO Agencies',
+        description: 'Automated SEO content engine using Perplexity for keyword research, ChatGPT for drafting, and Claude for fact-checking. Publish 3 posts/week that rank on Google — $0 in SEO tools.',
+      },
+      {
+        title: 'Finance & Analysis — Replace $350/mo Analysts',
+        description: 'Financial modeling, document analysis, and automated reporting with Gemini + ChatGPT + Perplexity. Build models, analyze 10-Ks, generate investor updates — $10/mo in API calls.',
+      },
+    ],
+    pro_tips: [
+      'Start with the highest-cost item first (typically customer support) for immediate savings',
+      'Each section includes exact prompts you can copy-paste into your AI tools',
+      'The total setup takes one weekend — we timed it with a first-time user',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Trying to replace everything at once',
+        fix: 'Pick one section per week. By week 5, you have a fully AI-powered operation.',
+      },
+      {
+        mistake: 'Not testing AI outputs before going live',
+        fix: 'Each section includes a "validation checklist" — run through it before cutting the old service.',
+      },
+    ],
+    pipeline_stage: 'deployment',
+    revenue_impact: 'Save $2,130/mo by replacing 5 services with AI tools',
+    real_results: [
+      { metric: 'Monthly Savings', value: '$2,130/mo', description: 'Replace $2,200/mo in services for $70/mo in AI tools' },
+      { metric: 'Setup Time', value: '1 weekend', description: 'Complete setup with step-by-step PDF guide' },
+      { metric: 'Tools Cost', value: '$70/mo', description: 'Total AI tool subscription cost' },
+    ],
+  },
+
+  // ════════════════════════════════════════════════════
   // NEW PLAYBOOK: AI-Powered Market Research
   // ════════════════════════════════════════════════════
   {
