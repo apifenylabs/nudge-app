@@ -38,13 +38,13 @@ The Philippines is made for family travel for several key reasons:
 Palawan consistently ranks among the world's best islands, and for good reason. The **Bacuit Bay** in El Nido is a Jurassic Park-esque seascape of towering limestone cliffs, hidden lagoons, and turquoise waters.
 
 **Family-Friendly Tour:**
-- **Tour A (Lagoon Tour):** The gentlest option. Visit the **Big Lagoon** and **Small Lagoon** — calm, shallow waters ideal for toddlers. You'll ride an outrigger bangka boat (traditional Philippine boat). Kids can sit comfortably on the boat's bamboo deck.
+- **Tour A (Lagoon Tour):** The gentlest option. Visit the **Big Lagoon** and **Small Lagoon** — calm, shallow waters ideal for toddlers. [Book El Nido tours on Klook](https://www.klook.com/search/?keyword=El+Nido+Palawan+tour&aid=38VWJMX). You'll ride an outrigger bangka boat (traditional Philippine boat). Kids can sit comfortably on the boat's bamboo deck.
 - **Duration:** 4–5 hours, half-day
 - **Cost:** ₱1,200–1,500 ($21–26 USD) per adult, half price for children under 10
 - **Age Range:** All ages. Life jackets are provided for everyone.
 - **Stroller Access:** Not applicable (boat-based tour). Use a baby carrier instead.
 
-**Hotel Tip:** Stay at **Lagen Island Resort** (family-friendly with a pool and kid's activities) or **El Nido Resorts Miniloc** (overwater bungalows, though pricier). For budget, **Spin Designer Hostel** in El Nido town has family rooms.
+**Hotel Tip:** [Check Palawan family hotels on Booking.com](https://www.booking.com/searchresults.html?ss=Palawan+Philippines&aid=2875669). Stay at **Lagen Island Resort** (family-friendly with a pool and kid's activities) or **El Nido Resorts Miniloc** (overwater bungalows, though pricier). For budget, **Spin Designer Hostel** in El Nido town has family rooms.
 
 #### 2. Cebu (Moalboal & Kawasan Falls)
 
@@ -172,4 +172,4 @@ Filipino food is approachable for most children:
 | **Underground River (Palawan)** | 3+ | Boat tour through caves, 45 minutes |
 | **Tarsier Sanctuary** | 0+ | Boardwalk, keep quiet, no flash photos |
 
-The Philippines offers a warm, welcoming, and wonderfully affordable island-hopping experience for families. With a bit of planning, your kids will experience pristine beaches, incredible marine life, and the world-famous Filipino hospitality — creating memories that will last a lifetime.
+The Philippines offers a warm, welcoming, and wonderfully affordable island-hopping experience for families. With a bit of planning, your kids will experience pristine beaches, incredible marine life, and the world-famous Filipino hospitality — creating memories that will last a lifetime. [Browse Philippines tours on Viator](https://www.viator.com/search/Philippines?pid=455806&mcid=42383) for family-friendly excursions across the islands.

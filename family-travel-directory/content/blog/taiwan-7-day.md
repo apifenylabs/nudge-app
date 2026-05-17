@@ -43,7 +43,7 @@ Best family areas: **Ximending** (central, fun, great food) or **Daan** (quieter
 
 One of Asia's best zoos. Lush, well-maintained, and incredibly affordable at just $2 USD entry. Highlights include the Giant Panda House (Tuan Tuan and Yuan Yuan), koala exhibit, Formosan Animal Area (Taiwan's native species), and Children's Zoo with petting area.
 
-From the zoo, take the Maokong Gondola up the mountain. Request a "crystal cabin" with glass bottom for an extra thrill. At the top: tea houses with stunning city views.
+From the zoo, take the Maokong Gondola up the mountain. [Book Maokong Gondola tickets on Klook](https://www.klook.com/search/?keyword=Maokong+Gondola&aid=38VWJMX) and request a "crystal cabin" with glass bottom for an extra thrill. At the top: tea houses with stunning city views.
 
 ### Evening — Shilin Night Market
 
@@ -74,7 +74,7 @@ Taroko is Taiwan's most famous natural wonder — a marble-walled canyon with tu
 - Baiyang Waterfall Trail (waterfall at the end, fun tunnels to walk through)
 - Xiangde Temple Trail (short walk to a temple with great views)
 
-**Pro tip:** Kids under 12 get free entry to Taroko National Park.
+**Pro tip:** Kids under 12 get free entry to Taroko National Park. [Book Taroko Gorge tours on Klook](https://www.klook.com/search/?keyword=Taroko+Gorge+tour&aid=38VWJMX).
 
 ### Evening — Stay at Hualien
 
@@ -139,4 +139,4 @@ Hit your favorite night market one last time, or try Ningxia Night Market (small
 
 ## The Verdict
 
-Taiwan offers incredible value for families. It combines Japanese-style efficiency with affordable prices and genuinely friendly locals. The 7-day itinerary covers the best of Taipei, Taroko Gorge, Sun Moon Lake, and Taichung without rushing. Best time to visit: October–December for cool, dry weather, or March–April for spring flowers. Avoid June–September (typhoon season and extreme heat).
+Taiwan offers incredible value for families. It combines Japanese-style efficiency with affordable prices and genuinely friendly locals. [Find family-friendly Taiwan hotels on Booking.com](https://www.booking.com/searchresults.html?ss=Taiwan&aid=2875669). The 7-day itinerary covers the best of Taipei, Taroko Gorge, Sun Moon Lake, and Taichung without rushing. Best time to visit: October–December for cool, dry weather, or March–April for spring flowers. Avoid June–September (typhoon season and extreme heat).

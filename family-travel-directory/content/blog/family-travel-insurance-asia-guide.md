@@ -73,7 +73,7 @@ When choosing a family travel insurance policy, it's easy to miss certain exclus
 
 With so many incredible destinations across Asia, planning a trip can be an exciting experience. Here are some related destinations worth considering:
 
-*   *Thailand*: Explore bustling Bangkok, relax on stunning beaches, and discover ancient ruins.
+*   *Thailand*: Explore bustling Bangkok, relax on stunning beaches, and discover ancient ruins. [Browse activities on Klook](https://www.klook.com/search/?keyword=Thailand+family&aid=38VWJMX)
 *   *Singapore*: Enjoy world-class cuisine, Gardens by the Bay, and vibrant street art.
 *   *Malaysia*: Discover vibrant Kuala Lumpur, explore Penang's food scene, and trek through Taman Negara National Park.
 *   *Vietnam*: Explore bustling Hanoi, cruise through Ha Long Bay, and relax on idyllic beaches in Da Nang.
@@ -83,4 +83,4 @@ With so many incredible destinations across Asia, planning a trip can be an exci
 
 Choosing the right family travel insurance policy can seem daunting, but with this guide, you're equipped to make an informed decision. By understanding key coverage types, what to look for with kids, medical evacuation differences across Asia, recommended providers, tips for filing claims, and common exclusions parents miss, you'll be well-prepared for any adventure that comes your way.
 
-Don't let unexpected events ruin your family trip – invest in a comprehensive travel insurance policy today. With peace of mind, you can focus on creating lifelong memories with your loved ones in Asia's incredible destinations.
+Once your insurance is sorted, start planning! [Book family-friendly hotels across Asia on Booking.com](https://www.booking.com/searchresults.html?ss=Asia&aid=2875669) and [browse tours and activities on Viator](https://www.viator.com/search/Asia?pid=455806&mcid=42383) to build your perfect itinerary. Don't let unexpected events ruin your family trip – invest in a comprehensive travel insurance policy today. With peace of mind, you can focus on creating lifelong memories with your loved ones in Asia's incredible destinations.

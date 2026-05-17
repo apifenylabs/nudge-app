@@ -138,7 +138,7 @@ This is the highlight for most families. Choose an **ethical sanctuary** — the
 **Cruise Selection Tips:**
 - **Choose 2-day/1-night cruises** — 3-day/2-night is too long with kids
 - **Look for "family-friendly" cruises** that provide kid's meals, life jackets in child sizes, and flexible itineraries
-- **Top recommendations:** **Indochina Junk** and **Swan Cruises** both have excellent family programs
+- **Top recommendations:** [Book Halong Bay cruises on Klook](https://www.klook.com/search/?keyword=Halong+Bay+cruise+family&aid=38VWJMX) or [browse options on Viator](https://www.viator.com/search/Halong%20Bay?pid=455806&mcid=42383)
 - **Cost:** $150–300 USD per adult, $75–150 USD per child (all-inclusive: meals, kayaking, cave visits, cooking class)
 
 **What to Expect:**
@@ -248,4 +248,4 @@ This is the highlight for most families. Choose an **ethical sanctuary** — the
 
 This 3-week family itinerary covers four countries, dozens of UNESCO sites, and enough variety to keep every family member engaged. It's ambitious but manageable — taking you from Bangkok's neon chaos to Luang Prabang's temple-lined streets, through Hanoi's electric energy and Hoi An's lantern-lit charm, ending at the ancient wonder of Angkor Wat.
 
-Your family will return home with a lifetime of memories — and probably a request to start planning the next trip before you've even unpacked.
+Your family will return home with a lifetime of memories — and probably a request to start planning the next trip before you've even unpacked. [Browse hotels across Southeast Asia on Booking.com](https://www.booking.com/searchresults.html?ss=Southeast+Asia&aid=2875669) to find family-friendly accommodation for every stop on your itinerary.

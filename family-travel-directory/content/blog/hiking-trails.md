@@ -32,7 +32,7 @@ Getting kids to enjoy hiking can be challenging. The key: short distances, inter
 
 The Dragon's Back is Hong Kong's most famous hike. The ridge walk offers stunning views of the South China Sea and Shek O Peak. The trail is well-maintained with gentle inclines. Why kids love it: the name — it really looks like a dragon's spine. Plus, you end at Big Wave Bay beach for a swim reward.
 
-**Getting there:** Bus 9 from Shau Kei Wan MTR station.
+**Getting there:** Bus 9 from Shau Kei Wan MTR station. [Check Hong Kong tours on Klook](https://www.klook.com/search/?keyword=Hong+Kong+hiking+tour&aid=38VWJMX) for guided hikes.
 
 ## 2. Fushimi Inari Shrine, Kyoto, Japan
 
@@ -48,7 +48,7 @@ The thousand-torii gates of Fushimi Inari are part of a gentle hiking trail up M
 
 Walking through Sapa's rice terraces is magical. Mostly flat dirt trails between terraced fields with bamboo bridges crossing streams. Why kids love it: water buffalo! Local Hmong and Dao children often walk alongside tourists.
 
-**Pro tip:** Hire a local guide ($15–20) who knows kid-friendly routes and pace.
+**Pro tip:** Hire a local guide ($15–20) who knows kid-friendly routes and pace. [Book Sapa trekking tours on Viator](https://www.viator.com/search/Sapa?pid=455806&mcid=42383).
 
 ## 4. Ubud Monkey Forest, Bali
 
@@ -115,4 +115,4 @@ Short guided forest walks at the Gibbon Rehabilitation Centre. Why kids love it:
 
 ## The Verdict
 
-Dragon's Back in Hong Kong is our top pick for families with older kids — the beach finish is genius. Ubud Monkey Forest is perfect for young children who need constant engagement. For an unforgettable cultural experience, Fushimi Inari in Kyoto combines gentle hiking with magical scenery. The key is matching the trail length and difficulty to your kids' ages and energy levels.
+Dragon's Back in Hong Kong is our top pick for families with older kids — the beach finish is genius. Ubud Monkey Forest is perfect for young children who need constant engagement. For an unforgettable cultural experience, Fushimi Inari in Kyoto combines gentle hiking with magical scenery. [Find family-friendly accommodation near these trails on Booking.com](https://www.booking.com/searchresults.html?ss=Asia&aid=2875669). The key is matching the trail length and difficulty to your kids' ages and energy levels.

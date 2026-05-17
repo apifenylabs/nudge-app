@@ -16,7 +16,7 @@ Can a family of four really travel Asia for $100 per day? Yes — with the right
 - Vietnam is the best value — a family of four can comfortably live on $50–70/day
 - Street food and local guesthouses are the secret weapons for budget family travel
 - Kids under 5–6 are free at most attractions and many hotels offer free stays for young children
-- Book activities locally (not online) for 30–50% savings
+- Book activities locally (not online) for 30–50% savings (though online bookings like [Klook](https://www.klook.com/search/?keyword=Vietnam+family+tour&aid=38VWJMX) can save time on popular attractions)
 
 ## The Budget Breakdown
 
@@ -98,6 +98,7 @@ Chiang Mai and Pai remain very budget-friendly, especially outside peak season.
 - **Use free cancellation** to lock in rates and keep shopping
 - **Negotiate weekly rates** — many guesthouses offer 20% off for stays of 5+ nights
 - **Choose family rooms** over two rooms — saves 30–50%
+- **Compare prices on Booking.com** — [browse budget stays in Vietnam](https://www.booking.com/searchresults.html?ss=Vietnam&aid=2875669) for the best deals
 
 ### Food
 - **Eat where locals eat** — street food is tastier AND cheaper
@@ -131,4 +132,4 @@ Chiang Mai and Pai remain very budget-friendly, especially outside peak season.
 
 ## The Verdict
 
-$100/day is achievable in Vietnam, Cambodia, Sri Lanka, Malaysia, Northern Thailand, and Laos. You'll need $150–200/day for Bali, Phuket, and the Thai islands. The secret is simple: eat local food, use public transport, stay in guesthouses, and book activities locally. With a bit of flexibility, Asia remains the most affordable continent for family travel.
+$100/day is achievable in Vietnam, Cambodia, Sri Lanka, Malaysia, Northern Thailand, and Laos. You'll need $150–200/day for Bali, Phuket, and the Thai islands. The secret is simple: eat local food, use public transport, stay in guesthouses, and book activities locally. With a bit of flexibility, Asia remains the most affordable continent for family travel. [Check budget tours on Viator](https://www.viator.com/search/Southeast%20Asia?pid=455806&mcid=42383) to find affordable family excursions.

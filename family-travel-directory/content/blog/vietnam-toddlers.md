@@ -51,10 +51,10 @@ Hoi An is the most toddler-friendly destination in Vietnam. The Ancient Town is 
 - Lantern-making workshops are toddler-friendly
 
 **Top toddler activities:**
+- [Book a Hoi An basket boat ride on Klook](https://www.klook.com/search/?keyword=Hoi+An+basket+boat&aid=38VWJMX)
 - Lantern-making workshop at Hoi An Handicraft
 - Bike ride to An Bang Beach (rent with child seat)
 - Visit the Japanese Covered Bridge
-- Basket boat ride in the coconut forest
 - Nightly lantern festival (magical for kids)
 
 ### 2. Hanoi — Cultural Hub (with Planning)
@@ -85,7 +85,7 @@ More modern than Hanoi, with wider sidewalks and more Western amenities. Better 
 
 ### 4. Nha Trang — Beach City
 
-If you want beach time, Nha Trang is the best option. 6 km of beachfront promenade, calm swimming, and excellent resorts.
+If you want beach time, Nha Trang is the best option. 6 km of beachfront promenade, calm swimming, and excellent resorts. [Check Nha Trang family hotels on Booking.com](https://www.booking.com/searchresults.html?ss=Nha+Trang+Vietnam&aid=2875669).
 
 **Top toddler activities:**
 - Beach (calm waves, shallow entry)
@@ -173,4 +173,4 @@ Day 10: Morning beach, fly home
 
 ## The Verdict
 
-Vietnam is absolutely doable with a toddler, but choose your destinations wisely. Hoi An is the most toddler-friendly — walkable streets, calm beach, and gentle activities make for a stress-free family trip. Nha Trang is excellent for beach-loving families. Hanoi and HCMC require more patience and planning but are deeply rewarding. Go with the right expectations, pack smart, and Vietnamese hospitality will make your family feel genuinely welcomed.
+Vietnam is absolutely doable with a toddler, but choose your destinations wisely. Hoi An is the most toddler-friendly — walkable streets, calm beach, and gentle activities make for a stress-free family trip. Nha Trang is excellent for beach-loving families. [Browse Vietnam family tours on Viator](https://www.viator.com/search/Vietnam?pid=455806&mcid=42383) to find toddler-friendly excursions. Go with the right expectations, pack smart, and Vietnamese hospitality will make your family feel genuinely welcomed.

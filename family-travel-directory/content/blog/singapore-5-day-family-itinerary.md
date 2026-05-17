@@ -26,7 +26,7 @@ Our first day in Singapore starts at the iconic Gardens by the Bay. This stunnin
 #### Must-see Attractions:
 
 1.  Supertree Grove: Explore the largest collection of Supertrees in one place.
-2.  Cloud Forest: Marvel at the stunning cloud-shaped structures and diverse plant species.
+2.  Cloud Forest: Marvel at the stunning cloud-shaped structures and diverse plant species. [Book Gardens by the Bay tickets on Klook](https://www.klook.com/search/?keyword=Gardens+by+the+Bay+Singapore&aid=38VWJMX).
 3.  Flower Dome: Discover over 1,000 types of plants from around the world.
 
 **Hawker Food Pricing**: Expect to pay around SGD 5-10 (USD 3.50-7) per meal for a kid-friendly dish at hawker centers like Maxwell Food Centre or Newton Food Centre.
@@ -65,7 +65,7 @@ On our third day, we head to Sentosa Island for a fun-filled day of thrill rides
 1.  Universal Studios Singapore: Explore the Wizarding World of Harry Potter or experience thrilling rides like Battlestar Galactica.
 2.  S.E.A. Aquarium: Discover an incredible array of marine life from around the world.
 
-**Accommodation Options**: Consider staying at Sentosa Beach Hotel or Equinox Residences, both offering affordable and convenient accommodations for families.
+**Accommodation Options**: Consider staying at Sentosa Beach Hotel or Equinox Residences, both offering affordable and convenient accommodations for families. [Browse Singapore family hotels on Booking.com](https://www.booking.com/searchresults.html?ss=Singapore&aid=2875669).
 
 ### Day 4: Chinatown and Kampong Glam
 
@@ -111,4 +111,4 @@ If you're looking for more family-friendly destinations in Asia, consider the fo
 
 The Verdict
 
-Singapore is an ideal destination for families looking for a fun and educational vacation. With its world-class attractions, kid-friendly activities, and affordable accommodations, Singapore offers something for everyone. Whether you're exploring Gardens by the Bay, Zoo and River Wonders, Sentosa Island, or Chinatown and Kampong Glam, your little ones will have an unforgettable experience in this vibrant city-state.
+Singapore is an ideal destination for families looking for a fun and educational vacation. With its world-class attractions, kid-friendly activities, and affordable accommodations, Singapore offers something for everyone. [Check Singapore tours on Viator](https://www.viator.com/search/Singapore?pid=455806&mcid=42383) for more family-friendly options. Whether you're exploring Gardens by the Bay, Zoo and River Wonders, Sentosa Island, or Chinatown and Kampong Glam, your little ones will have an unforgettable experience in this vibrant city-state.

@@ -102,7 +102,7 @@ Not all temples are equal when visiting with children. Here's our curated list r
 - **9:30 AM:** Drive to **Banteay Srei** (40 minutes). Spend 30–45 minutes exploring.
 - **11:00 AM:** Visit **Banteay Samre** (nearby, very quiet, kids can explore freely).
 - **Afternoon (2:00 PM):** Visit **Kampong Phluk** floating village on Tonle Sap Lake. This is a genuine cultural experience — stilted houses, floating schools, and boat rides through flooded forests. Kids are fascinated. **Cost:** $25–30 USD per person (boat tour included).
-- **Evening:** **Phare, the Cambodian Circus** — a world-class performance by local artists combining acrobatics, theatre, and music. Kids of all ages love it, and it supports a social enterprise. **Tickets:** $18–38 USD. Book online.
+- **Evening:** **Phare, the Cambodian Circus** — a world-class performance by local artists combining acrobatics, theatre, and music. Kids of all ages love it, and it supports a social enterprise. **Tickets:** $18–38 USD. [Book on Klook](https://www.klook.com/search/?keyword=Phare+Cambodian+Circus+Siem+Reap&aid=38VWJMX).
 
 **Day 4: Last Temple + Departure**
 
@@ -117,7 +117,7 @@ Not all temples are equal when visiting with children. Here's our curated list r
 
 | Hotel | Best For | Price/Night | Kid Perks |
 |---|---|---|---|
-| **Templation Hotel** | Luxury families | $80–150 | Family suites, huge pool, free kids club |
+| **[Templation Hotel](https://www.booking.com/searchresults.html?ss=Siem+Reap&aid=2875669)** | Luxury families | $80–150 | Family suites, huge pool, free kids club |
 | **Sarai Resort & Spa** | Mid-range | $50–80 | Family rooms, pool, central location |
 | **Viroth's Hotel** | Couples with older kids | $60–100 | Chic but relaxed, garden pool |
 | **Twin Villa Siem Reap** | Budget families | $20–35 | Simple but clean, pool, breakfast included |
@@ -179,4 +179,4 @@ Khmer cuisine is milder and less spicy than Thai food — great news for familie
 - **Shoulder:** **March–May** — hotter (35–38°C) but fewer crowds. Start your days at 6:30 AM if possible.
 - **Wet Season:** **June–October** — afternoon downpours, but Angkor is quieter and the temples look stunning against dramatic skies. Mornings are usually clear. Expect very lush greenery.
 
-Cambodia with kids is not just possible — it's one of the most rewarding family trips in Asia. The temples spark genuine wonder in children, the people are warm and welcoming, and the experience is affordable enough to take it at your own pace. Pack your sense of adventure, a good carrier, and plenty of water — Angkor is waiting.
+Cambodia with kids is not just possible — it's one of the most rewarding family trips in Asia. The temples spark genuine wonder in children, the people are warm and welcoming, and the experience is affordable enough to take it at your own pace. [Browse Angkor Wat tours on Viator](https://www.viator.com/search/Angkor%20Wat?pid=455806&mcid=42383) or [check Siem Reap hotel prices](https://www.booking.com/searchresults.html?ss=Siem+Reap&aid=2875669). Pack your sense of adventure, a good carrier, and plenty of water — Angkor is waiting.

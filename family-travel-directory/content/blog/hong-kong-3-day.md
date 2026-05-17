@@ -24,7 +24,7 @@ Hong Kong is surprisingly family-friendly. Clean, efficient public transport, En
 
 Start early (7:30 AM) to beat the queues. The Peak Tram is a funicular that climbs 396m to Victoria Peak in under 10 minutes. Sit on the RIGHT side of the tram for the best views of the skyline rising behind you. Kids under 3 ride free.
 
-**Pro tip:** Book tickets in advance online to skip the queue — the walk-up line can be 45+ minutes by 9 AM.
+**Pro tip:** [Book Peak Tram tickets on Klook](https://www.klook.com/search/?keyword=Peak+Tram+Hong+Kong&aid=38VWJMX) in advance to skip the queue — the walk-up line can be 45+ minutes by 9 AM.
 
 ### Midday — Lunch at The Peak
 
@@ -86,7 +86,7 @@ Tim Ho Wan (the original Michelin-starred dim sum chain) — baked BBQ pork buns
 
 Take the Ngong Ping cable car to Lantau Island. The 25-minute ride offers spectacular views of the airport, sea, and mountains. At the top: Tian Tan Buddha (climb the 268 steps), Po Lin Monastery, and Ngong Ping Village.
 
-**Cable car tip:** Book a glass-bottom "Crystal Cabin" for an extra thrill — kids love seeing the ocean below their feet.
+**Cable car tip:** Book a glass-bottom "Crystal Cabin" [via Klook](https://www.klook.com/search/?keyword=Ngong+Ping+360&aid=38VWJMX) for an extra thrill — kids love seeing the ocean below their feet.
 
 ### Evening — Symphony of Lights
 
@@ -120,4 +120,4 @@ Best areas for families:
 
 ## The Verdict
 
-Hong Kong is one of the most doable family trips in Asia. The combination of world-class attractions, efficient public transport, and English-friendly environment makes it perfect for first-time Asia travelers with kids. Three days gives you the perfect sample — Disney magic, cultural sights, incredible food, and harbour views that will stay with your family forever.
+Hong Kong is one of the most doable family trips in Asia. The combination of world-class attractions, efficient public transport, and English-friendly environment makes it perfect for first-time Asia travelers with kids. [Find family-friendly Hong Kong hotels on Booking.com](https://www.booking.com/searchresults.html?ss=Hong+Kong&aid=2875669). Three days gives you the perfect sample — Disney magic, cultural sights, incredible food, and harbour views that will stay with your family forever.

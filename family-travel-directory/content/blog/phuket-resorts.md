@@ -41,7 +41,7 @@ Club Med Phuket is purpose-built for families and sets the benchmark for kids' c
 
 **Pool:** Freeform pool with kids' section and water features.
 **Best for:** Families who want genuine time off while kids have a vacation of their own.
-**Price:** ~$250–400/night all-inclusive.
+**Price:** ~$250–400/night all-inclusive. [Book Club Med Phuket on Klook](https://www.klook.com/search/?keyword=Club+Med+Phuket&aid=38VWJMX).
 
 ## 2. Anantara Vacation Club Mai Khao
 
@@ -68,7 +68,7 @@ Club Med Phuket is purpose-built for families and sets the benchmark for kids' c
 **Unique Feature:** Massive lagoon-style pool complex with waterslides. Kids' pool area has splash pads and fountains.
 
 **Best for:** Families who want Patong Beach access with a resort bubble.
-**Price:** ~$100–200/night — best value on this list.
+**Price:** ~$100–200/night — best value on this list. [Check Phuket family resorts on Booking.com](https://www.booking.com/searchresults.html?ss=Phuket+Thailand&aid=2875669).
 
 ## 4. Sunwing Resort Kamala
 
@@ -142,4 +142,4 @@ Kata Beach has several family-friendly resorts clustered together:
 
 ## The Verdict
 
-Club Med Phuket is our top pick for families who want genuine time off with proven kids' programs from 2–17. Sunwing Kamala is perfect for families with toddlers thanks to its water park and age-1 minimum. Holiday Inn Patong offers the best value with waterslides starting at just $100/night. Whichever you choose, the right kids' club can transform a good family vacation into a great one.
+Club Med Phuket is our top pick for families who want genuine time off with proven kids' programs from 2–17. Sunwing Kamala is perfect for families with toddlers thanks to its water park and age-1 minimum. Holiday Inn Patong offers the best value with waterslides starting at just $100/night. [Browse Phuket tours and activities on Viator](https://www.viator.com/search/Phuket?pid=455806&mcid=42383) for family-friendly excursions. Whichever you choose, the right kids' club can transform a good family vacation into a great one.

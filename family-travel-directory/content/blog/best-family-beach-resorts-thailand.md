@@ -69,4 +69,4 @@ If you're looking for other destinations that cater to families, consider visiti
 
 Thailand is a top destination for family vacations, offering stunning beaches, delicious cuisine, and rich culture. When it comes to choosing the best family beach resorts in Thailand, there are many options to consider. From luxurious villas to budget-friendly bungalows, we've got you covered.
 
-Whether you're looking for a relaxing vacation or an action-packed adventure, Thailand has something for everyone. So why wait? Book your trip today and make some unforgettable memories with your loved ones!
+Whether you're looking for a relaxing vacation or an action-packed adventure, Thailand has something for everyone. [Browse family resorts in Phuket on Booking.com](https://www.booking.com/searchresults.html?ss=Phuket+Thailand&aid=2875669), [check family tours in Thailand on Viator](https://www.viator.com/search/Thailand?pid=455806&mcid=42383), or [book fun activities in Krabi on Klook](https://www.klook.com/search/?keyword=Krabi+family+activities&aid=38VWJMX). So why wait? Book your trip today and make some unforgettable memories with your loved ones!
