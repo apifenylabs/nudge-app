@@ -1617,9 +1617,26 @@ idea_pipeline_system:
     rule: "No idea from backlog enters a sprint until ALL current sprint P0-P2 tasks are complete or blocked"
     override: "Only override: Chris explicitly moves it to P0"
   
-  assessment_archive:
-    location: "~/life/Empire-Graph/research-archive/"
-    note: "Every assessed idea gets a permanent record. Scrapped ideas document why in case conditions change." 
+  idea_repository:
+    location: "~/life/Empire-Graph/idea-repository/"
+    structure:
+      - "README.md — master index with search by tag, status, and category"
+      - "building-now/ — ideas in active development (links to project logs)"
+      - "active/ — vetted ideas in backlog with per-file assessments"
+      - "scrapped/ — failed ideas with reasons, for posterity"
+    search_tags:
+      - "[greg] Greg Isenberg opportunities"
+      - "[ai-saas] AI SaaS / API products"
+      - "[directory] Niche directory sites"
+      - "[content] Playbook / PDF products"
+      - "[marketplace] Multi-sided marketplaces"
+      - "[social] Social / community apps"
+      - "[nudge-adj] Extends Nudge"
+      - "[apifeny-adj] Extends Apifeny AI"
+      - "[omnimind-adj] Extends OmniMind"
+      - "[raw] Unassessed raw ideas"
+    review_cadence: "Biweekly (every 2 weeks). Also trigger if major market shift makes a scrapped idea viable."
+    raw_capture: "New ideas first go to ~/life/Empire-Graph/idea-repository/scrapped/raw-ideas.md before assessment" 
 
 # ═══════════════════════════════════════════════════════════════
 # END OF RULES.yaml — DO NOT ADD CONTENT BELOW THIS LINE
