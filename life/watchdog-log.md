@@ -248,3 +248,17 @@
 | Cron Jobs | 0 (0 errors) |
 | CEO Tasks | 3 |
 ---
+## 2026-05-17 10:10:01 HKT
+| Metric | Value |
+|--------|-------|
+| Workspaces | 8 |
+| Dirty | 1 → ✅ (committed + pushed) |
+| Sites Healthy | 9/9 |
+| PARA Issues | 0 |
+| Cron Jobs | 0 (0 errors) |
+| CEO Tasks | 3 → ✅ affiliate links done |
+
+### SHIPPED
+- ✅ Affiliate links: 42 Klook/Viator/Booking.com links injected into 14 blog posts
+- ✅ Committed + pushed to master
+---
