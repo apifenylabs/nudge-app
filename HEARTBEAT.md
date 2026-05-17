@@ -2,13 +2,14 @@
 
 ## STATUS: 🟢 ALL SYSTEMS NOMINAL | 4 REVENUE AGENTS LOCKED | PDF PLAYBOOK BUILDING
 
-## WHAT SHIPPED THIS WAKE (10:00-10:20 HKT)
+## WHAT SHIPPED THIS WAKE (12:14 HKT)
 - ✅ **Revenue Agent structure locked** in RULES.yaml — 4 agents with clear ownership, overlap prevention, budget split (Dir 40% / AI 30% / Nudge 15% / Social 15%)
 - ✅ **Treasury awareness** added — all agents track MRR/ARR/spend/revenue ratio, logged to ~/life/Resources/treasury.md
 - ✅ **PDF playbook sales** added as core monetization for AI/Innovation Agent (Nate Eliason-style $9-$29)
 - ✅ **New Project Guardrail** refined — requires data-backed research + business case with flywheel synergy + human approval for any new domain until $1k+ MRR
 - ✅ **long-term-vision.md** updated with the same guardrail
 - ✅ **First PDF playbook sub-agent spawned** — building AI Solopreneur Toolkit page on apifeny-ai
+- ✅ **Directory Builder playbook + landing page** — 807-line dedicated sales page, $19, build passes
 
 ## WHAT NEEDS CHRIS (BLOCKERS)
 1. **Run supabase-schema.sql** in Supabase SQL Editor — unblocks Nudge signups + payments
@@ -60,3 +61,15 @@ _Watchdog 2026-05-17 11:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
 
 ---
 _Watchdog 2026-05-17 11:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 11:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 11:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 12:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-17 12:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_

@@ -2,7 +2,7 @@
 
 > Sprint-based organization aligned to 4 Revenue Agents.
 > 2-week sprints with P0–P3 priorities, revenue impact scores, and guardrails.
-> Last updated: 2026-05-17 11:23 HKT
+> Last updated: 2026-05-17 12:07 HKT
 
 ---
 
@@ -16,11 +16,11 @@
 #### P0: Apifeny AI MVP Completion
 | Task | Revenue Impact | Effort | Dependencies |
 |------|:--------------:|:------:|:------------:|
-| Create 2nd playbook landing page (Directory Builder) | HIGH ($9-$29/sale) | 2h | None |
+| ✅ Create 2nd playbook landing page (Directory Builder) | HIGH ($19/sale) | DONE ✅ | None |
 | Create 3rd playbook landing page (AI Workflow Automation) | HIGH ($9-$29/sale) | 2h | None |
 | Organize tool rankings by pipeline stage (ideate→build→launch→scale) | MEDIUM (discoverability) | 1h | None |
 | Add [CEO-REVIEW] research to playbook content | MEDIUM (quality) | 30m | Research done ✅ |
-| **Total P0:** 4 tasks | Revenue: unbounded (first $ matters) | ~5.5h | — |
+| **Total P0:** 3 tasks remaining | Revenue: unbounded (first $ matters) | ~3.5h remaining | — |
 
 #### P1: Nudge Monetization
 | Task | Revenue Impact | Effort | Dependencies |
