@@ -66,8 +66,28 @@
 - `lib/playbooks_meta.ts` (temporary intermediate file)
 - `lib/add_meta.py` (helper script)
 
+## Completed
+
+### Task 4: Affiliate Try-Now Buttons on All Playbook Pages
+- Added `rel="sponsored"` affiliate buttons to all 37 playbook pages (`/playbook/[slug]`)
+- Buttons link directly to tool `website_url` — one-click to signup instead of 2-click funnel
+- Responsive layouts: grid for ≤4 tools, chip-style for 5+ tools
+- Affiliate disclosure notice below buttons
+- Added `ShieldCheck` import for disclosure icon
+
+### Task 5: Pipeline Stage Organization on Playbooks Listing
+- Reorganized `/playbooks` page from one flat grid to pipeline-stage sections
+- Added stage navigation pills (Strategize → Ideate → Research → Build → Code → Review → Launch → Content → Marketing)
+- Added anchor IDs for each stage section (quick jump from pills)
+- Kept full grid cards under each stage heading
+- Uncategorized playbooks appear in a fallback section
+
+### Deploy: v2.14 — Affiliate + Pipeline Stage UX
+- `npm run build`: ✅ SUCCESS
+- `vercel --prod`: ✅ Deployed to apifeny-ai.vercel.app
+
 ## Next Steps
-- [ ] Deploy to Vercel: `vercel --prod`
-- [ ] Update sitemap if needed
+- [ ] Cross-link playbook pages → directory sites (P2 sprint task)
 - [ ] Add more playbooks (can always expand further)
-- [ ] Verify the new playbook pages render correctly on the live site
+- [ ] SEO keyword audit for Apifeny AI homepage
+- [ ] Verify Stripe env vars with Chris (enables PDF sales)

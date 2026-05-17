@@ -5241,6 +5241,89 @@ export const playbooks: Playbook[] = [
     ],
   },
 
+  // ════════════════════════════════════════════════════
+  // COMMERCIAL PLAYBOOK: Directory Builder Template (PDF, $19)
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'directory-builder-template',
+    title: 'Directory Builder Template',
+    subtitle: 'Build a profitable niche directory in 2 weeks with AI',
+    description: 'A complete blueprint for building, launching, and monetizing a niche directory website using AI tools. Includes Cosme-style ranking algorithms, affiliate monetization setup, SEO automation, and cross-site network effects. This is the exact system used to build 6 directories generating 1000+ pages of content.',
+    meta_title: 'Directory Builder Template — Build a Niche Directory with AI | Apifeny AI',
+    meta_description: 'Build a profitable niche directory in 2 weeks using AI. Complete blueprint with ranking algorithms, affiliate monetization, and SEO automation',
+    related_tool_slugs: ['cursor', 'claude', 'chatgpt', 'perplexity', 'canva-ai'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 14,
+    icon: '🏗️',
+    gradient: 'from-emerald-500/30 to-teal-500/30',
+    steps: [
+      {
+        title: 'Niche Selection & Validation',
+        description: 'Use Perplexity + ChatGPT to validate niche demand: search volume, affiliate commission potential, competition analysis, and content gaps. Score niches with a 5-factor framework: search volume, CPC, competition, affiliate availability, and growth trend.',
+        tip: 'Target niches with 500-5K monthly searches and at least 3 affiliate programs paying 4%+ commissions.',
+      },
+      {
+        title: 'Content Architecture & Data Model',
+        description: 'Design your directory\'s data structure: what entities will you list? What attributes matter for rankings? Use ChatGPT to design the schema, and Claude to review for edge cases. Include: entity attributes, ranking factors, scoring weights, and filter options.',
+        tip: 'Every directory needs 3 core entity types: listings, categories, and blog posts. Design the relationships between them.',
+      },
+      {
+        title: 'Build with Cursor + Next.js',
+        description: 'Scaffold a Next.js project with Tailwind CSS using Cursor Agent mode. Describe your directory type and let Cursor build: listing pages with dynamic routes, category filtering and search, ranking/scoring display, affiliate link integration, and SEO metadata generation.',
+        tip: 'Use generateStaticParams for SSG + getStaticProps with revalidate for fast pages that update periodically.',
+      },
+      {
+        title: 'Implement Cosme-Style Ranking Algorithm',
+        description: 'Create a multi-factor scoring system: community rating (35%), trending score (20%), editorial picks (15%), saves/bookmarks (10%), recency (10%), and regional relevance (10%). Display scores as stars or badges on listing cards.',
+        tip: 'Store rankings as a flat JSON file updated via build hook. Avoid database queries at page load.',
+      },
+      {
+        title: 'Affiliate Monetization Setup',
+        description: 'Integrate affiliate links (Booking.com, Klook, Viator, Agoda, etc.) with: contextual placement within content, comparison tables with affiliate CTAs, featured/sponsored listing tiers, and exit-intent discount popups.',
+        tip: 'Use rel="sponsored" nofollow on affiliate links. Google prefers transparency.',
+      },
+      {
+        title: 'SEO & Content Automation',
+        description: 'Set up: sitemap.xml generation script, blog content generation pipeline (AI writes 3-5 posts/week), internal linking strategy (every page links to 3+ related pages), and schema.org markup for rich snippets.',
+        tip: 'Cross-link all directories in your portfolio. Every directory feeds traffic to every other directory.',
+      },
+      {
+        title: 'Cross-Site Network Effects',
+        description: 'Deploy all directories with shared: footer links to all sibling sites, nav bar with portfolio dropdown, related content recommendations across sites, and unified search across the portfolio.',
+        tip: 'This creates a link network that Google treats as a media company, not a single site.',
+      },
+      {
+        title: 'Deploy & Monitor',
+        description: 'Deploy to Vercel with: custom domain setup, Vercel Analytics + Speed Insights, Google Search Console + GA4, uptime monitoring (betteruptime.com free tier), and weekly traffic review.',
+        tip: 'Set up automated weekly reports: traffic, top pages, affiliate clicks, revenue. AI analyzes the report and suggests improvements.',
+      },
+    ],
+    pro_tips: [
+      'Start with a single directory, perfect the template, then clone. Second directory takes 50% less time',
+      'Use a shared components library across all directories — header, footer, search bar, affiliate disclosure banner, review cards',
+      'The ranking algorithm is your moat. Spend time tuning the scoring weights based on user engagement data',
+      'Automate blog content generation: write one master prompt per directory, run it weekly to generate 3 posts',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Building the perfect directory before validating demand',
+        fix: 'Launch with 50-100 listings minimum. Add more based on user search queries and traffic analytics.',
+      },
+      {
+        mistake: 'Not tracking affiliate link performance per directory',
+        fix: 'Set up per-directory affiliate IDs so you can identify which sites convert best. Optimize the weakest performers.',
+      },
+    ],
+    pipeline_stage: 'deployment',
+    revenue_impact: '$500-5,000/mo per niche directory with 2-3 months of SEO growth',
+    real_results: [
+      { metric: 'Build Time', value: '2 weeks', description: 'From niche selection to deployed directory with 100+ listings' },
+      { metric: 'Monthly Traffic', value: '2-10K visits', description: 'After 3 months of SEO + content automation per directory' },
+      { metric: 'Cost to Build', value: '$0-20/mo', description: 'Vercel free tier + AI tool subscriptions' },
+      { metric: 'Revenue 90-day', value: '$200-500/mo', description: 'Affiliate commissions with 1-3% conversion rate' },
+    ],
+  },
+
 ];
 
 export function getPlaybookBySlug(slug: string): Playbook | undefined {

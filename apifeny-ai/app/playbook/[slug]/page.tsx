@@ -8,6 +8,7 @@ import {
   Lightbulb,
   AlertTriangle,
   ExternalLink,
+  ShieldCheck,
   ChevronRight,
   Sparkles,
   TrendingUp,
@@ -420,6 +421,63 @@ export default function PlaybookPage({ params }: PlaybookPageProps) {
               <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
+
+          {/* ═══ Affiliate Try Now Buttons ═══ */}
+          {/* Direct affiliate links to each tool's website — converts readers to commissions in one click */}
+          {relatedTools.length <= 4 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              {relatedTools.map((tool) => (
+                <a
+                  key={`aff-${tool.id}`}
+                  href={tool.website_url}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="group flex items-center justify-between p-4 bg-gradient-to-r from-tech-800 via-tech-800/80 to-tech-800 border border-neon/15 rounded-xl hover:border-neon/40 hover:shadow-lg hover:shadow-neon/5 transition-all"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-neon/20 to-aqua/20 flex items-center justify-center shrink-0 border border-neon/20">
+                      <span className="text-neon-light font-bold text-xs">
+                        {tool.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors">
+                        {tool.name}
+                      </span>
+                      <span className="block text-[10px] text-tech-400">
+                        {tool.pricing_tier} · {tool.category}
+                      </span>
+                    </div>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neon/15 text-neon-light text-xs font-semibold group-hover:bg-neon/25 transition-colors shrink-0">
+                    Try Free
+                    <ExternalLink className="w-3 h-3" />
+                  </span>
+                </a>
+              ))}
+            </div>
+          ) : (
+            <div className="flex flex-wrap gap-2 mb-6">
+              {relatedTools.map((tool) => (
+                <a
+                  key={`aff-${tool.id}`}
+                  href={tool.website_url}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="group inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-tech-800 border border-neon/15 hover:border-neon/40 transition-all text-sm"
+                >
+                  <span className="text-white group-hover:text-neon-light transition-colors">{tool.name}</span>
+                  <ExternalLink className="w-3 h-3 text-tech-500 group-hover:text-neon shrink-0" />
+                </a>
+              ))}
+            </div>
+          )}
+          <p className="mb-4 text-[10px] text-tech-500 flex items-center gap-1">
+            <ShieldCheck className="w-3 h-3" />
+            Affiliate links. We may earn a commission if you sign up — at no extra cost to you.
+          </p>
+
+          {/* Detailed tool cards for deeper comparison */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {relatedTools.map((tool) => (
               <ToolCard key={tool.id} tool={tool} />

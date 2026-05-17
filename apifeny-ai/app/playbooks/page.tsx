@@ -13,13 +13,39 @@ export const metadata: Metadata = {
   },
 };
 
+const PAID_PLAYBOOKS = ['ai-solopreneur-toolkit', 'directory-builder-template'];
+
 const difficultyMeta = {
   Beginner: { label: 'Beginner', color: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' },
   Intermediate: { label: 'Intermediate', color: 'bg-amber-500/20 text-amber-400 border-amber-500/30' },
   Advanced: { label: 'Advanced', color: 'bg-neon/20 text-neon-light border-neon/30' },
 };
 
+const PIPELINE_STAGES = [
+  { key: 'planning', label: 'Strategize', emoji: '🧠', color: 'bg-violet-500/15 text-violet-400 border-violet-500/30' },
+  { key: 'ideation', label: 'Ideate', emoji: '💡', color: 'bg-pink-500/15 text-pink-400 border-pink-500/30' },
+  { key: 'research', label: 'Research', emoji: '🔍', color: 'bg-sky-500/15 text-sky-400 border-sky-500/30' },
+  { key: 'build', label: 'Build', emoji: '⚡', color: 'bg-blue-500/15 text-blue-400 border-blue-500/30' },
+  { key: 'coding', label: 'Code', emoji: '💻', color: 'bg-blue-500/15 text-blue-400 border-blue-500/30' },
+  { key: 'review', label: 'Review & QA', emoji: '🔄', color: 'bg-amber-500/15 text-amber-400 border-amber-500/30' },
+  { key: 'testing', label: 'Test', emoji: '🧪', color: 'bg-orange-500/15 text-orange-400 border-orange-500/30' },
+  { key: 'deployment', label: 'Launch', emoji: '🚀', color: 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30' },
+  { key: 'content', label: 'Content', emoji: '✍️', color: 'bg-rose-500/15 text-rose-400 border-rose-500/30' },
+  { key: 'marketing', label: 'Marketing', emoji: '📣', color: 'bg-fuchsia-500/15 text-fuchsia-400 border-fuchsia-500/30' },
+];
+
+const STAGE_ORDER = ['planning', 'ideation', 'research', 'build', 'coding', 'review', 'testing', 'deployment', 'content', 'marketing'];
+
 export default function PlaybooksPage() {
+  const stageGroups = STAGE_ORDER
+    .map(key => ({
+      stage: PIPELINE_STAGES.find(s => s.key === key)!,
+      playbooks: playbooks.filter(p => p.pipeline_stage === key),
+    }))
+    .filter(g => g.playbooks.length > 0);
+
+  const uncategorized = playbooks.filter(p => !p.pipeline_stage || !STAGE_ORDER.includes(p.pipeline_stage));
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       {/* Hero */}
@@ -68,59 +94,152 @@ export default function PlaybooksPage() {
         </div>
       </section>
 
-      {/* Playbooks Grid */}
-      <section>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          {playbooks.map((pb) => {
-            const diff = difficultyMeta[pb.difficulty];
-            const toolCount = pb.related_tool_slugs.length;
+      {/* Pipeline Stage Navigation */}
+      <div className="flex flex-wrap gap-2 mb-8">
+        {stageGroups.map(({ stage, playbooks: stagePlaybooks }) => (
+          <a
+            key={stage.key}
+            href={`#stage-${stage.key}`}
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition hover:scale-105 ${stage.color}`}
+          >
+            <span>{stage.emoji}</span>
+            <span>{stage.label}</span>
+            <span className="text-[10px] opacity-60">{stagePlaybooks.length}</span>
+          </a>
+        ))}
+      </div>
 
-            return (
-              <Link
-                key={pb.slug}
-                href={`/playbook/${pb.slug}`}
-                className={`group relative rounded-xl bg-gradient-to-br ${pb.gradient} bg-tech-700 border border-tech-500/30 p-5 hover:border-neon/40 transition-all hover:-translate-y-1 overflow-hidden`}
-              >
-                <div className="absolute inset-0 bg-tech-grid opacity-20" />
-                <div className="relative">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-2xl">{pb.icon}</span>
-                    <span
-                      className={cn(
-                        'inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium border',
-                        diff.color
+      {/* Playbooks by Pipeline Stage */}
+      {stageGroups.map(({ stage, playbooks: stagePlaybooks }) => (
+        <section key={stage.key} id={`stage-${stage.key}`} className="mb-10">
+          <h2 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <span>{stage.emoji}</span>
+            <span>{stage.label}</span>
+            <span className="text-xs font-normal text-tech-400">— {stagePlaybooks.length} playbook{stagePlaybooks.length !== 1 ? 's' : ''}</span>
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+            {stagePlaybooks.map((pb) => {
+              const diff = difficultyMeta[pb.difficulty];
+              const toolCount = pb.related_tool_slugs.length;
+
+              return (
+                <Link
+                  key={pb.slug}
+                  href={`/playbook/${pb.slug}`}
+                  className={`group relative rounded-xl bg-gradient-to-br ${pb.gradient} bg-tech-700 border border-tech-500/30 p-5 hover:border-neon/40 transition-all hover:-translate-y-1 overflow-hidden`}
+                >
+                  <div className="absolute inset-0 bg-tech-grid opacity-20" />
+                  <div className="relative">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-2xl">{pb.icon}</span>
+                      {PAID_PLAYBOOKS.includes(pb.slug) && (
+                        <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium border bg-amber-500/20 text-amber-400 border-amber-500/30">
+                          📄 PDF
+                        </span>
                       )}
-                    >
-                      {diff.label}
-                    </span>
-                    <span className="inline-flex items-center gap-0.5 text-[9px] text-tech-300 ml-auto">
-                      <Clock className="w-3 h-3" />
-                      {pb.read_time_minutes} min
-                    </span>
-                  </div>
+                      <span
+                        className={cn(
+                          'inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium border',
+                          diff.color
+                        )}
+                      >
+                        {diff.label}
+                      </span>
+                      <span className="inline-flex items-center gap-0.5 text-[9px] text-tech-300 ml-auto">
+                        <Clock className="w-3 h-3" />
+                        {pb.read_time_minutes} min
+                      </span>
+                    </div>
 
-                  <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1.5">
-                    {pb.title}
-                  </h3>
-                  <p className="text-xs text-tech-200 line-clamp-2 mb-3 leading-relaxed">
-                    {pb.description}
-                  </p>
+                    <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1.5">
+                      {pb.title}
+                    </h3>
+                    <p className="text-xs text-tech-200 line-clamp-2 mb-3 leading-relaxed">
+                      {pb.description}
+                    </p>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] text-tech-300">
-                      {toolCount} {toolCount === 1 ? 'tool' : 'tools'}
-                    </span>
-                    <span className="text-[10px] text-tech-300 group-hover:text-neon-light transition-colors flex items-center gap-0.5">
-                      Read guide
-                      <ChevronRight className="w-3 h-3" />
-                    </span>
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] text-tech-300">
+                        {toolCount} {toolCount === 1 ? 'tool' : 'tools'}
+                      </span>
+                      <span className="text-[10px] text-tech-300 group-hover:text-neon-light transition-colors flex items-center gap-0.5">
+                        Read guide
+                        <ChevronRight className="w-3 h-3" />
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+
+      {/* Uncategorized playbooks */}
+      {uncategorized.length > 0 && (
+        <section className="mb-10">
+          <h2 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <span>📋</span>
+            <span>More Playbooks</span>
+            <span className="text-xs font-normal text-tech-400">— {uncategorized.length} playbook{uncategorized.length !== 1 ? 's' : ''}</span>
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+            {uncategorized.map((pb) => {
+              const diff = difficultyMeta[pb.difficulty];
+              const toolCount = pb.related_tool_slugs.length;
+
+              return (
+                <Link
+                  key={pb.slug}
+                  href={`/playbook/${pb.slug}`}
+                  className={`group relative rounded-xl bg-gradient-to-br ${pb.gradient} bg-tech-700 border border-tech-500/30 p-5 hover:border-neon/40 transition-all hover:-translate-y-1 overflow-hidden`}
+                >
+                  <div className="absolute inset-0 bg-tech-grid opacity-20" />
+                  <div className="relative">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-2xl">{pb.icon}</span>
+                      {PAID_PLAYBOOKS.includes(pb.slug) && (
+                        <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium border bg-amber-500/20 text-amber-400 border-amber-500/30">
+                          📄 PDF
+                        </span>
+                      )}
+                      <span
+                        className={cn(
+                          'inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium border',
+                          diff.color
+                        )}
+                      >
+                        {diff.label}
+                      </span>
+                      <span className="inline-flex items-center gap-0.5 text-[9px] text-tech-300 ml-auto">
+                        <Clock className="w-3 h-3" />
+                        {pb.read_time_minutes} min
+                      </span>
+                    </div>
+
+                    <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1.5">
+                      {pb.title}
+                    </h3>
+                    <p className="text-xs text-tech-200 line-clamp-2 mb-3 leading-relaxed">
+                      {pb.description}
+                    </p>
+
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] text-tech-300">
+                        {toolCount} {toolCount === 1 ? 'tool' : 'tools'}
+                      </span>
+                      <span className="text-[10px] text-tech-300 group-hover:text-neon-light transition-colors flex items-center gap-0.5">
+                        Read guide
+                        <ChevronRight className="w-3 h-3" />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       {/* Coming Soon / CTA */}
       <section className="mt-12 rounded-xl border border-dashed border-tech-500/30 bg-tech-700/40 p-8 text-center">
