@@ -7,6 +7,7 @@ const BASE_URL = 'https://luxury-family-travel-asia.vercel.app';
 interface BlogIndexEntry {
   slug: string;
   date: string;
+  excerpt?: string;
 }
 
 function slugify(name: string): string {
@@ -20,7 +21,11 @@ function slugify(name: string): string {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const destinations = allDestinations as Array<{ id: string; slug?: string; name: string; city: string; country: string; category: string }>;
-  const blogPosts = blogIndex as BlogIndexEntry[];
+  const blogPosts: BlogIndexEntry[] = Object.entries(blogIndex).map(([slug, entry]) => ({
+    slug,
+    date: (entry as { date: string }).date,
+    excerpt: (entry as { excerpt: string }).excerpt,
+  }));
 
   const seenCities = new Set<string>();
   const uniqueCities: { slug: string; name: string }[] = [];

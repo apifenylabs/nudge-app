@@ -324,9 +324,86 @@ Revenue-share deals, product equity, advisory roles.
 
 // ─── Helpers ────────────────────────────────────────────────
 
-function generatePDFContent(): string {
-  return playbookContent;
-}
+// ─── AI Workflow Automation Playbook Content ─────────────
+
+const workflowPlaybookContent = `# AI Workflow Automation
+
+## The Complete Guide to Building Autonomous Workflows with AI
+
+---
+
+# Chapter 1: Workflow Mapping & Diagnosis
+
+## The Automation ROI Framework
+
+Before you automate anything, you need to know WHAT to automate. Most people jump straight to tools without understanding their workflows. This chapter gives you a systematic framework for identifying high-ROI automation opportunities.
+
+### The 3-Step Workflow Audit
+
+**Step 1: Capture**
+- List every task you do in a week (use ChatGPT to help categorize)
+- Tag each task: frequency, duration, difficulty, enjoyment level
+- Include ALL the small tasks (you\'ll be surprised)
+
+**Step 2: Categorize**
+- High-frequency, low-cognition → AUTOMATE (e.g., email sorting, social scheduling)
+- Low-frequency, high-cognition → OUTSOURCE or DO MANUALLY (e.g., strategy)
+- High-frequency, high-cognition → AUGMENT with AI (e.g., content creation)
+- Low-frequency, low-cognition → ELIMINATE
+
+**Step 3: Prioritize**
+Score each task on:
+- Time spent per week (1-5)
+- Automation feasibility (1-5)
+- AI tool availability (1-5)
+- Impact on revenue (1-5)
+
+Multiply scores → highest score = automate first
+
+### Calculating Automation ROI
+
+Formula: ROI = (Hours saved per month × Your hourly rate) − (Tool cost + Setup time)
+
+Example:
+- Social media scheduling: 5 hrs/mo × $50/hr = $250 saved
+- Tool cost: $20/mo (Buffer)
+- Setup time: 2 hrs = $100
+- Monthly ROI: $250 − $120 = $130/mo
+
+### The Never-Automate List
+- High-stakes client negotiations
+- Creative direction decisions
+- Empathy-required customer interactions
+- Strategic pivots and business model decisions
+- Any task where the human touch IS the product
+
+---
+
+*Built with AI, refined for humans.*
+(c) 2026 Apifeny AI - All Rights Reserved
+`;
+
+// ─── Playbook Content Map ───────────────────────────────
+
+const PLAYBOOK_CONTENT: Record<string, { content: string; filename: string; title: string }> = {
+  'ai-solopreneur-toolkit': {
+    content: playbookContent,
+    filename: 'ai-solopreneur-toolkit.pdf',
+    title: 'AI Solopreneur Toolkit',
+  },
+  'ai-workflow-automation': {
+    content: workflowPlaybookContent,
+    filename: 'ai-workflow-automation.pdf',
+    title: 'AI Workflow Automation',
+  },
+  'directory-builder-template': {
+    content: playbookContent, // TODO: Add dedicated Directory Builder content
+    filename: 'directory-builder-template.pdf',
+    title: 'Directory Builder Template',
+  },
+};
+
+const VALID_PRODUCTS = Object.keys(PLAYBOOK_CONTENT);
 
 // ─── Route Handlers ─────────────────────────────────────────
 
@@ -338,6 +415,13 @@ export async function POST(request: NextRequest) {
     if (!email) {
       return NextResponse.json(
         { error: 'Email is required' },
+        { status: 400 }
+      );
+    }
+
+    if (!product || !PLAYBOOK_CONTENT[product]) {
+      return NextResponse.json(
+        { error: 'Invalid product. Valid products: ' + VALID_PRODUCTS.join(', ') },
         { status: 400 }
       );
     }
@@ -354,15 +438,15 @@ export async function POST(request: NextRequest) {
     // 3. const session = await stripe.checkout.sessions.create({...})
     // 4. redirect to session.url or confirm payment here
 
-    const content = generatePDFContent();
+    const playbook = PLAYBOOK_CONTENT[product];
 
     // Log purchase (in production: save to Supabase/DB)
     console.log(`[PDF Purchase] product=${product}, email=${email}, timestamp=${new Date().toISOString()}`);
 
-    return new NextResponse(content, {
+    return new NextResponse(playbook.content, {
       headers: {
         'Content-Type': 'text/markdown; charset=utf-8',
-        'Content-Disposition': `attachment; filename="ai-solopreneur-toolkit.pdf"`,
+        'Content-Disposition': `attachment; filename="${playbook.filename}"`,
       },
     });
   } catch (error) {
@@ -376,10 +460,14 @@ export async function POST(request: NextRequest) {
 
 export async function GET() {
   return NextResponse.json({
-    name: 'AI Solopreneur Toolkit PDF Generator',
+    name: 'Apifeny AI PDF Generator',
     version: '1.0.0',
     status: 'active',
-    products: ['ai-solopreneur-toolkit'],
+    products: VALID_PRODUCTS.map((slug) => ({
+      slug,
+      title: PLAYBOOK_CONTENT[slug].title,
+      filename: PLAYBOOK_CONTENT[slug].filename,
+    })),
     message: 'Send a POST request with email and product to download.',
   });
 }

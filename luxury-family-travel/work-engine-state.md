@@ -4,6 +4,44 @@ Last updated: 2026-05-16T09:54+08:00 (by premium-pivot subagent)
 
 ---
 
+## Task 3: Destination Slug Routing Fix ✅
+
+### Problem
+- Build error in `app/sitemap.ts`: `blogIndex` is a JSON object (`Record<string, {...}>`) but was cast as `BlogIndexEntry[]`, causing a TypeScript `neither type sufficiently overlaps` error.
+- Blog post `relatedDestinations` references used city names (e.g., `"bali"`, `"tokyo"`, `"bangkok"`) or IDs that didn't match actual destination slugs, resulting in broken link destinations.
+- Hardcoded hard-links in `app/compare/page.tsx` and `app/blog/[slug]/page.tsx` used `d.id` instead of `d.slug || d.id` for 30 destinations where id != slug.
+
+### Changes Made
+
+**`app/sitemap.ts`** — Fixed build error
+- Changed `const blogPosts = blogIndex as BlogIndexEntry[]` to use `Object.entries(blogIndex).map(...)` to properly convert the JSON object to an array of `{ slug, date, excerpt }` entries.
+- Added `excerpt?: string` to `BlogIndexEntry` interface.
+
+**`app/blog/[slug]/page.tsx`** — Fixed destination link resolution
+- Created `resolveDestination(destRef)` function that searches by id, then slug, then via `resolveSlug()` (which handles alias map — city names, city-001, etc.), and finally by normalized city name.
+- Replaced `getDestinationName(destId)` with the new `resolveDestination` which returns `{ name, slug }`.
+- Updated the "Related Destinations" section to use `resolved.slug` instead of raw `destId` in the `href`.
+- Added `resolveSlug` to the import from `@/lib/data`.
+
+**`app/compare/page.tsx`** — Fixed hardcoded destination links
+- Added `slug` field to all 18 `ALL_DESTINATIONS` entries (e.g., `amanpuri-phuket`, `aman-tokyo`, `soneva-fushi-maldives`, etc.).
+- Changed `href={`/destination/${d.id}`}` to `href={`/destination/${d.slug || d.id}`}`.
+
+### Files Modified
+- `app/sitemap.ts` — blogIndex object-to-array conversion
+- `app/blog/[slug]/page.tsx` — resolveDestination + slug-aware links
+- `app/compare/page.tsx` — added slug fields to ALL_DESTINATIONS
+
+### Build Result
+✅ **Build succeeded** — all routes compile cleanly:
+- `/destination/[slug]` — 527 paths (proper slugs)
+- `/properties/[slug]` — 554 paths (527 slugs + 27 legacy id redirects)
+- `/blog/[slug]` — 50 paths
+- `/compare` — renders static
+- `/sitemap.xml` — generates correctly with resolved slugs
+
+---
+
 ## Task 1: Cosme-style Premium Upgrade ✅
 
 ### Changes Made:

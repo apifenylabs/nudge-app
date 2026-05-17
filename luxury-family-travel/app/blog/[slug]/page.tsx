@@ -4,14 +4,33 @@ import Link from 'next/link';
 import { Calendar, Clock, Tag, ArrowLeft, ArrowRight, User, Sparkles, Compass } from 'lucide-react';
 import { getPostBySlug, getRelatedPosts } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data';
-import { allDestinations } from '@/lib/data';
+import { allDestinations, resolveSlug } from '@/lib/data';
 
 const BASE_URL = 'https://luxury-family-travel-asia.vercel.app';
 
-function getDestinationName(destId: string): string | null {
-  const found = allDestinations.find((d: { id: string; name: string; city: string }) => d.id === destId);
-  if (found) return `${found.name}, ${found.city}`;
+/** Resolve a destination reference (id, slug, or city name) to its display name. */
+function resolveDestination(destRef: string): { name: string; slug: string } | null {
+  // Try exact id match
+  const byId = allDestinations.find(d => d.id === destRef);
+  if (byId) return { name: `${byId.name}, ${byId.city}`, slug: byId.slug || byId.id };
+  // Try exact slug match
+  const bySlug = allDestinations.find(d => d.slug === destRef);
+  if (bySlug) return { name: `${bySlug.name}, ${bySlug.city}`, slug: bySlug.slug || bySlug.id };
+  // Try via resolveSlug (handles alias map: city names, city-001, etc.)
+  const aliasedSlug = resolveSlug(destRef);
+  if (aliasedSlug !== destRef) {
+    const byAlias = allDestinations.find(d => d.slug === aliasedSlug);
+    if (byAlias) return { name: `${byAlias.name}, ${byAlias.city}`, slug: byAlias.slug || byAlias.id };
+  }
+  // Try normalized city name match
+  const normalized = destRef.toLowerCase().replace(/[-\s]+/g, ' ');
+  const byCity = allDestinations.find(d => d.city.toLowerCase().replace(/[-\s]+/g, ' ') === normalized);
+  if (byCity) return { name: `${byCity.name}, ${byCity.city}`, slug: byCity.slug || byCity.id };
   return null;
+}
+
+function getDestinationName(destId: string): string | null {
+  return resolveDestination(destId)?.name ?? null;
 }
 
 export async function generateStaticParams() {
@@ -382,16 +401,16 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
             <h3 className="text-lg font-bold text-gray-900 mb-4">Related Destinations</h3>
             <div className="flex flex-wrap gap-3">
               {post.relatedDestinations.map(destId => {
-                const name = getDestinationName(destId);
-                if (!name) return null;
+                const resolved = resolveDestination(destId);
+                if (!resolved) return null;
                 return (
                   <Link
                     key={destId}
-                    href={`/destination/${destId}`}
+                    href={`/destination/${resolved.slug}`}
                     className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-sky-50 text-sky-700 hover:bg-sky-100 transition-colors text-sm font-medium"
                   >
                     <Compass size={14} />
-                    {name}
+                    {resolved.name}
                     <ArrowRight size={12} />
                   </Link>
                 );

@@ -39,7 +39,39 @@ export default function DashboardPage() {
   }
 
   return (
-    <AppShell>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Social Beast?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Social Beast is a social media scheduling and analytics tool that helps you create, schedule, and track posts across Twitter, LinkedIn, Telegram, Instagram, and your blog from one dashboard." }
+              },
+              {
+                "@type": "Question",
+                "name": "Which platforms does Social Beast support?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Social Beast connects to Twitter/X, LinkedIn, Telegram, Instagram, and your own blog. More platforms are coming based on user requests." }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I schedule posts in advance?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can create drafts, schedule posts for any future date and time, and manage your entire content calendar from the dashboard." }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Social Beast provide analytics?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Track total engagement, post performance, and platform-level metrics to understand what content resonates with your audience." }
+              }
+            ]
+          })
+        }}
+      />
+      <AppShell>
       {/* Quick Create */}
       <div className="card p-4 md:p-5 mb-6 animate-fade-in">
         <div className="flex items-center gap-3">
@@ -166,5 +198,6 @@ export default function DashboardPage() {
         </div>
       </div>
     </AppShell>
+    </>
   );
 }

@@ -1571,5 +1571,60 @@ ceo_sprint_system:
       - "Log review in ceo-central-log.md"
 
 # ═══════════════════════════════════════════════════════════════
+# IDEA PIPELINE SYSTEM (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# Structured pipeline for evaluating new ideas — from raw concept to production or scrap.
+
+idea_pipeline_system:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  description: "All new ideas go through a structured pipeline: capture → assess → backlog or scrap. No idea gets built without passing guardrails."
+  source: "CEO directives, market research (Greg Isenberg, trends), competitive analysis"
+  
+  pipeline_stages:
+    stage_1_capture:
+      description: "Raw idea logged in ~/life/Empire-Graph/research-archive/ with source and initial notes"
+      output: "YYYY-MM-DD-<tag>-<topic>.md in research-archive/"
+      requirement: "Must include: one-liner, source, why it matters"
+    
+    stage_2_assessment:
+      description: "Score against the IdeaBrowser criteria"
+      criteria:
+        - "Zero domain cost — builds on free Vercel tier or existing infra"
+        - "AI solopreneur stack — leverages our existing skills (Next.js, Python, APIs)"
+        - "Revenue model clear — subscriptions, PDF sales, affiliates, or API pricing"
+        - "Existing infra reuse — piggybacks on something we already built"
+        - "Time to first $ — can ship revenue within 2 weeks?"
+      scoring: "Must pass 4/5 criteria to advance to backlog"
+      output: "Assessment entry in the same research file with PASS/FAIL and rationale"
+    
+    stage_3_backlog_or_scrap:
+      pass_action: "Add to Idea Backlog with priority score + revisit trigger"
+      fail_action: "Log as SCRAPPED with reason. Do not revisit unless conditions change significantly."
+  
+  idea_backlog:
+    location: "~/life/Empire-Graph/idea-backlog.md"
+    entry_format:
+      - "Idea name and one-liner"
+      - "Source (e.g., Greg #17)"
+      - "Assessment score (X/5 criteria passed)"
+      - "Revisit trigger (e.g., 'after $1k MRR' or 'after Nudge ships')"
+      - "Estimated build cost (tokens + time)"
+      - "Revenue estimate"
+  
+  sprint_gate:
+    rule: "No idea from backlog enters a sprint until ALL current sprint P0-P2 tasks are complete or blocked"
+    override: "Only override: Chris explicitly moves it to P0"
+  
+  assessment_archive:
+    location: "~/life/Empire-Graph/research-archive/"
+    note: "Every assessed idea gets a permanent record. Scrapped ideas document why in case conditions change." 
+
+# ═══════════════════════════════════════════════════════════════
+# END OF RULES.yaml — DO NOT ADD CONTENT BELOW THIS LINE
+# ═══════════════════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════════════════════
 # END OF RULES.yaml — DO NOT ADD CONTENT BELOW THIS LINE
 # ═══════════════════════════════════════════════════════════════

@@ -20,7 +20,39 @@ const ACCESSIBILITY_FEATURES = [
 
 export default function HomePage() {
   return (
-    <main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is Asia safe for senior solo travelers?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Singapore, Japan, Taiwan, and South Korea consistently rank among the safest destinations for seniors. We rate each destination on safety, healthcare access, and mobility friendliness." }
+              },
+              {
+                "@type": "Question",
+                "name": "What accessibility features should I look for?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Look for wheelchair-accessible MRT stations, priority seating on public transport, elevators at tourist sites, English-speaking medical facilities, and flat walking paths." }
+              },
+              {
+                "@type": "Question",
+                "name": "Do Asian cities have senior discounts?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Many — Japan offers senior discounts at temples and museums, Singapore has senior-rate MRT cards, and Hong Kong's MTR provides half-fare for seniors 65+." }
+              },
+              {
+                "@type": "Question",
+                "name": "Which Asian city has the best healthcare for visiting seniors?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Singapore, Tokyo, and Hong Kong boast world-class hospitals with English-speaking staff, short wait times, and easy access from most tourist areas." }
+              }
+            ]
+          })
+        }}
+      />
+      <main>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-navy-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-300 via-transparent to-transparent animate-gradient-shift" />
@@ -167,5 +199,6 @@ export default function HomePage() {
         </div>
       </footer>
     </main>
+    </>
   );
 }

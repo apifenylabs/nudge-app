@@ -2,7 +2,21 @@
 
 > Sprint-based organization aligned to 4 Revenue Agents.
 > 2-week sprints with P0–P3 priorities, revenue impact scores, and guardrails.
-> Last updated: 2026-05-17 12:07 HKT
+> Last updated: 2026-05-17 15:07 HKT
+
+## Build Session Log (Hourly CEO Engine)
+
+### Session 15:07 HKT — Zero-Excuse Build Queue
+
+**Spawned sub-agents:**
+1. 🟡 `luxury-slug-fix` — Fix Luxury destination slug routing to match data
+2. 🟡 `family-travel-blog` — Generate 5 blog posts for familytravelasia.com
+
+**Direct work this session:**
+- ✅ Verified cross-site footer links already present on all 4 sites (Family, Luxury, EV, Apifeny)
+- ✅ Verified schema.org sameAs arrays link all sites to each other
+
+**Next session cursor:** Wait for sub-agents to complete, then verify + log results. If done, move to Zero-Excuse Queue #6 (Fix Apifeny tool detail pages).
 
 ---
 
@@ -16,11 +30,15 @@
 #### P0: Apifeny AI MVP Completion
 | Task | Revenue Impact | Effort | Dependencies |
 |------|:--------------:|:------:|:------------:|
+| ✅ Create 1st playbook landing page (AI Solopreneur Toolkit) | HIGH ($19/sale) | DONE ✅ | None |
 | ✅ Create 2nd playbook landing page (Directory Builder) | HIGH ($19/sale) | DONE ✅ | None |
-| Create 3rd playbook landing page (AI Workflow Automation) | HIGH ($9-$29/sale) | 2h | None |
-| Organize tool rankings by pipeline stage (ideate→build→launch→scale) | MEDIUM (discoverability) | 1h | None |
-| Add [CEO-REVIEW] research to playbook content | MEDIUM (quality) | 30m | Research done ✅ |
-| **Total P0:** 3 tasks remaining | Revenue: unbounded (first $ matters) | ~3.5h remaining | — |
+| ✅ **Create 3rd playbook landing page (AI Workflow Automation)** | HIGH ($9-$29/sale) | **DONE ✅** | None |
+| ✅ Organize tool rankings by pipeline stage (ideate→build→launch→scale) | MEDIUM (discoverability) | DONE ✅ | None |
+| ✅ PDF API supports all 3 products (generate-pdf route) | HIGH (enables sales) | DONE ✅ | None |
+| ✅ Link routing: paid playbooks → /playbooks/[slug], free → /playbook/[slug] | MEDIUM (UX) | DONE ✅ | None |
+| ✅ Add [CEO-REVIEW] research to playbook content | MEDIUM (quality) | DONE ✅ | Research done ✅, content verified |
+| **Total P0:** 0 tasks remaining ✅ | Revenue: unbounded (first $ matters) | ALL DONE ✅ | — |
+| **BUILD VERIFIED:** `npm run build` passes ✅ | | | |
 
 #### P1: Nudge Monetization
 | Task | Revenue Impact | Effort | Dependencies |
@@ -33,8 +51,8 @@
 #### P2: Traffic + First Sales
 | Task | Revenue Impact | Effort | Dependencies |
 |------|:--------------:|:------:|:------------:|
-| Cross-link Apifeny playbooks → directory sites | LOW (organic traffic) | 30m | P0 done |
-| Cross-link directories → Apifeny AI | LOW | 15m | None |
+| Cross-link Apifeny playbooks → directory sites | LOW (organic traffic) | 30m | P0 done 🟢 |
+| ✅ Cross-link directories → Apifeny AI | LOW | ✅ DONE — already in place from Phase E | None |
 | SEO keyword audit for Apifeny AI homepage | LOW (long-term) | 30m | None |
 | **Total P2:** 3 tasks | Revenue: indirect | ~1.25h | — |
 
@@ -48,12 +66,13 @@
 ### Blockers (Need Chris)
 1. **Supabase schema** — nudge/supabase-schema.sql → paste in Supabase SQL Editor (30 sec)
 2. **VITE_STRIPE_SECRET_KEY** — set in Vercel env for apifeny-ai (enables PDF sales)
-3. **Affiliate accounts** — Klook, Booking, Viator (content ready, just needs signup)
+3. **Vercel deploy auth** — no vercel token available, can't deploy
+4. **Affiliate accounts** — Klook, Booking, Viator (content ready, just needs signup)
 
 ### Revenue Dashboard
 | Project | Status | MRR | Path to First $ |
 |---------|--------|:---:|:---------------:|
-| Apifeny AI | Sprint P0 | $0 | PDF playbook sales ($9 each) |
+| Apifeny AI | Sprint P0 | $0 | PDF playbook sales ($9 each) — 3 products live, needs deploy + Stripe key |
 | Nudge | Sprint P1 (blocked) | $0 | Subscriptions ($5-9/mo) |
 | Directories | Waiting on affiliates | $0 | Affiliate commissions |
 | Social Beast | Waiting on API keys | $0 | Traffic/lead attribution |

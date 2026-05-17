@@ -5,6 +5,8 @@ import { Clock, ChevronRight, Sparkles, TrendingUp, DollarSign } from 'lucide-re
 import { playbooks } from '@/lib/playbooks';
 import { cn } from '@/lib/utils';
 
+const PAID_PLAYBOOKS = ['ai-solopreneur-toolkit', 'directory-builder-template', 'ai-workflow-automation'];
+
 export default function FeaturedPlaybooks() {
   // Show top 4 playbooks
   const featured = playbooks.slice(0, 4);
@@ -40,7 +42,7 @@ export default function FeaturedPlaybooks() {
           return (
             <Link
               key={pb.slug}
-              href={`/playbook/${pb.slug}`}
+              href={PAID_PLAYBOOKS.includes(pb.slug) ? `/playbooks/${pb.slug}` : `/playbook/${pb.slug}`}
               className={`group relative rounded-xl bg-gradient-to-r ${pb.gradient} bg-tech-700 border border-tech-500/30 p-5 hover:border-neon/40 transition-all hover:-translate-y-1 overflow-hidden`}
             >
               <div className="absolute inset-0 bg-tech-grid opacity-20" />
