@@ -47,3 +47,40 @@
 - **Revenue:** $0
 - **Daily budget:** $0.31 / $0.50
 - **Index consistency:** All green ✅
+
+### 📁 Per-Topic Logging System deployed
+Created dedicated topic logs for every active project:
+- `life/nudge-log.md` — Nudge task manager
+- `life/ai-directory-log.md` — Apifeny AI playbooks + tools
+- `life/distribution-log.md` — Social Beast content engine
+- `life/luxury-log.md` — Luxury Family Travel Asia
+- `life/ev-charging-log.md` — EV Charging Asia
+- `life/family-travel-log.md` — Family Travel Asia (flagship)
+- `life/senior-travel-log.md` — Senior Friendly Travel
+- `life/ai-cofounder-log.md` — AI Cofounder
+- `life/omnimind-log.md` — OmniMind memory API
+- `life/agent-hq-log.md` — Agent HQ dashboard
+- `life/kids-activities-log.md` — Kids Activities Asia (deferred)
+- **Rule locked in RULES.yaml:** In every topic, agent reads its own topic log FIRST, then central log if needed. All updates go to the correct topic log + summarized in central log.
+
+### 📄 PDF Playbook dedicated landing page strategy locked
+- Each major PDF playbook gets its own high-converting landing page (e.g., /playbooks/ai-solopreneur-toolkit)
+- Central Playbooks library on apifeny.ai for discoverability
+- Sales driven through individual landing pages (FOMO, bonuses, testimonials, $9-$29)
+- Prevents playbooks from getting lost, maximizes conversion per playbook
+
+## Topic Log Index
+
+| Topic Log | Project | Agent |
+|-----------|---------|-------|
+| nudge-log.md | Nudge | Nudge Revenue |
+| ai-directory-log.md | Apifeny AI | AI/Innovation |
+| distribution-log.md | Social Beast | Social Beast |
+| luxury-log.md | Luxury Travel | Directory |
+| ev-charging-log.md | EV Charging | Directory |
+| family-travel-log.md | Family Travel (flagship) | Directory |
+| senior-travel-log.md | Senior Travel | Directory (sub) |
+| ai-cofounder-log.md | AI Cofounder | AI/Innovation |
+| omnimind-log.md | OmniMind | AI/Innovation |
+| agent-hq-log.md | Agent HQ | AI/Innovation |
+| kids-activities-log.md | Kids Activities | Directory (sub) |

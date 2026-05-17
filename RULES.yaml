@@ -1193,7 +1193,7 @@ change_management_framework:
   
   new_project_onboarding:
     mandatory_steps:
-      1: "Create dedicated topic log: ~/life/Empire-Graph/<project>-log.md"
+      1: "Create dedicated topic log: ~/life/<project>-log.md" (naming pattern: <project>-log.md)
       2: "Add entry to ~/life/projects-index.md with status, revenue target, owner agent"
       3: "Update ~/life/cross-project-synergies.md with flywheel connections"
       4: "Update ~/life/ceo-central-log.md with summary"
@@ -1230,4 +1230,59 @@ change_management_framework:
     violation_handling:
       on_detect: "Log [SYNC-ERROR] in ceo-central-log.md, fix all affected files, record in project-edit-log.md as [SELF-HEAL]"
       chronic: "If 3+ SYNC-ERRORS occur in 7 days, escalate to Chris for process review"
+
+# ═══════════════════════════════════════════════════════════════
+# TOPIC LOG READING RULE (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# Ensures every topic session reads its own context before acting.
+
+topic_log_reading_rule:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  description: "In every topic/context, the agent MUST read its own topic-specific log first, then ceo-central-log.md if needed."
+  topic_log_map:
+    nudge: "~/life/nudge-log.md"
+    ai_directory: "~/life/ai-directory-log.md"
+    distribution: "~/life/distribution-log.md"
+    luxury: "~/life/luxury-log.md"
+    ev_charging: "~/life/ev-charging-log.md"
+    family_travel: "~/life/family-travel-log.md"
+    senior_travel: "~/life/senior-travel-log.md"
+    ai_cofounder: "~/life/ai-cofounder-log.md"
+    omnimind: "~/life/omnimind-log.md"
+    agent_hq: "~/life/agent-hq-log.md"
+    kids_activities: "~/life/kids-activities-log.md"
+  rule: "Read topic log → read ceo-central-log.md for global context → act. Write updates to topic log + summarize in central log."
+  sync_requirement: "All key updates are written to the correct topic log AND summarized in ceo-central-log.md. Central log is the summary layer."
+  new_projects: "When creating a new project, create its topic log in ~/life/ matching the naming pattern <project>-log.md"
+
+# ═══════════════════════════════════════════════════════════════
+# PDF PLAYBOOK STRATEGY (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# Each major PDF playbook gets a dedicated landing page for maximum conversion.
+
+pdf_playbook_strategy:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  owner: "AI/Innovation Revenue Agent"
+  description: "Each major PDF playbook gets its own high-converting dedicated landing page."
+  landing_page_requirements:
+    url_pattern: "/playbooks/<slug>"
+    elements:
+      - "Strong sales copy — problem + solution + transformation"
+      - "FOMO triggers — limited-time bonus, early adopter pricing"
+      - "Testimonials — even if placeholder/synthetic for v1"
+      - "Bonuses — additional templates, checklists, video walkthroughs"
+      - "Clear $9–$29 pricing tier"
+      - "Stripe checkout integration"
+      - "What's included section (5+ items)"
+      - "FAQ to overcome objections"
+    design: "High-converting product page design — hero, social proof, features, bonuses, CTA, FAQ"
+  central_library:
+    location: "apifeny-ai /playbooks/ central page"
+    purpose: "Discoverability for all playbooks — links to each dedicated landing page"
+    not_for: "Primary sales — sales happen on individual landing pages, not the central library"
+  conversion_principle: "Prevent playbooks from getting lost. If every playbook links to the central library but sells on its own page, we maximize per-playbook conversion while maintaining cross-playbook discoverability."
 
