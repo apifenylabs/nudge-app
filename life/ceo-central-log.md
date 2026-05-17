@@ -84,3 +84,21 @@ Created dedicated topic logs for every active project:
 | omnimind-log.md | OmniMind | AI/Innovation |
 | agent-hq-log.md | Agent HQ | AI/Innovation |
 | kids-activities-log.md | Kids Activities | Directory (sub) |
+
+### 🧠 LLM & RAM Management locked
+- RAM-aware decision tree: checks `free -m` before choosing models. <2GB free → skip heavy locals.
+- Easy tasks → Ollama local. Research → Gemini free. Normal work → DeepSeek cloud. Complex → DeepSeek then Sonnet (after 2 fails). Production → Opus (requires approval).
+
+### 🏢 Multi-Workspace Strategy locked
+- Main workspace = clean core. Specialized workspaces (OmniMind, Trading) allowed with topic logs + Change Management compliance.
+- CEO agent maintains overview of ALL workspaces.
+
+### 🔬 Research Agent SOP locked
+- Daily: AI Directory + Social Beast. Weekly: stable directories + Nudge + AI Cofounder + OmniMind. Monthly: long-term trends.
+- All research saved to ~/life/Empire-Graph/research-archive/ with [CEO-REVIEW] tags for actionable findings.
+- Budget: free tier tools only ($0 for research).
+
+### 📋 Full Revenue Agent SOPs locked
+- Each agent has detailed daily SOP, revenue tracking with milestones, blocked-on list, unblock strategy.
+- Global rules: Revenue-First Filter on every action, track own MRR/ARR in treasury, proposals must be revenue-positive.
+- Idle actions clearly defined for each agent.

@@ -1286,3 +1286,233 @@ pdf_playbook_strategy:
     not_for: "Primary sales — sales happen on individual landing pages, not the central library"
   conversion_principle: "Prevent playbooks from getting lost. If every playbook links to the central library but sells on its own page, we maximize per-playbook conversion while maintaining cross-playbook discoverability."
 
+# ═══════════════════════════════════════════════════════════════
+# LLM & RAM MANAGEMENT (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# 32GB RAM awareness — CEO agent checks RAM before choosing models.
+
+llm_ram_management:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  total_ram_gb: 32
+  check_command: "free -m"
+  resource_aware_decision_tree:
+    step_1_easy_tasks:
+      condition: "Easy / repetitive / formatting / simple data work / basic writing / file operations / regex / data cleanup"
+      ram_check:
+        min_free_mb: 2048
+        action_if_low: "Use ollama:llama3.2 (lightest, 2GB model) first. Skip heavier local models."
+      action: "Ollama local — priority by quality"
+      priority_order:
+        - "ollama:qwen3-coder:latest (1.9GB — best local coder)"
+        - "ollama:gemma4:latest (3.3GB — fastest for light tasks)"
+        - "ollama:deepseek-r1:latest (4.7GB — local reasoning)"
+        - "ollama:llama3.2:latest (2.0GB — lightest fallback)"
+      on_error: "Fallback to next local model. NEVER try cloud for easy tasks."
+      ram_note: "At <2GB free, skip qwen3-coder and deepseek-r1 (too large). Use gemma4 or llama3.2 only."
+    
+    step_2_research:
+      condition: "RESEARCH / trend scanning / data gathering / competitor analysis"
+      action: "Gemini 2.5 Flash (free tier)"
+      model: "google/gemini-2.5-flash-preview"
+      on_error: "Fallback to ollama:gemma4 + web_search. Do NOT cascade to DeepSeek/Sonnet/Opus for research."
+    
+    step_3_normal_work:
+      condition: "80%+ of work — coding, writing, SEO, product, testing, playbooks, content, configurations"
+      action: "DeepSeek-chat cloud (default workhorse)"
+      model: "deepseek/deepseek-chat"
+      parallel_option: "Coder2 = ollama:qwen3-coder:latest (if RAM >4GB free)"
+    
+    step_4_complex_reasoning:
+      condition: "Complex / high-stakes / final review after 2 failed attempts with DeepSeek"
+      steps:
+        - "Attempt 1: deepseek/deepseek-chat"
+        - "Attempt 2: deepseek/deepseek-v4-flash (fallback)"
+        - "Attempt 3 (only after 2 failures OR explicit need): anthropic/claude-sonnet-4-6"
+      on_error: "Do NOT cascade to Opus without human approval"
+    
+    step_5_production:
+      condition: "Production deployment / portfolio decision / final sign-off"
+      model: "anthropic/claude-opus-4-6"
+      requirement: "Explicit human approval from Chris REQUIRED before using"
+
+# ═══════════════════════════════════════════════════════════════
+# MULTI-WORKSPACE MANAGEMENT STRATEGY (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+
+multi_workspace_strategy:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  main_workspace: "~/life/ — clean core with all Empire-Graph files, project indexes, logs"
+  specialized_workspaces:
+    omnimind:
+      path: "~/workspaces/omnimind/"
+      topic_log: "~/life/omnimind-log.md"
+      description: "OmniMind backend (FastAPI + Qdrant), Felix consolidation pipeline"
+    trading:
+      path: "TBD"
+      topic_log: "TBD"
+      description: "Future algorithmic trading workspace (not yet created)"
+  rules:
+    - "Each specialized workspace MUST have its own topic log in ~/life/<project>-log.md"
+    - "Each topic log MUST link back to ~/life/ceo-central-log.md for high-level visibility"
+    - "Each workspace MUST follow the same Change Management Framework (life/Empire-Graph/)"
+    - "Each workspace MUST complete new-project-checklist.md before launch"
+    - "CEO agent is responsible for maintaining overview of ALL workspaces"
+  ceo_responsibility:
+    description: "CEO agent must know about all workspaces. No workspace is invisible."
+    check: "Every session startup: verify all workspace topic logs are synced in ceo-central-log.md"
+
+# ═══════════════════════════════════════════════════════════════
+# RESEARCH AGENT SOP (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+
+research_agent_sop:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  role_name: "Research Agent"
+  description: "Formal research role for all projects. Conducts market, competitor, trend, and SEO research per cadence."
+  archive: "~/life/Empire-Graph/research-archive/"
+  file_naming: "<YYYY-MM-DD>-<project-tag>-<topic>.md"
+  cadence:
+    high_velocity:
+      projects:
+        - "ai-directory (apifeny-ai) — playbook trends, competitor AI tools, pricing"
+        - "social-beast — distribution platform changes, content algorithm shifts"
+      frequency: "Daily (or every 2nd heartbeat cycle)"
+    stable_projects:
+      projects:
+        - "family-travel-asia"
+        - "luxury-family-travel-asia"
+        - "ev-charging-asia"
+        - "senior-friendly-travel"
+        - "nudge"
+        - "ai-cofounder"
+        - "omnimind"
+      frequency: "Weekly"
+    long_term:
+      projects:
+        - "All projects — broad industry trends, macro shifts, revenue model innovation"
+      frequency: "Monthly"
+  sop:
+    step_1: "Determine which project needs research based on cadence above"
+    step_2: "Use step_2_research model (Gemini 2.5 Flash free tier, fallback to ollama:gemma4 + web_search)"
+    step_3: "Save findings to ~/life/Empire-Graph/research-archive/<YYYY-MM-DD>-<project-tag>-<topic>.md"
+    step_4: "Include: date, sources/link, key findings (bullet points), actionable recommendations"
+    step_5: "Tag actionable findings with [CEO-REVIEW] for CEO agent review"
+    step_6: "CEO agent reviews [CEO-REVIEW] tagged research and decides: refine, create tasks, or discard"
+  output_structure:
+    required_sections:
+      - "# Research: [Topic]"
+      - "**Date:** YYYY-MM-DD"
+      - "**Project Tag:** <tag>"
+      - "**Sources:** [links]"
+      - "## Key Findings"
+      - "## Actionable Recommendations [CEO-REVIEW]"
+  budget_rule: "Free tier tools only (Gemini free, web_search). Never spend >$0.01 on research unless approved."
+
+# ═══════════════════════════════════════════════════════════════
+# FULL REVENUE AGENT SOPs (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# Enhanced with detailed SOP/context for each Revenue Agent.
+# Each agent must track MRR/ARR, propose only revenue-positive actions, and follow Revenue-First Guardrail.
+
+revenue_agent_sops:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  global_rules:
+    - "Every action must pass Revenue-First Filter before execution"
+    - "Each agent tracks its own projected MRR/ARR in ~/life/Resources/treasury.md"
+    - "Propose only revenue-positive actions. If an action doesn't generate revenue, reframe or deprioritize."
+    - "If blocked on Chris, prepare deliverables so unblocking takes <2 minutes"
+    - "Default to cheapest effective model. Local Ollama for easy, DeepSeek for normal."
+  
+  agent_1_directory_sop:
+    agent: "Directory Revenue Agent"
+    purpose: "Maximize affiliate revenue across all 5 directory sites (Family, Luxury, EV, Senior, Kids)"
+    daily_sop:
+      morning: "Check site health (all 5 sites 200 OK). Check treasury for any affiliate revenue."
+      midday: "Work on highest-revenue-potential task per Revenue-First Filter. Priorities: affiliate link additions > cross-linking > SEO content > new pages."
+      idle: "Add affiliate links to existing content → improve internal linking → write SEO content. Always add revenue value."
+    revenue_tracking:
+      metric: "MRR from affiliate commissions"
+      current: "$0 (no affiliate accounts set up yet)"
+      first_milestone: "First $50/mo affiliate revenue"
+      target: "$1k/mo total across all directories"
+    blocked_on:
+      - "Viator / Klook / Booking.com affiliate account signup"
+      - "Real traffic (content exists, no distribution pipeline)"
+    unblock_strategy: "Continue building content depth + SEO so it's ready when affiliates activate. Prepare affiliate link insertion templates."
+  
+  agent_2_nudge_sop:
+    agent: "Nudge Revenue Agent"
+    purpose: "Drive subscription revenue for family task manager (Freemium → $5/mo Pro, $9/mo Family)"
+    daily_sop:
+      morning: "Check if Supabase schema has been run (check for active signups). Check treasury."
+      midday: "Polish onboarding flows, prepare schema SQL, write conversion copy for pricing page."
+      idle: "Polish existing UI, write onboarding flows, prepare schema SQL for Chris. Prep materials so schema execution takes 30 seconds."
+    revenue_tracking:
+      metric: "MRR from subscriptions"
+      current: "$0 (not yet launched)"
+      pricing:
+        free: "Basic task management, 1 family"
+        pro: "$5/mo — advanced NLP, unlimited families, reminders"
+        family: "$9/mo — full family control, enforcements, analytics"
+      first_milestone: "10 paid users ($50/mo)"
+      target: "$5k/mo"
+    blocked_on:
+      - "Supabase schema not run (SQL exists, needs manual paste in Supabase editor)"
+    unblock_strategy: "Prepare everything so Chris only opens supabase.com, pastes schema, clicks run. That's it."
+  
+  agent_3_social_beast_sop:
+    agent: "Social Beast Revenue Agent"
+    purpose: "Generate organic traffic + leads for all other projects through content distribution"
+    daily_sop:
+      morning: "Check queue of pending content. Prioritize cross-promotion for highest-value project."
+      midday: "Generate content for projects that need traffic most. Queue for distribution."
+      idle: "Generate + queue social content, cross-promote other projects. Focus on building in public."
+    revenue_tracking:
+      metric: "Leads generated / traffic driven to other projects"
+      current: "$0 (no API keys, no distribution pipeline active)"
+      first_milestone: "First 1,000 referral visits to directories or apifeny-ai"
+      target: "$1k/mo attributed value (lead gen for other products)"
+    blocked_on:
+      - "Social API keys (Reddit, X, LinkedIn, Pinterest)"
+      - "Content pending in pending-posts/ directories"
+    unblock_strategy: "Pre-build content queue + scheduling. When Chris provides API keys, distribution starts immediately."
+  
+  agent_4_ai_innovation_sop:
+    agent: "AI / Innovation / New Product Revenue Agent"
+    purpose: "Monetize Apifeny AI (playbooks + PDF sales), maintain AI Cofounder + OmniMind + Agent HQ, evaluate new products through Revenue-First Filter"
+    daily_sop:
+      morning: "Check apifeny-ai playbook conversion (if Stripe key is set). Check treasury."
+      midday: "Priority 1: Create new playbook PDF drafts + dedicated landing pages. Priority 2: Expand playbook content. Priority 3: Improve ranking algorithms."
+      idle: "Create new playbook PDF drafts, expand playbooks on apifeny-ai, improve ranking, fix SEO."
+    revenue_tracking:
+      metric: "PDF playbook sales ($9-$29) + playbook traffic + tool affiliate commissions"
+      current: "$0 (Stripe test key not in Vercel env)"
+      first_milestone: "First PDF sale ($9)"
+      target: "$3k/mo"
+    core_monetization:
+      pdf_playbook_sales:
+        status: "ACTIVE — first playbook AI Solopreneur Toolkit built at /playbooks/ai-solopreneur-toolkit"
+        next: "Create 3 more playbooks (Directory Builder, AI Workflow, Agent Orchestration)"
+      community_features: "Future — paid community for AI builders"
+      tool_subscription: "Future — unlisted/premium tool access"
+      affiliate: "Future — tool recommendations with affiliate links"
+    blocked_on:
+      - "VITE_STRIPE_SECRET_KEY not set in Vercel env for apifeny-ai"
+    unblock_strategy: "Build more playbook content + landing pages. When Stripe key is set, 4 playbooks ready to sell immediately."
+  
+  sop_enforcement:
+    cadence: "CEO agent checks each agent's SOP compliance during heartbeat cycles"
+    monitoring: "Each agent logs completed work to its topic log + ceo-central-log.md"
+    violation: "If an agent proposes a non-revenue action without justification, flag in ceo-central-log.md and reframe or reject"
+
+# ═══════════════════════════════════════════════════════════════
+# END OF RULES.yaml — DO NOT ADD CONTENT BELOW THIS LINE
+# ═══════════════════════════════════════════════════════════════
