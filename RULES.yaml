@@ -702,6 +702,18 @@ revenue_first_filter:
       - Decision: <pass / reframe / deprioritize>
       - Rationale: <one-liner>
   override_condition: "Only Override for: (a) security fix, (b) site-down recovery, (c) explicit Chris request"
+  
+  # ─── NEW PROJECT GUARDRAIL (LOCKED May 17 2026) ───
+  # Until we reach consistent revenue ($1k+ MRR), any new project or domain requires:
+  new_project_guardrail:
+    locked: true
+    lock_date: "2026-05-17"
+    active_until: "Consistent revenue >$1k MRR from existing sites"
+    requirements:
+      - "Data-backed research showing strong revenue potential and high-volume pain points"
+      - "Clear business case with estimated setup cost vs projected MRR"
+      - "Explicit human approval for domain purchase and final go-live"
+    affected_by: "Applies to: new directories, new domains, new product launches. Does NOT apply to: content expansion, SEO, affiliate link additions, or UI polish on existing sites."
 
 # ═══════════════════════════════════════════════════════════════
 # DUMB QUESTIONS RULE (LOCKED May 17 2026 — NEVER OVERRIDE)
@@ -1034,4 +1046,105 @@ project_portfolio:
   archived: 2
   next_review: "2026-06-17"
 
+# ═══════════════════════════════════════════════════════════════
+# REVENUE AGENTS — TEAM STRUCTURE (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# 4 dedicated revenue agents, each owning specific projects.
+# Central CEO agent coordinates. No resource overlap.
+
+revenue_agents:
+  locked: true
+  lock_date: "2026-05-17"
+  central_ceo: "Captain (current session) — coordinates all 4 agents, resolves conflicts, allocates budget"
+  
+  agent_1_directory_revenue:
+    name: "Directory Revenue Agent"
+    ownership:
+      primary:
+        - "family-travel-asia (familytravelasia.com)"
+        - "luxury-family-travel-asia"
+        - "ev-charging-asia"
+      sub_projects:
+        - "senior-friendly-travel — directory sub-project, NOT separate domain"
+        - "kids-activities-asia — directory sub-project, NOT separate domain"
+      no_ownership:
+        - "apifeny-ai (belongs to AI/Innovation Agent)"
+        - "ai-cofounder (belongs to AI/Innovation Agent)"
+        - "omnimind (belongs to AI/Innovation Agent)"
+    responsibilities:
+      - "Affiliate revenue (Klook, Booking, Viator, Agoda, GetYourGuide)"
+      - "SEO traffic growth across all directory sites"
+      - "Premium listing / featured placement monetization"
+      - "Cross-linking between directory sites"
+      - "Price comparison widgets on every bookable item"
+      - "Blog content for SEO + affiliate CTAs"
+    budget_priority: "P1 — highest revenue potential per hour spent"
+    default_action_when_idle: "Add affiliate links to existing content, then improve internal linking, then write SEO content"
+  
+  agent_2_nudge_revenue:
+    name: "Nudge Revenue Agent"
+    ownership:
+      primary:
+        - "nudge — family task manager"
+    responsibilities:
+      - "Subscription revenue (Freemium → $5/mo Pro, $9/mo Family)"
+      - "Conversion optimization (free → paid)"
+      - "User retention and engagement"
+      - "Supabase schema unblocking (prep materials for Chris)"
+      - "Telegram webhook, NLP parser, PWA, admin panel"
+    budget_priority: "P2 — high upside but blocked on schema"
+    default_action_when_idle: "Polish existing UI, write onboarding flows, prepare schema SQL for Chris"
+  
+  agent_3_social_beast_revenue:
+    name: "Social Beast Revenue Agent"
+    ownership:
+      primary:
+        - "social-beast — content creation + distribution engine"
+      related:
+        - "social-beast-components (component library)"
+        - "social-beast-dashboard"
+        - "social-beast-logs"
+        - "social-beast-approvals"
+    responsibilities:
+      - "Organic content generation (blog posts, social posts)"
+      - "Distribution across channels (Twitter, LinkedIn, Reddit)"
+      - "Lead generation for directory + AI products"
+      - "Cross-promotion of all other products"
+      - "Building in public storytelling"
+    budget_priority: "P3 — supports all other agents, not standalone revenue"
+    default_action_when_idle: "Generate + queue social content, cross-promote other projects"
+  
+  agent_4_ai_innovation_revenue:
+    name: "AI / Innovation / New Product Revenue Agent"
+    ownership:
+      primary:
+        - "apifeny-ai (apifeny-ai.vercel.app)"
+        - "ai-cofounder (ai-cofounder.vercel.app)"
+        - "omnimind (~/workspaces/omnimind)"
+        - "agent-hq (agent-hq-alpha.vercel.app)"
+      future:
+        - "Any new AI products (video, blogging, newsletter, etc.)"
+        - "Any new directories or products not yet created"
+    responsibilities:
+      - "Apifeny AI: playbook expansion, ranking engine, tool aggregation"
+      - "AI Cofounder: AI product-building tool + travel copilot"
+      - "OmniMind: Felix pipeline maintenance, memory consolidation"
+      - "Agent HQ: orchestration dashboard"
+      - "Evaluate new product ideas through Revenue-First Filter"
+      - "New project guardrail: data-backed research + business case before launch"
+    budget_priority: "P1 (apifeny) / P4 (new ideas)"
+    default_action_when_idle: "Expand playbooks on apifeny-ai, improve ranking, fix SEO"
+  
+  # ─── OVERLAP PREVENTION ───
+  overlap_prevention:
+    enabled: true
+    rule: "No two agents work on the same project simultaneously. CEO assigns each task to exactly one agent."
+    conflict_resolution: "CEO decides priority based on revenue potential. Directory > AI > Social > Nudge (until schema unblocked)."
+    resource_allocation:
+      default_budget_split:
+        directory: "40%"
+        ai_innovation: "30%"
+        nudge: "15%"
+        social_beast: "15%"
+      adjustment: "CEO can shift budget based on weekly revenue data and Chris direction"
 
