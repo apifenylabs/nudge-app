@@ -27,7 +27,7 @@
 3. **Affiliate accounts** — Klook, Booking.com, Viator
 
 ## BUDGET
-- Today: ~$0.06 / $0.50 overnight cap
+- Today: ~$0.09 / $0.50 overnight cap
 - DeepSeek-chat sub-agent: partial timeout ($0.03)
 
 ---
