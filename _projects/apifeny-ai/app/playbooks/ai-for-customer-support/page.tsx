@@ -1,5 +1,6 @@
 'use client';
 
+import SeoMetadata from '@/components/SeoMetadata';
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
 import {
@@ -270,6 +271,7 @@ function AIForCustomerSupportInner() {
 
   return (
     <>
+      <SeoMetadata title="AI for Customer Support — Apifeny" description="Automate customer support with AI chatbots, ticket routing, sentiment analysis, and self-service portals using ChatGPT, Zendesk AI, and Intercom Fin." />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <nav aria-label="Breadcrumb" className="mb-4">
           <ol className="flex flex-wrap items-center gap-1.5 text-xs text-tech-300">

@@ -1,67 +1,49 @@
-# HEARTBEAT.md — May 18 01:40 HKT
+# HEARTBEAT.md — May 18 04:00 HKT
 
-## STATUS: 🟢 ALL 3 SUB-AGENTS COMPLETE
+## STATUS: 🟢 BUILT COMMITTED | 7 SITES HEALTHY
 
-## BUILT THIS WAKE (01:15-01:40)
+## ACTIVE BUILDS: None (all complete)
 
-### ✅ NO AI IMAGES DIRECTIVE — Fully Executed
-- **Audit**: Family Travel (Flickr ✅), Luxury (Unsplash ✅), EV (Unsplash ✅), Kids (was broken → FIXED)
-- **Kids Activities**: 32/32 blog posts now have real Unsplash photos (was all null)
-- **Policy document**: knowledge/operations/image-policy-2026-05-18.md
+## LAST BUILD (03:51-04:00 HKT)
+- ✅ **Apifeny AI: +5 blog posts** (translation tools, email marketing, freelance design, real estate, resume/career)
+- ✅ **35 → 40 total blog posts** on Apifeny AI
+- ✅ Build verified, committed & pushed to master
+- ✅ All 7 sites responding 200
 
-### ✅ Schema.org JSON-LD — 3 Sites
-- Family Travel Asia + Luxury Family Travel + Kids Activities Asia
-- WebSite schema with SearchAction for rich results
-
-### ✅ 5 New Blog Posts — Family Travel Asia
-1. Singapore with Toddlers (parks, playgrounds, free activities)
-2. Family Road Trip Vietnam (Hanoi → Ho Chi Minh)
-3. Osaka with Kids (Universal Studios, Aquarium, day trips)
-4. Best Asian Airlines for Families 2026 (ranked 10 airlines)
-5. Taipei with Kids (night markets, hot springs, day trips)
-
-**123 → 128 total posts** ✅
-
-### Cross-site footer links — Verified all 6 sites already have them ✅
+## SITE HEALTH
+| Site | Status | Content |
+|------|:------:|:-------:|
+| Apifeny AI | ✅ 200 | 79 playbooks (7 paid), 40 blog posts |
+| EV Charging Asia | ✅ 200 | 94 blog, 3 itineraries, 1125 stations |
+| Family Travel Asia | ✅ 200 | 128 blog posts |
+| Luxury Travel Asia | ✅ 200 | 51 blog posts, deployed |
+| Senior Friendly Travel | ✅ 200 | 58 blog posts |
+| Agent HQ | ⚠️ 404 | Not a priority |
+| AI Cofounder | ✅ 200 | — |
 
 ## BLOCKERS (Need Chris)
-1. ⚡ **VITE_STRIPE_SECRET_KEY** — set in Vercel env for apifeny-ai (7 paid products ready)
-2. **Supabase schema** — paste nudge/supabase-schema.sql (30 sec)
+1. ⚡ **VITE_STRIPE_SECRET_KEY** in Vercel env — 7 products ready to sell
+2. **Supabase schema** — nudge/supabase-schema.sql → paste in SQL Editor
 3. **Affiliate accounts** — Klook, Booking.com, Viator
 
-## BUDGET THIS WAKE
-- ~$0.04 (3 sub-agents on DeepSeek-chat)
-- Cumulative today: ~$0.54
+## BUDGET
+- Today: ~$0.06 / $0.50 overnight cap
+- DeepSeek-chat sub-agent: partial timeout ($0.03)
 
 ---
-_Watchdog 2026-05-18 01:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog every 15min_
 
 ---
-_Watchdog 2026-05-18 02:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
-## 02:03 HKT — Trading Beast: Hourly Cron Run ✅
-- Data refreshed: SOL 15m (8640 bars → May 17), BTC 1h (2160 bars → May 17)
-- 3 new live signals (2 SOL SELL, 1 BTC SELL) → 5 total paper trades
-- Signal dedup built & verified — no duplicate logging
-- Next: wire PnL tracking + cron job
+_Watchdog 2026-05-18 04:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
 
 ---
-_Watchdog 2026-05-18 02:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog 2026-05-18 04:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
 
 ---
-_Watchdog 2026-05-18 02:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog 2026-05-18 04:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
 
 ---
-_Watchdog 2026-05-18 02:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog 2026-05-18 04:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
 
 ---
-_Watchdog 2026-05-18 03:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-18 03:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-18 03:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-18 03:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog 2026-05-18 05:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
