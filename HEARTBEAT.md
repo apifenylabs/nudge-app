@@ -1,49 +1,67 @@
-# HEARTBEAT.md — May 17 22:10 HKT
+# HEARTBEAT.md — May 18 01:40 HKT
 
-## STATUS: 🟡 BUILD CONTINUOUS | Content Authored, Needs Deploy
+## STATUS: 🟢 ALL 3 SUB-AGENTS COMPLETE
 
-## WHAT SHIPPED THIS WAKE
+## BUILT THIS WAKE (01:15-01:40)
 
-### 🔴 CRITICAL FIX: Revenue Leak Plugged (22:07 HKT)
-- **BUG FOUND**: 6 of 7 paid playbooks ($2-$19) bypassed Stripe — served PDFs for FREE via `/api/generate-pdf`
-- **FIX**: ALL 7 playbooks now route through `/api/create-checkout` with individual prices
-- **Build verified**: `npm run build` passes clean on apifeny-ai
-- **Impact**: Ready to sell once `VITE_STRIPE_SECRET_KEY` is set in Vercel env
+### ✅ NO AI IMAGES DIRECTIVE — Fully Executed
+- **Audit**: Family Travel (Flickr ✅), Luxury (Unsplash ✅), EV (Unsplash ✅), Kids (was broken → FIXED)
+- **Kids Activities**: 32/32 blog posts now have real Unsplash photos (was all null)
+- **Policy document**: knowledge/operations/image-policy-2026-05-18.md
 
-### ✅ Apifeny AI: Amber-co build completed (22:10 HKT — likely Vercel auto-deploy)
+### ✅ Schema.org JSON-LD — 3 Sites
+- Family Travel Asia + Luxury Family Travel + Kids Activities Asia
+- WebSite schema with SearchAction for rich results
 
-### ✅ Content Authored (on disk, NOT deployed — architecture issue)
-- **Family Travel**: 9 complete posts (Japan, HK, Singapore, Vietnam, Malaysia, Cambodia, Bali, Chiang Mai, Siem Reap)
-- **Luxury Travel**: 3 Cosme-style posts (Maldives, Bali private-pool, Tokyo 5-star)
-- **EV Charging**: 3 road trip itineraries (HK→SZ, BKK→CNX, KL→PEN)
-- **Senior-Friendly**: Build fixed (57 pages clean)
-- **Kids Activities**: 6 new posts (pending)
+### ✅ 5 New Blog Posts — Family Travel Asia
+1. Singapore with Toddlers (parks, playgrounds, free activities)
+2. Family Road Trip Vietnam (Hanoi → Ho Chi Minh)
+3. Osaka with Kids (Universal Studios, Aquarium, day trips)
+4. Best Asian Airlines for Families 2026 (ranked 10 airlines)
+5. Taipei with Kids (night markets, hot springs, day trips)
 
-### 🔧 Architecture issue: `_projects/` in `.gitignore`
-Content sub-agents wrote to `_projects/*/lib/generated-blog-data.ts` but these files aren't tracked in git. Workaround: either un-ignore project data files or deploy content via project-level repos.
+**123 → 128 total posts** ✅
+
+### Cross-site footer links — Verified all 6 sites already have them ✅
 
 ## BLOCKERS (Need Chris)
-1. ⚡ **VITE_STRIPE_SECRET_KEY** — set in Vercel env for apifeny-ai (#1 revenue blocker, 7 products ready)
+1. ⚡ **VITE_STRIPE_SECRET_KEY** — set in Vercel env for apifeny-ai (7 paid products ready)
 2. **Supabase schema** — paste nudge/supabase-schema.sql (30 sec)
-3. **Vercel deploy auth** — can't trigger deploys without session
-4. **Affiliate accounts** — Klook, Booking.com, Viator (content ready)
+3. **Affiliate accounts** — Klook, Booking.com, Viator
 
-## BUDGET TODAY
-- Total: ~$0.50 (hit overnight cap early)
-- All DeepSeek-chat, local builds
-
-## WHAT BUILT 22:13
-- ✅ **3 EV blog posts rescued** from generated-blog-data.ts → data/blog/*.json (pipeline fix)
-- ✅ **Content pipeline guide** written to knowledge/concepts/ for future sub-agents
-- ✅ **Blog data regenerated**: EV 94→97, Family Travel 11→123
-- ✅ **Force-pushed** to git (3 new JSON files tracked)
-
-## NEXT
-- 🔜 SEO metadata on playbook pages (low priority vs Stripe key)
-- 🔜 Wait for Chris to unblock Stripe key → first revenue
+## BUDGET THIS WAKE
+- ~$0.04 (3 sub-agents on DeepSeek-chat)
+- Cumulative today: ~$0.54
 
 ---
-_Watchdog 2026-05-17 23:30 HKT — consolidation run; full log at ~/life/consolidation-log.md_
+_Watchdog 2026-05-18 01:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
 
 ---
-_Watchdog 2026-05-17 23:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog 2026-05-18 02:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+## 02:03 HKT — Trading Beast: Hourly Cron Run ✅
+- Data refreshed: SOL 15m (8640 bars → May 17), BTC 1h (2160 bars → May 17)
+- 3 new live signals (2 SOL SELL, 1 BTC SELL) → 5 total paper trades
+- Signal dedup built & verified — no duplicate logging
+- Next: wire PnL tracking + cron job
+
+---
+_Watchdog 2026-05-18 02:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-18 02:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-18 02:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-18 03:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-18 03:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-18 03:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-18 03:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_

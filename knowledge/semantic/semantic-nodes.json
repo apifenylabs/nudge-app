@@ -1174,5 +1174,264 @@
     "evidence": "{\"detail\": \"Sub-agent rewrote app/page.tsx, dropped all dark: classes. Fixed via CSS cascade in globals.css.\", \"date\": \"2026-05-17\", \"section\": \"Key Lesson\"}",
     "category": "engineering",
     "created": "2026-05-17"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2025-05-12)",
+    "evidence": "{\"context\":\"\\nAll 6 projects deployed to Vercel (prod) and verified 200 OK:\\n\\n| Project | Deployment Time | Domain\",\"date\":\"2025-05-12\",\"section\":\"\u2693 Overnight Build \u2014 2025-05-12 23:36 HKT\"}",
+    "category": "infrastructure",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: planning document",
+    "evidence": "{\"text\":\"\\n**Status:** Need to start actual planning work\\n\\n**Progress since last check:**\\n- Still haven't crea\",\"date\":\"2026-04-10\",\"section\":\"Heartbeat Check - 03:19 AM HKT\"}",
+    "category": "engineering",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: planning document!",
+    "evidence": "{\"text\":\"\\n**Status:** SUCCESS - Finally created planning document!\\n\\n**Progress since last check:**\\n- \u2705 CREATE\",\"date\":\"2026-04-10\",\"section\":\"Heartbeat Check - 04:49 AM HKT\"}",
+    "category": "engineering",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: and tested",
+    "evidence": "{\"text\":\"- \u2705 **Code complete:** All 7 orchestras have production-ready code\\n- \u2705 **Build passes:** Directory B\",\"date\":\"2026-04-19\",\"section\":\"Autonomous System Status\"}",
+    "category": "engineering",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: from Scratch:**",
+    "evidence": "{\"text\":\"**HabitFlow MVP Built from Scratch:**\\n- Created complete Next.js 14 + TypeScript + Tailwind CSS appl\",\"date\":\"2026-04-21\",\"section\":\"1. AppFactory Beast Major Development\"}",
+    "category": "engineering",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: first",
+    "evidence": "{\"text\":\"- **New product**: Universal barcode/product scanner with psychological hooks\\n- **PRD-first**: `prd/\",\"date\":\"2026-04-27\",\"section\":\"ScanWise \u2014 Phase 1 Complete (sub-agent, ~23:40-23:48 HKT)\"}",
+    "category": "engineering",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployed deployed",
+    "evidence": "{\"what\":\"Deployed to production:** https://ev-charging-asia.vercel.app \u2705\",\"date\":\"2026-05-06\",\"section\":\"00:30 HKT \u2014 EV Road Trip Planner Phase 1 Deployed\"}",
+    "category": "infrastructure",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.08 (2026-05-17)",
+    "evidence": "{\"text\":\"- Spawned 2 sub-agents in parallel for independent work\\n- **EV Charging Asia:** Premium hero redesig\",\"date\":\"2026-05-17\",\"section\":\"06:07 HKT \u2014 CEO Autonomous Work Session\"}",
+    "category": "operations",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "content",
+    "label": "94 post (2026-05-17)",
+    "evidence": "{\"text\":\"- Spawned 2 sub-agents in parallel for independent work\\n- **EV Charging Asia:** Premium hero redesign (dark gradient, gradient text, glassmorphism CTA\",\"date\":\"2026-05-17\",\"section\":\"06:07 HKT \u2014 CEO Autonomous Work Session\"}",
+    "category": "content",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: by Chris \u2014 needs Supabase service_role key",
+    "evidence": "{\"text\":\"- All sites built and deployed\\n- P1 (Nudge) still blocked by Chris \u2014 needs Supabase service_role key\\n- P3 (affiliates) still blocked \u2014 needs Chris to join programs\\n- EV Charging needs: trust badges, d\",\"date\":\"2026-05-17\",\"section\":\"Current state\"}",
+    "category": "management",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "build",
+    "label": "Build success (2026-05-17)",
+    "evidence": "{\"result\":\"Builder Template** playbook added to lib/playbooks.ts (58 \u2192 59 playbooks total)\",\"date\":\"2026-05-17\",\"section\":\"12:14 HKT \u2014 Heartbeat: Directory Builder Playbook Built\"}",
+    "category": "infrastructure",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $19 (2026-05-17)",
+    "evidence": "{\"text\":\"- **Directory Builder Template** playbook added to lib/playbooks.ts (58 \u2192 59 playbooks total)\\n- **De\",\"date\":\"2026-05-17\",\"section\":\"12:14 HKT \u2014 Heartbeat: Directory Builder Playbook Built\"}",
+    "category": "operations",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: at /playbooks/directory-builder/ \u2014 807 lines, $19 price poin",
+    "evidence": "{\"text\":\"- **Directory Builder Template** playbook added to lib/playbooks.ts (58 \u2192 59 playbooks total)\\n- **De\",\"date\":\"2026-05-17\",\"section\":\"12:14 HKT \u2014 Heartbeat: Directory Builder Playbook Built\"}",
+    "category": "engineering",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "fix",
+    "label": "Fix: syntax bug** in playbooks",
+    "evidence": "{\"detail\":\"- **Spawned 2 sub-agents**: (1) Apifeny AI playbook generation, (2) Cross-site link audit\\n- **Playbooks**: Added 5 new free playbooks to apifeny-ai (m\",\"date\":\"2026-05-17\",\"section\":\"14:07 HKT \u2014 CEO Work Engine Session\"}",
+    "category": "engineering",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.02 (2026-05-17)",
+    "evidence": "{\"text\":\"- **Spawned 2 sub-agents**: (1) Apifeny AI playbook generation, (2) Cross-site link audit\\n- **Playbo\",\"date\":\"2026-05-17\",\"section\":\"14:07 HKT \u2014 CEO Work Engine Session\"}",
+    "category": "operations",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "blocker",
+    "label": "Blocker: on Chris as always",
+    "evidence": "{\"text\":\"- Committed and pushed ai-workflow-automation playbook page + Directory Builder polish\\n- Updated HEARTBEAT.md\\n- All 7 sites building \u2705, Schema.org done, Nudge blocked on Chris as always\\n- Cost this wa\",\"date\":\"2026-05-17\",\"section\":\"14:23 HKT \u2014 Heartbeat: Commit + Push\"}",
+    "category": "management",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: but NOT committed to workspace git repo",
+    "evidence": "{\"text\":\"- **Spawned 2 sub-agents**: (1) family-travel-affiliate-ctas \u2014 add affiliate CTAs to posts with few/\",\"date\":\"2026-05-17\",\"section\":\"16:07 HKT \u2014 CEO Work Engine Session\"}",
+    "category": "engineering",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.03 (2026-05-17)",
+    "evidence": "{\"text\":\"- P4 Analytics audit completed: All 7 sites have Vercel Analytics + Speed Insights + GA4 component (\",\"date\":\"2026-05-17\",\"section\":\"08:07 HKT \u2014 CEO Autonomous Work Session\"}",
+    "category": "operations",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0 (2026-05-17)",
+    "evidence": "{\"text\":\"- Created `SeoMetadata.tsx` client component (useEffect-based title/OG tag injection)\\n- Added to all\",\"date\":\"2026-05-17\",\"section\":\"23:13 HKT \u2014 SEO Metadata Added to All 7 Paid Playbook Pages\"}",
+    "category": "operations",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: `SeoMetadata",
+    "evidence": "{\"text\":\"- Created `SeoMetadata.tsx` client component (useEffect-based title/OG tag injection)\\n- Added to all\",\"date\":\"2026-05-17\",\"section\":\"23:13 HKT \u2014 SEO Metadata Added to All 7 Paid Playbook Pages\"}",
+    "category": "engineering",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "cost",
+    "label": "Cost data: $0.00 (2026-05-17)",
+    "evidence": "{\"text\":\"- **3 EV blog posts rescued** from generated-blog-data.ts \u2192 proper data/blog/*.json files:\\n  - `hk-s\",\"date\":\"2026-05-17\",\"section\":\"What Built\"}",
+    "category": "operations",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "content",
+    "label": "97 post (2026-05-17)",
+    "evidence": "{\"text\":\"- **3 EV blog posts rescued** from generated-blog-data.ts \u2192 proper data/blog/*.json files:\\n  - `hk-shenzhen-ev-road-trip` \u2014 6.6K chars, 9 min read\\n  -\",\"date\":\"2026-05-17\",\"section\":\"What Built\"}",
+    "category": "content",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "tool",
+    "label": "Tool: content-pipeline-guide",
+    "evidence": "{\"text\":\"- **3 EV blog posts rescued** from generated-blog-data.ts \u2192 proper data/blog/*.json files:\\n  - `hk-s\",\"date\":\"2026-05-17\",\"section\":\"What Built\"}",
+    "category": "engineering",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "deployment",
+    "label": "Deployment event (2026-05-18)",
+    "evidence": "{\"context\":\"1. **Image audit** \u2014 4 sites checked. Family Travel (Flickr \u2705), Luxury (Unsplash \u2705), EV (Unsplash \u2705)\",\"date\":\"2026-05-18\",\"section\":\"Build Output (01:15-01:40 HKT)\"}",
+    "category": "infrastructure",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "content",
+    "label": "32 blog post (2026-05-18)",
+    "evidence": "{\"text\":\"1. **Image audit** \u2014 4 sites checked. Family Travel (Flickr \u2705), Luxury (Unsplash \u2705), EV (Unsplash \u2705), Kids (brok\u2192fixed)\\n2. **Kids Activities fixed** \u2014\",\"date\":\"2026-05-18\",\"section\":\"Build Output (01:15-01:40 HKT)\"}",
+    "category": "content",
+    "created": "2026-05-17"
+  },
+  {
+    "type": "tool",
+    "label": "Trading Beast: run_beast.py path fix + run_cron.py",
+    "evidence": "{\"text\":\"Fixed run_beast.py path bug, built run_cron.py cron-safe entry point, added signal dedup\",\"date\":\"2026-05-18\",\"section\":\"02:03 HKT \u2014 Trading Beast Hourly Cron\"}",
+    "category": "engineering",
+    "created": "2026-05-18"
+  },
+  {
+    "type": "tool",
+    "label": "Trading Beast: signal dedup (fingerprint by symbol+side+entry+SL+TP1)",
+    "evidence": "{\"text\":\"Added signal dedup to paper_logger.py with in-memory + CSV fingerprint reload\",\"date\":\"2026-05-18\",\"section\":\"02:03 HKT \u2014 Trading Beast Hourly Cron\"}",
+    "category": "engineering",
+    "created": "2026-05-18"
+  },
+  {
+    "type": "metric",
+    "label": "Trading Beast: 5 paper trades running (2.5% of 200 target)",
+    "evidence": "{\"text\":\"3 new live signals (2 SOL SELL, 1 BTC SELL). Total paper trades: 5\",\"date\":\"2026-05-18\",\"section\":\"02:03 HKT \u2014 Trading Beast Hourly Cron\"}",
+    "category": "analytics",
+    "created": "2026-05-18"
+  },
+  {
+    "type": "blocker",
+    "label": "Trading Beast: PnL tracking not wired, cron job not set",
+    "evidence": "{\"text\":\"PnL tracking not wired yet. Need exit simulation + PnL computation. Need cron job (currently manual)\",\"date\":\"2026-05-18\",\"section\":\"02:03 HKT \u2014 Trading Beast Hourly Cron\"}",
+    "category": "management",
+    "created": "2026-05-18"
+  },
+  {
+    "type": "decision",
+    "label": "Chris directive: NO AI images \u2014 real Unsplash/Flickr only",
+    "evidence": "{\"text\":\"Chris explicitly banned AI/placeholder images on all 4 directory sites. Real Unsplash/Flickr only.\",\"date\":\"2026-05-18\",\"section\":\"01:16 Chris Directive: NO AI Images\"}",
+    "category": "architecture",
+    "created": "2026-05-18"
+  },
+  {
+    "type": "content",
+    "label": "32 blog post images replaced with Unsplash (Kids Activities)",
+    "evidence": "{\"text\":\"Kids Activities fixed \u2014 32/32 blog posts got Unsplash images via tag-mapping script\",\"date\":\"2026-05-18\",\"section\":\"Build Output (01:15-01:40 HKT)\"}",
+    "category": "content",
+    "created": "2026-05-18"
+  },
+  {
+    "type": "content",
+    "label": "5 new blog posts (Family Travel 123\u2192128 total)",
+    "evidence": "{\"text\":\"Singapore toddlers, Vietnam road trip, Osaka, airline ranking, Taipei\",\"date\":\"2026-05-18\",\"section\":\"Build Output (01:15-01:40 HKT)\"}",
+    "category": "content",
+    "created": "2026-05-18"
+  },
+  {
+    "type": "tool",
+    "label": "Schema.org WebSite JSON-LD deployed on 3 sites",
+    "evidence": "{\"text\":\"Family/Luxury/Kids now have WebSite JSON-LD with SearchAction\",\"date\":\"2026-05-18\",\"section\":\"Build Output (01:15-01:40 HKT)\"}",
+    "category": "engineering",
+    "created": "2026-05-18"
+  },
+  {
+    "type": "decision",
+    "label": "Image policy recorded in knowledge/operations/",
+    "evidence": "{\"text\":\"Image policy documented \u2014 real images only, no AI generated\",\"date\":\"2026-05-18\",\"section\":\"Build Output (01:15-01:40 HKT)\"}",
+    "category": "architecture",
+    "created": "2026-05-18"
+  },
+  {
+    "type": "blocker",
+    "label": "VITE_STRIPE_SECRET_KEY in Vercel \u2014 #1 revenue blocker",
+    "evidence": "{\"text\":\"7 products on apifeny waiting for Stripe key\",\"date\":\"2026-05-18\",\"section\":\"Next Tasks\"}",
+    "category": "management",
+    "created": "2026-05-18"
+  },
+  {
+    "type": "blocker",
+    "label": "Supabase schema for Nudge signup flow",
+    "evidence": "{\"text\":\"Supabase schema needed for Nudge signup flow\",\"date\":\"2026-05-18\",\"section\":\"Next Tasks\"}",
+    "category": "management",
+    "created": "2026-05-18"
+  },
+  {
+    "type": "blocker",
+    "label": "Affiliate accounts needed (Booking, Klook, Viator)",
+    "evidence": "{\"text\":\"Need affiliate accounts for Booking, Klook, Viator\",\"date\":\"2026-05-18\",\"section\":\"Next Tasks\"}",
+    "category": "management",
+    "created": "2026-05-18"
   }
 ]

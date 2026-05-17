@@ -18,6 +18,12 @@ const QUESTIONS = [
     { label: "\u{1F41F} Pescatarian", value: "pescatarian" }, { label: "\u{1FAD2} Mediterranean", value: "mediterranean" },
     { label: "\u{1F969} Paleo", value: "paleo" }, { label: "\u{1F33E} Gluten-free", value: "gluten-free" },
   ]},
+  { id: "cuisine", label: "What cuisine vibe are you in the mood for?", type: "select" as const, options: [
+    { label: "🍣 Asian", value: "asian" }, { label: "🍝 Italian", value: "italian" },
+    { label: "🌮 Mexican", value: "mexican" }, { label: "🥙 Middle Eastern", value: "middle-eastern" },
+    { label: "🍔 American", value: "american" }, { label: "🍋 Mediterranean", value: "mediterranean" },
+    { label: "🍜 Fusion", value: "fusion" },
+  ]},
   { id: "allergies", label: "Any food allergies?", type: "multi" as const, options: [
     { label: "\u2705 None", value: "none" }, { label: "\u{1F95B} Dairy", value: "dairy" },
     { label: "\u{1F95C} Nuts", value: "nuts" }, { label: "\u{1F990} Shellfish", value: "shellfish" },
@@ -145,7 +151,7 @@ function CostBreakdownChart({ weeklyTotal }: { weeklyTotal: number }) {
         {arcs.map((a, i) => (
           <div key={i} className="flex items-center gap-1.5 text-[10px]">
             <span className="w-2 h-2 rounded-full flex-shrink-0" style={{background:a.color}} />
-            <span className="text-muted">{a.emoji} {a.label}</span>
+            <span className="text-ink/50">{a.emoji} {a.label}</span>
             <span className="font-medium text-ink">${a.value}</span>
           </div>
         ))}
@@ -165,11 +171,11 @@ function DailyNutritionBar() {
           <div key={d} className="flex flex-col items-center gap-1 flex-1">
             <div className="w-full rounded-t-md bg-gradient-to-t from-meal/40 to-meal transition-all duration-500 hover:opacity-80"
               style={{ height: `${(cals[i]/max)*100}%`, minHeight: "8px" }} />
-            <span className="text-[9px] text-muted font-medium">{d}</span>
+            <span className="text-[9px] text-ink/50 font-medium">{d}</span>
           </div>
         ))}
       </div>
-      <div className="flex justify-between mt-2 text-[9px] text-muted">
+      <div className="flex justify-between mt-2 text-[9px] text-ink/50">
         <span>1,650</span>
         <span>2,100</span>
       </div>
@@ -314,7 +320,7 @@ export default function InteractiveMealPlanning() {
       {/* SOCIAL PROOF BAR */}
       {step === 0 && (
         <div className="bg-white/80 border-b border-border/30 py-2">
-          <div className="section-container flex items-center justify-center gap-4 sm:gap-8 text-[10px] text-muted">
+          <div className="section-container flex items-center justify-center gap-4 sm:gap-8 text-[10px] text-ink/50">
             <span className="flex items-center gap-1"><Check size={10} className="text-meal" /> Dietitian-approved</span>
             <span className="flex items-center gap-1"><Star size={10} className="text-highlight fill-highlight" /> 10K+ plans</span>
             <span className="flex items-center gap-1"><Users size={10} className="text-meal" /> 1,247 families</span>
@@ -340,7 +346,7 @@ export default function InteractiveMealPlanning() {
               <h1 className="text-4xl sm:text-5xl font-bold text-ink mb-4 tracking-tight">
                 Get Your <span className="text-meal">Personalized</span> Meal Plan
               </h1>
-              <p className="text-lg text-muted leading-relaxed mb-8">
+              <p className="text-lg text-ink/70 leading-relaxed mb-8">
                 Stop wondering what&apos;s for dinner. Answer a few questions and let our AI build a weekly plan tailored to your diet, budget, and pantry.
               </p>
               <div className="grid grid-cols-2 gap-3 max-w-xs mx-auto mb-10">
@@ -359,7 +365,7 @@ export default function InteractiveMealPlanning() {
               <button onClick={next} className="btn-primary text-base px-8 py-3.5 rounded-2xl shadow-md">
                 Start {String.fromCharCode(8594)} <ArrowRight className="w-5 h-5" />
               </button>
-              <div className="mt-8 flex items-center justify-center gap-4 text-xs text-muted">
+              <div className="mt-8 flex items-center justify-center gap-4 text-xs text-ink/50">
                 <span className="flex items-center gap-1"><Heart className="w-3 h-3" /> Dietitian-approved</span>
                 <span className="flex items-center gap-1"><Check className="w-3 h-3" /> 10K+ plans generated</span>
               </div>
@@ -439,7 +445,7 @@ export default function InteractiveMealPlanning() {
                       </button>
                     );
                   })}
-                  <p className="text-xs text-muted mt-1">Select all that apply</p>
+                  <p className="text-xs text-ink/50 mt-1">Select all that apply</p>
                 </div>
               )}
 
@@ -481,7 +487,7 @@ export default function InteractiveMealPlanning() {
                 <Loader2 className="w-8 h-8 text-meal animate-spin" />
               </div>
               <h2 className="text-2xl font-bold text-ink mb-2">Cooking up your plan...</h2>
-              <p className="text-sm text-muted mb-8">Our AI is analyzing your preferences</p>
+              <p className="text-sm text-ink/60 mb-8">Our AI is analyzing your preferences</p>
               <div className="space-y-2.5 text-left max-w-xs mx-auto">
                 {AGENT_THOUGHTS.map((t, idx) => (
                   <div key={idx} className={`transition-all duration-500 ${idx <= genThought ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}>
@@ -537,7 +543,7 @@ export default function InteractiveMealPlanning() {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-ink">{SAMPLE_WEEK[selectedDay].day}</h3>
-                  <span className="text-xs text-muted">{'\u{1F525}'} {SAMPLE_WEEK[selectedDay].cals} cal</span>
+                  <span className="text-xs text-ink/50">{'\u{1F525}'} {SAMPLE_WEEK[selectedDay].cals} cal</span>
                 </div>
                 <div className="grid gap-3">
                   {MEAL_KEYS.map(key => {
@@ -581,9 +587,9 @@ export default function InteractiveMealPlanning() {
                   <span className="font-semibold text-sm text-ink">Daily Nutrition (avg)</span>
                 </div>
                 <div className="space-y-2.5">
-                  <div className="flex items-center justify-between"><span className="text-xs text-muted">Calories</span><span className="text-sm font-semibold text-ink">{avgCals.toLocaleString()}</span></div>
-                  <div className="flex items-center justify-between"><span className="text-xs text-muted">Protein</span><span className="text-sm font-semibold text-ink">~95g</span></div>
-                  <div className="flex items-center justify-between"><span className="text-xs text-muted">Fiber</span><span className="text-sm font-semibold text-ink">~28g</span></div>
+                  <div className="flex items-center justify-between"><span className="text-xs text-ink/50">Calories</span><span className="text-sm font-semibold text-ink">{avgCals.toLocaleString()}</span></div>
+                  <div className="flex items-center justify-between"><span className="text-xs text-ink/50">Protein</span><span className="text-sm font-semibold text-ink">~95g</span></div>
+                  <div className="flex items-center justify-between"><span className="text-xs text-ink/50">Fiber</span><span className="text-sm font-semibold text-ink">~28g</span></div>
                   <div className="mt-3 pt-3 border-t border-border/30">
                     <DailyNutritionBar />
                   </div>
@@ -601,7 +607,7 @@ export default function InteractiveMealPlanning() {
                 {SUBSTITUTIONS.map((s, i) => (
                   <div key={i} className="flex items-start gap-2 text-xs">
                     <span className="text-meal font-medium">{s.i}</span>
-                    <span className="text-muted">{'\u2192'}</span>
+                    <span className="text-ink/50">{'\u2192'}</span>
                     <span className="text-ink/70">{s.s}</span>
                   </div>
                 ))}
@@ -614,7 +620,7 @@ export default function InteractiveMealPlanning() {
                 <div className="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center flex-shrink-0">{'\u{2728}'}</div>
                 <div className="flex-1">
                   <h3 className="text-lg font-bold text-ink mb-1">{'\u{1F451}'} Unlock Premium</h3>
-                  <p className="text-sm text-muted mb-3">Get personalized macro targets, export to PDF, unlimited substitutions, and priority support.</p>
+                  <p className="text-sm text-ink/60 mb-3">Get personalized macro targets, export to PDF, unlimited substitutions, and priority support.</p>
                   <button className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-accent text-white text-xs font-semibold hover:bg-accent/90 transition-all">
                     Upgrade for $9/mo <ArrowRight size={12} />
                   </button>
@@ -711,7 +717,7 @@ export default function InteractiveMealPlanning() {
                 <Mail className="w-8 h-8 text-meal" />
               </div>
               <h2 className="text-2xl font-bold text-ink mb-2">Plan Saved!</h2>
-              <p className="text-sm text-muted mb-6">Enter your email to receive future updates and new meal plans.</p>
+              <p className="text-sm text-ink/60 mb-6">Enter your email to receive future updates and new meal plans.</p>
               <div className="flex gap-2">
                 <input type="email" placeholder="you@email.com"
                   value={email} onChange={e => setEmail(e.target.value)}
@@ -720,7 +726,7 @@ export default function InteractiveMealPlanning() {
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
-              <p className="text-[10px] text-muted mt-3">No spam. Unsubscribe anytime.</p>
+              <p className="text-[10px] text-ink/50 mt-3">No spam. Unsubscribe anytime.</p>
             </div>
           </div>
         )}
