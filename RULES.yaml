@@ -1853,6 +1853,24 @@ declutter_ceo_chat:
     sunsetting: "When a beast has zero tasks for 60+ days, CEO archives its topic log."
     rule: "The beast list is a living document, not a prison. Add, rename, split, or merge as strategy demands."
 
+  # ─── BEAST DELEGATION RULES ───
+
+  # LIFEOS DELEGATION RULE (LOCKED May 18 2026)
+  lifeos_delegation_rule:
+    locked: true
+    lock_date: "2026-05-18"
+    rule: "ALL heavy LifeOS / meal planning / AI copilot work MUST be delegated to the lifeos beast sub-agent. CEO chat receives only summaries and status updates. Never the full detailed work."
+    what_gets_delegated:
+      - "Meal planning UI/UX changes and polish"
+      - "Recipe card design and food photo sourcing"
+      - "All AI copilot feature work"
+      - "Categories refinements (travel, finance, solopreneur)"
+      - "Blog content about LifeOS features"
+    what_ceo_chat_gets:
+      - "Confirmation of delegation (1 line)"
+      - "Status: done/fail + new URL"
+      - "Only escalate to CEO chat if blocked on Chris"
+
 # ═══════════════════════════════════════════════════════════════
 # END OF RULES.yaml
 # ═══════════════════════════════════════════════════════════════
