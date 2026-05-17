@@ -15,6 +15,9 @@
 
 set +eu  # Don't exit on errors — we want full diagnostics, even on failed cd
 
+# Ensure npm global bin is in PATH (cron context often lacks it)
+export PATH="$HOME/.npm-global/bin:$HOME/.local/bin:/usr/bin:/bin:$PATH"
+
 # ─── Config ───────────────────────────────────────────────────────
 WORKSPACE="/home/captain/.openclaw/workspace"
 LIFE_DIR="$WORKSPACE/life"
@@ -452,6 +455,7 @@ _generate_ceo_tasks() {
   log ""
   
   local tasks=0
+  local task_dedup=""  # track unique tasks already added to prevent duplicates
   
   # Task 1: Check if any site is down
   local site_check_log
@@ -459,28 +463,67 @@ _generate_ceo_tasks() {
   if [ -n "$site_check_log" ]; then
     log "$ERR **TASK:** Fix down sites detected this cycle"
     log "  $INFO Priority: P0 — sites returning non-200"
+    task_dedup="$task_dedup site-down"
     ((tasks++))
   fi
   
   # Task 2: Stalled projects (only genuinely stalled, not archived)
-  local stalled
-  stalled=$(grep "STALLED" "$LOG" 2>/dev/null | head -5)
-  if [ -n "$stalled" ]; then
-    # Filter out archived/deferred projects
+  # Use /tmp/stalled-cache.md to avoid re-listing same projects every cycle
+  local stalled_cache="/tmp/ceo-stalled-cache.md"
+  if [ ! -f "$stalled_cache" ]; then
+    echo "Initialized $(date '+%Y-%m-%d')" > "$stalled_cache"
+  fi
+  
+  # Only scan for stalled if last scan was > 12h ago
+  local cache_time
+  cache_time=$(stat -c %Y "$stalled_cache" 2>/dev/null || echo "0")
+  local now_ts
+  now_ts=$(date +%s)
+  local cache_age=$(( (now_ts - cache_time) / 3600 ))
+  
+  if [ "$cache_age" -gt 12 ]; then
+    # Fresh scan — check ALL git repos outside workspace for stalled projects
+    local ALL_GIT_REPOS
+    ALL_GIT_REPOS=$(find /home/captain -maxdepth 4 -name ".git" -type d 2>/dev/null | sed 's|/\.git$||' | sort -u)
+    local stalled_list=""
+    local now_s
+    now_s=$(date +%s)
     local real_stalled=""
-    while read -r line; do
-      local proj_name
-      proj_name=$(echo "$line" | sed 's/.*\*\*\(.[^:*]*\)[:**].*/\1/')
-      local arch="/home/captain/.openclaw/workspace/life/Archives/stalled-projects/$proj_name.md"
-      if [ ! -f "$arch" ]; then
-        real_stalled="$real_stalled$proj_name "
+    
+    for proj_dir in $ALL_GIT_REPOS; do
+      local proj
+      proj=$(basename "$proj_dir")
+      [ "$proj_dir" = "$WORKSPACE" ] && continue
+      [ "$proj" = "openclaw" ] && continue
+      [ "$proj" = "canvas" ] && continue
+      [ "$proj" = "." ] && continue
+      [ ! -d "$proj_dir/.git" ] && continue
+      
+      cd "$proj_dir" 2>/dev/null || continue
+      local last_ts
+      last_ts=$(git log -1 --format=%ct 2>/dev/null || echo "0")
+      local age_hours=$(( (now_s - last_ts) / 3600 ))
+      local arch="/home/captain/.openclaw/workspace/life/Archives/stalled-projects/$proj.md"
+      
+      if [ "$age_hours" -gt 72 ] && [ ! -f "$arch" ]; then
+        real_stalled="$real_stalled $proj"
       fi
-    done <<< "$stalled"
-    if [ -n "$real_stalled" ]; then
-      log "$WARN **TASK:** Re-engage stalled projects: $real_stalled"
-      echo "$real_stalled" | while read -r proj; do
+    done
+    
+    echo "$real_stalled" | tr ' ' '\n' | sort -u > "$stalled_cache"
+  fi
+  
+  local stalled_count
+  stalled_count=$(wc -l < "$stalled_cache" 2>/dev/null || echo 0)
+  if [ "$stalled_count" -gt 0 ] && [ "$stalled_count" -lt 50 ]; then
+    local proj_names
+    proj_names=$(grep -v "^Initialized" "$stalled_cache" 2>/dev/null | grep -v "^$" | head -5 | tr '\n' ' ')
+    if [ -n "$proj_names" ]; then
+      log "$WARN **TASK:** Re-engage stalled projects: $proj_names"
+      echo "$proj_names" | tr ' ' '\n' | while read -r proj; do
         [ -n "$proj" ] && log "  $INFO Suggested: Investigate $proj — commit pending work or unpause"
       done
+      task_dedup="$task_dedup stalled"
       ((tasks++))
     fi
   fi

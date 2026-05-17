@@ -6,6 +6,18 @@
 
 ## Build Session Log
 
+### Session 23:07 HKT — Parallel sub-agents: affiliate links on ev-charging + OG SEO metadata on playbook pages
+
+**Accomplished:**
+- ✅ Created `components/SeoMetadata.tsx` — client-side metadata injector (document.title + OG tags via useEffect)
+- ✅ Added per-page SeoMetadata to ALL 7 paid playbook pages with unique titles/descriptions
+- ✅ Sub-agent added contextual affiliate link scaffolds (Klook/Booking) to ALL 15 ev-charging blog posts
+- ✅ Build verified: both apifeny-ai + ev-charging-asia pass clean
+
+**Affiliate links now on 33/33 ev-charging posts** — all ready to earn when Chris signs up affiliate accounts.
+
+---
+
 ### Session 22:07 HKT — Fixed critical revenue leak: ALL 7 paid playbooks now go through Stripe checkout
 
 **Revenue-critical fix:**
@@ -36,8 +48,10 @@ The `generate-pdf` API served PDFs directly without any payment gate. Anyone cli
 
 **Next session cursor:**
 1. ✅ Revenue leak fixed — all playbooks now require Stripe checkout
-2. ⏳ Still blocked: Chris needs to set `VITE_STRIPE_SECRET_KEY` in Vercel env for real payments
-3. 🎯 Next buildable: SEO metadata on playbook pages, affiliate links on directory sites
+2. ✅ All 7 paid playbook pages now have unique per-page OG metadata / SEO titles
+3. ✅ All 15 ev-charging blog posts now have affiliate link scaffolds (33/33 total)
+4. ⏳ Still blocked: Chris needs `VITE_STRIPE_SECRET_KEY` in Vercel env
+5. 🎯 Next buildable: SEO metadata on free playbook pages, internal cross-linking audit, more ev-charging content
 
 ---
 

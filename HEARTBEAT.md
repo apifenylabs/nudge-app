@@ -32,7 +32,18 @@ Content sub-agents wrote to `_projects/*/lib/generated-blog-data.ts` but these f
 - Total: ~$0.50 (hit overnight cap early)
 - All DeepSeek-chat, local builds
 
+## WHAT BUILT 22:13
+- ✅ **3 EV blog posts rescued** from generated-blog-data.ts → data/blog/*.json (pipeline fix)
+- ✅ **Content pipeline guide** written to knowledge/concepts/ for future sub-agents
+- ✅ **Blog data regenerated**: EV 94→97, Family Travel 11→123
+- ✅ **Force-pushed** to git (3 new JSON files tracked)
+
 ## NEXT
-- 🔜 Fix content deployment pipeline (un-ignore or copy content to tracked paths)
-- 🔜 SEO metadata pass on all playbook pages
+- 🔜 SEO metadata on playbook pages (low priority vs Stripe key)
 - 🔜 Wait for Chris to unblock Stripe key → first revenue
+
+---
+_Watchdog 2026-05-17 23:30 HKT — consolidation run; full log at ~/life/consolidation-log.md_
+
+---
+_Watchdog 2026-05-17 23:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
