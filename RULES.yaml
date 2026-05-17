@@ -1040,10 +1040,14 @@ project_portfolio:
       status: "ACTIVE — 58 playbooks, 90 tools"
     - name: "social-beast"
       status: "ACTIVE — seed data deployed"
-    - name: "senior-friendly-travel"
-      status: "ACTIVE — 58 blog posts"
     - name: "ai-cofounder"
       status: "ACTIVE — deployed"
+  deprioritized_projects:
+    - name: "senior-friendly-travel"
+      status: "DEPRIORITIZED — zero effort until $1k MRR. No domain purchase. No new content."
+    - name: "kidscan-api"
+      status: "DEPRIORITIZED — moved from deferred. No effort until $1k MRR.
+
   deferred_projects:
     - name: "kidscan-api"
       status: "DEFERRED — core but no active work"
@@ -1057,7 +1061,8 @@ project_portfolio:
       status: "ARCHIVED — one-off experiment"
       archive_path: "~/life/Archives/stalled-projects/habit-tracker.md"
   total: 14
-  active: 10
+  active: 8
+  deprioritized: 2
   deferred: 2
   archived: 2
   next_review: "2026-06-17"
@@ -1512,6 +1517,58 @@ revenue_agent_sops:
     cadence: "CEO agent checks each agent's SOP compliance during heartbeat cycles"
     monitoring: "Each agent logs completed work to its topic log + ceo-central-log.md"
     violation: "If an agent proposes a non-revenue action without justification, flag in ceo-central-log.md and reframe or reject"
+
+# ═══════════════════════════════════════════════════════════════
+# CEO SPRINT SYSTEM (LOCKED May 17 2026)
+# ═══════════════════════════════════════════════════════════════
+# 2-week sprints aligned to Revenue Agents, with revenue-first prioritization.
+
+ceo_sprint_system:
+  locked: true
+  lock_date: "2026-05-17"
+  enabled: true
+  description: "2-week sprints with P0-P3 priorities, revenue impact scores, and strict guardrails."
+  sprint_length: "2 weeks"
+  review_cadence: "Weekly (Sunday check-in), with adjustments based on treasury.md + research-archive findings"
+  
+  priority_tiers:
+    P0:
+      label: "CRITICAL — Direct revenue this sprint"
+      rule: "Work on before anything else. Must ship before sprint end."
+      check: "Does this directly generate revenue THIS sprint?"
+    P1:
+      label: "HIGH — Revenue path but blocked or needs setup"
+      rule: "Work if P0 complete or blocked. Prepare materials for unblocking."
+      check: "Does this enable revenue in next 1-2 sprints?"
+    P2:
+      label: "MEDIUM — Supports revenue (SEO, content, cross-links)"
+      rule: "Work when P0-P1 are done or blocked. Must be revenue-supporting, not busywork."
+      check: "Does this support or accelerate revenue channels?"
+    P3:
+      label: "LOW — Future prep. DO NOT START."
+      rule: "Zero effort until $1k MRR milestone reached. Only evaluate, never build."
+      check: "Have we hit $1k MRR? If no → DO NOT START."
+  
+  sprint_backlog_location: "~/work-engine-state.md"
+  treasury_location: "~/life/Resources/treasury.md"
+  
+  guardrails:
+    - "Only start new work after current sprint P0-P2 tasks are complete or blocked"
+    - "Every task must have a revenue impact score (HIGH/MEDIUM/LOW) in the backlog"
+    - "No new domains until $1k MRR. Chris pays for 3-4 max. Must pass New Project Guardrail."
+    - "Senior Friendly Travel + Kids Activities = ZERO effort until $1k MRR. No domain. No content."
+    - "If a task doesn't drive revenue this sprint or enable next-sprint revenue, it's not on the backlog"
+  
+  ceo_weekly_review:
+    enabled: true
+    schedule: "Every Sunday"
+    process:
+      - "Read treasury.md — any revenue yet?"
+      - "Read research-archive/ latest entries with [CEO-REVIEW] — any actionable findings?"
+      - "Review current sprint backlog — what's done, blocked, or needs reprioritization?"
+      - "Update work-engine-state.md with status"
+      - "If all P0 done and P1 unblocked → promote P1 to P0"
+      - "Log review in ceo-central-log.md"
 
 # ═══════════════════════════════════════════════════════════════
 # END OF RULES.yaml — DO NOT ADD CONTENT BELOW THIS LINE

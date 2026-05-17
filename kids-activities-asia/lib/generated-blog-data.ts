@@ -5,12 +5,12 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
-  date: string;
   content: string;
+  date: string;
+  author: string;
+  readingTime: string;
   tags: string[];
   imageUrl?: string;
-  author?: string;
-  readingTime?: number | string;
 }
 
 const allPosts: BlogPost[] = [

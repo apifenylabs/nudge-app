@@ -18,15 +18,15 @@
 | 6 | Luxury Family Travel Asia | luxury-family-travel-asia | Directory Revenue Agent | $3k (premium) | ACTIVE — 51 blog posts | luxury-family-travel-asia.vercel.app |
 | 7 | Apifeny AI | apifeny-ai | AI/Innovation Revenue Agent | $3k (playbooks + ads) | ACTIVE — 58 playbooks, 90 tools, PDF playbook launched | apifeny-ai.vercel.app |
 | 8 | Social Beast | social-beast | Social Beast Revenue Agent | $1k (distribution) | ACTIVE — seed data deployed | social-beast-two.vercel.app |
-| 9 | Senior Friendly Travel | senior-friendly-travel | Directory Revenue Agent (sub) | $1k (affiliates) | ACTIVE — 58 blog posts | seniortravel.vercel.app |
-| 10 | AI Cofounder | ai-cofounder | AI/Innovation Revenue Agent | TBD | ACTIVE — deployed | ai-cofounder.vercel.app |
+| 9 | AI Cofounder | ai-cofounder | AI/Innovation Revenue Agent | TBD | ACTIVE — deployed | ai-cofounder.vercel.app |
 
-## Deferred Projects
+## Deprioritized Projects (Zero Effort until $1k MRR)
 
 | # | Project | Slug | Owner Agent | Notes |
 |---|---------|------|-------------|-------|
-| 1 | KidsCan API / Kids Activities Asia | kidscan-api | Directory Revenue Agent (sub) | Core product, powers deployed site. No active work until schema unblocked |
-| 2 | Social Beast Components | social-beast-components | Social Beast Revenue Agent | Component library for distribution pipeline. Deferred until Social Beast needs expansion |
+| 1 | Senior Friendly Travel | senior-friendly-travel | Directory Revenue Agent (sub) | **DEPRIORITIZED** — zero new content, no domain purchase, no effort until $1k MRR |
+| 2 | Kids Activities Asia | kidscan-api | Directory Revenue Agent (sub) | **DEPRIORITIZED** — moved from deferred. No new content, no domain, no effort until $1k MRR |
+| 3 | Social Beast Components | social-beast-components | Social Beast Revenue Agent | **DEPRIORITIZED** — component library not needed until Social Beast is active |
 
 ## Archived Projects
 
@@ -37,10 +37,10 @@
 
 ## Project Counts
 
-- **Active:** 10
-- **Deferred:** 2
+- **Active (revenue-focused):** 8
+- **Deprioritized (zero effort):** 3
 - **Archived:** 2
-- **Total:** 14
+- **Total:** 13
 
 ## Index Health
 

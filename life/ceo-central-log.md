@@ -41,12 +41,20 @@
 | RULES.yaml project_portfolio | 2026-05-17 | ✅ Synced |
 
 ## Quick Stats
-- **Active projects:** 10
-- **Deferred:** 2
+- **Active projects:** 8
+- **Deprioritized (zero effort):** 2 (Senior Travel, Kids Activities — no domain, no content until $1k MRR)
 - **Archived:** 2
 - **Revenue:** $0
 - **Daily budget:** $0.31 / $0.50
 - **Index consistency:** All green ✅
+
+### 📋 Sprint 1 (May 17–31) Active
+- **P0:** Apifeny AI — 3 playbook landing pages, pipeline-stage rankings (revenue: $9-$29/sale)
+- **P1:** Nudge — schema prep + Stripe verification (blocked on Chris: 30s SQL paste)
+- **P2:** Traffic — cross-linking, SEO audit (indirect revenue)
+- **P3:** ⛔ DO NOT START — no new domains, no Senior/Kids work, no side projects until $1k MRR
+- **Sprint goal:** Ship first revenue. Zero new domains.
+- **Guardrail enforced:** Senior + Kids = ZERO effort. No domain cost. No content.
 
 ### 📁 Per-Topic Logging System deployed
 Created dedicated topic logs for every active project:

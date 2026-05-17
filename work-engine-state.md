@@ -1,38 +1,81 @@
-# Work Engine State
+# Work Engine State — Sprint System
 
-## Cursor: P2 IMPROVE — Affiliate links inserted (12/14 posts), blog data regenerated on 3 sites
+> Sprint-based organization aligned to 4 Revenue Agents.
+> 2-week sprints with P0–P3 priorities, revenue impact scores, and guardrails.
+> Last updated: 2026-05-17 11:23 HKT
 
-**Last updated:** 2026-05-17 10:15 HKT
+---
 
-## Completed This Wake (10:07-10:15 HKT)
-1. ✅ **Affiliate link insertion into 12 blog posts** (sub-agent running, 12/14 done, 2 remaining) — family-travel-directory: Klook (38VWJMX), Viator (455806), Booking.com (2875669) links added to posts that previously had zero affiliate links. Sub-agent finishing last 2.
-2. ✅ **Regenerated blog data on 3 sites (massive content unlock):**
-   - **Luxury Family Travel**: 1 → **50 blog posts** (generator was stale, JSON files existed but weren't compiled)
-   - **Kids Activities Asia**: 1 → **32 blog posts** (same generator issue)
-   - **EV Charging Asia**: 28 → **94 blog posts** (generator was stale)
-   - **Family Travel Directory**: already had 120 blog posts (confirmed)
-3. ✅ **Build verified** — family-travel-directory builds clean with all affiliate code + 580+ destination pages
-4. ✅ **Senior-friendly-travel-asia** — 36 blog posts confirmed (uses static JSON imports, already correct)
+## Current Sprint: May 17–31, 2026 (Sprint 1)
 
-## Blockers (Need Chris)
-- **Vercel deploy** — All sites have new content but can't deploy without Vercel auth fix
-- **GA4 analytics** — P4 is DONE, waiting for Chris to create GA4 property
-- **Nudge** — Needs Supabase service_role key (SQL must be run manually)
-- **Affiliate program sign-ups** — Klook (38VWJMX) and Viator (455806) are live; Booking.com (2875669) needs confirmation; Agoda, Expedia not yet joined
+### Sprint Goal
+**Ship first revenue** — finalize Apifeny AI monetization + prepare Nudge for launch. No new directories, no domains, no side projects.
 
-## Priority Queue (Current Reality)
-- **P0:** 🚫 BLOCKED (Vercel auth — Chris must fix)
-- **P1:** Apifeny AI — playbook content, blog content, SEO  
-- **P2:** All sites have blog content now (120+50+32+94+36+52=384 total posts across sites)
-  - Next: EV Charging blog posts could use more content (already 94)
-  - Next: Cross-site internal linking
-- **P3:** 🚫 BLOCKED (waiting for Chris directive per work-engine rules)
-- **P4:** DONE (waiting on Chris for GA4)
+### Sprint Backlog
 
-## Active Sessions
-- Sub-agent adding affiliate links to final 2 blog posts (running)
+#### P0: Apifeny AI MVP Completion
+| Task | Revenue Impact | Effort | Dependencies |
+|------|:--------------:|:------:|:------------:|
+| Create 2nd playbook landing page (Directory Builder) | HIGH ($9-$29/sale) | 2h | None |
+| Create 3rd playbook landing page (AI Workflow Automation) | HIGH ($9-$29/sale) | 2h | None |
+| Organize tool rankings by pipeline stage (ideate→build→launch→scale) | MEDIUM (discoverability) | 1h | None |
+| Add [CEO-REVIEW] research to playbook content | MEDIUM (quality) | 30m | Research done ✅ |
+| **Total P0:** 4 tasks | Revenue: unbounded (first $ matters) | ~5.5h | — |
 
-## Notes
-- **Massive content discovery**: All sites had JSON source files that weren't being compiled into blog data. Generating them instantly created +150 blog posts across 3 sites.
-- Cumulative cost this wake: ~$0.04
-- RAM: 11.7 GB free
+#### P1: Nudge Monetization
+| Task | Revenue Impact | Effort | Dependencies |
+|------|:--------------:|:------:|:------------:|
+| Prepare supabase-schema.sql with copy-paste instructions | MEDIUM ($5-$9/mo/user) | 15m | Schema file exists |
+| Write "Schema Setup Guide" for Chris (3 steps, <1 min) | MEDIUM | 10m | Schema prep done |
+| Verify pricing page + Stripe test flow works | MEDIUM | 30m | Schema must run |
+| **Total P1:** 3 tasks | Revenue: $5-$9/mo per user | ~55m | Blocked: Chris runs schema |
+
+#### P2: Traffic + First Sales
+| Task | Revenue Impact | Effort | Dependencies |
+|------|:--------------:|:------:|:------------:|
+| Cross-link Apifeny playbooks → directory sites | LOW (organic traffic) | 30m | P0 done |
+| Cross-link directories → Apifeny AI | LOW | 15m | None |
+| SEO keyword audit for Apifeny AI homepage | LOW (long-term) | 30m | None |
+| **Total P2:** 3 tasks | Revenue: indirect | ~1.25h | — |
+
+#### P3: Future Prep (Do NOT start until $1k MRR)
+| Task | Revenue Impact | Notes |
+|------|:--------------:|:------|
+| New directory or product evaluation | HIGH but premature | Must pass Revenue-First Guardrail + New Project Guardrail |
+| Domain purchases | $0 | Only after $1k MRR. Chris pays for 3-4 max. |
+| Senior / Kids content | $0 | **DEPRIORITIZED** — zero effort. No domain, no content. |
+
+### Blockers (Need Chris)
+1. **Supabase schema** — nudge/supabase-schema.sql → paste in Supabase SQL Editor (30 sec)
+2. **VITE_STRIPE_SECRET_KEY** — set in Vercel env for apifeny-ai (enables PDF sales)
+3. **Affiliate accounts** — Klook, Booking, Viator (content ready, just needs signup)
+
+### Revenue Dashboard
+| Project | Status | MRR | Path to First $ |
+|---------|--------|:---:|:---------------:|
+| Apifeny AI | Sprint P0 | $0 | PDF playbook sales ($9 each) |
+| Nudge | Sprint P1 (blocked) | $0 | Subscriptions ($5-9/mo) |
+| Directories | Waiting on affiliates | $0 | Affiliate commissions |
+| Social Beast | Waiting on API keys | $0 | Traffic/lead attribution |
+
+### Guardrails
+- ✅ Revenue-First Filter: Every task passes the 3-question gate
+- ✅ New Project Guardrail: Any new project needs research + business case + approval
+- ✅ Zero new domains: Chris pays for 3-4 max, only after $1k MRR
+- ✅ Deprioritized: Senior, Kids — ZERO effort until $1k MRR
+
+---
+
+## Sprint Cadence
+
+- **Sprint length:** 2 weeks
+- **Review:** Every Sunday (weekly check-in)
+- **Adjustment:** Based on treasury.md + research-archive findings
+- **Backlog grooming:** When P0 tasks complete, P1 becomes P0. Never start P3 before P0-P2 done.
+
+## Task State Rules
+- ✅ Done — completed and verified
+- 🔄 In Progress — actively working
+- ⏳ Blocked — waiting on Chris (prepare materials, report status)
+- 📋 Ready — in backlog, next available
+- ❌ Skipped — deferred to future sprint

@@ -1,17 +1,6 @@
-// Auto-generated from data/blog/*.json — DO NOT EDIT DIRECTLY
-// Run: npm run generate-blog-data
+// Auto-generated from data/blog/*.json
 
-export interface BlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  author: string;
-  tags: string[];
-  readingTime: string;
-  content: string;
-  relatedDestinations: string[];
-}
+export interface BlogPost { slug: string; title: string; excerpt: string; content: string; date: string; author: string; readingTime: string; tags: string[]; imageUrl?: string; }
 
 const allPosts: BlogPost[] = [
   {
