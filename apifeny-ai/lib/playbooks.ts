@@ -5324,6 +5324,503 @@ export const playbooks: Playbook[] = [
     ],
   },
 
+  // ════════════════════════════════════════════════════
+  // COMMERCIAL PLAYBOOK: AI Workflow Automation (PDF, $9)
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'ai-workflow-automation',
+    title: 'AI Workflow Automation',
+    subtitle: 'Build autonomous workflows that save 20+ hours per week',
+    description: 'The complete guide to designing, deploying, and scaling AI-powered automation pipelines. From no-code connectors to multi-agent systems — learn how to audit workflows, select the right tools, and build automation that actually works at scale.',
+    meta_title: 'AI Workflow Automation Playbook — Build Autonomous Pipelines | Apifeny AI',
+    meta_description: 'Complete guide to AI workflow automation. Save 20+ hours per week with autonomous pipelines. Includes 7 ready-to-deploy automation playbooks.',
+    related_tool_slugs: ['chatgpt', 'claude', 'gemini', 'zapier', 'perplexity', 'cursor', 'n8n'],
+    difficulty: 'Beginner',
+    read_time_minutes: 19,
+    icon: '\u26a1',
+    gradient: 'from-amber-500/30 to-orange-500/30',
+    steps: [
+      {
+        title: 'Workflow Audit & Diagnosis',
+        description: 'Systematically audit your workflows using the 3-step framework: Capture (list every weekly task), Categorize (frequency vs cognition matrix), Prioritize (ROI scoring). Learn to identify high-ROI automation opportunities and calculate exact time savings.',
+        tip: 'The Automation ROI formula: (Hours saved/mo x hourly rate) - (tool cost + setup time). Automate anything with 3x+ ROI within 30 days.',
+      },
+      {
+        title: 'Choose Your Automation Backbone',
+        description: 'Evaluate Zapier vs Make vs n8n for your specific needs. Learn when to choose no-code, low-code, or custom-code automation. Build the 5-layer stack: Trigger, Process, AI, Action, and Log layers working together.',
+        tip: 'Start with Make ($9/mo). Switch to self-hosted n8n when you exceed 1000 operations/month.',
+      },
+      {
+        title: 'Build the AI Content Pipeline',
+        description: 'Create an end-to-end content automation pipeline: RSS monitoring for topic discovery, AI research and outline generation, draft production with your preferred AI model, automated SEO optimization, cross-platform distribution, and performance analytics.',
+        tip: 'The 80/20 content rule: one long-form piece auto-generates 20+ social posts, 3 emails, and 1 video script through your repurposing pipeline.',
+      },
+      {
+        title: 'Automate Business Operations',
+        description: 'Deploy automation for: customer support triage (AI classifies and responds), lead scoring and nurturing, invoicing and expense tracking, project management auto-updates, meeting intelligence, and HR onboarding for micro-teams.',
+        tip: 'Customer support auto-triage alone saves 15-20 hours/week. Start there for fastest ROI.',
+      },
+      {
+        title: 'Design Multi-Agent Workflows',
+        description: 'Move beyond single AI tools to multi-agent architectures: assign specialized roles (Researcher, Writer, Editor, Reviewer, Archiver), design handoff protocols, manage agent memory and context, and implement human-in-the-loop checkpoints.',
+        tip: 'Use a tiered model for agent routing: Cheap model for 80% of tasks, mid-tier for 15%, best model only for the 5% that need deep reasoning.',
+      },
+      {
+        title: 'Testing, Monitoring & Scaling',
+        description: 'Set up automation health checks, cost tracking per workflow, A/B testing for optimization, security best practices (API key rotation, audit logs), and disaster recovery patterns.',
+        tip: 'Track cost per workflow monthly. A good automation costs under $0.01 per run for text-based workflows.',
+      },
+      {
+        title: 'Deploy 7 Ready Automation Playbooks',
+        description: 'Pre-built, ready-to-deploy automation recipes: Morning intelligence digest, Client onboarding auto-pilot, Social media content factory, Customer feedback loop, Invoice-to-payment tracker, Code review assistant, Personal CRM. Each includes exact tool config and prompts.',
+        tip: 'Deploy Playbook 1 (Morning Digest) first — it takes 30 minutes to set up and saves 2+ hours every single day.',
+      },
+    ],
+    pro_tips: [
+      'Audit before you automate — most people automate the wrong things. Use the ROI scoring framework first.',
+      'Start with one workflow and get it perfect before scaling. A polished workflow beats 10 half-broken ones.',
+      'Always include a human-in-the-loop for high-stakes decisions. Automate execution, not judgment.',
+      'Log everything. Analytics on your automations let you optimize and detect failures early.',
+      'Use the tiered model approach for AI calls: cheap model for 80%, mid for 15%, best for 5%. Saves 70% on costs.',
+      'Self-host critical automations (n8n) when possible. Avoid vendor lock-in on your core workflows.',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Starting with the tool instead of the workflow',
+        fix: 'Tools are solutions looking for problems - audit workflows first, then pick the right tool.',
+      },
+      {
+        mistake: 'Over-automating everything',
+        fix: 'Some workflows need human judgment. Create a Never-Automate list for high-stakes decisions.',
+      },
+      {
+        mistake: 'No error handling or monitoring',
+        fix: 'Every automation WILL fail eventually. Build failure detection and alerts from day one.',
+      },
+      {
+        mistake: 'Not tracking automation costs',
+        fix: 'API costs add up fast. Track cost per workflow monthly and set budget alerts.',
+      },
+      {
+        mistake: 'Building without monitoring',
+        fix: 'If you cannot see whether an automation is working, it probably isn\'t. Always add logging.',
+      },
+    ],
+    pipeline_stage: 'deployment',
+    revenue_impact: 'Save 20+ hours per week by automating repetitive workflows across content, operations, and business processes',
+    real_results: [
+      { metric: 'Time Saved', value: '20+ hrs/week', description: 'After deploying 3+ automation pipelines across content, support, and operations' },
+      { metric: 'Tool Cost', value: '<$100/mo', description: 'Complete automation stack including AI API calls, automation backbone, and monitoring' },
+      { metric: 'Setup Time', value: '1-2 days', description: 'First automation pipeline from audit to deployment in under 48 hours for simple workflows' },
+      { metric: 'Content Output', value: '10x more', description: 'One content pipeline generates 10x the output vs manual creation for the same time investment' },
+    ],
+  },
+
+  // --- AI for Technical Documentation ---
+  {
+    slug: 'ai-for-technical-documentation',
+    title: 'AI for Technical Documentation',
+    subtitle: 'Generate, maintain & localize docs with AI assistance',
+    description:
+      'Transform technical documentation workflows with AI: generate API reference docs from code, create user guides from product specs, maintain living documentation that stays in sync with changing codebases, and localize into multiple languages. Built for developers, technical writers, and product teams shipping documentation at scale.',
+    meta_title: 'AI for Technical Documentation — Apifeny AI Playbook',
+    meta_description: 'Generate and maintain technical documentation with AI. API references, user guides, internal wikis, and localization — all automated with AI assistance.',
+    related_tool_slugs: ['chatgpt', 'claude', 'gemini', 'cursor', 'github-copilot', 'perplexity', 'notion'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 12,
+    icon: '📚',
+    gradient: 'from-emerald-500/30 to-teal-500/30',
+    steps: [
+      {
+        title: 'Auto-generate API docs from source code',
+        description:
+          'Feed your codebase (functions, classes, endpoints) into Claude or ChatGPT with a structured prompt to generate JSDoc/TSDoc comments, OpenAPI specs, and endpoint descriptions. For large codebases, process file by file and compile the results. Use GitHub Copilot inline for real-time doc generation as you code.',
+        tip: 'Prompt: "Generate OpenAPI 3.0 spec for these Express routes. Include request/response schemas, auth requirements, error codes, and example curl commands." Process one module at a time for best quality.',
+      },
+      {
+        title: 'Create user guides from product specs',
+        description:
+          'Upload product requirements, feature specs, or wireframes into Gemini or ChatGPT and generate step-by-step user guides. Structure by persona (admin, end user, developer) and use case. Generate quick-start guides, troubleshooting sections, and advanced feature walkthroughs from the same source material.',
+        tip: 'Create a documentation template prompt: "Given [spec], generate a user guide with: Overview, Prerequisites, Step-by-step (with screenshots needed), FAQs, Troubleshooting. Tone: [friendly/professional]. Output as markdown."',
+      },
+      {
+        title: 'Maintain living documentation with AI',
+        description:
+          'Set up a CI/CD pipeline that triggers doc regeneration when code changes. Use GitHub Actions + ChatGPT API to re-generate affected doc sections on every merge. Link Notion or GitBook pages to source files so AI can detect changes and propose updates automatically.',
+        tip: 'Use git diff output as context for doc updates. Prompt: "Here is the diff for this sprint. Identify which doc pages need updating and generate the revised sections."',
+      },
+      {
+        title: 'Localize documentation with AI translation',
+        description:
+          'Use ChatGPT or Claude to translate documentation into 10+ languages while preserving code blocks, technical terms, and formatting. Create a glossary of key terms to ensure consistent translation across your entire documentation set.',
+        tip: 'Maintain a Term Base (TBX file) of 50-100 key technical terms. Feed it as context during translation for 95% consistency vs 70% without it.',
+      },
+      {
+        title: 'Generate code examples and tutorials',
+        description:
+          'Use Claude or GitHub Copilot to generate runnable code examples from your API docs. Create tutorials for common integration patterns (authentication, CRUD operations, webhooks) with copy-paste-ready code in multiple languages (Python, JavaScript, curl, etc.).',
+        tip: 'Test every AI-generated code example by running it against a staging environment. Flag examples that produce errors for human review — this catches 30% of AI quips.',
+      },
+      {
+        title: 'Create knowledge base with Perplexity + Notion',
+        description:
+          'Use Perplexity to research best practices, common pitfalls, and competitor documentation patterns. Feed insights into Notion AI to build and organize a living knowledge base. Set up automated weekly doc health reports using Perplexity to surface outdated content.',
+        tip: 'Add a "Last reviewed by AI" timestamp to every doc page. Auto-send a monthly report of pages older than 90 days for human review.',
+      },
+    ],
+    pro_tips: [
+      'Doc generation is 80% structure, 20% content. Invest time in prompts that define structure first, then fill content iteratively.',
+      'Create a documentation style guide in a single prompt preamble. Every AI generation starts with: "Write in [style], using [terminology], at [reading level]."',
+      'Use AI to generate the "before you start" section first — prerequisites are the most commonly missed documentation element.',
+      'Always add a "What could go wrong?" troubleshooting section. AI excels at generating edge cases and failure scenarios from code analysis.',
+      'Version your prompts alongside your code. A prompt that generates great docs for v1 may need tweaking for v2 API changes.',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'AI docs that sound confident but are wrong',
+        fix: 'Always mark AI-generated sections as "AI-assisted — verify behavior." Run examples against actual code before publishing.',
+      },
+      {
+        mistake: 'Treating doc generation as a one-time task',
+        fix: 'Schedule AI doc reviews weekly. Stale documentation is worse than no documentation — it actively misleads users.',
+      },
+      {
+        mistake: 'Ignoring code context for API docs',
+        fix: 'AI needs code context to generate accurate API docs. Feed actual function signatures, not just descriptions.',
+      },
+    ],
+    pipeline_stage: 'build',
+    revenue_impact: 'Reduce documentation time by 80%, improve developer onboarding speed by 50% with comprehensive always-updated docs',
+    real_results: [
+      { metric: 'Documentation Time', value: '80% faster', description: 'Full API docs generated and reviewed in 4 hours vs 20 hours manually' },
+      { metric: 'Developer Onboarding', value: '50% faster', description: 'New devs reached first commit 2x faster with AI-generated quick-start guides' },
+      { metric: 'Support Tickets Reduced', value: '35% fewer', description: 'Comprehensive AI-generated troubleshooting section resolved common issues before tickets' },
+    ],
+  },
+
+  // --- AI for Supply Chain Optimization ---
+  {
+    slug: 'ai-for-supply-chain-optimization',
+    title: 'AI for Supply Chain Optimization',
+    subtitle: 'Demand forecasting, logistics & vendor management with AI',
+    description:
+      'Optimize your entire supply chain with AI: demand forecasting that adapts to market signals, logistics route optimization, inventory allocation, vendor risk assessment, and automated procurement workflows. Built for supply chain managers, operations directors, and logistics teams looking to reduce costs while improving delivery reliability.',
+    meta_title: 'AI for Supply Chain Optimization — Apifeny AI Playbook',
+    meta_description: 'Optimize supply chain operations with AI: demand forecasting, logistics routing, vendor risk analysis, inventory allocation, and automated procurement workflows.',
+    related_tool_slugs: ['chatgpt', 'claude', 'gemini', 'perplexity', 'zapier', 'n8n', 'notion'],
+    difficulty: 'Advanced',
+    read_time_minutes: 14,
+    icon: '🚚',
+    gradient: 'from-blue-500/30 to-indigo-500/30',
+    steps: [
+      {
+        title: 'Build AI-powered demand forecasts',
+        description:
+          'Upload historical sales data, seasonality patterns, and market trend reports into ChatGPT or Gemini. Structure prompts to generate monthly/quarterly demand forecasts with confidence intervals. Include external factors: weather data, economic indicators, competitor activity, and social media trends for richer predictions.',
+        tip: 'Prompt template: "You are a supply chain forecaster. Given [3 years of sales data], [seasonality factors], and [recent market trends], generate a 6-month demand forecast by SKU category with 80% and 95% confidence intervals. Flag SKUs with >20% forecast variance."',
+      },
+      {
+        title: 'Optimize logistics routes with AI analysis',
+        description:
+          'Use Claude or ChatGPT to analyze shipping routes, carrier performance data, and cost structures. Feed in route tables, fuel costs, transit times, and reliability scores to get optimization recommendations. For complex multi-leg logistics, use structured data analysis to identify consolidation opportunities.',
+        tip: 'Create a logistics data pipeline: export route data → feed to Claude with analysis prompt → Claude outputs ranked optimization recommendations with cost savings estimates for each.',
+      },
+      {
+        title: 'Assess vendor risk with Perplexity + Gemini',
+        description:
+          'Use Perplexity to research vendor financial health, geopolitical risks, labor disputes, and regulatory changes affecting suppliers. Feed findings into Gemini for a consolidated risk score and mitigation recommendations per vendor. Set up automated weekly risk monitoring alerts.',
+        tip: 'Create a Perplexity collection per critical vendor. Configure weekly alerts for: financial news, regulatory changes, labor disputes, and natural disaster risks in supplier regions.',
+      },
+      {
+        title: 'Automate procurement workflows with n8n + Zapier',
+        description:
+          'Build automated procurement triggers: when inventory hits reorder point → AI analyzes demand forecast → generates purchase order → routes for approval → updates inventory system. Use n8n for complex multi-step logic and Zapier for connecting to existing ERP and procurement systems.',
+        tip: 'Start with one critical SKU category. Build and validate the automation for 30 days on high-volume consumables before expanding to the full catalog.',
+      },
+      {
+        title: 'Allocate inventory with AI optimization',
+        description:
+          'Use ChatGPT or Claude to model optimal inventory allocation across warehouses and retail locations. Input: demand forecasts by region, warehouse capacity, transportation costs, and service level targets. Get allocation recommendations that minimize total cost while meeting fill rate targets.',
+        tip: 'Run what-if scenarios: "If we increase East Coast warehouse capacity by 20%, how does that change allocation and total logistics cost?" Let AI model 10+ scenarios in minutes.',
+      },
+      {
+        title: 'Monitor and improve with AI dashboards',
+        description:
+          'Use Notion AI + connected data sources to build a supply chain command center. Real-time dashboards show: fill rates, inventory turnover, vendor on-time performance, cost per unit shipped, and forecast accuracy. Set up automated alerts when metrics deviate from targets.',
+        tip: 'Create a weekly "Supply Chain Pulse" report using Gemini. It automatically summarizes: what went well, what needs attention, and recommended actions for the coming week.',
+      },
+    ],
+    pro_tips: [
+      'Start with demand forecasting — it has the highest ROI and any 5% improvement in forecast accuracy directly reduces inventory costs by 10-15%.',
+      'Use AI to model "what-if" scenarios before making any supply chain change. Running 20 scenarios costs $0.50 in API calls vs weeks of manual analysis.',
+      'Feed both historical AND real-time data. AI forecasts improve dramatically when you include current sell-through rates, not just last year\'s numbers.',
+      'Don\'t automate vendor communication without human oversight. AI-generated order changes or cancellations can damage relationships if not reviewed.',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Forecasting without external factors',
+        fix: 'Include weather, economic indicators, and competitor activity in forecasting prompts. Internal data alone misses 40-60% of demand signals.',
+      },
+      {
+        mistake: 'Over-relying on AI for supplier decisions',
+        fix: 'Use AI for risk assessment and recommendations, but keep human judgment for supplier relationship decisions. AI doesn\'t know relationship nuances.',
+      },
+      {
+        mistake: 'Not validating AI-generated forecast data',
+        fix: 'Track forecast accuracy weekly. Anything below 70% accuracy needs prompt refinement or additional data inputs.',
+      },
+    ],
+    pipeline_stage: 'planning',
+    revenue_impact: 'Reduce inventory carrying costs by 15-25%, improve on-time delivery by 30% through AI-optimized logistics and demand planning',
+    real_results: [
+      { metric: 'Forecast Accuracy', value: '+28%', description: 'AI-powered forecasts outperformed traditional methods by 28% after 3 months of refinement' },
+      { metric: 'Inventory Costs', value: '-20%', description: 'Reduced carrying costs through optimized allocation and demand-driven procurement' },
+      { metric: 'On-Time Delivery', value: '+32%', description: 'Improved delivery reliability through AI-optimized routing and carrier selection' },
+    ],
+  },
+
+  // --- AI for Sustainability / ESG Reporting ---
+  {
+    slug: 'ai-for-sustainability-esg-reporting',
+    title: 'AI for Sustainability & ESG Reporting',
+    subtitle: 'Automate carbon accounting, compliance & sustainability strategy',
+    description:
+      'Streamline ESG reporting and sustainability initiatives with AI: automated carbon footprint calculation, regulatory compliance tracking, supplier sustainability assessment, green claims verification, and stakeholder communication. Built for sustainability officers, ESG analysts, and corporate responsibility teams navigating complex reporting frameworks.',
+    meta_title: 'AI for Sustainability & ESG Reporting — Apifeny AI Playbook',
+    meta_description: 'Automate ESG reporting and sustainability with AI. Carbon accounting, regulatory compliance, supplier assessment, and stakeholder communication made efficient.',
+    related_tool_slugs: ['chatgpt', 'claude', 'gemini', 'perplexity', 'notion', 'zapier', 'n8n'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 13,
+    icon: '🌿',
+    gradient: 'from-green-500/30 to-emerald-500/30',
+    steps: [
+      {
+        title: 'Calculate carbon footprint with AI analysis',
+        description:
+          'Upload utility bills, fuel consumption logs, travel records, and supply chain data into ChatGPT or Gemini. Structure prompts to calculate Scope 1, 2, and 3 emissions using recognized methodologies (GHG Protocol, ISO 14064). Generate per-department and per-product carbon footprints with visual breakdowns.',
+        tip: 'Prompt: "You are a carbon accounting specialist using the GHG Protocol. Given [energy data], calculate Scope 1, 2, and 3 emissions. Include: methodology reference, emission factors used, confidence level per category, and reduction recommendations ranked by cost-effectiveness."',
+      },
+      {
+        title: 'Track ESG regulatory compliance',
+        description:
+          'Use Perplexity to monitor ESG regulatory changes across jurisdictions (CSRD, SFDR, SEC climate rules, TCFD, ISSB). Feed regulatory updates into Claude or Gemini to assess your gap against new requirements. Generate compliance roadmaps with prioritized action items and deadline tracking.',
+        tip: 'Create a Perplexity space for ESG regulation monitoring with keywords: "CSRD implementation", "SEC climate disclosure", "EU taxonomy", "ISSB standards". Review and update your compliance tracker weekly.',
+      },
+      {
+        title: 'Assess supplier sustainability with AI',
+        description:
+          'Send AI-powered sustainability questionnaires to suppliers and analyze responses using ChatGPT. Cross-reference supplier claims against public databases (CDP, EcoVadis, SBTi) via Perplexity research. Generate supplier sustainability scorecards with improvement recommendations.',
+        tip: 'Create a supplier sustainability assessment prompt: "Score this supplier\'s response against our 20-point ESG criteria. Flag unverifiable claims. Suggest 3 low-cost improvements they can make in the next 6 months."',
+      },
+      {
+        title: 'Generate ESG reports from templates',
+        description:
+          'Use Claude or ChatGPT with your company data to draft ESG reports aligned with specific frameworks (GRI, SASB, TCFD, CSRD). Generate executive summaries, materiality matrices, KPI dashboards, and narrative sections from structured data inputs. Maintain version history for audit trails.',
+        tip: 'Build a report generation pipeline: structured data → AI draft → human review → senior sign-off. AI handles 80% of the writing; human focus on strategic narrative and sensitive disclosures.',
+      },
+      {
+        title: 'Verify green claims with AI research',
+        description:
+          'Use Perplexity to vet sustainability claims, green certifications, and environmental marketing language against scientific consensus and regulatory guidelines. Cross-reference supplier certifications against official registries. Flag greenwashing risks before public communication.',
+        tip: 'Run every sustainability claim through Perplexity with: "Is the claim [X] supported by peer-reviewed science and accepted by regulators in [region]? List any controversies or disputes."',
+      },
+      {
+        title: 'Automate ESG data collection with n8n + Zapier',
+        description:
+          'Build automated data pipelines: utility APIs feed energy consumption → AI calculates weekly carbon footprint → logs to Notion ESG database → flags threshold breaches. Automate data requests to departments on a quarterly cadence with reminder escalations.',
+        tip: 'Start with energy data automation (highest ROI — Scope 1 & 2 are typically 80% of footprint). Move to supply chain (Scope 3) once energy tracking is solid.',
+      },
+    ],
+    pro_tips: [
+      'ESG data is only as good as its audit trail. Always prompt AI to reference data sources, calculation methodologies, and confidence levels in every output.',
+      'Use AI for the 80% of reporting that is mechanical (data collection, calculation, formatting) and focus human effort on the 20% that requires judgment (strategy, materiality, stakeholder engagement).',
+      'Build an ESG knowledge base in Notion with AI-powered search. Every regulation, framework requirement, and internal policy should be queryable in natural language.',
+      'Regulatory landscapes change monthly. Set up automated monitoring now — catching a regulatory change 3 months early saves significant remediation costs.',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Treating ESG as a one-time report instead of continuous process',
+        fix: 'Set up quarterly AI-powered ESG health checks. Continuous monitoring costs less than annual catch-up and reduces reporting stress by 70%.',
+      },
+      {
+        mistake: 'Relying on AI for carbon calculations without methodology verification',
+        fix: 'Always ask AI to show its work: "Which emission factors did you use? Cite your sources." Verify against recognized databases monthly.',
+      },
+      {
+        mistake: 'Green claims without third-party verification',
+        fix: 'AI research can identify claims needing verification, but certifications require independent auditors. Use AI for screening, not certifying.',
+      },
+    ],
+    pipeline_stage: 'research',
+    revenue_impact: 'Reduce ESG reporting cycle by 70%, avoid compliance penalties, and identify $500K+ in operational sustainability savings',
+    real_results: [
+      { metric: 'Report Generation Time', value: '70% faster', description: 'Quarterly ESG report from 3 weeks to 4 days with AI-assisted data collection and drafting' },
+      { metric: 'Regulatory Coverage', value: '100% improvement', description: 'Previously missed 4 ESG regulations; AI monitoring now tracks 40+ regulatory frameworks across 12 jurisdictions' },
+      { metric: 'Cost Savings', value: '$200K/year', description: 'Energy efficiency opportunities identified through AI analysis of consumption data across facilities' },
+    ],
+  },
+
+  // --- AI for Negotiation Skills ---
+  {
+    slug: 'ai-for-negotiation-skills',
+    title: 'AI for Negotiation Skills',
+    subtitle: 'Prepare, practice & perfect every negotiation with AI',
+    description:
+      'Level up your negotiation game with AI: simulate counterparty scenarios, analyze deal structures, prepare opening positions, practice objection handling, and debrief outcomes. Built for sales professionals, procurement managers, founders, and deal-makers who want to enter every negotiation prepared and confident.',
+    meta_title: 'AI for Negotiation Skills — Apifeny AI Playbook',
+    meta_description: 'Master negotiation with AI: simulate counterparty scenarios, practice objections, prepare deal structures, and analyze outcomes with AI coaching.',
+    related_tool_slugs: ['chatgpt', 'claude', 'gemini', 'perplexity', 'notion'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 11,
+    icon: '🤝',
+    gradient: 'from-violet-500/30 to-purple-500/30',
+    steps: [
+      {
+        title: 'Simulate counterparty scenarios with ChatGPT',
+        description:
+          'Set up ChatGPT as your negotiation counterparty with a detailed persona prompt: role, motivations, constraints, leverage points, and communication style. Practice the full negotiation arc: opening, information exchange, proposal, concession, and close. Record each session for review.',
+        tip: 'Persona prompt: "You are [counterparty role] negotiating [deal]. Your priorities are: [list 3-5]. Your walk-away point is [BATNA]. You have [constraints]. You use [communication style]. Let\'s begin the negotiation. Do not reveal your strategy — role-play authentically."',
+      },
+      {
+        title: 'Analyze deal structures with Claude',
+        description:
+          'Upload term sheets, contracts, or deal proposals to Claude for structural analysis. Ask for: leverage points identification, hidden trade-offs, common pitfalls in similar deals, and suggested concession sequences. Claude excels at finding patterns and trade-offs across complex deal terms.',
+        tip: 'Share only relevant portions (redact PII). Prompt: "Analyze this term sheet for negotiation leverage. Identify: 1) Three terms favorable to us, 2) Three terms favorable to counterparty, 3) Hidden trade-offs, 4) Suggested concession order."',
+      },
+      {
+        title: 'Research counterparty with Perplexity',
+        description:
+          'Use Perplexity to research your counterparty before negotiation: recent deals, public statements, financial position, competitor dynamics, and known negotiation style. Create an intelligence brief that surfaces leverage points and potential objections.',
+        tip: 'Use Perplexity Collections to organize research per counterparty. Include: recent funding/earnings, leadership changes, legal challenges, strategic priorities. Review 24 hours before the negotiation.',
+      },
+      {
+        title: 'Prepare opening positions with Gemini',
+        description:
+          'Use Gemini to model multiple opening scenarios based on your research. Generate: optimal opening offer, rationale for each term, expected counterparty response, and fallback positions. Stress-test positions by asking Gemini to play devil\'s advocate.',
+        tip: 'Generate 3 versions: Aggressive (stretch goal), Realistic (expected close), Conservative (walk-away floor). During negotiation, aim for Realistic and use Aggressive as leverage for concessions.',
+      },
+      {
+        title: 'Practice objection handling with voice simulation',
+        description:
+          'Use ChatGPT voice mode or text role-play to practice handling tough objections. Feed it common objections from your research and industry knowledge. Practice responses until they feel natural. Record sessions and have AI evaluate your responses for tone, logic, and effectiveness.',
+        tip: 'Ask the AI to rate each of your responses on: persuasiveness (1-10), factual accuracy (1-10), relationship impact (1-10), and suggest an improved version. Focus on the patterns where you score lowest.',
+      },
+      {
+        title: 'Debrief and improve with AI analysis',
+        description:
+          'After each negotiation, debrief with AI: describe what happened, what worked, what didn\'t, and get analysis. Create a personal negotiation playbook that captures lessons learned, effective phrases, and improvement areas. Use Notion AI to maintain and evolve your playbook.',
+        tip: 'Debrief prompt: "I just finished a negotiation about [topic]. What worked: [list]. What didn\'t: [list]. Outcome: [outcome]. Analyze my approach, identify 3 things I could improve for next time, and suggest a preparation routine for the next session."',
+      },
+    ],
+    pro_tips: [
+      'Record and transcribe real negotiations (with permission). Feed transcripts into ChatGPT for analysis — the debrief is where 80% of learning happens.',
+      'Create an "anchor prompt" for each negotiation type (salary, vendor, partnership, pricing) and reuse/refine it. You\'ll build a library of proven preparation frameworks.',
+      'Practice the BATNA (Best Alternative to Negotiated Agreement) conversation. One AI prompt: "Simulate a negotiation where I need to walk away effectively without burning the bridge."',
+      'Use AI to generate a "cheat sheet" before every negotiation: 5 key data points, 3 leverage points, 2 concession options, and 1 walk-away criteria. Keep it visible during the call.',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Treating AI as the negotiator instead of the coach',
+        fix: 'AI is for preparation and analysis, not live negotiation. Never have AI speak for you in a real negotiation — it misses non-verbal cues and relationship dynamics.',
+      },
+      {
+        mistake: 'Skipping the research phase',
+        fix: 'Perplexity research before negotiation is non-negotiable. AI preparation without research data is guessing in the dark.',
+      },
+      {
+        mistake: 'Not updating your playbook after each negotiation',
+        fix: 'Every negotiation is data for the next. Debrief within 24 hours and add insights to your AI playbook. The first 5 debriefs will transform your approach.',
+      },
+    ],
+    pipeline_stage: 'ideation',
+    revenue_impact: 'Improve deal value by 15-25% through better preparation, and reduce negotiation cycle time by 40% with AI-powered scenario planning',
+    real_results: [
+      { metric: 'Deal Value Improvement', value: '+18%', description: 'Users reported 15-25% improvement in negotiated outcomes after consistent AI preparation' },
+      { metric: 'Preparation Time', value: '60% less', description: 'From 4 hours to 90 minutes of focused AI-assisted research and scenario planning per negotiation' },
+      { metric: 'Confidence Score', value: '+40%', description: 'Self-reported confidence entering negotiations increased significantly with AI scenario practice' },
+    ],
+  },
+
+  // --- AI for Mental Health / Wellness Coaching ---
+  {
+    slug: 'ai-for-mental-health-wellness-coaching',
+    title: 'AI for Mental Health & Wellness Coaching',
+    subtitle: 'AI-assisted self-care, coaching & daily wellness practices',
+    description:
+      'Enhance your mental health and wellness journey with AI: personalized daily check-ins, evidence-based coaching exercises, guided journaling, habit tracking with adaptive insights, and mindfulness practice support. Designed for wellness practitioners, coaches, and individuals seeking consistent, personalized self-care support using AI as a complement to professional care.',
+    meta_title: 'AI for Mental Health & Wellness Coaching — Apifeny AI Playbook',
+    meta_description: 'Support mental health and wellness with AI: personalized check-ins, coaching exercises, guided journaling, habit tracking, and mindfulness practices with AI assistance.',
+    related_tool_slugs: ['chatgpt', 'claude', 'gemini', 'notion', 'elevenlabs'],
+    difficulty: 'Beginner',
+    read_time_minutes: 11,
+    icon: '🧠',
+    gradient: 'from-rose-500/30 to-pink-500/30',
+    steps: [
+      {
+        title: 'Set up daily AI wellness check-ins',
+        description:
+          'Create a daily check-in routine with ChatGPT or Claude using a structured prompt that covers: mood tracking, energy levels, sleep quality, stressors, and wins. The AI adapts follow-up questions based on your patterns. Over time, it builds a personal wellness baseline and flags concerning trends.',
+        tip: 'Start with: "Let\'s do a daily wellness check-in. Rate each 1-10: mood, energy, sleep, stress. Note: [anything on your mind]. Then ask me one reflective question based on my patterns." Do this daily at the same time for best data.',
+      },
+      {
+        title: 'Practice guided coaching exercises',
+        description:
+          'Use Claude or ChatGPT as a wellness coach for structured exercises: cognitive reframing (challenge negative thoughts), gratitude practice, values clarification, goal setting with SMART framework, and self-compassion exercises. Each session builds on previous ones through conversation memory.',
+        tip: 'Prompt: "Guide me through a cognitive reframing exercise. I\'m feeling [emotion] about [situation]. Use the ABCDE method: Activating event, Beliefs, Consequences, Disputation, Effective new belief."',
+      },
+      {
+        title: 'Maintain an AI-assisted journaling practice',
+        description:
+          'Use ChatGPT or Gemini for guided journaling with prompts that evolve based on previous entries. Try structured formats: gratitude journal, emotional processing, morning pages, evening reflection, and periodic check-in reviews. AI identifies themes and growth patterns across entries.',
+        tip: 'Weekly review prompt: "Here are my journal entries from this week. Identify: 3 recurring themes, 2 growth areas, 1 pattern I should be aware of. Then suggest a focus for next week."',
+      },
+      {
+        title: 'Build and track wellness habits with Notion AI',
+        description:
+          'Use Notion AI to design a personalized habit tracking system: set wellness goals (meditation, exercise, sleep, hydration, social connection), get AI-suggested habit stacks and triggers, track daily progress, and receive adaptive recommendations when habits slip.',
+        tip: 'Build a Notion database with: habit name, frequency, trigger, difficulty rating, and daily log. Use Notion AI formulas to auto-generate weekly progress summaries and adjustment recommendations.',
+      },
+      {
+        title: 'Practice mindfulness with AI-generated content',
+        description:
+          'Use ElevenLabs or ChatGPT voice to generate guided meditations, breathing exercises, and body scans tailored to your current mood and available time. Create a library of 5-minute, 10-minute, and 20-minute sessions. AI generates fresh scripts that never repeat.',
+        tip: 'Prompt: "Generate a 5-minute guided breathing exercise for reducing work anxiety. Include: box breathing pattern (4-4-4-4), visualization of releasing tension, and one affirmation. Output as a script." Use ElevenLabs to narrate for a human voice.',
+      },
+      {
+        title: 'Create a personal wellness dashboard',
+        description:
+          'Use Notion AI to build a wellness dashboard that pulls from your check-ins, journaling, habit tracking, and mood patterns. Set up weekly AI-generated insights: trends, improvements, areas needing attention, and personalized recommendations for the coming week.',
+        tip: 'Configure Notion AI to ask weekly: "What was your highest-rated activity this week? What drained your energy most? What\'s one change for next week based on this data?"',
+      },
+    ],
+    pro_tips: [
+      'AI wellness tools complement, not replace, professional mental health care. Include this disclaimer in any generated content and know when to recommend professional help.',
+      'Build a crisis keyword detection prompt: if your check-in detects high-risk language, the AI should respond with crisis resources (hotlines, emergency services) — not continue coaching.',
+      'Consistency beats intensity in wellness. A 2-minute daily AI check-in is more valuable than a 30-minute session once a month.',
+      'Use AI to generate variety in wellness practices. Most people abandon routines due to boredom — AI creates infinite variations of the same beneficial practice.',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Using AI as a replacement for professional therapy',
+        fix: 'Clearly define AI\'s role: wellness coaching and self-care support. Always include resources for professional mental health support and train AI to recognize when it\'s out of its depth.',
+      },
+      {
+        mistake: 'Not reviewing patterns over time',
+        fix: 'AI\'s real value is pattern recognition over weeks and months. Schedule monthly AI insights review to identify trends you might miss day-to-day.',
+      },
+      {
+        mistake: 'Ignoring privacy for sensitive wellness data',
+        fix: 'Use AI tools with strong privacy guarantees. Avoid sharing identifying information. Consider local LLMs for highly sensitive journaling and check-in data.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Wellness coaches can scale 1:1 coaching with AI-assisted between-session support, increasing client retention by 40% and reducing coach burnout',
+    real_results: [
+      { metric: 'Check-in Consistency', value: '85% adherence', description: 'Users maintained daily check-in habit for 90+ days with AI-guided reminders and adaptive questioning' },
+      { metric: 'Journaling Frequency', value: '3x increase', description: 'AI-guided journaling prompts tripled writing frequency vs unstructured journaling alone' },
+      { metric: 'Wellbeing Score', value: '+22%', description: 'Self-reported wellbeing scores improved over 12 weeks of consistent AI-assisted wellness practice' },
+    ],
+  },
 ];
 
 export function getPlaybookBySlug(slug: string): Playbook | undefined {

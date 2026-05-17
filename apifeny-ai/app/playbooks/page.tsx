@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 };
 
-const PAID_PLAYBOOKS = ['ai-solopreneur-toolkit', 'directory-builder-template'];
+const PAID_PLAYBOOKS = ['ai-solopreneur-toolkit', 'directory-builder-template', 'ai-workflow-automation'];
 
 const difficultyMeta = {
   Beginner: { label: 'Beginner', color: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' },
@@ -125,7 +125,7 @@ export default function PlaybooksPage() {
               return (
                 <Link
                   key={pb.slug}
-                  href={`/playbook/${pb.slug}`}
+                  href={PAID_PLAYBOOKS.includes(pb.slug) ? `/playbooks/${pb.slug}` : `/playbook/${pb.slug}`}
                   className={`group relative rounded-xl bg-gradient-to-br ${pb.gradient} bg-tech-700 border border-tech-500/30 p-5 hover:border-neon/40 transition-all hover:-translate-y-1 overflow-hidden`}
                 >
                   <div className="absolute inset-0 bg-tech-grid opacity-20" />
@@ -191,7 +191,7 @@ export default function PlaybooksPage() {
               return (
                 <Link
                   key={pb.slug}
-                  href={`/playbook/${pb.slug}`}
+                  href={PAID_PLAYBOOKS.includes(pb.slug) ? `/playbooks/${pb.slug}` : `/playbook/${pb.slug}`}
                   className={`group relative rounded-xl bg-gradient-to-br ${pb.gradient} bg-tech-700 border border-tech-500/30 p-5 hover:border-neon/40 transition-all hover:-translate-y-1 overflow-hidden`}
                 >
                   <div className="absolute inset-0 bg-tech-grid opacity-20" />
