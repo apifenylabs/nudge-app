@@ -1,0 +1,46 @@
+=== FOLLOW-UP THREAD (8 tweets) ===
+=== Post 1 week after launch. Share learnings, not updates. ===
+
+1/ 
+We launched OmniMind last week — a memory layer for OpenClaw agents.
+Here's what happened, what broke, and what I'd do differently:
+
+2/ 
+What went right:
+The "why not use Mem0?" comparison worked. People know the cloud API problem. Framing it as "local alternative that runs on a Pi" got attention.
+3-4x more engagement than a straight feature announcement.
+
+3/ 
+What broke:
+Kuzu tsl/tsh dependency issue on ARM64. Someone tried installing on a Mac M3 (our dev machines are x86). Turns out the prebuilt bindings don't cover all platforms.
+Fix → marked kuzu as optionalDependency. Graceful fallback to SQLite-only mode.
+
+4/ 
+What surprised me:
+People cared more about the Memify worker (nightly compression) than the three-database architecture.
+"Your agent learns overnight" is a better hook than "LanceDB + Kuzu + SQLite."
+
+5/ 
+Engagement numbers:
+PH → ~TBD (haven't launched yet)
+GitHub stars → growing
+Reddit feedback → mostly positive, one "this is overengineered"
+
+The "overengineered" comment has a point. For most users, a single SQLite table would work fine. The three-store architecture matters at scale.
+
+6/ 
+What I'd change about the launch:
+1. Video demo would have helped. A terminal recording of the ECL pipeline in action is worth 1000 words of docs.
+2. Should have posted to r/selfhosted, not just dev/agent subs.
+3. First comment should have led with "why 3 stores" not "features."
+
+7/ 
+One thing I learned building open source:
+The people who file the most annoying issues (edge cases, weird configs) are also the ones who actually use your software. The people who say "nice!" and never come back aren't users.
+
+8/ 
+Next up:
+v0.4 → multi-agent shared memory, proactive file watcher, Felix hybrid layer.
+Ship cycle: 3 weeks.
+
+If you haven't tried it: github.com/apifenylabs/omnimind

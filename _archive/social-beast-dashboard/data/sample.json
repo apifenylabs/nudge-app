@@ -1,0 +1,68 @@
+{
+  "lastRun": "2026-04-28 07:00 AM",
+  "platforms": {
+    "twitter": { "status": "mock", "keyHint": "No API key — mock mode" },
+    "telegram": { "status": "mock", "keyHint": "No API key — mock mode" },
+    "linkedin": { "status": "mock", "keyHint": "No API key — mock mode" }
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Bangkok's Best Night Markets 2026",
+      "source": "Directory Beast — Bangkok",
+      "url": "https://directorybeast.com/bangkok/night-markets",
+      "category": "travel",
+      "image": "🌃",
+      "status": "ready"
+    },
+    {
+      "id": "s2",
+      "title": "Top 10 Coworking Spaces in Saigon",
+      "source": "Directory Beast — Saigon",
+      "url": "https://directorybeast.com/saigon/coworking",
+      "category": "work",
+      "image": "💼",
+      "status": "ready"
+    },
+    {
+      "id": "s3",
+      "title": "Hidden Rooftop Bars in Tokyo",
+      "source": "Directory Beast — Tokyo",
+      "url": "https://directorybeast.com/tokyo/rooftops",
+      "category": "nightlife",
+      "image": "🍸",
+      "status": "ready"
+    }
+  ],
+  "transforms": [
+    { "id": "t1", "sourceId": "s1", "type": "short_hook", "title": "Thread: 5 Bangkok night markets that changed my life 🌆", "target": ["twitter", "telegram"], "status": "pending" },
+    { "id": "t2", "sourceId": "s1", "type": "thread", "title": "Bangkok Night Market Survival Guide 🧵", "target": ["twitter"], "status": "pending" },
+    { "id": "t3", "sourceId": "s1", "type": "deep_dive", "title": "Ultimate Bangkok Night Market Map: 2026 Edition", "target": ["linkedin"], "status": "ready" },
+    { "id": "t4", "sourceId": "s2", "type": "short_hook", "title": "Saigon's coworking scene is wild right now 🚀", "target": ["twitter", "telegram"], "status": "pending" },
+    { "id": "t5", "sourceId": "s2", "type": "thread", "title": "10 Saigon coworking spaces ranked by WiFi + coffee 🧵", "target": ["twitter"], "status": "ready" },
+    { "id": "t6", "sourceId": "s2", "type": "deep_dive", "title": "Digital Nomad's Guide to Saigon Workspaces", "target": ["linkedin", "telegram"], "status": "pending" },
+    { "id": "t7", "sourceId": "s3", "type": "short_hook", "title": "Tokyo rooftops you won't find on Google Maps 🗼", "target": ["twitter", "telegram"], "status": "ready" },
+    { "id": "t8", "sourceId": "s3", "type": "thread", "title": "Speakeasy rooftop bars of Tokyo 🧵", "target": ["twitter"], "status": "pending" },
+    { "id": "t9", "sourceId": "s3", "type": "deep_dive", "title": "Tokyo After Dark: The Hidden Rooftop Scene", "target": ["linkedin"], "status": "error" }
+  ],
+  "history": [
+    { "time": "2026-04-27 19:00", "content": "Bali Digital Nomad Guide", "platform": "twitter", "status": "published" },
+    { "time": "2026-04-27 19:00", "content": "Bali Digital Nomad Guide", "platform": "telegram", "status": "published" },
+    { "time": "2026-04-27 19:01", "content": "Bali Digital Nomad Guide — Thread", "platform": "twitter", "status": "published" },
+    { "time": "2026-04-27 19:02", "content": "Working from Bali: Full Report", "platform": "linkedin", "status": "published" },
+    { "time": "2026-04-27 18:00", "content": "Chiang Mai Cafe Guide", "platform": "twitter", "status": "published" },
+    { "time": "2026-04-27 18:00", "content": "Chiang Mai Cafe Guide", "platform": "telegram", "status": "published" },
+    { "time": "2026-04-27 18:01", "content": "Chiang Mai Coffee Thread 🧵", "platform": "twitter", "status": "published" },
+    { "time": "2026-04-27 18:02", "content": "Chiang Mai Digital Nomad Cafes", "platform": "linkedin", "status": "published" },
+    { "time": "2026-04-27 17:00", "content": "Singapore Hawker Guide", "platform": "twitter", "status": "published" },
+    { "time": "2026-04-27 17:00", "content": "Singapore Hawker Guide", "platform": "telegram", "status": "published" },
+    { "time": "2026-04-27 17:01", "content": "Best Hawker Stalls Thread 🧵", "platform": "twitter", "status": "published" },
+    { "time": "2026-04-27 17:02", "content": "Singapore Michelin Hawker Analysis", "platform": "linkedin", "status": "published" },
+    { "time": "2026-04-26 20:00", "content": "Seoul Nightlife Guide", "platform": "twitter", "status": "published" },
+    { "time": "2026-04-26 20:00", "content": "Seoul Nightlife Guide", "platform": "telegram", "status": "published" },
+    { "time": "2026-04-26 20:01", "content": "Seoul Bar Crawl Thread 🧵", "platform": "twitter", "status": "published" },
+    { "time": "2026-04-26 20:02", "content": "Seoul Nightlife: The Insider's Guide", "platform": "linkedin", "status": "published" },
+    { "time": "2026-04-26 15:00", "content": "Kuala Lumpur Street Food", "platform": "twitter", "status": "published" },
+    { "time": "2026-04-26 15:00", "content": "Kuala Lumpur Street Food", "platform": "telegram", "status": "published" }
+  ]
+}

@@ -1,0 +1,42 @@
+# r/openclaw Post — OmniMind Launch
+
+Title: I built a memory layer for OpenClaw agents that stores conversations in 3 databases and evolves overnight
+
+---
+
+Been running OpenClaw for about a year now. Great framework. But the memory situation was bugging me.
+
+AGENTS.md + MEMORY.md is fine for configuration. It's not fine for actually remembering what happened in a session — the context, the decisions, the "we already tried this three weeks ago."
+
+So I built OmniMind.
+
+## What it does
+
+An OpenClaw plugin that sits between your agent and its memory. Three storage layers:
+
+1. **LanceDB** — vector search. "What did we talk about last Thursday?"
+2. **Kuzu** — graph DB. "How are these entities related?"
+3. **SQLite** — provenance. "When was this memory created and who accessed it?"
+
+Plus a nightly Memify worker that compresses episodic memories into higher-level summaries. Your agent gets smarter over time without you touching anything.
+
+## Why I'm posting here
+
+I want honest feedback from people who actually use OpenClaw daily. Not "great product!" — real criticism.
+
+**Things I know aren't solved yet:**
+- No multi-agent shared memory yet (v0.4)
+- No proactive file watcher (have to trigger ECL manually or via cron)
+- LanceDB pre-filtering could be faster at scale
+
+**Things that work:**
+- 24/24 tests passing
+- Installs with one command: `openclaw plugins install`
+- Running on my own setup for 2 weeks without issues
+
+## Repo
+
+https://github.com/apifenylabs/omnimind
+MIT licensed, v0.3.0 released today.
+
+Would love to hear what you'd want from a memory layer.

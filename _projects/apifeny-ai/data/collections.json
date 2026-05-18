@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "name": "Best AI Agents for Solopreneurs",
+    "slug": "ai-agents-solopreneurs"
+  },
+  {
+    "id": "2",
+    "name": "Best Productivity AI for Busy Parents",
+    "slug": "productivity-ai-busy-parents"
+  },
+  {
+    "id": "3",
+    "name": "Best AI Tools for Family Travel",
+    "slug": "ai-family-travel"
+  },
+  {
+    "id": "4",
+    "name": "Best AI for Asian Languages",
+    "slug": "ai-asian-languages"
+  },
+  {
+    "id": "5",
+    "name": "Best AI for the Coding Pipeline",
+    "slug": "ai-coding-pipeline"
+  },
+  {
+    "id": "6",
+    "name": "Best AI for Content Creation",
+    "slug": "ai-content-pipeline"
+  },
+  {
+    "id": "7",
+    "name": "Best AI for Marketing Pipeline",
+    "slug": "ai-marketing-pipeline"
+  }
+]

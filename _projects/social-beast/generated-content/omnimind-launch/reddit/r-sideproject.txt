@@ -1,0 +1,40 @@
+# r/SideProject Post — OmniMind Launch
+
+Title: I built an open source alternative to Mem0. 3 databases, 1 plugin, 0 cloud dependencies.
+
+---
+
+Started as a personal frustration: my OpenClaw agents kept forgetting context between sessions. Tried Mem0. Worked, but $50/month for agent memory felt wrong — especially when all it does is vectorize text and store it.
+
+Six weeks later, OmniMind v0.3.0 is live.
+
+## What I built
+
+An OpenClaw plugin that adds persistent memory across 3 embedded databases:
+- LanceDB for semantic search
+- Kuzu for entity relationship graphs  
+- SQLite for provenance tracking
+
+Plus a nightly compression worker that summarizes episodic memories into higher-level knowledge. Your agent gets smarter over time.
+
+## Numbers
+
+- 3,000+ lines of TypeScript
+- 24 tests, all passing
+- 2 major refactors during dev (started with Qdrant, dumped it for LanceDB)
+- 1 thing I'd do differently: start with Kuzu from the beginning instead of migrating halfway
+
+## What's hard about building local-first
+
+1. **Kuzu docs are sparse.** Great library, but the Node.js bindings need work. Spent 2 days debugging `conn.execute()` → turned out it was `conn.querySync()` for SQL strings. That's the kind of thing that's undocumented.
+2. **LanceDB with custom index params.** Works great out of the box, but tuning IVF-PQ for small-scale agent memory (thousands of vectors, not millions) took trial and error.
+3. **ESM-only.** The whole plugin had to be pure ESM. Can't `require()`, can't use `__dirname`. Learned a lot about import.meta patterns.
+
+## What I'd tell someone building a similar tool
+
+Ship the MVP even if it's embarrassing. v0.1 was a single SQLite table with JSON blobs. It "worked" but was terrible. v0.3 is clean. You don't get to v0.3 without shipping v0.1.
+
+Repo: https://github.com/apifenylabs/omnimind
+MIT, free, no registration.
+
+Would love feedback from anyone who's built local-first tools.

@@ -1,0 +1,865 @@
+[
+  {
+    "id": "new-york-001",
+    "name": "Central Park Family Day",
+    "city": "New York",
+    "country": "USA",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 95,
+    "description": "An 843-acre urban oasis with playgrounds, carousel rides, zoo, boat rentals, and miles of stroller-friendly paths. Perfect for a low-cost, high-memory family day in the heart of Manhattan.",
+    "location": "Central Park, New York, NY 10024",
+    "bestTime": "Weekday mornings, Spring & Fall",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Playgrounds",
+      "Stroller Access",
+      "Restrooms",
+      "Picnic Areas",
+      "Food Vendors"
+    ],
+    "safetyFeatures": [
+      "Park Rangers",
+      "Well-Lit Paths",
+      "First Aid Stations",
+      "Emergency Call Boxes"
+    ],
+    "tipsAndTricks": [
+      "Enter at 72nd Street - gives you zoo, carousel, and best playgrounds within a 5-min walk.",
+      "Central Park Zoo is perfect for toddlers - under an hour to see everything.",
+      "Rent a rowboat at Loeb Boathouse before 11 AM to skip the line.",
+      "Bring your own snacks - a $16 pretzel adds up fast.",
+      "Ancient Playground near the Met is the best - climbing structures and a pyramid."
+    ],
+    "parentStory": {
+      "title": "We spent $0 and had the best day of our trip",
+      "excerpt": "My kids still talk about the pigeon they named Gerald. Central Park costs nothing to enter and delivers everything.",
+      "author": "Emily, mom of 3 from Chicago",
+      "fullStory": "We had big plans. Then our youngest woke up cranky and we scrapped everything. Six hours later, we'd found a hidden waterfall, watched a puppet show, and made a friend from Brazil on a bench."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo, carousel, playground, paddle boats - 3-4 hours",
+      "fullDay": "Add Belvedere Castle, Conservatory Garden, Strawberry Fields, picnic",
+      "bestFor": "All ages, budget-conscious families"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Central Park with kids",
+      "free activities NYC family",
+      "Central Park playgrounds"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "new-york-002",
+    "name": "American Museum of Natural History",
+    "city": "New York",
+    "country": "USA",
+    "category": "Museums",
+    "ageRange": "3-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 93,
+    "description": "One of the world's greatest natural history museums, featuring the iconic blue whale, dinosaur fossils, the Rose Center for Earth and Space, and the Butterfly Conservatory.",
+    "location": "200 Central Park West, New York, NY 10024",
+    "bestTime": "Weekday afternoons, September-April",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Family Restrooms",
+      "Cafe",
+      "Elevators",
+      "Nursing Room"
+    ],
+    "safetyFeatures": [
+      "Security Staff",
+      "Bag Checks",
+      "Emergency Exits",
+      "First Aid",
+      "Lost & Found"
+    ],
+    "tipsAndTricks": [
+      "Start on the 4th floor (dinosaurs) and work down - kids have most energy at the start.",
+      "Butterfly Conservatory (Oct-May) is worth the extra fee.",
+      "Hall of Ocean Life is the quietest spot - perfect for meltdown recovery.",
+      "Pick 3 halls max for a half-day and leave wanting more.",
+      "Pack snacks for planetarium show lines."
+    ],
+    "parentStory": {
+      "title": "The dinosaur exhibit broke my 4-year-old's brain",
+      "excerpt": "He stood under the T. rex fossil and whispered 'it's real' over and over. Then he announced he wanted to be a paleontologist.",
+      "author": "Mike, dad of 1 from San Diego",
+      "fullStory": "My son is obsessed with dinosaurs. Seeing the real T. rex skeleton made him completely still. A museum educator showed him a real fossilized dinosaur egg. He held it in his tiny hands. The whole trip was worth it for that moment."
+    },
+    "itineraryComparison": {
+      "halfDay": "Dinosaurs + Ocean Hall + one exhibit - 3 hours",
+      "fullDay": "Add planetarium, Butterfly Conservatory, Gem Hall, IMAX",
+      "bestFor": "Ages 4-12, dinosaur fans"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "American Museum of Natural History",
+      "NYC family museum",
+      "dinosaurs New York kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "new-york-003",
+    "name": "Bronx Zoo",
+    "city": "New York",
+    "country": "USA",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "One of the largest metropolitan zoos in the world with over 700 species across 265 acres. The Congo Gorilla Forest, Tiger Mountain, and the Children's Zoo are standout family attractions.",
+    "location": "2300 Southern Blvd, Bronx, NY 10460",
+    "bestTime": "Weekday mornings, May & September",
+    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Restrooms",
+      "Food Courts",
+      "Splash Pad",
+      "Buggy Parking"
+    ],
+    "safetyFeatures": [
+      "Animal Barriers",
+      "Emergency Services",
+      "Security Patrols",
+      "First Aid Stations"
+    ],
+    "tipsAndTricks": [
+      "Pay-what-you-wish Wednesdays for everyone.",
+      "Wild Asia Monorail first thing - animals are most active in the morning.",
+      "Children's Zoo is perfect for ages 2-7 with touch pools and petting area.",
+      "Congo Gorilla Forest is indoors and air-conditioned.",
+      "Take the subway - parking is $17 and fills by 10 AM."
+    ],
+    "parentStory": {
+      "title": "My shy 6-year-old found his voice at the sea lion pool",
+      "excerpt": "He narrated the sea lions' entire routine. A stranger stopped to watch. 'Your son is a natural storyteller,' she said.",
+      "author": "Diana, mom of 2 from Boston",
+      "fullStory": "My son is painfully shy. At the Bronx Zoo sea lion pool, he pressed his hands against the glass and started describing everything the sea lions did. A stranger complimented him and he beamed. He just needs the right environment to shine."
+    },
+    "itineraryComparison": {
+      "halfDay": "Congo Gorilla Forest + Children's Zoo + sea lions - 3 hours",
+      "fullDay": "Add Wild Asia Monorail, Tiger Mountain, bug carousel",
+      "bestFor": "All ages, animal lovers"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Bronx Zoo family",
+      "NYC zoo with kids",
+      "Bronx Zoo tips"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    ]
+  },
+  {
+    "id": "orlando-001",
+    "name": "Walt Disney World Magic Kingdom",
+    "city": "Orlando",
+    "country": "USA",
+    "category": "Theme Parks",
+    "ageRange": "2-14",
+    "safetyRating": 4.9,
+    "priceRange": "$$$$",
+    "popularity": 99,
+    "description": "The most magical place on Earth for families. Cinderella Castle, classic rides, character meet-and-greets, parades, and fireworks across six immersive lands including Fantasyland designed for young children.",
+    "location": "1180 Seven Seas Dr, Lake Buena Vista, FL 32830",
+    "bestTime": "January-early March, September-November weekdays",
+    "imageUrl": "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Baby Care Centers",
+      "Rider Switch",
+      "Dining Plans",
+      "Parent Swap"
+    ],
+    "safetyFeatures": [
+      "Height Requirements",
+      "Security Checkpoints",
+      "Lost Child Centers",
+      "First Aid",
+      "Allergy Staff"
+    ],
+    "tipsAndTricks": [
+      "Book Genie+ the night before at midnight.",
+      "Use Baby Care Center on Main Street for diaper changes - cleaner and has rocking chairs.",
+      "Ride Peter Pan's Flight first - 60+ min wait all day.",
+      "Character dining at Crystal Palace is worth every cent for toddlers.",
+      "Bring cooling towels and refillable water bottles."
+    ],
+    "parentStory": {
+      "title": "My 3-year-old met Cinderella and forgot how to speak",
+      "excerpt": "When Cinderella knelt and said 'hello, princess,' my daughter stared silently and burst into tears. The best kind of tears.",
+      "author": "Rachel, mom of 1 from Dallas",
+      "fullStory": "I'd prepped her for weeks. The moment we walked in, Cinderella was right there. My daughter - who never stops talking - was completely silent. Tears streamed. Cinderella held her hand and said 'sometimes princesses don't need words.'"
+    },
+    "itineraryComparison": {
+      "halfDay": "Fantasyland + one big ride + parade - 4-5 hours",
+      "fullDay": "8-10 attractions, two meals, fireworks",
+      "bestFor": "All ages, especially first-timers"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Magic Kingdom kids",
+      "Disney World Orlando family",
+      "Magic Kingdom toddler tips"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80"
+    ]
+  },
+  {
+    "id": "orlando-002",
+    "name": "Universal Studios Florida",
+    "city": "Orlando",
+    "country": "USA",
+    "category": "Theme Parks",
+    "ageRange": "5-15",
+    "safetyRating": 4.7,
+    "priceRange": "$$$$",
+    "popularity": 95,
+    "description": "The Wizarding World of Harry Potter, Minion Mayhem, Jurassic World, and Hollywood-style rides. Two parks connected by the Hogwarts Express with Diagon Alley and Hogsmeade.",
+    "location": "6000 Universal Blvd, Orlando, FL 32819",
+    "bestTime": "September-November, January-February weekdays",
+    "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Child Swap",
+      "Single Rider Lines",
+      "Family Restrooms",
+      "Lockers"
+    ],
+    "safetyFeatures": [
+      "Height Requirements",
+      "Security Screening",
+      "First Aid",
+      "Life Jackets",
+      "Allergy Stations"
+    ],
+    "tipsAndTricks": [
+      "Buy park-to-park tickets for the Hogwarts Express.",
+      "Ride Hagrid's at rope drop or last hour - 120+ min waits.",
+      "Interactive wands ($55) are worth it - 10+ spell-casting spots.",
+      "Butterbeer is $8 frozen - get one to share, very sweet.",
+      "Minion Land is perfect for ages 5-8."
+    ],
+    "parentStory": {
+      "title": "My 7-year-old cast a spell and the dragon breathed fire",
+      "excerpt": "She shouted 'Incendio!' and the dragon ACTUALLY breathed fire. She screamed. I screamed. A stranger high-fived her.",
+      "author": "Chris, dad of 2 from Seattle",
+      "fullStory": "I was skeptical about the $55 interactive wands. My daughter practiced for 20 minutes. When the dragon responded with fire, her face was pure disbelief. That wand is on her nightstand now."
+    },
+    "itineraryComparison": {
+      "halfDay": "One park - Diagon Alley + Minions + coaster - 4-5 hours",
+      "fullDay": "Both parks, Hogwarts Express both ways, dinner at CityWalk",
+      "bestFor": "Ages 7-15, Harry Potter fans"
+    },
+    "commissionRate": "9%",
+    "seoKeywords": [
+      "Universal Orlando kids",
+      "Harry Potter Orlando family",
+      "Universal Studios tips"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80"
+    ]
+  },
+  {
+    "id": "orlando-003",
+    "name": "SeaWorld Orlando",
+    "city": "Orlando",
+    "country": "USA",
+    "category": "Zoos & Aquariums",
+    "ageRange": "3-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$$",
+    "popularity": 84,
+    "description": "Marine life park blending aquarium exhibits and thrill rides. Dolphin and sea lion encounters, roller coasters, penguin exhibit, and an underwater shark tunnel.",
+    "location": "7007 Sea World Dr, Orlando, FL 32821",
+    "bestTime": "Weekday mornings, March-May, September-October",
+    "imageUrl": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Animal Encounters",
+      "Splash Areas",
+      "Family Restrooms",
+      "Dining"
+    ],
+    "safetyFeatures": [
+      "Animal Handler Supervision",
+      "Life Jackets",
+      "First Aid",
+      "Shade Structures",
+      "Security"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 9 AM opening for stingray touch pool.",
+      "Shark Encounter underwater tunnel is huge hit for ages 4+.",
+      "Sesame Street Land is perfect for ages 3-6.",
+      "Skip the $30 Dine with Elmo breakfast.",
+      "Penguin exhibit is 30F - bring hoodie even in summer."
+    ],
+    "parentStory": {
+      "title": "My daughter touched a dolphin and announced her future career",
+      "excerpt": "After the dolphin encounter, my 6-year-old said 'I'm going to be a dolphin doctor.' She's drawn dolphins every day for a month.",
+      "author": "Nathan, dad of 2 from Atlanta",
+      "fullStory": "The dolphin encounter costs $45 extra. The trainer let each kid touch the dolphin and make a hand signal. My daughter was completely transfixed. She's been single-mindedly about dolphins ever since."
+    },
+    "itineraryComparison": {
+      "halfDay": "Dolphin show + shark tunnel + penguins - 3-4 hours",
+      "fullDay": "Add Sesame Street Land, roller coasters, splash pad",
+      "bestFor": "Ages 3-12, animal lovers"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "SeaWorld Orlando family",
+      "Orlando aquarium kids",
+      "SeaWorld dolphins children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80"
+    ]
+  },
+  {
+    "id": "los-angeles-001",
+    "name": "Disneyland California",
+    "city": "Los Angeles",
+    "country": "USA",
+    "category": "Theme Parks",
+    "ageRange": "2-14",
+    "safetyRating": 4.9,
+    "priceRange": "$$$$",
+    "popularity": 97,
+    "description": "The original Disney theme park. Pirates of the Caribbean, Haunted Mansion, Star Wars: Galaxy's Edge, and the reimagined Mickey's Toontown for toddlers and preschoolers.",
+    "location": "1313 Disneyland Dr, Anaheim, CA 92802",
+    "bestTime": "Tuesday-Thursday, January-March, September",
+    "imageUrl": "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Baby Care Centers",
+      "Rider Switch",
+      "Dining Packages",
+      "Disney Genie+"
+    ],
+    "safetyFeatures": [
+      "Height Requirements",
+      "Security Screening",
+      "Lost Child Protocol",
+      "First Aid",
+      "Allergy-Friendly Menus"
+    ],
+    "tipsAndTricks": [
+      "Mickey's Toontown is THE spot for under 7 - splash pads, climbing, no-line characters.",
+      "Ride 'it's a small world' during midday heat - never more than 15 min wait.",
+      "You can bring your own food - saves $60-80 per meal.",
+      "Park at Toy Story lot ($30) and take shuttle.",
+      "Use the app for mobile food ordering."
+    ],
+    "parentStory": {
+      "title": "She rode 'it's a small world' seven times in a row",
+      "excerpt": "My 3-year-old refused to leave. Each time the boat docked she yelled 'AGAIN!' Seven times.",
+      "author": "Jessica, mom of 1 from Portland",
+      "fullStory": "We planned Star Wars and the works. She fell in love with 'it's a small world.' Sat perfectly still every time. We never made it to Galaxy's Edge. Don't care."
+    },
+    "itineraryComparison": {
+      "halfDay": "Toontown + Fantasyland + parade - 4-5 hours",
+      "fullDay": "Both parks, Galaxy's Edge, fireworks",
+      "bestFor": "Ages 2-12, Disney purists"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Disneyland California family",
+      "Disneyland toddler tips",
+      "Anaheim Disney kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80",
+      "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80"
+    ]
+  },
+  {
+    "id": "los-angeles-002",
+    "name": "Griffith Observatory & Park",
+    "city": "Los Angeles",
+    "country": "USA",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 90,
+    "description": "Free public observatory on Mount Hollywood with stunning LA basin views and the Hollywood Sign. Planetarium shows, hands-on science exhibits, free telescopes for stargazing, and Griffith Park hiking trails.",
+    "location": "2800 E Observatory Rd, Los Angeles, CA 90027",
+    "bestTime": "Sunset for views, clear weeknights for telescopes",
+    "imageUrl": "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+    "amenities": [
+      "Free Admission",
+      "Parking",
+      "Gift Shop",
+      "Cafe",
+      "Hiking Trails"
+    ],
+    "safetyFeatures": [
+      "Railing Barriers",
+      "Well-Lit Paths",
+      "Emergency Phones",
+      "Ranger Patrols"
+    ],
+    "tipsAndTricks": [
+      "Go at sunset - free telescopes 7-10 PM.",
+      "Park at Greek Theatre lot and take DASH shuttle ($0.50).",
+      "Tesla coil demonstration twice daily - kids love the lightning bolts.",
+      "Bring a jacket even in summer - 15-20F cooler at the top.",
+      "Planetarium shows skip if under 6."
+    ],
+    "parentStory": {
+      "title": "He saw Jupiter's moons through the telescope and screamed",
+      "excerpt": "My 5-year-old looked through the telescope and saw Jupiter's four moons. He screamed 'IT'S REALLY THERE!'",
+      "author": "Tom, dad of 1 from Phoenix",
+      "fullStory": "When my son put his eye to the lens and saw Jupiter's stripes and moons, his whole face changed. We stayed until they closed. Best free night of our lives."
+    },
+    "itineraryComparison": {
+      "halfDay": "Sunset + telescope viewing + exhibits - 3 hours",
+      "fullDay": "Add Griffith Park hiking, LA Zoo",
+      "bestFor": "Ages 5-14, space enthusiasts, budget travelers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Griffith Observatory kids",
+      "free LA with children",
+      "Griffith Park family"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80"
+    ]
+  },
+  {
+    "id": "san-francisco-001",
+    "name": "California Academy of Sciences",
+    "city": "San Francisco",
+    "country": "USA",
+    "category": "Museums",
+    "ageRange": "3-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$$",
+    "popularity": 89,
+    "description": "An extraordinary museum under one living roof - aquarium, planetarium, natural history museum, and 4-story rainforest dome. The Steinhart Aquarium features coral reefs and deep-sea creatures.",
+    "location": "55 Music Concourse Dr, San Francisco, CA 94118",
+    "bestTime": "Weekday mornings (member hours 8:30 AM Thursdays)",
+    "imageUrl": "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Family Restrooms",
+      "Cafe",
+      "Nursing Area",
+      "Elevators"
+    ],
+    "safetyFeatures": [
+      "Security Guards",
+      "Clear Exit Signage",
+      "First Aid",
+      "Hand Sanitizer",
+      "Coat Check"
+    ],
+    "tipsAndTricks": [
+      "Book timed-entry online - weekend walk-ups sell out by 11 AM.",
+      "Rainforest Dome with free-flying butterflies - go early.",
+      "Penguin feeding at 10:30 AM and 3:30 PM.",
+      "Living Roof has incredible GGP views.",
+      "Bring a sweater - SF is cold year-round."
+    ],
+    "parentStory": {
+      "title": "She spent an hour watching one clownfish",
+      "excerpt": "My 4-year-old found Nemo. She sat cross-legged and watched it for an hour. Named it 'Spot.'",
+      "author": "Amanda, mom of 1 from Sacramento",
+      "fullStory": "We paid $130 and she spent 60 minutes watching one fish. Then I realized - this is childhood wonder. A seven-foot tank and one clownfish was her entire world."
+    },
+    "itineraryComparison": {
+      "halfDay": "Aquarium + rainforest dome + one exhibit - 3 hours",
+      "fullDay": "Add planetarium, natural history, living roof, GGP",
+      "bestFor": "Ages 3-12, curious kids"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "California Academy of Sciences",
+      "San Francisco family museum",
+      "SF aquarium kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336605-5e9c7c738336?w=800&q=80"
+    ]
+  },
+  {
+    "id": "san-francisco-002",
+    "name": "Golden Gate Park",
+    "city": "San Francisco",
+    "country": "USA",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 91,
+    "description": "San Francisco's backyard - 1,017 acres of gardens, playgrounds, the Japanese Tea Garden, a bison paddock, paddle boats on Stow Lake, the Carousel, and endless meadows. Home to the de Young Museum and Conservatory of Flowers.",
+    "location": "Golden Gate Park, San Francisco, CA 94122",
+    "bestTime": "Weekday mornings, September-October",
+    "imageUrl": "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80",
+    "amenities": [
+      "Playgrounds",
+      "Stroller Access",
+      "Restrooms",
+      "Picnic Areas",
+      "Bike Rentals"
+    ],
+    "safetyFeatures": [
+      "Park Rangers",
+      "Well-Lit Paths",
+      "First Aid",
+      "Emergency Call Boxes",
+      "Lifeguards"
+    ],
+    "tipsAndTricks": [
+      "Rent a pedal boat on Stow Lake - $35/hr and very family-friendly.",
+      "Japanese Tea Garden is beautiful but skip if kids under 5.",
+      "Carousel costs $3 - attendant lets you stay on if not busy.",
+      "Bison paddock is free and always shocks visitors.",
+      "Koret Children's Quarter playground is one of the best in the country."
+    ],
+    "parentStory": {
+      "title": "We found a bison paddock in the middle of San Francisco",
+      "excerpt": "My kids couldn't believe it. 'Mom, there are buffalo in the park!' We spent 30 minutes watching them eat grass.",
+      "author": "Jen, mom of 2 from Denver",
+      "fullStory": "We stumbled on the bison paddock while looking for the playground. My city kids had never seen a real buffalo. They pressed against the fence, completely mesmerized. Sometimes the unplanned moments are the best."
+    },
+    "itineraryComparison": {
+      "halfDay": "Stow Lake boats + carousel + playground + bison - 3-4 hours",
+      "fullDay": "Add Japanese Tea Garden, de Young Museum, Botanical Garden",
+      "bestFor": "All ages, budget travelers, nature lovers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Golden Gate Park kids",
+      "SF family park",
+      "Golden Gate Park playground",
+      "San Francisco with children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80",
+      "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80"
+    ]
+  },
+  {
+    "id": "toronto-001",
+    "name": "Toronto Zoo",
+    "city": "Toronto",
+    "country": "Canada",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 86,
+    "description": "One of the world's largest zoos with over 5,000 animals across 710 acres of naturalistic habitats. Divided into seven geographic regions including the award-winning Tundra Trek polar bear exhibit and the massive Indo-Malaya pavilion.",
+    "location": "2000 Meadowvale Rd, Toronto, ON M1B 5K7",
+    "bestTime": "Weekday mornings, May-June & September",
+    "imageUrl": "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Wagon Rental",
+      "Zoomobile",
+      "Picnic Areas",
+      "Splash Pad"
+    ],
+    "safetyFeatures": [
+      "Animal Barriers",
+      "First Aid Stations",
+      "Security Patrols",
+      "Clear Signage",
+      "Shade Structures"
+    ],
+    "tipsAndTricks": [
+      "The zoo is HUGE (710 acres) - take the Zoomobile between regions or your kids will be exhausted before lunch.",
+      "Tundra Trek (polar bears) is the star attraction - go first thing when it opens at 9 AM.",
+      "The Waterside Theatre splash pad is perfect for a summer cool-down - pack swimsuits.",
+      "Bring your own food. The zoo cafes are expensive and the lines at lunch are 30+ minutes.",
+      "The Discovery Zone has a touch table with animal artifacts and a small indoor play area.",
+      "Winter visits are cheaper and quieter - many animals (including the pandas) are more active in cool weather."
+    ],
+    "parentStory": {
+      "title": "My daughter waved at a polar bear and it waved back",
+      "excerpt": "Our 4-year-old pressed her hand against the glass of the underwater polar bear viewing window. The bear swam over, pressed its paw against the same spot, and stayed there for 5 minutes.",
+      "author": "Priya, mom of 2 from Mississauga",
+      "fullStory": "The underwater tunnel at the Tundra Trek is magical. A 500-pound polar bear on the other side of 3-inch glass, inches from your face. Our daughter pressed her hand against the glass, and the bear swam over and matched her. We stood there for 5 minutes, face-to-face with a polar bear. My daughter still talks about her 'polar bear friend.'"
+    },
+    "itineraryComparison": {
+      "halfDay": "Tundra Trek + Indo-Malaya + splash pad - 3-4 hours",
+      "fullDay": "Zoomobile to 5+ regions, Discovery Zone, two shows, picnic",
+      "bestFor": "Ages 2-12, animal lovers, big families"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Toronto Zoo family",
+      "Toronto with kids",
+      "Toronto Zoo polar bears",
+      "Canada family zoo"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1772550018808-ebbcc271726c?w=800&q=80",
+      "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "toronto-002",
+    "name": "Royal Ontario Museum",
+    "city": "Toronto",
+    "country": "Canada",
+    "category": "Museums",
+    "ageRange": "3-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "Canada's largest museum of natural history and world cultures. The spectacular Daniel Libeskind-designed crystal facade houses incredible dinosaur galleries, the Bat Cave immersive experience, First Nations artifacts, and a kid-friendly hands-on discovery gallery.",
+    "location": "100 Queen's Park, Toronto, ON M5S 2C6",
+    "bestTime": "Weekday afternoons, Tuesday is half-price",
+    "imageUrl": "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Family Restrooms",
+      "Cafe",
+      "Coat Check",
+      "Elevators"
+    ],
+    "safetyFeatures": [
+      "Security Guards",
+      "Emergency Exits",
+      "First Aid",
+      "Hand Sanitizer Stations",
+      "Non-Slip Floors"
+    ],
+    "tipsAndTricks": [
+      "Tuesday afternoons are half-price admission (3:30-5:30 PM) - best budget option.",
+      "The Bat Cave is a darkened immersive experience with 3D projections of bats flying around you - amazing for ages 5+, terrifying for under 4.",
+      "Start in the James and Louise Temerty Galleries of the Age of Dinosaurs - the massive Triceratops and T. rex skeletons will set the tone.",
+      "The CIBC Discovery Gallery is specifically designed for hands-on play - let your kids dig for fossils and dress up.",
+      "The Stair of Wonders is the crystal staircase inside the Libeskind building - walk up at least once for the Instagram shot.",
+      "There's a quiet nursing room on the second floor near the First Peoples gallery."
+    ],
+    "parentStory": {
+      "title": "The Bat Cave was too real for our 4-year-old",
+      "excerpt": "My son screamed when the projected bats 'flew' at his face. But my 7-year-old loved it so much she went through 4 times. ROM has something for every age - just know your kid's limits with the immersive exhibits.",
+      "author": "David, dad of 3 from Ottawa",
+      "fullStory": "The Bat Cave exhibit sounded cool. I figured all three kids would love it. Wrong. My 4-year-old clung to my leg and screamed. My 7-year-old asked to go again immediately. My 11-year-old took notes about bat species. The ROM is like three different museums under one roof - the trick is knowing which one fits your kid on any given day."
+    },
+    "itineraryComparison": {
+      "halfDay": "Dinosaur galleries + Bat Cave + Discovery Gallery - 3 hours",
+      "fullDay": "Add First Peoples gallery, China gallery, special exhibit, lunch at cafe",
+      "bestFor": "Ages 4-12, dinosaur fans, rainy days"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Royal Ontario Museum kids",
+      "ROM Toronto family",
+      "Toronto museum children",
+      "ROM dinosaurs"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80",
+      "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "vancouver-001",
+    "name": "Stanley Park Family Day",
+    "city": "Vancouver",
+    "country": "Canada",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 93,
+    "description": "Vancouver's crown jewel - a 1,001-acre urban rainforest with a 5.5-mile seawall, pristine beaches, the Vancouver Aquarium (inside the park), playgrounds, and the famous totem poles. Free access with paid attractions inside.",
+    "location": "Stanley Park, Vancouver, BC V6G 1Z4",
+    "bestTime": "Weekday mornings, June-September",
+    "imageUrl": "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+    "amenities": [
+      "Playgrounds",
+      "Seawall Paths",
+      "Restrooms",
+      "Swimming Beaches",
+      "Bike Rentals"
+    ],
+    "safetyFeatures": [
+      "Park Rangers",
+      "Well-Lit Paths",
+      "First Aid Stations",
+      "Lifeguards (Second Beach)",
+      "Emergency Phones"
+    ],
+    "tipsAndTricks": [
+      "Rent a family bike (with a trailer or tag-along) at the Denman Street entrance and do the full seawall loop - it's 5.5 flat miles with incredible ocean and mountain views.",
+      "Second Beach has the best playground in the park - water park, huge climbing structure, and adjacent pool. It's a whole afternoon by itself.",
+      "The totem poles at Brockton Point are the most photographed spot in Vancouver - go early morning to avoid crowds.",
+      "The Stanley Park Miniature Train runs year-round and is themed for Halloween and Christmas. Book tickets online.",
+      "Third Beach is quieter and has a clothing-optional section - know before you go with kids.",
+      "Bring layers. The weather changes fast. Sunny to rainy to sunny again in 20 minutes is normal."
+    ],
+    "parentStory": {
+      "title": "We biked the seawall and my 5-year-old never pedaled once",
+      "excerpt": "We rented a tandem attachment bike. My 5-year-old 'helped' pedal while I did all the work. But he felt like a champion. The look on his face when he saw the Lions Gate Bridge from the water - priceless.",
+      "author": "Sarah, mom of 2 from Calgary",
+      "fullStory": "The Stanley Park seawall bike rental was the best $45 we spent in Vancouver. My son sat on a tag-along bike attached to mine. He pretended to pedal hard. Every time we passed another family he'd yell 'I'm doing it!' He felt so grown up. We stopped at Second Beach for a swim, watched the sunset over English Bay, and biked back. That's the entire day - and it was perfect."
+    },
+    "itineraryComparison": {
+      "halfDay": "Seawall bike loop + playground + totem poles - 3-4 hours",
+      "fullDay": "Add aquarium, miniature train, Second Beach swim, picnic, sunset at English Bay",
+      "bestFor": "All ages, active families, nature lovers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Stanley Park Vancouver kids",
+      "Stanley Park family activities",
+      "Vancouver seawall family",
+      "Stanley Park playground"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80",
+      "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "vancouver-002",
+    "name": "Vancouver Aquarium",
+    "city": "Vancouver",
+    "country": "Canada",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$$",
+    "popularity": 89,
+    "description": "Canada's largest aquarium, located inside Stanley Park. World-class jellyfish exhibit, playful sea otters, the stunning Tropical Pacific reef tank, and a rescued Pacific white-sided dolphin program. One of the most immersive small aquariums in North America.",
+    "location": "845 Avison Way, Vancouver, BC V6G 3E2",
+    "bestTime": "Weekday mornings (right at opening)",
+    "imageUrl": "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Family Restrooms",
+      "Cafe",
+      "Nursing Area",
+      "Coat Check"
+    ],
+    "safetyFeatures": [
+      "Security Staff",
+      "Emergency Exits",
+      "First Aid",
+      "Hand Sanitizer",
+      "Non-Slip Flooring"
+    ],
+    "tipsAndTricks": [
+      "Arrive at opening and head straight to the sea otter exhibit - they do their morning feedings and are the most playful and active first thing.",
+      "The jellyfish exhibit is mesmerizing for all ages - the lighting changes colors and kids press their faces against the glass for 20+ minutes.",
+      "The 4D Experience theatre is fun but skip if your kid is sensitive to loud noises and water sprays.",
+      "The aquarium is part of Stanley Park - combine with the park's playground for a full day.",
+      "The 'Behind the Scenes' tour ($20 extra) is worth it for marine biology-obsessed kids ages 8+.",
+      "Bring a snack. The cafe is expensive ($12 for a kids' sandwich) and there are picnic tables right outside."
+    ],
+    "parentStory": {
+      "title": "My toddler sat mesmerized by the jellyfish for 20 minutes",
+      "excerpt": "The jellyfish exhibit - dark room, pulsing lights, floating translucent creatures - held my 2-year-old's attention longer than anything ever has. She just pointed and said 'woooow' on repeat. It was magical.",
+      "author": "Tom, dad of 1 from Portland",
+      "fullStory": "We almost skipped the jellyfish room. It was at the end and my toddler was getting tired. Then we walked into that dark room with the glowing jellyfish. She froze. Pointed. Said 'wow' about 50 times. A staff member came over and explained how jellyfish don't have brains. She didn't care about the science. She just stared. We stayed 20 minutes. I'll never forget her face."
+    },
+    "itineraryComparison": {
+      "halfDay": "Sea otters + jellyfish + Tropical Pacific tank - 2-3 hours",
+      "fullDay": "Add 4D theatre, behind-the-scenes tour, Stanley Park playground, seawall",
+      "bestFor": "Ages 2-12, marine life fans, rainy Vancouver days"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Vancouver Aquarium kids",
+      "Stanley Park aquarium",
+      "Vancouver with children",
+      "BC aquarium family"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "honolulu-001",
+    "name": "Waikiki Aquarium",
+    "city": "Honolulu",
+    "country": "USA",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 79,
+    "description": "A compact, affordable aquarium steps from Waikiki Beach. Established in 1904, it's one of the oldest public aquariums in the US. Features Hawaiian monk seals, colorful reef fish, live coral displays, and a fantastic outdoor touch pool. Perfect for a half-day break from the beach.",
+    "location": "2777 Kalakaua Ave, Honolulu, HI 96815",
+    "bestTime": "Weekday mornings, avoid cruise ship days",
+    "imageUrl": "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restrooms",
+      "Gift Shop",
+      "Shaded Benches",
+      "Outdoor Garden"
+    ],
+    "safetyFeatures": [
+      "Animal Barriers",
+      "Lifeguard-Adjacent",
+      "First Aid",
+      "Sun Protection Areas",
+      "Hand Sanitizer"
+    ],
+    "tipsAndTricks": [
+      "Combine with a Waikiki Beach morning - walk over in your swimsuits and hit the aquarium before the afternoon heat.",
+      "The outdoor touch pool has sea cucumbers, urchins, and hermit crabs - staff are excellent at engaging shy kids.",
+      "The Hawaiian monk seal exhibit is the star - feeding time is at 11 AM and the seals put on a show.",
+      "This is a small aquarium (1-2 hours max) - don't expect a full day. That's actually its charm.",
+      "Parking is brutal in Waikiki. Walk or take TheBus (Route 2 or 8, $3/adult, kids free).",
+      "Wednesday mornings are the quietest - fewer tourists, more local families with toddlers."
+    ],
+    "parentStory": {
+      "title": "A quiet break from the beach that became our favorite memory",
+      "excerpt": "My kids were sunburnt and cranky by day 3. The aquarium was a 10-minute walk from our hotel. We spent 90 minutes in the cool, dark building and walked out refreshed. Sometimes the smallest detours save the whole trip.",
+      "author": "Laura, mom of 2 from Melbourne",
+      "fullStory": "Waikiki is amazing but relentless. Sun, sand, salt, crowds. By day 3 my kids were done. I found the aquarium on Google Maps - a 10-minute walk from our hotel. It's small. Quaint. But the kids perked right up in the cool indoor space. They watched the jellyfish, touched a sea cucumber, and saw the monk seal do tricks. 90 minutes later we walked back to the beach, recharged. Best $12 we spent in Hawaii."
+    },
+    "itineraryComparison": {
+      "halfDay": "Aquarium visit + Waikiki Beach swim - 2-3 hours total",
+      "fullDay": "Add Diamond Head hike, Kapiolani Park playground, Waikiki Zoo",
+      "bestFor": "Ages 2-10, beach-break days, budget travelers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Waikiki Aquarium kids",
+      "Honolulu family activities",
+      "Oahu aquarium children",
+      "Waikiki with toddlers"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80"
+    ]
+  }
+]

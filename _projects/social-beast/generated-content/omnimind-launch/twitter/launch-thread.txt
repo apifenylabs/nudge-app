@@ -1,0 +1,63 @@
+=== MAIN LAUNCH THREAD (10 tweets) ===
+=== Post on day of PH launch, publish around 08:00 EST / 13:00 UTC ===
+=== Format: each section = 1 tweet. Post as a thread. ===
+
+1/ 
+Your AI agents have a 20-minute memory.
+Here's how I fixed that with 3 databases and a cron job that runs every night 🧵
+
+2/ 
+The problem: every time I started a new OpenClaw session, my agent forgot everything from yesterday. 
+Not "vaguely forgot" — completely blank.
+Context windows don't save across sessions. They're not supposed to.
+
+3/ 
+Most "solutions" are cloud APIs.
+Send your agent's conversations to some server → they vectorize it → you pay $30-50/month.
+Your private conversations. On someone else's machine. Monthly.
+
+4/ 
+I wanted:
+- 100% local
+- No monthly bill
+- Works offline
+- My agent actually learns over time, not just stores raw text
+
+So I built OmniMind.
+
+5/ 
+Three embedded databases, each for one job:
+• LanceDB → semantic search ("what did we say about X?")
+• Kuzu → relationship graphs ("how do these concepts connect?")
+• SQLite → audit trail ("when was this stored and who accessed it?")
+
+No servers. No API calls. Just a plugin.
+
+6/ 
+The part I'm most proud of: the Memify worker.
+Every night it scans raw conversation logs, finds patterns, and compresses them into higher-level knowledge. 
+Your agent gets smarter while you sleep. No input needed.
+
+7/ 
+One interesting learn: I started with Qdrant (great tool). Switched to LanceDB because embedding it inside a Node.js plugin was seamless. Zero infrastructure.
+Kuzu was the right call for graph — embedded, columnar, no server.
+
+8/ 
+Current state:
+✅ 24/24 tests passing
+✅ Running on my own agents for 2 weeks
+✅ Installs in one command
+✅ v0.3.0 tagged and released
+
+9/ 
+Not solved yet (being honest):
+• No multi-agent shared memory (coming v0.4)
+• No proactive file watcher (manual/cron trigger for now)
+• Need to dogfood more before I call it "production"
+
+10/
+MIT licensed. Free. No registration.
+GitHub → github.com/apifenylabs/omnimind
+Install → openclaw plugins install @openclaw/omnimind
+
+If you build agents, give it a try. I'd love to hear what breaks.

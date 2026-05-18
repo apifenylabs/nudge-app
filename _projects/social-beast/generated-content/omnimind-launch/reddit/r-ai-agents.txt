@@ -1,0 +1,45 @@
+# r/AI_Agents Post — OmniMind
+
+Title: We built an agent memory layer that runs locally. Here's why three databases beat one.
+
+---
+
+The problem: most "agent memory" solutions are cloud APIs. You send your agent's conversations to a service, they vectorize it, you pay monthly.
+
+That doesn't work for:
+- Privacy-sensitive use cases (health data, legal, internal docs)
+- Offline or edge deployments (Raspberry Pi, laptop while traveling)
+- Anyone who doesn't want another $50/month SaaS
+
+So we built OmniMind — a local-first memory layer for OpenClaw agents.
+
+## Why three databases
+
+Instead of one vector store that tries to do everything:
+
+1. **LanceDB** handles semantic search. Fast, embedded, columnar — good for "find conversations about X"
+2. **Kuzu** handles relationships. Agent stores entity graphs here — who knows what, how concepts connect, what patterns emerge
+3. **SQLite** handles provenance. Full audit trail of every memory operation
+
+Each one is optimized for its job. Kuzu runs queries that would be terrible in a vector store. LanceDB handles similarity search that would be slow in a graph. SQLite gives you the paper trail.
+
+## The evolution layer is the interesting part
+
+Every night, the Memify worker:
+1. Scans recent episodic memories
+2. Extracts patterns and connections via LLM
+3. Compresses into higher-level semantic summaries
+4. Strengthens relevant graph relationships
+
+Your agent doesn't just store memories — it gets smarter about them over time.
+
+## Current state
+
+- v0.3.0 released, MIT license
+- All tests passing
+- Running in production on my own agents
+- No cloud dependencies, no API keys, no monthly bill
+
+https://github.com/apifenylabs/omnimind
+
+Curious: what's the biggest memory problem you've hit with your agents? Ours was "agent forgot context from conversations literally 15 minutes ago."

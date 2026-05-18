@@ -1,0 +1,874 @@
+[
+  {
+    "id": "moscow-extra-001",
+    "name": "Moscow Planetarium",
+    "city": "Moscow",
+    "country": "Russia",
+    "category": "Museums",
+    "ageRange": "4-16",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 85,
+    "description": "One of the largest planetariums in the world, featuring a state-of-the-art dome cinema, interactive science exhibits, a 3D Uranium Museum, and a rooftop observatory with a giant telescope. Designed to make astronomy thrilling for all ages with hands-on experiments and stunning space shows.",
+    "location": "5 Sadovaya-Kudrinskaya St, Bldg 1, Moscow",
+    "bestTime": "Weekday mornings (opens at 10 AM)",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+    "amenities": [
+      "Wheelchair Access",
+      "Cafe",
+      "Gift Shop",
+      "Interactive Exhibits",
+      "Baby Changing Facilities"
+    ],
+    "safetyFeatures": [
+      "Security Guards",
+      "CCTV",
+      "Emergency Exits",
+      "First Aid Station"
+    ],
+    "tipsAndTricks": [
+      "Book tickets online at least 3 days in advance — same-day tickets often sell out by noon, especially on weekends.",
+      "The Great Star Hall show is a must, but skip the 3D movie if your kids are under 6 — the glasses can be scary and the volume is loud.",
+      "Head straight to the Lunarium interactive hall on floor -2. That’s where kids 4-12 spend most of their time doing hands-on experiments.",
+      "The rooftop telescope sessions run only on clear evenings (April-October). Queue starts 30 min before sunset — bring a jacket, it’s windy up there.",
+      "Combine with the Moscow Zoo next door — they’re a 5-minute walk apart and make a perfect full-day combo for kids."
+    ],
+    "parentStory": {
+      "title": "She asked if we could ‘go to space again tomorrow’",
+      "excerpt": "After the Great Star Hall show, my 6-year-old daughter turned to me with wide eyes and whispered, ‘Can we go to space again tomorrow?’ She spent the next hour glued to the gravity simulator, refusing to leave.",
+      "author": "Elena, mom of 2 from Belgrade",
+      "fullStory": "I was worried a planetarium would bore a 6-year-old. I was so wrong. The Lunarium has this spinning gravity well where kids toss coins and watch them spiral — she did it 15 times. The 4D movie with wind and vibration made her scream with joy. We stayed 4 hours and only left because she was hungry. The gift shop rocket toys are surprisingly affordable too."
+    },
+    "itineraryComparison": {
+      "halfDay": "Great Star Hall show + Lunarium exhibits, 2-3 hours total",
+      "fullDay": "Both shows + 3D movie + observatory + interactive labs in Lunarium",
+      "bestFor": "Ages 6-14 who love space, science, and hands-on play"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Moscow Planetarium",
+      "family astronomy Moscow",
+      "kids science museum Russia",
+      "planetarium with children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1447433589675-4d569e3f9041?w=800&q=80",
+      "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&q=80",
+      "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&q=80"
+    ]
+  },
+  {
+    "id": "stpetersburg-extra-001",
+    "name": "Museum of Maquettes",
+    "city": "Saint Petersburg",
+    "country": "Russia",
+    "category": "Museums",
+    "ageRange": "3-16",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 81,
+    "description": "An extraordinary miniature museum featuring a 180sqm handcrafted replica of tsarist-era Russia with over 100 moving trains, working streetlights, real water canals, and sound effects triggered by push-buttons. Kids press buttons to activate lights, moving cars, and steam trains across detailed cityscapes and villages.",
+    "location": "8 Tsvetochnaya Street, St Petersburg",
+    "bestTime": "Weekdays before 2 PM",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+    "amenities": [
+      "Wheelchair Accessible",
+      "Cafe",
+      "Interactive Buttons",
+      "Photo Zones",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Glass Barriers",
+      "Railings for Kids",
+      "CCTV",
+      "Staff in Every Hall"
+    ],
+    "tipsAndTricks": [
+      "Every half hour there’s a synchronized show where ALL trains run at once — time your visit for the top of the hour.",
+      "The buttons are at different heights. Let your shorter kid stand on the step stools provided near each display.",
+      "Bring a small notebook — kids love pressing buttons and tracking which trains they’ve activated.",
+      "The museum is part of a larger complex with a cozy cafe. The pancakes are excellent and kid-friendly.",
+      "Avoid Saturdays — it’s packed with local school groups and you’ll spend 15 minutes waiting for a single button."
+    ],
+    "parentStory": {
+      "title": "A button-pressing paradise",
+      "excerpt": "My son ran from display to display pressing every single button. Each train started, each light flickered — he was the conductor of an entire country. We barely made it through in 3 hours because he refused to leave the moving train section.",
+      "author": "Dmitri, dad of 1 from Minsk",
+      "fullStory": "I expected a quiet museum. What I got was a child-powered theme park. The maquette has actual water flowing through canals, tiny factories with smoking chimneys, and trains that whistle. My 5-year-old spent 20 minutes just making the same train go back and forth. The attention to detail is insane — there’s even a tiny wedding scene and a bear chasing a beekeeper in the forest section."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours exploring all interactive displays, doable with a cafe break",
+      "fullDay": "Combine with nearby St Petersburg attractions — 3 hours max is all you need here",
+      "bestFor": "Ages 4-12, train enthusiasts, button-pushers"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Museum of Maquettes St Petersburg",
+      "miniature museum Russia kids",
+      "interactive train museum",
+      "St Petersburg with children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ]
+  },
+  {
+    "id": "vilnius-001",
+    "name": "Vilnius Zoo",
+    "city": "Vilnius",
+    "country": "Lithuania",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 74,
+    "description": "Lithuania’s oldest and largest zoo, home to over 2,000 animals across 280 species. Modern enclosures, a petting zoo for toddlers, and a recently renovated tropical house make this a charming day out. The zoo is set in a forested area with plenty of shade and picnic spots.",
+    "location": "Žverynas District, Vilnius",
+    "bestTime": "Late spring to early autumn, morning hours",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Picnic Areas",
+      "Petting Zoo",
+      "Cafe",
+      "Stroller Paths",
+      "Playground"
+    ],
+    "safetyFeatures": [
+      "Animal Barrier Fencing",
+      "First Aid Point",
+      "Shaded Rest Areas",
+      "Security Personnel"
+    ],
+    "tipsAndTricks": [
+      "The petting zoo opens at 11 AM — arrive early to beat the school groups and let your toddler feed the goats.",
+      "Bring cash. The cafe takes cards but the pony rides and animal feeding kiosks are cash-only.",
+      "The tropical house is warm and humid, great for winter visits but stuffy in July. Dress in layers.",
+      "Pack a picnic — the designated picnic area has tables under pine trees and is far nicer than the overpriced cafe.",
+      "The playground near the entrance is a lifesaver on the way out — your kids will blow off steam while you rest."
+    ],
+    "parentStory": {
+      "title": "The goat that stole our hearts",
+      "excerpt": "A baby goat followed our toddler around the petting zoo for a full 10 minutes. She named it ‘Fluffy’ and still asks about it. The zookeeper let us come back after hours to see the goats being fed.",
+      "author": "Inga, mom of 2 from Riga",
+      "fullStory": "We’d heard Vilnius Zoo was small, and it is. But that’s its charm. The petting zoo is intimate — maybe 10 animals in a fenced area — but the zookeeper spent 15 minutes teaching our kids how to properly hold the guinea pigs. You don’t get that at a mega-zoo. The lemur enclosure is new and the walk-through experience is fantastic."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 hours covers all enclosures, petting zoo, and a picnic lunch",
+      "fullDay": "Add the nearby Vingis Park playground and Botanical Garden",
+      "bestFor": "Toddlers and young kids, budget-conscious families"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Vilnius Zoo",
+      "Lithuania zoo with kids",
+      "family day out Vilnius",
+      "petting zoo Lithuania"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    ]
+  },
+  {
+    "id": "tallinn-extra-001",
+    "name": "Tallinn TV Tower Family Day",
+    "city": "Tallinn",
+    "country": "Estonia",
+    "category": "Parks & Nature",
+    "ageRange": "3-16",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 78,
+    "description": "A 314m observation tower with a panoramic glass-floored viewing deck, a thrilling outdoor skywalk with harnesses, and an interactive science exhibition on the ground floor. Kids love stepping onto the glass floor 170m above ground and spotting landmarks through telescopes.",
+    "location": "Kloostrimetsa 58a, Tallinn",
+    "bestTime": "Clear days, spring through early autumn",
+    "imageUrl": "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+    "amenities": [
+      "Elevator Access",
+      "Cafe & Restaurant",
+      "Gift Shop",
+      "Interactive Exhibits",
+      "Outdoor Terrace"
+    ],
+    "safetyFeatures": [
+      "Harness System for Skywalk",
+      "Glass Floor Railings",
+      "Trained Staff",
+      "Emergency Evacuation Plan",
+      "Height Restrictions on Skywalk"
+    ],
+    "tipsAndTricks": [
+      "The skywalk (walking around the outside with a harness) has a minimum height of 120cm — measure your kid before booking or you’ll get turned away at check-in.",
+      "Visit on the hour to catch the rotating restaurant’s lunch service — the food is average but the 360-degree view while eating makes it fun for kids.",
+      "The glass floor scares some toddlers. Start by looking at the floor from a distance, then let them crawl onto it gradually.",
+      "The science exhibition on the ground floor is free with your ticket — don’t skip it. There’s a wind tunnel and an earthquake simulator kids love.",
+      "Check the weather forecast. If it’s overcast, the views are wasted. Reschedule for a clear day."
+    ],
+    "parentStory": {
+      "title": "She conquered her fear of heights in 10 minutes",
+      "excerpt": "My 7-year-old daughter froze at the glass floor edge. A staff member walked her across holding her hand. By the third crossing, she was jumping on it. We couldn’t get her off.",
+      "author": "Mikk, dad of 2 from Helsinki",
+      "fullStory": "We drove 2 hours from Helsinki just for this. The TV Tower exceeded all expectations. The kids zone on the lower observation deck has these interactive screens where you can draw virtual graffiti on the city — our kids spent 40 minutes there. The cafe serves a decent kids meal with a view. We spent 3 hours total and it was worth every euro."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours: observation deck, glass floor, science exhibition",
+      "fullDay": "Add the skywalk experience + lunch at the rotating restaurant + nearby Pirita beach for a splash",
+      "bestFor": "Families who love views, thrill-seekers aged 7+, science-curious kids"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Tallinn TV Tower family",
+      "observation tower Estonia kids",
+      "Tallinn with children",
+      "skywalk Tallinn"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ]
+  },
+  {
+    "id": "riga-extra-001",
+    "name": "Riga Motor Museum",
+    "city": "Riga",
+    "country": "Latvia",
+    "category": "Museums",
+    "ageRange": "3-16",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 76,
+    "description": "The largest and oldest automobile museum in the Baltics, housing over 100 vintage cars, motorcycles, and Soviet-era vehicles. Interactive touchscreens, a dedicated kids’ play zone with pedal cars, and the world’s only surviving Russo-Balt car make this a hit with gearhead families.",
+    "location": "S. Eizenšteina iela 6, Riga",
+    "bestTime": "Weekday mornings, or Wednesday when entry is discounted",
+    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+    "amenities": [
+      "Wheelchair Accessible",
+      "Cafe",
+      "Kids Play Zone",
+      "Interactive Displays",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Barriers Around Exhibits",
+      "CCTV",
+      "First Aid",
+      "Staff Supervision in Play Area"
+    ],
+    "tipsAndTricks": [
+      "The pedal car track for kids is on the 2nd floor — head there first if you have a 3-7 year old before the crowds hit.",
+      "Any kid under 12 gets in FREE on the first Sunday of every month — plan around it.",
+      "The audio guide is worth the €2. Kids have a special version with simpler language and fun facts.",
+      "The Soviet car collection is surprisingly fascinating — point out the ZIL limousines and tell kids these were for ‘secret leaders.’",
+      "Combine with the Riga Zoo (15 min drive) — same direction, perfect half-day+half-day."
+    ],
+    "parentStory": {
+      "title": "Our daughter ‘drove’ every car in the museum",
+      "excerpt": "They let our 4-year-old sit in a Soviet ambulance and ‘drive’ while we pushed the car on rollers. Her face lit up. We couldn’t get her out. Absolute highlight of our Baltic trip.",
+      "author": "Karl, dad of 1 from Stockholm",
+      "fullStory": "I expected a boring car museum that would lose my kid in 20 minutes. Instead, Riga Motor Museum is actively designed for families. The touchscreens at each exhibit tell stories in English and Latvian. The kids’ workshop on weekends lets them build wooden car models. We were there 3 hours and my daughter cried when we left."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours: main collection + pedal car track + cafe",
+      "fullDay": "Combine with Riga Zoo or the Latvian Ethnographic Open-Air Museum",
+      "bestFor": "Ages 3-12, car enthusiasts, hands-on learners"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Riga Motor Museum",
+      "car museum Latvia kids",
+      "Riga family activities",
+      "Baltic automotive museum"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80"
+    ]
+  },
+  {
+    "id": "gdansk-001",
+    "name": "Gdańsk Zoo",
+    "city": "Gdańsk",
+    "country": "Poland",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 79,
+    "description": "A spacious forest zoo set in the Tricity Landscape Park, home to over 1,000 animals including elephants, giraffes, and a well-known pair of Sumatran tigers. Wide natural enclosures, a children’s zoo with domestic animals, and a mini train that winds through the forest make this a family favorite.",
+    "location": "Karwieńska 3, Gdańsk",
+    "bestTime": "May-September, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+    "amenities": [
+      "Miniature Train",
+      "Playgrounds",
+      "Picnic Areas",
+      "Cafe & Food Stalls",
+      "Wheelchair Rental"
+    ],
+    "safetyFeatures": [
+      "Enclosure Barriers",
+      "First Aid Station",
+      "Security Guards",
+      "Lost Child Point"
+    ],
+    "tipsAndTricks": [
+      "The mini train costs 5 PLN extra per person but is absolutely worth it — it takes you through the forest section where you see animals from a different angle.",
+      "Elephant feeding happens at 11 AM and 2 PM — get there 15 min early for a good spot.",
+      "The zoo is hilly. Rent a stroller or wagon at the entrance for 10 PLN — your legs will thank you.",
+      "Pack your own food. The cafe is mediocre and the picnic areas under the pine trees are gorgeous.",
+      "The newly renovated seal pool has underwater viewing — your kids can watch seals swim right past their faces."
+    ],
+    "parentStory": {
+      "title": "The train ride made the whole trip",
+      "excerpt": "Our 3-year-old was tired after 20 minutes of walking. The mini train saved us. He sat on my lap, pointing at deer and bison through the trees, completely mesmerized for the full 30-minute ride.",
+      "author": "Anna, mom of 2 from Warsaw",
+      "fullStory": "Gdańsk Zoo surprised me. It’s not trying to compete with the mega-zoos of the world — it’s a forest with animal enclosures woven in. The bison enclosure is huge and natural. The elephant house is modern. But the star is the setting — old pine forest, birds singing, shaded paths. We spent 4 hours and barely covered half the park."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 hours: train ride + main enclosures + playground",
+      "fullDay": "Full zoo exploration + picnic + nearby beach at Brzeźno (10 min drive)",
+      "bestFor": "Ages 2-10, families who prefer nature settings over concrete zoos"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Gdańsk Zoo",
+      "Poland zoo with kids",
+      "Gdańsk family day out",
+      "Tricity zoo"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80",
+      "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80"
+    ]
+  },
+  {
+    "id": "wroclaw-001",
+    "name": "Wrocław Zoo",
+    "city": "Wrocław",
+    "country": "Poland",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-16",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "Poland’s oldest and most-visited zoo, famous for the spectacular ‘Afrykarium’ — a massive oceanarium featuring sharks, rays, hippos, and manatees in naturalistic habitats. Also home to a children’s zoo, a gondola ride, and Europe’s largest exhibit of pygmy hippos.",
+    "location": "Wróblewskiego 1, Wrocław",
+    "bestTime": "Weekday mornings, especially right at opening",
+    "imageUrl": "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+    "amenities": [
+      "Gondola Ride",
+      "Multiple Restaurants",
+      "Stroller Rental",
+      "Souvenir Shops",
+      "Water Fountains"
+    ],
+    "safetyFeatures": [
+      "Underwater Glass Tunnels with Railings",
+      "Lifeguards at Water Exhibits",
+      "Emergency Exits",
+      "Wide Walkways"
+    ],
+    "tipsAndTricks": [
+      "Book Afrykarium tickets online (including timed entry) at least 2 days ahead — weekend walk-up tickets can sell out by 11 AM.",
+      "The gondola ride gives panoramic views of the entire zoo and Szczytnicki Park — do it mid-visit as a break for tired legs.",
+      "The underwater tunnel at Afrykarium is best viewed from the moving walkway — let your kid stand on the left side while you ride the belt, they’ll feel like they’re swimming with the sharks.",
+      "The children’s zoo has goat and sheep feeding at 1 PM — arrive 10 min early for a brush.",
+      "Combine with the adjacent Japanese Garden in Szczytnicki Park — it’s free and stunning in cherry blossom season (April)."
+    ],
+    "parentStory": {
+      "title": "A hippo swam right over our heads",
+      "excerpt": "In the Afrykarium, a massive hippo floated directly above our family in the underwater tunnel. My 5-year-old screamed ‘Mommy, there’s a giant rock with a face!’ We laughed so hard we almost missed the shark swimming past.",
+      "author": "Marta, mom of 2 from Poznań",
+      "fullStory": "Wrocław Zoo is world-class. The Afrykarium alone is worth the trip — five huge aquariums with different African ecosystems. The manatee exhibit has a glass dome where you can watch them from below. We spent 6 hours and still didn’t see everything. The food court has decent kids’ meals for 25 PLN. A full-day experience worth the price."
+    },
+    "itineraryComparison": {
+      "halfDay": "Afrykarium + children’s zoo + gondola (3-4 hours)",
+      "fullDay": "Full zoo + Afrykarium + Japanese Garden + picnic in Park Szczytnicki",
+      "bestFor": "All ages, especially families who love aquariums and immersive animal exhibits"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Wrocław Zoo",
+      "Afrykarium oceanarium",
+      "Poland best zoo for kids",
+      "Wrocław family activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80",
+      "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80"
+    ]
+  },
+  {
+    "id": "krakow-001",
+    "name": "Krakow Zoo",
+    "city": "Krakow",
+    "country": "Poland",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "A charming zoo set in the Wolski Forest, home to over 1,500 animals. Highlights include a walk-through lemur enclosure, a modern elephant pavilion, and a children’s zoo with interactive feeding. The zoo’s hillside location provides beautiful forest views at every turn.",
+    "location": "Kasy Oszczędności Miasta Krakowa 14, Krakow",
+    "bestTime": "Late spring through early autumn, morning hours",
+    "imageUrl": "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+    "amenities": [
+      "Cafe & Restaurant",
+      "Picnic Areas",
+      "Playground",
+      "Souvenir Shop",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Walk-Through Enclosure Safety Briefing",
+      "First Aid",
+      "Shaded Rest Stops",
+      "Staff Patrols"
+    ],
+    "tipsAndTricks": [
+      "The zoo is on a hill and has steep sections. Use the free ‘zoo bus’ that shuttles between the entrance and the upper section — it runs every 20 minutes.",
+      "The lemur walk-through is the highlight for kids under 10 — staff tell you exactly how to behave (no sudden moves, don’t touch) to keep the lemurs calm.",
+      "Elephant feeding demonstrations happen at 11:30 AM and 2:30 PM — get there 10 minutes early.",
+      "Pack a picnic. The forest setting has dozens of benches and tables. The cafe food is basic and overpriced.",
+      "Combine with the Wolski Forest trails — there’s a marked 2km family loop that starts and ends at the zoo."
+    ],
+    "parentStory": {
+      "title": "A lemur sat on my daughter’s shoulder",
+      "excerpt": "A ring-tailed lemur hopped onto my daughter’s shoulder during the walk-through. She froze, eyes wide, then whispered ‘Mommy, I’m a Disney princess.’ The keeper let her stay inside for an extra 10 minutes.",
+      "author": "Kasia, mom of 1 from Katowice",
+      "fullStory": "We almost skipped the zoo for Wieliczka Salt Mine — so glad we didn’t. The lemur walk-through is intimate, not crowded like some bigger zoos. About 8 lemurs roam freely while a keeper explains their behavior. My 6-year-old learned more about lemurs in 20 minutes than from any documentary. The zoo feels like a forest sanctuary, not an attraction."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 hours: lemur walk-through + elephants + children’s zoo",
+      "fullDay": "Full zoo + Wolski Forest hike + picnic + Krakow Mound viewpoint",
+      "bestFor": "Ages 3-12, animal lovers, families who enjoy forest settings"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Krakow Zoo",
+      "Poland zoo with kids Krakow",
+      "lemur walk-through Krakow",
+      "Krakow family day out"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1718863336605-5e9c7c738336?w=800&q=80",
+      "https://images.unsplash.com/photo-1738023354227-16a406891bd2?w=800&q=80",
+      "https://images.unsplash.com/photo-1775152496490-9cebc8bb7dde?w=800&q=80"
+    ]
+  },
+  {
+    "id": "krakow-002",
+    "name": "Wieliczka Salt Mine",
+    "city": "Krakow",
+    "country": "Poland",
+    "category": "Museums",
+    "ageRange": "4-16",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 91,
+    "description": "A UNESCO World Heritage site and underground wonderland of chapels carved entirely from salt, underground lakes, and massive chambers. The 3.5km tourist route descends over 800 steps through 9 levels of stunning salt sculptures, chandeliers, and even an underground sports hall — all made of salt. A dedicated ‘Junior Explorer’ audio guide makes the history exciting for kids.",
+    "location": "Daniłowicza 10, Wieliczka",
+    "bestTime": "Weekday mornings, off-peak season (November-March is less crowded)",
+    "imageUrl": "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80",
+    "amenities": [
+      "Elevator (return only)",
+      "Cafe & Restaurant",
+      "Gift Shop",
+      "Audio Guides (including kids’ version)",
+      "Restrooms at several levels"
+    ],
+    "safetyFeatures": [
+      "Handrails on All Stairs",
+      "Well-Lit Pathways",
+      "Emergency Exits Marked",
+      "First Aid Station at Entry",
+      "Guide-Led Groups Only"
+    ],
+    "tipsAndTricks": [
+      "It’s 800 steps down and an elevator back up — but the elevator is small and queues can be 30+ minutes. Bring snacks for the wait.",
+      "The ‘Junior Explorer’ audio guide (free) turns the tour into a treasure hunt with questions and puzzles — grab it at the ticket desk.",
+      "Temperatures are a constant 14-16°C underground. Bring jackets even in summer — your kids will shiver in t-shirts.",
+      "Book the ‘Miner’s Route’ if your kids are 8+ — it’s a 3-hour tour with hard hats, lanterns, and actual mining activities. Way more fun than the standard tourist route.",
+      "The underground chapel is stunning but kids get bored of salt sculptures after 45 minutes. The underground lake at the end is a great reset button."
+    ],
+    "parentStory": {
+      "title": "We licked the walls. Yes, really.",
+      "excerpt": "The guide told us you can lick the walls to confirm they’re salt. My 8-year old did it immediately. Then my wife. Then me. We all stood there, tourists from 20 countries, licking a UNESCO site. Best family memory ever.",
+      "author": "Chris, dad of 2 from London",
+      "fullStory": "Wieliczka exceeded every expectation. The sheer scale is mind-blowing — you’re 135m underground, in a cathedral carved by hand over 700 years. The chandeliers are made of salt crystals. The underground lake has perfect reflections. The Junior Explorer audio guide kept my kids engaged for the full 2.5-hour tour. One of the few tourist attractions that’s actually better than the photos."
+    },
+    "itineraryComparison": {
+      "halfDay": "Tourist Route (2-3 hours) + elevator back up",
+      "fullDay": "Miner’s Route + Tourist Route + lunch at the underground restaurant",
+      "bestFor": "Ages 6-14, adventurous families, anyone who loves unique experiences"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Wieliczka Salt Mine with kids",
+      "Krakow day trip family",
+      "UNESCO Poland children",
+      "salt mine tour family friendly"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80",
+      "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80",
+      "https://images.unsplash.com/photo-1772550018808-ebbcc271726c?w=800&q=80"
+    ]
+  },
+  {
+    "id": "bratislava-001",
+    "name": "Bratislava Zoo",
+    "city": "Bratislava",
+    "country": "Slovakia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 70,
+    "description": "Slovakia’s largest zoo, set on a hillside with panoramic views of the city. Home to over 300 species including rare white lions, Amur tigers, and the popular ‘DinoPark’ — a separate section with life-sized dinosaur models. A cable car connects the upper and lower sections with stunning city views.",
+    "location": "Mlynská dolina 1, Bratislava",
+    "bestTime": "Spring to autumn, morning opening",
+    "imageUrl": "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80",
+    "amenities": [
+      "Cable Car",
+      "DinoPark",
+      "Playgrounds",
+      "Cafe",
+      "Stroller-Friendly Paths"
+    ],
+    "safetyFeatures": [
+      "Fenced Enclosures",
+      "First Aid",
+      "Security Guards",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "The cable car costs 2 EUR extra but gives amazing views of the city and saves your legs on the steep hill — worth every cent.",
+      "DinoPark is a separate ticket (6 EUR). For dinosaur-obsessed kids it’s a must, but skip it if yours are under 4 — the moving dinos can be loud and scary.",
+      "The white lion enclosure is the highlight — feeding time is at 10:30 AM, get there 15 min early for the best view.",
+      "Combine with the nearby botanical garden (free, 5 min walk) for a picnic lunch surrounded by flowers.",
+      "The zoo is smaller than Western European zoos but that’s a plus with toddlers — you can see everything in 2-3 hours without anyone melting down."
+    ],
+    "parentStory": {
+      "title": "The white lion yawned and my son froze",
+      "excerpt": "A magnificent white lion yawned directly in front of my 4-year-old, showing every tooth. My son froze, whispered ‘he’s beautiful’ and refused to move for 10 minutes. That moment cost us the rest of the zoo but was worth it.",
+      "author": "Pavel, dad of 2 from Prague",
+      "fullStory": "Bratislava Zoo isn’t world-class, but it’s perfect for a relaxed half-day trip. The white lions are genuinely impressive — we saw them from barely 3 meters away through thick glass. The DinoPark was a surprise hit; my 6-year-old loved the animatronic T-Rex. The zoo is honestly more of a park with animals than a serious conservation facility — and that’s fine for families who don’t want a full-day commitment."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours: cable car + white lions + DinoPark",
+      "fullDay": "Add botanical garden + Bratislava Castle playground",
+      "bestFor": "Ages 2-10, budget travelers, families doing Bratislava as a day trip"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Bratislava Zoo",
+      "Slovakia zoo with kids",
+      "Bratislava family activities",
+      "DinoPark Bratislava"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80",
+      "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "ljubljana-001",
+    "name": "Ljubljana Zoo",
+    "city": "Ljubljana",
+    "country": "Slovenia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 72,
+    "description": "A compact but charming zoo nestled in the forested Rožnik Hill, home to over 500 animals. Known for its naturalistic enclosures, a popular seal pool with underwater viewing, and a lovely adventure playground built into the trees. The zoo’s small size means even toddlers can walk the entire circuit without getting exhausted.",
+    "location": "Večna pot 70, Ljubljana",
+    "bestTime": "Weekday mornings, spring and autumn",
+    "imageUrl": "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+    "amenities": [
+      "Adventure Playground",
+      "Cafe",
+      "Picnic Areas",
+      "Baby Changing Room",
+      "Stroller Access"
+    ],
+    "safetyFeatures": [
+      "Natural Habitat Barriers",
+      "First Aid",
+      "Shaded Paths",
+      "Staff on Site"
+    ],
+    "tipsAndTricks": [
+      "The adventure playground is built into the hillside with rope bridges and slides — save it for the end of your visit or your kids won’t want to see any animals.",
+      "Seal feeding is at 11 AM and 3 PM — the underwater viewing window lets kids see them zoom past at eye level.",
+      "The zoo is small but hilly. If you have a stroller, use the upper entrance (near the cafe) to avoid the steepest climb.",
+      "Pack a picnic — the forest setting has lovely shaded benches and the cafe options are limited.",
+      "The rope course and climbing wall (extra 3 EUR) near the playground is worth it for kids 5+ with energy to burn."
+    ],
+    "parentStory": {
+      "title": "Seals at eye level made her day",
+      "excerpt": "My 3-year-old pressed her face against the underwater viewing window. A seal swam right up, stopped, and stared back at her. They had a ‘conversation’ for 5 minutes — bubbles, head tilts, the works. She named it Sparkle.",
+      "author": "Nina, mom of 1 from Zagreb",
+      "fullStory": "Ljubljana Zoo is small, and that’s its superpower. No crowds, no queues, no sensory overload. My daughter could take her time at each animal without being pushed along. The wolf enclosure is huge and natural. The playground is genuinely fun — not a sad set of swings, but an actual wooden castle with slides. We spent 3 happy hours and finished with ice cream at the hilltop cafe overlooking the city."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours: seal pool + main enclosures + playground",
+      "fullDay": "Combine with a walk to Ljubljana Castle via the forest trail from the zoo",
+      "bestFor": "Ages 2-8, families wanting a relaxed morning, budget-friendly days"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Ljubljana Zoo",
+      "Slovenia family zoo",
+      "Ljubljana with kids",
+      "zoo seal pool"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80",
+      "https://images.unsplash.com/photo-1594103345324-16aa1bcffdb9?w=800&q=80",
+      "https://images.unsplash.com/photo-1644327981167-fbd67b34ba72?w=800&q=80"
+    ]
+  },
+  {
+    "id": "tirana-001",
+    "name": "Tirana Zoo",
+    "city": "Tirana",
+    "country": "Albania",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 3.8,
+    "priceRange": "$",
+    "popularity": 58,
+    "description": "A small, recently renovated city zoo set in the Grand Park of Tirana. While modest compared to Western European zoos, it has undergone major improvements with better enclosures, a small petting zoo, and a beautiful natural setting beside the Artificial Lake. The adjacent park with boat rentals, bike paths, and lakeside cafes makes it a pleasant family outing.",
+    "location": "Rruga Herman Gjini, Tirana",
+    "bestTime": "Spring and autumn, weekday afternoons",
+    "imageUrl": "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80",
+    "amenities": [
+      "Park Setting",
+      "Cafe Nearby",
+      "Boat Rentals",
+      "Bike Paths",
+      "Playground"
+    ],
+    "safetyFeatures": [
+      "Basic Fencing",
+      "Park Security",
+      "Shaded Benches",
+      "Lake Safety Barriers"
+    ],
+    "tipsAndTricks": [
+      "The zoo itself is small (30 min to walk through). Make it a park day — combine with the lake and playground for a proper outing.",
+      "Boat rentals on the Artificial Lake cost 5 EUR for 30 minutes — pedal boats are a hit with kids 3-10.",
+      "The renovated section (entrance fee 200 LEK) is better than the free section. Pay the extra for cleaner enclosures and the petting zoo.",
+      "Bring snacks and water — the zoo itself has no cafe, but the lakeside restaurants a 2-min walk away are excellent and kid-friendly.",
+      "This isn’t a destination zoo — it’s a local park with animals. Keep expectations realistic and your kids will love the relaxed vibe."
+    ],
+    "parentStory": {
+      "title": "We turned it into a lake day and it was perfect",
+      "excerpt": "The zoo took us 20 minutes. But the pedal boats? 45 minutes of pure joy. My 4-year-old ‘navigated’ while I pedaled. We fed ducks, had ice cream by the lake, and watched locals playing volleyball. Not a bad afternoon.",
+      "author": "Emma, mom of 2 from Berlin",
+      "fullStory": "If you visit Tirana Zoo expecting a modern facility, you’ll be disappointed. But if you treat it as ‘park with bonus animals,’ it’s a lovely afternoon. The bear enclosure was sad (small, concrete) but the new section with goats and deer is much better. The Grand Park setting is genuinely lovely — huge trees, lake views, and a relaxed Balkan vibe. The bike rental (2 EUR/hour) was the highlight for our kids."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo (30 min) + lake boat ride + playground + lakeside lunch",
+      "fullDay": "Add the nearby National Museum + Blloku district for family dinner",
+      "bestFor": "Ages 2-8, budget travelers, families combining a park day with the zoo"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Tirana Zoo",
+      "Albania family activities",
+      "Grand Park Tirana with kids",
+      "Tirana lake boat"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80"
+    ]
+  },
+  {
+    "id": "minsk-001",
+    "name": "Minsk Zoo",
+    "city": "Minsk",
+    "country": "Belarus",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.2,
+    "priceRange": "$",
+    "popularity": 65,
+    "description": "Belarus’s largest zoo, featuring over 400 species spread across a spacious park with themed zones including ‘Exotarium’ (reptiles and aquariums), a dolphinarium, and a children’s contact zoo. The lake on the grounds offers paddleboat rentals and is surrounded by walking paths perfect for strollers.",
+    "location": "Pobediteley Ave 140, Minsk",
+    "bestTime": "May-September, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Dolphinarium",
+      "Paddleboat Rentals",
+      "Cafe",
+      "Playgrounds",
+      "Children’s Zoo"
+    ],
+    "safetyFeatures": [
+      "Dolphinarium Safety Staff",
+      "Enclosure Barriers",
+      "First Aid",
+      "CCTV"
+    ],
+    "tipsAndTricks": [
+      "The dolphin show has 3 daily performances (11 AM, 2 PM, 5 PM) — book at the dolphinarium entrance as soon as you arrive. Weekend shows sell out by noon.",
+      "The Exotarium (aquarium + reptile house) is a separate ticket but your kids 5+ will love it — there’s a walk-through tunnel with fish overhead.",
+      "Paddleboat rental on the lake costs 8 BYN for 30 min — cheap fun that tires kids out before the walk back.",
+      "The contact zoo (20 BYN) lets kids feed rabbits, guinea pigs, and goats — bring hand sanitizer, washing stations are limited.",
+      "The zoo is huge (30+ hectares). Rent a family bike or use the tram that circles the grounds (№1 every 15 minutes)."
+    ],
+    "parentStory": {
+      "title": "A dolphin high-fived my son",
+      "excerpt": "During the dolphin show, a dolphin swam to the edge and ‘high-fived’ my 5-year-old’s hand. His jaw dropped. He didn’t speak for a full minute. Then he asked if we could adopt a dolphin. We’re still debating it.",
+      "author": "Andrei, dad of 1 from Gomel",
+      "fullStory": "Minsk Zoo is better than I expected. The dolphinarium is small but the pool is clean and the trainers clearly care about the animals. The Exotarium is surprisingly good — piranhas, anacondas, a coral reef tank. The main zoo area needs renovation in parts but the bison enclosure and bear habitats are decent. A solid 4-hour outing that won’t break the bank."
+    },
+    "itineraryComparison": {
+      "halfDay": "Dolphin show + Exotarium + contact zoo (3-4 hours)",
+      "fullDay": "Full zoo + lake paddleboats + walk along the Pobediteley Ave park",
+      "bestFor": "Ages 3-12, families who enjoy dolphin shows and hands-on animal encounters"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Minsk Zoo",
+      "Belarus zoo with kids",
+      "Minsk dolphinarium",
+      "family day out Minsk"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "kyiv-001",
+    "name": "Kyiv Zoo",
+    "city": "Kyiv",
+    "country": "Ukraine",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4,
+    "priceRange": "$",
+    "popularity": 69,
+    "description": "One of Eastern Europe’s oldest zoos, spread across 40 hectares of woodland in central Kyiv. Home to over 3,000 animals including African elephants, Amur leopards, polar bears, and a large collection of exotic birds. Features a children’s railway, pony rides, and a recently renovated aquarium pavilion.",
+    "location": "Peremohy Ave 32, Kyiv",
+    "bestTime": "Late spring to early autumn, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Children’s Railway",
+      "Aquarium Pavilion",
+      "Cafes",
+      "Pony Rides",
+      "Picnic Areas"
+    ],
+    "safetyFeatures": [
+      "Enclosure Renovations in Progress",
+      "First Aid Points",
+      "Security Guards",
+      "Path Railings"
+    ],
+    "tipsAndTricks": [
+      "The children’s railway runs every 30 minutes (10 UAH) — a mini steam train that circles the zoo perimeter. Kids 2-8 go absolutely crazy for it.",
+      "Check the zoo’s Telegram channel before visiting — some sections occasionally close due to air raid situations. The aquarium is always open.",
+      "The polar bear pool has underwater viewing — your kids can see them swimming directly overhead.",
+      "Bring your own food. The zoo cafes are basic and the nearby Shevchenko Park has much better options for a picnic.",
+      "The zoo is undergoing gradual renovation (some old Soviet-era enclosures remain), head to the ‘New Zoo’ section first for the best habitats."
+    ],
+    "parentStory": {
+      "title": "The polar bear swam right toward us",
+      "excerpt": "Through the underwater glass, a massive polar bear swam directly toward my daughter. She screamed, then laughed, then pressed her face against the glass. The bear did a somersault. They were playing. I almost cried.",
+      "author": "Oksana, mom of 2 from Lviv",
+      "fullStory": "Kyiv Zoo has a complicated history — some areas are worn, some are being rebuilt. But the animals that have modern enclosures are clearly well cared for. The elephant house is new and spacious. The aquarium has a beautiful tunnel with rays and sharks. My kids loved the pony rides (50 UAH for a 5-min circuit). It’s a zoo in transition, getting better every year."
+    },
+    "itineraryComparison": {
+      "halfDay": "Children’s railway + polar bears + aquarium + pony rides (3-4 hours)",
+      "fullDay": "Full zoo + Shevchenko Park playground + botanical garden nearby",
+      "bestFor": "Ages 2-12, families wanting a big zoo experience on a budget"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Kyiv Zoo",
+      "Ukraine zoo with kids",
+      "Kyiv family day out",
+      "polar bear zoo Kyiv"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80"
+    ]
+  },
+  {
+    "id": "riga-extra-002",
+    "name": "Livu Water Park",
+    "city": "Riga",
+    "country": "Latvia",
+    "category": "Parks & Nature",
+    "ageRange": "2-16",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 75,
+    "description": "One of Northern Europe largest indoor water parks, featuring tropical-themed pools, water slides for all ages, a wave pool, and a dedicated toddler zone with shallow warm water. The retractable glass roof lets the sun in during summer while keeping winter visitors warm at 28 degrees year-round.",
+    "location": "Katlakalna iela 1, Kekava, Riga",
+    "bestTime": "Weekday mornings for minimal crowds",
+    "imageUrl": "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+    "amenities": [
+      "Multiple Pools",
+      "Water Slides",
+      "Sauna Complex",
+      "Restaurant",
+      "Locker Rooms"
+    ],
+    "safetyFeatures": [
+      "Lifeguards on Duty",
+      "Depth Markings",
+      "Non-Slip Flooring",
+      "Kids Life Jackets",
+      "Temperature-Controlled Water"
+    ],
+    "tipsAndTricks": [
+      "The toddler zone for ages 0-5 has warm 30 degree water with fountains and mini slides, perfect for nervous first-timers.",
+      "Wednesday evenings after 5 PM have 30% discount on entry. Weekends are chaos, avoid if possible.",
+      "Bring your own towels, rental is 5 EUR each and adds up fast for a family of four.",
+      "The wave pool activates every 30 minutes for 10 minutes. Time your visit accordingly.",
+      "The outdoor hot tubs are amazing in winter, your kids will love sitting in warm water while snow falls around them."
+    ],
+    "parentStory": {
+      "title": "The lazy river saved our rainy day",
+      "excerpt": "It poured for three straight days during our Riga trip. Livu Water Park saved us. Our 4-year-old spent 2 hours in the toddler zone, my 8-year-old conquered every slide. A rainy day miracle.",
+      "author": "Marta, mom of 2 from Vilnius",
+      "fullStory": "We visited Riga in October and got unlucky with weather. Livu Water Park was our backup plan and it became the highlight. The longest slide is genuinely thrilling even for adults. The toddler area is warm and safe. The cafe food is surprisingly good, burgers and fries that kids actually eat. We spent 5 hours and every minute was worth it."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 hours: toddler zone + wave pool + a few slides",
+      "fullDay": "5-6 hours: all slides + wave pool + sauna + lunch",
+      "bestFor": "Ages 2-14, rainy day alternative, water lovers"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Riga water park kids",
+      "indoor water park Latvia",
+      "Riga rainy day activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80"
+    ]
+  }
+]

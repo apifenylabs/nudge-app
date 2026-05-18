@@ -1,0 +1,35 @@
+# Pre-Written Maker Responses for PH Comments
+
+## Q: How is this different from Supermemory (openclaw-supermemory)?
+**A:** Supermemory is a cloud API — you send your agent's data to their servers. OmniMind runs entirely local. No monthly subscription, no API keys, no data leaving your machine. Also self-evolves via nightly Memify compression, which Supermemory doesn't do.
+
+## Q: Why three databases instead of one?
+**A:** Optimized for different memory types:
+- **LanceDB** for semantic search ("what did we talk about last week?")
+- **Kuzu** for relationship graphs ("how is this task connected to that project?")
+- **SQLite** for audit trails and provenance ("when did this memory get stored?")
+Each one does one thing well. A single store would compromise on all three.
+
+## Q: Does this work with Claude/GPT agents or only OpenClaw?
+**A:** Currently an OpenClaw plugin. But the core library is MIT licensed and could be adapted to any agent framework. The ECL pipeline (Extract → Cognify → Load) is framework-agnostic — it just reads markdown and writes to the stores.
+
+## Q: How much memory does it use?
+**A:** Light. LanceDB + Kuzu are both embedded (no separate server processes). A typical OpenClaw user with 6 months of conversations uses ~200MB of storage. RAM footprint is negligible — a few MB idling.
+
+## Q: Can I run this without Ollama?
+**A:** Yes. The pipeline accepts any OpenClaw-compatible model. If you have an OpenAI or Anthropic key, you can use those instead. bge-m3 via Ollama is the default because it's free and runs locally.
+
+## Q: What's the Memify worker actually do?
+**A:** Every night it scans episodic memories (raw conversation logs), identifies patterns and connections, and compresses them into higher-level semantic summaries. Think of it like your brain's sleep cycle — consolidating short-term memories into long-term knowledge. The original episodes are still searchable via LanceDB, but the compressed versions surface faster for everyday recall.
+
+## Q: Why Kuzu and not Neo4j?
+**A:** Kuzu is embedded (no server), columnar (fast for analytical queries), and zero-config. Neo4j requires a running server. For a plugin that needs to work with `openclaw plugins install`, Kuzu was the right fit.
+
+## Q: Is this production-ready?
+**A:** v0.3.0 is MVP complete. All tests pass. It's running in production on my own OpenClaw instance (dogfooding). v0.4 will add agent-to-agent memory sharing, a Felix hybrid layer for faster recall, and proactive scanning of file changes. But v0.3.0 ships everything needed for persistent memory today.
+
+## Q: What's the roadmap?
+**A:** v0.3.0 = ECL pipeline + 3 stores + self-evolution. v0.4 = Felix hybrid (fast path for hot memories + deep path for cold storage), multi-agent shared memory, proactive file watcher. Long-term: agent-to-agent memory sync across instances.
+
+## Q: How do embeddings work if it's all local?
+**A:** Default uses Ollama with bge-m3 (local, free, good multilingual support). You can swap in any embedding model. If you want GPU acceleration, that depends on your Ollama setup — OmniMind just calls the Ollama API.

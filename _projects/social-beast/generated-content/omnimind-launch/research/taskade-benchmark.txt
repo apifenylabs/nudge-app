@@ -1,0 +1,28 @@
+# Taskade Competitive Benchmark — OmniMind Context
+
+Researched 2026-05-18 per Chris @Wosobu request.
+
+## What Taskade Is
+Not a direct competitor. Taskade is an "AI-native workspace" (Notion competitor) that pivoted to include memory-like features. They market "Workspace DNA" as a memory layer but it's CRM-style structured data, not AI agent memory.
+
+## Their "Memory" vs Ours
+
+| Taskade "Memory" | OmniMind Memory |
+|---|---|
+| Structured task fields (status, dates, owners) | Unstructured episodic recall |
+| CRM-style queryable datasets | 3-store: vector + graph + provenance |
+| No self-evolution | Nightly Memify compression |
+| No entity extraction | Kuzu entity relationship graphs |
+| Agents reference project data | Agents reference conversation history |
+
+## What to Benchmark (Not Copy)
+1. **Genesis dashboard builder** — "describe what you need" → auto-generates widget dashboard. Could inspire OmniMind agent debugging dashboard
+2. **NL queries on structured data** — "show me blocked tasks" → returns formatted view. Valuable pattern for memory inspection in v0.4
+
+## What to Ignore
+- Credit-based AI pricing (pay-per-call = user hostile, don't do this)
+- Feature bloat (Taskade does too much, OmniMind should stay focused)
+- Multi-agent orchestration (different category)
+
+## Verdict
+Benchmark, not copy. Taskade validates that "memory layer" branding has market value, but their technical approach (structured only, no vectors/graphs) is different enough that there's no competitive overlap. 

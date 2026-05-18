@@ -1,0 +1,802 @@
+[
+  {
+    "id": "singapore",
+    "name": "Singapore",
+    "country": "Singapore",
+    "slug": "singapore",
+    "score": 9.2,
+    "tier": 1,
+    "description": "A model of accessible urban design, Singapore offers seniors a seamless travel experience with its world-class MRT system featuring elevators at every station, English signage throughout, and excellent healthcare infrastructure.",
+    "topSpots": [
+      {
+        "name": "Gardens by the Bay",
+        "notes": "Fully wheelchair accessible with ramps and elevators, courtesy wheelchairs available, senior discount on entry",
+        "accessibility": 5
+      },
+      {
+        "name": "Marina Bay Sands SkyPark",
+        "notes": "Elevator access to observation deck, wide pathways, stunning city views without walking",
+        "accessibility": 5
+      },
+      {
+        "name": "Singapore Botanic Gardens",
+        "notes": "UNESCO World Heritage site, flat paved paths, benches every 50m, free entry, wheelchair rental",
+        "accessibility": 5
+      },
+      {
+        "name": "National Museum of Singapore",
+        "notes": "Ramps at all entrances, elevators, accessible toilets, senior discount on admission",
+        "accessibility": 5
+      },
+      {
+        "name": "Chinatown Heritage Centre",
+        "notes": "Restored shophouse with elevator access, local history exhibits, senior-friendly pacing",
+        "accessibility": 4
+      }
+    ],
+    "bestTime": "January–March (cooler, less humid)",
+    "accessibility": 5,
+    "transport": "MRT has elevators at every station, priority seating abundant. Senior MRT card offers discounted fares. Taxis readily available and affordable. Bus fleet 100% wheelchair accessible.",
+    "healthcare": "World-class hospitals: Mount Elizabeth, Gleneagles, Singapore General Hospital. All English-speaking. Walk-in clinics at every neighborhood. Excellent pharmacy network.",
+    "highlights": [
+      "Fully accessible public transit system",
+      "English widely spoken everywhere",
+      "Excellent safety record",
+      "Senior discounts at most attractions",
+      "Clean streets and abundant public restrooms"
+    ],
+    "practicalTips": [
+      "Get a Senior Citizen MRT card for discounted fares",
+      "Visit Gardens by the Bay early morning (9 AM) to avoid heat",
+      "Free shuttle bus around major tourist areas",
+      "Carry a water bottle",
+      "Most restaurants reduce spice on request"
+    ],
+    "seoKeywords": [
+      "accessible Singapore",
+      "senior travel Singapore",
+      "Singapore for elderly",
+      "wheelchair friendly Singapore"
+    ]
+  },
+  {
+    "id": "taipei",
+    "name": "Taipei",
+    "country": "Taiwan",
+    "slug": "taipei",
+    "score": 8.9,
+    "tier": 1,
+    "description": "Taipei offers the most generous senior benefits in Asia. Citizens aged 65+ ride the MRT for free, and foreign seniors can access many of the same discounts. The city is exceptionally safe with clean air, excellent healthcare, and food easy on digestion.",
+    "topSpots": [
+      {
+        "name": "Chiang Kai-shek Memorial Hall",
+        "notes": "Flat walking paths, wide steps with ramps, hourly changing of the guard",
+        "accessibility": 5
+      },
+      {
+        "name": "Taipei 101",
+        "notes": "High-speed elevator to observatory, accessible restrooms, senior ticket price",
+        "accessibility": 5
+      },
+      {
+        "name": "National Palace Museum",
+        "notes": "Wheelchair loan, ramps throughout, benches in every gallery, senior discount",
+        "accessibility": 5
+      },
+      {
+        "name": "Beitou Hot Springs",
+        "notes": "Accessible public bathhouses, easy MRT access, gentle thermal pools",
+        "accessibility": 4
+      },
+      {
+        "name": "Elephant Mountain",
+        "notes": "Easy paved trail at the base, suitable for gentle walks",
+        "accessibility": 3
+      }
+    ],
+    "bestTime": "October–April (mild, pleasant)",
+    "accessibility": 5,
+    "transport": "MRT with accessibility features at all stations. EasyCard for transit and stores. Seniors 65+ ride MRT for free with Foreign Visitor Senior EasyCard. Taxis very affordable.",
+    "healthcare": "Excellent: National Taiwan University Hospital, Taipei Veterans General Hospital. English-speaking international clinics. Affordable dental care.",
+    "highlights": [
+      "Free MRT for seniors 65+ (even foreign visitors)",
+      "Extremely safe, even at night",
+      "Excellent street food with mild flavors",
+      "Clean public restrooms throughout",
+      "Affordable dental and medical care"
+    ],
+    "practicalTips": [
+      "Get an EasyCard at any MRT station",
+      "Bring passport for senior MRT discounts",
+      "Visit night markets before 7 PM to avoid crowds",
+      "Many restaurants have English menus with pictures"
+    ],
+    "seoKeywords": [
+      "senior travel Taipei",
+      "Taipei for elderly",
+      "accessible Taipei",
+      "Taiwan senior travel"
+    ]
+  },
+  {
+    "id": "hong-kong",
+    "name": "Hong Kong",
+    "country": "Hong Kong",
+    "slug": "hong-kong",
+    "score": 8.8,
+    "tier": 1,
+    "description": "Hong Kong's legendary efficiency extends to its senior-friendly infrastructure. The MTR has elevators at most stations, the famous HK$2 travel scheme for seniors, and English is everywhere. Victoria Peak tram and world-class hospitals provide peace of mind.",
+    "topSpots": [
+      {
+        "name": "Victoria Peak (The Peak Tram)",
+        "notes": "Scenic tram ride with gentle incline, accessible Peak Tower with elevators and restaurants",
+        "accessibility": 5
+      },
+      {
+        "name": "Star Ferry",
+        "notes": "Classic harbor crossing, flat boarding ramps, senior discount fare",
+        "accessibility": 4
+      },
+      {
+        "name": "Hong Kong Park",
+        "notes": "Central park with paved paths, aviary, waterfall, accessible toilets",
+        "accessibility": 5
+      },
+      {
+        "name": "Kowloon Walled City Park",
+        "notes": "Classical Chinese garden, flat paved paths, pavilions for resting",
+        "accessibility": 5
+      },
+      {
+        "name": "Tian Tan Buddha (cable car)",
+        "notes": "Cable car with wheelchair option, accessible village at base",
+        "accessibility": 4
+      }
+    ],
+    "bestTime": "October–March (mild, low humidity)",
+    "accessibility": 4,
+    "transport": "MTR with elevators at most stations. Octopus Card for seamless tap-and-go. HK$2 travel scheme for seniors 65+. Taxis plentiful and affordable.",
+    "healthcare": "World-class: Hong Kong Sanatorium & Hospital, Queen Mary Hospital. Excellent English-speaking doctors. International SOS clinic in Central.",
+    "highlights": [
+      "HK$2 flat fare for seniors on MTR, buses, and ferries",
+      "English signs on all transit",
+      "World-class English-speaking healthcare",
+      "Excellent food variety",
+      "Efficient Octopus Card system"
+    ],
+    "practicalTips": [
+      "Get the Senior Octopus Card for automated HK$2 fare",
+      "Check MTR accessibility maps",
+      "Visit the Peak before 3 PM to avoid crowds",
+      "Carry a light jacket",
+      "Use taxis for routes without MTR"
+    ],
+    "seoKeywords": [
+      "senior travel Hong Kong",
+      "Hong Kong for elderly",
+      "accessible Hong Kong",
+      "Hong Kong senior discount"
+    ]
+  },
+  {
+    "id": "kyoto",
+    "name": "Kyoto",
+    "country": "Japan",
+    "slug": "kyoto",
+    "score": 8.7,
+    "tier": 1,
+    "description": "Kyoto is the soul of traditional Japan. Major temples now have ramps, and Japan's omotenashi culture means staff go above and beyond to assist seniors. Zen gardens are naturally wheelchair-friendly. The city is clean, safe, and perfectly paced for older travelers.",
+    "topSpots": [
+      {
+        "name": "Kinkaku-ji (Golden Pavilion)",
+        "notes": "Wheelchair-accessible path around the pavilion, paved walkways, resting benches",
+        "accessibility": 4
+      },
+      {
+        "name": "Arashiyama Bamboo Grove",
+        "notes": "Flat paved path through the grove, accessible from station",
+        "accessibility": 4
+      },
+      {
+        "name": "Philosopher Path",
+        "notes": "2km flat walking path along canal, cherry blossoms, many benches",
+        "accessibility": 4
+      },
+      {
+        "name": "Fushimi Inari (partial)",
+        "notes": "Lower section is wheelchair accessible, ground level is stunning",
+        "accessibility": 3
+      },
+      {
+        "name": "Ryoan-ji Temple",
+        "notes": "Famous rock garden viewable from veranda, wheelchair loan available",
+        "accessibility": 4
+      }
+    ],
+    "bestTime": "March–May or October–November",
+    "accessibility": 4,
+    "transport": "Look for low-floor non-step buses with ramps. Taxis are excellent and reasonably priced. JR Kyoto Station is a model of accessibility.",
+    "healthcare": "Excellent: Kyoto University Hospital, Kyoto City Hospital. English-speaking clinics. 24-hour interpreter service available.",
+    "highlights": [
+      "Zen gardens designed for contemplation at your own pace",
+      "Omotenashi service culture",
+      "Extremely clean and safe city",
+      "Accessible toilets at all major attractions"
+    ],
+    "practicalTips": [
+      "Rent a taxi for half-day temple tour",
+      "Visit temples at opening time (8-9 AM)",
+      "Many restaurants have plastic food displays for easy ordering",
+      "Look for barrier-free signs"
+    ],
+    "seoKeywords": [
+      "senior travel Kyoto",
+      "Kyoto for elderly",
+      "accessible Kyoto temples",
+      "Japan senior travel"
+    ]
+  },
+  {
+    "id": "tokyo",
+    "name": "Tokyo",
+    "country": "Japan",
+    "slug": "tokyo",
+    "score": 8.8,
+    "tier": 2,
+    "description": "Tokyo is surprisingly accessible for seniors. The world's best transit system has priority seating, English audio announcements, and helpful staff. Parks like Ueno and Shinjuku Gyoen offer peaceful escapes. Incredible safety means exploring freely at any hour.",
+    "topSpots": [
+      {
+        "name": "Ueno Park",
+        "notes": "Flat paved paths, museums all wheelchair accessible, cherry blossoms",
+        "accessibility": 5
+      },
+      {
+        "name": "Meiji Shrine",
+        "notes": "Wide paved forest path, wheelchair loan available, peaceful",
+        "accessibility": 4
+      },
+      {
+        "name": "Shinjuku Gyoen",
+        "notes": "Fully accessible paths, many benches, tea house with ramp",
+        "accessibility": 5
+      },
+      {
+        "name": "Asakusa Senso-ji",
+        "notes": "Main hall accessible by ramp, flat Nakamise street with benches",
+        "accessibility": 4
+      },
+      {
+        "name": "teamLab Borderless",
+        "notes": "Fully wheelchair accessible, stunning digital art",
+        "accessibility": 5
+      }
+    ],
+    "bestTime": "March–April or October–November",
+    "accessibility": 4,
+    "transport": "Extensive subway with elevators at most stations. JR Yamanote Line serves major areas. Priority seating culturally respected. Suica/Pasmo cards work everywhere.",
+    "healthcare": "World-class: St. Luke's International Hospital, Tokyo Medical University Hospital. English-speaking clinics in central Tokyo.",
+    "highlights": [
+      "Best public transit system in the world",
+      "Helpful station staff",
+      "Incredible food variety",
+      "Impeccably clean and exceptionally safe"
+    ],
+    "practicalTips": [
+      "Get a Suica or Pasmo card",
+      "Avoid rush hour (7:30-9:30 AM, 5-7 PM)",
+      "Priority seating is culturally respected",
+      "Look for barrier-free maps at stations"
+    ],
+    "seoKeywords": [
+      "senior travel Tokyo",
+      "Tokyo for elderly",
+      "accessible Tokyo",
+      "Japan senior travel guide"
+    ]
+  },
+  {
+    "id": "chiang-mai",
+    "name": "Chiang Mai",
+    "country": "Thailand",
+    "slug": "chiang-mai",
+    "score": 8.5,
+    "tier": 2,
+    "description": "Chiang Mai is a favorite among international retirees. It's slow-paced, affordable, and offers excellent healthcare at Western prices. The Old City is compact and mostly flat with temples offering peaceful spaces. The expat community means English services are widely available.",
+    "topSpots": [
+      {
+        "name": "Doi Suthep (cable car)",
+        "notes": "Cable car to the top, temple has accessible areas, panoramic views",
+        "accessibility": 4
+      },
+      {
+        "name": "Wat Phra Singh",
+        "notes": "Flat temple complex in Old City, gentle paths, shaded benches",
+        "accessibility": 4
+      },
+      {
+        "name": "Night Bazaar",
+        "notes": "Flat walking area, early evening less crowded, seating available",
+        "accessibility": 3
+      },
+      {
+        "name": "Nimman Area",
+        "notes": "Flat sidewalks, many cafes with outdoor seating",
+        "accessibility": 4
+      }
+    ],
+    "bestTime": "November–February (cool season)",
+    "accessibility": 3,
+    "transport": "Songthaews have high steps. Use Grab taxis instead. Private car with driver very affordable (~$30-40/day).",
+    "healthcare": "Excellent: Chiangmai Ram Hospital, Bangkok Hospital Chiang Mai (JCI accredited). Very affordable. Many doctors US/UK trained.",
+    "highlights": [
+      "Very affordable cost of living",
+      "Large expat senior community",
+      "Excellent hospitals",
+      "Slow, relaxed pace of life",
+      "Thai massage everywhere ($6-10)"
+    ],
+    "practicalTips": [
+      "Use Grab instead of songthaews",
+      "Visit Old City in the morning when cooler",
+      "Bangkok Hospital has international patient desk"
+    ],
+    "seoKeywords": [
+      "senior travel Chiang Mai",
+      "Chiang Mai for elderly",
+      "retire in Chiang Mai",
+      "Thailand senior travel"
+    ]
+  },
+  {
+    "id": "seoul",
+    "name": "Seoul",
+    "country": "South Korea",
+    "slug": "seoul",
+    "score": 8.4,
+    "tier": 2,
+    "description": "Seoul combines cutting-edge technology with deep cultural traditions. The subway is modern with accessibility features, senior citizens ride at discounted rates, and Korea's hospitality culture extends to older visitors.",
+    "topSpots": [
+      {
+        "name": "Gyeongbokgung Palace",
+        "notes": "Flat grounds, wheelchair loan, free entry for seniors 65+",
+        "accessibility": 5
+      },
+      {
+        "name": "Namsan Cable Car",
+        "notes": "Scenic cable car to N Seoul Tower, fully accessible stations",
+        "accessibility": 5
+      },
+      {
+        "name": "Seoul Forest",
+        "notes": "Large park with flat paved paths, deer enclosure, butterfly garden",
+        "accessibility": 5
+      },
+      {
+        "name": "Hangang River Cruise",
+        "notes": "Flat boarding, indoor seating, gentle cruise, senior discount",
+        "accessibility": 4
+      }
+    ],
+    "bestTime": "April–June or September–November",
+    "accessibility": 4,
+    "transport": "Seoul Subway with elevators at most stations. Seniors 65+ ride subway for free. T-money card works everywhere. Taxis affordable.",
+    "healthcare": "Excellent: Severance Hospital, Samsung Medical Center. Many English-speaking doctors. Leading medical tourism destination.",
+    "highlights": [
+      "Free subway for seniors 65+",
+      "Modern clean public transit",
+      "Ancient palaces and futuristic cityscapes",
+      "Safe even at night"
+    ],
+    "practicalTips": [
+      "Get a T-money card at any convenience store",
+      "Show passport for senior subway discounts",
+      "Use Seoul Subway app with elevator locations"
+    ],
+    "seoKeywords": [
+      "senior travel Seoul",
+      "Seoul for elderly",
+      "accessible Seoul",
+      "Korea senior travel"
+    ]
+  },
+  {
+    "id": "penang",
+    "name": "Penang",
+    "country": "Malaysia",
+    "slug": "penang",
+    "score": 8.3,
+    "tier": 2,
+    "description": "Penang is a sensory feast that's surprisingly accessible for seniors. George Town's UNESCO heritage zone is largely flat and walkable with countless cafes for rest breaks. The food is legendary and affordable, English is widely spoken.",
+    "topSpots": [
+      {
+        "name": "Pinang Peranakan Mansion",
+        "notes": "Ground floor access, air-conditioned, senior ticket price",
+        "accessibility": 3
+      },
+      {
+        "name": "Kek Lok Si Temple",
+        "notes": "Escalators up the hill, accessible prayer areas",
+        "accessibility": 4
+      },
+      {
+        "name": "Penang Hill (funicular)",
+        "notes": "Funicular to the top, accessible viewing decks",
+        "accessibility": 4
+      },
+      {
+        "name": "Clan Jetties",
+        "notes": "Flat wooden boardwalks over water, benches for resting",
+        "accessibility": 3
+      }
+    ],
+    "bestTime": "December–February (dry season)",
+    "accessibility": 3,
+    "transport": "Grab recommended for seniors (~$2-5/ride). CAT free shuttle bus in George Town.",
+    "healthcare": "Good: Penang Adventist Hospital, Island Hospital, Gleneagles Penang. English-speaking doctors.",
+    "highlights": [
+      "UNESCO George Town flat and walkable",
+      "Legendary street food",
+      "English very widely spoken",
+      "Strong expat community"
+    ],
+    "practicalTips": [
+      "Use Grab within George Town",
+      "Visit street art early morning (before 9 AM)",
+      "Penang Hill is 5°C cooler"
+    ],
+    "seoKeywords": [
+      "senior travel Penang",
+      "Penang for elderly",
+      "accessible Penang",
+      "Malaysia senior travel"
+    ]
+  },
+  {
+    "id": "hoi-an",
+    "name": "Hoi An",
+    "country": "Vietnam",
+    "slug": "hoi-an",
+    "score": 7.9,
+    "tier": 3,
+    "description": "Hoi An is a beautifully preserved ancient trading port. The Old Town is largely flat and car-free, making it comfortable for walking at a gentle pace. Lantern-lit streets, affordable tailors, and exquisite cuisine make this a favorite among mature travelers.",
+    "topSpots": [
+      {
+        "name": "Old Town Lantern Streets",
+        "notes": "Flat mostly pedestrianized area, benches along the river",
+        "accessibility": 3
+      },
+      {
+        "name": "Japanese Covered Bridge",
+        "notes": "Short iconic bridge, flat approach, beautiful photo spot",
+        "accessibility": 4
+      },
+      {
+        "name": "An Bang Beach",
+        "notes": "Flat path to beach, restaurants with seating, gentle waves",
+        "accessibility": 3
+      },
+      {
+        "name": "Cooking Classes",
+        "notes": "Ground floor, seated experience, gentle-paced",
+        "accessibility": 4
+      }
+    ],
+    "bestTime": "February–May (dry, pleasant)",
+    "accessibility": 3,
+    "transport": "Very walkable Old Town. Private car hire cheap (~$15-20/day). Da Nang Airport 45 min away.",
+    "healthcare": "Limited: Hoi An General Hospital. For serious needs, Da Nang (45 min). Travel insurance strongly recommended.",
+    "highlights": [
+      "Beautiful car-free Old Town",
+      "Custom tailoring at incredible prices",
+      "Affordable luxury stays",
+      "Cooking classes for all mobility levels"
+    ],
+    "practicalTips": [
+      "Wear comfortable shoes with good grip",
+      "Visit Old Town late afternoon (4 PM)",
+      "Set menu lunches are great value ($5-8)"
+    ],
+    "seoKeywords": [
+      "senior travel Hoi An",
+      "Hoi An for elderly",
+      "accessible Hoi An",
+      "Vietnam senior travel"
+    ]
+  },
+  {
+    "id": "bali-ubud",
+    "name": "Bali (Ubud)",
+    "country": "Indonesia",
+    "slug": "bali-ubud",
+    "score": 7.8,
+    "tier": 3,
+    "description": "Ubud is Bali's cultural heart, known for wellness retreats and spiritual atmosphere. While the terrain is hilly, the area excels in spa treatments, gentle yoga, and healthy food. Private drivers make it accessible door-to-door.",
+    "topSpots": [
+      {
+        "name": "Ubud Monkey Forest",
+        "notes": "Paved paths through sanctuary, shaded, flat walking",
+        "accessibility": 4
+      },
+      {
+        "name": "Tegallalang Rice Terrace",
+        "notes": "Viewing deck without hiking down, coffee tasting nearby",
+        "accessibility": 3
+      },
+      {
+        "name": "Ubud Palace",
+        "notes": "Central, flat grounds, free entry, evening dance performances",
+        "accessibility": 4
+      },
+      {
+        "name": "Campuhan Ridge Walk",
+        "notes": "2km paved ridge path, mostly flat, benches",
+        "accessibility": 4
+      }
+    ],
+    "bestTime": "April–October (dry season)",
+    "accessibility": 2,
+    "transport": "Private driver best option (~$30-40/day). Grab works in Ubud. Airport transfer 1.5-2 hours.",
+    "healthcare": "Adequate: Ubud Clinic (international standard). Travel insurance with evacuation strongly recommended.",
+    "highlights": [
+      "World-class wellness and spa culture",
+      "Peaceful spiritual atmosphere",
+      "Affordable private drivers",
+      "Gentle yoga and meditation"
+    ],
+    "practicalTips": [
+      "Hire a private driver for your stay",
+      "Request ground floor rooms",
+      "Bring insect repellent"
+    ],
+    "seoKeywords": [
+      "senior travel Bali",
+      "Ubud for elderly",
+      "accessible Bali",
+      "Bali senior travel"
+    ]
+  },
+  {
+    "id": "bangkok",
+    "name": "Bangkok",
+    "country": "Thailand",
+    "slug": "bangkok",
+    "score": 7.8,
+    "tier": 3,
+    "description": "Bangkok's superpower is world-class healthcare at Western prices. Hospitals like Bumrungrad and Bangkok Hospital are JCI-accredited. While heat and traffic are intense, affordable taxis and Grab cars make the city manageable.",
+    "topSpots": [
+      {
+        "name": "Grand Palace",
+        "notes": "Large complex, mostly flat, shaded areas, accessible toilets",
+        "accessibility": 4
+      },
+      {
+        "name": "Wat Pho (Reclining Buddha)",
+        "notes": "Flat temple complex, ramps at entrance, massage on-site",
+        "accessibility": 4
+      },
+      {
+        "name": "Asiatique Riverfront",
+        "notes": "Flat walkways, seating throughout, restaurants with river views",
+        "accessibility": 4
+      }
+    ],
+    "bestTime": "November–February (cool season)",
+    "accessibility": 2,
+    "transport": "BTS Skytrain elevators at most stations. MRT better for accessibility. Taxis very affordable. Grab recommended.",
+    "healthcare": "World-class: Bumrungrad International, Bangkok Hospital (JCI), Samitivej. English-speaking doctors, US/UK trained.",
+    "highlights": [
+      "World-class healthcare at affordable prices",
+      "Incredible street food",
+      "Very affordable luxury hotels",
+      "Vibrant expat community"
+    ],
+    "practicalTips": [
+      "Use BTS or Grab instead of walking long distances",
+      "Visit temples early (8-9 AM)",
+      "Carry a hand fan and water"
+    ],
+    "seoKeywords": [
+      "senior travel Bangkok",
+      "Bangkok for elderly",
+      "Thailand senior healthcare",
+      "Bangkok medical tourism"
+    ]
+  },
+  {
+    "id": "kuala-lumpur",
+    "name": "Kuala Lumpur",
+    "country": "Malaysia",
+    "slug": "kuala-lumpur",
+    "score": 7.7,
+    "tier": 3,
+    "description": "Kuala Lumpur offers a comfortable introduction to Southeast Asia for seniors. English is widely spoken, infrastructure modern, and very affordable. Free city buses and massive shopping malls provide air-conditioned comfort with great accessibility.",
+    "topSpots": [
+      {
+        "name": "Petronas Towers & KLCC Park",
+        "notes": "Elevator to skybridge, park with flat paved paths, benches",
+        "accessibility": 5
+      },
+      {
+        "name": "Batu Caves (cable car)",
+        "notes": "Cable car avoids 272 steps, amazing Hindu temple cave",
+        "accessibility": 4
+      },
+      {
+        "name": "Islamic Arts Museum",
+        "notes": "Accessible galleries, restaurant with great views",
+        "accessibility": 5
+      },
+      {
+        "name": "KL Bird Park",
+        "notes": "World's largest free-flight aviary, flat paved paths",
+        "accessibility": 5
+      }
+    ],
+    "bestTime": "December–February (dry season)",
+    "accessibility": 3,
+    "transport": "Go KL City Bus FREE covers tourist areas. MRT/LRT modern with elevators. Grab affordable.",
+    "healthcare": "Excellent: Prince Court Medical Centre, Pantai Hospital, Gleneagles KL. English-speaking doctors.",
+    "highlights": [
+      "English widely spoken",
+      "Modern accessible transit with free city buses",
+      "Amazing multicultural food",
+      "Very affordable luxury hotels"
+    ],
+    "practicalTips": [
+      "Use free Go KL buses for sightseeing",
+      "Stay in KLCC/Bukit Bintang area",
+      "Ask for senior discounts!"
+    ],
+    "seoKeywords": [
+      "senior travel Kuala Lumpur",
+      "KL for elderly",
+      "accessible Kuala Lumpur",
+      "Malaysia senior travel"
+    ]
+  },
+  {
+    "id": "da-nang",
+    "name": "Da Nang",
+    "country": "Vietnam",
+    "slug": "da-nang",
+    "score": 7.5,
+    "tier": 4,
+    "description": "Da Nang is Vietnam's most livable city. A beach destination with modern airport, wide boulevards, and beautiful coastline. Less chaotic than Hanoi or Saigon, ideal for seniors wanting beach relaxation with cultural options nearby.",
+    "topSpots": [
+      {
+        "name": "My Khe Beach",
+        "notes": "Long flat promenade, gentle waves, accessible beach access",
+        "accessibility": 4
+      },
+      {
+        "name": "Marble Mountains (elevator)",
+        "notes": "Elevator to the top, cave temples, panoramic views",
+        "accessibility": 4
+      },
+      {
+        "name": "Linh Ung Pagoda",
+        "notes": "Flat temple grounds, giant Buddha statue, ocean views",
+        "accessibility": 4
+      }
+    ],
+    "bestTime": "February–May (dry, pleasant)",
+    "accessibility": 3,
+    "transport": "Walkable along beach road. Taxis cheap and metered. Airport small, 15 min from beach.",
+    "healthcare": "Good: Da Nang Family Hospital, Vinmec Da Nang. Adequate for non-emergency care.",
+    "highlights": [
+      "Beautiful calm beach",
+      "Less chaotic than Hanoi or Saigon",
+      "Modern international airport",
+      "Affordable beachfront resorts"
+    ],
+    "practicalTips": [
+      "Stay in My Khe Beach area",
+      "Visit Marble Mountains early (7:30 AM)",
+      "Wide pavements for walking"
+    ],
+    "seoKeywords": [
+      "senior travel Da Nang",
+      "Da Nang for elderly",
+      "Vietnam beach senior travel"
+    ]
+  },
+  {
+    "id": "luang-prabang",
+    "name": "Luang Prabang",
+    "country": "Laos",
+    "slug": "luang-prabang",
+    "score": 7.3,
+    "tier": 4,
+    "description": "Luang Prabang is a UNESCO World Heritage town where time stands still. Nestled between the Mekong and Nam Khan rivers, this former royal capital is compact, walkable, and deeply peaceful. Limited medical facilities but unmatched tranquility.",
+    "topSpots": [
+      {
+        "name": "Royal Palace Museum",
+        "notes": "Flat grounds, beautiful colonial building, accessible",
+        "accessibility": 4
+      },
+      {
+        "name": "Night Market",
+        "notes": "Flat walking area, handicrafts and textiles",
+        "accessibility": 4
+      },
+      {
+        "name": "Mekong River Cruise",
+        "notes": "Gentle boat ride, seated, sunset cruise option",
+        "accessibility": 3
+      },
+      {
+        "name": "Kuang Si Waterfalls (lower)",
+        "notes": "Lower pools accessible by flat path",
+        "accessibility": 3
+      }
+    ],
+    "bestTime": "November–February (dry, cool)",
+    "accessibility": 2,
+    "transport": "Very walkable town center. Tuk-tuks for longer trips. Airport 15 min from town.",
+    "healthcare": "Limited: Luang Prabang Provincial Hospital. International Clinic for minor issues. Evacuation insurance essential.",
+    "highlights": [
+      "Peaceful unhurried atmosphere",
+      "Beautiful French colonial architecture",
+      "Morning alms-giving ceremony",
+      "Stunning Mekong river views"
+    ],
+    "practicalTips": [
+      "Watch alms-giving from respectful distance (~5:30-6 AM)",
+      "Take a Mekong sunset cruise",
+      "Bring cash"
+    ],
+    "seoKeywords": [
+      "senior travel Luang Prabang",
+      "Luang Prabang for elderly",
+      "Laos senior travel",
+      "slow travel Laos"
+    ]
+  },
+  {
+    "id": "siem-reap",
+    "name": "Siem Reap",
+    "country": "Cambodia",
+    "slug": "siem-reap",
+    "score": 7.2,
+    "tier": 4,
+    "description": "Siem Reap is the gateway to Angkor Wat. While temples have steep steps, main temples offer accessible ground-level exploration. Tuk-tuks make getting around easy. The town has a buzzing food scene and the Cambodian people are famously warm.",
+    "topSpots": [
+      {
+        "name": "Angkor Wat (ground level)",
+        "notes": "Flat paths around the moat, stunning photos without climbing",
+        "accessibility": 3
+      },
+      {
+        "name": "Ta Prohm (Tomb Raider)",
+        "notes": "Paved central path through tree-root ruins",
+        "accessibility": 3
+      },
+      {
+        "name": "Angkor National Museum",
+        "notes": "Air-conditioned, wheelchair accessible, excellent exhibits",
+        "accessibility": 5
+      }
+    ],
+    "bestTime": "November–February (cool, dry)",
+    "accessibility": 2,
+    "transport": "Covered tuk-tuks. Private car with driver ~$30-40/day recommended for seniors.",
+    "healthcare": "Limited: Royal Angkor International Hospital. For serious needs, Bangkok (1 hr flight). Evacuation insurance essential.",
+    "highlights": [
+      "Angkor Wat",
+      "Warm Cambodian hospitality",
+      "Affordable luxury accommodations",
+      "Excellent food scene"
+    ],
+    "practicalTips": [
+      "Hire a private car instead of tuk-tuk",
+      "Visit Angkor Wat at sunrise",
+      "Buy multi-day pass for relaxed pace"
+    ],
+    "seoKeywords": [
+      "senior travel Siem Reap",
+      "accessible Angkor Wat",
+      "Cambodia senior travel",
+      "Angkor Wat elderly"
+    ]
+  }
+]

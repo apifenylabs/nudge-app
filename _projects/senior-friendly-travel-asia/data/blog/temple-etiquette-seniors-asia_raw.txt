@@ -1,0 +1,129 @@
+{
+  "slug": "temple-etiquette-seniors-asia",
+  "title": "Temple Etiquette for Senior Travelers in Asia: A Practical Guid
+Guide (2026)",
+  "excerpt": "Navigate Asia's sacred spaces with confidence. From Angkor Wa
+Wat's steep steps to Tokyo's serene shrines — practical etiquette tips for 
+seniors covering dress codes, mobility aids, and cultural traditions.",
+  "content": """
+## Introduction
+
+Asia is home to some of the world\\'s most stunning temples, each offering 
+a unique glimpse into the region\\'s rich history and culture. However, nav
+navigating these sacred spaces can be challenging, especially for senior tr
+travelers. In this guide, we\\'ll provide practical tips and advice on how 
+to make the most of your temple experience in Asia.
+
+## Wat Phra Kaew & Grand Palace, Bangkok
+
+Located in the heart of Bangkok, Wat Phra Kaew is one of Thailand\\'s most 
+famous temples. To ensure a smooth visit:
+
+* Strict dress code: long pants/skirt below knees, covered shoulders
+* Smooth walkways throughout, mostly flat
+* Wheelchair rental available at information booth (free)
+* Best to visit before 9 AM to avoid heat and crowds
+* Hats allowed but must be removed inside temple buildings
+* Entry fee: 500 THB ($14) for foreigners
+* Rest areas with shade available
+
+## Shwedagon Pagoda, Yangon, Myanmar
+
+Shwedagon Pagoda is one of the most sacred sites in Myanmar, and visitors c
+can expect:
+
+* Shoes and socks must be removed before entering
+* Escalators available to main platform
+* Elevator (lift) available for seniors and disabled
+* Hot ground in midday - bring thick socks or visit early morning
+* Rest areas with benches throughout
+* Entry fee: 10,000 MMK ($5)
+* Accessible toilets available
+* Best visited 6-8 AM for cooler temperatures
+
+## Angkor Wat, Cambodia
+
+Angkor Wat is a must-visit destination for any traveler to Cambodia. To mak
+make the most of your visit:
+
+* Famous steep stairs - use the wooden staircase with handrail on the west 
+side (added for accessibility)
+* Much of Angkor complex has flat paths that are accessible
+* Hire a tuk-tuk for the full day ($20-30) instead of walking between templ
+temples
+* Temple of Angkor Wat itself has about 50 steps at the main entrance - man
+manageable at slow pace with handrail
+* Bayon and Ta Prohm have flatter access
+* Best to visit 5-7 AM for sunrise (cooler) or 4-6 PM for sunset
+* Entry: $37 for 1-day pass, $62 for 3-day
+
+## Senso-ji, Tokyo
+
+Located in the heart of Tokyo\\'s Asakusa district, Senso-ji is one of Japa
+Japan\\'s oldest and most famous temples. To experience this sacred space:
+
+* Flat approach through Nakamise-dori shopping street
+* Wheelchair accessible throughout
+* Shoe removal areas have benches for sitting
+* Very popular - visit early (7-8 AM) to avoid crowds
+* Free entry
+* Nearest station: Asakusa (elevator access)
+
+## Fushimi Inari, Kyoto
+
+Fushimi Inari is famous for its thousands of vermillion torii gates that fo
+form a stunning tunnel up the mountain. However:
+
+* Thousands of stairs going up the mountain
+* NOT recommended for seniors with mobility issues beyond the first section
+section
+* The lower section (first 15 min) is flat and beautiful - go here o
+only
+* Visit early (6-7 AM) to avoid crowds
+* Free entry
+* Alternative: View from nearby cafes
+
+## Borobudur, Java, Indonesia
+
+Borobudur is a UNESCO World Heritage site and one of the most iconic temple
+temples in Southeast Asia. To visit:
+
+* Steep stone stairs between levels
+* Sunrise visits are beautiful but require climbing
+* Consider viewing sunrise from nearby Punthuk Setumbu hill (easier access)
+access) or from Manohara Hotel
+* Entry: $25 for foreigners
+* Best visited May-October (dry season)
+* Handrails on some sections
+
+## Temple of Heaven, Beijing
+
+Located in the heart of Beijing\\'s Dongcheng district, the Temple of Heave
+Heaven is a must-visit destination:
+
+* Very accessible - ramps and wide flat paths
+* Park is popular with elderly locals doing tai chi
+* Beautiful gardens, easy walking
+* Entry: 35 RMB ($5) for park, 55 RMB ($7.5) for full access
+* Best visited 6-8 AM when locals practice tai chi
+
+## General Tips for Seniors
+
+To make the most of your temple experience in Asia:
+
+* Carry a scarf/shawl for covering shoulders
+* Compression socks for temple walking days
+* Bring a small folding stool if queuing
+* Slip-on shoes are essential for temples requiring shoe removal
+* Sit on provided benches for shoe removal
+* Bow/wai slightly (a nod is respectful enough for seniors)
+* Donate small bills at temples (20-100 THB or equivalent)
+* Stay hydrated - bring water bottle
+* Visit early morning (before 9 AM) to avoid heat and crowds
+* Many major temples have accessible toilets now
+
+"""
+  "date": "2026-05-14",
+  "author": "Senior-Friendly Travel Asia Team",
+  "readingTime": "7 min read",
+  "tags": ["culture", "safety", "planning", "transport"]

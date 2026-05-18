@@ -1,0 +1,1655 @@
+{
+  "strategy": "ORB",
+  "parameters": {
+    "initial_balance": 1000.0,
+    "slippage_bps": 10,
+    "fee_bps": 5,
+    "compounding": false
+  },
+  "performance": {
+    "total_return_pct": -5.33,
+    "final_balance": 946.68,
+    "num_trades": 54,
+    "num_skipped": 30,
+    "win_rate_pct": 25.9,
+    "avg_win": 1.77,
+    "avg_loss": -1.95,
+    "profit_factor": 0.32,
+    "sharpe_ratio": -8.49,
+    "max_drawdown_pct": 5.36
+  },
+  "trades": [
+    {
+      "date": "2026-03-19",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-03-19",
+      "side": "SELL",
+      "entry": 70108.5631,
+      "exit": 69999.93,
+      "pnl": 0.31,
+      "pnl_pct": 0.03,
+      "bars_held": 16,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": false,
+      "entry_bar": 6,
+      "fees": 0.0002,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-03-20",
+      "side": "BUY",
+      "entry": 71307.5342,
+      "exit": 70366.0978,
+      "pnl": -2.64,
+      "pnl_pct": -0.26,
+      "bars_held": 1,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 8,
+      "fees": 0.0013,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-03-20",
+      "side": "SELL",
+      "entry": 69500.9416,
+      "exit": 70440.646,
+      "pnl": -2.7,
+      "pnl_pct": -0.27,
+      "bars_held": 6,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 15,
+      "fees": 0.0014,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-03-21",
+      "side": "BUY",
+      "entry": 71124.1476,
+      "exit": 70326.7938,
+      "pnl": -2.25,
+      "pnl_pct": -0.23,
+      "bars_held": 2,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 14,
+      "fees": 0.0011,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-03-21",
+      "side": "SELL",
+      "entry": 70142.8225,
+      "exit": 68970.1296,
+      "pnl": 2.87,
+      "pnl_pct": 0.29,
+      "bars_held": 6,
+      "exit_reason": "FULL_TP",
+      "partial_tp1": true,
+      "entry_bar": 17,
+      "tp1_fill": 69298.4093,
+      "fees": 0.0014,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-03-22",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-03-22",
+      "side": "SELL",
+      "entry": 67962.1445,
+      "exit": 67926.859,
+      "pnl": 0.1,
+      "pnl_pct": 0.01,
+      "bars_held": 2,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": false,
+      "entry_bar": 21,
+      "fees": 0.0001,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-03-23",
+      "side": "BUY",
+      "entry": 69228.1937,
+      "exit": 70550.2223,
+      "pnl": 3.29,
+      "pnl_pct": 0.33,
+      "bars_held": 0,
+      "exit_reason": "FULL_TP",
+      "partial_tp1": true,
+      "entry_bar": 11,
+      "tp1_fill": 70185.1356,
+      "fees": 0.0016,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-03-23",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-03-24",
+      "side": "BUY",
+      "entry": 71457.343,
+      "exit": 70457.4379,
+      "pnl": -2.8,
+      "pnl_pct": -0.28,
+      "bars_held": 0,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 7,
+      "fees": 0.0014,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-03-24",
+      "side": "SELL",
+      "entry": 69763.2299,
+      "exit": 70761.7452,
+      "pnl": -2.86,
+      "pnl_pct": -0.29,
+      "bars_held": 9,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 14,
+      "fees": 0.0014,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-03-25",
+      "side": "BUY",
+      "entry": 71672.7067,
+      "exit": 70761.956,
+      "pnl": -2.54,
+      "pnl_pct": -0.26,
+      "bars_held": 5,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 10,
+      "fees": 0.0013,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-03-25",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-03-26",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-03-26",
+      "side": "SELL",
+      "entry": 69634.3381,
+      "exit": 68338.8054,
+      "pnl": 3.2,
+      "pnl_pct": 0.32,
+      "bars_held": 9,
+      "exit_reason": "FULL_TP",
+      "partial_tp1": true,
+      "entry_bar": 9,
+      "tp1_fill": 68697.5406,
+      "fees": 0.0016,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-03-27",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-03-27",
+      "side": "SELL",
+      "entry": 68011.5149,
+      "exit": 66799.0541,
+      "pnl": 3.07,
+      "pnl_pct": 0.31,
+      "bars_held": 2,
+      "exit_reason": "FULL_TP",
+      "partial_tp1": true,
+      "entry_bar": 8,
+      "tp1_fill": 67136.2091,
+      "fees": 0.0015,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-03-28",
+      "side": "BUY",
+      "entry": 66785.9145,
+      "exit": 66310.653,
+      "pnl": -1.43,
+      "pnl_pct": -0.14,
+      "bars_held": 10,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": false,
+      "entry_bar": 13,
+      "fees": 0.0007,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-03-28",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-03-29",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-03-29",
+      "side": "SELL",
+      "entry": 66067.6605,
+      "exit": 66643.188,
+      "pnl": -1.74,
+      "pnl_pct": -0.17,
+      "bars_held": 0,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 22,
+      "fees": 0.0009,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-03-30",
+      "side": "BUY",
+      "entry": 68106.1375,
+      "exit": 67256.4774,
+      "pnl": -2.5,
+      "pnl_pct": -0.25,
+      "bars_held": 3,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 11,
+      "fees": 0.0012,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-03-30",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-03-31",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-03-31",
+      "side": "SELL",
+      "entry": 66229.9205,
+      "exit": 67108.1377,
+      "pnl": -2.65,
+      "pnl_pct": -0.27,
+      "bars_held": 4,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 9,
+      "fees": 0.0013,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-01",
+      "side": "BUY",
+      "entry": 69105.4376,
+      "exit": 68125.534,
+      "pnl": -2.84,
+      "pnl_pct": -0.29,
+      "bars_held": 7,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 6,
+      "fees": 0.0014,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-01",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-02",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-02",
+      "side": "SELL",
+      "entry": 65883.0383,
+      "exit": 66819.9885,
+      "pnl": -2.84,
+      "pnl_pct": -0.29,
+      "bars_held": 1,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 13,
+      "fees": 0.0014,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-03",
+      "side": "BUY",
+      "entry": 67265.5084,
+      "exit": 66536.7764,
+      "pnl": -2.17,
+      "pnl_pct": -0.22,
+      "bars_held": 6,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 7,
+      "fees": 0.0011,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-03",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-04",
+      "side": "BUY",
+      "entry": 67139.3933,
+      "exit": 67233.1196,
+      "pnl": 0.64,
+      "pnl_pct": 0.07,
+      "bars_held": 13,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": true,
+      "entry_bar": 10,
+      "tp1_fill": 67472.965,
+      "fees": 0.0003,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-04-04",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-05",
+      "side": "BUY",
+      "entry": 67464.1447,
+      "exit": 67061.2157,
+      "pnl": -1.2,
+      "pnl_pct": -0.12,
+      "bars_held": 0,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 15,
+      "fees": 0.0006,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-05",
+      "side": "SELL",
+      "entry": 66731.7335,
+      "exit": 67134.0029,
+      "pnl": -1.2,
+      "pnl_pct": -0.12,
+      "bars_held": 4,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 6,
+      "fees": 0.0006,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-06",
+      "side": "BUY",
+      "entry": 69830.3415,
+      "exit": 69173.5953,
+      "pnl": -1.88,
+      "pnl_pct": -0.19,
+      "bars_held": 0,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 9,
+      "fees": 0.0009,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-06",
+      "side": "SELL",
+      "entry": 68535.4251,
+      "exit": 68922.5137,
+      "pnl": -1.13,
+      "pnl_pct": -0.12,
+      "bars_held": 0,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": false,
+      "entry_bar": 23,
+      "fees": 0.0006,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-07",
+      "side": "BUY",
+      "entry": 69407.2222,
+      "exit": 70525.3943,
+      "pnl": 2.77,
+      "pnl_pct": 0.28,
+      "bars_held": 2,
+      "exit_reason": "FULL_TP",
+      "partial_tp1": true,
+      "entry_bar": 20,
+      "tp1_fill": 70211.1823,
+      "fees": 0.0014,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-04-07",
+      "side": "SELL",
+      "entry": 67995.592,
+      "exit": 68761.4014,
+      "pnl": -2.25,
+      "pnl_pct": -0.23,
+      "bars_held": 3,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 14,
+      "fees": 0.0011,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-08",
+      "side": "BUY",
+      "entry": 72459.973,
+      "exit": 71485.2223,
+      "pnl": -2.69,
+      "pnl_pct": -0.28,
+      "bars_held": 0,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 13,
+      "fees": 0.0013,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-08",
+      "side": "SELL",
+      "entry": 70893.0905,
+      "exit": 71866.6558,
+      "pnl": -2.74,
+      "pnl_pct": -0.28,
+      "bars_held": 3,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 14,
+      "fees": 0.0014,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-09",
+      "side": "BUY",
+      "entry": 71501.0257,
+      "exit": 70666.4706,
+      "pnl": -2.34,
+      "pnl_pct": -0.24,
+      "bars_held": 4,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 9,
+      "fees": 0.0012,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-09",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-10",
+      "side": "BUY",
+      "entry": 72712.2139,
+      "exit": 72889.7373,
+      "pnl": 0.49,
+      "pnl_pct": 0.05,
+      "bars_held": 9,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": false,
+      "entry_bar": 14,
+      "fees": 0.0002,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-04-10",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-11",
+      "side": "BUY",
+      "entry": 73355.9424,
+      "exit": 72970.1168,
+      "pnl": -1.05,
+      "pnl_pct": -0.11,
+      "bars_held": 5,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": false,
+      "entry_bar": 18,
+      "fees": 0.0005,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-11",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-12",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-12",
+      "side": "SELL",
+      "entry": 71028.1632,
+      "exit": 70811.721,
+      "pnl": 0.61,
+      "pnl_pct": 0.06,
+      "bars_held": 11,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": false,
+      "entry_bar": 12,
+      "fees": 0.0003,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-04-13",
+      "side": "BUY",
+      "entry": 71510.8929,
+      "exit": 70865.4969,
+      "pnl": -1.81,
+      "pnl_pct": -0.19,
+      "bars_held": 0,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 13,
+      "fees": 0.0009,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-13",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-14",
+      "side": "BUY",
+      "entry": 74887.6192,
+      "exit": 74038.2348,
+      "pnl": 0.07,
+      "pnl_pct": 0.01,
+      "bars_held": 11,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": true,
+      "entry_bar": 7,
+      "tp1_fill": 75787.632,
+      "fees": 0.0,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-04-14",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-15",
+      "side": "BUY",
+      "entry": 75106.1562,
+      "exit": 74735.18,
+      "pnl": -0.99,
+      "pnl_pct": -0.1,
+      "bars_held": 4,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": false,
+      "entry_bar": 19,
+      "fees": 0.0005,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-15",
+      "side": "SELL",
+      "entry": 73545.9853,
+      "exit": 74427.1731,
+      "pnl": -2.4,
+      "pnl_pct": -0.25,
+      "bars_held": 5,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 7,
+      "fees": 0.0012,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-16",
+      "side": "BUY",
+      "entry": 75572.1981,
+      "exit": 74735.3372,
+      "pnl": -2.22,
+      "pnl_pct": -0.23,
+      "bars_held": 1,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 20,
+      "fees": 0.0011,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-16",
+      "side": "SELL",
+      "entry": 74148.416,
+      "exit": 74984.1019,
+      "pnl": -2.25,
+      "pnl_pct": -0.23,
+      "bars_held": 0,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 13,
+      "fees": 0.0011,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-17",
+      "side": "BUY",
+      "entry": 75457.764,
+      "exit": 76671.3028,
+      "pnl": 2.77,
+      "pnl_pct": 0.29,
+      "bars_held": 5,
+      "exit_reason": "FULL_TP",
+      "partial_tp1": true,
+      "entry_bar": 8,
+      "tp1_fill": 76330.227,
+      "fees": 0.0014,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-04-17",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-18",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-18",
+      "side": "SELL",
+      "entry": 76590.7255,
+      "exit": 75767.4518,
+      "pnl": 2.15,
+      "pnl_pct": 0.22,
+      "bars_held": 15,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": true,
+      "entry_bar": 8,
+      "tp1_fill": 75767.903,
+      "fees": 0.0011,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-04-19",
+      "side": "BUY",
+      "entry": 76084.226,
+      "exit": 75450.2986,
+      "pnl": -1.67,
+      "pnl_pct": -0.17,
+      "bars_held": 2,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 13,
+      "fees": 0.0008,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-19",
+      "side": "SELL",
+      "entry": 75121.006,
+      "exit": 75754.2742,
+      "pnl": -1.69,
+      "pnl_pct": -0.18,
+      "bars_held": 5,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 7,
+      "fees": 0.0008,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-20",
+      "side": "BUY",
+      "entry": 75029.2154,
+      "exit": 76122.0498,
+      "pnl": 2.5,
+      "pnl_pct": 0.26,
+      "bars_held": 11,
+      "exit_reason": "FULL_TP",
+      "partial_tp1": true,
+      "entry_bar": 7,
+      "tp1_fill": 75811.364,
+      "fees": 0.0013,
+      "result": "WIN"
+    },
+    {
+      "date": "2026-04-20",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-21",
+      "side": "BUY",
+      "entry": 76550.822,
+      "exit": 75765.6632,
+      "pnl": -2.05,
+      "pnl_pct": -0.21,
+      "bars_held": 4,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 8,
+      "fees": 0.001,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-21",
+      "side": "SELL",
+      "entry": 75188.5585,
+      "exit": 75972.562,
+      "pnl": -2.08,
+      "pnl_pct": -0.22,
+      "bars_held": 0,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 17,
+      "fees": 0.001,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-22",
+      "side": "BUY",
+      "entry": 78826.694,
+      "exit": 78100.0518,
+      "pnl": -1.85,
+      "pnl_pct": -0.19,
+      "bars_held": 10,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": false,
+      "entry_bar": 13,
+      "fees": 0.0009,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-22",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-23",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-23",
+      "side": "SELL",
+      "entry": 77133.8257,
+      "exit": 78016.1548,
+      "pnl": -2.29,
+      "pnl_pct": -0.24,
+      "bars_held": 4,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 10,
+      "fees": 0.0011,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-24",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-24",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-25",
+      "side": "BUY",
+      "entry": 77939.6755,
+      "exit": 77334.5706,
+      "pnl": -1.56,
+      "pnl_pct": -0.16,
+      "bars_held": 5,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 10,
+      "fees": 0.0008,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-25",
+      "side": "SELL",
+      "entry": 77082.8163,
+      "exit": 77687.4172,
+      "pnl": -1.57,
+      "pnl_pct": -0.16,
+      "bars_held": 6,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 16,
+      "fees": 0.0008,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-26",
+      "side": "BUY",
+      "entry": 78394.7063,
+      "exit": 77889.2531,
+      "pnl": -1.29,
+      "pnl_pct": -0.14,
+      "bars_held": 3,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 18,
+      "fees": 0.0006,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-26",
+      "side": "SELL",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-27",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-27",
+      "side": "SELL",
+      "entry": 77245.797,
+      "exit": 77448.6913,
+      "pnl": -0.53,
+      "pnl_pct": -0.06,
+      "bars_held": 8,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": false,
+      "entry_bar": 15,
+      "fees": 0.0003,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-28",
+      "side": "BUY",
+      "entry": null,
+      "exit": null,
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "bars_held": 0,
+      "exit_reason": "NOT_TRIGGERED",
+      "partial_tp1": false,
+      "result": "SKIPPED"
+    },
+    {
+      "date": "2026-04-28",
+      "side": "SELL",
+      "entry": 76410.1694,
+      "exit": 76419.1128,
+      "pnl": -0.02,
+      "pnl_pct": -0.0,
+      "bars_held": 16,
+      "exit_reason": "EOD_CLOSE",
+      "partial_tp1": false,
+      "entry_bar": 7,
+      "fees": 0.0,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-29",
+      "side": "BUY",
+      "entry": 77702.302,
+      "exit": 77040.6577,
+      "pnl": -1.71,
+      "pnl_pct": -0.18,
+      "bars_held": 0,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 9,
+      "fees": 0.0009,
+      "result": "LOSS"
+    },
+    {
+      "date": "2026-04-29",
+      "side": "SELL",
+      "entry": 75942.7639,
+      "exit": 76602.2102,
+      "pnl": -1.74,
+      "pnl_pct": -0.18,
+      "bars_held": 0,
+      "exit_reason": "STOP_LOSS",
+      "partial_tp1": false,
+      "entry_bar": 15,
+      "fees": 0.0009,
+      "result": "LOSS"
+    }
+  ],
+  "equity_curve": [
+    {
+      "date": "2026-03-19",
+      "balance": 1000.0,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-03-19",
+      "balance": 1000.31,
+      "side": "SELL",
+      "pnl": 0.31
+    },
+    {
+      "date": "2026-03-20",
+      "balance": 997.67,
+      "side": "BUY",
+      "pnl": -2.64
+    },
+    {
+      "date": "2026-03-20",
+      "balance": 994.97,
+      "side": "SELL",
+      "pnl": -2.7
+    },
+    {
+      "date": "2026-03-21",
+      "balance": 992.72,
+      "side": "BUY",
+      "pnl": -2.25
+    },
+    {
+      "date": "2026-03-21",
+      "balance": 995.59,
+      "side": "SELL",
+      "pnl": 2.87
+    },
+    {
+      "date": "2026-03-22",
+      "balance": 995.59,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-03-22",
+      "balance": 995.69,
+      "side": "SELL",
+      "pnl": 0.1
+    },
+    {
+      "date": "2026-03-23",
+      "balance": 998.98,
+      "side": "BUY",
+      "pnl": 3.29
+    },
+    {
+      "date": "2026-03-23",
+      "balance": 998.98,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-03-24",
+      "balance": 996.18,
+      "side": "BUY",
+      "pnl": -2.8
+    },
+    {
+      "date": "2026-03-24",
+      "balance": 993.32,
+      "side": "SELL",
+      "pnl": -2.86
+    },
+    {
+      "date": "2026-03-25",
+      "balance": 990.78,
+      "side": "BUY",
+      "pnl": -2.54
+    },
+    {
+      "date": "2026-03-25",
+      "balance": 990.78,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-03-26",
+      "balance": 990.78,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-03-26",
+      "balance": 993.98,
+      "side": "SELL",
+      "pnl": 3.2
+    },
+    {
+      "date": "2026-03-27",
+      "balance": 993.98,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-03-27",
+      "balance": 997.05,
+      "side": "SELL",
+      "pnl": 3.07
+    },
+    {
+      "date": "2026-03-28",
+      "balance": 995.62,
+      "side": "BUY",
+      "pnl": -1.43
+    },
+    {
+      "date": "2026-03-28",
+      "balance": 995.62,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-03-29",
+      "balance": 995.62,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-03-29",
+      "balance": 993.88,
+      "side": "SELL",
+      "pnl": -1.74
+    },
+    {
+      "date": "2026-03-30",
+      "balance": 991.38,
+      "side": "BUY",
+      "pnl": -2.5
+    },
+    {
+      "date": "2026-03-30",
+      "balance": 991.38,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-03-31",
+      "balance": 991.38,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-03-31",
+      "balance": 988.73,
+      "side": "SELL",
+      "pnl": -2.65
+    },
+    {
+      "date": "2026-04-01",
+      "balance": 985.89,
+      "side": "BUY",
+      "pnl": -2.84
+    },
+    {
+      "date": "2026-04-01",
+      "balance": 985.89,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-02",
+      "balance": 985.89,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-02",
+      "balance": 983.05,
+      "side": "SELL",
+      "pnl": -2.84
+    },
+    {
+      "date": "2026-04-03",
+      "balance": 980.88,
+      "side": "BUY",
+      "pnl": -2.17
+    },
+    {
+      "date": "2026-04-03",
+      "balance": 980.88,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-04",
+      "balance": 981.52,
+      "side": "BUY",
+      "pnl": 0.64
+    },
+    {
+      "date": "2026-04-04",
+      "balance": 981.52,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-05",
+      "balance": 980.32,
+      "side": "BUY",
+      "pnl": -1.2
+    },
+    {
+      "date": "2026-04-05",
+      "balance": 979.12,
+      "side": "SELL",
+      "pnl": -1.2
+    },
+    {
+      "date": "2026-04-06",
+      "balance": 977.24,
+      "side": "BUY",
+      "pnl": -1.88
+    },
+    {
+      "date": "2026-04-06",
+      "balance": 976.11,
+      "side": "SELL",
+      "pnl": -1.13
+    },
+    {
+      "date": "2026-04-07",
+      "balance": 978.88,
+      "side": "BUY",
+      "pnl": 2.77
+    },
+    {
+      "date": "2026-04-07",
+      "balance": 976.63,
+      "side": "SELL",
+      "pnl": -2.25
+    },
+    {
+      "date": "2026-04-08",
+      "balance": 973.94,
+      "side": "BUY",
+      "pnl": -2.69
+    },
+    {
+      "date": "2026-04-08",
+      "balance": 971.2,
+      "side": "SELL",
+      "pnl": -2.74
+    },
+    {
+      "date": "2026-04-09",
+      "balance": 968.86,
+      "side": "BUY",
+      "pnl": -2.34
+    },
+    {
+      "date": "2026-04-09",
+      "balance": 968.86,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-10",
+      "balance": 969.35,
+      "side": "BUY",
+      "pnl": 0.49
+    },
+    {
+      "date": "2026-04-10",
+      "balance": 969.35,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-11",
+      "balance": 968.3,
+      "side": "BUY",
+      "pnl": -1.05
+    },
+    {
+      "date": "2026-04-11",
+      "balance": 968.3,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-12",
+      "balance": 968.3,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-12",
+      "balance": 968.91,
+      "side": "SELL",
+      "pnl": 0.61
+    },
+    {
+      "date": "2026-04-13",
+      "balance": 967.1,
+      "side": "BUY",
+      "pnl": -1.81
+    },
+    {
+      "date": "2026-04-13",
+      "balance": 967.1,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-14",
+      "balance": 967.17,
+      "side": "BUY",
+      "pnl": 0.07
+    },
+    {
+      "date": "2026-04-14",
+      "balance": 967.17,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-15",
+      "balance": 966.18,
+      "side": "BUY",
+      "pnl": -0.99
+    },
+    {
+      "date": "2026-04-15",
+      "balance": 963.78,
+      "side": "SELL",
+      "pnl": -2.4
+    },
+    {
+      "date": "2026-04-16",
+      "balance": 961.56,
+      "side": "BUY",
+      "pnl": -2.22
+    },
+    {
+      "date": "2026-04-16",
+      "balance": 959.31,
+      "side": "SELL",
+      "pnl": -2.25
+    },
+    {
+      "date": "2026-04-17",
+      "balance": 962.08,
+      "side": "BUY",
+      "pnl": 2.77
+    },
+    {
+      "date": "2026-04-17",
+      "balance": 962.08,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-18",
+      "balance": 962.08,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-18",
+      "balance": 964.23,
+      "side": "SELL",
+      "pnl": 2.15
+    },
+    {
+      "date": "2026-04-19",
+      "balance": 962.56,
+      "side": "BUY",
+      "pnl": -1.67
+    },
+    {
+      "date": "2026-04-19",
+      "balance": 960.87,
+      "side": "SELL",
+      "pnl": -1.69
+    },
+    {
+      "date": "2026-04-20",
+      "balance": 963.37,
+      "side": "BUY",
+      "pnl": 2.5
+    },
+    {
+      "date": "2026-04-20",
+      "balance": 963.37,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-21",
+      "balance": 961.32,
+      "side": "BUY",
+      "pnl": -2.05
+    },
+    {
+      "date": "2026-04-21",
+      "balance": 959.24,
+      "side": "SELL",
+      "pnl": -2.08
+    },
+    {
+      "date": "2026-04-22",
+      "balance": 957.39,
+      "side": "BUY",
+      "pnl": -1.85
+    },
+    {
+      "date": "2026-04-22",
+      "balance": 957.39,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-23",
+      "balance": 957.39,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-23",
+      "balance": 955.1,
+      "side": "SELL",
+      "pnl": -2.29
+    },
+    {
+      "date": "2026-04-24",
+      "balance": 955.1,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-24",
+      "balance": 955.1,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-25",
+      "balance": 953.54,
+      "side": "BUY",
+      "pnl": -1.56
+    },
+    {
+      "date": "2026-04-25",
+      "balance": 951.97,
+      "side": "SELL",
+      "pnl": -1.57
+    },
+    {
+      "date": "2026-04-26",
+      "balance": 950.68,
+      "side": "BUY",
+      "pnl": -1.29
+    },
+    {
+      "date": "2026-04-26",
+      "balance": 950.68,
+      "side": "SELL",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-27",
+      "balance": 950.68,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-27",
+      "balance": 950.15,
+      "side": "SELL",
+      "pnl": -0.53
+    },
+    {
+      "date": "2026-04-28",
+      "balance": 950.15,
+      "side": "BUY",
+      "pnl": 0.0
+    },
+    {
+      "date": "2026-04-28",
+      "balance": 950.13,
+      "side": "SELL",
+      "pnl": -0.02
+    },
+    {
+      "date": "2026-04-29",
+      "balance": 948.42,
+      "side": "BUY",
+      "pnl": -1.71
+    },
+    {
+      "date": "2026-04-29",
+      "balance": 946.68,
+      "side": "SELL",
+      "pnl": -1.74
+    }
+  ]
+}

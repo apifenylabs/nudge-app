@@ -1,0 +1,52 @@
+# Product Hunt Listing — OmniMind v0.3.0
+
+## Title
+OmniMind — Memory that doesn't forget for your OpenClaw agents
+
+## Tagline
+The memory layer for OpenClaw that finally lets agents remember conversations, learn from experience, and evolve overnight. 100% local, MIT license, runs on a Pi.
+
+## Description
+
+Your OpenClaw agents have a 20-minute memory. OmniMind fixes that.
+
+Three storage layers under the hood:
+
+• LanceDB: vector storage for semantic search across every conversation
+• Kuzu: graph DB for entity relationships and procedural knowledge
+• SQLite: provenance tracking for full audit trail of what your agent knows
+
+Every night, the Memify worker compresses episodic memories into higher-level summaries. Your agent gets smarter over time without you doing anything.
+
+No cloud dependencies. No API keys. No Mem0 bills. Just local memory that actually works.
+
+MIT license — fork it, embed it, ship it. Runs on anything Node.js runs on (including a Raspberry Pi 4).
+
+Install: openclaw plugins install @openclaw/omnimind
+GitHub: https://github.com/apifenylabs/omnimind
+
+## What people are saying
+
+"Finally — a memory layer that respects privacy and works offline. No sending my agents' memories to some cloud API." — Early user
+
+## Tech Stack
+• Vector: LanceDB (embedded)
+• Graph: Kuzu (embedded)
+• Provenance: SQLite (embedded)
+• Embeddings: Ollama (bge-m3 default)
+• Self-evolution: Memify nightly compression
+
+## Pricing
+Free. Open source (MIT).
+
+## Product Hunt Strategy Notes
+• Best launch day: Tuesday-Thursday, midnight PT reset
+• Hunter: self-hunt or find someone in AI/devtools community
+• Key differentiators (for comments): "Mem0 alternative but local and free," "no cloud dependency," "self-evolving"
+• Maker comments to prepare: see comment-threads.txt for common questions
+
+## Assets Needed (prep before launch)
+• Logo: 64x64 PNG
+• Hero image: screenshot showing the 3-store architecture (or architecture diagram)
+• Demo GIF: terminal showing plugins list with OmniMind loaded
+• First comment: "Maker here. Happy to answer any questions about how the ECL pipeline works or why we chose Kuzu over Neo4j"

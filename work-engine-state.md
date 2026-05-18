@@ -1,59 +1,55 @@
 # Work Engine State
 
-## Cursor: P2 IMPROVE: Affiliate Placeholder Fix ✅
+## Cursor (02:24 HKT): P2 IMPROVE — 2 sub-agents running (Luxury + Senior)
+
+### Completed 2026-05-19 02:09 HKT
+- **Featured images added to all 146 blog posts**: New `scripts/generate-featured-images.mjs` generates deterministic gradient SVGs (1200×630, 20 rotating palettes, 5 overlay patterns) based on post slug hash
+- **BlogPost interface**: Now includes optional `featuredImage` field (string path)
+- **Blog listing page**: Every card shows the featured image above excerpt text (with hover zoom, lazy loading)
+- **Blog article page**: Hero image displayed above article content; per-post OG/Twitter meta uses featured image
+- **146 SVG images** stored in `public/images/blog/`
+- **Build**: ✅ Compiled successfully (796 pages)
+- **Deploy**: Commit `05edbd20` pushed to `master` (auto-deployed via Vercel)
+- **tsconfig.json**: Fixed by excluding `_archive`, `_projects`, `affiliate-tracking`, and other sub-project directories from build
 
 ### Completed 2026-05-19 01:09 HKT
 - **Affiliate placeholders fixed (all 5 sites)**: `YOUR_AFFILIATE_ID`, `YOUR_GYG_ID`, `YOUR_EXPEDIA_ID`, `YOUR_AMAZON_TAG` replaced with real IDs across all code and blog content files
-- **Family Travel**: 11x `YOUR_AFFILIATE_ID` in blog content body → `2875669`
-- **EV Charging Asia**: 5x placeholders in `lib/affiliate-links.ts`, `components/SiteFooter.tsx`, `components/PremiumPartnerSection.tsx` → real IDs
-- **Luxury Family Travel**: 2x placeholders in `SiteFooter.tsx` → real IDs
-- **Kids Activities Asia**: 2x placeholders in `SiteFooter.tsx` → real IDs
-- **Senior Friendly Travel**: 2x placeholders in `SiteFooter.tsx` → real IDs
-- **Family Travel**: 2x `YOUR_GYG_ID`/`YOUR_EXPEDIA_ID` in `SiteFooter.tsx` → real IDs
-- **Sub-agents used**: 2 parallel (EV Charging + 3 other sites)
 
-### Completed 2026-05-19 00:09 HKT
-- **Tag filtering on blog page**: Users can now click any tag in the topic cloud to filter posts by that tag. Active tag shows with highlighting, "Clear filter" link appears. Tag counts shown in parentheses. URL-based (`/blog?tag=asia-travel`).
-- **Sitemap fix**: Now includes BOTH legacy 5 blog slugs (from data/blog-posts.json) AND 13 generated JSON blog slugs (from generated-blog-data.ts). Total: 18 blog post URLs in sitemap.
-- **Build**: ✅ Compiled successfully (796 pages)
-- **Deploy**: Commit `f38dfd1` pushed to GitHub (auto-deployed via Vercel)
+### Active Sub-Agents
+- *(none — all completed)*
 
-### Sub-agent: Affiliate Placeholder Audit (All 5 Sites) ✅
-**Family Travel**: ~16 placeholder `YOUR_AFFILIATE_ID` occurrences embedded in `lib/generated-blog-data.ts` (Booking.com/Klook links in 8 blog post contents)
-**EV Charging Asia**: `YOUR_GYG_ID`, `YOUR_EXPEDIA_ID`, `YOUR_AMAZON_TAG` in 3 components (SiteFooter, affiliate-links.ts, PremiumPartnerSection)
-**Luxury Family Travel**: `YOUR_GYG_ID`, `YOUR_EXPEDIA_ID` in SiteFooter.tsx
-**Kids Activities Asia**: GetYourGuide & Amazon have empty string fallbacks (no env var = no tracking)
-**Senior Friendly Travel**: `YOUR_GYG_ID`, `YOUR_EXPEDIA_ID` in SiteFooter.tsx; GetYourGuide & Amazon empty fallbacks
+### Completed 2026-05-19 03:10 HKT
+- **Destination image gallery / lightbox**: Added to `senior-friendly-travel-asia` (only site with `app/destinations/` route)
+  - Created `components/DestinationGallery.tsx` — client component with grid thumbnails, full-screen lightbox, keyboard nav (Escape/arrows), body scroll lock
+  - Added `galleryImages?: { src, alt, caption? }[]` to `Destination` interface in `lib/data.ts`
+  - Integrated into `app/destinations/[slug]/page.tsx` — renders between Practical Tips and sidebar, conditionally (empty → hidden)
+  - Other 5 sites (luxury-family-travel, family-travel-directory, family-directory, ev-charging-asia, seniorfriendlytravel-asia) have no destinations route — nothing to add
+
+### Completed 2026-05-19 02:50 HKT
+- **Luxury Travel**: +5 blog posts (62 total) — Bali, SG, Maldives, Hokkaido, Bangkok — deployed ✅
+- **Senior Friendly**: +5 blog posts (58 total) — cruises, Bangkok hotels, KL, mobility, Phuket — deployed ✅
+- **Fixed**: blog-data.ts restored from git (deleted during workspace consolidation) — senior site now has all 58 posts
+
+### Completed 2026-05-19 03:10 HKT
+- **Blog system enhancements (progress bar + social share)**: Added to 4 sites (luxury-family-travel, senior-friendly-travel-asia, family-travel-directory, ev-charging-asia)
+  - `ReadingProgress.tsx` — fixed thin progress bar at top of article pages, fills as user scrolls (teal/sky/green accent per site)
+  - `SocialShare.tsx` — "Share this post" section with Copy Link, X/Twitter, Facebook, WhatsApp buttons below article content
+  - Skipped: phuket-travel (doesn't exist), family-directory (no blog route)
 
 ### Next Priority: P2 IMPROVE (continue)
 Remaining P2 work:
-- Visual polish / UX improvements on directory sites — sub-agent running on ev-charging-asia
-- Blog system enhancements (featured images, related posts widget)
+- ⬜  Visual polish / UX on directory site pages
 
 ### Blocked
 - Custom domains for luxury-family-travel-asia and ev-charging-asia (DNS — needs Chris)
 
-## 2026-05-18: Generated 5 New Family Travel Blog Posts
+## Previous Work (Summary)
 
-### Files Created (data/blog)
-1. **best-family-hotels-bangkok-pool-kids-clubs-2026.json** — Bangkok family hotels with pools and kids clubs (2,147 words, ~11 min read)
-2. **family-friendly-restaurants-hong-kong-2026.json** — Hong Kong family-friendly restaurant guide (2,251 words, ~10 min read)
-3. **guide-traveling-asia-with-babies-essentials-tips.json** — Ultimate baby travel guide for Asia (2,528 words, ~12 min read)
-4. **kid-friendly-hikes-southeast-asia-family-trails.json** — Best kid-friendly hikes in SE Asia (2,642 words, ~10 min read)
-5. **packing-list-family-trip-asia-ultimate-guide.json** — Ultimate family packing list for Asia (2,692 words, ~11 min read)
+### 2026-05-18: Generated 5 New Family Travel Blog Posts
+5 new blog posts added covering Bangkok hotels, HK restaurants, baby travel guide, kid-friendly hikes, packing list.
 
-### Build Status
-- `npm run build`: ✅ Compiled successfully, 796 static pages generated
-- All posts validated as valid JSON
+### 2026-05-17: Generated 5 New Blog Posts
+5 new blog posts added.
 
-## 2026-05-17: Generated 5 New Blog Posts
-
-Added 5 new blog posts to `content/blog/`.
-
-## 2026-05-16: Cross-site footer links + SEO improvements
-
+### 2026-05-16: Cross-site footer links + SEO improvements
 Fixed EV Charging URL, renamed "Asia AI Empire" → "Apifeny AI", SEO audit complete.
-
-## 2026-05-14 & Earlier: Previous Work
-
-See history in prior sections.

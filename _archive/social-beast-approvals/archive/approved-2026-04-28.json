@@ -1,0 +1,1209 @@
+{
+  "date": "2026-04-28",
+  "items": [
+    {
+      "id": "sh-ca24d36af2c1",
+      "contentId": "sh-ca24d36af2c1",
+      "preview": "🐦 Short Hook ← directory-beast/orlando-001: Walt Disney World Magic Kingdom is the ultimate disney world orlando family. The most magical place on Earth for fami...",
+      "content": {
+        "id": "sh-ca24d36af2c1",
+        "sourceId": "orlando-001",
+        "sourceProject": "directory-beast",
+        "format": "short-hook",
+        "platforms": [
+          "twitter"
+        ],
+        "content": "Walt Disney World Magic Kingdom is the ultimate disney world orlando family. The most magical place on Earth for families. Cinderella Castle, classic rides, character meet-an...\nhttps://www.booking.com/searchresults.html?ss=Orlando%2C+USA&label=ftd-affiliate #MagicKingdomkids",
+        "thread": null,
+        "images": [
+          "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+        ],
+        "contentHash": "ca24d36af2c1",
+        "createdAt": "2026-04-28T02:52:25.530Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 1
+    },
+    {
+      "id": "st-835a2005f474",
+      "contentId": "st-835a2005f474",
+      "preview": "🧵 Story Thread ← directory-beast/orlando-001: 1/5 Walt Disney World Magic Kingdom — The most magical place on Earth for families. Cinderella Castle, classic rides,...",
+      "content": {
+        "id": "st-835a2005f474",
+        "sourceId": "orlando-001",
+        "sourceProject": "directory-beast",
+        "format": "story-thread",
+        "platforms": [
+          "twitter"
+        ],
+        "content": "1/5 Walt Disney World Magic Kingdom — The most magical place on Earth for families. Cinderella Castle, classic rides, character meet-and-greets, parades, and fireworks across six immers...\n\n2/5 Great for ages 2-14. Best time: January-early March, September-November weekdays. Price: $$$$. Pro tip: Book Genie+ the night before at midnight.\n\n3/5 Book Genie+ the night before at midnight. Use Baby Care Center on Main Street for diaper changes - cleaner and has rocking chairs.\n\n4/5 \"When Cinderella knelt and said 'hello, princess,' my daughter stared silently and burst into tears. The best kind of tears.\" — Rachel, mom of 1 from Dallas\n\n5/5 Check it out → https://www.booking.com/searchresults.html?ss=Orlando%2C+USA&label=ftd-affiliate #MagicKingdomkids",
+        "thread": [
+          "1/5 Walt Disney World Magic Kingdom — The most magical place on Earth for families. Cinderella Castle, classic rides, character meet-and-greets, parades, and fireworks across six immers...",
+          "2/5 Great for ages 2-14. Best time: January-early March, September-November weekdays. Price: $$$$. Pro tip: Book Genie+ the night before at midnight.",
+          "3/5 Book Genie+ the night before at midnight. Use Baby Care Center on Main Street for diaper changes - cleaner and has rocking chairs.",
+          "4/5 \"When Cinderella knelt and said 'hello, princess,' my daughter stared silently and burst into tears. The best kind of tears.\" — Rachel, mom of 1 from Dallas",
+          "5/5 Check it out → https://www.booking.com/searchresults.html?ss=Orlando%2C+USA&label=ftd-affiliate #MagicKingdomkids"
+        ],
+        "images": [
+          "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+        ],
+        "contentHash": "835a2005f474",
+        "createdAt": "2026-04-28T02:52:25.530Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 2
+    },
+    {
+      "id": "tdd-ca82777e734c",
+      "contentId": "tdd-ca82777e734c",
+      "preview": "📢 Telegram Deep Dive ← directory-beast/orlando-001: 🌍 *Walt Disney World Magic Kingdom*\n\nThe most magical place on Earth for families. Cinderella Castle, classic rides,...",
+      "content": {
+        "id": "tdd-ca82777e734c",
+        "sourceId": "orlando-001",
+        "sourceProject": "directory-beast",
+        "format": "telegram-deep-dive",
+        "platforms": [
+          "telegram"
+        ],
+        "content": "🌍 *Walt Disney World Magic Kingdom*\n\nThe most magical place on Earth for families. Cinderella Castle, classic rides, character meet-and-greets, parades, and fireworks across six immersive lands including Fantasyland designed for young children.\n\n*📋 Quick Facts:*\n• 👶 Age range: 2-14\n• 🕐 Best time: January-early March, September-November weekdays\n• 💰 Price: $$$$\n• ⭐ Safety rating: 4.9/5\n• 🏷️ Category: Theme Parks & Attractions\n\n*💡 Tips & Tricks:*\n• Book Genie+ the night before at midnight.\n• Use Baby Care Center on Main Street for diaper changes - cleaner and has rocking chairs.\n• Ride Peter Pan's Flight first - 60+ min wait all day.\n• Character dining at Crystal Palace is worth every cent for toddlers.\n\n*📖 My 3-year-old met Cinderella and forgot how to speak*\n> When Cinderella knelt and said 'hello, princess,' my daughter stared silently and burst into tears. The best kind of tears.\n— Rachel, mom of 1 from Dallas\n\n— — — — — — — — — —\n🔗 [Book / Learn More](https://www.booking.com/searchresults.html?ss=Orlando%2C+USA&label=ftd-affiliate)\n#MagicKingdomkids #DisneyWorldOrlandofamily #MagicKingdomtoddlertips",
+        "thread": null,
+        "images": [
+          "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+          "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+        ],
+        "contentHash": "ca82777e734c",
+        "createdAt": "2026-04-28T02:52:25.531Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 3
+    },
+    {
+      "id": "li-59dbc39061c1",
+      "contentId": "li-59dbc39061c1",
+      "preview": "💼 LinkedIn Insight ← directory-beast/orlando-001: I recently came across something worth sharing: Walt Disney World Magic Kingdom. The most magical place on Earth for ...",
+      "content": {
+        "id": "li-59dbc39061c1",
+        "sourceId": "orlando-001",
+        "sourceProject": "directory-beast",
+        "format": "linkedin-insight",
+        "platforms": [
+          "linkedin"
+        ],
+        "content": "I recently came across something worth sharing: Walt Disney World Magic Kingdom. The most magical place on Earth for families. Cinderella Castle, classic rides, character meet-and-greets, parades, and fireworks across six immersive lands including Fantasyland designed for young children. Here's why it caught my attention.\n\nDesigned for ages 2-14. Rated 4.9/5 for safety. Optimal timing: January-early March, September-November weekdays. Key insight: Book Genie+ the night before at midnight.\n\nOne parent shared: \"When Cinderella knelt and said 'hello, princess,' my daughter stared silently and burst into tears. The best kind of tears.\". Stories like this remind us that the best experiences are the ones that create lasting memories.\n\n\n\n🔗 https://www.booking.com/searchresults.html?ss=Orlando%2C+USA&label=ftd-affiliate\n\n#MagicKingdomkids #DisneyWorldOrlandofamily #MagicKingdomtoddlertips #ThemeParks&Attractions",
+        "thread": null,
+        "images": [
+          "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+        ],
+        "contentHash": "59dbc39061c1",
+        "createdAt": "2026-04-28T02:52:25.531Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 4
+    },
+    {
+      "id": "cc-31a3af751e3f",
+      "contentId": "cc-31a3af751e3f",
+      "preview": "📷 Carousel Card ← directory-beast/orlando-001: 1/5 Walt Disney World Magic Kingdom\nThe most magical place on Earth for families. Cinderella Castle, classic rides, c...",
+      "content": {
+        "id": "cc-31a3af751e3f",
+        "sourceId": "orlando-001",
+        "sourceProject": "directory-beast",
+        "format": "carousel-card",
+        "platforms": [
+          "instagram"
+        ],
+        "content": "1/5 Walt Disney World Magic Kingdom\nThe most magical place on Earth for families. Cinderella Castle, classic rides, character meet-and-greets, parades, and fireworks across six immersive lands including Fantasyland designed for young...\n📍 Orlando, USA\n\n2/5 Why Walt Disney World Magic Kingdom?\n• Perfect for ages 2-14\n• Safety rating: 4.9/5\n• Best time: January-early March, September-November weekdays\n• $$$$ — great value for families\n\n3/5 Pro Tips\n• Book Genie+ the night before at midnight.\n• Use Baby Care Center on Main Street for diaper changes - cleaner and has rocking chairs.\n• Ride Peter Pan's Flight first - 60+ min wait all day.\n\n4/5 Real Parent Take\nWhen Cinderella knelt and said 'hello, princess,' my daughter stared silently and burst into tears. The best kind of tears.\n— Rachel, mom of 1 from Dallas\n\n5/5 Save This For Later\n🔗 Link in bio\n❤️ Like if you'd take your family here!\n💬 Comment your favorite family destination\n#MagicKingdomkids #DisneyWorldOrlandofamily",
+        "thread": [
+          "1/5 Walt Disney World Magic Kingdom\nThe most magical place on Earth for families. Cinderella Castle, classic rides, character meet-and-greets, parades, and fireworks across six immersive lands including Fantasyland designed for young...\n📍 Orlando, USA",
+          "2/5 Why Walt Disney World Magic Kingdom?\n• Perfect for ages 2-14\n• Safety rating: 4.9/5\n• Best time: January-early March, September-November weekdays\n• $$$$ — great value for families",
+          "3/5 Pro Tips\n• Book Genie+ the night before at midnight.\n• Use Baby Care Center on Main Street for diaper changes - cleaner and has rocking chairs.\n• Ride Peter Pan's Flight first - 60+ min wait all day.",
+          "4/5 Real Parent Take\nWhen Cinderella knelt and said 'hello, princess,' my daughter stared silently and burst into tears. The best kind of tears.\n— Rachel, mom of 1 from Dallas",
+          "5/5 Save This For Later\n🔗 Link in bio\n❤️ Like if you'd take your family here!\n💬 Comment your favorite family destination\n#MagicKingdomkids #DisneyWorldOrlandofamily"
+        ],
+        "images": [
+          "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+          "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+          "https://live.staticflickr.com/65535/54287953273_f3241a0067_b.jpg"
+        ],
+        "contentHash": "31a3af751e3f",
+        "createdAt": "2026-04-28T02:52:25.531Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 5
+    },
+    {
+      "id": "tt-a5a6cefec441",
+      "contentId": "tt-a5a6cefec441",
+      "preview": "🎬 TikTok Script ← directory-beast/orlando-001: 🎬 TIKTOK SCRIPT: Walt Disney World Magic Kingdom\n⏱️ Duration: 45 seconds\n\n━━━ HOOK (0-3s) ━━━\n[VISUAL: Title card or...",
+      "content": {
+        "id": "tt-a5a6cefec441",
+        "sourceId": "orlando-001",
+        "sourceProject": "directory-beast",
+        "format": "tiktok-script",
+        "platforms": [
+          "tiktok"
+        ],
+        "content": "🎬 TIKTOK SCRIPT: Walt Disney World Magic Kingdom\n⏱️ Duration: 45 seconds\n\n━━━ HOOK (0-3s) ━━━\n[VISUAL: Title card or establishing shot]\nAUDIO: Upbeat background music\nTEXT ON SCREEN: \"Book Genie+ the night before at midnight.\"\nSPOKEN: \"Stop! Before you go to Walt Disney World Magic Kingdom, here's what nobody tells you...\"\n\n━━━ SETUP (3-15s) ━━━\n[VISUAL: B-roll of Walt Disney World Magic Kingdom]\nSPOKEN: \"The most magical place on Earth for families. Cinderella Castle, classic rides, character meet-and-greets, parades, and fireworks across six immersive lands including Fantasyland designed for young...\"\nTEXT ON SCREEN: Orlando, USA\n\n━━━ CONTENT (15-45s) ━━━\n[VISUAL: Quick cut to relevant footage #1]\nSPOKEN: \"Book Genie+ the night before at midnight.\"\n[VISUAL: Quick cut to relevant footage #2]\nSPOKEN: \"Use Baby Care Center on Main Street for diaper changes - cleaner and has rocking chairs.\"\n[VISUAL: Quick cut to relevant footage #3]\nSPOKEN: \"Ride Peter Pan's Flight first - 60+ min wait all day.\"\n\n━━━ CTA (45-60s) ━━━\n[VISUAL: You talking to camera or destination wide shot]\nSPOKEN: \"Follow for more family travel tips! Link in bio.\"\nCAPTION HASHTAGS: #MagicKingdomkids #DisneyWorldOrlandofamily #MagicKingdomtoddlertips",
+        "thread": null,
+        "images": [
+          "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+        ],
+        "contentHash": "a5a6cefec441",
+        "createdAt": "2026-04-28T02:52:25.531Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 6
+    },
+    {
+      "id": "bip-6ba9adc80f11",
+      "contentId": "bip-6ba9adc80f11",
+      "preview": "🔧 Build In Public ← directory-beast/orlando-001: Building in public — Walt Disney World Magic Kingdom\n\nThe most magical place on Earth for families. Cinderella Castle...",
+      "content": {
+        "id": "bip-6ba9adc80f11",
+        "sourceId": "orlando-001",
+        "sourceProject": "directory-beast",
+        "format": "build-in-public",
+        "platforms": [
+          "twitter",
+          "telegram"
+        ],
+        "content": "Building in public — Walt Disney World Magic Kingdom\n\nThe most magical place on Earth for families. Cinderella Castle, classic rides, character meet-and-greets, parades, and fireworks across six immersive lands including Fantasyland designed for young children.\n\nThe biggest lesson I keep learning? Automation is not about replacing humans — it's about freeing them to do what humans do best. Build systems. Ship value. Repeat.\n\nCurrent stack: OpenClaw skills → Paperclip orchestration → Telegram delivery. Zero external SaaS. Everything runs on my machine.\n\n#buildinpublic #indiehacker #automation",
+        "thread": null,
+        "images": [],
+        "contentHash": "6ba9adc80f11",
+        "createdAt": "2026-04-28T02:52:25.531Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 7
+    },
+    {
+      "id": "nb-1657756ec907",
+      "contentId": "nb-1657756ec907",
+      "preview": "📧 Newsletter Blurb ← directory-beast/orlando-001: Walt Disney World Magic Kingdom is a must-know for families. The most magical place on Earth for families. Cinderella...",
+      "content": {
+        "id": "nb-1657756ec907",
+        "sourceId": "orlando-001",
+        "sourceProject": "directory-beast",
+        "format": "newsletter-blurb",
+        "platforms": [
+          "email"
+        ],
+        "content": "Walt Disney World Magic Kingdom is a must-know for families. The most magical place on Earth for families. Cinderella Castle, classic rides, character meet-and-greets, parades, and fireworks across six immersive lands including Fantasyland designed for young children. Learn more → https://www.booking.com/searchresults.html?ss=Orlando%2C+USA&label=ftd-affiliate\n\n#MagicKingdomkids #DisneyWorldOrlandofamily",
+        "thread": null,
+        "images": [
+          "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+        ],
+        "contentHash": "1657756ec907",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 8
+    },
+    {
+      "id": "nf-5b88ef3cc119",
+      "contentId": "nf-5b88ef3cc119",
+      "preview": "nudge-features ← directory-beast/orlando-001: 💡 Parent Life Hack: Walt Disney World Magic Kingdom\n\nThe most magical place on Earth for families. Cinderella Castle...",
+      "content": {
+        "id": "nf-5b88ef3cc119",
+        "sourceId": "orlando-001",
+        "sourceProject": "directory-beast",
+        "format": "nudge-features",
+        "variant": "tip",
+        "platforms": [
+          "twitter",
+          "telegram"
+        ],
+        "content": "💡 Parent Life Hack: Walt Disney World Magic Kingdom\n\nThe most magical place on Earth for families. Cinderella Castle, classic rides, character meet-and-greets, parades, and fireworks across six immersive lands including Fantasyland designed for young children.\n\n→ Stop repeating yourself. Let automation do the nagging.\n\n#magickingdomkids #disneyworldorlandofamily #magickingdomtoddlertips",
+        "thread": null,
+        "images": [
+          "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+          "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+          "https://live.staticflickr.com/65535/54287953273_f3241a0067_b.jpg"
+        ],
+        "contentHash": "5b88ef3cc119",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 9
+    },
+    {
+      "id": "sh-a70a17d62f9d",
+      "contentId": "sh-a70a17d62f9d",
+      "preview": "🐦 Short Hook ← directory-beast/tokyo-001: Tokyo Disneyland is the ultimate family theme park japan. The ultimate family destination with classic Disney magic. ...",
+      "content": {
+        "id": "sh-a70a17d62f9d",
+        "sourceId": "tokyo-001",
+        "sourceProject": "directory-beast",
+        "format": "short-hook",
+        "platforms": [
+          "twitter"
+        ],
+        "content": "Tokyo Disneyland is the ultimate family theme park japan. The ultimate family destination with classic Disney magic. Two incredible parks with exceptional ...\nhttps://www.booking.com/searchresults.html?ss=Tokyo%2C+Japan&label=ftd-affiliate #TokyoDisneyland",
+        "thread": null,
+        "images": [
+          "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+        ],
+        "contentHash": "a70a17d62f9d",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 10
+    },
+    {
+      "id": "st-e3c8b5157b5b",
+      "contentId": "st-e3c8b5157b5b",
+      "preview": "🧵 Story Thread ← directory-beast/tokyo-001: 1/5 Tokyo Disneyland — The ultimate family destination with classic Disney magic. Two incredible parks with exception...",
+      "content": {
+        "id": "st-e3c8b5157b5b",
+        "sourceId": "tokyo-001",
+        "sourceProject": "directory-beast",
+        "format": "story-thread",
+        "platforms": [
+          "twitter"
+        ],
+        "content": "1/5 Tokyo Disneyland — The ultimate family destination with classic Disney magic. Two incredible parks with exceptional safety standards, stroller rentals, baby care cent...\n\n2/5 Great for ages 3-12. Best time: Weekdays, September-November. Price: $$$. Pro tip: Go on a Tuesday or Wednesday — weekend crowds are 3x worse and you'll spend half your day in line.\n\n3/5 Go on a Tuesday or Wednesday — weekend crowds are 3x worse and you'll spend half your day in line. Bring your own snacks. The park allows outside food and a packed lunch saves $40+ per person.\n\n4/5 \"Our 4-year-old screamed for 20 minutes outside Space Mountain. Too short. Too scary. We almost left. Then a cast member took us to the backlot to w...\" — Sarah, mom of 2 from Melbourne\n\n5/5 Check it out → https://www.booking.com/searchresults.html?ss=Tokyo%2C+Japan&label=ftd-affiliate #TokyoDisneyland",
+        "thread": [
+          "1/5 Tokyo Disneyland — The ultimate family destination with classic Disney magic. Two incredible parks with exceptional safety standards, stroller rentals, baby care cent...",
+          "2/5 Great for ages 3-12. Best time: Weekdays, September-November. Price: $$$. Pro tip: Go on a Tuesday or Wednesday — weekend crowds are 3x worse and you'll spend half your day in line.",
+          "3/5 Go on a Tuesday or Wednesday — weekend crowds are 3x worse and you'll spend half your day in line. Bring your own snacks. The park allows outside food and a packed lunch saves $40+ per person.",
+          "4/5 \"Our 4-year-old screamed for 20 minutes outside Space Mountain. Too short. Too scary. We almost left. Then a cast member took us to the backlot to w...\" — Sarah, mom of 2 from Melbourne",
+          "5/5 Check it out → https://www.booking.com/searchresults.html?ss=Tokyo%2C+Japan&label=ftd-affiliate #TokyoDisneyland"
+        ],
+        "images": [
+          "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+        ],
+        "contentHash": "e3c8b5157b5b",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 11
+    },
+    {
+      "id": "tdd-a22ff5964674",
+      "contentId": "tdd-a22ff5964674",
+      "preview": "📢 Telegram Deep Dive ← directory-beast/tokyo-001: 🌍 *Tokyo Disneyland*\n\nThe ultimate family destination with classic Disney magic. Two incredible parks with exception...",
+      "content": {
+        "id": "tdd-a22ff5964674",
+        "sourceId": "tokyo-001",
+        "sourceProject": "directory-beast",
+        "format": "telegram-deep-dive",
+        "platforms": [
+          "telegram"
+        ],
+        "content": "🌍 *Tokyo Disneyland*\n\nThe ultimate family destination with classic Disney magic. Two incredible parks with exceptional safety standards, stroller rentals, baby care centers, and numerous family-friendly restaurants.\n\n*📋 Quick Facts:*\n• 👶 Age range: 3-12\n• 🕐 Best time: Weekdays, September-November\n• 💰 Price: $$$\n• ⭐ Safety rating: 4.9/5\n• 🏷️ Category: Theme Parks & Attractions\n\n*💡 Tips & Tricks:*\n• Go on a Tuesday or Wednesday — weekend crowds are 3x worse and you'll spend half your day in line.\n• Bring your own snacks. The park allows outside food and a packed lunch saves $40+ per person.\n• Use the Disney Resort app to book 'Priority Pass' slots — they're free and save 60-90 minutes of waiting per ride.\n• The Baby Care Centers have private nursing rooms, microwaves for bottles, and vending machines with formula.\n\n*📖 The meltdown that turned into our best memory*\n> Our 4-year-old screamed for 20 minutes outside Space Mountain. Too short. Too scary. We almost left. Then a cast member took us to the backlot to watch the parade setup. She spent an hour waving at characters. That moment — a stranger's kindness — saved our day.\n— Sarah, mom of 2 from Melbourne\n\n— — — — — — — — — —\n🔗 [Book / Learn More](https://www.booking.com/searchresults.html?ss=Tokyo%2C+Japan&label=ftd-affiliate)\n#TokyoDisneyland #familythemeparkJapan #kid-friendlyTokyo",
+        "thread": null,
+        "images": [
+          "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+          "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+        ],
+        "contentHash": "a22ff5964674",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 12
+    },
+    {
+      "id": "li-9c493ed7a203",
+      "contentId": "li-9c493ed7a203",
+      "preview": "💼 LinkedIn Insight ← directory-beast/tokyo-001: I recently came across something worth sharing: Tokyo Disneyland. The ultimate family destination with classic Disney...",
+      "content": {
+        "id": "li-9c493ed7a203",
+        "sourceId": "tokyo-001",
+        "sourceProject": "directory-beast",
+        "format": "linkedin-insight",
+        "platforms": [
+          "linkedin"
+        ],
+        "content": "I recently came across something worth sharing: Tokyo Disneyland. The ultimate family destination with classic Disney magic. Two incredible parks with exceptional safety standards, stroller rentals, baby care centers, and numerous family-friendly restaurants. Here's why it caught my attention.\n\nDesigned for ages 3-12. Rated 4.9/5 for safety. Optimal timing: Weekdays, September-November. Key insight: Go on a Tuesday or Wednesday — weekend crowds are 3x worse and you'll spend half your day in line.\n\nOne parent shared: \"Our 4-year-old screamed for 20 minutes outside Space Mountain. Too short. Too scary. We almost left. Then a cast member took us to the backlot to w...\". Stories like this remind us that the best experiences are the ones that create lasting memories.\n\n\n\n🔗 https://www.booking.com/searchresults.html?ss=Tokyo%2C+Japan&label=ftd-affiliate\n\n#TokyoDisneyland #familythemeparkJapan #kid-friendlyTokyo #ThemeParks&Attractions",
+        "thread": null,
+        "images": [
+          "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+        ],
+        "contentHash": "9c493ed7a203",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 13
+    },
+    {
+      "id": "cc-edfbd4df224d",
+      "contentId": "cc-edfbd4df224d",
+      "preview": "📷 Carousel Card ← directory-beast/tokyo-001: 1/5 Tokyo Disneyland\nThe ultimate family destination with classic Disney magic. Two incredible parks with exceptional...",
+      "content": {
+        "id": "cc-edfbd4df224d",
+        "sourceId": "tokyo-001",
+        "sourceProject": "directory-beast",
+        "format": "carousel-card",
+        "platforms": [
+          "instagram"
+        ],
+        "content": "1/5 Tokyo Disneyland\nThe ultimate family destination with classic Disney magic. Two incredible parks with exceptional safety standards, stroller rentals, baby care centers, and numerous family-friendly restaurants.\n📍 Tokyo, Japan\n\n2/5 Why Tokyo Disneyland?\n• Perfect for ages 3-12\n• Safety rating: 4.9/5\n• Best time: Weekdays, September-November\n• $$$ — great value for families\n\n3/5 Pro Tips\n• Go on a Tuesday or Wednesday — weekend crowds are 3x worse and you'll spend half your day in line.\n• Bring your own snacks. The park allows outside food and a packed lunch saves $40+ per person.\n• Use the Disney Resort app to book 'Priority Pass' slots — they're free and save 60-90 minutes of waiting per ride.\n\n4/5 Real Parent Take\nOur 4-year-old screamed for 20 minutes outside Space Mountain. Too short. Too scary. We almost left. Then a cast member took us to the backlot to watch the parade setup. She spent an hour waving at...\n— Sarah, mom of 2 from Melbourne\n\n5/5 Save This For Later\n🔗 Link in bio\n❤️ Like if you'd take your family here!\n💬 Comment your favorite family destination\n#TokyoDisneyland #familythemeparkJapan",
+        "thread": [
+          "1/5 Tokyo Disneyland\nThe ultimate family destination with classic Disney magic. Two incredible parks with exceptional safety standards, stroller rentals, baby care centers, and numerous family-friendly restaurants.\n📍 Tokyo, Japan",
+          "2/5 Why Tokyo Disneyland?\n• Perfect for ages 3-12\n• Safety rating: 4.9/5\n• Best time: Weekdays, September-November\n• $$$ — great value for families",
+          "3/5 Pro Tips\n• Go on a Tuesday or Wednesday — weekend crowds are 3x worse and you'll spend half your day in line.\n• Bring your own snacks. The park allows outside food and a packed lunch saves $40+ per person.\n• Use the Disney Resort app to book 'Priority Pass' slots — they're free and save 60-90 minutes of waiting per ride.",
+          "4/5 Real Parent Take\nOur 4-year-old screamed for 20 minutes outside Space Mountain. Too short. Too scary. We almost left. Then a cast member took us to the backlot to watch the parade setup. She spent an hour waving at...\n— Sarah, mom of 2 from Melbourne",
+          "5/5 Save This For Later\n🔗 Link in bio\n❤️ Like if you'd take your family here!\n💬 Comment your favorite family destination\n#TokyoDisneyland #familythemeparkJapan"
+        ],
+        "images": [
+          "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+          "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+          "https://live.staticflickr.com/5170/5219970061_9d9e843d0d_b.jpg"
+        ],
+        "contentHash": "edfbd4df224d",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 14
+    },
+    {
+      "id": "tt-a5e58adaf42e",
+      "contentId": "tt-a5e58adaf42e",
+      "preview": "🎬 TikTok Script ← directory-beast/tokyo-001: 🎬 TIKTOK SCRIPT: Tokyo Disneyland\n⏱️ Duration: 45 seconds\n\n━━━ HOOK (0-3s) ━━━\n[VISUAL: Title card or establishing s...",
+      "content": {
+        "id": "tt-a5e58adaf42e",
+        "sourceId": "tokyo-001",
+        "sourceProject": "directory-beast",
+        "format": "tiktok-script",
+        "platforms": [
+          "tiktok"
+        ],
+        "content": "🎬 TIKTOK SCRIPT: Tokyo Disneyland\n⏱️ Duration: 45 seconds\n\n━━━ HOOK (0-3s) ━━━\n[VISUAL: Title card or establishing shot]\nAUDIO: Upbeat background music\nTEXT ON SCREEN: \"Go on a Tuesday or Wednesday — weekend crowds are 3x worse and you'll spend h...\"\nSPOKEN: \"Stop! Before you go to Tokyo Disneyland, here's what nobody tells you...\"\n\n━━━ SETUP (3-15s) ━━━\n[VISUAL: B-roll of Tokyo Disneyland]\nSPOKEN: \"The ultimate family destination with classic Disney magic. Two incredible parks with exceptional safety standards, stroller rentals, baby care centers, and numerous family-friendly restaurants.\"\nTEXT ON SCREEN: Tokyo, Japan\n\n━━━ CONTENT (15-45s) ━━━\n[VISUAL: Quick cut to relevant footage #1]\nSPOKEN: \"Go on a Tuesday or Wednesday — weekend crowds are 3x worse and you'll spend half your day in line.\"\n[VISUAL: Quick cut to relevant footage #2]\nSPOKEN: \"Bring your own snacks. The park allows outside food and a packed lunch saves $40+ per person.\"\n[VISUAL: Quick cut to relevant footage #3]\nSPOKEN: \"Use the Disney Resort app to book 'Priority Pass' slots — they're free and save 60-90 minutes of waiting per ride.\"\n\n━━━ CTA (45-60s) ━━━\n[VISUAL: You talking to camera or destination wide shot]\nSPOKEN: \"Follow for more family travel tips! Link in bio.\"\nCAPTION HASHTAGS: #TokyoDisneyland #familythemeparkJapan #kid-friendlyTokyo",
+        "thread": null,
+        "images": [
+          "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+        ],
+        "contentHash": "a5e58adaf42e",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 15
+    },
+    {
+      "id": "bip-5cb9e1d4eae1",
+      "contentId": "bip-5cb9e1d4eae1",
+      "preview": "🔧 Build In Public ← directory-beast/tokyo-001: Building in public — Tokyo Disneyland\n\nThe ultimate family destination with classic Disney magic. Two incredible park...",
+      "content": {
+        "id": "bip-5cb9e1d4eae1",
+        "sourceId": "tokyo-001",
+        "sourceProject": "directory-beast",
+        "format": "build-in-public",
+        "platforms": [
+          "twitter",
+          "telegram"
+        ],
+        "content": "Building in public — Tokyo Disneyland\n\nThe ultimate family destination with classic Disney magic. Two incredible parks with exceptional safety standards, stroller rentals, baby care centers, and numerous family-friendly restaurants.\n\nThe biggest lesson I keep learning? Automation is not about replacing humans — it's about freeing them to do what humans do best. Build systems. Ship value. Repeat.\n\nCurrent stack: OpenClaw skills → Paperclip orchestration → Telegram delivery. Zero external SaaS. Everything runs on my machine.\n\n#buildinpublic #indiehacker #automation",
+        "thread": null,
+        "images": [],
+        "contentHash": "5cb9e1d4eae1",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 16
+    },
+    {
+      "id": "nb-60f650c4db28",
+      "contentId": "nb-60f650c4db28",
+      "preview": "📧 Newsletter Blurb ← directory-beast/tokyo-001: Tokyo Disneyland is a must-know for families. The ultimate family destination with classic Disney magic. Two incredib...",
+      "content": {
+        "id": "nb-60f650c4db28",
+        "sourceId": "tokyo-001",
+        "sourceProject": "directory-beast",
+        "format": "newsletter-blurb",
+        "platforms": [
+          "email"
+        ],
+        "content": "Tokyo Disneyland is a must-know for families. The ultimate family destination with classic Disney magic. Two incredible parks with exceptional safety standards, stroller rentals, baby care centers, and numerous family-friendly restaurants. Learn more → https://www.booking.com/searchresults.html?ss=Tokyo%2C+Japan&label=ftd-affiliate\n\n#TokyoDisneyland #familythemeparkJapan",
+        "thread": null,
+        "images": [
+          "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+        ],
+        "contentHash": "60f650c4db28",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 17
+    },
+    {
+      "id": "nf-8e6c66521205",
+      "contentId": "nf-8e6c66521205",
+      "preview": "nudge-features ← directory-beast/tokyo-001: 💡 Parent Life Hack: Tokyo Disneyland\n\nThe ultimate family destination with classic Disney magic. Two incredible park...",
+      "content": {
+        "id": "nf-8e6c66521205",
+        "sourceId": "tokyo-001",
+        "sourceProject": "directory-beast",
+        "format": "nudge-features",
+        "variant": "tip",
+        "platforms": [
+          "twitter",
+          "telegram"
+        ],
+        "content": "💡 Parent Life Hack: Tokyo Disneyland\n\nThe ultimate family destination with classic Disney magic. Two incredible parks with exceptional safety standards, stroller rentals, baby care centers, and numerous family-friendly restaurants.\n\n→ Stop repeating yourself. Let automation do the nagging.\n\n#tokyodisneyland #familythemeparkjapan #kidfriendlytokyo",
+        "thread": null,
+        "images": [
+          "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+          "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+          "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+          "https://live.staticflickr.com/5170/5219970061_9d9e843d0d_b.jpg"
+        ],
+        "contentHash": "8e6c66521205",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 18
+    },
+    {
+      "id": "sh-2d8d23fe7eae",
+      "contentId": "sh-2d8d23fe7eae",
+      "preview": "🐦 Short Hook ← build-in-public/bip-2026-04-28-49334070a20d: Just shipped: Building in Public: Day in the Life. Working on automating my content distribution pipeline. One skill ...",
+      "content": {
+        "id": "sh-2d8d23fe7eae",
+        "sourceId": "bip-2026-04-28-49334070a20d",
+        "sourceProject": "build-in-public",
+        "format": "short-hook",
+        "platforms": [
+          "twitter"
+        ],
+        "content": "Just shipped: Building in Public: Day in the Life. Working on automating my content distribution pipeline. One skill at a time. No fancy tools — jus... #buildinpublic",
+        "thread": null,
+        "images": [],
+        "contentHash": "2d8d23fe7eae",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 19
+    },
+    {
+      "id": "st-cfe13887e2b8",
+      "contentId": "st-cfe13887e2b8",
+      "preview": "🧵 Story Thread ← build-in-public/bip-2026-04-28-49334070a20d: 1/4 Building in Public: Day in the Life — Working on automating my content distribution pipeline. One skill at a time...",
+      "content": {
+        "id": "st-cfe13887e2b8",
+        "sourceId": "bip-2026-04-28-49334070a20d",
+        "sourceProject": "build-in-public",
+        "format": "story-thread",
+        "platforms": [
+          "twitter"
+        ],
+        "content": "1/4 Building in Public: Day in the Life — Working on automating my content distribution pipeline. One skill at a time. No fancy tools — just OpenClaw skills talking to each other.\n\n2/4 \n\n3/4 Perfect for a family day out.\n\n4/4 Save this for your next trip! 🌍 #buildinpublic",
+        "thread": [
+          "1/4 Building in Public: Day in the Life — Working on automating my content distribution pipeline. One skill at a time. No fancy tools — just OpenClaw skills talking to each other.",
+          "2/4 ",
+          "3/4 Perfect for a family day out.",
+          "4/4 Save this for your next trip! 🌍 #buildinpublic"
+        ],
+        "images": [],
+        "contentHash": "cfe13887e2b8",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 20
+    },
+    {
+      "id": "tdd-1bbc81442fdc",
+      "contentId": "tdd-1bbc81442fdc",
+      "preview": "📢 Telegram Deep Dive ← build-in-public/bip-2026-04-28-49334070a20d: 🌍 *Building in Public: Day in the Life*\n\nWorking on automating my content distribution pipeline. One skill at a time...",
+      "content": {
+        "id": "tdd-1bbc81442fdc",
+        "sourceId": "bip-2026-04-28-49334070a20d",
+        "sourceProject": "build-in-public",
+        "format": "telegram-deep-dive",
+        "platforms": [
+          "telegram"
+        ],
+        "content": "🌍 *Building in Public: Day in the Life*\n\nWorking on automating my content distribution pipeline. One skill at a time. No fancy tools — just OpenClaw skills talking to each other.\n\n*📋 Quick Facts:*\n\n— — — — — — — — — —\n#buildinpublic #indiehacker #lesson",
+        "thread": null,
+        "images": [],
+        "contentHash": "1bbc81442fdc",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 21
+    },
+    {
+      "id": "li-b97b5d61c016",
+      "contentId": "li-b97b5d61c016",
+      "preview": "💼 LinkedIn Insight ← build-in-public/bip-2026-04-28-49334070a20d: I recently came across something worth sharing: Building in Public: Day in the Life. Working on automating my content...",
+      "content": {
+        "id": "li-b97b5d61c016",
+        "sourceId": "bip-2026-04-28-49334070a20d",
+        "sourceProject": "build-in-public",
+        "format": "linkedin-insight",
+        "platforms": [
+          "linkedin"
+        ],
+        "content": "I recently came across something worth sharing: Building in Public: Day in the Life. Working on automating my content distribution pipeline. One skill at a time. No fancy tools — just OpenClaw skills talking to each other. Here's why it caught my attention.\n\nWhat makes Building in Public: Day in the Life stand out is the attention to detail. Whether you're a parent planning a trip or an operator looking for inspiration, there's something to learn here.\n\nFor anyone planning family time, Building in Public: Day in the Life is worth a closer look. The combination of practical features and genuine experience makes it a standout.\n\n\n\n#buildinpublic #indiehacker #lesson #ai",
+        "thread": null,
+        "images": [],
+        "contentHash": "b97b5d61c016",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 22
+    },
+    {
+      "id": "cc-0420cad467a7",
+      "contentId": "cc-0420cad467a7",
+      "preview": "📷 Carousel Card ← build-in-public/bip-2026-04-28-49334070a20d: 1/5 Building in Public: Day in the Life\nWorking on automating my content distribution pipeline. One skill at a time. ...",
+      "content": {
+        "id": "cc-0420cad467a7",
+        "sourceId": "bip-2026-04-28-49334070a20d",
+        "sourceProject": "build-in-public",
+        "format": "carousel-card",
+        "platforms": [
+          "instagram"
+        ],
+        "content": "1/5 Building in Public: Day in the Life\nWorking on automating my content distribution pipeline. One skill at a time. No fancy tools — just OpenClaw skills talking to each other.\n📍 , \n\n2/5 Why Building in Public: Day in the Life?\n\n\n3/5 Pro Tips\n• Plan ahead\n• Arrive early\n• Bring snacks\n\n4/5 Quick Facts\nCategory: Family\nTags: buildinpublic, indiehacker, lesson\n\n5/5 Save This For Later\n❤️ Like if you'd take your family here!\n💬 Comment your favorite family destination\n#buildinpublic #indiehacker",
+        "thread": [
+          "1/5 Building in Public: Day in the Life\nWorking on automating my content distribution pipeline. One skill at a time. No fancy tools — just OpenClaw skills talking to each other.\n📍 , ",
+          "2/5 Why Building in Public: Day in the Life?\n",
+          "3/5 Pro Tips\n• Plan ahead\n• Arrive early\n• Bring snacks",
+          "4/5 Quick Facts\nCategory: Family\nTags: buildinpublic, indiehacker, lesson",
+          "5/5 Save This For Later\n❤️ Like if you'd take your family here!\n💬 Comment your favorite family destination\n#buildinpublic #indiehacker"
+        ],
+        "images": [],
+        "contentHash": "0420cad467a7",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 23
+    },
+    {
+      "id": "tt-090b03594b49",
+      "contentId": "tt-090b03594b49",
+      "preview": "🎬 TikTok Script ← build-in-public/bip-2026-04-28-49334070a20d: 🎬 TIKTOK SCRIPT: Building in Public: Day in the Life\n⏱️ Duration: 45 seconds\n\n━━━ HOOK (0-3s) ━━━\n[VISUAL: Title car...",
+      "content": {
+        "id": "tt-090b03594b49",
+        "sourceId": "bip-2026-04-28-49334070a20d",
+        "sourceProject": "build-in-public",
+        "format": "tiktok-script",
+        "platforms": [
+          "tiktok"
+        ],
+        "content": "🎬 TIKTOK SCRIPT: Building in Public: Day in the Life\n⏱️ Duration: 45 seconds\n\n━━━ HOOK (0-3s) ━━━\n[VISUAL: Title card or establishing shot]\nAUDIO: Upbeat background music\nTEXT ON SCREEN: \"This is a game-changer\"\nSPOKEN: \"Stop! Before you go to Building in Public: Day in the Life, here's what nobody tells you...\"\n\n━━━ SETUP (3-15s) ━━━\n[VISUAL: B-roll of Building in Public: Day in the Life]\nSPOKEN: \"Working on automating my content distribution pipeline. One skill at a time. No fancy tools — just OpenClaw skills talking to each other.\"\nTEXT ON SCREEN: , \n\n━━━ CONTENT (15-45s) ━━━\n[VISUAL: Slow-motion highlight reel]\nSPOKEN: \"The perfect family destination.\"\n\n━━━ CTA (45-60s) ━━━\n[VISUAL: You talking to camera or destination wide shot]\nSPOKEN: \"Follow for more family travel tips! Link in bio.\"\nCAPTION HASHTAGS: #buildinpublic #indiehacker #lesson",
+        "thread": null,
+        "images": [],
+        "contentHash": "090b03594b49",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 24
+    },
+    {
+      "id": "bip-37a4307afb94",
+      "contentId": "bip-37a4307afb94",
+      "preview": "🔧 Build In Public ← build-in-public/bip-2026-04-28-49334070a20d: Building in public — Building in Public: Day in the Life\n\nWorking on automating my content distribution pipeline. One...",
+      "content": {
+        "id": "bip-37a4307afb94",
+        "sourceId": "bip-2026-04-28-49334070a20d",
+        "sourceProject": "build-in-public",
+        "format": "build-in-public",
+        "platforms": [
+          "twitter",
+          "telegram"
+        ],
+        "content": "Building in public — Building in Public: Day in the Life\n\nWorking on automating my content distribution pipeline. One skill at a time. No fancy tools — just OpenClaw skills talking to each other.\n\nThe biggest lesson I keep learning? Automation is not about replacing humans — it's about freeing them to do what humans do best. Build systems. Ship value. Repeat.\n\nCurrent stack: OpenClaw skills → Paperclip orchestration → Telegram delivery. Zero external SaaS. Everything runs on my machine.\n\n#buildinpublic #indiehacker #automation",
+        "thread": null,
+        "images": [],
+        "contentHash": "37a4307afb94",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 25
+    },
+    {
+      "id": "nb-01d2903fef1b",
+      "contentId": "nb-01d2903fef1b",
+      "preview": "📧 Newsletter Blurb ← build-in-public/bip-2026-04-28-49334070a20d: Building in Public: Day in the Life is a must-know for families. Working on automating my content distribution pipeli...",
+      "content": {
+        "id": "nb-01d2903fef1b",
+        "sourceId": "bip-2026-04-28-49334070a20d",
+        "sourceProject": "build-in-public",
+        "format": "newsletter-blurb",
+        "platforms": [
+          "email"
+        ],
+        "content": "Building in Public: Day in the Life is a must-know for families. Working on automating my content distribution pipeline. One skill at a time. No fancy tools — just OpenClaw skills talking to each other. Learn more → Check it out\n\n#buildinpublic #indiehacker",
+        "thread": null,
+        "images": [],
+        "contentHash": "01d2903fef1b",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 26
+    },
+    {
+      "id": "nf-b9547d9be698",
+      "contentId": "nf-b9547d9be698",
+      "preview": "nudge-features ← build-in-public/bip-2026-04-28-49334070a20d: 💡 Parent Life Hack: Building in Public: Day in the Life\n\nWorking on automating my content distribution pipeline. One...",
+      "content": {
+        "id": "nf-b9547d9be698",
+        "sourceId": "bip-2026-04-28-49334070a20d",
+        "sourceProject": "build-in-public",
+        "format": "nudge-features",
+        "variant": "tip",
+        "platforms": [
+          "twitter",
+          "telegram"
+        ],
+        "content": "💡 Parent Life Hack: Building in Public: Day in the Life\n\nWorking on automating my content distribution pipeline. One skill at a time. No fancy tools — just OpenClaw skills talking to each other.\n\n→ Stop repeating yourself. Let automation do the nagging.\n\n#buildinpublic #indiehacker #lesson",
+        "thread": null,
+        "images": [],
+        "contentHash": "b9547d9be698",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 27
+    },
+    {
+      "id": "sh-c36a6002a31f",
+      "contentId": "sh-c36a6002a31f",
+      "preview": "🐦 Short Hook ← nudge/nudge-2026-04-28-598addca5bad: 🚀 Real-Time Family Dashboard — Nudge's PWA dashboard shows every family member's tasks in real time. See who's done ...",
+      "content": {
+        "id": "sh-c36a6002a31f",
+        "sourceId": "nudge-2026-04-28-598addca5bad",
+        "sourceProject": "nudge",
+        "format": "short-hook",
+        "platforms": [
+          "twitter"
+        ],
+        "content": "🚀 Real-Time Family Dashboard — Nudge's PWA dashboard shows every family member's tasks in real time. See who's done what, who's ...\nhttps://github.com/captain/nudge #dashboard",
+        "thread": null,
+        "images": [],
+        "contentHash": "c36a6002a31f",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 28
+    },
+    {
+      "id": "st-60af0d0c36d9",
+      "contentId": "st-60af0d0c36d9",
+      "preview": "🧵 Story Thread ← nudge/nudge-2026-04-28-598addca5bad: 1/4 Real-Time Family Dashboard — Nudge's PWA dashboard shows every family member's tasks in real time. See who's done...",
+      "content": {
+        "id": "st-60af0d0c36d9",
+        "sourceId": "nudge-2026-04-28-598addca5bad",
+        "sourceProject": "nudge",
+        "format": "story-thread",
+        "platforms": [
+          "twitter"
+        ],
+        "content": "1/4 Real-Time Family Dashboard — Nudge's PWA dashboard shows every family member's tasks in real time. See who's done what, who's slacking, and who needs a nudge. Perfect for the f...\n\n2/4 \n\n3/4 Perfect for a family day out.\n\n4/4 Check it out → https://github.com/captain/nudge #dashboard",
+        "thread": [
+          "1/4 Real-Time Family Dashboard — Nudge's PWA dashboard shows every family member's tasks in real time. See who's done what, who's slacking, and who needs a nudge. Perfect for the f...",
+          "2/4 ",
+          "3/4 Perfect for a family day out.",
+          "4/4 Check it out → https://github.com/captain/nudge #dashboard"
+        ],
+        "images": [],
+        "contentHash": "60af0d0c36d9",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 29
+    },
+    {
+      "id": "tdd-c787d6ec2f09",
+      "contentId": "tdd-c787d6ec2f09",
+      "preview": "📢 Telegram Deep Dive ← nudge/nudge-2026-04-28-598addca5bad: 🌍 *Real-Time Family Dashboard*\n\nNudge's PWA dashboard shows every family member's tasks in real time. See who's done...",
+      "content": {
+        "id": "tdd-c787d6ec2f09",
+        "sourceId": "nudge-2026-04-28-598addca5bad",
+        "sourceProject": "nudge",
+        "format": "telegram-deep-dive",
+        "platforms": [
+          "telegram"
+        ],
+        "content": "🌍 *Real-Time Family Dashboard*\n\nNudge's PWA dashboard shows every family member's tasks in real time. See who's done what, who's slacking, and who needs a nudge. Perfect for the family meeting at dinner.\n\n*📋 Quick Facts:*\n\n— — — — — — — — — —\n🔗 [Book / Learn More](https://github.com/captain/nudge)\n#dashboard #family #real-time",
+        "thread": null,
+        "images": [],
+        "contentHash": "c787d6ec2f09",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 30
+    },
+    {
+      "id": "li-84cfdd8246c0",
+      "contentId": "li-84cfdd8246c0",
+      "preview": "💼 LinkedIn Insight ← nudge/nudge-2026-04-28-598addca5bad: I recently came across something worth sharing: Real-Time Family Dashboard. Nudge's PWA dashboard shows every family ...",
+      "content": {
+        "id": "li-84cfdd8246c0",
+        "sourceId": "nudge-2026-04-28-598addca5bad",
+        "sourceProject": "nudge",
+        "format": "linkedin-insight",
+        "platforms": [
+          "linkedin"
+        ],
+        "content": "I recently came across something worth sharing: Real-Time Family Dashboard. Nudge's PWA dashboard shows every family member's tasks in real time. See who's done what, who's slacking, and who needs a nudge. Perfect for the family meeting at dinner. Here's why it caught my attention.\n\nWhat makes Real-Time Family Dashboard stand out is the attention to detail. Whether you're a parent planning a trip or an operator looking for inspiration, there's something to learn here.\n\nFor anyone planning family time, Real-Time Family Dashboard is worth a closer look. The combination of practical features and genuine experience makes it a standout.\n\n\n\n🔗 https://github.com/captain/nudge\n\n#dashboard #family #real-time #productivity",
+        "thread": null,
+        "images": [],
+        "contentHash": "84cfdd8246c0",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 31
+    },
+    {
+      "id": "cc-cc1fa6679ce2",
+      "contentId": "cc-cc1fa6679ce2",
+      "preview": "📷 Carousel Card ← nudge/nudge-2026-04-28-598addca5bad: 1/5 Real-Time Family Dashboard\nNudge's PWA dashboard shows every family member's tasks in real time. See who's done w...",
+      "content": {
+        "id": "cc-cc1fa6679ce2",
+        "sourceId": "nudge-2026-04-28-598addca5bad",
+        "sourceProject": "nudge",
+        "format": "carousel-card",
+        "platforms": [
+          "instagram"
+        ],
+        "content": "1/5 Real-Time Family Dashboard\nNudge's PWA dashboard shows every family member's tasks in real time. See who's done what, who's slacking, and who needs a nudge. Perfect for the family meeting at dinner.\n📍 , \n\n2/5 Why Real-Time Family Dashboard?\n\n\n3/5 Pro Tips\n• Plan ahead\n• Arrive early\n• Bring snacks\n\n4/5 Quick Facts\nCategory: Family\nTags: dashboard, family, real-time\n\n5/5 Save This For Later\n🔗 Link in bio\n❤️ Like if you'd take your family here!\n💬 Comment your favorite family destination\n#dashboard #family",
+        "thread": [
+          "1/5 Real-Time Family Dashboard\nNudge's PWA dashboard shows every family member's tasks in real time. See who's done what, who's slacking, and who needs a nudge. Perfect for the family meeting at dinner.\n📍 , ",
+          "2/5 Why Real-Time Family Dashboard?\n",
+          "3/5 Pro Tips\n• Plan ahead\n• Arrive early\n• Bring snacks",
+          "4/5 Quick Facts\nCategory: Family\nTags: dashboard, family, real-time",
+          "5/5 Save This For Later\n🔗 Link in bio\n❤️ Like if you'd take your family here!\n💬 Comment your favorite family destination\n#dashboard #family"
+        ],
+        "images": [],
+        "contentHash": "cc1fa6679ce2",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 32
+    },
+    {
+      "id": "tt-ad473b2fba48",
+      "contentId": "tt-ad473b2fba48",
+      "preview": "🎬 TikTok Script ← nudge/nudge-2026-04-28-598addca5bad: 🎬 TIKTOK SCRIPT: Real-Time Family Dashboard\n⏱️ Duration: 45 seconds\n\n━━━ HOOK (0-3s) ━━━\n[VISUAL: Title card or esta...",
+      "content": {
+        "id": "tt-ad473b2fba48",
+        "sourceId": "nudge-2026-04-28-598addca5bad",
+        "sourceProject": "nudge",
+        "format": "tiktok-script",
+        "platforms": [
+          "tiktok"
+        ],
+        "content": "🎬 TIKTOK SCRIPT: Real-Time Family Dashboard\n⏱️ Duration: 45 seconds\n\n━━━ HOOK (0-3s) ━━━\n[VISUAL: Title card or establishing shot]\nAUDIO: Upbeat background music\nTEXT ON SCREEN: \"This is a game-changer\"\nSPOKEN: \"Stop! Before you go to Real-Time Family Dashboard, here's what nobody tells you...\"\n\n━━━ SETUP (3-15s) ━━━\n[VISUAL: B-roll of Real-Time Family Dashboard]\nSPOKEN: \"Nudge's PWA dashboard shows every family member's tasks in real time. See who's done what, who's slacking, and who needs a nudge. Perfect for the family meeting at dinner.\"\nTEXT ON SCREEN: , \n\n━━━ CONTENT (15-45s) ━━━\n[VISUAL: Slow-motion highlight reel]\nSPOKEN: \"The perfect family destination.\"\n\n━━━ CTA (45-60s) ━━━\n[VISUAL: You talking to camera or destination wide shot]\nSPOKEN: \"Follow for more family travel tips! Link in bio.\"\nCAPTION HASHTAGS: #dashboard #family #real-time",
+        "thread": null,
+        "images": [],
+        "contentHash": "ad473b2fba48",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 33
+    },
+    {
+      "id": "bip-853ad8fba9c3",
+      "contentId": "bip-853ad8fba9c3",
+      "preview": "🔧 Build In Public ← nudge/nudge-2026-04-28-598addca5bad: Building in public — Real-Time Family Dashboard\n\nNudge's PWA dashboard shows every family member's tasks in real time...",
+      "content": {
+        "id": "bip-853ad8fba9c3",
+        "sourceId": "nudge-2026-04-28-598addca5bad",
+        "sourceProject": "nudge",
+        "format": "build-in-public",
+        "platforms": [
+          "twitter",
+          "telegram"
+        ],
+        "content": "Building in public — Real-Time Family Dashboard\n\nNudge's PWA dashboard shows every family member's tasks in real time. See who's done what, who's slacking, and who needs a nudge. Perfect for the family meeting at dinner.\n\nThe biggest lesson I keep learning? Automation is not about replacing humans — it's about freeing them to do what humans do best. Build systems. Ship value. Repeat.\n\nCurrent stack: OpenClaw skills → Paperclip orchestration → Telegram delivery. Zero external SaaS. Everything runs on my machine.\n\n#buildinpublic #indiehacker #automation",
+        "thread": null,
+        "images": [],
+        "contentHash": "853ad8fba9c3",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 34
+    },
+    {
+      "id": "nb-1cbde4e874ad",
+      "contentId": "nb-1cbde4e874ad",
+      "preview": "📧 Newsletter Blurb ← nudge/nudge-2026-04-28-598addca5bad: Real-Time Family Dashboard is a must-know for families. Nudge's PWA dashboard shows every family member's tasks in re...",
+      "content": {
+        "id": "nb-1cbde4e874ad",
+        "sourceId": "nudge-2026-04-28-598addca5bad",
+        "sourceProject": "nudge",
+        "format": "newsletter-blurb",
+        "platforms": [
+          "email"
+        ],
+        "content": "Real-Time Family Dashboard is a must-know for families. Nudge's PWA dashboard shows every family member's tasks in real time. See who's done what, who's slacking, and who needs a nudge. Perfect for the family meeting at dinner. Learn more → https://github.com/captain/nudge\n\n#dashboard #family",
+        "thread": null,
+        "images": [],
+        "contentHash": "1cbde4e874ad",
+        "createdAt": "2026-04-28T02:52:25.532Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 35
+    },
+    {
+      "id": "nf-f849e1b978d9",
+      "contentId": "nf-f849e1b978d9",
+      "preview": "nudge-features ← nudge/nudge-2026-04-28-598addca5bad: 🚀 Real-Time Family Dashboard\n\nNudge's PWA dashboard shows every family member's tasks in real time. See who's done w...",
+      "content": {
+        "id": "nf-f849e1b978d9",
+        "sourceId": "nudge-2026-04-28-598addca5bad",
+        "sourceProject": "nudge",
+        "format": "nudge-features",
+        "variant": "highlight",
+        "platforms": [
+          "twitter",
+          "telegram",
+          "linkedin"
+        ],
+        "content": "🚀 Real-Time Family Dashboard\n\nNudge's PWA dashboard shows every family member's tasks in real time. See who's done what, who's slacking, and who needs a nudge. Perfect for the family meeting at dinner.\n\nWhy it matters:\n• Natural language → zero learning curve\n• Multi-platform (Telegram, Voice, Web) → works everywhere\n• Smart enforcement → tasks actually get done\n\n#dashboard #family #realtime",
+        "thread": null,
+        "images": [],
+        "contentHash": "f849e1b978d9",
+        "createdAt": "2026-04-28T02:52:25.533Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 36
+    },
+    {
+      "id": "sh-f3c50312bc64",
+      "contentId": "sh-f3c50312bc64",
+      "preview": "🐦 Short Hook ← nudge/nudge-2026-04-28-4647367f891b: 🚀 AI-Powered Task Enforcement That Actually Works — Nudge's smart reminder system escalates automatically: gentle nu...",
+      "content": {
+        "id": "sh-f3c50312bc64",
+        "sourceId": "nudge-2026-04-28-4647367f891b",
+        "sourceProject": "nudge",
+        "format": "short-hook",
+        "platforms": [
+          "twitter"
+        ],
+        "content": "🚀 AI-Powered Task Enforcement That Actually Works — Nudge's smart reminder system escalates automatically: gentle nudge at 30 min → firm reminder at ...\nhttps://github.com/captain/nudge #ai",
+        "thread": null,
+        "images": [],
+        "contentHash": "f3c50312bc64",
+        "createdAt": "2026-04-28T02:52:25.533Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 37
+    },
+    {
+      "id": "st-65f9b1ab7251",
+      "contentId": "st-65f9b1ab7251",
+      "preview": "🧵 Story Thread ← nudge/nudge-2026-04-28-4647367f891b: 1/4 AI-Powered Task Enforcement That Actually Works — Nudge's smart reminder system escalates automatically: gentle n...",
+      "content": {
+        "id": "st-65f9b1ab7251",
+        "sourceId": "nudge-2026-04-28-4647367f891b",
+        "sourceProject": "nudge",
+        "format": "story-thread",
+        "platforms": [
+          "twitter"
+        ],
+        "content": "1/4 AI-Powered Task Enforcement That Actually Works — Nudge's smart reminder system escalates automatically: gentle nudge at 30 min → firm reminder at 15 min → notify the assigner at deadline. Parents ...\n\n2/4 \n\n3/4 Perfect for a family day out.\n\n4/4 Check it out → https://github.com/captain/nudge #ai",
+        "thread": [
+          "1/4 AI-Powered Task Enforcement That Actually Works — Nudge's smart reminder system escalates automatically: gentle nudge at 30 min → firm reminder at 15 min → notify the assigner at deadline. Parents ...",
+          "2/4 ",
+          "3/4 Perfect for a family day out.",
+          "4/4 Check it out → https://github.com/captain/nudge #ai"
+        ],
+        "images": [],
+        "contentHash": "65f9b1ab7251",
+        "createdAt": "2026-04-28T02:52:25.533Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 38
+    },
+    {
+      "id": "tdd-e819802d95e4",
+      "contentId": "tdd-e819802d95e4",
+      "preview": "📢 Telegram Deep Dive ← nudge/nudge-2026-04-28-4647367f891b: 🌍 *AI-Powered Task Enforcement That Actually Works*\n\nNudge's smart reminder system escalates automatically: gentle n...",
+      "content": {
+        "id": "tdd-e819802d95e4",
+        "sourceId": "nudge-2026-04-28-4647367f891b",
+        "sourceProject": "nudge",
+        "format": "telegram-deep-dive",
+        "platforms": [
+          "telegram"
+        ],
+        "content": "🌍 *AI-Powered Task Enforcement That Actually Works*\n\nNudge's smart reminder system escalates automatically: gentle nudge at 30 min → firm reminder at 15 min → notify the assigner at deadline. Parents report 70%+ completion rates vs 30% with manual reminders.\n\n*📋 Quick Facts:*\n\n— — — — — — — — — —\n🔗 [Book / Learn More](https://github.com/captain/nudge)\n#ai #enforcement #family",
+        "thread": null,
+        "images": [],
+        "contentHash": "e819802d95e4",
+        "createdAt": "2026-04-28T02:52:25.533Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 39
+    },
+    {
+      "id": "li-61b3b8efd731",
+      "contentId": "li-61b3b8efd731",
+      "preview": "💼 LinkedIn Insight ← nudge/nudge-2026-04-28-4647367f891b: I recently came across something worth sharing: AI-Powered Task Enforcement That Actually Works. Nudge's smart remind...",
+      "content": {
+        "id": "li-61b3b8efd731",
+        "sourceId": "nudge-2026-04-28-4647367f891b",
+        "sourceProject": "nudge",
+        "format": "linkedin-insight",
+        "platforms": [
+          "linkedin"
+        ],
+        "content": "I recently came across something worth sharing: AI-Powered Task Enforcement That Actually Works. Nudge's smart reminder system escalates automatically: gentle nudge at 30 min → firm reminder at 15 min → notify the assigner at deadline. Parents report 70%+ completion rates vs 30% with manual reminders. Here's why it caught my attention.\n\nWhat makes AI-Powered Task Enforcement That Actually Works stand out is the attention to detail. Whether you're a parent planning a trip or an operator looking for inspiration, there's something to learn here.\n\nFor anyone planning family time, AI-Powered Task Enforcement That Actually Works is worth a closer look. The combination of practical features and genuine experience makes it a standout.\n\n\n\n🔗 https://github.com/captain/nudge\n\n#ai #enforcement #family #productivity",
+        "thread": null,
+        "images": [],
+        "contentHash": "61b3b8efd731",
+        "createdAt": "2026-04-28T02:52:25.533Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 40
+    },
+    {
+      "id": "cc-ace928240064",
+      "contentId": "cc-ace928240064",
+      "preview": "📷 Carousel Card ← nudge/nudge-2026-04-28-4647367f891b: 1/5 AI-Powered Task Enforcement That Actually Works\nNudge's smart reminder system escalates automatically: gentle nud...",
+      "content": {
+        "id": "cc-ace928240064",
+        "sourceId": "nudge-2026-04-28-4647367f891b",
+        "sourceProject": "nudge",
+        "format": "carousel-card",
+        "platforms": [
+          "instagram"
+        ],
+        "content": "1/5 AI-Powered Task Enforcement That Actually Works\nNudge's smart reminder system escalates automatically: gentle nudge at 30 min → firm reminder at 15 min → notify the assigner at deadline. Parents report 70%+ completion rates vs 30% with manual re...\n📍 , \n\n2/5 Why AI-Powered Task Enforcement That Actually Works?\n\n\n3/5 Pro Tips\n• Plan ahead\n• Arrive early\n• Bring snacks\n\n4/5 Quick Facts\nCategory: Family\nTags: ai, enforcement, family\n\n5/5 Save This For Later\n🔗 Link in bio\n❤️ Like if you'd take your family here!\n💬 Comment your favorite family destination\n#ai #enforcement",
+        "thread": [
+          "1/5 AI-Powered Task Enforcement That Actually Works\nNudge's smart reminder system escalates automatically: gentle nudge at 30 min → firm reminder at 15 min → notify the assigner at deadline. Parents report 70%+ completion rates vs 30% with manual re...\n📍 , ",
+          "2/5 Why AI-Powered Task Enforcement That Actually Works?\n",
+          "3/5 Pro Tips\n• Plan ahead\n• Arrive early\n• Bring snacks",
+          "4/5 Quick Facts\nCategory: Family\nTags: ai, enforcement, family",
+          "5/5 Save This For Later\n🔗 Link in bio\n❤️ Like if you'd take your family here!\n💬 Comment your favorite family destination\n#ai #enforcement"
+        ],
+        "images": [],
+        "contentHash": "ace928240064",
+        "createdAt": "2026-04-28T02:52:25.533Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 41
+    },
+    {
+      "id": "tt-0191d05bdee1",
+      "contentId": "tt-0191d05bdee1",
+      "preview": "🎬 TikTok Script ← nudge/nudge-2026-04-28-4647367f891b: 🎬 TIKTOK SCRIPT: AI-Powered Task Enforcement That Actually Works\n⏱️ Duration: 45 seconds\n\n━━━ HOOK (0-3s) ━━━\n[VISUA...",
+      "content": {
+        "id": "tt-0191d05bdee1",
+        "sourceId": "nudge-2026-04-28-4647367f891b",
+        "sourceProject": "nudge",
+        "format": "tiktok-script",
+        "platforms": [
+          "tiktok"
+        ],
+        "content": "🎬 TIKTOK SCRIPT: AI-Powered Task Enforcement That Actually Works\n⏱️ Duration: 45 seconds\n\n━━━ HOOK (0-3s) ━━━\n[VISUAL: Title card or establishing shot]\nAUDIO: Upbeat background music\nTEXT ON SCREEN: \"This is a game-changer\"\nSPOKEN: \"Stop! Before you go to AI-Powered Task Enforcement That Actually Works, here's what nobody tells you...\"\n\n━━━ SETUP (3-15s) ━━━\n[VISUAL: B-roll of AI-Powered Task Enforcement That Actually Works]\nSPOKEN: \"Nudge's smart reminder system escalates automatically: gentle nudge at 30 min → firm reminder at 15 min → notify the assigner at deadline. Parents report 70%+ completion rates vs 30% with manual re...\"\nTEXT ON SCREEN: , \n\n━━━ CONTENT (15-45s) ━━━\n[VISUAL: Slow-motion highlight reel]\nSPOKEN: \"The perfect family destination.\"\n\n━━━ CTA (45-60s) ━━━\n[VISUAL: You talking to camera or destination wide shot]\nSPOKEN: \"Follow for more family travel tips! Link in bio.\"\nCAPTION HASHTAGS: #ai #enforcement #family",
+        "thread": null,
+        "images": [],
+        "contentHash": "0191d05bdee1",
+        "createdAt": "2026-04-28T02:52:25.533Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 42
+    },
+    {
+      "id": "bip-c94adcf100bf",
+      "contentId": "bip-c94adcf100bf",
+      "preview": "🔧 Build In Public ← nudge/nudge-2026-04-28-4647367f891b: Building in public — AI-Powered Task Enforcement That Actually Works\n\nNudge's smart reminder system escalates automat...",
+      "content": {
+        "id": "bip-c94adcf100bf",
+        "sourceId": "nudge-2026-04-28-4647367f891b",
+        "sourceProject": "nudge",
+        "format": "build-in-public",
+        "platforms": [
+          "twitter",
+          "telegram"
+        ],
+        "content": "Building in public — AI-Powered Task Enforcement That Actually Works\n\nNudge's smart reminder system escalates automatically: gentle nudge at 30 min → firm reminder at 15 min → notify the assigner at deadline. Parents report 70%+ completion rates vs 30% with manual reminders.\n\nThe biggest lesson I keep learning? Automation is not about replacing humans — it's about freeing them to do what humans do best. Build systems. Ship value. Repeat.\n\nCurrent stack: OpenClaw skills → Paperclip orchestration → Telegram delivery. Zero external SaaS. Everything runs on my machine.\n\n#buildinpublic #indiehacker #automation",
+        "thread": null,
+        "images": [],
+        "contentHash": "c94adcf100bf",
+        "createdAt": "2026-04-28T02:52:25.533Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 43
+    },
+    {
+      "id": "nb-cb1abc6d8c13",
+      "contentId": "nb-cb1abc6d8c13",
+      "preview": "📧 Newsletter Blurb ← nudge/nudge-2026-04-28-4647367f891b: AI-Powered Task Enforcement That Actually Works is a must-know for families. Nudge's smart reminder system escalates ...",
+      "content": {
+        "id": "nb-cb1abc6d8c13",
+        "sourceId": "nudge-2026-04-28-4647367f891b",
+        "sourceProject": "nudge",
+        "format": "newsletter-blurb",
+        "platforms": [
+          "email"
+        ],
+        "content": "AI-Powered Task Enforcement That Actually Works is a must-know for families. Nudge's smart reminder system escalates automatically: gentle nudge at 30 min → firm reminder at 15 min → notify the assigner at deadline. Parents report 70%+ completion rates vs 30% with manual reminders. Learn more → https://github.com/captain/nudge\n\n#ai #enforcement",
+        "thread": null,
+        "images": [],
+        "contentHash": "cb1abc6d8c13",
+        "createdAt": "2026-04-28T02:52:25.533Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 44
+    },
+    {
+      "id": "nf-3b9ae8d9e339",
+      "contentId": "nf-3b9ae8d9e339",
+      "preview": "nudge-features ← nudge/nudge-2026-04-28-4647367f891b: 🚀 AI-Powered Task Enforcement That Actually Works\n\nNudge's smart reminder system escalates automatically: gentle nud...",
+      "content": {
+        "id": "nf-3b9ae8d9e339",
+        "sourceId": "nudge-2026-04-28-4647367f891b",
+        "sourceProject": "nudge",
+        "format": "nudge-features",
+        "variant": "highlight",
+        "platforms": [
+          "twitter",
+          "telegram",
+          "linkedin"
+        ],
+        "content": "🚀 AI-Powered Task Enforcement That Actually Works\n\nNudge's smart reminder system escalates automatically: gentle nudge at 30 min → firm reminder at 15 min → notify the assigner at deadline. Parents report 70%+ completion rates vs 30% with manual reminders.\n\nWhy it matters:\n• Natural language → zero learning curve\n• Multi-platform (Telegram, Voice, Web) → works everywhere\n• Smart enforcement → tasks actually get done\n\n#ai #enforcement #family",
+        "thread": null,
+        "images": [],
+        "contentHash": "3b9ae8d9e339",
+        "createdAt": "2026-04-28T02:52:25.533Z",
+        "status": "pending"
+      },
+      "status": "approved",
+      "editedContent": null,
+      "editNotes": null,
+      "position": 45
+    }
+  ],
+  "status": "approved",
+  "createdAt": "2026-04-28T02:52:25.533Z"
+}

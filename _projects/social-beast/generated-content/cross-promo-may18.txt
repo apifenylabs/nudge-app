@@ -1,0 +1,106 @@
+================================================================================
+ CROSS-PROMOTION CONTENT — May 18, 2026
+ Building 5 Sites with AI Agents — Behind the Scenes
+================================================================================
+
+Tone: Transparent, hacker-ish, building-in-public
+Style: Twitter/X thread-suitable posts (each <280 chars, thread-friendly)
+Target: Indie hackers, solopreneurs, builders, position-zero content sharks
+
+================================================================================
+ POST 1 — THE PORTFOLIO OVERVIEW
+================================================================================
+
+I run 5 sites across 5 niches. Zero budget, just AI agents and caffeine.
+
+⚡ EV Charging Asia — 1,125 stations mapped
+🏡 familytravelasia.com — 120 blog posts
+🏰 Luxury Travel Asia — 51 handpicked properties
+🤖 Apifeny AI — 90+ tools, 58 playbooks
+🧠 LifeOS — my personal command center
+
+Thread on what I learned ↓
+
+Link: https://ev-charging-asia.vercel.app + https://apifeny-ai.vercel.app
+#BuildInPublic #IndieHacker #AI
+
+================================================================================
+ POST 2 — HOW AI AGENTS HANDLE REAL CONTENT
+================================================================================
+
+People ask: "Can AI agents really replace a content team?"
+
+Depends. For structured content? Absolutely.
+
+My EV site has 1,125 station entries across 12 countries. Each one: location,
+connector types, pricing, user ratings. AI agents scrape, validate, format.
+
+My travel blog? 120 long-form posts. AI drafts, I edit. 10x faster.
+
+The secret: good prompts + human review loops. Not magic. Process.
+
+Link: https://ev-charging-asia.vercel.app + https://familytravelasia.com
+#BuildInPublic #AI #ContentStrategy
+
+================================================================================
+ POST 3 — SITE #3: LUXURY FAMILY TRAVEL = HIGH-TICKET NICHE
+================================================================================
+
+Luxury family travel is the dark horse.
+
+51 handpicked properties. Private villas in Bali. Overwater bungalows in Maldives.
+Family suites at Aman resorts. Each one manually curated, AI-enriched.
+
+What I found: rich families WILL change plans if you prove the kid-factor.
+Pool depth. Kids club quality. Babysitting availability. Real data wins.
+
+Margins are fat because nobody else hyper-focuses on data for this niche.
+
+Link: https://luxury-family-travel-asia.vercel.app
+#BuildInPublic #LuxuryTravel #NicheSite
+
+================================================================================
+ POST 4 — APIFENY AI: MY BIGGEST BET
+================================================================================
+
+90+ AI tools. 58 playbooks. 151 pages of structured content.
+
+Apifeny AI is my content-moat play. Every tool reviewed with:
+→ Use case
+→ Pricing
+→ Real alternatives
+→ Prompt templates to replicate results
+
+It's the site I'd want if I were getting into AI today. No fluff. Just
+actionable data. Built with AI agents, by the way. Recursive meta.
+
+Still indexing. Still optimizing. But the structure is the moat.
+
+Link: https://apifeny-ai.vercel.app
+#BuildInPublic #AI #IndieHacker
+
+================================================================================
+ POST 5 — WHY I BUILD THIS WAY (THE REAL ONE)
+================================================================================
+
+I don't have a team. I don't have VC money. I have a laptop and a cron job.
+
+5 sites. 2,500+ content pages. All generated, all curated, all live.
+
+The strategy:
+1. Pick a niche with query volume
+2. Build a data model, not just articles
+3. Generate structured content at scale
+4. Review + publish with human taste
+5. Repeat
+
+LifeOS ties it together — my personal dashboard for what's working and what's not.
+
+Took 18 months of iteration. Still early. But the flywheel is spinning.
+
+Link: https://familytravelasia.com + https://apifeny-ai.vercel.app
+#BuildInPublic #Solopreneur #IndieHacker #LifeOS
+
+================================================================================
+EOF — 5 posts generated 2026-05-18
+================================================================================

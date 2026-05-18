@@ -1,0 +1,33 @@
+# LinkedIn Post — OmniMind Launch
+
+## Headline
+My OpenClaw agents kept forgetting everything after 20 minutes. So I built a memory layer that runs entirely on my laptop.
+
+## Text
+
+Every OpenClaw user knows the problem: you start a new session and your agent has zero context from yesterday. Not "vaguely remembers" — zero. Blank slate.
+
+The standard fix is a cloud memory API. Works great, but:
+- Your data lives on someone else's server
+- Costs $30-50/month minimum
+- Doesn't work offline
+- Doesn't make sense for privacy-sensitive use cases
+
+I wanted something different.
+
+**OmniMind** is an open source memory layer for OpenClaw agents. Three embedded databases:
+- Vector storage for semantic recall ("what did we discuss last week?")
+- Graph database for entity relationships and procedural knowledge
+- SQLite for provenance tracking
+
+It runs 100% locally. No cloud, no API keys, no subscription.
+
+The most interesting piece is the Memify worker — a nightly process that compresses raw conversations into higher-level knowledge. Your agent literally gets smarter over time without you doing anything.
+
+v0.3.0 is live and running on my own setup. MIT license, free forever.
+
+**If you build AI agents or work with OpenClaw:** I'd genuinely love to hear what memory problems you're hitting. Not looking for validation — looking for what actually needs fixing.
+
+https://github.com/apifenylabs/omnimind
+
+#OpenSource #AI #OpenClaw #AgentMemory #DevTools
