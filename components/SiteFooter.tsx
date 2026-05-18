@@ -68,19 +68,19 @@ export default function SiteFooter() {
         <div className="mb-8">
           <h4 className="text-sm font-semibold text-warm-white mb-3 text-center uppercase tracking-wider">Plan Your Trip</h4>
           <div className="flex flex-wrap justify-center gap-3">
-            <AffiliateLink href="https://www.booking.com" provider="booking.com">
+            <AffiliateLink href="https://www.booking.com/index.html?aid=2875669" provider="booking.com">
               🏨 Hotels
             </AffiliateLink>
-            <AffiliateLink href="https://www.klook.com" provider="klook">
+            <AffiliateLink href="https://affiliate.klook.com/redirect?aid=119991" provider="klook">
               🎫 Activities
             </AffiliateLink>
-            <AffiliateLink href="https://www.viator.com" provider="viator">
+            <AffiliateLink href="https://www.viator.com/?pid=P00299136" provider="viator">
               🏛️ Tours
             </AffiliateLink>
-            <AffiliateLink href="https://www.getyourguide.com" provider="getyourguide">
+            <AffiliateLink href="https://www.getyourguide.com/?partner_id=YOUR_GYG_ID" provider="getyourguide">
               🌟 Experiences
             </AffiliateLink>
-            <AffiliateLink href="https://www.expedia.com" provider="expedia">
+            <AffiliateLink href="https://www.expedia.com/?msp_cid=YOUR_EXPEDIA_ID" provider="expedia">
               🚗 Car Rental
             </AffiliateLink>
           </div>
