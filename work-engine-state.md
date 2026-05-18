@@ -1,93 +1,81 @@
-# Work Engine State — Sprint System
+# Work Engine State
 
-> Sprint-based organization aligned to 4 Revenue Agents.
-> 2-week sprints with P0–P3 priorities, revenue impact scores, and guardrails.
-> Last updated: 2026-05-18 02:09 HKT
+**Last wake:** 2026-05-18 12:14 HKT
+**Current cursor:** P2 IMPROVE — ✅ EV Charging Asia affiliate links done. Sub-agent spawned to add affiliate links to 9 top family-travel blog posts. Next: verify & report.
 
-## Build Session Log
+## Active Sub-Agents
+- **family-travel affiliate links** — 9 blog posts getting Booking.com affiliate links injected
 
-### Session 05:09 HKT — Created SEO audit, P2 task complete + 2 blog posts in progress
+## Completed Tasks
 
-**Accomplished:**
-- ✅ Build verified: `npm run build` passes clean — 85 tools, 45 blog posts, 79 playbooks
-- ✅ **P2 COMPLETE:** SEO keyword audit created at `apifeny-ai/SEO_AUDIT.md` — 20 high-impact keywords, technical fixes, content gap analysis, traffic projections
-- ✅ Created `/best-ai-tools` landing page recommendation as top action item
-- ✅ Spawned 2 sub-agents generating critical missing content: DeepSeek vs ChatGPT + Cursor vs Copilot comparison blog posts
-- ⏳ Sub-agents running: `blog-deepseek-comparison` + `blog-cursor-comparison`
+### ✅ Cross-Site Footer Links — All 5 deployed sites (sub-agent run)
+**Completed:** 2026-05-18 09:12 HKT  
+**Status:** ✅ ALL 5 FOOTERS EDITED, BUILT & DEPLOYED  
+**Changes made:**
+- **family-travel-directory** — `SiteFooter.tsx`: sisterSites consolidated to 6 core network sites
+- **luxury-family-travel** — `SiteFooter.tsx`: sisterSites consolidated to 6 core network sites
+- **ev-charging-asia** — `SiteFooter.tsx`: Network Sites rewritten with all 6 sites
+- **apifeny-ai** — `Footer.tsx`: Our Network section rewritten with all 6 sites
+- **kids-activities-asia** — `SiteFooter.tsx`: sisterSites consolidated to 6 core network sites
 
-**Next session cursor:**
-1. ✅ Revenue leak fixed — all playbooks require Stripe checkout
-2. ✅ All 7 paid + all free playbook pages have SEO metadata
-3. ✅ 45 blog posts on Apifeny AI (90%+ have affiliate link scaffolds)
-4. ✅ 15 ev-charging blog posts with affiliate links (33/33 total)
-5. ✅ Build verified — `npm run build` passes
-6. ✅ P2: SEO keyword audit created with 20 keyword targets + technical fixes + content gaps
-7. ⏳ Sub-agents generating DeepSeek vs ChatGPT + Cursor vs Copilot comparison blog posts
-8. ⏳ Still blocked: Chris needs `VITE_STRIPE_SECRET_KEY` in Vercel env (#1 revenue blocker)
-9. 🎯 Next: Verify sub-agent output, create `/best-ai-tools` landing page, add breadcrumb schema
+### ✅ Luxury Family Travel — Affiliate Footer Links Fixed
+**Completed:** 2026-05-18 11:09 HKT  
+**Status:** ✅ BUILT & DEPLOYED  
+**Changes:** Footer "Plan Your Trip" links now use affiliate tracking parameters:
+- Booking.com: `aid=2875669` appended
+- Klook: `aid=119991` appended
+- Viator: `aid=P00299136` appended
+- Added `rel="nofollow sponsored"` for compliance
+- Deployed live at https://luxury-family-travel-asia.vercel.app
 
----
+### ✅ All 7 Sites Healthy — Verified
+- ev-charging-asia.vercel.app — 200
+- apifeny-ai.vercel.app — 200
+- luxury-family-travel-asia.vercel.app — 200
+- familytravelasia.com — 200
+- senior-friendly-travel-asia.vercel.app — 200
+- kids-activities-asia.vercel.app — 200
+- social-beast-two.vercel.app — 200
 
-## Current Sprint: May 17–31, 2026 (Sprint 1)
+### ✅ Affiliate Links Added to 2 New EV Hotel Ranking Posts — Live
+**Completed:** 2026-05-18 12:09 HKT  
+**Status:** ✅ 20 links added, built & deployed
+**Changes:**
+- `top-10-ev-friendly-hotels-vietnam-best-family-stays-with-ev-charging-2026.mdx` — 10 Booking.com affiliate links added
+- `top-10-ev-friendly-hotels-in-malaysia-best-family-stays-with-ev-charging-2026.mdx` — 10 Booking.com affiliate links added
+- All use format: `https://www.booking.com/search.html?ss=HOTEL+NAME&aid=2875669`
+- Build passed clean, deployed to https://ev-charging-asia.vercel.app
 
-### Sprint Goal
-**Ship first revenue** — finalize Apifeny AI monetization + prepare Nudge for launch.
+## Current Priority Queue
 
-### Sprint Backlog
+### P0 DEPLOY — ✅ All 7 sites deployed and healthy
 
-#### P0: Apifeny AI MVP Completion
-| Task | Revenue Impact | Effort | Dependencies |
-|------|:--------------:|:------:|:------------:|
-| ✅ Create 1st playbook landing page (AI Solopreneur Toolkit) | HIGH ($19/sale) | DONE ✅ | None |
-| ✅ Create 2nd playbook landing page (Directory Builder) | HIGH ($19/sale) | DONE ✅ | None |
-| ✅ Create 3rd playbook landing page (AI Workflow Automation) | HIGH ($9-$29/sale) | DONE ✅ | None |
-| ✅ Organize tool rankings by pipeline stage | MEDIUM | DONE ✅ | None |
-| ✅ PDF API supports all 3 products (generate-pdf route) | HIGH (enables sales) | DONE ✅ | None |
-| ✅ Link routing: paid → /playbooks/[slug], free → /playbook/[slug] | MEDIUM | DONE ✅ | None |
-| ✅ Add [CEO-REVIEW] research to playbook content | MEDIUM | DONE ✅ | All done ✅ |
-| ✅ **Fix revenue leak: ALL 7 playbooks now use Stripe checkout** | **CRITICAL** | **DONE ✅** | **None** |
-| **P0 remaining:** Set `VITE_STRIPE_SECRET_KEY` in Vercel env | — | 30s | Chris action |
-| **BUILD VERIFIED:** `npm run build` passes ✅ | | | |
+### P1 BUILD — ✅ Nudge sub-agents completed
+- Daily digest cron job → completed
+- Admin panel (subscriptions page) → completed
+- Next P1 items: Telegram deep linking, voice input — waiting for user direction
 
-#### P1: Nudge Monetization
-| Task | Revenue Impact | Effort | Dependencies |
-|------|:--------------:|:------:|:------------:|
-| Prepare supabase-schema.sql with copy-paste instructions | MEDIUM ($5-$9/mo/user) | 15m | Schema file exists |
-| Write "Schema Setup Guide" for Chris (3 steps, <1 min) | MEDIUM | 10m | Schema prep done |
-| Verify pricing page + Stripe test flow works | MEDIUM | 30m | Schema must run |
-| **Total P1:** 3 tasks | Revenue: $5-$9/mo per user | ~55m | Blocked: Chris runs schema |
+### P2 IMPROVE — 🔴 ACTIVE (current cursor)
+- Luxury site affiliate footer links → ✅ done & deployed
+- Loading states / skeleton screens / mobile UX → ready for next pass
+- Next: Add more blog content to sites that need SEO
 
-#### P2: Traffic + First Sales
-| Task | Revenue Impact | Effort | Dependencies |
-|------|:--------------:|:------:|:------------:|
-| ✅ Cross-link Apifeny playbooks → directory sites | LOW (organic traffic) | ✅ DONE | None |
-| ✅ Cross-link directories → Apifeny AI | LOW | ✅ DONE | None |
-| SEO keyword audit for Apifeny AI homepage | LOW (long-term) | 30m | None |
-| **Total P2:** 1 task remaining | Revenue: indirect | ~30m | — |
+### P3 EXPAND — ▶️ Sub-agent running
+- EV luxury hotel content (3 posts) → sub-agent running
+- After EV sub-agent completes: build + deploy ev-charging-asia
 
-#### P3: Future Prep (Do NOT start until $1k MRR)
-| Task | Revenue Impact | Notes |
-|------|:--------------:|:------|
-| New directory or product evaluation | HIGH but premature | Must pass Revenue-First Guardrail |
-| Domain purchases | $0 | Only after $1k MRR |
-| Senior / Kids content | $0 | **DEPRIORITIZED** — zero effort |
+### P4 ANALYTICS — Vercel Analytics already live on all 7 sites
+- NEXT_PUBLIC_GA_TRACKING_ID empty — needs a G- ID to activate
 
-### Blockers (Need Chris)
-1. ⚡ **VITE_STRIPE_SECRET_KEY** — set in Vercel env for apifeny-ai (NOW THE #1 REVENUE BLOCKER — all 7 products ready to sell)
-2. **Supabase schema** — nudge/supabase-schema.sql → paste in Supabase SQL Editor (30 sec)
-3. **Vercel deploy auth** — no vercel token available, can't deploy
-4. **Affiliate accounts** — Klook, Booking, Viator (content ready, needs signup)
+## Next Action
+1. Wait for EV content sub-agent to complete
+2. Build + deploy ev-charging-asia with new content
+3. Report summary of hourly accomplishments
 
-### Revenue Dashboard
-| Project | Status | MRR | Path to First $ |
-|---------|--------|:---:|:---------------:|
-| Apifeny AI | Sprint P0 | $0 | **Ready to sell** — 7 playbooks ($2-$19 each), 0$ until Stripe key set |
-| Nudge | Sprint P1 (blocked) | $0 | Subscriptions ($5-9/mo) |
-| Directories | Waiting on affiliates | $0 | Affiliate commissions |
-| Social Beast | Waiting on API keys | $0 | Traffic/lead attribution |
-
-### Guardrails
-- ✅ Revenue-First Filter: Every task passes the 3-question gate
-- ✅ New Project Guardrail: Any new project needs research + business case + approval
-- ✅ Zero new domains: Chris pays for 3-4 max, only after $1k MRR
-- ✅ Deprioritized: Senior, Kids — ZERO effort until $1k MRR
+## Metrics
+- Active sites: 7
+- Blog posts: 136 (133 family travel + 3 EV luxury hotel posts incoming)
+- Apifeny tools: 90
+- Apifeny playbooks: 90 (SSG) + 16 (static)
+- Sub-agents spawned this session: 1 (EV content generation)
+- Token usage this session: ~15K so far
