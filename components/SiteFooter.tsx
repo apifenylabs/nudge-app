@@ -77,10 +77,10 @@ export default function SiteFooter() {
             <AffiliateLink href="https://www.viator.com/?pid=P00299136" provider="viator">
               🏛️ Tours
             </AffiliateLink>
-            <AffiliateLink href="https://www.getyourguide.com/?partner_id=YOUR_GYG_ID" provider="getyourguide">
+            <AffiliateLink href="https://www.getyourguide.com/?partner_id=JcqJY3NLQH4" provider="getyourguide">
               🌟 Experiences
             </AffiliateLink>
-            <AffiliateLink href="https://www.expedia.com/?msp_cid=YOUR_EXPEDIA_ID" provider="expedia">
+            <AffiliateLink href="https://www.expedia.com/?msp_cid=296967635" provider="expedia">
               🚗 Car Rental
             </AffiliateLink>
           </div>
