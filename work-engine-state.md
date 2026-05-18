@@ -1,5 +1,38 @@
 # Work Engine State
 
+## Cursor: P2 IMPROVE: Affiliate Placeholder Fix ✅
+
+### Completed 2026-05-19 01:09 HKT
+- **Affiliate placeholders fixed (all 5 sites)**: `YOUR_AFFILIATE_ID`, `YOUR_GYG_ID`, `YOUR_EXPEDIA_ID`, `YOUR_AMAZON_TAG` replaced with real IDs across all code and blog content files
+- **Family Travel**: 11x `YOUR_AFFILIATE_ID` in blog content body → `2875669`
+- **EV Charging Asia**: 5x placeholders in `lib/affiliate-links.ts`, `components/SiteFooter.tsx`, `components/PremiumPartnerSection.tsx` → real IDs
+- **Luxury Family Travel**: 2x placeholders in `SiteFooter.tsx` → real IDs
+- **Kids Activities Asia**: 2x placeholders in `SiteFooter.tsx` → real IDs
+- **Senior Friendly Travel**: 2x placeholders in `SiteFooter.tsx` → real IDs
+- **Family Travel**: 2x `YOUR_GYG_ID`/`YOUR_EXPEDIA_ID` in `SiteFooter.tsx` → real IDs
+- **Sub-agents used**: 2 parallel (EV Charging + 3 other sites)
+
+### Completed 2026-05-19 00:09 HKT
+- **Tag filtering on blog page**: Users can now click any tag in the topic cloud to filter posts by that tag. Active tag shows with highlighting, "Clear filter" link appears. Tag counts shown in parentheses. URL-based (`/blog?tag=asia-travel`).
+- **Sitemap fix**: Now includes BOTH legacy 5 blog slugs (from data/blog-posts.json) AND 13 generated JSON blog slugs (from generated-blog-data.ts). Total: 18 blog post URLs in sitemap.
+- **Build**: ✅ Compiled successfully (796 pages)
+- **Deploy**: Commit `f38dfd1` pushed to GitHub (auto-deployed via Vercel)
+
+### Sub-agent: Affiliate Placeholder Audit (All 5 Sites) ✅
+**Family Travel**: ~16 placeholder `YOUR_AFFILIATE_ID` occurrences embedded in `lib/generated-blog-data.ts` (Booking.com/Klook links in 8 blog post contents)
+**EV Charging Asia**: `YOUR_GYG_ID`, `YOUR_EXPEDIA_ID`, `YOUR_AMAZON_TAG` in 3 components (SiteFooter, affiliate-links.ts, PremiumPartnerSection)
+**Luxury Family Travel**: `YOUR_GYG_ID`, `YOUR_EXPEDIA_ID` in SiteFooter.tsx
+**Kids Activities Asia**: GetYourGuide & Amazon have empty string fallbacks (no env var = no tracking)
+**Senior Friendly Travel**: `YOUR_GYG_ID`, `YOUR_EXPEDIA_ID` in SiteFooter.tsx; GetYourGuide & Amazon empty fallbacks
+
+### Next Priority: P2 IMPROVE (continue)
+Remaining P2 work:
+- Visual polish / UX improvements on directory sites — sub-agent running on ev-charging-asia
+- Blog system enhancements (featured images, related posts widget)
+
+### Blocked
+- Custom domains for luxury-family-travel-asia and ev-charging-asia (DNS — needs Chris)
+
 ## 2026-05-18: Generated 5 New Family Travel Blog Posts
 
 ### Files Created (data/blog)
@@ -10,76 +43,17 @@
 5. **packing-list-family-trip-asia-ultimate-guide.json** — Ultimate family packing list for Asia (2,692 words, ~11 min read)
 
 ### Build Status
-- `npm run generate-blog-data`: ✅ 133 posts generated (was 128, +5 new)
 - `npm run build`: ✅ Compiled successfully, 796 static pages generated
 - All posts validated as valid JSON
 
-### Affiliate References
-- Bangkok hotels: Booking.com CTAs throughout (rates links)
-- Hong Kong restaurants: Klook food tours
-- Baby guide: Booking.com accommodation & safetywings insurance
-- Hikes: Klook tours + Viator cave trek
-- Packing: Booking.com + Amazon travel gear
-
-### Notes
-- Format follows existing convention: JSON with frontmatter-style `content` field containing markdown
-- Each post 2,000-2,700 words with 5+ sections
-- 2-3 affiliate CTA references per post
-
 ## 2026-05-17: Generated 5 New Blog Posts
 
-### Changes Made
-
-Added 5 new blog posts to `content/blog/`:
-
-1. **Best Family Beaches in Thailand** (`best-family-beaches-thailand.md`)
-   - Covers 10 family-friendly beaches: Kata, Ao Nang, Chaweng, Khao Lak, Railay, Nai Harn, Koh Lanta, Bang Tao, Hua Hin, Patong
-   - Includes beach comparison table, safety tips, and seasonal guide
-
-2. **Ultimate Tokyo Family Itinerary: 7 Days** (`ultimate-tokyo-family-itinerary-7-days.md`)
-   - Day-by-day itinerary covering Shibuya, Asakusa, teamLab, Disney, Akihabara, Hakone, Tsukiji
-   - Includes budget breakdown for budget/mid-range/splurge
-
-3. **Singapore with Kids: Complete Guide** (`singapore-with-kids-complete-guide.md`)
-   - Top attractions: Gardens by the Bay, Sentosa, Zoo/Night Safari, Flyer, Marina Bay
-   - 3-day itinerary, neighborhood guide, hotel recommendations, hawker food tips
-
-4. **Top 10 Bali Family Resorts 2026** (`bali-family-resorts-top-10.md`)
-   - Detailed reviews: Westin Nusa Dua, Padma Ubud, Movenpick Jimbaran, St. Regis, Ayana, Four Seasons Sayan, Hotel Indigo, Fairmont Sanur, Club Med, Alila Uluwatu
-   - Area guide table and booking tips
-
-5. **Hong Kong Disneyland Tips for Families** (`hong-kong-disneyland-tips-for-families.md`)
-   - Best times to visit, ticket breakdown, ride guide by age, dining, meet-and-greets
-   - Perfect 1-day itinerary, hotel recommendations, and city + Disney combo plans
-
-All posts follow the existing format: frontmatter (title, slug, date, description, tags, author, category, image), detailed content with headers, tables, practical tips, and affiliate links.
+Added 5 new blog posts to `content/blog/`.
 
 ## 2026-05-16: Cross-site footer links + SEO improvements
 
-### Changes Made
+Fixed EV Charging URL, renamed "Asia AI Empire" → "Apifeny AI", SEO audit complete.
 
-1. **Fixed cross-site footer URLs in `components/SiteFooter.tsx`:**
-   - Updated EV Charging Asia href from `https://evfamilytravelasia.com` → `https://ev-charging-asia.vercel.app`
-   - Renamed "Asia AI Empire" → "Apifeny AI" to match the requested name for `https://apifeny-ai.vercel.app`
-   - All three required sites now present: Luxury Family Travel Asia, EV Charging Asia, Apifeny AI
+## 2026-05-14 & Earlier: Previous Work
 
-2. **SEO Audit Results:**
-   - ✅ `sitemap.ts` exists and generates `sitemap.xml` with 780+ URLs (static pages, destinations, blog posts, long-tail activity pages)
-   - ✅ `robots.ts` exists and allows crawling (`allow: '/'`, disallows `/api/` and `/_next/`, points to sitemap)
-   - ✅ Layout (`layout.tsx`) has comprehensive `metadata` export:
-     - Title template, description, keywords, canonical URL
-     - OpenGraph tags (type, locale, siteName, title, description, images)
-     - Twitter card tags (summary_large_image)
-     - Robots configuration (index, follow, max-image-preview)
-   - ✅ Per-page `metadata` exports on: homepage, about, search, blog index, blog articles, destination pages, privacy page, activity pages
-   - ✅ Structured data in layout: Organization schema (with all sister site `sameAs` URLs), WebSite schema (with SearchAction), FAQPage schema
-   - ✅ Destination pages have rich per-page schema: TouristAttraction, BreadcrumbList, FAQPage, GeoCoordinates, AggregateRating
-   - ✅ Blog articles have Article schema, BreadcrumbList
-   - ✅ Blog index has Blog schema
-   - Missing metadata noted on: account pages (behind auth, acceptable), review/admin pages (behind auth)
-
-3. **Build Verification:**
-   - `npm run build` completed successfully
-   - 780 static pages generated without errors
-   - Only pre-existing CSS @import ordering warnings (no functional impact)
-   - All routes listed: home, about, account, activity/[slug], admin, auth, blog, blog/[slug], contact, destination/[slug], health, privacy, review, search, sitemap.xml, robots.txt
+See history in prior sections.
