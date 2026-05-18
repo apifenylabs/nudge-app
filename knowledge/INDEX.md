@@ -20,4 +20,9 @@ This is the central knowledge base for the entire orchestra.
 
 Every new piece of information the agents discover must be added here with proper links.
 
-Last updated: 2026-05-15
+- strategic/niche-assessment-may-18.md → Comprehensive audit: Felix benchmark, OpenClaw monetization consensus, current ecosystem evaluation, recommended P0-P3 priority order
+
+Last updated: 2026-05-18
+
+### Key additions this session
+- strategic/niche-assessment-may-18.md — All 5 rounds of research artifacted (May 18). Round 5: Monetization metrics with ranges, realistic ramp timeline (week 1 to year 2-3), Michael Short challenge refutation, final 10/10 synthesis with zoomed-in high-ROI areas

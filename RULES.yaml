@@ -3,6 +3,12 @@
 # ═══════════════════════════════════════════════════════════════
 # One permanent default: DeepSeek-chat for everything.
 # Local models exist for offline fallback only.
+
+# ─── LANGUAGE — STRICT ────────────────────────────────────────
+language: "en"
+# English only. Never output Chinese or any other language.
+# Chris only understands English. This is permanent.
+
 # Sonnet/Opus rules unchanged — step 4/5 only, Opus needs human approval.
 
 model_routing:
@@ -521,27 +527,31 @@ mission_1b:
     - "Every cron job must serve this mission"
 
 # ═══════════════════════════════════════════════════════════════
-# REVENUE-FIRST FILTER (LOCKED May 17 2026 — NEVER OVERRIDE)
+# REVENUE-FIRST FILTER (LOCKED May 16 2026 — NEVER OVERRIDE)
 # ═══════════════════════════════════════════════════════════════
 # Chris directive: Before ANY task, filter through revenue lens.
 # No busy work. Everything must drive money this week.
+# Expanded May 18 2026 with all 4 research rounds synthesized.
 
 revenue_first_filter:
   locked: true
-  lock_date: "2026-05-17"
+  lock_date: "2026-05-16"
   enabled: true
   mandatory_questions:
-    - "Does this directly create or increase revenue this week?"
+    - "Does this directly create or accelerate revenue THIS WEEK?"
     - "Is this the simplest version that can make money fastest?"
-    - "Can we ship it today without asking Chris for anything?"
-  pass_criteria: "Answer YES to #1, OR reframe the task until the answer becomes YES"
+    - "Does this align with the highest-ROI proven paths from research (directories + affiliates, PDF playbooks, data moat, OmniMind as memory layer)?"
+    - "Will this cause us to lose focus or create too many parallel projects?"
+  pass_criteria: "Answer YES to #1 AND #3, OR reframe the task until both answers become YES"
   deprioritization:
-    condition: "Answer to #1 is NO and cannot be reframed"
-    action: "Deprioritize. If the task has long-term value, turn it into a revenue-generating version first."
+    condition: "Answer to #1 is NO and cannot be reframed, OR answer to #4 is YES (too much parallel)"
+    action: "Deprioritize. If the task has long-term value, turn it into a revenue-generating version first. Never polish backlog items that don't make money."
     examples:
       - "Redesigning a landing page with no CTA improvement → add affiliate CTA or price comparison widget first"
       - "Adding dark mode to a site with no traffic → deprioritize until traffic justifies UX investment"
       - "Building a new feature for nudge before schema is run → create a prep guide Chris can execute in 5min instead"
+      - "Polishing directory UI for 3rd week without affiliate links live → ship affiliates FIRST, then minor polish"
+      - "Starting a new project idea while directories + PDFs aren't revenue-positive → kill new idea, execute existing cash engines"
   logging:
     enabled: true
     log_to: "~/life/Resources/ceo-decisions.md"
@@ -550,10 +560,203 @@ revenue_first_filter:
       - Task: <task name>
       - Q1 (direct revenue this week?): YES/NO
       - Q2 (simplest money-making version?): YES/NO
-      - Q3 (ship today without Chris?): YES/NO
-      - Decision: <pass / reframe / deprioritize>
+      - Q3 (highest-ROI proven path?): YES/NO
+      - Q4 (too many parallel projects?): YES/NO
+      - Decision: <pass / reframe / deprioritize / kill>
       - Rationale: <one-liner>
   override_condition: "Only Override for: (a) security fix, (b) site-down recovery, (c) explicit Chris request"
+
+# ═══════════════════════════════════════════════════════════════
+# IDEA REVIEW PIPELINE (LOCKED May 18 2026 — NEVER OVERRIDE)
+# ═══════════════════════════════════════════════════════════════
+# Any new idea, project, or feature that is NOT already in the active
+# project list must pass this pipeline before receiving ANY resources.
+# Lesson learned: We do NOT create new projects unless they have a clear
+# path to first revenue within 30 days.
+
+idea_review_pipeline:
+  locked: true
+  lock_date: "2026-05-18"
+  enabled: true
+  active_until: "Consistent revenue >$1k MRR from existing products"
+  
+  stages:
+    stage_1_initial_filter:
+      questions:
+        - "Does this fit within our existing ecosystem (directories, LifeOS, OmniMind, playbooks, Social Beast)?"
+        - "Can it generate revenue within 30 days?"
+        - "Does it use our existing tech stack (Next.js + Supabase + OpenClaw + Vercel)?"
+      pass: "YES to at least 2 of 3"
+      fail: "Idea is parked. Logged to ~/life/Resources/parked-ideas.md"
+    
+    stage_2_revenue_gate:
+      pass_criteria: "Must identify a clear, non-abstract path to first $100 within 30 days"
+      check:
+        - "Who pays?"
+        - "How do we reach them?"
+        - "What's the exact transaction?"
+        - "What's the cost to deliver?"
+      fail: "No clear revenue path within 30 days → parked until cash flow positive from existing projects"
+    
+    stage_3_parallel_threshold:
+      pass_criteria: "No more than 2 active projects can be in 'building' phase at once"
+      current_active_projects:
+        - "Directories + affiliates (cash engine)"
+        - "Apifeny playbooks (cash engine)"
+        - "LifeOS (small A/B tests only until cash flow)"
+        - "OmniMind (productization after cash flow)"
+      max_build: 2
+      rule: "If already at max_build, new idea waits. Do not start it. Do not plan it. Wait."
+    
+    stage_4_human_approval:
+      requirement: "Explicit Chris approval for any: (a) new domain purchase, (b) new product outside ecosystem, (c) any parallel build >2"
+      approval_channel: "Alpha Orchestras HQ topic:2"
+
+  example_paths:
+    passes:
+      - "Add affiliate links to family-travel-asia directory → YES to 2/3, $100 path via Booking/Klook commissions, within existing project count"
+      - "Create a 'How to Set Up OmniMind' PDF playbook → YES to 2/3, $9-$19 sale, within existing project count"
+    fails:
+      - "Build a new fitness app from scratch → NO to stage 1 (outside ecosystem), NO to stage 4 (new product)"
+      - "Create a dedicated reddit bot for distribution → NO to stage 2 (no clear $100 path), parallel threshold exceeded"
+
+  scoring_system:
+    description: "Numeric score (0-100) for each idea. Applies after all 4 stages pass."
+    enabled: true
+    criteria:
+      revenue_potential:
+        weight: 40
+        description: "Expected first-year revenue from this idea"
+        scoring:
+          - "$0-500: 10 points"
+          - "$500-5k: 20 points"
+          - "$5k-20k: 30 points"
+          - "$20k+: 40 points"
+      time_to_revenue:
+        weight: 25
+        description: "How fast can this make money?"
+        scoring:
+          - "<7 days: 25 points"
+          - "7-30 days: 18 points"
+          - "30-90 days: 10 points"
+          - ">90 days: 5 points"
+        
+      distribution_advantage:
+        weight: 20
+        description: "Do we have a built-in distribution channel?"
+        scoring:
+          - "Existing audience/traffic waiting: 20 points"
+          - "Build-in-public story ready to tell: 15 points"
+          - "Community/Reddit/X targeting possible: 10 points"
+          - "No distribution advantage: 5 points"
+        
+      existing_asset_leverage:
+        weight: 15
+        description: "Does this leverage something we already built?"
+        scoring:
+          - "Uses existing code + data + audience: 15 points"
+          - "Uses existing code or data: 10 points"
+          - "Uses existing skills/domain: 5 points"
+          - "Totally new build: 0 points"
+    
+    thresholds:
+      execute_now: ">=80 — Full speed ahead, allocate resources"
+      explore: "60-79 — Explore with a single sub-agent, no full allocation"
+      delayed: "40-59 — Park until scoring improves or blockers resolve"
+      kill: "<40 — Reject permanently or archive for far future"
+    
+    logging:
+      log_to: "~/life/Resources/ceo-decisions.md"
+      format: |
+        ## [YYYY-MM-DD] Idea Score
+        - Idea: <name>
+        - Revenue Potential: <score>/40
+        - Time to Revenue: <score>/25
+        - Distribution Advantage: <score>/20
+        - Asset Leverage: <score>/15
+        - TOTAL: <score>/100
+        - Decision: <execute / explore / delayed / kill>
+  
+  # ─── WEEKLY REVIEW CYCLE (LOCKED May 18 2026) ───
+  weekly_review:
+    enabled: true
+    schedule: "Every Monday at 08:00 HKT"
+    
+    mandatory_checks:
+      - review_question: "Is each active project generating or progressing toward revenue THIS WEEK?"
+        action_if_no: "Flag for kill review"
+      - review_question: "Are we exceeding the max_build of 2 parallel projects?"
+        action_if_yes: "Kill or park the lowest-scoring project"
+      - review_question: "Are there any parked ideas whose conditions changed (new assets, new data)?"
+        action_if_yes: "Re-run through initial stages"
+      - review_question: "Is any active project in 'polish' mode without revenue output?"
+        action_if_yes: "Convert to revenue version or kill"
+    
+    kill_authority:
+      condition: "Any project not generating or progressing toward revenue after 2 consecutive weeks"
+      action: "Automatic deprioritization. Move to parked-ideas.md. Resources reallocated to highest-scoring active project."
+      override: "Explicit Chris override required to resurrect"
+      exemption: "Security fixes, site-down recovery, and infrastructure maintainance exempt from kill authority"
+    
+    decision_log: "~/life/Resources/weekly-reviews.md"
+    format: |
+      ## WEEK X — [Start Date — End Date]
+      ### Active Projects Review
+      | Project | Revenue Progress | Score | Kill? |
+      |---------|-----------------|-------|-------|
+      | <name> | <this week / progressing / stalled / nothing> | <X/100> | <YES/NO> |
+      
+      ### Kill Decisions
+      - Killed: <project name> — rationale: <reason>
+      - Parked: <project name> — rationale: <reason>
+      
+      ### Parked Ideas to Revisit
+      - <idea name> — what changed: <reason>
+      
+      ### Next Week Focus
+      - <priority 1>
+      - <priority 2>
+    
+  # ─── CONSOLIDATION RUN INTEGRATION (LOCKED May 18 2026) ───
+  consolidation_integration:
+    enabled: true
+    description: "On EVERY consolidation run and morning summary, the Idea Review Pipeline must be executed."
+    
+    trigger_events:
+      - "Consolidation run start"
+      - "Morning summary generation"
+      - "HEARTBEAT.md refresh"
+      - "Any new project/idea proposal"
+    
+    procedure:
+      step_1: "Run pipeline on any new ideas since last consolidation"
+      step_2: "Check weekly_review criteria against all active projects"
+      step_3: "Score and log any active idea that hasn't been scored yet"
+      step_4: "Append pipeline decision summary to morning report"
+    
+    mandatory_report_section: |
+      ## Idea Review Pipeline — [Date]
+      - New ideas this period: <count>
+      - Passed pipeline: <names>
+      - Parked/killed: <names>
+      - Active projects within max_build: <YES/NO>
+      - Revenue progress this week: <summary>
+
+  parked_ideas_log: "~/life/Resources/parked-ideas.md"
+  
+  logging:
+    enabled: true
+    log_to: "~/life/Resources/ceo-decisions.md"
+    format: |
+      ## [YYYY-MM-DD] Idea Review Pipeline Decision
+      - Idea: <name>
+      - Stage 1 (fits ecosystem, revenue in 30d, existing stack?): PASS/FAIL
+      - Stage 2 (clear $100 path?): PASS/FAIL
+      - Stage 3 (parallel threshold?): PASS/FAIL
+      - Stage 4 (human approval?): PASS/FAIL / N/A
+      - Score: <X/100>
+      - Decision: <execute / explore / delayed / kill / parked>
+      - Rationale: <one-liner>
   
   # ─── NEW PROJECT GUARDRAIL (LOCKED May 17 2026) ───
   # Until we reach consistent revenue ($1k+ MRR), any new project or domain requires:
@@ -1056,7 +1259,7 @@ change_management_framework:
   
   new_project_onboarding:
     mandatory_steps:
-      1: "Create dedicated topic log: ~/life/<project>-log.md" (naming pattern: <project>-log.md)
+      1: "Create dedicated topic log: ~/life/<project>-log.md"
       2: "Add entry to ~/life/projects-index.md with status, revenue target, owner agent"
       3: "Update ~/life/cross-project-synergies.md with flywheel connections"
       4: "Update ~/life/ceo-central-log.md with summary"
@@ -1168,9 +1371,10 @@ llm_ram_management:
     llama32: "ollama:llama3.2:latest — requires 2.0GB free (lightest)"
   local_safe_minimum_mb: 1536
   parallel_spawn_minimum_mb: 4096
-  action_when_low_ram: "Use DeepSeek-chat cloud (no local impact) or skip sub-agent spawning
-    
-    step_5_production:
+  action_when_low_ram: "Use DeepSeek-chat cloud (no local impact) or skip sub-agent spawning"
+
+  # ─── ESCALATION STEPS (Defined globally for model_routing) ───
+  step_5_production:
       condition: "Production deployment / portfolio decision / final sign-off"
       model: "anthropic/claude-opus-4-6"
       requirement: "Explicit human approval from Chris REQUIRED before using"
