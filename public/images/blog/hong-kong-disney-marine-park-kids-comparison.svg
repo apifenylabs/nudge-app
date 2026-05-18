@@ -1,0 +1,37 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(90)">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#dc2626" />
+    </linearGradient>
+    <linearGradient id="overlay" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.15)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0.05)" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#overlay)" />
+  <circle cx="100" cy="100" r="4" fill="white" opacity="0.06" />
+   <circle cx="300" cy="80" r="3" fill="white" opacity="0.05" />
+   <circle cx="500" cy="120" r="5" fill="white" opacity="0.04" />
+   <circle cx="700" cy="90" r="3" fill="white" opacity="0.06" />
+   <circle cx="200" cy="250" r="4" fill="white" opacity="0.05" />
+   <circle cx="600" cy="300" r="3" fill="white" opacity="0.04" />
+   <circle cx="400" cy="380" r="5" fill="white" opacity="0.05" />
+   <circle cx="800" cy="350" r="3" fill="white" opacity="0.06" />
+  <g filter="url(#glow)">
+    <text x="80" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="800" fill="white" opacity="0.98">
+      <tspan x="80" dy="0">Hong Kong Disneyland vs Ocean Park: Which Is Better for Y...</tspan>
+    </text>
+  </g>
+  <rect x="80" y="360" width="80" height="4" rx="2" fill="white" opacity="0.6" />
+  <text x="80" y="520" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="500" fill="white" opacity="0.7">
+    Asia Family Travel Directory
+  </text>
+  <circle cx="1120" cy="100" r="60" fill="white" opacity="0.06" />
+  <circle cx="1080" cy="60" r="30" fill="white" opacity="0.04" />
+</svg>

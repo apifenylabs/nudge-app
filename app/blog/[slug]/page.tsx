@@ -46,13 +46,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
-      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: post.title }],
+      images: [{ url: post.featuredImage ? post.featuredImage : '/og-image.jpg', width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: ['/og-image.jpg'],
+      images: [post.featuredImage ? post.featuredImage : '/og-image.jpg'],
     },
     robots: {
       index: true,
@@ -169,7 +169,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
     "@type": "Article",
     "headline": post.title,
     "description": post.excerpt,
-    "image": `${BASE_URL}/og-image.jpg`,
+    "image": post.featuredImage ? `${BASE_URL}${post.featuredImage}` : `${BASE_URL}/og-image.jpg`,
     "author": {
       "@type": "Person",
       "name": post.author,
@@ -300,6 +300,16 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
             </span>
           </div>
         </header>
+
+        {post.featuredImage && (
+          <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden mb-10 shadow-lg">
+            <img
+              src={post.featuredImage}
+              alt={post.title}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        )}
 
         <div className="prose-custom max-w-none">
           <ArticleContent content={post.content} />

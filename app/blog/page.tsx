@@ -53,21 +53,32 @@ function formatDate(dateStr: string): string {
 }
 
 function BlogCard({ post, featured = false }: { post: BlogPost; featured?: boolean }) {
+  const imgSrc = post.featuredImage || null;
+
   return (
     <Link
       href={`/blog/${post.slug}`}
       className={`group block bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-100 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-lg ${featured ? 'md:col-span-2 md:grid md:grid-cols-2 md:gap-0' : ''}`}
     >
-      {featured && (
-        <div className="relative h-48 md:h-full bg-gray-100 dark:bg-gray-700 overflow-hidden">
+      <div className={`relative bg-gray-100 dark:bg-gray-700 overflow-hidden ${featured ? 'h-48 md:h-full' : 'h-48 md:h-56'}`}>
+        {imgSrc ? (
+          <img
+            src={imgSrc}
+            alt={post.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        ) : (
           <div className="w-full h-full bg-gradient-to-br from-sky-100 via-sky-200 to-blue-200 dark:from-sky-900 dark:via-sky-800 dark:to-blue-900 flex items-center justify-center">
             <Compass size={48} className="text-sky-400/60 dark:text-sky-500/40" />
           </div>
+        )}
+        {featured && (
           <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500 text-white text-[10px] font-bold uppercase tracking-wider">
             Featured
           </div>
-        </div>
-      )}
+        )}
+      </div>
       <div className="p-6 md:p-8">
         <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-3">
           <span className="flex items-center gap-1.5">

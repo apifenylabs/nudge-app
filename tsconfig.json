@@ -37,6 +37,22 @@
     "**/*.mts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "_archive",
+    "_projects",
+    "affiliate-tracking",
+    "ev-charging-asia",
+    "family-travel-directory",
+    "luxury-family-travel",
+    "kids-activities-asia",
+    "senior-friendly-travel-asia",
+    "apifeny-ai",
+    "social-beast-components",
+    "social-beast",
+    "generalscan",
+    "scanwise",
+    "appfactory-beast",
+    "data",
+    "scripts"
   ]
 }

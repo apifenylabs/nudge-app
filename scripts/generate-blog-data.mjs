@@ -8,7 +8,7 @@ const PROJECT_DIR = join(__dirname, '..');
 const BLOG_DIR = join(PROJECT_DIR, 'data', 'blog');
 const OUTPUT_FILE = join(PROJECT_DIR, 'lib', 'generated-blog-data.ts');
 
-const ALLOWED_FIELDS = new Set(['slug', 'title', 'excerpt', 'date', 'author', 'tags', 'readingTime', 'content', 'relatedDestinations', 'relatedStations']);
+const ALLOWED_FIELDS = new Set(['slug', 'title', 'excerpt', 'date', 'author', 'tags', 'readingTime', 'content', 'relatedDestinations', 'relatedStations', 'featuredImage']);
 
 if (!existsSync(BLOG_DIR)) {
   console.error(`Blog directory not found: ${BLOG_DIR}`);
@@ -45,6 +45,7 @@ export interface BlogPost {
   readingTime: string;
   content: string;
   ${relatedField}: string[];
+  featuredImage?: string;
 }
 
 const allPosts: BlogPost[] = ${JSON.stringify(posts, null, 2)};
