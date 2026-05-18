@@ -1,54 +1,54 @@
-# HEARTBEAT.md — May 18 11:30 HKT
+# HEARTBEAT.md — May 18 17:15 HKT
 
-## STATUS: 🟢 ALL CONTENT SHIPPED — 2 sites updated, 8 new posts
-
-## BUILT THIS SESSION (08:09-12:14 HKT)
-- ✅ **apifeny-ai**: Deployed + AffiliateButton.tsx + Best Alternatives section
-- ✅ **ev-charging-asia**: Malaysia/Vietnam/Thailand EV Hotel rankings + 3 luxury EV hotel posts + 20 affiliate links added
-- ✅ **social-beast**: 5 build-in-public cross-promo posts
-- ✅ **kids-activities-asia**: 5 blog posts CREATED + DEPLOYED (59 pages, 37 posts)
-- ✅ **senior-friendly-travel-asia**: 5 new blog posts — COMMITTED + PUSHED
-- ✅ **family-travel**: 9 blog posts getting Booking.com affiliate links (aid=2875669) — sub-agent running
+## STATUS: 🟢 All sites built and serving
 
 ## SITE HEALTH
-| Site | Status | Content |
-|------|:------:|:-------:|
-| Apifeny AI | ✅ 200 | 79 playbooks (7 paid), 42 blog posts |
-| EV Charging Asia | ✅ 200 | 97 blog, 3 itineraries, 1125 stations |
-| Family Travel Asia | ✅ 200 | 133 blog posts (22 with affiliate links) |
-| Luxury Travel Asia | ✅ 200 | 51 blog posts |
-| Senior Friendly Travel Asia | ✅ 200 | 66 pages, 61 blog posts |
-| Kids Activities Asia | ✅ 200 | 59 pages (37 posts) |
+| Site | Content |
+|------|:------:|
+| Apifeny AI | 90 playbooks, 42 blog posts |
+| EV Charging Asia | 124 blog, 12 itineraries, 1125 stations |
+| Family Travel Asia | 141 blog posts, 580 destinations |
+| Luxury Travel Asia | 58 blog posts, 527 destinations |
+| Senior Friendly Travel Asia | 61 blog posts |
+| Kids Activities Asia | 42 blog posts |
+
+**Total blog posts: 468**
+
+## BUILD STATUS
+- ✅ Luxury family travel build — clean (17:13 HKT)
+- Data Moat telemetry — all 7 sites integrated
 
 ## BLOCKERS (Need Chris)
-1. 🏦 **Stripe** — Apifeny has keys, Nudge still needs Supabase
-2. 🔀 **Luxury domain** — luxuryfamilytravelasia.com DNS not configured
-3. 🔗 **Klook/Viator IDs** — footer links have IDs, but content links need the same
+1. ⛔ Vercel team access — captain@apifeny.ai needs Vercel team invite
+2. Supabase schema — paste nudge/supabase-schema.sql (30 sec)
+3. Affiliate accounts — Klook, Viator IDs needed for content links
 
-## BUDGET
-- Today: ~$0.40 / $0.50 cap | All DeepSeek-chat ✅
-- 6+ sub-agents, 3 build waves, adding 9 more affiliate link posts
+## TRADING: 3 playbooks, 105/200 paper trades ✅
 
----
-_Watchdog 2026-05-18 11:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+## BUDGET: ~$0.72 today (all DeepSeek-chat)
 
----
-_Watchdog 2026-05-18 11:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
-
----
-_Watchdog 2026-05-18 12:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+## NEXT UP (when Chris returns)
+- [ ] Push luxury-content batch to production
+- [ ] Generate more cross-site content
+- [ ] Get Vercel deployment automated
 
 ---
-_Watchdog 2026-05-18 12:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog 2026-05-18 17:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
 
 ---
-_Watchdog 2026-05-18 12:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog 2026-05-18 17:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
 
 ---
-_Watchdog 2026-05-18 12:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog 2026-05-18 18:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
 
 ---
-_Watchdog 2026-05-18 13:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog 2026-05-18 18:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
 
 ---
-_Watchdog 2026-05-18 13:15:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+_Watchdog 2026-05-18 18:30:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-18 18:45:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_
+
+---
+_Watchdog 2026-05-18 19:00:01 HKT — 0 workspaces, 0/10 sites, 0 CEO tasks_

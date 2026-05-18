@@ -1192,6 +1192,67 @@ const allPosts: BlogPost[] = [
       "family-travel"
     ]
   },
+  {
+    "slug": "best-multi-gen-family-vacations-asia-seniors-2026",
+    "title": "Best Multi-Generational Family Vacations in Asia for Seniors (2026)",
+    "excerpt": "Multi-generational trips that work for grandparents, parents, and kids — accessible, comfortable, and memorable. Our top picks across Japan, Thailand, Vietnam, Bali, and Singapore.",
+    "content": "# Best Multi-Generational Family Vacations in Asia for Seniors (2026)\n\n## Why Multi-Generational Travel Is Booming in 2026\n\nFamily travel is changing. More families than ever are planning trips that span three or four generations — grandparents in their 60s, 70s, or even 80s, parents in their 30s and 40s, and kids of all ages. Asia is the perfect stage for these trips because it offers world-class infrastructure, incredible value, and experiences that genuinely delight every age group.\n\nBut planning a multi-generational trip is harder than planning a family vacation. You need accommodation that works for everyone — accessible rooms for seniors, space for families, activities that engage grandparents without exhausting them and entertain kids without boring them, and dining that satisfies varied tastes and dietary needs.\n\nThis guide covers the best multi-generational destinations in Asia for 2026, with specific hotel recommendations, sample itineraries, and practical tips for keeping everyone happy.",
+    "date": "2026-05-18",
+    "author": "Senior-Friendly Travel Asia Team",
+    "readingTime": "12 min read",
+    "tags": [
+      "multigenerational",
+      "family-travel",
+      "Japan",
+      "Thailand",
+      "Vietnam",
+      "Bali",
+      "Singapore",
+      "senior-travel",
+      "planning"
+    ]
+  },
+  {
+    "slug": "accessible-cruise-tours-asia-seniors-2026",
+    "title": "Accessible Cruise Tours in Asia for Seniors — The Complete 2026 Guide",
+    "excerpt": "Best accessible cruise options in Asia with shore excursions designed for seniors and mobility-impaired travelers. From Japan's cherry blossom cruises to Southeast Asian river journeys.",
+    "content": "# Accessible Cruise Tours in Asia for Seniors — The Complete 2026 Guide\n\n## Why Cruising Is Perfect for Senior Travelers\n\nCruising is arguably the most senior-friendly way to travel. You unpack once, the ship moves while you sleep, meals are included, medical staff are on board, and shore excursions can be tailored to your pace and ability. Asia's cruise offerings have expanded dramatically in recent years, with both ocean liners and river cruises now providing genuine accessibility features.\n\nFor seniors with mobility concerns, cruising eliminates the two biggest hassles of travel: schlepping luggage between hotels and navigating unfamiliar transport systems. Your floating hotel takes care of everything.\n\nThis guide covers the most accessible cruise options in Asia for 2026, from luxury ocean voyages on world-class liners to intimate river cruises through Southeast Asia's waterways.",
+    "date": "2026-05-18",
+    "author": "Senior-Friendly Travel Asia Team",
+    "readingTime": "12 min read",
+    "tags": [
+      "cruises",
+      "ocean-cruise",
+      "river-cruise",
+      "Japan",
+      "Vietnam",
+      "Singapore",
+      "Thailand",
+      "accessibility",
+      "senior-travel",
+      "transport"
+    ]
+  },
+  {
+    "slug": "senior-friendly-asia-destinations-2026-rankings",
+    "title": "Top 10 Senior-Friendly Destinations in Asia Ranked for 2026",
+    "excerpt": "Data-driven ranking of Asian destinations by senior-friendliness — accessibility, healthcare quality, ease of transport, senior discounts, and overall value for retired travelers.",
+    "content": "# Top 10 Senior-Friendly Destinations in Asia Ranked for 2026\n\n## Our Ranking Methodology\n\nAfter reviewing 60+ blog posts and analyzing data across five key dimensions, we've ranked Asia's most senior-friendly destinations for 2026. Each destination is scored from 1-10 across five criteria:\n\n- **Accessibility (25% weight):** Public transport accessibility, wheelchair-friendly infrastructure, smooth pavements, elevator availability, and barrier-free attractions.\n- **Healthcare (25% weight):** Quality of hospitals, English-speaking medical staff, pharmacy access, and cost of care.\n- **Ease of Transport (20% weight):** Airport accessibility, taxi availability, ride-hailing apps, senior-friendly public transit, and signage in English.\n- **Senior Discounts (15% weight):** Availability of senior rates on attractions, transport, and accommodation — for both locals and foreign visitors.\n- **Value & Safety (15% weight):** Overall cost of accommodation, dining, and attractions balanced against personal safety, crime rates, and political stability.\n\nLet's dive into the 2026 rankings.",
+    "date": "2026-05-18",
+    "author": "Senior-Friendly Travel Asia Team",
+    "readingTime": "11 min read",
+    "tags": [
+      "top-10",
+      "city-guides",
+      "destination-rankings",
+      "accessibility",
+      "healthcare",
+      "transport",
+      "senior-travel",
+      "planning",
+      "budget"
+    ]
+  }
 ];
 
 export default allPosts;

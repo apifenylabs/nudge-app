@@ -52,6 +52,11 @@ import slowTravelBali from '@/data/blog/slow-travel-bali-seniors-guide.json';
 import guidedToursThailand from '@/data/blog/guided-tours-elderly-thailand.json';
 import medicalTourismBangkok from '@/data/blog/medical-tourism-bangkok-checkups-recovery.json';
 
+// NEW: Multi-generational family vacations, accessible cruises, and destination rankings (May 2026)
+import multiGenFamilyVacations from '@/data/blog/best-multi-gen-family-vacations-asia-seniors-2026.json';
+import accessibleCruiseTours from '@/data/blog/accessible-cruise-tours-asia-seniors-2026.json';
+import seniorFriendlyDestinationsRankings from '@/data/blog/senior-friendly-asia-destinations-2026-rankings.json';
+
 // Existing inline posts
 const existingPosts: BlogPost[] = [
   {
@@ -146,6 +151,11 @@ const newPosts: BlogPost[] = [
   slowTravelBali as BlogPost,
   guidedToursThailand as BlogPost,
   medicalTourismBangkok as BlogPost,
+
+  // NEW: Multi-generational family vacations, accessible cruises, and destination rankings (May 2026)
+  multiGenFamilyVacations as BlogPost,
+  accessibleCruiseTours as BlogPost,
+  seniorFriendlyDestinationsRankings as BlogPost,
 ];
 
 const allPosts: BlogPost[] = [...existingPosts, ...newPosts];
