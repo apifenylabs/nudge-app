@@ -16,8 +16,10 @@ interface LongTailPage {
   destination_count: number;
 }
 
-// Blog posts loaded via static import
+// Blog posts loaded via static import (legacy markdown posts)
 import blogPosts from '@/data/blog-posts.json';
+// Generated JSON blog posts from data/blog/*.json
+import generatedPosts from '@/lib/generated-blog-data';
 
 const BASE_URL = 'https://www.familytravelasia.com';
 
@@ -46,10 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Get blog slugs from static data
-  const blogSlugs: string[] = (blogPosts as Array<{ slug: string }>)
+  // Get blog slugs from BOTH sources (legacy markdown + generated JSON)
+  const legacySlugs: string[] = (blogPosts as Array<{ slug: string }>)
     .map(p => p.slug)
     .filter(Boolean);
+  const generatedSlugs = generatedPosts.map(p => p.slug).filter(Boolean);
+  const blogSlugs = [...new Set([...legacySlugs, ...generatedSlugs])].sort();
 
   const entries: MetadataRoute.Sitemap = [
     // Static pages

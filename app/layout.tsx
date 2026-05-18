@@ -112,6 +112,12 @@ export default function RootLayout({
         }} />
         {/* Google AdSense */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6046953221141245" crossOrigin="anonymous" />
+        {/* Travelpayouts */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var s=document.createElement("script");s.async=1;s.src="https://emrldtp.cc/NTMwNDAx.js?t=530401";document.head.appendChild(s);})()`,
+          }}
+        />
         {/* Schema.org Organization */}
         <script
           type="application/ld+json"

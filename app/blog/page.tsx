@@ -196,19 +196,30 @@ function PaginationBar({ currentPage, totalPages, baseUrl }: { currentPage: numb
 export default function BlogPage({
   searchParams,
 }: {
-  searchParams: Promise<{ page?: string }>;
+  searchParams: Promise<{ page?: string; tag?: string }>;
 }) {
   // use() the searchParams promise per Next.js 15 convention
   // For static export compatibility, resolve with default if needed
   const posts = getAllPosts();
-  const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+  const allTags = Array.from(new Set(posts.flatMap(p => p.tags))).sort();
 
   // Handle searchParams — default to page 1
   let currentPage = 1;
+  let activeTag: string | null = null;
   // Static check: searchParams is a Promise in Next.js 15;
   // destructure defensively for both RSC and static export
-  const sp = searchParams as unknown as { page?: string };
+  const sp = searchParams as unknown as { page?: string; tag?: string };
   const pageParam = typeof sp === 'object' && sp !== null ? sp.page : undefined;
+  const tagParam = typeof sp === 'object' && sp !== null ? sp.tag : undefined;
+
+  // Filter by tag if present
+  let filteredPosts = posts;
+  if (tagParam && allTags.includes(tagParam)) {
+    activeTag = tagParam;
+    filteredPosts = posts.filter(p => p.tags.includes(tagParam));
+  }
+
+  const totalPages = Math.max(1, Math.ceil(filteredPosts.length / POSTS_PER_PAGE));
 
   if (pageParam) {
     const parsed = parseInt(pageParam, 10);
@@ -219,8 +230,8 @@ export default function BlogPage({
 
   const startIdx = (currentPage - 1) * POSTS_PER_PAGE;
   const endIdx = startIdx + POSTS_PER_PAGE;
-  const pagePosts = posts.slice(startIdx, endIdx);
-  const isFirstPage = currentPage === 1;
+  const pagePosts = filteredPosts.slice(startIdx, endIdx);
+  const isFirstPage = currentPage === 1 && !activeTag;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -314,10 +325,12 @@ export default function BlogPage({
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-              {isFirstPage ? 'Latest Articles' : `Articles — Page ${currentPage}`}
+              {activeTag
+                ? `${activeTag.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}`
+                : isFirstPage ? 'Latest Articles' : `Articles — Page ${currentPage}`}
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
-              Page {currentPage} of {totalPages} ({posts.length} article{posts.length !== 1 ? 's' : ''})
+              {activeTag ? `${filteredPosts.length} article${filteredPosts.length !== 1 ? 's' : ''} tagged` : `Page ${currentPage} of ${totalPages} (${filteredPosts.length} article${filteredPosts.length !== 1 ? 's' : ''})`}
             </p>
           </div>
           <Link
@@ -333,7 +346,7 @@ export default function BlogPage({
           <div className="text-center py-16 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/50 shadow-lg">
             <Compass size={40} className="mx-auto text-gray-300 dark:text-gray-600 mb-3" />
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">Coming Soon</h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm">We're writing new articles. Check back soon!</p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">{activeTag ? 'No articles found with this tag.' : "We're writing new articles. Check back soon!"}</p>
           </div>
         ) : (
           <>
@@ -355,18 +368,35 @@ export default function BlogPage({
         {/* ─── PAGINATION ─── */}
         <PaginationBar currentPage={currentPage} totalPages={totalPages} baseUrl={`${BASE_URL}/blog`} />
 
-        {/* Topic tags cloud (show on all pages) */}
+        {/* Topic tags cloud with filtering (show on all pages) */}
         <div className="mt-16 pt-10 border-t border-gray-200/50 dark:border-gray-700/50">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4 uppercase tracking-wider">Browse by Topic</h3>
+          <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4 uppercase tracking-wider">
+            {activeTag ? (
+              <>
+                Filtering by: <span className="text-sky-600 dark:text-sky-400">{activeTag.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</span>
+                <Link href="/blog" className="ml-3 text-xs font-normal text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 underline underline-offset-2">Clear filter</Link>
+              </>
+            ) : 'Browse by Topic'}
+          </h3>
           <div className="flex flex-wrap gap-2">
-            {Array.from(new Set(posts.flatMap(p => p.tags))).map(tag => (
-              <span
-                key={tag}
-                className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium backdrop-blur-sm ${getTagVariant(tag)}`}
-              >
-                {tag.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
-              </span>
-            ))}
+            {allTags.map(tag => {
+              const isActive = tag === activeTag;
+              const postCount = posts.filter(p => p.tags.includes(tag)).length;
+              return (
+                <Link
+                  key={tag}
+                  href={isActive ? '/blog' : `/blog?tag=${encodeURIComponent(tag)}`}
+                  className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium backdrop-blur-sm transition-all duration-200 hover:scale-105 ${
+                    isActive
+                      ? 'bg-sky-500 text-white shadow-md'
+                      : getTagVariant(tag)
+                  }`}
+                >
+                  {tag.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                  <span className={`opacity-60 text-[10px] ${isActive ? 'text-white/70' : ''}`}>({postCount})</span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
