@@ -23,6 +23,11 @@ const BackToTop = dynamic(
   { ssr: false }
 );
 
+const BottomNav = dynamic(
+  () => import('@/components/BottomNav'),
+  { ssr: false }
+);
+
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://senior-friendly-travel-asia.vercel.app';
 
 export const metadata: Metadata = {
@@ -89,6 +94,7 @@ export default function RootLayout({
         <TelemetryInit />
         <BackToTop />
         <SiteFooter />
+        <BottomNav />
         <GoogleAnalytics />
         {/* Schema.org Organization */}
         <Script

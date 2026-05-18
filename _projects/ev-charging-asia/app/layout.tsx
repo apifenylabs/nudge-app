@@ -24,6 +24,11 @@ const BackToTop = dynamic(
   { ssr: false }
 );
 
+const BottomNav = dynamic(
+  () => import('@/components/BottomNav'),
+  { ssr: false }
+);
+
 const BASE_URL = 'https://ev-charging-asia.vercel.app';
 
 export const metadata: Metadata = {
@@ -131,6 +136,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics />
+        <BottomNav />
       </body>
     </html>
   );
