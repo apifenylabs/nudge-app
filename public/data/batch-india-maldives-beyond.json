@@ -1,0 +1,867 @@
+[
+  {
+    "id": "nara-001",
+    "name": "Nara Park & Todai-ji Temple",
+    "city": "Nara",
+    "country": "Japan",
+    "category": "Parks & Nature",
+    "ageRange": "2-14",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 78,
+    "description": "Nara Park is home to 1,200+ friendly deer who bow for crackers. Kids can feed them, explore the world largest bronze Buddha inside Todai-ji, and run through 500 acres of ancient parkland.",
+    "location": "Nara Park, Nara, Japan (1 hour from Kyoto/Osaka by train)",
+    "bestTime": "Weekday mid-morning, especially November for autumn leaves",
+    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+    "amenities": [
+      "Public Toilets",
+      "Food Stalls",
+      "Deer Crackers",
+      "First Aid",
+      "Water Fountains"
+    ],
+    "safetyFeatures": [
+      "Deer are gentle but keep snacks hidden",
+      "Park rangers throughout",
+      "No vehicles in park"
+    ],
+    "tipsAndTricks": [
+      "Buy deer crackers from official stalls only - ¥200 per pack.",
+      "Deer will bow for treats - teach your kids to bow back.",
+      "Keep crackers hidden and feed one at a time to avoid stampedes.",
+      "Go early (8-9am) when deer are hungriest and crowds are thin.",
+      "Todai-ji has a pillar hole the size of the Buddha nostril - kids crawl through for luck."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The day my toddler got stalked by 6 deer",
+      "excerpt": "She had one cracker and half the park deer locked onto her. She laughed so hard she forgot to be scared.",
+      "author": "Mike, dad of 2 from London",
+      "fullStory": "Our 3-year-old was terrified when the first deer approached. Within 10 minutes she was bowing to every deer she saw and laughing when they bowed back. Go early - by 11am the deer are full and wont perform tricks."
+    },
+    "itineraryComparison": {
+      "halfDay": "Deer feeding + Todai-ji Temple, lunch in Naramachi district",
+      "fullDay": "Add Nara National Museum, Isuien Garden, Kasuga Taisha shrine",
+      "bestFor": "Ages 2-14, animal lovers, families wanting a gentle cultural day"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Nara with kids",
+      "deer park Japan",
+      "Nara day trip from Kyoto",
+      "Todai-ji family"
+    ]
+  },
+  {
+    "id": "nara-002",
+    "name": "Nara National Museum",
+    "city": "Nara",
+    "country": "Japan",
+    "category": "Museums",
+    "ageRange": "6-16",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 62,
+    "description": "Houses one of Japan finest Buddhist art collections. Kids get in free on weekends. The rooftop garden has great park views and a space for kids to run.",
+    "location": "50 Noboriojicho, Nara (inside Nara Park, 10min from Todai-ji)",
+    "bestTime": "Weekends (kids free), weekday mornings quieter",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Free Lockers",
+      "Museum Shop",
+      "Audio Guides",
+      "Cafe",
+      "Wheelchair Accessible"
+    ],
+    "safetyFeatures": [
+      "Security staff",
+      "Sitting areas for breaks",
+      "Stroller-friendly paths"
+    ],
+    "tipsAndTricks": [
+      "Kids under 18 free on weekends and public holidays.",
+      "Kids audio guide turns the tour into a treasure hunt game.",
+      "Focus on the Buddhist Sculpture Hall - most wow factor for kids.",
+      "Good 1-2 hour cool-down after deer feeding.",
+      "Rooftop garden has great views and running space."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My 7-year-old actually enjoyed a museum",
+      "excerpt": "He normally yells boring. The kids audio guide kept him engaged 90 minutes.",
+      "author": "Yuki, mom of 2 from Tokyo",
+      "fullStory": "I was nervous bringing my son who has zero patience. The kids audio guide framed Buddha statues as guardians with secret powers. He went room to room collecting them. He left asking to come back."
+    },
+    "itineraryComparison": {
+      "halfDay": "Museum visit + quick Nara Park stroll",
+      "fullDay": "Museum + deer feeding + Todai-ji + lunch in Naramachi",
+      "bestFor": "Ages 6-16, families wanting cultural depth"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Nara National Museum",
+      "Nara museum kids",
+      "free museum Nara",
+      "Buddhist art family"
+    ]
+  },
+  {
+    "id": "hirosh-001",
+    "name": "Hiroshima Peace Memorial Museum",
+    "city": "Hiroshima",
+    "country": "Japan",
+    "category": "Museums",
+    "ageRange": "8-16",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 85,
+    "description": "World-class museum documenting the atomic bombing with artifacts, survivor testimonies, and interactive exhibits. Deeply moving for older kids. Younger children may find it intense.",
+    "location": "1-2 Nakajimacho, Naka Ward, Hiroshima, Japan",
+    "bestTime": "Arrive at 8:30am opening to avoid school groups",
+    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+    "amenities": [
+      "Audio Guides",
+      "Free Wi-Fi",
+      "Wheelchair Accessible",
+      "Lockers",
+      "Cafe"
+    ],
+    "safetyFeatures": [
+      "Calm environment",
+      "Quiet zones",
+      "First aid room",
+      "Trained staff"
+    ],
+    "tipsAndTricks": [
+      "Prepare kids. Read Sadako and the Thousand Paper Cranes together before visiting.",
+      "Skip main hall for sensitive kids under 10 - focus on children corner and Peace Park.",
+      "Audio guide with survivor testimonies is powerful for ages 10+.",
+      "Fold paper cranes at home to leave at the Children Peace Monument.",
+      "Plan 2-3 hours for museum, another hour for Peace Park and A-Bomb Dome."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "How I explained the bomb to my 9-year-old",
+      "excerpt": "She asked about a melted tricycle in glass. I wasnt ready. The children section helped us talk.",
+      "author": "Tom, dad of 2 from Toronto",
+      "fullStory": "I worried this was too heavy. Instead it became our most meaningful conversation. The museum handles it with incredible sensitivity. We spent an hour reading stories of kids who lived through the bombing."
+    },
+    "itineraryComparison": {
+      "halfDay": "Peace Museum (2h), Peace Park walk (1h), A-Bomb Dome",
+      "fullDay": "Add Hiroshima Castle, Shukkeien Garden, okonomiyaki lunch",
+      "bestFor": "Ages 8+, families seeking education and reflection"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Hiroshima Peace Museum",
+      "Hiroshima with kids",
+      "peace education Japan",
+      "atomic bomb museum family"
+    ]
+  },
+  {
+    "id": "hirosh-002",
+    "name": "Hiroshima Children Museum",
+    "city": "Hiroshima",
+    "country": "Japan",
+    "category": "Museums",
+    "ageRange": "3-12",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 58,
+    "description": "Hands-on science and play museum with a planetarium, interactive exhibits, and massive indoor play structure. Perfect energy burner after the Peace Museum. Bilingual Japanese/English.",
+    "location": "5-83 Motomachi, Naka Ward, Hiroshima (next to Hiroshima Castle)",
+    "bestTime": "Weekday afternoons - weekends crowded with locals",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+    "amenities": [
+      "Nursing Room",
+      "Cafeteria",
+      "Lockers",
+      "Stroller Parking"
+    ],
+    "safetyFeatures": [
+      "Soft flooring",
+      "Height limits",
+      "Staff throughout",
+      "Child bathrooms"
+    ],
+    "tipsAndTricks": [
+      "Planetarium shows in Japanese but visuals are universal.",
+      "Bring indoor shoes - you change at entrance.",
+      "4th floor science lab has rotating experiments.",
+      "Next to Hiroshima Castle (3 min walk) - combine both.",
+      "Use as palate cleanser after Peace Museum."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The perfect post-Peace Museum antidote",
+      "excerpt": "She was quiet and sad. An hour in the play structure and she was laughing again.",
+      "author": "Lisa, mom of 3 from Sydney",
+      "fullStory": "After the Peace Museum my youngest was in a funk. A local told us about this place. Within 5 minutes she was ziplining through the playground. The science exhibits kept my older kids busy another hour."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 hours of play and planetarium",
+      "fullDay": "Peace Museum morning + lunch + Children Museum + Hiroshima Castle",
+      "bestFor": "Ages 3-12, families balancing education with play"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Hiroshima Children Museum",
+      "Hiroshima with kids",
+      "kids museum Hiroshima",
+      "family activities Hiroshima"
+    ]
+  },
+  {
+    "id": "hakone-001",
+    "name": "Hakone Open Air Museum",
+    "city": "Hakone",
+    "country": "Japan",
+    "category": "Parks & Nature",
+    "ageRange": "3-16",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 72,
+    "description": "Massive outdoor sculpture museum against mountain views. Features a colorful glass tower kids walk inside, Picasso Pavilion, giant play net, and free hot spring foot bath.",
+    "location": "1121 Ninotaira, Hakone, Kanagawa, Japan",
+    "bestTime": "Morning 9am opening - mist clearing over mountains is magical",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Free Foot Bath",
+      "Cafe",
+      "Gift Shop",
+      "Stroller Paths",
+      "Indoor Halls"
+    ],
+    "safetyFeatures": [
+      "Safety barriers on sculptures",
+      "Wide traffic-free paths",
+      "First aid",
+      "Fenced play areas"
+    ],
+    "tipsAndTricks": [
+      "Bring towels for the free foot bath - kids will stay 30 minutes.",
+      "Glass tower highlight - kids walk through spiral with stained glass views.",
+      "Pack a picnic for grassy areas with mountain views.",
+      "Giant crocheted Net of Wonder - let kids climb in socks.",
+      "Buy Hakone Free Pass for museum entry + all transport."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The sculpture that made my son ask about art",
+      "excerpt": "He walked into the glass tower and said Mom, it like being inside a rainbow.",
+      "author": "Emily, mom of 2 from Singapore",
+      "fullStory": "I expected to drag my kids through boring sculptures. Instead my 5-year-old spent 20 minutes running through the glass tower. My 8-year-old fell in love with Picasso. We soaked in the foot bath 40 minutes. Best day of our Hakone trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Sculpture park + foot bath + Picasso Pavilion (2-3 hours)",
+      "fullDay": "Add Net of Wonder climbing, forest trails, mountain-view lunch",
+      "bestFor": "Ages 3-16, art-curious families, nature lovers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Hakone with kids",
+      "Hakone Open Air Museum",
+      "sculpture park Japan",
+      "Hakone family day trip"
+    ]
+  },
+  {
+    "id": "sapporo-001",
+    "name": "Sapporo Snow Festival",
+    "city": "Sapporo",
+    "country": "Japan",
+    "category": "Parks & Nature",
+    "ageRange": "2-16",
+    "safetyRating": 4.3,
+    "priceRange": "$",
+    "popularity": 91,
+    "description": "Enormous snow and ice sculptures fill Odori Park each February. Anime characters, buildings, animals glow with colored lights. Kids slide down snow slopes, watch ice carving competitions.",
+    "location": "Odori Park, Sapporo, Hokkaido, Japan (Feb 4-11 annually)",
+    "bestTime": "Evenings for illuminated sculptures (bundle up - temperatures drop to -8°C)",
+    "imageUrl": "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+    "amenities": [
+      "Food Stalls",
+      "Warm-Up Tents",
+      "Public Toilets",
+      "Sleigh Rides",
+      "Snow Slides"
+    ],
+    "safetyFeatures": [
+      "Crowd control barriers",
+      "Viewing areas",
+      "Medical stations",
+      "Anti-slip mats"
+    ],
+    "tipsAndTricks": [
+      "Layer up with thermal underwear, waterproof boots, hand warmers.",
+      "Go weekday - weekends have 200,000+ people.",
+      "Susukino site (ice sculptures) less crowded, different vibe.",
+      "Rent boots and snow gear at festival entrance.",
+      "Kids under 12 free on most slides. Bring sled cushion."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Snow festival at -12°C with a toddler",
+      "excerpt": "I was terrified shed freeze. An hour in she refused to leave the snow slide.",
+      "author": "Ken, dad of 1 from Hong Kong",
+      "fullStory": "We flew from Hong Kong for the Snow Festival. Our 3-year-old never saw snow. She saw the giant Pikachu sculpture and was running toward it. We spent 4 hours outside in -12°C. She didnt complain once."
+    },
+    "itineraryComparison": {
+      "halfDay": "Odori Park main site (3-4 hours with slides and sculptures)",
+      "fullDay": "Add Susukino ice sculptures (evening), Sapporo Ramen Alley dinner",
+      "bestFor": "Ages 2-16, winter lovers, cold-tolerant families"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Sapporo Snow Festival",
+      "winter festival Japan",
+      "Sapporo with kids",
+      "Hokkaido winter family"
+    ]
+  },
+  {
+    "id": "sapporo-002",
+    "name": "Moerenuma Park",
+    "city": "Sapporo",
+    "country": "Japan",
+    "category": "Parks & Nature",
+    "ageRange": "2-16",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 55,
+    "description": "Sprawling park designed by Isamu Noguchi. Massive glass pyramid with restaurant and observation deck, 50-meter mountain with spiral paths, interactive fountains dancing to music.",
+    "location": "Moerenuma Koen, Higashi-ku, Sapporo, Hokkaido, Japan",
+    "bestTime": "Summer (May-Oct) for fountains and grass; winter for snow play",
+    "imageUrl": "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+    "amenities": [
+      "Glass Pyramid",
+      "Free Parking",
+      "Bike Rental",
+      "Water Fountains",
+      "Picnic Areas"
+    ],
+    "safetyFeatures": [
+      "Open sightlines",
+      "Shallow fountains",
+      "Designated play zones",
+      "Park rangers"
+    ],
+    "tipsAndTricks": [
+      "Rent bikes at entrance - 4km end-to-end with kid seats.",
+      "Glass pyramid has free exhibits and 360° observation deck.",
+      "Pack a picnic for lawns in front of the pyramid.",
+      "Sea Fountain does 20-min water shows with music.",
+      "Winter: mountain is perfect for sledding (bring your own)."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A park so beautiful my kids forgot their iPads",
+      "excerpt": "They spent 2 hours running up Mt. Moere. Not one Im bored.",
+      "author": "Hiro, dad of 3 from Osaka",
+      "fullStory": "My kids are glued to screens 24/7. At Moerenuma, my 6-year-old sprinted up the spiral path 4 times. My 8-year-old tried to catch fountain water. We ate lunch on the grass. Most peaceful family day in years."
+    },
+    "itineraryComparison": {
+      "halfDay": "Glass pyramid + Mt. Moere climb + Sea Fountain + picnic",
+      "fullDay": "Add bike loop, playground, art exhibits, sunset from observation deck",
+      "bestFor": "All ages, active families, art-loving families"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Moerenuma Park",
+      "Sapporo family park",
+      "Isamu Noguchi",
+      "Sapporo outdoor kids"
+    ]
+  },
+  {
+    "id": "busan-001",
+    "name": "SEA LIFE Busan Aquarium",
+    "city": "Busan",
+    "country": "South Korea",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 74,
+    "description": "One of Korea largest aquariums with 10,000+ creatures. 80-meter underwater tunnel lets kids walk with sharks overhead. Touch pools, daily feeding shows, interactive digital kids zone.",
+    "location": "266 Haeundaehaebyeon-ro, Haeundae-gu, Busan (next to Haeundae Beach)",
+    "bestTime": "Weekday mornings to avoid school groups",
+    "imageUrl": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Baby Changing Rooms",
+      "Cafe",
+      "Souvenir Shop",
+      "Wheelchair Accessible"
+    ],
+    "safetyFeatures": [
+      "Safety glass 3x standards",
+      "Lifeguards at touch pools",
+      "Emergency exits",
+      "Staff throughout"
+    ],
+    "tipsAndTricks": [
+      "Check feeding times at entrance - shark feeding 11am highlight.",
+      "Ocean Engineers zone: kids design digital fish on giant screen.",
+      "Buy tickets online. Same-day queues 30-45 min peak season.",
+      "Combine with Haeundae Beach and Dongbaek Island walk.",
+      "4D theater extra 5,000 won - animated deep-sea adventure."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The shark tunnel that cured my 4-year-old fear",
+      "excerpt": "He clung to my leg at entrance. By the tunnel he was pressing face against glass.",
+      "author": "Min-ji, mom of 2 from Seoul",
+      "fullStory": "My youngest feared big fish. The touch pool with starfish was our gateway. Then penguins. By the shark tunnel he was pointing and naming every fish. We spent 3 hours and he cried when we left."
+    },
+    "itineraryComparison": {
+      "halfDay": "Aquarium (2-3 hours), lunch on Haeundae Beach",
+      "fullDay": "Add Haeundae Beach, Dongbaek Island, Busan Sky Capsule",
+      "bestFor": "Ages 2-14, animal lovers, indoor option"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Busan Aquarium",
+      "SEA LIFE Busan",
+      "Haeundae with kids",
+      "Busan family activities"
+    ]
+  },
+  {
+    "id": "busan-002",
+    "name": "Busan Children Museum",
+    "city": "Busan",
+    "country": "South Korea",
+    "category": "Museums",
+    "ageRange": "3-12",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 52,
+    "description": "Interactive wonderland with mock supermarket, construction site, fire station, science lab, and traditional Korean village. Everything hands-on and bilingual (Korean/English).",
+    "location": "Busan Citizens Park, 68 Geumgang-ro, Busanjin-gu, Busan",
+    "bestTime": "Weekday mornings - weekends book out hours ahead",
+    "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "amenities": [
+      "Cafe",
+      "Breastfeeding Room",
+      "Lockers",
+      "Free Wi-Fi"
+    ],
+    "safetyFeatures": [
+      "Limited capacity",
+      "Soft-play flooring",
+      "Staff in every zone",
+      "Lost child wristbands"
+    ],
+    "tipsAndTricks": [
+      "Book online 3 days ahead for weekends. Walk-ins weekdays only.",
+      "Mini Construction Zone with safe tools - most popular, go first.",
+      "Kids must wear socks. Bring extras or buy for 1,000 won.",
+      "Mock supermarket - kids get carts and buy real-looking food.",
+      "Plan 2-3 hours max. Kids crash at 3-hour mark."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My daughter the fire chief for a day",
+      "excerpt": "She put on the tiny firefighter uniform and didnt take it off for 2 hours.",
+      "author": "David, dad of 1 from Chicago",
+      "fullStory": "We were jet-lagged and needed indoor activity. My 4-year-old spent the whole time in the fire station zone, putting out pretend fires and sliding down the tiny pole. Clean, educational, perfect."
+    },
+    "itineraryComparison": {
+      "halfDay": "Children Museum (2-3h) + picnic in Citizens Park",
+      "fullDay": "Add Busan Cinema Center (15min walk) + Seomyeon shopping",
+      "bestFor": "Ages 3-12, rainy days, role-play kids"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Busan Children Museum",
+      "Busan with kids",
+      "indoor activities Busan",
+      "kids museum Busan"
+    ]
+  },
+  {
+    "id": "busan-003",
+    "name": "Busan Cinema Center & BIFF Experience",
+    "city": "Busan",
+    "country": "South Korea",
+    "category": "Theme Parks",
+    "ageRange": "4-16",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 60,
+    "description": "World largest cantilevered roof lit in rainbow colors at night. Home of BIFF with outdoor cinema screen, media art exhibits, and huge grassy plaza. Free to explore year-round.",
+    "location": "120 Suyeonggangbyeon-daero, Haeundae-gu, Busan",
+    "bestTime": "Evening for roof light show (sunset to 10pm)",
+    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+    "amenities": [
+      "Free Wi-Fi",
+      "Cafe",
+      "Restaurants",
+      "Public Toilets",
+      "Open Plaza"
+    ],
+    "safetyFeatures": [
+      "Well-lit at night",
+      "Security during events",
+      "Open sightlines",
+      "Nearby fenced play area"
+    ],
+    "tipsAndTricks": [
+      "Visit evening - roof LED show starts at sunset.",
+      "Plaza perfect for running. Bring blanket and snacks.",
+      "During BIFF (Oct) free outdoor kids screenings.",
+      "Centum City mall 5min walk - massive kids play zone inside.",
+      "Check website for Kids Film Festival weekend workshops."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Movie night under the Busan sky",
+      "excerpt": "The roof was glowing pink and blue. Kids lay on blankets watching Pixar on outdoor screen.",
+      "author": "Sophie, mom of 2 from Kuala Lumpur",
+      "fullStory": "We stumbled here during BIFF. Free outdoor kids animation screening. The roof did incredible color show. My 5-year-old said the rainbow roof is singing. We grabbed hotteok and watched two short films under stars."
+    },
+    "itineraryComparison": {
+      "halfDay": "Evening roof light show + dinner in Centum City",
+      "fullDay": "Add Shinsegae Centum City, Haeundae Beach, Dongbaek Island",
+      "bestFor": "Ages 4-16, movie lovers, budget-friendly families"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Busan Cinema Center",
+      "BIFF Busan",
+      "Busan with kids free",
+      "Busan night activities family"
+    ]
+  },
+  {
+    "id": "delhi-001",
+    "name": "National Zoological Park",
+    "city": "New Delhi",
+    "country": "India",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 3.8,
+    "priceRange": "$",
+    "popularity": 70,
+    "description": "A sprawling 176-acre zoo in the heart of Delhi, home to 1,300+ animals including white tigers, lions, elephants, and the rare Indian rhinoceros. A toy train takes kids around the park.",
+    "location": "Mathura Road, New Delhi, India (near Purana Qila)",
+    "bestTime": "November to February (cool season) — arrive at 9am when animals are active",
+    "imageUrl": "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+    "amenities": [
+      "Toy Train",
+      "Canteen",
+      "Public Toilets",
+      "Parking",
+      "Wheelchair Accessible"
+    ],
+    "safetyFeatures": [
+      "Barricaded enclosures",
+      "Security guards",
+      "No feeding signs",
+      "First aid post"
+    ],
+    "tipsAndTricks": [
+      "Go in the morning (9-11am) when animals are most active — by noon everything naps in the heat.",
+      "The toy train ride is a must-do for kids under 8. INR 20 for 20 minutes around the park.",
+      "Bring your own snacks and water. The on-site canteen is basic and overpriced.",
+      "Hire a cycle rickshaw at the entrance if you have a toddler — the park is huge.",
+      "Avoid summer (April-June). It is unbearably hot and most animals hide in shade."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The white tiger that made my son roar",
+      "excerpt": "He saw the white tiger and started roaring back at it. The tiger yawned. Best standoff of our trip.",
+      "author": "Priya, mom of 1 from Mumbai",
+      "fullStory": "My 3-year-old is obsessed with white tigers thanks to a cartoon. When he saw the real thing at Delhi Zoo, he froze, then started roaring. The tiger looked at him, yawned dramatically, and went back to sleep. My son was convinced he scared the tiger."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo visit (2-3 hours) + toy train ride + Purana Qila nearby",
+      "fullDay": "Add Humayun Tomb, lunch at India Habitat Centre, and Lodhi Garden evening walk",
+      "bestFor": "Ages 2-14, animal lovers, budget-conscious families"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Delhi Zoo",
+      "National Zoological Park Delhi",
+      "Delhi with kids",
+      "white tiger Delhi"
+    ]
+  },
+  {
+    "id": "delhi-002",
+    "name": "National Museum — Kid-Friendly Tour",
+    "city": "New Delhi",
+    "country": "India",
+    "category": "Museums",
+    "ageRange": "6-16",
+    "safetyRating": 4.2,
+    "priceRange": "$",
+    "popularity": 58,
+    "description": "India's premier museum spanning 5000 years of history, with a dedicated children's gallery featuring interactive exhibits, puppets, traditional toys, and a mini Harappan civilization model.",
+    "location": "Janpath, New Delhi, India (near India Gate)",
+    "bestTime": "Weekday mornings — arrive by 10am to avoid school groups",
+    "imageUrl": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+    "amenities": [
+      "Cafe",
+      "Restrooms",
+      "Book Shop",
+      "Wheelchair Accessible",
+      "Audio Guides"
+    ],
+    "safetyFeatures": [
+      "Security staff throughout",
+      "CCTV surveillance",
+      "Quiet zones",
+      "Elevator access"
+    ],
+    "tipsAndTricks": [
+      "Head straight to the Children's Gallery (ground floor) — hands-on exhibits for ages 4-10.",
+      "The Harappan Civilization section has a miniature city model with tiny houses.",
+      "Book a guided family tour in advance — storytelling-focused, not date-heavy.",
+      "Combine with India Gate (10 min walk) for a morning + picnic afternoon.",
+      "Don't try the whole museum. Pick 3-4 galleries max."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "How a 4000-year-old seal saved museum day",
+      "excerpt": "My 7-year-old was bored until the kids' guide showed her how to make her own Harappan seal in clay.",
+      "author": "Anika, mom of 2 from Bangalore",
+      "fullStory": "My kids have zero patience for museums. The Children's Gallery was a game-changer. They spent 45 minutes in the Harappan section, making seal impressions in clay and playing with replica toys from 2500 BCE."
+    },
+    "itineraryComparison": {
+      "halfDay": "Children's Gallery (1.5h) + Central Asian Antiquities tour (1h)",
+      "fullDay": "Add India Gate, National Gallery of Modern Art, and lunch at Connaught Place",
+      "bestFor": "Ages 6-16, history-curious families, rainy day activity"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "National Museum Delhi",
+      "Delhi museum kids",
+      "children gallery Delhi",
+      "family museum Delhi"
+    ]
+  },
+  {
+    "id": "mumbai-001",
+    "name": "EsselWorld Theme Park",
+    "city": "Mumbai",
+    "country": "India",
+    "category": "Theme Parks",
+    "ageRange": "3-16",
+    "safetyRating": 3.9,
+    "priceRange": "$$",
+    "popularity": 76,
+    "description": "One of India's largest amusement parks with 40+ rides, a massive water park (Water Kingdom), and dedicated kiddie zones. The park sits on a peninsula with sea views on both sides.",
+    "location": "Global Pagoda Road, Gorai, Borivali West, Mumbai, India",
+    "bestTime": "Weekdays November-February — summer is brutally hot, weekends packed",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Restaurants",
+      "Changing Rooms",
+      "Locker Room",
+      "First Aid"
+    ],
+    "safetyFeatures": [
+      "Life jackets",
+      "Height restrictions enforced",
+      "Lifeguards",
+      "Lost child center"
+    ],
+    "tipsAndTricks": [
+      "Buy the combo ticket online (EsselWorld + Water Kingdom) — saves 30%.",
+      "Reach by 10am opening. The ferry from Borivali takes 20 minutes — kids love the boat ride.",
+      "Water Kingdom requires swimwear. They have changing rooms but bring your own towel.",
+      "Toddlers stick to Kiddie Land — 12 gentle rides designed for 2-6 year olds.",
+      "Avoid weekends. 2+ hour queues for popular rides on Saturdays."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The ferry ride was more exciting than the park",
+      "excerpt": "My kids spent the whole boat ride pretending to be pirates. We got to the park and they wanted to go back on the ferry.",
+      "author": "Raj, dad of 2 from Pune",
+      "fullStory": "We drove 3 hours from Pune for EsselWorld. The ferry from Borivali to Gorai was unexpectedly the highlight. My kids spent 20 minutes pretending to search for treasure. Water Kingdom kept them occupied for 4 hours."
+    },
+    "itineraryComparison": {
+      "halfDay": "Ferry ride + either EsselWorld OR Water Kingdom (3-4 hours)",
+      "fullDay": "Ferry + both parks combo + lunch inside — plan 6-8 hours",
+      "bestFor": "Ages 3-16, thrill-seekers, families wanting a Mumbai day trip"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "EsselWorld Mumbai",
+      "Mumbai theme park",
+      "Water Kingdom",
+      "Mumbai with kids day trip"
+    ]
+  },
+  {
+    "id": "mumbai-002",
+    "name": "Taraporewala Aquarium",
+    "city": "Mumbai",
+    "country": "India",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 3.7,
+    "priceRange": "$",
+    "popularity": 55,
+    "description": "Mumbai's historic aquarium recently renovated with modern glass tanks, a 180-degree underwater tunnel, and over 100 species of marine life. Compact enough for a quick visit on Marine Drive.",
+    "location": "Marine Drive, opposite Girgaon Chowpatty, Mumbai, India",
+    "bestTime": "Weekday mornings — afternoons get crowded",
+    "imageUrl": "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+    "amenities": [
+      "Air Conditioning",
+      "Public Toilets",
+      "Souvenir Shop",
+      "Wheelchair Accessible"
+    ],
+    "safetyFeatures": [
+      "Glass barriers",
+      "Anti-slip flooring",
+      "Security staff",
+      "Well-marked exits"
+    ],
+    "tipsAndTricks": [
+      "This is a 30-45 minute visit, not a half-day affair. Plan as a quick stop on Marine Drive.",
+      "The underwater tunnel is tiny (15m) but kids love it. Go early to avoid bottlenecks.",
+      "Combine with Chowpatty Beach (across the road) for sunset and bhelpuri snacks.",
+      "Don't expect SEA LIFE level. Adjust expectations and you'll enjoy it.",
+      "Entry fee is under INR 100 — cheap enough just to cool down on a hot day."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Quick pit stop that became a core memory",
+      "excerpt": "We ducked in to escape the heat. An hour later my 4-year-old was still mesmerized by the jellyfish.",
+      "author": "Carlos, dad of 1 from Madrid",
+      "fullStory": "We only went in because of the air conditioning. But the jellyfish tank stopped my 4-year-old in her tracks. She stood there for 20 minutes, moving with the jellyfish. The tunnel section has sharks that swim right over your head. Small but well-done."
+    },
+    "itineraryComparison": {
+      "halfDay": "Aquarium (45min) + Chowpatty Beach + Marine Drive walk + bhelpuri",
+      "fullDay": "Add Girgaon for pao bhaji, Hanging Gardens, and Kamala Nehru Park",
+      "bestFor": "Ages 2-12, families walking Marine Drive, quick indoor break"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Mumbai Aquarium",
+      "Taraporewala Aquarium",
+      "Marine Drive with kids",
+      "Mumbai family activities"
+    ]
+  },
+  {
+    "id": "male-001",
+    "name": "Coralarium at Sirru Fen Fushi",
+    "city": "Male",
+    "country": "Maldives",
+    "category": "Parks & Nature",
+    "ageRange": "5-16",
+    "safetyRating": 4.5,
+    "priceRange": "$$$$",
+    "popularity": 45,
+    "description": "A semi-submerged art gallery and marine conservation center rising from a turquoise lagoon. Kids can walk through a tidal gallery into an underwater viewing chamber, snorkel along coral restoration frames, and see baby sharks and rays.",
+    "location": "Fairmont Maldives, Sirru Fen Fushi, Shaviyani Atoll (seaplane from Male)",
+    "bestTime": "December to April (dry season), mid-morning for low tide tidal gallery access",
+    "imageUrl": "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+    "amenities": [
+      "Snorkel Gear",
+      "Life Jackets",
+      "Freshwater Rinse",
+      "Camera Rental",
+      "Reef-Safe Sunscreen"
+    ],
+    "safetyFeatures": [
+      "Guided snorkel tours",
+      "Shallow depth (1-3m)",
+      "Lifeguards on duty",
+      "No strong currents"
+    ],
+    "tipsAndTricks": [
+      "This is inside the Fairmont Maldives resort — must be a guest or book a day visit.",
+      "Tidal gallery only accessible at low tide. Check the chart with the marine biologist.",
+      "Kids can help transplant coral fragments — hands-on conservation lesson.",
+      "Bring water shoes. Coral fragments on the seabed are sharp even in shallow areas.",
+      "Best time is 9-11am when light makes the underwater chamber glow turquoise."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My daughter the marine biologist for a day",
+      "excerpt": "She carefully transplanted a piece of coral onto the frame and announced her career change on the spot.",
+      "author": "James, dad of 2 from Dubai",
+      "fullStory": "The Coralarium was the highlight of our Maldives trip. My 8-year-old joined the coral restoration program with the resident marine biologist. She named her coral Sparkle and still asks to see photos of it. The underwater chamber is magical."
+    },
+    "itineraryComparison": {
+      "halfDay": "Coralarium tour + coral restoration + snorkel (2-3 hours)",
+      "fullDay": "Add reef snorkeling, dolphin cruise, and kids' marine biology workshop",
+      "bestFor": "Ages 5-16, marine lovers, families at luxury resorts"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Maldives with kids",
+      "Coralarium Maldives",
+      "Sirru Fen Fushi family",
+      "luxury Maldives family"
+    ]
+  }
+]

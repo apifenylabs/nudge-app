@@ -1,0 +1,132 @@
+{
+  "city": "Singapore",
+  "country": "Singapore",
+  "lastUpdated": "2026-04-22T01:20:00Z",
+  "totalListings": 30,
+  "activities": [
+    {
+      "id": "singapore-001",
+      "name": "Universal Studios Singapore",
+      "category": "Theme Park",
+      "ageRange": "5-17",
+      "safetyRating": 4.9,
+      "description": "Southeast Asia's only Universal Studios theme park with 7 themed zones. Excellent for families with rides ranging from gentle to thrilling. World-class safety standards and family facilities.",
+      "location": "8 Sentosa Gateway, Sentosa Island, Singapore 098269",
+      "bestTime": "Weekdays, Avoid school holidays",
+      "priceRange": "$$$",
+      "amenities": ["Stroller Rental", "Baby Care Centers", "Child Swap", "Express Pass", "Family Restrooms"],
+      "safetyFeatures": ["Height Restrictions", "Trained Ride Operators", "First Aid Stations", "Lost Child Center", "Shaded Queues"],
+      "seoKeywords": ["Universal Studios Singapore", "Sentosa theme park", "family activities Singapore", "kid-friendly Singapore"],
+      "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e",
+      "popularity": 96,
+      "affiliateLinks": {
+        "klook": "https://www.klook.com/activity/455-universal-studios-singapore/?aid=119991",
+        "viator": "https://www.viator.com/tours/Singapore/Universal-Studios-Singapore-Admission-Ticket/d18-5070SIN_UNIVERSAL?pid=119991"
+      },
+      "commissionRate": "9%"
+    },
+    {
+      "id": "singapore-002",
+      "name": "Singapore Zoo & River Wonders",
+      "category": "Zoo",
+      "ageRange": "0-15",
+      "safetyRating": 4.8,
+      "description": "World-famous open-concept zoo with natural habitats. Includes River Wonders (formerly River Safari) with pandas and river animals. Excellent stroller access and family facilities.",
+      "location": "80 Mandai Lake Rd, Singapore 729826",
+      "bestTime": "Morning, Weekdays",
+      "priceRange": "$$",
+      "amenities": ["Open Enclosures", "Animal Shows", "Tram Service", "Stroller Rental", "Nursing Rooms"],
+      "safetyFeatures": ["Barrier-Free Viewing", "Trained Staff", "First Aid", "Shaded Pathways", "Security"],
+      "seoKeywords": ["Singapore Zoo", "River Wonders", "family zoo Singapore", "Mandai wildlife"],
+      "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+      "popularity": 94,
+      "affiliateLinks": {
+        "klook": "https://www.klook.com/activity/456-singapore-zoo-tickets/?aid=119991",
+        "getYourGuide": "https://www.getyourguide.com/singapore-l169/singapore-zoo-ticket-t395176/?partner_id=119991"
+      },
+      "commissionRate": "8%"
+    },
+    {
+      "id": "singapore-003",
+      "name": "Gardens by the Bay",
+      "category": "Park",
+      "ageRange": "3-17",
+      "safetyRating": 4.9,
+      "description": "Award-winning nature park with futuristic Supertrees, climate-controlled domes, and children's garden. Stroller-friendly with plenty of shaded areas and family amenities.",
+      "location": "18 Marina Gardens Dr, Singapore 018953",
+      "bestTime": "Morning or Evening, Daily",
+      "priceRange": "$$",
+      "amenities": ["Children's Garden", "Stroller Access", "Nursing Rooms", "Restaurants", "Gift Shops"],
+      "safetyFeatures": ["Air-Conditioned Domes", "Wide Pathways", "Security Patrols", "First Aid", "Emergency Exits"],
+      "seoKeywords": ["Gardens by the Bay", "Singapore gardens", "family park Singapore", "Supertree Grove"],
+      "imageUrl": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd",
+      "popularity": 95,
+      "affiliateLinks": {
+        "klook": "https://www.klook.com/activity/457-gardens-by-the-bay/?aid=119991",
+        "viator": "https://www.viator.com/tours/Singapore/Gardens-by-the-Bay-Ticket/d18-5070SIN_GARDENS?pid=119991"
+      },
+      "commissionRate": "7%"
+    },
+    {
+      "id": "singapore-004",
+      "name": "S.E.A. Aquarium",
+      "category": "Aquarium",
+      "ageRange": "2-14",
+      "safetyRating": 4.8,
+      "description": "One of the world's largest aquariums with over 100,000 marine animals. Features underwater tunnels, touch pools, and educational exhibits. Perfect for young children.",
+      "location": "8 Sentosa Gateway, Sentosa Island, Singapore 098269",
+      "bestTime": "Weekdays, Morning",
+      "priceRange": "$$",
+      "amenities": ["Underwater Tunnel", "Touch Pools", "Educational Programs", "Stroller Access", "Rest Areas"],
+      "safetyFeatures": ["Air-Conditioned", "Wide Viewing Areas", "Trained Staff", "First Aid", "Security"],
+      "seoKeywords": ["S.E.A. Aquarium", "Sentosa aquarium", "marine life Singapore", "family aquarium"],
+      "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
+      "popularity": 92,
+      "affiliateLinks": {
+        "klook": "https://www.klook.com/activity/458-sea-aquarium-singapore/?aid=119991"
+      },
+      "commissionRate": "8%"
+    },
+    {
+      "id": "singapore-005",
+      "name": "Science Centre Singapore & KidsSTOP",
+      "category": "Educational",
+      "ageRange": "3-12",
+      "safetyRating": 4.7,
+      "description": "Interactive science museum with dedicated children's section (KidsSTOP). Hands-on exhibits, planetarium, and educational workshops. Perfect for curious young minds.",
+      "location": "15 Science Centre Rd, Singapore 609081",
+      "bestTime": "Weekdays",
+      "priceRange": "$",
+      "amenities": ["Hands-On Exhibits", "KidsSTOP Zone", "Planetarium", "Workshops", "Cafeteria"],
+      "safetyFeatures": ["Supervised Areas", "Educational Staff", "First Aid", "Clean Facilities", "Security"],
+      "seoKeywords": ["Science Centre Singapore", "KidsSTOP", "educational activities Singapore", "science museum kids"],
+      "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d",
+      "popularity": 88,
+      "affiliateLinks": {
+        "klook": "https://www.klook.com/activity/459-science-centre-singapore/?aid=119991"
+      },
+      "commissionRate": "6%"
+    },
+    {
+      "id": "singapore-006",
+      "name": "Singapore Flyer & Time Capsule",
+      "category": "Observation",
+      "ageRange": "4-17",
+      "safetyRating": 4.9,
+      "description": "World's largest observation wheel with panoramic views of Singapore. Includes Time Capsule exhibition. Climate-controlled capsules and excellent safety record.",
+      "location": "30 Raffles Ave, Singapore 039803",
+      "bestTime": "Daytime for views, Evening for lights",
+      "priceRange": "$$",
+      "amenities": ["Climate-Controlled", "Audio Guide", "Photo Service", "Gift Shop", "Restaurant"],
+      "safetyFeatures": ["Safety Briefing", "Emergency Systems", "Trained Operators", "First Aid", "Security"],
+      "seoKeywords": ["Singapore Flyer", "observation wheel", "family views Singapore", "Marina Bay sights"],
+      "imageUrl": "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3",
+      "popularity": 90,
+      "affiliateLinks": {
+        "klook": "https://www.klook.com/activity/460-singapore-flyer/?aid=119991",
+        "viator": "https://www.viator.com/tours/Singapore/Singapore-Flyer-Ticket/d18-5070SIN_FLYER?pid=119991"
+      },
+      "commissionRate": "7%"
+    }
+  ]
+}

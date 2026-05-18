@@ -1,0 +1,867 @@
+[
+  {
+    "id": "hcmc-001",
+    "name": "Suoi Tien Theme Park",
+    "city": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "category": "Theme Parks",
+    "ageRange": "3-12",
+    "safetyRating": 3.8,
+    "priceRange": "$",
+    "popularity": 72,
+    "description": "Vietnam's largest theme park with a unique Buddhist mythology theme blending water park, zoo, and amusement rides.",
+    "location": "District 9, HCMC",
+    "bestTime": "Weekday mornings in dry season (Nov-Apr)",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurants",
+      "Locker Rental",
+      "First Aid"
+    ],
+    "safetyFeatures": [
+      "Lifeguards on Duty",
+      "Ride Safety Inspections"
+    ],
+    "tipsAndTricks": [
+      "Go on a weekday — weekends are packed. You'll queue 30+ min per ride.",
+      "Bring swimwear for the water park section — it's included in the ticket.",
+      "Food inside is cheap ($2-3 per meal) and clean."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A theme park that teaches my kid about mythology",
+      "excerpt": "I expected tacky rides. Instead we spent 4 hours wandering through colorful exhibits about Vietnamese creation myths.",
+      "author": "Lisa, mom of 1 from Sydney",
+      "fullStory": "I'll admit I was skeptical. The entrance looks dated, but my 6-year-old was mesmerized by the giant dragon statues and the wave pool. The water park saved us from the heat. We spent 6 hours here and could have stayed longer."
+    },
+    "itineraryComparison": {
+      "halfDay": "Water park + 3 rides, lunch, leave by 2pm",
+      "fullDay": "All rides, zoo, water park, cultural show, dinner",
+      "bestFor": "Ages 3-12, adventure families on a budget"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Ho Chi Minh City with kids",
+      "Vietnam family attractions",
+      "Suoi Tien review"
+    ]
+  },
+  {
+    "id": "hcmc-002",
+    "name": "Saigon Zoo & Botanical Gardens",
+    "city": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 3.6,
+    "priceRange": "$",
+    "popularity": 75,
+    "description": "One of the world's oldest zoos (opened 1864), home to over 1,000 animals across 20 hectares of lush botanical gardens in the heart of HCMC.",
+    "location": "District 1, near Notre-Dame Cathedral",
+    "bestTime": "Early mornings before 10am to beat the heat",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurants",
+      "Shaded Walkways",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Animal Barrier Guards",
+      "First Aid Station",
+      "Wide Paths"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 7:30am opening — animals are most active and the heat hasn't set in.",
+      "The botanical gardens section is free and beautiful for a picnic.",
+      "Skip the on-site playground and head to Tao Dan Park across the street."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A throwback zoo that actually works",
+      "excerpt": "It's not Singapore Zoo, but my toddler was absolutely captivated by the monkeys and elephants.",
+      "author": "David, dad of 2 from Melbourne",
+      "fullStory": "We almost skipped it because of mixed reviews. Glad we didn't. Wide tree-lined paths, spacious enclosures, and exhibits that feel close-up. My 3-year-old spent 20 minutes watching the orangutans. The botanical gardens are gorgeous. Feels like an oasis in the middle of the city."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main animal exhibits + gardens, leave by 11am",
+      "fullDay": "Full zoo loop + botanical gardens + Tao Dan Park picnic",
+      "bestFor": "Toddlers and young kids who love animals"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Saigon Zoo review",
+      "Ho Chi Minh City with toddlers",
+      "Vietnam botanical gardens",
+      "HCMC family day out"
+    ]
+  },
+  {
+    "id": "hcmc-003",
+    "name": "Dam Sen Water Park",
+    "city": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "category": "Parks & Nature",
+    "ageRange": "3-15",
+    "safetyRating": 3.7,
+    "priceRange": "$",
+    "popularity": 68,
+    "description": "A sprawling water park with wave pools, lazy rivers, and kids' splash zones offering a refreshing escape from Saigon's heat.",
+    "location": "District 11, HCMC",
+    "bestTime": "Weekdays 9am-3pm to avoid school holiday crowds",
+    "imageUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+    "amenities": [
+      "Locker Rental",
+      "Restaurants",
+      "Changing Rooms",
+      "Shaded Loungers"
+    ],
+    "safetyFeatures": [
+      "Lifeguards on Duty",
+      "Depth Markers",
+      "First Aid Room"
+    ],
+    "tipsAndTricks": [
+      "Rent a locker ($1) — petty theft happens in crowded areas.",
+      "Hit the wave pool right at 9am opening before it fills up.",
+      "Bring water shoes — concrete gets scorching hot by midday."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Best value water park in Southeast Asia",
+      "excerpt": "$5 entry for a full day of water slides. My kids (5 and 8) didn't stop smiling.",
+      "author": "Mei, mom of 2 from Singapore",
+      "fullStory": "For the price of a bubble tea in Singapore, my kids got a full day of water fun. The slides aren't world-class but they're safe and fun. The kids' area is perfect for ages 3-7. The lazy river was our family favourite."
+    },
+    "itineraryComparison": {
+      "halfDay": "Wave pool + kids zone + 2 slides, lunch, leave by 1pm",
+      "fullDay": "All slides, lazy river, wave pool, lunch break, more slides",
+      "bestFor": "Families needing to beat the heat on a budget"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Dam Sen Water Park review",
+      "HCMC water park",
+      "Ho Chi Minh City with kids",
+      "cheap family activities Vietnam"
+    ]
+  },
+  {
+    "id": "hcmc-004",
+    "name": "War Remnants Museum",
+    "city": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "category": "Museums",
+    "ageRange": "10+",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 82,
+    "description": "A sobering but essential museum documenting the Vietnam War through powerful photography, military artifacts, and exhibits that foster understanding and peace.",
+    "location": "District 1, 28 Vo Van Tan Street",
+    "bestTime": "Mornings 8am-10am before school groups",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Air Conditioning",
+      "Wheelchair Access",
+      "Gift Shop",
+      "Cafe Nearby"
+    ],
+    "safetyFeatures": [
+      "Well-Maintained Walkways",
+      "Emergency Exits",
+      "Security Staff"
+    ],
+    "tipsAndTricks": [
+      "Tread carefully with kids under 13 — some exhibits are graphic. Preview first.",
+      "The outdoor military equipment area (tanks, helicopters) is the highlight for most kids.",
+      "Read the visitor book in the Requiem gallery — it's filled with moving reflections."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Hard conversations made easier",
+      "excerpt": "My 12-year-old asked more questions here than in a year of history class. It sparked real conversations.",
+      "author": "James, dad of 2 from London",
+      "fullStory": "I was nervous bringing my kids here. But my 12-year-old history buff was riveted. The outdoor tank and helicopter display was the hook, and the photo exhibits kept him engaged. We talked for hours afterward about war, peace, and perspective."
+    },
+    "itineraryComparison": {
+      "halfDay": "Outdoor military exhibits + one indoor gallery, 90 minutes",
+      "fullDay": "All galleries + outdoor exhibits + lunch + reflection walk at Tao Dan Park",
+      "bestFor": "History-minded families with kids 12+, educational visits"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "War Remnants Museum kids",
+      "Ho Chi Minh City educational",
+      "Vietnam War museum family",
+      "HCMC with teens"
+    ]
+  },
+  {
+    "id": "hcmc-005",
+    "name": "Saigon Skydeck",
+    "city": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "category": "Theme Parks",
+    "ageRange": "4+",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 74,
+    "description": "The Bitexco Financial Tower's 49th-floor observation deck offering 360-degree panoramic views of Ho Chi Minh City's sprawling skyline.",
+    "location": "Bitexco Financial Tower, District 1",
+    "bestTime": "Late afternoon 4pm-5pm for sunset",
+    "imageUrl": "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+    "amenities": [
+      "Elevator Access",
+      "Viewing Binoculars",
+      "Gift Shop",
+      "Helipad Viewing Area"
+    ],
+    "safetyFeatures": [
+      "Glass Barriers",
+      "Security Screening",
+      "Clear Signage"
+    ],
+    "tipsAndTricks": [
+      "Go at 4:30pm — you'll catch daylight, sunset, AND city lights — three views, one ticket.",
+      "Download the free audio guide app before you arrive.",
+      "Glass-floored helipad area is the best photo spot."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80",
+      "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My 5-year-old felt like a giant",
+      "excerpt": "She pressed her face against the glass and shouted 'Mummy, the cars are tiny LEGOs!'",
+      "author": "Hannah, mom of 1 from Perth",
+      "fullStory": "I wasn't sure if a skydeck would hold her attention. It did for a full hour. The view was stunning — the Saigon River, endless motorbikes, tiny buildings. She loved the binoculars. The staff gave her a paper hat. Simple but memorable."
+    },
+    "itineraryComparison": {
+      "halfDay": "Skydeck at sunset + drinks downstairs, 1.5 hours",
+      "fullDay": "Skydeck + Ben Thanh Market + walking tour of District 1",
+      "bestFor": "Families wanting a quick, memorable city view"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Saigon Skydeck review",
+      "HCMC observation deck",
+      "Bitexco tower with kids",
+      "Ho Chi Minh City skyline"
+    ]
+  },
+  {
+    "id": "danang-001",
+    "name": "Ba Na Hills & Golden Bridge",
+    "city": "Da Nang",
+    "country": "Vietnam",
+    "category": "Theme Parks",
+    "ageRange": "4-16",
+    "safetyRating": 4.2,
+    "priceRange": "$$",
+    "popularity": 85,
+    "description": "A mountaintop French-inspired fantasy village reached by cable car, featuring the iconic Golden Bridge held by giant stone hands.",
+    "location": "Ba Na Hills, 25km west of Da Nang",
+    "bestTime": "Weekday mornings (arrive by 8am)",
+    "imageUrl": "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+    "amenities": [
+      "Cable Car Access",
+      "Restaurants",
+      "Stroller Rental",
+      "Souvenir Shops"
+    ],
+    "safetyFeatures": [
+      "Cable Car Safety Harnesses",
+      "Railed Walkways",
+      "First Aid Posts"
+    ],
+    "tipsAndTricks": [
+      "The cable car ride over jungle is an attraction in itself.",
+      "Golden Bridge gets packed by 10am. Go straight there from the cable car.",
+      "Pack a jacket — at 1,487m it's 10°C cooler than Da Nang."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Worth every penny for the cable car alone",
+      "excerpt": "My kids screamed with joy as we climbed through the clouds on the cable car. The Golden Bridge was the cherry on top.",
+      "author": "Tom, dad of 2 from Auckland",
+      "fullStory": "The cable car ride is genuinely spectacular. My 7-year-old spotted a waterfall from the cable car. The French village has European architecture, a small arcade, and beautiful gardens. We spent 5 hours and still felt rushed."
+    },
+    "itineraryComparison": {
+      "halfDay": "Cable car up, Golden Bridge photos, one garden, cable car down",
+      "fullDay": "Cable car, Golden Bridge, French village, gardens, lunch, shows, return",
+      "bestFor": "Kids 6-16 who can handle walking, families who love views"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Ba Na Hills with kids",
+      "Golden Bridge family",
+      "Da Nang family attractions",
+      "Vietnam cable car"
+    ]
+  },
+  {
+    "id": "danang-002",
+    "name": "Hoi An Old Town Lantern Walk",
+    "city": "Da Nang",
+    "country": "Vietnam",
+    "category": "Parks & Nature",
+    "ageRange": "2-99",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 90,
+    "description": "UNESCO World Heritage port town where kids love lantern-lit streets, boat rides, and lantern-making workshops.",
+    "location": "Hoi An, 30km south of Da Nang",
+    "bestTime": "Late afternoon through evening for lantern atmosphere",
+    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+    "amenities": [
+      "Pedestrian Streets",
+      "Restaurants",
+      "Public Toilets",
+      "Dock Access"
+    ],
+    "safetyFeatures": [
+      "Traffic-Free Zones Evenings",
+      "Well-Lit Streets",
+      "Life Jackets Boat Rides"
+    ],
+    "tipsAndTricks": [
+      "Rent bicycles ($1/day) — Hoi An is flat and easy to explore.",
+      "Lantern-making workshops are a hit — kids make their own for $5.",
+      "Try cao lau noodles — unique to Hoi An, kids love the pork and noodle combo."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The night the town lit up for us",
+      "excerpt": "Watching my kids float paper lanterns on the river under a full moon — that's a travel memory you can't buy.",
+      "author": "Sarah, mom of 3 from Toronto",
+      "fullStory": "We arrived around 4pm, did a lantern-making workshop, and at sunset the whole town turned gold. The boat ride was the highlight. My 8-year-old said it was 'the best night ever'."
+    },
+    "itineraryComparison": {
+      "halfDay": "Lantern workshop, Old Town walk, dinner, river boat ride",
+      "fullDay": "Bicycle tour + Japanese Bridge + market + cooking class + evening lantern festival",
+      "bestFor": "All ages, especially families who love culture and hands-on activities"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Hoi An with kids",
+      "family friendly Hoi An",
+      "Da Nang family day trip",
+      "Vietnam lantern festival"
+    ]
+  },
+  {
+    "id": "danang-003",
+    "name": "Sun World Danang Wonders",
+    "city": "Da Nang",
+    "country": "Vietnam",
+    "category": "Theme Parks",
+    "ageRange": "4-16",
+    "safetyRating": 4.0,
+    "priceRange": "$$",
+    "popularity": 65,
+    "description": "Amusement park with over 30 rides, a water park section, and ocean views from the giant Ferris wheel.",
+    "location": "Asia Park, Hoa Cuong Bac, Da Nang",
+    "bestTime": "Weekday afternoons 3pm (open til 10pm)",
+    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+    "amenities": [
+      "Restaurants",
+      "Locker Rental",
+      "Free Parking",
+      "Nursing Room"
+    ],
+    "safetyFeatures": [
+      "Ride Inspections",
+      "Lifeguards Water Park",
+      "Security"
+    ],
+    "tipsAndTricks": [
+      "Sun Wheel offers incredible Da Nang Bay views at sunset.",
+      "Water park opens 9am, rides open 3pm — plan around this.",
+      "Download the Sun World app for real-time queue times."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Ferris wheel sunset and the best night of our trip",
+      "excerpt": "The Sun Wheel at sunset was breathtaking. My 10-year-old said 'this is better than Disneyland'.",
+      "author": "Mark, dad of 1 from Hong Kong",
+      "fullStory": "Weekday afternoon and it was delightfully uncrowded. My daughter loved the drop tower. The Ferris wheel was a nice cooldown — 30 minutes floating over Da Nang. Park lights up beautifully at night."
+    },
+    "itineraryComparison": {
+      "halfDay": "Ferris wheel + 3 rides, games, dinner at the park",
+      "fullDay": "Water park morning + rides afternoon + evening shows + Ferris wheel night view",
+      "bestFor": "Families with kids 5+, ride enthusiasts"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Sun World Danang",
+      "Asia Park Da Nang",
+      "Da Nang family amusement park",
+      "Vietnam theme parks"
+    ]
+  },
+  {
+    "id": "siemreap-001",
+    "name": "Angkor Wat Temple Tour",
+    "city": "Siem Reap",
+    "country": "Cambodia",
+    "category": "Parks & Nature",
+    "ageRange": "5+",
+    "safetyRating": 3.5,
+    "priceRange": "$$",
+    "popularity": 94,
+    "description": "The world's largest religious monument and a UNESCO World Heritage site with intricate carvings, climbable towers, and jungle-wrapped temples.",
+    "location": "Angkor Archaeological Park, 6km north of Siem Reap",
+    "bestTime": "Sunrise (5am) for iconic reflection, explore before 11am heat",
+    "imageUrl": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Water Vendors",
+      "Shaded Rest Areas",
+      "Bicycle & Tuk Tuk Rental"
+    ],
+    "safetyFeatures": [
+      "Guard Rails Steep Steps",
+      "Well-Marked Paths",
+      "Park Rangers"
+    ],
+    "tipsAndTricks": [
+      "Book a tuk tuk for the day ($15-20) — shaded, fun, driver plans the route.",
+      "Multi-day pass (3-day for $62) — one day isn't enough with kids.",
+      "Start with Ta Prohm ('Tomb Raider Temple') — trees through ruins captivate kids."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Indiana Jones for a day",
+      "excerpt": "My 8-year-old spent the whole day pretending to be an explorer discovering lost temples.",
+      "author": "Anna, mom of 2 from Stockholm",
+      "fullStory": "Total opposite of boring. Ta Prohm with strangler fig trees? They explored like a playground. Climbing Angkor Wat's central tower made them feel like adventurers. Cold coconut water every hour kept everyone happy."
+    },
+    "itineraryComparison": {
+      "halfDay": "Sunrise at Angkor Wat + Ta Prohm + Bayon, return by noon",
+      "fullDay": "Sunrise + Angkor Wat + Ta Prohm + Bayon + Preah Khan + sunset at Pre Rup",
+      "bestFor": "Adventure families, history lovers, kids who love exploring"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Angkor Wat with kids",
+      "Siem Reap family tour",
+      "Cambodia family travel",
+      "temples with children"
+    ]
+  },
+  {
+    "id": "siemreap-002",
+    "name": "Angkor National Museum",
+    "city": "Siem Reap",
+    "country": "Cambodia",
+    "category": "Museums",
+    "ageRange": "8+",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 70,
+    "description": "State-of-the-art museum with multimedia exhibits, 3D projections, and artifacts telling the story of the Khmer Empire.",
+    "location": "Charles de Gaulle Road, Siem Reap (5 min from Old Market)",
+    "bestTime": "Before your first temple visit, afternoon 1pm-4pm (hottest time)",
+    "imageUrl": "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+    "amenities": [
+      "Air Conditioning",
+      "Audio Guides",
+      "Cafe",
+      "Gift Shop"
+    ],
+    "safetyFeatures": [
+      "Clear Exit Signage",
+      "Security Guards",
+      "Wheelchair Access"
+    ],
+    "tipsAndTricks": [
+      "Visit BEFORE the temples — context makes ruins 10x more interesting for kids.",
+      "Audio guide ($3) has a dedicated kids' channel with fun facts.",
+      "Gallery of 1,000 Buddhas in the basement captivates children."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Made the temples 100x more interesting",
+      "excerpt": "After the museum, my kids were spotting carvings and saying 'that's Shiva!'.",
+      "author": "John, dad of 2 from Vancouver",
+      "fullStory": "Brilliant advice to do the museum first. Kids watched a 3D film about Angkor Wat construction, learned Hindu mythology, and saw statues up close. At the real temples, they pointed out linga and apsaras."
+    },
+    "itineraryComparison": {
+      "halfDay": "Museum exhibits + 3D film + cafe, 2-3 hours",
+      "fullDay": "Museum morning + lunch + Artisans Angkor workshop afternoon",
+      "bestFor": "Families wanting Khmer history, educational enrichment"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Angkor National Museum kids",
+      "Siem Reap educational",
+      "Cambodia museum family",
+      "Khmer Empire for children"
+    ]
+  },
+  {
+    "id": "siemreap-003",
+    "name": "Cambodian Cultural Village",
+    "city": "Siem Reap",
+    "country": "Cambodia",
+    "category": "Theme Parks",
+    "ageRange": "3-14",
+    "safetyRating": 3.4,
+    "priceRange": "$",
+    "popularity": 52,
+    "description": "Cultural theme park with miniature replicas of Cambodia's landmarks, traditional dance, and 11 ethnic group villages.",
+    "location": "Sala Kanseng Village, Siem Reap (5 min from city center)",
+    "bestTime": "Mornings 9am-noon when shows are scheduled",
+    "imageUrl": "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+    "amenities": [
+      "Restaurants",
+      "Shaded Walkways",
+      "Parking",
+      "Souvenir Shops"
+    ],
+    "safetyFeatures": [
+      "Railed Walkways",
+      "Well-Maintained Grounds",
+      "Security"
+    ],
+    "tipsAndTricks": [
+      "10am Apsara dance show is the best — kids love colorful costumes.",
+      "Wax museum section is cheesy but fun for photo ops.",
+      "Book a guide ($5) for kid-friendly explanations of ethnic groups."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80",
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A fun cultural crash course",
+      "excerpt": "My 6-year-old danced along to the Apsara show and tried coconut candy. So much fun.",
+      "author": "Priya, mom of 2 from Kuala Lumpur",
+      "fullStory": "Not a high-end attraction — models are dated, park feels tired. But kids loved it. Miniature Angkor Wat was a hit, dance performance beautiful, they tried snacks from villages. For $5 entry, 3 hours of fun."
+    },
+    "itineraryComparison": {
+      "halfDay": "Miniature landmarks + dance show + 3 villages, lunch inside",
+      "fullDay": "All villages + wax museum + performances + Artisans Angkor workshop",
+      "bestFor": "Young kids 3-10, families wanting light cultural experience"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Cambodian Cultural Village",
+      "Siem Reap young kids",
+      "Cambodia family theme park",
+      "Apsara dance children"
+    ]
+  },
+  {
+    "id": "manila-001",
+    "name": "Manila Ocean Park",
+    "city": "Manila",
+    "country": "Philippines",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-16",
+    "safetyRating": 3.9,
+    "priceRange": "$$",
+    "popularity": 80,
+    "description": "World-class oceanarium with a 25-meter walk-through tunnel, touch pools, penguin encounters, and sea lion shows on Manila Bay.",
+    "location": "Luneta Park Complex, Ermita, Manila",
+    "bestTime": "Weekday mornings 9am-11am before school groups",
+    "imageUrl": "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurants",
+      "Parking",
+      "Souvenir Shops"
+    ],
+    "safetyFeatures": [
+      "Glass Barriers",
+      "Lifeguards Touch Pools",
+      "First Aid Station"
+    ],
+    "tipsAndTricks": [
+      "Buy 'All Access' pass online — 20% cheaper, includes sea lion show.",
+      "Walk-through tunnel is best at opening when empty.",
+      "Penguin exhibit is 15°C — bring a jacket for little ones."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Penguins in the tropics!",
+      "excerpt": "My kids couldn't believe we were watching penguins in Manila. The sea lion show was the grand finale.",
+      "author": "Catherine, mom of 2 from Dubai",
+      "fullStory": "Exceeded expectations. Walk-through tunnel with giant manta rays and sharks. Touch pool with starfish and sea cucumbers. Penguins were the showstopper. Sea lion show had everyone cheering."
+    },
+    "itineraryComparison": {
+      "halfDay": "Oceanarium tunnel + touch pools + sea lion show, 3 hours",
+      "fullDay": "All exhibits + penguin encounter + lunch + Manila Bay sunset walk",
+      "bestFor": "Ages 2-12, families who love marine life"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Manila Ocean Park family",
+      "Philippines aquarium kids",
+      "Manila family attractions",
+      "sea lion show Manila"
+    ]
+  },
+  {
+    "id": "manila-002",
+    "name": "Enchanted Kingdom",
+    "city": "Manila",
+    "country": "Philippines",
+    "category": "Theme Parks",
+    "ageRange": "3-16",
+    "safetyRating": 4.0,
+    "priceRange": "$$",
+    "popularity": 83,
+    "description": "The Philippines' premier theme park with 7 themed zones, over 30 rides including roller coasters and a log flume.",
+    "location": "Santa Rosa, Laguna (1 hour south of Manila)",
+    "bestTime": "Weekdays at 10am opening to beat weekend crowds",
+    "imageUrl": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+    "amenities": [
+      "Restaurants",
+      "Locker Rental",
+      "Stroller Rental",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Ride Safety Inspections",
+      "Height Requirements Posted",
+      "First Aid",
+      "Security"
+    ],
+    "tipsAndTricks": [
+      "Rent a locker ($3) for the whole day.",
+      "Kids' zone (Enchanting Kingdom) has gentle rides for ages 3-7.",
+      "Download the EK mobile app for wait times."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Our kids' first roller coaster",
+      "excerpt": "My 8-year-old conquered his first roller coaster. The pure joy on his face was worth the trip.",
+      "author": "Michael, dad of 2 from San Francisco",
+      "fullStory": "Dedicated a full day and it was worth it. Well-maintained, clean, staff incredibly friendly with kids. Our 8-year-old was tall enough for the Pterodactyl coaster. He was terrified on the climb but came off beaming."
+    },
+    "itineraryComparison": {
+      "halfDay": "Kids' zone + 3-4 thrill rides + lunch, leave by 3pm",
+      "fullDay": "All zones, major rides, shows, parade, dinner, night Ferris wheel",
+      "bestFor": "Thrill-seeking families, day trips from Manila"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Enchanted Kingdom Philippines",
+      "Manila theme park family",
+      "Laguna amusement park",
+      "Philippines rides kids"
+    ]
+  },
+  {
+    "id": "manila-003",
+    "name": "The Mind Museum",
+    "city": "Manila",
+    "country": "Philippines",
+    "category": "Museums",
+    "ageRange": "4-16",
+    "safetyRating": 4.9,
+    "priceRange": "$$",
+    "popularity": 77,
+    "description": "World-class science museum with over 250 interactive exhibits across 5 galleries exploring atoms, life, Earth, the universe, and technology.",
+    "location": "Bonifacio Global City (BGC), Taguig",
+    "bestTime": "Weekday mornings 9am-noon",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
+    "amenities": [
+      "Air Conditioning",
+      "Cafe",
+      "Gift Shop",
+      "Wheelchair Access"
+    ],
+    "safetyFeatures": [
+      "Interactive Exhibit Guards",
+      "Staff Supervision",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "Buy tickets online a day ahead — weekend slots sell out.",
+      "'Atom' gallery has a touchable periodic table display.",
+      "Plan 3-4 hours minimum — kids will try everything twice."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Finally, a science museum that does it right",
+      "excerpt": "So many 'interactive' museums have broken exhibits. This one had everything working.",
+      "author": "David, dad of 2 from Singapore",
+      "fullStory": "Genuinely top-tier. Every exhibit worked and was engaging. My 9-year-old loved the earthquake simulator and Tesla coil. My 6-year-old spent 30 minutes in the Life gallery with the DNA model. Staff knowledgeable and happy to explain."
+    },
+    "itineraryComparison": {
+      "halfDay": "Atom + Life + Earth galleries, 2.5 hours",
+      "fullDay": "All 5 galleries + lab tour + cafe lunch + BGC park",
+      "bestFor": "Science-loving families, rainy day activity"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Mind Museum Manila",
+      "science museum Philippines kids",
+      "BGC family activities",
+      "Manila educational"
+    ]
+  },
+  {
+    "id": "cebu-001",
+    "name": "Cebu Safari & Adventure Park",
+    "city": "Cebu",
+    "country": "Philippines",
+    "category": "Zoos & Aquariums",
+    "ageRange": "3-16",
+    "safetyRating": 4.1,
+    "priceRange": "$$",
+    "popularity": 76,
+    "description": "The largest wildlife park in the Philippines, home to over 1,000 animals across 170 hectares with safari rides and a zip line adventure park.",
+    "location": "Carmen, Cebu (1.5 hours north of Cebu City)",
+    "bestTime": "Early mornings 8am-10am when animals are most active",
+    "imageUrl": "https://images.unsplash.com/photo-1594103345324-16aa1bcffdb9?w=800&q=80",
+    "amenities": [
+      "Restaurants",
+      "Restrooms",
+      "Parking",
+      "Souvenir Shops"
+    ],
+    "safetyFeatures": [
+      "Animal Barrier Fencing",
+      "Safari Vehicle Seat Belts",
+      "First Aid",
+      "Rangers"
+    ],
+    "tipsAndTricks": [
+      "Book the 9am safari truck slot for cooler weather and active animals.",
+      "Pack sunscreen and hats — many walkways are exposed.",
+      "Bird show at 10:30am has eagles flying overhead."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Lions and giraffes in Cebu — who knew?",
+      "excerpt": "We saw giraffes up close from the safari truck. My 7-year-old was wide-eyed the whole ride.",
+      "author": "Rachel, mom of 1 from Tokyo",
+      "fullStory": "Had no idea Cebu had a world-class safari park. Safari truck ride through open enclosures with zebras, giraffes, antelopes. Bird show with eagles swooping overhead. Full-day adventure."
+    },
+    "itineraryComparison": {
+      "halfDay": "Safari truck + bird show + lunch, leave by 1pm",
+      "fullDay": "Safari + bird show + adventure park zip line + all exhibits + dinner",
+      "bestFor": "Animal-loving families, adventure families, day trips from Cebu City"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Cebu Safari review",
+      "Philippines wildlife park",
+      "Cebu with kids",
+      "safari park Philippines family"
+    ]
+  },
+  {
+    "id": "cebu-002",
+    "name": "Chocolate Hills Adventure Park",
+    "city": "Cebu",
+    "country": "Philippines",
+    "category": "Parks & Nature",
+    "ageRange": "5+",
+    "safetyRating": 3.2,
+    "priceRange": "$",
+    "popularity": 82,
+    "description": "Eco-adventure park on Bohol Island near the iconic Chocolate Hills, offering ziplines, bike rides, and views over 1,200 cone-shaped hills.",
+    "location": "Carmen, Bohol (2hr ferry from Cebu + 1hr drive)",
+    "bestTime": "Early morning 6am-8am for sunrise and cooler temps",
+    "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Snack Stands",
+      "Parking",
+      "Equipment Rental"
+    ],
+    "safetyFeatures": [
+      "Helmets Provided",
+      "Safety Harnesses",
+      "Staff Supervision",
+      "Railed Platforms"
+    ],
+    "tipsAndTricks": [
+      "Bike zip line is the main attraction — pedal a suspended bike over the hills.",
+      "Combine with Tarsier Conservation Area (15 min drive).",
+      "Pack water and snacks — closest restaurant is 15 min away."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Biking over a chocolate landscape",
+      "excerpt": "We zip-lined across the Chocolate Hills. My 9-year-old was braver than me — she did superman-style!",
+      "author": "Emma, mom of 2 from Seattle",
+      "fullStory": "Worth the journey. The Chocolate Hills are surreal — 1,200 cone-shaped hills. Bike zip line across them had us screaming with joy. Also did the face-down 'superman' zip line. Visit the tarsiers too. Perfect day."
+    },
+    "itineraryComparison": {
+      "halfDay": "Viewpoint + bike zip line + tarsier visit, 4 hours",
+      "fullDay": "Cebu ferry (6am) + zipline + tarsiers + Loboc River lunch cruise + return",
+      "bestFor": "Adventure families, kids 7+ not afraid of heights"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Chocolate Hills kids",
+      "Bohol family adventure",
+      "Cebu day trip Bohol",
+      "Philippines nature parks"
+    ]
+  }
+]

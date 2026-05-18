@@ -1,0 +1,872 @@
+[
+  {
+    "id": "mumbai-003",
+    "name": "Mumbai Zoo (Veermata Jijabai Bhosale Udyan)",
+    "city": "Mumbai",
+    "country": "India",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-10",
+    "safetyRating": 4.2,
+    "priceRange": "$",
+    "popularity": 72,
+    "description": "One of India's oldest zoos, recently renovated with spacious enclosures and a dedicated children's section. Lions, tigers, bears, and a reptile house keep kids captivated for hours. The lush botanical garden setting offers plenty of shade for hot Mumbai days.",
+    "location": "Byculla East, Mumbai, Maharashtra 400027",
+    "bestTime": "Weekday mornings, October-February",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Picnic Areas",
+      "Shaded Walkways",
+      "Snack Kiosks",
+      "Restrooms"
+    ],
+    "safetyFeatures": [
+      "Animal Barriers",
+      "First Aid Station",
+      "Security Guards",
+      "Clear Signage"
+    ],
+    "tipsAndTricks": [
+      "Go on a weekday morning before 10 AM. The animals are most active during feeding time and the crowds are thin.",
+      "Skip the reptile house if your kid is under 5 — it’s dimly lit and the snakes behind glass can feel intense for little ones.",
+      "Bring a reusable water bottle. There are filtered water stations near the main restrooms and the plastic bottles at kiosks are overpriced.",
+      "The butterfly garden at the back is a hidden gem. Most families miss it. Your kids can walk through clouds of butterflies for free.",
+      "Combine with a visit to Bhau Daji Lad Museum (10-minute walk) for a budget-friendly morning. The museum has great kid-oriented Sunday workshops."
+    ],
+    "parentStory": {
+      "title": "He roared back at the lion and the lion roared louder",
+      "excerpt": "My 3-year-old stood in front of the lion enclosure and let out his best roar. The lion turned, looked at him, and roared back. His jaw dropped. I’ve never seen him that speechless.",
+      "author": "Priya, mom of 2 from Pune",
+      "fullStory": "I was nervous about taking a toddler to an Indian zoo — I’d heard mixed reviews about animal welfare. But the renovated Mumbai Zoo surprised me. The enclosures are spacious, the animals look healthy, and my son’s moment with the lion is a core memory now. The zoo isn’t fancy like Singapore’s, but it’s honest and affordable. We spent 3 hours there and spent less than ₹500."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main animals + butterfly garden + playground, 2.5 hours",
+      "fullDay": "Zoo + Bhau Daji Lad Museum + lunch at Byculla food stalls",
+      "bestFor": "Budget-conscious families, animal-loving toddlers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Mumbai Zoo",
+      "Veermata Jijabai Bhosale Udyan",
+      "family zoo Mumbai",
+      "things to do in Mumbai with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ]
+  },
+  {
+    "id": "mumbai-004",
+    "name": "Nehru Science Centre",
+    "city": "Mumbai",
+    "country": "India",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 78,
+    "description": "India’s largest interactive science centre with over 500 hands-on exhibits spread across indoor and outdoor galleries. Kids can generate electricity by pedaling, create tornadoes, and explore a life-size model of a spacecraft. The 3D science shows and the 'Science on a Sphere' theatre are crowd favorites.",
+    "location": "Dr. E Moses Road, Worli, Mumbai 400018",
+    "bestTime": "Weekdays, 10 AM - 2 PM",
+    "imageUrl": "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+    "amenities": [
+      "Wheelchair Accessible",
+      "Cafeteria",
+      "Parking",
+      "Science Shows",
+      "Gift Shop"
+    ],
+    "safetyFeatures": [
+      "Supervised Exhibits",
+      "Emergency Exits",
+      "First Aid Room",
+      "Staff Assistants"
+    ],
+    "tipsAndTricks": [
+      "Head straight to the 'Science of Motion' wing on the ground floor — it’s the most interactive and least crowded before 11 AM.",
+      "The 3D film shows have specific timings (11 AM, 1 PM, 3 PM). Book your slot right when you arrive or they sell out.",
+      "Don’t skip the outdoor gallery. The giant kaleidoscope and the pulley-chair exhibit are in the back garden and 80% of visitors miss them.",
+      "Bring a change of clothes for the water-play exhibits near the back. Kids WILL get wet and happy.",
+      "The cafeteria food is mediocre. Pack lunches and eat on the shaded benches outside the main hall — way better value."
+    ],
+    "parentStory": {
+      "title": "She built a working circuit and screamed with joy",
+      "excerpt": "My 7-year-old daughter spent 45 minutes at the electricity exhibit. She connected wires, flipped switches, and when the light bulb finally lit up, she screamed like she’d discovered fire. That’s when I knew this was worth every rupee.",
+      "author": "Rohan, dad of 1 from Mumbai",
+      "fullStory": "We almost went to a mall instead because it was raining. Thank goodness we chose the Science Centre. My daughter is usually glued to her iPad, but here she was building circuits, testing aerodynamics, and asking questions I couldn’t answer. We stayed 4 hours and she didn’t ask for her tablet once. The ticket cost less than a movie and we got ten times the value."
+    },
+    "itineraryComparison": {
+      "halfDay": "Indoor galleries + one 3D show, 3 hours",
+      "fullDay": "All galleries + outdoor section + both shows + picnic lunch",
+      "bestFor": "Curious kids 5-12, rainy-day activity"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Nehru Science Centre Mumbai",
+      "science museum Mumbai kids",
+      "interactive museum Mumbai",
+      "rainy day Mumbai with children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ]
+  },
+  {
+    "id": "delhi-003",
+    "name": "National Zoological Park",
+    "city": "New Delhi",
+    "country": "India",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.3,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "Spread across 176 acres, Delhi’s premier zoo is home to over 1,350 animals representing 130 species. White tigers, Royal Bengal tigers, chimpanzees, and a massive walk-through aviary are highlights. The toy train ride through the park is a hit with younger children.",
+    "location": "Mathura Road, New Delhi 110003",
+    "bestTime": "October-March, 9 AM opening",
+    "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "amenities": [
+      "Toy Train",
+      "Stroller Rental",
+      "Snack Kiosks",
+      "Shaded Rest Areas",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Moated Enclosures",
+      "CCTV Coverage",
+      "Security Patrols",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "Rent the battery-operated toy train as soon as you enter — it gives a 20-minute tour of the whole zoo and helps kids orient themselves before walking.",
+      "The white tiger enclosure is at the far northeast corner. Walk there first (30 min from entrance) while it’s still cool, then work your way back.",
+      "Bring a stroller even if your kid walks. The zoo is 176 acres and little legs give out around the 2-hour mark.",
+      "The reptile house is underwhelming compared to the mammal exhibits. Skip it if time is tight.",
+      "Pack a picnic. The zoo allows outside food and there are shaded tables near the aviary. The on-site restaurant is overpriced and slow."
+    ],
+    "parentStory": {
+      "title": "The white tiger yawned and my son yawning back broke the silence",
+      "excerpt": "We stood in silence watching the white tiger for what felt like forever. Then it yawned, and my 4-year-old yawned back. The whole crowd giggled. That moment of pure, shared wonder is why we travel.",
+      "author": "Ananya, mom of 2 from Bangalore",
+      "fullStory": "Delhi Zoo is massive — way bigger than I expected. My kids were tired after just the first section, but the toy train saved us. Once they saw the white tigers, they got their second wind. The aviary was also amazing — birds flying right over your head. It’s not the cleanest zoo I’ve seen, but the animal diversity is incredible for the price."
+    },
+    "itineraryComparison": {
+      "halfDay": "Toy train tour + white tigers + aviary, 3 hours",
+      "fullDay": "Full zoo walk + picnic + nearby National Museum visit",
+      "bestFor": "Animal lovers, budget family outings in Delhi"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Delhi Zoo",
+      "National Zoological Park Delhi",
+      "family zoo Delhi",
+      "things to do in Delhi with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80"
+    ]
+  },
+  {
+    "id": "delhi-004",
+    "name": "National Science Centre",
+    "city": "New Delhi",
+    "country": "India",
+    "category": "Museums",
+    "ageRange": "4-16",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 76,
+    "description": "One of India’s largest science centres with themed halls covering prehistoric life, human biology, energy, and space exploration. The giant dinosaur skeleton at the entrance stops every kid in their tracks. Interactive exhibits let children test their reflexes, understand optical illusions, and control a robotic arm.",
+    "location": "Bhairon Marg, Near Gate No.1, Pragati Maidan, New Delhi 110001",
+    "bestTime": "Weekdays, 10 AM - 1 PM",
+    "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    "amenities": [
+      "Wheelchair Access",
+      "Cafeteria",
+      "Science Shows",
+      "Library",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Guard Rails",
+      "Staffed Galleries",
+      "Emergency Exits",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "Start with the 'Hall of Space' on the third floor — the rocket models and astronaut suits are the most impressive and get crowded after 11 AM.",
+      "The 3D science film costs extra but is worth it for kids 6+. The 'Dinosaurs of India' film runs at 12 PM and 3 PM.",
+      "The 'Human Biology' hall has a transparent model of a beating heart that fascinates kids. Press the button to watch blood flow through each chamber.",
+      "There’s a tinkering lab on the ground floor where kids 8+ can build simple circuits. Ask at the front desk for timings.",
+      "Avoid weekends unless you enjoy elbow-to-elbow crowds. Weekday mornings are practically empty."
+    ],
+    "parentStory": {
+      "title": "He asked if I was a robot too after the robotics demo",
+      "excerpt": "After controlling the robotic arm for 10 minutes, my 5-year-old turned to me very seriously and asked 'Papa, are you also a robot?' He wasn’t joking. That’s when you know science has truly blown their mind.",
+      "author": "Vikram, dad of 1 from Gurgaon",
+      "fullStory": "My son is obsessed with robots, so the National Science Centre was our top priority for our Delhi trip. The robotics section alone was worth the drive. He spent 20 minutes moving the robotic arm, picking up blocks, stacking them. An engineer working there noticed his interest and spent 15 extra minutes showing him how the sensors worked. That kind of staff engagement is rare."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-4 halls + one film show, 3 hours",
+      "fullDay": "All 6 halls + both films + tinkering lab",
+      "bestFor": "School-age kids, STEM-loving families"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "National Science Centre Delhi",
+      "science museum Delhi kids",
+      "interactive science Delhi",
+      "educational activities Delhi"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80"
+    ]
+  },
+  {
+    "id": "jaipur-003",
+    "name": "Jaipur Zoo",
+    "city": "Jaipur",
+    "country": "India",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-10",
+    "safetyRating": 4.0,
+    "priceRange": "$",
+    "popularity": 68,
+    "description": "Located within the Ram Niwas Garden, Jaipur Zoo is one of Rajasthan’s oldest zoos, recently revamped with better enclosures and a dedicated children’s petting area. White tigers, leopards, and a walk-through aviary are highlights. The adjacent garden has a toy train and boating lake.",
+    "location": "Ram Niwas Garden, Jaipur, Rajasthan 302004",
+    "bestTime": "November-February, 8:30 AM opening",
+    "imageUrl": "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+    "amenities": [
+      "Toy Train",
+      "Boating Lake",
+      "Snack Stalls",
+      "Shaded Benches",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Enclosure Barriers",
+      "Staff Patrols",
+      "First Aid Post",
+      "Drinking Water"
+    ],
+    "tipsAndTricks": [
+      "Go at opening time (8:30 AM). The animals are fed between 9-10 AM and you’ll see them at their most active.",
+      "The children’s zoo section has rabbits, guinea pigs, and goats that kids can pet and feed. Bring some carrot sticks for an extra-special experience.",
+      "Combine with a visit to the Albert Hall Museum across the garden — it’s a 5-minute walk and has fantastic kid-friendly puppet shows on weekends.",
+      "The toy train ride circles the garden and costs just ₹20. Run by the garden, not the zoo, so buy tickets at the garden entrance.",
+      "Avoid summer months (April-June). The heat is brutal and most animals hide in shaded enclosures, invisible to visitors."
+    ],
+    "parentStory": {
+      "title": "She fed a goat named Chiku and didn’t want to leave",
+      "excerpt": "My city kid touched an animal for the first time at the petting zoo. A goat named Chiku ate carrots from her hand and she cried happy tears. We went back three times during our Jaipur trip.",
+      "author": "Meera, mom of 1 from Delhi",
+      "fullStory": "My 4-year-old daughter has always been nervous around animals. At Jaipur Zoo’s petting section, a park attendant showed her how to hold a carrot flat on her palm so the goat wouldn’t nibble her fingers. The goat (Chiku, she named him) gently took the carrot and she was hooked. We visited the same goat every day of our trip. This zoo isn’t fancy, but the kindness of the staff here is unmatched."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo + petting area + toy train, 2.5 hours",
+      "fullDay": "Zoo + Albert Hall Museum + Ram Niwas Garden picnic",
+      "bestFor": "Toddlers, first-time zoo visitors"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Jaipur Zoo",
+      "Ram Niwas Garden zoo",
+      "Jaipur with kids",
+      "family activities Jaipur"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80"
+    ]
+  },
+  {
+    "id": "jaipur-004",
+    "name": "Amber Fort Family Tour with Kid-Friendly Guide",
+    "city": "Jaipur",
+    "country": "India",
+    "category": "Museums",
+    "ageRange": "4-12",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 85,
+    "description": "A UNESCO World Heritage site reimagined for families. This isn’t a dry history tour — it’s a treasure hunt through the fortress. Kids get a 'royal quest' booklet with puzzles, stickers, and missions at each palace. Guides use storytelling (not dates) to bring the Maharajas to life. Elephant rides up the ramp and the Sheesh Mahal (Mirror Palace) are showstoppers.",
+    "location": "Devisinghpura, Amer, Jaipur, Rajasthan 302001",
+    "bestTime": "October-March, 8 AM opening",
+    "imageUrl": "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80",
+    "amenities": [
+      "Stroller-friendly Pathways",
+      "Restrooms",
+      "Water Stations",
+      "Kid-Friendly Guides",
+      "Camel Cart Rides"
+    ],
+    "safetyFeatures": [
+      "Railings at Heights",
+      "Medical Room",
+      "Security Staff",
+      "Well-Marked Exits"
+    ],
+    "tipsAndTricks": [
+      "Book a private family guide (₹600-800) at the entrance — specifically ask for someone who 'works with children'. They use interactive storytelling and know which staircases to avoid.",
+      "Start with the elephant ride at 8 AM before the queue (and heat) builds. By 9:30 AM, the wait hits 90 minutes.",
+      "The Sheesh Mahal (Mirror Palace) is on the second level — carry your kids up the steps rather than taking the ramp exit. The mirrored ceiling will blow their minds.",
+      "Kids under 5 may find the audio tour boring. Instead, download the 'Amber Fort Treasure Hunt' printable worksheet from the Rajasthan Tourism website before you go.",
+      "Buy water bottles outside the fort complex (₹20 vs ₹100 inside). There are shops in the parking lot before the ticket counter."
+    ],
+    "parentStory": {
+      "title": "Our 6-year-old found the 'secret door' before the guide did",
+      "excerpt": "The guide was explaining how the Queen escaped through a secret tunnel. Our son spotted a narrow doorway behind a tapestry and ran through it. Turns out it was a servant’s passage from 1592. He found ancient graffiti and felt like Indiana Jones.",
+      "author": "David, dad of 2 from Sydney",
+      "fullStory": "I was worried Amber Fort would be another 'stand here, look at this, listen to dates' experience. But our guide, Raj, was incredible. He gave each kid a 'royal mission' — find the peacock carving, count the pillars in the Diwan-e-Aam, spot the hidden mirror in the Sheesh Mahal. My kids were engaged for 3 hours. That’s a miracle. The fort itself is stunning, but the way it was presented made it unforgettable."
+    },
+    "itineraryComparison": {
+      "halfDay": "Elephant ride + palace tour + Sheesh Mahal, 3 hours",
+      "fullDay": "Morning fort tour + lunch at Amer + afternoon Jaigarh Fort hike",
+      "bestFor": "Active families, history lovers aged 5+"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Amber Fort with kids",
+      "Jaipur family tour",
+      "kid-friendly guide Jaipur",
+      "Amber Fort treasure hunt"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80"
+    ]
+  },
+  {
+    "id": "agra-003",
+    "name": "Agra Zoo (Bharatpur-Agra Zoo)",
+    "city": "Agra",
+    "country": "India",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-10",
+    "safetyRating": 3.8,
+    "priceRange": "$",
+    "popularity": 60,
+    "description": "A compact but well-maintained zoo near the Taj Mahal area. Home to white tigers, Himalayan bears, zebras, and a lively monkey enclosure. The lush tree cover provides excellent shade, and the small lake in the center attracts migratory birds in winter. A peaceful alternative for families zooed out by megacity zoos.",
+    "location": "NH-2, Near Shilpgram, Agra, Uttar Pradesh 282001",
+    "bestTime": "October-March, 8 AM - 10 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Snack Kiosks",
+      "Shaded Walkways",
+      "Rest Areas",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Security Guards",
+      "CCTV",
+      "First Aid",
+      "Animal Barriers"
+    ],
+    "tipsAndTricks": [
+      "Combine with a morning Taj visit — the zoo is 10 minutes from the Taj Mahal East Gate and opens at 8 AM.",
+      "The bird aviary is the best section. Peacocks and parrots roam freely. Bring a few peanuts (check with staff first) for an unforgettable experience.",
+      "Skip the reptile house. It’s small and the snakes are usually sleeping. Kids find it boring.",
+      "The zoo is small enough to cover in 1.5 hours. Don’t plan a full day around it — pair it with another Agra attraction.",
+      "The best animal viewing is 8-9 AM during feeding time. By 10 AM most animals are napping in the shade."
+    ],
+    "parentStory": {
+      "title": "We escaped the Taj crowds for the zoo and found peace",
+      "excerpt": "After 2 hours of shoulder-to-shoulder crowds at the Taj, we needed a breather. Agra Zoo was half-empty, shaded, and my kids finally saw animals they’d only read about. The white tiger was pacing near the glass — we were 3 feet away.",
+      "author": "Sophie, mom of 2 from France",
+      "fullStory": "The Taj Mahal was incredible but overwhelming for our kids. By 10 AM we were all hot and cranky. On a whim, we took a rickshaw to Agra Zoo. What a contrast — quiet, green, calm. The white tiger enclosure lets you get surprisingly close. The monkeys were putting on a show. It saved our day and gave us a second wind to enjoy Agra Fort in the evening."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo only, 1.5 hours — pair with Taj Mahal morning visit",
+      "fullDay": "Taj Mahal sunrise + zoo + Agra Fort evening",
+      "bestFor": "Toddlers, families needing a calm afternoon"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Agra Zoo",
+      "zoo near Taj Mahal",
+      "Agra with kids family",
+      "things to do in Agra children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336605-5e9c7c738336?w=800&q=80",
+      "https://images.unsplash.com/photo-1738023354227-16a406891bd2?w=800&q=80"
+    ]
+  },
+  {
+    "id": "agra-004",
+    "name": "Taj Mahal Family Visit with Kid-Friendly Guide",
+    "city": "Agra",
+    "country": "India",
+    "category": "Parks & Nature",
+    "ageRange": "4-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 96,
+    "description": "The world’s most famous monument of love, made accessible for families. A kid-friendly guide transforms the visit from 'looking at a building' into a love story treasure hunt. Children learn about Emperor Shah Jahan and Mumtaz’s romance, spot hidden calligraphy, and race to find the perfect symmetry. The lush gardens are perfect for running around after the indoor tour.",
+    "location": "Dharmapuri, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001",
+    "bestTime": "Sunrise (6-8 AM), October-March",
+    "imageUrl": "https://images.unsplash.com/photo-1775152496490-9cebc8bb7dde?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Wheelchair Rental",
+      "Shaded Gardens",
+      "Water Fountains",
+      "Shoe Covers"
+    ],
+    "safetyFeatures": [
+      "Security Screening",
+      "CCTV",
+      "Medical Room",
+      "Guarded Entry Points"
+    ],
+    "tipsAndTricks": [
+      "Book the sunrise slot (tickets go on sale 30 days in advance online). The crowd at 6 AM is tiny and the marble changes color as the sun rises — it’s magical.",
+      "Hire a kid-friendly guide at the entrance (look for badges with a 'child-friendly' logo). They use storytelling and games, not lectures. ₹500-800 is fair.",
+      "Bring sock-shoes or thin socks. You have to remove shoes on the main platform and the marble gets scorching hot by 9 AM.",
+      "Tell your kids the 'Princess Diana Bench' story — there’s a specific bench inside the complex where Princess Diana sat alone for a photo in 1992. Kids love the royal gossip.",
+      "The Mehtab Bagh garden across the river offers a stunning sunset view of the Taj with hardly any crowds. A 10-minute rickshaw ride from the East Gate."
+    ],
+    "parentStory": {
+      "title": "The love story made my 7-year-old believe in romance for 5 minutes",
+      "excerpt": "The guide told the story of Shah Jahan building this for his beloved wife. My son said 'That’s the most romantic thing I’ve ever heard.' He took it back at lunch when he saw a couple holding hands and said 'Ew,' but for five minutes, the Taj made him a believer.",
+      "author": "Nina, mom of 2 from London",
+      "fullStory": "I was dreading the Taj with kids — long queues, hot marble, bored children. Our guide Khurram changed everything. He turned it into a game: 'Find the flower that appears 99 times.' 'Count the minarets.' 'Spot where the architect was buried alive.' My kids were more engaged than I was. The Taj itself is breathtaking, but the right guide makes it family magic."
+    },
+    "itineraryComparison": {
+      "halfDay": "Sunrise Taj visit + guide + Mehtab Bagh garden, 4 hours",
+      "fullDay": "Sunrise Taj + breakfast + Agra Fort + afternoon marble inlay workshop",
+      "bestFor": "First-time visitors, families wanting a cultural experience"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Taj Mahal with kids",
+      "family visit Taj Mahal",
+      "kid-friendly guide Agra",
+      "Agra family tourism India"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80",
+      "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80",
+      "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80"
+    ]
+  },
+  {
+    "id": "kerala-001",
+    "name": "Kumarakom Bird Sanctuary (Kerala Bird Sanctuary)",
+    "city": "Kerala",
+    "country": "India",
+    "category": "Zoos & Aquariums",
+    "ageRange": "3-12",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 75,
+    "description": "A tranquil bird sanctuary spread along the banks of Vembanad Lake. Home to over 180 bird species including Siberian cranes (winter), kingfishers, herons, and egrets. Families can explore via walking trails or guided boat rides through the mangroves. The canopy walkway offers kids a bird’s-eye view of nesting colonies.",
+    "location": "Kumarakom, Kottayam District, Kerala 686563",
+    "bestTime": "November-February, 6 AM - 10 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1772550018808-ebbcc271726c?w=800&q=80",
+    "amenities": [
+      "Guided Boat Tours",
+      "Walking Trails",
+      "Bird Watching Towers",
+      "Snack Shop",
+      "Restrooms"
+    ],
+    "safetyFeatures": [
+      "Life Jackets on Boats",
+      "Railings on Walkways",
+      "First Aid Kit",
+      "Trained Guides"
+    ],
+    "tipsAndTricks": [
+      "Book the early morning boat safari (6:30 AM). The birds are most active and the lake mist makes it feel like another world.",
+      "Binoculars are essential. Rent them at the entrance (₹100) or bring your own. Kids love spotting birds through them — make it a game with a checklist.",
+      "The walking trail through the mangroves is 4 km. For kids under 6, stick to the 1 km loop near the entrance.",
+      "The Siberian cranes arrive in November and stay until February. If visiting during this window, it’s non-negotiable — you MUST see them.",
+      "Combine with a houseboat cruise on Vembanad Lake. Many operators pick up directly from the sanctuary jetty — it’s a seamless transition from birds to backwaters."
+    ],
+    "parentStory": {
+      "title": "She spotted a kingfisher and whispered for 10 minutes straight",
+      "excerpt": "My usually-loud 6-year-old spotted a kingfisher dive into the water. She whispered 'Mama, look!' and didn’t make another sound for 10 minutes. A kid who never stops talking, silenced by a bird. That’s the power of this place.",
+      "author": "Thomas, dad of 2 from Germany",
+      "fullStory": "We’d been in India for two weeks and our kids were tired of temples and forts. Kumarakom Bird Sanctuary was the reset we needed. The boat ride through the mangroves at dawn was peaceful. Our guide had a bird call whistle that he’d use to call specific species. When a brilliant blue kingfisher dove right next to our boat, my daughter was mesmerized. We spent 3 hours there and she talked about the 'blue bird' for the rest of the trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Boat safari + 1 km nature walk, 3 hours",
+      "fullDay": "Sanctuary + houseboat cruise + lunch on the lake",
+      "bestFor": "Nature-loving families, calm outdoor activity"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Kerala Bird Sanctuary",
+      "Kumarakom bird watching",
+      "family nature Kerala India",
+      "things to do Kerala with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80",
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80"
+    ]
+  },
+  {
+    "id": "kerala-002",
+    "name": "Houseboat Family Cruise (Alleppey Backwaters)",
+    "city": "Kerala",
+    "country": "India",
+    "category": "Parks & Nature",
+    "ageRange": "2-99",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "A magical overnight houseboat cruise through the tranquil backwaters of Alleppey. Glide past palm-fringed canals, rice paddies, and village life while a crew serves fresh Kerala meals. Kids can spot kingfishers, watch toddy tappers climb trees, and try their hand at steering the boat. The sunset over Vembanad Lake is unforgettable.",
+    "location": "Alleppey Boat Jetty, Kuttanad, Kerala 688001",
+    "bestTime": "November-March, 12 PM check-in",
+    "imageUrl": "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80",
+    "amenities": [
+      "Private Bedrooms",
+      "Attached Bathroom",
+      "Onboard Meals",
+      "Sun Deck",
+      "Life Jackets"
+    ],
+    "safetyFeatures": [
+      "Life Jackets for All Ages",
+      "Trained Crew",
+      "Emergency Radio",
+      "Night Anchor System"
+    ],
+    "tipsAndTricks": [
+      "Book a private houseboat (not shared) for families. The premium is worth it for privacy and the ability to stop whenever your kids want to explore.",
+      "Request a 3-hour sunset cruise instead of the standard overnight if your kids are under 5. They’ll love the ride but may get bored on the overnight.",
+      "Choose the 'Central Alleppey' route over 'Kumarakom' — narrower canals, more village life, closer to bird sightings.",
+      "Pack mosquito repellent and light long-sleeve clothing for the evening. The backwaters are beautiful but mosquito activity spikes at dusk.",
+      "Ask the chef to prepare kid-friendly versions of Kerala meals (less spice). Most crews are happy to make mild coconut-based dishes for children."
+    ],
+    "parentStory": {
+      "title": "Our 4-year-old steered the houseboat for 20 whole minutes",
+      "excerpt": "The captain let our son stand at the wheel while we cruised through a straight canal. He gripped it with both hands and announced we were 'sailing to the moon.' Best $2 tip I ever spent.",
+      "author": "Emma, mom of 1 from Singapore",
+      "fullStory": "I was worried about taking a hyperactive 4-year-old on a slow boat ride. Turns out houseboats are the perfect pace for kids. He loved spotting ducks, waving at village kids on the banks, and eating fresh mango from the boat's kitchen. The crew treated him like royalty — even made him a little paper hat. We’ll never forget watching the sun set over the water as a family."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-hour sunset cruise, ideal for young kids",
+      "fullDay": "12 PM check-in to next morning, full backwater experience",
+      "bestFor": "Families wanting a unique, slow-paced Kerala experience"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Kerala houseboat family",
+      "Alleppey backwaters kids",
+      "Kerala family cruise",
+      "houseboat India children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80",
+      "https://images.unsplash.com/photo-1594103345324-16aa1bcffdb9?w=800&q=80"
+    ]
+  },
+  {
+    "id": "goa-003",
+    "name": "Salim Ali Bird Sanctuary (Goa Bird Sanctuary)",
+    "city": "Goa",
+    "country": "India",
+    "category": "Zoos & Aquariums",
+    "ageRange": "3-12",
+    "safetyRating": 4.3,
+    "priceRange": "$",
+    "popularity": 65,
+    "description": "Named after India’s legendary ornithologist, this compact bird sanctuary on Chorao Island is a hidden gem away from Goa’s beach crowds. Mangrove boardwalks wind through nesting sites of kingfishers, herons, eagles, and the iconic black-capped kingfisher. Guided boat rides through the creeks are a hit with kids.",
+    "location": "Chorao Island, Near Panjim, Goa 403102",
+    "bestTime": "November-February, 7 AM - 10 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1644327981167-fbd67b34ba72?w=800&q=80",
+    "amenities": [
+      "Guided Boat Tours",
+      "Boardwalk Trails",
+      "Watchtower",
+      "Snack Kiosk",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Life Jackets",
+      "Boardwalk Railings",
+      "Trained Guides",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 7 AM sharp to catch the morning boat safari (1 hour). After 8:30 the birds quiet down and the heat picks up.",
+      "The boardwalk trail is 1.5 km and stroller-friendly. Skip the boat if your kid gets seasick — the boardwalk is equally good for bird spotting.",
+      "Combine with a visit to Old Goa churches (15-minute drive) for a perfect half-day that breaks up the beach routine.",
+      "Binoculars are provided on the boat tour. But if you have your own, bring them — the provided ones are basic and hard for small hands to focus.",
+      "The sanctuary closes for monsoon (June-September). Check the DFF Goa website before planning your trip."
+    ],
+    "parentStory": {
+      "title": "We saw eagles fishing and my son declared himself a bird expert",
+      "excerpt": "A Brahminy kite swooped down and caught a fish right in front of our boat. My 5-year-old announced 'I am now a bird expert, Mama.' He spent the rest of the trip identifying 'eagles' (every bird larger than a pigeon).",
+      "author": "Aisha, mom of 2 from Hyderabad",
+      "fullStory": "We came to Goa for the beaches but Salim Ali Sanctuary was our surprise highlight. It’s small enough that kids don’t get tired, but packed with wildlife. The boat ride through the mangroves is peaceful and the guide was great with children — he showed them how to mimic bird calls. A perfect morning away from the sun loungers."
+    },
+    "itineraryComparison": {
+      "halfDay": "Boat safari + boardwalk walk, 2.5 hours",
+      "fullDay": "Sanctuary + Old Goa churches + riverside lunch",
+      "bestFor": "Nature breaks from beach time, bird-loving kids"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Goa Bird Sanctuary",
+      "Salim Ali bird sanctuary kids",
+      "Goa family nature",
+      "things to do Goa children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80",
+      "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+    ]
+  },
+  {
+    "id": "doha-004",
+    "name": "Doha Zoo (Doha Oasis of Animals)",
+    "city": "Doha",
+    "country": "Qatar",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-10",
+    "safetyRating": 4.1,
+    "priceRange": "$",
+    "popularity": 62,
+    "description": "A family-friendly zoo in the heart of Doha featuring Arabian oryx, lions, giraffes, and a dedicated children’s farm. The zoo has undergone major renovations with larger, modern enclosures and shaded walkways. Interactive feeding sessions and a small train ride keep younger visitors engaged.",
+    "location": "Al Rayyan Road, Near Aspire Zone, Doha, Qatar",
+    "bestTime": "November-March, 8 AM opening",
+    "imageUrl": "https://images.unsplash.com/photo-1775152496490-9cebc8bb7dde?w=800&q=80",
+    "amenities": [
+      "Toy Train",
+      "Children's Farm",
+      "Picnic Areas",
+      "Cafe",
+      "Prayer Rooms"
+    ],
+    "safetyFeatures": [
+      "Shaded Walkways",
+      "First Aid",
+      "CCTV",
+      "Security Staff"
+    ],
+    "tipsAndTricks": [
+      "Go early (8 AM) in winter months — by 10:30 AM it gets too hot for both animals and kids to be comfortable.",
+      "The children’s farm section has goats, sheep, and rabbits that kids can pet. Bring a small bag of carrots (check with staff first) for a memorable interaction.",
+      "The Arabian oryx enclosure is the star attraction — these majestic antelopes are Qatar’s national animal and very active in the morning.",
+      "Skip summer entirely (June-September). The heat is unbearable and most animals stay in air-conditioned indoor enclosures.",
+      "Combine with a visit to Aspire Park across the road — it has excellent playgrounds and shaded walking paths for an afternoon picnic."
+    ],
+    "parentStory": {
+      "title": "My 3-year-old fed a goat for the first time and it was pure joy",
+      "excerpt": "She held a carrot stick with trembling hands and a goat gently nibbled it. She looked at me with eyes wide open and said 'Again!' We spent 30 minutes at the petting farm. Worth the trip alone.",
+      "author": "Fatima, mom of 1 from Doha",
+      "fullStory": "We’re Doha locals and had never been to the zoo. Took our toddler on a Friday morning and were pleasantly surprised. The new enclosures are spacious and clean. The petting farm is the highlight for little ones — the animals are gentle and well cared for. It’s not a world-class zoo but for the price (practically free) it’s a lovely morning out."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo + children's farm + toy train, 2.5 hours",
+      "fullDay": "Zoo morning + Aspire Park + KidzMondo Doha afternoon",
+      "bestFor": "Toddlers, budget family outing in Doha"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Doha Zoo",
+      "Qatar zoo family",
+      "Doha with kids",
+      "things to do in Doha children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    ]
+  },
+  {
+    "id": "kuwait-001",
+    "name": "Kuwait Zoo (Kuwait Zoological Park)",
+    "city": "Kuwait City",
+    "country": "Kuwait",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-10",
+    "safetyRating": 3.7,
+    "priceRange": "$",
+    "popularity": 55,
+    "description": "Kuwait’s main zoological park featuring over 200 species including Arabian leopards, lions, giraffes, and a reptile house. The zoo has a dedicated children’s corner with pony rides and a small playground. Recent upgrades have improved enclosures and added shaded rest areas for hot Gulf days.",
+    "location": "Omariya Area, Block 6, Kuwait City, Kuwait",
+    "bestTime": "November-March, 8 AM - 10 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+    "amenities": [
+      "Playground",
+      "Pony Rides",
+      "Snack Kiosks",
+      "Shaded Benches",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Enclosure Barriers",
+      "CCTV",
+      "First Aid Station",
+      "Security Patrols"
+    ],
+    "tipsAndTricks": [
+      "Go on a Thursday or Friday morning (weekend in Kuwait) when the zoo is most lively and all exhibits are staffed.",
+      "Pony rides are available from 9-11 AM only. Head straight to the children’s corner when you arrive to book a slot.",
+      "Bring your own water and snacks. The on-site kiosks are limited and overpriced.",
+      "The reptile house is surprisingly good — one of the better sections. Don’t skip it like you would at other zoos.",
+      "Avoid summer entirely (May-September). Most animals are moved to indoor enclosures and the heat is dangerous for young children."
+    ],
+    "parentStory": {
+      "title": "The pony ride made my shy daughter giggle for the first time all trip",
+      "excerpt": "She was nervous around the big animals but the pony was tiny and gentle. After one slow lap around the ring, she was waving at us like a princess. A simple moment that meant the world.",
+      "author": "Hessa, mom of 2 from Kuwait City",
+      "fullStory": "Kuwait Zoo isn’t fancy by international standards, but it’s a solid local option for a Friday morning outing. The pony ride was the highlight for my 4-year-old — the attendant was patient and let her pet the pony before riding. The big cat enclosures are decent, but the giraffe area feels a bit small. For the price (2 KD), it’s good value."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo + children’s corner + pony ride, 2.5 hours",
+      "fullDay": "Zoo + nearby Scientific Center aquarium + lunch",
+      "bestFor": "Budget local family outing, toddlers"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Kuwait Zoo",
+      "Kuwait family activities",
+      "Kuwait with kids",
+      "zoo Kuwait City"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80"
+    ]
+  },
+  {
+    "id": "oman-004",
+    "name": "Al Jahili Fort & Al Ain Zoo Experience",
+    "city": "Muscat",
+    "country": "Oman",
+    "category": "Zoos & Aquariums",
+    "ageRange": "3-12",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 70,
+    "description": "A combined heritage-meets-nature experience exploring Oman’s rich culture and wildlife. Al Jahili Fort offers kid-friendly tours with storytelling about desert life, while nearby Al Ain Zoo showcases Arabian wildlife including oryx, gazelles, and the Arabian wolf. The zoo’s safari-style bus tour is a family favorite.",
+    "location": "Sultan Qaboos Street, Al Ain Area, Near Muscat, Oman",
+    "bestTime": "October-March, 8 AM - 11 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+    "amenities": [
+      "Safari Bus",
+      "Guided Fort Tours",
+      "Play Areas",
+      "Cafe",
+      "Shaded Rest Areas"
+    ],
+    "safetyFeatures": [
+      "Enclosure Barriers",
+      "First Aid",
+      "Shaded Viewing Areas",
+      "Trained Staff"
+    ],
+    "tipsAndTricks": [
+      "Start at Al Jahili Fort at 8 AM (opens at 8) for the coolest part of the day. The fort takes about 1 hour with kids.",
+      "The fort’s photography exhibition of Oman’s landscapes fascinates kids — they can play 'spot the camel' in each photo.",
+      "Head to Al Ain Zoo after the fort (10-minute drive). The safari bus departs every 30 minutes and kids love riding on the open-air vehicle.",
+      "Bring sunscreen and hats. Even in 'cool' months, the Omani sun is intense by 10 AM.",
+      "The zoo’s petting area has goats, sheep, and a baby camel. The camel is the star — gentle and used to children."
+    ],
+    "parentStory": {
+      "title": "My 6-year-old saluted the camel and the camel bowed back",
+      "excerpt": "At the petting zoo, a baby camel was lying down. My son stood at attention, saluted, and said 'Hello, camel sir.' The camel lifted its head, blinked slowly, and lowered its head back down. I swear it was a bow. We laughed for 10 minutes.",
+      "author": "Liam, dad of 2 from Dublin",
+      "fullStory": "Oman surprised us. We came for the beaches but the fort-zoo combo became our favorite day. The fort is beautiful and kid-friendly (no steep stairs, wide ramps). The zoo isn’t huge but the Arabian animals are rare and beautiful. The oryx enclosure is stunning — white antelopes against the desert backdrop. The staff were warm and welcoming."
+    },
+    "itineraryComparison": {
+      "halfDay": "Fort tour + zoo safari + petting area, 4 hours",
+      "fullDay": "Fort + zoo + lunch at Al Ain Oasis + camel farm visit",
+      "bestFor": "Culture + nature combo, active families"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Al Jahili Fort Oman",
+      "Al Ain Zoo family",
+      "Oman with kids",
+      "Muscat family activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80",
+      "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80",
+      "https://images.unsplash.com/photo-1772550018808-ebbcc271726c?w=800&q=80"
+    ]
+  },
+  {
+    "id": "amman-001",
+    "name": "Amman Zoo (Royal Society for the Conservation of Nature)",
+    "city": "Amman",
+    "country": "Jordan",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-10",
+    "safetyRating": 3.6,
+    "priceRange": "$",
+    "popularity": 52,
+    "description": "Jordan’s main zoological park featuring native Arabian species alongside exotic animals. Lions, hyenas, bears, and a walk-through aviary are highlights. The zoo is run in partnership with the Royal Society for the Conservation of Nature, emphasizing education and conservation. A playground and picnic area make it a decent family outing.",
+    "location": "Airport Road, Al Jeezah, Amman, Jordan",
+    "bestTime": "March-May or September-October, 9 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+    "amenities": [
+      "Playground",
+      "Picnic Area",
+      "Cafe",
+      "Parking",
+      "Prayer Room"
+    ],
+    "safetyFeatures": [
+      "Enclosure Fencing",
+      "Security Staff",
+      "First Aid",
+      "Signage"
+    ],
+    "tipsAndTricks": [
+      "Go in spring (March-April) when the weather is perfect. Summer is brutally hot and the zoo lacks sufficient shade.",
+      "The aviary is the best section — local birds in a large netted enclosure. Kids can walk through and see eagles, hawks, and peacocks up close.",
+      "Bring your own food. The cafe is limited and expensive. There are shaded picnic benches near the playground.",
+      "The conservation center at the entrance has interactive exhibits about Jordan’s endangered species. Worth 15 minutes before the zoo walk.",
+      "Combine with a visit to the nearby Dead Sea Panorama complex (30-minute drive) for a stunning view and educational exhibit."
+    ],
+    "parentStory": {
+      "title": "We saw a hyena laugh and my son tried to imitate it for days",
+      "excerpt": "The hyena made its signature laughing call and my 3-year-old tried to copy it. He sounded like a wheezing toy but kept at it for 10 minutes. The hyena seemed entertained too.",
+      "author": "Yousef, dad of 1 from Amman",
+      "fullStory": "Amman Zoo gets mixed reviews and honestly, the infrastructure could use more investment. But my son had a blast. The aviary is genuinely good, and the playground kept him happy for another hour. The animals look well-fed if not in luxury enclosures. For a cheap Friday morning outing, it does the job."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo + playground + picnic, 3 hours",
+      "fullDay": "Zoo + Dead Sea Panorama + lunch in Madaba",
+      "bestFor": "Budget family outing, toddlers"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Amman Zoo",
+      "Jordan family activities",
+      "Amman with kids",
+      "zoo Jordan children"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1718863336605-5e9c7c738336?w=800&q=80",
+      "https://images.unsplash.com/photo-1738023354227-16a406891bd2?w=800&q=80",
+      "https://images.unsplash.com/photo-1775152496490-9cebc8bb7dde?w=800&q=80"
+    ]
+  }
+]

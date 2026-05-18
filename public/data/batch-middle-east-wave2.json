@@ -1,0 +1,904 @@
+[
+  {
+    "id": "dubai-004",
+    "name": "Aquaventure Waterpark",
+    "city": "Dubai",
+    "country": "UAE",
+    "category": "Theme Parks",
+    "ageRange": "4-16",
+    "safetyRating": 4.6,
+    "priceRange": "$$$",
+    "popularity": 94,
+    "description": "One of the world's largest waterparks at Atlantis, The Palm, with over 30 rides and a dedicated toddler zone. Splashers Cove has zero height restrictions for small children.",
+    "location": "Atlantis The Palm, Palm Jumeirah",
+    "bestTime": "November to March, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1414963501131-5d61f46f1df8?w=800&q=80",
+    "amenities": [
+      "Lifeguard Stations",
+      "Stroller Parking",
+      "Cabanas",
+      "Restaurants",
+      "Lockers",
+      "Changing Rooms"
+    ],
+    "safetyFeatures": [
+      "24/7 Lifeguard Coverage",
+      "Height Requirements Posted",
+      "Life Jackets Available",
+      "First Aid Stations"
+    ],
+    "tipsAndTricks": [
+      "Book the Aquaventure plus Lost Chambers combo ticket online to save 25 percent.",
+      "Arrive at 9:30 AM before the 10 AM crowd rush.",
+      "Use waterproof wristbands for cashless payments throughout the park.",
+      "Bring swim diapers as they cost triple on-site.",
+      "Skip the Leap of Faith if your kid is nervous and try the Rapids River instead."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1595348026445-f6f0a100e21c?w=800&q=80",
+      "https://images.unsplash.com/photo-1560109947-c81c064f87f4?w=800&q=80",
+      "https://images.unsplash.com/photo-1577471488272-29e7ae5a36cc?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The water slide that cured my fear of heights",
+      "excerpt": "My 7-year-old begged me to go on the Leap of Faith. I was terrified but she went first and I had to follow.",
+      "author": "James, dad of 2 from London",
+      "fullStory": "We almost skipped Aquaventure because I am terrified of heights. But my daughter saw the Leap of Faith on Instagram. At the top of that 27-meter slide she vanished down the drop. A lifeguard had to remind me to breathe. I went screaming all the way and at the bottom she was waiting with the biggest hug."
+    },
+    "itineraryComparison": {
+      "halfDay": "Splashers Cove 2 hours, Rapids River 1 hour, lunch, 2-3 family slides",
+      "fullDay": "All family slides, Leap of Faith, Lost Chambers Aquarium, lunch, wave pool, second round on favorites",
+      "bestFor": "Families with kids 4-16 who love water thrills"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Aquaventure Waterpark",
+      "Dubai waterpark family",
+      "Atlantis water park",
+      "best waterparks Dubai"
+    ]
+  },
+  {
+    "id": "dubai-005",
+    "name": "Dubai Aquarium and Underwater Zoo",
+    "city": "Dubai",
+    "country": "UAE",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 92,
+    "description": "A massive aquarium inside the Dubai Mall with a 48-meter acrylic tunnel surrounded by 140 species of marine life. The Underwater Zoo offers interactive touch pools kids love.",
+    "location": "Dubai Mall, Downtown Dubai",
+    "bestTime": "Weekday mornings at 10 AM opening",
+    "imageUrl": "https://images.unsplash.com/photo-1533460004989-cef5103b0f41?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Nursing Rooms",
+      "Restaurants Nearby",
+      "Gift Shop",
+      "Glass-Bottom Boat",
+      "Touch Pool"
+    ],
+    "safetyFeatures": [
+      "Glass Thickness Certified",
+      "Staff at Touch Pools",
+      "Well-Marked Exits",
+      "AED Available",
+      "Security Screening"
+    ],
+    "tipsAndTricks": [
+      "Buy the Explorer pass for aquarium plus VR and glass-bottom boat for 30 percent more.",
+      "Visit at 10 AM opening to have the tunnel almost to yourself.",
+      "Pack a light jacket as the aquarium is kept at 20 degrees Celsius.",
+      "The touch pool runs 11 AM to 7 PM and only fits 8 kids at a time.",
+      "Combine with KidZania or the ice rink in the same mall for a 20 percent discount."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1445820200644-69f7d2847f51?w=800&q=80",
+      "https://images.unsplash.com/photo-1598554739171-0407840ebbf8?w=800&q=80",
+      "https://images.unsplash.com/photo-1598096972835-8ccf62c71f7c?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Two hours staring at one shark",
+      "excerpt": "My 3-year-old spent two hours watching one reef shark circle. I sat next to him. Never been so bored and so happy.",
+      "author": "Priya, mom of 1 from Singapore",
+      "fullStory": "The Dubai Mall is overwhelming but inside that aquarium tunnel everything went quiet. My son sat down cross-legged and watched a single shark make its rounds. I sat down next to him. Two hours later he stood up and said okay bye-bye fishy. It was the cheapest best therapy I have had in years."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main tunnel 1 hour, Underwater Zoo 45 minutes, lunch, gift shop",
+      "fullDay": "Add VR experience, glass-bottom boat, KidZania, ice rink, dinner, fountain show",
+      "bestFor": "Kids 2-10 who love animals and calm indoor activities"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Dubai Aquarium",
+      "Dubai Mall aquarium",
+      "Underwater Zoo Dubai",
+      "family things Dubai"
+    ]
+  },
+  {
+    "id": "dubai-006",
+    "name": "IMG Worlds of Adventure",
+    "city": "Dubai",
+    "country": "UAE",
+    "category": "Theme Parks",
+    "ageRange": "5-16",
+    "safetyRating": 4.5,
+    "priceRange": "$$$",
+    "popularity": 85,
+    "description": "The world's largest indoor theme park with Marvel, Cartoon Network, and dinosaur zones. Fully air-conditioned for Dubai summers with rides from gentle coasters to intense thrill drops.",
+    "location": "E311, Sheikh Mohammed Bin Zayed Road, Dubai",
+    "bestTime": "Weekday mornings, September to April",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Indoor Parking",
+      "Multiple Dining Options",
+      "Stroller Rentals",
+      "Prayer Rooms",
+      "Lockers",
+      "Baby Changing"
+    ],
+    "safetyFeatures": [
+      "Ride Safety Inspections",
+      "Height Requirements",
+      "First Aid Stations",
+      "Lost Child Protocol",
+      "CCTV"
+    ],
+    "tipsAndTricks": [
+      "Download the IMG app for real-time queue times and fast-track booking.",
+      "Hit the Marvel zone first as queues hit 45 minutes by 11 AM.",
+      "The Velociraptor in Lost Valley is a gentle spinner perfect for nervous 5-year-olds.",
+      "Bring a refillable water bottle for free water stations near every restroom.",
+      "Aim for Sunday or Monday when school groups are minimal."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1568932259959-c909547373e6?w=800&q=80",
+      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80",
+      "https://images.unsplash.com/photo-1573883431205-98b5f10aaedb?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The indoor park that saved our summer trip",
+      "excerpt": "48 degrees in Dubai and we found IMG Worlds. Three days of air-conditioned fun taking turns on the Hulk coaster.",
+      "author": "Aisha, mom of 2 from Jeddah",
+      "fullStory": "July in Dubai is brutal. A local friend suggested IMG Worlds and it saved our holiday. The kids rode the Cartoon Network zone on repeat. My husband and I took turns on the Avengers ride. We ended up buying 3-day passes."
+    },
+    "itineraryComparison": {
+      "halfDay": "Marvel zone 2 hours, Cartoon Network 1 hour, lunch, one ride in Lost Valley",
+      "fullDay": "All four zones, fast-track Avengers, sit-down lunch, return to favorites, dinner",
+      "bestFor": "Thrill-seeking families with kids 7 and up"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "IMG Worlds of Adventure",
+      "Marvel theme park Dubai",
+      "indoor theme park Dubai",
+      "Dubai attractions"
+    ]
+  },
+  {
+    "id": "dubai-007",
+    "name": "Dubai Miracle Garden",
+    "city": "Dubai",
+    "country": "UAE",
+    "category": "Parks & Nature",
+    "ageRange": "2-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "The world's largest flower garden with 150 million blooms in incredible sculptures including a life-sized A380 plane. Open November to May with floral castles topiaries and Instagram-worthy displays.",
+    "location": "Al Barsha South, Dubailand, Dubai",
+    "bestTime": "November to March, early morning or sunset",
+    "imageUrl": "https://images.unsplash.com/photo-1585198560642-14e20d02ef76?w=800&q=80",
+    "amenities": [
+      "Wheelchair Access",
+      "Stroller-Friendly Paths",
+      "Cafes",
+      "Souvenir Shops",
+      "Shaded Seating",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Fenced Perimeter",
+      "Wide Pathways",
+      "Security Personnel",
+      "No Rides",
+      "Clearly Marked Exits"
+    ],
+    "tipsAndTricks": [
+      "Come at 3 PM for golden hour lighting on the floral displays.",
+      "Arrive early for crowd-free photos at the sunflower field and A380.",
+      "Buy tickets online 2 days ahead as weekend slots sell out.",
+      "Bring hats and sunscreen as open fields offer zero shade.",
+      "Take the free tram from parking to save a 15-minute walk with toddlers."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1530878955558-a6c31bb9e6ef?w=800&q=80",
+      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&q=80",
+      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A garden that made my flower-hating son stop",
+      "excerpt": "My 6-year-old groaned at flower garden but the floral A380 made his jaw drop. He smelled every rose.",
+      "author": "Leila, mom of 1 from Toronto",
+      "fullStory": "I dragged my son to Miracle Garden expecting complaints. The floral A380 made his jaw drop. He kept asking how they did that. We spent three hours there. He smelled every rose bush and tried to count the sunflowers. AED 95 for adults and free for under 3. Best value day of our Dubai trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Garden walk 1.5 hours, A380 display 30 minutes, sunflower photos, ice cream",
+      "fullDay": "Add Butterfly Garden 10 minutes away, lunch, return for sunset photos",
+      "bestFor": "Families with young kids who love colorful stroller-friendly walks"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Dubai Miracle Garden",
+      "flower garden Dubai",
+      "things to see Dubai",
+      "family garden Dubai"
+    ]
+  },
+  {
+    "id": "abu-dhabi-001",
+    "name": "Ferrari World Abu Dhabi",
+    "city": "Abu Dhabi",
+    "country": "UAE",
+    "category": "Theme Parks",
+    "ageRange": "5-16",
+    "safetyRating": 4.6,
+    "priceRange": "$$$",
+    "popularity": 91,
+    "description": "The world's first Ferrari-branded theme park and home to Formula Rossa, the fastest roller coaster on the planet at 240 km/h in 4.9 seconds. The Junior Grand Prix offers scaled-down experiences for younger children.",
+    "location": "Yas Island, Abu Dhabi",
+    "bestTime": "October to April, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1568735899246-5aea9a3b89bd?w=800&q=80",
+    "amenities": [
+      "Indoor Air-Conditioned",
+      "Family Restrooms",
+      "Nursing Room",
+      "Restaurants",
+      "Gift Shop",
+      "Prayer Rooms"
+    ],
+    "safetyFeatures": [
+      "Height Requirements Enforced",
+      "Ride Restraint Checks",
+      "First Aid",
+      "Security Screening",
+      "Lost Child Wristbands"
+    ],
+    "tipsAndTricks": [
+      "Book the Yas Island 2-Park combo with Yas Waterworld to save 30 percent with free shuttle.",
+      "Get to Formula Rossa before 10:30 AM as lines hit 90 minutes after lunch.",
+      "Junior Grand Prix costs AED 25 extra but gives kids a real mini-Ferrari on a track.",
+      "Kids under 130 cm can enjoy Speed of Magic 4D show instead of big coasters.",
+      "Eat at 11:30 AM to beat the lunch rush at Mamma Rossella."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551016521-3580f5e63bb1?w=800&q=80",
+      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80",
+      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My speed-demon daughter conquered Formula Rossa",
+      "excerpt": "My 9-year-old walked onto the fastest coaster like a merry-go-round. She came off grinning. We did it four times.",
+      "author": "Tom, dad of 1 from Sydney",
+      "fullStory": "I had heard about Formula Rossa doing 240 km/h. My daughter wanted to ride it the moment we walked in. I was terrified. She sat next to me held my hand and said you can do it daddy. We launched and I could not feel my face. She laughed the entire time. We went four times. She wanted a fifth."
+    },
+    "itineraryComparison": {
+      "halfDay": "Formula Rossa 3x, Junior Grand Prix, Speed of Magic show, lunch",
+      "fullDay": "All major coasters, kids zones, 4D shows, behind-the-scenes tour, dinner at Yas Marina",
+      "bestFor": "Car-loving families and thrill seekers aged 8 and up"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Ferrari World Abu Dhabi",
+      "Formula Rossa",
+      "Yas Island attractions",
+      "Abu Dhabi theme parks"
+    ]
+  },
+  {
+    "id": "abu-dhabi-002",
+    "name": "Yas Waterworld",
+    "city": "Abu Dhabi",
+    "country": "UAE",
+    "category": "Theme Parks",
+    "ageRange": "3-16",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 89,
+    "description": "An Emirati-themed waterpark on Yas Island with 40 rides and attractions. The Al Mariyah pirate fort with 150 water features keeps toddlers happy while older kids love the Bandit Bomber water coaster.",
+    "location": "Yas Island, Abu Dhabi",
+    "bestTime": "November to March, right at 10 AM opening",
+    "imageUrl": "https://images.unsplash.com/photo-1575485184186-9c991aa5be90?w=800&q=80",
+    "amenities": [
+      "Lifeguard Stations",
+      "Cabana Rentals",
+      "Stroller Parking",
+      "Changing Rooms",
+      "Lockers",
+      "Family Dining",
+      "Halal Options"
+    ],
+    "safetyFeatures": [
+      "Lifeguards at Every Pool",
+      "Free Life Jackets",
+      "Height Restriction Signs",
+      "First Aid Room",
+      "Free Sunscreen Stations"
+    ],
+    "tipsAndTricks": [
+      "The YAS combo ticket with Ferrari World and Warner Bros costs AED 495 which is 55 percent off individual tickets.",
+      "Head to Bandit Bomber first as it is the only water coaster in the region.",
+      "Bring water shoes since the ground gets hot enough to burn bare feet by 11 AM.",
+      "Al Mariyah fort has timed bucket dumps every 15 minutes for great splash photos.",
+      "Pack a waterproof phone pouch for photos of the pearl centerpiece and wave pool."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1560155016-bf3aac6e5f15?w=800&q=80",
+      "https://images.unsplash.com/photo-1575995872537-3793d29d972c?w=800&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Three hours in the pirate fort",
+      "excerpt": "My 4-year-old twins spent 3 hours in the pirate fort and never looked for me. I read half a book. Best day of the trip.",
+      "author": "Emma, mom of twins from Auckland",
+      "fullStory": "Yas Waterworld was supposed to be just another stop. But my twins saw the Al Mariyah pirate fort and did not look back. I found a shaded lounger and checked on them every 15 minutes. They were making friends splashing and laughing. I finished 120 pages of a book which has not happened since 2019."
+    },
+    "itineraryComparison": {
+      "halfDay": "Al Mariyah fort 1.5 hours, Bandit Bomber 3x, lazy river, lunch",
+      "fullDay": "All major slides, wave pool, second round of favorites, cabana rental, dinner at Yas Plaza",
+      "bestFor": "Families with mixed ages from toddlers to teens"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Yas Waterworld",
+      "Abu Dhabi waterpark",
+      "Yas Island water park",
+      "family waterpark UAE"
+    ]
+  },
+  {
+    "id": "abu-dhabi-003",
+    "name": "Louvre Abu Dhabi",
+    "city": "Abu Dhabi",
+    "country": "UAE",
+    "category": "Museums",
+    "ageRange": "4-16",
+    "safetyRating": 4.9,
+    "priceRange": "$$",
+    "popularity": 87,
+    "description": "The iconic museum on Saadiyat Island with a stunning rain of light dome. A dedicated children's gallery with hands-on activities and art workshops makes it surprisingly family-friendly.",
+    "location": "Saadiyat Island, Abu Dhabi",
+    "bestTime": "Saturday to Wednesday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1554893520-20faec733c36?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Children's Gallery",
+      "Nursing Room",
+      "Cafe",
+      "Bookshop",
+      "Free Wi-Fi"
+    ],
+    "safetyFeatures": [
+      "Security Staff Throughout",
+      "Glass Barriers Near Art",
+      "Wide Galleries",
+      "Temperature Controlled",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "Visit on Family Day Mondays for free children's art workshops 10 AM to 12 PM.",
+      "The rain of light effect is best between 11 AM and 1 PM in the dome center.",
+      "Download the Louvre Kids app for a scavenger hunt through the galleries.",
+      "Pick 5-6 key pieces and use the family audio guide AED 20 for 90 minutes max.",
+      "The outdoor boardwalk has shaded seating with Abu Dhabi skyline views."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1594068972024-639a1101c20d?w=800&q=80",
+      "https://images.unsplash.com/photo-1561576195-0e7ec4ecd76b?w=800&q=80",
+      "https://images.unsplash.com/photo-1552410260-db4abc39adad?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My 6-year-old's art critique",
+      "excerpt": "She stood in front of a Picasso and said his lines are messy because he was thinking about too many things. A curator agreed.",
+      "author": "Nadia, mom of 1 from Kuala Lumpur",
+      "fullStory": "I worried the Louvre would bore my 6-year-old. Instead she walked through the galleries like a tiny critic. She analyzed a Monet and a curator knelt down to explain the Impressionists. She made a Picasso-style mask in the children's workshop. It is on our fridge."
+    },
+    "itineraryComparison": {
+      "halfDay": "Dome 20 minutes, children's gallery 1 hour, 5 galleries, cafe lunch",
+      "fullDay": "Add audioguide, boardwalk walk, documentary screening, art workshop, sunset plaza",
+      "bestFor": "Culture-curious families with kids 6 and up"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Louvre Abu Dhabi",
+      "Abu Dhabi museum family",
+      "Saadiyat Island",
+      "children's museum Abu Dhabi"
+    ]
+  },
+  {
+    "id": "doha-001",
+    "name": "Katara Cultural Village",
+    "city": "Doha",
+    "country": "Qatar",
+    "category": "Museums",
+    "ageRange": "3-14",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 83,
+    "description": "A sprawling cultural destination on Doha's east coast with art galleries, an amphitheater, a mosque, and beachfront. Children love the kite-flying fields, small aquarium, and weekend markets with camel rides.",
+    "location": "West Bay, Doha",
+    "bestTime": "November to March, late afternoons",
+    "imageUrl": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80",
+    "amenities": [
+      "Beach Access",
+      "Restaurants",
+      "Art Galleries",
+      "Open-Air Theater",
+      "Prayer Room",
+      "Free Parking"
+    ],
+    "safetyFeatures": [
+      "Security Personnel",
+      "Well-Lit Walkways",
+      "Shaded Seating",
+      "Pedestrian-Only Zones",
+      "Fenced Beach"
+    ],
+    "tipsAndTricks": [
+      "Go Friday or Saturday for the weekend market with camel rides and henna painting.",
+      "Bring a kite for the plaza near the amphitheater or buy one for QR 30.",
+      "The beach has gentle waves and lifeguards ideal for toddler splashing.",
+      "Check the Katara website for free Friday evening storytelling events.",
+      "Park at the southern entrance closer to the beach and playground."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1582995110737-f1b5203c2ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1560996388-5b5624c0187b?w=800&q=80",
+      "https://images.unsplash.com/photo-1567951209511-db7701bcb9c7?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The free afternoon that won",
+      "excerpt": "We spent 400 dollars on museum tickets but my kids spent two hours flying a cheap kite at Katara. That was their favorite memory of Doha.",
+      "author": "Sarah, mom of 2 from Melbourne",
+      "fullStory": "We had been to all the big Doha museums. On our last day we stumbled into Katara just to kill time. My kids bought a kite for QR 20 and ran across the plaza for almost two hours. A local family shared traditional sweets with us. No entry fee. No queues. Just a perfect afternoon."
+    },
+    "itineraryComparison": {
+      "halfDay": "Plazas and amphitheater 1 hour, kite flying 45 min, beach 30 min, lunch at cafe",
+      "fullDay": "Add art galleries, weekend market, beach time, dinner, evening fountain walk",
+      "bestFor": "Families wanting culture mixed with free outdoor fun for kids"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Katara Cultural Village",
+      "Doha family activities",
+      "Qatar attractions",
+      "free things Doha"
+    ]
+  },
+  {
+    "id": "doha-002",
+    "name": "Museum of Islamic Art",
+    "city": "Doha",
+    "country": "Qatar",
+    "category": "Museums",
+    "ageRange": "4-16",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 84,
+    "description": "The I.M. Pei-designed museum houses 1400 years of Islamic artifacts with a waterfront park offering playgrounds, fountains, and Doha skyline views. Family-friendly audio guides and activity booklets turn cultural visits into treasure hunts.",
+    "location": "Corniche, Doha",
+    "bestTime": "November to March, right at 9 AM opening",
+    "imageUrl": "https://images.unsplash.com/photo-1552125382-d5efbf5a1ffb?w=800&q=80",
+    "amenities": [
+      "Museum Cafe",
+      "Gift Shop",
+      "Children's Activity Room",
+      "Stroller Access",
+      "Wi-Fi",
+      "Fountain Play Area"
+    ],
+    "safetyFeatures": [
+      "Security Screening",
+      "Staff Throughout",
+      "Artifact Glass Protection",
+      "Spacious Galleries",
+      "Air-Conditioned"
+    ],
+    "tipsAndTricks": [
+      "Ask for the free kids activity backpack with coloring books and scavenger hunt cards.",
+      "The restaurant IDAM by Alain Ducasse has a QR 60 kids three-course meal with a view.",
+      "Visit the museum first hour when kids are fresh then let them play outside.",
+      "The central staircase and shadow play fascinate children architecturally.",
+      "Add a dhow boat ride from the Corniche dock for QR 40 per person for 30 minutes."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1511652563611-6310a0cfe79d?w=800&q=80",
+      "https://images.unsplash.com/photo-1518532086188-3cc1f0a7b78a?w=800&q=80",
+      "https://images.unsplash.com/photo-1591101762088-9408d7be59f8?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Coloring at a world-class museum",
+      "excerpt": "My 6-year-old spent an hour coloring geometric patterns while a curator explained how they symbolize infinity.",
+      "author": "Fatima, mom of 2 from Istanbul",
+      "fullStory": "I worried a museum of Islamic art would bore my children. But the activity room with coloring tables hooked them. My daughter spent an hour drawing geometric patterns. A curator sat down and explained the star shapes represent the heavens and the endless repetition represents infinity. I got to explore the galleries in peace."
+    },
+    "itineraryComparison": {
+      "halfDay": "Activity room 30 min, galleries 1 hour, park 45 min, cafe lunch",
+      "fullDay": "Add full audio tour, dhow boat, Corniche walk, dinner at Souq Waqif",
+      "bestFor": "Families wanting culture plus outdoor play with kids 5 and up"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Museum of Islamic Art Doha",
+      "MIA Park",
+      "Doha family museum",
+      "Qatar cultural experiences"
+    ]
+  },
+  {
+    "id": "doha-003",
+    "name": "Aspire Park",
+    "city": "Doha",
+    "country": "Qatar",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.9,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "Doha's largest park spanning 88 hectares with a massive lake, fountains, jogging trails, and multiple shaded playgrounds. The wide open spaces are perfect for toddlers to run safely and the paddle boats delight kids of all ages.",
+    "location": "Aspire Zone, Al Waab Street, Doha",
+    "bestTime": "November to March, late afternoon",
+    "imageUrl": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&q=80",
+    "amenities": [
+      "Playgrounds",
+      "Paddle Boats",
+      "Walking Trails",
+      "Lake Fountains",
+      "Shaded Seating",
+      "Cafe",
+      "Free Parking"
+    ],
+    "safetyFeatures": [
+      "Fenced Perimeter",
+      "Security Patrols",
+      "Well-Lit at Night",
+      "Separated Paths",
+      "First Aid Available"
+    ],
+    "tipsAndTricks": [
+      "Visit after 3 PM when temperatures drop and the lake fountains create cooling mist.",
+      "Paddle boats cost QR 20 for 30 minutes and are the most popular kid activity.",
+      "Bring a picnic blanket as the grass areas near the lake are perfect for family picnics.",
+      "The playground near the south entrance has the best equipment for toddlers under 5.",
+      "Combine with a visit to Kidzmondo next door for indoor play on hot days."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1500076656116-558758c991c1?w=800&q=80",
+      "https://images.unsplash.com/photo-1563620915144-6a837f120a28?w=800&q=80",
+      "https://images.unsplash.com/photo-1505567745926-b2dbf5275f18?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The park that saved our flight day",
+      "excerpt": "We had 4 hours before our flight and Aspire Park was the perfect sendoff. Paddle boats, playground, and a picnic under the palm trees.",
+      "author": "Michael, dad of 1 from Berlin",
+      "fullStory": "Our flight to Berlin was at 10 PM and checkout was at noon. Aspire Park was 15 minutes from the airport. We rented paddle boats on the lake and my 5-year-old thought she was a captain. The playground has a huge climbing structure. We grabbed sandwiches from the cafe and had a picnic. She fell asleep on the way to the airport. Perfect last day."
+    },
+    "itineraryComparison": {
+      "halfDay": "Paddle boats 30 min, playground 1 hour, lake walk 30 min, picnic lunch",
+      "fullDay": "Add Kidzmondo indoor play, Aspire Zone sports facilities, dinner at nearby mall",
+      "bestFor": "Families with toddlers and young kids who need open space to run"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Aspire Park Doha",
+      "Doha family park",
+      "free park Doha",
+      "Qatar outdoor activities"
+    ]
+  },
+  {
+    "id": "muscat-001",
+    "name": "Qurum Natural Park",
+    "city": "Muscat",
+    "country": "Oman",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 78,
+    "description": "Muscat's largest and most beloved park with lush greenery, a lake with paddle boats, children's playgrounds, and a small amusement park. The open lawns are perfect for family picnics and the shaded walkways keep even summer visits comfortable.",
+    "location": "Qurum, Muscat",
+    "bestTime": "October to April, late afternoon",
+    "imageUrl": "https://images.unsplash.com/photo-1490750967868-88aa4f44ca16?w=800&q=80",
+    "amenities": [
+      "Children's Playgrounds",
+      "Paddle Boats",
+      "Mini Amusement Rides",
+      "Cafes",
+      "Picnic Areas",
+      "Walking Trails",
+      "Free Parking"
+    ],
+    "safetyFeatures": [
+      "Fenced Perimeter",
+      "Security Patrols",
+      "Shaded Seating Throughout",
+      "Well-Lit Paths",
+      "Playground Safety Surfacing"
+    ],
+    "tipsAndTricks": [
+      "Arrive before 4 PM to secure a shaded picnic table near the lake as they fill fast with local families.",
+      "The mini amusement rides cost 500 baisa each which is about 1 dollar making it the cheapest fun in Muscat.",
+      "Bring bread crumbs for the ducks and geese at the lake but check with staff first as feeding rules vary seasonally.",
+      "Friday mornings are busy with Omani families so aim for Saturday through Wednesday for quieter visits.",
+      "Combine with a visit to the nearby Qurum Beach which is a 5-minute drive for sunset beach time after the park."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1540479859555-17af45c78602?w=800&q=80",
+      "https://images.unsplash.com/photo-1453227588063-bb302b62f50b?w=800&q=80",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The 1-dollar roller coaster",
+      "excerpt": "My 4-year-old rode the mini roller coaster at Qurum Park eight times. Each ride cost 50 cents. She still talks about the pink train with the smiling face.",
+      "author": "Lena, mom of 1 from Helsinki",
+      "fullStory": "We expected Oman to be expensive like Dubai but Qurum Park was a revelation. The mini amusement area has a tiny roller coaster, a carousel, and bumper boats. My daughter rode the train coaster eight times. Eight times for 4 dollars total. She named it Pinky the Train. She asks about Pinky every week."
+    },
+    "itineraryComparison": {
+      "halfDay": "Playground 1 hour, paddle boats 30 min, mini rides 30 min, picnic lunch",
+      "fullDay": "Add Qurum Beach, walk to nearby restaurants on Shatti Al Qurum for dinner",
+      "bestFor": "Families with young kids who want cheap outdoor fun"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Qurum Park Muscat",
+      "Oman family activities",
+      "Muscat parks",
+      "free things Muscat"
+    ]
+  },
+  {
+    "id": "muscat-002",
+    "name": "Muscat Children's Museum",
+    "city": "Muscat",
+    "country": "Oman",
+    "category": "Museums",
+    "ageRange": "3-12",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 74,
+    "description": "An interactive science museum built for children with hands-on exhibits on physics, nature, and human biology. Bubbles, magnets, a human-sized hamster wheel, and a planetarium make learning feel like play.",
+    "location": "Sultan Qaboos Street, Al Khuwair, Muscat",
+    "bestTime": "Sunday to Wednesday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1568132930455-d2e33baf5677?w=800&q=80",
+    "amenities": [
+      "Interactive Exhibits",
+      "Planetarium",
+      "Outdoor Play Area",
+      "Cafe",
+      "Gift Shop",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Staff Supervised Zones",
+      "Child-Safe Exhibits",
+      "Indoor Air-Conditioned",
+      "Emergency Exits",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "The bubble exhibit is the star attraction for under 7s so head straight there before it gets busy around 10 AM.",
+      "Planetarium shows run at 10 AM and 11 AM on Sundays and Tuesdays with the 11 AM show being less crowded.",
+      "The entrance fee is just 500 baisa about 1.30 dollars making it one of the cheapest kids activities in the Gulf region.",
+      "Combine with the nearby Natural History Museum which is free and a 3-minute walk from the Children's Museum.",
+      "Friday mornings are closed as the museum follows Omani weekend hours so check the website before visiting."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80",
+      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The human-sized hamster wheel changed everything",
+      "excerpt": "My 5-year-old spent 40 minutes in the giant hamster wheel. She learned about kinetic energy by being the energy source. We had to drag her out for lunch.",
+      "author": "Omar, dad of 1 from Amman",
+      "fullStory": "The Children's Museum in Muscat is a hidden gem. The giant hamster wheel is basically a human-sized exercise wheel that lights up as you run. My daughter ran until she collapsed from laughter. She learned more about energy in that 40 minutes than in a month of school science. And it cost less than a juice at the mall."
+    },
+    "itineraryComparison": {
+      "halfDay": "Bubble exhibit 30 min, planetarium 30 min, science floor 1 hour, lunch at cafe",
+      "fullDay": "Add Natural History Museum next door, lunch at Al Khuwair restaurants, afternoon playground",
+      "bestFor": "Curious kids aged 3-10 who love hands-on science"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Muscat Children's Museum",
+      "kids museum Oman",
+      "family Muscat",
+      "Oman attractions kids"
+    ]
+  },
+  {
+    "id": "muscat-003",
+    "name": "Al Qurum Beach",
+    "city": "Muscat",
+    "country": "Oman",
+    "category": "Parks & Nature",
+    "ageRange": "0-16",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 82,
+    "description": "A beautiful long sandy beach in the heart of Muscat with calm waters perfect for young swimmers. Lined with cafes, restaurants, and a dedicated children's playground area right on the sand with sunset views over the Gulf of Oman.",
+    "location": "Shatti Al Qurum, Muscat",
+    "bestTime": "October to April, late afternoon for sunset",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    "amenities": [
+      "Lifeguards",
+      "Children's Playground",
+      "Beachfront Cafes",
+      "Restaurants",
+      "Public Restrooms",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Lifeguard Patrols",
+      "Calm Swimming Area",
+      "Designated Family Zone",
+      "Well-Lit Evenings",
+      "Emergency Contact Posts"
+    ],
+    "tipsAndTricks": [
+      "Visit between 4 PM and sunset when the temperature drops and the beach comes alive with local families.",
+      "The beach has separate family areas from single men's areas so look for the family section sign near the playground.",
+      "Pack water shoes as the sand can get hot mid-afternoon and there are small shells near the waterline.",
+      "Beach chairs and umbrellas are free at most sections unlike paid beaches in Dubai and Europe.",
+      "Dinner at one of the Shatti Al Qurum restaurants after sunset is a family tradition with Omani halwa for dessert."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=800&q=80",
+      "https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=800&q=80",
+      "https://images.unsplash.com/photo-1519046904884-53103b34b575?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The sunset that stopped time",
+      "excerpt": "We sat on the sand at Qurum Beach at sunset. My kids were building sandcastles and locals were playing football. No jet skis. No loud music. Just the waves and families. That is Oman.",
+      "author": "Chris, dad of 2 from London",
+      "fullStory": "After days of theme park chaos in Dubai, Qurum Beach was therapy. The water was calm and warm enough for my toddler to float with floaties. Older kids were playing football with a Omani family who wave to everyone. The sunset was spectacular. We ate grilled fish at a beachfront restaurant for 25 dollars for four people. Oman feels like the Gulf before everyone discovered it."
+    },
+    "itineraryComparison": {
+      "halfDay": "Swimming 1 hour, sand play 45 min, sunset walk, beachfront dinner",
+      "fullDay": "Add Qurum Natural Park morning, lunch, beach afternoon, dinner on Shatti Al Qurum",
+      "bestFor": "Families who want relaxed beach time away from crowds and commercialization"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Qurum Beach Muscat",
+      "Oman beaches",
+      "Muscat family beach",
+      "Shatti Al Qurum"
+    ]
+  },
+  {
+    "id": "manama-001",
+    "name": "Bahrain National Museum",
+    "city": "Manama",
+    "country": "Bahrain",
+    "category": "Museums",
+    "ageRange": "4-16",
+    "safetyRating": 4.8,
+    "priceRange": "$",
+    "popularity": 79,
+    "description": "Bahrain's premier museum showcasing 6000 years of history with stunning Dilmun-era artifacts, traditional Bahraini house reconstructions, and interactive displays. The children's section has hands-on archaeology pits where kids can dig for replica artifacts.",
+    "location": "Al Fateh Highway, Manama",
+    "bestTime": "Sunday to Wednesday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=800&q=80",
+    "amenities": [
+      "Cafe",
+      "Gift Shop",
+      "Children's Discovery Area",
+      "Wheelchair Access",
+      "Parking",
+      "Free Wi-Fi"
+    ],
+    "safetyFeatures": [
+      "Security Staff",
+      "Wide Galleries",
+      "Air-Conditioned",
+      "Temperature Controlled",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "The archaeology sand pit in the children's section is the highlight for under 10s and costs nothing extra.",
+      "Visit on Sunday or Tuesday mornings when school groups are fewer and you can enjoy the galleries quietly.",
+      "The traditional house reconstruction with life-sized mannequins fascinates kids who get to see how families lived 100 years ago.",
+      "Entry is just 1 dinar about 2.50 dollars making it one of the best value museums in the region.",
+      "Combine with a walk along the nearby Bahrain Bay waterfront which has playgrounds and food trucks on weekends."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1560880685-94a4f081a590?w=800&q=80",
+      "https://images.unsplash.com/photo-1544965858-83ef53f74e9b?w=800&q=80",
+      "https://images.unsplash.com/photo-1551098716-cf3f8f1e8e9a?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The Dilmun dig that made a little archaeologist",
+      "excerpt": "My 7-year-old spent an hour in the archaeology sand pit brushing away sand to find replica Dilmun seals. A curator showed him how real archaeologists work.",
+      "author": "Yusuf, dad of 1 from Dubai",
+      "fullStory": "We drove from Dubai to Bahrain for a weekend and the National Museum was our first stop. My son loves dinosaurs and anything digging-related. The children's section has a sand pit with replica Dilmun artifacts buried inside. He found a tiny clay seal and the museum staff gave him a certificate. He wore it around his neck for the rest of the trip. Best 1 dinar I ever spent."
+    },
+    "itineraryComparison": {
+      "halfDay": "Children's discovery area 1 hour, main galleries 1 hour, cafe lunch",
+      "fullDay": "Add Bahrain Fort nearby, afternoon at Bahrain Bay waterfront, dinner in Manama Souq",
+      "bestFor": "History-curious families with kids 5 and up"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Bahrain National Museum",
+      "Manama family activities",
+      "Bahrain attractions",
+      "kids museum Bahrain"
+    ]
+  },
+  {
+    "id": "manama-002",
+    "name": "Lost Paradise of Dilmun Water Park",
+    "city": "Manama",
+    "country": "Bahrain",
+    "category": "Theme Parks",
+    "ageRange": "3-16",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 81,
+    "description": "Bahrain's largest waterpark themed after the ancient Dilmun civilization with over 15 rides, a wave pool, lazy river, and dedicated children's area with mini slides and water cannons. Less crowded than Dubai waterparks with gentler pricing.",
+    "location": "Dilmunia Island, near Bahrain International Circuit",
+    "bestTime": "November to March, weekday mornings",
+    "imageUrl": "https://images.unsplash.com/photo-1570989234217-f4c4eb5e7884?w=800&q=80",
+    "amenities": [
+      "Lifeguard Stations",
+      "Cabana Rentals",
+      "Changing Rooms",
+      "Lockers",
+      "Family Restaurants",
+      "Free Parking"
+    ],
+    "safetyFeatures": [
+      "Full Lifeguard Coverage",
+      "Height Restrictions Enforced",
+      "Life Jackets Provided",
+      "First Aid Station",
+      "Shaded Areas"
+    ],
+    "tipsAndTricks": [
+      "Buy tickets online for 20 percent discount as walk-up prices are significantly higher at the gate.",
+      "Weekdays have almost no crowds and you can walk onto most slides multiple times without queuing.",
+      "The lazy river is surprisingly long at 500 meters and is great for parents floating with toddlers in their laps.",
+      "Bring your own towels as rental fees add up and the park does not include them in ticket prices.",
+      "The park is significantly cheaper than Dubai waterparks with family tickets around 50 percent less than Aquaventure."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1575425186779-b8de9b4279c3?w=800&q=80",
+      "https://images.unsplash.com/photo-1529755586385-891f58753a3f?w=800&q=80",
+      "https://images.unsplash.com/photo-1534008897995-27a23e859048?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The waterpark without the chaos",
+      "excerpt": "Lost Paradise was everything Aquaventure is not. Quiet weekdays, half the price, and the kids had the slides to themselves. We did the lazy river five times.",
+      "author": "Noor, mom of 2 from Riyadh",
+      "fullStory": "We usually go to Dubai for waterparks but tried Bahrain on a whim. Lost Paradise was a revelation. We went on a Tuesday and practically had the park to ourselves. My kids rode the giant funnel slide ten times without waiting. The toddler zone was clean and well-shaded. We spent less than half of what Aquaventure costs and had just as much fun. Bahrain is seriously underrated for family trips."
+    },
+    "itineraryComparison": {
+      "halfDay": "Kids zone 1.5 hours, lazy river 30 min, wave pool 30 min, lunch",
+      "fullDay": "All slides, second round of favorites, cabana rental, wave pool, lazy river float, dinner",
+      "bestFor": "Families who want waterpark fun without Dubai crowds and prices"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Lost Paradise Bahrain",
+      "Bahrain waterpark",
+      "Dilmun water park",
+      "Manama family attractions"
+    ]
+  }
+]

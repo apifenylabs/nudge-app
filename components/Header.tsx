@@ -1,0 +1,204 @@
+'use client';
+
+import { MapPin, Search, Globe, Menu, X, User, Sparkles, ChevronDown, Heart, Plus, Compass, Sun, Moon } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { createBrowserSupabaseClient } from '@/lib/supabase-browser';
+import UserMenu from './UserMenu';
+import DarkModeToggle from './DarkModeToggle';
+import type { User as SupabaseUser } from '@supabase/supabase-js';
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [user, setUser] = useState<SupabaseUser | null>(null);
+  const [bookmarkCount, setBookmarkCount] = useState(0);
+  const [authLoading, setAuthLoading] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const supabase = createBrowserSupabaseClient();
+    supabase.auth.getUser().then(({ data: { user } }: { data: { user: any } }) => {
+      setUser(user);
+      setAuthLoading(false);
+    });
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event: string, session: any) => {
+      setUser(session?.user ?? null);
+      if (session?.user) {
+        supabase.from('bookmarks').select('id', { count: 'exact', head: true }).eq('user_id', session.user.id).then(({ count }) => setBookmarkCount(count || 0));
+      } else {
+        setBookmarkCount(0);
+      }
+    });
+    return () => subscription.unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    if (!user) return;
+    const supabase = createBrowserSupabaseClient();
+    supabase.from('bookmarks').select('id', { count: 'exact', head: true }).eq('user_id', user.id).then(({ count }) => setBookmarkCount(count || 0));
+  }, [user]);
+
+  return (
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${
+      isScrolled
+        ? 'bg-warm-white/95 backdrop-blur-xl shadow-sm border-b border-sand-200/50'
+        : 'bg-warm-white/80 backdrop-blur-md border-b border-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo — clean minimal */}
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-600 to-primary-500 flex items-center justify-center shadow-md shadow-primary-200 group-hover:shadow-lg group-hover:shadow-primary-200 transition-all">
+              <Compass size={18} className="text-white" />
+            </div>
+            <div>
+              <span className="font-heading text-lg font-bold text-heading tracking-tight dark:text-gray-100">
+                Family Travel<span className="text-primary-600">.</span>
+              </span>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation — clean, spacious */}
+          <nav className="hidden lg:flex items-center gap-8">
+            <Link href="/" className="text-sm font-medium text-body hover:text-heading transition-colors relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full">
+              Explore
+            </Link>
+            <Link href="/search" className="text-sm font-medium text-body hover:text-heading transition-colors">
+              Destinations
+            </Link>
+            <Link href="/blog" className="text-sm font-medium text-body hover:text-heading transition-colors">
+              Blog
+            </Link>
+
+            {/* For Families dropdown — inline links for now */}
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-sm font-medium text-body hover:text-heading dark:text-gray-300 dark:hover:text-gray-100 transition-colors">
+                For Families
+                <ChevronDown size={14} />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-30 overflow-hidden">
+                <div className="py-2">
+                  <Link href="/best-for/babies" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">
+                    <span className="text-lg">👶</span>
+                    <div>
+                      <div className="font-medium dark:text-gray-200">Best for Babies</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">Under 2 years old</div>
+                    </div>
+                  </Link>
+                  <Link href="/best-for/teens" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">
+                    <span className="text-lg">🧑</span>
+                    <div>
+                      <div className="font-medium dark:text-gray-200">Best for Teens</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">13-18 years old</div>
+                    </div>
+                  </Link>
+                  <Link href="/best-for/multigen" className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">
+                    <span className="text-lg">👨‍👩‍👧‍👦</span>
+                    <div>
+                      <div className="font-medium dark:text-gray-200">Multi-Generational</div>
+                      <div className="text-xs text-gray-500 dark:text-gray-400">Grandparents &amp; kids</div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          {/* Right side */}
+          <div className="flex items-center gap-1">
+            {/* Dark Mode Toggle */}
+            <DarkModeToggle />
+            
+            {/* Bookmark/Saved */}
+            <Link
+              href={user ? '/account/saved' : '/auth/login'}
+              className="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-body dark:text-gray-300 hover:text-heading dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            >
+              <Heart size={16} />
+              <span>Saved</span>
+              {bookmarkCount > 0 && (
+                <span className="text-xs px-1.5 py-0.5 rounded-full bg-rose-50 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400 font-medium ml-1">{bookmarkCount}</span>
+              )}
+            </Link>
+
+            {/* Auth */}
+            <div className="hidden md:flex items-center">
+              {authLoading ? (
+                <div className="w-8 h-8 rounded-full border-2 border-gray-200 dark:border-gray-600 border-t-primary-500 animate-spin" />
+              ) : user ? (
+                <UserMenu user={user} bookmarkCount={bookmarkCount} />
+              ) : (
+                <Link
+                  href="/auth/login"
+                  className="px-5 py-2 bg-primary-700 text-white text-sm font-semibold rounded-lg hover:bg-primary-800 transition-colors shadow-sm"
+                >
+                  Sign In
+                </Link>
+              )}
+            </div>
+
+            {/* Mobile menu button */}
+            <button
+              className="lg:hidden min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden py-4 border-t border-gray-100">
+            <div className="flex flex-col gap-1">
+              <Link href="/" className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Explore</Link>
+              <Link href="/search" className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Destinations</Link>
+              <Link href="/blog" className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+              <Link href="/best-for/babies" className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>👶 Best for Babies</Link>
+              <Link href="/best-for/teens" className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>🧑 Best for Teens</Link>
+              <Link href="/best-for/multigen" className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>👨‍👩‍👧‍👦 Multi-Generational</Link>
+
+              <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 space-y-2 px-4">
+                <Link
+                  href={user ? '/account/saved' : '/auth/login'}
+                  className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Heart size={16} />
+                  Saved Places
+                  {bookmarkCount > 0 && (
+                    <span className="text-xs px-1.5 py-0.5 rounded-full bg-rose-50 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400 ml-auto">{bookmarkCount}</span>
+                  )}
+                </Link>
+                {user ? (
+                  <Link
+                    href="/account"
+                    className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <User size={16} />
+                    Account
+                  </Link>
+                ) : (
+                  <Link
+                    href="/auth/login"
+                    className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-primary-700 rounded-lg hover:bg-primary-800 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Sign In
+                  </Link>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+}

@@ -1,0 +1,848 @@
+[
+  {
+    "id": "bangkok-004",
+    "name": "Dream World Bangkok",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "category": "Theme Parks",
+    "ageRange": "2-14",
+    "safetyRating": 3.9,
+    "priceRange": "$$",
+    "popularity": 76,
+    "description": "Bangkok's biggest amusement park with themed zones including Snow World, a massive indoor snow park where kids can touch real snow for the first time.",
+    "location": "Pathum Thani, 45 min north of central Bangkok",
+    "bestTime": "Weekdays, November-February (cool season)",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurants",
+      "Locker Rental",
+      "First Aid",
+      "Changing Rooms"
+    ],
+    "safetyFeatures": [
+      "Ride Inspections",
+      "Lifeguards (Water Park)",
+      "Lost Child Center",
+      "Security"
+    ],
+    "tipsAndTricks": [
+      "The Snow World section requires a jacket rental included in premium ticket - don't skip it, the kids will remember it forever.",
+      "Pack a change of clothes - the water rides and snow area will leave everyone wet.",
+      "Go on a Wednesday or Thursday - weekends see 50,000+ visitors and queues hit 45 minutes per ride."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My tropical kids touched snow for the first time",
+      "excerpt": "Our kids had never seen snow except on TV. Dream World's Snow World made them scream with joy - and it's -5C inside!",
+      "author": "Natalie, mom of 2 from Singapore",
+      "fullStory": "Living in Singapore, our kids had never experienced cold weather. The Snow World section at Dream World was worth the 45-minute drive from central Bangkok alone. They spent 2 hours building snowmen and sliding on the ice track. The rest of the park was standard theme park fare, but Snow World made it unforgettable. The jacket rental was included in our ticket for 200 baht extra - completely worth it."
+    },
+    "itineraryComparison": {
+      "halfDay": "Snow World + 3-4 rides, lunch, leave by 2pm",
+      "fullDay": "All rides, water park, Snow World, shows, dinner",
+      "bestFor": "Ages 2-14, tropical families wanting snow"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Dream World Bangkok",
+      "Bangkok family theme park",
+      "Thailand with kids"
+    ]
+  },
+  {
+    "id": "bangkok-005",
+    "name": "SEA LIFE Bangkok Ocean World",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 82,
+    "description": "One of Southeast Asia's largest aquariums, housed beneath Siam Paragon mall. Walk through the 270-degree ocean tunnel surrounded by sharks, rays, and sea turtles.",
+    "location": "Siam Paragon, basement floor, central Bangkok (BTS Siam station)",
+    "bestTime": "Morning opening (10am) on weekdays for fewest crowds",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restrooms",
+      "Air Conditioning",
+      "Cafe",
+      "Gift Shop"
+    ],
+    "safetyFeatures": [
+      "Glass Barriers",
+      "Staff Supervision",
+      "Hand Sanitizer Stations",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "Book tickets online 24h ahead - you save 30% compared to walk-in counter prices.",
+      "The glass-bottom boat ride over the shark tank is worth the 300 baht add-on; kids lie flat on it and pretend they're swimming.",
+      "Combine with Siam Paragon for lunch - the food court has everything from pad thai to pizza that picky eaters will accept."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "How I survived 3 hours at an aquarium without a single tantrum",
+      "excerpt": "My toddler was mesmerized by the giant ocean tunnel. I actually sat down and drank a full coffee while she watched sharks float above us.",
+      "author": "David, dad of 1 from Australia",
+      "fullStory": "We visited SEA LIFE as a break from Bangkok's heat, expecting maybe 45 minutes before our 2-year-old got bored. Three hours later, she was still pressing her nose against the glass of the ocean tunnel. The touch pool with starfish kept her busy for another 20 minutes. Best parenting win: they have a dedicated stroller parking area and the whole place is air conditioned. I had my first hot coffee in days."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main aquarium walkthrough, touch pool, glass-bottom boat, 1.5-2 hours",
+      "fullDay": "Combine with Siam Paragon shopping, KidZania Bangkok next door, and mall dining",
+      "bestFor": "Rainy days, hot afternoons, toddlers to tweens"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "SEA LIFE Bangkok",
+      "Bangkok aquarium kids",
+      "Siam Paragon activities",
+      "Bangkok indoor activities children"
+    ]
+  },
+  {
+    "id": "bangkok-006",
+    "name": "Children's Discovery Museum",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "category": "Museums",
+    "ageRange": "3-12",
+    "safetyRating": 4.3,
+    "priceRange": "$",
+    "popularity": 68,
+    "description": "Bangkok's largest interactive children's museum with hands-on exhibits spanning science, technology, culture, and the human body - almost entirely free of charge.",
+    "location": "Chatuchak district, near Mo Chit BTS station",
+    "bestTime": "Weekday mornings, weekends get very busy after 11am",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Free Entry",
+      "Air Conditioning",
+      "Parking",
+      "Snack Bar"
+    ],
+    "safetyFeatures": [
+      "Soft Flooring in Baby Zones",
+      "Staff on Every Floor",
+      "Height Restrictions Posted",
+      "Rounded Furniture"
+    ],
+    "tipsAndTricks": [
+      "Entry is free for Thai residents and 100 baht for foreigners - bring cash, no card accepted at the gate.",
+      "The construction zone on the third floor with real (safe) tools is the biggest hit; budget 45 minutes there alone.",
+      "Combine with Chatuchak Weekend Market on Saturdays - the museum opens at 10am, market stalls open around 11am."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Best 100 baht we spent in Bangkok",
+      "excerpt": "Three floors of interactive science exhibits and my daughter was the one dragging ME from station to station. Free-ish and brilliant.",
+      "author": "Rachel, mom of 1 from UK",
+      "fullStory": "After a week of temples and palaces, our 5-year-old was done with 'looking but not touching.' The Children's Discovery Museum was exactly what she needed. The water play area taught her about dams and currents, the human body section had a giant digestive system she could crawl through, and the construction zone let her use real tools. We spent 4 hours there and she cried when we left. For the equivalent of 1 GBP, this was easily our best value day in Bangkok."
+    },
+    "itineraryComparison": {
+      "halfDay": "2-3 floors of exhibits, snack break, 2-3 hours",
+      "fullDay": "Add Chatuchak Market (weekend), Or Tor Kor fruit market nearby",
+      "bestFor": "Active kids who need to touch everything, budget travelers"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Children's Discovery Museum Bangkok",
+      "Bangkok free kids activities",
+      "Bangkok museums for children",
+      "Chatuchak kids"
+    ]
+  },
+  {
+    "id": "bali-004",
+    "name": "Bali Zoo & Bird Park",
+    "city": "Bali",
+    "country": "Indonesia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.0,
+    "priceRange": "$$",
+    "popularity": 74,
+    "description": "A lush, jungle-set zoo home to over 500 animals including orangutans, Komodo dragons, and a walk-through aviary with hundreds of exotic birds from across Indonesia.",
+    "location": "Singapadu, Gianyar, 15 min from Ubud center",
+    "bestTime": "Early morning (9am opening) to avoid heat and catch animal feeding sessions",
+    "imageUrl": "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurants",
+      "Shaded Walkways",
+      "Restrooms",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Enclosure Barriers",
+      "Staff Escorts for Animal Encounters",
+      "First Aid Station",
+      "Hand Wash Stations"
+    ],
+    "tipsAndTricks": [
+      "The breakfast with orangutans experience (7:30am) books out 2 weeks in advance - reserve online before your trip.",
+      "Bring a refillable water bottle; they have free filtered water stations but charge 35,000 IDR for bottled.",
+      "The bird park is connected to the zoo by a free shuttle - do the bird park first while it's still cool, then the zoo."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80",
+      "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My 4-year-old fed a tiger (with a handler)",
+      "excerpt": "The toddler stared at a Komodo dragon for 20 minutes straight. Meanwhile, I ate breakfast with a view of orangutans swinging overhead.",
+      "author": "Tomomi, mom of 1 from Japan",
+      "fullStory": "We booked the breakfast with orangutans and it was surreal - sitting in the open-air restaurant while these gentle apes climbed and played in the trees right next to our table. After breakfast, the bird park's walk-through aviary had my daughter squealing as lorikeets landed on her shoulders. The zoo is compact enough to cover in 3 hours without exhaustion, which is a huge win for Bali's heat."
+    },
+    "itineraryComparison": {
+      "halfDay": "Bird park walk-through + zoo main loop + animal feeding show, 3 hours",
+      "fullDay": "Add elephant ride, jungle splash water play, lunch at the zoo restaurant",
+      "bestFor": "Animal-loving kids, families splitting time between Ubud and south Bali"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Bali Zoo",
+      "Bali Bird Park",
+      "Ubud with kids",
+      "Bali animal experiences"
+    ]
+  },
+  {
+    "id": "bali-005",
+    "name": "Bali Museum & Cultural Center",
+    "city": "Bali",
+    "country": "Indonesia",
+    "category": "Museums",
+    "ageRange": "5-14",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 58,
+    "description": "The Bali Museum in Denpasar showcases Balinese art, history, and culture across three traditional pavilions, plus a cultural center offering batik-making and gamelan workshops for kids.",
+    "location": "Jalan Mayor Wisnu, Denpasar, central Bali",
+    "bestTime": "Morning, Tuesday-Sunday (closed Mondays and public holidays)",
+    "imageUrl": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Gift Shop",
+      "Shaded Courtyard",
+      "Guided Tours",
+      "Workshop Tables"
+    ],
+    "safetyFeatures": [
+      "Low Exhibition Barriers",
+      "Non-Slip Floors",
+      "Staff Monitors",
+      "Covered Walkways"
+    ],
+    "tipsAndTricks": [
+      "The batik-making workshop costs 50,000 IDR and takes about 1 hour - your kid takes home an actual piece of batik cloth.",
+      "Kids under 12 enter free; adults pay a tiny 5,000 IDR fee (less than $0.50).",
+      "The museum grounds have a lovely garden with turtles in a pond - a good reset point if kids get museum fatigue."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Museum day in Bali - it actually worked",
+      "excerpt": "I was sure the Bali Museum would bore my kids. Turns out, making their own batik and trying on traditional dance costumes changed everything.",
+      "author": "Marcus, dad of 2 from Germany",
+      "fullStory": "We needed a break from beaches and pool time, so I reluctantly took the kids to the Bali Museum. The museum itself is small - three pavilions that you can cover in 45 minutes. But the cultural center is where it gets good. My 7-year-old made a batik scarf she still wears, and my 9-year-old tried the gamelan percussion workshop and couldn't stop talking about it. The whole visit including workshop time was about 2.5 hours and cost us under $5."
+    },
+    "itineraryComparison": {
+      "halfDay": "Museum tour + one workshop (batik or gamelan), 2-2.5 hours",
+      "fullDay": "Combine with Bajra Sandhi Monument nearby and Puputan Park for a Denpasar cultural day",
+      "bestFor": "School-age kids, cultural learning, rainy day backup plan"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Bali Museum Denpasar",
+      "Bali culture kids",
+      "batik workshop kids",
+      "Denpasar family activities"
+    ]
+  },
+  {
+    "id": "phuket-003",
+    "name": "Phuket Aquarium",
+    "city": "Phuket",
+    "country": "Thailand",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.2,
+    "priceRange": "$",
+    "popularity": 62,
+    "description": "A well-maintained aquarium at Cape Panwa showcasing the marine life of the Andaman Sea, with touch pools, a sea turtle rehabilitation center, and giant moray eels.",
+    "location": "Cape Panwa, 15 min south of Phuket Town",
+    "bestTime": "Weekday mornings to avoid school groups",
+    "imageUrl": "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Air Conditioning",
+      "Restrooms",
+      "Souvenir Shop",
+      "Water Dispenser"
+    ],
+    "safetyFeatures": [
+      "Glass Barrier Walls",
+      "Hand Sanitizer",
+      "Non-Slip Floors",
+      "Lifeguard Adjacent Beaches"
+    ],
+    "tipsAndTricks": [
+      "The sea turtle rehabilitation center is the highlight - you can see rescued turtles being treated and learn about conservation.",
+      "At 200 THB per adult and 100 THB per child, it's the cheapest air-conditioned attraction on the island.",
+      "Combine with the Phuket Botanic Garden next door for a half-day nature double-header."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Rainy day in Phuket saved by 50 baht",
+      "excerpt": "A tropical downpour stranded us at Cape Panwa. The tiny aquarium turned out to be a gem - and cost less than a mango smoothie.",
+      "author": "Sarah, mom of 2 from Canada",
+      "fullStory": "We ducked into Phuket Aquarium to escape a sudden storm, expecting a 20-minute time-filler. Two hours later, we had to drag the kids out. The touch pool with starfish and sea cucumbers was the big hit, but the sea turtle rescue story really connected with my older one. The aquarium is small but thoughtfully laid out - you walk through the tanks in a natural progression from shoreline to deep sea. Clean bathrooms, cold AC, and at this price, it's a no-brainer."
+    },
+    "itineraryComparison": {
+      "halfDay": "Aquarium tour + touch pool + turtle center, 1.5-2 hours",
+      "fullDay": "Add Phuket Botanic Garden, lunch at Cape Panwa beach, afternoon at Panwa Beach",
+      "bestFor": "Rainy days, toddlers, budget families"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Phuket Aquarium",
+      "Phuket with kids",
+      "Cape Panwa",
+      "Phuket rainy day activities"
+    ]
+  },
+  {
+    "id": "phuket-004",
+    "name": "Carnival Magic Theme Park",
+    "city": "Phuket",
+    "country": "Thailand",
+    "category": "Theme Parks",
+    "ageRange": "3-14",
+    "safetyRating": 4.0,
+    "priceRange": "$$$",
+    "popularity": 71,
+    "description": "Phuket's newest mega theme park with a huge carnival-themed entertainment complex including a nightly parade, AI-powered water show, indoor rides, and a massive buffet dinner.",
+    "location": "Kamala Beach area, 20 min north of Patong",
+    "bestTime": "Evening shows start at 6pm; arrive by 4pm to enjoy carnival games and rides before dark",
+    "imageUrl": "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurants",
+      "Baby Changing Rooms",
+      "Free Parking",
+      "Souvenir Shops"
+    ],
+    "safetyFeatures": [
+      "Ride Inspections",
+      "Security Guards",
+      "Lost Child Wristbands",
+      "Emergency Medical Team",
+      "CCTV"
+    ],
+    "tipsAndTricks": [
+      "The premium ticket includes the River Palace buffet dinner and best show seats - it costs more but saves you from lining up for food with hungry kids.",
+      "Get the lost child wristband at the entrance for every kid under 10; the park gets chaotic after dark.",
+      "Skip the game stalls (300-500 THB per game) and spend that money on the face painting station instead."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336605-5e9c7c738336?w=800&q=80",
+      "https://images.unsplash.com/photo-1738023354227-16a406891bd2?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A theme park that actually felt safe for little ones",
+      "excerpt": "With wristbands, friendly staff, and surprisingly gentle rides, Carnival Magic let us relax for the first time all trip.",
+      "author": "Hiro, dad of 2 from Japan",
+      "fullStory": "I was skeptical about a mega theme park in Phuket - assumed it would be tourist-trap chaos. Carnival Magic surprised me. The park is sprawling but very well organized, with clear signage in English and Thai. The indoor air-conditioned sections were a lifesaver for our afternoon visit. The nightly parade at 8pm is genuinely impressive - enormous floats, dancers, and enough lights to keep even the most tired toddler awake. The buffet dinner was decent quality, and the kids ate more than they had all week."
+    },
+    "itineraryComparison": {
+      "halfDay": "Afternoon rides + carnival games + evening parade + dinner, 4-5pm to 9pm",
+      "fullDay": "Full day pass with water park add-on, shows, and all rides",
+      "bestFor": "Evening family outing, kids who love parades and spectacle"
+    },
+    "commissionRate": "10%",
+    "seoKeywords": [
+      "Carnival Magic Phuket",
+      "Phuket theme park",
+      "Kamala Beach activities",
+      "Phuket night show kids"
+    ]
+  },
+  {
+    "id": "chiangmai-003",
+    "name": "Queen Sirikit Botanical Garden",
+    "city": "Chiang Mai",
+    "country": "Thailand",
+    "category": "Parks & Nature",
+    "ageRange": "2-14",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 66,
+    "description": "Thailand's first-class botanical garden spread across 560 acres on the slopes of Doi Suthep, featuring a stunning glasshouse complex, canopy walkway, and a dedicated children's discovery garden.",
+    "location": "Mae Rim district, 25 min north of Chiang Mai city center",
+    "bestTime": "November-February for cool weather and blooming flowers; arrive at 8:30am opening",
+    "imageUrl": "https://images.unsplash.com/photo-1775152496490-9cebc8bb7dde?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restrooms",
+      "Cafe",
+      "Free Parking",
+      "Picnic Areas",
+      "Tram Service"
+    ],
+    "safetyFeatures": [
+      "Railed Walkways",
+      "Staff Throughout",
+      "Emergency Phones",
+      "Shaded Rest Areas"
+    ],
+    "tipsAndTricks": [
+      "Take the tram (free with entry) to the top of the gardens and walk down - saves little legs and gives you the downhill view.",
+      "The canopy walkway sways gently and might scare very young kids; test with a short walk before committing to the full length.",
+      "Pack a picnic - there are beautiful shaded lawns near the greenhouse complex and very few crowds on weekdays."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80",
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A garden so big we got lost (and didn't mind)",
+      "excerpt": "We walked through a glasshouse full of carnivorous plants and ended up at a canopy walkway above the treetops. The kids thought we were in Jurassic Park.",
+      "author": "Anya, mom of 2 from Singapore",
+      "fullStory": "My husband thought a botanical garden would be boring for the kids, but Queen Sirikit won him over. The glasshouse complex is stunning - multiple domes with different climate zones. The rainforest dome had a waterfall inside it, and the kids loved the carnivorous plant section. The canopy walkway was the highlight: walking above the actual forest floor with views over the valley. We spent 3 hours and only covered about half the gardens. The tram saved us when the little one got tired."
+    },
+    "itineraryComparison": {
+      "halfDay": "Tram to top, canopy walkway, main glasshouse, children's garden, 2-3 hours",
+      "fullDay": "Full garden exploration + picnic + nearby Mae Rim elephant sanctuary in afternoon",
+      "bestFor": "Nature-loving families, hot day escape (cooler mountain air), photographers"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Queen Sirikit Botanical Garden",
+      "Chiang Mai nature kids",
+      "Doi Suthep garden",
+      "Chiang Mai outdoor activities"
+    ]
+  },
+  {
+    "id": "chiangmai-004",
+    "name": "Chiang Mai Zoo & Aquarium",
+    "city": "Chiang Mai",
+    "country": "Thailand",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 3.7,
+    "priceRange": "$",
+    "popularity": 69,
+    "description": "Thailand's oldest zoo set on the slopes of Doi Suthep, housing over 7,000 animals including pandas, snow leopards, and a freshwater aquarium with a long glass tunnel.",
+    "location": "Huay Kaew Road, foothills of Doi Suthep, 10 min from Old City",
+    "bestTime": "Weekday mornings before 10am when animals are active and crowds are thin",
+    "imageUrl": "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurants",
+      "Shuttle Bus",
+      "Restrooms",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Barrier Fences",
+      "Veterinary Staff",
+      "First Aid Points",
+      "Lost Child Office"
+    ],
+    "tipsAndTricks": [
+      "The panda exhibit closes for nap time from 11am-1pm - see them first thing or after lunch.",
+      "The zoo is on a hill and very spread out; rent a golf cart (300 THB/hour) if you have toddlers, otherwise expect a lot of walking.",
+      "The aquarium inside the zoo costs extra (200 THB) but the freshwater tunnel is genuinely impressive - giant catfish swim right overhead."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+      "https://images.unsplash.com/photo-1594103345324-16aa1bcffdb9?w=800&q=80",
+      "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Pandas made my kids forget about iPads",
+      "excerpt": "Two pandas eating bamboo for an hour - and my kids watched the entire thing without blinking. Chiang Mai Zoo delivered.",
+      "author": "Leo, dad of 2 from Hong Kong",
+      "fullStory": "The zoo itself is a bit old and hilly, but the animals are well-cared for and the panda exhibit is world-class. We saw Lin Hui munching bamboo less than 3 meters away through the glass. The snow leopard was hiding, which disappointed my 6-year-old, but the white tiger and gibbon enclosures made up for it. The aquarium tunnel was better than expected - freshwater fish the size of small sharks. For the price (150 THB adult, 75 THB child), it's fantastic value. Just rent the golf cart."
+    },
+    "itineraryComparison": {
+      "halfDay": "Panda + main zoo loop + aquarium, 2-3 hours by golf cart",
+      "fullDay": "Full zoo + aquarium + Doi Suthep temple visit (same road)",
+      "bestFor": "Animal lovers, budget families, combining with Doi Suthep trip"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Chiang Mai Zoo",
+      "Chiang Mai panda",
+      "Chiang Mai aquarium",
+      "Kids activities Chiang Mai"
+    ]
+  },
+  {
+    "id": "chiangmai-005",
+    "name": "Doi Suthep Kid-Friendly Hike",
+    "city": "Chiang Mai",
+    "country": "Thailand",
+    "category": "Parks & Nature",
+    "ageRange": "5-14",
+    "safetyRating": 4.1,
+    "priceRange": "$",
+    "popularity": 74,
+    "description": "A family-friendly jungle trail from the base of Doi Suthep mountain to Wat Pha Lat, a serene forest temple hidden in the jungle - a 2km walk that feels like an adventure without being too hard for little legs.",
+    "location": "Doi Suthep National Park, starting at the monk's trail CHP gate, 20 min from Old City",
+    "bestTime": "Morning, 7-10am, before the heat builds and afternoon rains arrive (June-October)",
+    "imageUrl": "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80",
+    "amenities": [
+      "Trail Markers",
+      "Restrooms at Temple",
+      "Water Refill at Temple",
+      "Shaded Path"
+    ],
+    "safetyFeatures": [
+      "Railed Sections",
+      "Gentle Grade",
+      "Emergency Number Posted",
+      "Cell Reception on Most Trail"
+    ],
+    "tipsAndTricks": [
+      "Start at the monk's trail gate (CHP entrance) - it's the easier, shaded route perfect for kids, not the 306-step staircase.",
+      "Bring at least 1L of water per person; there are vendors at Wat Pha Lat but nothing on the trail itself.",
+      "Take it slow - the trail has roots and rocks that little feet need to navigate. Plan 1-1.5 hours up, 45 min down.",
+      "Watch for monkeys near Wat Pha Lat - don't let kids carry snacks in open bags."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80",
+      "https://images.unsplash.com/photo-1772550018808-ebbcc271726c?w=800&q=80",
+      "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The jungle walk that turned my city kids into explorers",
+      "excerpt": "My 7-year-old spotted a monitor lizard on the trail and thought he was Indiana Jones. The temple at the end was a magical reward.",
+      "author": "Katherine, mom of 2 from USA",
+      "fullStory": "I was nervous about a jungle hike with kids in Chiang Mai's heat, but the monk's trail to Wat Pha Lat was perfect. The path is shaded by enormous trees and feels like a real jungle adventure without being dangerous. We saw butterflies, a monitor lizard, colorful birds, and giant millipedes. Wat Pha Lat is breathtaking - a hidden temple with Buddha statues draped in moss, waterfalls, and a small meditation cave. My kids felt like they'd discovered a secret. We sat by the waterfall and ate the bananas we'd brought. Total cost: 0 THB."
+    },
+    "itineraryComparison": {
+      "halfDay": "Trail up + Wat Pha Lat visit + snack + trail down, 2-3 hours total",
+      "fullDay": "Add the full Doi Suthep temple at the top (songthaew up, walk down), lunch at a mountain-view restaurant",
+      "bestFor": "Active families, ages 5+, nature immersion"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Doi Suthep hike kids",
+      "Wat Pha Lat trail",
+      "Chiang Mai family hiking",
+      "monk's trail Chiang Mai"
+    ]
+  },
+  {
+    "id": "kualalumpur-003",
+    "name": "KL Bird Park",
+    "city": "Kuala Lumpur",
+    "country": "Malaysia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.4,
+    "priceRange": "$$",
+    "popularity": 77,
+    "description": "The world's largest free-flight walk-in aviary, home to over 3,000 birds from 200 species including flamingos, hornbills, and peacocks that roam freely around visitors.",
+    "location": "Lake Gardens, 10 min from KL city center",
+    "bestTime": "Morning opening (9am) to catch bird feeding sessions and avoid the midday heat",
+    "imageUrl": "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restrooms",
+      "Cafe",
+      "Shaded Walkways",
+      "Gift Shop",
+      "Souvenir Photo"
+    ],
+    "safetyFeatures": [
+      "Controlled Bird Access",
+      "Hand Wash Stations",
+      "Non-Slip Paths",
+      "First Aid",
+      "Security Personnel"
+    ],
+    "tipsAndTricks": [
+      "Buy the bird feed (RM5 per cup) at the entrance - flamingos and parrots will eat right from your kids' hands.",
+      "The 12:30pm bird show is the best one of the day with hornbills flying over the audience.",
+      "The park is part of the Lake Gardens complex - combine with the butterfly park and deer park all within walking distance for a full day out."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1644327981167-fbd67b34ba72?w=800&q=80",
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Flamingos walked past our picnic blanket",
+      "excerpt": "We sat down for a snack and a peacock joined us. My toddler thought she'd entered a fairy tale.",
+      "author": "Nina, mom of 1 from Australia",
+      "fullStory": "KL Bird Park was the highlight of our Kuala Lumpur trip. The free-flight concept is incredible - birds just wander around you. Flamingos waded in their pond while my daughter watched from inches away. The hornbill section was noisy and wonderful, and the feeding area where parrots land on your arm was pure joy. The bird show was genuinely entertaining with macaws doing tricks and a hornbill doing a fly-over. The cafe is basic but the milkshake saved us from the heat."
+    },
+    "itineraryComparison": {
+      "halfDay": "Bird park + bird show + feeding, 2 hours",
+      "fullDay": "Combine with KL Butterfly Park, Deer Park, and Lake Gardens picnic",
+      "bestFor": "Toddlers and young kids, animal lovers, hot mornings"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "KL Bird Park",
+      "Kuala Lumpur kids",
+      "Lake Gardens KL",
+      "free flight aviary Kuala Lumpur"
+    ]
+  },
+  {
+    "id": "kualalumpur-004",
+    "name": "Petrosains Science Discovery Centre",
+    "city": "Kuala Lumpur",
+    "country": "Malaysia",
+    "category": "Museums",
+    "ageRange": "4-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 79,
+    "description": "An award-winning interactive science center inside the Petronas Twin Towers with over 100 hands-on exhibits covering space exploration, dinosaurs, oil platforms, and the science of everyday life.",
+    "location": "Suria KLCC, Level 4, Petronas Twin Towers, KL city center",
+    "bestTime": "Weekday afternoons after 1pm when school groups have left",
+    "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Air Conditioning",
+      "Restrooms",
+      "Cafe",
+      "Locker Rental",
+      "Nursing Room"
+    ],
+    "safetyFeatures": [
+      "Soft Flooring",
+      "Rounded Edges",
+      "Staff Supervision at Each Zone",
+      "Emergency Exits",
+      "Hand Sanitizer Stations"
+    ],
+    "tipsAndTricks": [
+      "The Dark Ride at the start is a fun roller-coaster-style intro to energy and science - but warn sensitive kids about the loud sounds.",
+      "The earthquake simulator and hurricane chamber are the biggest hits; be prepared to queue 10-15 minutes for each.",
+      "You can spend 3-4 hours here easily, and it's inside Suria KLCC mall - grab lunch at the food court on level 3 after."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Science center that made my 8-year-old want to be an engineer",
+      "excerpt": "He designed a bridge on a computer simulator, then walked across a real suspended bridge. Two weeks later he's still talking about it.",
+      "author": "Jason, dad of 1 from UK",
+      "fullStory": "Petrosains is one of the best science centers I've visited anywhere. The exhibits are thoughtfully designed - not just buttons to press but real experiments. My son built a simple oil rig model, tested bridge designs under simulated earthquakes, and experienced hurricane-force winds. The space section with a mock Mars rover was also fantastic. It's not cheap (RM45 adult, RM35 child) but for the quality and time you spend, it's great value. The fact that it's in the Petronas Twin Towers is a bonus."
+    },
+    "itineraryComparison": {
+      "halfDay": "All exhibits + Dark Ride + simulator experiences, 3 hours",
+      "fullDay": "Petrosains + Skybridge to Petronas Towers + Aquaria KLCC + KLCC Park",
+      "bestFor": "School-age kids, rainy days, budding scientists"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Petrosains KL",
+      "KLCC kids activities",
+      "science museum Kuala Lumpur",
+      "Petronas Twin Towers with kids"
+    ]
+  },
+  {
+    "id": "hanoi-003",
+    "name": "Vietnam Museum of Ethnology",
+    "city": "Hanoi",
+    "country": "Vietnam",
+    "category": "Museums",
+    "ageRange": "5-14",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 65,
+    "description": "A fascinating open-air museum showcasing the traditional homes and cultures of Vietnam's 54 ethnic groups, with full-scale reconstructed houses, traditional performances, and hands-on craft workshops.",
+    "location": "Cau Giay district, 20 min from Hoan Kiem Lake",
+    "bestTime": "Weekday mornings to avoid crowds; go before 10am for the coolest part of the day for the outdoor section",
+    "imageUrl": "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+    "amenities": [
+      "Stroller Access (Partial)",
+      "Restrooms",
+      "Cafe",
+      "Souvenir Shop",
+      "Free Parking"
+    ],
+    "safetyFeatures": [
+      "Railed Staircases",
+      "Open Air (well ventilated)",
+      "Staff on Site",
+      "First Aid Station"
+    ],
+    "tipsAndTricks": [
+      "The outdoor section with full-scale traditional houses is the highlight - kids can climb into a stilt house and a longhouse.",
+      "The water puppet workshop (weekends, 40,000 VND) lets kids make their own puppet - book at the information desk when you arrive.",
+      "Bring mosquito repellent for the outdoor section, especially in rainy season (May-October)."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Climbing into people's homes made history click for my kids",
+      "excerpt": "My daughter crawled through a Bahnar longhouse and saw a jar of fermented rice wine. She didn't just learn about culture - she lived it.",
+      "author": "Mathieu, dad of 2 from France",
+      "fullStory": "Museums in Hanoi can be tough for kids - lots of artifacts behind glass. The Ethnology Museum is the opposite. The outdoor area has full-scale houses from Vietnam's different ethnic groups that you can actually walk through. My kids ran through a H'mong wooden house, climbed stairs in a Tay stilt house, and sat in a traditional boat. Inside the main building, the exhibits are well-presented with enough color and variety to keep attention. We spent 2.5 hours and only left because we were hungry."
+    },
+    "itineraryComparison": {
+      "halfDay": "Indoor exhibits + outdoor village houses + craft workshop, 2-3 hours",
+      "fullDay": "Combine with nearby Ho Tay (West Lake) for lunch and Thang Long Imperial Citadel",
+      "bestFor": "School-age kids, families interested in culture, active kids who need to move"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Vietnam Museum of Ethnology",
+      "Hanoi kids museum",
+      "Vietnamese culture for children",
+      "Hanoi family activities"
+    ]
+  },
+  {
+    "id": "srilanka-001",
+    "name": "Pinnawala Elephant Orphanage",
+    "city": "Pinnawala",
+    "country": "Sri Lanka",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 3.8,
+    "priceRange": "$$",
+    "popularity": 80,
+    "description": "The world's most famous elephant orphanage, home to over 60 rescued elephants of all ages. Watch them feed, bathe, and roam freely in a riverside sanctuary 90 minutes from Colombo.",
+    "location": "Pinnawala, Kegalle district, 90 min east of Colombo",
+    "bestTime": "10am-12pm for feeding and the famous 1pm river bathing session",
+    "imageUrl": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Cafe",
+      "Gift Shop",
+      "Observation Platforms",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Fenced Viewing Areas",
+      "Mahout Supervision",
+      "Safety Barriers at River",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "The 1pm river bathing is the main event - elephants march to the river through the street. Get there by 12:30pm.",
+      "Stay on the observation platform across the river for the best photos without the crowds.",
+      "Entry fee is 3,000 LKR adult, 1,500 LKR child (foreigners) - bring cash",
+      "Elephant rides offered nearby are NOT part of the orphanage and often involve unethical treatment."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Baby elephants are as clumsy as toddlers",
+      "excerpt": "A 3-month-old elephant tripped over his trunk at the river. My 5-year-old thought it was the funniest thing she'd ever seen.",
+      "author": "Claire, mom of 2 from Canada",
+      "fullStory": "Pinnawala was the reason we came to Sri Lanka with kids, and it delivered. Watching the herd march down the road to the river - traffic stops for them - is extraordinary. The river bathing is pure magic. Baby elephants splash and roll, mahouts scrub the big ones. It's not a zoo - the elephants have space and seem genuinely cared for. My kids asked a million questions about each rescue story."
+    },
+    "itineraryComparison": {
+      "halfDay": "Morning arrival, feeding session, river bathing, lunch, 3-4 hours",
+      "fullDay": "Combine with nearby Pinnewala Tea Factory and botanical gardens in Kegalle",
+      "bestFor": "Animal lovers, ages 2+, first-time Sri Lanka visitors"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Pinnawala Elephant Orphanage",
+      "Sri Lanka with kids",
+      "elephant bathing Sri Lanka",
+      "Colombo day trips"
+    ]
+  },
+  {
+    "id": "srilanka-002",
+    "name": "Colombo National Museum",
+    "city": "Colombo",
+    "country": "Sri Lanka",
+    "category": "Museums",
+    "ageRange": "6-14",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 61,
+    "description": "Sri Lanka's largest museum, housing the crown jewels of the Kandyan kings, over 4,000 ancient manuscripts, natural history exhibits, and the throne of the last King of Kandy.",
+    "location": "Colombo 7, Cinnamon Gardens, 15 min from Colombo Fort",
+    "bestTime": "Tuesday-Saturday mornings, 9am-12pm (closed on Mondays and public holidays)",
+    "imageUrl": "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Air Conditioning",
+      "Gift Shop",
+      "Guided Tours",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Glass Cases for Artifacts",
+      "Security Guards",
+      "CCTV",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "Download the museum's audio guide app - exhibit labels are sparse and audio brings history to life.",
+      "The Natural History wing has a life-sized blue whale skeleton that will wow the kids.",
+      "Kids under 12 enter free; adults pay 1,200 LKR."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Crown jewels that my kids actually cared about",
+      "excerpt": "I bribed them with ice cream to visit 'another boring museum.' Then they saw the golden throne and the jeweled elephant howdah.",
+      "author": "Raj, dad of 2 from India",
+      "fullStory": "Colombo National Museum is a proper old-school museum - dusty cases, dim lighting, artifacts packed floor-to-ceiling. But the wow factor is real. The Kandyan throne studded with gems, the ceremonial swords, and the royal costumes caught my kids' imagination. The natural history section with the whale skeleton was the perfect break. We spent 90 minutes. Not for toddlers, but school-age kids who like treasure and kings will love it."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main museum + natural history wing + gift shop, 1.5-2 hours",
+      "fullDay": "Combine with Viharamahadevi Park, Nelum Pokuna, and Galle Face Green",
+      "bestFor": "School-age kids, history-interested families, Colombo rainy day"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Colombo National Museum",
+      "Sri Lanka history kids",
+      "Colombo with children",
+      "Colombo rainy day activities"
+    ]
+  }
+]

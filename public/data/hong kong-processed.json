@@ -1,0 +1,93 @@
+{
+  "city": "Hong Kong",
+  "country": "China",
+  "lastUpdated": "2026-04-21T23:18:30.842Z",
+  "activities": [
+    {
+      "id": "hong kong-new-1",
+      "name": "Hong Kong Family Restaurant 1",
+      "category": "Restaurant",
+      "ageRange": "1-12",
+      "safetyRating": "4.8",
+      "description": "A wonderful family-friendly restaurant in Hong Kong. Perfect for children of all ages with safety measures in place.",
+      "location": "Hong Kong, China",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000001"
+    },
+    {
+      "id": "hong kong-new-2",
+      "name": "Hong Kong Family Beach 2",
+      "category": "Beach",
+      "ageRange": "0-9",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly beach in Hong Kong. Perfect for children of all ages with safety measures in place.",
+      "location": "Hong Kong, China",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000002"
+    },
+    {
+      "id": "hong kong-new-3",
+      "name": "Hong Kong Family Cultural 3",
+      "category": "Cultural",
+      "ageRange": "0-17",
+      "safetyRating": "5.0",
+      "description": "A wonderful family-friendly cultural in Hong Kong. Perfect for children of all ages with safety measures in place.",
+      "location": "Hong Kong, China",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000003"
+    },
+    {
+      "id": "hong kong-new-4",
+      "name": "Hong Kong Family Restaurant 4",
+      "category": "Restaurant",
+      "ageRange": "0-17",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly restaurant in Hong Kong. Perfect for children of all ages with safety measures in place.",
+      "location": "Hong Kong, China",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000004"
+    },
+    {
+      "id": "hong kong-new-5",
+      "name": "Hong Kong Family Cultural 5",
+      "category": "Cultural",
+      "ageRange": "1-9",
+      "safetyRating": "5.0",
+      "description": "A wonderful family-friendly cultural in Hong Kong. Perfect for children of all ages with safety measures in place.",
+      "location": "Hong Kong, China",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000005"
+    }
+  ],
+  "source": "Simulated data - would be real scraping in production",
+  "seoContent": {
+    "metaTitle": "Family Travel Guide: Hong Kong, China",
+    "metaDescription": "Complete family travel guide for Hong Kong. Safety-rated activities, age recommendations, and essential tips.",
+    "keywords": [
+      "Hong Kong family travel",
+      "things to do in Hong Kong with kids",
+      "Hong Kong children activities"
+    ],
+    "article": "Hong Kong is a fantastic destination for families. Our guide covers the best activities for children of all ages."
+  }
+}
