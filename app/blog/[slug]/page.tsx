@@ -8,6 +8,8 @@ import type { BlogPost } from '@/lib/blog-data';
 import BlogAdSlots from './BlogAdSlots';
 import BlogBookingCTA from './BlogBookingCTA';
 import SiteFooter from '@/components/SiteFooter';
+import ReadingProgress from '@/components/ReadingProgress';
+import SocialShare from '@/components/SocialShare';
 
 const BASE_URL = 'https://familytravelasia.com';
 
@@ -214,6 +216,8 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(post.faqSchema) }} />
       )}
 
+      <ReadingProgress />
+
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm">
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex items-center justify-between h-20">
@@ -314,6 +318,8 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
         <div className="prose-custom max-w-none">
           <ArticleContent content={post.content} />
         </div>
+
+        <SocialShare title={post.title} slug={slug} />
 
         <BlogBookingCTA tags={post.tags} />
 

@@ -20,6 +20,11 @@ const TelemetryInit = dynamic(
   { ssr: false }
 );
 
+const BackToTop = dynamic(
+  () => import('@/components/BackToTop'),
+  { ssr: false }
+);
+
 const BASE_URL = 'https://www.familytravelasia.com';
 
 export const metadata: Metadata = {
@@ -205,6 +210,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <EcosystemToggle />
         <TelemetryInit />
+        <BackToTop />
       </body>
     </html>
   );

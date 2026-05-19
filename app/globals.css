@@ -122,23 +122,25 @@
   --card-bg: #FFFFFF;
   --card-shadow: 0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px -1px rgba(0,0,0,0.06);
   --card-shadow-hover: 0 10px 25px -5px rgba(0,0,0,0.08), 0 4px 10px -6px rgba(0,0,0,0.04);
-  --primary-gradient: linear-gradient(135deg, #4A6B4E 0%, #5A7D5E 100%);
-  --accent-gradient: linear-gradient(135deg, #F59E0B 0%, #BD8E3C 100%);
-  --premium-gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  --text-muted: #6B7280;
+  --text-muted-light: #9CA3AF;
+  --primary-gradient: linear-gradient(135deg, #6D28D9 0%, #7C3AED 100%);
+  --accent-gradient: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
+  --premium-gradient: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%);
   --text-heading: #1B2838;
   --text-body: #2D2D2D;
   --radius-default: 0.75rem;
   --radius-card: 1rem;
   --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* Vibe Engine accent palette — all ratios verified ≥4.5:1 */
-  --vibe-teal: #3D7A78;
-  --vibe-coral: #E11D48;
-  --vibe-amber: #F59E0B;
-  --vibe-plum: #7C3AED;
-  --vibe-sky: #0284C7;
-  --vibe-accent: #3D7A78;
-  --vibe-subtle: #E8F2F2;
+  /* Vibe Engine accent palette — monotone purple */
+  --vibe-teal: #7C3AED;
+  --vibe-coral: #8B5CF6;
+  --vibe-amber: #A78BFA;
+  --vibe-plum: #6D28D9;
+  --vibe-sky: #5B21B6;
+  --vibe-accent: #7C3AED;
+  --vibe-subtle: #F5F3FF;
 }
 
 body {
@@ -151,24 +153,37 @@ body {
 /* ─── DARK MODE ─────────────────────────────────────────────────── */
 /* Support BOTH class-based toggle AND system prefers-color-scheme */
 /* Order: .dark class first (highest priority), then system preference */
+/* Text contrast safety: any hardcoded Tailwind gray becomes readable */
+html.dark, html.dark * {
+  color-scheme: dark;
+}
+html.dark p, html.dark span, html.dark li, html.dark div, html.dark a, html.dark small {
+  color: var(--text-body);
+}
+html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
+  color: var(--text-heading);
+}
+html.dark a { color: var(--vibe-accent); }
+html.dark a:hover { color: var(--vibe-plum); }
+
 html.dark {
   --background: #0F172A;
   --foreground: #E2E8F0;
   --card-bg: #1E293B;
   --card-shadow: 0 1px 3px 0 rgba(0,0,0,0.3), 0 1px 2px -1px rgba(0,0,0,0.2);
   --card-shadow-hover: 0 10px 25px -5px rgba(0,0,0,0.4), 0 4px 10px -6px rgba(0,0,0,0.2);
-  --primary-gradient: linear-gradient(135deg, #6B9E73 0%, #5A9E6E 100%);
-  --accent-gradient: linear-gradient(135deg, #FBBF24 0%, #D4A843 100%);
-  --premium-gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  --primary-gradient: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+  --accent-gradient: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%);
+  --premium-gradient: linear-gradient(135deg, #C4B5FD 0%, #8B5CF6 100%);
   --text-heading: #F1F5F9;
   --text-body: #CBD5E1;
-  --vibe-teal: #5FA8A5;
-  --vibe-coral: #FB7185;
-  --vibe-amber: #FBBF24;
-  --vibe-plum: #A78BFA;
-  --vibe-sky: #38BDF8;
-  --vibe-accent: #5FA8A5;
-  --vibe-subtle: #1E293B;
+  --vibe-teal: #A78BFA;
+  --vibe-coral: #C4B5FD;
+  --vibe-amber: #DDD6FE;
+  --vibe-plum: #8B5CF6;
+  --vibe-sky: #7C3AED;
+  --vibe-accent: #A78BFA;
+  --vibe-subtle: #1E1B4B;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -273,21 +288,21 @@ html {
   display: inline-block;
   margin: 0.75rem 0;
   padding: 0.75rem 1rem;
-  background: linear-gradient(135deg, #E8F2F2 0%, #D1DFD1 100%);
-  border: 1px solid #C5D6C5;
+  background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 100%);
+  border: 1px solid #C4B5FD;
   border-radius: 8px;
   font-size: 0.925rem;
   line-height: 1.5;
-  color: #3D5A41;
+  color: #6D28D9;
   text-decoration: none;
   transition: all 0.2s ease;
   font-weight: 500;
 }
 .cross-site-link:hover {
-  background: linear-gradient(135deg, #D1DFD1 0%, #C5D6C5 100%);
-  border-color: #5A7D5E;
-  color: #2F4732;
-  box-shadow: 0 2px 8px rgba(90, 125, 94, 0.15);
+  background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 100%);
+  border-color: #7C3AED;
+  color: #5B21B6;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.15);
 }
 
 /* Vibe Engine brand badge — WCAG AA verified */
@@ -296,13 +311,13 @@ html {
   align-items: center;
   gap: 0.375rem;
   padding: 0.25rem 0.75rem;
-  background: linear-gradient(135deg, #E11D48, #7C3AED);
+  background: linear-gradient(135deg, #7C3AED, #6D28D9);
   color: white;
   border-radius: 999px;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.03em;
-  box-shadow: 0 2px 8px rgba(225, 29, 72, 0.25);
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25);
 }
 
 /* Vibe Engine comparison badge (for tables) */
@@ -385,3 +400,13 @@ html {
     max-width: 140px;
   }
 }
+
+/* Staggered entry animations */
+.animate-stagger > *:nth-child(1) { animation-delay: 0ms; }
+.animate-stagger > *:nth-child(2) { animation-delay: 50ms; }
+.animate-stagger > *:nth-child(3) { animation-delay: 100ms; }
+.animate-stagger > *:nth-child(4) { animation-delay: 150ms; }
+.animate-stagger > *:nth-child(5) { animation-delay: 200ms; }
+.animate-stagger > *:nth-child(6) { animation-delay: 250ms; }
+.animate-stagger > *:nth-child(7) { animation-delay: 300ms; }
+.animate-stagger > *:nth-child(8) { animation-delay: 350ms; }
