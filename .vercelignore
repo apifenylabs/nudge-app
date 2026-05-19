@@ -1,0 +1,47 @@
+# Git
+.git
+.gitignore
+.github
+
+# Build outputs
+.next
+out/
+dist/
+build/
+
+# Dependencies
+node_modules
+
+# Python/scripts
+__pycache__
+*.pyc
+.pytest_cache
+
+# Agent files
+HEARTBEAT.md
+SIGNOFF-MATRIX.md
+AGENTS.md
+IDENTITY.md
+CLAUDE.md
+CONTINUOUS_WORKFLOW.md
+
+# Docs
+CHECK_DEPLOYMENT_STATUS.md
+DATA_EXPANSION_PLAN.md
+DEPLOYMENT_PLAN.md
+LAUNCH_CHECKLIST.md
+AFFILIATE_SETUP.md
+
+# Environment
+.env*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
