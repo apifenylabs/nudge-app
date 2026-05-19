@@ -68,7 +68,7 @@ function PriceIndicator({ range }: { range: string }) {
           <span key={i} className={i < count ? (colors[i] || 'text-gray-900') : 'text-gray-300'}>¥</span>
         ))}
       </div>
-      <div className="text-xs text-gray-500">Price Range</div>
+      <div className="text-xs text-gray-700 font-medium">Price Range</div>
     </div>
   );
 }
@@ -179,7 +179,7 @@ function AffiliateButton({ url, label }: { url: string; label: string }) {
       className={`flex items-center gap-2 ${brandClass} border rounded-xl px-4 min-h-[44px] text-sm font-medium transition-all group hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98]`}>
       <BrandIcon size={14} className={`${iconColor} flex-shrink-0`} />
       <span>{label}</span>
-      <span className="text-[10px] text-gray-400 ml-auto uppercase tracking-wider">Affiliate</span>
+      <span className="text-[10px] text-gray-600 ml-auto uppercase tracking-wider">Affiliate</span>
     </a>
   );
 }
@@ -337,11 +337,11 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center">
               <div className="flex items-center justify-center gap-1 text-2xl font-bold text-gray-900 mb-0.5">{d.safetyRating.toFixed(1)} <Star size={14} className="text-amber-400 fill-amber-400" /></div>
-              <div className="text-xs text-gray-500">Safety Rating</div>
+              <div className="text-xs text-gray-700 font-medium">Safety Rating</div>
             </div>
             <div className="text-center"><PriceIndicator range={d.priceRange} /></div>
-            <div className="text-center"><div className="text-2xl font-bold text-gray-900">{d.ageRange}</div><div className="text-xs text-gray-500">Recommended Age</div></div>
-            <div className="text-center"><div className="text-2xl font-bold text-gray-900">{d.popularity}%</div><div className="text-xs text-gray-500">Parent Approval</div></div>
+            <div className="text-center"><div className="text-2xl font-bold text-gray-900">{d.ageRange}</div><div className="text-xs text-gray-700 font-medium">Recommended Age</div></div>
+            <div className="text-center"><div className="text-2xl font-bold text-gray-900">{d.popularity}%</div><div className="text-xs text-gray-700 font-medium">Parent Approval</div></div>
           </div>
         </GlassCard>
 
@@ -380,7 +380,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
         {/* Age-Specific Guide */}
         <section className="mb-12">
           <SectionTitle n={2} title="Age-Specific Guide" />
-          <p className="text-sm text-gray-500 mb-6">{d.name} suits ages {d.ageRange}. Here&apos;s what each age group will love:</p>
+          <p className="text-sm text-gray-700 mb-6">{d.name} suits ages {d.ageRange}. Here&apos;s what each age group will love:</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {generateAgeBreakdown(d).map((ab, i) => (
               <div key={i} className={`rounded-2xl border p-6 ${ab.color}`}>
@@ -389,7 +389,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
                   <h3 className="font-semibold text-gray-900 text-sm">{ab.age}</h3>
                 </div>
                 <div className="mb-3">
-                  <div className="flex items-center justify-between text-xs mb-1"><span className="text-gray-500">Suitability</span><span className="font-semibold text-gray-700">{ab.suitability}%</span></div>
+                  <div className="flex items-center justify-between text-xs mb-1"><span className="text-gray-700 font-medium">Suitability</span><span className="font-semibold text-gray-700">{ab.suitability}%</span></div>
                   <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div className={`h-full rounded-full transition-all duration-700 ${ab.suitability >= 90 ? 'bg-emerald-500' : ab.suitability >= 75 ? 'bg-sky-500' : 'bg-amber-500'}`} style={{ width: `${ab.suitability}%` }} />
                   </div>
@@ -428,7 +428,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
                   </div>
                 ))}
               </div>
-            ) : <p className="text-sm text-gray-500">No parent tips yet. Be the first to share!</p>}
+            ) : <p className="text-sm text-gray-700">No parent tips yet. Be the first to share!</p>}
           </GlassCard>
         </section>
 
@@ -445,7 +445,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
                   <div className="flex items-center gap-1.5">
                     <Shield size={14} className="text-sky-600" />
                     <span className="text-xs font-semibold text-gray-700">{d.safetyRating.toFixed(1)} / 5</span>
-                    <span className="text-[10px] text-gray-500">({d.safetyRating >= 4 ? 'Excellent' : d.safetyRating >= 3 ? 'Good' : 'Moderate'})</span>
+                    <span className="text-[10px] text-gray-700 font-medium">({d.safetyRating >= 4 ? 'Excellent' : d.safetyRating >= 3 ? 'Good' : 'Moderate'})</span>
                   </div>
                 </div>
               </div>
@@ -454,7 +454,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
                 <div className="flex flex-wrap gap-2">
                   {d.safetyFeatures.length > 0 ? d.safetyFeatures.map((f, i) => (
                     <span key={i} className="text-xs bg-emerald-50/80 text-emerald-700 px-3 py-1.5 rounded-full font-medium border border-emerald-100/50 backdrop-blur-sm">{f}</span>
-                  )) : <p className="text-sm text-gray-500">No features listed.</p>}
+                  )) : <p className="text-sm text-gray-700">No features listed.</p>}
                 </div>
               </div>
             </div>
@@ -474,7 +474,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
         {/* Where to Stay — Hotel Recommendations */}
         <section className="mb-12">
           <SectionTitle n={7} title="Where to Stay" />
-          <p className="text-sm text-gray-500 mb-6">Recommended family-friendly hotels near {d.name}. Book directly through our partner, Booking.com.</p>
+          <p className="text-sm text-gray-700 mb-6">Recommended family-friendly hotels near {d.name}. Book directly through our partner, Booking.com.</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <a
               href={bookingUrl(`${d.city} family hotels budget`)}
@@ -488,7 +488,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm group-hover:text-sky-600 transition-colors">Budget-Friendly</h4>
-                  <p className="text-[10px] text-gray-400">Under $80/night</p>
+                  <p className="text-[10px] text-gray-600">Under $80/night</p>
                 </div>
               </div>
               <p className="text-xs text-gray-600 leading-relaxed">Clean, safe, and well-rated family rooms with kitchenettes. Great for cost-conscious families.</p>
@@ -508,7 +508,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm group-hover:text-sky-600 transition-colors">Mid-Range</h4>
-                  <p className="text-[10px] text-gray-400">$80–$150/night</p>
+                  <p className="text-[10px] text-gray-600">$80–$150/night</p>
                 </div>
               </div>
               <p className="text-xs text-gray-600 leading-relaxed">Kid-friendly hotels with pools, kids clubs, and family suites. Best value for most families.</p>
@@ -528,7 +528,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm group-hover:text-sky-600 transition-colors">Luxury</h4>
-                  <p className="text-[10px] text-gray-400">$150+/night</p>
+                  <p className="text-[10px] text-gray-600">$150+/night</p>
                 </div>
               </div>
               <p className="text-xs text-gray-600 leading-relaxed">Premium family resorts with kids programs, multiple pools, and exceptional family service.</p>
@@ -542,7 +542,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
         {/* Top Tours & Experiences on Viator */}
         <section className="mb-12">
           <SectionTitle n={8} title="Top Tours & Experiences" />
-          <p className="text-sm text-gray-500 mb-6">Popular family-friendly tours, attractions, and day trips in {d.city}. Book directly on Viator.</p>
+          <p className="text-sm text-gray-700 mb-6">Popular family-friendly tours, attractions, and day trips in {d.city}. Book directly on Viator.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { name: `${d.city} Family Guided Tour`, desc: 'Private family-friendly tour with kid-focused guide', price: 'From $45/person', emoji: '👨‍👩‍👧‍👦' },
@@ -589,7 +589,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
             <div className="flex items-center gap-2 mb-4">
               <DollarSign size={16} className="text-amber-600" />
               <h3 className="font-semibold text-gray-900 text-base">More Booking Options</h3>
-              <span className="text-[10px] text-gray-400 ml-auto uppercase tracking-wider">Affiliate</span>
+              <span className="text-[10px] text-gray-600 ml-auto uppercase tracking-wider">Affiliate</span>
             </div>
             <p className="text-sm text-gray-600 mb-5">We earn a small commission at no extra cost when you book through these trusted partners.</p>
             <div className="space-y-3">
@@ -642,7 +642,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
                   <svg className="w-3.5 h-3.5 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                 </summary>
                 <p className="text-sm text-gray-600 leading-relaxed mt-3 pt-3 border-t border-sky-100">{d.parentStory.fullStory}</p>
-                <p className="text-xs text-gray-400 mt-2">&mdash; {d.parentStory.author}</p>
+                <p className="text-xs text-gray-600 mt-2">&mdash; {d.parentStory.author}</p>
               </details>
             </GlassCard>
           </section>
@@ -690,7 +690,7 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
                         </div>
                         <div>
                           <p className="text-sm font-medium text-gray-900">{review.author_name || 'Anonymous'}</p>
-                          <p className="text-[10px] text-gray-400">{new Date(review.created_at).toLocaleDateString()}</p>
+                          <p className="text-[10px] text-gray-600">{new Date(review.created_at).toLocaleDateString()}</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-0.5">

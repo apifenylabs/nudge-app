@@ -1,6 +1,11 @@
 # Work Engine State
 
-## Cursor (02:24 HKT): P2 IMPROVE — 2 sub-agents running (Luxury + Senior)
+## Cursor (06:12 HKT): P0-P4 COMPLETE — No pending autonomous work
+
+All sites deployed, all analytics added, blog system enhanced.
+
+### Completed 2026-05-19 05:12 HKT
+- **Affiliate Tracking**: Added Vercel Analytics + Google Analytics 4 to affiliate-tracking site (was the only site missing analytics) — GoogleAnalytics.tsx component, @vercel/analytics dep, layout integration, built ✅, pushed to master ✅
 
 ### Completed 2026-05-19 02:09 HKT
 - **Featured images added to all 146 blog posts**: New `scripts/generate-featured-images.mjs` generates deterministic gradient SVGs (1200×630, 20 rotating palettes, 5 overlay patterns) based on post slug hash
@@ -36,12 +41,12 @@
   - `SocialShare.tsx` — "Share this post" section with Copy Link, X/Twitter, Facebook, WhatsApp buttons below article content
   - Skipped: phuket-travel (doesn't exist), family-directory (no blog route)
 
-### Next Priority: P2 IMPROVE (continue)
-Remaining P2 work:
-- ⬜  Visual polish / UX on directory site pages
+### Next Priority: P1 BUILD (blocked — needs user instruction)
+Telegram webhook, NLP parser, voice, PWA, admin panel nudges pending user direction.
 
 ### Blocked
 - Custom domains for luxury-family-travel-asia and ev-charging-asia (DNS — needs Chris)
+- P1 BUILD items require user instruction
 
 ## Previous Work (Summary)
 
