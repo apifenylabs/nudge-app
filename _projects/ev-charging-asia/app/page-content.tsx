@@ -83,7 +83,7 @@ export default function HomeContent({ meta, homepageData, blogPosts: initialPost
             {meta.totalStations} stations · {meta.cities.length} cities
           </span>
         </div>
-        <nav className="flex items-center gap-3 text-xs text-gray-500">
+        <nav className="flex items-center gap-3 text-xs text-gray-700">
           <Link href="/search" className="hover:text-gray-900 dark:hover:text-gray-300 font-medium hidden sm:inline">Browse Stations</Link>
           <Link href="/routes" className="hover:text-gray-900 dark:hover:text-gray-300 font-medium hidden sm:inline">Routes</Link>
           <Link href="/itinerary" className="hover:text-gray-900 dark:hover:text-gray-300 font-medium hidden sm:inline">Itineraries</Link>
@@ -248,7 +248,7 @@ export default function HomeContent({ meta, homepageData, blogPosts: initialPost
                 <h3 className="font-semibold text-gray-900 text-sm group-hover:text-emerald-600 transition-colors mb-2">
                   {route.name}
                 </h3>
-                <div className="flex items-center gap-2 text-[10px] text-gray-500">
+                <div className="flex items-center gap-2 text-[10px] text-gray-700">
                   <span>⏱ {route.duration}</span>
                 </div>
                 <div className="mt-2 pt-2 border-t border-gray-100 flex items-center gap-1 text-[10px] text-gray-400">
@@ -304,7 +304,7 @@ export default function HomeContent({ meta, homepageData, blogPosts: initialPost
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
             <div>
               <h2 className="text-xl font-bold text-gray-900 mb-1">🏕️ Family Road Trip Itineraries</h2>
-              <p className="text-sm text-gray-500">Curated multi-day EV road trips with charging stops, activities, and hotel recommendations</p>
+              <p className="text-sm text-gray-700">Curated multi-day EV road trips with charging stops, activities, and hotel recommendations</p>
             </div>
             <Link href="/itinerary" className="inline-flex items-center gap-1 px-4 py-2 bg-white text-sky-700 rounded-lg text-xs font-medium border border-sky-200 hover:bg-sky-50 transition-colors shrink-0">
               Browse All Itineraries →
@@ -358,7 +358,7 @@ export default function HomeContent({ meta, homepageData, blogPosts: initialPost
                   <h3 className="font-semibold text-gray-900 text-sm group-hover:text-emerald-600 transition-colors mb-2 line-clamp-2">
                     {post.title}
                   </h3>
-                  <p className="text-xs text-gray-500 mb-3 line-clamp-2">{post.excerpt}</p>
+                  <p className="text-xs text-gray-700 mb-2 line-clamp-2">{post.excerpt}</p>
                   <div className="flex flex-wrap gap-1">
                     {post.tags.slice(0, 3).map(tag => (
                       <span key={tag} className="text-[9px] px-1.5 py-0.5 bg-gray-100 text-gray-500 rounded-full">
@@ -377,7 +377,7 @@ export default function HomeContent({ meta, homepageData, blogPosts: initialPost
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
             <div>
               <h2 className="text-xl font-bold text-gray-900 mb-1">🏨 EV-Friendly Hotels & Resorts</h2>
-              <p className="text-sm text-gray-500">Book luxury stays with EV charging near your route</p>
+              <p className="text-sm text-gray-700">Book luxury stays with EV charging near your route</p>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">

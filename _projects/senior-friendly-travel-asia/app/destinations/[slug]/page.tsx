@@ -271,7 +271,7 @@ export default function DestinationPage({ params }: Props) {
               </div>
 
               <div className="border-t border-gray-100 pt-4 mt-4">
-                <p className="text-[11px] text-gray-400 leading-relaxed">
+                <p className="text-[11px] text-gray-600 leading-relaxed">
                   When you book through these links, we may earn a small commission at no extra cost to you. 
                   It helps us keep this guide free and updated for all seniors.
                 </p>

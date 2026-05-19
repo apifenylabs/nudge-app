@@ -47,10 +47,11 @@ export default function HeroSection({
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 md:py-32">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Premium badge — Cosme-style editorial seal */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 backdrop-blur-sm border border-gold/30 text-gold text-sm mb-6 shadow-lg">
-            <Crown size={14} />
+          {/* Premium badge — Cosme-style editorial seal with gold shimmer */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 backdrop-blur-sm border border-gold/30 text-gold text-sm mb-6 shadow-lg gold-shimmer">
+            <Crown size={14} className="animate-pulse" />
             <span className="font-medium">Editorially Curated for Discerning Families</span>
+            <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
           </div>
 
           {/* Headline — serif-heavy, Cosme-style */}
