@@ -212,9 +212,9 @@ export default function ClientDestinationPage({ initialData }: DestinationPagePr
             <ArrowLeft size={16} /> Home
           </Link>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
-            <Link href="/" className="text-gray-500 hover:text-gray-900 transition-colors">Home</Link>
-            <Link href="/blog" className="text-gray-500 hover:text-gray-900 transition-colors">Blog</Link>
-            <Link href="/search" className="text-gray-500 hover:text-gray-900 transition-colors">Search</Link>
+            <Link href="/" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Home</Link>
+            <Link href="/blog" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Blog</Link>
+            <Link href="/search" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Search</Link>
           </nav>
           <div className="flex items-center gap-2">
             <Compass size={16} className="text-sky-600" />
