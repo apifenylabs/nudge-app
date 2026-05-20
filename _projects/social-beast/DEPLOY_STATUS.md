@@ -1,58 +1,55 @@
-# Social Beast — Deployment Status
+# DEPLOY STATUS
 
-## Production URLs
-- **Primary**: https://social-beast-two.vercel.app
-- **Vercel Auto**: https://social-beast-o538ev71q-apifenylabs-2612s-projects.vercel.app
+## Current
 
-## Deployed: May 6, 2026
-Build and deployment completed successfully.
+- **URL:** https://social-beast-two.vercel.app
+- **Status:** ✅ Live (200 OK, 6 pages working)
+- **Framework:** Next.js 14 (App Router)
+- **Storage:** localStorage
+- **Deploy method:** CLI (`npx vercel --prod`)
 
-## Pages Deployed
-| Route | Status |
-|-------|--------|
-| `/` — Dashboard | ✅ |
-| `/calendar` — Content Calendar | ✅ |
-| `/posts` — All Posts with filters | ✅ |
-| `/create` — Post Creator | ✅ |
-| `/analytics` — Analytics with Charts | ✅ |
-| `/settings` — Platform & Preferences | ✅ |
-| `/community` — Discussions | ✅ |
+## Git Repository
 
-## Build Info
-- **Framework**: Next.js 14.2.29
-- **CSS**: Tailwind CSS v3.4
-- **Charts**: Recharts v2.15
-- **Icons**: Lucide React v0.468
-- **Data**: localStorage (ready for Supabase swap)
-- **Build Status**: ✅ All static pages generated, no errors
+- **Remote:** Not yet connected to GitHub
+- **Local:** Git initialized at project root
+- **Next step:** Create repo at apifenylabs/social-beast, push, connect Vercel
 
-## What's Working
-- Post creation with platform selector, schedule picker, and affiliate link inserter
-- Dashboard with stats, recent posts, and quick-create bar
-- Calendar view with monthly grid, post count per day, and day detail panel
-- Posts list with search, platform/status filters, and bulk archive/delete
-- Analytics with line, bar, and pie charts (daily engagement, platform breakdown)
-- Settings for platform connections, content sources, brand voice
-- Community discussions with comments
-- Dark mode toggle
-- Mobile-responsive (375px+)
-- Pieter Levels-inspired minimalist design
+## To Set Up Git Integration
 
-## Tech Stack
-- Next.js 14.2 App Router (static generation)
-- TypeScript strict mode
-- Tailwind CSS with custom design system (cream/ink/accent/highlight palette)
-- Recharts for analytics visualizations
-- Lucide React for icons
+```bash
+# 1. Create GitHub repo manually at github.com/new
+#    Name: social-beast
+#    Private or Public as you prefer
+#    Do NOT initialize with README (we have one)
 
-## Old CLI Files (Preserved)
-- `publish-directory.js` — untouched
-- `publish-all-preview.txt` — untouched
-- `publish-log.txt` — untouched
-- `README.md` — untouched
-- `docs/` — untouched
+# 2. Push existing code
+cd /home/captain/.openclaw/workspace/_projects/social-beast
+git remote add origin https://github.com/apifenylabs/social-beast.git
+git push -u origin main
 
-## Notes
-- All data stored in localStorage with async abstractions for easy swap to Supabase
-- Platform posting uses placeholder functions (same pattern as original CLI)
-- Vercel Analytics can be enabled in project dashboard
+# 3. Connect to Vercel
+#    Vercel Dashboard → Add New → Project → Import social-beast
+#    Vercel auto-detects Next.js — framework preset "Next.js"
+#    Leave all defaults, click Deploy
+```
+
+## Recent Changes (May 20)
+
+- ✅ **SB-1:** Repo initialized, docs updated for git setup
+- ✅ **SB-2:** Calendar page enhanced with content buckets, weekly schedule, template viewer, Generate Week button
+- ✅ **SB-3:** 7 content buckets created with 3 templates each (21 templates total)
+- New files: `lib/content-buckets.ts`, `lib/calendar-generator.ts`
+- Enhanced: `app/calendar/page.tsx`, `README.md`, `.gitignore`
+
+## Pages
+
+| Route | Status | Description |
+|-------|--------|-------------|
+| `/` | ✅ | Dashboard with stats, recent posts, platform status |
+| `/calendar` | ✅ | Content calendar with buckets + weekly schedule + Generate Week |
+| `/posts` | ✅ | All posts with search, filter, bulk archive/delete |
+| `/create` | ✅ | Post composer with platform selector, schedule, affiliates |
+| `/analytics` | ✅ | Engagement analytics with charts |
+| `/settings` | ✅ | Platform connections, brand voice, preferences |
+| `/community` | ✅ | Discussion board |
+| `/build-log` | ✅ | Build timeline / changelog |

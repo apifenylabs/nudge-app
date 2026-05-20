@@ -1,9 +1,18 @@
 'use client';
 
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { MapContainer, TileLayer, Polyline, Marker, Popup, CircleMarker } from 'react-leaflet';
 import L from 'leaflet';
 import Link from 'next/link';
+
+// Charging station icon
+const chargingIcon = new L.DivIcon({
+  className: 'custom-marker',
+  html: '<div style="background:#7C3AED;color:white;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;border:2px solid white;box-shadow:0 1px 4px rgba(0,0,0,0.25);">⚡</div>',
+  iconSize: [24, 24],
+  iconAnchor: [12, 12],
+  popupAnchor: [0, -14],
+});
 
 // Fix Leaflet icon paths
 const iconUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png';
@@ -43,13 +52,26 @@ const waypointIcon = new L.DivIcon({
   popupAnchor: [0, -18],
 });
 
+interface StationMarker {
+  id: string;
+  name: string;
+  lat: number;
+  lng: number;
+  chargerSpeed: number;
+  chargerCount: number;
+  costPerKwh: number;
+  reliability: number;
+}
+
 interface RouteMapContentProps {
   routeCoords: [number, number][];
   cityNames: string[];
   height: string;
+  stationMarkers?: StationMarker[];
 }
 
-export default function RouteMapContent({ routeCoords, cityNames, height }: RouteMapContentProps) {
+export default function RouteMapContent({ routeCoords, cityNames, height, stationMarkers = [] }: RouteMapContentProps) {
+  const [showStations, setShowStations] = useState(true);
   // Calculate bounds from the route
   const bounds = useMemo(() => {
     if (routeCoords.length === 0) return undefined;
@@ -83,6 +105,31 @@ export default function RouteMapContent({ routeCoords, cityNames, height }: Rout
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
+        {/* Legend toggle */}
+        <div style={{
+          position: 'absolute',
+          top: '10px',
+          right: '48px',
+          zIndex: 1000,
+          background: 'white',
+          padding: '6px 10px',
+          borderRadius: '8px',
+          boxShadow: '0 1px 5px rgba(0,0,0,0.15)',
+          fontSize: '11px',
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '6px',
+        }}
+        onClick={() => setShowStations(!showStations)}
+        title={showStations ? 'Hide charging stations' : 'Show charging stations'}
+      >
+        <span style={{ fontSize: '14px' }}>⚡</span>
+        <span style={{ color: showStations ? '#7C3AED' : '#9CA3AF', fontWeight: showStations ? 600 : 400 }}>
+          {stationMarkers.length} Stations
+        </span>
+      </div>
+
         {/* Route polyline */}
         <Polyline
           positions={routeCoords}
@@ -109,6 +156,42 @@ export default function RouteMapContent({ routeCoords, cityNames, height }: Rout
             />
           );
         })}
+
+        {/* Charging station markers (within route bounding box) */}
+        {showStations && stationMarkers.map((station) => (
+          <CircleMarker
+            key={station.id}
+            center={[station.lat, station.lng]}
+            radius={5 + Math.min(station.chargerCount, 10) * 0.8}
+            pathOptions={{
+              color: '#7C3AED',
+              fillColor: '#7C3AED',
+              fillOpacity: 0.6,
+              weight: 1.5,
+            }}
+          >
+            <Popup>
+              <div className="min-w-[180px]">
+                <div className="flex items-center gap-1.5 mb-1">
+                  <span className="text-sm">⚡</span>
+                  <span className="font-semibold text-gray-900 text-sm">{station.name}</span>
+                </div>
+                <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 text-xs text-gray-600">
+                  <span>Speed: {station.chargerSpeed}kW</span>
+                  <span>Ports: {station.chargerCount}</span>
+                  <span>Cost: ${station.costPerKwh.toFixed(2)}/kWh</span>
+                  <span>Reliability: {'★'.repeat(Math.round(station.reliability))}{'☆'.repeat(5 - Math.round(station.reliability))}</span>
+                </div>
+                <Link
+                  href={`/station/${station.id}`}
+                  className="mt-2 inline-block text-xs text-purple-600 hover:text-purple-700 font-medium"
+                >
+                  View details →
+                </Link>
+              </div>
+            </Popup>
+          </CircleMarker>
+        ))}
 
         {/* City markers */}
         {routeCoords.map((coord, i) => {

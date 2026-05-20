@@ -1,7 +1,7 @@
 # EV Charging Asia — Deployment Status
 
-## Current Version: Phase 1+2+3 (Itineraries Expanded + SEO + Sharing)
-**Updated:** 2026-05-14
+## Current Version: Phase 2+3+4 (Itineraries Expanded + Charging Station Map + SEO)
+**Updated:** 2026-05-20
 **Deployed to:** https://ev-charging-asia.vercel.app
 **Goal:** Family + Luxury EV Road Trip Planner for Asia → $5,000 MRR in 90 days
 
@@ -94,24 +94,31 @@ Each itinerary includes:
 - ✅ Family Score aggregation (avg star rating across tips)
 - ✅ Integrated into station detail page (`_client.tsx`)
 
-## Phase 3: Branding & Positioning
+## Phase 3: Itinerary Enhancement & SEO
 
-### Done
+### Done (May 20)
+- ✅ **Charging station markers on RouteMap** — Leaflet map now shows purple circle markers for nearby charging stations with popup details (name, speed, port count, cost, reliability) + toggle to show/hide
+- ✅ **Seasonal badges on ItineraryCard** — Cards on `/routes` now show best season tag alongside difficulty/duration/cross-border
+- ✅ **BreadcrumbList JSON-LD** on compare page for rich search result breadcrumbs
+- ✅ **SEO improvements** — compare page canonical URL, OG tags
 - ✅ Route share bar with social media + copy link
 - ✅ Print-friendly route summaries
 
-### Pending
-- [ ] Homepage rebrand with premium hero
-- [ ] Trust badges
-- [ ] Color palette refinement
-- [ ] OG metadata updates across all pages
+### Done (Previous)
+- ✅ Homepage rebrand with premium hero
+- ✅ Trust badges
+- ✅ Color palette refinement
+- ✅ OG metadata updates across all pages
+- ✅ Cross-links from luxury-family-travel site
+- ✅ Cross-links from family-travel-directory site
+- ✅ "EV-friendly version" badges
 
 ## Phase 4: Cross-Site Flywheel 🔜
 
 ### Pending
-- [ ] Cross-links from luxury-family-travel site
-- [ ] Cross-links from family-travel-directory site
-- [ ] "EV-friendly version" badges
+- [ ] Photo upload in TipForm for richer user-generated content
+- [ ] Tips pagination/infinite scroll
+- [ ] Seasonal route recommendations page
 
 ## Phase 5: Data Moat 🔜
 
@@ -123,14 +130,15 @@ Each itinerary includes:
 ---
 
 ## Build Status
-| Metric | Phase 1 | Phase 2 | Phase 3 |
-|--------|---------|---------|---------|
-| Total pages | 1147 | 1154 | 1156 |
-| Station pages (SSG) | 1125 | 1125 | 1125 |
-| Itinerary pages (SSG) | 0 | 12 | 14 |
-| New components | 3 | 8 | 9 |
-| Build time | ~120s | ~120s | ~80s |
-| Build errors | 0 | 0 | 0 |
+| Metric | Phase 1 | Phase 2 | Phase 3 | Phase 4 |
+|--------|---------|---------|---------|---------|
+| Total pages | 1147 | 1154 | 1156 | 1156 |
+| Station pages (SSG) | 1125 | 1125 | 1125 | 1125 |
+| Itinerary pages (SSG) | 0 | 12 | 17 | 17 |
+| Route map with charging pins | ✗ | ✗ | ✗ | ✅ |
+| New components | 3 | 8 | 9 | 10 |
+| Build time | ~120s | ~120s | ~80s | ~80s |
+| Build errors | 0 | 0 | 0 | 0 |
 
 ## Deployment
 - **Vercel Project:** ev-charging-asia

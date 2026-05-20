@@ -2,8 +2,9 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import dynamic from 'next/dynamic';
-import { MapPin } from 'lucide-react';
+import { MapPin, Zap } from 'lucide-react';
 import type { Itinerary } from '@/data/itineraries';
+import rawStations from '@/data/stations.json';
 
 // Dynamically import Leaflet to avoid SSR issues
 const RouteMapContent = dynamic(() => import('./RouteMapContent'), { ssr: false });
@@ -87,6 +88,39 @@ export default function RouteMap({ itinerary, height = '400px' }: RouteMapProps)
       .filter(Boolean) as [number, number][];
   }, [itinerary.cities]);
 
+  // Filter stations to ones near the route cities (within 80km / ~0.72 deg lat)
+  const stationMarkers = useMemo(() => {
+    if (!itinerary.cities.length || !rawStations.length) return [];
+    const citySet = new Set(itinerary.cities.map(c => c.toLowerCase()));
+    const cityCoords = itinerary.cities.map(c => CITY_COORDS[c]).filter(Boolean) as [number, number][];
+    if (!cityCoords.length) return [];
+
+    // Calculate bounding box with 1-degree padding (~110km)
+    const lats = cityCoords.map(c => c[0]);
+    const lngs = cityCoords.map(c => c[1]);
+    const minLat = Math.min(...lats) - 1;
+    const maxLat = Math.max(...lats) + 1;
+    const minLng = Math.min(...lngs) - 1;
+    const maxLng = Math.max(...lngs) + 1;
+
+    return (rawStations as any[])
+      .filter(s => {
+        const lat = s.latitude as number;
+        const lng = s.longitude as number;
+        return lat >= minLat && lat <= maxLat && lng >= minLng && lng <= maxLng;
+      })
+      .map(s => ({
+        id: s.id as string,
+        name: s.name as string,
+        lat: s.latitude as number,
+        lng: s.longitude as number,
+        chargerSpeed: (s.chargerSpeed as number) || 0,
+        chargerCount: (s.chargerCount as number) || 0,
+        costPerKwh: (s.costPerKwh as number) || 0.25,
+        reliability: (s.reliability as number) || 3.5,
+      }));
+  }, [itinerary.cities]);
+
   if (!mounted) {
     return (
       <div className="bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 text-sm" style={{ height }}>
@@ -95,5 +129,15 @@ export default function RouteMap({ itinerary, height = '400px' }: RouteMapProps)
     );
   }
 
-  return <RouteMapContent routeCoords={routeCoords} cityNames={itinerary.cities} height={height} />;
+  return (
+    <>
+      {stationMarkers.length > 0 && (
+        <div className="flex items-center gap-1.5 mb-2 text-xs text-gray-500">
+          <Zap size={12} className="text-purple-500" />
+          <span>{stationMarkers.length} charging stations near this route</span>
+        </div>
+      )}
+      <RouteMapContent routeCoords={routeCoords} cityNames={itinerary.cities} height={height} stationMarkers={stationMarkers} />
+    </>
+  );
 }

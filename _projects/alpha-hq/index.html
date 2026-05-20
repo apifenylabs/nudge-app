@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Alpha Orchestras HQ — Sprint Board</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'SF Mono','Fira Code',monospace;background:#0a0e17;color:#c8d6e5;padding:12px;font-size:13px;max-width:900px;margin:0 auto}
+h1{color:#48dbfb;font-size:18px}
+h2{color:#ff9f43;font-size:14px;margin:16px 0 6px;border-bottom:1px solid #1e2a3a;padding-bottom:4px}
+.sub{color:#576574;font-size:11px;margin-bottom:12px}
+.card{background:#111827;border:1px solid #1e2a3a;border-radius:8px;padding:10px;margin-bottom:10px}
+.stat-bar{display:flex;gap:12px;margin-bottom:12px}
+.stat-box{flex:1;background:#111827;border:1px solid #1e2a3a;border-radius:8px;padding:10px;text-align:center}
+.stat-box .num{font-size:24px;font-weight:bold}
+.stat-box .lbl{font-size:10px;color:#576574;margin-top:2px}
+.green{color:#2ed573}
+.orange{color:#ffa502}
+.red{color:#ff4757}
+.blue{color:#48dbfb}
+
+.project-card{background:#111827;border:1px solid #1e2a3a;border-radius:8px;padding:10px;margin-bottom:10px;border-left:3px solid #1e2a3a}
+.priority-P0{border-left-color:#ff4757}
+.priority-P1{border-left-color:#ffa502}
+.priority-P2{border-left-color:#576574}
+
+.project-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.project-name{font-weight:bold;color:#48dbfb;font-size:14px}
+.priority-badge{display:inline-block;padding:1px 6px;border-radius:3px;color:#fff;font-size:10px;font-weight:bold;margin-right:8px;vertical-align:middle}
+.project-status{font-size:10px;padding:2px 8px;border-radius:4px;font-weight:bold}
+.project-building{background:#0a2e0a;color:#2ed573;border:1px solid #2ed57333}
+.project-researching{background:#0a1a2e;color:#48dbfb;border:1px solid #48dbfb33}
+.project-planning{background:#2e2a0a;color:#ffa502;border:1px solid #ffa50233}
+.project-queued{background:#1a1a1a;color:#576574;border:1px solid #1e2a3a}
+.project-running{background:#0a2e0a;color:#2ed573;border:1px solid #2ed57333}
+.project-blocked{background:#2e0a0a;color:#ff4757;border:1px solid #ff475733}
+
+.project-current{color:#576574;font-size:11px;margin-bottom:8px;padding-left:2px}
+.task-list{margin-top:4px}
+.task-row{display:flex;gap:8px;padding:3px 0;font-size:11px;align-items:center;border-top:1px solid #0d1520}
+.task-row:first-child{border-top:none}
+.task-id{color:#576574;font-size:10px;width:40px;flex-shrink:0}
+.task-desc{flex:1;color:#c8d6e5}
+.task-status{font-size:9px;padding:1px 6px;border-radius:3px;font-weight:bold;flex-shrink:0}
+.task-building{background:#0a2e0a;color:#2ed573}
+.task-todo{background:#2e2a0a;color:#ffa502}
+.task-queued{background:#1a1a1a;color:#576574}
+.task-researching{background:#0a1a2e;color:#48dbfb}
+
+.blockers-section{background:#111827;border:1px solid #ff475733;border-radius:8px;padding:10px;margin-bottom:10px}
+.blocker-section-title{font-weight:bold;color:#ff4757;font-size:12px;margin-bottom:6px}
+.blocker-row{display:flex;gap:8px;padding:3px 0;font-size:12px;border-top:1px solid #0d1520}
+.blocker-row:first-child{border-top:none}
+.blocker-item{flex:1;color:#ff4757}
+.blocker-who{color:#ffa502;font-size:10px;flex-shrink:0}
+.blocker-action{color:#576574;font-size:10px;flex-shrink:0}
+.backlog-row{color:#576574;font-size:11px;padding:2px 0}
+</style>
+</head>
+<body>
+<h1>📋 Alpha Orchestras HQ <span style="color:#2ed573;font-size:13px;font-weight:normal">— Sprint 2026-W21</span></h1>
+<div class="sub" style="margin-bottom:8px">Last updated: 2026-05-20T00:30:00+08:00 · <span id="live-ts"></span></div>
+
+<div class="stat-bar">
+  <div class="stat-box"><div class="num green">1</div><div class="lbl">Building Now</div></div>
+  <div class="stat-box"><div class="num orange">15</div><div class="lbl">Tasks Remaining</div></div>
+</div>
+
+<div class="blockers-section">
+  <div class="blocker-section-title">⛔ BLOCKERS</div>
+  
+    <div class="blocker-row">
+      <span class="blocker-item">⛔ luxuryfamilytravel.asia domain</span>
+      <span class="blocker-who">→ Chris</span>
+      <span class="blocker-action">Register ($12 at Namecheap)</span>
+    </div>
+    <div class="blocker-row">
+      <span class="blocker-item">⛔ Viator affiliate signup</span>
+      <span class="blocker-who">→ Chris</span>
+      <span class="blocker-action">Fill signup form</span>
+    </div>
+    <div class="blocker-row">
+      <span class="blocker-item">⛔ Omni-mind repo deletion</span>
+      <span class="blocker-who">→ Chris</span>
+      <span class="blocker-action">Delete from repo settings (token lacks admin)</span>
+    </div>
+</div>
+
+<div id="project-list">
+  <div class="project-card priority-P1">
+    <div class="project-header">
+      <div>
+        <span class="priority-badge" style="background:#ffa502">P1</span>
+        <span class="project-name">Trading Systems</span>
+      </div>
+      <span class="project-status project-running">RUNNING</span>
+    </div>
+    <div class="project-current">▶ Overnight runner cron'd every 2h</div>
+    <div class="task-list">
+    <div class="task-row">
+      <span class="task-id">TR-1</span>
+      <span class="task-desc">Cointegration first backtest</span>
+      <span class="task-status task-todo">TODO</span>
+    </div>
+    <div class="task-row">
+      <span class="task-id">TR-2</span>
+      <span class="task-desc">Grid with SL/TP (5%/10%) test</span>
+      <span class="task-status task-todo">TODO</span>
+    </div>
+    <div class="task-row">
+      <span class="task-id">TR-3</span>
+      <span class="task-desc">Widen Wick threshold 2.0x → 1.5x</span>
+      <span class="task-status task-todo">TODO</span>
+    </div></div>
+  </div>
+
+  <div class="project-card priority-P1">
+    <div class="project-header">
+      <div>
+        <span class="priority-badge" style="background:#ffa502">P1</span>
+        <span class="project-name">Directory Audits & Upgrades</span>
+      </div>
+      <span class="project-status project-queued">QUEUED</span>
+    </div>
+    <div class="project-current">▶ Not started yet — after P0 workstreams</div>
+    <div class="task-list">
+    <div class="task-row">
+      <span class="task-id">DA-1</span>
+      <span class="task-desc">Audit all 6 directories (score + gaps)</span>
+      <span class="task-status task-queued">QUEUED</span>
+    </div>
+    <div class="task-row">
+      <span class="task-id">DA-2</span>
+      <span class="task-desc">Fix luxury site from 4/10 to 9/10</span>
+      <span class="task-status task-queued">QUEUED</span>
+    </div></div>
+  </div>
+
+  <div class="project-card priority-P1">
+    <div class="project-header">
+      <div>
+        <span class="priority-badge" style="background:#ffa502">P1</span>
+        <span class="project-name">Apifeny AI / Playbooks</span>
+      </div>
+      <span class="project-status project-blocked">BLOCKED</span>
+    </div>
+    <div class="project-current">▶ Stripe key set — ready to ship</div>
+    <div class="task-list">
+    <div class="task-row">
+      <span class="task-id">AP-1</span>
+      <span class="task-desc">Deploy playbook checkout pages</span>
+      <span class="task-status task-todo">⛔ BLOCKED</span>
+    </div>
+    <div class="task-row">
+      <span class="task-id">AP-2</span>
+      <span class="task-desc">Improve playbook quality for UGC reviews</span>
+      <span class="task-status task-todo">TODO</span>
+    </div>
+    <div class="task-row">
+      <span class="task-id">AP-3</span>
+      <span class="task-desc">Add UGC review hooks on checkout</span>
+      <span class="task-status task-todo">TODO</span>
+    </div></div>
+  </div>
+
+  <div class="project-card priority-P0">
+    <div class="project-header">
+      <div>
+        <span class="priority-badge" style="background:#ff4757">P0</span>
+        <span class="project-name">LifeOS</span>
+      </div>
+      <span class="project-status project-building">BUILDING</span>
+    </div>
+    <div class="project-current">▶ Building daily behavioral loop prototype</div>
+    <div class="task-list">
+    <div class="task-row">
+      <span class="task-id">LS-1</span>
+      <span class="task-desc">Daily habit tracking module (food/mood/energy)</span>
+      <span class="task-status task-building">BUILDING</span>
+    </div>
+    <div class="task-row">
+      <span class="task-id">LS-2</span>
+      <span class="task-desc">Behavioral loop: trigger → action → reward → invest</span>
+      <span class="task-status task-todo">TODO</span>
+    </div>
+    <div class="task-row">
+      <span class="task-id">LS-3</span>
+      <span class="task-desc">Persistent data store (JSON file for v0)</span>
+      <span class="task-status task-todo">TODO</span>
+    </div>
+    <div class="task-row">
+      <span class="task-id">LS-4</span>
+      <span class="task-desc">Sticky mechanism: streak + identity reinforcement</span>
+      <span class="task-status task-todo">TODO</span>
+    </div></div>
+  </div>
+
+  <div class="project-card priority-P0">
+    <div class="project-header">
+      <div>
+        <span class="priority-badge" style="background:#ff4757">P0</span>
+        <span class="project-name">Agent Skills Marketplace</span>
+      </div>
+      <span class="project-status project-researching">RESEARCHING</span>
+    </div>
+    <div class="project-current">▶ Analyzing Claw Hub gaps</div>
+    <div class="task-list">
+    <div class="task-row">
+      <span class="task-id">AS-1</span>
+      <span class="task-desc">Research Claw Hub / OpenClaw skills format</span>
+      <span class="task-status task-researching">RESEARCHING</span>
+    </div>
+    <div class="task-row">
+      <span class="task-id">AS-2</span>
+      <span class="task-desc">Identify top 5 gap skills nobody built yet</span>
+      <span class="task-status task-todo">TODO</span>
+    </div>
+    <div class="task-row">
+      <span class="task-id">AS-3</span>
+      <span class="task-desc">Build and ship first skill</span>
+      <span class="task-status task-todo">TODO</span>
+    </div></div>
+  </div>
+
+  <div class="project-card priority-P0">
+    <div class="project-header">
+      <div>
+        <span class="priority-badge" style="background:#ff4757">P0</span>
+        <span class="project-name">Social Beast</span>
+      </div>
+      <span class="project-status project-planning">PLANNING</span>
+    </div>
+    <div class="project-current">▶ Fixing broken repo + building content calendar</div>
+    <div class="task-list">
+    <div class="task-row">
+      <span class="task-id">SB-1</span>
+      <span class="task-desc">Fix repo structure so it deploys clean</span>
+      <span class="task-status task-todo">TODO</span>
+    </div>
+    <div class="task-row">
+      <span class="task-id">SB-2</span>
+      <span class="task-desc">Build daily posting calendar (per platform)</span>
+      <span class="task-status task-todo">TODO</span>
+    </div>
+    <div class="task-row">
+      <span class="task-id">SB-3</span>
+      <span class="task-desc">Content buckets based on app marketing best practices</span>
+      <span class="task-status task-todo">TODO</span>
+    </div></div>
+  </div></div>
+
+<h2>📌 Backlog</h2>
+<div class="card"><div class="backlog-row">☐ Directory audit docs</div><div class="backlog-row">☐ Monetization analysis per site</div><div class="backlog-row">☐ Predicting next evolution of AI research</div><div class="backlog-row">☐ Claw Mart skills marketplace architecture</div></div>
+
+<script>
+function updateTime(){document.getElementById('live-ts').textContent=new Date().toLocaleString('en-SG',{timeZone:'Asia/Singapore',hour12:false})}
+updateTime();setInterval(updateTime,10000);
+</script>
+</body>
+</html>

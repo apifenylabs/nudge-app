@@ -5,6 +5,7 @@ import { Zap, Calendar, BookOpen, Tag, ArrowLeft, ChevronRight, BadgeCheck, Awar
 import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/lib/blog-data';
 import { renderMarkdown } from '@/lib/markdown-render';
 import EvBookingCTA from './EvBookingCTA';
+import BlogAffiliateCTA from './BlogAffiliateCTA';
 import ReadingProgress from '@/components/ReadingProgress';
 import SocialShare from '@/components/SocialShare';
 
@@ -21,16 +22,30 @@ export async function generateStaticParams() {
   return posts.slice(0, 30).map(p => ({ slug: p.slug }));
 }
 
+const BASE_URL = 'https://ev-charging-asia.vercel.app';
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
   if (!post) return { title: 'Post Not Found' };
   return {
     title: `${post.title} — EV Charging Asia Blog`,
     description: post.excerpt,
+    openGraph: {
+      title: `${post.title} — EV Charging Asia`,
+      description: post.excerpt,
+      url: `${BASE_URL}/blog/${params.slug}`,
+      images: post.imageUrl ? [{ url: post.imageUrl, width: 1200, height: 630 }] : [{ url: `${BASE_URL}/og-image.jpg`, width: 1200, height: 630 }],
+      type: 'article',
+      siteName: 'EV Charging Asia',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${post.title} — EV Charging Asia`,
+      description: post.excerpt,
+      images: post.imageUrl ? [post.imageUrl] : [`${BASE_URL}/og-image.jpg`],
+    },
   };
 }
-
-const BASE_URL = 'https://ev-charging-asia.vercel.app';
 
 export default function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(params.slug);
@@ -140,6 +155,18 @@ export default function BlogPostPage({ params }: Props) {
             <span className="flex items-center gap-1"><Calendar size={12} />{post.date}</span>
             <span className="flex items-center gap-1"><BookOpen size={12} />{post.readingTime}</span>
           </div>
+          {/* Hero Image */}
+          {post.imageUrl && (
+            <div className="relative w-full aspect-[2/1] mb-6 overflow-hidden rounded-xl bg-gray-100">
+              <img
+                src={post.imageUrl}
+                alt={post.title}
+                className="w-full h-full object-cover"
+                loading="eager"
+              />
+            </div>
+          )}
+
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
           <div className="flex flex-wrap gap-1.5 mb-4">
             {post.tags.map(tag => (
@@ -157,8 +184,13 @@ export default function BlogPostPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Affiliate CTA — EV rentals, hotels, experiences */}
+        {/* Social share */}
         <SocialShare title={post.title} slug={params.slug} />
+
+        {/* Affiliate CTA — gear, rentals, experiences */}
+        <BlogAffiliateCTA tags={post.tags} />
+
+        {/* Travel booking CTA */}
         <EvBookingCTA tags={post.tags} />
 
         {related.length > 0 && (

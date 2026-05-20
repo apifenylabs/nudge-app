@@ -1,0 +1,170 @@
+{
+  "sprint": "Sprint 2026-W21",
+  "updated": "2026-05-20T10:25:00+08:00",
+  "projects": {
+    "lifeos": {
+      "name": "LifeOS",
+      "priority": "P0",
+      "status": "shipped",
+      "current": "V0 live at https://lifeos-weld.vercel.app",
+      "tasks": [
+        {
+          "id": "LS-1",
+          "desc": "Daily habit tracking module (food/mood/energy)",
+          "status": "done",
+          "eta": "60min"
+        },
+        {
+          "id": "LS-2",
+          "desc": "Behavioral loop: trigger \u2192 action \u2192 reward \u2192 invest",
+          "status": "todo"
+        },
+        {
+          "id": "LS-3",
+          "desc": "Persistent data store (JSON file for v0)",
+          "status": "todo"
+        },
+        {
+          "id": "LS-4",
+          "desc": "Sticky mechanism: streak + identity reinforcement",
+          "status": "todo"
+        }
+      ]
+    },
+    "agent-skills": {
+      "name": "Agent Skills Marketplace",
+      "priority": "P0",
+      "status": "shipped",
+      "current": "2 skills built (vercel-deploy, directory-builder) \u2014 not published to ClawHub (needs auth)",
+      "tasks": [
+        {
+          "id": "AS-1",
+          "desc": "Research Claw Hub / OpenClaw skills format",
+          "status": "done",
+          "eta": "20min"
+        },
+        {
+          "id": "AS-2",
+          "desc": "Identify top 5 gap skills nobody built yet",
+          "status": "done"
+        },
+        {
+          "id": "AS-3",
+          "desc": "Build and ship first skill",
+          "status": "done"
+        }
+      ]
+    },
+    "social-beast": {
+      "name": "Social Beast",
+      "priority": "P0",
+      "status": "planning",
+      "current": "Fixing broken repo + building content calendar",
+      "tasks": [
+        {
+          "id": "SB-1",
+          "desc": "Fix repo structure so it deploys clean",
+          "status": "todo"
+        },
+        {
+          "id": "SB-2",
+          "desc": "Build daily posting calendar (per platform)",
+          "status": "todo"
+        },
+        {
+          "id": "SB-3",
+          "desc": "Content buckets based on app marketing best practices",
+          "status": "todo"
+        }
+      ]
+    },
+    "trading": {
+      "name": "Trading Systems",
+      "priority": "P1",
+      "status": "running",
+      "current": "Overnight runner cron'd every 2h",
+      "tasks": [
+        {
+          "id": "TR-1",
+          "desc": "Cointegration first backtest",
+          "status": "todo"
+        },
+        {
+          "id": "TR-2",
+          "desc": "Grid with SL/TP (5%/10%) test",
+          "status": "todo"
+        },
+        {
+          "id": "TR-3",
+          "desc": "Widen Wick threshold 2.0x \u2192 1.5x",
+          "status": "todo"
+        }
+      ]
+    },
+    "directories": {
+      "name": "Directory Audits & Upgrades",
+      "priority": "P1",
+      "status": "queued",
+      "current": "Not started yet \u2014 after P0 workstreams",
+      "tasks": [
+        {
+          "id": "DA-1",
+          "desc": "Audit all 6 directories (score + gaps)",
+          "status": "queued"
+        },
+        {
+          "id": "DA-2",
+          "desc": "Fix luxury site from 4/10 to 9/10",
+          "status": "queued"
+        }
+      ]
+    },
+    "apifeny": {
+      "name": "Apifeny AI / Playbooks",
+      "priority": "P1",
+      "status": "blocked",
+      "current": "Stripe key set \u2014 ready to ship",
+      "tasks": [
+        {
+          "id": "AP-1",
+          "desc": "Deploy playbook checkout pages",
+          "status": "todo",
+          "blocked_by": "Needs deploy to pick up Stripe key"
+        },
+        {
+          "id": "AP-2",
+          "desc": "Improve playbook quality for UGC reviews",
+          "status": "todo"
+        },
+        {
+          "id": "AP-3",
+          "desc": "Add UGC review hooks on checkout",
+          "status": "todo"
+        }
+      ]
+    }
+  },
+  "blockers": [
+    {
+      "item": "luxuryfamilytravel.asia domain",
+      "who": "Chris",
+      "action": "Register ($12 at Namecheap)"
+    },
+    {
+      "item": "Viator affiliate signup",
+      "who": "Chris",
+      "action": "Fill signup form"
+    },
+    {
+      "item": "Omni-mind repo deletion",
+      "who": "Chris",
+      "action": "Delete from repo settings (token lacks admin)"
+    }
+  ],
+  "backlog": [
+    "Directory audit docs",
+    "Monetization analysis per site",
+    "Predicting next evolution of AI research",
+    "Claw Mart skills marketplace architecture"
+  ]
+}

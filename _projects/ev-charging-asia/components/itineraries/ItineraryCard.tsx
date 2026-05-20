@@ -40,6 +40,9 @@ export default function ItineraryCard({ itinerary }: Props) {
               🌏 Cross-border
             </span>
           )}
+          <span className="px-2.5 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium border border-amber-200">
+            🌿 {itinerary.bestSeason}
+          </span>
         </div>
 
         {/* Title */}

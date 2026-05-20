@@ -1,6 +1,12 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { Zap } from 'lucide-react';
 import SiteFooter from '@/components/SiteFooter';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy — EV Charging Asia',
+  description: 'How EV Charging Asia collects, uses, and protects your personal data. Read our privacy policy for details on cookies, analytics, and data handling.',
+};
 
 export default function PrivacyPage() {
   return (

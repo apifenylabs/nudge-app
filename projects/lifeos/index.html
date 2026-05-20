@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>LifeOS — Daily Loop</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#222;min-height:100vh}
+.container{max-width:480px;margin:0 auto;padding:16px}
+header{padding:20px 0 12px}
+h1{font-size:22px;font-weight:700;display:flex;align-items:center;gap:8px}
+.streak{font-size:13px;color:#666;background:#eee;padding:4px 10px;border-radius:20px}
+.date{font-size:13px;color:#888;margin-top:2px}
+.card{background:white;border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.card h2{font-size:14px;font-weight:600;margin-bottom:10px;color:#444}
+.track-item{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #f0f0f0}
+.track-item:last-child{border-bottom:none}
+.track-label{font-size:14px;font-weight:500}
+.track-desc{font-size:11px;color:#999;margin-top:1px}
+.btn-group{display:flex;gap:4px}
+.btn{padding:6px 14px;border-radius:20px;border:1px solid #ddd;background:white;font-size:12px;cursor:pointer;transition:all .15s;font-weight:500}
+.btn:hover{background:#f0f0f0}
+.btn.active{background:#22c55e;color:white;border-color:#22c55e}
+.btn.active.bad{background:#ef4444;border-color:#ef4444}
+.btn.active.mid{background:#f59e0b;border-color:#f59e0b}
+.notes-area{width:100%;border:1px solid #eee;border-radius:10px;padding:10px;font-size:13px;resize:vertical;min-height:60px;font-family:inherit}
+.notes-area:focus{outline:none;border-color:#22c55e}
+.save-btn{width:100%;padding:14px;border:none;border-radius:12px;background:#22c55e;color:white;font-size:15px;font-weight:600;cursor:pointer;margin-top:4px;transition:opacity .15s}
+.save-btn:hover{opacity:.9}
+.save-btn:disabled{opacity:.4;cursor:default}
+.history{margin-top:20px}
+.history-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:12px;color:#666}
+.history-score{font-weight:600}
+.day-good{color:#22c55e}
+.day-ok{color:#f59e0b}
+.day-bad{color:#ef4444}
+.empty{text-align:center;padding:40px 0;color:#bbb;font-size:14px}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <h1>⟳ LifeOS <span class="streak" id="streak">🔥 0 days</span></h1>
+    </div>
+    <div class="date" id="date"></div>
+  </header>
+
+  <div class="card" id="trackers">
+    <h2>How was today?</h2>
+    <div id="tracker-list"></div>
+  </div>
+
+  <div class="card">
+    <h2>Notes / Reflect</h2>
+    <textarea class="notes-area" id="notes" placeholder="What went well? What to improve?" maxlength="1000"></textarea>
+  </div>
+
+  <button class="save-btn" id="saveBtn" disabled>Save Today</button>
+
+  <div class="history" id="history">
+    <h2 style="font-size:14px;font-weight:600;color:#444;margin-bottom:8px">Last 7 Days</h2>
+    <div id="history-list"></div>
+  </div>
+</div>
+
+<script>
+// Trackers config
+const TRACKERS = [
+  {id:'sleep',label:'😴 Sleep',options:[{v:1,l:'<6h'},{v:2,l:'6-7h'},{v:3,l:'7-8h'},{v:4,l:'8+'}],def:2},
+  {id:'mood',label:'😊 Mood',options:[{v:1,l:'Bad'},{v:2,l:'Meh'},{v:3,l:'Good'},{v:4,l:'Great'}],def:2},
+  {id:'energy',label:'⚡ Energy',options:[{v:1,l:'Low'},{v:2,l:'OK'},{v:3,l:'High'},{v:4,l:'Max'}],def:2},
+  {id:'exercise',label:'🏃 Exercise',options:[{v:0,l:'None'},{v:1,l:'Light'},{v:2,l:'Good'},{v:3,l:'Intense'}],def:0},
+  {id:'food',label:'🥗 Nutrition',options:[{v:0,l:'Junk'},{v:1,l:'OK'},{v:2,l:'Good'},{v:3,l:'Perfect'}],def:1}
+];
+
+function getToday(){return new Date().toISOString().split('T')[0]}
+function getDateStr(){const d=new Date();return d.toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric',year:'numeric'})}
+function loadData(){try{return JSON.parse(localStorage.getItem('lifeos')||'{}')}catch{return{}}}
+function saveData(d){localStorage.setItem('lifeos',JSON.stringify(d));render()}
+function getScore(e){if(!e)return 0;let t=0;TRACKERS.forEach(tk=>{const v=e[tk.id]||0;t+=v});return Math.round(t/TRACKERS.length*25)}
+
+function getStreak(data){
+  const days=Object.keys(data.days||{}).sort().reverse();
+  if(!days.length)return 0;
+  let streak=0;
+  const today=getToday();
+  for(const d of days){
+    if(d===today||streak>0||d===yesterday(today,streak)){
+      streak++;
+    }else if(streak===0)break;
+  }
+  return streak;
+}
+function yesterday(t,i){
+  const d=new Date(t);d.setDate(d.getDate()-1-i);
+  return d.toISOString().split('T')[0];
+}
+
+let currentValue={};
+const today=getToday();
+const data=loadData();
+const todayEntry=data.days?.[today]||{};
+TRACKERS.forEach(tk=>{currentValue[tk.id]=todayEntry[tk.id]!==undefined?todayEntry[tk.id]:tk.def});
+
+function render(){
+  const data=loadData();
+  const todayEntry=data.days?.[today]||{};
+  TRACKERS.forEach(tk=>{
+    if(todayEntry[tk.id]!==undefined)currentValue[tk.id]=todayEntry[tk.id];
+  });
+
+  // Tracker buttons
+  const list=document.getElementById('tracker-list');
+  list.innerHTML='';
+  TRACKERS.forEach(tk=>{
+    const val=currentValue[tk.id]!==undefined?currentValue[tk.id]:tk.def;
+    const div=document.createElement('div');div.className='track-item';
+    const labelDiv=document.createElement('div');
+    labelDiv.innerHTML=`<div class="track-label">${tk.label}</div>`;
+    const btnDiv=document.createElement('div');btnDiv.className='btn-group';
+    tk.options.forEach(o=>{
+      const b=document.createElement('button');
+      b.className='btn'+(o.v===val?' active':'');
+      if(tk.id==='mood'&&o.v===1&&o.v===val)b.classList.add('bad');
+      if(tk.id==='mood'&&o.v===2&&o.v===val)b.classList.add('mid');
+      b.textContent=o.l;
+      b.onclick=()=>{currentValue[tk.id]=o.v;render()};
+      btnDiv.appendChild(b);
+    });
+    div.appendChild(labelDiv);div.appendChild(btnDiv);
+    list.appendChild(div);
+  });
+
+  // Notes
+  document.getElementById('notes').value=todayEntry.notes||'';
+
+  // Streak
+  document.getElementById('streak').textContent='🔥 '+getStreak(data)+' day'+(getStreak(data)!==1?'s':'');
+
+  // Save button
+  const hasChanges=TRACKERS.some(tk=>currentValue[tk.id]!==(todayEntry[tk.id]!==undefined?todayEntry[tk.id]:tk.def));
+  document.getElementById('saveBtn').disabled=!hasChanges&&!(todayEntry.notes||'')!==document.getElementById('notes').value;
+  document.getElementById('saveBtn').textContent=hasChanges||!todayEntry.notes?'Save Today':'Saved ✓';
+
+  // History
+  const histList=document.getElementById('history-list');
+  const days=Object.keys(data.days||{}).sort().reverse().slice(0,7);
+  if(!days.length){histList.innerHTML='<div class="empty">No days tracked yet. Start today!</div>';return}
+  histList.innerHTML='';
+  days.forEach(d=>{
+    const e=data.days[d];const score=getScore(e);const date=new Date(d+'T12:00:00');
+    const label=date.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+    const cls=score>=80?'day-good':score>=50?'day-ok':'day-bad';
+    const div=document.createElement('div');div.className='history-item';
+    div.innerHTML=`<span>${label}</span><span class="history-score ${cls}">${score}%</span>`;
+    histList.appendChild(div);
+  });
+}
+
+document.getElementById('date').textContent=getDateStr();
+
+document.getElementById('saveBtn').onclick=()=>{
+  const data=loadData();
+  if(!data.days)data.days={};
+  data.days[today]={...currentValue,notes:document.getElementById('notes').value};
+  saveData(data);
+  render();
+};
+
+document.getElementById('notes').oninput=()=>{
+  const data=loadData();
+  const todayEntry=data.days?.[today]||{};
+  const hasChanges=document.getElementById('notes').value!==(todayEntry.notes||'');
+  document.getElementById('saveBtn').disabled=!hasChanges;
+};
+
+render();
+</script>
+</body>
+</html>

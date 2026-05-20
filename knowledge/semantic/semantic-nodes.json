@@ -1,75 +1,51 @@
-[
-  {
-    "id": "semantic-infra-2026-05-19-82521bb0",
-    "type": "infrastructure",
-    "summary": "Infrastructure fixes: tsconfig.json excluded _archive from build, featured images auto-generated (146 SVGs), affiliate placeholders replaced across all 5 sites, senior site blog-data.ts restored from git",
-    "details": [
-      "- **Affiliate placeholders fixed** \u2014 all 5 sites scanned, YOUR_AFFILIATE_ID/YOUR_GYG_ID/YOUR_EXPEDIA_ID/YOUR_AMAZON_TAG replaced with real IDs",
-      "- **Featured images for all 146 FT blog posts** \u2014 new `scripts/generate-featured-images.mjs` creates deterministic gradient SVGs (20 palettes, 5 patterns, hashed by slug). 146 images in public/images/blog/. Build \u2705, deployed.",
-      "- **tsconfig.json fix** \u2014 _archive/_projects excluded from build",
-      "- **Luxury**: 5 blog posts deployed \u2705 (62 total) \u2014 Bali private villas, Singapore luxury, Maldives resorts, Hokkaido ski, Bangkok luxury",
-      "- **Senior**: 5 blog posts deployed \u2705 (58 total) \u2014 cruises, Bangkok hotels, KL attractions, mobility tips, Phuket",
-      "- Deployed via `vercel deploy --prod` from senior project dir (monorepo push doesn't auto-deploy subdir projects)."
-    ],
-    "date": "2026-05-19",
-    "confidence": 0.95
-  },
-  {
-    "id": "semantic-content-2026-05-19-fbc09d34",
-    "type": "content",
-    "summary": "10 new blog posts generated and deployed: 5 luxury (Bali private pool villas, Singapore Marina Bay, Maldives resorts, Hokkaido ski, Bangkok luxury) and 5 senior (Asia cruises, Bangkok accessible hotels, KL attractions, mobility tips, Phuket)",
-    "details": [
-      "- **Featured images for all 146 FT blog posts** \u2014 new `scripts/generate-featured-images.mjs` creates deterministic gradient SVGs (20 palettes, 5 patterns, hashed by slug). 146 images in public/images/blog/. Build \u2705, deployed.",
-      "- **luxury-content**: 5 blog posts (Bali private pool villas, Singapore Marina Bay luxury, Maldives resorts, Hokkaido ski, Bangkok luxury)",
-      "- **senior-content**: 5 blog posts (Asia cruises, Bangkok accessible hotels, KL attractions, mobility tips, Phuket)",
-      "- **Luxury**: 5 blog posts deployed \u2705 (62 total) \u2014 Bali private villas, Singapore luxury, Maldives resorts, Hokkaido ski, Bangkok luxury",
-      "- **Senior**: 5 blog posts deployed \u2705 (58 total) \u2014 cruises, Bangkok hotels, KL attractions, mobility tips, Phuket",
-      "- Senior site `lib/blog-data.ts` was missing (deleted in workspace consolidation). Restored from git history + added imports for 5 new posts.",
-      "- Senior blog files committed to root `data/blog/` by sub-agent instead of `senior-friendly-travel-asia/data/blog/`. Copied to correct location.",
-      "- Deployed via `vercel deploy --prod` from senior project dir (monorepo push doesn't auto-deploy subdir projects).",
-      "- 478 total blog posts across portfolio"
-    ],
-    "date": "2026-05-19",
-    "confidence": 0.95
-  },
-  {
-    "id": "semantic-metrics-2026-05-19-99a52061",
-    "type": "metrics",
-    "summary": "Portfolio status: 6 sites healthy (200 OK), 478 total blog posts, 3 trading playbooks GREEN with 105/200 paper trades complete, ~$0.06 spent total today. overnight_runner.py didn't execute.",
-    "details": [
-      "- Budget: ~$0.02 so far (2 sub-agents on DeepSeek-chat)",
-      "- **Luxury**: 5 blog posts deployed \u2705 (62 total) \u2014 Bali private villas, Singapore luxury, Maldives resorts, Hokkaido ski, Bangkok luxury",
-      "- **Senior**: 5 blog posts deployed \u2705 (58 total) \u2014 cruises, Bangkok hotels, KL attractions, mobility tips, Phuket",
-      "- All 6 sites healthy 200 \u2705",
-      "- 478 total blog posts across portfolio",
-      "- 3 trading playbooks GREEN, 105/200 paper trades",
-      "- ~$0.06 spent today"
-    ],
-    "date": "2026-05-19",
-    "confidence": 0.95
-  },
-  {
-    "id": "semantic-blockers-2026-05-19-8e60c947",
-    "type": "blocker",
-    "summary": "Bug fix needed: senior site blog-data.ts was deleted during workspace consolidation, restored from git. Sub-agents committing to wrong directories (root data/blog/ instead of project-specific path). Monorepo push doesn't auto-deploy subdirectory projects \u2014 manual vercel deploy required.",
-    "details": [
-      "- **Affiliate placeholders fixed** \u2014 all 5 sites scanned, YOUR_AFFILIATE_ID/YOUR_GYG_ID/YOUR_EXPEDIA_ID/YOUR_AMAZON_TAG replaced with real IDs",
-      "- **tsconfig.json fix** \u2014 _archive/_projects excluded from build",
-      "- Senior site `lib/blog-data.ts` was missing (deleted in workspace consolidation). Restored from git history + added imports for 5 new posts.",
-      "- Senior blog files committed to root `data/blog/` by sub-agent instead of `senior-friendly-travel-asia/data/blog/`. Copied to correct location."
-    ],
-    "date": "2026-05-19",
-    "confidence": 0.9
-  },
-  {
-    "id": "semantic-cost-2026-05-19-62fd608b",
-    "type": "cost",
-    "summary": "Daily spend: ~$0.06 (2 content sub-agents on DeepSeek-chat for 10 blog posts)",
-    "details": [
-      "- Budget: ~$0.02 so far (2 sub-agents on DeepSeek-chat)",
-      "- ~$0.06 spent today"
-    ],
-    "date": "2026-05-19",
-    "confidence": 0.95
-  }
-]
+{
+  "version": "2026-05-21-consolidation-primary",
+  "generated": "2026-05-21T02:00:00+08:00",
+  "nodes": [
+    {
+      "id": "trading-crypnuevo",
+      "name": "CrypNuevo Methodology — Full Extraction + Verdict",
+      "summary": "Full 4-layer weekly bias + liquidity zone system extracted and corrected from earlier wick-only simplification. 1) Weekly bias from HTF structure/funding/OI, 2) Liquidity zone mapping on Hyperliquid order book, 3) Entry AFTER sweep + rejection (not before), 4) Multi-TP exit. Rejection filter reduces false signals from 20+/week to ~2.5/week. Cross-asset backtest: SOL WR 43.2%, PF 1.52 (+9.75R, 44 signals, under 100 minimum). BTC (28.0% WR, 0.78 PF) and ETH (30.4% WR, 0.66 PF) fail gate. OHLCV-only version is pale imitation — real edge requires Hyperliquid order book depth, funding rate extremes, and OI divergence. Nuevo bias function crude (SMA slope → 95% neutral). Paths: knowledge/strategies/crypnuevo-full-weekly-bias-system.md, scripts/playbook_nuevo_weekly.py, scripts/nuevo_game.py."
+    },
+    {
+      "id": "trading-gold-v2",
+      "name": "Gold Template v2 — All 3 Gates Complete",
+      "summary": "All 3 scripts built and tested. Epistemic Gate correctly blocks BB(10,2.0) RSI<15 at 16% confidence. Killswitch Gate fails 78/78 paper trades at 48.7% WR (<55% requirement). Rolling Optimizer proves params shift every 3-6 months across 62 windows. BTC grid walk-forward failure: Train PF 2.39 (2021-2023) → Test PF 0.84 (2024-2025) = 65% edge decay. Current BTC best: BB(30,2.5) RSI<20, PF=1.0 (no edge). Fixed params are structurally dead — no single strategy passes all 4 regimes. Master doc: /home/captain/trading/GOLD_TEMPLATE_V2.md. Gap analysis: /home/captain/trading/GOLD_V2_GAP_ANALYSIS.md (12 gaps)."
+    },
+    {
+      "id": "trading-playbooks",
+      "name": "7 Playbooks — Status Summary",
+      "summary": "1) Grid (BB+RSI) — Walk-forward FAILED (65% edge decay). Needs rolling re-optimization. 2) Cointegration (ETH-SOL, BTC-ETH) — PF 9.97 bull regime, needs real-cost model. 3) Meta-strat combination — PF 2.53 synthetic (2.15 after fees). 4) Forex (EURUSD, AUDUSD) — Some configs pass gate, low priority. 5) Wick imbalance — 10 trades only (40% WR, PF 1.45), too few signals. 6) Nuevo weekly bias — NEW (2.5 signals/week, needs API integration). 7) Stubs (Options/Arb/ML/MEV) — Blocked by infra/access. Meta-strategy v0.1.0 active: regime=CHOP (conf 0.88, stable 372h), Grid+VWAP active, Kelly 0.25 fractional (9.5% per trade). Dashboard at alpha-dashboard-1779191065.vercel.app."
+    },
+    {
+      "id": "trading-data-collected",
+      "name": "Trading Data & LLM Experiments",
+      "summary": "24,000 Hyperliquid funding entries collected (BTC/ETH/SOL, Feb 2024-May 2026). BTC funding positive 59/68 weeks — highly one-sided. Local LLM experiment conclusively failed: qwen2.5-coder:3b (0/6 correct, always NEUTRAL), gemma3:4b (returns NO to everything), deepseek-r1:7b (60s timeout, too slow). Interactive trading game: scripts/nuevo_game.py."
+    },
+    {
+      "id": "user-preferences-wosobu",
+      "name": "User: Wosobu (@CaptainAlphaAgent_bot)",
+      "summary": "Name: Wosobu. Timezone: Asia/Hong_Kong (GMT+8). Explicitly wants agents working overnight autonomously — 'im not doing anything. you do it all the next hours and test alot'. Signature sign-off: 'keep building' (momentum over planning). Prefers building over talking: demo products > strategy documents. Wants both quant paths AND manual/discretionary method exploration. Active in Alpha Orchestras HQ Telegram group. Working toward $1K → $100M, paper-first, Gold Template v2 gates. Called out CrypNuevo research gap — values rigorous analysis + practical approaches. Called out as having sharp BS detector on incomplete analysis."
+    },
+    {
+      "id": "infrastructure-web-sites",
+      "name": "Web Site Portfolio — 6 Vercel Sites",
+      "summary": "All 6 Next.js sites on Vercel, healthy 200 OK. 478 total blog posts. Apifeny AI: 90 playbooks, 47 blog posts. Family Travel Asia: 146 blog, 580 destinations. Luxury Travel Asia: 62 blog, 527 destinations (new repo: apifenylabs/luxury-family-travel-asia). EV Charging Asia: 113 blog, 12 itineraries. Senior Friendly Travel: 58 blog. Kids Activities Asia: 42 blog. Affiliate placeholders replaced across all 5 sites. 146 gradient SVG featured images auto-generated. Nudge (separate Next.js app): Telegram inline mode @nudgebot deployed (+25% MRR estimate). 5-step onboarding flow polished (+15% MRR estimate)."
+    },
+    {
+      "id": "meta-strategy-trading",
+      "name": "Meta-Strategy Trading System v0.1.0",
+      "summary": "Deployed and running. Regime detection: 3h vol + 15h trend + 48h momentum + 120h net. 48h stabilization window before regime flip. Playbook gating: 2-3 active per regime. Kelly fractional 0.25 with conviction modulation + drawdown floor. Current: CHOP (conf=0.88, stable 372h). Dash: alpha-dashboard-1779191065.vercel.app. Integrated into overnight runner cron (every 2h). Stabilization improved from 89 flips/500h to 8/5000h. 10 playbook stubs created (#7-10 need external infra)."
+    },
+    {
+      "id": "active-blockers",
+      "name": "6 Active Blockers (Wosobu)",
+      "summary": "1) GitHub PAT expired (ghp_wW7cv2...) — repos stay public, can't manage/delete repos. 2) VITE_STRIPE_SECRET_KEY — 7 playbook products with checkout pages ready. 3) Supabase schema paste pending (nudge/supabase-schema.sql). 4) Affiliate accounts not created (Klook, Booking.com, Viator). 5) Nuevo bias function crude — SMA slope only (95% neutral), needs funding rate + OI divergence + Hyperliquid order book API. 6) Local LLMs unreliable for signal analysis."
+    },
+    {
+      "id": "omnimind-system",
+      "name": "OmniMind Memory System — Day 2 of 7",
+      "summary": "Plugin v0.3.0 installed (LanceDB vector + Kuzu graph + SQLite). Two parallel systems: plugin (unused) and cron file extraction (running). Pilot metric: does 3-store recall beat grep of memory/*.md? Semantic graph holds 9 nodes across 7 categories. Previous cycle: 41 data_points stored, 0 graph edges. Short-term recall tracking: 12 entries in .dreams/short-term-recall.json with 218 total recall events. Most recalled topics: OmniMind PAT/Killswitch info (23), Nuevo verdict (23), Grid walk-forward (23), User preferences (23). Distribution plan: 4-phase $0 strategy in social-beast/generated-content/omnimind-launch/."
+    }
+  ]
+}

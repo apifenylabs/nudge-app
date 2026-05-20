@@ -1,0 +1,159 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Titan brand tokens */
+  --color-titan-bg: #0A0E17;
+  --color-titan-surface: #111827;
+  --color-titan-card: #1A1F2E;
+  --color-titan-border: #2A2F42;
+  --color-titan-text: #E2E8F0;
+  --color-titan-muted: #6B7280;
+  --color-titan-cyan: #22D3EE;
+  --color-titan-emerald: #34D399;
+  --color-titan-violet: #A78BFA;
+  --color-titan-amber: #FBBF24;
+  --color-titan-red: #F87171;
+  --color-titan-accent-glow: #22D3EE;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* shadcn mapping */
+  --background: #0A0E17;
+  --foreground: #E2E8F0;
+  --card: #1A1F2E;
+  --card-foreground: #E2E8F0;
+  --popover: #111827;
+  --popover-foreground: #E2E8F0;
+  --primary: #22D3EE;
+  --primary-foreground: #0A0E17;
+  --secondary: #1A1F2E;
+  --secondary-foreground: #E2E8F0;
+  --muted: #1A1F2E;
+  --muted-foreground: #6B7280;
+  --accent: #22D3EE;
+  --accent-foreground: #0A0E17;
+  --destructive: #F87171;
+  --success: #34D399;
+  --warning: #FBBF24;
+  --border: #2A2F42;
+  --input: #2A2F42;
+  --ring: #22D3EE;
+  --radius: 0.5rem;
+
+  /* Charts — cyber palette */
+  --chart-1: #22D3EE;
+  --chart-2: #34D399;
+  --chart-3: #A78BFA;
+  --chart-4: #FBBF24;
+  --chart-5: #F87171;
+
+  /* Sidebar */
+  --sidebar: #111827;
+  --sidebar-foreground: #E2E8F0;
+  --sidebar-primary: #22D3EE;
+  --sidebar-primary-foreground: #0A0E17;
+  --sidebar-accent: #1E293B;
+  --sidebar-accent-foreground: #22D3EE;
+  --sidebar-border: #2A2F42;
+  --sidebar-ring: #22D3EE;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: rgb(from var(--ring) r g b / 50%);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+
+  /* Subtle cyan glow on focus */
+  *:focus-visible {
+    outline: 2px solid var(--color-titan-cyan);
+    outline-offset: 2px;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-titan-bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-titan-border);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-titan-muted);
+  }
+
+  /* Selection */
+  ::selection {
+    background: color-mix(in oklch, var(--color-titan-cyan) 30%, transparent);
+    color: var(--color-titan-text);
+  }
+}
+
+/* ─── Utility classes ─── */
+@layer utilities {
+  .titan-gradient {
+    background: linear-gradient(135deg, #0A0E17 0%, #111827 50%, #1A1F2E 100%);
+  }
+
+  .titan-glow {
+    box-shadow: 0 0 20px color-mix(in oklch, var(--color-titan-cyan) 15%, transparent);
+  }
+
+  .titan-glow-strong {
+    box-shadow: 0 0 30px color-mix(in oklch, var(--color-titan-cyan) 30%, transparent);
+  }
+
+  .titan-text-gradient {
+    background: linear-gradient(135deg, #22D3EE, #34D399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .titan-border-glow {
+    border-color: color-mix(in oklch, var(--color-titan-cyan) 30%, transparent);
+  }
+
+  .titan-grid-bg {
+    background-image:
+      linear-gradient(rgba(34, 211, 238, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
+
+/* ─── Animations ─── */
+@keyframes pulse-cyan {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.animate-pulse-cyan {
+  animation: pulse-cyan 2s ease-in-out infinite;
+}
+
+.animate-scan {
+  animation: scan-line 4s linear infinite;
+}

@@ -1,41 +1,38 @@
-EV Charging Asia — Blog Content Generation
-===========================================
-Generated: 2026-05-17 00:08 HKT
+EV Charging Asia — Project Status
+===================================
+Updated: 2026-05-20 03:50 HKT
+URL: https://ev-charging-asia.vercel.app
+Goal: $5,000 MRR in 90 days (Day ~20)
 
-## Task 1: 5 New Blog Posts (data/blog/*.json)
-All 5 posts created and imported via generate-blog-data.js (91 total posts now):
+## Current State
+- 17 EV road trip itineraries (exceeds target of 12)
+- 1125 charging stations across Asia
+- 90+ blog posts with SEO-optimized content
+- Route comparison page at /compare
+- Seasonal recommendations on every route page
+- User tips with categories, ratings, helpful voting
+- Route map with charging station pin overlays
+- Breadcrumb + FAQ JSON-LD structured data on all pages
 
-1. ✅ **Bali EV Road Trip** — data/blog/bali-ev-road-trip-complete-family-guide.json
-   Slug: bali-ev-road-trip-complete-family-guide
-   5-day family itinerary covering Seminyak, Ubud, Kintamani, Amed, Sanur, Uluwatu
+## What Was Just Built (May 20)
+1. **Charging station markers on RouteMap** — Leaflet map now loads stations.json and displays purple circle markers for nearby charging stations (within bounding box). Clicking shows name, speed, port count, cost/kWh, reliability stars. Toggle button to show/hide stations.
 
-2. ✅ **Bangkok to Phuket** — data/blog/bangkok-to-phuket-ev-road-trip-guide.json
-   Slug: bangkok-to-phuket-ev-road-trip-guide
-   870 km route via Highway 4 with stops at Chumphon and Surat Thani
+2. **Seasonal badges on ItineraryCard** — Each route card on /routes now shows 🌿 best season tag alongside difficulty/duration/cross-border badges.
 
-3. ✅ **Osaka-Kyoto-Nara Kansai** — data/blog/osaka-kyoto-nara-kansai-ev-road-trip.json
-   Slug: osaka-kyoto-nara-kansai-ev-road-trip
-   Kansai region EV loop with CHAdeMO charging stations
+3. **BreadcrumbList JSON-LD on /compare** — Structured data for Google rich result breadcrumbs on the compare page.
 
-4. ✅ **Shanghai to Hangzhou** — data/blog/shanghai-hangzhou-ev-road-trip-guide.json
-   Slug: shanghai-hangzhou-ev-road-trip-guide
-   175 km G60 Expressway route with GB/T charging guide
+4. **SEO metadata refinements** — Compare page gets proper canonical URL, OG tags.
 
-5. ✅ **Phnom Penh to Siem Reap (Cambodia)** — data/blog/phnom-penh-siem-reap-cambodia-ev-road-trip.json
-   Slug: phnom-penh-siem-reap-cambodia-ev-road-trip
-   315 km National Highway 6 route with Angkor Wat access
+5. **Deployed to production** — Build passes clean, deployed to Vercel.
 
-## Task 2: Blog/[slug] Page Rendering
-✅ Verified: app/blog/[slug]/page.tsx loads from lib/blog-data.ts -> lib/generated-blog-data.ts
-✅ All 5 new routes are in generated-blog-data.ts
-✅ Build succeeded — .next/server/app/blog/ has HTML files for all 5 new slugs
+## Build Metrics
+- Build: passes (0 errors, ~80s)
+- First Load JS: 87.9 kB shared
+- SSG pages: 17 itinerary detail + 50 station pages
+- Static pages: /, /routes, /compare, /search, /range, /blog+
 
-## Task 3: Cross-Site Footer Links
-✅ Already present in components/SiteFooter.tsx under "Our Network" section:
-   - Family Travel Asia: https://www.familytravelasia.com
-   - Luxury Family Travel Asia: https://luxury-family-travel-asia.vercel.app
-   - Apifeny AI: https://apifeny-ai.vercel.app
-   No changes needed — all sister sites already linked
-
-## Build Result
-npm run build: ✅ PASSED (exit code 0)
+## Next Session Priorities
+- Photo upload in TipForm (richer UGC → more engagement)
+- Tips pagination/infinite scroll
+- Seasonal route recommendations page
+- Route planner form

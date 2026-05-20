@@ -106,6 +106,16 @@ function familyRecommendation(a: Itinerary, b: Itinerary): string {
 }
 
 // SEO handled via Head component since this is a client component
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ev-charging-asia.vercel.app/' },
+    { '@type': 'ListItem', position: 2, name: 'Routes', item: 'https://ev-charging-asia.vercel.app/routes' },
+    { '@type': 'ListItem', position: 3, name: 'Compare EV Routes', item: 'https://ev-charging-asia.vercel.app/compare' },
+  ],
+};
+
 export default function ComparePage() {
   const [routeA, setRouteA] = useState<string>('');
   const [routeB, setRouteB] = useState<string>('');
@@ -500,6 +510,11 @@ export default function ComparePage() {
         )}
       </div>
 
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <SiteFooter />
     </div>
   );

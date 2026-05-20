@@ -9,6 +9,7 @@ import React from 'react';
  *   - Headings (# through ######)
  *   - Bold (**text**), Italic (*text*), Strikethrough (~~text~~)
  *   - Inline code (`code`)
+ *   - Images (![alt](url))
  *   - Links ([text](url))
  *   - Unordered lists (- item)
  *   - Ordered lists (1. item)
@@ -20,7 +21,6 @@ export function renderMarkdown(markdown: string | undefined | null): React.React
   if (!markdown) return null;
   const lines = markdown.split('\n');
   const elements: React.ReactNode[] = [];
-  let inParagraph = false;
   let paragraphLines: string[] = [];
   let inList = false;
   let listItems: { ordered: boolean; items: string[] } = { ordered: false, items: [] };
@@ -178,13 +178,11 @@ export function renderMarkdown(markdown: string | undefined | null): React.React
         inList = false;
       }
       paragraphLines.push(line);
-      inParagraph = true;
     } else {
       // Empty line = end of paragraph/list
       flushParagraph(keyCounter++);
       flushList(keyCounter++);
       inList = false;
-      inParagraph = false;
     }
   }
 
@@ -197,28 +195,63 @@ export function renderMarkdown(markdown: string | undefined | null): React.React
 
 /**
  * Convert inline markdown (bold, italic, code, links) to HTML.
+ * Handles images BEFORE escaping to preserve tag syntax.
  */
 function inlineMarkdownToHtml(text: string): string {
-  let html = escapeHtml(text);
+  let html = text;
 
-  // Images: ![alt](url)
-  html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="rounded-lg my-2 max-w-full" />');
+  // Store raw content tokens to preserve after escaping
+  const tokens: string[] = [];
+  const placeholder = (): string => `%%TOKEN${tokens.push('PLACEHOLDER') - 1}%%`;
 
-  // Links: [text](url)
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, text, url) => {
+  // Images: ![alt](url) — preserve first
+  html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_match, alt, url) => {
+    const token = placeholder();
+    tokens[parseInt(token.replace(/[^0-9]/g, ''))] = `<img src="${escapeAttr(url)}" alt="${escapeAttr(alt)}" class="rounded-lg my-2 max-w-full" />`;
+    return token;
+  });
+
+  // Links: [text](url) 
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, text, url) => {
+    const token = placeholder();
     const isExternal = url.startsWith('http');
     const target = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
-    return `<a href="${url}"${target} class="text-sky-600 hover:text-sky-700 underline">${text}</a>`;
+    tokens[parseInt(token.replace(/[^0-9]/g, ''))] = `<a href="${escapeAttr(url)}"${target} class="text-sky-600 hover:text-sky-700 underline">${escapeHtml(text)}</a>`;
+    return token;
   });
 
   // Bold: **text**
-  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/\*\*(.+?)\*\*/g, (_match, inner) => {
+    const token = placeholder();
+    tokens[parseInt(token.replace(/[^0-9]/g, ''))] = `<strong>${inner}</strong>`;
+    return token;
+  });
   // Italic: *text*
-  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  html = html.replace(/\*(.+?)\*/g, (_match, inner) => {
+    if (inner.includes('<') || inner.includes('>')) return _match;
+    const token = placeholder();
+    tokens[parseInt(token.replace(/[^0-9]/g, ''))] = `<em>${inner}</em>`;
+    return token;
+  });
   // Strikethrough: ~~text~~
-  html = html.replace(/~~(.+?)~~/g, '<del>$1</del>');
+  html = html.replace(/~~(.+?)~~/g, (_match, inner) => {
+    const token = placeholder();
+    tokens[parseInt(token.replace(/[^0-9]/g, ''))] = `<del>${inner}</del>`;
+    return token;
+  });
   // Inline code: `code`
-  html = html.replace(/`([^`]+)`/g, '<code class="bg-gray-100 text-red-600 px-1.5 py-0.5 rounded text-xs font-mono">$1</code>');
+  html = html.replace(/`([^`]+)`/g, (_match, code) => {
+    const token = placeholder();
+    tokens[parseInt(token.replace(/[^0-9]/g, ''))] = `<code class="bg-gray-100 text-red-600 px-1.5 py-0.5 rounded text-xs font-mono">${escapeHtml(code)}</code>`;
+    return token;
+  });
+
+  // Escape everything
+  html = escapeHtml(html);
+
+  // Restore preserved tokens (which are safe since they don't contain user text that isn't escaped)
+  html = html.replace(/%%TOKEN(\d+)%%/g, (_match, idx) => tokens[parseInt(idx)] || '');
+
   // Line breaks within paragraph
   html = html.replace(/  \n/g, '<br />');
 
@@ -231,4 +264,8 @@ function escapeHtml(text: string): string {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+function escapeAttr(text: string): string {
+  return text.replace(/"/g, '&quot;').replace(/&/g, '&amp;');
 }

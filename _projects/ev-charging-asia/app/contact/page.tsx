@@ -1,6 +1,12 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { Zap, Mail, MapPin } from 'lucide-react';
 import SiteFooter from '@/components/SiteFooter';
+
+export const metadata: Metadata = {
+  title: 'Contact — EV Charging Asia',
+  description: 'Get in touch with the EV Charging Asia team. Questions about EV road trips, charging stations, or partnerships — we\'d love to hear from you.',
+};
 
 export default function ContactPage() {
   return (

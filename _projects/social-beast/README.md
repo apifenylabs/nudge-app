@@ -1,113 +1,141 @@
-# Social Beast — Directory Publisher
+# Social Beast — Content Empire for Builders
 
-Automated social media posting for the Family Travel Directory (29 destinations).
+Create, schedule, and publish social content across Twitter/X, LinkedIn, Telegram, Instagram, and your blog. AI-powered content engine with smart buckets, templates, and auto-generation.
 
-Pulls a random destination from the directory and posts to Twitter/X + Telegram.
+## Features
 
-## Quick Start
+- **Dashboard** — Quick stats, recent posts, platform status
+- **Content Calendar** — Monthly grid view with per-day details, weekly schedule, and content bucket strategy
+- **Posts** — Browse, search, filter, bulk archive/delete
+- **Create** — Compose posts with platform-aware formatting, schedule, affiliate links
+- **Analytics** — Engagement tracking across platforms
+- **Settings** — Platform connections, brand voice, timezone
+- **Community** — Discussion board
+- **Build Log** — Transparent development timeline
+- **Generate Week** — Auto-creates 12-14 draft posts from 7 content buckets
+
+## Content Buckets
+
+| # | Bucket | Emoji | Frequency | Best Platforms |
+|---|--------|-------|-----------|----------------|
+| 1 | Build in Public | 🏗️ | 3-4x/week | Twitter/X, LinkedIn |
+| 2 | Product Deep Dives | 🔧 | 2x/week | LinkedIn, Twitter, Blog |
+| 3 | Industry Commentary | 💡 | 2-3x/week | Twitter/X, LinkedIn |
+| 4 | User Wins | 🏆 | 1-2x/week | LinkedIn, Twitter, Instagram |
+| 5 | Behind the Scenes | 🎬 | 1-2x/week | Twitter/X, LinkedIn, Instagram |
+| 6 | Humor & Relatability | 😅 | 1-2x/week | Twitter/X, Telegram, Instagram |
+| 7 | Cross-Promotion | 🔗 | 1x/week | Twitter/X, LinkedIn, Telegram |
+
+Each bucket has 3 ready-to-use templates with auto-fillable placeholders.
+
+## Deployment
+
+### Production (Vercel)
+
+The site is live at: **https://social-beast-two.vercel.app**
+
+**CLI Deploy:**
+```bash
+# From the social-beast directory
+npx vercel --prod
+```
+
+**Git-based Deploy (recommended):**
+1. Push to your GitHub repo
+2. Import project in Vercel dashboard → Add New → Project
+3. Vercel auto-detects Next.js — no config needed
+4. Every push to `main` auto-deploys
+
+### Environment Variables (none needed for MVP)
+
+All data is localStorage-based. No API keys or database required.
+
+## Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS (cream/ink/accent/highlight palette)
+- **Icons:** Lucide React
+- **Charts:** Recharts
+- **Storage:** localStorage (MVP — Supabase planned)
+- **Analytics:** @vercel/analytics + @vercel/speed-insights
+- **Hosting:** Vercel (Pro)
+
+## Local Development
 
 ```bash
-# Dry run — one random destination (preview only)
-node publish-directory.js --dry-run
+# Install
+npm install
 
-# Dry run — all 29 destinations (writes preview file)
-node publish-directory.js --dry-run --all
+# Run
+npm run dev
 
-# Live — one random destination (actually posts)
-node publish-directory.js
+# Build
+npm run build
 
-# Live — all 29 destinations (posts all)
-node publish-directory.js --all
+# Lint
+npm run lint
 ```
 
-## Output
-
-| Flag | Behavior |
-|------|----------|
-| (none) | Posts 1 random destination to Twitter + Telegram |
-| `--dry-run` | Shows what would be posted without sending anything |
-| `--all` | Processes all 29 destinations |
-| `--dry-run --all` | Writes full preview to `publish-all-preview.txt` |
-
-## Post Format
-
-### Twitter/X (plain text)
-```
-🏖️ Tokyo Disneyland — Tokyo, Japan
-The ultimate family destination with classic Disney magic.
-🧒 Best for ages: 3-12
-⭐ Safety: 4.9/5
-💰 Price: $$$
-Read the full parent review ➡️ family-travel-directory.vercel.app/destination/tokyo-001
-```
-
-### Telegram (HTML)
-Same content with `<b>`, `<a>` tags for rich formatting.
-
-## Logging
-
-Every run appends to `publish-log.txt` with timestamps, platform, status, and destination info.
-
-## TODO: Real API Integration
-
-The `postToTwitter()` and `postToTelegram()` functions in `publish-directory.js` are placeholders that `console.log()`. Replace them with real API calls.
-
-### Twitter/X API v2
-
-```js
-const { TwitterApi } = require("twitter-api-v2");
-const client = new TwitterApi({
-  appKey: process.env.TWITTER_API_KEY,
-  appSecret: process.env.TWITTER_API_SECRET,
-  accessToken: process.env.TWITTER_ACCESS_TOKEN,
-  accessSecret: process.env.TWITTER_ACCESS_SECRET,
-});
-await client.v2.tweet(content);
-```
-
-### Telegram Bot API
-
-```js
-const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const TELEGRAM_CHANNEL_ID = process.env.TELEGRAM_CHANNEL_ID;
-const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-await fetch(url, {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    chat_id: TELEGRAM_CHANNEL_ID,
-    text: content,
-    parse_mode: "HTML",
-    disable_web_page_preview: false,
-  }),
-});
-```
-
-### Image posting
-
-For Twitter, you can attach the destination image:
-
-```js
-const mediaId = await client.v1.uploadMedia(dest.imageUrl);
-await client.v2.tweet({ text: content, media: { media_ids: [mediaId] } });
-```
-
-## Scheduling (Cron)
-
-Add to crontab to post daily:
-
-```cron
-# Post one random destination every day at 09:00 HKT
-0 1 * * * cd /home/captain/.openclaw/workspace/social-beast && /usr/bin/node publish-directory.js >> publish-log.txt 2>&1
-```
-
-## Structure
+## Project Structure
 
 ```
 social-beast/
-├── publish-directory.js   # Main script
-├── publish-log.txt        # Run log (gitignored)
-├── publish-all-preview.txt # Full preview output (gitignored)
-├── README.md              # This file
-└── docs/                  # Documentation (future)
+├── app/                          # Next.js App Router pages
+│   ├── analytics/                # Analytics dashboard
+│   ├── build-log/                # Build log / changelog
+│   ├── calendar/                 # Content calendar + bucket strategy
+│   ├── community/                # Discussion board
+│   ├── create/                   # Post composer
+│   ├── posts/                    # All posts (search, filter, bulk)
+│   ├── settings/                 # Platform connections, preferences
+│   ├── globals.css               # Design system (cream/ink palette)
+│   ├── layout.tsx                # Root layout with metadata + JSON-LD
+│   ├── loading.tsx               # Loading state
+│   ├── page.tsx                  # Dashboard
+│   ├── robots.ts
+│   └── sitemap.ts
+├── components/                   # Reusable UI components
+│   ├── AnalyticsChart.tsx
+│   ├── AppShell.tsx
+│   ├── CalendarView.tsx
+│   ├── CrossSiteFooter.tsx
+│   ├── Navbar.tsx
+│   ├── PlatformBadge.tsx
+│   ├── PostCard.tsx
+│   ├── PostForm.tsx
+│   ├── Sidebar.tsx
+│   └── StatsCard.tsx
+├── lib/                          # Business logic & data layer
+│   ├── affiliate-links.ts        # Booking/Klook/Viator link generation
+│   ├── analytics.ts              # Analytics computation
+│   ├── calendar-generator.ts     # Week-ahead post generation
+│   ├── content-buckets.ts        # 7 buckets with templates
+│   ├── content-sources.ts        # Site content directory sources
+│   ├── platforms.ts              # Platform config + publish abstractions
+│   ├── posts.ts                  # Post CRUD (localStorage)
+│   ├── publish.ts                # Multi-platform publishing
+│   ├── scheduler.ts              # Schedule CRUD + processing
+│   ├── seed-data.ts              # First-visit seed posts
+│   └── types.ts                  # TypeScript types
+├── public/
+│   └── robots.txt
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+├── next.config.js
+├── postcss.config.mjs
+└── vercel.json
 ```
+
+## Publishing Script (legacy)
+
+The directory publishing script at `publish-directory.js` is a standalone Node.js script for batch-publishing destination content to Twitter/X and Telegram. It's separate from the Next.js app.
+
+```bash
+node publish-directory.js --dry-run
+node publish-directory.js
+```
+
+## License
+
+MIT — built by [Apifeny Labs](https://apifenylabs.github.io)

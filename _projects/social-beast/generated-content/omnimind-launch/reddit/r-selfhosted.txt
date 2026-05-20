@@ -1,0 +1,27 @@
+Title: I got tired of my AI agents forgetting everything, so I built a memory layer that runs entirely on my server
+
+I run OpenClaw for my daily workflows — code generation, research, trading analysis. It's great, but every new session starts from zero. Yesterday's context is gone.
+
+The "solutions" out there are cloud APIs. Send your conversations to someone's server, pay $30-50/month, hope they don't get breached.
+
+So I built my own. Three embedded databases, one pipeline, zero cloud:
+
+- **LanceDB** for vector search (semantic recall)
+- **Kuzu** for knowledge graphs (entity relationships)
+- **SQLite** for provenance (who stored what, when)
+- **Nightly Memify worker** that compresses raw logs into higher-level knowledge
+
+All 100% local. All free. No data ever leaves the machine.
+
+**The install is one line:** `openclaw plugins install @openclaw/omni-mind`
+
+It's MIT licensed, v0.3.0, running on my own setup for 2 weeks. Works with OpenClaw as a native plugin — registers as a memory slot, auto-indexes markdown files.
+
+Repo: https://github.com/apifenylabs/omni-mind
+
+What I'd love feedback on:
+1. Would you trust a memory layer like this for sensitive work?
+2. Multi-agent shared memory (v0.4) — what API would you want?
+3. Any other selfhosted memory solutions I should know about?
+
+Not looking for "great job" — real critique wanted. What's missing? What would break for you?

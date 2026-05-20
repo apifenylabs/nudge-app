@@ -1,0 +1,24 @@
+{
+  "date": "2026-05-19 23:31 HKT",
+  "on_btc_currently": {
+    "best_param": "BB(30,2.5) RSI<20",
+    "pf": 1.0,
+    "wr": 37.5,
+    "n": 16
+  },
+  "on_btc_now_vs_frozen": {
+    "frozen_param": "BB(10,2.0) RSI<15 (fixed from 2021-2023)",
+    "current_optimum": "BB(30,2.5) RSI<20 (re-optimized on last 6 months)",
+    "frozen_pf_2024_test": 0.84,
+    "current_pf": 1.0,
+    "verdict": "BTC grid has lost most of its edge. Neither param is good enough to trade live."
+  },
+  "what_gold_v2_teaches_us": [
+    "1. Fixed params die \u2014 BTC lost 65% edge walk-forward",
+    "2. Current best (BB(30,2.5) RSI<20) only PF=1.0 \u2014 no live-ready playbook exists today",
+    "3. Epistemic gate correctly BLOCKED the deployment proposal at 16% confidence",
+    "4. Killswitch gate correctly FAILED paper-first (78 trades, 48.7% WR, 1.67 PF)",
+    "5. Rolling optimizer proves params shift every 3-6 months \u2014 must be automated",
+    "6. The meta-strat PF 2.53 is theoretical. Reality is PF ~1.0 on current BTC."
+  ]
+}
