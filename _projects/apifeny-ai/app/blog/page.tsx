@@ -30,6 +30,7 @@ export const metadata: Metadata = {
 function getTagVariant(tag: string): string {
   const variants: Record<string, string> = {
     'ai-tools': 'border-neon/30 text-neon-light bg-neon/10',
+    'AI-comparison': 'border-aqua/30 text-aqua bg-aqua/10',
     'comparison': 'border-aqua/30 text-aqua bg-aqua/10',
     'solopreneur': 'border-purple-400/30 text-purple-300 bg-purple-400/10',
     'productivity': 'border-yellow-400/30 text-yellow-300 bg-yellow-400/10',

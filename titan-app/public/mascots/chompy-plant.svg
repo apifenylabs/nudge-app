@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <radialGradient id="cp-g" cx="40%" cy="30%">
+      <stop offset="0%" stop-color="#6EE7B7"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </radialGradient>
+  </defs>
+  <!-- Pot -->
+  <path d="M65 140 L75 180 L125 180 L135 140" fill="#92400E"/>
+  <rect x="58" y="136" width="84" height="10" rx="4" fill="#B45309"/>
+  <!-- Stem -->
+  <path d="M100 136 L100 70" stroke="#059669" stroke-width="6" stroke-linecap="round"/>
+  <!-- Leaves -->
+  <path d="M100 115 Q65 110 55 95" stroke="#059669" stroke-width="4" fill="#6EE7B7" opacity="0.6"/>
+  <path d="M100 100 Q135 95 145 80" stroke="#059669" stroke-width="4" fill="#6EE7B7" opacity="0.6"/>
+  <!-- Head -->
+  <ellipse cx="100" cy="62" rx="38" ry="32" fill="url(#cp-g)"/>
+  <!-- Mouth open -->
+  <ellipse cx="100" cy="68" rx="18" ry="12" fill="#064E3B"/>
+  <!-- Teeth top -->
+  <polygon points="85,61 90,68 95,61" fill="white"/>
+  <polygon points="95,60 100,68 105,60" fill="white"/>
+  <polygon points="105,61 110,68 115,61" fill="white"/>
+  <!-- Teeth bottom -->
+  <polygon points="85,75 90,68 95,75" fill="white"/>
+  <polygon points="95,76 100,68 105,76" fill="white"/>
+  <polygon points="105,75 110,68 115,75" fill="white"/>
+  <!-- Eyes -->
+  <ellipse cx="85" cy="50" rx="7" ry="8" fill="white"/>
+  <ellipse cx="115" cy="50" rx="7" ry="8" fill="white"/>
+  <ellipse cx="87" cy="51" rx="3.5" ry="4" fill="#0F172A"/>
+  <ellipse cx="117" cy="51" rx="3.5" ry="4" fill="#0F172A"/>
+</svg>

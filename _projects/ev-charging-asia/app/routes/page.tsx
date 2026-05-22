@@ -138,7 +138,7 @@ export default function RoutesPage() {
         </div>
 
         {/* Tools section */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
             href="/compare"
             className="block bg-white rounded-2xl border border-gray-200 p-6 hover:border-sky-300 hover:shadow-sm transition-all"
@@ -150,10 +150,20 @@ export default function RoutesPage() {
             <div className="mt-3 text-sm font-medium text-sky-600">Try it now →</div>
           </Link>
           <Link
+            href="/seasons"
+            className="block bg-white rounded-2xl border border-gray-200 p-6 hover:border-emerald-300 hover:shadow-sm transition-all"
+          >
+            <h3 className="text-lg font-bold text-gray-900 mb-2">🌿 Best Seasons Guide</h3>
+            <p className="text-sm text-gray-500">
+              Find the best time of year for every EV road trip — month-by-month recommendations, weather, and road conditions.
+            </p>
+            <div className="mt-3 text-sm font-medium text-emerald-600">Seasonal guide →</div>
+          </Link>
+          <Link
             href="/compare"
             className="block bg-white rounded-2xl border border-gray-200 p-6 hover:border-sky-300 hover:shadow-sm transition-all"
           >
-            <h3 className="text-lg font-bold text-gray-900 mb-2">📊 All 12 Routes Comparison</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-2">📊 All Routes at a Glance</h3>
             <p className="text-sm text-gray-500">
               See the full table of all EV road trips with distance, difficulty, duration, countries, and charging stops side by side.
             </p>

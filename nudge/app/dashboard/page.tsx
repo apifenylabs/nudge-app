@@ -8,6 +8,7 @@ import StatsOverview from '@/components/dashboard/StatsOverview'
 import BottomNav from '@/components/layout/BottomNav'
 import DashboardTourWrapper from '@/components/onboarding/DashboardTourWrapper'
 import SubscriptionBanner from '@/components/billing/SubscriptionBanner'
+import DashboardContent from '@/components/dashboard/DashboardContent'
 
 export default async function DashboardPage() {
   const supabase = createClient()
@@ -84,6 +85,7 @@ export default async function DashboardPage() {
   const greeting = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening'
 
   return (
+    <DashboardContent>
     <div className="min-h-screen bg-background pb-20 md:pb-8">
       {/* Mobile header */}
       <div className="md:hidden">
@@ -180,5 +182,6 @@ export default async function DashboardPage() {
       {/* Bottom Navigation */}
       <BottomNav />
     </div>
+    </DashboardContent>
   )
 }

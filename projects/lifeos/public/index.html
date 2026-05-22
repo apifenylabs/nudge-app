@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>LifeOS — Daily Loop</title>
+<!-- Supabase SDK (loaded lazily, only if env vars present) -->
+<script>window.__SUPABASE_READY=!1;window.__SUPABASE=null;(function(){var u=window.LIFEOS_SUPABASE_URL||document.querySelector('meta[name="lifeos-supabase-url"]')?.content||'';var k=window.LIFEOS_SUPABASE_ANON_KEY||document.querySelector('meta[name="lifeos-supabase-key"]')?.content||'';if(!u||!k){console.log('LifeOS: offline mode (no Supabase env vars)');return}var s=document.createElement('script');s.src='https://unpkg.com/@supabase/supabase-js@2';s.crossOrigin='anonymous';s.onload=function(){try{window.__SUPABASE=window.supabase.createClient(u,k);window.__SUPABASE_READY=!0;console.log('LifeOS: Supabase sync enabled')}catch(e){console.log('LifeOS: Supabase init failed, offline fallback')}};s.onerror=function(){console.log('LifeOS: Supabase CDN load failed, offline fallback')};document.head.appendChild(s)})()</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#222;min-height:100vh}
@@ -58,10 +60,17 @@ h1{font-size:22px;font-weight:700;display:flex;align-items:center;gap:8px}
   </div>
 
   <button class="save-btn" id="saveBtn" disabled>Save Today</button>
+  <button class="sync-btn" id="syncBtn" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;background:white;color:#666;font-size:13px;font-weight:500;cursor:pointer;margin-top:6px;transition:all .15s" onclick="syncAllHistory()">↻ Sync All History</button>
+  <span id="syncStatus" style="display:block;text-align:center;font-size:11px;color:#999;margin-top:4px"></span>
 
   <div class="history" id="history">
     <h2 style="font-size:14px;font-weight:600;color:#444;margin-bottom:8px">Last 7 Days</h2>
     <div id="history-list"></div>
+  </div>
+
+  <div class="card" id="trends">
+    <h2>📊 Trend (7-day avg)</h2>
+    <div id="trends-list" style="display:flex;flex-direction:column;gap:8px"></div>
   </div>
 </div>
 
@@ -72,7 +81,13 @@ const TRACKERS = [
   {id:'mood',label:'😊 Mood',options:[{v:1,l:'Bad'},{v:2,l:'Meh'},{v:3,l:'Good'},{v:4,l:'Great'}],def:2},
   {id:'energy',label:'⚡ Energy',options:[{v:1,l:'Low'},{v:2,l:'OK'},{v:3,l:'High'},{v:4,l:'Max'}],def:2},
   {id:'exercise',label:'🏃 Exercise',options:[{v:0,l:'None'},{v:1,l:'Light'},{v:2,l:'Good'},{v:3,l:'Intense'}],def:0},
-  {id:'food',label:'🥗 Nutrition',options:[{v:0,l:'Junk'},{v:1,l:'OK'},{v:2,l:'Good'},{v:3,l:'Perfect'}],def:1}
+  {id:'food',label:'🥗 Nutrition',options:[{v:0,l:'Junk'},{v:1,l:'OK'},{v:2,l:'Good'},{v:3,l:'Perfect'}],def:1},
+  {id:'focus',label:'🎯 Focus',options:[{v:0,l:'Scattered'},{v:1,l:'OK'},{v:2,l:'Good'},{v:3,l:'Deep'}],def:1},
+  {id:'social',label:'🤝 Social',options:[{v:0,l:'Alone'},{v:1,l:'Minimal'},{v:2,l:'Connected'},{v:3,l:'Great'}],def:1},
+  {id:'productivity',label:'💼 Productivity',options:[{v:0,l:'Wasted'},{v:1,l:'Low'},{v:2,l:'Focused'},{v:3,l:'Flow'}],def:1},
+  {id:'learning',label:'📚 Learning',options:[{v:0,l:'None'},{v:1,l:'Light'},{v:2,l:'Read'},{v:3,l:'Studied'}],def:0},
+  {id:'mindfulness',label:'🧘 Mindfulness',options:[{v:0,l:'None'},{v:1,l:'Brief'},{v:2,l:'Meditated'},{v:3,l:'Deep'}],def:0},
+  {id:'finances',label:'💰 Finances',options:[{v:0,l:'Overspent'},{v:1,l:'OK'},{v:2,l:'Good'},{v:3,l:'Saved'}],def:1}
 ];
 
 function getToday(){return new Date().toISOString().split('T')[0]}
@@ -80,6 +95,57 @@ function getDateStr(){const d=new Date();return d.toLocaleDateString('en-US',{we
 function loadData(){try{return JSON.parse(localStorage.getItem('lifeos')||'{}')}catch{return{}}}
 function saveData(d){localStorage.setItem('lifeos',JSON.stringify(d));render()}
 function getScore(e){if(!e)return 0;let t=0;TRACKERS.forEach(tk=>{const v=e[tk.id]||0;t+=v});return Math.round(t/TRACKERS.length*25)}
+
+// ─── Supabase Sync Layer (optional) ─────────────────────────────────────
+
+/** Wait for supabase client to be ready (poll up to 10s) */
+function waitForSupabase(maxMs){
+  if(maxMs===void 0)maxMs=10000;
+  return new Promise(function(resolve){
+    var waited=0;var step=100;
+    function check(){
+      if(window.__SUPABASE_READY&&window.__SUPABASE){return resolve(window.__SUPABASE)}
+      waited+=step;if(waited>=maxMs){return resolve(null)}
+      setTimeout(check,step)
+    }
+    if(window.__SUPABASE_READY&&window.__SUPABASE){return resolve(window.__SUPABASE)}
+    setTimeout(check,step)
+  })
+}
+
+/** Build a lifeos_plugins row from today's tracker data */
+function buildSyncPayload(dateStr,entry){
+  var state=JSON.parse(JSON.stringify(entry||{}));
+  return{
+    id:'daily-'+dateStr,
+    user_id:'demo',
+    category:'daily_tracker',
+    name:dateStr,
+    emoji:'📋',
+    state:state,
+    total_actions:1,
+    overall_progress:getScore(entry),
+    last_active_at:new Date().toISOString()
+  };
+}
+
+/** Upsert today's entry to Supabase lifeos_plugins */
+function syncToSupabase(dateStr,entry){
+  if(!window.__SUPABASE_READY||!window.__SUPABASE){return}
+  var payload=buildSyncPayload(dateStr,entry);
+  window.__SUPABASE.from('lifeos_plugins').upsert(payload,{onConflict:'id'}).then(function(resp){
+    if(resp.error){console.warn('LifeOS: Supabase sync failed',resp.error)}
+  }).catch(function(){});
+}
+
+/** Try to load today's entry from Supabase and merge (localStorage wins) */
+function tryLoadFromSupabase(dateStr){
+  if(!window.__SUPABASE_READY||!window.__SUPABASE){return Promise.resolve(null)}
+  return window.__SUPABASE.from('lifeos_plugins').select('state').eq('id','daily-'+dateStr).single().then(function(resp){
+    if(resp.error||!resp.data||!resp.data.state){return null}
+    return resp.data.state;
+  }).catch(function(){return null})
+}
 
 function getStreak(data){
   const days=Object.keys(data.days||{}).sort().reverse();
@@ -103,6 +169,70 @@ const today=getToday();
 const data=loadData();
 const todayEntry=data.days?.[today]||{};
 TRACKERS.forEach(tk=>{currentValue[tk.id]=todayEntry[tk.id]!==undefined?todayEntry[tk.id]:tk.def});
+
+// On load: try to merge today's remote state if no local data yet
+waitForSupabase().then(function(sb){
+  if(!sb)return;
+  tryLoadFromSupabase(today).then(function(remoteState){
+    if(!remoteState)return;
+    var data=loadData();
+    if(!data.days)data.days={};
+    var local=data.days[today];
+    var hasLocal=local&&Object.keys(local).length>0&&TRACKERS.some(function(tk){return local[tk.id]!==void 0});
+    if(!hasLocal){
+      var merged=Object.assign({},remoteState);
+      TRACKERS.forEach(function(tk){
+        if(merged[tk.id]===void 0||merged[tk.id]===null)merged[tk.id]=tk.def;
+      });
+      data.days[today]=merged;
+      saveData(data);
+    }
+  })
+});
+
+/** Sync ALL tracked days to Supabase */
+function syncAllHistory(){
+  var btn=document.getElementById('syncBtn');
+  var status=document.getElementById('syncStatus');
+  btn.disabled=true;
+  btn.textContent='↻ Syncing...';
+  status.textContent='Connecting...';
+  waitForSupabase().then(function(sb){
+    if(!sb){
+      status.textContent='⚠ No Supabase connection (configure env vars)';
+      btn.disabled=false;
+      btn.textContent='↻ Sync All History';
+      return;
+    }
+    var data=loadData();
+    var days=Object.keys(data.days||{});
+    if(!days.length){
+      status.textContent='No data to sync';
+      btn.disabled=false;
+      btn.textContent='↻ Sync All History';
+      return;
+    }
+    var i=0;
+    function syncNext(){
+      if(i>=days.length){
+        status.textContent='✓ Synced '+days.length+' day(s)';
+        btn.disabled=false;
+        btn.textContent='↻ Sync All History';
+        return;
+      }
+      var d=days[i];
+      var entry=data.days[d];
+      var payload=buildSyncPayload(d,entry);
+      sb.from('lifeos_plugins').upsert(payload,{onConflict:'id'}).then(function(resp){
+        if(resp.error)console.warn('sync error',d,resp.error);
+        i++;
+        status.textContent='Syncing '+i+'/'+days.length+'...';
+        syncNext();
+      }).catch(function(){i++;syncNext()});
+    }
+    syncNext();
+  });
+}
 
 function render(){
   const data=loadData();
@@ -139,15 +269,19 @@ function render(){
   // Streak
   document.getElementById('streak').textContent='🔥 '+getStreak(data)+' day'+(getStreak(data)!==1?'s':'');
 
-  // Save button
-  const hasChanges=TRACKERS.some(tk=>currentValue[tk.id]!==(todayEntry[tk.id]!==undefined?todayEntry[tk.id]:tk.def));
-  document.getElementById('saveBtn').disabled=!hasChanges&&!(todayEntry.notes||'')!==document.getElementById('notes').value;
-  document.getElementById('saveBtn').textContent=hasChanges||!todayEntry.notes?'Save Today':'Saved ✓';
+  // Save button — check tracker + notes changes
+  const savedNotes = todayEntry.notes || '';
+  const currentNotes = document.getElementById('notes').value;
+  const trackerChanged = TRACKERS.some(tk => (currentValue[tk.id] ?? tk.def) !== (todayEntry[tk.id] !== undefined ? todayEntry[tk.id] : tk.def));
+  const notesChanged = currentNotes !== savedNotes;
+  const canSave = trackerChanged || notesChanged;
+  document.getElementById('saveBtn').disabled = !canSave;
+  document.getElementById('saveBtn').textContent = canSave ? 'Save Today' : 'Saved ✓';
 
   // History
   const histList=document.getElementById('history-list');
   const days=Object.keys(data.days||{}).sort().reverse().slice(0,7);
-  if(!days.length){histList.innerHTML='<div class="empty">No days tracked yet. Start today!</div>';return}
+  if(!days.length){histList.innerHTML='<div class="empty">No days tracked yet. Start today!</div>'}else{
   histList.innerHTML='';
   days.forEach(d=>{
     const e=data.days[d];const score=getScore(e);const date=new Date(d+'T12:00:00');
@@ -156,7 +290,27 @@ function render(){
     const div=document.createElement('div');div.className='history-item';
     div.innerHTML=`<span>${label}</span><span class="history-score ${cls}">${score}%</span>`;
     histList.appendChild(div);
-  });
+  });}
+
+  // Trend: 7-day avg per tracker
+  const trendList=document.getElementById('trends-list');
+  const trendDays=Object.keys(data.days||{}).sort().reverse().slice(0,7);
+  if(trendDays.length>0){
+    trendList.innerHTML='';
+    TRACKERS.forEach(tk=>{
+      var vals=trendDays.map(function(d){return data.days[d][tk.id]}).filter(function(v){return v!==void 0&&v!==null});
+      if(!vals.length)return;
+      var avg=vals.reduce(function(a,b){return a+b},0)/vals.length;
+      var max=tk.options.reduce(function(m,o){return o.v>m?o.v:m},0);
+      var pct=avg>0?Math.round((avg/max)*100):0;
+      var div=document.createElement('div');div.className='track-item';
+      div.style.padding='4px 0';
+      div.innerHTML='<span style="font-size:12px;width:120px;flex-shrink:0">'+tk.label+'</span><div style="flex:1;height:12px;background:#f0f0f0;border-radius:6px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+(pct>=75?'#22c55e':pct>=50?'#f59e0b':'#ef4444')+';border-radius:6px;transition:width .3s"></div></div><span style="font-size:11px;color:#888;width:30px;text-align:right">'+avg.toFixed(1)+'</span>';
+      trendList.appendChild(div);
+    });
+  }else{
+    trendList.innerHTML='<div class="empty">Track a few days to see trends</div>';
+  }
 }
 
 document.getElementById('date').textContent=getDateStr();
@@ -164,8 +318,10 @@ document.getElementById('date').textContent=getDateStr();
 document.getElementById('saveBtn').onclick=()=>{
   const data=loadData();
   if(!data.days)data.days={};
-  data.days[today]={...currentValue,notes:document.getElementById('notes').value};
+  var entry=Object.assign({},currentValue,{notes:document.getElementById('notes').value});
+  data.days[today]=entry;
   saveData(data);
+  syncToSupabase(today,entry);
   render();
 };
 

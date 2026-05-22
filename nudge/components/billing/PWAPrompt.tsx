@@ -15,6 +15,22 @@ export default function PWAPrompt() {
   const [dismissed, setDismissed] = useState(false)
   const [expanded, setExpanded] = useState(false)
 
+  const DISMISSED_KEY = 'nudge_pwa_prompt_dismissed'
+  const DISMISS_DURATION_MS = 7 * 24 * 60 * 60 * 1000 // 7 days
+
+  // Check if previously dismissed (within cooldown)
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem(DISMISSED_KEY)
+      if (stored) {
+        const dismissedAt = parseInt(stored, 10)
+        if (Date.now() - dismissedAt < DISMISS_DURATION_MS) {
+          setDismissed(true)
+        }
+      }
+    } catch {}
+  }, [])
+
   useEffect(() => {
     // Check if already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
@@ -59,11 +75,19 @@ export default function PWAPrompt() {
     if (choice.outcome === 'accepted') {
       setInstalled(true)
       setShowPrompt(false)
+    } else {
+      // Dismissed — persist for cooldown
+      try {
+        localStorage.setItem(DISMISSED_KEY, Date.now().toString())
+      } catch {}
     }
     setDeferredPrompt(null)
   }
 
   const handleDismiss = () => {
+    try {
+      localStorage.setItem(DISMISSED_KEY, Date.now().toString())
+    } catch {}
     setDismissed(true)
     setShowPrompt(false)
   }

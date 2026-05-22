@@ -5,62 +5,66 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* Titan brand tokens */
-  --color-titan-bg: #0A0E17;
-  --color-titan-surface: #111827;
-  --color-titan-card: #1A1F2E;
-  --color-titan-border: #2A2F42;
-  --color-titan-text: #E2E8F0;
-  --color-titan-muted: #6B7280;
-  --color-titan-cyan: #22D3EE;
-  --color-titan-emerald: #34D399;
-  --color-titan-violet: #A78BFA;
-  --color-titan-amber: #FBBF24;
-  --color-titan-red: #F87171;
-  --color-titan-accent-glow: #22D3EE;
+  /* Titan brand tokens — Warm Living Ecosystem v3.0 */
+  --color-titan-bg: #0F172A;
+  --color-titan-surface: #1E2937;
+  --color-titan-card: #1E2937;
+  --color-titan-border: #334155;
+  --color-titan-text: #F1F5F9;
+  --color-titan-muted: #94A3B8;
+  --color-titan-teal: #14B8A6;
+  --color-titan-golden: #F59E0B;
+  --color-titan-emerald: #10B981;
+  --color-titan-violet: #7C3AED;
+  --color-titan-amber: #F59E0B;
+  --color-titan-red: #EF4444;
+  --color-titan-accent-glow: #14B8A6;
+  --color-titan-agent-base: #E0F2F1;
+  --color-titan-cyan: #14B8A6;  /* alias for backward compat */
+  --color-titan-violet: #F59E0B; /* alias for god-tier (now warm golden) */
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
   /* shadcn mapping */
-  --background: #0A0E17;
-  --foreground: #E2E8F0;
-  --card: #1A1F2E;
-  --card-foreground: #E2E8F0;
-  --popover: #111827;
-  --popover-foreground: #E2E8F0;
-  --primary: #22D3EE;
-  --primary-foreground: #0A0E17;
-  --secondary: #1A1F2E;
-  --secondary-foreground: #E2E8F0;
-  --muted: #1A1F2E;
-  --muted-foreground: #6B7280;
-  --accent: #22D3EE;
-  --accent-foreground: #0A0E17;
-  --destructive: #F87171;
-  --success: #34D399;
-  --warning: #FBBF24;
-  --border: #2A2F42;
-  --input: #2A2F42;
-  --ring: #22D3EE;
-  --radius: 0.5rem;
+  --background: #0F172A;
+  --foreground: #F1F5F9;
+  --card: #1E2937;
+  --card-foreground: #F1F5F9;
+  --popover: #1E2937;
+  --popover-foreground: #F1F5F9;
+  --primary: #14B8A6;
+  --primary-foreground: #0F172A;
+  --secondary: #1E2937;
+  --secondary-foreground: #F1F5F9;
+  --muted: #1E2937;
+  --muted-foreground: #94A3B8;
+  --accent: #F59E0B;
+  --accent-foreground: #0F172A;
+  --destructive: #EF4444;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --border: #334155;
+  --input: #334155;
+  --ring: #14B8A6;
+  --radius: 0.625rem;
 
-  /* Charts — cyber palette */
-  --chart-1: #22D3EE;
-  --chart-2: #34D399;
-  --chart-3: #A78BFA;
-  --chart-4: #FBBF24;
-  --chart-5: #F87171;
+  /* Charts — warm palette */
+  --chart-1: #14B8A6;
+  --chart-2: #10B981;
+  --chart-3: #7C3AED;
+  --chart-4: #F59E0B;
+  --chart-5: #EF4444;
 
   /* Sidebar */
-  --sidebar: #111827;
-  --sidebar-foreground: #E2E8F0;
-  --sidebar-primary: #22D3EE;
-  --sidebar-primary-foreground: #0A0E17;
-  --sidebar-accent: #1E293B;
-  --sidebar-accent-foreground: #22D3EE;
-  --sidebar-border: #2A2F42;
-  --sidebar-ring: #22D3EE;
+  --sidebar: #1E2937;
+  --sidebar-foreground: #F1F5F9;
+  --sidebar-primary: #14B8A6;
+  --sidebar-primary-foreground: #0F172A;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #14B8A6;
+  --sidebar-border: #334155;
+  --sidebar-ring: #14B8A6;
 }
 
 @layer base {
@@ -77,83 +81,205 @@
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
   }
 
-  /* Subtle cyan glow on focus */
   *:focus-visible {
-    outline: 2px solid var(--color-titan-cyan);
+    outline: 2px solid var(--color-titan-teal);
     outline-offset: 2px;
   }
 
-  /* Custom scrollbar */
-  ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-  ::-webkit-scrollbar-track {
-    background: var(--color-titan-bg);
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--color-titan-border);
-    border-radius: 3px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-titan-muted);
-  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--color-titan-bg); }
+  ::-webkit-scrollbar-thumb { background: var(--color-titan-border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-titan-muted); }
 
-  /* Selection */
   ::selection {
-    background: color-mix(in oklch, var(--color-titan-cyan) 30%, transparent);
+    background: color-mix(in oklch, var(--color-titan-teal) 30%, transparent);
     color: var(--color-titan-text);
   }
 }
 
-/* ─── Utility classes ─── */
 @layer utilities {
   .titan-gradient {
-    background: linear-gradient(135deg, #0A0E17 0%, #111827 50%, #1A1F2E 100%);
+    background: linear-gradient(135deg, #0A1020 0%, #162032 40%, #1A2835 70%, #0F172A 100%);
+  }
+
+  .titan-gradient-warm {
+    background: radial-gradient(ellipse at 30% 20%, rgba(20, 184, 166, 0.06) 0%, rgba(245, 158, 11, 0.03) 30%, #0F172A 70%);
   }
 
   .titan-glow {
-    box-shadow: 0 0 20px color-mix(in oklch, var(--color-titan-cyan) 15%, transparent);
+    box-shadow: 0 0 25px color-mix(in oklch, var(--color-titan-teal) 20%, transparent);
+  }
+
+  .titan-glow-golden {
+    box-shadow: 0 0 30px color-mix(in oklch, var(--color-titan-golden) 25%, transparent);
   }
 
   .titan-glow-strong {
-    box-shadow: 0 0 30px color-mix(in oklch, var(--color-titan-cyan) 30%, transparent);
+    box-shadow: 0 0 40px color-mix(in oklch, var(--color-titan-teal) 30%, transparent);
   }
 
   .titan-text-gradient {
-    background: linear-gradient(135deg, #22D3EE, #34D399);
+    background: linear-gradient(135deg, #14B8A6, #F59E0B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
+  .titan-text-teal {
+    color: #14B8A6;
+  }
+
+  .titan-text-golden {
+    color: #F59E0B;
+  }
+
   .titan-border-glow {
-    border-color: color-mix(in oklch, var(--color-titan-cyan) 30%, transparent);
+    border-color: color-mix(in oklch, var(--color-titan-teal) 30%, transparent);
   }
 
   .titan-grid-bg {
     background-image:
-      linear-gradient(rgba(34, 211, 238, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(34, 211, 238, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(20, 184, 166, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(20, 184, 166, 0.04) 1px, transparent 1px);
     background-size: 60px 60px;
+  }
+
+  .titan-radial-glow {
+    background: radial-gradient(ellipse at center, rgba(20, 184, 166, 0.12) 0%, rgba(245, 158, 11, 0.04) 40%, transparent 70%);
+  }
+
+  .titan-radial-glow-warm {
+    background: radial-gradient(ellipse at 50% 30%, rgba(20, 184, 166, 0.32) 0%, rgba(245, 158, 11, 0.07) 30%, transparent 72%);
+    pointer-events: none;
+  }
+
+  .titan-glow-pulse-soft {
+    animation: glow-pulse-soft 4s ease-in-out infinite;
+  }
+
+  /* Premium depth: layered shadow for 3D agent illusion */
+  .titan-agent-deep {
+    position: relative;
+    box-shadow:
+      0 4px 20px rgba(20, 184, 166, 0.15),
+      0 0 60px rgba(20, 184, 166, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .titan-agent-deep-golden {
+    position: relative;
+    box-shadow:
+      0 4px 20px rgba(245, 158, 11, 0.15),
+      0 0 60px rgba(245, 158, 11, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .titan-agent-deep-violet {
+    position: relative;
+    box-shadow:
+      0 4px 20px rgba(124, 58, 237, 0.15),
+      0 0 60px rgba(124, 58, 237, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Premium particle trail */
+  .titan-particle-glow {
+    filter: blur(2px);
+    mix-blend-mode: screen;
+  }
+
+  /* Orbit spin keyframes for orbiting swarm */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .animate-spin-slow {
+    animation: spin var(--orbit-duration, 20s) linear infinite;
+  }
+
+  /* Orbital ring with warm animated dash */
+  .titan-orbit-ring {
+    stroke-dasharray: 3 6;
+    animation: orbit-dash 2.5s linear infinite;
+  }
+
+  /* Smooth agent platform */
+  .titan-agent-platform {
+    background: radial-gradient(ellipse at center, rgba(20, 184, 166, 0.12) 0%, transparent 60%);
   }
 }
 
-/* ─── Animations ─── */
-@keyframes pulse-cyan {
+/* Animations */
+@keyframes pulse-teal {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
 }
 
-@keyframes scan-line {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
 }
 
-.animate-pulse-cyan {
-  animation: pulse-cyan 2s ease-in-out infinite;
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
-.animate-scan {
-  animation: scan-line 4s linear infinite;
+@keyframes orbit-dash {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 24; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; filter: blur(8px); }
+  50% { opacity: 0.9; filter: blur(12px); }
+}
+
+@keyframes glow-pulse-soft {
+  0%, 100% { opacity: 0.5; filter: blur(6px); }
+  50% { opacity: 0.8; filter: blur(10px); }
+}
+
+@keyframes orbit-connection-pulse {
+  0%, 100% { opacity: 0.08; }
+  50% { opacity: 0.25; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-pulse-teal {
+  animation: pulse-teal 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.08), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+/* Particle burst on hover */
+@keyframes particle-burst {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+
+.animate-particle-burst {
+  animation: particle-burst 1.2s ease-in-out forwards;
 }

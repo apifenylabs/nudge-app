@@ -191,10 +191,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
+            "@type": "BlogPosting",
             "headline": post.title,
             "description": post.excerpt,
+            "articleBody": post.content.substring(0, 5000),
             "datePublished": post.date,
+            "dateModified": post.date,
             "author": { "@type": "Person", "name": post.author },
             "publisher": { "@type": "Organization", "name": "Apifeny AI", "url": BASE_URL },
             "mainEntityOfPage": { "@type": "WebPage", "@id": `${BASE_URL}/blog/${post.slug}` },

@@ -1,0 +1,461 @@
+"use client";
+
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  Puzzle, Play, CheckCircle2, ChevronRight, Sparkles, 
+  Zap, ArrowRight, Layers, TrendingUp
+} from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import {
+  activatePlugin,
+  completeTask,
+  getAllPlugins,
+  getAvailableCategories,
+  getDownloadsCount,
+  getTotalActions,
+  enableSupabaseSync,
+  setSyncCallback,
+  type LifeOSPlugin,
+  type LifeCategory,
+  type PluginPhase,
+} from "@/lib/lifeos/plugins";
+import { recordAction } from "@/lib/lifeos/analytics";
+import LifeOSAnalytics from "@/components/LifeOSAnalytics";
+import {
+  upsertPlugin,
+  logAction,
+  getLifeOSState,
+} from "@/lib/db/lifeos-supabase";
+
+// ─── LifeOS Tab Component ──────────────────────────────────────────────
+
+export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar: string; name: string; text: string }) => void }) {
+  const [plugins, setPlugins] = useState<LifeOSPlugin[]>([]);
+  const [catalog] = useState(getAvailableCategories);
+  const [activePlugin, setActivePlugin] = useState<LifeCategory | null>(null);
+  const [showCatalog, setShowCatalog] = useState(false);
+  const [showAnalytics, setShowAnalytics] = useState(false);
+  const [downloads, setDownloads] = useState(0);
+
+  const refresh = useCallback(() => {
+    setPlugins(getAllPlugins());
+    setDownloads(getDownloadsCount());
+  }, []);
+
+  // Connect Supabase persistence on mount
+  useEffect(() => {
+    enableSupabaseSync();
+    setSyncCallback(async (plugin, action, detail) => {
+      switch (action) {
+        case 'upsert':
+          await upsertPlugin(plugin);
+          break;
+        case 'complete_task':
+          await upsertPlugin(plugin);
+          if (detail) await logAction(plugin.id, plugin.category, detail, '');
+          break;
+      }
+    });
+    // Try loading state from server
+    getLifeOSState().then(serverState => {
+      if (serverState && serverState.plugins.length > 0) {
+        // Server has data — merge into localStorage
+        localStorage.setItem('titan-lifeos-state', JSON.stringify(serverState));
+        refresh();
+      }
+    }).catch(() => {
+      // Server unavailable — localStorage works fine
+    });
+  }, [refresh]);
+
+  const handleActivate = useCallback((category: LifeCategory) => {
+    activatePlugin(category);
+    refresh();
+    setActivePlugin(category);
+    setShowCatalog(false);
+    onFeedAdd?.({
+      avatar: '🧩',
+      name: 'LifeOS',
+      text: `Activated ${catalog.find(c => c.category === category)?.name || category} plugin`,
+    });
+  }, [catalog, refresh, onFeedAdd]);
+
+  const handleCompleteTask = useCallback((category: LifeCategory, phase: PluginPhase, taskId: string, taskLabel: string) => {
+    completeTask(category, phase, taskId);
+    recordAction();
+    refresh();
+    onFeedAdd?.({
+      avatar: '✅',
+      name: catalog.find(c => c.category === category)?.name || 'LifeOS',
+      text: `Completed: ${taskLabel}`,
+    });
+  }, [catalog, refresh, onFeedAdd]);
+
+  const currentPlugin = activePlugin ? plugins.find(p => p.category === activePlugin) : null;
+
+  return (
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="flex items-center gap-2 mb-2">
+        <div className="w-2 h-2 rounded-full" style={{ background: '#14B8A6' }} />
+        <h2 className="text-sm font-mono font-semibold tracking-wider" style={{ color: '#14B8A6' }}>LIFEOS PLUGINS</h2>
+        <span className="text-[10px] font-mono text-titan-muted/50">// guided phases for every category</span>
+      </div>
+
+      {/* Stats bar */}
+      <div className="flex items-center gap-4 text-[10px] font-mono text-titan-muted/70 bg-titan-card/40 border border-titan-border/20 rounded-xl px-4 py-2">
+        <span className="flex items-center gap-1">
+          <Puzzle className="h-3 w-3 text-titan-teal" />
+          <span className="text-titan-teal font-semibold">{plugins.length}</span> active plugins
+        </span>
+        <span className="flex items-center gap-1">
+          <Zap className="h-3 w-3 text-titan-golden" />
+          <span className="text-titan-golden font-semibold">{getTotalActions()}</span> total actions
+        </span>
+        <span className="flex items-center gap-1">
+          <CheckCircle2 className="h-3 w-3 text-titan-emerald" />
+          <span className="text-titan-emerald font-semibold">{downloads}</span> downloads
+        </span>
+        <div className="ml-auto flex items-center gap-1.5">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => {
+              setShowAnalytics(false);
+              setShowCatalog(!showCatalog);
+            }}
+            className="text-[10px] h-6 gap-1"
+            style={{ borderColor: 'rgba(20,184,166,0.3)', color: '#14B8A6' }}
+          >
+            <Puzzle className="h-3 w-3" />
+            {showCatalog ? 'Close' : 'Browse'}
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => {
+              setShowCatalog(false);
+              setShowAnalytics(!showAnalytics);
+            }}
+            className="text-[10px] h-6 gap-1"
+            style={{
+              borderColor: showAnalytics ? 'rgba(139,92,246,0.4)' : 'rgba(139,92,246,0.2)',
+              color: showAnalytics ? '#A78BFA' : '#8B5CF6',
+            }}
+          >
+            <TrendingUp className="h-3 w-3" />
+            Analytics
+          </Button>
+        </div>
+      </div>
+
+      {/* Analytics Panel (collapsible) */}
+      <AnimatePresence>
+        {showAnalytics && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden"
+          >
+            <div className="mb-4">
+              <LifeOSAnalytics onActivateCategory={(cat) => {
+                activatePlugin(cat);
+                refresh();
+                setActivePlugin(cat);
+                setShowAnalytics(false);
+                onFeedAdd?.({
+                  avatar: '🧩',
+                  name: 'LifeOS',
+                  text: `Activated ${catalog.find(c => c.category === cat)?.name || cat} from recommendations`,
+                });
+              }} />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Plugin Catalog (collapsible) */}
+      <AnimatePresence>
+        {showCatalog && !showAnalytics && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden"
+          >
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-4">
+              {catalog.map((cat, i) => {
+                const isActive = plugins.some(p => p.category === cat.category);
+                return (
+                  <motion.button
+                    key={cat.category}
+                    onClick={() => handleActivate(cat.category)}
+                    className={`relative p-3 rounded-xl border text-left transition-all ${
+                      isActive 
+                        ? 'bg-titan-card/60 border-titan-teal/40' 
+                        : 'bg-titan-surface/40 border-titan-border/20 hover:border-titan-teal/30'
+                    }`}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.04 }}
+                    whileHover={{ y: -2 }}
+                  >
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-xl">{cat.emoji}</span>
+                      {isActive && (
+                        <Badge className="text-[7px] h-4 px-1" style={{ background: 'rgba(20,184,166,0.2)', color: '#14B8A6', border: '1px solid rgba(20,184,166,0.3)' }}>
+                          Active
+                        </Badge>
+                      )}
+                    </div>
+                    <p className="text-[11px] font-semibold">{cat.name}</p>
+                    <p className="text-[9px] text-titan-muted/70 mt-0.5 line-clamp-2">{cat.description}</p>
+                    <div className="flex items-center gap-1 mt-1.5">
+                      <span className="text-[8px] text-titan-muted/50">5 phases</span>
+                      <ArrowRight className="h-2 w-2 text-titan-teal/50" />
+                    </div>
+                  </motion.button>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Active Plugin Detail */}
+      {currentPlugin ? (
+        <PluginDetail 
+          plugin={currentPlugin} 
+          onCompleteTask={(phase, taskId, taskLabel) => handleCompleteTask(currentPlugin.category, phase, taskId, taskLabel)} 
+        />
+      ) : plugins.length > 0 ? (
+        /* Show most recently used plugin */
+        <PluginDetail 
+          plugin={plugins[plugins.length - 1]} 
+          onCompleteTask={(phase, taskId, taskLabel) => handleCompleteTask(
+            plugins[plugins.length - 1].category, phase, taskId, taskLabel
+          )} 
+        />
+      ) : (
+        /* Empty state */
+        <motion.div
+          className="flex flex-col items-center justify-center py-16 rounded-2xl border border-dashed border-titan-border/30 bg-titan-card/20"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <Puzzle className="h-12 w-12 text-titan-muted/30 mb-4" />
+          <h3 className="text-lg font-semibold text-titan-muted/60 mb-1">No plugins active</h3>
+          <p className="text-sm text-titan-muted/40 mb-4">Activate a LifeOS plugin to get started with guided phases</p>
+          <Button
+            onClick={() => setShowCatalog(true)}
+            className="text-xs gap-1"
+            style={{ background: 'linear-gradient(135deg, #14B8A6, #0D9488)', color: '#0A0E17' }}
+          >
+            <Sparkles className="h-3.5 w-3.5" />
+            Browse Plugin Catalog
+          </Button>
+        </motion.div>
+      )}
+
+      {/* Plugin grid (all active plugins) */}
+      {plugins.length > 0 && (
+        <div>
+          <h3 className="text-xs font-mono text-titan-muted/70 mb-2 uppercase tracking-wider">All Active Plugins</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            {plugins.map(p => (
+              <motion.button
+                key={p.id}
+                onClick={() => setActivePlugin(p.category)}
+                className={`p-3 rounded-xl border text-left transition-all ${
+                  activePlugin === p.category 
+                    ? 'bg-titan-card/80 border-titan-teal/40' 
+                    : 'bg-titan-surface/40 border-titan-border/20 hover:border-titan-teal/30'
+                }`}
+                whileHover={{ y: -2 }}
+              >
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-lg">{p.emoji}</span>
+                  <span className="text-[11px] font-semibold">{p.name}</span>
+                </div>
+                {/* Phase progress dots */}
+                <div className="flex gap-1 mt-1.5">
+                  {p.phases.map((ph, i) => (
+                    <div
+                      key={i}
+                      className="h-1 flex-1 rounded-full"
+                      style={{ 
+                        background: ph.completed 
+                          ? 'linear-gradient(90deg, #14B8A6, #F59E0B)' 
+                          : ph.progress > 0 
+                            ? `linear-gradient(90deg, #14B8A6 ${ph.progress}%, rgba(255,255,255,0.08) ${ph.progress}%)`
+                            : 'rgba(255,255,255,0.08)'
+                      }}
+                    />
+                  ))}
+                </div>
+                <div className="flex items-center justify-between mt-1.5">
+                  <span className="text-[9px] text-titan-muted/50 font-mono">{p.overallProgress}%</span>
+                  <ChevronRight className="h-2.5 w-2.5 text-titan-muted/30" />
+                </div>
+              </motion.button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Plugin Detail View ────────────────────────────────────────────────
+
+function PluginDetail({ plugin, onCompleteTask }: { 
+  plugin: LifeOSPlugin; 
+  onCompleteTask: (phase: PluginPhase, taskId: string, taskLabel: string) => void;
+}) {
+  const phaseLabels: Record<PluginPhase, string> = {
+    research: 'Research',
+    canvas: 'Canvas',
+    build: 'Build',
+    ship: 'Ship',
+    maintain: 'Maintain',
+  };
+  const phaseEmojis: Record<PluginPhase, string> = {
+    research: '🔍',
+    canvas: '🎨',
+    build: '🔧',
+    ship: '🚀',
+    maintain: '🔄',
+  };
+
+  return (
+    <motion.div
+      className="rounded-2xl border overflow-hidden"
+      style={{ borderColor: `${plugin.color}30` }}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+    >
+      {/* Plugin header */}
+      <div className="p-5" style={{ background: `linear-gradient(135deg, ${plugin.color}10, ${plugin.color}05)` }}>
+        <div className="flex items-center gap-3 mb-3">
+          <div 
+            className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
+            style={{ background: `${plugin.color}20`, border: `1px solid ${plugin.color}30` }}
+          >
+            {plugin.emoji}
+          </div>
+          <div>
+            <h3 className="font-bold text-base">{plugin.name}</h3>
+            <p className="text-xs text-titan-muted/70">{plugin.description}</p>
+          </div>
+          <div className="ml-auto text-right">
+            <span className="text-lg font-bold font-mono" style={{ color: plugin.color }}>{plugin.overallProgress}%</span>
+            <p className="text-[9px] text-titan-muted/50 font-mono uppercase">Complete</p>
+          </div>
+        </div>
+        {/* Overall progress bar */}
+        <div className="h-1.5 bg-titan-border/20 rounded-full overflow-hidden">
+          <motion.div
+            className="h-full rounded-full"
+            style={{ background: `linear-gradient(90deg, ${plugin.color}, ${plugin.color}88)` }}
+            initial={{ width: 0 }}
+            animate={{ width: `${plugin.overallProgress}%` }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+          />
+        </div>
+      </div>
+
+      {/* Phases */}
+      <div className="p-5 space-y-4">
+        {plugin.phases.map((phase, i) => (
+          <motion.div
+            key={phase.phase}
+            className={`rounded-xl p-4 border transition-all ${
+              phase.completed 
+                ? 'bg-titan-card/40 border-green-500/20' 
+                : phase.progress > 0 
+                  ? 'bg-titan-card/30 border-titan-teal/20'
+                  : 'bg-titan-surface/20 border-titan-border/10'
+            }`}
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: i * 0.08 }}
+          >
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-2">
+                <span>{phaseEmojis[phase.phase]}</span>
+                <span className="text-sm font-semibold">{phaseLabels[phase.phase]}</span>
+                {phase.completed && (
+                  <Badge className="text-[8px] h-4 px-1" style={{ background: 'rgba(16,185,129,0.2)', color: '#10B981', border: '1px solid rgba(16,185,129,0.3)' }}>
+                    ✓ Done
+                  </Badge>
+                )}
+              </div>
+              <span className="text-[10px] font-mono text-titan-muted/50">{phase.progress}%</span>
+            </div>
+            {/* Phase progress */}
+            <div className="h-1 bg-titan-border/10 rounded-full overflow-hidden mb-2.5">
+              <motion.div
+                className="h-full rounded-full"
+                style={{ background: phase.completed ? '#10B981' : plugin.color }}
+                initial={{ width: 0 }}
+                animate={{ width: `${phase.progress}%` }}
+                transition={{ duration: 0.8, delay: i * 0.1 }}
+              />
+            </div>
+            {/* Tasks */}
+            <div className="space-y-1.5">
+              {phase.tasks.map((task) => (
+                <motion.button
+                  key={task.id}
+                  onClick={() => !task.done && onCompleteTask(phase.phase, task.id, task.label)}
+                  disabled={task.done}
+                  className={`w-full flex items-start gap-2.5 p-2 rounded-lg text-left transition-all ${
+                    task.done 
+                      ? 'opacity-40 cursor-default' 
+                      : 'hover:bg-titan-card/40 cursor-pointer'
+                  }`}
+                  whileHover={task.done ? {} : { x: 3 }}
+                >
+                  <div className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
+                    task.done ? 'bg-emerald-500/30' : 'bg-titan-border/20'
+                  }`}>
+                    {task.done ? (
+                      <CheckCircle2 className="h-3 w-3 text-emerald-400" />
+                    ) : (
+                      <div className="w-1.5 h-1.5 rounded-full bg-titan-muted/30" />
+                    )}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className={`text-[11px] font-medium ${task.done ? 'line-through text-titan-muted/40' : ''}`}>
+                      {task.label}
+                    </p>
+                    <p className="text-[9px] text-titan-muted/50 mt-0.5">{task.description}</p>
+                  </div>
+                </motion.button>
+              ))}
+            </div>
+            {/* Phase CTA */}
+            {!phase.completed && phase.progress > 0 && (
+              <Button
+                size="sm"
+                className="w-full mt-2 text-[10px] h-7 gap-1"
+                style={{ background: `linear-gradient(135deg, ${plugin.color}, ${plugin.color}88)`, color: '#0A0E17' }}
+                onClick={() => {
+                  const nextTask = phase.tasks.find(t => !t.done);
+                  if (nextTask) onCompleteTask(phase.phase, nextTask.id, nextTask.label);
+                }}
+              >
+                <Play className="h-2.5 w-2.5" />
+                Continue Phase
+              </Button>
+            )}
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  );
+}

@@ -1,8 +1,9 @@
 # DEPLOY_STATUS.md
 
-**Last deployed:** 2026-05-23 02:15 HKT (Phase 31)
+**Last deployed:** 2026-05-23 02:15 HKT (Phase 31 — commit 8ad826f2)
 **URL:** https://nudge-sigma-liart.vercel.app
-**Build:** ✅ Passes
+**Build:** ✅ Passes (local) | ⏳ Pending (Vercel deploy — build queue stalled on Hobby plan)
+**Deploy note:** Vercel Hobby plan builds are queue-stuck (multiple UNKNOWN deployments). Build passes locally. Production still serves cached Phase 30. Push requires working GitHub token or Hobby plan queue to clear.
 
 ## Current Phase: 31 — Analytics Dashboard
 

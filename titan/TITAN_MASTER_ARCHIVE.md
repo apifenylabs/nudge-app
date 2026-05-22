@@ -38,4 +38,26 @@ _Single source of truth. Import into OpenClaw filesystem + vector DB._
 - `titan/research/` — 8 phase research docs
 - `titan/README.md` — project hub
 
+## Agentic SDLC v2.0 (PDLC-Enhanced)
+
+### Phases
+| Phase | Name | Owner Agent |
+|-------|------|-------------|
+| 0 | Demand Intake & Validation | Demand Intake Agent |
+| 1 | Foundations & Specs | Strategy Agent |
+| 2 | Skill Forge & Visual Atelier | UI/Atelier + Skill Forge Agents |
+| 3 | Swarm Orchestrator + BAU | Swarm BAU Agent |
+| 4 | Auditor + Certification | Auditor Agent |
+| 5 | IP + BYO Enterprise | IP Guardian Agent |
+| 6 | God-Tier & Robotics Hooks | God-Tier Engine Agent |
+
+### Cross-Cutting Layers (Always Active)
+- Continuous Feedback & Telemetry Loop → BAU Engine + NPS/CSAT, adoption, ROI
+- Innovation Loop → Innovation Review Agent ("10x better?" after each sprint)
+- Release Gate → Agent-driven sign-off + release notes + alert triage
+- User & Market → User Sentiment Agent (NPS surveys, feature adoption)
+
 ## Next: Phase 6 — God-Tier & Robotics Hooks
+
+## Deployments
+- v0.4 live at https://titan-app-puce.vercel.app (per-tab differentiation, premium particles, mobile CSS orbit, Three.js 3D agents)

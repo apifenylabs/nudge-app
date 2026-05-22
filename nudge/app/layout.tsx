@@ -19,6 +19,11 @@ const TelemetryInit = dynamic(
   { ssr: false }
 );
 
+const OfflineBannerWrapper = dynamic(
+  () => import('@/components/ui/OfflineBanner'),
+  { ssr: false }
+);
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -146,6 +151,8 @@ export default function RootLayout({
         <div className="min-h-screen bg-background">
           <ToastProvider>
             {children}
+            {/* Offline banner — shown globally when offline */}
+            <OfflineBannerWrapper />
           </ToastProvider>
           <SiteFooter />
         </div>

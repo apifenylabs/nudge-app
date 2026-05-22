@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-20T18:14:43.225Z",
+  "updatedAt": "2026-05-21T22:04:20.965Z",
   "entries": {
     "memory:memory/2026-05-19.md:1:22": {
       "key": "memory:memory/2026-05-19.md:1:22",
@@ -126,20 +126,14 @@
       "endLine": 55,
       "source": "memory",
       "snippet": "- **GH PAT expired** (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) — repos stay public - **Two OmniMind systems**: (1) Installed plugin v0.3.0 (graph/vector/SQLite, unused), (2) Cron file writer (running but disjoint) - **Cron updates**: `omnimind-consolidation-primary` → now calls `memory_add`/`memory_recall` via plugin API; `quality-check-08` and `quality-check-20` added - **Distribution**: 4-phase $0 strategy in `_projects/social-beast/generated-content/omnimind-launch/`. 11 files, 480 lines - **Pilot metric**: Does 3-store recall beat grep of `memory/*.md`? ## 17:24 HKT — Work Engine Complete - **Affiliate Tracking**: Vercel Analytics + GA4 added (was last site missing analytics) - All P0-",
-      "recallCount": 25,
+      "recallCount": 40,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 10.66650531087079,
+      "totalScore": 16.94920653793969,
       "maxScore": 0.6730415830389475,
       "firstRecalledAt": "2026-05-19T18:00:25.219Z",
-      "lastRecalledAt": "2026-05-20T18:14:43.225Z",
+      "lastRecalledAt": "2026-05-21T22:04:20.965Z",
       "queryHashes": [
-        "e62ba81b4194",
-        "56dbc7964a0e",
-        "d5d5782eaede",
-        "1b74dd8394b7",
-        "032d15d183fe",
-        "ea268e232dd5",
         "3b066db60054",
         "51df086458d9",
         "ca2ca7000f70",
@@ -158,11 +152,25 @@
         "81aeb1911ade",
         "8a3ce40419cd",
         "715f0367a757",
-        "a282cdde5250"
+        "a282cdde5250",
+        "da6bb8f5e583",
+        "80fa34c5c233",
+        "ce3d984800e6",
+        "cc91e277a540",
+        "cb3edcb5c9e4",
+        "9d5fb8a7d4af",
+        "df4bedfd7ab6",
+        "642f3aed6f8f",
+        "9dab1a90640c",
+        "3f86451a9434",
+        "cf05a514b035",
+        "f6ee1576f9ef",
+        "e53563e0f366"
       ],
       "recallDays": [
         "2026-05-20",
-        "2026-05-21"
+        "2026-05-21",
+        "2026-05-22"
       ],
       "conceptTags": [
         "v0.3.0",
@@ -182,19 +190,14 @@
       "endLine": 36,
       "source": "memory",
       "snippet": "- **Build**: +5 Apifeny AI blog posts (writing tools, data viz, accounting, market research, education) — 47 active posts - Total cost: ~$0.08 ## 09:00-09:20 HKT — Grid Mean Reversion Debug - **Root cause of PF<1.0 bug**: VectorBT `.shift(24)` in exit logic delayed exits by 24h. Fixed by removing shift. - **Best result** (Bull 2021): WR 68.4%, PF 5.31, DD 11.7%, Sharpe 2.23 — but only 1/4 regimes. - **Key insight**: SL/TP on first open position blocks new entries with `size=0.33`. Cannot have concurrent positions with per-row SL/TP in VectorBT. - **Structural problem confirmed**: No single strategy passes all 4 regimes. Meta-strategy is the only path. ## 10:56-11:00 HKT — Parallel Swarm La",
-      "recallCount": 23,
+      "recallCount": 39,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 10.021369752931635,
+      "totalScore": 16.833633939075508,
       "maxScore": 0.6631138211965966,
       "firstRecalledAt": "2026-05-19T18:00:25.219Z",
-      "lastRecalledAt": "2026-05-20T18:14:43.225Z",
+      "lastRecalledAt": "2026-05-21T22:04:20.965Z",
       "queryHashes": [
-        "e62ba81b4194",
-        "56dbc7964a0e",
-        "1b74dd8394b7",
-        "032d15d183fe",
-        "ea268e232dd5",
         "3b066db60054",
         "51df086458d9",
         "ca2ca7000f70",
@@ -212,11 +215,26 @@
         "81aeb1911ade",
         "8a3ce40419cd",
         "715f0367a757",
-        "a282cdde5250"
+        "a282cdde5250",
+        "da6bb8f5e583",
+        "80fa34c5c233",
+        "ce3d984800e6",
+        "cc91e277a540",
+        "cb3edcb5c9e4",
+        "9d5fb8a7d4af",
+        "df4bedfd7ab6",
+        "642f3aed6f8f",
+        "9dab1a90640c",
+        "3f86451a9434",
+        "3a0ddbf943a2",
+        "cf05a514b035",
+        "f6ee1576f9ef",
+        "e53563e0f366"
       ],
       "recallDays": [
         "2026-05-20",
-        "2026-05-21"
+        "2026-05-21",
+        "2026-05-22"
       ],
       "conceptTags": [
         "0.08",
@@ -236,22 +254,14 @@
       "endLine": 90,
       "source": "memory",
       "snippet": "- Values rigorous analysis AND practical trading approaches - Called out gap in CrypNuevo research — wants both quant paths AND manual/discretionary method exploration - \"keep building\" is his signature sign-off — wants momentum, not planning - Active in Alpha Orchestras HQ Telegram group - Working toward $1K → $100M, paper-first, Gold Template v2 gates - Prefers building over talking: demo products > strategy documents ## Update — Wed 2026-05-20 00:44 HKT ### CrypNuevo Full Verdict **Bottom line: SOL passes gate (barely), BTC/ETH fail.** Full cross-asset PnL executed: | Asset | WR@1.5:1 | PF | NetR | Expectancy | |-------|:--------:|:--:|:----:|:---------:| | **BTC** | 28.0% | 0.78 | -6.",
-      "recallCount": 25,
+      "recallCount": 41,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 11.326979541778565,
+      "totalScore": 18.710568240284918,
       "maxScore": 0.49860025942325586,
       "firstRecalledAt": "2026-05-19T18:00:25.219Z",
-      "lastRecalledAt": "2026-05-20T18:14:43.225Z",
+      "lastRecalledAt": "2026-05-21T22:04:20.965Z",
       "queryHashes": [
-        "e62ba81b4194",
-        "56dbc7964a0e",
-        "d5d5782eaede",
-        "1b74dd8394b7",
-        "032d15d183fe",
-        "ea268e232dd5",
-        "3b066db60054",
-        "51df086458d9",
         "ca2ca7000f70",
         "4aadc3746419",
         "8e5e2bd42f7a",
@@ -268,11 +278,27 @@
         "81aeb1911ade",
         "8a3ce40419cd",
         "715f0367a757",
-        "a282cdde5250"
+        "a282cdde5250",
+        "da6bb8f5e583",
+        "80fa34c5c233",
+        "ce3d984800e6",
+        "cc91e277a540",
+        "cb3edcb5c9e4",
+        "9d5fb8a7d4af",
+        "df4bedfd7ab6",
+        "642f3aed6f8f",
+        "9dab1a90640c",
+        "3f86451a9434",
+        "3a0ddbf943a2",
+        "cf05a514b035",
+        "f6ee1576f9ef",
+        "ea268e232dd5",
+        "e53563e0f366"
       ],
       "recallDays": [
         "2026-05-20",
-        "2026-05-21"
+        "2026-05-21",
+        "2026-05-22"
       ],
       "conceptTags": [
         "manual/discretionary",
@@ -292,22 +318,14 @@
       "endLine": 63,
       "source": "memory",
       "snippet": "### Critical Data Points - **BTC Grid walk-forward failure**: Train PF 2.39 (2021-2023) → Test PF 0.84 (2024-2025) = 65% edge decay. Fixed params are dead. - **Rolling optimizer confirms**: Optimal params shift every 3-6 months. Current best on BTC: BB(30,2.5) RSI<20, PF=1.0 (barely above break-even — no grid edge right now) - **CrypNuevo playbook**: 2.5 signals/week @ 1.5x wick ratio + rejection. Not yet backtested for WR/PF — still needs funding/OI integration for real bias ### Playbooks Summary 1. **Grid** (BB + RSI) — Walk-forward FAILED. Needs rolling re-optimization 2. **Cointegration** (ETH-SOL, BTC-ETH) — Promising backtest (PF 9.97 bull). Needs real-cost model 3. **Meta-strat combi",
-      "recallCount": 25,
+      "recallCount": 41,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 11.395334514975547,
+      "totalScore": 18.723564344644547,
       "maxScore": 0.512998765707016,
       "firstRecalledAt": "2026-05-19T18:00:25.219Z",
-      "lastRecalledAt": "2026-05-20T18:14:43.225Z",
+      "lastRecalledAt": "2026-05-21T22:04:20.965Z",
       "queryHashes": [
-        "e62ba81b4194",
-        "56dbc7964a0e",
-        "d5d5782eaede",
-        "1b74dd8394b7",
-        "032d15d183fe",
-        "ea268e232dd5",
-        "3b066db60054",
-        "51df086458d9",
         "ca2ca7000f70",
         "4aadc3746419",
         "8e5e2bd42f7a",
@@ -324,11 +342,27 @@
         "81aeb1911ade",
         "8a3ce40419cd",
         "715f0367a757",
-        "a282cdde5250"
+        "a282cdde5250",
+        "da6bb8f5e583",
+        "80fa34c5c233",
+        "ce3d984800e6",
+        "cc91e277a540",
+        "cb3edcb5c9e4",
+        "9d5fb8a7d4af",
+        "df4bedfd7ab6",
+        "642f3aed6f8f",
+        "9dab1a90640c",
+        "3f86451a9434",
+        "3a0ddbf943a2",
+        "cf05a514b035",
+        "f6ee1576f9ef",
+        "ea268e232dd5",
+        "e53563e0f366"
       ],
       "recallDays": [
         "2026-05-20",
-        "2026-05-21"
+        "2026-05-21",
+        "2026-05-22"
       ],
       "conceptTags": [
         "walk-forward",
@@ -348,13 +382,13 @@
       "endLine": 43,
       "source": "memory",
       "snippet": "- Nuevo's actual edge is: 1) Set weekly bias from HTF structure/funding/OI, 2) Map liquidity zones on Hyperliquid order book, 3) Enter AFTER sweep + rejection, not before, 4) Multi-TP exit **Current gap in playbook:** - Bias function is crude (SMA slope only → 95% \"neutral\") - Real edge needs funding rate + OI divergence + Hyperliquid order book data - Requires API integration before full deployment ### Gold Template v2 State (All 3 scripts built + tested) | Script | Status | Path | |--------|--------|------| | Epistemic Gate | ✅ Built + tested (correctly blocks BB(10,2.0) RSI<15 at 16% conf) | `/home/captain/trading/scripts/epistemic_gate.py` | | Killswitch Gate | ✅ Built + tested (paper",
-      "recallCount": 18,
+      "recallCount": 25,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 7.223990577618835,
+      "totalScore": 9.870088669817207,
       "maxScore": 0.6588452817604523,
       "firstRecalledAt": "2026-05-19T18:00:25.219Z",
-      "lastRecalledAt": "2026-05-20T18:14:43.225Z",
+      "lastRecalledAt": "2026-05-21T19:04:25.213Z",
       "queryHashes": [
         "e62ba81b4194",
         "56dbc7964a0e",
@@ -373,11 +407,17 @@
         "24667458f8da",
         "81aeb1911ade",
         "715f0367a757",
-        "a282cdde5250"
+        "a282cdde5250",
+        "da6bb8f5e583",
+        "cc91e277a540",
+        "cb3edcb5c9e4",
+        "df4bedfd7ab6",
+        "642f3aed6f8f"
       ],
       "recallDays": [
         "2026-05-20",
-        "2026-05-21"
+        "2026-05-21",
+        "2026-05-22"
       ],
       "conceptTags": [
         "structure/funding/oi",
@@ -397,13 +437,13 @@
       "endLine": 21,
       "source": "memory",
       "snippet": "# 2026-05-19 Daily Notes ## 01:09-02:09 HKT — Overnight Session - **Affiliate placeholders fixed** — all 5 sites: YOUR_AFFILIATE_ID/YOUR_GYG_ID/YOUR_EXPEDIA_ID/YOUR_AMAZON_TAG replaced with real IDs - **Featured images for all 146 FT blog posts** — `scripts/generate-featured-images.mjs` creates deterministic gradient SVGs. 146 images in `public/images/blog/`. Build ✅, deployed. - **tsconfig.json fix** — `_archive/_projects` excluded from build ## 02:24-02:50 HKT — Content Generation - **Luxury Travel**: +5 blog posts (62 total) — Bali, Singapore, Maldives, Hokkaido, Bangkok — deployed ✅ - **Senior Travel**: +5 blog posts (58 total) — cruises, Bangkok hotels, KL, mobility, Phuket — deployed",
-      "recallCount": 13,
+      "recallCount": 21,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.382130068540573,
+      "totalScore": 8.638379099965094,
       "maxScore": 0.5359565675258636,
       "firstRecalledAt": "2026-05-19T18:00:25.219Z",
-      "lastRecalledAt": "2026-05-20T18:14:43.225Z",
+      "lastRecalledAt": "2026-05-21T16:25:52.102Z",
       "queryHashes": [
         "e62ba81b4194",
         "d5d5782eaede",
@@ -417,11 +457,20 @@
         "24667458f8da",
         "81aeb1911ade",
         "715f0367a757",
-        "a282cdde5250"
+        "a282cdde5250",
+        "da6bb8f5e583",
+        "80fa34c5c233",
+        "ce3d984800e6",
+        "cc91e277a540",
+        "9d5fb8a7d4af",
+        "df4bedfd7ab6",
+        "642f3aed6f8f",
+        "3f86451a9434"
       ],
       "recallDays": [
         "2026-05-20",
-        "2026-05-21"
+        "2026-05-21",
+        "2026-05-22"
       ],
       "conceptTags": [
         "09-02",
@@ -441,13 +490,13 @@
       "endLine": 79,
       "source": "memory",
       "snippet": "4. `solana-mev-assessment.md` — Realistic needs ($10-50K account, Jito RPC) 5. `playbook-research-guide.md` — Per-playbook improvements ### 4 Parallel Agents (19:40 HKT) - **Grid (200 combos × 4 regimes)**: Winner BB(25, alpha=1.5, RSI<40) — Bull WR 66.7%, PF 2.75. Chop PF 1.94 (0.06 from gate!). Crash: nothing passes. - **Miner Cost**: ✅ `detect_miner_zone(df)` added to `meta_strategy.py` - **Wick Imbalance**: 10 trades, 40% WR, PF 1.45, DD 5.19%. Chop: 0%. Need lower threshold (2.0x → 1.5x) - **Solana MEV Plan**: 253-line doc. PARKED — needs >$10K account - **Bug**: VectorBT 1.0 returns scalars not series for `trades.win_rate()`. Fixed with `[0]` indexing. ### Meta-Strategy v0.1.0 - **Re",
-      "recallCount": 10,
+      "recallCount": 14,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.7445556432008744,
-      "maxScore": 0.40119488835334777,
+      "totalScore": 5.294970071315766,
+      "maxScore": 0.41229089498519894,
       "firstRecalledAt": "2026-05-19T18:00:54.941Z",
-      "lastRecalledAt": "2026-05-20T11:55:41.893Z",
+      "lastRecalledAt": "2026-05-21T12:30:07.460Z",
       "queryHashes": [
         "56dbc7964a0e",
         "3b066db60054",
@@ -458,10 +507,15 @@
         "85ff3c850fa7",
         "29e88451a82d",
         "3e21b5992819",
-        "fe231c88bcba"
+        "fe231c88bcba",
+        "ce3d984800e6",
+        "cb3edcb5c9e4",
+        "9d5fb8a7d4af",
+        "642f3aed6f8f"
       ],
       "recallDays": [
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21"
       ],
       "conceptTags": [
         "solana-mev-assessment.md",
@@ -481,18 +535,22 @@
       "endLine": 102,
       "source": "memory",
       "snippet": "- WR 88.9%, PF 11.26, DD -2.9%, Sharpe 6.17. Paper-trade candidate. ### FOREX Grid (2yr hourly) - AUDUSD closest: WR 58%, PF 1.48 — 0.52 from gate. Needs different exit (not 24h) for forex. ## Dashboard - `https://alpha-dashboard-1779191065.vercel.app` — dark theme, mobile-friendly - Shows: current regime, active playbooks, Kelly sizing, gate progress - Regenerated + deployed each cycle ## Sites Status (All 200 ✅) - Apifeny AI: 90 playbooks, 47 blog posts - Family Travel Asia: 146 blog, 580 destinations - Luxury Travel Asia: 62 blog, 527 destinations (new GitHub repo: `apifenylabs/luxury-family-travel-asia`) - EV Charging Asia: 113 blog, 12 itineraries - Senior Friendly Travel: 58 blog -",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4433023482561111,
-      "maxScore": 0.4433023482561111,
+      "totalScore": 1.3298163906110407,
+      "maxScore": 0.5250938877833964,
       "firstRecalledAt": "2026-05-19T18:00:54.942Z",
-      "lastRecalledAt": "2026-05-19T18:00:54.942Z",
+      "lastRecalledAt": "2026-05-21T17:03:09.907Z",
       "queryHashes": [
-        "d5d5782eaede"
+        "d5d5782eaede",
+        "642f3aed6f8f",
+        "3a0ddbf943a2"
       ],
       "recallDays": [
-        "2026-05-20"
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22"
       ],
       "conceptTags": [
         "88.9",
@@ -503,6 +561,79 @@
         "1.48",
         "0.52",
         "mobile-friendly"
+      ]
+    },
+    "memory:memory/2026-05-21.md:1:25": {
+      "key": "memory:memory/2026-05-21.md:1:25",
+      "path": "memory/2026-05-21.md",
+      "startLine": 1,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "# Memory — 2026-05-21 (Thu) ## Trading System ### Core BB(10,2.0) RSI<20 Engine - **Status**: ✅ Live. 1,095 trades merged (hist+live), 88.0% WR, 14.72 PF, +1,347.7R - **Regime**: CHOP (ADX 15-22, RSI BTC 62-78, SOL 61.6, ETH 77-78) - **Cash**: 100% waiting for flush - **No signals active** — all prices above RSI<20 threshold ### New Experiments Run Today (session 15:34-15:45 HKT) *Wosobu rejected claim that \"no more free data\" exists; demanded creativity.* 1. **EXP25: Cross-asset correlation shifts** (3 assets × 54 configs) → **0 winners.** Dead. Rolling 48h correlation doesn't predict reversals. 2. **EXP26: Alt rotation via ratio Z-scores** → **1 config passes gate:** SOL/BTC LB6 Z1.5 T",
+      "recallCount": 7,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3.102461320161819,
+      "maxScore": 0.4687995314598083,
+      "firstRecalledAt": "2026-05-21T14:09:18.583Z",
+      "lastRecalledAt": "2026-05-21T22:04:20.965Z",
+      "queryHashes": [
+        "9dab1a90640c",
+        "3f86451a9434",
+        "3a0ddbf943a2",
+        "cf05a514b035",
+        "f6ee1576f9ef",
+        "ea268e232dd5",
+        "e53563e0f366"
+      ],
+      "recallDays": [
+        "2026-05-21",
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "2.0",
+        "88.0",
+        "14.72",
+        "347.7r",
+        "15-22",
+        "62-78",
+        "61.6",
+        "77-78"
+      ]
+    },
+    "memory:memory/2026-05-21.md:45:75": {
+      "key": "memory:memory/2026-05-21.md:45:75",
+      "path": "memory/2026-05-21.md",
+      "startLine": 45,
+      "endLine": 75,
+      "source": "memory",
+      "snippet": "- [ ] Wosobu: Bybit API keys + $1k deposit for seed stage - [ ] Titan Supabase: SQL migration pending (Wosobu action required) - [ ] Social Beast: PAT expired, needs manual regen ### Blockers (all Wosobu-blocked) 1. Supabase migration for Titan 2. Social Beast PAT renewal 3. Bybit account setup + $1k deposit 4. ClawHub manual auth ## Session Notes - Full session from 15:34 to ~20:12 HKT - Multiple cron-driven hourly updates on price drift - No trading activity — strategy waiting for flush signal - 4 new experiments completed in parallel after Wosobu's pushback on \"no more free data\" - EXP28 vol surge proxy identified as the first new viable signal since BB Core validation ### SOL Vol Surg",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2.185948583483696,
+      "maxScore": 0.4541144698858261,
+      "firstRecalledAt": "2026-05-21T17:03:09.907Z",
+      "lastRecalledAt": "2026-05-21T22:04:20.965Z",
+      "queryHashes": [
+        "3a0ddbf943a2",
+        "cf05a514b035",
+        "f6ee1576f9ef",
+        "ea268e232dd5",
+        "e53563e0f366"
+      ],
+      "recallDays": [
+        "2026-05-22"
+      ],
+      "conceptTags": [
+        "wosobu-blocked",
+        "cron-driven",
+        "wosobu",
+        "bybit",
+        "api",
+        "keys",
+        "deposit",
+        "seed"
       ]
     }
   }

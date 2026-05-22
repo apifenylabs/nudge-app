@@ -1,3 +1,4 @@
+import HomepageSchema from '@/components/HomepageSchema'
 import {
   MessageSquare,
   CheckCircle,
@@ -61,6 +62,7 @@ const footerLinks = {
 export default function Home() {
   return (
     <>
+      <HomepageSchema />
       <StickyMicButton />
 
       {/* Navigation */}

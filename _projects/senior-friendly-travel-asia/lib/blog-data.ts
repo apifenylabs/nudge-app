@@ -51,6 +51,7 @@ import accessibleHotelsBangkok from '@/data/blog/accessible-hotels-bangkok-senio
 import seniorKLA from '@/data/blog/senior-friendly-tourist-attractions-kuala-lumpur-2026.json';
 import mobilityTipsAsia from '@/data/blog/mobility-aids-travel-tips-asia-seniors-planes-trains-automobiles-2026.json';
 import seniorPhuket from '@/data/blog/senior-friendly-phuket-best-hotels-beaches-tours-2026.json';
+import seniorFriendlyCities from '@/data/blog/senior-friendly-cities-long-stay-asia.json';
 
 // Existing inline posts
 const existingPosts: BlogPost[] = [
@@ -144,6 +145,7 @@ const newPosts: BlogPost[] = [
   seniorKLA as BlogPost,
   mobilityTipsAsia as BlogPost,
   seniorPhuket as BlogPost,
+  seniorFriendlyCities as BlogPost,
 ];
 
 const allPosts: BlogPost[] = [...existingPosts, ...newPosts];

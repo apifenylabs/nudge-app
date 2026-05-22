@@ -1,0 +1,111 @@
+# ──────────────────────────────────────────────────────────────────────────
+# RULES.yaml — Titan Operating System (LOCKED)
+# ──────────────────────────────────────────────────────────────────────────
+# This file is the source of truth for all prioritization, project
+# classification, and capacity allocation decisions.
+#
+# LOCKED POLICY: Do not modify without direct CEO instruction.
+# ──────────────────────────────────────────────────────────────────────────
+
+# ══════════════════════════════════════════════════════════════════════════
+# BALANCED PRIORITIZATION (LOCKED)
+# ══════════════════════════════════════════════════════════════════════════
+#
+# 70% of all work capacity must go to direct revenue-generating tasks
+# this week (affiliates, PDF playbooks, monetization improvements).
+#
+# 30% of capacity is reserved for Founder Strategic Projects (explicitly
+# protected — never starved, never deprioritized to zero):
+#   1. LifeOS (personality-aware copilot)
+#   2. AI Directory (apifeny-ai)
+#   3. Titan (visual/gamified agent builder like Replit + Solo Leveling)
+#
+# The CEO must always find work to do in the Strategic Projects bucket
+# every day — never say "nothing to do" or "HEARTBEAT_OK" if there's
+# high-priority work pending.
+#
+# Never create new projects outside these buckets without passing the
+# full Revenue-First + Idea Review Pipeline.
+#
+# When the system idles (all P0-P4 items done), it MUST:
+#   a) Pick highest-impact task from the 3 Strategic Projects
+#   b) If none obvious, improve LifeOS plugin depth (more categories, connected features)
+#   c) If nothing, improve Titan (progression, UI polish, Supabase connection)
+#   d) If nothing, improve AI Directory (content, SEO, affiliate integration)
+#   e) If truly nothing anywhere, generate a backlog entry in work-engine-state.md
+
+# ══════════════════════════════════════════════════════════════════════════
+# PROJECT CLASSIFICATION
+# ══════════════════════════════════════════════════════════════════════════
+
+projects:
+  revenue:
+    - ev-charging-asia        # Travel site → affiliate revenue
+    - luxury-family-travel    # Travel site → affiliate revenue
+    - family-travel-directory # Travel site → affiliate revenue
+    - senior-friendly-travel  # Travel site → affiliate revenue
+    - kids-activities-asia    # Travel site → affiliate revenue
+    - social-beast            # Subscription product
+    - nudge                   # Subscription product
+    - affiliate-tracking      # Direct affiliate infrastructure
+
+  strategic:
+    - lifeos                  # LifeOS — personality-aware copilot (Top Priority)
+    - apifeny-ai              # AI Directory — apifeny-ai site
+    - titan                   # Titan — visual/gamified agent builder
+
+# ══════════════════════════════════════════════════════════════════════════
+# DAILY CAPACITY ALLOCATION
+# ══════════════════════════════════════════════════════════════════════════
+#
+# Every work session (cron, heartbeat, manual instruction):
+#   1. Check work-engine-state.md cursor
+#   2. If revenue bucket has open items → 70% effort there
+#   3. Always allocate at least 30% to strategic projects
+#   4. If revenue bucket is empty → 100% to strategic projects
+#   5. NEVER respond HEARTBEAT_OK if strategic projects have work to do
+#   6. Always push a backlog item forward — even if it's just one task
+
+# ══════════════════════════════════════════════════════════════════════════
+# IDEA REVIEW PIPELINE
+# ══════════════════════════════════════════════════════════════════════════
+#
+# Before any new project is created:
+#   1. Does it fit in Revenue or Strategic bucket?
+#   2. If Revenue: does it have a clear monetization path within 30 days?
+#   3. If Strategic: does the CEO explicitly approve it?
+#   4. If neither: REJECT — route to idea backlog in life/Projects/
+#
+# New ideas are logged to life/Projects/IDEA_BACKLOG.md for periodic review.
+# No new standalone project repos without passing this pipeline.
+
+# ══════════════════════════════════════════════════════════════════════════
+# WORK ENGINE INSTRUCTIONS (for cron payloads)
+# ══════════════════════════════════════════════════════════════════════════
+#
+# Used by: ceo-24-7-work-engine, proactive-builder, all heartbeat checks
+#
+# Priority order (updated for 70/30 split):
+#   P0 REVENUE  — Affiliate link structure, commission tracking, payment integration
+#   P1 REVENUE  — PDF playbook checkout, Stripe, monetization features
+#   P2 REVENUE  — SEO improvements, content growth, blog expansion
+#   P3 STRATEGIC — LifeOS: plugin depth, Supabase persistence, more categories
+#   P4 STRATEGIC — Titan: progression polish, landing page, visual refinements
+#   P5 STRATEGIC — AI Directory: content, SEO, affiliate hooks
+#   P6 ANALYTICS — Vercel Analytics + GA4 on all deployed sites
+#
+# At least 30% of each session must touch a Strategic project.
+
+# ══════════════════════════════════════════════════════════════════════════
+# HEARTBEAT RULES (LOCKED)
+# ══════════════════════════════════════════════════════════════════════════
+#
+# Every heartbeat MUST:
+#   1. Read this file (RULES.yaml) to check 70/30 split compliance
+#   2. Read HEARTBEAT.md for current status
+#   3. Read work-engine-state.md for cursor position
+#   4. If high-priority items exist → do the work, do NOT reply HEARTBEAT_OK
+#   5. If revenue bucket is empty → work on 3 Strategic Projects ONLY
+#   6. If ALL buckets appear empty → pick ONE improvement for each Strategic Project
+#      and add it as backlog. Never idle.
+#   7. Update HEARTBEAT.md after any action taken.

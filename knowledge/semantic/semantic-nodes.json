@@ -1,51 +1,111 @@
 {
-  "version": "2026-05-21-consolidation-primary",
-  "generated": "2026-05-21T02:00:00+08:00",
+  "version": "2026-05-23-consolidation-primary",
+  "generated": "2026-05-23T02:00:00+08:00",
   "nodes": [
     {
       "id": "trading-crypnuevo",
       "name": "CrypNuevo Methodology — Full Extraction + Verdict",
-      "summary": "Full 4-layer weekly bias + liquidity zone system extracted and corrected from earlier wick-only simplification. 1) Weekly bias from HTF structure/funding/OI, 2) Liquidity zone mapping on Hyperliquid order book, 3) Entry AFTER sweep + rejection (not before), 4) Multi-TP exit. Rejection filter reduces false signals from 20+/week to ~2.5/week. Cross-asset backtest: SOL WR 43.2%, PF 1.52 (+9.75R, 44 signals, under 100 minimum). BTC (28.0% WR, 0.78 PF) and ETH (30.4% WR, 0.66 PF) fail gate. OHLCV-only version is pale imitation — real edge requires Hyperliquid order book depth, funding rate extremes, and OI divergence. Nuevo bias function crude (SMA slope → 95% neutral). Paths: knowledge/strategies/crypnuevo-full-weekly-bias-system.md, scripts/playbook_nuevo_weekly.py, scripts/nuevo_game.py."
+      "summary": "Full 4-layer weekly bias + liquidity zone system extracted and corrected from earlier wick-only simplification. 1) Weekly bias from HTF structure/funding/OI, 2) Liquidity zone mapping on Hyperliquid order book, 3) Entry AFTER sweep + rejection (not before), 4) Multi-TP exit. Rejection filter reduces false signals from 20+/week to ~2.5/week. Cross-asset backtest: SOL WR 43.2%, PF 1.52 (+9.75R, 44 signals, under 100 minimum). BTC (28.0% WR, 0.78 PF) and ETH (30.4% WR, 0.66 PF) fail gate. OHLCV-only version is pale imitation — real edge requires Hyperliquid order book depth, funding rate extremes, and OI divergence. Nuevo bias function crude (SMA slope → 95% neutral)."
     },
     {
       "id": "trading-gold-v2",
       "name": "Gold Template v2 — All 3 Gates Complete",
-      "summary": "All 3 scripts built and tested. Epistemic Gate correctly blocks BB(10,2.0) RSI<15 at 16% confidence. Killswitch Gate fails 78/78 paper trades at 48.7% WR (<55% requirement). Rolling Optimizer proves params shift every 3-6 months across 62 windows. BTC grid walk-forward failure: Train PF 2.39 (2021-2023) → Test PF 0.84 (2024-2025) = 65% edge decay. Current BTC best: BB(30,2.5) RSI<20, PF=1.0 (no edge). Fixed params are structurally dead — no single strategy passes all 4 regimes. Master doc: /home/captain/trading/GOLD_TEMPLATE_V2.md. Gap analysis: /home/captain/trading/GOLD_V2_GAP_ANALYSIS.md (12 gaps)."
+      "summary": "All 3 scripts built and tested. Epistemic Gate correctly blocks BB(10,2.0) RSI<15 at 16% confidence. Killswitch Gate fails 78/78 paper trades at 48.7% WR (<55% requirement). Rolling Optimizer proves params shift every 3-6 months across 62 windows. BTC grid walk-forward failure: Train PF 2.39 (2021-2023) → Test PF 0.84 (2024-2025) = 65% edge decay. Current BTC best: BB(30,2.5) RSI<20, PF=1.0 (no edge). Fixed params are structurally dead — no single strategy passes all 4 regimes."
     },
     {
       "id": "trading-playbooks",
       "name": "7 Playbooks — Status Summary",
-      "summary": "1) Grid (BB+RSI) — Walk-forward FAILED (65% edge decay). Needs rolling re-optimization. 2) Cointegration (ETH-SOL, BTC-ETH) — PF 9.97 bull regime, needs real-cost model. 3) Meta-strat combination — PF 2.53 synthetic (2.15 after fees). 4) Forex (EURUSD, AUDUSD) — Some configs pass gate, low priority. 5) Wick imbalance — 10 trades only (40% WR, PF 1.45), too few signals. 6) Nuevo weekly bias — NEW (2.5 signals/week, needs API integration). 7) Stubs (Options/Arb/ML/MEV) — Blocked by infra/access. Meta-strategy v0.1.0 active: regime=CHOP (conf 0.88, stable 372h), Grid+VWAP active, Kelly 0.25 fractional (9.5% per trade). Dashboard at alpha-dashboard-1779191065.vercel.app."
+      "summary": "1) Grid (BB+RSI) — Walk-forward FAILED (65% edge decay). Needs rolling re-optimization. 2) Cointegration (ETH-SOL, BTC-ETH) — PF 9.97 bull regime, needs real-cost model. 3) Meta-strat combination — PF 2.53 synthetic (2.15 after fees). 4) Forex (EURUSD, AUDUSD) — Some configs pass gate, low priority. 5) Wick imbalance — 10 trades only (40% WR, PF 1.45), too few signals. 6) Nuevo weekly bias — 2.5 signals/week, needs API integration. 7) Stubs (Options/Arb/ML/MEV) — Blocked by infra/access. Meta-strategy v0.1.0 active: regime=CHOP (conf 0.88), Grid+VWAP active, Kelly 0.25 fractional."
     },
     {
       "id": "trading-data-collected",
       "name": "Trading Data & LLM Experiments",
-      "summary": "24,000 Hyperliquid funding entries collected (BTC/ETH/SOL, Feb 2024-May 2026). BTC funding positive 59/68 weeks — highly one-sided. Local LLM experiment conclusively failed: qwen2.5-coder:3b (0/6 correct, always NEUTRAL), gemma3:4b (returns NO to everything), deepseek-r1:7b (60s timeout, too slow). Interactive trading game: scripts/nuevo_game.py."
+      "summary": "24,000 Hyperliquid funding entries collected (BTC/ETH/SOL, Feb 2024-May 2026). BTC funding positive 59/68 weeks. Local LLM experiment failed: qwen2.5-coder:3b (0/6 correct), gemma3:4b (NO to everything), deepseek-r1:7b (60s timeout). Interactive trading game: scripts/nuevo_game.py."
     },
     {
       "id": "user-preferences-wosobu",
-      "name": "User: Wosobu (@CaptainAlphaAgent_bot)",
-      "summary": "Name: Wosobu. Timezone: Asia/Hong_Kong (GMT+8). Explicitly wants agents working overnight autonomously — 'im not doing anything. you do it all the next hours and test alot'. Signature sign-off: 'keep building' (momentum over planning). Prefers building over talking: demo products > strategy documents. Wants both quant paths AND manual/discretionary method exploration. Active in Alpha Orchestras HQ Telegram group. Working toward $1K → $100M, paper-first, Gold Template v2 gates. Called out CrypNuevo research gap — values rigorous analysis + practical approaches. Called out as having sharp BS detector on incomplete analysis."
+      "name": "User: Wosobu",
+      "summary": "Name: Wosobu. Timezone: Asia/Hong_Kong (GMT+8). Explicitly wants agents working overnight autonomously. Signature: 'keep building' (momentum over planning). Prefers building over talking. Wants both quant and discretionary paths. Works toward $1K → $100M, paper-first. Sharp BS detector — caught incomplete CrypNuevo extraction."
     },
     {
-      "id": "infrastructure-web-sites",
-      "name": "Web Site Portfolio — 6 Vercel Sites",
-      "summary": "All 6 Next.js sites on Vercel, healthy 200 OK. 478 total blog posts. Apifeny AI: 90 playbooks, 47 blog posts. Family Travel Asia: 146 blog, 580 destinations. Luxury Travel Asia: 62 blog, 527 destinations (new repo: apifenylabs/luxury-family-travel-asia). EV Charging Asia: 113 blog, 12 itineraries. Senior Friendly Travel: 58 blog. Kids Activities Asia: 42 blog. Affiliate placeholders replaced across all 5 sites. 146 gradient SVG featured images auto-generated. Nudge (separate Next.js app): Telegram inline mode @nudgebot deployed (+25% MRR estimate). 5-step onboarding flow polished (+15% MRR estimate)."
+      "id": "trading-sol-vol-surge-satellite",
+      "name": "SOL Vol Surge Satellite — Proven Second Signal",
+      "summary": "EXP28 identified SOL-specific volume surge accumulation proxy. Best config LB12_V3x_D1_TP1.0_SL0.5: 683 trades, 89.8% WR, PF 17.51. Walk-forward stable (90.3%→90.3%→89.2% across 3 periods). 524 unique signals BB Core misses. 95.6% WR when Vol Surge entry used instead of BB on overlap. Monte Carlo ($500, 2000 paths): median $16,409, 0% ruin, 4.4% median DD. SOL-specific retail accumulation pattern — BTC/ETH near zero. Built as SS1 satellite."
     },
     {
-      "id": "meta-strategy-trading",
-      "name": "Meta-Strategy Trading System v0.1.0",
-      "summary": "Deployed and running. Regime detection: 3h vol + 15h trend + 48h momentum + 120h net. 48h stabilization window before regime flip. Playbook gating: 2-3 active per regime. Kelly fractional 0.25 with conviction modulation + drawdown floor. Current: CHOP (conf=0.88, stable 372h). Dash: alpha-dashboard-1779191065.vercel.app. Integrated into overnight runner cron (every 2h). Stabilization improved from 89 flips/500h to 8/5000h. 10 playbook stubs created (#7-10 need external infra)."
+      "id": "trading-strategy-pivot-sol-hyperliquid",
+      "name": "Strategy Pivot: SOL-only + Hyperliquid $500",
+      "summary": "Decision from May 21: SOL-only on Hyperliquid with $500 seed (not $1K multi-asset Bybit). 70/30 BB Core / Vol Surge split. Monte Carlo: 100% profit paths, median $16,409 in ~7 months at 1 trade/day. Kill-switch: 30% WR / 5 cons losses / 15% weekly DD. Deployment: Phantom wallet → Hyperliquid → bridge $500 USDC → 2 weeks paper → real."
+    },
+    {
+      "id": "trading-experiments-exp25-exp30",
+      "name": "EXP25-30 Results Summary",
+      "summary": "EXP25 (cross-correlation): 0 winners — dead. EXP26 (alt rotation): 1 config passes (SOL/BTC, 28 trades, 75% WR). EXP27 (macro calendar): context-only (44-55% WR). EXP28 (volume surge): SOL ✅ satellite built. EXP29 (funding/OI): SOL SMA12 → 86% WR, PF 6.3 — promising, needs wider TP. EXP30 (taker flow): BTC shorts → 65.6% WR, PF 3.18 — weak. EXP26b (alt rotation thickened): TP artifact. Summary: 1 built as signal, 1 promising, 3 discarded."
+    },
+    {
+      "id": "trading-paper-metrics-22may",
+      "name": "Trading Beast Paper — First Bar-by-Bar Simulation",
+      "summary": "12 TendersAlt positions: 6 closed (0% WR, -14.03% PnL), 6 open (-1.36%). All SOL SELLs hit tight SL (3.5 ATR in chop). Takeaway: 5.0x ATR for ranging markets. BB Core: 88% WR, 14.72 PF, +1,347.7R on 1,095 trades. Data pipeline: live fresh through 16:00 UTC, historical frozen. Regime: CHOP (ADX 15-22). 100% cash."
+    },
+    {
+      "id": "titan-v061-agent-evolution",
+      "name": "Titan v0.61 — Agent Evolution System",
+      "summary": "3-tier evolution (Baby→Evolved→Ultimate) based on level/XP with visual decorations (crown rings, shoulder pads, emissive glow). Mouse-follow eyes, blink animation, particle sparkles. 'Keep Basic Look' toggle via localStorage. 5 orbiting agents with particle burst hover. Global warmth (teal radial + golden overlays). Deployed to https://titan-app-puce.vercel.app. @vercel/analytics + speed-insights added. Supabase migration SQL ready (manual apply needed). Wosobu's backlog: P1-P4 for v0.61→v0.70."
+    },
+    {
+      "id": "seventy-thirty-prioritization",
+      "name": "70/30 Balanced Prioritization — LOCKED",
+      "summary": "RULES.yaml: 70% work → revenue projects, 30% → strategic projects. Idea Review Pipeline — no new projects without passing. Heartbeat rules — never idle if strategic items open. LifeOS PRD: 12 plugins, 7 milestones to v1.0, 5/10 aicofounder parity. All crons updated. No revenue yet ($0.00)."
+    },
+    {
+      "id": "lifeos-prd-complete",
+      "name": "LifeOS PRD Complete",
+      "summary": "Full PRD at life/Projects/LifeOS-PRD.md. 10 sections covering Vision, Architecture, Feature Specs, Persistence, UI/UX, Integration, Roadmap, Technical, Metrics, aicofounder Parity. 12 plugins built (v0.59+), 3 more planned. 7 milestones to v1.0."
+    },
+    {
+      "id": "omnimind-cron-status-22may",
+      "name": "OmniMind Cron Status — Day 4",
+      "summary": "Primary (02:00 HKT), backup (03:00 HKT), distribution (10:00 HKT) autonomously delivering. 19 total crons active. Budget ~$0.28/$0.50 today, all DeepSeek-chat. 3 blockers: Titan Supabase env vars unpasted, Social Beast PAT expired, Stripe key missing."
     },
     {
       "id": "active-blockers",
-      "name": "6 Active Blockers (Wosobu)",
-      "summary": "1) GitHub PAT expired (ghp_wW7cv2...) — repos stay public, can't manage/delete repos. 2) VITE_STRIPE_SECRET_KEY — 7 playbook products with checkout pages ready. 3) Supabase schema paste pending (nudge/supabase-schema.sql). 4) Affiliate accounts not created (Klook, Booking.com, Viator). 5) Nuevo bias function crude — SMA slope only (95% neutral), needs funding rate + OI divergence + Hyperliquid order book API. 6) Local LLMs unreliable for signal analysis."
+      "name": "3 Active Blockers (Consolidated from 6)",
+      "summary": "1) Titan Supabase — env vars exist, SQL migration pending manual dashboard apply (no CLI). 2) Social Beast — GitHub PAT expired, repos public (manual token regen). 3) Playbook checkout — VITE_STRIPE_SECRET_KEY not set, 7 playbook products ready."
     },
     {
-      "id": "omnimind-system",
-      "name": "OmniMind Memory System — Day 2 of 7",
-      "summary": "Plugin v0.3.0 installed (LanceDB vector + Kuzu graph + SQLite). Two parallel systems: plugin (unused) and cron file extraction (running). Pilot metric: does 3-store recall beat grep of memory/*.md? Semantic graph holds 9 nodes across 7 categories. Previous cycle: 41 data_points stored, 0 graph edges. Short-term recall tracking: 12 entries in .dreams/short-term-recall.json with 218 total recall events. Most recalled topics: OmniMind PAT/Killswitch info (23), Nuevo verdict (23), Grid walk-forward (23), User preferences (23). Distribution plan: 4-phase $0 strategy in social-beast/generated-content/omnimind-launch/."
+      "id": "trading-correlation-clusters",
+      "name": "Correlation Cluster Analysis — HYPE Only True Diversifier",
+      "summary": "12-pair hourly return correlation across 30 days. Core macro cluster (SOL·BTC·ETH·XRP·AVAX·BONK·POPCAT) = ~1.5 effective Markowitz bets. HYPE only genuine diversifier (r=0.35 with everything). WIF and TAO mild diversifiers (BTC r<0.5). BONK and POPCAT confirmed as SOL beta (r=0.79, 0.73). DOGE mostly beta (r=0.70 SOL, 0.74 BTC). Portfolio implication: SOL+BONK+POPCAT+DOGE = single concentrated SOL/beta position."
+    },
+    {
+      "id": "trading-stress-test-no-pairs-viable",
+      "name": "Stress Test — No Hyperliquid Perp Pair Passes Ensemble Gates",
+      "summary": "Full stress test of BB Core + Vol Surge ensemble on all 12 Hyperliquid perp pairs. Zero pairs profitable. WR ceiling 18-25% for pairs with >300 trades. PF below 0.8 (losses > gains ~2:1). 0% MC profit probability across all pairs. Root causes: (1) BB Core 0.75 ATR SL too tight on extreme-move entries, (2) Vol Surge fires too often on false surges without RSI divergence/OBV confirmation, (3) No short-side signals — long-only on perps pays ~11-33%/yr funding. Recommendation: widen stops to 1.5-2.0 ATR, add confirmation filters, add short signals."
+    },
+    {
+      "id": "trading-15m-scalp-freq",
+      "name": "15m Scalp Frequency Test — Only HYPE Passes",
+      "summary": "BB Core on 15m across 7 pairs. 420 total signals. Only HYPE passes (50.0% WR, PF 0.99, 5.36 trades/week). WIF borderline (35% WR). All others NOISE (<35% WR). Average WR 34.7%. Average 15m/1h signal ratio 3.1x."
+    },
+    {
+      "id": "trading-bb-core-spot-stress",
+      "name": "BB Core Spot Stress Test — HYPE #1, Most Pairs ~30% WR",
+      "summary": "BB Core(10,2.0)+RSI<14 on 1h spot across 7 pairs (2024-01 to 2026-05). HYPE best (50% WR, 1.84 PF, 18 signals). TAO (40% WR, 1.28 PF). BTC (39.1% WR, 1.26 PF). SOL (29.9% WR, 0.82 PF). ETH (32.3% WR, 0.92 PF). Walk-forward mostly stable despite low WR. MC shows no ruin risk but limited upside at current signal rate."
+    },
+    {
+      "id": "build-affiliate-tracking-dashboard",
+      "name": "Affiliate Tracking Dashboard Built (May 22)",
+      "summary": "Full affiliate link management system built from Next.js scaffold. 18 pre-seeded AI tool links (Notion, Jasper, Canva, Synthesia, Semrush, etc.). Click tracking API with privacy-safe IP hashing, referrer, user-agent capture. Dashboard with summary cards, CRUD link manager, click event log. TypeScript + build clean on Next.js 16 + Tailwind 4. localStorage persistence (no backend). P0 revenue project."
+    },
+    {
+      "id": "trading-alt-rotation-scan",
+      "name": "Alt Rotation Scan — ETH/SOL Gaining on BTC",
+      "summary": "ETH/BTC ratio +0.14% 24h, SOL/BTC ratio +1.13% 24h — both gaining on BTC. Alt season brewing indicator. Most liquid perp pairs by volume: HYPE ($3.3B), SUI ($155M), XRP ($113M). Thin markets: POPCAT ($2.3M), WIF ($1.9M), BONK ($868K)."
+    },
+    {
+      "id": "trading-15m-intraday-recs",
+      "name": "15m Intraday BB Core Scans — DOGE/SUI/SOL Recommended",
+      "summary": "90-day 15m scan on 12 pairs. Recommended: DOGE (59.5% WR, 3.91% total R), SUI (70% WR, 3.22% total R), SOL (63.4% WR, 3.09% total R). Skip: BTC, AVAX, ETH, BONK due to negative total R%. NOTE: These are Binance spot 15m results — may not translate to Hyperliquid perps."
     }
   ]
 }

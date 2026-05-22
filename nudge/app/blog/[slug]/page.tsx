@@ -9,6 +9,8 @@ import AffiliateBookingCard from '@/components/affiliate/AffiliateBookingCard'
 import AffiliateProductLink from '@/components/affiliate/AffiliateProductLink'
 import { affiliateUrl } from '@/lib/affiliate-links'
 import { allPosts } from '@/lib/generated-blog-data'
+import BlogPostSchema from '@/components/BlogPostSchema'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const revalidate = 3600
 
@@ -604,8 +606,27 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     notFound()
   }
 
+  const title = isDataDriven ? dataPost!.meta.title : inlinePost!.title
+  const description = isDataDriven ? dataPost!.meta.excerpt : inlinePost!.title
+  const datePublished = isDataDriven ? dataPost!.meta.date : inlinePost!.date
+  const author = isDataDriven ? dataPost!.meta.author : inlinePost!.author
+  const postUrl = `https://nudge-sigma-liart.vercel.app/blog/${params.slug}`
+
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <BlogPostSchema
+        title={title}
+        description={description}
+        datePublished={datePublished}
+        authorName={author}
+        url={postUrl}
+      />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://nudge-sigma-liart.vercel.app' },
+        { name: 'Blog', url: 'https://nudge-sigma-liart.vercel.app/blog' },
+        { name: title, url: postUrl },
+      ]} />
+      <div className="min-h-screen bg-background">
       {/* Nav */}
       <nav className="border-b border-border/40">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
@@ -683,6 +704,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </div>
       </footer>
     </div>
+    </>
   )
 }
 

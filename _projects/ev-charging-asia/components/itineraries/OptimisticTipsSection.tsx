@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react';
 import TipForm from '@/components/TipForm';
 import TipList from '@/components/TipList';
+import TipPhotoGallery from '@/components/TipPhotoGallery';
 import { MessageSquareText, Sparkles } from 'lucide-react';
 
 interface OptimisticTipsSectionProps {
@@ -35,6 +36,9 @@ export default function OptimisticTipsSection({ routeSlug, routeName }: Optimist
       <p className="text-xs text-gray-500 mb-4">
         Share your experience driving the {routeName} route — tips on charging, family stops, scenic viewpoints, and more.
       </p>
+
+      {/* Traveler Photo Gallery */}
+      <TipPhotoGallery stationId={`route-${routeSlug}`} refreshKey={refreshKey} />
 
       {justSubmitted && (
         <div className="mb-4 px-4 py-3 bg-emerald-50 border border-emerald-200 rounded-xl text-sm text-emerald-700 animate-fade-in flex items-center gap-2">

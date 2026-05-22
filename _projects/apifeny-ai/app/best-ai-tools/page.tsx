@@ -129,6 +129,41 @@ export default function BestAIToolsPage() {
     ];
   }, []);
 
+  // Inject ItemList JSON-LD for rich search results
+  useEffect(() => {
+    const topItems = topByTrending(12);
+    const toolItems = topItems.map((t, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'SoftwareApplication',
+        name: t.name,
+        url: `https://apifeny.ai/tools/${t.slug}`,
+        description: t.tagline || t.description.slice(0, 150),
+        applicationCategory: t.category || 'AI Tool',
+      },
+    }));
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'best-ai-tools-jsonld';
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Best AI Tools in 2026',
+      description: 'Curated directory of 85+ top-rated AI tools across writing, coding, design, marketing, and more.',
+      url: 'https://apifeny.ai/best-ai-tools',
+      numberOfItems: totalCount,
+      itemListElement: toolItems,
+    });
+
+    const existing = document.getElementById('best-ai-tools-jsonld');
+    if (existing) existing.remove();
+    document.head.appendChild(script);
+
+    return () => { script.remove(); };
+  }, []);
+
   return (
     <>
       <BreadcrumbSchema

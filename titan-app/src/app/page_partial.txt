@@ -1,0 +1,241 @@
+          {/* Forge Tab — Skill Creator */}
+          <TabsContent value="forge" className="space-y-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* Left: Templates */}
+              <Card className="p-4 bg-titan-card/60 border-titan-border/30">
+                <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
+                  <Star className="h-3.5 w-3.5 text-titan-teal" />
+                  Templates
+                </h3>
+                <div className="space-y-2">
+                  {[
+                    { name: "Travel Companion", desc: "Itinerary + budget + tips", level: "Lv.5" },
+                    { name: "Research Analyst", desc: "Deep-dive + citations + summary", level: "Lv.8" },
+                    { name: "Trading Assistant", desc: "Signals + risk + portfolio", level: "Lv.12" },
+                    { name: "Content Writer", desc: "Drafts + SEO + tone check", level: "Lv.3" },
+                  ].map((t, i) => (
+                    <motion.div key={i} className="p-2.5 rounded-lg bg-titan-surface/60 border border-titan-border/20 hover:border-titan-teal/30 cursor-pointer transition-all" whileHover={{ x: 3 }}>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-xs font-medium">{t.name}</p>
+                          <p className="text-[10px] text-titan-muted/70">{t.desc}</p>
+                        </div>
+                        <Badge className="text-[9px] bg-titan-teal/10 text-titan-teal border-titan-teal/20 font-mono">{t.level}</Badge>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </Card>
+
+              {/* Center: Editor */}
+              <Card className="p-4 bg-titan-surface/80 border-titan-border/30 lg:col-span-1">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-sm font-semibold">Skill Editor</h3>
+                  <Badge className="bg-titan-golden/10 text-titan-golden border-titan-golden/20 text-[9px] font-mono">v1 · Draft</Badge>
+                </div>
+                <div className="bg-[#0A0E17] rounded-lg p-3 font-mono text-[11px] leading-relaxed border border-titan-border/20 min-h-[240px]">
+                  <div><span className="text-titan-muted">1 </span><span className="text-titan-teal">agent</span> TravelGuide {"{"}</div>
+                  <div><span className="text-titan-muted">2 </span><span className="text-titan-teal">triggers</span> ["new_destination", "budget_check"]</div>
+                  <div><span className="text-titan-muted">3 </span><span className="text-titan-teal">actions</span> {"{"}</div>
+                  <div><span className="text-titan-muted">4 </span>  <span className="text-titan-teal">research</span>: <span className="text-titan-golden/80">deep_scan</span>,</div>
+                  <div><span className="text-titan-muted">5 </span>  <span className="text-titan-teal">summarize</span>: <span className="text-titan-golden/80">concise</span>,</div>
+                  <div><span className="text-titan-muted">6 </span>  <span className="text-titan-teal">notify</span>: <span className="text-titan-golden/80">push</span></div>
+                  <div><span className="text-titan-muted">7 </span>{"}"}</div>
+                  <div><span className="text-titan-muted">8 </span><span className="text-titan-teal">level_req</span>: 5</div>
+                  <div><span className="text-titan-muted">9 </span>{"}"}</div>
+                </div>
+                <div className="flex gap-2 mt-3">
+                  <Button className="flex-1 bg-titan-golden text-titan-bg hover:bg-titan-golden/90 text-xs">Audit & Certify</Button>
+                  <Button variant="outline" className="text-xs border-titan-border/30 text-titan-text/70">Test</Button>
+                </div>
+              </Card>
+
+              {/* Right: Preview */}
+              <Card className="p-4 bg-titan-card/60 border-titan-border/30">
+                <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
+                  <Bot className="h-3.5 w-3.5 text-titan-teal" />
+                  Preview
+                </h3>
+                <div className="flex flex-col items-center py-6">
+                  <motion.div
+                    className="w-24 h-24 rounded-2xl bg-gradient-to-br from-titan-teal/20 to-titan-golden/10 flex items-center justify-center text-3xl border border-titan-border/30 mb-3"
+                    animate={{ y: [0, -4, 0] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                  >
+                    🌍
+                  </motion.div>
+                  <p className="font-mono text-sm font-medium">Travel Guide v2</p>
+                  <div className="flex gap-1 mt-2">
+                    {["Research", "Summarize", "Notify"].map(s => (
+                      <Badge key={s} className="text-[8px] bg-titan-teal/10 text-titan-teal/80 border-titan-teal/20">{s}</Badge>
+                    ))}
+                  </div>
+                  <div className="mt-4 w-full space-y-1.5">
+                    <XPBar current={3400} max={5000} label="Level Progress" />
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </TabsContent>
+
+          {/* Audit Tab — Certification Center */}
+          <TabsContent value="audit" className="space-y-6">
+            {/* Green certification banner */}
+            <motion.div className="p-6 rounded-2xl bg-gradient-to-r from-titan-emerald/20 via-titan-emerald/10 to-transparent border border-titan-emerald/30" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-titan-emerald/20 flex items-center justify-center">
+                  <Shield className="h-6 w-6 text-titan-emerald" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg">All Agents Certified</h3>
+                  <p className="text-sm text-titan-muted/80">Your swarm passed all security checks — no vulnerabilities found</p>
+                </div>
+                <Badge className="ml-auto bg-titan-emerald text-white border-0 text-xs font-mono">✓ Certified</Badge>
+              </div>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                { name: "OWASP Top 10", status: "pass", checks: ["Broken Access Control", "Cryptographic Failures", "Injection", "Insecure Design"], score: 96 },
+                { name: "TDAD Compliance", status: "pass", checks: ["Data Privacy", "Model Transparency", "Audit Trail", "Bias Check"], score: 94 },
+                { name: "Agent Behavior", status: "pass", checks: ["Scope Limits", "Permission Boundary", "Escalation Path", "Logging"], score: 98 },
+                { name: "Supply Chain", status: "pass", checks: ["Dependency Scan", "License Check", "Version Audit", "Signature Verify"], score: 91 },
+              ].map((a, i) => (
+                <motion.div key={i} className="p-4 rounded-xl bg-titan-card/60 border border-titan-border/30" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="text-sm font-semibold">{a.name}</h4>
+                    <span className="text-lg font-mono font-bold text-titan-emerald">{a.score}%</span>
+                  </div>
+                  <div className="space-y-1.5">
+                    {a.checks.map((c, j) => (
+                      <div key={j} className="flex items-center gap-2 text-xs text-titan-muted">
+                        <span className="w-3.5 h-3.5 rounded-full bg-titan-emerald/20 flex items-center justify-center">
+                          <span className="text-[8px] text-titan-emerald">✓</span>
+                        </span>
+                        {c}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </TabsContent>
+
+          {/* ROI Tab — Savings Dashboard */}
+          <TabsContent value="roi" className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                { label: "Time Saved", value: "18.5h", unit: "this week", icon: Zap, color: "text-titan-teal" },
+                { label: "Money Saved", value: "$540", unit: "this week", icon: TrendingUp, color: "text-titan-emerald" },
+                { label: "Tasks Auto'd", value: "142", unit: "completed", icon: Orbit, color: "text-titan-golden" },
+              ].map((m, i) => (
+                <motion.div key={i} className="p-5 rounded-xl bg-titan-card/60 border border-titan-border/30" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
+                  <div className="flex items-center justify-between mb-3">
+                    <p className="text-xs font-mono text-titan-muted">{m.label}</p>
+                    <m.icon className={`h-4 w-4 ${m.color}`} />
+                  </div>
+                  <p className="text-3xl font-bold tracking-tight">{m.value}</p>
+                  <p className="text-[11px] text-titan-muted/70 mt-1">{m.unit}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <Card className="p-5 bg-titan-card/60 border-titan-border/30">
+              <h3 className="text-sm font-semibold mb-4">Agent Productivity</h3>
+              <div className="space-y-3">
+                {ORBITING_AGENTS.map((agent, i) => (
+                  <div key={agent.id} className="flex items-center gap-3">
+                    <span className="text-lg">{agent.emoji}</span>
+                    <div className="flex-1">
+                      <div className="flex justify-between text-xs mb-0.5">
+                        <span className="font-medium">{agent.name}</span>
+                        <span className="text-titan-muted">{agent.xp.toLocaleString()} XP · Lv{agent.level}</span>
+                      </div>
+                      <div className="h-1.5 bg-titan-border/30 rounded-full overflow-hidden">
+                        <motion.div
+                          className="h-full rounded-full"
+                          style={{ width: `${Math.min((agent.xp / agent.xpToNext) * 100, 100)}%`, background: `linear-gradient(90deg, ${agent.color}, ${agent.color}88)` }}
+                          initial={{ width: 0 }}
+                          animate={{ width: `${Math.min((agent.xp / agent.xpToNext) * 100, 100)}%` }}
+                          transition={{ duration: 1, delay: i * 0.1 }}
+                        />
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-mono text-titan-muted/70">{agent.specialty}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </TabsContent>
+
+          {/* BAU Tab — Business as Usual */}
+          <TabsContent value="bau" className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                { name: "Daily Report", status: "active", schedule: "Every 8h", last: "2h ago", desc: "Swarm activity summary + key metrics" },
+                { name: "Market Scan", status: "active", schedule: "Every 4h", last: "1h ago", desc: "Crypto + travel price monitoring" },
+                { name: "Budget Check", status: "active", schedule: "Daily 9AM", last: "Today", desc: "Expense tracking + savings report" },
+                { name: "Content Digest", status: "paused", schedule: "Weekly Mon", last: "3d ago", desc: "Curated reading list from research agents" },
+              ].map((task, i) => (
+                <motion.div key={i} className="p-4 rounded-xl bg-titan-card/60 border border-titan-border/30" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="text-sm font-semibold">{task.name}</h4>
+                    <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full border ${task.status === "active" ? "bg-titan-emerald/10 text-titan-emerald border-titan-emerald/20" : "bg-titan-amber/10 text-titan-amber border-titan-amber/20"}`}>
+                      {task.status}
+                    </span>
+                  </div>
+                  <p className="text-xs text-titan-muted/80 mb-2">{task.desc}</p>
+                  <div className="flex items-center gap-3 text-[10px] font-mono text-titan-muted">
+                    <span>🕐 {task.schedule}</span>
+                    <span>⚡ {task.last}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </TabsContent>
+
+          {/* Progression Tab — God-Tier */}
+          <TabsContent value="progression" className="space-y-6">
+            {/* God-Tier banner */}
+            <motion.div className="p-6 rounded-2xl bg-gradient-to-r from-titan-golden/20 via-titan-teal/10 to-transparent border border-titan-golden/30" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-titan-golden/20 flex items-center justify-center">
+                  <Rocket className="h-6 w-6 text-titan-golden" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg">Progression System</h3>
+                  <p className="text-sm text-titan-muted/80">Level up agents to unlock God-Tier capabilities</p>
+                </div>
+                <Badge className="ml-auto bg-gradient-to-r from-titan-golden to-titan-amber text-titan-bg border-0 text-xs font-mono">Next: Lv.30</Badge>
+              </div>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                { title: "Unlocked Achievements", value: "8/24", desc: "Certified, Speed Demon, Auto-Pilot, Globetrotter, Analyst, Trader, Collector, Pioneer", color: "text-titan-teal" },
+                { title: "God-Tier Agents", value: "0", desc: "Reach Lv.30+ on any agent to unlock self-evolving capabilities", color: "text-titan-golden" },
+                { title: "Total XP Earned", value: "14,300", desc: "Across all agents in your swarm", color: "text-titan-emerald" },
+              ].map((s, i) => (
+                <motion.div key={i} className="p-4 rounded-xl bg-titan-card/60 border border-titan-border/30" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
+                  <p className={`text-2xl font-bold ${s.color}`}>{s.value}</p>
+                  <p className="text-sm font-semibold mt-1">{s.title}</p>
+                  <p className="text-[11px] text-titan-muted/70 mt-1">{s.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Achievement grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {["Certified Agent", "Speed Demon", "Auto-Pilot", "Globetrotter", "Data Analyst", "Crypto Trader", "Content Master", "Swarm Commander"].map((ach, i) => {
+                const unlocked = i < 6;
+                return (
+                  <motion.div key={i} className={`p-3 rounded-xl border text-center ${unlocked ? "bg-titan-card/60 border-titan-teal/20" : "bg-titan-surface/40 border-titan-border/10 opacity-40"}`} whileHover={unlocked ? { y: -2 } : {}}>
+                    <span className={`text-2xl ${unlocked ? "" : "grayscale"}`}>{["🏆", "⚡", "🤖", "🌍", "📊", "🧠", "✍️", "🌀"][i]}</span>
+                    <p className="text-xs mt-1">{ach}</p>
+                    {unlocked && <p className="text-[9px] text-titan-teal font-mono mt-0.5">✓ Unlocked</p>}
+                  </motion.div>
+                );
+              })}
+            </div>
+          </TabsContent>
+        </Tabs>

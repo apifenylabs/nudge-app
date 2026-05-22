@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { MessageSquareText, Star, Send } from 'lucide-react';
+import { useState, useRef, useCallback } from 'react';
+import { MessageSquareText, Star, Send, Camera, X, Image as ImageIcon, Upload } from 'lucide-react';
 
 interface TipFormProps {
   stationId: string;
@@ -25,6 +25,48 @@ export default function TipForm({ stationId, stationName, onTipSubmitted }: TipF
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [photoPreview, setPhotoPreview] = useState<string | null>(null);
+  const [photoFile, setPhotoFile] = useState<File | null>(null);
+  const [isDragOver, setIsDragOver] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleFileSelect = useCallback((file: File) => {
+    if (file.size > 5 * 1024 * 1024) {
+      setError('Photo must be under 5MB');
+      return;
+    }
+    if (!file.type.startsWith('image/')) {
+      setError('Please select an image file');
+      return;
+    }
+    setPhotoFile(file);
+    const reader = new FileReader();
+    reader.onload = (e) => setPhotoPreview(e.target?.result as string);
+    reader.readAsDataURL(file);
+    setError('');
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragOver(true);
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragOver(false);
+  }, []);
+
+  const handleDrop = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragOver(false);
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+      handleFileSelect(files[0]);
+    }
+  }, [handleFileSelect]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,6 +84,15 @@ export default function TipForm({ stationId, stationName, onTipSubmitted }: TipF
 
     setSubmitting(true);
     try {
+      let photoDataUrl: string | undefined;
+      if (photoFile) {
+        const reader = new FileReader();
+        photoDataUrl = await new Promise((resolve) => {
+          reader.onload = (e) => resolve(e.target?.result as string);
+          reader.readAsDataURL(photoFile);
+        });
+      }
+
       const res = await fetch('/api/tips', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -51,6 +102,7 @@ export default function TipForm({ stationId, stationName, onTipSubmitted }: TipF
           text,
           category,
           rating: rating > 0 ? rating : undefined,
+          photoUrl: photoDataUrl,
         }),
       });
 
@@ -63,8 +115,10 @@ export default function TipForm({ stationId, stationName, onTipSubmitted }: TipF
       setText('');
       setCategory('general');
       setRating(0);
+      setPhotoPreview(null);
+      setPhotoFile(null);
       onTipSubmitted?.();
-    } catch (err) {
+    } catch {
       setError('Something went wrong. Please try again.');
     } finally {
       setSubmitting(false);
@@ -98,6 +152,69 @@ export default function TipForm({ stationId, stationName, onTipSubmitted }: TipF
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-3">
+        {/* Photo upload with drag-and-drop */}
+        <div>
+          <input
+            type="file"
+            ref={fileInputRef}
+            accept="image/*"
+            className="hidden"
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              if (file) handleFileSelect(file);
+              e.target.value = '';
+            }}
+          />
+          {photoPreview ? (
+            <div className="relative mb-3 rounded-xl overflow-hidden border border-gray-200 group">
+              <img
+                src={photoPreview}
+                alt="Upload preview"
+                className="w-full h-36 object-cover"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+              <button
+                type="button"
+                onClick={() => {
+                  setPhotoPreview(null);
+                  setPhotoFile(null);
+                  if (fileInputRef.current) fileInputRef.current.value = '';
+                }}
+                className="absolute top-2 right-2 bg-black/60 text-white rounded-full p-1.5 hover:bg-black/80 transition-colors opacity-90"
+              >
+                <X size={14} />
+              </button>
+              <div className="absolute bottom-2 left-2 bg-black/50 text-white text-[10px] px-2 py-1 rounded-md backdrop-blur-sm">
+                {(photoFile!.size / 1024).toFixed(0)} KB
+              </div>
+            </div>
+          ) : (
+            <div
+              onDragOver={handleDragOver}
+              onDragLeave={handleDragLeave}
+              onDrop={handleDrop}
+              onClick={() => fileInputRef.current?.click()}
+              className={`flex flex-col items-center justify-center gap-1.5 w-full px-3 py-5 text-sm border-2 border-dashed rounded-xl cursor-pointer transition-all mb-3 ${
+                isDragOver
+                  ? 'border-sky-400 bg-sky-50 text-sky-600'
+                  : 'border-gray-300 text-gray-400 hover:border-sky-400 hover:text-sky-500 hover:bg-sky-50/50'
+              }`}
+            >
+              {isDragOver ? (
+                <Upload size={24} className="text-sky-500" />
+              ) : (
+                <Camera size={24} />
+              )}
+              <span className="text-xs font-medium">
+                {isDragOver ? 'Drop photo here' : 'Drag & drop a photo or click to browse'}
+              </span>
+              <span className="text-[10px] text-gray-400">
+                Optional — helps other travelers (max 5MB)
+              </span>
+            </div>
+          )}
+        </div>
+
         {/* Author */}
         <div>
           <input
@@ -136,8 +253,8 @@ export default function TipForm({ stationId, stationName, onTipSubmitted }: TipF
               key={star}
               type="button"
               onClick={() => setRating(star)}
-              className={`transition-colors ${
-                star <= rating ? 'text-amber-400' : 'text-gray-200'
+              className={`transition-all ${
+                star <= rating ? 'text-amber-400 scale-110' : 'text-gray-200 hover:text-amber-300'
               }`}
             >
               <Star size={16} fill={star <= rating ? 'currentColor' : 'none'} />
@@ -159,14 +276,15 @@ export default function TipForm({ stationId, stationName, onTipSubmitted }: TipF
             className="w-full h-20 px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 resize-none text-gray-700 placeholder-gray-400"
             maxLength={500}
           />
-          <div className="text-right text-[10px] text-gray-400">
-            {text.length}/500
+          <div className="flex items-center justify-between">
+            {error && (
+              <p className="text-[10px] text-red-500">{error}</p>
+            )}
+            <div className={`text-right text-[10px] ${text.length > 450 ? 'text-amber-500' : 'text-gray-400'} ml-auto`}>
+              {text.length}/500
+            </div>
           </div>
         </div>
-
-        {error && (
-          <p className="text-xs text-red-500">{error}</p>
-        )}
 
         <button
           type="submit"

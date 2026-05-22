@@ -60,6 +60,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: 'https://ev-charging-asia.vercel.app/about', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: 'https://ev-charging-asia.vercel.app/blog', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
     { url: 'https://ev-charging-asia.vercel.app/compare', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: 'https://ev-charging-asia.vercel.app/seasons', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     ...routeUrls,
     ...itineraryUrls,
     ...blogUrls,

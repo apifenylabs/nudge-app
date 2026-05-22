@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import { MessageSquareText, ThumbsUp, Star, Clock, ChevronDown, ChevronUp, Filter, SortDesc, ArrowUpDown } from 'lucide-react';
+import { MessageSquareText, ThumbsUp, Star, Clock, ChevronDown, ChevronUp, Filter, SortDesc, ArrowUpDown, Loader2 } from 'lucide-react';
 
 interface Tip {
   id: string;
@@ -12,6 +12,7 @@ interface Tip {
   rating?: number;
   createdAt: string;
   helpful: number;
+  photoUrl?: string;
 }
 
 interface TipListProps {
@@ -31,13 +32,19 @@ const CATEGORIES = ['all', 'family', 'luxury', 'charging', 'wellness', 'general'
 
 type SortMode = 'newest' | 'helpful' | 'rating';
 
+const PAGE_SIZE = 5;
+
 export default function TipList({ stationId, refreshKey = 0 }: TipListProps) {
   const [tips, setTips] = useState<Tip[]>([]);
   const [loading, setLoading] = useState(true);
-  const [showAll, setShowAll] = useState(false);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [error, setError] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortMode, setSortMode] = useState<SortMode>('newest');
   const [helpfulVotes, setHelpfulVotes] = useState<Record<string, boolean>>({});
+  const [page, setPage] = useState(1);
+  const [total, setTotal] = useState(0);
+  const [hasMore, setHasMore] = useState(false);
 
   // Load helpful votes from localStorage on mount
   useEffect(() => {
@@ -51,25 +58,46 @@ export default function TipList({ stationId, refreshKey = 0 }: TipListProps) {
     }
   }, [stationId]);
 
-  const fetchTips = useCallback(async () => {
-    setLoading(true);
+  const fetchTips = useCallback(async (pageNum: number = 1, append: boolean = false) => {
+    if (!append) {
+      setLoading(true);
+    } else {
+      setLoadingMore(true);
+    }
+    setError('');
     try {
-      const res = await fetch(`/api/tips?stationId=${encodeURIComponent(stationId)}`);
+      const res = await fetch(`/api/tips?stationId=${encodeURIComponent(stationId)}&page=${pageNum}`);
+      if (!res.ok) throw new Error('Failed to fetch');
       const data = await res.json();
-      setTips(data.tips || []);
+      if (append) {
+        setTips(prev => [...prev, ...(data.tips || [])]);
+      } else {
+        setTips(data.tips || []);
+      }
+      setTotal(data.total || 0);
+      setHasMore(data.hasMore || false);
+      setPage(pageNum);
     } catch {
-      setTips([]);
+      if (!append) setTips([]);
+      setError('Could not load tips');
     } finally {
       setLoading(false);
+      setLoadingMore(false);
     }
   }, [stationId]);
 
   useEffect(() => {
-    fetchTips();
+    fetchTips(1, false);
   }, [fetchTips, refreshKey]);
 
+  const handleLoadMore = () => {
+    if (!loadingMore && hasMore) {
+      fetchTips(page + 1, true);
+    }
+  };
+
   const handleHelpful = useCallback((tipId: string) => {
-    if (helpfulVotes[tipId]) return; // Already voted
+    if (helpfulVotes[tipId]) return;
 
     setTips(prev => prev.map(t => t.id === tipId ? { ...t, helpful: t.helpful + 1 } : t));
     const updated = { ...helpfulVotes, [tipId]: true };
@@ -80,7 +108,6 @@ export default function TipList({ stationId, refreshKey = 0 }: TipListProps) {
       // localStorage not available
     }
 
-    // Fire-and-forget API call to persist the vote
     fetch('/api/tips/vote', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -88,7 +115,7 @@ export default function TipList({ stationId, refreshKey = 0 }: TipListProps) {
     }).catch(() => {});
   }, [helpfulVotes, stationId]);
 
-  // Filter and sort tips
+  // Filter and sort locally
   const filteredTips = tips.filter(t => activeCategory === 'all' || t.category === activeCategory);
 
   const sortedTips = [...filteredTips].sort((a, b) => {
@@ -104,17 +131,14 @@ export default function TipList({ stationId, refreshKey = 0 }: TipListProps) {
     }
   });
 
-  const displayedTips = showAll ? sortedTips : sortedTips.slice(0, 3);
-
-  // Calculate rating stats
-  const ratingsWithValue = filteredTips.filter(t => t.rating != null && t.rating > 0);
-  const avgRating = ratingsWithValue.length > 0
-    ? ratingsWithValue.reduce((sum, t) => sum + (t.rating || 0), 0) / ratingsWithValue.length
+  // Calculate rating stats across all loaded tips
+  const allRatings = tips.filter(t => t.rating != null && t.rating > 0);
+  const avgRating = allRatings.length > 0
+    ? allRatings.reduce((sum, t) => sum + (t.rating || 0), 0) / allRatings.length
     : 0;
 
-  // Rating breakdown
   const ratingBreakdown: Record<number, number> = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
-  ratingsWithValue.forEach(t => {
+  allRatings.forEach(t => {
     const r = t.rating || 0;
     if (r >= 1 && r <= 5) ratingBreakdown[r]++;
   });
@@ -123,7 +147,7 @@ export default function TipList({ stationId, refreshKey = 0 }: TipListProps) {
     return (
       <div className="bg-gray-50 rounded-xl p-4">
         <div className="flex items-center gap-2 text-xs text-gray-400 mb-3">
-          <MessageSquareText size={14} />
+          <Loader2 size={14} className="animate-spin" />
           Loading tips...
         </div>
         <div className="space-y-2">
@@ -161,8 +185,11 @@ export default function TipList({ stationId, refreshKey = 0 }: TipListProps) {
       <div className="flex items-center justify-between mb-3">
         <h4 className="text-sm font-bold text-gray-900 flex items-center gap-2">
           <MessageSquareText size={16} className="text-sky-500" />
-          Traveler Tips ({filteredTips.length})
+          Traveler Tips ({total})
         </h4>
+        {error && (
+          <span className="text-[10px] text-red-500">{error}</span>
+        )}
       </div>
 
       {/* Average rating */}
@@ -179,12 +206,12 @@ export default function TipList({ stationId, refreshKey = 0 }: TipListProps) {
             ))}
           </div>
           <span className="text-sm font-semibold text-gray-900">{avgRating.toFixed(1)}</span>
-          <span className="text-xs text-gray-400">({ratingsWithValue.length} ratings)</span>
+          <span className="text-xs text-gray-400">({allRatings.length} ratings)</span>
         </div>
       )}
 
       {/* Rating breakdown */}
-      {ratingsWithValue.length > 0 && (
+      {allRatings.length > 0 && (
         <div className="bg-white rounded-lg border border-gray-100 p-3 mb-3">
           {[5, 4, 3, 2, 1].map(star => (
             <div key={star} className="flex items-center gap-2 text-xs mb-1 last:mb-0">
@@ -193,7 +220,7 @@ export default function TipList({ stationId, refreshKey = 0 }: TipListProps) {
               <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-amber-400 rounded-full"
-                  style={{ width: `${ratingsWithValue.length > 0 ? (ratingBreakdown[star] / ratingsWithValue.length) * 100 : 0}%` }}
+                  style={{ width: `${allRatings.length > 0 ? (ratingBreakdown[star] / allRatings.length) * 100 : 0}%` }}
                 />
               </div>
               <span className="text-gray-400 w-4 text-right">{ratingBreakdown[star]}</span>
@@ -207,7 +234,7 @@ export default function TipList({ stationId, refreshKey = 0 }: TipListProps) {
         {CATEGORIES.map(cat => (
           <button
             key={cat}
-            onClick={() => { setActiveCategory(cat); setShowAll(false); }}
+            onClick={() => { setActiveCategory(cat); }}
             className={`text-[11px] px-2 py-1 rounded-lg font-medium transition-colors ${
               activeCategory === cat
                 ? 'bg-sky-500 text-white'
@@ -238,65 +265,91 @@ export default function TipList({ stationId, refreshKey = 0 }: TipListProps) {
         ))}
       </div>
 
+      {/* Tips list */}
       <div className="space-y-2">
-        {displayedTips.map((tip) => (
-          <div key={tip.id} className="bg-white rounded-lg border border-gray-100 p-3">
-            <div className="flex items-start justify-between mb-1.5">
-              <div className="flex items-center gap-1.5">
-                <span className="text-xs font-semibold text-gray-900">{tip.author}</span>
-                <span className="text-[10px] px-1.5 py-0.5 bg-gray-100 rounded text-gray-500">
-                  {CATEGORY_EMOJIS[tip.category] || '💬'} {tip.category}
-                </span>
-              </div>
-              <div className="flex items-center gap-1 text-[10px] text-gray-400">
-                <Clock size={10} />
-                {new Date(tip.createdAt).toLocaleDateString('en-US', {
-                  month: 'short',
-                  day: 'numeric',
-                  year: 'numeric',
-                })}
-              </div>
-            </div>
-
-            <p className="text-xs text-gray-700 leading-relaxed mb-2">{tip.text}</p>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                {tip.rating && (
-                  <div className="flex items-center gap-0.5">
-                    {Array.from({ length: tip.rating }).map((_, i) => (
-                      <Star key={i} size={11} className="text-amber-400" fill="currentColor" />
-                    ))}
-                  </div>
-                )}
-              </div>
-              <button
-                onClick={() => handleHelpful(tip.id)}
-                disabled={helpfulVotes[tip.id]}
-                className={`flex items-center gap-1 text-[10px] transition-colors ${
-                  helpfulVotes[tip.id]
-                    ? 'text-sky-500'
-                    : 'text-gray-400 hover:text-sky-600'
-                }`}
-                title={helpfulVotes[tip.id] ? 'You found this helpful' : 'Mark as helpful'}
-              >
-                <ThumbsUp size={11} />
-                {tip.helpful}
-              </button>
-            </div>
+        {sortedTips.length === 0 ? (
+          <div className="bg-white rounded-lg p-4 text-center text-xs text-gray-400">
+            No {activeCategory !== 'all' ? activeCategory : ''} tips found. Try a different category filter.
           </div>
-        ))}
+        ) : (
+          sortedTips.map((tip) => (
+            <div key={tip.id} className="bg-white rounded-lg border border-gray-100 p-3">
+              <div className="flex items-start justify-between mb-1.5">
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs font-semibold text-gray-900">{tip.author}</span>
+                  <span className="text-[10px] px-1.5 py-0.5 bg-gray-100 rounded text-gray-500">
+                    {CATEGORY_EMOJIS[tip.category] || '💬'} {tip.category}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1 text-[10px] text-gray-400">
+                  <Clock size={10} />
+                  {new Date(tip.createdAt).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                  })}
+                </div>
+              </div>
+
+              {tip.photoUrl && (
+                <div className="mb-2 rounded-lg overflow-hidden border border-gray-100">
+                  <img
+                    src={tip.photoUrl}
+                    alt={`Photo by ${tip.author}`}
+                    className="w-full h-40 object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+
+              <p className="text-xs text-gray-700 leading-relaxed mb-2">{tip.text}</p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  {tip.rating && (
+                    <div className="flex items-center gap-0.5">
+                      {Array.from({ length: tip.rating }).map((_, i) => (
+                        <Star key={i} size={11} className="text-amber-400" fill="currentColor" />
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <button
+                  onClick={() => handleHelpful(tip.id)}
+                  disabled={helpfulVotes[tip.id]}
+                  className={`flex items-center gap-1 text-[10px] transition-colors ${
+                    helpfulVotes[tip.id]
+                      ? 'text-sky-500'
+                      : 'text-gray-400 hover:text-sky-600'
+                  }`}
+                  title={helpfulVotes[tip.id] ? 'You found this helpful' : 'Mark as helpful'}
+                >
+                  <ThumbsUp size={11} />
+                  {tip.helpful}
+                </button>
+              </div>
+            </div>
+          ))
+        )}
       </div>
 
-      {sortedTips.length > 3 && (
+      {/* Pagination: Load more */}
+      {hasMore && (
         <button
-          onClick={() => setShowAll(!showAll)}
-          className="mt-3 flex items-center gap-1 text-xs text-sky-600 hover:text-sky-700 font-medium mx-auto"
+          onClick={handleLoadMore}
+          disabled={loadingMore}
+          className="mt-3 w-full flex items-center justify-center gap-2 text-xs py-2.5 bg-white border border-gray-200 rounded-lg hover:border-sky-200 hover:text-sky-700 text-gray-600 font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {showAll ? (
-            <>Show less <ChevronUp size={14} /></>
+          {loadingMore ? (
+            <>
+              <Loader2 size={14} className="animate-spin" />
+              Loading...
+            </>
           ) : (
-            <>View all {sortedTips.length} tips <ChevronDown size={14} /></>
+            <>
+              <ChevronDown size={14} />
+              Load More Tips ({tips.length} of {total})
+            </>
           )}
         </button>
       )}

@@ -3,8 +3,10 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import {
   Mic, Square, Loader2, CheckCircle, AlertCircle,
-  Play, RotateCcw, Pencil, Send, Headphones, Volume2
+  Play, RotateCcw, Pencil, Send, Headphones, Volume2,
+  WifiOff, HardDrive, Sparkles
 } from 'lucide-react'
+import ConfidenceBadge from './ConfidenceBadge'
 
 interface VoiceRecorderProps {
   onTranscribed: (text: string, taskCreated?: boolean) => void
@@ -14,6 +16,10 @@ interface VoiceRecorderProps {
   requireConfirmation?: boolean
   /** Called when the user cancels the review (no-op by default) */
   onCancel?: () => void
+  /** Quality estimate (0-1) for the recording, shown as a badge */
+  qualityEstimate?: number | null
+  /** When true, indicates the recording was saved offline */
+  isOfflineRecording?: boolean
 }
 
 type RecorderState =
@@ -51,6 +57,9 @@ export default function VoiceRecorder({
   const [audioUrl, setAudioUrl] = useState<string | null>(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [editing, setEditing] = useState(false)
+  const [isOffline, setIsOffline] = useState(typeof navigator !== 'undefined' ? !navigator.onLine : false)
+  const [qualityEstimate, setQualityEstimate] = useState<number | null>(null)
+  const [offlineSaved, setOfflineSaved] = useState(false)
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null)
   const chunksRef = useRef<Blob[]>([])
@@ -116,12 +125,26 @@ export default function VoiceRecorder({
     }, SILENCE_TIMEOUT_MS)
   }, [])
 
+  // Track online/offline status
+  useEffect(() => {
+    const goOnline = () => setIsOffline(false)
+    const goOffline = () => setIsOffline(true)
+    window.addEventListener('online', goOnline)
+    window.addEventListener('offline', goOffline)
+    return () => {
+      window.removeEventListener('online', goOnline)
+      window.removeEventListener('offline', goOffline)
+    }
+  }, [])
+
   const startRecording = useCallback(async () => {
     try {
       setState('recording')
       setRecordingDuration(0)
       setErrorMsg('')
       setAudioUrl(null)
+      setOfflineSaved(false)
+      setQualityEstimate(null)
       chunksRef.current = []
 
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
@@ -191,44 +214,101 @@ export default function VoiceRecorder({
           const url = URL.createObjectURL(blob)
           setAudioUrl(url)
 
-          const formData = new FormData()
-          formData.append('audio', blob, 'recording.webm')
+          const isCurrentlyOffline = !navigator.onLine
 
-          const res = await fetch('/api/transcribe', {
-            method: 'POST',
-            body: formData,
-          })
+          if (isCurrentlyOffline) {
+            // Save recording to IndexedDB for later transcription
+            try {
+              const { saveRecording } = await import('@/lib/voice-indexeddb')
+              const recording = await saveRecording(blob, recordingDuration * 1000)
+              setOfflineSaved(true)
+              setQualityEstimate(recording.qualityEstimate || null)
 
-          if (!res.ok) {
-            throw new Error('Transcription failed')
-          }
-
-          const data = await res.json()
-
-          let text: string
-          if (data.mock) {
-            text = MOCK_PHRASES[Math.floor(Math.random() * MOCK_PHRASES.length)]
+              // Show saved confirmation
+              setState('success')
+              setTranscribedText('Recording saved offline — will transcribe when connected')
+              setTimeout(() => {
+                setState('idle')
+                setTranscribedText('')
+                setAudioUrl(null)
+              }, 3000)
+            } catch (dbErr) {
+              console.error('Failed to save offline recording:', dbErr)
+              setErrorMsg('Could not save recording offline. Check storage space.')
+              setState('error')
+              setTimeout(() => setState('idle'), 3000)
+            }
           } else {
-            text = data.text
-          }
+            // Online: transcribe immediately
+            const formData = new FormData()
+            formData.append('audio', blob, 'recording.webm')
 
-          setTranscribedText(text)
+            const res = await fetch('/api/transcribe', {
+              method: 'POST',
+              body: formData,
+            })
 
-          if (requireConfirmation) {
-            // Show review step — let user confirm, edit, or re-record
-            setEditedText(text)
-            setState('review')
-          } else {
-            onTranscribed(text)
-            setState('success')
-            setTimeout(() => {
-              setState('idle')
-              setTranscribedText('')
-              setAudioUrl(null)
-            }, 3000)
+            if (!res.ok) {
+              throw new Error('Transcription failed')
+            }
+
+            const data = await res.json()
+
+            let text: string
+            if (data.mock) {
+              text = MOCK_PHRASES[Math.floor(Math.random() * MOCK_PHRASES.length)]
+            } else {
+              text = data.text
+            }
+
+            setTranscribedText(text)
+
+            // Calculate quality estimate from recording duration and audio level
+            const estimatedQuality = recordingDuration < 1 ? 0.2
+              : recordingDuration < 2 ? 0.5
+              : recordingDuration > 120 ? 0.5
+              : 0.85
+            setQualityEstimate(estimatedQuality)
+
+            if (requireConfirmation) {
+              setEditedText(text)
+              setState('review')
+            } else {
+              onTranscribed(text)
+              setState('success')
+              setTimeout(() => {
+                setState('idle')
+                setTranscribedText('')
+                setAudioUrl(null)
+              }, 3000)
+            }
+
+            // Cache transcription result
+            try {
+              const { cacheTranscription } = await import('@/lib/voice-indexeddb')
+              await cacheTranscription(text, estimatedQuality, recordingDuration * 1000, recordingDuration.toString())
+            } catch {}
           }
         } catch (err) {
           console.error('Transcription error:', err)
+          // If we're offline, try to save for later
+          if (!navigator.onLine && chunksRef.current.length > 0) {
+            try {
+              const blob = new Blob(chunksRef.current)
+              const { saveRecording } = await import('@/lib/voice-indexeddb')
+              const recording = await saveRecording(blob, recordingDuration * 1000)
+              setOfflineSaved(true)
+              setQualityEstimate(recording.qualityEstimate || null)
+              setState('success')
+              setTranscribedText('Recording saved offline — will transcribe when connected')
+              setTimeout(() => {
+                setState('idle')
+                setTranscribedText('')
+                setAudioUrl(null)
+              }, 3000)
+              return
+            } catch {}
+          }
           setErrorMsg('Could not transcribe. Try again.')
           setState('error')
           setTimeout(() => setState('idle'), 3000)
@@ -353,6 +433,19 @@ export default function VoiceRecorder({
           </div>
         )}
 
+        {/* Confidence badge */}
+        <ConfidenceBadge quality={qualityEstimate} size="md" />
+
+        {/* Offline indicator */}
+        {isOffline && (
+          <div className="flex items-center gap-2 p-2.5 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-200 dark:border-amber-800">
+            <WifiOff className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+            <span className="text-xs text-amber-700 dark:text-amber-300">
+              You&apos;re offline — task will transcribe when connected
+            </span>
+          </div>
+        )}
+
         {/* Transcription display / edit */}
         <div>
           <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1.5">
@@ -379,6 +472,24 @@ export default function VoiceRecorder({
             </div>
           )}
         </div>
+
+        {/* Character count & word estimate */}
+        {editedText && !editing && (
+          <div className="flex items-center gap-3 text-[11px] text-muted-foreground/60">
+            <span>{editedText.length} chars</span>
+            <span>&middot;</span>
+            <span>~{editedText.split(/\s+/).filter(Boolean).length} words</span>
+            {isOffline && (
+              <>
+                <span>&middot;</span>
+                <span className="flex items-center gap-1 text-amber-500">
+                  <HardDrive className="w-3 h-3" />
+                  Saved offline
+                </span>
+              </>
+            )}
+          </div>
+        )}
 
         {/* Action buttons */}
         <div className="flex gap-2">
@@ -458,14 +569,24 @@ export default function VoiceRecorder({
   return (
     <div className="w-full">
       {state === 'idle' && (
-        <button
-          onClick={startRecording}
-          className="w-full group flex items-center justify-center gap-3 px-8 py-5 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white rounded-2xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98]"
-        >
-          <Mic size={22} className="group-hover:scale-110 transition-transform" />
-          <span>Press &amp; speak your task</span>
-          <kbd className="hidden sm:inline-flex text-[10px] px-1.5 py-0.5 rounded bg-white/20 text-white/80 font-mono ml-2">Space</kbd>
-        </button>
+        <>
+          <button
+            onClick={startRecording}
+            className="w-full group flex items-center justify-center gap-3 px-8 py-5 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white rounded-2xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98]"
+          >
+            <Mic size={22} className="group-hover:scale-110 transition-transform" />
+            <span>Press &amp; speak your task</span>
+            <kbd className="hidden sm:inline-flex text-[10px] px-1.5 py-0.5 rounded bg-white/20 text-white/80 font-mono ml-2">Space</kbd>
+          </button>
+
+          {/* Offline indicator above button */}
+          {isOffline && (
+            <div className="flex items-center justify-center gap-2 mt-2 text-xs text-amber-600 dark:text-amber-400">
+              <HardDrive className="w-3.5 h-3.5" />
+              <span>Recording will be saved offline and transcribed later</span>
+            </div>
+          )}
+        </>
       )}
 
       {state === 'recording' && (
@@ -529,11 +650,26 @@ export default function VoiceRecorder({
 
       {state === 'success' && (
         <div className="flex flex-col items-center gap-2 py-6 animate-in fade-in zoom-in-95 duration-200">
-          <CheckCircle size={28} className="text-green-500" />
+          {offlineSaved ? (
+            <HardDrive size={28} className="text-indigo-500" />
+          ) : (
+            <CheckCircle size={28} className="text-green-500" />
+          )}
           <p className="text-sm text-foreground font-medium">
-            Heard: <span className="text-muted-foreground font-normal">&ldquo;{transcribedText}&rdquo;</span>
+            {offlineSaved ? 'Recording saved offline' : (
+              <>
+                Heard: <span className="text-muted-foreground font-normal">&ldquo;{transcribedText}&rdquo;</span>
+              </>
+            )}
           </p>
-          <p className="text-xs text-muted-foreground">Task created!</p>
+          {qualityEstimate !== null && !offlineSaved && (
+            <ConfidenceBadge quality={qualityEstimate} />
+          )}
+          {offlineSaved ? (
+            <p className="text-xs text-muted-foreground">Will transcribe when you&apos;re back online</p>
+          ) : (
+            <p className="text-xs text-muted-foreground">Task created!</p>
+          )}
         </div>
       )}
 

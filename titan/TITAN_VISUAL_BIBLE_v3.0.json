@@ -1,0 +1,33 @@
+{
+ "version": "3.0",
+ "project": "Titan",
+ "timestamp": "2026-05-21",
+ "design_tokens": {
+  "primary_teal": "#14B8A6",
+  "accent_golden": "#F59E0B",
+  "background": "#0F172A",
+  "card_bg": "#1E2937",
+  "text_primary": "#F1F5F9",
+  "success": "#10B981",
+  "font_family": "Inter, system-ui, sans-serif"
+ },
+ "ui_style": "warm_living_ecosystem_teal_golden_friendly_agents",
+ "features": ["game_modular_toggle", "theme_picker", "mobile_first", "particle_system"],
+ "per_screen_specs": {
+  "onboarding_theme_picker": "full-screen centered 2x2 card grid, warm background, hero illustrations",
+  "main_dashboard_game_view": "central glowing agent with orbiting companions, top ROI/Level bar, soft particles",
+  "visual_atelier": "left base models grid, center live preview, right skin library + orange Artify button",
+  "skill_forge": "three-column: templates left, dark editor center, preview+audit right",
+  "swarm_orchestrator": "circular map with pulsing energy lines, god-tier particles on level-up",
+  "audit_center": "large green certified banner + detailed OWASP/TDAD cards",
+  "byo_enterprise": "clean drag-drop manifest card + compliance scanner"
+ },
+ "agent_style": "friendly cartoon 3D style, big expressive eyes, soft smile, glowing halo, idle breathing animation",
+ "animations": {
+  "idle": "gentle float + scale 1.0-1.05 over 4s",
+  "level_up": "scale pop + golden particle burst",
+  "orbit": "slow circular path 20s infinite"
+ },
+ "mobile_responsive": "all screens fully thumb-friendly, vertical stacking",
+ "openclaw_recreation_instruction": "Use warm Living Ecosystem aesthetic with exact hex colors. Match friendly glowing agents, soft particles, premium feel."
+}

@@ -1,12 +1,23 @@
 import { MessageSquare, Calendar, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { allPosts } from '@/lib/generated-blog-data'
+import BlogListSchema from '@/components/BlogListSchema'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 const posts = allPosts
 
+const BASE_URL = 'https://nudge-sigma-liart.vercel.app'
+
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      {/* Structured data */}
+      <BlogListSchema posts={posts} baseUrl={BASE_URL} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: BASE_URL },
+        { name: 'Blog', url: `${BASE_URL}/blog` },
+      ]} />
+      <div className="min-h-screen bg-background">
       {/* Nav */}
       <nav className="border-b border-border/40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
@@ -106,5 +117,6 @@ export default function BlogPage() {
         </div>
       </footer>
     </div>
+    </>
   )
 }

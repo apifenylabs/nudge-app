@@ -7,6 +7,7 @@ import SmartTaskCreator from '@/components/dashboard/SmartTaskCreator'
 import TaskEditModal from '@/components/dashboard/TaskEditModal'
 import WhatsNextSuggestions from '@/components/dashboard/WhatsNextSuggestions'
 import BatchActionBar from '@/components/dashboard/BatchActionBar'
+import PendingRecordingsBanner from '@/components/voice/PendingRecordingsBanner'
 
 interface Task {
   id: string
@@ -667,6 +668,13 @@ export default function TaskBoard({ tasks, familyId, userId, familyName, userNam
           </div>
         ) : (
           <>
+            <PendingRecordingsBanner userId={userId} getAuthToken={async () => {
+              try {
+                const { supabase } = await import('@/lib/supabase')
+                const { data } = await supabase().auth.getSession()
+                return data.session?.access_token || null
+              } catch { return null }
+            }} />
             <TaskSection title="Overdue" count={overdueTasks.length} tasks={overdueTasks.filter(filterBySearch)} />
             <TaskSection title="Today" count={todayTasks.length} tasks={todayTasks.filter(filterBySearch)} />
             <TaskSection title="Upcoming" count={upcomingTasks.length} tasks={upcomingTasks.filter(filterBySearch)} defaultOpen={false} />

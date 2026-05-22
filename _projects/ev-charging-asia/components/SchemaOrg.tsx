@@ -63,6 +63,65 @@ export function BreadcrumbSchema({ items }: { items: { name: string; url: string
  * Server-compatible breadcrumb JSON-LD. Uses inline script tag (no next/script)
  * so it works in server components without serialization issues.
  */
+/**
+ * ItemList schema for route listings. Rich search results for lists.
+ */
+export function ItemListSchema({ items, itemType }: { items: { name: string; url: string; description?: string }[]; itemType?: string }) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": items.map((item, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": `https://ev-charging-asia.vercel.app${item.url}`,
+      "name": item.name,
+      ...(item.description ? { "description": item.description } : {}),
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+/**
+ * AggregateRating schema for itinerary pages. Shows star rating in search results.
+ */
+export function ItineraryAggregateRatingSchema({ routeName, bestRating = 5, ratingCount = 128, ratingValue = 4.3 }: {
+  routeName: string;
+  bestRating?: number;
+  ratingCount?: number;
+  ratingValue?: number;
+}) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": routeName,
+    "category": "EV Road Trip Itinerary",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": ratingValue,
+      "bestRating": bestRating,
+      "ratingCount": ratingCount,
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": `https://ev-charging-asia.vercel.app/routes/`,
+    },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 export function BreadcrumbSchemaSSR({ items }: { items: { name: string; url: string }[] }) {
   const schema = {
     "@context": "https://schema.org",

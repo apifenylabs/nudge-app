@@ -1,9 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Settings, Crown } from 'lucide-react'
+import { Settings, Crown, Mic } from 'lucide-react'
 import Link from 'next/link'
 import InAppNotifications from './InAppNotifications'
+import SyncStatus from './SyncStatus'
+import { getPendingRecordingCount } from '@/lib/voice-indexeddb'
 
 interface DashboardHeaderProps {
   user: {
@@ -19,6 +21,7 @@ interface DashboardHeaderProps {
 export default function DashboardHeader({ user, greeting, taskCount, pendingCount, userId }: DashboardHeaderProps) {
   const displayName = user.fullName || user.email?.split('@')[0] || 'there'
   const [plan, setPlan] = useState<string | null>(null)
+  const [voicePending, setVoicePending] = useState(0)
 
   useEffect(() => {
     if (!userId) return
@@ -31,6 +34,20 @@ export default function DashboardHeader({ user, greeting, taskCount, pendingCoun
       })
       .catch(() => {})
   }, [userId])
+
+  // Poll offline voice recording count
+  useEffect(() => {
+    const update = async () => {
+      try {
+        const count = await getPendingRecordingCount()
+        setVoicePending(count)
+      } catch { setVoicePending(0) }
+    }
+    update()
+    const interval = setInterval(update, 8000)
+    return () => clearInterval(interval)
+  }, [])
+
   const initial = displayName.charAt(0).toUpperCase()
 
   return (
@@ -48,6 +65,31 @@ export default function DashboardHeader({ user, greeting, taskCount, pendingCoun
         </div>
 
         <div className="flex items-center gap-1.5">
+          {/* Sync status indicator (shows offline/pending state) */}
+          {userId && (
+            <div className="hidden sm:flex">
+              <SyncStatus
+                familyId=""
+                userId={userId}
+                supabaseToken={async () => {
+                  try {
+                    const { supabase } = await import('@/lib/supabase')
+                    const { data } = await supabase().auth.getSession()
+                    return data.session?.access_token || null
+                  } catch { return null }
+                }}
+              />
+            </div>
+          )}
+
+          {/* Voice pending badge */}
+          {voicePending > 0 && (
+            <div className="flex items-center gap-1 px-2 py-1.5 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 animate-in fade-in">
+              <Mic className="w-3 h-3" />
+              <span className="text-2xs font-medium">{voicePending}</span>
+            </div>
+          )}
+
           {/* Notification bell */}
           {userId && <InAppNotifications userId={userId} />}
 
