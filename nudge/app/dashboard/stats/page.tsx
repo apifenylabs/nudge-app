@@ -8,7 +8,7 @@ export default async function StatsPage() {
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/auth/login')
 
-  // Get family
+  // Verify user is in a family
   const { data: membership } = await supabase
     .from('family_members')
     .select('family_id')
@@ -18,12 +18,5 @@ export default async function StatsPage() {
 
   if (!membership) redirect('/onboarding')
 
-  // Get tasks for stats
-  const { data: tasks } = await supabase
-    .from('tasks')
-    .select('*')
-    .eq('family_id', membership.family_id)
-    .order('created_at', { ascending: false })
-
-  return <StatsPageClient tasks={tasks || []} />
+  return <StatsPageClient />
 }
