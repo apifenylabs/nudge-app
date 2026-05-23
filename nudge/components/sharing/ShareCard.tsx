@@ -1,7 +1,8 @@
 'use client'
 
 import { useRef, useEffect, useState, useCallback } from 'react'
-import { Download, Share2, Check, Loader2, X } from 'lucide-react'
+import { Download, Share2, Check, Loader2, X, Sparkles } from 'lucide-react'
+import SocialSharePanel from './SocialSharePanel'
 
 interface ShareCardConfig {
   taskTitle: string
@@ -11,22 +12,26 @@ interface ShareCardConfig {
   familyName?: string
   priority?: 'low' | 'medium' | 'high' | 'urgent'
   assignee?: string
+  taskId?: string
 }
 
 interface ShareCardProps {
   config: ShareCardConfig
   onClose?: () => void
+  userId?: string
 }
 
 /**
  * Polaroid-style shareable task completion card.
  * Renders to an SVG/Canvas element for download or sharing.
  */
-export default function ShareCard({ config, onClose }: ShareCardProps) {
+export default function ShareCard({ config, onClose, userId }: ShareCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)
   const [svgDataUrl, setSvgDataUrl] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
   const [downloading, setDownloading] = useState(false)
+
+  const taskId = config.taskId || ''
 
   const {
     taskTitle,
@@ -201,6 +206,20 @@ export default function ShareCard({ config, onClose }: ShareCardProps) {
             </div>
           </div>
         </div>
+
+        {/* Social sharing row */}
+        {userId && taskId && (
+          <div className="border-t border-gray-100 dark:border-gray-800 pt-4 mt-2">
+            <SocialSharePanel
+              taskId={taskId}
+              taskTitle={taskTitle}
+              taskDescription={taskDescription}
+              completedBy={completedBy}
+              familyName={familyName}
+              userId={userId}
+            />
+          </div>
+        )}
 
         {/* Action buttons */}
         <div className="flex gap-3">

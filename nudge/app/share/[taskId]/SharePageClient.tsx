@@ -1,8 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { CheckCircle, Download, Share2, Check, Loader2, ArrowLeft } from 'lucide-react'
+import { CheckCircle, Download, Share2, Check, Loader2, ArrowLeft, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import SocialSharePanel from '@/components/sharing/SocialSharePanel'
 
 interface TaskData {
   id: string
@@ -18,6 +19,15 @@ interface TaskData {
 }
 
 export default function SharePageClient({ task }: { task: TaskData }) {
+  // Extract userId from URL params if available (for share tracking)
+  const [userId, setUserId] = useState<string>('')
+
+  useEffect(() => {
+    // Try to find userId from the URL search params
+    const params = new URLSearchParams(window.location.search)
+    const uid = params.get('userId') || params.get('ref') || ''
+    setUserId(uid)
+  }, [])
   const [copied, setCopied] = useState(false)
   const [downloading, setDownloading] = useState(false)
 
@@ -178,6 +188,18 @@ export default function SharePageClient({ task }: { task: TaskData }) {
           </div>
         </div>
 
+        {/* Social share panel */}
+        <div className="max-w-[340px] mx-auto mb-4">
+          <SocialSharePanel
+            taskId={task.id}
+            taskTitle={task.title}
+            taskDescription={task.description || undefined}
+            completedBy={task.completedByName}
+            familyName={task.familyName}
+            userId={userId || 'anonymous'}
+          />
+        </div>
+
         {/* Actions */}
         <div className="flex gap-3 max-w-[340px] mx-auto">
           <button
@@ -201,6 +223,31 @@ export default function SharePageClient({ task }: { task: TaskData }) {
               <><Download className="w-4 h-4" /> Download</>
             )}
           </button>
+        </div>
+      </div>
+
+      {/* Viral CTA for non-users */}
+      <div className="mt-8 text-center max-w-sm mx-auto">
+        <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl p-0.5">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6">
+            <h3 className="text-lg font-bold text-foreground mb-2">
+              ✨ Get Nudge for Your Family
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              The family task manager that actually works. Natural language,
+              Telegram integration, and smart reminders.
+            </p>
+            <Link
+              href="/auth/signup"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition-colors shadow-lg hover:shadow-xl"
+            >
+              Try Nudge Free
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <p className="text-xs text-muted-foreground mt-3">
+              Free plan includes 10 tasks/day · No credit card required
+            </p>
+          </div>
         </div>
       </div>
     </div>

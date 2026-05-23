@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const supabase = createClient()
   const { data: task } = await supabase
     .from('tasks')
-    .select('title')
+    .select('title, description, status')
     .eq('id', params.taskId)
     .single()
 
@@ -19,18 +19,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Task Not Found - Nudge' }
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://nudge-sigma-liart.vercel.app'
+  const ogImageUrl = `${baseUrl}/api/share/og?taskId=${encodeURIComponent(params.taskId)}`
+  const taskTitle = task.title
+  const description = task.description || `A completed task on Nudge — family task management`
+
   return {
-    title: `${task.title} - Completed on Nudge`,
-    description: `View a completed task on Nudge — the family task manager`,
+    title: `${taskTitle} ✅ - Completed on Nudge`,
+    description,
     openGraph: {
-      title: `${task.title} ✅`,
-      description: 'Completed on Nudge — family task management made simple',
+      title: `${taskTitle} ✅`,
+      description,
       type: 'website',
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${taskTitle} - Completed on Nudge`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${task.title} ✅`,
-      description: 'Completed on Nudge — family task management made simple',
+      title: `${taskTitle} ✅`,
+      description,
+      images: [ogImageUrl],
     },
   }
 }
@@ -53,6 +67,17 @@ export default async function ShareTaskPage({ params }: Props) {
     notFound()
   }
 
+  // Supabase join returns arrays, normalize
+  const createdByUser = Array.isArray(task.created_by_user)
+    ? task.created_by_user[0]
+    : task.created_by_user
+  const assignedToUser = Array.isArray(task.assigned_to_user)
+    ? task.assigned_to_user[0]
+    : task.assigned_to_user
+  const familyInfo = Array.isArray(task.family)
+    ? task.family[0]
+    : task.family
+
   // Fetch completed_by user (if different from created_by)
   let completedByUser: { full_name?: string } | null = null
   if (task.completed_by) {
@@ -74,10 +99,10 @@ export default async function ShareTaskPage({ params }: Props) {
     completed_by: task.completed_by,
     completed_at: task.completed_at,
     assigned_to: task.assigned_to,
-    assigneeName: task.assigned_to_user?.full_name || null,
-    creatorName: task.created_by_user?.full_name || 'Someone',
-    completedByName: completedByUser?.full_name || task.created_by_user?.full_name || 'Someone',
-    familyName: task.family?.name || 'My Family',
+    assigneeName: assignedToUser?.full_name || null,
+    creatorName: createdByUser?.full_name || 'Someone',
+    completedByName: completedByUser?.full_name || createdByUser?.full_name || 'Someone',
+    familyName: familyInfo?.name || 'My Family',
   }
 
   return <SharePageClient task={taskData} />

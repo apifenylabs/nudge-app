@@ -68,6 +68,7 @@ export default function TaskBoard({ tasks, familyId, userId, familyName, userNam
       familyName?: string
       priority?: 'low' | 'medium' | 'high' | 'urgent'
       assignee?: string
+      taskId?: string
     } | null
   }>({ isOpen: false, config: null })
 
@@ -176,6 +177,7 @@ export default function TaskBoard({ tasks, familyId, userId, familyName, userNam
       setShareModal({
         isOpen: true,
         config: {
+          taskId: task.id,
           taskTitle: task.title,
           taskDescription: task.description,
           completedBy: userName || 'Someone',
@@ -189,6 +191,13 @@ export default function TaskBoard({ tasks, familyId, userId, familyName, userNam
       // Also show "What's next?" suggestions after completion
       setLastCompletedTaskTitle(task.title)
       setShowWhatsNext(true)
+
+      // Fire-and-forget: post completion to Telegram family group
+      fetch('/api/share/telegram-post', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ taskId: task.id, userId }),
+      }).catch(e => console.warn('[TelegramPost] Background post failed:', e))
     } catch (err) {
       console.error('Complete task error:', err)
     } finally {
@@ -522,6 +531,7 @@ export default function TaskBoard({ tasks, familyId, userId, familyName, userNam
       setShareModal({
         isOpen: true,
         config: {
+          taskId: task.id,
           taskTitle: task.title,
           taskDescription: task.description,
           completedBy: userName || 'Someone',
@@ -775,6 +785,7 @@ export default function TaskBoard({ tasks, familyId, userId, familyName, userNam
         isOpen={shareModal.isOpen}
         onClose={() => setShareModal({ isOpen: false, config: null })}
         config={shareModal.config}
+        userId={userId}
       />
     </>
   )

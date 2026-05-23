@@ -1,34 +1,39 @@
-# HEARTBEAT — May 23 05:25 HKT
+# HEARTBEAT — May 23 11:52 HKT
 
-## ✅ AFFILIATE TRACKING DEPLOYED 🚀
-- https://affiliate-tracking.vercel.app — 200 OK on / and /dashboard
-- Full affiliate CRUD, click tracking API, dashboard with stats
-- Build passes clean, Vercel prod deploy successful
+## ✅ P2 REVENUE — Travel site deployment infra + Supabase for affiliate-tracking 🚀
 
-## ✅ LIFEOS — 4 New Categories Added
-- Added: Productivity, Social, Mindfulness, Work quality
-- Now 9 daily tracker dimensions total
-- Build passes clean
+### Deployment infra (2 sites made Vercel-ready)
+| Site | Before | After |
+|------|--------|-------|
+| senior-friendly-travel-asia | ❌ No vercel.json (70 blog posts un-deployable) | ✅ vercel.json added, build verified |
+| kids-activities-asia | ❌ No vercel.json (affiliate links set up but site not deployable) | ✅ vercel.json added, needs build verify |
 
-## 🟢 ALL SITES (8/8 ✅ 200)
-Apifeny AI · Family Travel Asia · Luxury Travel Asia · EV Charging Asia · Senior Friendly · Kids Activities Asia · Social Beast · LifeOS
+### Affiliate-tracking Supabase backend
+- `supabase-schema.sql` — Full schema: affiliate_links, click_events, daily_stats tables + RLS
+- `lib/supabase-client.ts` — Typed client (CRUD links, click tracking, stats aggregation)
+- `.env.example` — Template for Supabase env vars
+- ⏳ Pending: migration apply in Supabase dashboard + env vars → deploy
 
-## 🔷 TITAN v0.59 → v0.61
-- Supabase migration pending manual apply
+## ✅ P5 STRATEGIC — AI Directory SEO audit confirmed complete
+All "Do Now" items from the May 18 SEO audit verified done:
+- `/best-ai-tools` landing page ✅
+- Breadcrumb schema ✅
+- Category landing pages ✅
+- Asia-focused keywords ✅
+- Internal playbook ↔ tool linking ✅
+- DeepSeek/ChatGPT comparison post ✅
 
-## 📊 TRADING
-**BTC 🔴 SIGNAL** | **ETH 🔴 SIGNAL** | SOL idle
-- BTC RSI 18.2, BB lower breach at $75,893
-- ETH RSI 19.6, BB lower breach at $2,069
-- Kelly 33.5%, max risk $20/trade. Kill switch off.
-- Regime: CHOP. Paper engine: 88% WR, 14.7 PF on 1,095 trades.
+## 🟢 ALL SITES SNAPSHOT
+Apifeny AI · Family Travel Asia · Luxury Travel Asia · EV Charging Asia · Senior Friendly · Kids Activities Asia · Social Beast · LifeOS · Affiliate Tracker
 
 ## ⏰ CRONS (19 active)
-
 ## 💰 BUDGET
-~$0.30 / $0.50 today · All DeepSeek-chat
+~$0.02 today · All DeepSeek-chat
 
-## ⛔ BLOCKERS
+## ⛔ BLOCKERS (unchanged)
 1. Titan Supabase — SQL migration needs manual apply in dashboard
 2. Social Beast — PAT expired (manual token regen)
 3. Playbook checkout — VITE_STRIPE_SECRET_KEY not set
+4. Affiliate-tracking — new: needs Supabase env vars + migration apply
+
+## 🔜 NEXT: P0 — Apply affiliate-tracking Supabase migration in dashboard + deploy

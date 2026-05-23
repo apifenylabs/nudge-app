@@ -6,6 +6,9 @@ import { loadFromLocalStorage, saveToLocalStorage, syncDayToSupabase, type LifeO
 import WeeklyTrends from './components/WeeklyTrends';
 import MonthlyInsights from './components/MonthlyInsights';
 import DataManager from './components/DataManager';
+import PluginManager, { PluginSection } from './components/PluginManager';
+import ArchetypeDisplay from './components/ArchetypeDisplay';
+import { getActivePluginDefs, type PluginDef } from './data/plugins';
 
 function getToday(): string {
   return new Date().toISOString().split('T')[0];
@@ -59,7 +62,9 @@ export default function Home() {
   const today = getToday();
   const [data, setData] = useState<LifeOSData>({ days: {} });
   const [values, setValues] = useState<Record<string, number>>({});
+  const [pluginValues, setPluginValues] = useState<Record<string, Record<string, number | boolean | string>>>({});
   const [notes, setNotes] = useState('');
+  const [activePlugins, setActivePlugins] = useState<PluginDef[]>([]);
 
   // Load data on mount
   useEffect(() => {
@@ -72,6 +77,16 @@ export default function Home() {
     });
     setValues(init);
     setNotes(entry.notes || '');
+
+    // Load plugin data
+    const plugins = getActivePluginDefs();
+    setActivePlugins(plugins);
+    const pv: Record<string, Record<string, number | boolean | string>> = {};
+    plugins.forEach((p) => {
+      const saved = (entry as any)?.[`_plugin_${p.id}`] as Record<string, number | boolean | string> | undefined;
+      pv[p.id] = saved ?? {};
+    });
+    setPluginValues(pv);
   }, [today]);
 
   const entry = data.days?.[today] || {};
@@ -87,17 +102,43 @@ export default function Home() {
   const handleSave = useCallback(() => {
     const d = loadData();
     if (!d.days) d.days = {};
-    const newEntry: DayEntry = { ...values, notes };
+    const newEntry: DayEntry = { ...values, notes } as DayEntry;
+    // Attach plugin data
+    activePlugins.forEach((p) => {
+      (newEntry as any)[`_plugin_${p.id}`] = pluginValues[p.id] || {};
+    });
     d.days[today] = newEntry;
     saveDataToStorage(d);
     setData(d);
     // Fire-and-forget sync to Supabase
     syncDayToSupabase(today, newEntry);
-  }, [values, notes, today]);
+  }, [values, notes, today, activePlugins, pluginValues]);
 
   const handleNotesChange = useCallback((e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setNotes(e.target.value);
   }, []);
+
+  const handlePluginValueChange = useCallback(
+    (pluginId: string, fieldId: string, value: number | boolean | string) => {
+      setPluginValues((prev) => ({
+        ...prev,
+        [pluginId]: { ...(prev[pluginId] || {}), [fieldId]: value },
+      }));
+    },
+    [],
+  );
+
+  const handlePluginsChange = useCallback(() => {
+    const plugins = getActivePluginDefs();
+    setActivePlugins(plugins);
+    const entry = data.days?.[today] || {};
+    const pv: Record<string, Record<string, number | boolean | string>> = {};
+    plugins.forEach((p) => {
+      const saved = (entry as any)?.[`_plugin_${p.id}`] as Record<string, number | boolean | string> | undefined;
+      pv[p.id] = saved ?? {};
+    });
+    setPluginValues(pv);
+  }, [data.days, today]);
 
   const streak = getStreak(data);
 
@@ -150,6 +191,24 @@ export default function Home() {
       <button className="save-btn" disabled={!canSave} onClick={handleSave}>
         {canSave || !entry.notes ? 'Save Today' : 'Saved ✓'}
       </button>
+
+      {/* Plugin sections (active plugins) */}
+      {activePlugins.map((p) => (
+        <PluginSection
+          key={p.id}
+          plugin={p}
+          values={pluginValues[p.id] || {}}
+          onChange={(fieldId, value) => handlePluginValueChange(p.id, fieldId, value)}
+        />
+      ))}
+
+      <PluginManager onPluginsChange={handlePluginsChange} />
+
+      <ArchetypeDisplay
+        data={data}
+        todayScore={getScore(data.days?.[today])}
+        streakDays={streak}
+      />
 
       <WeeklyTrends data={data} />
 

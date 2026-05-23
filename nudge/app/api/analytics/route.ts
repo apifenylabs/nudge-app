@@ -322,6 +322,27 @@ export async function GET(request: NextRequest) {
       totalMembers: memberProductivity.length,
     }
 
+    // ── 9. Share Analytics ──
+    let shareStats = { totalShares: 0, platforms: {} }
+    try {
+      const { data: shares } = await supabase
+        .from('task_shares')
+        .select('platform')
+        .in('task_id', allTasks.map(t => t.id))
+
+      if (shares) {
+        const platformCounts: Record<string, number> = {}
+        let total = 0
+        for (const s of shares) {
+          platformCounts[s.platform] = (platformCounts[s.platform] || 0) + 1
+          total++
+        }
+        shareStats = { totalShares: total, platforms: platformCounts }
+      }
+    } catch {
+      // task_shares table may not exist yet
+    }
+
     return NextResponse.json({
       completionTrends,
       memberProductivity,
@@ -329,6 +350,7 @@ export async function GET(request: NextRequest) {
       priorityBreakdown,
       timeOfDay: timeBuckets,
       insights,
+      shares: shareStats,
       generatedAt: new Date().toISOString(),
     })
   } catch (err: any) {

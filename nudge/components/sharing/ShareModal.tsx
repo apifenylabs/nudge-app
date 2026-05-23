@@ -15,14 +15,16 @@ interface ShareModalProps {
     familyName?: string
     priority?: 'low' | 'medium' | 'high' | 'urgent'
     assignee?: string
+    taskId?: string
   } | null
+  userId?: string
 }
 
 /**
  * Full-screen share celebration modal.
  * Shows a confetti -> card flow for completed tasks.
  */
-export default function ShareModal({ isOpen, onClose, config }: ShareModalProps) {
+export default function ShareModal({ isOpen, onClose, config, userId }: ShareModalProps) {
   const [showConfetti, setShowConfetti] = useState(true)
   const [showCard, setShowCard] = useState(false)
 
@@ -82,6 +84,7 @@ export default function ShareModal({ isOpen, onClose, config }: ShareModalProps)
           <ShareCard
             config={config}
             onClose={onClose}
+            userId={userId}
           />
         </div>
       )}

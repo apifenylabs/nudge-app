@@ -12,6 +12,7 @@ import {
   StreakDisplay,
   TrendInsights,
   TimeOfDayAnalysis,
+  ShareAnalytics,
 } from '@/components/analytics'
 import BottomNav from '@/components/layout/BottomNav'
 
@@ -46,7 +47,7 @@ interface AnalyticsData {
   }
 }
 
-type Tab = 'overview' | 'members' | 'trends' | 'streaks'
+type Tab = 'overview' | 'members' | 'trends' | 'streaks' | 'shares'
 
 export default function StatsPageClient() {
   const [data, setData] = useState<AnalyticsData | null>(null)
@@ -120,6 +121,7 @@ export default function StatsPageClient() {
     { id: 'members', label: 'Members', icon: '👥' },
     { id: 'trends', label: 'Trends', icon: '📈' },
     { id: 'streaks', label: 'Streaks', icon: '🔥' },
+    { id: 'shares', label: 'Shares', icon: '📣' },
   ]
 
   return (
@@ -272,6 +274,13 @@ export default function StatsPageClient() {
         {data && activeTab === 'streaks' && (
           <Section title="🔥 Streak Tracker">
             <StreakDisplay data={data.streaks} />
+          </Section>
+        )}
+
+        {/* Data: Shares tab */}
+        {data && activeTab === 'shares' && (
+          <Section title="📣 Social Shares">
+            <ShareAnalytics />
           </Section>
         )}
 

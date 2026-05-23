@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { User, Baby, MapPin, Save, ArrowLeft, Sparkles, Camera } from 'lucide-react'
 import { createBrowserSupabaseClient } from '@/lib/supabase-browser'
 import AuthGuard from '@/components/AuthGuard'
+import AccountStats from '@/components/AccountStats'
 
 function AccountProfileForm() {
   const router = useRouter()
@@ -229,6 +230,9 @@ function AccountProfileForm() {
           </button>
         </div>
       </form>
+
+      {/* Activity Stats */}
+      <AccountStats />
 
       {/* Quick links */}
       <div className="mt-6 grid grid-cols-2 gap-4">
