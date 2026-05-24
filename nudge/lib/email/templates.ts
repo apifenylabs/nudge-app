@@ -460,3 +460,177 @@ export function trialExpiringEmail(params: {
     `),
   }
 }
+
+export function trialGracePeriodEmail(params: {
+  to: string
+  userName: string
+  planName: string
+  familyName: string
+  daysExpired: number
+  whatWasLost: { icon: string; label: string }[]
+  resubscribeUrl: string
+}): EmailData {
+  const itemsHtml = params.whatWasLost.map(item =>
+    `<div style="display:flex;align-items:center;gap:8px;padding:6px 0;">
+      <span style="font-size:18px;">${item.icon}</span>
+      <span style="font-size:14px;color:#374151;">${item.label}</span>
+    </div>`
+  ).join('')
+
+  return {
+    to: params.to,
+    subject: `😢 Your ${params.planName} trial ended — Nudge`,
+    html: wrap(`
+      <h2 style="margin:0 0 4px;font-size:20px;color:#1a1a2e;">
+        Your trial has ended 💔
+      </h2>
+      <p style="margin:0 0 16px;color:#6b7280;">
+        Hi ${params.userName}, your <strong>${params.planName}</strong> trial for
+        <strong>${params.familyName}</strong> ended ${params.daysExpired === 1 ? 'yesterday' : `${params.daysExpired} days ago`}.
+        No worries — your data is safe and your family can still see existing tasks.
+      </p>
+
+      <p style="color:#6b7280;font-weight:600;margin:0 0 8px;">
+        Since your trial ended, you've lost:
+      </p>
+      <div style="${styles.card}">
+        ${itemsHtml}
+      </div>
+
+      <p style="color:#6b7280;margin:16px 0;">
+        Reactivate in one click to get everything back — and nothing changes for your family.
+      </p>
+
+      <div style="text-align:center;">
+        <a href="${params.resubscribeUrl}" style="${styles.button}">
+          Reactivate My Plan →
+        </a>
+      </div>
+
+      <p style="text-align:center;font-size:12px;color:#9ca3af;margin-top:12px;">
+        Your data is kept for 30 days after trial ends
+      </p>
+    `),
+  }
+}
+
+export function welcomeSequenceEmail(params: {
+  to: string
+  userName: string
+  familyName: string
+  step: 1 | 2 | 3
+  inviteCode?: string
+  dashboardUrl: string
+}): EmailData {
+  const stepContent: Record<number, { subject: string; body: string }> = {
+    1: {
+      subject: `🎉 Welcome to Nudge, ${params.userName}!`,
+      body: `
+        <h2 style="margin:0 0 4px;font-size:20px;color:#1a1a2e;">
+          Welcome to Nudge! 🎉
+        </h2>
+        <p style="margin:0 0 16px;color:#6b7280;">
+          Hi ${params.userName}! You just created <strong>${params.familyName}</strong>.
+          Here's how to get the most out of Nudge in the next 5 minutes:
+        </p>
+
+        <ol style="color:#374151;font-size:14px;line-height:1.8;">
+          <li><strong>Add your family</strong> — Share your invite code <code style="background:#f3f4f6;padding:1px 6px;border-radius:4px;font-weight:700;">${params.inviteCode || '••••'}</code> with family members</li>
+          <li><strong>Create your first task</strong> — Try creating a shared chore or reminder</li>
+          <li><strong>Connect Telegram</strong> — Get instant notifications for task changes</li>
+        </ol>
+
+        <div style="text-align:center;">
+          <a href="${params.dashboardUrl}" style="${styles.button}">
+            Go to Dashboard →
+          </a>
+        </div>
+
+        <p style="text-align:center;font-size:12px;color:#9ca3af;margin-top:12px;">
+          Pro tip: Tasks assigned to someone show up as Telegram notifications instantly!
+        </p>
+      `,
+    },
+    2: {
+      subject: `💪 Day 2: You've got this, ${params.userName}!`,
+      body: `
+        <h2 style="margin:0 0 4px;font-size:20px;color:#1a1a2e;">
+          Day 2 — Let's build momentum! 💪
+        </h2>
+        <p style="margin:0 0 16px;color:#6b7280;">
+          Hi ${params.userName}! You started using Nudge and we think that's awesome.
+          Here are two things that make a big difference:
+        </p>
+
+        <div style="${styles.card}">
+          <p style="margin:0 0 8px;font-weight:600;color:#1a1a2e;">🔥 Streaks keep everyone going</p>
+          <p style="margin:0;font-size:13px;color:#6b7280;">
+            Every day your family completes at least one task, you build a streak.
+            See who can keep it going the longest!
+          </p>
+        </div>
+
+        <div style="text-align:center;margin:16px 0;">
+          <a href="${params.dashboardUrl}" style="${styles.button}">
+            View Your Streak →
+          </a>
+        </div>
+
+        ${params.inviteCode ? `
+        <div style="${styles.card};background:#f0fdf4;">
+          <p style="margin:0 0 4px;font-weight:600;color:#16a34a;">👋 Invite more family members</p>
+          <p style="margin:0;font-size:13px;color:#6b7280;">
+            Share this invite code: <strong>${params.inviteCode}</strong>
+          </p>
+        </div>
+        ` : ''}
+      `,
+    },
+    3: {
+      subject: `📈 ${params.familyName} — Your first week on Nudge`,
+      body: `
+        <h2 style="margin:0 0 4px;font-size:20px;color:#1a1a2e;">
+          One week in! How's it going? 📈
+        </h2>
+        <p style="margin:0 0 16px;color:#6b7280;">
+          Hi ${params.userName}! You've been using Nudge for a week with
+          <strong>${params.familyName}</strong>. Here's what's helped families like yours:
+        </p>
+
+        <div style="${styles.card}">
+          <p style="margin:0 0 8px;font-weight:600;color:#1a1a2e;">🏆 The secret to consistency</p>
+          <p style="margin:0 0 8px;font-size:13px;color:#6b7280;">
+            Families that assign tasks to specific members see 3x more completions.
+            Try the "@" mention when creating tasks!
+          </p>
+        </div>
+
+        <div style="${styles.card}">
+          <p style="margin:0 0 8px;font-weight:600;color:#1a1a2e;">🤖 Telegram makes it effortless</p>
+          <p style="margin:0;font-size:13px;color:#6b7280;">
+            Need something done? Send a message to @nudgebot and it creates a task.
+            No app needed.
+          </p>
+        </div>
+
+        <div style="text-align:center;margin:16px 0;">
+          <a href="${params.dashboardUrl}" style="${styles.button}">
+            See Your Progress →
+          </a>
+        </div>
+
+        <p style="text-align:center;font-size:13px;color:#9ca3af;">
+          Nudge stays free for up to 10 tasks. Ready for more? Upgrade to Pro for unlimited.
+        </p>
+      `,
+    },
+  }
+
+  const content = stepContent[params.step]
+
+  return {
+    to: params.to,
+    subject: content.subject,
+    html: wrap(content.body),
+  }
+}

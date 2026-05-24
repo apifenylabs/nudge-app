@@ -4,6 +4,7 @@ import { ExternalLink, Zap, Car, PlugZap, Lightbulb, Sparkles, Shield } from 'lu
 import { useState, useEffect, useRef } from 'react';
 import { affiliateLinks } from '@/lib/affiliate-links';
 import type { AffiliateLink } from '@/lib/affiliate-links';
+import { trackAffiliateClick } from '@/lib/affiliate-tracking';
 
 // ─── Country detection from blog tags ───
 const COUNTRY_SYNONYMS: Record<string, string> = {
@@ -169,6 +170,7 @@ export default function BlogAffiliateCTA({ tags }: { tags: string[] }) {
                   href={link.url}
                   target="_blank"
                   rel="nofollow sponsored noopener"
+                  onClick={() => trackAffiliateClick(link.id)}
                   className="group flex items-center gap-3 px-3 py-2.5 rounded-lg border border-amber-200/60 bg-amber-50/60 dark:bg-amber-900/10 dark:border-amber-800/30 hover:border-amber-300 dark:hover:border-amber-600/50 hover:bg-amber-100/60 dark:hover:bg-amber-800/20 transition-all"
                 >
                   <span className="text-sm">🔌</span>
@@ -198,6 +200,7 @@ export default function BlogAffiliateCTA({ tags }: { tags: string[] }) {
                   href={link.url}
                   target="_blank"
                   rel="nofollow sponsored noopener"
+                  onClick={() => trackAffiliateClick(link.id)}
                   className="group flex items-center gap-3 px-3 py-2.5 rounded-lg border border-sky-200/60 bg-sky-50/60 dark:bg-sky-900/10 dark:border-sky-800/30 hover:border-sky-300 dark:hover:border-sky-600/50 hover:bg-sky-100/60 dark:hover:bg-sky-800/20 transition-all"
                 >
                   <span className="text-sm">🚗</span>
@@ -227,6 +230,7 @@ export default function BlogAffiliateCTA({ tags }: { tags: string[] }) {
                   href={link.url}
                   target="_blank"
                   rel="nofollow sponsored noopener"
+                  onClick={() => trackAffiliateClick(link.id)}
                   className="group flex items-center gap-3 px-3 py-2.5 rounded-lg border border-pink-200/60 bg-pink-50/60 dark:bg-pink-900/10 dark:border-pink-800/30 hover:border-pink-300 dark:hover:border-pink-600/50 hover:bg-pink-100/60 dark:hover:bg-pink-800/20 transition-all"
                 >
                   <span className="text-sm">🎫</span>

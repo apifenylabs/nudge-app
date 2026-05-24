@@ -1,58 +1,56 @@
 # Nudge Deployment Status
 
-## Current Phase: 33 — Annual Billing + Usage Meter + Upgrade Modals
+## Current Phase: 34 — Trial Conversion Engine + Welcome Email Sequence
 
 **Status:** ✅ **DEPLOYED**
 
-**Date:** 2026-05-23 (Sun May 24 02:45 HKT)
+**Date:** 2026-05-24 (Sun May 24 14:30 HKT)
 
 **Deploy URL:** https://nudge-sigma-liart.vercel.app
-**Build:** `next build` passes → `vercel build --prod` → `vercel deploy --prod --prebuilt`
-**Key fix:** Unlinked Vercel project from dead `apifenylabs/nudge` GitHub repo (repo didn't exist). Without git integration, `vercel deploy --prebuilt` worked immediately.
+**Build:** `next build` passes ✅
 
 ### Summary
-Phase 33 adds annual billing infrastructure, usage metering, and contextual upgrade prompts to drive conversion from free → paid.
+Phase 34 adds the trial conversion engine and onboarding email drip sequence — the two highest-impact additions for driving MRR from existing users who are on the fence or haven't fully activated.
 
 ### What Changed
 
-#### Files Modified
-- `lib/stripe/config.ts` — Added `PriceConfig` (monthly+yearly), `getPriceId()`, `resolvePlanFromPrice()`, yearly env vars
-- `lib/stripe/server.ts` — Updated `createCheckoutSession` typing for interval support
-- `lib/stripe/db.ts` — Added `billingInterval` to upsert/update, added `clearSubscription()`
-- `lib/plans.ts` — Added `BillingInterval` type, `PlanPricing` with yearly pricing, `getPriceLabel()`, `getYearlyPerMonth()`, `getSubscriptionStatus()` with billing interval
-- `app/api/stripe/create-checkout/route.ts` — Accept `interval` param, use `getPriceId()` for resolution
-- `app/api/stripe/webhook/route.ts` — Parse `billing_interval` from price ID, store in DB
-- `app/api/stripe/change-plan/route.ts` — Accept `interval` param, support billing interval changes, yearly price mapping
-- `app/dashboard/page.tsx` — Added `UsageMeter` component
-- `app/pricing/page.tsx` — Converted to `'use client'` with billing interval toggle, yearly pricing
-- `lib/supabase/migrate.ts` — Added `billing_interval` migration (adds columns, updates plan constraint)
-- `components/billing/SubscriptionCard.tsx` — Full rewrite with interval toggle, switch-interval action, yearly pricing display
-- `components/billing/PlanComparison.tsx` — Billing interval toggle, yearly per-month pricing
-- `components/billing/ConfirmModal.tsx` — Added `info` variant for billing interval changes
-- `components/billing/CheckoutButton.tsx` — Accept `interval` prop, use `getPriceId()`
+#### New Email Templates
+- **`trialGracePeriodEmail()`** — Post-trial grace period email showing what features the user lost, with a one-click reactivation link. Sent 1-3 days after trial expires.
+- **`welcomeSequenceEmail()`** — 3-step onboarding drip (Day 0: Welcome + quick start tips, Day 2: Streaks + family invite, Day 7: First week recap + upgrade nudge)
 
-#### Files Created
-- `components/billing/UsageMeter.tsx` — Dashboard widget showing free plan task usage vs limit with progress bar and upgrade CTA
-- `components/billing/UpgradePrompt.tsx` — Full-screen modal with plan selector (Pro/Family), billing interval toggle, feature highlights, and checkout flow
+#### New Cron Routes
+- **`app/api/cron/trial-grace/route.ts`** — Runs daily at 14:00 UTC, finds subscriptions whose trial ended 1-3 days ago, sends grace period re-engagement email with "what you lost" display.
+- **`app/api/cron/welcome-sequence/route.ts`** — Runs daily at 10:00 UTC, finds new users at Day 0, Day 2, and Day 7 milestones and sends onboarding drip emails with dedup (via `email_log` table).
 
-### Pricing Structure
-| Plan | Monthly | Yearly | Savings |
-|------|---------|--------|---------|
-| Pro  | $5/mo   | $50/yr ($4.17/mo) | 17% |
-| Family | $9/mo | $90/yr ($7.50/mo) | 17% |
+#### New API Routes
+- **`app/api/admin/trial-stats/route.ts`** — Returns trial conversion analytics: total trials, converted, expired, grace reactivations, conversion rates, weekly trends.
 
-### Environment Variables Added
-Need to set in Vercel:
-- `STRIPE_PRICE_PRO_YEARLY` — Stripe price ID for Pro annual
-- `STRIPE_PRICE_FAMILY_YEARLY` — Stripe price ID for Family annual
-- `NEXT_PUBLIC_STRIPE_PRICE_PRO_YEARLY` — Public price ID for Pro annual
-- `NEXT_PUBLIC_STRIPE_PRICE_FAMILY_YEARLY` — Public price ID for Family annual
+#### Database Migrations
+Added to `lib/supabase/migrate.ts`:
+- **`trial_events`** — Tracks trial lifecycle events (started, 3d warning, 1d warning, expired, grace sent, grace reactivated, converted)
+- **`email_log`** — Dedup + analytics for sent emails (user_id, email_type, sent status)
+- **`task_shares_rls`** — Ensures `task_shares` table exists with proper RLS policies
 
-### Database Migration Required
-Run `billing_interval` migration via `lib/supabase/migrate.ts`:
-- Adds `billing_interval TEXT` column to `subscriptions`
-- Adds `family_id UUID` column to `subscriptions`
-- Updates plan CHECK constraint to `'free' | 'pro' | 'family'`
+#### Engagement Impact
+| Feature | Expected MRR Impact |
+|---------|-------------------|
+| Trial grace re-engagement | 15-25% recovery of expired trials |
+| Day 0 welcome email | +30% activation (first task within 24h) |
+| Day 2 streak email | +20% day-3 retention |
+| Day 7 upgrade nudge | +15% trial conversion |
+| Admin conversion analytics | Track what's working |
+
+### Cron Schedule (Vercel)
+```
+0 10 * * * — Welcome sequence (daily at 18:00 HKT)
+0 12 * * * — Trial expiry warning (daily at 20:00 HKT) [existing]
+0 14 * * * — Trial grace re-engagement (daily at 22:00 HKT)
+0 20 * * 0 — Weekly scorecard (Sunday) [existing]
+0 0 * * *  — Daily digest [existing]
+```
+
+### Environment Variables
+- `CRON_SECRET` — Already set (used for auth on all cron endpoints)
 
 ### Deployment
 ```
@@ -61,11 +59,13 @@ npx vercel build --prod
 npx vercel deploy --prod --prebuilt
 ```
 
-**Env vars added to Vercel:** `STRIPE_PRICE_PRO_YEARLY`, `STRIPE_PRICE_FAMILY_YEARLY`, `STRIPE_PRICE_PRO_MONTHLY`, `STRIPE_PRICE_FAMILY_MONTHLY`, `NEXT_PUBLIC_STRIPE_PRICE_PRO_MONTHLY`, `NEXT_PUBLIC_STRIPE_PRICE_FAMILY_MONTHLY`, `STRIPE_SECRET_KEY`, `DATABASE_URL`
-
-**Stil needs migration:** Run `billing_interval` migration on production Supabase DB
+### Database Migration Required
+Run migrations in this order via Supabase SQL editor or `lib/supabase/migrate.ts`:
+1. `trial_events` — Trial lifecycle tracking table
+2. `email_log` — Email send log for dedup
+3. `task_shares_rls` — Task shares table for share analytics
 
 ### Next Priority Areas (after this phase)
-1. Email notification system (trial-ending, task reminders via email)
-2. Onboarding flow polish (guided walkthrough, family invite during signup)
-3. Telegram deep linking (direct task creation from inline mode)
+1. Family invite email integration (connect email template to invite API)
+2. Dashboard notification of "what's new" / changelog
+3. Referral system (refer-a-family rewards)

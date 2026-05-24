@@ -7,6 +7,9 @@ import {
   DollarSign, Zap, CheckCircle, ChevronRight, FileText, Star,
   Download, Layers, Clock,
 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import FeaturedPlaybooks from '@/components/FeaturedPlaybooks';
 import TrendingTools from '@/components/TrendingTools';
@@ -52,10 +55,10 @@ const freeTemplates = [
 ];
 
 const socialProof = [
-  { icon: BookOpen, value: '71', label: 'Playbooks', color: 'text-violet-600', bg: 'bg-violet-100', border: 'border-violet-200' },
-  { icon: Users, value: '500+', label: 'Solopreneurs using Apifeny', color: 'text-cyan-600', bg: 'bg-cyan-100', border: 'border-cyan-200' },
-  { icon: TrendingUp, value: '3x', label: 'Faster content production', color: 'text-emerald-600', bg: 'bg-emerald-100', border: 'border-emerald-200' },
-  { icon: DollarSign, value: '22 hrs', label: 'Saved per week (avg)', color: 'text-amber-600', bg: 'bg-amber-100', border: 'border-amber-200' },
+  { icon: BookOpen, value: '71', label: 'Playbooks', color: 'text-violet-600', bg: 'bg-violet-100' },
+  { icon: Users, value: '500+', label: 'Solopreneurs using Apifeny', color: 'text-cyan-600', bg: 'bg-cyan-100' },
+  { icon: TrendingUp, value: '3x', label: 'Faster content production', color: 'text-emerald-600', bg: 'bg-emerald-100' },
+  { icon: DollarSign, value: '22 hrs', label: 'Saved per week (avg)', color: 'text-amber-600', bg: 'bg-amber-100' },
 ];
 
 const playbookSectionData = [
@@ -85,10 +88,10 @@ export default function HomePage() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-300 to-transparent" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-xs sm:text-sm font-medium mb-6 shadow-sm">
-              <Sparkles className="w-4 h-4 text-violet-500" />
+            <Badge variant="outline" className="mb-6 bg-violet-50 border-violet-200 text-violet-700">
+              <Sparkles className="w-3.5 h-3.5 mr-1" />
               New: AI playbooks that actually ship results
-            </div>
+            </Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-5 tracking-tight">
               Spend{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-purple-500 to-cyan-500">
@@ -103,19 +106,17 @@ export default function HomePage() {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-              <Link
-                href="/playbooks/ai-solopreneur-toolkit"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-700 text-white text-sm font-semibold shadow-lg shadow-violet-200 transition-all hover:-translate-y-0.5"
-              >
-                <Download className="w-4 h-4" />
-                Start with the Solopreneur Toolkit — $9
-                <ArrowRight className="w-4 h-4" />
+              <Link href="/playbooks/ai-solopreneur-toolkit">
+                <Button size="lg" className="bg-violet-600 hover:bg-violet-700 text-white shadow-lg shadow-violet-200">
+                  <Download className="w-4 h-4 mr-1" />
+                  Start with the Solopreneur Toolkit — $9
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </Button>
               </Link>
-              <Link
-                href="/playbooks"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white border-2 border-gray-200 text-gray-700 text-sm font-semibold hover:border-violet-300 hover:text-violet-700 shadow-sm transition-all hover:-translate-y-0.5"
-              >
-                Browse All Playbooks
+              <Link href="/playbooks">
+                <Button variant="outline" size="lg">
+                  Browse All Playbooks
+                </Button>
               </Link>
             </div>
 
@@ -142,10 +143,10 @@ export default function HomePage() {
       <section className="py-16 sm:py-20 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-xs sm:text-sm font-medium mb-4">
-              <FileText className="w-4 h-4" />
+            <Badge variant="outline" className="mb-4 bg-violet-50 border-violet-200 text-violet-700">
+              <FileText className="w-3.5 h-3.5 mr-1" />
               Free AI Prompts — Use Immediately
-            </div>
+            </Badge>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 tracking-tight">
               Copy-paste into ChatGPT. Start in seconds.
             </h2>
@@ -156,22 +157,21 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {freeTemplates.map((tpl) => (
-              <div
-                key={tpl.path}
-                className="relative rounded-2xl bg-white border border-gray-200 p-5 hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100/50 transition-all duration-300 group flex flex-col"
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-2xl">{tpl.icon}</span>
-                  <h3 className="text-sm font-semibold text-gray-900 group-hover:text-violet-700 transition-colors">
-                    {tpl.title}
-                  </h3>
-                </div>
-                <div className="mb-3 p-3 rounded-lg bg-gray-50 border border-gray-200 flex-1">
-                  <p className="text-[11px] text-gray-500 leading-relaxed italic">
-                    &ldquo;{tpl.prompt}&rdquo;
-                  </p>
-                </div>
-                <div className="flex items-center justify-between mt-auto">
+              <Card key={tpl.path} className="hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100/50 transition-all duration-300 group">
+                <CardHeader>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-2xl">{tpl.icon}</span>
+                    <CardTitle className="group-hover:text-violet-700 transition-colors">{tpl.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="flex-1">
+                  <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">
+                    <p className="text-[11px] text-gray-500 leading-relaxed italic">
+                      &ldquo;{tpl.prompt}&rdquo;
+                    </p>
+                  </div>
+                </CardContent>
+                <div className="flex items-center justify-between px-4 pb-4">
                   <Link
                     href={`/playbook/${tpl.path}`}
                     className="inline-flex items-center gap-1 text-xs font-medium text-violet-600 hover:text-violet-700 transition"
@@ -182,24 +182,25 @@ export default function HomePage() {
                   </Link>
                   <Link
                     href={`/playbooks/${tpl.path}`}
-                    className="inline-flex items-center gap-1 text-[10px] text-amber-600 hover:text-amber-700 font-medium"
+                    className="shrink-0"
                   >
-                    <DollarSign className="w-3 h-3" />
-                    Full PDF
+                    <Button variant="ghost" size="xs" className="text-amber-600 hover:text-amber-700">
+                      <DollarSign className="w-3 h-3 mr-0.5" />
+                      Full PDF
+                    </Button>
                   </Link>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
 
           <div className="text-center mt-8">
-            <Link
-              href="/playbooks"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium shadow-lg shadow-violet-200 transition hover:-translate-y-0.5"
-            >
-              <BookOpen className="w-4 h-4" />
-              Browse all 71 playbooks
-              <ArrowRight className="w-4 h-4" />
+            <Link href="/playbooks">
+              <Button className="bg-violet-600 hover:bg-violet-700 text-white shadow-lg shadow-violet-200">
+                <BookOpen className="w-4 h-4 mr-1" />
+                Browse all 71 playbooks
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </Button>
             </Link>
           </div>
         </div>
@@ -209,10 +210,10 @@ export default function HomePage() {
       <section className="py-16 sm:py-20 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-xs sm:text-sm font-medium mb-4">
-              <Zap className="w-4 h-4" />
+            <Badge variant="outline" className="mb-4 bg-violet-50 border-violet-200 text-violet-700">
+              <Zap className="w-3.5 h-3.5 mr-1" />
               Featured Products
-            </div>
+            </Badge>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 tracking-tight">
               The playbooks that ship results
             </h2>
@@ -223,47 +224,44 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {PAID_PLAYBOOKS.map((pb) => (
-              <Link
-                key={pb.slug}
-                href={`/playbooks/${pb.slug}`}
-                className="group relative rounded-2xl bg-white border border-gray-200 overflow-hidden hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100/50 transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className={`h-2 bg-gradient-to-r ${pb.gradient}`} />
-                <div className="p-5">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-2xl">{pb.icon}</span>
-                    <h3 className="text-sm font-semibold text-gray-900 group-hover:text-violet-700 transition-colors">
-                      {pb.title}
-                    </h3>
-                  </div>
-                  <p className="text-xs text-gray-500 mb-4">
-                    {pb.slug === 'ai-solopreneur-toolkit' && '5 AI tools that replace $2,200/mo in services. Customer support bot, automated content, and more.'}
-                    {pb.slug === 'directory-builder-template' && 'Build and monetize a niche directory in 2 weeks. Cosme-style rankings, affiliate setup, SEO automation.'}
-                    {pb.slug === 'ai-workflow-automation' && 'Autonomous workflows that save 20+ hours/week. 7 ready-to-deploy automation playbooks.'}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-xs font-semibold">
-                      <DollarSign className="w-3 h-3" />
-                      {pb.price}
+              <Link key={pb.slug} href={`/playbooks/${pb.slug}`} className="block group">
+                <Card className="overflow-hidden hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100/50 transition-all duration-300 hover:-translate-y-1">
+                  <div className={`h-2 bg-gradient-to-r ${pb.gradient}`} />
+                  <CardHeader>
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl">{pb.icon}</span>
+                      <CardTitle className="group-hover:text-violet-700 transition-colors">{pb.title}</CardTitle>
                     </div>
-                    <span className="inline-flex items-center gap-1 text-xs font-medium text-violet-600 group-hover:text-violet-700">
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-xs text-gray-500">
+                      {pb.slug === 'ai-solopreneur-toolkit' && '5 AI tools that replace $2,200/mo in services. Customer support bot, automated content, and more.'}
+                      {pb.slug === 'directory-builder-template' && 'Build and monetize a niche directory in 2 weeks. Cosme-style rankings, affiliate setup, SEO automation.'}
+                      {pb.slug === 'ai-workflow-automation' && 'Autonomous workflows that save 20+ hours/week. 7 ready-to-deploy automation playbooks.'}
+                    </p>
+                  </CardContent>
+                  <div className="flex items-center justify-between px-4 pb-4">
+                    <Badge className="bg-violet-50 border-violet-200 text-violet-700">
+                      <DollarSign className="w-3 h-3 mr-0.5" />
+                      {pb.price}
+                    </Badge>
+                    <Button variant="ghost" size="sm" className="text-violet-600">
                       Get PDF
-                      <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition" />
-                    </span>
+                      <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition" />
+                    </Button>
                   </div>
-                </div>
+                </Card>
               </Link>
             ))}
           </div>
 
           <div className="text-center mt-6">
-            <Link
-              href="/playbooks"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border-2 border-gray-200 text-gray-700 text-sm font-medium hover:border-violet-300 hover:text-violet-700 transition hover:-translate-y-0.5"
-            >
-              <BookOpen className="w-4 h-4" />
-              See all playbooks
-              <ArrowRight className="w-4 h-4" />
+            <Link href="/playbooks">
+              <Button variant="outline">
+                <BookOpen className="w-4 h-4 mr-1" />
+                See all playbooks
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </Button>
             </Link>
           </div>
         </div>
@@ -273,10 +271,10 @@ export default function HomePage() {
       <section className="py-16 sm:py-20 bg-white border-t border-gray-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs sm:text-sm font-medium mb-4">
-              <Layers className="w-4 h-4" />
+            <Badge variant="outline" className="mb-4 bg-amber-50 border-amber-200 text-amber-700">
+              <Layers className="w-3.5 h-3.5 mr-1" />
               Free Template vs Full Playbook
-            </div>
+            </Badge>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 tracking-tight">
               Start free. Upgrade when you&apos;re serious.
             </h2>
@@ -286,7 +284,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto rounded-2xl border border-gray-200 overflow-hidden">
+          <Card className="max-w-2xl mx-auto overflow-hidden">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
@@ -311,22 +309,20 @@ export default function HomePage() {
                 ))}
               </tbody>
             </table>
-          </div>
+          </Card>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
-            <Link
-              href="/playbooks"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium shadow-lg shadow-violet-200 transition hover:-translate-y-0.5"
-            >
-              Browse Playbooks from $9
-              <ArrowRight className="w-4 h-4" />
+            <Link href="/playbooks">
+              <Button className="bg-violet-600 hover:bg-violet-700 text-white shadow-lg shadow-violet-200">
+                Browse Playbooks from $9
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </Button>
             </Link>
-            <Link
-              href="/playbooks?pro=1"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium shadow-lg shadow-amber-200 transition hover:-translate-y-0.5"
-            >
-              <Star className="w-4 h-4" />
-              Get Pro — $47/mo (all playbooks)
+            <Link href="/playbooks?pro=1">
+              <Button className="bg-amber-500 hover:bg-amber-600 text-white shadow-lg shadow-amber-200">
+                <Star className="w-4 h-4 mr-1" />
+                Get Pro — $47/mo (all playbooks)
+              </Button>
             </Link>
           </div>
         </div>
@@ -382,20 +378,24 @@ export default function HomePage() {
                 role: 'E-commerce Owner, Thailand',
               },
             ].map((testimonial, i) => (
-              <div key={i} className="rounded-2xl bg-white border border-gray-200 p-5 hover:border-violet-200 hover:shadow-md transition-all">
-                <div className="flex items-center gap-0.5 mb-3">
-                  {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed mb-3">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <div>
-                  <p className="text-xs font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-[10px] text-gray-400">{testimonial.role}</p>
-                </div>
-              </div>
+              <Card key={i} className="hover:border-violet-200 hover:shadow-md transition-all">
+                <CardHeader>
+                  <div className="flex items-center gap-0.5 mb-1">
+                    {[...Array(5)].map((_, j) => (
+                      <Star key={j} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
+                  <div>
+                    <p className="text-xs font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-[10px] text-gray-400">{testimonial.role}</p>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -404,10 +404,10 @@ export default function HomePage() {
       {/* PRO MEMBERSHIP UPSELL */}
       <section className="py-16 sm:py-20 bg-violet-50 border-y border-violet-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-200/60 text-violet-700 text-xs sm:text-sm font-medium mb-4">
-            <Star className="w-4 h-4" />
+          <Badge variant="outline" className="mb-4 bg-violet-200/60 border-violet-300 text-violet-700">
+            <Star className="w-3.5 h-3.5 mr-1" />
             Pro Membership
-          </div>
+          </Badge>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 tracking-tight">
             Unlock all playbooks for $47/mo
           </h2>
@@ -416,12 +416,11 @@ export default function HomePage() {
             Cancel anytime.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="/api/create-checkout?product=pro-monthly"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold text-sm shadow-lg shadow-violet-200 transition hover:-translate-y-0.5"
-            >
-              <Star className="w-4 h-4" />
-              Get Pro — $47/mo
+            <a href="/api/create-checkout?product=pro-monthly">
+              <Button size="lg" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white shadow-lg shadow-violet-200">
+                <Star className="w-4 h-4 mr-1" />
+                Get Pro — $47/mo
+              </Button>
             </a>
             <div className="text-xs text-gray-500">
               <span className="inline-flex items-center gap-1"><CheckCircle className="w-3 h-3 text-emerald-500" /> Cancel anytime</span>
@@ -445,63 +444,54 @@ export default function HomePage() {
       </div>
 
       {/* EXISTING SECTIONS (keep all functionality) */}
-      {/* FEATURED PLAYBOOKS (grid) */}
       <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FeaturedPlaybooks />
         </div>
       </section>
 
-      {/* MUST-USE THIS MONTH */}
       <section className="py-16 sm:py-20 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <MustUseThisMonth />
         </div>
       </section>
 
-      {/* TRENDING TOOLS */}
       <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <TrendingTools />
         </div>
       </section>
 
-      {/* FEATURED CATEGORIES */}
       <section className="py-16 sm:py-20 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FeaturedCategories />
         </div>
       </section>
 
-      {/* FEATURED COLLECTIONS */}
       <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FeaturedCollections />
         </div>
       </section>
 
-      {/* RANKINGS */}
       <section className="py-16 sm:py-20 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FeaturedRankings />
         </div>
       </section>
 
-      {/* SUCCESS STORIES */}
       <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SuccessStories />
         </div>
       </section>
 
-      {/* SPONSORED */}
       <section className="py-12 sm:py-16 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SponsoredToolSpot />
         </div>
       </section>
 
-      {/* NEWSLETTER */}
       <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
           <NewsletterSignup source="homepage-cta" />

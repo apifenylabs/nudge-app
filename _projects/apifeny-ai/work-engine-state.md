@@ -16,12 +16,51 @@
 
 3. **Build verified:** `npx next build` passed with all 3 new pages appearing in the route listing. Zero errors.
 
+## 2026-05-24 11:08 HKT — apifeny-ai deploy
+- [P5 STRATEGIC] Deployed apifeny-ai with all 9 guides including ai-tools-for-content-creation
+- Status: SUCCESS
+- Build: 403 static pages generated, zero errors
+- Deploy: `npx vercel deploy --prod` via Vercel CLI (user: apifenylabs-2612)
+- Production URL: https://apifeny-ai.vercel.app
+- Guides verified: /guides/ai-tools-for-content-creation returns 200 OK
+
 ### Key decisions (playbook fixes)
 - Used `ai-for-data-analysis` (327 lines, 26.5KB) as template instead of `ai-personal-assistant-setup` (917 lines, 47KB) to stay under the `write` tool's ~32KB limit
 - Each page has unique function names (AiForHrAndRecruitingPage, AiForSocialMediaManagementPage, AiForPersonalFinancePage)
 - Unique gradient/icon/theme per page (violet for HR, pink for social, emerald for finance)
 - Fresh content for sections, testimonials, bonuses, FAQ per slug
 - No duplicate export bug (which existed in the solopreneur-toolkit-derived reference files)
+
+## 2026-05-24 13:13 HKT — NEW GUIDE: AI Tools for Education
+
+### Created
+- **Guide**: `app/guides/ai-tools-for-education/page.tsx` (28.8 KB)
+- **Route**: `/guides/ai-tools-for-education`
+- **Title**: Best AI Tools for Education in 2026 — Complete Guide
+- **Bucket**: P5 Strategic
+- **Target**: Students, teachers, and educators in Asia
+
+### What was done
+1. Created full TSX component matching the `ai-tools-for-marketing` structure:
+   - Hero with emerald/teal gradient, est. 12 min read
+   - Table of contents with 7 anchor-linked sections
+   - Quick comparison table (5 tools with prices and ratings)
+   - Use case recommendation table (8 scenarios × tool × why)
+   - Section 1: AI Tutoring & Personalized Learning
+   - Section 2: AI for Course Creation & Lesson Planning
+   - Section 3: AI Writing Assistants for Students & Researchers
+   - Section 4: AI Study Tools & Flashcards
+   - Section 5: AI for Language Learning
+   - Section 6: AI Grading & Assessment Tools
+   - Section 7: AI Classroom Management
+   - Affiliate CTAs per section linking to recommended tools
+   - ToolCard components for 5 tools (ChatGPT, Gemini, Perplexity, Grammarly, DeepL)
+   - Bottom CTA with ChatGPT spotlight
+   - BreadcrumbSchema JSON-LD
+   - Comprehensive SEO metadata (20+ keywords, OG/twitter tags)
+
+2. **Build verified**: `npx next build` passed with zero errors
+   - `/guides/ai-tools-for-education` appears in route listing (3.23 kB)
 
 ---
 ## 2026-05-18 01:16 HKT - FINAL RESULT: 2 Missing Playbook Pages Created

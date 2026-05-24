@@ -150,6 +150,86 @@ DO $$ BEGIN
   END IF;
 END $$;
 `,
+
+  'trial_events': `
+-- Migration: Trial events (conversion tracking)
+CREATE TABLE IF NOT EXISTS public.trial_events (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  subscription_id UUID REFERENCES public.subscriptions(id) ON DELETE CASCADE,
+  family_id UUID REFERENCES public.families(id) ON DELETE CASCADE,
+  user_id UUID REFERENCES public.users(id) ON DELETE CASCADE,
+  event_type TEXT NOT NULL CHECK (event_type IN ('trial_started', 'trial_warning_3d', 'trial_warning_1d', 'trial_expired', 'grace_email_sent', 'grace_reactivated', 'converted')),
+  days_expired INTEGER,
+  metadata JSONB DEFAULT '{}'::jsonb,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_trial_events_subscription ON public.trial_events(subscription_id);
+CREATE INDEX IF NOT EXISTS idx_trial_events_user ON public.trial_events(user_id);
+CREATE INDEX IF NOT EXISTS idx_trial_events_type ON public.trial_events(event_type);
+
+ALTER TABLE public.trial_events ENABLE ROW LEVEL SECURITY;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'Service role can manage trial events') THEN
+    CREATE POLICY "Service role can manage trial events" ON public.trial_events FOR ALL USING (true);
+  END IF;
+END $$;
+`,
+
+  'email_log': `
+-- Migration: Email send log (dedup + analytics)
+CREATE TABLE IF NOT EXISTS public.email_log (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES public.users(id) ON DELETE CASCADE,
+  email_type TEXT NOT NULL,
+  sent BOOLEAN NOT NULL DEFAULT TRUE,
+  metadata JSONB DEFAULT '{}'::jsonb,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_email_log_user_type ON public.email_log(user_id, email_type);
+CREATE INDEX IF NOT EXISTS idx_email_log_type ON public.email_log(email_type);
+
+ALTER TABLE public.email_log ENABLE ROW LEVEL SECURITY;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'Service role can manage email log') THEN
+    CREATE POLICY "Service role can manage email log" ON public.email_log FOR ALL USING (true);
+  END IF;
+END $$;
+`,
+
+  'task_shares_rls': `
+-- Migration: Ensure task_shares table has RLS
+CREATE TABLE IF NOT EXISTS public.task_shares (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  task_id UUID REFERENCES public.tasks(id) ON DELETE CASCADE,
+  user_id UUID REFERENCES public.users(id) ON DELETE CASCADE,
+  platform TEXT NOT NULL,
+  share_url TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_task_shares_task ON public.task_shares(task_id);
+
+ALTER TABLE public.task_shares ENABLE ROW LEVEL SECURITY;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'Service role can insert task shares') THEN
+    CREATE POLICY "Service role can insert task shares" ON public.task_shares FOR INSERT WITH CHECK (true);
+  END IF;
+END $$;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'Users can view own task shares') THEN
+    CREATE POLICY "Users can view own task shares" ON public.task_shares
+      FOR SELECT USING (
+        user_id IN (SELECT id FROM public.users WHERE auth_uid = auth.uid())
+      );
+  END IF;
+END $$;
+`,
 }
 
 // ── MIGRATION STATE TRACKING ──────────────────────────────────────

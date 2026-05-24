@@ -39,6 +39,7 @@ import {
   Info,
 } from 'lucide-react';
 import { affiliateLinks, type AffiliateLink } from '@/lib/affiliate-links';
+import { trackAffiliateClick } from '@/lib/affiliate-tracking';
 
 // ─── Types ───
 
@@ -420,6 +421,7 @@ export default function AffiliateDashboardPage() {
                               href={link.url}
                               target="_blank"
                               rel="noopener noreferrer sponsored"
+                              onClick={() => trackAffiliateClick(link.id)}
                               className="inline-flex items-center gap-1 text-[10px] font-medium text-sky-600 hover:text-sky-700 dark:text-sky-400"
                             >
                               <ExternalLink size={10} />
