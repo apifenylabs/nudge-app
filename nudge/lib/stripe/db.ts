@@ -1,4 +1,5 @@
 import { createAdminClient } from '@/lib/supabase/admin'
+import type { BillingInterval } from '@/lib/plans'
 
 /**
  * Get the subscription record for a family from our database.
@@ -44,6 +45,7 @@ export async function upsertSubscription(params: {
   stripeCustomerId: string
   stripeSubscriptionId: string
   plan: 'free' | 'pro' | 'family'
+  billingInterval?: BillingInterval
   status: 'active' | 'trialing' | 'past_due' | 'canceled' | 'incomplete'
   currentPeriodStart?: string
   currentPeriodEnd?: string
@@ -61,6 +63,7 @@ export async function upsertSubscription(params: {
     updated_at: new Date().toISOString(),
   }
 
+  if (params.billingInterval) payload.billing_interval = params.billingInterval
   if (params.currentPeriodStart) payload.current_period_start = params.currentPeriodStart
   if (params.currentPeriodEnd) payload.current_period_end = params.currentPeriodEnd
   if (params.trialEndsAt) payload.trial_ends_at = params.trialEndsAt
@@ -95,6 +98,7 @@ export async function updateSubscriptionStatus(
   if (metadata?.cancel_at_period_end !== undefined) update.cancel_at_period_end = metadata.cancel_at_period_end
   if (metadata?.current_period_end) update.current_period_end = metadata.current_period_end
   if (metadata?.trial_ends_at) update.trial_ends_at = metadata.trial_ends_at
+  if (metadata?.billing_interval) update.billing_interval = metadata.billing_interval
   return supabase.from('subscriptions').update(update).eq('stripe_subscription_id', subscriptionId)
 }
 

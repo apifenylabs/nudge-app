@@ -5,9 +5,11 @@ import TaskBoard from '@/components/dashboard/TaskBoard'
 import FamilyMembers from '@/components/dashboard/FamilyMembers'
 import QuickActions from '@/components/dashboard/QuickActions'
 import StatsOverview from '@/components/dashboard/StatsOverview'
+import DailyCheckin from '@/components/dashboard/DailyCheckin'
 import BottomNav from '@/components/layout/BottomNav'
 import DashboardTourWrapper from '@/components/onboarding/DashboardTourWrapper'
 import SubscriptionBanner from '@/components/billing/SubscriptionBanner'
+import UsageMeter from '@/components/billing/UsageMeter'
 import DashboardContent from '@/components/dashboard/DashboardContent'
 
 export default async function DashboardPage() {
@@ -118,6 +120,11 @@ export default async function DashboardPage() {
       {/* Subscription status banner — shows trial, upgrade, or limit warnings */}
       <SubscriptionBanner userId={user.id} />
 
+      {/* Usage meter — shows free users their task limit progress */}
+      <div className="px-4 mt-2">
+        <UsageMeter userId={user.id} dismissible compact />
+      </div>
+
       {/* Stats - mobile optimized */}
       <StatsOverview
         completedTasks={completedTasks}
@@ -125,6 +132,13 @@ export default async function DashboardPage() {
         totalTasks={totalTasks}
         urgentTasks={urgentTasks}
       />
+
+      {/* Daily Check-in section */}
+      <div className="px-4 mt-2">
+        <div className="glass-card p-4 rounded-xl">
+          <DailyCheckin userId={user.id} familyId={familyId} />
+        </div>
+      </div>
 
       {/* Quick add + task board */}
       <TaskBoard

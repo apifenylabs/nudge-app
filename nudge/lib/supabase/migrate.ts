@@ -108,6 +108,48 @@ END $$;
 
 -- Default preferences for all existing users (inserted by app on first access)
 `,
+
+  'billing_interval': `
+-- Migration: Add billing_interval and family_id to subscriptions
+
+DO $$ BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM information_schema.columns
+    WHERE table_schema = 'public' AND table_name = 'subscriptions' AND column_name = 'billing_interval'
+  ) THEN
+    ALTER TABLE public.subscriptions ADD COLUMN billing_interval TEXT DEFAULT 'monthly' CHECK (billing_interval IN ('monthly', 'yearly'));
+  END IF;
+END $$;
+
+DO $$ BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM information_schema.columns
+    WHERE table_schema = 'public' AND table_name = 'subscriptions' AND column_name = 'family_id'
+  ) THEN
+    ALTER TABLE public.subscriptions ADD COLUMN family_id UUID REFERENCES public.families(id) ON DELETE CASCADE;
+  END IF;
+END $$;
+
+DO $$ BEGIN
+  ALTER TABLE public.subscriptions DROP CONSTRAINT IF EXISTS subscriptions_plan_check;
+  ALTER TABLE public.subscriptions ADD CONSTRAINT subscriptions_plan_check
+    CHECK (plan IN ('free', 'pro', 'family'));
+EXCEPTION WHEN OTHERS THEN NULL;
+END $$;
+
+CREATE INDEX IF NOT EXISTS idx_subscriptions_family_id ON public.subscriptions(family_id);
+
+ALTER TABLE public.subscriptions ENABLE ROW LEVEL SECURITY;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'Family members can view subscription') THEN
+    CREATE POLICY "Family members can view subscription" ON public.subscriptions
+      FOR SELECT USING (
+        EXISTS (SELECT 1 FROM public.family_members WHERE family_id = subscriptions.family_id AND user_id IN (SELECT id FROM public.users WHERE auth_uid = auth.uid()))
+      );
+  END IF;
+END $$;
+`,
 }
 
 // ── MIGRATION STATE TRACKING ──────────────────────────────────────

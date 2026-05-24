@@ -1,9 +1,9 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { X, AlertTriangle, Loader2, Crown, ArrowLeftRight } from 'lucide-react'
+import { X, AlertTriangle, Loader2, Crown, ArrowLeftRight, RefreshCcw } from 'lucide-react'
 
-type ModalVariant = 'cancel' | 'downgrade' | 'upgrade'
+type ModalVariant = 'cancel' | 'downgrade' | 'upgrade' | 'info'
 
 interface ConfirmModalProps {
   open: boolean
@@ -11,19 +11,28 @@ interface ConfirmModalProps {
   plan?: string
   loading?: boolean
   description?: string
+  confirmLabel?: string
   onConfirm: () => void
   onCancel: () => void
   onClose: () => void
 }
 
-const variants = {
+const variants: Record<ModalVariant, {
+  icon: any
+  iconBg: string
+  iconColor: string
+  title: string
+  defaultDescription: string
+  defaultConfirmLabel: string
+  confirmClass: string
+}> = {
   cancel: {
     icon: AlertTriangle,
     iconBg: 'bg-red-100 dark:bg-red-900/30',
     iconColor: 'text-red-500',
     title: 'Cancel Subscription',
-    description: 'Are you sure? You\'ll lose access to premium features at the end of your billing period. Your family\'s task history will be preserved, but you\'ll be limited to the Free plan.',
-    confirmLabel: 'Confirm Cancellation',
+    defaultDescription: 'Are you sure? You\'ll lose access to premium features at the end of your billing period. Your family\'s task history will be preserved, but you\'ll be limited to the Free plan.',
+    defaultConfirmLabel: 'Confirm Cancellation',
     confirmClass: 'bg-red-500 hover:bg-red-600 text-white',
   },
   downgrade: {
@@ -31,8 +40,8 @@ const variants = {
     iconBg: 'bg-amber-100 dark:bg-amber-900/30',
     iconColor: 'text-amber-500',
     title: 'Change Plan',
-    description: 'Switching to a lower plan will reduce features available to your family. Changes take effect immediately for new features, but billing credits are handled by Stripe.',
-    confirmLabel: 'Switch Plan',
+    defaultDescription: 'Switching to a lower plan will reduce features available to your family. Changes take effect immediately for new features, but billing credits are handled by Stripe.',
+    defaultConfirmLabel: 'Switch Plan',
     confirmClass: 'btn-amber',
   },
   upgrade: {
@@ -40,13 +49,22 @@ const variants = {
     iconBg: 'bg-indigo-100 dark:bg-indigo-900/30',
     iconColor: 'text-indigo-500',
     title: 'Upgrade Plan',
-    description: 'Ready to unlock more features for your family? You\'ll be taken to Stripe to complete payment.',
-    confirmLabel: 'Go to Checkout',
+    defaultDescription: 'Ready to unlock more features for your family? You\'ll be taken to Stripe to complete payment.',
+    defaultConfirmLabel: 'Go to Checkout',
+    confirmClass: 'btn-primary',
+  },
+  info: {
+    icon: RefreshCcw,
+    iconBg: 'bg-indigo-100 dark:bg-indigo-900/30',
+    iconColor: 'text-indigo-500',
+    title: 'Change Billing Interval',
+    defaultDescription: 'Switching between monthly and annual billing.',
+    defaultConfirmLabel: 'Switch Interval',
     confirmClass: 'btn-primary',
   },
 }
 
-export default function ConfirmModal({ open, variant, plan, loading, description, onConfirm, onCancel, onClose }: ConfirmModalProps) {
+export default function ConfirmModal({ open, variant, plan, loading, description, confirmLabel, onConfirm, onCancel, onClose }: ConfirmModalProps) {
   const overlayRef = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
 
@@ -101,7 +119,7 @@ export default function ConfirmModal({ open, variant, plan, loading, description
 
         {/* Description */}
         <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-          {description || v.description}
+          {description || v.defaultDescription}
         </p>
 
         {/* Actions */}
@@ -121,7 +139,7 @@ export default function ConfirmModal({ open, variant, plan, loading, description
             {loading ? (
               <><Loader2 className="w-4 h-4 animate-spin" /> Processing...</>
             ) : (
-              v.confirmLabel
+              confirmLabel || v.defaultConfirmLabel
             )}
           </button>
         </div>

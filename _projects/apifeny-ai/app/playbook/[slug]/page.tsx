@@ -15,6 +15,7 @@ import {
   DollarSign,
   Trophy,
   Users,
+  FileText,
 } from 'lucide-react';
 import { playbooks, getPlaybookBySlug, getAllPlaybookSlugs } from '@/lib/playbooks';
 import { toolsData } from '@/lib/data';
@@ -24,6 +25,7 @@ import ToolCard from '@/components/ToolCard';
 import ReadingProgressBar from '@/components/ReadingProgressBar';
 import PlaybookTOC from '@/components/PlaybookTOC';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FreeTemplateSection from '@/components/FreeTemplateSection';
 
 interface PlaybookPageProps {
   params: { slug: string };
@@ -201,6 +203,11 @@ export default function PlaybookPage({ params }: PlaybookPageProps) {
           )}
         </div>
       </div>
+
+      {/* Free Template Section */}
+      {playbook.free_prompt && (
+        <FreeTemplateSection prompt={playbook.free_prompt} playbookTitle={playbook.title} />
+      )}
 
       {/* Table of Contents */}
       {showToc && <PlaybookTOC steps={playbook.steps} />}

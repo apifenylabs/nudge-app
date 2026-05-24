@@ -10,6 +10,8 @@ import RelatedBlogPosts from '@/components/itineraries/RelatedBlogPosts';
 import ItineraryAffiliateCTA from '@/components/itineraries/ItineraryAffiliateCTA';
 import ItineraryCard from '@/components/itineraries/ItineraryCard';
 import SeasonalRecommendations from '@/components/itineraries/SeasonalRecommendations';
+import RoutePopularity from '@/components/RoutePopularity';
+import NewsletterSignup from '@/components/NewsletterSignup';
 import SeasonalComparisonTable from '@/components/itineraries/SeasonalComparisonTable';
 import ItinerarySEOSection from '@/components/itineraries/ItinerarySEOSection';
 import ItineraryRevenueSection from '@/components/itineraries/ItineraryRevenueSection';
@@ -310,7 +312,7 @@ export default function ItineraryDetailPage({ params }: Props) {
         {/* Seasonal Recommendations + Comparison Table */}
         <div className="mb-8 space-y-4">
           <SeasonalRecommendations bestSeason={it.bestSeason} countries={it.countries} />
-          <SeasonalComparisonTable bestSeason={it.bestSeason} countries={it.countries} />
+          <SeasonalComparisonTable bestSeason={it.bestSeason} countries={it.countries} totalDistanceKm={it.totalDistanceKm} estimatedRangeKm={400} />
         </div>
 
         {/* Traveler Tips & Reviews */}
@@ -364,6 +366,16 @@ export default function ItineraryDetailPage({ params }: Props) {
 
         {/* Related Blog Posts */}
         <RelatedBlogPosts keywords={it.tags} countries={it.countries} limit={3} />
+
+        {/* Route Popularity — Star Rating */}
+        <div className="mb-8">
+          <RoutePopularity routeId={it.id} routeName={it.title} />
+        </div>
+
+        {/* Newsletter Signup */}
+        <div className="mb-8">
+          <NewsletterSignup variant="inline" source={`route-${it.slug}`} />
+        </div>
 
         {/* Compare route CTA */}
         <div className="mb-8">

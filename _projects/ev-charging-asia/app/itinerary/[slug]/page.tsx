@@ -6,6 +6,8 @@ import { getAllItineraries, getItineraryBySlug, getRelatedItineraries } from '@/
 import RouteMap from '@/components/itineraries/RouteMap';
 import SeasonalRecommendations from '@/components/itineraries/SeasonalRecommendations';
 import SeasonalComparisonTable from '@/components/itineraries/SeasonalComparisonTable';
+import RoutePopularity from '@/components/RoutePopularity';
+import NewsletterSignup from '@/components/NewsletterSignup';
 import ItinerarySEOSection from '@/components/itineraries/ItinerarySEOSection';
 import ItineraryRevenueSection from '@/components/itineraries/ItineraryRevenueSection';
 import OptimisticTipsSection from '@/components/itineraries/OptimisticTipsSection';
@@ -432,7 +434,7 @@ export default async function ItineraryDetailPage({ params }: Props) {
 
         {/* ===== SEASONAL COMPARISON TABLE ===== */}
         <div className="mb-6">
-          <SeasonalComparisonTable bestSeason={it.bestSeason} countries={it.countries} />
+          <SeasonalComparisonTable bestSeason={it.bestSeason} countries={it.countries} totalDistanceKm={it.totalDistanceKm} estimatedRangeKm={400} />
         </div>
 
         {/* ===== SEO STRUCTURED DATA ===== */}
@@ -495,6 +497,12 @@ export default async function ItineraryDetailPage({ params }: Props) {
             We earn a commission at no extra cost to you when you book through these links.
           </p>
         </div>
+
+        {/* ===== ROUTE POPULARITY ===== */}
+        <RoutePopularity routeId={it.id} routeName={it.title} />
+
+        {/* ===== NEWSLETTER SIGNUP ===== */}
+        <NewsletterSignup variant="inline" source={`itinerary-${it.slug}`} />
 
         {/* ===== RELATED BLOG POSTS ===== */}
         <RelatedBlogPosts keywords={it.tags} countries={it.countries} limit={3} />

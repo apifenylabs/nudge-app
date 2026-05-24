@@ -11,6 +11,14 @@ import {
 import type { MascotDef } from "@/data/mascots";
 import type { ProgressionData, FeedEntry } from "@/lib/persistence";
 
+// ─── New Palette ────────────────────────────────────────────────────────
+// Page bg: #F8F6F3, Card bg: #FFFFFF
+// Card border: 1px solid #E5E0D8, shadow: 0 10px 30px -10px rgba(31,31,31,0.08)
+// Primary text: #1F1F1F, Secondary: #666666
+// Accent teal: #0EA5A5, Accent gold: #D4A017
+// Button height: 56px, border-radius 16px
+// Card border-radius: 20px, padding: 24px
+
 interface HomeDashboardProps {
   progression: {
     totalXp: number;
@@ -40,8 +48,12 @@ function StatCard({
 }) {
   return (
     <motion.div
-      className="relative p-3 sm:p-4 rounded-xl border bg-titan-card/60 backdrop-blur-sm cursor-pointer group overflow-hidden"
-      style={{ borderColor: `${color}25` }}
+      className="relative p-4 rounded-xl border cursor-pointer group overflow-hidden"
+      style={{
+        background: '#FFFFFF',
+        borderColor: '#E5E0D8',
+        boxShadow: '0 10px 30px -10px rgba(31,31,31,0.08)',
+      }}
       whileHover={{ y: -3, scale: 1.01 }}
       onClick={onClick}
     >
@@ -53,12 +65,12 @@ function StatCard({
       />
       <div className="flex items-start justify-between relative z-10">
         <div>
-          <p className="text-[10px] sm:text-xs font-mono text-titan-muted/70 mb-1">{label}</p>
+          <p className="text-[10px] sm:text-xs font-mono mb-1" style={{ color: '#666666' }}>{label}</p>
           <p className="text-lg sm:text-2xl font-bold font-mono" style={{ color }}>
             {value}
           </p>
           {trend && (
-            <p className="text-[9px] sm:text-[10px] text-titan-muted/50 mt-0.5 font-mono">{trend}</p>
+            <p className="text-[9px] sm:text-[10px] font-mono mt-0.5" style={{ color: '#666666' }}>{trend}</p>
           )}
         </div>
         <div
@@ -87,8 +99,12 @@ function QuickNavCard({
 }) {
   return (
     <motion.button
-      className="relative p-3 sm:p-4 rounded-xl border bg-titan-card/40 hover:bg-titan-card/60 text-left w-full group"
-      style={{ borderColor: `${color}20` }}
+      className="relative p-4 rounded-xl border text-left w-full group"
+      style={{
+        background: '#FFFFFF',
+        borderColor: `${color}20`,
+        boxShadow: '0 10px 30px -10px rgba(31,31,31,0.08)',
+      }}
       whileHover={{ y: -2, scale: 1.01 }}
       onClick={onClick}
     >
@@ -100,10 +116,10 @@ function QuickNavCard({
           <Icon className="h-4 w-4 sm:h-5 sm:w-5" style={{ color }} />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-xs sm:text-sm font-semibold font-mono text-titan-text">{label}</p>
-          <p className="text-[9px] sm:text-[10px] text-titan-muted/60 mt-0.5 truncate">{description}</p>
+          <p className="text-xs sm:text-sm font-semibold font-mono" style={{ color: '#1F1F1F' }}>{label}</p>
+          <p className="text-[9px] sm:text-[10px] mt-0.5 truncate" style={{ color: '#666666' }}>{description}</p>
         </div>
-        <ChevronRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-titan-muted/40 group-hover:text-titan-teal transition-colors shrink-0" />
+        <ChevronRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 group-hover:transition-colors shrink-0" style={{ color: '#666666' }} />
       </div>
     </motion.button>
   );
@@ -133,9 +149,8 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Welcome header */}
+      {/* Welcome header avec mascot + greeting */}
       <div className="flex items-center gap-3 sm:gap-4">
-        {/* Mascot avatar (clickable) */}
         <motion.div
           className="relative shrink-0 cursor-pointer group"
           whileHover={{ scale: 1.08 }}
@@ -156,54 +171,53 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
             />
           </div>
           <motion.div
-            className="absolute -bottom-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center border border-titan-bg"
+            className="absolute -bottom-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center border-2 border-white"
             style={{ background: currentMascot.colorTint }}
             animate={{ scale: [1, 1.15, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <Sparkles className="h-2 w-2 sm:h-2.5 sm:w-2.5 text-titan-bg" />
+            <Sparkles className="h-2 w-2 sm:h-2.5 sm:w-2.5 text-white" />
           </motion.div>
         </motion.div>
 
-        {/* Level + XP */}
         <div className="flex-1 min-w-0">
-          <h1 className="text-base sm:text-xl font-bold">
-            <span className="titan-text-gradient">{currentMascot.name}</span>
-            <span className="text-titan-muted/50 ml-2 text-xs font-mono">Lv.{agentLevel}</span>
+          <h1 className="text-base sm:text-xl font-bold" style={{ color: '#1F1F1F' }}>
+            {currentMascot.name}
+            <span className="ml-2 text-xs font-mono" style={{ color: '#666666' }}>Lv.{agentLevel}</span>
           </h1>
-          <p className="text-[10px] sm:text-xs text-titan-muted/60 font-mono mt-0.5">
+          <p className="text-[10px] sm:text-xs font-mono mt-0.5" style={{ color: '#666666' }}>
             {currentMascot.description}
           </p>
           {/* XP bar */}
           <div className="mt-2 flex items-center gap-2">
-            <div className="flex-1 h-1.5 sm:h-2 rounded-full bg-titan-border/30 overflow-hidden">
+            <div className="flex-1 h-1.5 sm:h-2 rounded-full overflow-hidden" style={{ background: '#E5E0D8' }}>
               <motion.div
                 className="h-full rounded-full"
-                style={{ background: `linear-gradient(90deg, ${currentMascot.colorTint}, #F59E0B)` }}
+                style={{ background: `linear-gradient(90deg, ${currentMascot.colorTint}, #D4A017)` }}
                 initial={{ width: 0 }}
                 animate={{ width: `${xpProgress}%` }}
                 transition={{ duration: 1, ease: "easeOut" }}
               />
             </div>
-            <span className="text-[9px] sm:text-[10px] font-mono text-titan-muted/50 shrink-0">
+            <span className="text-[9px] sm:text-[10px] font-mono shrink-0" style={{ color: '#666666' }}>
               {progression.totalXp.toLocaleString()} / {nextLevelXp.toLocaleString()} XP
             </span>
           </div>
         </div>
       </div>
 
-      {/* Today's Impact */}
+      {/* Today's Impact — Value metrics cards */}
       <div>
         <div className="flex items-center gap-2 mb-3">
-          <Zap className="h-3 w-3 text-titan-golden" />
-          <span className="text-[10px] font-mono text-titan-muted/70 tracking-widest uppercase">Today&apos;s Impact</span>
+          <Zap className="h-3 w-3" style={{ color: '#D4A017' }} />
+          <span className="text-[10px] font-mono tracking-widest uppercase" style={{ color: '#666666' }}>Today&apos;s Impact</span>
         </div>
         <div className="grid grid-cols-3 gap-2 sm:gap-3">
           <StatCard
             label="Tasks Done"
             value={todayImpact.tasks.toString()}
             icon={Bot}
-            color="#14B8A6"
+            color="#0EA5A5"
             trend="swarm executed"
             onClick={() => onNavigate("swarm")}
           />
@@ -219,18 +233,22 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
             label="Value Created"
             value={`$${todayImpact.moneySaved}`}
             icon={TrendingUp}
-            color="#F59E0B"
+            color="#D4A017"
             trend="total savings"
             onClick={() => onNavigate("roi")}
           />
         </div>
       </div>
 
-      {/* Mini swarm + quick nav — two columns on desktop */}
+      {/* Mini swarm + quick actions — two columns on desktop */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         {/* Mini Swarm Preview */}
-        <div className="relative p-4 sm:p-5 rounded-xl border bg-titan-card/40 overflow-hidden"
-          style={{ borderColor: `${currentMascot.colorTint}15` }}
+        <div className="relative p-4 sm:p-5 rounded-xl border overflow-hidden"
+          style={{
+            background: '#FFFFFF',
+            borderColor: `${currentMascot.colorTint}15`,
+            boxShadow: '0 10px 30px -10px rgba(31,31,31,0.08)',
+          }}
         >
           <div
             className="absolute inset-0 pointer-events-none"
@@ -240,13 +258,11 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
           />
           <div className="flex items-center gap-2 mb-3">
             <Layers className="h-3.5 w-3.5" style={{ color: currentMascot.colorTint }} />
-            <span className="text-[10px] font-mono text-titan-muted/70 tracking-widest uppercase">Active Swarm</span>
+            <span className="text-[10px] font-mono tracking-widest uppercase" style={{ color: '#666666' }}>Active Swarm</span>
           </div>
 
           <div className="flex items-center justify-center py-4 sm:py-6">
-            {/* Mini orbital view */}
             <div className="relative w-[120px] h-[120px] sm:w-[160px] sm:h-[160px]">
-              {/* Ring */}
               <div
                 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full w-full h-full"
                 style={{
@@ -254,7 +270,6 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
                   background: `radial-gradient(circle, ${currentMascot.colorTint}05, transparent 60%)`,
                 }}
               />
-              {/* Center mascot */}
               <motion.div
                 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
                 animate={{ y: [0, -3, 0] }}
@@ -269,10 +284,9 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
                 />
               </motion.div>
 
-              {/* Orbiting dots */}
               {[
-                { color: "#14B8A6", angle: 0 },
-                { color: "#F59E0B", angle: 72 },
+                { color: "#0EA5A5", angle: 0 },
+                { color: "#D4A017", angle: 72 },
                 { color: "#10B981", angle: 144 },
                 { color: "#7C3AED", angle: 216 },
                 { color: "#EC4899", angle: 288 },
@@ -299,8 +313,10 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
           </div>
 
           <motion.button
-            className="w-full py-1.5 rounded-lg text-[10px] font-mono flex items-center justify-center gap-1.5 transition-all group"
+            className="w-full py-2 rounded-lg text-[10px] font-mono flex items-center justify-center gap-1.5 transition-all group"
             style={{
+              height: '56px',
+              borderRadius: '16px',
               background: `${currentMascot.colorTint}12`,
               color: currentMascot.colorTint,
             }}
@@ -312,17 +328,17 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
           </motion.button>
         </div>
 
-        {/* Quick navigation */}
+        {/* Quick actions */}
         <div className="space-y-2">
           <div className="flex items-center gap-2 mb-2">
-            <Star className="h-3 w-3 text-titan-golden" />
-            <span className="text-[10px] font-mono text-titan-muted/70 tracking-widest uppercase">Quick Actions</span>
+            <Star className="h-3 w-3" style={{ color: '#D4A017' }} />
+            <span className="text-[10px] font-mono tracking-widest uppercase" style={{ color: '#666666' }}>Quick Actions</span>
           </div>
           <QuickNavCard
             label="Skill Forge"
             description="Craft new skills & templates"
             icon={Bot}
-            color="#F59E0B"
+            color="#D4A017"
             onClick={() => onNavigate("forge")}
           />
           <QuickNavCard
@@ -343,7 +359,7 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
             label="Progression"
             description="Achievements & milestones"
             icon={Trophy}
-            color="#F59E0B"
+            color="#D4A017"
             onClick={() => onNavigate("progression")}
           />
         </div>
@@ -353,22 +369,26 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
       {recentActivity.length > 0 && (
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <Clock className="h-3 w-3 text-titan-teal" />
-            <span className="text-[10px] font-mono text-titan-muted/70 tracking-widest uppercase">Recent Activity</span>
+            <Clock className="h-3 w-3" style={{ color: '#0EA5A5' }} />
+            <span className="text-[10px] font-mono tracking-widest uppercase" style={{ color: '#666666' }}>Recent Activity</span>
           </div>
           <div className="space-y-1.5">
             {recentActivity.map((entry, i) => (
               <motion.div
                 key={entry.id}
-                className="flex items-center gap-2.5 p-2 rounded-lg border border-titan-border/10 bg-titan-card/20"
+                className="flex items-center gap-2.5 p-2 rounded-lg border"
+                style={{
+                  background: '#FFFFFF',
+                  borderColor: '#E5E0D8',
+                }}
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.05 }}
               >
                 <span className="text-sm">{entry.avatar}</span>
                 <div className="flex-1 min-w-0">
-                  <p className="text-[11px] text-titan-text/80 truncate">{entry.text}</p>
-                  <p className="text-[9px] text-titan-muted/50 mt-0.5 font-mono">{entry.time}</p>
+                  <p className="text-[11px] truncate" style={{ color: '#1F1F1F' }}>{entry.text}</p>
+                  <p className="text-[9px] font-mono mt-0.5" style={{ color: '#666666' }}>{entry.time}</p>
                 </div>
               </motion.div>
             ))}
@@ -376,12 +396,12 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
         </div>
       )}
 
-      {/* System health banner */}
+      {/* XP stat + system health banner */}
       <motion.div
         className="p-3 rounded-xl border flex items-center gap-3 cursor-pointer"
         style={{
-          background: "linear-gradient(135deg, rgba(16,185,129,0.08), rgba(20,184,166,0.05))",
-          borderColor: "rgba(16,185,129,0.25)",
+          background: 'linear-gradient(135deg, rgba(16,185,129,0.08), rgba(14,165,165,0.05))',
+          borderColor: 'rgba(16,185,129,0.25)',
         }}
         whileHover={{ y: -1 }}
         onClick={() => onNavigate("audit")}
@@ -391,11 +411,11 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-xs font-semibold text-emerald-400">All Systems Secure</p>
-          <p className="text-[10px] text-titan-muted/60 mt-0.5 font-mono">
+          <p className="text-[10px] font-mono mt-0.5" style={{ color: '#666666' }}>
             {progression.skillsCertified} skills certified · {progression.goldSkills} gold standard
           </p>
         </div>
-        <ChevronRight className="h-3.5 w-3.5 text-emerald-400/50 shrink-0" />
+        <ChevronRight className="h-3.5 w-3.5 shrink-0" style={{ color: '#10B981' }} />
       </motion.div>
     </motion.div>
   );

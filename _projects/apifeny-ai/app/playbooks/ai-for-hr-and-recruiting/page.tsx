@@ -1,6 +1,7 @@
 'use client';
 
 import SeoMetadata from '@/components/SeoMetadata';
+import EmailCapture from '@/components/EmailCapture';
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
 
@@ -213,6 +214,28 @@ function AiForHrAndRecruitingInner() {
             </div>
           </div>
         </div>
+
+        <section className="mb-8 sm:mb-10">
+          <EmailCapture
+            templateContent={`You are an AI-powered HR consultant. I need to automate parts of my hiring process.
+
+Role I\'m hiring for: [job title]
+Company size: [size]
+Applicants per posting: [rough number]
+Current hiring pain point: [what takes the most time?]
+
+Please give me:
+1. A job description template optimized for AI screening
+2. 5 screening questions that reveal the best candidates
+3. A scorecard template for evaluating applicants
+4. An onboarding checklist that AI can help automate
+5. The top 3 automation opportunities in my hiring workflow`}
+            templateTitle="Free Prompt: Automate Your Hiring Workflow"
+            playbookSlug="ai-for-hr-and-recruiting"
+            playbookTitle="AI for HR & Recruiting"
+            gradient="from-indigo-500/10 to-violet-500/10"
+          />
+        </section>
 
         {[["What's Inside", BookOpen, 'text-neon-light'],
           ["Who This Is For", Users, 'text-sky-400'],

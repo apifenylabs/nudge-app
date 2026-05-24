@@ -1,6 +1,7 @@
 'use client';
 
 import SeoMetadata from '@/components/SeoMetadata';
+import EmailCapture from '@/components/EmailCapture';
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
 
@@ -190,6 +191,28 @@ function AIForDataAnalysisInner() {
             </div>
           </div>
         </div>
+
+        {/* Free Template Section */}
+        <section className="mb-8 sm:mb-10">
+          <EmailCapture
+            templateContent={`You are a data analyst. I need a Python analysis script for my dataset.
+
+Dataset: [describe — e.g., "CSV with 10K customer rows, columns: signup_date, country, plan_type, revenue, churned"]
+Goal: [what do you want to find out? — e.g., "Which customer segments churn most?"]
+Output format: [e.g., "charts + summary table"]
+
+Please give me:
+1. A complete Python script using pandas, matplotlib/seaborn
+2. Comments explaining each section
+3. Expected output description
+4. File naming conventions for saving outputs
+5. A 1-paragraph executive summary template`}
+            templateTitle="Free Prompt: AI-Powered Data Analysis Script"
+            playbookSlug="ai-for-data-analysis"
+            playbookTitle="AI for Data Analysis"
+            gradient="from-indigo-500/10 to-cyan-500/10"
+          />
+        </section>
 
         {[["What's Inside", BookOpen, 'text-neon-light'],
           ["Who This Is For", Users, 'text-sky-400'],

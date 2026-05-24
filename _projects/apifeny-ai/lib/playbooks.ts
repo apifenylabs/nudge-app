@@ -35,6 +35,8 @@ export interface Playbook {
   revenue_impact?: string;
   /** Real results from using this playbook */
   real_results?: { metric: string; value: string; description: string }[];
+  /** Free template prompt for quick start */
+  free_prompt?: string;
 }
 
 export const playbooks: Playbook[] = [
@@ -101,6 +103,7 @@ export const playbooks: Playbook[] = [
       { metric: 'Monthly Posts', value: '12 blogs + 120 social', description: '3 blog posts + 5 social posts/day' },
       { metric: 'Time Saved/Week', value: '15 hours', description: 'Down from 25 hours with manual writing' },
     ],
+    free_prompt: 'You are an expert content strategist. I need a 1200-word blog post about [topic] for my audience of [target audience]. Create an outline first with: 1) A compelling hook, 2) 5 main sections with key points each, 3) Actionable takeaways. Tone: professional but warm. Include 3 places to add data or statistics. After I approve the outline, write the full post.',
   },
   {
     slug: 'build-an-app-with-cursor',
@@ -164,6 +167,7 @@ export const playbooks: Playbook[] = [
       { metric: 'Time to MVP', value: '72 hours', description: 'From idea to working product with Stripe' },
       { metric: 'First Week Signups', value: '45 users', description: 'Posted build journey on X' },
     ],
+    free_prompt: 'You are a senior software architect. I want to build a [describe app idea]. Help me plan the architecture. First, ask me 5 questions to clarify my requirements. Then, provide: 1) Recommended tech stack with reasoning, 2) Database schema for the MVP, 3) API endpoints I need, 4) Component tree for the frontend. Assume I use Next.js and I am comfortable with TypeScript.',
   },
   {
     slug: 'travel-planning-with-ai',
@@ -221,6 +225,7 @@ export const playbooks: Playbook[] = [
     real_results: [
       { metric: 'Planning Time Saved', value: '70%', description: 'Reduced trip planning from 8 hours to 2.5 hours' },
     ],
+    free_prompt: 'You are a travel planning expert. I\'m planning a [length]-day family trip to [destination] with [number] adults and [number] children aged [ages]. Create a detailed day-by-day itinerary that: 1) Balances activities with rest time, 2) Includes kid-friendly dining options, 3) Accounts for travel time between locations, 4) Provides a budget estimate per day. Start with 3 questions to refine before building the full itinerary.',
   },
   {
     slug: 'ai-marketing-for-asia',
@@ -284,6 +289,7 @@ export const playbooks: Playbook[] = [
       { metric: 'Ad ROI Improvement', value: '5x', description: 'Using AI to tailor ad copy per Asian market' },
       { metric: 'Content Production', value: '10x faster', description: 'Localize 1 post into 8 Asian languages' },
     ],
+    free_prompt: 'You are a multilingual marketing strategist specializing in Asian markets. I need a marketing campaign targeting [country/region] for my [product/service]. Create: 1) Culturally adapted messaging for [language] speakers, 2) Recommended local platforms and content formats, 3) A 4-week content calendar with platform-specific posts, 4) Key cultural considerations and taboos to avoid, 5) Suggested local influencers or brand partners. Base recommendations on current market trends.',
   },
   {
     slug: 'productivity-workflow-with-ai',
@@ -342,6 +348,7 @@ export const playbooks: Playbook[] = [
       { metric: 'Daily Tasks Automated', value: '12+', description: 'Recurring workflows now fully automated' },
       { metric: 'Hours Saved/Week', value: '10+ hours', description: 'Reallocated to high-value work' },
     ],
+    free_prompt: 'You are a productivity expert who helps professionals optimize their workflows. My biggest productivity challenges are: [list 2-3 challenges]. I use [mention tools, e.g., Notion, Slack, Gmail]. Design a daily workflow for me: 1) Morning routine for priority setting, 2) Deep work blocks with time boxing, 3) Communication batching strategy, 4) Weekly reflection framework. Suggest 3 automations I can set up this week.',
   },
   {
     slug: 'ai-video-production',
@@ -395,6 +402,7 @@ export const playbooks: Playbook[] = [
       { metric: 'Video Production Speed', value: '5x', description: 'From scripting to finished video' },
       { metric: 'Cost Savings', value: '80%', description: 'No studio, no crew, no editing suite needed' },
     ],
+    free_prompt: 'You are a video production expert. I need to create a [type of video, e.g., product demo / tutorial / social reel] for [purpose]. Create a complete production plan: 1) Script with hook, body, and CTA (timestamps included), 2) Visual direction for each scene, 3) Voiceover tone and pacing guide, 4) Music and sound effects suggestions, 5) Post-production checklist with caption strategy.',
   },
 
   // ════════════════════════════════════════════════════

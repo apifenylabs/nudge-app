@@ -122,3 +122,20 @@ export interface AuditLog {
   humanNotes?: string;
   createdAt: string;
 }
+
+// ─── Robotics types (Phase 6c) ─────────────────────────────────────────
+
+export type PlatformType = 'ros2' | 'arduino' | 'raspberry-pi' | 'custom';
+export type DeploymentStatus = 'pending' | 'active' | 'error' | 'disconnected';
+
+export interface RobotDeployment {
+  id: string;
+  platform: PlatformType;
+  agentId: string;
+  agentName: string;
+  status: DeploymentStatus;
+  endpoint?: string;
+  deployedAt: string;
+  lastHeartbeat: string;
+  config: Record<string, unknown>;
+}

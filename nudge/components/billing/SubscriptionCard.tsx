@@ -5,16 +5,19 @@ import {
   Crown, CheckCircle, XCircle, Loader2, ExternalLink,
   Zap, Users, Sparkles, ArrowRight, Clock, AlertTriangle,
   CreditCard, ChevronRight, Info, Undo2, Eye,
-  ArrowDown, ArrowUp,
+  ArrowDown, ArrowUp, Flame,
 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { buildAppUrl } from '@/lib/config'
+import { getPriceId, stripeConfig } from '@/lib/stripe/config'
 import ConfirmModal from './ConfirmModal'
 import PlanComparison from './PlanComparison'
+import type { BillingInterval } from '@/lib/plans'
 
 interface Subscription {
   plan: 'free' | 'pro' | 'family'
+  billingInterval: BillingInterval | null
   status: string
   stripeCustomerId: string | null
   stripeSubscriptionId: string | null
@@ -30,7 +33,7 @@ interface SubscriptionCardProps {
   isOwner: boolean
 }
 
-type ConfirmAction = 'cancel' | 'downgrade-to-free' | 'downgrade-pro' | 'upgrade-family' | 'reactivate'
+type ConfirmAction = 'cancel' | 'downgrade-to-free' | 'downgrade-pro' | 'upgrade-family' | 'reactivate' | 'switch-interval'
 
 export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCardProps) {
   const router = useRouter()
@@ -38,18 +41,15 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [actionLoading, setActionLoading] = useState<string | null>(null)
+  const [billingInterval, setBillingInterval] = useState<BillingInterval>('monthly')
+  const [showComparison, setShowComparison] = useState(false)
+  const [successMsg, setSuccessMsg] = useState('')
 
   // Confirmation modal state
   const [confirmOpen, setConfirmOpen] = useState(false)
   const [confirmAction, setConfirmAction] = useState<ConfirmAction>('cancel')
   const [confirmPlan, setConfirmPlan] = useState<string | undefined>(undefined)
   const [confirmDescription, setConfirmDescription] = useState('')
-
-  // Show comparison table
-  const [showComparison, setShowComparison] = useState(false)
-
-  // Success toast
-  const [successMsg, setSuccessMsg] = useState('')
 
   const fetchStatus = useCallback(async () => {
     try {
@@ -58,6 +58,9 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
       if (!res.ok) throw new Error('Failed to fetch status')
       const data = await res.json()
       setSub(data)
+      if (data.billingInterval) {
+        setBillingInterval(data.billingInterval)
+      }
     } catch (err: any) {
       setError(err.message)
     } finally {
@@ -101,6 +104,19 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
           'Upgrade to Family Plan ($9/mo) for unlimited family members, analytics, API access, and priority support.'
         )
         break
+      case 'switch-interval': {
+        const targetInterval = billingInterval === 'monthly' ? 'yearly' : 'monthly'
+        const currentPlan = sub?.plan || 'pro'
+        const price = currentPlan === 'pro'
+          ? (targetInterval === 'yearly' ? '$50/yr ($4.17/mo)' : '$5/mo')
+          : (targetInterval === 'yearly' ? '$90/yr ($7.50/mo)' : '$9/mo')
+        setConfirmDescription(
+          `Switch to ${targetInterval} billing for ${currentPlan === 'pro' ? 'Pro' : 'Family'} at ${price}. ` +
+          (targetInterval === 'yearly' ? 'Save 17% with annual billing!' : 'Switch to monthly billing.')
+        )
+        setConfirmPlan(undefined)
+        break
+      }
       case 'reactivate':
         setConfirmPlan(undefined)
         setConfirmDescription(
@@ -124,19 +140,22 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
       case 'upgrade-family':
         await doChangePlan('family')
         break
+      case 'switch-interval':
+        await doSwitchInterval()
+        break
       case 'reactivate':
         await doReactivate()
         break
     }
   }
 
-  const doChangePlan = async (targetPlan: string) => {
+  const doChangePlan = async (targetPlan: string, interval?: BillingInterval) => {
     setActionLoading('change-plan')
     try {
       const res = await fetch('/api/stripe/change-plan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ plan: targetPlan }),
+        body: JSON.stringify({ plan: targetPlan, interval: interval || billingInterval }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Failed to change plan')
@@ -153,9 +172,34 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
     }
   }
 
+  const doSwitchInterval = async () => {
+    if (!sub || sub.plan === 'free') return
+    const targetInterval: BillingInterval = billingInterval === 'monthly' ? 'yearly' : 'monthly'
+    setActionLoading('switch-interval')
+    try {
+      const res = await fetch('/api/stripe/change-plan', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ plan: sub.plan, interval: targetInterval }),
+      })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error || 'Failed to switch billing interval')
+
+      setBillingInterval(targetInterval)
+      setSuccessMsg(data.message || `Switched to ${targetInterval} billing!`)
+      setConfirmOpen(false)
+      await fetchStatus()
+      setTimeout(() => setSuccessMsg(''), 4000)
+    } catch (err: any) {
+      setError(err.message)
+      setTimeout(() => setError(''), 4000)
+    } finally {
+      setActionLoading(null)
+    }
+  }
+
   const doCancelAtPeriodEnd = async () => {
     if (!sub?.stripeSubscriptionId) return
-
     setActionLoading('cancel')
     try {
       const res = await fetch('/api/stripe/cancel', {
@@ -163,12 +207,10 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ subscriptionId: sub.stripeSubscriptionId }),
       })
-
       if (!res.ok) {
         const data = await res.json()
         throw new Error(data.error || 'Failed to cancel')
       }
-
       setSuccessMsg('Subscription will end at the end of your billing period.')
       await fetchStatus()
       setConfirmOpen(false)
@@ -182,7 +224,6 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
 
   const doReactivate = async () => {
     if (!sub?.stripeSubscriptionId) return
-
     setActionLoading('reactivate')
     try {
       const res = await fetch('/api/stripe/reactivate', {
@@ -190,12 +231,10 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ subscriptionId: sub.stripeSubscriptionId }),
       })
-
       if (!res.ok) {
         const data = await res.json()
         throw new Error(data.error || 'Failed to reactivate')
       }
-
       setSuccessMsg('Subscription reactivated!')
       setConfirmOpen(false)
       await fetchStatus()
@@ -207,31 +246,29 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
     }
   }
 
-  const handleUpgrade = async (plan: 'pro' | 'family') => {
-    // For free → paid, redirect to Stripe checkout (needs payment method)
+  const handleUpgrade = async (plan: 'pro' | 'family', interval?: BillingInterval) => {
+    const targetInterval = interval || billingInterval
+
     if (!sub || sub.plan === 'free') {
-      await doCheckout(plan)
+      await doCheckout(plan, targetInterval)
       return
     }
 
-    // For pro → family, use change-plan API
     if (sub.plan === 'pro' && plan === 'family') {
       showConfirm('upgrade-family')
       return
     }
   }
 
-  const doCheckout = async (plan: 'pro' | 'family') => {
+  const doCheckout = async (plan: 'pro' | 'family', interval: BillingInterval) => {
     setActionLoading(plan)
     try {
-      const priceId = plan === 'pro'
-        ? process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO_MONTHLY || 'price_pro_monthly'
-        : process.env.NEXT_PUBLIC_STRIPE_PRICE_FAMILY_MONTHLY || 'price_family_monthly'
+      const priceId = getPriceId(plan, interval)
 
       const res = await fetch('/api/stripe/create-checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ priceId, plan }),
+        body: JSON.stringify({ priceId, plan, interval }),
       })
 
       const data = await res.json()
@@ -257,10 +294,8 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
       })
-
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Failed to open billing portal')
-
       if (data.url) {
         window.location.href = data.url
       } else {
@@ -295,6 +330,31 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
   if (sub.plan === 'free') {
     return (
       <div className="space-y-3">
+        {/* Billing interval toggle */}
+        <div className="flex items-center gap-1 p-1 bg-secondary rounded-xl w-fit mx-auto">
+          <button
+            onClick={() => setBillingInterval('monthly')}
+            className={`px-4 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              billingInterval === 'monthly'
+                ? 'bg-background text-foreground shadow-sm'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            Monthly
+          </button>
+          <button
+            onClick={() => setBillingInterval('yearly')}
+            className={`px-4 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              billingInterval === 'yearly'
+                ? 'bg-background text-foreground shadow-sm'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            Yearly
+            <span className="ml-1 text-[10px] text-emerald-500 font-bold">Save 17%</span>
+          </button>
+        </div>
+
         {/* Current plan status */}
         <div className="glass-card rounded-2xl p-5">
           <div className="flex items-center justify-between mb-4">
@@ -319,18 +379,18 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
           {isOwner && (
             <div className="space-y-2">
               <button
-                onClick={() => handleUpgrade('pro')}
+                onClick={() => handleUpgrade('pro', billingInterval)}
                 disabled={actionLoading === 'pro'}
                 className="btn-primary w-full flex items-center justify-center gap-2 text-sm"
               >
                 {actionLoading === 'pro' ? (
                   <><Loader2 className="w-4 h-4 animate-spin" /> Opening checkout...</>
                 ) : (
-                  <><Crown className="w-4 h-4" /> Upgrade to Pro — $5/mo</>
+                  <><Crown className="w-4 h-4" /> {billingInterval === 'yearly' ? 'Start Pro Annual $50/yr' : 'Start Pro Monthly $5/mo'}</>
                 )}
               </button>
               <button
-                onClick={() => handleUpgrade('family')}
+                onClick={() => handleUpgrade('family', billingInterval)}
                 disabled={actionLoading === 'family'}
                 className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold
                   bg-gradient-to-r from-amber-400 to-amber-500 text-amber-950
@@ -340,12 +400,16 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
                 {actionLoading === 'family' ? (
                   <><Loader2 className="w-4 h-4 animate-spin" /> Opening checkout...</>
                 ) : (
-                  <><Users className="w-4 h-4" /> Upgrade to Family — $9/mo</>
+                  <><Users className="w-4 h-4" /> {billingInterval === 'yearly' ? 'Start Family Annual — $90/yr' : 'Start Family Monthly — $9/mo'}</>
                 )}
               </button>
-              <p className="text-xs text-muted-foreground text-center pt-1">
-                Save $3/mo with Family — includes everything in Pro plus unlimited members &amp; analytics
-              </p>
+
+              {billingInterval === 'yearly' && (
+                <p className="text-xs text-emerald-600 dark:text-emerald-400 text-center pt-1 flex items-center justify-center gap-1">
+                  <Flame className="w-3 h-3" />
+                  Save up to 17% with annual billing — best value!
+                </p>
+              )}
             </div>
           )}
 
@@ -356,7 +420,6 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
           )}
         </div>
 
-        {/* Plan comparison toggle */}
         <button
           onClick={() => setShowComparison(!showComparison)}
           className="w-full flex items-center justify-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors py-2"
@@ -368,7 +431,7 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
         {showComparison && (
           <PlanComparison
             currentPlan="free"
-            onUpgrade={handleUpgrade}
+            onUpgrade={(plan) => handleUpgrade(plan, billingInterval)}
             loading={actionLoading !== null}
             isOwner={isOwner}
           />
@@ -377,16 +440,20 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
     )
   }
 
-  // ---------- PAID PLAN VIEW (pro or family) ----------
+  // ---------- PAID PLAN VIEW ----------
   const isTrialing = sub.status === 'trialing'
   const isPastDue = sub.status === 'past_due'
+  const currentInterval = sub.billingInterval || billingInterval || 'monthly'
+  const priceLabel = sub.plan === 'pro'
+    ? (currentInterval === 'yearly' ? '$50/yr' : '$5/mo')
+    : (currentInterval === 'yearly' ? '$90/yr' : '$9/mo')
+  const yearlyPerMonth = sub.plan === 'pro' ? '$4.17/mo' : '$7.50/mo'
 
   return (
     <div className="space-y-3">
-      {/* Confirmation modal */}
       <ConfirmModal
         open={confirmOpen}
-        variant={confirmAction === 'upgrade-family' ? 'upgrade' : confirmAction === 'reactivate' ? 'upgrade' : confirmAction === 'cancel' ? 'cancel' : 'downgrade'}
+        variant={confirmAction === 'upgrade-family' ? 'upgrade' : confirmAction === 'reactivate' ? 'upgrade' : confirmAction === 'cancel' ? 'cancel' : confirmAction === 'switch-interval' ? 'info' : 'downgrade'}
         plan={confirmPlan}
         loading={actionLoading !== null}
         description={confirmDescription}
@@ -395,7 +462,6 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
         onClose={() => setConfirmOpen(false)}
       />
 
-      {/* Success toast */}
       {successMsg && (
         <div className="p-3 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 rounded-xl text-xs text-emerald-700 dark:text-emerald-300 flex items-center gap-2 animate-slide-up">
           <CheckCircle className="w-4 h-4 shrink-0" />
@@ -403,7 +469,6 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
         </div>
       )}
 
-      {/* Error toast */}
       {error && (
         <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-xs text-red-600 dark:text-red-400 flex items-center gap-2 animate-slide-up">
           <AlertTriangle className="w-4 h-4 shrink-0" />
@@ -411,7 +476,6 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
         </div>
       )}
 
-      {/* Current Plan Card */}
       <div className={`glass-card rounded-2xl p-5 ${
         sub.plan === 'family'
           ? 'border-2 border-amber-200 dark:border-amber-800'
@@ -419,14 +483,26 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
       }`}>
         <div className="flex items-center justify-between mb-4">
           <div>
-            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Current Plan</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Plan</p>
             <div className="flex items-center gap-2 mt-0.5">
               <p className="text-lg font-bold text-foreground capitalize">{sub.plan}</p>
+              <span className="text-xs text-muted-foreground bg-secondary px-2 py-0.5 rounded-full">
+                {currentInterval === 'yearly' ? `Annual — ${priceLabel}` : priceLabel}
+              </span>
+              {currentInterval === 'yearly' && (
+                <span className="text-[10px] text-emerald-500 font-bold bg-emerald-50 dark:bg-emerald-950/20 px-1.5 py-0.5 rounded-full">
+                  {yearlyPerMonth}
+                </span>
+              )}
               {sub.cancelAtPeriodEnd && (
-                <span className="badge-amber text-[10px]">Canceling</span>
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300">
+                  Canceling
+                </span>
               )}
               {isTrialing && (
-                <span className="badge-amber text-[10px]">Trial</span>
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300">
+                  Trial
+                </span>
               )}
               {isPastDue && (
                 <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300">
@@ -463,7 +539,7 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
               {new Date(sub.currentPeriodEnd).toLocaleDateString('en-US', {
                 month: 'long', day: 'numeric', year: 'numeric'
               })}.
-              {' '}You'll revert to Free after that.
+              You'll revert to Free after that.
             </p>
           </div>
         )}
@@ -500,7 +576,26 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
         {/* Owner action buttons */}
         {isOwner && (
           <div className="space-y-2">
-            {/* Manage Billing (Stripe Portal) — always available */}
+            {/* Billing interval switch */}
+            {!sub.cancelAtPeriodEnd && sub.status === 'active' && (
+              <button
+                onClick={() => showConfirm('switch-interval')}
+                disabled={actionLoading === 'switch-interval'}
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold
+                  bg-indigo-50 dark:bg-indigo-950/20 text-indigo-700 dark:text-indigo-300
+                  hover:bg-indigo-100 dark:hover:bg-indigo-950/30
+                  active:scale-[0.97] transition-all"
+              >
+                {actionLoading === 'switch-interval' ? (
+                  <><Loader2 className="w-4 h-4 animate-spin" /> Switching...</>
+                ) : (
+                  <>{currentInterval === 'yearly' ? <ArrowDown className="w-4 h-4" /> : <ArrowUp className="w-4 h-4" />}
+                    {currentInterval === 'yearly' ? 'Switch to Monthly' : 'Switch to Annual & Save 17%'}
+                  </>
+                )}
+              </button>
+            )}
+
             <button
               onClick={handleManageBilling}
               disabled={actionLoading === 'portal'}
@@ -513,10 +608,9 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
               )}
             </button>
 
-            {/* ---- Pro-specific actions ---- */}
+            {/* Pro actions */}
             {sub.plan === 'pro' && !sub.cancelAtPeriodEnd && (
               <>
-                {/* Upgrade to Family (direct change-plan) */}
                 <button
                   onClick={() => showConfirm('upgrade-family')}
                   disabled={actionLoading === 'change-plan'}
@@ -531,8 +625,6 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
                     <><ArrowUp className="w-4 h-4" /> Upgrade to Family — $9/mo</>
                   )}
                 </button>
-
-                {/* Downgrade to Free (direct change-plan with 'free') */}
                 <button
                   onClick={() => showConfirm('downgrade-to-free')}
                   disabled={actionLoading === 'change-plan'}
@@ -544,10 +636,9 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
               </>
             )}
 
-            {/* ---- Family-specific actions ---- */}
+            {/* Family actions */}
             {sub.plan === 'family' && !sub.cancelAtPeriodEnd && (
               <>
-                {/* Downgrade to Pro (direct change-plan) */}
                 <button
                   onClick={() => showConfirm('downgrade-pro')}
                   disabled={actionLoading === 'change-plan'}
@@ -561,8 +652,6 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
                     <><ArrowDown className="w-4 h-4" /> Downgrade to Pro — $5/mo</>
                   )}
                 </button>
-
-                {/* Cancel straight to Free */}
                 <button
                   onClick={() => showConfirm('downgrade-to-free')}
                   disabled={actionLoading === 'change-plan'}
@@ -573,10 +662,9 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
               </>
             )}
 
-            {/* ---- Canceling state actions ---- */}
+            {/* Canceling state */}
             {sub.cancelAtPeriodEnd && (
               <>
-                {/* Reactivate */}
                 <button
                   onClick={() => showConfirm('reactivate')}
                   disabled={actionLoading === 'reactivate'}
@@ -591,8 +679,6 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
                     <><Undo2 className="w-4 h-4" /> Reactivate Subscription</>
                   )}
                 </button>
-
-                {/* Immediate downgrade to Free (don't wait for period) */}
                 <button
                   onClick={() => showConfirm('downgrade-to-free')}
                   disabled={actionLoading === 'change-plan'}
@@ -605,7 +691,6 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
           </div>
         )}
 
-        {/* Non-owner message */}
         {!isOwner && (
           <p className="text-xs text-muted-foreground text-center pt-2">
             Only the family owner can manage billing.
@@ -613,7 +698,6 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
         )}
       </div>
 
-      {/* Plan comparison toggle */}
       <button
         onClick={() => setShowComparison(!showComparison)}
         className="w-full flex items-center justify-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors py-2"
@@ -625,13 +709,12 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
       {showComparison && (
         <PlanComparison
           currentPlan={sub.plan}
-          onUpgrade={handleUpgrade}
+          onUpgrade={(plan) => handleUpgrade(plan, billingInterval)}
           loading={actionLoading !== null}
           isOwner={isOwner}
         />
       )}
 
-      {/* Pricing link */}
       <Link href="/pricing" className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors justify-center py-1">
         <Info className="w-3 h-3" />
         Compare all plans on pricing page

@@ -157,6 +157,20 @@ export default function Home() {
               🔥 {streak} day{streak !== 1 ? 's' : ''}
             </span>
           </h1>
+          <a
+            href="/review"
+            style={{
+              fontSize: 12,
+              color: '#22c55e',
+              textDecoration: 'none',
+              fontWeight: 600,
+              background: '#f0fdf4',
+              padding: '4px 10px',
+              borderRadius: 8,
+            }}
+          >
+            📊 Review
+          </a>
         </div>
         <div className="date">{getDateStr()}</div>
       </header>

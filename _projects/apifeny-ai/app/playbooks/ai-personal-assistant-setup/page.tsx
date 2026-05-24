@@ -3,6 +3,7 @@
 // OG tags handled by parent layout.
 
 import SeoMetadata from '@/components/SeoMetadata';
+import EmailCapture from '@/components/EmailCapture';
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
 import {
@@ -492,6 +493,32 @@ function AISolopreneurToolkitInner() {
             </div>
           </div>
         </div>
+
+        {/* Free Template Section */}
+        <section className="mb-8 sm:mb-10">
+          <EmailCapture
+            templateContent={`You are a personal executive assistant. Help me design my perfect AI-powered daily briefing.
+
+My role: [describe your work]
+My priorities this month: [top 3-5 priorities]
+My industry: [what do you track?]
+My KPIs: [what numbers matter daily?]
+My tools: [which apps do I use — email, calendar, CRM, analytics, etc.]
+
+Design a daily briefing system that:
+1. Aggregates data from all tools into one view
+2. Highlights what changed since yesterday
+3. Flags urgent items (emails, deadlines, alerts)
+4. Suggests top 3 priorities for today
+5. Shows one strategic insight I might miss
+
+Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
+            templateTitle="Free Prompt: Your AI Morning Briefing"
+            playbookSlug="ai-personal-assistant-setup"
+            playbookTitle="AI Personal Assistant Setup"
+            gradient="from-sky-500/10 to-violet-500/10"
+          />
+        </section>
 
         {/* ═══════════════════════════════════════════════════ */}
         {/* WHAT IS INSIDE                                    */}

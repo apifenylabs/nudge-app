@@ -1,80 +1,82 @@
-import { CheckCircle, ArrowRight, Star, MessageSquare, Shield, Clock } from 'lucide-react'
+'use client'
+
+import { useState } from 'react'
+import { CheckCircle, ArrowRight, Star, MessageSquare, Shield, Clock, Flame } from 'lucide-react'
 import Link from 'next/link'
 import CheckoutButton from '@/components/billing/CheckoutButton'
+import type { BillingInterval } from '@/lib/plans'
 
-const plans = [
-  {
-    name: 'Free',
-    tagline: 'Perfect for getting started',
-    price: '$0',
-    period: '/month',
-    popular: false,
-    features: [
-      '5 tasks per day',
-      'Basic voice input',
-      'Telegram integration',
-      'Email reminders',
-      'Single user',
-    ],
-    cta: 'Get Started Free',
-    href: '/auth/signup',
-    primary: false,
-    checkoutPlan: 'free' as const,
-  },
-  {
-    name: 'Pro',
-    tagline: 'Best for busy families',
-    price: '$5',
-    period: '/month',
-    popular: true,
-    features: [
-      'Unlimited tasks',
-      'Advanced voice AI',
-      'Telegram + mobile apps',
-      'Push & SMS reminders',
-      'Up to 5 family members',
-      'Recurring chores',
-      'Weekly scorecards',
-      'Priority support',
-    ],
-    cta: 'Start Free Trial',
-    href: '/auth/signup',
-    primary: true,
-    checkoutPlan: 'pro' as const,
-  },
-  {
-    name: 'Family',
-    tagline: 'For larger households',
-    price: '$9',
-    period: '/month',
-    popular: false,
-    features: [
-      'Everything in Pro',
-      'Unlimited family members',
-      'Priority support',
-      'Custom reminders',
-      'Advanced analytics',
-      'API access',
-      'Early access to new features',
-      'Dedicated onboarding',
-    ],
-    cta: 'Start Free Trial',
-    href: '/auth/signup',
-    primary: false,
-    checkoutPlan: 'family' as const,
-  },
-]
+function getPlans(interval: BillingInterval) {
+  return [
+    {
+      name: 'Free',
+      tagline: 'Perfect for getting started',
+      price: '$0',
+      period: '',
+      popular: false,
+      features: [
+        '5 tasks per day',
+        'Basic voice input',
+        'Telegram integration',
+        'Email reminders',
+        'Single user',
+      ],
+      checkoutPlan: 'free' as const,
+    },
+    {
+      name: 'Pro',
+      tagline: 'Best for busy families',
+      price: interval === 'yearly' ? '$50' : '$5',
+      period: interval === 'yearly' ? '/year' : '/month',
+      popular: true,
+      yearlyPerMonth: interval === 'yearly' ? '$4.17/mo' : null,
+      features: [
+        'Unlimited tasks',
+        'Advanced voice AI',
+        'Telegram + mobile apps',
+        'Push & SMS reminders',
+        'Up to 5 family members',
+        'Recurring chores',
+        'Weekly scorecards',
+        'Priority support',
+      ],
+      checkoutPlan: 'pro' as const,
+    },
+    {
+      name: 'Family',
+      tagline: 'For larger households',
+      price: interval === 'yearly' ? '$90' : '$9',
+      period: interval === 'yearly' ? '/year' : '/month',
+      popular: false,
+      yearlyPerMonth: interval === 'yearly' ? '$7.50/mo' : null,
+      features: [
+        'Everything in Pro',
+        'Unlimited family members',
+        'Priority support',
+        'Custom reminders',
+        'Advanced analytics',
+        'API access',
+        'Early access to new features',
+        'Dedicated onboarding',
+      ],
+      checkoutPlan: 'family' as const,
+    },
+  ]
+}
 
 const faq = [
   { q: 'Can I start for free?', a: 'Yes! Start with the Free plan — no credit card required. Upgrade anytime when you need more tasks or family members.' },
   { q: 'What payment methods do you accept?', a: 'We accept all major credit cards, PayPal, and Apple Pay. Stripe handles all payments securely.' },
   { q: 'Can I cancel anytime?', a: 'Absolutely. No contracts, no commitments. Cancel from your settings and keep access until the end of your billing period.' },
   { q: 'What happens if I hit my task limit?', a: 'You\'ll get a friendly nudge to upgrade. Your existing tasks stay safe — you just can\'t add new ones until the next day or you upgrade.' },
-  { q: 'Is my data secure?', a: 'Yes. All data is encrypted at rest and in transit. We use Supabase and Vercel for infrastructure. No data sharing, ever.' },
+  { q: 'Is there an annual discount?', a: 'Yes! Annual billing saves you 17% — Pro is $50/yr ($4.17/mo) and Family is $90/yr ($7.50/mo).' },
   { q: 'Can I switch plans?', a: 'Yes, upgrade or downgrade at any time. Changes take effect immediately.' },
 ]
 
 export default function PricingPage() {
+  const [interval, setInterval] = useState<BillingInterval>('monthly')
+  const plans = getPlans(interval)
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -96,7 +98,7 @@ export default function PricingPage() {
       </nav>
 
       {/* Pricing Header */}
-      <section className="pt-20 pb-12 px-4 text-center">
+      <section className="pt-20 pb-8 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 mb-4">
             Pricing
@@ -107,6 +109,33 @@ export default function PricingPage() {
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto">
             Start free. Upgrade when your family grows. No hidden fees, no surprises.
           </p>
+        </div>
+      </section>
+
+      {/* Billing Interval Toggle */}
+      <section className="pb-12 px-4">
+        <div className="flex items-center justify-center gap-1 p-1 bg-secondary rounded-xl w-fit mx-auto">
+          <button
+            onClick={() => setInterval('monthly')}
+            className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
+              interval === 'monthly'
+                ? 'bg-background text-foreground shadow-sm'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            Monthly
+          </button>
+          <button
+            onClick={() => setInterval('yearly')}
+            className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
+              interval === 'yearly'
+                ? 'bg-background text-foreground shadow-sm'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            Yearly
+            <span className="ml-1.5 text-[10px] text-emerald-500 font-bold bg-emerald-50 dark:bg-emerald-950/30 px-1.5 py-0.5 rounded-full">Save 17%</span>
+          </button>
         </div>
       </section>
 
@@ -138,6 +167,11 @@ export default function PricingPage() {
                     <span className="text-4xl font-bold text-gray-900 dark:text-white">{plan.price}</span>
                     <span className="text-sm text-muted-foreground">{plan.period}</span>
                   </div>
+                  {plan.yearlyPerMonth && (
+                    <p className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold mt-1 flex items-center gap-1">
+                      <Flame className="w-3 h-3" /> {plan.yearlyPerMonth} — save 17%
+                    </p>
+                  )}
                 </div>
 
                 <ul className="space-y-3 mb-8 flex-1">
@@ -149,22 +183,17 @@ export default function PricingPage() {
                   ))}
                 </ul>
 
-                <Link
-                  href={plan.href}
-                  className={`w-full text-center text-sm rounded-xl font-semibold tracking-wide transition-all duration-200 py-3 px-6 flex items-center justify-center gap-1 ${
-                    plan.primary
+                <CheckoutButton
+                  plan={plan.checkoutPlan}
+                  interval={interval}
+                  className={`w-full text-center text-sm rounded-xl font-semibold tracking-wide transition-all duration-200 py-3 px-6 flex items-center justify-center gap-2 ${
+                    plan.checkoutPlan === 'pro'
                       ? 'bg-indigo-600 text-white hover:shadow-lg hover:shadow-indigo-600/25 hover:brightness-110 active:scale-[0.97]'
-                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80 active:scale-[0.97]'
+                      : plan.checkoutPlan === 'family'
+                        ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-amber-950 hover:shadow-lg hover:shadow-amber-400/25 active:scale-[0.97]'
+                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80 active:scale-[0.97]'
                   }`}
-                >
-                  <CheckoutButton plan={plan.checkoutPlan} label={plan.cta} className={`w-full text-center text-sm rounded-xl font-semibold tracking-wide transition-all duration-200 py-3 px-6 flex items-center justify-center gap-1 ${
-  plan.primary
-    ? 'bg-indigo-600 text-white hover:shadow-lg hover:shadow-indigo-600/25 hover:brightness-110 active:scale-[0.97]'
-    : plan.checkoutPlan === 'family'
-      ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-amber-950 hover:shadow-lg hover:shadow-amber-400/25 active:scale-[0.97]'
-      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80 active:scale-[0.97]'
-}`} />
-                </Link>
+                />
               </div>
             ))}
           </div>

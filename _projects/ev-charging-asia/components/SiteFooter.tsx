@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Zap } from 'lucide-react';
+import { Zap, Mail } from 'lucide-react';
+import NewsletterSignup from '@/components/NewsletterSignup';
 
 export default function SiteFooter() {
   return (
@@ -66,6 +67,21 @@ export default function SiteFooter() {
           <p className="text-[10px] text-gray-400 mt-2">
             Support this site — we may earn a commission when you book through these links, at no extra cost to you.
           </p>
+        </div>
+
+        {/* Newsletter section */}
+        <div className="mb-8 pb-6 border-b border-gray-100">
+          <div className="max-w-md mx-auto text-center">
+            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+              <Mail size={12} className="inline mr-1 text-emerald-500" />
+              Free EV Road Trip Guide
+            </p>
+            <h3 className="text-lg font-bold text-gray-900 mb-1">Get Monthly Route Updates</h3>
+            <p className="text-xs text-gray-500 mb-3">
+              New routes, charging station additions, and exclusive partner deals.
+            </p>
+            <NewsletterSignup variant="footer" source="footer" />
+          </div>
         </div>
 
         {/* Main footer row */}
@@ -199,6 +215,8 @@ export default function SiteFooter() {
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="hover:text-gray-600 transition-colors">Privacy Policy</Link>
             <Link href="/contact" className="hover:text-gray-600 transition-colors">Contact</Link>
+            <Link href="/blog" className="hover:text-gray-600 transition-colors">Blog</Link>
+            <Link href="/seasons" className="hover:text-gray-600 transition-colors">Seasons</Link>
           </div>
         </div>
       </div>

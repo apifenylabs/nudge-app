@@ -2,6 +2,7 @@
 
 import IconRenderer from '@/components/IconRenderer';
 import SeoMetadata from '@/components/SeoMetadata';
+import EmailCapture from '@/components/EmailCapture';
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
 import {
@@ -157,6 +158,31 @@ function AIForPersonalFinanceInner() {
             </div>
           </div>
         </div>
+
+        {/* Free Template Section */}
+        <section className="mb-8 sm:mb-10">
+          <EmailCapture
+            templateContent={`You are a certified financial planner. Help me do a 15-minute financial health check.
+
+My age: [X]
+My monthly income: [$X]
+My monthly expenses: [$X]
+My savings: [$X]
+My debt: [$X] at [X]% interest
+My investments: [$X]
+
+Please analyze:
+1. Emergency fund health
+2. Debt priority — which to pay off first
+3. Investment gap — enough for my age?
+4. Tax efficiency — quick wins?
+5. Action items — top 3 priorities this month`}
+            templateTitle="Free Prompt: 15-Minute Financial Health Check"
+            playbookSlug="ai-for-personal-finance"
+            playbookTitle="AI for Personal Finance"
+            gradient="from-emerald-500/10 to-cyan-500/10"
+          />
+        </section>
 
         {/* What's Inside */}
         <section className="mb-8 sm:mb-10" id="preview">

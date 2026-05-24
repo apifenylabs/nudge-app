@@ -7,6 +7,7 @@
 import { createAdminClient } from '@/lib/supabase/admin'
 
 export type PlanTier = 'free' | 'pro' | 'family'
+export type BillingInterval = 'monthly' | 'yearly'
 
 export interface PlanFeatures {
   maxTasksPerDay: number // -1 = unlimited
@@ -62,6 +63,58 @@ export const PLAN_FEATURES: Record<PlanTier, PlanFeatures> = {
     prioritySupport: false,
     referralsEnabled: false,
   },
+}
+
+/**
+ * Pricing display info per plan + interval.
+ */
+export interface PlanPricing {
+  plan: PlanTier
+  monthlyPrice: number  // cents
+  yearlyPrice: number   // cents (total for 12 months)
+  monthlyLabel: string
+  yearlyLabel: string
+  yearlySavingsPercent: number
+}
+
+export const PLAN_PRICING: Record<Exclude<PlanTier, 'free'>, PlanPricing> = {
+  pro: {
+    plan: 'pro',
+    monthlyPrice: 500,    // $5
+    yearlyPrice: 5000,    // $50 ($4.17/mo save ~17%)
+    monthlyLabel: '$5/mo',
+    yearlyLabel: '$50/yr',
+    yearlySavingsPercent: 17,
+  },
+  family: {
+    plan: 'family',
+    monthlyPrice: 900,    // $9
+    yearlyPrice: 9000,    // $90 ($7.50/mo save ~17%)
+    monthlyLabel: '$9/mo',
+    yearlyLabel: '$90/yr',
+    yearlySavingsPercent: 17,
+  },
+}
+
+export function getPlanPricing(plan: Exclude<PlanTier, 'free'>): PlanPricing {
+  return PLAN_PRICING[plan]
+}
+
+/**
+ * Price label for display.
+ */
+export function getPriceLabel(plan: Exclude<PlanTier, 'free'>, interval: BillingInterval): string {
+  const pricing = PLAN_PRICING[plan]
+  if (interval === 'yearly') return pricing.yearlyLabel
+  return pricing.monthlyLabel
+}
+
+/**
+ * Per-month cost for yearly billing (for display).
+ */
+export function getYearlyPerMonth(plan: Exclude<PlanTier, 'free'>): string {
+  const pricing = PLAN_PRICING[plan]
+  return `$${(pricing.yearlyPrice / 1200).toFixed(2)}/mo`
 }
 
 /**
@@ -156,6 +209,7 @@ export async function checkDailyTaskLimit(
  */
 export interface SubscriptionStatus {
   plan: PlanTier
+  billingInterval: BillingInterval | null
   status: string
   trialDaysRemaining: number | null
   cancelAtPeriodEnd: boolean
@@ -181,6 +235,7 @@ export async function getSubscriptionStatus(userId: string): Promise<Subscriptio
   if (!membership) {
     return {
       plan: 'free',
+      billingInterval: null,
       status: 'active',
       trialDaysRemaining: null,
       cancelAtPeriodEnd: false,
@@ -200,6 +255,7 @@ export async function getSubscriptionStatus(userId: string): Promise<Subscriptio
   if (!sub) {
     return {
       plan: 'free',
+      billingInterval: null,
       status: 'active',
       trialDaysRemaining: null,
       cancelAtPeriodEnd: false,
@@ -220,9 +276,12 @@ export async function getSubscriptionStatus(userId: string): Promise<Subscriptio
   }
 
   const plan = (sub.plan === 'pro' || sub.plan === 'family') ? sub.plan : 'free'
+  const billingInterval: BillingInterval | null = sub.billing_interval === 'yearly' ? 'yearly' :
+    sub.billing_interval === 'monthly' ? 'monthly' : null
 
   return {
     plan,
+    billingInterval,
     status: sub.status,
     trialDaysRemaining,
     cancelAtPeriodEnd: sub.cancel_at_period_end || false,

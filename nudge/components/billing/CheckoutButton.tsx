@@ -3,15 +3,18 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { ArrowRight, Loader2, Crown, Sparkles } from 'lucide-react'
+import { getPriceId } from '@/lib/stripe/config'
+import type { BillingInterval } from '@/lib/plans'
 
 interface CheckoutButtonProps {
   plan: 'free' | 'pro' | 'family'
+  interval?: BillingInterval
   label?: string
   className?: string
   children?: React.ReactNode
 }
 
-export default function CheckoutButton({ plan, label, className, children }: CheckoutButtonProps) {
+export default function CheckoutButton({ plan, interval = 'monthly', label, className, children }: CheckoutButtonProps) {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -26,22 +29,19 @@ export default function CheckoutButton({ plan, label, className, children }: Che
     setError('')
 
     try {
-      const priceId = plan === 'pro'
-        ? process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO_MONTHLY || 'price_pro_monthly'
-        : process.env.NEXT_PUBLIC_STRIPE_PRICE_FAMILY_MONTHLY || 'price_family_monthly'
+      const priceId = getPriceId(plan as 'pro' | 'family', interval)
 
       const res = await fetch('/api/stripe/create-checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ priceId, plan }),
+        body: JSON.stringify({ priceId, plan, interval }),
       })
 
       const data = await res.json()
 
       if (!res.ok) {
-        // If unauthorized, redirect to signup
         if (res.status === 401) {
-          router.push(`/auth/signup?plan=${plan}`)
+          router.push(`/auth/signup?plan=${plan}&interval=${interval}`)
           return
         }
         throw new Error(data.error || 'Something went wrong')
@@ -52,16 +52,16 @@ export default function CheckoutButton({ plan, label, className, children }: Che
       }
     } catch (err: any) {
       setError(err.message)
-      // On error, fallback to signup
-      router.push(`/auth/signup?plan=${plan}`)
+      router.push(`/auth/signup?plan=${plan}&interval=${interval}`)
     } finally {
       setLoading(false)
     }
   }
 
   const defaultLabel = plan === 'free' ? 'Get Started Free'
-    : plan === 'pro' ? 'Start Free Trial'
-    : 'Start Free Trial'
+    : plan === 'pro'
+      ? (interval === 'yearly' ? 'Start Pro Annual $50/yr' : 'Start Free Trial')
+      : (interval === 'yearly' ? 'Start Family Annual $90/yr' : 'Start Free Trial')
 
   return (
     <div>

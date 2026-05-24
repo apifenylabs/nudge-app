@@ -68,6 +68,7 @@ export default function MapView({
       maxBounds={asiaBounds}
       maxBoundsViscosity={1.0}
       className="w-full h-full"
+      style={{ width: '100%', height: '100%', minHeight: '300px' }}
       zoomControl={true}
       scrollWheelZoom={true}
     >

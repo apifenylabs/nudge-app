@@ -2,6 +2,7 @@
 
 import IconRenderer from '@/components/IconRenderer';
 import SeoMetadata from '@/components/SeoMetadata';
+import EmailCapture from '@/components/EmailCapture';
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
 import {
@@ -157,6 +158,30 @@ function AIForSocialMediaManagementInner() {
             </div>
           </div>
         </div>
+
+        {/* Free Template Section */}
+        <section className="mb-8 sm:mb-10">
+          <EmailCapture
+            templateContent={`You are a social media hook specialist. I need hooks that stop the scroll.
+
+My niche: [describe your niche]
+My content angle: [education, entertainment, inspiration, or mix]
+My platform: [TikTok, Instagram Reels, YouTube Shorts, LinkedIn, X]
+My audience: [who are they?]
+
+Generate 20 hooks using these proven frameworks (5 each):
+1. The Curiosity Gap — what almost no one knows about [topic]
+2. The Before/After — "I used to X, then I did Y, and Z happened"
+3. The Contrarian — "Everyone says X, but here\'s the truth"
+4. The Direct Address — "[Audience], if you\'re struggling with [pain point], this is for you"
+
+For each hook, tell me why it works and what kind of post would follow it.`}
+            templateTitle="Free Prompt: Generate 20 Viral Hooks"
+            playbookSlug="ai-for-social-media-management"
+            playbookTitle="AI for Social Media Management"
+            gradient="from-pink-500/10 to-rose-500/10"
+          />
+        </section>
 
         {/* What's Inside */}
         <section className="mb-8 sm:mb-10" id="preview">

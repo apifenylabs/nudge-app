@@ -1,7 +1,7 @@
 /**
  * POST /api/stripe/change-plan
  * Upgrade or downgrade the subscription plan.
- * Body: { plan: 'pro' | 'family' | 'free' }
+ * Body: { plan: 'pro' | 'family' | 'free', interval?: 'monthly' | 'yearly' }
  *
  * This is used by the settings UI for direct plan changes.
  * For owners who want to upgrade/downgrade without going through Stripe portal.
@@ -11,8 +11,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { getFamilySubscription } from '@/lib/stripe/db'
-import { stripeConfig } from '@/lib/stripe/config'
+import { stripeConfig, getPriceId } from '@/lib/stripe/config'
 import Stripe from 'stripe'
+import type { BillingInterval } from '@/lib/plans'
 
 export async function POST(request: NextRequest) {
   try {
@@ -24,10 +25,14 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { plan } = body
+    const { plan, interval } = body as { plan: string; interval?: BillingInterval }
 
     if (plan !== 'pro' && plan !== 'family' && plan !== 'free') {
       return NextResponse.json({ error: 'Invalid plan. Must be "pro", "family", or "free".' }, { status: 400 })
+    }
+
+    if (interval && interval !== 'monthly' && interval !== 'yearly') {
+      return NextResponse.json({ error: 'Invalid interval. Must be "monthly" or "yearly".' }, { status: 400 })
     }
 
     // Verify user is owner of their family
@@ -41,6 +46,8 @@ export async function POST(request: NextRequest) {
     if (!membership || membership.role !== 'owner') {
       return NextResponse.json({ error: 'Only the family owner can change the plan' }, { status: 403 })
     }
+
+    const targetInterval: BillingInterval = interval || 'monthly'
 
     // Handle downgrade to free: cancel the Stripe subscription and clear local record
     if (plan === 'free') {
@@ -73,29 +80,29 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    // Paid plan change (pro ⟷ family)
+    // Paid plan change (pro ⟷ family, or billing interval change)
     const subscription = await getFamilySubscription(membership.family_id)
     if (!subscription || !subscription.stripe_subscription_id) {
       return NextResponse.json({ error: 'No active subscription found. Please subscribe first.' }, { status: 400 })
     }
 
     // Determine the target price ID
-    const targetPriceId = plan === 'pro'
-      ? stripeConfig.prices.pro.monthly
-      : stripeConfig.prices.family.monthly
+    const targetPriceId = getPriceId(plan as 'pro' | 'family', targetInterval)
 
     if (!targetPriceId || targetPriceId.startsWith('price_')) {
       // In dev mode with mock prices, just update locally
-      if (targetPriceId === 'price_pro_monthly' || targetPriceId === 'price_family_monthly') {
+      if (targetPriceId.includes('price_pro') || targetPriceId.includes('price_family')) {
         await adminDb.from('subscriptions').update({
           plan,
+          billing_interval: targetInterval,
           updated_at: new Date().toISOString(),
         }).eq('family_id', membership.family_id)
 
         return NextResponse.json({
           success: true,
           plan,
-          message: `Plan changed to ${plan} (dev mode)`,
+          interval: targetInterval,
+          message: `Plan changed to ${plan} (${targetInterval}) — dev mode`,
         })
       }
     }
@@ -106,13 +113,15 @@ export async function POST(request: NextRequest) {
       // Dev mode: simulate
       await adminDb.from('subscriptions').update({
         plan,
+        billing_interval: targetInterval,
         updated_at: new Date().toISOString(),
       }).eq('family_id', membership.family_id)
 
       return NextResponse.json({
         success: true,
         plan,
-        message: `Plan changed to ${plan} (dev mode)`,
+        interval: targetInterval,
+        message: `Plan changed to ${plan} (${targetInterval}) — dev mode`,
       })
     }
 
@@ -139,21 +148,24 @@ export async function POST(request: NextRequest) {
       metadata: {
         ...existingSub.metadata,
         plan_changed_to: plan,
+        interval_changed_to: targetInterval,
       },
     })
 
     // Update our database
     await adminDb.from('subscriptions').update({
       plan,
+      billing_interval: targetInterval,
       updated_at: new Date().toISOString(),
     }).eq('family_id', membership.family_id)
 
-    console.log(`[Stripe] Plan changed: family ${membership.family_id} -> ${plan}`)
+    console.log(`[Stripe] Plan changed: family ${membership.family_id} -> ${plan} (${targetInterval})`)
 
     return NextResponse.json({
       success: true,
       plan,
-      message: `Plan changed to ${plan.charAt(0).toUpperCase() + plan.slice(1)}. Changes take effect immediately.`,
+      interval: targetInterval,
+      message: `Plan changed to ${plan.charAt(0).toUpperCase() + plan.slice(1)} (${targetInterval}). Changes take effect immediately.`,
     })
   } catch (err: any) {
     console.error('Stripe change-plan error:', err)

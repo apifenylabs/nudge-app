@@ -1,13 +1,15 @@
 /**
  * POST /api/stripe/create-checkout
  * Creates a Stripe Checkout Session for subscription purchase.
- * Body: { priceId: string, plan: 'pro' | 'family' }
+ * Body: { priceId: string, plan: 'pro' | 'family', interval?: 'monthly' | 'yearly' }
  * Returns: { url: string } to redirect the user to Stripe.
  */
 
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createCheckoutSession } from '@/lib/stripe/server'
+import { getPriceId } from '@/lib/stripe/config'
+import type { BillingInterval } from '@/lib/plans'
 
 export async function POST(request: NextRequest) {
   try {
@@ -21,15 +23,22 @@ export async function POST(request: NextRequest) {
 
     // Parse body
     const body = await request.json()
-    const { priceId, plan } = body as { priceId: string; plan: 'pro' | 'family' }
+    const { priceId: rawPriceId, plan, interval } = body as {
+      priceId?: string
+      plan: 'pro' | 'family'
+      interval?: BillingInterval
+    }
 
-    if (!priceId || !plan) {
-      return NextResponse.json({ error: 'Missing priceId or plan' }, { status: 400 })
+    if (!plan) {
+      return NextResponse.json({ error: 'Missing plan' }, { status: 400 })
     }
 
     if (!['pro', 'family'].includes(plan)) {
       return NextResponse.json({ error: 'Invalid plan' }, { status: 400 })
     }
+
+    // Resolve price ID: if rawPriceId provided, use it; otherwise derive from plan+interval
+    const priceId = rawPriceId || getPriceId(plan, interval || 'monthly')
 
     // Get user profile
     const { data: profile } = await supabase

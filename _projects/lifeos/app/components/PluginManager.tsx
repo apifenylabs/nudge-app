@@ -5,6 +5,8 @@ import {
   BUILTIN_PLUGINS,
   loadActivePlugins,
   saveActivePlugins,
+  loadPluginOrder,
+  savePluginOrder,
   type PluginDef,
   type PluginField,
   getActivePluginDefs,
@@ -14,7 +16,7 @@ interface PluginManagerProps {
   onPluginsChange?: () => void;
 }
 
-const CATEGORIES = ['habit', 'goal', 'reflection', 'health_extra', 'social_extra', 'work_extra', 'learning', 'finance', 'mindfulness'] as const;
+const CATEGORIES = ['habit', 'goal', 'reflection', 'health_extra', 'social_extra', 'work_extra', 'learning', 'finance', 'mindfulness', 'content_creation', 'career', 'environment', 'habits_extra', 'nutrition', 'creativity', 'finance_invest', 'family_parenting'] as const;
 const CATEGORY_LABELS: Record<string, { label: string; emoji: string }> = {
   habit: { label: 'Daily Habits', emoji: '✅' },
   goal: { label: 'Goals & Progress', emoji: '🏆' },
@@ -25,6 +27,14 @@ const CATEGORY_LABELS: Record<string, { label: string; emoji: string }> = {
   learning: { label: 'Learning & Growth', emoji: '📚' },
   finance: { label: 'Daily Finance', emoji: '💰' },
   mindfulness: { label: 'Mindfulness & Energy', emoji: '🧘' },
+  content_creation: { label: 'Content & Writing', emoji: '✍️' },
+  career: { label: 'Career & Growth', emoji: '💼' },
+  environment: { label: 'Workspace & Env', emoji: '🖥️' },
+  habits_extra: { label: 'Extra Habits', emoji: '📖' },
+  nutrition: { label: 'Nutrition & Diet', emoji: '🥗' },
+  creativity: { label: 'Creative Expression', emoji: '🎨' },
+  finance_invest: { label: 'Finance & Investments', emoji: '📈' },
+  family_parenting: { label: 'Family & Parenting', emoji: '👨‍👩‍👧‍👦' },
 };
 
 export default function PluginManager({ onPluginsChange }: PluginManagerProps) {
@@ -32,6 +42,8 @@ export default function PluginManager({ onPluginsChange }: PluginManagerProps) {
   const [showPanel, setShowPanel] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<string | 'all'>('all');
+  const [dragIndex, setDragIndex] = useState<number | null>(null);
+  const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
 
   useEffect(() => {
     setActivePluginIds(loadActivePlugins());
@@ -83,9 +95,9 @@ export default function PluginManager({ onPluginsChange }: PluginManagerProps) {
     return counts;
   }, [activePluginIds]);
 
-  // Active plugin names summary
+  // Active plugin names summary (in user-specified order)
   const activeSummary = useMemo(() => {
-    const active = BUILTIN_PLUGINS.filter((p) => activePluginIds.includes(p.id));
+    const active = getActivePluginDefs();
     if (active.length === 0) return 'No plugins active';
     if (active.length <= 3) return active.map((p) => `${p.emoji} ${p.name}`).join(', ');
     return `${active.length} active plugins`;
@@ -280,17 +292,59 @@ export default function PluginManager({ onPluginsChange }: PluginManagerProps) {
         </div>
       )}
 
-      {/* Plugin list */}
-      {filteredPlugins.map((plugin) => {
+      {/* Plugin list with drag-to-reorder for active plugins */}
+      {filteredPlugins.map((plugin, idx) => {
         const active = activePluginIds.includes(plugin.id);
         const categoryLabel = CATEGORY_LABELS[plugin.category]?.emoji || '';
+        const isDragging = dragIndex === idx;
+        const isDragOver = dragOverIndex === idx;
         
         return (
           <div
             key={plugin.id}
             onClick={() => {
               togglePlugin(plugin.id);
-              // Also toggle suggestion buttons visual state
+            }}
+            draggable={active}
+            onDragStart={(e) => {
+              e.dataTransfer.effectAllowed = 'move';
+              e.dataTransfer.setData('text/plain', plugin.id);
+              setDragIndex(idx);
+            }}
+            onDragOver={(e) => {
+              e.preventDefault();
+              e.dataTransfer.dropEffect = 'move';
+              setDragOverIndex(idx);
+            }}
+            onDragLeave={() => {
+              setDragOverIndex((prev) => prev === idx ? null : prev);
+            }}
+            onDrop={(e) => {
+              e.preventDefault();
+              const draggedId = e.dataTransfer.getData('text/plain');
+              if (draggedId && draggedId !== plugin.id && active) {
+                // Reorder in activePluginIds preserving the drop position
+                const currentOrder = loadPluginOrder();
+                const allActive = getActivePluginDefs().map((p) => p.id);
+                
+                // Remove dragged item from current order
+                const newOrder = allActive.filter((id) => id !== draggedId);
+                // Insert at the drop target's position
+                const targetIdx = newOrder.indexOf(plugin.id);
+                newOrder.splice(targetIdx, 0, draggedId);
+                
+                savePluginOrder(newOrder);
+                // Refresh display
+                setActivePluginIds(loadActivePlugins());
+                // Signal re-render to main page
+                setTimeout(() => onPluginsChange?.(), 0);
+              }
+              setDragIndex(null);
+              setDragOverIndex(null);
+            }}
+            onDragEnd={() => {
+              setDragIndex(null);
+              setDragOverIndex(null);
             }}
             style={{
               display: 'flex',
@@ -299,12 +353,39 @@ export default function PluginManager({ onPluginsChange }: PluginManagerProps) {
               padding: '10px 12px',
               borderRadius: 10,
               marginBottom: 5,
-              cursor: 'pointer',
-              background: active ? '#f0fdf4' : '#fafafa',
-              border: active ? '1px solid #22c55e' : '1px solid #eee',
+              cursor: active ? 'grab' : 'pointer',
+              background: isDragOver && active
+                ? '#dcfce7'
+                : active
+                  ? '#f0fdf4'
+                  : '#fafafa',
+              border: isDragOver && active
+                ? '2px dashed #22c55e'
+                : active
+                  ? '1px solid #22c55e'
+                  : '1px solid #eee',
               transition: 'all .15s',
+              opacity: isDragging ? 0.5 : 1,
             }}
           >
+            {/* Drag handle (only for active plugins) */}
+            {active && (
+              <div style={{
+                width: 18,
+                height: 18,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: 14,
+                color: '#999',
+                cursor: 'grab',
+                flexShrink: 0,
+                userSelect: 'none',
+              }} title="Drag to reorder">
+                ≡
+              </div>
+            )}
+
             {/* Checkbox */}
             <div style={{
               width: 22,
@@ -376,7 +457,7 @@ export default function PluginManager({ onPluginsChange }: PluginManagerProps) {
           {activePluginIds.length} of {BUILTIN_PLUGINS.length} active
         </span>
         <span style={{ fontSize: 10, color: '#bbb' }}>
-          Plugins save automatically
+          {activePluginIds.length > 0 && 'Drag ≡ to reorder · '}Plugins save automatically
         </span>
       </div>
     </div>

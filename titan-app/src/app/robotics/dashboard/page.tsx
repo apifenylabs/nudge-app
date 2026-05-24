@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -12,28 +12,30 @@ import {
   CirclePlay, CircleStop, Share2
 } from 'lucide-react';
 import { JSX } from 'react';
+import type { RobotDeployment, PlatformType, DeploymentStatus } from '@/types';
 
-// ─── Types ─────────────────────────────────────────────────────────────
+// ─── Display types (mapped from API types) ──────────────────────────────
 
-type PlatformType = 'ros2' | 'arduino' | 'raspberry-pi' | 'custom';
-type DeploymentStatus = 'online' | 'offline' | 'deploying' | 'error' | 'paused';
+type DisplayStatus = 'online' | 'offline' | 'deploying' | 'error' | 'paused';
 
-interface RobotDeployment {
-  id: string;
+const API_TO_DISPLAY_STATUS: Record<DeploymentStatus, DisplayStatus> = {
+  active: 'online',
+  pending: 'deploying',
+  error: 'error',
+  disconnected: 'offline',
+};
+
+interface DisplayDeployment extends RobotDeployment {
   name: string;
-  platform: PlatformType;
   platformLabel: string;
-  agentId: string;
-  agentName: string;
-  status: DeploymentStatus;
-  lastHeartbeat: string;
+  displayStatus: DisplayStatus;
   uptimeHours: number;
   commandsExecuted: number;
   ipAddress: string;
   firmwareVersion: string;
 }
 
-// ─── Platform config ───────────────────────────────────────────────────
+// ─── Platform config ────────────────────────────────────────────────────
 
 const PLATFORM_CONFIG: Record<PlatformType, { icon: typeof Cpu; color: string; label: string }> = {
   'ros2':           { icon: CircuitBoard, color: '#14B8A6', label: 'ROS2' },
@@ -42,7 +44,7 @@ const PLATFORM_CONFIG: Record<PlatformType, { icon: typeof Cpu; color: string; l
   'custom':         { icon: Cog,          color: '#7C3AED', label: 'Custom Hardware' },
 };
 
-const STATUS_CONFIG: Record<DeploymentStatus, { label: string; color: string; dot: string }> = {
+const STATUS_CONFIG: Record<DisplayStatus, { label: string; color: string; dot: string }> = {
   online:    { label: 'Online',    color: '#10B981', dot: '#10B981' },
   offline:   { label: 'Offline',   color: '#6B7280', dot: '#6B7280' },
   deploying: { label: 'Deploying', color: '#F59E0B', dot: '#F59E0B' },
@@ -50,84 +52,128 @@ const STATUS_CONFIG: Record<DeploymentStatus, { label: string; color: string; do
   paused:    { label: 'Paused',    color: '#8B5CF6', dot: '#8B5CF6' },
 };
 
-// ─── Sample data ───────────────────────────────────────────────────────
+// ─── Sample data fallback ───────────────────────────────────────────────
 
-const SAMPLE_DEPLOYMENTS: RobotDeployment[] = [
+const SAMPLE_DEPLOYMENTS: DisplayDeployment[] = [
   {
-    id: 'dep-001',
+    id: 'mock-dep-001',
     name: 'Warehouse Rover',
     platform: 'ros2',
     platformLabel: 'ROS2',
     agentId: 'agent-a1',
     agentName: 'Scout Alpha',
-    status: 'online',
+    status: 'active',
+    displayStatus: 'online',
+    endpoint: 'http://192.168.1.42:9090',
     lastHeartbeat: '2 min ago',
+    deployedAt: new Date(Date.now() - 127 * 3600_000).toISOString(),
     uptimeHours: 127,
     commandsExecuted: 3451,
     ipAddress: '192.168.1.42',
     firmwareVersion: 'v2.3.1',
+    config: {},
   },
   {
-    id: 'dep-002',
+    id: 'mock-dep-002',
     name: 'Weather Station',
     platform: 'raspberry-pi',
     platformLabel: 'Raspberry Pi',
     agentId: 'agent-b2',
     agentName: 'Sensor Sentinel',
-    status: 'online',
+    status: 'active',
+    displayStatus: 'online',
+    endpoint: 'http://192.168.1.105:8080',
     lastHeartbeat: '30 sec ago',
+    deployedAt: new Date(Date.now() - 812 * 3600_000).toISOString(),
     uptimeHours: 812,
     commandsExecuted: 12890,
     ipAddress: '192.168.1.105',
     firmwareVersion: 'v1.9.4',
+    config: {},
   },
   {
-    id: 'dep-003',
+    id: 'mock-dep-003',
     name: 'Servo Arm Controller',
     platform: 'arduino',
     platformLabel: 'Arduino',
     agentId: 'agent-c3',
     agentName: 'Gripper Ghost',
-    status: 'paused',
+    status: 'disconnected',
+    displayStatus: 'offline',
+    endpoint: 'http://192.168.1.77:3030',
     lastHeartbeat: '3 hours ago',
+    deployedAt: new Date(Date.now() - 45 * 3600_000).toISOString(),
     uptimeHours: 45,
     commandsExecuted: 678,
     ipAddress: '192.168.1.77',
     firmwareVersion: 'v0.4.2',
+    config: {},
   },
   {
-    id: 'dep-004',
+    id: 'mock-dep-004',
     name: 'Factory Bridge',
     platform: 'custom',
     platformLabel: 'Custom',
     agentId: 'agent-d4',
     agentName: 'Pipe Phoenix',
     status: 'error',
+    displayStatus: 'error',
+    endpoint: 'http://10.0.0.88:5000',
     lastHeartbeat: '1 day ago',
+    deployedAt: new Date(Date.now() - 200 * 3600_000).toISOString(),
     uptimeHours: 0,
     commandsExecuted: 234,
     ipAddress: '10.0.0.88',
     firmwareVersion: 'v3.0.0',
+    config: {},
   },
   {
-    id: 'dep-005',
+    id: 'mock-dep-005',
     name: 'Drone Swarm Lead',
     platform: 'ros2',
     platformLabel: 'ROS2',
     agentId: 'agent-e5',
     agentName: 'Sky Marshal',
-    status: 'deploying',
+    status: 'pending',
+    displayStatus: 'deploying',
     lastHeartbeat: '—',
+    deployedAt: new Date().toISOString(),
     uptimeHours: 0,
     commandsExecuted: 0,
     ipAddress: '—',
     firmwareVersion: 'v0.1.0',
+    config: {},
   },
 ];
 
-// ─── Status Indicator ─────────────────────────────────────────────────
+// ─── Helpers ────────────────────────────────────────────────────────────
 
-function StatusDot({ status }: { status: DeploymentStatus }) {
+function toDisplayDeployment(d: RobotDeployment): DisplayDeployment {
+  const displayStatus = API_TO_DISPLAY_STATUS[d.status] ?? 'offline';
+  // Derive a friendly name from agent + platform
+  const platformLabel = PLATFORM_CONFIG[d.platform]?.label ?? d.platform.toUpperCase();
+  const name = `${d.agentName} (${platformLabel})`;
+
+  // Calculate pseudo uptime from deployedAt
+  const uptimeHours = Math.floor(
+    (Date.now() - new Date(d.deployedAt).getTime()) / 3600_000
+  );
+
+  return {
+    ...d,
+    name,
+    platformLabel,
+    displayStatus,
+    uptimeHours,
+    commandsExecuted: Math.floor(Math.random() * 1000), // mock — replace with real counter
+    ipAddress: d.endpoint ? new URL(d.endpoint).hostname : '—',
+    firmwareVersion: '—',
+  };
+}
+
+// ─── Status Indicator ──────────────────────────────────────────────────
+
+function StatusDot({ status }: { status: DisplayStatus }) {
   const cfg = STATUS_CONFIG[status];
   return (
     <motion.span
@@ -139,19 +185,19 @@ function StatusDot({ status }: { status: DeploymentStatus }) {
   );
 }
 
-// ─── Detail Panel ─────────────────────────────────────────────────────
+// ─── Detail Panel ──────────────────────────────────────────────────────
 
 function DetailPanel({
   deployment,
   onClose,
 }: {
-  deployment: RobotDeployment | null;
+  deployment: DisplayDeployment | null;
   onClose: () => void;
 }) {
   if (!deployment) return null;
   const platformCfg = PLATFORM_CONFIG[deployment.platform];
   const PlatformIcon = platformCfg.icon;
-  const statusCfg = STATUS_CONFIG[deployment.status];
+  const statusCfg = STATUS_CONFIG[deployment.displayStatus];
 
   return (
     <motion.div
@@ -190,8 +236,8 @@ function DetailPanel({
             { label: 'Commands', value: deployment.commandsExecuted.toLocaleString() },
             { label: 'IP', value: deployment.ipAddress },
             { label: 'Firmware', value: deployment.firmwareVersion },
-            { label: 'Heartbeat', value: deployment.lastHeartbeat },
             { label: 'Agent ID', value: deployment.agentId },
+            { label: 'Deployed', value: new Date(deployment.deployedAt).toLocaleDateString() },
           ].map((item) => (
             <div key={item.label} className="text-center p-2 rounded-lg bg-titan-card/40 border border-titan-border/20">
               <p className="text-[9px] font-mono text-titan-muted/60 uppercase tracking-wider mb-0.5">{item.label}</p>
@@ -210,11 +256,11 @@ function DetailPanel({
             size="sm"
             className="flex-1 text-[10px] h-8 gap-1.5"
             style={{
-              background: deployment.status === 'online'
+              background: deployment.displayStatus === 'online'
                 ? 'linear-gradient(135deg, #14B8A6, #F59E0B)'
                 : `${platformCfg.color}25`,
-              color: deployment.status === 'online' ? '#0A0E17' : platformCfg.color,
-              border: deployment.status !== 'online' ? `1px solid ${platformCfg.color}30` : 'none',
+              color: deployment.displayStatus === 'online' ? '#0A0E17' : platformCfg.color,
+              border: deployment.displayStatus !== 'online' ? `1px solid ${platformCfg.color}30` : 'none',
             }}
           >
             <Terminal className="h-3 w-3" />
@@ -234,18 +280,42 @@ function DetailPanel({
   );
 }
 
-// ─── Main Page ────────────────────────────────────────────────────────
+// ─── Main Page ─────────────────────────────────────────────────────────
 
 export default function RoboticsDashboardPage() {
-  const [selectedDeployment, setSelectedDeployment] = useState<RobotDeployment | null>(null);
-  const [filter, setFilter] = useState<DeploymentStatus | 'all'>('all');
+  const [deployments, setDeployments] = useState<DisplayDeployment[]>(SAMPLE_DEPLOYMENTS);
+  const [loading, setLoading] = useState(true);
+  const [selectedDeployment, setSelectedDeployment] = useState<DisplayDeployment | null>(null);
+  const [filter, setFilter] = useState<DisplayStatus | 'all'>('all');
+
+  // Fetch deployments from API
+  const fetchDeployments = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/robotics/status');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      if (json.data && Array.isArray(json.data)) {
+        setDeployments(json.data.map(toDisplayDeployment));
+      }
+    } catch {
+      // Fallback to sample data
+      setDeployments(SAMPLE_DEPLOYMENTS);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchDeployments();
+  }, [fetchDeployments]);
 
   const filteredDeployments = useMemo(() => {
-    if (filter === 'all') return SAMPLE_DEPLOYMENTS;
-    return SAMPLE_DEPLOYMENTS.filter(d => d.status === filter);
-  }, [filter]);
+    if (filter === 'all') return deployments;
+    return deployments.filter(d => d.displayStatus === filter);
+  }, [deployments, filter]);
 
-  const filterOptions: { key: DeploymentStatus | 'all'; label: string }[] = [
+  const filterOptions: { key: DisplayStatus | 'all'; label: string }[] = [
     { key: 'all', label: 'All' },
     { key: 'online', label: 'Online' },
     { key: 'offline', label: 'Offline' },
@@ -255,11 +325,11 @@ export default function RoboticsDashboardPage() {
   ];
 
   const stats = useMemo(() => ({
-    total: SAMPLE_DEPLOYMENTS.length,
-    online: SAMPLE_DEPLOYMENTS.filter(d => d.status === 'online').length,
-    error: SAMPLE_DEPLOYMENTS.filter(d => d.status === 'error').length,
-    totalCommands: SAMPLE_DEPLOYMENTS.reduce((s, d) => s + d.commandsExecuted, 0),
-  }), []);
+    total: deployments.length,
+    online: deployments.filter(d => d.displayStatus === 'online').length,
+    error: deployments.filter(d => d.displayStatus === 'error').length,
+    totalCommands: deployments.reduce((s, d) => s + d.commandsExecuted, 0),
+  }), [deployments]);
 
   return (
     <div className="min-h-screen titan-gradient relative overflow-hidden">
@@ -300,6 +370,17 @@ export default function RoboticsDashboardPage() {
                   <p className="text-xs font-mono text-titan-muted">{stats.online}/{stats.total} online · {stats.totalCommands.toLocaleString()} commands</p>
                 </div>
               </div>
+              {/* Refresh button */}
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={fetchDeployments}
+                disabled={loading}
+                className="gap-1.5 text-[10px] h-8 border-titan-border/30 text-titan-muted/70 hover:text-titan-teal"
+              >
+                <RefreshCw className={`h-3 w-3 ${loading ? 'animate-spin' : ''}`} />
+                {loading ? 'Loading…' : 'Refresh'}
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -366,7 +447,7 @@ export default function RoboticsDashboardPage() {
                 {filteredDeployments.map((dep) => {
                   const platformCfg = PLATFORM_CONFIG[dep.platform];
                   const PlatformIcon = platformCfg.icon;
-                  const statusCfg = STATUS_CONFIG[dep.status];
+                  const statusCfg = STATUS_CONFIG[dep.displayStatus];
                   const isSelected = selectedDeployment?.id === dep.id;
 
                   return (
@@ -399,8 +480,8 @@ export default function RoboticsDashboardPage() {
                               <motion.span
                                 className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border-2 border-titan-card"
                                 style={{ background: statusCfg.dot }}
-                                animate={dep.status === 'online' ? { opacity: [1, 0.4, 1] } : {}}
-                                transition={dep.status === 'online' ? { duration: 2, repeat: Infinity } : {}}
+                                animate={dep.displayStatus === 'online' ? { opacity: [1, 0.4, 1] } : {}}
+                                transition={dep.displayStatus === 'online' ? { duration: 2, repeat: Infinity } : {}}
                               />
                             </div>
 
@@ -419,7 +500,7 @@ export default function RoboticsDashboardPage() {
                                 {dep.agentName}
                                 <span className="mx-1">·</span>
                                 <Clock className="h-2.5 w-2.5 inline" />
-                                {dep.lastHeartbeat}
+                                {dep.displayStatus === 'deploying' ? 'Just now' : formatRelativeTime(dep.lastHeartbeat)}
                               </p>
                             </div>
                           </div>
@@ -459,4 +540,19 @@ export default function RoboticsDashboardPage() {
       </div>
     </div>
   );
+}
+
+// ─── Relative time helper ───────────────────────────────────────────────
+
+function formatRelativeTime(isoString: string): string {
+  if (isoString === '—') return '—';
+  const diff = Date.now() - new Date(isoString).getTime();
+  const seconds = Math.floor(diff / 1000);
+  if (seconds < 60) return `${seconds}s ago`;
+  const minutes = Math.floor(seconds / 60);
+  if (minutes < 60) return `${minutes}m ago`;
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return `${hours}h ago`;
+  const days = Math.floor(hours / 24);
+  return `${days}d ago`;
 }

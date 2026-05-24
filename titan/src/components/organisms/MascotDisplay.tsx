@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import GodTierAura from '../molecules/GodTierAura';
+import GodTierModal from './GodTierModal';
 import Badge from '../ui/badge';
 
 interface MascotDisplayProps {
@@ -29,6 +30,18 @@ function getStage(level: number): { emoji: string; label: string } {
 export default function MascotDisplay({ level, mascotName, className }: MascotDisplayProps) {
   const stage = getStage(level);
   const isGodTier = level >= 30;
+  const [showGodModal, setShowGodModal] = useState(false);
+
+  // Show the God-Tier modal on mount for level 30+
+  useEffect(() => {
+    if (isGodTier) {
+      const shown = sessionStorage.getItem('titan_godtier_shown');
+      if (!shown) {
+        setShowGodModal(true);
+        sessionStorage.setItem('titan_godtier_shown', 'true');
+      }
+    }
+  }, [isGodTier]);
 
   return (
     <div
@@ -94,6 +107,15 @@ export default function MascotDisplay({ level, mascotName, className }: MascotDi
         >
           {mascotName}
         </div>
+      )}
+
+      {/* God-Tier ascension modal (shows once per session) */}
+      {isGodTier && (
+        <GodTierModal
+          open={showGodModal}
+          onClose={() => setShowGodModal(false)}
+          level={level}
+        />
       )}
     </div>
   );

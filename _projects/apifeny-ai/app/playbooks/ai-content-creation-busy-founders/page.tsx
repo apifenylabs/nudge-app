@@ -3,6 +3,7 @@
 // OG tags handled by parent layout.
 
 import SeoMetadata from '@/components/SeoMetadata';
+import EmailCapture from '@/components/EmailCapture';
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
 import {
@@ -364,6 +365,31 @@ function AIContentCreationForBusyFoundersInner() {
             </div>
           </div>
         </div>
+
+        {/* Free Template Section */}
+        <section className="mb-8 sm:mb-10">
+          <EmailCapture
+            templateContent={`You are a content strategist. Help me plan 30 days of content in one session.
+
+My business: [describe your business]
+My audience: [who you\'re writing for]
+My top 5 topics: [what you write about]
+My channels: [LinkedIn, X, blog, newsletter, etc.]
+
+Please generate:
+1. 4 content pillars (themes for each week)
+2. 8 long-form post topics (2 per week, with hooks)
+3. 30 social media post ideas (one per day, per channel)
+4. 4 newsletter outlines (one per week)
+5. Content repurposing plan — how one long-form post becomes 10+ pieces
+
+Format it as a calendar I can copy into my Notion or Google Sheets.`}
+            templateTitle="Free Prompt: Plan 30 Days of Content in 30 Minutes"
+            playbookSlug="ai-content-creation-busy-founders"
+            playbookTitle="AI Content Creation for Busy Founders"
+            gradient="from-pink-500/10 to-rose-500/10"
+          />
+        </section>
 
         {/* What's Inside */}
         <section className="mb-8 sm:mb-10" id="preview">

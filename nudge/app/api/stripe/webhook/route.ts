@@ -10,8 +10,9 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
-import { stripeConfig } from '@/lib/stripe/config'
+import { stripeConfig, resolvePlanFromPrice } from '@/lib/stripe/config'
 import { upsertSubscription, updateSubscriptionStatus } from '@/lib/stripe/db'
+import type { BillingInterval } from '@/lib/plans'
 
 export async function POST(request: NextRequest) {
   const signature = request.headers.get('stripe-signature')
@@ -55,13 +56,14 @@ export async function POST(request: NextRequest) {
         const subData = await stripeClient.subscriptions.retrieve(subscriptionId) as any
 
         const priceId = subData.items?.data?.[0]?.price?.id
-        const plan = getPlanFromPrice(priceId)
+        const { plan, interval } = resolvePlanFromPrice(priceId)
 
         await upsertSubscription({
           familyId,
           stripeCustomerId: customerId,
           stripeSubscriptionId: subscriptionId,
           plan: plan || 'pro',
+          billingInterval: interval || undefined,
           status: subData.status || 'active',
           currentPeriodStart: new Date(subData.current_period_start * 1000).toISOString(),
           currentPeriodEnd: new Date(subData.current_period_end * 1000).toISOString(),
@@ -71,7 +73,7 @@ export async function POST(request: NextRequest) {
           cancelAtPeriodEnd: !!subData.cancel_at_period_end,
         })
 
-        console.log(`[Stripe Webhook] Subscription created: ${subscriptionId} for family ${familyId} (${plan})`)
+        console.log(`[Stripe Webhook] Subscription created: ${subscriptionId} for family ${familyId} (${plan} ${interval})`)
         break
       }
 
@@ -83,16 +85,17 @@ export async function POST(request: NextRequest) {
         const stripeClient2 = new Stripe(stripeConfig.secretKey, { apiVersion: '2025-03-31.basil' as any })
         const sub2 = await stripeClient2.subscriptions.retrieve(subId) as any
         const priceId2 = sub2.items?.data?.[0]?.price?.id
-        const plan2 = getPlanFromPrice(priceId2)
+        const { plan: plan2, interval: interval2 } = resolvePlanFromPrice(priceId2)
 
         await updateSubscriptionStatus(subId, 'active', {
           current_period_end: new Date(sub2.current_period_end * 1000).toISOString(),
           cancel_at_period_end: !!sub2.cancel_at_period_end,
+          billing_interval: interval2 || undefined,
         })
 
         if (plan2) {
           const { createAdminClient } = await import('@/lib/supabase/admin')
-          await createAdminClient().from('subscriptions').update({ plan: plan2 }).eq('stripe_subscription_id', subId)
+          await createAdminClient().from('subscriptions').update({ plan: plan2, billing_interval: interval2 }).eq('stripe_subscription_id', subId)
         }
 
         console.log(`[Stripe Webhook] Invoice paid for subscription ${subId}`)
@@ -112,7 +115,7 @@ export async function POST(request: NextRequest) {
       // --- Subscription Updated ---
       case 'customer.subscription.updated': {
         const updatedPriceId = obj.items?.data?.[0]?.price?.id
-        const updatedPlan = getPlanFromPrice(updatedPriceId)
+        const { plan: updatedPlan, interval: updatedInterval } = resolvePlanFromPrice(updatedPriceId)
 
         await updateSubscriptionStatus(obj.id, obj.status, {
           cancel_at_period_end: !!obj.cancel_at_period_end,
@@ -120,14 +123,18 @@ export async function POST(request: NextRequest) {
           trial_ends_at: obj.trial_end
             ? new Date(obj.trial_end * 1000).toISOString()
             : undefined,
+          billing_interval: updatedInterval || undefined,
         })
 
         if (updatedPlan) {
           const { createAdminClient } = await import('@/lib/supabase/admin')
-          await createAdminClient().from('subscriptions').update({ plan: updatedPlan }).eq('stripe_subscription_id', obj.id)
+          await createAdminClient().from('subscriptions').update({
+            plan: updatedPlan,
+            billing_interval: updatedInterval,
+          }).eq('stripe_subscription_id', obj.id)
         }
 
-        console.log(`[Stripe Webhook] Subscription updated: ${obj.id} -> ${obj.status}`)
+        console.log(`[Stripe Webhook] Subscription updated: ${obj.id} -> ${obj.status} (${updatedPlan} ${updatedInterval})`)
         break
       }
 
@@ -147,15 +154,4 @@ export async function POST(request: NextRequest) {
     console.error('[Stripe Webhook] Error processing event:', err.message)
     return NextResponse.json({ error: 'Webhook handler failed' }, { status: 500 })
   }
-}
-
-/**
- * Map Stripe price IDs to plan names.
- */
-function getPlanFromPrice(priceId: string): 'free' | 'pro' | 'family' | null {
-  const proPrice = stripeConfig.prices.pro.monthly
-  const familyPrice = stripeConfig.prices.family.monthly
-  if (priceId === proPrice) return 'pro'
-  if (priceId === familyPrice) return 'family'
-  return null
 }

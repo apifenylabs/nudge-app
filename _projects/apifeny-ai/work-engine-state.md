@@ -16,7 +16,7 @@
 
 3. **Build verified:** `npx next build` passed with all 3 new pages appearing in the route listing. Zero errors.
 
-### Key decisions
+### Key decisions (playbook fixes)
 - Used `ai-for-data-analysis` (327 lines, 26.5KB) as template instead of `ai-personal-assistant-setup` (917 lines, 47KB) to stay under the `write` tool's ~32KB limit
 - Each page has unique function names (AiForHrAndRecruitingPage, AiForSocialMediaManagementPage, AiForPersonalFinancePage)
 - Unique gradient/icon/theme per page (violet for HR, pink for social, emerald for finance)
@@ -70,3 +70,70 @@ ai-solopreneur-toolkit, directory-builder, ai-workflow-automation, ai-for-ecomme
 
 ### Remaining Work
 - **`ai-for-seo`** slug is NOT currently in the library (needs verification from lib/playbooks.ts)
+
+---
+## 2026-05-24 06:04 HKT - Stripe Checkout Infrastructure Fixed
+
+### What was done
+1. **Fixed env var naming bug** in `app/api/create-checkout/route.ts`:
+   - `VITE_STRIPE_SECRET_KEY` → `STRIPE_SECRET_KEY` (3 references: const, console.warn, error message)
+   
+2. **Added `STRIPE_SECRET_KEY` to `.env.example`** with `sk_test_placeholder` as placeholder
+
+3. **Created webhook handler stub** at `app/api/stripe-webhook/route.ts`:
+   - Handles: `checkout.session.completed`, `checkout.session.expired`, `customer.subscription.updated`, `customer.subscription.deleted`
+   - Returns 200 for unhandled events
+   - Logs purchase events to console (real fulfillment pending Supabase integration)
+   - GET endpoint for Stripe endpoint health checks
+
+4. **Created `/docs/STRIPE_SETUP.md`** with:
+   - Stripe account creation steps
+   - Secret key retrieval
+   - Local & Vercel env var configuration
+   - Test card numbers table
+   - Webhook setup instructions
+   - Going live checklist
+   - Troubleshooting table
+
+5. **Build verified:** `npm run build` passed with zero errors. New routes appear:
+   - `ƒ /api/stripe-webhook` (dynamic, server-rendered)
+
+### Files changed
+- `app/api/create-checkout/route.ts` — 3 replacements (VITE_STRIPE_SECRET_KEY → STRIPE_SECRET_KEY)
+- `.env.example` — added Stripe section
+- `app/api/stripe-webhook/route.ts` — new file (webhook handler stub)
+- `docs/STRIPE_SETUP.md` — new file (setup documentation)
+
+---
+## 2026-05-24 03:02 HKT - NEW GUIDE: AI for E-Commerce in Asia
+
+### Created
+- **Guide**: `app/guides/ai-ecommerce-asia/page.tsx` (923 lines)
+- **Route**: `/guides/ai-ecommerce-asia`
+- **Title**: AI for E-Commerce in Asia (2026) — Top Tools & Strategies
+- **Target**: SMB e-commerce owners in SG, MY, TH, PH, VN, ID
+- **Publish date**: 2026-05-24
+
+### What was done
+1. Created full TSX component with:
+   - Hero section with meta info and key stats
+   - Table of contents (8 anchor-linked sections)
+   - Section 1: Why E-Commerce AI Matters in Asia (multi-language, super-app ecosystem, payments)
+   - Section 2: AI Product Photography & Visuals for Asian Markets
+   - Section 3: AI Chatbots & Customer Service in Asian Languages
+   - Section 4: AI Inventory & Demand Forecasting for Asian Retailers
+   - Section 5: AI Marketing & Personalization
+   - Section 6: AI for Marketplace Sellers (Shopee, Lazada, Tokopedia)
+   - Section 7: Pricing & ROI Comparison Table (6 categories × 4 tiers)
+   - Section 8: Getting Started in 7 Days (actionable roadmap)
+   - FAQ section (8 questions)
+   - Related blog posts section (via getRelatedPosts)
+   - CTA section
+   - 8 FAQ items in structured details/summary tags
+   - Pricing comparison table with Free/Budget/Mid/Premium/ROI columns
+   - ToolCard components for recommended tools per section
+   - BreadcrumbSchema + Article JSON-LD structured data
+   - Comprehensive SEO metadata (30+ keywords, OG/twitter tags)
+
+2. **Build verified**: `npm run build` passed with zero errors
+   - `/guides/ai-ecommerce-asia` appears in route listing (3.2 kB)

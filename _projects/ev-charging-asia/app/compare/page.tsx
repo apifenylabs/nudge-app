@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Zap, ArrowLeft, ArrowRight, Check, X, Minus, Route as RouteIcon, Clock, BatteryCharging, Calendar, AlertTriangle, ArrowUpDown, Star, Table, List } from 'lucide-react';
 import { getAllItineraries } from '@/data/itineraries';
 import SiteFooter from '@/components/SiteFooter';
+import NewsletterSignup from '@/components/NewsletterSignup';
 import type { Itinerary } from '@/data/itineraries';
 
 const allItineraries = getAllItineraries();
@@ -511,6 +512,9 @@ export default function ComparePage() {
       </div>
 
       {/* JSON-LD Structured Data */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <NewsletterSignup variant="inline" source="compare" />
+      </div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
