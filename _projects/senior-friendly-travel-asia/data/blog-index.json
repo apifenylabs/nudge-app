@@ -557,36 +557,101 @@
     "title": "Accessible Day Tours in Tokyo for Seniors with Limited Mobility (2026)",
     "excerpt": "Tokyo is one of the most accessible cities in Asia for senior travelers with mobility concerns. From wheelchair-friendly temples to barrier-free museums, here are the best accessible day tours for seniors visiting Tokyo.",
     "date": "2026-05-18",
-    "tags": ["tokyo", "japan", "day-tours", "wheelchair", "accessible", "senior-travel"]
+    "tags": [
+      "tokyo",
+      "japan",
+      "day-tours",
+      "wheelchair",
+      "accessible",
+      "senior-travel"
+    ]
   },
   "senior-friendly-kyoto-excursions-wheelchair": {
     "title": "Senior-Friendly Kyoto Excursions with Wheelchair Access (2026)",
     "excerpt": "Kyoto's temples, gardens, and cultural sites are more accessible than ever. From flat stone paths at Ryoan-ji to elevator access at Kiyomizu-dera, here are the best wheelchair-friendly excursions for seniors visiting Kyoto.",
     "date": "2026-05-18",
-    "tags": ["kyoto", "japan", "excursions", "wheelchair", "temple", "accessible", "senior-travel"]
+    "tags": [
+      "kyoto",
+      "japan",
+      "excursions",
+      "wheelchair",
+      "temple",
+      "accessible",
+      "senior-travel"
+    ]
   },
   "easy-bangkok-temple-tours-seniors": {
     "title": "Easy Bangkok Temple Tour for Seniors — Accessible Version with Flat Routes (2026)",
     "excerpt": "Bangkok's famous temples are more accessible than most visitors think. This guide covers an easy, wheelchair-friendly temple route with flat paths, shade, rest stops, and working elevators — designed for seniors with mobility concerns.",
     "date": "2026-05-18",
-    "tags": ["bangkok", "thailand", "temple", "wheelchair", "accessible", "guided-tour", "senior-travel"]
+    "tags": [
+      "bangkok",
+      "thailand",
+      "temple",
+      "wheelchair",
+      "accessible",
+      "guided-tour",
+      "senior-travel"
+    ]
   },
   "accessible-hong-kong-island-tour-elderly": {
     "title": "Accessible Hong Kong Island Tour for Elderly Visitors (2026)",
     "excerpt": "Hong Kong Island offers spectacular views and attractions that are surprisingly accessible for elderly travelers. From the Peak Tram to the Star Ferry, here's how to explore Hong Kong Island with ease — including wheelchair routes, elevator shortcuts, and rest stops.",
     "date": "2026-05-18",
-    "tags": ["hong-kong", "island-tour", "wheelchair", "accessible", "peak-tram", "senior-travel", "star-ferry"]
+    "tags": [
+      "hong-kong",
+      "island-tour",
+      "wheelchair",
+      "accessible",
+      "peak-tram",
+      "senior-travel",
+      "star-ferry"
+    ]
   },
   "guided-taipei-city-tour-elderly": {
     "title": "Best Guided Taipei City Tours for Elderly Travelers with Mobility Concerns (2026)",
     "excerpt": "Taipei is one of Asia's most underrated destinations for senior travelers. From the accessible Taipei 101 to the flat trails of Da'an Park, here are the best guided tours and self-guided routes designed for elderly visitors with limited mobility.",
     "date": "2026-05-18",
-    "tags": ["taipei", "taiwan", "city-tour", "guided", "accessible", "senior-travel", "mrt"]
+    "tags": [
+      "taipei",
+      "taiwan",
+      "city-tour",
+      "guided",
+      "accessible",
+      "senior-travel",
+      "mrt"
+    ]
   },
   "digital-travel-tools-apps-seniors-asia-2026": {
     "title": "Best Digital Tools & Apps for Senior Travelers in Asia 2026",
     "excerpt": "Essential digital tools every senior traveler needs in Asia: navigation, translation, booking, health tracking, and communication apps for stress-free travel.",
     "date": "2026-05-25",
-    "tags": ["digital-tools", "apps", "seniors", "asia", "technology", "navigation", "translation", "travel-tips"]
+    "tags": [
+      "digital-tools",
+      "apps",
+      "seniors",
+      "asia",
+      "technology",
+      "navigation",
+      "translation",
+      "travel-tips"
+    ]
+  },
+  "pet-travel-seniors-asia": {
+    "title": "Traveling with Pets as a Senior in Asia: Pet-Friendly Hotels, Airlines & Tips (2026)",
+    "excerpt": "Everything senior travelers need to know about traveling with pets in Asia. Pet-friendly airlines, hotels with pet policies, vet requirements, and practical tips for stress-free travel with your furry companion.",
+    "date": "2026-05-25",
+    "tags": [
+      "pet-travel",
+      "senior-travel",
+      "accommodation",
+      "travel-tips",
+      "packing",
+      "health",
+      "thailand",
+      "japan",
+      "singapore",
+      "planning"
+    ]
   }
 }

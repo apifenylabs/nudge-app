@@ -5,6 +5,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { Search, X, SlidersHorizontal, ChevronDown, ChevronUp, BatteryCharging, Gauge, Activity, Shield, Zap, DollarSign } from 'lucide-react';
 import { Station, computeStationScore, scoreTier } from '@/lib/scoring';
+import 'leaflet/dist/leaflet.css';
 import MapLegend from './MapLegend';
 
 const MapView = dynamic(() => import('./MapView'), { ssr: false });

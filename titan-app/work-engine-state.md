@@ -1,44 +1,42 @@
-# Work Engine State — Titan
+# Titan — Work Engine State
 
-Last updated: 2026-05-23 16:52 HKT
+## Last Updated
+Mon 2026-05-25 21:27 GMT+8
 
-## Completed Tasks — This Session
+## What Was Done
 
-### Phase 6c — Robotics Backend (verification: ✅ All built and compiling)
+### 1. Codebase Audit
+- Explored `titan-app/` (primary project at `/home/captain/.openclaw/workspace/titan-app`)
+- 21 routes total: 19 static pages + 6 API routes + 1 middleware
+- Routes: `/` (landing), `/login`, `/dashboard/` (7 sub-routes), `/robotics/` (3 routes), `/byo`
 
-| File | Status |
-|------|--------|
-| `src/lib/robotics/types.ts` | ✅ Built (types in `src/types/index.ts`) |
-| `src/lib/robotics/deploy.ts` | ✅ Built — full Supabase + mock deployment logic |
-| `src/app/api/robotics/deploy/route.ts` | ✅ Built — POST endpoint with validation |
-| `src/app/api/robotics/status/route.ts` | ✅ Built — GET endpoint with agentId filter |
-| `src/app/api/robotics/status/[id]/route.ts` | ✅ Built — GET single deployment |
-| `src/app/api/robotics/command/route.ts` | ✅ Built — POST command endpoint |
-| `src/app/api/robotics/logs/route.ts` | ✅ Built — GET logs endpoint |
-| `src/app/robotics/dashboard/page.tsx` | ✅ Built — full deployment management UI (558 lines) |
-| `src/app/robotics/[platform]/page.tsx` | ✅ Built — per-platform setup guides (946 lines, 5 platforms) |
-| `src/app/robotics/page.tsx` | ✅ Built — landing page (was Phase 6a) |
+### 2. Missing CSS Utilities — Fixed
+- **Problem**: Login and Robotics pages used custom CSS utility classes (`titan-gradient`, `titan-text-gradient`, `titan-teal`, `titan-golden`, `titan-radial-glow-warm`, `titan-grid-bg`, `titan-glow`, `titan-particle-glow`, `titan-muted`, `titan-card`, `titan-border`, etc.) that were NOT defined in `globals.css`
+- **Fix**: Added ~50 custom utility classes in `globals.css` under `@layer utilities`:
+  - Gradient utilities: `.titan-gradient`, `.titan-text-gradient`, `.titan-radial-glow-warm`, `.titan-radial-glow`
+  - Background utilities: `.titan-grid-bg`, `.titan-glow`, `.titan-particle-glow`
+  - Color token utilities: `.titan-teal`, `.titan-golden`, `.titan-emerald`, `.titan-muted`, `.titan-text`, `.titan-card`, `.titan-border`, `.titan-bg`
+  - Opacity variants: all `bg-titan-*/N`, `border-titan-*/N`, `text-titan-*/N`, `hover:*` variants used in the codebase
+- **Impact**: Login page, robotics pages, robotics dashboard, LifeOS tab now render with proper visual styling
 
-### Phase 6e — God-Tier Engine (WORK DONE THIS SESSION)
+### 3. Landing Page Polish
+- Added scroll-down indicator (mouse scroll wheel icon) below hero CTA buttons
+- Enhanced mascot card hover: added gradient overlay and more pronounced translate effect
+- Both animate via framer-motion with delays
 
-| File | Action | Status |
-|------|--------|--------|
-| `src/lib/swarm/god-tier-engine.ts` | **ENHANCED** — 14 abilities at 3 tiers (Lv30/40/50), GodTierStatus system, visual tier mapping, skill evolution logic with memory analysis, RoboticsManifest | ✅ Done |
-| `src/app/page.tsx` — useGodTier hook + integration | **INTEGRATED** — `useGodTier()`, `visualTier`, `godTierAbilities` all wired into GameDashboard | ✅ Done |
-| Progression tab — dynamic god-tier stats | **UPDATED** — shows actual ability count, score, level lock | ✅ Done |
-| God-Tier banner — dynamic status | **UPDATED** — shows "Active · N abilities" when Lv30+, "Next: Lv.30 (Lv.N)" otherwise | ✅ Done |
-| God-Tier Abilities grid | **ADDED** — shows up to 9 ability cards with icons + descriptions at level 30+ | ✅ Done |
-| Build verification | `npx next build` — zero errors | ✅ Done |
+### 4. Swarm Orbit Animation
+- Added `@keyframes spin` CSS animation to `globals.css` used by the orbital swarm visualization
 
-## Next Cursor
+### 5. Build
+- `npm run build` passes: clean output, zero errors, 21 routes generated
+- `npx vercel build --prod` passes: prebuilt successfully
 
-### Phase 6e remaining (P4 STRATEGIC)
-1. Update landing page with god-tier badge for returning players
-2. Add a small god-tier callout on the root `/` (hero or stats row) showing god-tier score
-
-### Phase 6 complete checklist
-- [x] Phase 6a — Robotics Landing (page.tsx)
-- [x] Phase 6b — God-Tier Visuals (aura, badge, modal, MascotDisplay integration)
-- [x] Phase 6c — Robotics Backend (all API routes, deploy lib, types)
-- [x] Phase 6d — Robotics Full UI (dashboard, platform detail pages)
-- [x] Phase 6e — God-Tier Engine (engine enhanced, Progression tab linked — landing page badge remaining)
+### 6. Deployment
+- Deployed to Vercel production: `https://titan-app-puce.vercel.app`
+- Smoke-tested:
+  - `/` → 200
+  - `/login` → 200
+  - `/robotics` → 200
+  - `/byo` → 200
+  - Dashboard routes → 307 (redirects to login as expected — unauthenticated)
+- Vercel preview deployment has password protection (expected)

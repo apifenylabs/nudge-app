@@ -79,6 +79,7 @@ import southKoreaTravelGuide from '@/data/blog/south-korea-senior-travel-guide.j
 import stayHealthyAsia from '@/data/blog/stay-healthy-traveling-asia-seniors.json';
 import taiwanAccessibility from '@/data/blog/taiwan-accessibility-senior-travelers.json';
 import trainTravelAsia from '@/data/blog/train-travel-asia-seniors.json';
+import petTravel from '@/data/blog/pet-travel-seniors-asia.json';
 
 // Existing inline posts
 const existingPosts: BlogPost[] = [
@@ -198,6 +199,7 @@ const newPosts: BlogPost[] = [
   soloSeniorTravelSEA as BlogPost,
   southKoreaTravelGuide as BlogPost,
   stayHealthyAsia as BlogPost,
+  petTravel as BlogPost,
   taiwanAccessibility as BlogPost,
   trainTravelAsia as BlogPost,
 ];

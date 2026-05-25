@@ -12,7 +12,7 @@ import EvRoadTripCTA from '@/components/EvRoadTripCTA';
 import PremiumPartnerSection from '@/components/PremiumPartnerSection';
 import RoadTripPackageWidget from '@/components/RoadTripPackageWidget';
 
-const MapWithFilters = dynamic(() => import('@/components/MapWithFilters'), { ssr: false });
+const SafeMapSection = dynamic(() => import('@/components/SafeMapSection'), { ssr: false });
 const FeaturedFamilyStops = dynamic(() => import('@/components/FeaturedFamilyStops'), { ssr: false });
 
 interface Meta {
@@ -41,7 +41,6 @@ interface HomepageData {
 
 export default function HomeContent({ meta, homepageData, blogPosts: initialPosts = [] }: { meta: Meta; homepageData: HomepageData; blogPosts?: BlogPost[] }) {
   const [mounted, setMounted] = useState(false);
-  const [showMap, setShowMap] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -217,17 +216,8 @@ export default function HomeContent({ meta, homepageData, blogPosts: initialPost
         </div>
       </div>
 
-      {/* Map Section */}
-      <div className="relative h-[50vh] sm:h-[55vh] lg:h-[60vh]">
-        <button
-          onClick={() => setShowMap(!showMap)}
-          className="absolute top-3 right-3 z-10 bg-white border border-gray-200 rounded-lg px-3 py-1.5 text-xs font-medium text-gray-600 hover:bg-gray-50 shadow-sm"
-        >
-          {showMap ? 'Show Content' : 'Show Map'}
-        </button>
-        {/* MapWithFilters loads stations via its own data hook */}
-        <MapWithFilters meta={meta} />
-      </div>
+      {/* Map Section — isolated so a crash doesn't take the page down */}
+      <SafeMapSection meta={meta} />
 
       {/* Featured Carousel */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-10">

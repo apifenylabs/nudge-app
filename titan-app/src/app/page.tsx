@@ -20,13 +20,40 @@ import {
   Users,
   TrendingUp,
   Star,
+  Diamond,
 } from "lucide-react";
+
+const MASCOTS = [
+  { name: "Teal Blob", emoji: "🫧", src: "/mascots/teal-blob.svg", element: "Water", rarity: "Common", bg: "from-teal-100 to-teal-50", border: "border-teal-200", accent: "text-teal-600" },
+  { name: "Chompy Plant", emoji: "🌱", src: "/mascots/chompy-plant.svg", element: "Nature", rarity: "Common", bg: "from-emerald-100 to-emerald-50", border: "border-emerald-200", accent: "text-emerald-600" },
+  { name: "Cosmic Fox", emoji: "🦊", src: "/mascots/cosmic-fox.svg", element: "Fire", rarity: "Uncommon", bg: "from-orange-100 to-orange-50", border: "border-orange-200", accent: "text-orange-600" },
+  { name: "Ember Dragon", emoji: "🐉", src: "/mascots/ember-dragon.svg", element: "Fire", rarity: "Rare", bg: "from-amber-100 to-amber-50", border: "border-amber-200", accent: "text-amber-600" },
+  { name: "Orb Weaver", emoji: "🕸️", src: "/mascots/orb-weaver.svg", element: "Cosmic", rarity: "Rare", bg: "from-pink-100 to-pink-50", border: "border-pink-200", accent: "text-pink-600" },
+  { name: "Starlight", emoji: "⭐", src: "/mascots/starlight.svg", element: "Light", rarity: "Epic", bg: "from-yellow-100 to-yellow-50", border: "border-yellow-200", accent: "text-yellow-600" },
+  { name: "Purrbot", emoji: "🤖", src: "/mascots/purrbot-cat.svg", element: "Tech", rarity: "Epic", bg: "from-violet-100 to-violet-50", border: "border-violet-200", accent: "text-violet-600" },
+  { name: "Little Robot", emoji: "⚙️", src: "/mascots/little-robot.svg", element: "Tech", rarity: "Legendary", bg: "from-cyan-100 to-cyan-50", border: "border-cyan-200", accent: "text-cyan-600" },
+];
+
+const RARITY_COLORS: Record<string, string> = {
+  Common: "text-gray-500 bg-gray-100",
+  Uncommon: "text-green-600 bg-green-50",
+  Rare: "text-blue-600 bg-blue-50",
+  Epic: "text-purple-600 bg-purple-50",
+  Legendary: "text-amber-600 bg-amber-50",
+};
+
+const SKINS_PLANS = [
+  { name: "Free", price: "$0", skins: "1 (default)", cooldown: "N/A", swapFee: "—", color: "text-gray-600", bg: "bg-gray-50", border: "border-gray-200" },
+  { name: "Starter", price: "$5", skins: "3", cooldown: "30 days", swapFee: "Free", color: "text-teal-600", bg: "bg-teal-50", border: "border-teal-200" },
+  { name: "Collector", price: "$12", skins: "10", cooldown: "14 days", swapFee: "Free", color: "text-purple-600", bg: "bg-purple-50", border: "border-purple-200" },
+  { name: "Skin Market", price: "Single", skins: "Any skin", cooldown: "7 days", swapFee: "$1-5", color: "text-amber-600", bg: "bg-amber-50", border: "border-amber-200" },
+];
 
 const FEATURES = [
   {
     icon: <Swords className="h-5 w-5" />,
-    title: "Skill Forge",
-    description: "Craft custom agent skills with a built-in editor. Certify them through automated audits — gold, silver, or bronze.",
+    title: "Skill Builder",
+    description: "Create custom AI skills with a built-in editor. Get them certified through automated audits — gold, silver, or bronze.",
     color: "text-emerald-600",
     bg: "bg-emerald-50",
   },
@@ -46,8 +73,8 @@ const FEATURES = [
   },
   {
     icon: <Zap className="h-5 w-5" />,
-    title: "LifeOS Integration",
-    description: "Travel, finance, health, productivity plugins — each with streaks, analytics, and daily check-ins.",
+    title: "Plugin Ecosystem",
+    description: "Plug in skills for travel, finance, health, productivity — each with streaks, analytics, and daily check-ins.",
     color: "text-teal-600",
     bg: "bg-teal-50",
   },
@@ -115,10 +142,10 @@ const PRICING = [
 ];
 
 const STATS = [
-  { label: "Active Agents", value: "0", icon: <Bot className="h-4 w-4" /> },
-  { label: "Skills Deployed", value: "0", icon: <Zap className="h-4 w-4" /> },
-  { label: "Community Members", value: "0", icon: <Users className="h-4 w-4" /> },
-  { label: "XP Earned", value: "0", icon: <TrendingUp className="h-4 w-4" /> },
+  { label: "Companions", value: "8", suffix: "unique skins", icon: <Bot className="h-4 w-4" /> },
+  { label: "Rarity Tiers", value: "5", suffix: "common → legendary", icon: <Zap className="h-4 w-4" /> },
+  { label: "Skill Builder", value: "Built-in", suffix: "no coding needed", icon: <Trophy className="h-4 w-4" /> },
+  { label: "God Powers", value: "14", suffix: "unlockable abilities", icon: <TrendingUp className="h-4 w-4" /> },
 ];
 
 export default function LandingPage() {
@@ -162,47 +189,109 @@ export default function LandingPage() {
           <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-amber-50/60 to-transparent" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-20 pb-16 sm:pt-32 sm:pb-24">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-12 sm:pt-24 sm:pb-16">
           <div className="max-w-3xl mx-auto text-center">
             <Badge variant="outline" className="mb-6 border-teal-200 bg-teal-50 text-teal-700 hover:bg-teal-50">
               <Sparkles className="h-3 w-3 mr-1" />
               Your AI Swarm, Evolved
             </Badge>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
-              Level Up Your
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-4 leading-tight">
+              Your AI Agent
               <br />
               <span className="bg-gradient-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent">
-                AI Agent Swarm
+                Grows With You
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto mb-8 leading-relaxed">
-              Forge custom skills, command an orbital swarm, and climb through God-Tier ranks.
-              Titan turns your AI ecosystem into a living progression system — like an RPG for your productivity.
+            <p className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto mb-6 leading-relaxed">
+              Pick a companion. Give it skills. Watch it evolve from a baby mascot into a God-Tier
+              AI swarm that works for you — managing tasks, analyzing data, and automating your life.
+              Like raising a Pokémon, but it actually does your work.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <Button size="lg" onClick={() => router.push("/login")} className="w-full sm:w-auto">
-                <Swords className="h-4 w-4 mr-2" />
-                Enter the Forge
+                <Sparkles className="h-4 w-4 mr-2" />
+                Start Free
                 <ChevronRight className="h-4 w-4 ml-1" />
               </Button>
               <Button variant="outline" size="lg" onClick={() => router.push("/login")} className="w-full sm:w-auto">
-                Sign In
+                See How It Works
               </Button>
             </div>
+          </div>
 
-            {/* Stats row */}
-            <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
-              {STATS.map((stat) => (
-                <div key={stat.label} className="flex flex-col items-center p-3 rounded-xl bg-gray-50 border border-gray-100">
-                  <div className="text-gray-400 mb-1">{stat.icon}</div>
-                  <span className="text-xl font-bold text-gray-900">{stat.value}</span>
-                  <span className="text-xs text-gray-500 mt-0.5">{stat.label}</span>
-                </div>
-              ))}
+          {/* ── Scroll indicator ── */}
+          <motion.div
+            className="flex justify-center mt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 1 }}
+          >
+            <motion.div
+              className="w-5 h-8 rounded-full border border-gray-300 flex justify-center pt-1.5"
+              animate={{ y: [0, 4, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <motion.div className="w-1 h-1.5 rounded-full bg-gray-400" />
+            </motion.div>
+          </motion.div>
+
+          {/* ── Mascot Grid ── */}
+          <div className="mt-10 sm:mt-12">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+              {MASCOTS.map((mascot, i) => {
+                const rarityBadge = RARITY_COLORS[mascot.rarity] || "text-gray-500 bg-gray-100";
+                return (
+                  <motion.div
+                    key={mascot.name}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.06, duration: 0.4 }}
+                  >
+                    <Card className={`w-28 sm:w-32 h-44 sm:h-48 ${mascot.border} hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group overflow-hidden`}>
+                      <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" />
+                      <CardContent className="p-0 h-full flex flex-col">
+                        {/* Mascot image area */}
+                        <div className={`flex-1 flex items-center justify-center bg-gradient-to-b ${mascot.bg} p-3`}>
+                          <img
+                            src={mascot.src}
+                            alt={mascot.name}
+                            className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-110 transition-transform duration-300"
+                          />
+                        </div>
+                        {/* Info bar */}
+                        <div className="px-2 py-1.5 text-center border-t border-gray-100">
+                          <p className="text-xs font-semibold text-gray-900 truncate">{mascot.emoji} {mascot.name}</p>
+                          <div className="flex items-center justify-center gap-1 mt-0.5">
+                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${rarityBadge}`}>
+                              {mascot.rarity}
+                            </span>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                );
+              })}
             </div>
+            <p className="text-center text-sm text-gray-400 mt-4">
+              Each companion has unique evolutions, abilities, and unlockable skins. Your choice matters.
+            </p>
+          </div>
+
+          {/* Stats row */}
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto">
+            {STATS.map((stat) => (
+              <div key={stat.label} className="flex flex-col items-center p-3 rounded-xl bg-gray-50 border border-gray-100">
+                <div className="text-gray-400 mb-1">{stat.icon}</div>
+                <span className="text-xl font-bold text-gray-900">{stat.value}</span>
+                <span className="text-xs text-gray-500 mt-0.5">{stat.label}</span>
+                {stat.suffix && <span className="text-[10px] text-gray-400">{stat.suffix}</span>}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -222,7 +311,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { step: "01", title: "Create Your Profile", desc: "Sign up, choose your companion mascot, and define your agent's first skill.", color: "from-teal-500 to-teal-600" },
-              { step: "02", title: "Forge & Deploy", desc: "Craft skills in the built-in editor, test them, and deploy to your orbital swarm.", color: "from-amber-500 to-amber-600" },
+              { step: "02", title: "Build & Deploy", desc: "Create custom AI skills in a built-in editor, test them live, and put them to work managing your tasks.", color: "from-amber-500 to-amber-600" },
               { step: "03", title: "Earn & Ascend", desc: "Every action earns XP. Level up, unlock tiers, and grow your swarm.", color: "from-purple-500 to-purple-600" },
             ].map((step, i) => (
               <motion.div
@@ -243,6 +332,68 @@ export default function LandingPage() {
                 </Card>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── God-Tier Callout ── */}
+      <section className="border-t border-gray-100 bg-gradient-to-br from-purple-50/80 via-indigo-50/50 to-purple-50/80">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <Badge variant="outline" className="mb-4 border-purple-200 bg-purple-50 text-purple-700">
+                <Diamond className="h-3 w-3 mr-1" />
+                God-Tier Engine
+              </Badge>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Ascend beyond level 30
+              </h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Hit <strong>Level 30</strong> to unlock the God-Tier system — a suite of 14 transcendent abilities
+                across three tiers. Automate audits, spawn orbital swarms, command robotics,
+                and evolve your mascot into its final form.
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { label: "Ability Tiers", value: "3", color: "text-purple-600", bg: "bg-purple-50" },
+                  { label: "God Powers", value: "14", color: "text-amber-600", bg: "bg-amber-50" },
+                  { label: "Unlock Level", value: "30", color: "text-rose-600", bg: "bg-rose-50" },
+                  { label: "Robotics Ready", value: "✓", color: "text-emerald-600", bg: "bg-emerald-50" },
+                ].map((s) => (
+                  <div key={s.label} className={`${s.bg} rounded-xl px-4 py-3 flex items-center justify-between`}>
+                    <span className="text-sm text-gray-600">{s.label}</span>
+                    <span className={`text-lg font-bold ${s.color}`}>{s.value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <div className="bg-white rounded-2xl border border-purple-100 shadow-lg shadow-purple-100/30 p-6 sm:p-8">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-amber-500 flex items-center justify-center">
+                    <Crown className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="font-semibold text-gray-900">God-Tier Abilities</span>
+                </div>
+                <div className="space-y-3">
+                  {[
+                    { tier: "Tier 3", name: "Autonomous Deployment", color: "text-amber-600", desc: "Self-deploying agent swarms" },
+                    { tier: "Tier 2", name: "Swarm Orchestration", color: "text-purple-600", desc: "Real-time multi-agent coordination" },
+                    { tier: "Tier 1", name: "Skill Evolution", color: "text-rose-600", desc: "Memory-driven ability upgrades" },
+                  ].map((a, i) => (
+                    <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50">
+                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold ${a.color.replace('text-', 'bg-').replace('600', '100')} ${a.color}`}>
+                        {a.tier}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-gray-900">{a.name}</p>
+                        <p className="text-xs text-gray-500">{a.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -278,6 +429,54 @@ export default function LandingPage() {
               </Card>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* ── Skin System ── */}
+      <section className="border-t border-gray-100 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div className="text-center mb-10">
+          <Badge variant="outline" className="mb-4 border-amber-200 bg-amber-50 text-amber-700">
+            <Star className="h-3 w-3 mr-1" />
+            Skins & Cosmetics
+          </Badge>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+            Collect &amp; Customize Your Companions
+          </h2>
+          <p className="text-gray-500 max-w-xl mx-auto">
+            Like any great game, your Titan mascot is more than a tool — it&apos;s an identity.
+            Unlock skins, swap styles, and flex your rarity. Each decision costs commitment.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-10">
+          {SKINS_PLANS.map((plan) => (
+            <Card key={plan.name} className={`${plan.border} ${plan.bg} border-2`}>
+              <CardContent className="p-5 text-center">
+                <h3 className={`font-semibold ${plan.color} mb-1`}>{plan.name}</h3>
+                <p className="text-2xl font-bold text-gray-900 mb-1">{plan.price}</p>
+                <div className="space-y-1 text-xs text-gray-500">
+                  <p><span className="font-medium text-gray-700">Skins:</span> {plan.skins}</p>
+                  <p><span className="font-medium text-gray-700">Swap cooldown:</span> {plan.cooldown}</p>
+                  <p><span className="font-medium text-gray-700">Fee:</span> {plan.swapFee}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="max-w-2xl mx-auto bg-gray-50 rounded-2xl border border-gray-200 p-6 sm:p-8">
+          <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+            <Diamond className="h-4 w-4 text-amber-500" />
+            Skins Monetization Strategy
+          </h3>
+          <ul className="space-y-2 text-sm text-gray-600">
+            <li className="flex gap-2"><span className="text-amber-500 shrink-0">•</span> <strong>Monthly rotation:</strong> 2-3 exclusive skins rotate in/out of the shop each month. FOMO drives purchases.</li>
+            <li className="flex gap-2"><span className="text-amber-500 shrink-0">•</span> <strong>Cooldown friction:</strong> Swapping skins costs time (30d free → 7d paid). This makes each choice feel meaningful, and power-users pay to shorten the wait.</li>
+            <li className="flex gap-2"><span className="text-amber-500 shrink-0">•</span> <strong>Rarity tiers:</strong> Common (free), Uncommon ($2), Rare ($5), Epic ($12), Legendary ($25). Higher rarities have animated effects, unique sounds, and particle trails.</li>
+            <li className="flex gap-2"><span className="text-amber-500 shrink-0">•</span> <strong>Trade-in system:</strong> Users can trade 3 common skins for 1 uncommon, or pay a fee to resell owned skins on a marketplace (30% platform cut).</li>
+            <li className="flex gap-2"><span className="text-amber-500 shrink-0">•</span> <strong>Evolution unlocks:</strong> Hitting level 10/20/30 on a mascot unlocks exclusive evolution skins for that line — no purchase needed, earned through play.</li>
+            <li className="flex gap-2"><span className="text-amber-500 shrink-0">•</span> <strong>Projected skin MRR:</strong> With 200 users at $5-12/mo on skin tiers + 20 single sales/month → ~$1,200-2,500/mo within 3 months.</li>
+          </ul>
         </div>
       </section>
 

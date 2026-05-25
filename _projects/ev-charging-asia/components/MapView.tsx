@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Station, computeStationScore, scoreTier } from '@/lib/scoring';
@@ -38,6 +38,28 @@ function createIcon(type: string, isSelected: boolean): L.DivIcon {
   });
 }
 
+/* Force map to re-check its size on mount (fixes zero-height issue) */
+function MapSizeFixer() {
+  const map = useMap();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      map.invalidateSize();
+    }, 200);
+    return () => clearTimeout(timer);
+  }, [map]);
+  return null;
+}
+
+/* Detect tile load failures and report them */
+function TileErrorDetector({ onTileError }: { onTileError: () => void }) {
+  const map = useMapEvents({
+    tileerror: () => {
+      onTileError();
+    },
+  });
+  return null;
+}
+
 function FitBounds({ stations }: { stations: Station[] }) {
   const map = useMap();
   useEffect(() => {
@@ -60,6 +82,26 @@ export default function MapView({
   onSelectStation: (s: Station | null) => void;
 }) {
   const defaultCenter: L.LatLngTuple = [20, 110]; // SE Asia center
+  const [tileError, setTileError] = useState(false);
+
+  if (tileError) {
+    return (
+      <div className="flex items-center justify-center h-full w-full bg-gray-100 rounded-xl p-8 text-center">
+        <div>
+          <p className="text-amber-600 font-semibold text-sm mb-2">🗺️ Map tiles unavailable</p>
+          <p className="text-gray-500 text-xs mb-4">Cannot load OpenStreetMap tiles — check your internet connection or try a different network.</p>
+          <button
+            onClick={() => {
+              setTileError(false);
+            }}
+            className="px-4 py-2 bg-emerald-500 text-white rounded-lg text-xs font-medium hover:bg-emerald-600"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <MapContainer
@@ -72,6 +114,8 @@ export default function MapView({
       zoomControl={true}
       scrollWheelZoom={true}
     >
+      <MapSizeFixer />
+      <TileErrorDetector onTileError={() => setTileError(true)} />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

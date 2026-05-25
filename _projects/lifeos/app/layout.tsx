@@ -4,14 +4,14 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'LifeOS — Daily Loop',
-  description: 'Track sleep, mood, energy, exercise, and nutrition daily.',
+  title: 'LifeOS — AI Copilot for Everything',
+  description: 'Guided phases for every area of your life. Research → Canvas → Build → Ship → Maintain.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}
+      <body className="min-h-screen">{children}
         <Analytics />
         <SpeedInsights />
       </body>

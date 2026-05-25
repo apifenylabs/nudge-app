@@ -176,3 +176,26 @@ ai-solopreneur-toolkit, directory-builder, ai-workflow-automation, ai-for-ecomme
 
 2. **Build verified**: `npm run build` passed with zero errors
    - `/guides/ai-ecommerce-asia` appears in route listing (3.2 kB)
+
+---
+
+## 2026-05-25 19:24 HKT — ✅ APIFENY-AI: DeepSeek vs ChatGPT comparison page created + build verified
+
+### Created
+- **Comparison page**: `app/compare/deepseek-vs-chatgpt/page.tsx` (29.6 KB)
+- **Route**: `/compare/deepseek-vs-chatgpt` (static, 509 B page, zero errors)
+
+### What was done
+1. Created dedicated comparison landing page (not a blog post — complementary to `/blog/deepseek-vs-chatgpt-2026`)
+2. **Structure**:
+   - Hero section with gradient background and quick stats pills
+   - Table of Contents with 8 anchor-linked sections
+   - Quick Verdict Scorecard — visual bar charts (0-10) for 7 dimensions per tool
+   - Detailed comparison tables for 4 categories (Pricing, Coding, Language & Reasoning, Features) — 16 rows total with winner badges
+   - Use Cases section — 4 scenarios (Coding, Writing, Analysis, Automation) with verdict badges
+   - Recommendation section — dual-column "Choose DeepSeek if / Choose ChatGPT if" + "Smartest Setup" bottom line
+   - FAQ section with expandable `<details>` (5 questions) + JSON-LD FAQPage schema
+   - CTA to tools directory and full blog post
+3. **SEO**: Comprehensive meta/OG/twitter tags, BreadcrumbSchema JSON-LD, FAQPage structured data
+4. **Design**: Apifeny dark theme (tech-900, neon/aqua accents), mobile-responsive, Tailwind CSS
+5. **Build verified**: `npx next build` passed with zero errors — route appears in listing

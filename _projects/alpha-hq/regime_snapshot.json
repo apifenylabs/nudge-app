@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-05-25T16:39:18.920835",
+  "market": "crypto",
+  "assessments": {
+    "realized_vol_30d_pct": 8.9,
+    "btc_dominance_pct": 58.2,
+    "overall_volatility": "LOW",
+    "recommendation": "GO"
+  },
+  "recommendation": "GO",
+  "overall_volatility": "LOW",
+  "dvol_realized_30d": 8.9,
+  "btc_dominance_pct": 58.2,
+  "note": "BTC 30d realized vol from CoinGecko. Low vol regime — trend following preferred over mean reversion."
+}

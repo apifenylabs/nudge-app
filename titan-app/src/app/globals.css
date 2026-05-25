@@ -2,6 +2,115 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* ─── Titan Design Utilities ──────────────────────────── */
+/* Used by login, robotics, LifeOS, and dashboard pages */
+
+@layer utilities {
+  /* Gradients */
+  .titan-gradient {
+    background: linear-gradient(180deg, #0A0E17 0%, #1A1F2E 50%, #0F172A 100%);
+  }
+  .titan-text-gradient {
+    background: linear-gradient(135deg, #14B8A6, #F59E0B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .titan-radial-glow-warm {
+    background: radial-gradient(ellipse at 50% 15%, rgba(20, 184, 166, 0.08) 0%, rgba(245, 158, 11, 0.04) 30%, transparent 70%);
+  }
+  .titan-radial-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.06) 0%, transparent 60%);
+  }
+  .titan-grid-bg {
+    background-image: linear-gradient(rgba(20, 184, 166, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(20, 184, 166, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .titan-glow {
+    box-shadow: 0 0 40px rgba(20, 184, 166, 0.06);
+  }
+  .titan-particle-glow {
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* Color tokens — map to existing theme vars for consistency */
+  .titan-teal {
+    --titan-teal: #14B8A6;
+    color: #14B8A6;
+  }
+  .titan-golden {
+    --titan-golden: #F59E0B;
+    color: #F59E0B;
+  }
+  .titan-emerald {
+    --titan-emerald: #10B981;
+    color: #10B981;
+  }
+  .titan-muted {
+    --titan-muted: #94A3B8;
+    color: #94A3B8;
+  }
+  .titan-text {
+    --titan-text: #F1F5F9;
+    color: #F1F5F9;
+  }
+  .titan-card {
+    background: rgba(30, 41, 59, 0.4);
+  }
+  .titan-border {
+    border-color: rgba(51, 65, 85, 0.4);
+  }
+  .titan-bg {
+    background: #0F172A;
+  }
+
+  /* Opacity variants for color tokens (used as bg-*, border-*) */
+  .bg-titan-teal\/10 { background: rgba(20, 184, 166, 0.1); }
+  .bg-titan-teal\/15 { background: rgba(20, 184, 166, 0.15); }
+  .bg-titan-teal\/20 { background: rgba(20, 184, 166, 0.2); }
+  .bg-titan-teal\/30 { background: rgba(20, 184, 166, 0.3); }
+  .bg-titan-golden\/10 { background: rgba(245, 158, 11, 0.1); }
+  .bg-titan-golden\/20 { background: rgba(245, 158, 11, 0.2); }
+  .bg-titan-emerald\/10 { background: rgba(16, 185, 129, 0.1); }
+  .bg-titan-card\/30 { background: rgba(30, 41, 59, 0.3); }
+  .bg-titan-card\/40 { background: rgba(30, 41, 59, 0.4); }
+  .bg-titan-card\/60 { background: rgba(30, 41, 59, 0.6); }
+  .border-titan-teal\/10 { border-color: rgba(20, 184, 166, 0.1); }
+  .border-titan-teal\/15 { border-color: rgba(20, 184, 166, 0.15); }
+  .border-titan-teal\/20 { border-color: rgba(20, 184, 166, 0.2); }
+  .border-titan-teal\/30 { border-color: rgba(20, 184, 166, 0.3); }
+  .border-titan-teal\/40 { border-color: rgba(20, 184, 166, 0.4); }
+  .border-titan-golden\/10 { border-color: rgba(245, 158, 11, 0.1); }
+  .border-titan-golden\/20 { border-color: rgba(245, 158, 11, 0.2); }
+  .border-titan-border\/20 { border-color: rgba(51, 65, 85, 0.2); }
+  .border-titan-border\/30 { border-color: rgba(51, 65, 85, 0.3); }
+  .border-titan-border\/40 { border-color: rgba(51, 65, 85, 0.4); }
+  .text-titan-teal { color: #14B8A6; }
+  .text-titan-teal\/60 { color: rgba(20, 184, 166, 0.6); }
+  .text-titan-teal\/70 { color: rgba(20, 184, 166, 0.7); }
+  .text-titan-teal\/80 { color: rgba(20, 184, 166, 0.8); }
+  .text-titan-golden { color: #F59E0B; }
+  .text-titan-golden\/50 { color: rgba(245, 158, 11, 0.5); }
+  .text-titan-muted { color: #94A3B8; }
+  .text-titan-muted\/40 { color: rgba(148, 163, 184, 0.4); }
+  .text-titan-muted\/50 { color: rgba(148, 163, 184, 0.5); }
+  .text-titan-muted\/60 { color: rgba(148, 163, 184, 0.6); }
+  .text-titan-muted\/70 { color: rgba(148, 163, 184, 0.7); }
+  .text-titan-text { color: #F1F5F9; }
+  .text-titan-text\/60 { color: rgba(241, 245, 249, 0.6); }
+  .text-titan-text\/70 { color: rgba(241, 245, 249, 0.7); }
+  .text-titan-text\/80 { color: rgba(241, 245, 249, 0.8); }
+  .text-titan-text\/90 { color: rgba(241, 245, 249, 0.9); }
+  .hover\:text-titan-teal:hover { color: #14B8A6; }
+  .hover\:text-titan-teal\/80:hover { color: rgba(20, 184, 166, 0.8); }
+  .hover\:text-titan-text:hover { color: #F1F5F9; }
+  .hover\:bg-titan-card\/30:hover { background: rgba(30, 41, 59, 0.3); }
+  .hover\:bg-titan-card\/50:hover { background: rgba(30, 41, 59, 0.5); }
+  .shadow-titan-teal\/5 { box-shadow: 0 10px 30px -10px rgba(20, 184, 166, 0.05); }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -106,5 +215,11 @@
   ::selection {
     background: color-mix(in oklch, var(--primary) 30%, transparent);
     color: var(--foreground);
+  }
+
+  /* Swarm orbit animation */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
 }

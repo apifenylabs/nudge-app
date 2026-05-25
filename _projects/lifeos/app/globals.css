@@ -1,31 +1,21 @@
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#222;min-height:100vh}
-.container{max-width:480px;margin:0 auto;padding:16px}
-header{padding:20px 0 12px}
-h1{font-size:22px;font-weight:700;display:flex;align-items:center;gap:8px}
-.streak{font-size:13px;color:#666;background:#eee;padding:4px 10px;border-radius:20px}
-.date{font-size:13px;color:#888;margin-top:2px}
-.card{background:white;border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
-.card h2{font-size:14px;font-weight:600;margin-bottom:10px;color:#444}
-.track-item{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #f0f0f0}
-.track-item:last-child{border-bottom:none}
-.track-label{font-size:14px;font-weight:500}
-.track-desc{font-size:11px;color:#999;margin-top:1px}
-.btn-group{display:flex;gap:4px}
-.btn{padding:6px 14px;border-radius:20px;border:1px solid #ddd;background:white;font-size:12px;cursor:pointer;transition:all .15s;font-weight:500}
-.btn:hover{background:#f0f0f0}
-.btn.active{background:#22c55e;color:white;border-color:#22c55e}
-.btn.active.bad{background:#ef4444;border-color:#ef4444}
-.btn.active.mid{background:#f59e0b;border-color:#f59e0b}
-.notes-area{width:100%;border:1px solid #eee;border-radius:10px;padding:10px;font-size:13px;resize:vertical;min-height:60px;font-family:inherit}
-.notes-area:focus{outline:none;border-color:#22c55e}
-.save-btn{width:100%;padding:14px;border:none;border-radius:12px;background:#22c55e;color:white;font-size:15px;font-weight:600;cursor:pointer;margin-top:4px;transition:opacity .15s}
-.save-btn:hover{opacity:.9}
-.save-btn:disabled{opacity:.4;cursor:default}
-.history{margin-top:20px}
-.history-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:12px;color:#666}
-.history-score{font-weight:600}
-.day-good{color:#22c55e}
-.day-ok{color:#f59e0b}
-.day-bad{color:#ef4444}
-.empty{text-align:center;padding:40px 0;color:#bbb;font-size:14px}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --fg: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --card-bg: #f9fafb;
+  --card-hover: #f3f4f6;
+  --accent: #14B8A6;
+  --accent-light: rgba(20, 184, 166, 0.1);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
