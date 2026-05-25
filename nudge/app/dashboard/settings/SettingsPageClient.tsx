@@ -6,7 +6,7 @@ import {
   ArrowLeft, Crown, User, CreditCard, Bell, Shield,
   LogOut, ChevronRight, CheckCircle, XCircle, Loader2,
   ExternalLink, MessageSquare, Sparkles, Zap, Info,
-  Smartphone, FileText, Eye, ChevronDown
+  Smartphone, FileText, Eye, ChevronDown, Gift
 } from 'lucide-react'
 import Link from 'next/link'
 import { supabase as supabaseFn } from '@/lib/supabase'
@@ -309,9 +309,15 @@ export default function SettingsPageClient({ user, familyMembership }: SettingsP
           )}
         </section>
 
-        {/* Referral Program */}
+        {/* Referral Program with link to full page */}
         <section className="animate-fade-in">
           <ReferralProgram />
+          <Link
+            href="/dashboard/referrals"
+            className="mt-2 flex items-center gap-2 text-xs font-semibold text-indigo-600 dark:text-indigo-400 justify-center py-2 hover:text-indigo-500 transition-colors"
+          >
+            View full referral program <ExternalLink className="w-3 h-3" />
+          </Link>
         </section>
 
         {/* Telegram Inline Mode Setup */}
@@ -327,6 +333,22 @@ export default function SettingsPageClient({ user, familyMembership }: SettingsP
           </div>
 
           <div className="glass-card divide-y divide-border/40 rounded-2xl overflow-hidden">
+            <Link
+              href="/dashboard/referrals"
+              className="flex items-center justify-between px-4 py-3.5 hover:bg-secondary/30 transition-colors"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center">
+                  <Gift className="w-4 h-4 text-amber-500" />
+                </div>
+                <div className="text-left">
+                  <p className="text-sm font-medium text-foreground">Referral Program</p>
+                  <p className="text-xs text-muted-foreground">Share & earn free months</p>
+                </div>
+              </div>
+              <ChevronRight className="w-4 h-4 text-muted-foreground" />
+            </Link>
+
             <Link
               href="/family"
               className="flex items-center justify-between px-4 py-3.5 hover:bg-secondary/30 transition-colors"

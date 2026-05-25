@@ -7,6 +7,7 @@ import ThemeToggle from '@/components/ThemeToggle';
 import TrustBadges from '@/components/TrustBadges';
 import { BlogPost } from '@/lib/blog-data';
 import { affiliateLinks, getAffiliatesForLocation } from '@/lib/affiliate-links';
+import RoutePlannerForm from '@/components/RoutePlannerForm';
 import EvRoadTripCTA from '@/components/EvRoadTripCTA';
 import PremiumPartnerSection from '@/components/PremiumPartnerSection';
 import RoadTripPackageWidget from '@/components/RoadTripPackageWidget';
@@ -100,6 +101,39 @@ export default function HomeContent({ meta, homepageData, blogPosts: initialPost
           </a>
         </nav>
       </header>
+
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'EV Charging Asia',
+            url: 'https://ev-charging-asia.vercel.app/',
+            description: 'The ultimate family EV road trip planner for Asia. Find charging stations, plan routes, book EV-friendly hotels.',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://ev-charging-asia.vercel.app/search?q={search_term_string}',
+              'query-input': 'required name=search_term_string',
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'EV Charging Asia',
+            url: 'https://ev-charging-asia.vercel.app/',
+            description: 'Your family-friendly EV road trip planner for Asia. 1,000+ charging stations across 14+ countries.',
+            areaServed: ['Asia'],
+            foundingDate: '2026',
+          }),
+        }}
+      />
 
       {/* Hero Section — Premium Redesign */}
       <section className="relative overflow-hidden bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-900 border-b border-emerald-800/30">
@@ -258,6 +292,9 @@ export default function HomeContent({ meta, homepageData, blogPosts: initialPost
             ))}
           </div>
         </section>
+
+        {/* ═══════ ROUTE PLANNER ═══════ */}
+        <RoutePlannerForm />
 
         {/* ═══════ SEASONAL EXPLORER ═══════ */}
         <section className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 shadow-sm">

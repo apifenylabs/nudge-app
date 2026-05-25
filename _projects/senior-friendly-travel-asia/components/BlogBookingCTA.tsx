@@ -1,7 +1,7 @@
 'use client';
 
 import { ExternalLink } from 'lucide-react';
-import { getAffiliateLinks, getPartner } from '@/lib/affiliate';
+import { getAffiliateLinks, getPartner, fireAffiliateBeacon } from '@/lib/affiliate';
 import type { BlogPost } from '@/lib/blog-data';
 
 interface BlogBookingCTAProps {
@@ -52,6 +52,7 @@ export default function BlogBookingCTA({
               target="_blank"
               rel="noopener noreferrer sponsored"
               className="flex items-center gap-4 bg-white rounded-xl px-4 py-3 hover:shadow-md transition-shadow border border-gray-100 group"
+              onClick={() => fireAffiliateBeacon(`blog-${link.partner}`, link.url)}
             >
               <span className="text-2xl">{partner.icon}</span>
               <div className="flex-1 min-w-0">

@@ -34,3 +34,26 @@ export function bookingUrl(location: string): string {
 export function viatorUrl(location: string): string {
   return `https://www.viator.com/${encodeURIComponent(location.replace(/\s+/g, '').replace(/[^a-zA-Z]/g, ''))}/things-to-do?aid=${AFFILIATE.viatorPid}`;
 }
+
+// ─── Central Tracking Beacon ──────────────────────────────────
+
+const TRACKING_API = (typeof process !== 'undefined' && process.env?.NEXT_PUBLIC_AFFILIATE_TRACKING_URL)
+  || 'https://affiliate-tracking.vercel.app';
+
+/**
+ * Fire a tracking beacon to the central affiliate tracking API.
+ * Uses sendBeacon for reliable fire-and-forget delivery.
+ */
+export function fireAffiliateBeacon(linkId: string, redirectUrl: string): void {
+  if (typeof window === 'undefined') return;
+  
+  const beaconUrl = `${TRACKING_API}/api/track-click` +
+    `?linkId=${encodeURIComponent('luxury-travel_' + linkId)}` +
+    `&redirectUrl=${encodeURIComponent(redirectUrl)}`;
+  
+  try {
+    navigator.sendBeacon(beaconUrl);
+  } catch {
+    fetch(beaconUrl, { method: 'GET', keepalive: true }).catch(() => {});
+  }
+}

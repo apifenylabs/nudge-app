@@ -10,9 +10,10 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { loadProgression, loadFeed, saveFeed } from "@/lib/persistence";
 import { useMascotStore } from "@/stores/mascotStore";
-import { MAIN_AGENT } from "@/lib/dashboard-store";
+import { MAIN_AGENT, ACHIEVEMENT_DEFS, checkAchievements } from "@/lib/dashboard-store";
 import type { FeedEntry } from "@/lib/persistence";
 import MascotDisplay, { MascotPickerModal } from "@/components/molecules/MascotDisplay";
+import XPBar from "@/components/molecules/XPBar";
 
 // ─── Theme Configuration ────────────────────────────────────────────────
 
@@ -45,24 +46,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "billing", label: "Billing", icon: CreditCard, color: "#14B8A6", path: "/dashboard/billing" },
 ];
 
-// ─── XP Bar ────────────────────────────────────────────────────────────
 
-function XPBar({ current, max }: { current: number; max: number }) {
-  const pct = Math.min((current / max) * 100, 100);
-  return (
-    <div className="w-24">
-      <div className="h-1.5 bg-[#E5E0D8]/40 rounded-full overflow-hidden">
-        <motion.div
-          className="h-full rounded-full"
-          style={{ background: "linear-gradient(90deg, #0EA5A5, #D4A017)" }}
-          initial={{ width: 0 }}
-          animate={{ width: `${pct}%` }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        />
-      </div>
-    </div>
-  );
-}
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -70,7 +54,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
   const [theme, setTheme] = useState<DashboardTheme>("game");
   const [threeDMode, setThreeDMode] = useState(false);
-  const [progression, setProgression] = useState({ totalXp: 0, totalTasksRun: 0 });
+  const [progression, setProgression] = useState({ totalXp: 0, totalTasksRun: 0, achievements: [] as string[] });
 
   const { currentMascot, openPicker } = useMascotStore();
 
@@ -79,7 +63,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       const saved = localStorage.getItem('titan-3d-mode');
       if (saved === 'true') setThreeDMode(true);
       const prog = loadProgression();
-      setProgression({ totalXp: prog.totalXp, totalTasksRun: prog.totalTasksRun });
+      setProgression({ totalXp: prog.totalXp, totalTasksRun: prog.totalTasksRun, achievements: prog.achievements });
     } catch {}
   }, []);
 
@@ -148,11 +132,35 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <span className="hidden sm:inline" style={{ color: '#666666' }}>{THEMES.find(t => t.id === theme)?.label}</span>
             </div>
 
-            {/* Level + XP */}
-            <div className="hidden md:flex items-center gap-2">
-              <Trophy className="h-3.5 w-3.5" style={{ color: '#D4A017' }} />
-              <span className="text-xs font-mono font-semibold" style={{ color: '#D4A017' }}>Lv{MAIN_AGENT.level}</span>
-              <XPBar current={progression.totalXp} max={MAIN_AGENT.xpToNext} />
+            {/* Level + XP Bar + Achievement Badges */}
+            <div className="hidden md:flex items-center gap-2.5">
+              {/* Achievement badges tooltip */}
+              {progression.achievements.length > 0 && (
+                <motion.div
+                  className="flex items-center gap-0.5 px-1.5 py-0.5 rounded-full border cursor-pointer"
+                  style={{
+                    background: 'rgba(212,160,23,0.08)',
+                    borderColor: 'rgba(212,160,23,0.2)',
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  onClick={() => router.push('/dashboard/progression')}
+                  title={`${progression.achievements.length} achievements unlocked`}
+                >
+                  <Trophy className="h-2.5 w-2.5" style={{ color: '#D4A017' }} />
+                  <span className="text-[9px] font-mono font-semibold" style={{ color: '#D4A017' }}>
+                    {progression.achievements.length}
+                  </span>
+                </motion.div>
+              )}
+              <div className="w-48">
+                <XPBar
+                  currentXp={progression.totalXp}
+                  maxXp={MAIN_AGENT.xpToNext}
+                  currentLevel={MAIN_AGENT.level}
+                  recentAchievements={progression.achievements}
+                  onAchievementClick={() => router.push('/dashboard/progression')}
+                />
+              </div>
             </div>
 
             {/* 3D Toggle */}

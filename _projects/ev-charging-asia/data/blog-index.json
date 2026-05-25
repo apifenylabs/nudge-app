@@ -7,6 +7,13 @@
     "image": "/blog/papua-new-guinea-ev-guide.jpg"
   },
   {
+    "slug": "ev-charging-brunei",
+    "title": "EV Charging in Brunei: A Practical Guide for Electric Vehicle Owners in the Sultanate (2026)",
+    "date": "2026-05-25",
+    "description": "Complete guide to charging an EV in Brunei — 40 stations, 45 charging points, import rules, top routes from Bandar Seri Begawan to Kuala Belait and Temburong, EV-friendly hotels, and essential tips for the sultanate's growing EV ecosystem.",
+    "image": "/blog/ev-charging-brunei.jpg"
+  },
+  {
     "slug": "ev-charging-shopping-malls-asia",
     "title": "EV Charging at Shopping Malls in Asia: Where to Charge While You Shop (2026)",
     "date": "2026-05-24",
@@ -728,5 +735,12 @@
   {
     "slug": "ccs2-vs-chademo-asia",
     "date": "April 20, 2026"
+  },
+  {
+    "slug": "ev-charging-east-timor-timor-leste-complete-guide",
+    "title": "EV Charging in East Timor (Timor-Leste): A Practical Guide for Electric Vehicle Owners",
+    "date": "2026-05-25",
+    "description": "East Timor has virtually zero public EV charging infrastructure — but that doesn't mean an electric vehicle is impossible. From hotel wall sockets in Dili to solar charging at eco-lodges, cross-border tips from Indonesia, and practical advice on what EVs can actually work in the world's newest nation.",
+    "image": "/blog/ev-charging-east-timor-timor-leste-complete-guide.jpg"
   }
 ]

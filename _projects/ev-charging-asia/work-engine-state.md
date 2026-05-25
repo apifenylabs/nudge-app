@@ -26,7 +26,7 @@ No pending cursor tasks identified.
 
 ## Revenue Bucket: Blog Content Created
 
-### Status: ✅ 3 new blog posts written (2026-05-24)
+### Status: ✅ 4 new blog posts written (2026-05-24 & 2026-05-25)
 
 Three high-quality MDX-format road trip guides were created for missing blog-index.json topics:
 
@@ -47,3 +47,10 @@ Three high-quality MDX-format road trip guides were created for missing blog-ind
    - Trans-Java Toll Road with SPKLU/PLN and ChargeIN charging stops
    - Full 4-day itinerary (Jakarta→Borobudur→Prambanan→Yogyakarta)
    - Toll cost breakdown (IDR ~317,500), Merapi jeep tour tip
+
+4. **ev-charging-brunei.md** — EV Charging in Brunei: A Practical Guide for Electric Vehicle Owners in the Sultanate (2026)
+   - 24.5 KB, ~4,000 words
+   - 40 charging stations, 45 charging points, 1× 350 kW Porsche charger
+   - Routes: BSB→Kuala Belait, BSB→Temburong via bridge, BSB city loop
+   - Import rules, EV-friendly hotels table, equipment checklist, 7 FAQs
+   - Affiliate CTAs {{BOOKING}} and {{KLOOK}} included

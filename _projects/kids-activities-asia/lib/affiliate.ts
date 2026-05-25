@@ -51,3 +51,32 @@ export function viatorUrl(location: string): string {
 export function klookActivityUrl(activitySlug: string): string {
   return `https://www.klook.com/activity/${activitySlug}/?aid=${AFFILIATE.klookId}`;
 }
+
+// ─── Central Tracking Beacon ──────────────────────────────────
+// Fires a server-side tracking event to the central affiliate-tracking API.
+// Call from onClick handlers alongside the navigation.
+
+const TRACKING_API = (typeof process !== 'undefined' && process.env?.NEXT_PUBLIC_AFFILIATE_TRACKING_URL)
+  || 'https://affiliate-tracking.vercel.app';
+
+/**
+ * Fire a tracking beacon to the central affiliate tracking API.
+ * Uses sendBeacon for reliable fire-and-forget delivery.
+ * Call this before navigating to an affiliate link.
+ *
+ * @param linkId - A unique identifier for this link
+ * @param redirectUrl - The actual URL the user is being redirected to
+ */
+export function fireAffiliateBeacon(linkId: string, redirectUrl: string): void {
+  if (typeof window === 'undefined') return;
+  
+  const beaconUrl = `${TRACKING_API}/api/track-click` +
+    `?linkId=${encodeURIComponent('kids-activities-asia_' + linkId)}` +
+    `&redirectUrl=${encodeURIComponent(redirectUrl)}`;
+  
+  try {
+    navigator.sendBeacon(beaconUrl);
+  } catch {
+    fetch(beaconUrl, { method: 'GET', keepalive: true }).catch(() => {});
+  }
+}

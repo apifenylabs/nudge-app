@@ -53,6 +53,33 @@ import mobilityTipsAsia from '@/data/blog/mobility-aids-travel-tips-asia-seniors
 import seniorPhuket from '@/data/blog/senior-friendly-phuket-best-hotels-beaches-tours-2026.json';
 import seniorFriendlyCities from '@/data/blog/senior-friendly-cities-long-stay-asia.json';
 
+// New imports added May 25 2026 batch
+import accessibleCruiseTours from '@/data/blog/accessible-cruise-tours-asia-seniors-2026.json';
+import accessibleDayToursTokyo from '@/data/blog/accessible-day-tours-tokyo-seniors.json';
+import accessibleHongKongIslandTour from '@/data/blog/accessible-hong-kong-island-tour-elderly.json';
+import accessibleTemplesJapanWheelchair from '@/data/blog/accessible-temples-japan-wheelchair.json';
+import bestMultiGenFamilyVacations from '@/data/blog/best-multi-gen-family-vacations-asia-seniors-2026.json';
+import bestSeniorHotelsKL from '@/data/blog/best-senior-hotels-kuala-lumpur-2026.json';
+import bestTimeVisitSEAMonthly from '@/data/blog/best-time-visit-southeast-asia-senior-travelers-month-by-month-2026.json';
+import bestTimeVisitSEASeniors from '@/data/blog/best-time-visit-southeast-asia-seniors.json';
+import bestTravelInsurance from '@/data/blog/best-travel-insurance-seniors-asia.json';
+import budgetFriendlyVietnam from '@/data/blog/budget-friendly-senior-travel-vietnam-50-per-day-2026.json';
+import completeGuideTravelInsurance from '@/data/blog/complete-guide-senior-travel-insurance-asia-2026.json';
+import digitalTravelTools from '@/data/blog/digital-travel-tools-apps-seniors-asia-2026.json';
+import easyBangkokTempleTours from '@/data/blog/easy-bangkok-temple-tours-seniors.json';
+import guidedTaipeiCityTour from '@/data/blog/guided-taipei-city-tour-elderly.json';
+import medicalFacilitiesSingapore from '@/data/blog/medical-facilities-singapore-seniors.json';
+import seniorDigitalNomad from '@/data/blog/senior-digital-nomad-thailand-2026.json';
+import seniorDestinationsRankings from '@/data/blog/senior-friendly-asia-destinations-2026-rankings.json';
+import seniorKyotoExcursions from '@/data/blog/senior-friendly-kyoto-excursions-wheelchair.json';
+import seniorThailandBeachResorts from '@/data/blog/senior-friendly-thailand-beach-resorts-2026.json';
+import slowTravelJapanItinerary from '@/data/blog/slow-travel-japan-2-week-itinerary-active-seniors-2026.json';
+import soloSeniorTravelSEA from '@/data/blog/solo-senior-travel-southeast-asia.json';
+import southKoreaTravelGuide from '@/data/blog/south-korea-senior-travel-guide.json';
+import stayHealthyAsia from '@/data/blog/stay-healthy-traveling-asia-seniors.json';
+import taiwanAccessibility from '@/data/blog/taiwan-accessibility-senior-travelers.json';
+import trainTravelAsia from '@/data/blog/train-travel-asia-seniors.json';
+
 // Existing inline posts
 const existingPosts: BlogPost[] = [
   {
@@ -146,6 +173,33 @@ const newPosts: BlogPost[] = [
   mobilityTipsAsia as BlogPost,
   seniorPhuket as BlogPost,
   seniorFriendlyCities as BlogPost,
+
+  // May 25 2026 batch — 25 additional posts
+  accessibleCruiseTours as BlogPost,
+  accessibleDayToursTokyo as BlogPost,
+  accessibleHongKongIslandTour as BlogPost,
+  accessibleTemplesJapanWheelchair as BlogPost,
+  bestMultiGenFamilyVacations as BlogPost,
+  bestSeniorHotelsKL as BlogPost,
+  bestTimeVisitSEAMonthly as BlogPost,
+  bestTimeVisitSEASeniors as BlogPost,
+  bestTravelInsurance as BlogPost,
+  budgetFriendlyVietnam as BlogPost,
+  completeGuideTravelInsurance as BlogPost,
+  digitalTravelTools as BlogPost,
+  easyBangkokTempleTours as BlogPost,
+  guidedTaipeiCityTour as BlogPost,
+  medicalFacilitiesSingapore as BlogPost,
+  seniorDigitalNomad as BlogPost,
+  seniorDestinationsRankings as BlogPost,
+  seniorKyotoExcursions as BlogPost,
+  seniorThailandBeachResorts as BlogPost,
+  slowTravelJapanItinerary as BlogPost,
+  soloSeniorTravelSEA as BlogPost,
+  southKoreaTravelGuide as BlogPost,
+  stayHealthyAsia as BlogPost,
+  taiwanAccessibility as BlogPost,
+  trainTravelAsia as BlogPost,
 ];
 
 const allPosts: BlogPost[] = [...existingPosts, ...newPosts];

@@ -8,11 +8,19 @@ import { ExternalLink } from 'lucide-react';
 // ---------------------------------------------------------------------------
 // Usage: drop this component anywhere.  If the env var for the given provider
 // is set AND productId is provided, the link points to the tracked affiliate
-// URL.  Otherwise it falls back to the plain `href` – safe to ship today.
+// URL via the centralized tracking API.  Otherwise it falls back to the plain
+// `href` – safe to ship today.
+//
+// The tracking API (affiliate-tracking.vercel.app) records the click before
+// redirecting to the provider, so all affiliate activity is logged to a
+// central dashboard. See: https://affiliate-tracking.vercel.app/dashboard
 //
 // Provider logos are rendered as simple SVG/emoji badges so there is zero
 // external dependency.  Swap with real vector logos when you have them.
 // ---------------------------------------------------------------------------
+
+/** Central affiliate-tracking API endpoint — records clicks before redirect. */
+const TRACKING_API = 'https://affiliate-tracking.vercel.app/api/track-click';
 
 export type AffiliateProvider = 'booking.com' | 'klook' | 'viator' | 'expedia' | 'getyourguide' | 'tripadvisor' | 'agoda';
 
@@ -37,6 +45,7 @@ interface AffiliateLinkProps {
 
 /**
  * Build an affiliate URL from env-var + productId, or fall back to href.
+ * Routes through the centralized tracking API to log every click.
  */
 function buildAffiliateUrl(
   provider: AffiliateProvider,
@@ -49,24 +58,37 @@ function buildAffiliateUrl(
 
   if (!affiliateId || !productId) return href;
 
+  // Build the direct affiliate URL first
+  let affiliateUrl: string;
   switch (provider) {
     case 'booking.com':
-      return `https://www.booking.com/searchresults.html?aid=${affiliateId}&ss=${encodeURIComponent(productId)}`;
+      affiliateUrl = `https://www.booking.com/searchresults.html?aid=${affiliateId}&ss=${encodeURIComponent(productId)}`;
+      break;
     case 'klook':
-      return `https://affiliate.klook.com/redirect?aid=${affiliateId}&aff_adid=${encodeURIComponent(productId)}`;
+      affiliateUrl = `https://affiliate.klook.com/redirect?aid=${affiliateId}&aff_adid=${encodeURIComponent(productId)}`;
+      break;
     case 'viator':
-      return `https://www.viator.com/${encodeURIComponent(productId)}?pid=${affiliateId}`;
+      affiliateUrl = `https://www.viator.com/${encodeURIComponent(productId)}?pid=${affiliateId}`;
+      break;
     case 'expedia':
-      return `https://www.expedia.com/${encodeURIComponent(productId)}?msp_cid=${affiliateId}`;
+      affiliateUrl = `https://www.expedia.com/${encodeURIComponent(productId)}?msp_cid=${affiliateId}`;
+      break;
     case 'getyourguide':
-      return `https://www.getyourguide.com/${encodeURIComponent(productId)}?partner_id=${affiliateId}`;
+      affiliateUrl = `https://www.getyourguide.com/${encodeURIComponent(productId)}?partner_id=${affiliateId}`;
+      break;
     case 'tripadvisor':
-      return `https://www.tripadvisor.com/${encodeURIComponent(productId)}?partner_id=${affiliateId}`;
+      affiliateUrl = `https://www.tripadvisor.com/${encodeURIComponent(productId)}?partner_id=${affiliateId}`;
+      break;
     case 'agoda':
-      return `https://www.agoda.com/${encodeURIComponent(productId)}?cid=${affiliateId}`;
+      affiliateUrl = `https://www.agoda.com/${encodeURIComponent(productId)}?cid=${affiliateId}`;
+      break;
     default:
-      return href;
+      affiliateUrl = href;
   }
+
+  // Route through the centralized tracking API — encodes the final redirect
+  const linkId = `${provider}:${productId.substring(0, 40)}`;
+  return `${TRACKING_API}?linkId=${encodeURIComponent(linkId)}&redirectUrl=${encodeURIComponent(affiliateUrl)}`;
 }
 
 /** Tiny provider-identifier badges (emoji-based – zero-dependency, mobile-safe) */

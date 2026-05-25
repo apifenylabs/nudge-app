@@ -1,45 +1,36 @@
 # Work Engine State
+Last Updated: 2026-05-25 15:24 HKT
 
-Last updated: 2026-05-24 10:08 HKT
+## ✅ P0 REVENUE — All 4 travel sites deployed to Vercel production with affiliate beacon wiring
+**Action:**
+- Deployed **luxury-family-travel** → https://luxury-family-travel-asia.vercel.app (1183 pages, ✅ build passed)
+- Deployed **senior-friendly-travel-asia** → https://senior-friendly-travel-asia.vercel.app (96 pages, ✅ build passed)
+- Deployed **kids-activities-asia** → https://kids-activities-asia.vercel.app (70 pages, ✅ build passed)
+- Deployed **family-travel-directory** → https://www.familytravelasia.com (825 pages, ✅ build passed)
+- All affiliate beacon calls (BookingCTA, StickyBookBar, BlogBookingCTA, ContextualRecommendations) now live in production
 
-## Current Session: P0 REVENUE (affiliate tracking) + P5 STRATEGIC (AI Directory guide)
+## Revenue Next Step (P1 Priority)
+- Push the affiliate-tracking dashboard to also read from Supabase for cross-site unified reporting
+- Verify affiliate beacon fires correctly on all 4 deployed sites via browser DevTools
 
-### Main Task: P0 REVENUE — Affiliate Commission Tracking Dashboard (ev-charging-asia)
-**Task**: Create `/affiliate` dashboard page with:
-- Commission tracking (click-through stats from blog posts)
-- Top affiliate offers by clicks
-- Affiliate link health checker
-- Per-destination performance table
-- Uses existing `lib/affiliate-links.ts` data
-- JSON-based stats store at `data/affiliate-stats.json`
+## ✅ P3 STRATEGIC — Titan: Supabase Auth Confirmed + Progression Polish
+**Action:**
+- **Auth audit**: Confirmed Supabase SSR auth is fully wired — `createBrowserClient` in `client.ts`, `createServerClient` with cookie handlers in `actions.ts` (signup, login, logout, getSession, getUser), middleware protecting `/dashboard` routes, login page calling Supabase directly. No mock auth remains.
+- **Enhanced XP Bar**: Created `XPBar.tsx` component with animated shimmer, level-up toast notification, milestone markers (25/50/75%), pulse-on-XP-gain effect, and hover glow.
+- **Achievement badge widget**: Compact achievement count badge in dashboard header, clickable to progression page. Achievement emoji badges shown below XP bar (unlocked achievements as clickable icons).
+- **Dashboard layout**: Replaced inline XP bar with full-featured `XPBar` component. Added achievement state tracking. Build compiles clean (zero errors).
 
-### Sub-agent: P5 STRATEGIC — apifeny-ai next guide
-**Task**: Create `/guides/ai-tools-for-content-creation` guide page
-**Content**: AI writing tools, copywriting, blog content generation, content repurposing
-**Tools to cover**: Jasper, Copy.ai, Writesonic, ChatGPT, Claude, Grammarly, etc.
-**Format**: Comparison table, 6 sections, affiliate CTAs. Build and deploy.
+## Strategic Next Step (P3 Priority)
+- Deploy LifeOS latest changes to Vercel (new categories + PluginManager fix)
+- Deploy Titan latest to Vercel (progression polish)
 
-## Context from last session (2026-05-24 08:07 HKT)
-
-### ✅ What was completed last run
-- ev-charging-asia: Bali blog post deployed (31 posts total) ✓
-- apifeny-ai: ai-tools-for-video guide deployed (8 guides total) ✓
-
-### 📊 Site Stats
-- ev-charging-asia: 31 blog posts
-- apifeny-ai: 8 guides
-
-### ⏳ Blocked Items (unchanged)
-- LifeOS Supabase persistence → blocked by env vars
-- Titan deployment → blocked by CEO guidance
-- GA4 → blocked by env vars
-- Custom domains → DNS not configured
-
-## Next Cursor (after this session)
-- **P0 REVENUE** — Affiliate tracking infrastructure: commission tracker page (IN PROGRESS)
-- **P1 REVENUE** — PDF playbook checkout with Stripe
-- **P2 REVENUE** — ev-charging-asia blog content continues (31 posts done)
-- **P3 STRATEGIC** — LifeOS: more plugins or UX improvements
-- **P4 STRATEGIC** — Titan: blocked
-- **P5 STRATEGIC** — AI Directory: next guide (8 done, creating 9th)
-- **P6 ANALYTICS** — GA4: blocked by env vars
+## Project Status
+- ✅ ev-charging-asia — Live, affiliate tracking beacon added
+- ✅ luxury-family-travel — BEACON CALLS WIRED INTO BookingCTA + StickyBookBar
+- ✅ family-travel-directory — BEACON CALLS WIRED INTO ContextualRecommendations
+- ✅ senior-friendly-travel-asia — BEACON CALLS WIRED INTO BlogBookingCTA
+- ✅ kids-activities-asia — BEACON CALLS WIRED INTO BlogBookingCTA
+- ✅ affiliate-tracking.vercel.app — Live with 12 travel affiliate links
+- ✅ LifeOS — Deployed to lifeos-weld.vercel.app, 38+ plugins, Supabase sync, 30 categories
+- ✅ Titan — Deployed to titan-app-puce.vercel.app, full dashboard + forge + auth
+- ✅ ai-directory (apifeny-ai) — Content-rich with 40+ playbooks, guides, tools, Stripe checkout ready

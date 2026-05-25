@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ExternalLink, Calendar, TrendingUp, X } from 'lucide-react';
+import { fireAffiliateBeacon } from '@/lib/affiliate';
 
 interface StickyBookBarProps {
   destinationName: string;
@@ -84,6 +85,7 @@ export default function StickyBookBar({
               target="_blank"
               rel="noopener noreferrer sponsored"
               className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 bg-gold text-navy text-xs font-bold rounded-lg hover:bg-gold-light transition-all active:scale-[0.97] min-h-[40px]"
+              onClick={() => fireAffiliateBeacon('sticky-booking', `https://www.booking.com/searchresults.html?ss=${encodedDest}%20${encodedCity}&aid=2875669`)}
             >
               <Calendar size={12} />
               Book Hotel
@@ -93,6 +95,7 @@ export default function StickyBookBar({
               target="_blank"
               rel="noopener noreferrer sponsored"
               className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 bg-orange-500 text-white text-xs font-semibold rounded-lg hover:bg-orange-600 transition-all active:scale-[0.97] min-h-[40px]"
+              onClick={() => fireAffiliateBeacon('sticky-klook', `https://www.klook.com/search/?keyword=${encodedDest}%20${encodedCity}&aid=119991`)}
             >
               <TrendingUp size={12} />
               Tours
@@ -102,6 +105,7 @@ export default function StickyBookBar({
               target="_blank"
               rel="noopener noreferrer sponsored"
               className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 bg-rose-500 text-white text-xs font-semibold rounded-lg hover:bg-rose-600 transition-all active:scale-[0.97] min-h-[40px]"
+              onClick={() => fireAffiliateBeacon('sticky-viator', `https://www.viator.com/${encodedCity.replace(/%20/g, '')}/things-to-do?aid=P00299136`)}
             >
               <ExternalLink size={12} />
               Tours

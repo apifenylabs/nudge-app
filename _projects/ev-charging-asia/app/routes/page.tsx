@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Zap, Route as RouteIcon, ChevronRight } from 'lucide-react';
 import { getAllItineraries } from '@/data/itineraries';
 import SiteFooter from '@/components/SiteFooter';
+import RoutePlannerForm from '@/components/RoutePlannerForm';
 import ItineraryCard from '@/components/itineraries/ItineraryCard';
 import RouteFilterBar from '@/components/itineraries/RouteFilterBar';
 import RouteFinderQuiz from '@/components/RouteFinderQuiz';
@@ -135,6 +136,11 @@ export default function RoutesPage() {
             <p className="text-sm text-gray-500">Answer 6 quick questions and we'll recommend the ideal EV road trip for you.</p>
           </div>
           <RouteFinderQuiz />
+        </div>
+
+        {/* Route planner form */}
+        <div className="mt-12">
+          <RoutePlannerForm />
         </div>
 
         {/* Tools section */}

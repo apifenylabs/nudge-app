@@ -145,12 +145,68 @@ export default function SeasonsPage() {
     routes: allItineraries.filter(it => getRecommendedMonths(it.bestSeason).includes(m.index)),
   }));
 
+  // JSON-LD: FAQPage for rich results
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the best season for EV road trips in Asia?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The best season varies by region. For Southeast Asia (Thailand, Vietnam, Malaysia), November to February offers cool, dry weather ideal for driving. For Japan and Korea, spring (March-May) and autumn (September-November) are best. India is best October to March. Mild temperatures (20-25°C) maximize EV battery range.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does hot weather affect EV range in Asia?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Air conditioning usage in hot weather can reduce EV range by 15-25%. Battery thermal management systems also draw power. In tropical Asian countries like Thailand, Malaysia, and Indonesia, plan for more frequent charging stops during the hot season (March-June).',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does cold weather affect EV range in Asia?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Cold temperatures can reduce EV battery efficiency by 20-40%. In northern Japan, Korea, and mountainous parts of China and India, winter driving requires careful range planning. Pre-condition the battery while plugged in before departure.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Which Asian countries have the best EV charging infrastructure?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'China leads Asia with the most extensive fast-charging network. Thailand has rapidly expanding 50-150kW chargers along major highways. Japan has widespread CHAdeMO coverage. South Korea offers ultra-fast 350kW chargers on major corridors. Singapore has excellent urban coverage. India and Indonesia are growing quickly but planning is recommended.',
+        },
+      },
+    ],
+  };
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'EV Charging Asia',
+    url: 'https://ev-charging-asia.vercel.app',
+    description: 'Best seasons for EV road trips across Asia — month-by-month guide with route recommendations.',
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <BreadcrumbSchemaSSR items={[
         { name: 'Home', url: '/' },
         { name: 'Best Seasons', url: '/seasons' },
       ]} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
 
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">

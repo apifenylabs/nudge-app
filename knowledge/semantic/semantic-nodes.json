@@ -1,7 +1,7 @@
 {
-  "version": "2026-05-24-consolidation-backup",
-  "generated": "2026-05-24T03:04:00+08:00",
-  "semanticCount": 24,
+  "version": "2026-05-25-consolidation-primary",
+  "generated": "2026-05-25T02:00:00+08:00",
+  "semanticCount": 31,
   "graphEdgeCount": 44,
   "nodes": [
     {
@@ -23,7 +23,7 @@
     {
       "id": "chunk-gold-v2-1779217287655",
       "name": "chunk-gold-v2-1779217287655",
-      "summary": "Gold Template v2 — All 3 scripts built and tested. Epistemic Gate correctly blocks BB(10,2.0) RSI<15 at 16 percent confidence. Killswitch Gate fails 78/78 paper trades at 48.7 percent WR below 55 percent requirement. Rolling Optimizer proves params shift every 3-6 months across 62 windows. BTC grid walk-forward failure: Train PF 2.39 to Test PF 0.84 equals 65 percent edge decay. Current BTC best BB(30,2.5) RSI<20 PF=1.0 with no edge. Fixed params are structurally dead.",
+      "summary": "Gold Template v2 \u2014 All 3 scripts built and tested. Epistemic Gate correctly blocks BB(10,2.0) RSI<15 at 16 percent confidence. Killswitch Gate fails 78/78 paper trades at 48.7 percent WR below 55 percent requirement. Rolling Optimizer proves params shift every 3-6 months across 62 windows. BTC grid walk-forward failure: Train PF 2.39 to Test PF 0.84 equals 65 percent edge decay. Current BTC best BB(30,2.5) RSI<20 PF=1.0 with no edge. Fixed params are structurally dead.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-19T19:01:27.655Z"
@@ -46,7 +46,7 @@
     },
     {
       "id": "funding-rate-strategy-algotick",
-      "name": "Algotick Funding Rate Strategy — 2.56 PF Backtest on HL",
+      "name": "Algotick Funding Rate Strategy \u2014 2.56 PF Backtest on HL",
       "summary": "90-day backtest on Hyperliquid: 2.56 PF, 55% WR, Sharpe 1.26. Contrarian entries at extreme funding Z-scores, 7h avg hold. Already partially in our Kalman DRL strategy. Action: Align Kalman DRL funding rate thresholds with Algotick params.",
       "type": "semantic",
       "confidence": 0.85,
@@ -54,8 +54,8 @@
     },
     {
       "id": "heartbeat-lifeos-plugins-may24",
-      "name": "HEARTBEAT May 24 — LifeOS Expands to 27 Plugins",
-      "summary": "4 new LifeOS plugins across 4 new categories: Nutrition & Diet (7 fields), Creative Expression (6 fields), Finance & Investments (6 fields), Family & Parenting (6 fields). PluginManager UI updated. AI Directory: 57 blog posts, 2 guides, 4 hub pages — all live. LifeOS total: 27 plugins across 17 categories. Titan: all phases complete, deploy guidance needed. All 8 sites healthy.",
+      "name": "HEARTBEAT May 24 \u2014 LifeOS Expands to 27 Plugins",
+      "summary": "4 new LifeOS plugins across 4 new categories: Nutrition & Diet (7 fields), Creative Expression (6 fields), Finance & Investments (6 fields), Family & Parenting (6 fields). PluginManager UI updated. AI Directory: 57 blog posts, 2 guides, 4 hub pages \u2014 all live. LifeOS total: 27 plugins across 17 categories. Titan: all phases complete, deploy guidance needed. All 8 sites healthy.",
       "type": "semantic",
       "confidence": 0.9,
       "timestamp": "2026-05-23T18:03:40.615Z"
@@ -63,22 +63,22 @@
     {
       "id": "kalman-drl-deployed-may23",
       "name": "Kalman DRL Strategy Deployed to Live HL Bot (May 23)",
-      "summary": "3 signal generators deployed: (1) Kalman deviation — price vs denoised, 1.5-4% threshold, (2) Funding rate signal — deeply negative → long, positive → short, (3) Liquidation cascade fade — exhaustion detection after 2+ ATR moves. Allocation: 5% of $500. Dashboard generated with Plotly heatmap + equity curve. Kill Zone filter: 13-20 UTC.",
+      "summary": "3 signal generators deployed: (1) Kalman deviation \u2014 price vs denoised, 1.5-4% threshold, (2) Funding rate signal \u2014 deeply negative \u2192 long, positive \u2192 short, (3) Liquidation cascade fade \u2014 exhaustion detection after 2+ ATR moves. Allocation: 5% of $500. Dashboard generated with Plotly heatmap + equity curve. Kill Zone filter: 13-20 UTC.",
       "type": "semantic",
       "confidence": 0.9,
       "timestamp": "2026-05-23T18:03:40.538Z"
     },
     {
       "id": "lifeos-prd-complete",
-      "name": "LifeOS PRD — Full Product Requirements Document",
-      "summary": "LifeOS PRD created at /home/captain/.openclaw/workspace/life/Projects/LifeOS-PRD.md. 10 sections: Vision, Architecture, Feature Specs, Persistence, UI/UX, Integration, Roadmap, Technical, Metrics, aicofounder Parity. 12 plugins built (v0.59+), 3 more planned (Business, Home, Relationships). Roadmap: v0.59→v1.0 with 7 milestones. 5/10 aicofounder parity items done.",
+      "name": "LifeOS PRD \u2014 Full Product Requirements Document",
+      "summary": "LifeOS PRD created at /home/captain/.openclaw/workspace/life/Projects/LifeOS-PRD.md. 10 sections: Vision, Architecture, Feature Specs, Persistence, UI/UX, Integration, Roadmap, Technical, Metrics, aicofounder Parity. 12 plugins built (v0.59+), 3 more planned (Business, Home, Relationships). Roadmap: v0.59\u2192v1.0 with 7 milestones. 5/10 aicofounder parity items done.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.984044+00:00"
     },
     {
       "id": "live-hl-bot-status-may23",
-      "name": "Live Hyperliquid Bot Status — May 23",
+      "name": "Live Hyperliquid Bot Status \u2014 May 23",
       "summary": "BB Core: 6 trades live, 33% WR, 10.6% DD, $41 PnL. Kalman DRL: deployed (5% allocation). TendersAlt: 47 signals, 41.3% WR, -72.2% PnL (bearish flush). Markets: BTC $75K, ETH $2K, SOL $83. Regime: CHOP (ADX 15-22). Paper WR: BTC 86.4%, ETH 88.8%, SOL 90.3%. Allocations: 80% BB Core / 15% Vol Surge / 5% Kalman DRL.",
       "type": "semantic",
       "confidence": 0.9,
@@ -86,7 +86,7 @@
     },
     {
       "id": "next-actions-may23",
-      "name": "Consolidated Pending Actions — May 23",
+      "name": "Consolidated Pending Actions \u2014 May 23",
       "summary": "(1) Implement forex ADX filter + 2% risk, (2) Write FMP equity screener script (250 calls/day), (3) Set up Jupiter API meme execution (paper mode), (4) Fix PnL reconciliation bug: max_lookback_bars=200, (5) Wire core_bb playbook into hourly runner, (6) Align Kalman DRL funding rate thresholds with Algotick params.",
       "type": "semantic",
       "confidence": 0.9,
@@ -94,16 +94,16 @@
     },
     {
       "id": "omnimind-cron-status-22may",
-      "name": "OmniMind Cron Status — Primary/Backup/Distribution",
-      "summary": "omnimind-consolidation-primary: 02:00 HKT daily — fully autonomous. omnimind-consolidation-backup: 03:00 HKT daily — fully autonomous. omnimind-distribution-day: 10:00 HKT daily — needs platform auth. 19 crons active total. Trading-beast-hourly timeout bumped to 300s. Budget ~$0.24/$0.50 today. All DeepSeek-chat.",
+      "name": "OmniMind Cron Status \u2014 Primary/Backup/Distribution",
+      "summary": "omnimind-consolidation-primary: 02:00 HKT daily \u2014 fully autonomous. omnimind-consolidation-backup: 03:00 HKT daily \u2014 fully autonomous. omnimind-distribution-day: 10:00 HKT daily \u2014 needs platform auth. 19 crons active total. Trading-beast-hourly timeout bumped to 300s. Budget ~$0.24/$0.50 today. All DeepSeek-chat.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.984050+00:00"
     },
     {
       "id": "research-forum-mining-passivbot",
-      "name": "Forum Mining — Top GitHub Repos Found",
-      "summary": "PassivBot (2,001⭐, Hyperliquid-native, Rust order planner, evolutionary optimizer), Fractal DeFi (entity-based backtesting, basis trading, ML funding rate forecasting), Freqtrade Ultimate (Hyperliquid fork with PlateauSampler, CPCV walk-forward). Also OctoBot (5,974⭐ reference architecture) and Moss Trade Bot (composite 5-pillar scoring). Malware warning: xlev-v/Hyperliquid-Trading-Bot — PowerShell IEX download-execute.",
+      "name": "Forum Mining \u2014 Top GitHub Repos Found",
+      "summary": "PassivBot (2,001\u2b50, Hyperliquid-native, Rust order planner, evolutionary optimizer), Fractal DeFi (entity-based backtesting, basis trading, ML funding rate forecasting), Freqtrade Ultimate (Hyperliquid fork with PlateauSampler, CPCV walk-forward). Also OctoBot (5,974\u2b50 reference architecture) and Moss Trade Bot (composite 5-pillar scoring). Malware warning: xlev-v/Hyperliquid-Trading-Bot \u2014 PowerShell IEX download-execute.",
       "type": "semantic",
       "confidence": 0.9,
       "timestamp": "2026-05-23T18:03:40.495Z"
@@ -111,7 +111,7 @@
     {
       "id": "semantic-default-1779559420775",
       "name": "semantic-default-1779559420775",
-      "summary": "May 24 01:52 HKT — ceo-24-7-work-engine cron HEARTBEAT: LifeOS expanded to 27 plugins across 17 categories. 4 new plugins: Nutrition & Diet, Creative Expression, Finance & Investments, Family & Parenting. AI Directory: 57 blog posts, 2 guides, 4 hub pages live. All sites healthy. Titan deploy guidance needed. Strategy readiness: BB Core 85%, Vol Surge 70%, TendersAlt 55%, Kalman DRL 40%, Funding Rate Arb 20%, PassivBot Grid 15%.\nMay 23 23:02 HKT — Web search fixed: DuckDuckGo now operational as ",
+      "summary": "May 24 01:52 HKT \u2014 ceo-24-7-work-engine cron HEARTBEAT: LifeOS expanded to 27 plugins across 17 categories. 4 new plugins: Nutrition & Diet, Creative Expression, Finance & Investments, Family & Parenting. AI Directory: 57 blog posts, 2 guides, 4 hub pages live. All sites healthy. Titan deploy guidance needed. Strategy readiness: BB Core 85%, Vol Surge 70%, TendersAlt 55%, Kalman DRL 40%, Funding Rate Arb 20%, PassivBot Grid 15%.\nMay 23 23:02 HKT \u2014 Web search fixed: DuckDuckGo now operational as ",
       "type": "semantic",
       "confidence": 0.7,
       "timestamp": "2026-05-23T18:03:40.775Z"
@@ -119,23 +119,23 @@
     {
       "id": "semantic-omnimind-consolidation-1779559420857",
       "name": "semantic-omnimind-consolidation-1779559420857",
-      "summary": "May 24 01:52 HKT — ceo-24-7-work-engine cron HEARTBEAT: LifeOS expanded to 27 plugins across 17 categories. 4 new plugins: Nutrition & Diet, Creative Expression, Finance & Investments, Family & Parenting. AI Directory: 57 blog posts, 2 guides, 4 hub pages live. All sites healthy. Titan deploy guidance needed. Strategy readiness: BB Core 85%, Vol Surge 70%, TendersAlt 55%, Kalman DRL 40%, Funding Rate Arb 20%, PassivBot Grid 15%.\nMay 23 23:02 HKT — Web search fixed: DuckDuckGo now operational as ",
+      "summary": "May 24 01:52 HKT \u2014 ceo-24-7-work-engine cron HEARTBEAT: LifeOS expanded to 27 plugins across 17 categories. 4 new plugins: Nutrition & Diet, Creative Expression, Finance & Investments, Family & Parenting. AI Directory: 57 blog posts, 2 guides, 4 hub pages live. All sites healthy. Titan deploy guidance needed. Strategy readiness: BB Core 85%, Vol Surge 70%, TendersAlt 55%, Kalman DRL 40%, Funding Rate Arb 20%, PassivBot Grid 15%.\nMay 23 23:02 HKT \u2014 Web search fixed: DuckDuckGo now operational as ",
       "type": "semantic",
       "confidence": 0.7,
       "timestamp": "2026-05-23T18:03:40.857Z"
     },
     {
       "id": "seventy-thirty-prioritization",
-      "name": "70/30 Balanced Prioritization Framework — LOCKED",
-      "summary": "RULES.yaml created with Balanced Prioritization system. 70% work capacity → Revenue projects (affiliates, PDF playbooks, monetization). 30% → Strategic Projects (LifeOS personality-aware copilot, AI Directory, Titan agent builder). Idea Review Pipeline — no new projects without passing pipeline. Heartbeat rules — must find work, never HEARTBEAT_OK if Strategic Projects have open items. Ceo-24-7-work-engine and proactive-builder crons updated with 70/30 split instructions. $0.00 revenue, 6 active blockers all Wosobu-dependent.",
+      "name": "70/30 Balanced Prioritization Framework \u2014 LOCKED",
+      "summary": "RULES.yaml created with Balanced Prioritization system. 70% work capacity \u2192 Revenue projects (affiliates, PDF playbooks, monetization). 30% \u2192 Strategic Projects (LifeOS personality-aware copilot, AI Directory, Titan agent builder). Idea Review Pipeline \u2014 no new projects without passing pipeline. Heartbeat rules \u2014 must find work, never HEARTBEAT_OK if Strategic Projects have open items. Ceo-24-7-work-engine and proactive-builder crons updated with 70/30 split instructions. $0.00 revenue, 6 active blockers all Wosobu-dependent.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.984037+00:00"
     },
     {
       "id": "titan-v061-agent-evolution",
-      "name": "Titan v0.61 — Agent Evolution System Complete",
-      "summary": "Titan landing page now features: 3D Agent (teal, SphereGeometry + glow) with 5 orbiting companions. 3-tier evolution system (Baby→Evolved→Ultimate) based on level/XP. Tier 1: small base, teal. Tier 2: larger, golden crown ring. Tier 3: titanium-gold, shoulder pads, emissive glow. 'Keep Basic Look' toggle — localStorage titan-keep-basic-look. Mouse-follow eyes (±0.05 offset). Blink animation (3.5-6s interval). 5 orbiting agents with enlarged container. Particle burst hover effect. Global warmth: teal radial + golden overlays. Deployed to https://titan-app-puce.vercel.app. Wosobu's 8-24h autonomous backlog received: P1-P4 priorities for v0.61→v0.70.",
+      "name": "Titan v0.61 \u2014 Agent Evolution System Complete",
+      "summary": "Titan landing page now features: 3D Agent (teal, SphereGeometry + glow) with 5 orbiting companions. 3-tier evolution system (Baby\u2192Evolved\u2192Ultimate) based on level/XP. Tier 1: small base, teal. Tier 2: larger, golden crown ring. Tier 3: titanium-gold, shoulder pads, emissive glow. 'Keep Basic Look' toggle \u2014 localStorage titan-keep-basic-look. Mouse-follow eyes (\u00b10.05 offset). Blink animation (3.5-6s interval). 5 orbiting agents with enlarged container. Particle burst hover effect. Global warmth: teal radial + golden overlays. Deployed to https://titan-app-puce.vercel.app. Wosobu's 8-24h autonomous backlog received: P1-P4 priorities for v0.61\u2192v0.70.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.984028+00:00"
@@ -143,23 +143,23 @@
     {
       "id": "trading-experiments-exp25-exp30",
       "name": "EXP25-30: Four Viable Signals, Two Discarded",
-      "summary": "EXP25 (cross-asset correlation): 0 winners — dead. EXP26 (alt rotation via ratio Z-scores): 1 config passes gate — SOL/BTC LB6 Z1.5 TP0.01 (28 trades, 75% WR, PF=3.0). EXP27 (macro calendar effects): Interesting directional data but 44-55% WR — context-only, not tradeable. EXP28 (volume surge): BIG SOL finding — satellite built. EXP29 (funding/OI proxy): SOL dominates — SMA12 EXT3 TP0.5 → 86% WR, PF 6.3. Funding carry burn strategy. EXP30 (taker flow proxy): BTC shorts best — LB6 Z5 V2x TP0.5 SL0.3 → 64 trades, 65.6% WR, PF 3.18. EXP26b (alt rotation thickened): ETH/BTC SHORT LB96 Z1.0 — TP artifact (ratio units too tight). Summary: EXP28 ✅ built as SS1 satellite. EXP29 promising, needs wider TP. EXP30 weak. EXP25-27 discarded.",
+      "summary": "EXP25 (cross-asset correlation): 0 winners \u2014 dead. EXP26 (alt rotation via ratio Z-scores): 1 config passes gate \u2014 SOL/BTC LB6 Z1.5 TP0.01 (28 trades, 75% WR, PF=3.0). EXP27 (macro calendar effects): Interesting directional data but 44-55% WR \u2014 context-only, not tradeable. EXP28 (volume surge): BIG SOL finding \u2014 satellite built. EXP29 (funding/OI proxy): SOL dominates \u2014 SMA12 EXT3 TP0.5 \u2192 86% WR, PF 6.3. Funding carry burn strategy. EXP30 (taker flow proxy): BTC shorts best \u2014 LB6 Z5 V2x TP0.5 SL0.3 \u2192 64 trades, 65.6% WR, PF 3.18. EXP26b (alt rotation thickened): ETH/BTC SHORT LB96 Z1.0 \u2014 TP artifact (ratio units too tight). Summary: EXP28 \u2705 built as SS1 satellite. EXP29 promising, needs wider TP. EXP30 weak. EXP25-27 discarded.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.983975+00:00"
     },
     {
       "id": "trading-paper-metrics-22may",
-      "name": "Trading Beast Paper Metrics — First Bar-by-Bar Simulation",
-      "summary": "12 TendersAlt positions: 6 closed (all losses), 6 still open. Closed win rate: 0% — all SOL SELLs hit SL (tight 3.5 ATR stops in chop). Closed PnL: -14.03% virtual losses. Unrealized: -1.36%. Total: -15.39%. Key insight: TendersAlt produces zero new signals in CHOP regime. Takeaway: 6 SL hits on SOL shows 3.5 ATR stop too tight for chop. Consider 5.0x ATR for ranging markets. Data pipeline: BTC/USDT/ETH perpetual 1h live fresh through 16:00 UTC. 90d historical frozen at 01:00 UTC May 21 (not appending). Gate progress: TendersAlt 12/200 paper trades (6.0%). Grid/arb: 3098 signals (not directional).",
+      "name": "Trading Beast Paper Metrics \u2014 First Bar-by-Bar Simulation",
+      "summary": "12 TendersAlt positions: 6 closed (all losses), 6 still open. Closed win rate: 0% \u2014 all SOL SELLs hit SL (tight 3.5 ATR stops in chop). Closed PnL: -14.03% virtual losses. Unrealized: -1.36%. Total: -15.39%. Key insight: TendersAlt produces zero new signals in CHOP regime. Takeaway: 6 SL hits on SOL shows 3.5 ATR stop too tight for chop. Consider 5.0x ATR for ranging markets. Data pipeline: BTC/USDT/ETH perpetual 1h live fresh through 16:00 UTC. 90d historical frozen at 01:00 UTC May 21 (not appending). Gate progress: TendersAlt 12/200 paper trades (6.0%). Grid/arb: 3098 signals (not directional).",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.984015+00:00"
     },
     {
       "id": "trading-sol-vol-surge-satellite",
-      "name": "SOL Vol Surge Satellite — Proven Second Signal",
-      "summary": "EXP28 identified SOL-specific volume surge accumulation proxy. Best config: LB12_V3x_D1_TP1.0_SL0.5 — 683 trades, 89.8% WR, PF 17.51. Walk-forward (3 periods): 90.3% → 90.3% → 89.2% WR. 524 unique signals BB Core misses. Overlap analysis: 95.6% WR when Vol Surge entry used instead of BB. Monte Carlo (SOL-only, $500 seed, 2000 paths): median final $16,409, 0% ruin, 4.4% median DD. Catches accumulation during shallow dips that don't hit RSI<20 threshold. SOL-specific retail-heavy accumulation pattern — BTC/ETH near zero winners.",
+      "name": "SOL Vol Surge Satellite \u2014 Proven Second Signal",
+      "summary": "EXP28 identified SOL-specific volume surge accumulation proxy. Best config: LB12_V3x_D1_TP1.0_SL0.5 \u2014 683 trades, 89.8% WR, PF 17.51. Walk-forward (3 periods): 90.3% \u2192 90.3% \u2192 89.2% WR. 524 unique signals BB Core misses. Overlap analysis: 95.6% WR when Vol Surge entry used instead of BB. Monte Carlo (SOL-only, $500 seed, 2000 paths): median final $16,409, 0% ruin, 4.4% median DD. Catches accumulation during shallow dips that don't hit RSI<20 threshold. SOL-specific retail-heavy accumulation pattern \u2014 BTC/ETH near zero winners.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.983404+00:00"
@@ -167,14 +167,14 @@
     {
       "id": "trading-strategy-pivot-sol-hyperliquid",
       "name": "Strategy Pivot: Solana-only + Hyperliquid $500",
-      "summary": "Key decision from May 21 session: Solana-only strategy on Hyperliquid. $500 seed (not $1K). No Bybit. No portfolio splits. 70/30 BB Core / Vol Surge split, 0% cash (aggressive for $500). 2000 Monte Carlo paths: 100% profit paths, median $16,409 from $500 in ~7 months. Kill-switch defined: 30% WR / 5 cons losses / 15% weekly DD. Deployment checklist: Phantom wallet → Hyperliquid → bridge $500 USDC → 2 weeks paper → flip to real.",
+      "summary": "Key decision from May 21 session: Solana-only strategy on Hyperliquid. $500 seed (not $1K). No Bybit. No portfolio splits. 70/30 BB Core / Vol Surge split, 0% cash (aggressive for $500). 2000 Monte Carlo paths: 100% profit paths, median $16,409 from $500 in ~7 months. Kill-switch defined: 30% WR / 5 cons losses / 15% weekly DD. Deployment checklist: Phantom wallet \u2192 Hyperliquid \u2192 bridge $500 USDC \u2192 2 weeks paper \u2192 flip to real.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.983917+00:00"
     },
     {
       "id": "web-search-fixed-duckduckgo",
-      "name": "Web Search Fixed — DuckDuckGo Provider Operational",
+      "name": "Web Search Fixed \u2014 DuckDuckGo Provider Operational",
       "summary": "DuckDuckGo is now the web search provider. Gateway restarted. web_fetch works via DuckDuckGo lite page. Ollama provider (qwen2.5-coder:3b) removed from agents.defaults config.",
       "type": "semantic",
       "confidence": 0.9,
@@ -190,11 +190,67 @@
     },
     {
       "id": "autonomous-may24-wosobu-sleep",
-      "name": "Autonomous May 24 — Full Autonomy Granted",
+      "name": "Autonomous May 24 \u2014 Full Autonomy Granted",
       "summary": "Wosobu went to sleep, full autonomy granted May 24 02:16 HKT. 26 cron jobs live across Algo Trading + CEO/Business + OmniMind. Expected reports: morning pulse 08:00, trading pulse every 30m, daily report 20:30. Only failures ping group. Dashboard at dashboard_full.html. PassivBot + Fractal DeFi repos cloned for study. Reverse-engineering agent cycles through 11 search rounds every 6h.",
       "type": "semantic",
       "confidence": 0.9,
       "timestamp": "2026-05-24T02:16:00+08:00"
+    },
+    {
+      "id": "live-trading-confirmed-may25",
+      "name": "Live Hyperliquid Trading Confirmed \u2014 12 Real Portfolio",
+      "summary": "Hyperliquid live trading is confirmed operational after fixing the clearinghouseState balance bug. Real portfolio at 12 (Wosobu deposited SOL). 7 closed trades with 67% WR. TP/SL workaround: resting reduce-only limit GTC orders (bulk_orders only works during entry). ETH short @ ,122 at +.72 UPnL. Portfolio 17.12. 60s cron self-healing for TP/SL. Position sizing: 5% alloc too small (.60/position) \u2014 needs 30-40% bump for meaningful notional.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-05-25T02:00:00+08:00"
+    },
+    {
+      "id": "balance-endpoint-never-clearinghouse",
+      "name": "CRITICAL: HL Balance Must Read Portfolio Endpoint, Not clearinghouseState",
+      "summary": "Hyperliquid unified accounts (v0.23+) have /bin/bash in perp clearinghouseState. Balance lives in portfolio endpoint: Info.portfolio(wallet)[0][1][\"accountValueHistory\"][-1][1]. Spot fallback: Info.spot_user_state(wallet)[\"balances\"][USDC][\"total\"]. Never use clearinghouseState, user_state().marginSummary.accountValue, or paper defaults. This bug caused false live-trading confidence for days.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-05-25T02:00:00+08:00"
+    },
+    {
+      "id": "tp-sl-workaround-resting-orders",
+      "name": "TP/SL Workaround: Resting Reduce-Only Limit GTC Orders",
+      "summary": "Hyperliquid bulk_orders(grouping=\"normalTpsl\") only works during entry. Retroactive placement fails with \"Main order cannot be trigger order.\" Solution: place individual resting reduce-only limit GTC orders at TP/SL levels. 60s cron self-healing detects raw positions without exits and attaches them. Size/price rounding per asset szDecimals required.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-05-25T02:00:00+08:00"
+    },
+    {
+      "id": "trading-dashboard-deployed",
+      "name": "Trading Dashboard Deployed to Vercel",
+      "summary": "Internal trading dashboard at /home/captain/trading/dashboard/index.html, deployed to https://dashboard-one-beryl-50.vercel.app. White professional layout. Sections: KPIs, live positions, signal feed, 10-algo strategy pipeline (crypto/forex/equity/polymarket with confidence/stage/research-hours). External Felixbot-style public dashboard proposed but not built.",
+      "type": "semantic",
+      "confidence": 0.9,
+      "timestamp": "2026-05-25T02:00:00+08:00"
+    },
+    {
+      "id": "backtest-to-live-gap-risk-factor",
+      "name": "Pattern: Backtest-to-Live Gap is the #1 Risk Factor",
+      "summary": "Cross-week synthesis reveals a repeating pattern: promising backtest findings fail in live conditions. Grid BB: Train PF 2.39 to Test PF 0.84 (65% edge decay). Ensemble stress test: ALL 12 HL perps fail. Balance reading bug: bot reported live trading for days on /bin/bash clearinghouseState. Paper WR of 88-90% on BB Core hasn't been tested with real funding/slippage. The Gold Template v2 killswitch/epistemic gates must be applied to the live system.",
+      "type": "semantic",
+      "confidence": 0.85,
+      "timestamp": "2026-05-25T02:00:00+08:00"
+    },
+    {
+      "id": "portfolio-revenue-at-zero-day-25",
+      "name": "Product Revenue at /bin/bash \u2014 Day 25 of May",
+      "summary": "All product revenue is /bin/bash.00. Affiliate dashboard built with 18 pre-seeded links but no accounts created. Stripe checkout wired but VITE_STRIPE_SECRET_KEY not set. Supabase migration blocked (needs Wosobu). The 70/30 Balanced Prioritization (70% revenue projects) is violated in practice \u2014 trading + LifeOS consumes 70%+ of output. Week 1 of 1-month roadmap (May 24-30) is \"Infrastructure & Gates\" \u2014 the exact blockers that haven't moved in 5+ days.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-05-25T02:00:00+08:00"
+    },
+    {
+      "id": "pending-actions-accumulation",
+      "name": "Pending Actions Accumulating \u2014 10 Items Unresolved",
+      "summary": "10 pending actions carried across multiple consolidation cycles without execution. True blockers (need Wosobu): Supabase migration, GitHub PAT, Stripe keys, affiliate accounts (stale 5+ days). Genuine backlog: (1) Bump KalmanDRL alloc, (2) Wire tick data for Vol Surge, (3) Cointegration backtest with real-cost, (4) Felixbot dashboard, (5) Forex ADX filter, (6) FMP equity screener, (7) Jupiter API meme execution, (8) PnL reconciliation bug fix, (9) Wire core_bb playbook, (10) Align Kalman DRL with Algotick params.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-05-25T02:00:00+08:00"
     }
   ],
   "edges": [

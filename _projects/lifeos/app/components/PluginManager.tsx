@@ -16,7 +16,7 @@ interface PluginManagerProps {
   onPluginsChange?: () => void;
 }
 
-const CATEGORIES = ['habit', 'goal', 'reflection', 'health_extra', 'social_extra', 'work_extra', 'learning', 'finance', 'mindfulness', 'content_creation', 'career', 'environment', 'habits_extra', 'nutrition', 'creativity', 'finance_invest', 'family_parenting'] as const;
+const CATEGORIES = ['habit', 'goal', 'reflection', 'health_extra', 'social_extra', 'work_extra', 'learning', 'finance', 'mindfulness', 'content_creation', 'career', 'environment', 'habits_extra', 'nutrition', 'creativity', 'finance_invest', 'family_parenting', 'pets', 'events', 'travel', 'meal_planning', 'sleep_recovery', 'energy_focus', 'media', 'home', 'volunteering', 'digital_minimalism', 'biz_ops', 'content_marketing', 'local_seo'] as const;
 const CATEGORY_LABELS: Record<string, { label: string; emoji: string }> = {
   habit: { label: 'Daily Habits', emoji: '✅' },
   goal: { label: 'Goals & Progress', emoji: '🏆' },
@@ -35,6 +35,19 @@ const CATEGORY_LABELS: Record<string, { label: string; emoji: string }> = {
   creativity: { label: 'Creative Expression', emoji: '🎨' },
   finance_invest: { label: 'Finance & Investments', emoji: '📈' },
   family_parenting: { label: 'Family & Parenting', emoji: '👨‍👩‍👧‍👦' },
+  pets: { label: 'Pet Care', emoji: '🐾' },
+  events: { label: 'Events & Calendar', emoji: '📅' },
+  travel: { label: 'Travel & Trips', emoji: '✈️' },
+  meal_planning: { label: 'Meal Planning', emoji: '🍽️' },
+  sleep_recovery: { label: 'Sleep & Recovery', emoji: '😴' },
+  energy_focus: { label: 'Energy & Focus', emoji: '⚡' },
+  media: { label: 'Reading & Media', emoji: '📚' },
+  home: { label: 'Home Management', emoji: '🏠' },
+  volunteering: { label: 'Volunteering & Community', emoji: '🤝' },
+  digital_minimalism: { label: 'Digital Minimalism', emoji: '🧘' },
+  biz_ops: { label: 'Business Operations', emoji: '⚙️' },
+  content_marketing: { label: 'Content Marketing', emoji: '📢' },
+  local_seo: { label: 'Local SEO', emoji: '📍' },
 };
 
 export default function PluginManager({ onPluginsChange }: PluginManagerProps) {

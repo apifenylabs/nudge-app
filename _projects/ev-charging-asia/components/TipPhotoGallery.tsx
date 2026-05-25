@@ -28,6 +28,7 @@ export default function TipPhotoGallery({ stationId, refreshKey = 0 }: TipPhotoG
   const [loading, setLoading] = useState(true);
   const [collapsed, setCollapsed] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [showAllPhotos, setShowAllPhotos] = useState(false);
 
   const fetchPhotos = useCallback(async () => {
     setLoading(true);
@@ -91,10 +92,43 @@ export default function TipPhotoGallery({ stationId, refreshKey = 0 }: TipPhotoG
             ))}
           </div>
 
-          {photos.length > 6 && (
-            <button className="mt-2 text-xs text-purple-600 hover:text-purple-700 font-medium">
-              +{photos.length - 6} more photos
+          {photos.length > 6 && !showAllPhotos && (
+            <button
+              onClick={(e) => { e.stopPropagation(); setShowAllPhotos(true); }}
+              className="mt-2 w-full text-xs text-purple-600 hover:text-purple-700 font-medium bg-purple-50 hover:bg-purple-100 rounded-lg py-2 transition-colors"
+            >
+              + Show all {photos.length} photos
             </button>
+          )}
+          {photos.length > 6 && showAllPhotos && (
+            <>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2">
+                {photos.slice(6).map((tip, idx) => (
+                  <button
+                    key={tip.id}
+                    onClick={() => setLightboxIndex(idx + 6)}
+                    className="relative group rounded-xl overflow-hidden border border-gray-200 hover:border-purple-300 transition-all aspect-[4/3] bg-gray-100"
+                  >
+                    <img
+                      src={tip.photoUrl}
+                      alt={`Photo by ${tip.author}`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute bottom-0 left-0 right-0 p-2 text-white text-[10px] opacity-0 group-hover:opacity-100 transition-opacity truncate">
+                      {tip.author} · {catEmojis[tip.category] || '💬'}
+                    </div>
+                  </button>
+                ))}
+              </div>
+              <button
+                onClick={(e) => { e.stopPropagation(); setShowAllPhotos(false); }}
+                className="mt-2 w-full text-xs text-gray-500 hover:text-gray-700 font-medium bg-gray-50 hover:bg-gray-100 rounded-lg py-2 transition-colors"
+              >
+                Show less
+              </button>
+            </>
           )}
         </>
       )}

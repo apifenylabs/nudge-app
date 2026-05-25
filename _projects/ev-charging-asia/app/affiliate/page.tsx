@@ -258,6 +258,14 @@ export default function AffiliateDashboardPage() {
               Commission tracker &amp; link performance monitor — {totalClicks} total clicks recorded
             </p>
           </div>
+          <a
+            href="https://affiliate-tracking.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors px-2.5 py-1.5 rounded-md border border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500"
+          >
+            Central Tracking <ExternalLink size={10} />
+          </a>
         </div>
 
         {/* Summary cards */}

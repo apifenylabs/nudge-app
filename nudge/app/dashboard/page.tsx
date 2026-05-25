@@ -10,6 +10,8 @@ import BottomNav from '@/components/layout/BottomNav'
 import DashboardTourWrapper from '@/components/onboarding/DashboardTourWrapper'
 import SubscriptionBanner from '@/components/billing/SubscriptionBanner'
 import UsageMeter from '@/components/billing/UsageMeter'
+import ReferralBanner from '@/components/billing/ReferralBanner'
+import TrialCountdown from '@/components/dashboard/TrialCountdown'
 import DashboardContent from '@/components/dashboard/DashboardContent'
 
 export default async function DashboardPage() {
@@ -119,6 +121,12 @@ export default async function DashboardPage() {
 
       {/* Subscription status banner — shows trial, upgrade, or limit warnings */}
       <SubscriptionBanner userId={user.id} />
+
+      {/* Trial ending countdown — shows when trial has ≤7 days remaining */}
+      <TrialCountdown userId={user.id} />
+
+      {/* Referral rewards banner — shows if user has pending rewards or no referrals */}
+      <ReferralBanner userId={user.id} dismissible />
 
       {/* Usage meter — shows free users their task limit progress */}
       <div className="px-4 mt-2">

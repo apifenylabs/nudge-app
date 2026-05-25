@@ -52,8 +52,11 @@ export async function GET(request: NextRequest) {
     const supabase = createAdminClient()
     const now = new Date()
 
-    // ── Step 1: Day 0 Welcome (users created 0-24 hours ago) ──
-    // These are sent from the signup handler, but we also catch any missed ones here
+    const results: { userEmail: string; step: number; sent: boolean; error?: string }[] = []
+
+    // ── Step 1: Catch-up for users who missed inline welcome email ──
+    // The inline signup handler now sends this immediately, but we catch
+    // any users who were created before that feature shipped.
     const yesterday = new Date(now.getTime() - 24 * 60 * 60 * 1000).toISOString()
     const today = now.toISOString()
 
@@ -74,15 +77,13 @@ export async function GET(request: NextRequest) {
       console.error('[Welcome Sequence] Step 1 query error:', s1Error)
     }
 
-    const results: { userEmail: string; step: number; sent: boolean; error?: string }[] = []
-
-    // Process step 1 (welcome) — for users created in the last 24h
+    // Process step 1 (welcome) — catch any missed by inline sending
     if (step1Candidates) {
       for (const user of step1Candidates) {
         try {
           if (!user.email) continue
 
-          // Check if already sent step 1
+          // Check if already sent step 1 (either inline or via previous cron run)
           const { data: existing } = await supabase
             .from('email_log')
             .select('id')

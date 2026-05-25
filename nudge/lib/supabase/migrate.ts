@@ -230,6 +230,140 @@ DO $$ BEGIN
   END IF;
 END $$;
 `,
+
+  'changelog_entries': `
+-- Migration: Changelog entries for "What's New" feature
+CREATE TABLE IF NOT EXISTS public.changelog_entries (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  title TEXT NOT NULL,
+  body TEXT NOT NULL,
+  category TEXT NOT NULL DEFAULT 'improvement' CHECK (category IN ('new_feature', 'improvement', 'fix', 'announcement')),
+  icon TEXT DEFAULT '✨',
+  tags TEXT[] DEFAULT '{}',
+  is_published BOOLEAN DEFAULT TRUE,
+  published_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_changelog_published ON public.changelog_entries(published_at DESC)
+  WHERE is_published = TRUE;
+
+ALTER TABLE public.changelog_entries ENABLE ROW LEVEL SECURITY;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'Anyone can read published changelog') THEN
+    CREATE POLICY "Anyone can read published changelog" ON public.changelog_entries
+      FOR SELECT USING (is_published = TRUE);
+  END IF;
+END $$;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'Service role can manage changelog') THEN
+    CREATE POLICY "Service role can manage changelog" ON public.changelog_entries FOR ALL USING (true);
+  END IF;
+END $$;
+
+-- Seed initial changelog entries
+INSERT INTO public.changelog_entries (title, body, category, icon, tags) VALUES
+  (
+    'Trial Conversion Engine',
+    'We now send personalized re-engagement emails when your trial ends, showing exactly what features you miss and giving you one-click reactivation.',
+    'new_feature',
+    '🎯',
+    ARRAY['billing', 'email']
+  ),
+  (
+    'Onboarding Email Drip',
+    'New users now get a warm welcome sequence over their first week — Day 0 tips, Day 2 streaks challenge, and Day 7 first-week recap with upgrade nudge.',
+    'new_feature',
+    '📧',
+    ARRAY['onboarding', 'email']
+  ),
+  (
+    'What\'s New Changelog',
+    'This! You can now see what we\'ve shipped right from your dashboard. New features, improvements, and fixes — all in one place.',
+    'new_feature',
+    '📋',
+    ARRAY['ui']
+  ),
+  (
+    'Referral Rewards Program',
+    'Share Nudge with friends and earn free months of Pro. Each referral = 1 free month. Track your rewards in Settings > Referral Program.',
+    'new_feature',
+    '🎁',
+    ARRAY['referrals', 'growth']
+  ),
+  (
+    'Family Sharing Improved',
+    'Better member management with per-member task stats, streamlined invitations, and clearer plan upgrade prompts when you hit member limits.',
+    'improvement',
+    '👨‍👩‍👧‍👦',
+    ARRAY['family', 'ui']
+  )
+ON CONFLICT DO NOTHING;
+`,
+
+  'changelog_seen': `
+-- Migration: Track which changelog entries each user has seen
+CREATE TABLE IF NOT EXISTS public.changelog_seen (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID NOT NULL REFERENCES public.users(id) ON DELETE CASCADE,
+  entry_id UUID NOT NULL REFERENCES public.changelog_entries(id) ON DELETE CASCADE,
+  seen_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  UNIQUE(user_id, entry_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_changelog_seen_user ON public.changelog_seen(user_id);
+
+ALTER TABLE public.changelog_seen ENABLE ROW LEVEL SECURITY;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'Users can view own changelog seen') THEN
+    CREATE POLICY "Users can view own changelog seen" ON public.changelog_seen
+      FOR SELECT USING (user_id IN (SELECT id FROM public.users WHERE auth_uid = auth.uid()));
+  END IF;
+END $$;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'Users can insert own changelog seen') THEN
+    CREATE POLICY "Users can insert own changelog seen" ON public.changelog_seen
+      FOR INSERT WITH CHECK (user_id IN (SELECT id FROM public.users WHERE auth_uid = auth.uid()));
+  END IF;
+END $$;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'Service role can manage changelog seen') THEN
+    CREATE POLICY "Service role can manage changelog seen" ON public.changelog_seen FOR ALL USING (true);
+  END IF;
+END $$;
+`,
+
+  'changelog_phase36': `
+-- Phase 36: Trial Countdown + Social Proof + Welcome Email Inline
+INSERT INTO public.changelog_entries (title, body, category, icon, tags) VALUES
+  (
+    'Trial Ending Countdown',
+    'See exactly how many days you have left on your trial right on your dashboard. We\'ll nudge you with a friendly reminder when you have 7, 3, and 2 days remaining.',
+    'new_feature',
+    '⏰',
+    ARRAY['billing', 'dashboard', 'ux']
+  ),
+  (
+    'Social Proof on Pricing',
+    'The pricing page now shows real-time stats — how many families joined this week, total tasks completed, and tasks done today. See the community growing!',
+    'new_feature',
+    '📊',
+    ARRAY['marketing', 'pricing']
+  ),
+  (
+    'Welcome Email on Signup',
+    'New users now get an immediate welcome email right after signing up, with tips on inviting family, creating their first task, and connecting Telegram. No more waiting for the daily cron to send it!',
+    'improvement',
+    '📧',
+    ARRAY['onboarding', 'email']
+  )
+ON CONFLICT DO NOTHING;
+`,
 }
 
 // ── MIGRATION STATE TRACKING ──────────────────────────────────────

@@ -2,6 +2,7 @@
 
 import { ExternalLink, Calendar, CreditCard, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import { fireAffiliateBeacon } from '@/lib/affiliate';
 
 interface BookingCTAProps {
   hotelName: string;
@@ -127,6 +128,7 @@ export default function BookingCTA({ hotelName, destinationId, priceRange, class
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-gold text-navy text-sm font-semibold rounded-lg hover:bg-gold-light transition-all min-h-[44px]"
+            onClick={() => fireAffiliateBeacon('booking-cta-smart', smartBookingUrl(hotelName))}
           >
             <Calendar size={14} />
             Booking.com
@@ -137,6 +139,7 @@ export default function BookingCTA({ hotelName, destinationId, priceRange, class
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-white/10 text-white text-sm font-medium rounded-lg hover:bg-white/20 transition-all min-h-[44px] border border-white/10"
+            onClick={() => fireAffiliateBeacon('agoda-cta-smart', smartAgodaUrl(hotelName))}
           >
             <CreditCard size={14} />
             Agoda
@@ -146,6 +149,7 @@ export default function BookingCTA({ hotelName, destinationId, priceRange, class
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-white/10 text-white text-sm font-medium rounded-lg hover:bg-white/20 transition-all min-h-[44px] border border-white/10"
+            onClick={() => fireAffiliateBeacon('expedia-cta-smart', smartExpediaUrl(hotelName))}
           >
             <ExternalLink size={14} />
             Expedia
@@ -157,6 +161,7 @@ export default function BookingCTA({ hotelName, destinationId, priceRange, class
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="inline-flex items-center gap-1 px-3 py-1.5 bg-orange-500/20 text-orange-300 text-[10px] font-medium rounded-full hover:bg-orange-500/30 transition-colors"
+            onClick={() => fireAffiliateBeacon('klook-cta-mini', smartBookingUrl(hotelName))}
           >
             🎟️ Klook
           </a>
@@ -165,6 +170,7 @@ export default function BookingCTA({ hotelName, destinationId, priceRange, class
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="inline-flex items-center gap-1 px-3 py-1.5 bg-rose-500/20 text-rose-300 text-[10px] font-medium rounded-full hover:bg-rose-500/30 transition-colors"
+            onClick={() => fireAffiliateBeacon('viator-cta-mini', smartBookingUrl(hotelName))}
           >
             🚌 Viator
           </a>
@@ -191,6 +197,7 @@ export default function BookingCTA({ hotelName, destinationId, priceRange, class
           target="_blank"
           rel="noopener noreferrer sponsored"
           className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-gold text-navy text-sm font-semibold rounded-lg hover:bg-gold-light transition-all min-h-[44px]"
+          onClick={() => fireAffiliateBeacon('booking-cta-known', links.booking)}
         >
           <Calendar size={14} />
           Booking.com
@@ -201,6 +208,7 @@ export default function BookingCTA({ hotelName, destinationId, priceRange, class
           target="_blank"
           rel="noopener noreferrer sponsored"
           className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-white/10 text-white text-sm font-medium rounded-lg hover:bg-white/20 transition-all min-h-[44px] border border-white/10"
+          onClick={() => fireAffiliateBeacon('agoda-cta-known', links.agoda)}
         >
           <CreditCard size={14} />
           Agoda
@@ -210,6 +218,7 @@ export default function BookingCTA({ hotelName, destinationId, priceRange, class
           target="_blank"
           rel="noopener noreferrer sponsored"
           className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-white/10 text-white text-sm font-medium rounded-lg hover:bg-white/20 transition-all min-h-[44px] border border-white/10"
+          onClick={() => fireAffiliateBeacon('expedia-cta-known', links.expedia)}
         >
           <ExternalLink size={14} />
           Expedia

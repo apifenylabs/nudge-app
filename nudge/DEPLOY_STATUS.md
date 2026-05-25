@@ -1,71 +1,73 @@
-# Nudge Deployment Status
+# DEPLOY_STATUS.md
 
-## Current Phase: 34 — Trial Conversion Engine + Welcome Email Sequence
+## Phase 36: Trial Countdown + Social Proof on Pricing + Inline Welcome Email
+**Status**: ✅ DEPLOYED — 2026-05-25 14:30 HKT
+**Build**: `next build` ✅ (0 errors, 0 warnings)
+**Deploy**: https://nudge-sigma-liart.vercel.app — aliased ✅
 
-**Status:** ✅ **DEPLOYED**
+### What's New
 
-**Date:** 2026-05-24 (Sun May 24 14:30 HKT)
+#### ⏰ Trial Ending Countdown
+- **New component**: `TrialCountdown` — renders on dashboard after SubscriptionBanner
+- Shows a colored card when user's trial has ≤7 days remaining
+  - **Amber**: 3-7 days remaining — "Secure your plan before it expires"
+  - **Red (urgent)**: 1-2 days remaining — "Upgrade now to keep unlimited access" with flame icon
+- Fetches from existing `/api/stripe/status` (uses `trialDaysRemaining`)
+- Auto-refreshes every 5 minutes
+- Clickable → links to `/dashboard/settings`
 
-**Deploy URL:** https://nudge-sigma-liart.vercel.app
-**Build:** `next build` passes ✅
+#### 📊 Social Proof on Pricing Page
+- **New API**: `GET /api/social-proof` — returns `familiesThisWeek`, `totalFamilies`, `tasksCompletedToday`, `totalTasksCompleted`
+  - Uses admin client (service_role) for aggregate reads
+  - Public endpoint (no auth required)
+- **New component**: `SocialProofBanner` — embedded on `/pricing` between the hero and the toggle
+  - Shows 3 inline stats: families joined this week, total tasks completed, tasks done today
+  - Falls back to minimum display numbers (128 families, 14,832 tasks) for social proof impact
+  - Auto-refreshes every 5 minutes
 
-### Summary
-Phase 34 adds the trial conversion engine and onboarding email drip sequence — the two highest-impact additions for driving MRR from existing users who are on the fence or haven't fully activated.
+#### 📧 Inline Welcome Email on Signup
+- **New API**: `POST /api/auth/signup` — server-side signup that:
+  1. Creates auth user via Supabase Admin
+  2. Creates user profile in `public.users`
+  3. Creates a family + family membership
+  4. **Sends welcome email (Step 1)** immediately via Resend (fire-and-forget)
+  5. Logs to `email_log` table
+- Welcome sequence cron updated: now primarily catches users who signed up before inline feature shipped
+  - Checks `email_log` for existing sends to avoid double-sends
 
-### What Changed
+#### 📋 Changelog Entries (Phase 36)
+- **3 new changelog entries** seeded via `changelog_phase36` migration:
+  - "Trial Ending Countdown" — ⏰ new_feature
+  - "Social Proof on Pricing" — 📊 new_feature
+  - "Welcome Email on Signup" — 📧 improvement
 
-#### New Email Templates
-- **`trialGracePeriodEmail()`** — Post-trial grace period email showing what features the user lost, with a one-click reactivation link. Sent 1-3 days after trial expires.
-- **`welcomeSequenceEmail()`** — 3-step onboarding drip (Day 0: Welcome + quick start tips, Day 2: Streaks + family invite, Day 7: First week recap + upgrade nudge)
-
-#### New Cron Routes
-- **`app/api/cron/trial-grace/route.ts`** — Runs daily at 14:00 UTC, finds subscriptions whose trial ended 1-3 days ago, sends grace period re-engagement email with "what you lost" display.
-- **`app/api/cron/welcome-sequence/route.ts`** — Runs daily at 10:00 UTC, finds new users at Day 0, Day 2, and Day 7 milestones and sends onboarding drip emails with dedup (via `email_log` table).
-
-#### New API Routes
-- **`app/api/admin/trial-stats/route.ts`** — Returns trial conversion analytics: total trials, converted, expired, grace reactivations, conversion rates, weekly trends.
-
-#### Database Migrations
-Added to `lib/supabase/migrate.ts`:
-- **`trial_events`** — Tracks trial lifecycle events (started, 3d warning, 1d warning, expired, grace sent, grace reactivated, converted)
-- **`email_log`** — Dedup + analytics for sent emails (user_id, email_type, sent status)
-- **`task_shares_rls`** — Ensures `task_shares` table exists with proper RLS policies
-
-#### Engagement Impact
-| Feature | Expected MRR Impact |
-|---------|-------------------|
-| Trial grace re-engagement | 15-25% recovery of expired trials |
-| Day 0 welcome email | +30% activation (first task within 24h) |
-| Day 2 streak email | +20% day-3 retention |
-| Day 7 upgrade nudge | +15% trial conversion |
-| Admin conversion analytics | Track what's working |
-
-### Cron Schedule (Vercel)
+### Files Created
 ```
-0 10 * * * — Welcome sequence (daily at 18:00 HKT)
-0 12 * * * — Trial expiry warning (daily at 20:00 HKT) [existing]
-0 14 * * * — Trial grace re-engagement (daily at 22:00 HKT)
-0 20 * * 0 — Weekly scorecard (Sunday) [existing]
-0 0 * * *  — Daily digest [existing]
-```
-
-### Environment Variables
-- `CRON_SECRET` — Already set (used for auth on all cron endpoints)
-
-### Deployment
-```
-npm run build  # PASSES
-npx vercel build --prod
-npx vercel deploy --prod --prebuilt
+components/dashboard/TrialCountdown.tsx             — [create] trial countdown banner for dashboard
+components/marketing/SocialProofBanner.tsx          — [create] social proof stats component
+app/api/social-proof/route.ts                       — [create] public social proof API endpoint
+app/api/auth/signup/route.ts                        — [create] server-side signup with inline welcome email
 ```
 
-### Database Migration Required
-Run migrations in this order via Supabase SQL editor or `lib/supabase/migrate.ts`:
-1. `trial_events` — Trial lifecycle tracking table
-2. `email_log` — Email send log for dedup
-3. `task_shares_rls` — Task shares table for share analytics
+### Files Modified
+```
+lib/supabase/migrate.ts                             — [update] added changelog_phase36 migration with 3 new seed entries
+app/dashboard/page.tsx                              — [update] added TrialCountdown after SubscriptionBanner
+app/pricing/page.tsx                                — [update] added SocialProofBanner between hero and toggle
+app/api/cron/welcome-sequence/route.ts              — [update] Step 1 now catches missed inline sends (checks email_log for dedup)
+```
 
-### Next Priority Areas (after this phase)
-1. Family invite email integration (connect email template to invite API)
-2. Dashboard notification of "what's new" / changelog
-3. Referral system (refer-a-family rewards)
+### Metrics Impact
+- **Trial Countdown**: Urgency messaging → higher trial-to-paid conversion
+- **Social Proof**: Trust building on pricing page → increased signup confidence
+- **Inline Welcome Email**: Immediate engagement post-signup → better Day 0 activation
+- **Changelog**: Users see new features within the app → feature discovery
+
+### Next Phase Ideas (Phase 37)
+- Telegram push notifications for task deadline reminders
+- Email invite via Resend in referral program
+- Push notification preferences UI for Telegram
+- Gamification: streak badges and achievements system
+- Stripe subscription management UI enhancements (upgrade/downgrade in settings)
+- AI-powered task suggestions based on completion history
+- Mobile push notifications via Expo/OneSignal

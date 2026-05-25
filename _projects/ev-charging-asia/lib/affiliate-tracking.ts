@@ -1,15 +1,15 @@
 /**
  * Affiliate Click Tracking Utility
  *
- * Records affiliate link clicks to localStorage for the
- * affiliate commission tracking dashboard at /affiliate.
+ * Records affiliate link clicks to localStorage AND fires a server-side
+ * beacon to the central affiliate-tracking dashboard for cross-site
+ * commission tracking.
  *
- * The dashboard reads from the same localStorage key.
- * Data is never sent to a server — purely client-side
- * until Supabase env vars become available.
+ * Privacy: IP is hashed by the server. No PII collected.
  */
 
 const STORAGE_KEY = 'evca_affiliate_clicks';
+const TRACKING_API = process.env.NEXT_PUBLIC_AFFILIATE_TRACKING_URL || 'https://affiliate-tracking.vercel.app';
 
 export interface ClickRecord {
   linkId: string;
@@ -18,7 +18,29 @@ export interface ClickRecord {
 }
 
 /**
- * Track an affiliate link click by recording it to localStorage.
+ * Fire a server-side click beacon to the central affiliate tracking API.
+ * Uses sendBeacon for reliability — it survives page navigation.
+ */
+function fireTrackingBeacon(linkId: string, page: string): void {
+  if (typeof window === 'undefined') return;
+  
+  // Build redirect URL from the link ID lookup (done on the server side)
+  const beaconUrl = `${TRACKING_API}/api/track-click` +
+    `?linkId=${encodeURIComponent('evca_' + linkId)}` +
+    `&redirectUrl=${encodeURIComponent(window.location.href)}`;
+  
+  // sendBeacon is the most reliable way to fire-and-forget before navigation
+  try {
+    navigator.sendBeacon(beaconUrl);
+  } catch {
+    // Fallback: use fetch (may be cancelled on navigation)
+    fetch(beaconUrl, { method: 'GET', keepalive: true }).catch(() => {});
+  }
+}
+
+/**
+ * Track an affiliate link click by recording it to localStorage
+ * AND firing a server-side beacon.
  * Call this from the onClick handler of any affiliate link.
  *
  * @param linkId - The id from the AffiliateLink entry in affiliate-links.ts
@@ -27,10 +49,16 @@ export interface ClickRecord {
 export function trackAffiliateClick(linkId: string, page?: string): void {
   if (typeof window === 'undefined') return;
 
+  const resolvedPage = page || (window.location.pathname + window.location.search);
+
+  // Server-side beacon (fire-and-forget)
+  fireTrackingBeacon(linkId, resolvedPage);
+
+  // Client-side localStorage record
   const record: ClickRecord = {
     linkId,
     timestamp: Date.now(),
-    page: page || (window.location.pathname + window.location.search),
+    page: resolvedPage,
   };
 
   try {
@@ -45,10 +73,7 @@ export function trackAffiliateClick(linkId: string, page?: string): void {
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
   } catch (e) {
-    // localStorage quota exceeded or unavailable — silently fail
-    // In production, this could fire a beacon to an API endpoint
     if (e instanceof DOMException && e.name === 'QuotaExceededError') {
-      // Clear old records and retry once
       try {
         localStorage.removeItem(STORAGE_KEY);
       } catch {}

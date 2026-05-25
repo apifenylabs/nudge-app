@@ -27,7 +27,7 @@ export interface PluginDef {
   name: string;
   description: string;
   emoji: string;
-  category: 'habit' | 'goal' | 'reflection' | 'health_extra' | 'social_extra' | 'work_extra' | 'learning' | 'finance' | 'mindfulness' | 'content_creation' | 'career' | 'environment' | 'habits_extra' | 'nutrition' | 'creativity' | 'finance_invest' | 'family_parenting' | 'pets' | 'events' | 'travel' | 'meal_planning' | 'sleep_recovery' | 'energy_focus' | 'media' | 'home';
+  category: 'habit' | 'goal' | 'reflection' | 'health_extra' | 'social_extra' | 'work_extra' | 'learning' | 'finance' | 'mindfulness' | 'content_creation' | 'career' | 'environment' | 'habits_extra' | 'nutrition' | 'creativity' | 'finance_invest' | 'family_parenting' | 'pets' | 'events' | 'travel' | 'meal_planning' | 'sleep_recovery' | 'energy_focus' | 'media' | 'home' | 'volunteering' | 'digital_minimalism' | 'biz_ops' | 'content_marketing' | 'local_seo';
   fields: PluginField[];
   /** Optional: suggest to user based on detected patterns */
   autoSuggest?: string;
@@ -575,6 +575,24 @@ export const BUILTIN_PLUGINS: PluginDef[] = [
     ],
   },
 
+  // ── Volunteering & Community ──
+  {
+    id: 'volunteering_community',
+    name: 'Volunteering & Community',
+    description: 'Log volunteer hours, service type, and organizations you support',
+    emoji: '🤝',
+    category: 'volunteering',
+    fields: [
+      { id: 'vol_hours', label: 'Hours Volunteered', type: 'scale', min: 0, max: 24, step: 0.25, default: 0 },
+      { id: 'vol_organization', label: 'Organization Name', type: 'text', default: '' },
+      { id: 'vol_service_type', label: 'Type of Service', type: 'text', default: '' },
+      { id: 'vol_session', label: 'Volunteered Today', type: 'checkbox', default: false },
+      { id: 'vol_feeling', label: 'Impact Feeling (1-5)', type: 'scale', min: 1, max: 5, step: 1, default: 3 },
+      { id: 'vol_notes', label: 'Notes / Reflection', type: 'text', default: '' },
+    ],
+    autoSuggest: 'track_social',
+  },
+
   // ── Home Management ──
   {
     id: 'home_management',
@@ -589,6 +607,196 @@ export const BUILTIN_PLUGINS: PluginDef[] = [
       { id: 'home_repair_task', label: 'Home Repair Task Done', type: 'text', default: '' },
       { id: 'organizing_project', label: 'Organizing Project', type: 'text', default: '' },
     ],
+  },
+
+  // ── Podcast & Video Creation ──
+  {
+    id: 'podcast_video_creation',
+    name: 'Podcast & Video Creation',
+    description: 'Track podcast recording, video production, streaming, and content publishing',
+    emoji: '🎙️',
+    category: 'content_creation',
+    fields: [
+      { id: 'recorded_episode', label: 'Recorded a Podcast / Video', type: 'checkbox', default: false },
+      { id: 'edited_min', label: 'Editing Time (min)', type: 'scale', min: 0, max: 240, step: 10, default: 0 },
+      { id: 'published_episode', label: 'Published / Scheduled Episode', type: 'checkbox', default: false },
+      { id: 'audio_video_quality', label: 'Audio/Video Quality (1-5)', type: 'scale', min: 1, max: 5, step: 1, default: 3 },
+      { id: 'guest_or_topic', label: 'Guest / Topic', type: 'text', default: '' },
+      { id: 'distribution_done', label: 'Distributed (YouTube, Spotify, etc.)', type: 'checkbox', default: false },
+      { id: 'content_note', label: 'Content Note / Ideas', type: 'text', default: '' },
+    ],
+    autoSuggest: 'track_work',
+  },
+
+  // ── Outdoor & Nature Time ──
+  {
+    id: 'outdoor_nature',
+    name: 'Outdoor & Nature Time',
+    description: 'Track time outside, nature exposure, vitamin D, and green space quality',
+    emoji: '🌿',
+    category: 'environment',
+    fields: [
+      { id: 'outdoor_min', label: 'Time Outside (min)', type: 'scale', min: 0, max: 480, step: 10, default: 0 },
+      { id: 'nature_exposure', label: 'Spent Time in Nature / Park', type: 'checkbox', default: false },
+      { id: 'sunlight_exposure', label: 'Direct Sunlight (15+ min)', type: 'checkbox', default: false },
+      { id: 'walked_outside', label: 'Walked / Exercised Outdoors', type: 'checkbox', default: false },
+      { id: 'air_quality', label: 'Air Quality Felt Good', type: 'checkbox', default: false },
+      { id: 'nature_note', label: 'Nature / Outdoor Note', type: 'text', default: '' },
+    ],
+    autoSuggest: 'track_health',
+  },
+
+  // ── Morning & Evening Routines ──
+  {
+    id: 'morning_evening_routine',
+    name: 'Morning & Evening Routines',
+    description: 'Track your bookend routines — how you start and end each day',
+    emoji: '🌅',
+    category: 'habit',
+    fields: [
+      { id: 'woke_up_early', label: 'Woke Up by Target Time', type: 'checkbox', default: false },
+      { id: 'morning_stretch', label: 'Morning Stretch / Movement', type: 'checkbox', default: false },
+      { id: 'morning_hydration', label: 'Drank Water Right After Wake', type: 'checkbox', default: false },
+      { id: 'morning_plan', label: 'Planned the Day Ahead', type: 'checkbox', default: false },
+      { id: 'evening_winddown_min', label: 'Evening Wind-Down (min)', type: 'scale', min: 0, max: 120, step: 5, default: 15 },
+      { id: 'evening_no_screens', label: 'Screens Off 30m Before Bed', type: 'checkbox', default: false },
+      { id: 'set_tomorrow', label: 'Prepped for Tomorrow', type: 'checkbox', default: false },
+      { id: 'routine_quality', label: 'Routine Quality (1-5)', type: 'scale', min: 1, max: 5, step: 1, default: 3 },
+      { id: 'routine_note', label: 'Routine Note', type: 'text', default: '' },
+    ],
+    autoSuggest: 'track_health',
+  },
+
+  // ── Digital Minimalism & Tech Hygiene ──
+  {
+    id: 'digital_minimalism',
+    name: 'Digital Minimalism',
+    description: 'Track intentional tech use, digital declutter, and screen-life balance',
+    emoji: '🧘',
+    category: 'digital_minimalism',
+    fields: [
+      { id: 'phone_free_morning', label: 'No Phone First 30 Min of Day', type: 'checkbox', default: false },
+      { id: 'notification_sessions', label: 'Notification Check Sessions', type: 'scale', min: 0, max: 30, step: 1, default: 5 },
+      { id: 'social_scroll_min', label: 'Social Media Scroll (min)', type: 'scale', min: 0, max: 180, step: 5, default: 30 },
+      { id: 'doomscroll_flag', label: 'Caught Mindless Scrolling', type: 'checkbox', default: false },
+      { id: 'digital_declutter', label: 'Unsubscribed / Deleted / Organized', type: 'checkbox', default: false },
+      { id: 'phone_free_meal', label: 'Phone-Free Meal', type: 'checkbox', default: false },
+      { id: 'grayscale_mode', label: 'Used Grayscale / Focus Mode', type: 'checkbox', default: false },
+      { id: 'intention_before_unlock', label: 'Had Intention Before Unlocking', type: 'checkbox', default: false },
+      { id: 'digital_note', label: 'Digital Hygiene Note', type: 'text', default: '' },
+    ],
+    autoSuggest: 'track_health',
+  },
+
+  // ── AI & Automation Tracking ──
+  {
+    id: 'ai_automation',
+    name: 'AI & Automation Tracking',
+    description: 'Tracks AI tool usage, automation saves, and prompt engineering sessions',
+    emoji: '🤖',
+    category: 'work_extra',
+    fields: [
+      { id: 'ai_tools_used', label: 'Used AI Tools Today', type: 'checkbox', default: false },
+      { id: 'tools_list', label: 'Which AI Tools Used', type: 'text', default: '' },
+      { id: 'prompt_sessions', label: 'Prompt Engineering Sessions', type: 'scale', min: 0, max: 20, step: 1, default: 0 },
+      { id: 'automation_saves_hrs', label: 'Hours Saved by Automation', type: 'scale', min: 0, max: 8, step: 0.5, default: 0 },
+      { id: 'ai_output_quality', label: 'Output Quality Rating', type: 'scale', min: 1, max: 5, step: 1, default: 3 },
+      { id: 'learned_new_ai_skill', label: 'Learned New AI Technique', type: 'checkbox', default: false },
+    ],
+  },
+
+  // ── Business Metrics ──
+  {
+    id: 'business_metrics',
+    name: 'Business Metrics',
+    description: 'Tracks daily business KPIs — revenue, traffic, user signups',
+    emoji: '📊',
+    category: 'work_extra',
+    fields: [
+      { id: 'daily_revenue', label: 'Daily Revenue ($)', type: 'scale', min: 0, max: 10000, step: 10, default: 0 },
+      { id: 'website_visitors', label: 'Website Visitors', type: 'scale', min: 0, max: 50000, step: 100, default: 0 },
+      { id: 'new_signups', label: 'New Signups', type: 'scale', min: 0, max: 1000, step: 1, default: 0 },
+      { id: 'key_actions_taken', label: 'Key Business Actions', type: 'scale', min: 0, max: 20, step: 1, default: 0 },
+      { id: 'revenue_goal_met', label: 'Met Daily Revenue Goal', type: 'checkbox', default: false },
+      { id: 'business_confidence', label: 'Business Confidence (1-5)', type: 'scale', min: 1, max: 5, step: 1, default: 3 },
+      { id: 'business_note', label: 'Business Note / Idea', type: 'text', default: '' },
+    ],
+  },
+
+  // ── Social Media Management ──
+  {
+    id: 'social_media',
+    name: 'Social Media Management',
+    description: 'Tracks social media posting, engagement, growth, and content calendar',
+    emoji: '📱',
+    category: 'content_creation',
+    fields: [
+      { id: 'platforms_posted', label: 'Platforms Posted On', type: 'text', default: '' },
+      { id: 'posts_created', label: 'Posts Created', type: 'scale', min: 0, max: 20, step: 1, default: 0 },
+      { id: 'engagement_rate', label: 'Engagement (%)', type: 'scale', min: 0, max: 100, step: 1, default: 0 },
+      { id: 'followers_gained', label: 'Followers Gained', type: 'scale', min: 0, max: 1000, step: 1, default: 0 },
+      { id: 'dm_replies', label: 'DMs / Comments Replied To', type: 'scale', min: 0, max: 50, step: 1, default: 0 },
+      { id: 'content_calendar_done', label: 'Updated Content Calendar', type: 'checkbox', default: false },
+      { id: 'social_note', label: 'Social Media Note', type: 'text', default: '' },
+    ],
+  },
+
+  // ── Business Operations ──
+  {
+    id: 'biz_operations',
+    name: 'Business Operations',
+    description: 'Track solopreneur ops — client work, invoicing, emails, CRM tasks, and project milestones',
+    emoji: '⚙️',
+    category: 'biz_ops',
+    fields: [
+      { id: 'client_work_hrs', label: 'Client Work (hrs)', type: 'scale', min: 0, max: 12, step: 0.5, default: 0 },
+      { id: 'invoices_sent', label: 'Invoices Sent', type: 'scale', min: 0, max: 10, step: 1, default: 0 },
+      { id: 'crm_updated', label: 'Updated CRM / Leads', type: 'checkbox', default: false },
+      { id: 'email_inbox_zero', label: 'Inbox Zero / Processed', type: 'checkbox', default: false },
+      { id: 'project_milestones', label: 'Project Milestones Hit', type: 'scale', min: 0, max: 5, step: 1, default: 0 },
+      { id: 'biz_ops_blocker', label: 'Biggest Blocker Today', type: 'text', default: '' },
+      { id: 'biz_ops_score', label: 'Ops Smoothness (1-5)', type: 'scale', min: 1, max: 5, step: 1, default: 3 },
+    ],
+    autoSuggest: 'track_work',
+  },
+
+  // ── Content Marketing ──
+  {
+    id: 'content_marketing',
+    name: 'Content Marketing',
+    description: 'Track content distribution, SEO performance, email marketing, and lead generation',
+    emoji: '📢',
+    category: 'content_marketing',
+    fields: [
+      { id: 'content_pieces_distributed', label: 'Content Pieces Distributed', type: 'scale', min: 0, max: 10, step: 1, default: 0 },
+      { id: 'email_sent_campaign', label: 'Sent Email Campaign', type: 'checkbox', default: false },
+      { id: 'seo_keyword_optimized', label: 'SEO Keywords Optimized', type: 'scale', min: 0, max: 20, step: 1, default: 0 },
+      { id: 'traffic_generated', label: 'Referral Traffic (visitors)', type: 'scale', min: 0, max: 10000, step: 50, default: 0 },
+      { id: 'new_backlinks', label: 'New Backlinks Earned', type: 'scale', min: 0, max: 50, step: 1, default: 0 },
+      { id: 'social_crosspost', label: 'Crossposted to Social', type: 'checkbox', default: false },
+      { id: 'content_marketing_note', label: 'Content Marketing Note / Idea', type: 'text', default: '' },
+    ],
+    autoSuggest: 'track_work',
+  },
+
+  // ── Local SEO ──
+  {
+    id: 'local_seo',
+    name: 'Local SEO',
+    description: 'Track Google Business Profile, local citations, reviews, and local ranking',
+    emoji: '📍',
+    category: 'local_seo',
+    fields: [
+      { id: 'gbp_posted', label: 'Posted to Google Business Profile', type: 'checkbox', default: false },
+      { id: 'reviews_responded', label: 'Reviews Responded To', type: 'scale', min: 0, max: 20, step: 1, default: 0 },
+      { id: 'local_citations', label: 'Local Citations Created/Updated', type: 'scale', min: 0, max: 20, step: 1, default: 0 },
+      { id: 'local_keywords_tracked', label: 'Local Keywords Tracked', type: 'scale', min: 0, max: 50, step: 1, default: 0 },
+      { id: 'maps_ranking', label: 'Maps Ranking (1=top, 20=bottom)', type: 'scale', min: 1, max: 20, step: 1, default: 10 },
+      { id: 'photo_gbp', label: 'Added Photo to GBP Listing', type: 'checkbox', default: false },
+      { id: 'local_seo_note', label: 'Local SEO Note / Wins', type: 'text', default: '' },
+      { id: 'local_seo_effort', label: 'Local SEO Effort (1-5)', type: 'scale', min: 1, max: 5, step: 1, default: 3 },
+    ],
+    autoSuggest: 'track_work',
   },
 ];
 

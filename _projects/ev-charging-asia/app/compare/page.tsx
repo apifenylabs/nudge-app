@@ -478,27 +478,79 @@ export default function ComparePage() {
               <p className="text-sm text-emerald-700 leading-relaxed">{familyAdvice}</p>
             </div>
 
-            {/* CTA to view individual routes */}
+            {/* Route snapshot cards — richer CTAs to individual routes */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Link
                 href={`/routes/${itineraryA.slug}`}
-                className="block bg-white rounded-xl border border-gray-200 p-4 hover:border-sky-300 hover:shadow-sm transition-all"
+                className="group block bg-white rounded-xl border border-gray-200 p-4 hover:border-sky-300 hover:shadow-md transition-all"
               >
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-gray-900">{itineraryA.title}</span>
-                  <ArrowRight size={16} className="text-sky-500" />
+                <div className="flex items-center justify-between mb-2">
+                  <span className="flex items-center gap-2 text-sm font-bold text-gray-900 group-hover:text-sky-700 transition-colors">
+                    <RouteIcon size={16} className="text-sky-500" />
+                    {itineraryA.title.split(':')[0] || itineraryA.title}
+                  </span>
+                  <ArrowRight size={16} className="text-sky-500 shrink-0 group-hover:translate-x-0.5 transition-transform" />
                 </div>
-                <span className="text-xs text-gray-500">View full itinerary details</span>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-gray-500 mb-2">
+                  <span>{itineraryA.totalDistanceKm} km</span>
+                  <span>·</span>
+                  <span>{itineraryA.duration}</span>
+                  <span>·</span>
+                  <span className={`capitalize font-medium ${
+                    itineraryA.difficulty === 'easy' ? 'text-emerald-600' :
+                    itineraryA.difficulty === 'moderate' ? 'text-amber-600' :
+                    'text-red-600'
+                  }`}>{itineraryA.difficulty}</span>
+                  <span>·</span>
+                  <span>{itineraryA.estimatedChargingStops}+ charges</span>
+                </div>
+                <div className="text-[10px] text-gray-400 truncate">
+                  {itineraryA.cities.join(' → ')}
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1">
+                  {itineraryA.tags.slice(0, 4).map(tag => (
+                    <span key={tag} className="text-[9px] px-1.5 py-0.5 bg-gray-100 text-gray-500 rounded-full">#{tag}</span>
+                  ))}
+                </div>
+                <div className="mt-2 text-xs font-medium text-sky-600 group-hover:text-sky-700">
+                  View full itinerary →
+                </div>
               </Link>
               <Link
                 href={`/routes/${itineraryB.slug}`}
-                className="block bg-white rounded-xl border border-gray-200 p-4 hover:border-sky-300 hover:shadow-sm transition-all"
+                className="group block bg-white rounded-xl border border-gray-200 p-4 hover:border-sky-300 hover:shadow-md transition-all"
               >
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-gray-900">{itineraryB.title}</span>
-                  <ArrowRight size={16} className="text-sky-500" />
+                <div className="flex items-center justify-between mb-2">
+                  <span className="flex items-center gap-2 text-sm font-bold text-gray-900 group-hover:text-sky-700 transition-colors">
+                    <RouteIcon size={16} className="text-sky-500" />
+                    {itineraryB.title.split(':')[0] || itineraryB.title}
+                  </span>
+                  <ArrowRight size={16} className="text-sky-500 shrink-0 group-hover:translate-x-0.5 transition-transform" />
                 </div>
-                <span className="text-xs text-gray-500">View full itinerary details</span>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-gray-500 mb-2">
+                  <span>{itineraryB.totalDistanceKm} km</span>
+                  <span>·</span>
+                  <span>{itineraryB.duration}</span>
+                  <span>·</span>
+                  <span className={`capitalize font-medium ${
+                    itineraryB.difficulty === 'easy' ? 'text-emerald-600' :
+                    itineraryB.difficulty === 'moderate' ? 'text-amber-600' :
+                    'text-red-600'
+                  }`}>{itineraryB.difficulty}</span>
+                  <span>·</span>
+                  <span>{itineraryB.estimatedChargingStops}+ charges</span>
+                </div>
+                <div className="text-[10px] text-gray-400 truncate">
+                  {itineraryB.cities.join(' → ')}
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1">
+                  {itineraryB.tags.slice(0, 4).map(tag => (
+                    <span key={tag} className="text-[9px] px-1.5 py-0.5 bg-gray-100 text-gray-500 rounded-full">#{tag}</span>
+                  ))}
+                </div>
+                <div className="mt-2 text-xs font-medium text-sky-600 group-hover:text-sky-700">
+                  View full itinerary →
+                </div>
               </Link>
             </div>
           </>

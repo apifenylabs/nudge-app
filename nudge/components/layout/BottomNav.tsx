@@ -1,6 +1,6 @@
 'use client'
 
-import { ListTodo, Users, BarChart3, Settings, Shield } from 'lucide-react'
+import { ListTodo, Users, BarChart3, Settings, Shield, Gift } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -15,6 +15,7 @@ export default function BottomNav({ isAdmin }: BottomNavProps) {
     { label: 'Tasks', icon: ListTodo, href: '/dashboard', color: 'text-indigo-500' },
     { label: 'Family', icon: Users, href: '/dashboard/family', color: 'text-amber-500' },
     { label: 'Stats', icon: BarChart3, href: '/dashboard/stats', color: 'text-emerald-500' },
+    { label: 'Refer', icon: Gift, href: '/dashboard/referrals', color: 'text-rose-500' },
     { label: 'Settings', icon: Settings, href: '/dashboard/settings', color: 'text-pink-500' },
     ...(isAdmin ? [{ label: 'Admin', icon: Shield, href: '/dashboard/admin', color: 'text-purple-500' }] : []),
   ]

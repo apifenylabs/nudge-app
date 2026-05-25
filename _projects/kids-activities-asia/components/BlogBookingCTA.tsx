@@ -1,7 +1,7 @@
 'use client';
 
 import { ExternalLink } from 'lucide-react';
-import { AFFILIATE, klookUrl, bookingUrl, viatorUrl } from '@/lib/affiliate';
+import { AFFILIATE, klookUrl, bookingUrl, viatorUrl, fireAffiliateBeacon } from '@/lib/affiliate';
 import type { BlogPost } from '@/lib/blog-data';
 
 /**
@@ -133,6 +133,7 @@ export default function BlogBookingCTA({
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="flex items-center gap-4 bg-white rounded-xl px-4 py-3 hover:shadow-md transition-shadow border border-gray-100 group"
+            onClick={() => fireAffiliateBeacon(`kidsblog-${partner.name}`, partnerUrl(partner.name, dest))}
           >
             <span className="text-2xl">{partner.icon}</span>
             <div className="flex-1 min-w-0">

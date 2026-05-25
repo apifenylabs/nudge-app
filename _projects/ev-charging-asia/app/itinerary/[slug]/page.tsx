@@ -658,7 +658,44 @@ export default async function ItineraryDetailPage({ params }: Props) {
           </Link>
         </div>
 
-        {/* ===== JSON-LD STRUCTURED DATA (Trip + TouristicRoute) ===== */}
+        {/* ===== JSON-LD PART 1: FAQPage (server-side) ===== */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: `How long does the ${it.title} EV road trip take?`,
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: `The complete ${it.title} road trip takes ${it.duration} covering ${it.totalDistanceKm} km with ${it.totalDrivingHours} hours of total driving time. You'll need ${it.estimatedChargingStops}+ charging stops along the way.`,
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: `Is the ${it.title} route suitable for families with kids?`,
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: `This route is designed with families in mind. It includes ${it.familyHighlights.length} family-friendly highlights such as ${it.familyHighlights.slice(0, 3).map(h => h.split('—')[0].trim()).join(', ')}. The difficulty is ${it.difficulty} with ${it.totalDrivingHours} hours of driving spread over ${it.duration}.`,
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: `What is the best time of year for ${it.title}?`,
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: `The best season for this route is ${it.bestSeason}. The route passes through ${it.cities.join(', ')}. We recommend planning your trip during the recommended season for the best weather and road conditions.`,
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* ===== JSON-LD PART 2: Trip + TouristicRoute ===== */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

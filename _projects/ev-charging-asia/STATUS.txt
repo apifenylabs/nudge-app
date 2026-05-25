@@ -1,8 +1,8 @@
 EV Charging Asia — Project Status
 ===================================
-Updated: 2026-05-20 03:50 HKT
+Updated: 2026-05-25 03:50 HKT
 URL: https://ev-charging-asia.vercel.app
-Goal: $5,000 MRR in 90 days (Day ~20)
+Goal: $5,000 MRR in 90 days (Day ~25)
 
 ## Current State
 - 17 EV road trip itineraries (exceeds target of 12)
@@ -14,16 +14,20 @@ Goal: $5,000 MRR in 90 days (Day ~20)
 - Route map with charging station pin overlays
 - Breadcrumb + FAQ JSON-LD structured data on all pages
 
-## What Was Just Built (May 20)
-1. **Charging station markers on RouteMap** — Leaflet map now loads stations.json and displays purple circle markers for nearby charging stations (within bounding box). Clicking shows name, speed, port count, cost/kWh, reliability stars. Toggle button to show/hide stations.
+## What Was Just Built (May 25)
+1. **FAQPage JSON-LD on itinerary detail pages** — Server-side FAQ structured data (3 Q&As per route) for Google rich snippet eligibility. Each itinerary now has both Trip + FAQPage schema.
 
-2. **Seasonal badges on ItineraryCard** — Each route card on /routes now shows 🌿 best season tag alongside difficulty/duration/cross-border badges.
+2. **WebSite + Organization JSON-LD on home page** — SearchAction schema enables Google Sitelinks search box. Organization schema improves brand knowledge panel.
 
-3. **BreadcrumbList JSON-LD on /compare** — Structured data for Google rich result breadcrumbs on the compare page.
+3. **FAQPage + WebSite JSON-LD on /seasons page** — Rich results for seasonal travel queries (4 Q&As about EV range by season, best countries for EV charging).
 
-4. **SEO metadata refinements** — Compare page gets proper canonical URL, OG tags.
+4. **Route Planner Form component** — New `RoutePlannerForm` on / and /routes with 5 filters (duration, difficulty, family, region, vibe). Live filtering of all 17 routes with count badge. Replaces passive search.
 
-5. **Deployed to production** — Build passes clean, deployed to Vercel.
+5. **Richer route snapshot cards on /compare** — Each comparison result now shows stats (distance, difficulty, charges, cities, tags) with clear "View full itinerary →" CTA.
+
+6. **TipPhotoGallery "Show all photos" expand** — Photos > 6 now have a toggle to reveal all with grid layout and "Show less" collapse.
+
+7. **Deployed to production** — Build passes clean (0 errors, 162 static pages), deployed to Vercel.
 
 ## Build Metrics
 - Build: passes (0 errors, ~80s)
@@ -32,7 +36,8 @@ Goal: $5,000 MRR in 90 days (Day ~20)
 - Static pages: /, /routes, /compare, /search, /range, /blog+
 
 ## Next Session Priorities
-- Photo upload in TipForm (richer UGC → more engagement)
-- Tips pagination/infinite scroll
-- Seasonal route recommendations page
-- Route planner form
+- Route overlay polylines on the main /search Leaflet map (show route path on station map)
+- Add RoutePlannerForm to /itinerary page
+- Tip photo upload enhancement (direct camera capture)
+- More blog posts with deep internal linking
+- Affiliate link conversion tracking

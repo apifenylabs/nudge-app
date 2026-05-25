@@ -7,7 +7,9 @@ import WeeklyTrends from './components/WeeklyTrends';
 import MonthlyInsights from './components/MonthlyInsights';
 import DataManager from './components/DataManager';
 import PluginManager, { PluginSection } from './components/PluginManager';
+import VolunteeringTracker from './components/VolunteeringTracker';
 import ArchetypeDisplay from './components/ArchetypeDisplay';
+import AIInsight from './components/AIInsight';
 import { getActivePluginDefs, type PluginDef } from './data/plugins';
 
 function getToday(): string {
@@ -216,6 +218,8 @@ export default function Home() {
         />
       ))}
 
+      <VolunteeringTracker />
+
       <PluginManager onPluginsChange={handlePluginsChange} />
 
       <ArchetypeDisplay
@@ -223,6 +227,8 @@ export default function Home() {
         todayScore={getScore(data.days?.[today])}
         streakDays={streak}
       />
+
+      <AIInsight data={data} />
 
       <WeeklyTrends data={data} />
 

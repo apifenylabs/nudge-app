@@ -15,17 +15,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Titan — Phasr Forge",
-  description: "The Solo Leveling Steam of AI — visually level-up your personal agent swarm",
+  title: "Titan — Your Personal AI Agent Platform",
+  description: "Build, train, and orchestrate your own AI agent collective. Gamified progression with XP, skills, and certifications.",
   openGraph: {
-    title: "Titan — Level Up Your Personal AI Agent Swarm",
-    description: "Build, train, and orchestrate your own AI agent collective. Gamified progression with XP, skills, certifications, and a 3D companion.",
+    title: "Titan — Your Personal AI Agent Platform",
+    description: "Build, train, and orchestrate your own AI agent collective. Gamified progression with XP, skills, and certifications.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Titan — Phasr Forge",
-    description: "Level up your personal AI agent swarm with XP, skills, and a 3D companion.",
+    title: "Titan — Your Personal AI Agent Platform",
+    description: "Build, train, and orchestrate your own AI agent collective.",
   },
 };
 
@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         {children}

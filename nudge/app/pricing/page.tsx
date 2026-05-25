@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { CheckCircle, ArrowRight, Star, MessageSquare, Shield, Clock, Flame } from 'lucide-react'
 import Link from 'next/link'
 import CheckoutButton from '@/components/billing/CheckoutButton'
+import SocialProofBanner from '@/components/marketing/SocialProofBanner'
 import type { BillingInterval } from '@/lib/plans'
 
 function getPlans(interval: BillingInterval) {
@@ -110,6 +111,11 @@ export default function PricingPage() {
             Start free. Upgrade when your family grows. No hidden fees, no surprises.
           </p>
         </div>
+      </section>
+
+      {/* Social Proof — families joined, tasks completed */}
+      <section className="pb-10 px-4">
+        <SocialProofBanner />
       </section>
 
       {/* Billing Interval Toggle */}
