@@ -1,7 +1,14 @@
 # HEARTBEAT.md — Last Check
-2026-05-26 01:25 HKT
+2026-05-26 01:50 HKT
 
 ## System State
+- ✅ **Overnight Build Run (01:30 HKT)** — all 6 projects deployed & returning HTTP 200
+  - www.familytravelasia.com ✅
+  - luxury-family-travel-asia.vercel.app ✅
+  - ev-charging-asia.vercel.app ✅
+  - apifeny-ai.vercel.app ✅
+  - nudge-sigma-liart.vercel.app ✅
+  - social-beast-two.vercel.app ✅
 - ✅ **Trading live on Hyperliquid** — $117.12 portfolio (+193% from $40.59), 3 open positions (ETH/HYPE/WIF), 7 closed trades today (67% WR, -$0.04 net)
 - ✅ **TP/SL workaround deployed** — resting reduce-only limit GTC orders instead of native grouped TPSL
 - ✅ **Internal trading dashboard** deployed to vercel (trading-only, professional white layout)
