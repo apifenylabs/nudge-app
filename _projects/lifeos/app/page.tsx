@@ -3,22 +3,39 @@
 import { useState, useEffect, useCallback } from 'react';
 import PluginCatalog from './components/PluginCatalog';
 import PluginDetail from './components/PluginDetail';
+import DashboardHome from './components/DashboardHome';
 import { loadState, saveState, activatePlugin, completeTask, type LifeOSPlugin, type LifeCategory, type PluginPhase } from './lib/plugins';
+import WaitlistCard from './components/WaitlistCard';
 import type { LifeOSState } from './lib/plugins';
+import { initSupabaseSync, getLastSyncTime } from './lib/supabase-sync';
+import { useAuth } from './lib/auth-context';
+import AuthModal from './components/AuthModal';
 
 export default function Home() {
   const [state, setState] = useState<LifeOSState>({ plugins: [], totalActions: 0, unlockedCategories: [] });
-  const [activePlugin, setActivePlugin] = useState<LifeOSPlugin | null>(null);
   const [showCatalog, setShowCatalog] = useState(false);
+  const [showDashboard, setShowDashboard] = useState(true);
+  const [activePlugin, setActivePlugin] = useState<LifeOSPlugin | null>(null);
   const [mounted, setMounted] = useState(false);
+
+  const [syncStatus, setSyncStatus] = useState<'off' | 'connecting' | 'live' | 'error'>('off');
+  const [showAuth, setShowAuth] = useState(false);
+  const { user, loading: authLoading } = useAuth();
 
   useEffect(() => {
     setMounted(true);
     const s = loadState();
     setState(s);
-    if (s.plugins.length > 0) {
-      setActivePlugin(s.plugins[s.plugins.length - 1]);
-    }
+    // Start on dashboard — let the user pick a plugin
+    setShowDashboard(true);
+
+    // Initialize Supabase sync (non-blocking)
+    setSyncStatus('connecting');
+    initSupabaseSync().then(enabled => {
+      setSyncStatus(enabled ? 'live' : 'off');
+    }).catch(() => {
+      setSyncStatus('error');
+    });
   }, []);
 
   const refresh = useCallback(() => {
@@ -38,6 +55,7 @@ export default function Home() {
     refresh();
     setActivePlugin(plugin);
     setShowCatalog(false);
+    setShowDashboard(false);
   }, [refresh]);
 
   const handleCompleteTask = useCallback((category: LifeCategory, phase: PluginPhase, taskId: string) => {
@@ -48,6 +66,7 @@ export default function Home() {
   const handleSelectPlugin = useCallback((plugin: LifeOSPlugin) => {
     setActivePlugin(plugin);
     setShowCatalog(false);
+    setShowDashboard(false);
   }, []);
 
   if (!mounted) return null;
@@ -55,19 +74,41 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-6xl mx-auto px-4 py-8">
+        {/* Waitlist CTA — prominent on landing page for early access signups */}
+        <WaitlistCard />
+
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-2xl font-bold text-gray-900 tracking-tight">LifeOS</h1>
             <p className="text-sm text-gray-500 mt-1">AI copilot for every area of your life</p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <button
               onClick={() => { setShowCatalog(true); setActivePlugin(null); }}
               className="px-4 py-2 text-sm font-medium text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-colors"
             >
               + New Plugin
             </button>
+
+            {/* Auth button */}
+            {!authLoading && (
+              <button
+                onClick={() => setShowAuth(true)}
+                className="px-3 py-2 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors flex items-center gap-1.5"
+                title={user ? user.email || 'Signed in' : 'Sign in'}
+              >
+                {user ? (
+                  <span className="w-5 h-5 rounded-full bg-teal-500 text-white text-[10px] font-bold flex items-center justify-center">
+                    {user.email?.charAt(0).toUpperCase() || '?'}
+                  </span>
+                ) : (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                )}
+              </button>
+            )}
           </div>
         </div>
 
@@ -85,9 +126,28 @@ export default function Home() {
             <span className="w-2 h-2 rounded-full bg-emerald-500" />
             <span className="font-semibold text-gray-900">{state.unlockedCategories.length}</span> categories
           </span>
+          <span className="flex items-center gap-1.5 ml-auto">
+            <span className={`w-2 h-2 rounded-full ${syncStatus === 'live' ? 'bg-green-500' : syncStatus === 'connecting' ? 'bg-yellow-500 animate-pulse' : syncStatus === 'error' ? 'bg-red-500' : 'bg-gray-400'}`} />
+            <span className="text-xs text-gray-400">
+              {syncStatus === 'live' ? 'Synced' : syncStatus === 'connecting' ? 'Connecting...' : syncStatus === 'error' ? 'Sync error' : 'Local only'}
+            </span>
+          </span>
         </div>
 
-        {/* Main content */}
+        {/* Navigation breadcrumb */}
+        {!showCatalog && activePlugin && (
+          <button
+            onClick={() => { setActivePlugin(null); setShowDashboard(true); }}
+            className="flex items-center gap-1 text-sm text-gray-400 hover:text-gray-600 mb-4 transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Dashboard
+          </button>
+        )}
+
+        {/* Main content: Dashboard → Catalog → Plugin Detail */}
         {showCatalog ? (
           <PluginCatalog
             state={state}
@@ -101,23 +161,22 @@ export default function Home() {
             onCompleteTask={handleCompleteTask}
             onSelectPlugin={handleSelectPlugin}
           />
+        ) : showDashboard ? (
+          <DashboardHome
+            state={state}
+            onSelectPlugin={handleSelectPlugin}
+            onOpenCatalog={() => setShowCatalog(true)}
+          />
         ) : (
-          <div className="flex flex-col items-center justify-center py-24 text-center">
-            <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-              </svg>
-            </div>
-            <h2 className="text-xl font-semibold text-gray-900 mb-2">No plugins active</h2>
-            <p className="text-gray-500 mb-6 max-w-md">Activate a LifeOS plugin to start guided phases for your travel, health, family, finance, or any life category.</p>
-            <button
-              onClick={() => setShowCatalog(true)}
-              className="px-6 py-2.5 text-sm font-medium text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-colors"
-            >
-              Browse Plugin Catalog
-            </button>
-          </div>
+          <DashboardHome
+            state={state}
+            onSelectPlugin={handleSelectPlugin}
+            onOpenCatalog={() => setShowCatalog(true)}
+          />
         )}
+
+        {/* Auth Modal */}
+        {showAuth && <AuthModal onClose={() => setShowAuth(false)} />}
       </div>
     </div>
   );
