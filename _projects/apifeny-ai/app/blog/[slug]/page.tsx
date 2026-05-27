@@ -6,6 +6,7 @@ import { getPostBySlug, getRelatedPosts } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data';
 import BlogAffiliateCTA from '../../components/BlogAffiliateCTA';
 import BlogRelatedTools from '../../components/BlogRelatedTools';
+import BlogGeoLinks from '../../components/BlogGeoLinks';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -136,6 +137,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       {/* Related AI Tools — cross-link from blog post to tool pages */}
       <BlogRelatedTools
         postTitle={post.title}
+        postTags={post.tags}
+      />
+
+      {/* Geo-specific cross-links — strengthen topical authority */}
+      <BlogGeoLinks
+        postSlug={post.slug}
         postTags={post.tags}
       />
 

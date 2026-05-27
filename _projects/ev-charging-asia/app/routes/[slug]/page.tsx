@@ -19,6 +19,7 @@ import OptimisticTipsSection from '@/components/itineraries/OptimisticTipsSectio
 import PrintButton from '@/components/itineraries/PrintButton';
 import RouteShareBar from '@/components/itineraries/RouteShareBar';
 import DownloadRouteGuide from '@/components/itineraries/DownloadRouteGuide';
+import PremiumRouteCTA from '@/components/itineraries/PremiumRouteCTA';
 
 interface Props {
   params: { slug: string };
@@ -240,6 +241,11 @@ export default function ItineraryDetailPage({ params }: Props) {
               <DownloadRouteGuide itinerary={it} />
               <PrintButton />
             </div>
+          </div>
+
+          {/* Premium Route CTA */}
+          <div className="mt-4">
+            <PremiumRouteCTA itinerary={it} compact />
           </div>
         </div>
 
