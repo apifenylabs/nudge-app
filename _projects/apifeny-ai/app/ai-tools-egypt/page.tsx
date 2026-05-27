@@ -553,7 +553,7 @@ export default function AIToolsEgyptPage() {
             {[
               {
                 title: '🇵🇰 Digital Egypt & Ignite',
-                description: 'Egypt's Ministry of Communications and Information Technology (MCIT) has launched a comprehensive AI strategy under Egypt Vision 2030. The National Council for Artificial Intelligence (NCAI) drives AI policy, while Cairo ICT and the Creativa innovation hubs foster the startup ecosystem.',
+                description: 'Egypt\'s Ministry of Communications and Information Technology (MCIT) has launched a comprehensive AI strategy under Egypt Vision 2030. The National Council for Artificial Intelligence (NCAI) drives AI policy, while Cairo ICT and the Creativa innovation hubs foster the startup ecosystem.',
               },
               {
                 title: '🏢 Cairo / Alexandria / Islamabad Tech Hubs',

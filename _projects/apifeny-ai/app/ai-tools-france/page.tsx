@@ -589,8 +589,8 @@ export default function AIToolsFrancePage() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-medium mb-6">
             <MapPin className="w-3.5 h-3.5" />
-            No more guessing if a tool works in France. Every tool on Apifeny AI is rated for French/English support, EUR pricing, and GDPR compliance. Start exploring — no account needed.
-          </p>
+            <span>No more guessing if a tool works in France. Every tool on Apifeny AI is rated for French/English support, EUR pricing, and GDPR compliance. Start exploring — no account needed.</span>
+          </div>
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link
               href="/tools"

@@ -565,7 +565,7 @@ export default function AIToolsBrazilPage() {
               },
               {
                 title: '🌏 Agtech & Fintech Powerhouse',
-                description: 'Brazil is a global leader in agtech (Embrapa, Climate FieldView) and fintech (Nubank, PicPay, Mercado Pago). We evaluate tools for their applicability to Brazil's key economic sectors — agriculture, financial services, and digital commerce.',
+                description: 'Brazil is a global leader in agtech (Embrapa, Climate FieldView) and fintech (Nubank, PicPay, Mercado Pago). We evaluate tools for their applicability to Brazil\'s key economic sectors — agriculture, financial services, and digital commerce.',
               },
             ].map((item) => (
               <div

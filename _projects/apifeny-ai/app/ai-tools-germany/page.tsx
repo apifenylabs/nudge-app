@@ -552,8 +552,8 @@ export default function AIToolsGermanyPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {[
               {
-                title: '🇩🇪 Berlin — Europe's Startup Capital',
-                description: 'Berlin is Germany's AI startup epicentre, attracting €3B+ in AI venture capital annually. Home to hundreds of AI startups, the KI Bundesverband, and thriving communities in fintech (N26, Trade Republic), proptech, and B2B SaaS. German-English bilingual tools are essential for Berlin's international tech workforce.',
+                title: '🇩🇪 Berlin — Europe\'s Startup Capital',
+                description: 'Berlin is Germany\'s AI startup epicentre, attracting €3B+ in AI venture capital annually. Home to hundreds of AI startups, the KI Bundesverband, and thriving communities in fintech (N26, Trade Republic), proptech, and B2B SaaS. German-English bilingual tools are essential for Berlin\'s international tech workforce.',
               },
               {
                 title: '🏭 Munich & Stuttgart — Automotive AI Hub',
@@ -565,7 +565,7 @@ export default function AIToolsGermanyPage() {
               },
               {
                 title: '🎓 World-Class Research & DFKI',
-                description: 'The German Research Center for Artificial Intelligence (DFKI), Max Planck Institute, Fraunhofer Institutes, and TU Munich/TU Berlin create an unmatched AI research infrastructure. Germany's KI-Strategie (€5B+ committed) and the Excellence Strategy fund AI at the highest level. Tools with academic licensing, research collaboration features, and German university infrastructure integration score highest.',
+                description: 'The German Research Center for Artificial Intelligence (DFKI), Max Planck Institute, Fraunhofer Institutes, and TU Munich/TU Berlin create an unmatched AI research infrastructure. Germany\'s KI-Strategie (€5B+ committed) and the Excellence Strategy fund AI at the highest level. Tools with academic licensing, research collaboration features, and German university infrastructure integration score highest.',
               },
             ].map((item) => (
               <div
