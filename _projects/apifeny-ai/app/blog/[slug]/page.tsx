@@ -5,6 +5,7 @@ import { Calendar, Clock, Tag, ArrowLeft, ArrowRight, User, Sparkles, BookOpen }
 import { getPostBySlug, getRelatedPosts } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data';
 import BlogAffiliateCTA from '../../components/BlogAffiliateCTA';
+import BlogRelatedTools from '../../components/BlogRelatedTools';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -130,7 +131,15 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           postTags={post.tags}
           postTitle={post.title}
         />
+      </article>
 
+      {/* Related AI Tools — cross-link from blog post to tool pages */}
+      <BlogRelatedTools
+        postTitle={post.title}
+        postTags={post.tags}
+      />
+
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Bottom Tags */}
         <div className="pt-8 border-t border-tech-500/20">
           <div className="flex flex-wrap items-center gap-2">

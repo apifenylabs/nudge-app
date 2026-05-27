@@ -44,6 +44,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -288,6 +289,26 @@ For teachers managing large classrooms in Asia, AI classroom management tools re
 ];
 
 const toolSlugs = ['chatgpt', 'gemini', 'perplexity', 'grammarly', 'deepl'];
+
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI tool for teachers in 2026?",
+    "answer": "Khanmigo (Khan Academy's AI tutor) is the best AI tool specifically designed for education \u2014 it uses Socratic questioning to guide students rather than giving answers. ChatGPT is the most versatile for lesson planning, worksheet creation, and student feedback. Canva for Education offers free AI design tools for teachers."
+  },
+  {
+    "question": "Can AI replace teachers?",
+    "answer": "No \u2014 AI enhances teaching by automating administrative tasks, personalizing learning materials, and providing 24/7 tutoring support, but it cannot replace the human elements of teaching: emotional connection, mentorship, classroom management, and adapting to individual student needs in real-time."
+  },
+  {
+    "question": "Which AI tools are best for Asian education systems?",
+    "answer": "ChatGPT handles Chinese, Japanese, and Korean curricula effectively. Gemini has strong Asian language support for creating bilingual materials. For specific education systems, Khanmigo supports Singapore Math and IB curricula. Duolingo Max is excellent for English language learning in Asian markets."
+  },
+  {
+    "question": "Are AI education tools free for teachers?",
+    "answer": "Many AI tools offer free tiers for educators. Khanmigo costs $44/year (teachers should check school/district licensing). ChatGPT Free is sufficient for lesson planning. Canva for Education is completely free for verified teachers. Duolingo offers free classroom accounts through Duolingo for Schools."
+  }
+];
 
 export default function AIToolsForEducationGuide() {
   return (
@@ -542,6 +563,8 @@ export default function AIToolsForEducationGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

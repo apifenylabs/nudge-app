@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { Card } from "@/components/ui/card";
 import HomeDashboard from "@/components/molecules/HomeDashboard";
+import ActivitySparkline from "@/components/molecules/ActivitySparkline";
+import DashboardSkeleton from "@/components/molecules/DashboardSkeleton";
 import { useMascotStore } from "@/stores/mascotStore";
 
 // Shared state from dashboard-store
@@ -15,7 +17,9 @@ import {
 } from "@/lib/dashboard-store";
 import { loadFeed, saveFeed, loadAudits } from "@/lib/persistence";
 import type { FeedEntry, AuditRecord } from "@/lib/persistence";
-import { Trophy, Shield, Star, Sparkles } from "lucide-react";
+import { Trophy, Shield, Star, Sparkles, Puzzle, Layers } from "lucide-react";
+import { computeLifeOSXp } from "@/lib/lifeos-xp-bridge";
+import { recordDailyStat } from "@/lib/usage-tracker";
 
 export default function DashboardHomePage() {
   const router = useRouter();
@@ -49,6 +53,9 @@ export default function DashboardHomePage() {
     return { gold, silver, bronze, total, avgScore };
   }, []);
 
+  // LifeOS bridge data — reads actual plugin engagement from localStorage
+  const lifeosData = useMemo(() => computeLifeOSXp(), []);
+
   const handleNavigate = useCallback((tab: string) => {
     const pathMap: Record<string, string> = {
       home: "/dashboard",
@@ -62,6 +69,19 @@ export default function DashboardHomePage() {
     };
     router.push(pathMap[tab] || `/dashboard/${tab}`);
   }, [router]);
+
+  // Track today's stats on mount
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoaded(true), 400);
+    // Record a daily stat snapshot so the activity chart has data
+    recordDailyStat({ tasksRun: progression.totalTasksRun, xpEarned: progression.totalXp });
+    return () => clearTimeout(timer);
+  }, [progression.totalTasksRun, progression.totalXp]);
+
+  if (!loaded) {
+    return <DashboardSkeleton />;
+  }
 
   return (
     <div className="space-y-4 sm:space-y-6">
@@ -131,6 +151,64 @@ export default function DashboardHomePage() {
           </div>
         </div>
       )}
+
+      {/* LifeOS Plugin Summary — always visible */}
+      <div className="grid grid-cols-4 gap-2 sm:gap-3">
+        <div
+          className="p-3 sm:p-4 rounded-xl border text-center cursor-pointer"
+          onClick={() => router.push('/dashboard/lifeos')}
+          style={{
+            background: '#FFFFFF',
+            borderColor: '#E5E0D8',
+            boxShadow: '0 4px 12px -4px rgba(31,31,31,0.06)',
+          }}
+        >
+          <Puzzle className="h-4 w-4 mx-auto mb-1" style={{ color: '#14B8A6' }} />
+          <div className="text-lg sm:text-xl font-bold" style={{ color: '#14B8A6' }}>{lifeosData.activePlugins}</div>
+          <div className="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider" style={{ color: '#666666' }}>Plugins</div>
+        </div>
+        <div
+          className="p-3 sm:p-4 rounded-xl border text-center cursor-pointer"
+          onClick={() => router.push('/dashboard/lifeos')}
+          style={{
+            background: '#FFFFFF',
+            borderColor: '#E5E0D8',
+            boxShadow: '0 4px 12px -4px rgba(31,31,31,0.06)',
+          }}
+        >
+          <Layers className="h-4 w-4 mx-auto mb-1" style={{ color: '#0EA5A5' }} />
+          <div className="text-lg sm:text-xl font-bold" style={{ color: '#0EA5A5' }}>{lifeosData.totalActions}</div>
+          <div className="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider" style={{ color: '#666666' }}>Actions</div>
+        </div>
+        <div
+          className="p-3 sm:p-4 rounded-xl border text-center cursor-pointer"
+          onClick={() => router.push('/dashboard/lifeos')}
+          style={{
+            background: '#FFFFFF',
+            borderColor: '#E5E0D8',
+            boxShadow: '0 4px 12px -4px rgba(31,31,31,0.06)',
+          }}
+        >
+          <Trophy className="h-4 w-4 mx-auto mb-1" style={{ color: '#D4A017' }} />
+          <div className="text-lg sm:text-xl font-bold" style={{ color: '#D4A017' }}>{lifeosData.completedPlugins}</div>
+          <div className="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider" style={{ color: '#666666' }}>Done</div>
+        </div>
+        <div
+          className="p-3 sm:p-4 rounded-xl border text-center"
+          style={{
+            background: '#FFFFFF',
+            borderColor: '#E5E0D8',
+            boxShadow: '0 4px 12px -4px rgba(31,31,31,0.06)',
+          }}
+        >
+          <Star className="h-4 w-4 mx-auto mb-1" style={{ color: '#10B981' }} />
+          <div className="text-lg sm:text-xl font-bold" style={{ color: '#10B981' }}>{lifeosData.totalLifeosXp.toLocaleString()}</div>
+          <div className="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider" style={{ color: '#666666' }}>XP</div>
+        </div>
+      </div>
+
+      {/* Activity Sparkline — 7-day usage trend chart */}
+      <ActivitySparkline />
     </div>
   );
 }

@@ -4,9 +4,11 @@ import Link from 'next/link';
 import { toolsData } from '@/lib/data';
 import { playbooks } from '@/lib/playbooks';
 import { RANKING_CATEGORIES } from '@/lib/ranking-categories';
-import { BookOpen, ChevronRight, TrendingUp } from 'lucide-react';
+import { BookOpen, ChevronRight, TrendingUp, Zap, Sparkles } from 'lucide-react';
 import ToolDetail from '@/components/ToolDetail';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import ToolRelatedBlogPosts from '@/components/ToolRelatedBlogPosts';
+import { getAffiliateForTool } from '@/lib/affiliate-links';
 
 const BASE_URL = 'https://apifeny-ai.vercel.app';
 
@@ -88,6 +90,48 @@ export default function ToolPage({ params }: ToolPageProps) {
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <ToolDetail tool={tool} />
+
+        {/* Affiliate Best Deal CTA — appears right after hero for paid affiliate tools */}
+        {(() => {
+          const aff = getAffiliateForTool(tool.slug);
+          if (!aff || !aff.is_direct) return null;
+          return (
+            <section className="mt-6 rounded-xl border border-emerald-500/30 bg-gradient-to-r from-emerald-900/30 via-tech-700/60 to-tech-800/50 p-5 sm:p-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div className="flex items-start gap-3">
+                  <Zap className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="text-sm font-semibold text-white flex items-center gap-2">
+                      Best Deal: Try {tool.name}
+                      {aff.badge && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                          <Sparkles className="w-2.5 h-2.5" />
+                          {aff.badge}
+                        </span>
+                      )}
+                    </h3>
+                    <p className="text-xs text-tech-200 mt-1">
+                      {aff.commission_note}
+                    </p>
+                    <p className="text-[10px] text-emerald-400/80 mt-1 flex items-center gap-1">
+                      <Zap className="w-3 h-3" />
+                      Affiliate link — we may earn a commission at no extra cost to you
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href={aff.referral_url}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium transition whitespace-nowrap shrink-0"
+                >
+                  <Zap className="w-4 h-4" />
+                  {aff.cta_label}
+                </a>
+              </div>
+            </section>
+          );
+        })()}
 
         {/* Ranking Position Badge */}
         {(() => {
@@ -179,6 +223,15 @@ export default function ToolPage({ params }: ToolPageProps) {
             </section>
           );
         })()}
+
+        {/* Related Blog Posts */}
+        <ToolRelatedBlogPosts
+          toolName={tool.name}
+          toolSlug={tool.slug}
+          toolUseCases={tool.use_cases}
+          toolCategory={tool.category}
+          limit={4}
+        />
       </div>
     </>
   );

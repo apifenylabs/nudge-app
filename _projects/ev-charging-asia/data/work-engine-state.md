@@ -61,3 +61,22 @@
 ### Cleanup
 - Removed stale file: `japan-tokyo-osaka-chubu-region-ev-road-trip.json` (leftover from prior attempt with slightly different slug)
 - Fixed: Thailand JSON had unescaped newlines in content string — fixed via Python script that properly encoded the content value
+
+---
+
+## Task: Fix Hong Kong Booking.com city code (May 27, 2026)
+
+### Status: ✅ Complete
+
+### What was done
+1. **Investigated city code discrepancy**: `affiliate-links.ts` had `hotel-hong-kong` using `city=4002244`, but the blog post (`generated-blog-data.ts` — Hong Kong hotel ranking) uses `city=4000101` in all Booking.com URLs.
+2. **Verified both IDs are valid**: Both `4000101` and `4002244` are valid Booking.com destination IDs that resolve correctly. However, `4000101` is the code used across all 10+ hotel links in the live blog post.
+3. **Updated `affiliate-links.ts`**: Changed `hotel-hong-kong` URL from `city=4002244` to `city=4000101` — aligning with the blog post and ensuring consistency.
+4. **Build verified**: `npm run build` completed successfully with no errors.
+
+### Files changed
+- `lib/affiliate-links.ts` — `hotel-hong-kong` entry: `city=4002244` → `city=4000101`
+
+### Notes
+- `affiliate-links.ts` already had a `hotel-hong-kong` entry (no new entry needed)
+- The blog post uses `city=4000101&nflt=ht_id=204` (raw `=`), while the affiliate link uses `city=4000101&nflt=ht_id%3D204` (URL-encoded `=`) — both work correctly for Booking.com

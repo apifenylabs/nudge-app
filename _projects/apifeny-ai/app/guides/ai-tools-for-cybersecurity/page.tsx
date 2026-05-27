@@ -53,6 +53,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -322,6 +323,18 @@ For APAC, AI cloud security must cover Alibaba Cloud alongside AWS, Azure, and G
       { name: 'Gemini', slug: 'gemini', note: 'Google Cloud security integration and compliance maps' },
     ],
   },
+];
+
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI cybersecurity tool for small businesses?",
+    "answer": "For small businesses, CrowdStrike Falcon offers AI-powered endpoint protection, while Darktrace uses AI for network threat detection. For Asian small businesses, AI-enhanced antivirus solutions like Bitdefender and Norton with AI threat detection provide affordable baseline protection starting at $30-60/year."
+  },
+  {
+    "question": "Can AI prevent cyber attacks?",
+    "answer": "AI excels at detecting patterns that indicate attacks \u2014 unusual login locations, abnormal data access, phishing email characteristics. AI security tools can block 95%+ of common attacks automatically. However, zero-day exploits and sophisticated targeted attacks still require human security expertise to address."
+  }
 ];
 
 export default function AIToolsForCybersecurityGuide() {
@@ -635,6 +648,8 @@ export default function AIToolsForCybersecurityGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

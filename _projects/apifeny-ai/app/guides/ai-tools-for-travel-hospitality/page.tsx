@@ -11,6 +11,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -376,6 +377,17 @@ const toolsSections = [
   { number: 10, id: 'ai-travel-payments', label: 'Payments & Fintech' },
 ];
 
+const guideFaqs = [
+  {
+    "question": "What is the best AI travel planning tool?",
+    "answer": "AI travel planners like GuideGeek and Trip Planner AI create personalized itineraries. ChatGPT and Gemini research flights, hotels, and activities. For Asian travel, tools that understand local transport and visa requirements are most practical."
+  },
+  {
+    "question": "Can AI help with hotel pricing optimization?",
+    "answer": "Yes \u2014 AI revenue management tools analyze competitor pricing, seasonal demand, and local events. For Asian hospitality, tools understanding Chinese New Year, Songkran, and Golden Week surges are most effective."
+  }
+];
+
 export default function AIToolsForTravelHospitalityPage() {
   const breadcrumbItems = [
     { name: 'Home', item: '/' },
@@ -699,7 +711,9 @@ export default function AIToolsForTravelHospitalityPage() {
             </div>
           </div>
         </section>
-      </article>
+            {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </article>
     </>
   );
 }

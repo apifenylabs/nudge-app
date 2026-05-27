@@ -1,14 +1,17 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import {
-  Cpu, CircuitBoard, Radio, Cog, Rocket, ChevronRight,
-  Zap, HardDrive, Wifi, Terminal, Bot, Monitor, Sparkles
+  Cpu, CircuitBoard, Radio, Cog, Rocket, ChevronRight, Activity,
+  Zap, HardDrive, Wifi, Terminal, Bot, Monitor, Sparkles, Crown, Star
 } from 'lucide-react';
+import Link from 'next/link';
+import { useLevelProgression } from '@/lib/swarm/use-level-progression';
+import { getGodTierStatus, getVisualTier, getAbilitiesForLevel } from '@/lib/swarm/god-tier-engine';
 
 // ─-- Platform Definitions --────────────────────────────────────────────
 
@@ -158,6 +161,33 @@ function RoboticsStat({ icon, end, label, color }: { icon: React.ReactNode; end:
 
 export default function RoboticsPage() {
   const [hoveredPlatform, setHoveredPlatform] = useState<string | null>(null);
+  const [level, setLevel] = useState(1);
+  const [xp, setXp] = useState(0);
+  const [showControls, setShowControls] = useState(false);
+
+  const [{ showGodModal, hasGodTierAura }, progressionActions] = useLevelProgression(level);
+
+  // Sync level into the hook
+  useEffect(() => {
+    progressionActions.setLevel(level);
+  }, [level, progressionActions]);
+
+  const handleLevelUp = useCallback(() => {
+    setLevel((prev) => Math.min(prev + 1, 55));
+  }, []);
+
+  const handleLevelDown = useCallback(() => {
+    setLevel((prev) => Math.max(prev - 1, 1));
+  }, []);
+
+  const handleAddXp = useCallback(() => {
+    setXp((prev) => progressionActions.addXp(25, prev, 100));
+  }, [progressionActions]);
+
+  const handleResetLevel = useCallback(() => {
+    setLevel(1);
+    setXp(0);
+  }, []);
 
   return (
     <div className="min-h-screen titan-gradient relative overflow-hidden">
@@ -175,6 +205,69 @@ export default function RoboticsPage() {
       {/* -- Particles -- */}
       <ParticleField />
 
+      {/* -- God-Tier Modal -- */}
+      {showGodModal && (
+        <motion.div
+          className="fixed inset-0 z-50 flex items-center justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(20, 184, 166, 0.15) 0%, rgba(15, 23, 42, 0.85) 70%)',
+            backdropFilter: 'blur(12px)',
+          }}
+        >
+          <motion.div
+            className="relative max-w-md mx-4 p-8 rounded-2xl border text-center overflow-hidden"
+            style={{
+              background: 'linear-gradient(135deg, rgba(20, 184, 166, 0.12), rgba(245, 158, 11, 0.08), rgba(124, 58, 237, 0.06))',
+              borderColor: 'rgba(20, 184, 166, 0.3)',
+            }}
+            initial={{ scale: 0.85, y: 40 }}
+            animate={{ scale: 1, y: 0 }}
+            transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+          >
+            {/* Animated crown */}
+            <motion.div
+              className="text-6xl mb-4"
+              animate={{ scale: [1, 1.15, 1], rotate: [0, -5, 5, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+            >
+              👑
+            </motion.div>
+
+            <h2 className="text-2xl font-bold titan-text-gradient mb-2">God-Tier Unlocked!</h2>
+            <p className="text-sm text-titan-muted/80 mb-4 font-mono">
+              Your agent has reached Level {level} and awakened new abilities.
+            </p>
+
+            {/* Abilities preview */}
+            <div className="text-left mb-6 space-y-2">
+              {getAbilitiesForLevel(level).filter(a => a.type === 'visual' || a.type === 'passive').slice(0, 4).map((ability) => (
+                <div key={ability.id} className="flex items-center gap-2 text-xs font-mono">
+                  <span className="text-lg">{ability.icon}</span>
+                  <div>
+                    <p className="text-titan-text/90 font-semibold">{ability.name}</p>
+                    <p className="text-titan-muted/60 text-[10px]">{ability.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <button
+              onClick={() => progressionActions.dismissGodModal()}
+              className="px-8 py-2.5 rounded-xl text-xs font-semibold shadow-xl"
+              style={{
+                background: 'linear-gradient(135deg, #14B8A6, #F59E0B)',
+                color: '#0A0E17',
+              }}
+            >
+              ✦ Continue
+            </button>
+          </motion.div>
+        </motion.div>
+      )}
+
       <div className="relative z-10">
         {/* -- Title Bar -- */}
         <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-8 pb-2">
@@ -184,26 +277,103 @@ export default function RoboticsPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="w-10 h-10 rounded-xl bg-titan-teal/10 border border-titan-teal/30 flex items-center justify-center">
-              <Bot className="h-5 w-5 text-titan-teal" />
-            </div>
-            <div>
-              <h1 className="text-lg font-bold titan-text-gradient tracking-tight">Robotics</h1>
+            <motion.div
+              className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+                hasGodTierAura
+                  ? 'border-2 animate-pulse'
+                  : 'bg-titan-teal/10 border border-titan-teal/30'
+              }`}
+              style={hasGodTierAura ? { borderColor: '#F59E0B', background: 'rgba(245, 158, 11, 0.15)' } : {}}
+              animate={hasGodTierAura ? { boxShadow: ['0 0 10px rgba(245,158,11,0.3)', '0 0 20px rgba(245,158,11,0.5)', '0 0 10px rgba(245,158,11,0.3)'] } : {}}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              {hasGodTierAura ? (
+                <Crown className="h-5 w-5 text-titan-golden" />
+              ) : (
+                <Bot className="h-5 w-5 text-titan-teal" />
+              )}
+            </motion.div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2">
+                <h1 className="text-lg font-bold titan-text-gradient tracking-tight">Robotics</h1>
+                {/* Level badge */}
+                <motion.div
+                  className="flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-mono"
+                  style={{
+                    background: hasGodTierAura
+                      ? 'linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(20, 184, 166, 0.15))'
+                      : 'rgba(20, 184, 166, 0.1)',
+                    border: `1px solid ${hasGodTierAura ? 'rgba(245, 158, 11, 0.4)' : 'rgba(20, 184, 166, 0.2)'}`,
+                    color: hasGodTierAura ? '#F59E0B' : '#14B8A6',
+                  }}
+                  animate={hasGodTierAura ? { scale: [1, 1.05, 1] } : {}}
+                  transition={{ duration: 3, repeat: Infinity }}
+                >
+                  <Star className="h-2.5 w-2.5" />
+                  <span>Lv.{level}</span>
+                  {hasGodTierAura && <span className="text-[8px]">✦ GOD</span>}
+                </motion.div>
+              </div>
               <p className="text-xs font-mono text-titan-muted">Deploy your Titan agents to any robot</p>
             </div>
           </motion.div>
 
-          {/* -- Navigation hint -- */}
-          <motion.div
-            className="flex items-center gap-2 mb-6 text-[10px] font-mono text-titan-muted/50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            <span className="hover:text-titan-teal/80 cursor-pointer transition-colors">Dashboard</span>
-            <ChevronRight className="h-2.5 w-2.5" />
-            <span className="text-titan-teal/80">Robotics</span>
-          </motion.div>
+          {/* -- Navigation hint + Level Controls -- */}
+          <div className="flex items-center justify-between mb-6">
+            <motion.div
+              className="flex items-center gap-2 text-[10px] font-mono text-titan-muted/50"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              <span className="hover:text-titan-teal/80 cursor-pointer transition-colors">Dashboard</span>
+              <ChevronRight className="h-2.5 w-2.5" />
+              <span className="text-titan-teal/80">Robotics</span>
+            </motion.div>
+
+            {/* Level controls (collapsible for demo) */}
+            <motion.div
+              className="flex items-center gap-1"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              <button
+                onClick={() => setShowControls((p) => !p)}
+                className="text-[10px] font-mono text-titan-muted/40 hover:text-titan-muted/70 px-2 py-1 rounded border border-titan-border/20"
+              >
+                {showControls ? 'Hide' : 'Dev'}
+              </button>
+              {showControls && (
+                <>
+                  <button
+                    onClick={handleLevelDown}
+                    className="text-[10px] font-mono px-1.5 py-1 rounded border border-titan-border/20 text-titan-muted/50 hover:text-titan-teal/80"
+                  >
+                    -Lv
+                  </button>
+                  <button
+                    onClick={handleLevelUp}
+                    className="text-[10px] font-mono px-1.5 py-1 rounded border border-titan-border/20 text-titan-muted/50 hover:text-titan-teal/80"
+                  >
+                    +Lv
+                  </button>
+                  <button
+                    onClick={handleAddXp}
+                    className="text-[10px] font-mono px-1.5 py-1 rounded border border-titan-border/20 text-titan-muted/50 hover:text-titan-golden/80"
+                  >
+                    +XP
+                  </button>
+                  <button
+                    onClick={handleResetLevel}
+                    className="text-[10px] font-mono px-1.5 py-1 rounded border border-titan-border/20 text-red-400/50 hover:text-red-400/80"
+                  >
+                    Reset
+                  </button>
+                </>
+              )}
+            </motion.div>
+          </div>
         </div>
 
         {/* -- Hero Section -- */}
@@ -259,14 +429,27 @@ export default function RoboticsPage() {
                 <ChevronRight className="h-3.5 w-3.5" />
               </motion.button>
 
-              <motion.button
-                className="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-mono text-titan-muted/80 border border-titan-border/40 inline-flex items-center gap-2 hover:bg-titan-card/50 transition-colors"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                <Terminal className="h-3.5 w-3.5" />
-                View API Docs
-              </motion.button>
+              <Link href="/robotics/dashboard">
+                <motion.button
+                  className="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-mono text-titan-muted/80 border border-titan-border/40 inline-flex items-center gap-2 hover:bg-titan-card/50 transition-colors"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  <Activity className="h-3.5 w-3.5" />
+                  View Dashboard
+                </motion.button>
+              </Link>
+
+              <Link href="/robotics/[platform]">
+                <motion.button
+                  className="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-mono text-titan-muted/80 border border-titan-border/40 inline-flex items-center gap-2 hover:bg-titan-card/50 transition-colors"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  <Terminal className="h-3.5 w-3.5" />
+                  Setup Guides
+                </motion.button>
+              </Link>
             </motion.div>
 
             {/* Quick features row below CTA */}
@@ -469,6 +652,7 @@ export default function RoboticsPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <Link href="/robotics/dashboard">
                 <motion.button
                   className="px-7 py-2.5 rounded-xl text-xs sm:text-sm font-semibold inline-flex items-center gap-2 shadow-2xl"
                   style={{
@@ -478,19 +662,22 @@ export default function RoboticsPage() {
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  <HardDrive className="h-3.5 w-3.5" />
-                  Connect Hardware
+                  <Activity className="h-3.5 w-3.5" />
+                  Open Dashboard
                   <ChevronRight className="h-3.5 w-3.5" />
                 </motion.button>
+              </Link>
 
+              <Link href="/robotics">
                 <motion.button
                   className="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-mono text-titan-muted/70 border border-titan-border/40 inline-flex items-center gap-2 hover:bg-titan-card/30 transition-colors"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                 >
                   <Sparkles className="h-3.5 w-3.5" />
-                  Try Simulated Device
+                  Explore Platforms
                 </motion.button>
+              </Link>
               </div>
 
               {/* Trust badge */}

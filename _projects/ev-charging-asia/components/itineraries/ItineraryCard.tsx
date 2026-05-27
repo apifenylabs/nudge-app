@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Route, Clock, BatteryCharging, MapPin, ChevronRight, Users, Crown } from 'lucide-react';
+import { Route, Clock, BatteryCharging, MapPin, ChevronRight, Users, Crown, ArrowUpDown } from 'lucide-react';
 import type { Itinerary } from '@/data/itineraries';
 
 interface Props {
@@ -95,8 +95,18 @@ export default function ItineraryCard({ itinerary }: Props) {
         </div>
 
         {/* CTA */}
-        <div className="flex items-center gap-2 text-sm font-medium text-sky-600 group-hover:text-sky-700">
-          View itinerary <ChevronRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 text-sm font-medium text-sky-600 group-hover:text-sky-700">
+            View itinerary <ChevronRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+          </div>
+          <Link
+            href={`/compare?route=${itinerary.slug}`}
+            onClick={(e) => e.stopPropagation()}
+            className="inline-flex items-center gap-1 text-xs text-gray-400 hover:text-sky-600 hover:underline transition-colors shrink-0"
+          >
+            <ArrowUpDown size={12} />
+            Compare
+          </Link>
         </div>
       </div>
     </Link>

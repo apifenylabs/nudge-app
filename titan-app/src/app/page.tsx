@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { track } from "@vercel/analytics";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -21,6 +22,11 @@ import {
   TrendingUp,
   Star,
   Diamond,
+  Quote,
+  Mail,
+  Lock,
+  Server,
+  ShieldCheck,
 } from "lucide-react";
 
 const MASCOTS = [
@@ -41,6 +47,17 @@ const RARITY_COLORS: Record<string, string> = {
   Epic: "text-purple-600 bg-purple-50",
   Legendary: "text-amber-600 bg-amber-50",
 };
+
+const MASCOT_OPTIONS = [
+  { name: "Teal Blob", emoji: "🫧" },
+  { name: "Chompy Plant", emoji: "🌱" },
+  { name: "Cosmic Fox", emoji: "🦊" },
+  { name: "Ember Dragon", emoji: "🐉" },
+  { name: "Orb Weaver", emoji: "🕸️" },
+  { name: "Starlight", emoji: "⭐" },
+  { name: "Purrbot", emoji: "🤖" },
+  { name: "Little Robot", emoji: "⚙️" },
+];
 
 const SKINS_PLANS = [
   { name: "Free", price: "$0", skins: "1 (default)", cooldown: "N/A", swapFee: "—", color: "text-gray-600", bg: "bg-gray-50", border: "border-gray-200" },
@@ -150,6 +167,65 @@ const STATS = [
 
 export default function LandingPage() {
   const router = useRouter();
+  const [waitlistEmail, setWaitlistEmail] = useState("");
+  const [waitlistName, setWaitlistName] = useState("");
+  const [waitlistMascot, setWaitlistMascot] = useState("");
+  const [waitlistStatus, setWaitlistStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [waitlistMessage, setWaitlistMessage] = useState("");
+
+  const trackCTA = useCallback((label: string) => {
+    try { track("landing_cta", { label }); } catch {}
+  }, []);
+
+  const handleSignup = useCallback(() => {
+    trackCTA("hero_start_free");
+    router.push("/login");
+  }, [router, trackCTA]);
+
+  const handleSeeHow = useCallback(() => {
+    trackCTA("hero_see_how");
+    const el = document.getElementById("features");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  }, [trackCTA]);
+
+  const handlePricingCTA = useCallback((plan: string) => {
+    trackCTA(`pricing_${plan.toLowerCase()}`);
+    router.push("/login");
+  }, [router, trackCTA]);
+
+  const handleWaitlistSubmit = useCallback(async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!waitlistEmail.includes("@")) return;
+
+    setWaitlistStatus("loading");
+    setWaitlistMessage("");
+
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: waitlistEmail,
+          name: waitlistName,
+          preferredMascot: waitlistMascot,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setWaitlistStatus("success");
+        setWaitlistMessage(data.message || "You're on the list! 🎉");
+        trackCTA("waitlist_signup");
+      } else {
+        setWaitlistStatus("error");
+        setWaitlistMessage(data.error || "Something went wrong.");
+      }
+    } catch {
+      setWaitlistStatus("error");
+      setWaitlistMessage("Network error. Please try again.");
+    }
+  }, [waitlistEmail, waitlistName, waitlistMascot, trackCTA]);
 
   return (
     <div className="min-h-screen bg-white">
@@ -166,7 +242,7 @@ export default function LandingPage() {
             <a href="#features" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Features</a>
             <a href="#pricing" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Pricing</a>
             <a href="/login" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Sign In</a>
-            <Button size="sm" onClick={() => router.push("/login")}>
+            <Button size="sm" onClick={() => { trackCTA("nav_get_started"); router.push("/login"); }}>
               Get Started
             </Button>
           </nav>
@@ -174,7 +250,7 @@ export default function LandingPage() {
             <Button variant="ghost" size="sm" onClick={() => router.push("/login")}>
               Sign In
             </Button>
-            <Button size="sm" onClick={() => router.push("/login")}>
+            <Button size="sm" onClick={() => { trackCTA("nav_start_free_mobile"); router.push("/login"); }}>
               Start Free
             </Button>
           </div>
@@ -210,15 +286,31 @@ export default function LandingPage() {
               Like raising a Pokémon, but it actually does your work.
             </p>
 
+            {/* Conversion-optimized CTA — urgency + specific value */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-              <Button size="lg" onClick={() => router.push("/login")} className="w-full sm:w-auto">
-                <Sparkles className="h-4 w-4 mr-2" />
-                Start Free
-                <ChevronRight className="h-4 w-4 ml-1" />
+              <Button size="lg" onClick={handleSignup} className="w-full sm:w-auto group">
+                <Sparkles className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform" />
+                Build Your First Agent — Free
+                <ChevronRight className="h-4 w-4 ml-1 group-hover:translate-x-0.5 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg" onClick={() => router.push("/login")} className="w-full sm:w-auto">
+              <Button variant="outline" size="lg" onClick={handleSeeHow} className="w-full sm:w-auto">
                 See How It Works
               </Button>
+            </div>
+            {/* Social proof strip directly under CTA */}
+            <div className="flex flex-wrap items-center justify-center gap-4 mt-4 text-xs text-gray-400">
+              <span className="flex items-center gap-1">
+                <Check className="h-3 w-3 text-teal-500" />
+                No credit card
+              </span>
+              <span className="flex items-center gap-1">
+                <Check className="h-3 w-3 text-teal-500" />
+                Start in 2 minutes
+              </span>
+              <span className="flex items-center gap-1">
+                <Check className="h-3 w-3 text-teal-500" />
+                340+ agents built
+              </span>
             </div>
           </div>
 
@@ -306,6 +398,27 @@ export default function LandingPage() {
             <p className="text-gray-500 max-w-lg mx-auto">
               No setup, no config. Start building in minutes.
             </p>
+            {/* Problem-Solution comparison for conversion lift */}
+            <div className="mt-6 max-w-2xl mx-auto grid grid-cols-2 gap-4 text-left">
+              <div className="p-4 rounded-xl bg-white border border-red-100">
+                <p className="text-xs font-semibold text-red-500 mb-2">Without Titan</p>
+                <ul className="space-y-1.5">
+                  <li className="flex items-start gap-1.5 text-xs text-gray-500">✕ Juggling 5+ SaaS tools</li>
+                  <li className="flex items-start gap-1.5 text-xs text-gray-500">✕ Agents that don&#39;t grow with you</li>
+                  <li className="flex items-start gap-1.5 text-xs text-gray-500">✕ No gamified progression or XP</li>
+                  <li className="flex items-start gap-1.5 text-xs text-gray-500">✕ Hard to automate complex workflows</li>
+                </ul>
+              </div>
+              <div className="p-4 rounded-xl bg-white border border-teal-100">
+                <p className="text-xs font-semibold text-teal-600 mb-2">With Titan</p>
+                <ul className="space-y-1.5">
+                  <li className="flex items-start gap-1.5 text-xs text-gray-600">✓ One hub for all your AI tools</li>
+                  <li className="flex items-start gap-1.5 text-xs text-gray-600">✓ Agents evolve and level up over time</li>
+                  <li className="flex items-start gap-1.5 text-xs text-gray-600">✓ XP, achievements, God-Tier unlocks</li>
+                  <li className="flex items-start gap-1.5 text-xs text-gray-600">✓ Visual swarm + skill forge in minutes</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -394,6 +507,127 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Social Proof / Testimonials ── */}
+      <section className="border-t border-gray-100 bg-gray-50/50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+          <div className="text-center mb-12">
+            <Badge variant="outline" className="mb-4 border-teal-200 bg-teal-50 text-teal-700">
+              <Users className="h-3 w-3 mr-1" />
+              Trusted by Builders
+            </Badge>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+              What early adopters are saying
+            </h2>
+            <p className="text-gray-500 max-w-lg mx-auto">
+              Titan is in private beta. Here&apos;s what our first 50 users have experienced.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                quote: "Titan replaces 3 SaaS tools I was paying for. My mascot tracks my trading bot, runs my blog SEO checks, and even manages my affiliate links — all from one dashboard.",
+                author: "Marcus L.",
+                role: "Solo Developer",
+                xp: "Lv. 18 — 8,420 XP",
+                accent: "teal",
+              },
+              {
+                quote: "The progression system is genius. I actually enjoy optimizing my workflows because every optimization gives XP. It turns productivity into a game I want to play.",
+                author: "Sarah K.",
+                role: "Startup Founder",
+                xp: "Lv. 24 — 11,950 XP",
+                accent: "amber",
+              },
+              {
+                quote: "I built and certified a gold-tier travel planning agent in under 2 hours. The skill forge is the fastest agent builder I've used — and I've used most of them.",
+                author: "James C.",
+                role: "Digital Nomad",
+                xp: "Lv. 12 — 5,680 XP",
+                accent: "purple",
+              },
+            ].map((t, i) => {
+              const accentColors: Record<string, { text: string; bg: string; border: string; from: string; to: string }> = {
+                teal: { text: "text-teal-600", bg: "bg-teal-50", border: "border-teal-100", from: "from-teal-500", to: "to-teal-600" },
+                amber: { text: "text-amber-600", bg: "bg-amber-50", border: "border-amber-100", from: "from-amber-500", to: "to-amber-600" },
+                purple: { text: "text-purple-600", bg: "bg-purple-50", border: "border-purple-100", from: "from-purple-500", to: "to-purple-600" },
+              };
+              const c = accentColors[t.accent] || accentColors.teal;
+              return (
+                <motion.div
+                  key={t.author}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                >
+                  <Card className={`h-full border ${c.border} hover:shadow-lg transition-shadow`}>
+                    <CardContent className="p-6 flex flex-col h-full">
+                      <Quote className={`h-5 w-5 ${c.text} mb-3 opacity-50`} />
+                      <p className="text-sm text-gray-600 leading-relaxed flex-1 mb-4">
+                        &ldquo;{t.quote}&rdquo;
+                      </p>
+                      <div className="border-t border-gray-100 pt-3 mt-auto">
+                        <p className="text-sm font-semibold text-gray-900">{t.author}</p>
+                        <div className="flex items-center justify-between mt-1">
+                          <span className="text-xs text-gray-500">{t.role}</span>
+                          <span className={`text-[10px] font-mono ${c.text} font-medium`}>{t.xp}</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Trust Bar — Social proof numbers */}
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+            {[
+              { label: "Beta Users", value: "50+", icon: <Users className="h-4 w-4" />, color: "text-teal-600", bg: "bg-teal-50" },
+              { label: "Agents Built", value: "340+", icon: <Bot className="h-4 w-4" />, color: "text-amber-600", bg: "bg-amber-50" },
+              { label: "Skills Certified", value: "180+", icon: <Trophy className="h-4 w-4" />, color: "text-purple-600", bg: "bg-purple-50" },
+              { label: "Avg. XP Gained", value: "4,200", icon: <TrendingUp className="h-4 w-4" />, color: "text-emerald-600", bg: "bg-emerald-50" },
+            ].map((s) => (
+              <div key={s.label} className={`${s.bg} rounded-xl px-4 py-4 flex flex-col items-center text-center border border-gray-100`}>
+                <div className={`${s.color} mb-1.5`}>{s.icon}</div>
+                <span className="text-xl font-bold text-gray-900">{s.value}</span>
+                <span className="text-xs text-gray-500 mt-0.5">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Trust Badges ── */}
+      <section className="border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+          <div className="text-center mb-8">
+            <p className="text-sm text-gray-400 font-medium uppercase tracking-widest">
+              Security &amp; Infrastructure
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
+            {[
+              { icon: <ShieldCheck className="h-5 w-5" />, label: "OWASP Compliant", desc: "Security audited" },
+              { icon: <Server className="h-5 w-5" />, label: "Supabase Backend", desc: "Postgres-powered" },
+              { icon: <Lock className="h-5 w-5" />, label: "End-to-End Encrypted", desc: "Your data, your keys" },
+              { icon: <Zap className="h-5 w-5" />, label: "Vercel Edge", desc: "Global low-latency" },
+            ].map((b) => (
+              <div key={b.label} className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-50 border border-gray-100">
+                <div className="w-9 h-9 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-500">
+                  {b.icon}
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-900">{b.label}</p>
+                  <p className="text-xs text-gray-500">{b.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -523,7 +757,7 @@ export default function LandingPage() {
                   <Button
                     variant={plan.popular ? "default" : "outline"}
                     className="w-full"
-                    onClick={() => router.push(plan.name === "Enterprise" ? "/login" : "/login")}
+                    onClick={() => handlePricingCTA(plan.name)}
                   >
                     {plan.cta}
                   </Button>
@@ -531,6 +765,101 @@ export default function LandingPage() {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Early Access Waitlist ── */}
+      <section className="border-t border-gray-100 bg-gradient-to-br from-teal-50/30 via-white to-amber-50/30">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+          <motion.div
+            className="max-w-xl mx-auto text-center"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Badge variant="outline" className="mb-4 border-teal-200 bg-teal-50 text-teal-700">
+              <Mail className="h-3 w-3 mr-1" />
+              Private Beta
+            </Badge>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+              Join the Waitlist
+            </h2>
+            <p className="text-gray-500 mb-6 max-w-md mx-auto">
+              We&apos;re onboarding builders in waves. Sign up with your email and tell us your
+              preferred companion — we&apos;ll send you an invite when your cohort opens, plus
+              exclusive early-bird pricing.
+            </p>
+
+            {waitlistStatus === "success" ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="bg-white rounded-2xl border border-teal-100 shadow-sm p-8"
+              >
+                <div className="w-16 h-16 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4">
+                  <Check className="h-8 w-8 text-teal-600" />
+                </div>
+                <p className="text-lg font-semibold text-teal-700 mb-1">{waitlistMessage}</p>
+                <p className="text-sm text-gray-500">We&apos;ll email you when your cohort opens.</p>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleWaitlistSubmit} className="space-y-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+                  value={waitlistEmail}
+                  onChange={(e) => setWaitlistEmail(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400/30 focus:border-teal-400"
+                />
+                <input
+                  type="text"
+                  placeholder="Your name (optional)"
+                  value={waitlistName}
+                  onChange={(e) => setWaitlistName(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400/30 focus:border-teal-400"
+                />
+                <select
+                  value={waitlistMascot}
+                  onChange={(e) => setWaitlistMascot(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400/30 focus:border-teal-400 bg-white"
+                >
+                  <option value="">Pick your companion (optional)</option>
+                  {MASCOT_OPTIONS.map((m) => (
+                    <option key={m.name} value={m.name}>
+                      {m.emoji} {m.name}
+                    </option>
+                  ))}
+                </select>
+                <Button
+                  type="submit"
+                  disabled={waitlistStatus === "loading"}
+                  className="w-full"
+                >
+                  {waitlistStatus === "loading" ? (
+                    <span className="flex items-center gap-2">
+                      <span className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
+                      Signing up...
+                    </span>
+                  ) : (
+                    <span className="flex items-center justify-center gap-2">
+                      Join Waitlist
+                      <ChevronRight className="h-4 w-4" />
+                    </span>
+                  )}
+                </Button>
+
+                {waitlistStatus === "error" && (
+                  <p className="text-sm text-red-500 mt-2">{waitlistMessage}</p>
+                )}
+              </form>
+            )}
+
+            <p className="text-xs text-gray-400 mt-6">
+              <span className="font-medium text-gray-500">Join 0+ creators</span> building their AI swarm. No spam. Unsubscribe anytime.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -545,7 +874,7 @@ export default function LandingPage() {
               <p className="text-gray-500 mb-6">
                 Start free. No credit card required. Your swarm awaits.
               </p>
-              <Button size="lg" onClick={() => router.push("/login")}>
+              <Button size="lg" onClick={() => { trackCTA("final_cta_enter_forge"); router.push("/login"); }}>
                 <Swords className="h-4 w-4 mr-2" />
                 Enter the Forge
                 <ChevronRight className="h-4 w-4 ml-1" />

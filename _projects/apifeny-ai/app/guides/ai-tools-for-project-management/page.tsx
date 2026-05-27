@@ -46,6 +46,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -309,6 +310,14 @@ For agencies and consultancies in Singapore, Manila, and Ho Chi Minh City managi
       { name: 'Claude', slug: 'claude', note: 'Deep analysis of time allocation and productivity patterns' },
     ],
   },
+];
+
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI project management tool?",
+    "answer": "Motion uses AI to auto-schedule tasks based on priorities and deadlines. Monday.com offers AI-powered workflow automation and risk detection. Asana Intelligence generates project timelines and identifies bottlenecks. For Asian teams, Monday.com supports Bahasa Melayu, Chinese, Japanese, and Korean interfaces."
+  }
 ];
 
 export default function AIToolsForProjectManagementGuide() {
@@ -626,6 +635,8 @@ export default function AIToolsForProjectManagementGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

@@ -28,6 +28,8 @@ import FeaturedPlaybooks from '@/components/FeaturedPlaybooks';
 import FeaturedCategories from '@/components/FeaturedCategories';
 import FeaturedCollections from '@/components/FeaturedCollections';
 import FeaturedRankings from '@/components/FeaturedRankings';
+import BlogCategoryLinks from '@/components/BlogCategoryLinks';
+import LandingPageCrossLinks from '@/components/LandingPageCrossLinks';
 import { toolsData } from '@/lib/data';
 import { playbooks } from '@/lib/playbooks';
 import { collections } from '@/lib/collections';
@@ -902,6 +904,15 @@ export default function BestAIToolsPage() {
           </div>
         </div>
       </section>
+
+      {/* ───── BLOG CROSS-LINKS ───── */}
+      <BlogCategoryLinks
+        slugs={['ai-tools', 'comparisons', 'productivity', 'solopreneur']}
+        heading="Explore In-Depth AI Tool Guides"
+      />
+
+      {/* ───── LANDING PAGE CROSS-LINKS ───── */}
+      <LandingPageCrossLinks currentSlug="best-ai-tools" />
 
       {/* ───── FINAL CTA ───── */}
       <section className="relative overflow-hidden border-t border-tech-500/20">

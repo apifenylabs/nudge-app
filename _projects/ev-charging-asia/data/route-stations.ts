@@ -88,20 +88,25 @@ export function getLuxuryStations(stations: Station[], routeSlug: string): Stati
   });
 }
 
-// City mappings for each route slug
+// City mappings for each route slug (full-slug format used by app/routes/[slug])
 const routeCityMap: Record<string, string[]> = {
   'bangkok-to-phuket-road-trip': ['Bangkok', 'Surat Thani', 'Phuket'],
   'bangkok-to-chiang-mai-road-trip': ['Bangkok', 'Chiang Mai'],
   'singapore-to-kuala-lumpur-road-trip': ['Singapore', 'Johor Bahru', 'Melaka', 'Kuala Lumpur'],
   'bali-ev-road-trip-loop': ['Denpasar'],
+  'bali-family-ev-road-trip-loop': ['Denpasar', 'Ubud', 'Uluwatu'],
   'hong-kong-to-macau-road-trip': ['Hong Kong', 'Zhuhai', 'Macau'],
   'hanoi-to-ha-long-bay-road-trip': ['Hanoi', 'Haiphong'],
   'osaka-to-tokyo-road-trip': ['Osaka', 'Kyoto', 'Nagoya', 'Tokyo'],
   'kuala-lumpur-to-penang-road-trip': ['Kuala Lumpur', 'Ipoh', 'George Town'],
+  'kuala-lumpur-to-penang-family-ev-road-trip': ['Kuala Lumpur', 'Ipoh', 'George Town'],
+  'singapore-to-kuala-lumpur-family-ev-road-trip': ['Singapore', 'Johor Bahru', 'Melaka', 'Kuala Lumpur'],
   'mumbai-to-pune-road-trip': ['Mumbai', 'Pune'],
   'tokyo-to-hakone-fuji-road-trip': ['Tokyo', 'Hakone'],
   'delhi-to-jaipur-agra-road-trip': ['Delhi', 'Jaipur', 'Agra'],
   'chiang-mai-to-pai-mae-hong-son-road-trip': ['Chiang Mai', 'Pai'],
+  'seoul-to-busan-road-trip': ['Seoul', 'Sejong', 'Gyeongju', 'Busan'],
+  'manila-to-baguio-road-trip': ['Manila', 'Pampanga', 'Tarlac', 'Baguio'],
 };
 
 // Also map the shorter slug format used in app/itinerary
@@ -109,15 +114,20 @@ const shortRouteSlugMap: Record<string, string[]> = {
   'bangkok-phuket': ['Bangkok', 'Surat Thani', 'Phuket'],
   'bangkok-chiang-mai': ['Bangkok', 'Chiang Mai'],
   'singapore-kuala-lumpur': ['Singapore', 'Johor Bahru', 'Melaka', 'Kuala Lumpur'],
+  'singapore-kuala-lumpur-family': ['Singapore', 'Johor Bahru', 'Melaka', 'Kuala Lumpur'],
   'bali-loop': ['Denpasar'],
+  'bali-family': ['Denpasar', 'Ubud', 'Uluwatu'],
   'hong-kong-macau': ['Hong Kong', 'Zhuhai', 'Macau'],
   'hanoi-ha-long': ['Hanoi', 'Haiphong'],
   'osaka-tokyo': ['Osaka', 'Kyoto', 'Nagoya', 'Tokyo'],
   'kuala-lumpur-penang': ['Kuala Lumpur', 'Ipoh', 'George Town'],
+  'kuala-lumpur-penang-family': ['Kuala Lumpur', 'Ipoh', 'George Town'],
   'mumbai-pune': ['Mumbai', 'Pune'],
   'tokyo-hakone-fuji': ['Tokyo', 'Hakone'],
   'delhi-jaipur-agra': ['Delhi', 'Jaipur', 'Agra'],
   'chiang-mai-pai-mae-hong-son': ['Chiang Mai', 'Pai'],
+  'seoul-busan': ['Seoul', 'Sejong', 'Gyeongju', 'Busan'],
+  'manila-baguio': ['Manila', 'Pampanga', 'Tarlac', 'Baguio'],
 };
 
 export function getRouteCities(routeSlug: string): string[] {

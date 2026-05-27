@@ -26,6 +26,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -269,6 +270,18 @@ Expected results by Day 30: 15–25 hours saved per week, 30% faster customer re
   },
 ];
 
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI automation tool for small businesses?",
+    "answer": "n8n (free self-hosted) is the most powerful open-source automation tool. Make (formerly Integromat) offers visual workflow building from $9/month. Zapier Central provides AI-powered automation with a 14-day free trial. Start with free n8n for complex workflows."
+  },
+  {
+    "question": "How much time can AI automation save a small business?",
+    "answer": "Small businesses typically save 20-30 hours per week with AI automation \u2014 email responses, invoice generation, meeting scheduling, data entry, and customer follow-ups. Most small business owners report a 3-5x return on their automation investment within the first 3 months."
+  }
+];
+
 export default function AIAutomationGuide() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-950">
@@ -451,6 +464,8 @@ export default function AIAutomationGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

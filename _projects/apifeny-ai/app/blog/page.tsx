@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Calendar, Clock, Tag, ArrowRight, Sparkles, BookOpen } from 'lucide-react';
+import { Calendar, Clock, Tag, ArrowRight, Sparkles, BookOpen, Layers } from 'lucide-react';
 import { getAllPosts } from '@/lib/blog-data';
+import { getAllCategories } from '@/lib/blog-categories';
 import type { BlogPost } from '@/lib/blog-data';
 
 const BASE_URL = 'https://apifeny.ai';
@@ -66,6 +67,36 @@ export default function BlogListPage() {
           <p className="text-lg sm:text-xl text-tech-200 max-w-2xl leading-relaxed">
             Expert reviews, comparisons, and practical guides to help you find and use the best AI tools for your workflow in Asia.
           </p>
+        </div>
+      </section>
+
+      {/* Topic Clusters Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-0">
+        <div className="flex items-center gap-2 mb-6">
+          <Layers className="w-5 h-5 text-neon" />
+          <h2 className="text-xl font-bold text-white">Browse by Topic</h2>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+          {getAllCategories().map((cat) => {
+            const count = getAllPosts().filter(p =>
+              p.tags.some(t => cat.tags.map(ct => ct.toLowerCase()).includes(t.toLowerCase()))
+            ).length;
+            return (
+              <Link
+                key={cat.slug}
+                href={`/blog/category/${cat.slug}`}
+                className="group bg-tech-800/30 border border-tech-500/20 rounded-lg px-4 py-3 hover:border-neon/20 hover:bg-tech-800/50 transition-all"
+              >
+                <h3 className="text-sm font-medium text-white group-hover:text-neon-light transition line-clamp-1">
+                  {cat.slug === 'translation-language' ? 'Translation & Language' :
+                   cat.slug === 'coding-development' ? 'Coding & Development' :
+                   cat.slug === 'accounting-finance' ? 'Accounting & Finance' :
+                   cat.slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+                </h3>
+                <p className="text-xs text-tech-500 mt-0.5">{count} guides</p>
+              </Link>
+            );
+          })}
         </div>
       </section>
 

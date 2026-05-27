@@ -35,6 +35,8 @@ const COUNTRY_SYNONYMS: Record<string, string> = {
   'seoul': 'South Korea',
   'taiwan': 'Taiwan',
   'taipei': 'Taiwan',
+  'hong-kong': 'Hong Kong',
+  'hongkong': 'Hong Kong',
   'vietnam': 'Vietnam',
   'philippines': 'Philippines',
 };

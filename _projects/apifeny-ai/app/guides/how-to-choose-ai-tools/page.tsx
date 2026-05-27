@@ -24,6 +24,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 import { getRelatedPosts } from '@/lib/blog-data';
 
 const BASE_URL = 'https://apifeny.ai';
@@ -212,6 +213,17 @@ const DECISION_QUESTIONS = [
   },
 ];
 
+const guideFaqs = [
+  {
+    "question": "How do I choose the right AI tool?",
+    "answer": "Identify your biggest time sink \u2014 content, admin, design, research, or support. Test 2-3 tools in that category (most have free tiers). Use the winner for 2 weeks before adding another category. Layer tools gradually."
+  },
+  {
+    "question": "All-in-one or specialized tools?",
+    "answer": "All-in-one platforms like ChatGPT are better for beginners. Specialized tools like Canva for design outperform all-in-ones in their domain. Start with a generalist, add specialists as needs emerge."
+  }
+];
+
 export default function HowToChooseAIToolsPage() {
   const recommendedTools = toolsData
     .filter(t => t.is_published)
@@ -256,7 +268,9 @@ export default function HowToChooseAIToolsPage() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-xs font-medium mb-6">
             <BookOpen className="w-3.5 h-3.5" />
             Evergreen Guide
-          </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             How to Choose AI Tools{' '}
@@ -276,17 +290,27 @@ export default function HowToChooseAIToolsPage() {
             <div className="flex items-center gap-2 text-tech-300">
               <CheckCircle className="w-4 h-4 text-green-400" />
               <span>6-step decision framework</span>
-            </div>
+                  {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
             <div className="flex items-center gap-2 text-tech-300">
               <AlertTriangle className="w-4 h-4 text-amber-400" />
               <span>4 common mistakes to avoid</span>
-            </div>
+                  {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
             <div className="flex items-center gap-2 text-tech-300">
               <ClipboardCheck className="w-4 h-4 text-green-400" />
               <span>5 must-ask questions before buying</span>
-            </div>
-          </div>
-        </div>
+                  {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+              {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
       </section>
 
       {/* ── Quick Navigation ─────────────────────────────────────────── */}
@@ -327,8 +351,12 @@ export default function HowToChooseAIToolsPage() {
               </span>
               Decision Framework
             </a>
-          </div>
-        </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+              {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
       </section>
 
       {/* ── Step-by-Step Guide ───────────────────────────────────────── */}
@@ -343,7 +371,9 @@ export default function HowToChooseAIToolsPage() {
             <div className="flex items-start gap-4 mb-6">
               <div className="w-10 h-10 rounded-xl bg-violet-500/15 border border-violet-500/20 flex items-center justify-center shrink-0 mt-0.5">
                 <step.icon className="w-5 h-5 text-violet-400" />
-              </div>
+                    {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
               <div>
                 <span className="text-xs font-medium text-violet-400 uppercase tracking-wider">
                   Step {step.num} of {STEPS.length}
@@ -351,8 +381,12 @@ export default function HowToChooseAIToolsPage() {
                 <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">
                   {step.title}
                 </h2>
-              </div>
-            </div>
+                    {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+                  {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
 
             {/* Description */}
             <div className="ml-14 sm:ml-14">
@@ -365,7 +399,9 @@ export default function HowToChooseAIToolsPage() {
                 <div className="flex items-center gap-2 mb-3">
                   <Lightbulb className="w-4 h-4 text-amber-400" />
                   <span className="text-xs font-medium text-amber-400 uppercase tracking-wider">Tips</span>
-                </div>
+                      {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
                 <ul className="space-y-2">
                   {step.tips.map((tip, i) => (
                     <li key={i} className="text-sm text-tech-300 flex items-start gap-2">
@@ -374,7 +410,9 @@ export default function HowToChooseAIToolsPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+                    {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
 
               {/* Example / Scoring fields */}
               {'example' in step && step.example && (
@@ -382,11 +420,15 @@ export default function HowToChooseAIToolsPage() {
                   <div className="flex items-center gap-2 mb-2">
                     <Sparkles className="w-4 h-4 text-green-400" />
                     <span className="text-xs font-medium text-green-400 uppercase tracking-wider">Example</span>
-                  </div>
+                        {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
                   <pre className="text-sm text-tech-300 whitespace-pre-wrap font-sans">
                     {step.example}
                   </pre>
-                </div>
+                      {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
               )}
 
               {'scoringFields' in step && step.scoringFields && (
@@ -396,7 +438,9 @@ export default function HowToChooseAIToolsPage() {
                     <span className="text-xs font-medium text-violet-400 uppercase tracking-wider">
                       Scoring Fields to Include
                     </span>
-                  </div>
+                        {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
                   <ul className="space-y-2">
                     {step.scoringFields.map((field, i) => (
                       <li key={i} className="text-sm text-tech-300 flex items-start gap-2">
@@ -405,15 +449,21 @@ export default function HowToChooseAIToolsPage() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                      {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
               )}
-            </div>
+                  {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
 
             {/* Divider (except last) */}
             {idx < STEPS.length - 1 && (
               <div className="ml-14 mt-8 border-l-2 border-dashed border-tech-500/20 h-8" />
             )}
-          </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
         ))}
       </section>
 
@@ -429,7 +479,9 @@ export default function HowToChooseAIToolsPage() {
               Based on our editorial curation and community ratings, these are the most reliable AI tools
               across categories. Each one has a free tier, proven track record, and strong fit for teams.
             </p>
-          </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {recommendedTools.map(tool => (
@@ -442,7 +494,9 @@ export default function HowToChooseAIToolsPage() {
                   <span className="text-white font-bold">
                     {tool.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
                   </span>
-                </div>
+                      {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
                 <h3 className="text-white font-semibold text-sm group-hover:text-violet-300 transition mb-1.5">
                   {tool.name}
                 </h3>
@@ -453,11 +507,15 @@ export default function HowToChooseAIToolsPage() {
                   <div className="flex items-center gap-1">
                     <Star className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
                     <span className="text-xs text-tech-400">{tool.avg_rating.toFixed(1)}</span>
-                  </div>
+                        {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
                 )}
               </Link>
             ))}
-          </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
 
           <div className="text-center mt-8">
             <Link
@@ -467,8 +525,12 @@ export default function HowToChooseAIToolsPage() {
               Browse All {toolsData.filter(t => t.is_published).length} Curated Tools
               <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
-        </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+              {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
       </section>
 
       {/* ── Common Mistakes ──────────────────────────────────────────── */}
@@ -479,7 +541,9 @@ export default function HowToChooseAIToolsPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-white">
               Common Mistakes to Avoid
             </h2>
-          </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
 
           <div className="space-y-6">
             {MISTAKES.map((mistake, i) => (
@@ -490,7 +554,9 @@ export default function HowToChooseAIToolsPage() {
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
                     <mistake.icon className="w-5 h-5 text-amber-400" />
-                  </div>
+                        {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
                   <div>
                     <h3 className="text-white font-semibold mb-1.5">{mistake.title}</h3>
                     <p className="text-sm text-tech-300 mb-3 leading-relaxed">
@@ -499,13 +565,25 @@ export default function HowToChooseAIToolsPage() {
                     <div className="flex items-start gap-2 text-sm">
                       <span className="text-green-400 font-medium shrink-0 mt-0.5">✓ Fix:</span>
                       <span className="text-tech-300">{mistake.fix}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                          {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+                        {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+                      {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+                    {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
             ))}
-          </div>
-        </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+              {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
       </section>
 
       {/* ── Decision Framework ───────────────────────────────────────── */}
@@ -517,7 +595,9 @@ export default function HowToChooseAIToolsPage() {
               5 Questions to Ask{' '}
               <span className="text-violet-400">Before You Buy</span>
             </h2>
-          </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
 
           <div className="grid sm:grid-cols-2 gap-4">
             {DECISION_QUESTIONS.map((dq, i) => (
@@ -528,22 +608,32 @@ export default function HowToChooseAIToolsPage() {
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-8 h-8 rounded-lg bg-violet-500/10 flex items-center justify-center shrink-0">
                     <span className="text-violet-400 font-bold text-sm">{i + 1}</span>
-                  </div>
+                        {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
                   <h3 className="text-white font-semibold text-sm leading-snug">{dq.question}</h3>
-                </div>
+                      {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
                 <p className="text-xs text-tech-400 leading-relaxed ml-11">
                   {dq.why}
                 </p>
-              </div>
+                    {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
             ))}
-          </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
 
           {/* Print-ready checklist */}
           <div className="mt-8 bg-gradient-to-br from-violet-500/5 to-purple-500/5 border border-violet-500/10 rounded-xl p-6 sm:p-8">
             <div className="flex items-center gap-2 mb-4">
               <ClipboardCheck className="w-5 h-5 text-violet-400" />
               <h3 className="text-white font-semibold">Printable Checklist</h3>
-            </div>
+                  {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
             <p className="text-sm text-tech-300 mb-4">
               Take these questions with you when evaluating AI tools. Check off each one as you go.
             </p>
@@ -560,9 +650,15 @@ export default function HowToChooseAIToolsPage() {
                   <span className="text-sm text-tech-200">{dq.question}</span>
                 </label>
               ))}
-            </div>
-          </div>
-        </div>
+                  {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+              {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
       </section>
 
       {/* ── CTA ──────────────────────────────────────────────────────── */}
@@ -591,9 +687,15 @@ export default function HowToChooseAIToolsPage() {
               >
                 Browse by Category
               </Link>
-            </div>
-          </div>
-        </div>
+                  {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+              {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
       </section>
 
       {/* ── Related Blog Posts ─────────────────────────────────────── */}
@@ -603,7 +705,9 @@ export default function HowToChooseAIToolsPage() {
             <div className="flex items-center gap-2 mb-8">
               <BookOpen className="w-5 h-5 text-neon" />
               <h2 className="text-2xl font-bold text-white">Related Guides & Articles</h2>
-            </div>
+                  {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedPosts.map((related) => (
@@ -618,7 +722,9 @@ export default function HowToChooseAIToolsPage() {
                         {tag.replace(/-/g, ' ')}
                       </span>
                     ))}
-                  </div>
+                        {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
                   <h3 className="font-semibold text-white group-hover:text-neon-light transition mb-2 line-clamp-2">
                     {related.title}
                   </h3>
@@ -628,13 +734,21 @@ export default function HowToChooseAIToolsPage() {
                   <div className="flex items-center gap-1 text-xs text-neon-light group-hover:gap-2 transition-all">
                     Read Guide
                     <ArrowRight className="w-3 h-3" />
-                  </div>
+                        {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
                 </Link>
               ))}
-            </div>
-          </div>
+                  {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
+                {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </div>
         </section>
       )}
+          {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
     </div>
   );
 }

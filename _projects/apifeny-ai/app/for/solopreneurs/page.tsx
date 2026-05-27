@@ -24,6 +24,7 @@ import { toolsData } from '@/lib/data';
 import { playbooks } from '@/lib/playbooks';
 import type { Playbook } from '@/lib/playbooks';
 import ToolCard from '@/components/ToolCard';
+import BlogCategoryLinks from '@/components/BlogCategoryLinks';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -464,6 +465,12 @@ export default function SolopreneursPage() {
           </div>
         </div>
       </section>
+
+      {/* ── BLOG CROSS-LINKS ── */}
+      <BlogCategoryLinks
+        slugs={['solopreneur', 'productivity', 'ai-tools', 'accounting-finance']}
+        heading="Guides for Solopreneurs"
+      />
 
       {/* ── Next Steps / CTA ── */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">

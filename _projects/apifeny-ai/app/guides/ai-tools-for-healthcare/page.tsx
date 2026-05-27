@@ -40,6 +40,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -302,6 +303,18 @@ For Asia-Pacific, the multilingual capability is crucial:
   },
 ];
 
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI tool for clinic management in Asia?",
+    "answer": "For Asian clinics, tools that support multi-language patient communication and local compliance are essential. Zendesk AI handles bilingual patient queries. Plato's AI accounting supports IRAS compliance for Singapore clinics. AI scheduling tools like Calendly or Motion reduce no-shows by 30%."
+  },
+  {
+    "question": "Can AI help with medical documentation?",
+    "answer": "Yes \u2014 AI transcription tools like Otter.ai and Fireflies.ai automate clinical note-taking. For Asian languages, DeepL and ChatGPT handle medical terminology in Chinese, Japanese, and Korean. AI medical scribes are becoming standard in forward-thinking clinics across Singapore, Malaysia, and Hong Kong."
+  }
+];
+
 export default function AIToolsForHealthcareGuide() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-950">
@@ -529,6 +542,8 @@ export default function AIToolsForHealthcareGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

@@ -67,6 +67,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -570,6 +571,17 @@ Asia-Pacific infrastructure AI adoption:
   },
 ];
 
+const guideFaqs = [
+  {
+    "question": "What is the best AI design tool for architects?",
+    "answer": "Generative design tools like Autodesk Forma use AI to explore thousands of design options based on constraints. For visualization, Midjourney creates concept renders from text descriptions. For Asian projects, local building code compliance tools are essential."
+  },
+  {
+    "question": "Can AI help with structural engineering calculations?",
+    "answer": "AI tools assist with structural analysis by running simulations and optimizing designs for load distribution. However, critical calculations require licensed professional engineers to verify outputs."
+  }
+];
+
 export default function AIToolsForArchEngPage() {
   const breadcrumbItems = [
     { name: 'Home', item: '/' },
@@ -942,7 +954,9 @@ export default function AIToolsForArchEngPage() {
             </div>
           </div>
         </section>
-      </article>
+            {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </article>
     </>
   );
 }

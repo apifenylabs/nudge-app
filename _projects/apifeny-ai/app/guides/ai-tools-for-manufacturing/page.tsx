@@ -11,6 +11,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -439,6 +440,14 @@ const comparisonTools = [
   { name: 'Augury', category: 'Predictive Maint.', strength: 'Machine health, vibration analysis', costMonthly: 300, bestFor: 'Rotating equipment, pumps, motors' },
 ];
 
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI tool for manufacturing in Asia?",
+    "answer": "AI predictive maintenance platforms analyze equipment sensor data to predict failures before they happen. For Asian manufacturers, tools that support local protocols and languages are essential. Computer vision AI tools inspect product quality on production lines, reducing defect rates by up to 90%."
+  }
+];
+
 export default function AiForManufacturingPage() {
   const allTools = toolsData || [];
 
@@ -609,6 +618,8 @@ export default function AiForManufacturingPage() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

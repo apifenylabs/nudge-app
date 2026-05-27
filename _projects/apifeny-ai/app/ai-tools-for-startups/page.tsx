@@ -21,6 +21,7 @@ import {
 import { toolsData } from '@/lib/data';
 import { playbooks } from '@/lib/playbooks';
 import ToolCard from '@/components/ToolCard';
+import BlogCategoryLinks from '@/components/BlogCategoryLinks';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -325,6 +326,12 @@ export default function AIToolsForStartupsPage() {
       </section>
 
       {/* ── CTA Section ──────────────────────────────────────────────── */}
+      {/* ── BLOG CROSS-LINKS ── */}
+      <BlogCategoryLinks
+        slugs={['ai-tools', 'productivity', 'coding-development', 'solopreneur']}
+        heading="Startup Guides & Tips"
+      />
+
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="relative rounded-2xl bg-gradient-to-br from-rocket-500/10 via-orange-500/5 to-tech-800 border border-tech-500/30 p-8 sm:p-12 text-center">
           <Rocket className="w-10 h-10 text-rocket-400 mx-auto mb-4" />

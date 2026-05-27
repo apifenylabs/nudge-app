@@ -12,6 +12,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -395,6 +396,14 @@ const comparisonTools = [
   { name: 'AlphaFold', category: 'Protein Structure', strength: '3D protein prediction', costMonthly: 0, bestFor: 'Structural biology labs' },
 ];
 
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI tool for academic research?",
+    "answer": "For academic research, tools like Elicit, Scite, and Consensus use AI to search and summarize research papers. ChatGPT and Claude are excellent for data analysis, literature review synthesis, and methodology design. Perplexity Pro provides cited research summaries across scientific domains."
+  }
+];
+
 export default function AiForScienceResearchPage() {
   const allTools = toolsData || [];
 
@@ -565,6 +574,8 @@ export default function AiForScienceResearchPage() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

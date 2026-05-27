@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useRef } from 'react'
 import {
   Crown, CheckCircle, XCircle, Loader2, ExternalLink,
   Zap, Users, Sparkles, ArrowRight, Clock, AlertTriangle,
@@ -12,8 +12,10 @@ import Link from 'next/link'
 import { buildAppUrl } from '@/lib/config'
 import { getPriceId, stripeConfig } from '@/lib/stripe/config'
 import ConfirmModal from './ConfirmModal'
+import CancelSurveyModal from './CancelSurveyModal'
 import PlanComparison from './PlanComparison'
 import type { BillingInterval } from '@/lib/plans'
+import type { CancelSurveyData } from './CancelSurveyModal'
 
 interface Subscription {
   plan: 'free' | 'pro' | 'family'
@@ -33,7 +35,7 @@ interface SubscriptionCardProps {
   isOwner: boolean
 }
 
-type ConfirmAction = 'cancel' | 'downgrade-to-free' | 'downgrade-pro' | 'upgrade-family' | 'reactivate' | 'switch-interval'
+type ConfirmAction = 'downgrade-to-free' | 'downgrade-pro' | 'upgrade-family' | 'reactivate' | 'switch-interval'
 
 export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCardProps) {
   const router = useRouter()
@@ -47,9 +49,13 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
 
   // Confirmation modal state
   const [confirmOpen, setConfirmOpen] = useState(false)
-  const [confirmAction, setConfirmAction] = useState<ConfirmAction>('cancel')
+  const [confirmAction, setConfirmAction] = useState<ConfirmAction>('downgrade-to-free')
   const [confirmPlan, setConfirmPlan] = useState<string | undefined>(undefined)
   const [confirmDescription, setConfirmDescription] = useState('')
+
+  // Cancel survey state
+  const [surveyOpen, setSurveyOpen] = useState(false)
+  const pendingCancelRef = useRef(false)
 
   const fetchStatus = useCallback(async () => {
     try {
@@ -77,13 +83,7 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
     setConfirmOpen(true)
 
     switch (action) {
-      case 'cancel':
-        setConfirmPlan(undefined)
-        setConfirmDescription(
-          'Are you sure? You\'ll lose access to premium features at the end of your billing period. ' +
-          'Your family\'s task history will be preserved, but you\'ll be limited to the Free plan.'
-        )
-        break
+      case 'downgrade-to-free':
       case 'downgrade-to-free':
         setConfirmPlan('free')
         setConfirmDescription(
@@ -126,11 +126,26 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
     }
   }
 
+  // ── Cancel Survey Handlers ─────────────────────────────────
+  const handleCancelSurveyComplete = async (surveyData: CancelSurveyData) => {
+    // 1. Submit the survey (async, don't block cancel on failure)
+    try {
+      await fetch('/api/stripe/cancel-survey', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(surveyData),
+      })
+    } catch {
+      // Silent — cancellation proceeds regardless
+    }
+
+    // 2. Proceed with the actual cancellation
+    setSurveyOpen(false)
+    await doCancelAtPeriodEnd()
+  }
+
   const handleConfirm = async () => {
     switch (confirmAction) {
-      case 'cancel':
-        await doCancelAtPeriodEnd()
-        break
       case 'downgrade-to-free':
         await doChangePlan('free')
         break
@@ -453,13 +468,28 @@ export default function SubscriptionCard({ familyId, isOwner }: SubscriptionCard
     <div className="space-y-3">
       <ConfirmModal
         open={confirmOpen}
-        variant={confirmAction === 'upgrade-family' ? 'upgrade' : confirmAction === 'reactivate' ? 'upgrade' : confirmAction === 'cancel' ? 'cancel' : confirmAction === 'switch-interval' ? 'info' : 'downgrade'}
+        variant={confirmAction === 'upgrade-family' ? 'upgrade' : confirmAction === 'reactivate' ? 'upgrade' : confirmAction === 'switch-interval' ? 'info' : 'downgrade'}
         plan={confirmPlan}
         loading={actionLoading !== null}
         description={confirmDescription}
         onConfirm={handleConfirm}
         onCancel={() => setConfirmOpen(false)}
         onClose={() => setConfirmOpen(false)}
+      />
+
+      {/* Cancel Survey Modal — Phase 38 */}
+      <CancelSurveyModal
+        open={surveyOpen}
+        loading={actionLoading === 'cancel'}
+        onClose={() => {
+          setSurveyOpen(false)
+          pendingCancelRef.current = false
+        }}
+        onBack={() => {
+          setSurveyOpen(false)
+          pendingCancelRef.current = false
+        }}
+        onComplete={handleCancelSurveyComplete}
       />
 
       {successMsg && (

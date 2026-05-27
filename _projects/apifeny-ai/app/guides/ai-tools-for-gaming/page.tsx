@@ -56,6 +56,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -434,6 +435,17 @@ Asia-Pacific design trends:
   },
 ];
 
+const guideFaqs = [
+  {
+    "question": "What is the best AI tool for game development?",
+    "answer": "Scenario for AI asset generation, ChatGPT for narrative and dialogue, and Cursor/Copilot for code are essential. Runway Gen-3 creates cinematic cutscenes from text descriptions."
+  },
+  {
+    "question": "Can AI generate game assets?",
+    "answer": "Yes \u2014 AI tools like Scenario, Leonardo AI, and Midjourney generate game-ready assets including characters, environments, textures, and UI elements, saving months of manual art creation."
+  }
+];
+
 export default function AIToolsForGamingPage() {
   const breadcrumbItems = [
     { name: 'Home', item: '/' },
@@ -803,7 +815,9 @@ export default function AIToolsForGamingPage() {
             </div>
           </div>
         </section>
-      </article>
+            {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </article>
     </>
   );
 }

@@ -5,13 +5,14 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'LifeOS — AI Copilot for Everything',
-  description: 'Guided phases for every area of your life. Research → Canvas → Build → Ship → Maintain.',
+  description: 'Your AI copilot for life. Have a conversation that leads, challenges, and builds a plan with you. Inspired by aicofounder.com — for every area of life.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen">{children}
+      <body className="min-h-screen">
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>

@@ -30,10 +30,10 @@
 
 | Component | File | Status |
 |---|---|---|
-| `GodTierAura` overlay (golden radial gradient) | `src/components/molecules/GodTierAura.tsx` | **NEEDS BUILD** |
-| God-Tier unlock modal/celebration screen | `src/components/organisms/GodTierModal.tsx` | **NEEDS BUILD** |
-| Level 30+ crown badge on `Badge` component | update `src/components/ui/badge.tsx` | **NEEDS BUILD** |
-| God-Tier toggle in `MascotDisplay` (visual switch) | update `src/components/molecules/MascotDisplay.tsx` | **NEEDS BUILD** |
+| `GodTierAura` overlay (golden radial gradient) | `src/components/molecules/GodTierAura.tsx` | ✅ **BUILT** |
+| God-Tier unlock modal/celebration screen | `src/components/organisms/GodTierModal.tsx` | ✅ **BUILT** |
+| Level 30+ crown badge on `Badge` component | `src/components/ui/badge.tsx` | ✅ **BUILT** — golden gradient, crown glow animation |
+| God-Tier toggle in `MascotDisplay` | `src/components/molecules/MascotDisplay.tsx` | ✅ **BUILT** — aura + modal both integrated |
 
 ### Existing Assets That Support God-Tier
 
@@ -67,7 +67,7 @@
 | Page | File | Status |
 |---|---|---|
 | Robotics Landing ("Deploy Your Agent") | `src/app/robotics/page.tsx` | **BUILD FIRST** — hero, feature cards, CTA |
-| Robotics Dashboard (manage deployments) | `src/app/robotics/dashboard/page.tsx` | **NEEDS BUILD** |
+| Robotics Dashboard (manage deployments) | `src/app/robotics/dashboard/page.tsx` | ✅ **BUILT** (May 27) — deploy/remove/status/refresh, modal, empty state, stats row |
 | Platform Detail (per-platform setup guide) | `src/app/robotics/[platform]/page.tsx` | **NEEDS BUILD** |
 
 ### Robotics Data Model

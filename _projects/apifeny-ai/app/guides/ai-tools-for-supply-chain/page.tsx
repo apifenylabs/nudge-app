@@ -41,6 +41,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -255,6 +256,18 @@ For supply chain leaders managing Asia's complex manufacturing and distribution 
       { name: 'Perplexity', slug: 'perplexity', note: 'Real-time intelligence on geopolitical events, tariffs, and market disruptions' },
     ],
   },
+];
+
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI tool for supply chain management in Asia?",
+    "answer": "For Asian supply chains, Sirclo AI is excellent for e-commerce inventory management across Shopee, Lazada, and Tokopedia. For logistics tracking, AI platforms that integrate with JNE, J&T, GrabExpress, and Lalamove provide real-time visibility across Southeast Asia's fragmented delivery landscape."
+  },
+  {
+    "question": "Can AI predict inventory needs for small businesses?",
+    "answer": "Yes \u2014 AI inventory forecasting tools analyze historical sales data, seasonal patterns, and market trends to predict optimal stock levels. For Asian e-commerce sellers, Sirclo AI and EasyStore AI predict demand based on local holidays (Chinese New Year, Hari Raya, 11.11, 12.12) and platform-specific trends."
+  }
 ];
 
 export default function AIToolsForSupplyChainGuide() {
@@ -591,6 +604,8 @@ export default function AIToolsForSupplyChainGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

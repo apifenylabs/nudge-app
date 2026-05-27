@@ -38,6 +38,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -276,6 +277,22 @@ These tools understand local tax codes, support local languages, and integrate w
 ];
 
 const toolSlugs = ['chatgpt', 'claude', 'gemini', 'deepseek', 'qwen', 'perplexity', 'doubao'];
+
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI tool for personal finance management?",
+    "answer": "Plato is the best AI bookkeeping tool for Singapore solopreneurs with IRAS-compliant features. For general personal finance, You Need A Budget (YNAB) with AI insights and Copilot Money are top choices. For Asian markets, Xero and Zoho Books offer region-specific tax compliance features."
+  },
+  {
+    "question": "Can AI handle Asian tax compliance?",
+    "answer": "Yes \u2014 several AI accounting tools are built for specific Asian tax systems. Plato handles Singapore IRAS compliance. AutoCount manages Malaysia SST (6%/8%) with LHDN e-Invoice integration. Jurnal by Mekari handles Indonesia's PPN 11% and e-Faktur. Zoho Books has GST/SST templates for multiple Asian countries."
+  },
+  {
+    "question": "What is the cheapest AI accounting tool?",
+    "answer": "Plato Free (50 transactions/month) for Singapore, AkuntanKu Free for Indonesia, Zoho Books Free (5 invoices/month) for general use, and Wave Free for basic invoicing. These free tiers cover basic needs for most solopreneurs in their first year of business."
+  }
+];
 
 export default function AIToolsForFinanceGuide() {
   return (
@@ -578,6 +595,8 @@ export default function AIToolsForFinanceGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

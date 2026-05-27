@@ -1,183 +1,646 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-import PluginCatalog from './components/PluginCatalog';
-import PluginDetail from './components/PluginDetail';
-import DashboardHome from './components/DashboardHome';
-import { loadState, saveState, activatePlugin, completeTask, type LifeOSPlugin, type LifeCategory, type PluginPhase } from './lib/plugins';
-import WaitlistCard from './components/WaitlistCard';
-import type { LifeOSState } from './lib/plugins';
-import { initSupabaseSync, getLastSyncTime } from './lib/supabase-sync';
-import { useAuth } from './lib/auth-context';
-import AuthModal from './components/AuthModal';
+import { useState, useRef, useEffect, useCallback } from 'react';
+import dynamic from 'next/dynamic';
 
-export default function Home() {
-  const [state, setState] = useState<LifeOSState>({ plugins: [], totalActions: 0, unlockedCategories: [] });
-  const [showCatalog, setShowCatalog] = useState(false);
-  const [showDashboard, setShowDashboard] = useState(true);
-  const [activePlugin, setActivePlugin] = useState<LifeOSPlugin | null>(null);
-  const [mounted, setMounted] = useState(false);
+// Dynamic import: Excalidraw is client-only
+const ExcalidrawCanvas = dynamic(
+  () => import('./components/ExcalidrawCanvas'),
+  { ssr: false },
+);
+import type { ChatSession, ChatMessage, ConversationMode } from './lib/chat-persistence';
+import type { PluginDefinition, PluginPhase } from './lib/plugin-registry';
+import * as Persistence from './lib/chat-persistence';
 
-  const [syncStatus, setSyncStatus] = useState<'off' | 'connecting' | 'live' | 'error'>('off');
-  const [showAuth, setShowAuth] = useState(false);
-  const { user, loading: authLoading } = useAuth();
+type Message = {
+  role: 'user' | 'assistant';
+  content: string;
+};
 
-  useEffect(() => {
-    setMounted(true);
-    const s = loadState();
-    setState(s);
-    // Start on dashboard — let the user pick a plugin
-    setShowDashboard(true);
+const CANVAS_COLORS: Record<string, string> = {
+  red: '#FEE2E2', orange: '#FED7AA', amber: '#FDE68A', green: '#D1FAE5',
+  teal: '#CCFBF1', blue: '#DBEAFE', indigo: '#E0E7FF', purple: '#E9D5FF', pink: '#FCE7F3',
+};
 
-    // Initialize Supabase sync (non-blocking)
-    setSyncStatus('connecting');
-    initSupabaseSync().then(enabled => {
-      setSyncStatus(enabled ? 'live' : 'off');
-    }).catch(() => {
-      setSyncStatus('error');
-    });
-  }, []);
+// ─── Plugin Card — PRD §11.1 ───────────────────────────────────────
 
-  const refresh = useCallback(() => {
-    const s = loadState();
-    setState(s);
-    // Keep active plugin in sync
-    setActivePlugin(prev => {
-      if (!prev) return s.plugins.length > 0 ? s.plugins[s.plugins.length - 1] : null;
-      const updated = s.plugins.find(p => p.id === prev.id);
-      return updated || (s.plugins.length > 0 ? s.plugins[s.plugins.length - 1] : null);
-    });
-  }, []);
-
-  const handleActivate = useCallback((category: LifeCategory) => {
-    const plugin = activatePlugin(category);
-    saveState(loadState());
-    refresh();
-    setActivePlugin(plugin);
-    setShowCatalog(false);
-    setShowDashboard(false);
-  }, [refresh]);
-
-  const handleCompleteTask = useCallback((category: LifeCategory, phase: PluginPhase, taskId: string) => {
-    completeTask(category, phase, taskId);
-    refresh();
-  }, [refresh]);
-
-  const handleSelectPlugin = useCallback((plugin: LifeOSPlugin) => {
-    setActivePlugin(plugin);
-    setShowCatalog(false);
-    setShowDashboard(false);
-  }, []);
-
-  if (!mounted) return null;
+function PluginCard({
+  plugin,
+  onSelect,
+}: {
+  plugin: PluginDefinition;
+  onSelect: (plugin: PluginDefinition) => void;
+}) {
+  const statusBadge = plugin.status === 'coming-soon'
+    ? { label: 'Coming Soon', style: 'bg-gray-100 text-gray-400 border-gray-200' }
+    : plugin.status === 'beta'
+    ? { label: 'Beta', style: 'bg-amber-50 text-amber-600 border-amber-200' }
+    : { label: 'Active', style: 'bg-emerald-50 text-emerald-600 border-emerald-200' };
+  const canSelect = plugin.status === 'active' || plugin.status === 'beta';
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        {/* Waitlist CTA — prominent on landing page for early access signups */}
-        <WaitlistCard />
+    <button
+      onClick={() => (plugin.status === 'active' || plugin.status === 'beta') && onSelect(plugin)}
+      disabled={plugin.status === 'coming-soon'}
+      className={`group relative p-5 rounded-2xl border text-left transition-all duration-300 ${
+        canSelect
+          ? 'bg-white border-gray-200 hover:shadow-lg hover:-translate-y-1 hover:border-transparent cursor-pointer'
+          : 'bg-gray-50 border-gray-100 cursor-not-allowed opacity-60'
+      }`}
+    >
+      {/* Animated gradient border on hover */}
+      {canSelect && (
+        <div
+          className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          style={{
+            background: `${plugin.gradient}15`,
+            border: `1px solid transparent`,
+            backgroundClip: 'padding-box',
+          }}
+        />
+      )}
 
-        {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h1 className="text-2xl font-bold text-gray-900 tracking-tight">LifeOS</h1>
-            <p className="text-sm text-gray-500 mt-1">AI copilot for every area of your life</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => { setShowCatalog(true); setActivePlugin(null); }}
-              className="px-4 py-2 text-sm font-medium text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-colors"
+      <div className="relative z-10">
+        {/* Emoji icon */}
+        <div
+          className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-3"
+          style={{
+            background: plugin.status === 'active' ? `${plugin.gradient.split(',')[0]}15` : '#F3F4F6',
+            border: `1px solid ${
+              plugin.status === 'active'
+                ? plugin.gradient.split(',')[0].replace('linear-gradient(135deg, ', '').trim().split(' ')[0]
+                : '#E5E7EB'
+            }30`,
+          }}
+        >
+          {plugin.emoji}
+        </div>
+
+        {/* Name + status */}
+        <div className="flex items-center justify-between mb-1.5">
+          <h3 className="text-sm font-bold text-gray-900">{plugin.name}</h3>
+          <span className={`text-[9px] font-mono px-1.5 py-0.5 rounded-full border ${statusBadge.style}`}>
+            {statusBadge.label}
+          </span>
+        </div>
+
+        {/* Description */}
+        <p className="text-xs text-gray-500 leading-relaxed mb-3">{plugin.description}</p>
+
+        {/* Feature pills */}
+        <div className="flex flex-wrap gap-1">
+          {plugin.features.slice(0, 3).map(f => (
+            <span
+              key={f}
+              className="text-[9px] font-mono text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded-md border border-gray-100"
             >
-              + New Plugin
-            </button>
+              {f.length > 22 ? f.slice(0, 20) + '…' : f}
+            </span>
+          ))}
+          {plugin.features.length > 3 && (
+            <span className="text-[9px] font-mono text-gray-300">+{plugin.features.length - 3}</span>
+          )}
+        </div>
+      </div>
+    </button>
+  );
+}
 
-            {/* Auth button */}
-            {!authLoading && (
+// ─── Phase Progress Bar ────────────────────────────────────────────
+
+function PhaseBar({
+  phases,
+  currentPhase,
+  onPhaseChange,
+}: {
+  phases: PluginPhase[];
+  currentPhase: string;
+  onPhaseChange?: (phaseId: string) => void;
+}) {
+  const currentIndex = phases.findIndex(p => p.id === currentPhase);
+  return (
+    <div className="flex items-center gap-1.5 mb-4 overflow-x-auto pb-1">
+      {phases.map((phase, i) => {
+        const isCurrent = phase.id === currentPhase;
+        const isPast = currentIndex >= 0 && i < currentIndex;
+        return (
+          <button
+            key={phase.id}
+            onClick={() => onPhaseChange?.(phase.id)}
+            disabled={!isCurrent && !isPast}
+            className={`flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-mono whitespace-nowrap transition-all ${
+              isCurrent
+                ? 'bg-teal-100 text-teal-800 border border-teal-300 font-semibold shadow-sm'
+                : isPast
+                ? 'bg-gray-50 text-gray-500 border border-gray-200 hover:bg-gray-100'
+                : 'bg-gray-50/50 text-gray-300 border border-gray-100'
+            }`}
+          >
+            <span className={`w-1.5 h-1.5 rounded-full ${
+              isCurrent ? 'bg-teal-500 animate-pulse' : isPast ? 'bg-green-400' : 'bg-gray-200'
+            }`} />
+            <span>{i + 1}. {phase.name}</span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+// ─── Typing Indicator ──────────────────────────────────────────────
+
+function TypingBubble() {
+  return (
+    <div className="flex justify-start">
+      <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md px-4 py-3 shadow-sm">
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 bg-teal-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+          <div className="w-2 h-2 bg-teal-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+          <div className="w-2 h-2 bg-teal-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── Main Page ─────────────────────────────────────────────────────
+
+export default function Home() {
+  const [input, setInput] = useState('');
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [thinking, setThinking] = useState(false);
+  const [sessionId, setSessionId] = useState<string | null>(null);
+  const [started, setStarted] = useState(false);
+  const [selectedPlugin, setSelectedPlugin] = useState<PluginDefinition | null>(null);
+  const [currentPhase, setCurrentPhase] = useState<string>('');
+  const [sessions, setSessions] = useState<ChatSession[]>([]);
+  const [showHistory, setShowHistory] = useState(false);
+  const [loadingSessions, setLoadingSessions] = useState(false);
+  const [plugins, setPlugins] = useState<PluginDefinition[]>([]);
+  const [showPluginOverlay, setShowPluginOverlay] = useState(false);
+  const chatEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
+  useEffect(() => {
+    // Load plugin definitions from API
+    fetch('/api/plugins')
+      .then(r => r.json())
+      .then(data => {
+        if (data.plugins) setPlugins(data.plugins);
+      })
+      .catch(() => {
+        // Fallback to bundled definitions — load from plugin registry inline
+        import('./lib/plugin-registry').then(mod => {
+          setPlugins(mod.PLUGINS);
+        });
+      });
+  }, []);
+
+  useEffect(() => {
+    if (showHistory) {
+      loadSessions();
+    }
+  }, [showHistory]);
+
+  const loadSessions = async () => {
+    setLoadingSessions(true);
+    try {
+      const res = await fetch('/api/chat');
+      const data = await res.json();
+      if (data.sessions) setSessions(data.sessions);
+    } catch { /* ignore */ }
+    setLoadingSessions(false);
+  };
+
+  const resumeSession = async (sid: string) => {
+    try {
+      const res = await fetch(`/api/chat?sessionId=${encodeURIComponent(sid)}&action=messages`);
+      const data = await res.json();
+      if (data.messages) {
+        const msgs: Message[] = data.messages.map((m: ChatMessage) => ({
+          role: m.role,
+          content: m.content,
+        }));
+        setMessages(msgs);
+        setSessionId(sid);
+        setStarted(true);
+        setShowHistory(false);
+      }
+    } catch { /* ignore */ }
+  };
+
+  const deleteSession = async (sid: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    await fetch(`/api/chat?sessionId=${encodeURIComponent(sid)}`, { method: 'DELETE' });
+    setSessions(prev => prev.filter(s => s.id !== sid));
+  };
+
+  const newSession = () => {
+    setMessages([]);
+    setSessionId(null);
+    setStarted(false);
+    setSelectedPlugin(null);
+    setCurrentPhase('');
+    setInput('');
+    setShowHistory(false);
+  };
+
+  // ─── Select a plugin — AI-led conversation starts ──────────────
+  const selectPlugin = useCallback((plugin: PluginDefinition) => {
+    setSelectedPlugin(plugin);
+    setCurrentPhase(plugin.phases[0]?.id || '');
+    setShowPluginOverlay(false);
+
+    // Auto-send first message to trigger AI to LEAD
+    const greeting = `I'd like to start with ${plugin.name}. Talk me through it.`;
+    setInput('');
+    setStarted(true);
+    setMessages([{ role: 'user', content: greeting }]);
+    callChatApi(greeting, true, plugin.id, plugin.phases[0]?.id);
+  }, []);
+
+  const callChatApi = (
+    message: string,
+    isFirst: boolean,
+    pluginId?: string,
+    phase?: string,
+  ) => {
+    setThinking(true);
+
+    const body: any = {
+      message,
+      sessionId: isFirst ? null : sessionId,
+      isFirst,
+      mode: pluginId || selectedPlugin?.id || 'travel',
+      phase: phase || currentPhase || undefined,
+    };
+
+    if (!isFirst && messages.length > 0) {
+      body.history = messages.map(m => ({ role: m.role, content: m.content }));
+    }
+
+    fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    })
+      .then(r => r.json())
+      .then(data => {
+        setThinking(false);
+        setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
+        setSessionId(data.sessionId);
+        if (data.phase) setCurrentPhase(data.phase);
+      })
+      .catch(() => {
+        setThinking(false);
+        setMessages(prev => [...prev, { role: 'assistant', content: "Sorry, I couldn't reach the AI. Please check the API key is set." }]);
+      });
+  };
+
+  const startSession = () => {
+    if (!input.trim() || selectedPlugin) return;
+    setStarted(true);
+    const msg = input.trim();
+    setInput('');
+    setMessages([{ role: 'user', content: msg }]);
+    callChatApi(msg, true);
+  };
+
+  const sendMessage = (text?: string) => {
+    const msg = (text || input).trim();
+    if (!msg || thinking) return;
+    setInput('');
+    setMessages(prev => [...prev, { role: 'user', content: msg }]);
+    callChatApi(msg, false);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      if (!started) startSession();
+      else sendMessage();
+    }
+  };
+
+  const activePlugin = selectedPlugin;
+  const phases = activePlugin?.phases || [];
+
+  // ─── Render ───────────────────────────────────────────────────
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-teal-50">
+      {/* ── WELCOME SCREEN: Plugin Grid (PRD §11.1) ── */}
+      {!started && !selectedPlugin && (
+        <div className="flex flex-col items-center justify-center min-h-screen px-4 py-12">
+          <div className="max-w-3xl w-full">
+            {/* Hero */}
+            <div className="text-center mb-10">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal-400 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg shadow-teal-200/50">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                </svg>
+              </div>
+              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-2">
+                LifeOS
+              </h1>
+              <p className="text-base text-gray-500 max-w-md mx-auto">
+                Your AI copilot for everything in life.
+              </p>
+              <p className="text-sm text-gray-400 mt-1 italic">
+                "I don't wait for you to tell me what to do — I ask. I challenge. I guide."
+              </p>
+            </div>
+
+            {/* Plugin Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+              {plugins.length > 0 ? plugins.map(plugin => (
+                <PluginCard
+                  key={plugin.id}
+                  plugin={plugin}
+                  onSelect={selectPlugin}
+                />
+              )) : (
+                // Loading skeleton
+                Array.from({ length: 6 }).map((_, i) => (
+                  <div key={i} className="p-5 rounded-2xl border border-gray-200 bg-white animate-pulse">
+                    <div className="w-12 h-12 rounded-xl bg-gray-200 mb-3" />
+                    <div className="h-4 bg-gray-200 rounded w-24 mb-2" />
+                    <div className="h-3 bg-gray-100 rounded w-full mb-1" />
+                    <div className="h-3 bg-gray-100 rounded w-3/4" />
+                  </div>
+                ))
+              )}
+            </div>
+
+            {/* Footer */}
+            <div className="text-center">
               <button
-                onClick={() => setShowAuth(true)}
-                className="px-3 py-2 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors flex items-center gap-1.5"
-                title={user ? user.email || 'Signed in' : 'Sign in'}
+                onClick={() => { setShowHistory(true); }}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-500 hover:border-teal-300 hover:text-teal-600 transition-all shadow-sm"
               >
-                {user ? (
-                  <span className="w-5 h-5 rounded-full bg-teal-500 text-white text-[10px] font-bold flex items-center justify-center">
-                    {user.email?.charAt(0).toUpperCase() || '?'}
-                  </span>
-                ) : (
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                )}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Recent conversations
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── CHAT + CANVAS VIEW ── */}
+      {started && activePlugin && (
+        <div className="flex h-screen">
+          {/* Chat Panel */}
+          <div className="flex-1 flex flex-col min-w-0 border-r border-gray-200">
+            {/* Chat header */}
+            <div className="border-b border-gray-200 px-4 py-2.5 bg-white flex items-center gap-2">
+              {/* Plugin badge */}
+              <div
+                className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium"
+                style={{
+                  background: `${activePlugin.color.split(' ')[0].replace('from-', '')}15`.trim(),
+                  color: activePlugin.color.includes('teal') ? '#0D9488' :
+                          activePlugin.color.includes('cyan') ? '#06B6D4' :
+                          activePlugin.color.includes('emerald') ? '#059669' : '#0D9488',
+                }}
+              >
+                <span>{activePlugin.emoji}</span>
+                <span>{activePlugin.name}</span>
+              </div>
+
+              {/* Phase progress */}
+              <div className="flex-1 mx-2">
+                <PhaseBar phases={phases} currentPhase={currentPhase} />
+              </div>
+
+              {/* Controls */}
+              <button
+                onClick={() => setShowHistory(!showHistory)}
+                className="p-1.5 rounded-lg hover:bg-gray-100 transition-colors"
+                title="History"
+              >
+                <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </button>
+
+              <button
+                onClick={() => setShowPluginOverlay(true)}
+                className="p-1.5 rounded-lg hover:bg-gray-100 transition-colors"
+                title="Switch plugin"
+              >
+                <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              </button>
+
+              <button
+                onClick={newSession}
+                className="text-[11px] text-teal-600 hover:text-teal-800 font-medium px-2"
+              >
+                + New
+              </button>
+            </div>
+
+            {/* Messages */}
+            <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4">
+              {messages.map((msg, i) => (
+                <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                  <div className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+                    msg.role === 'user'
+                      ? 'bg-teal-500 text-white rounded-br-md'
+                      : 'bg-white border border-gray-200 text-gray-800 rounded-bl-md shadow-sm'
+                  }`}>
+                    {msg.role === 'assistant' && (
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <div className="w-5 h-5 rounded-full bg-gradient-to-br from-teal-400 to-emerald-500 flex items-center justify-center">
+                          <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                          </svg>
+                        </div>
+                        <span className="text-[11px] font-semibold text-teal-700">LifeOS</span>
+                        {activePlugin && (
+                          <span className="text-[10px] text-gray-400">· {activePlugin.emoji} {activePlugin.name}</span>
+                        )}
+                      </div>
+                    )}
+                    <div className="whitespace-pre-wrap">{msg.content}</div>
+                  </div>
+                </div>
+              ))}
+              {thinking && <TypingBubble />}
+              <div ref={chatEndRef} />
+            </div>
+
+            {/* Input bar */}
+            <div className="border-t border-gray-200 px-4 py-3 bg-white">
+              <div className="flex gap-2">
+                <textarea
+                  value={input}
+                  onChange={e => setInput(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  placeholder={activePlugin ? `Ask ${activePlugin.name} anything...` : "Ask LifeOS anything..."}
+                  className="flex-1 px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent resize-none"
+                  rows={1}
+                />
+                <button
+                  onClick={() => sendMessage()}
+                  disabled={!input.trim() || thinking}
+                  className="px-4 py-2.5 bg-teal-500 hover:bg-teal-600 disabled:bg-gray-200 disabled:cursor-not-allowed text-white rounded-xl transition-colors flex items-center gap-1.5 text-sm font-medium"
+                >
+                  Send
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-7-7l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Canvas Panel — Excalidraw Integration (PRD §3.3) ── */}
+          <div className="w-[400px] bg-white border-l border-gray-100 hidden lg:flex lg:flex-col" style={{ height: '100vh' }}>
+            {activePlugin && sessionId ? (
+              <div className="flex-1 flex flex-col overflow-hidden">
+                <ExcalidrawCanvas
+                  pluginId={activePlugin.id}
+                  sessionId={sessionId}
+                  plugin={activePlugin}
+                  currentPhase={currentPhase}
+                />
+              </div>
+            ) : (
+              <div className="p-4 border-b border-gray-100">
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-teal-400 to-emerald-500 flex items-center justify-center">
+                    <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                  </div>
+                  <span className="text-sm font-semibold text-gray-800">Canvas</span>
+                </div>
+                <div className="mt-4 text-xs text-gray-400 text-center">
+                  Select a plugin and start a conversation to see your canvas.
+                </div>
+              </div>
             )}
           </div>
         </div>
+      )}
 
-        {/* Stats bar */}
-        <div className="flex items-center gap-4 mb-6 text-sm text-gray-500 bg-gray-50 rounded-xl px-4 py-3 border border-gray-100">
-          <span className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-teal-500" />
-            <span className="font-semibold text-gray-900">{state.plugins.length}</span> active plugins
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-amber-500" />
-            <span className="font-semibold text-gray-900">{state.totalActions}</span> total actions
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-emerald-500" />
-            <span className="font-semibold text-gray-900">{state.unlockedCategories.length}</span> categories
-          </span>
-          <span className="flex items-center gap-1.5 ml-auto">
-            <span className={`w-2 h-2 rounded-full ${syncStatus === 'live' ? 'bg-green-500' : syncStatus === 'connecting' ? 'bg-yellow-500 animate-pulse' : syncStatus === 'error' ? 'bg-red-500' : 'bg-gray-400'}`} />
-            <span className="text-xs text-gray-400">
-              {syncStatus === 'live' ? 'Synced' : syncStatus === 'connecting' ? 'Connecting...' : syncStatus === 'error' ? 'Sync error' : 'Local only'}
-            </span>
-          </span>
+      {/* ── HISTORY SIDEBAR ── */}
+      {showHistory && (
+        <div className="fixed inset-0 z-50 flex">
+          <div className="absolute inset-0 bg-black/20" onClick={() => setShowHistory(false)} />
+          <div className="relative w-80 bg-white border-r border-gray-200 shadow-xl overflow-y-auto">
+            <div className="p-4 border-b border-gray-100">
+              <div className="flex items-center justify-between mb-2">
+                <h2 className="text-sm font-semibold text-gray-800">Conversations</h2>
+                <button onClick={() => setShowHistory(false)} className="text-gray-400 hover:text-gray-600">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <button
+                onClick={newSession}
+                className="w-full py-2 bg-teal-50 border border-teal-200 text-teal-700 rounded-lg text-sm font-medium hover:bg-teal-100 transition-colors"
+              >
+                + New conversation
+              </button>
+            </div>
+
+            {loadingSessions ? (
+              <div className="p-4 text-center">
+                <div className="w-5 h-5 border-2 border-teal-400 border-t-transparent rounded-full animate-spin mx-auto" />
+              </div>
+            ) : sessions.length === 0 ? (
+              <div className="p-8 text-center">
+                <div className="w-10 h-10 mx-auto mb-2 bg-gray-100 rounded-xl flex items-center justify-center">
+                  <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-400">No conversations yet.</p>
+              </div>
+            ) : (
+              <div className="p-2 space-y-1">
+                {sessions.map(s => (
+                  <button
+                    key={s.id}
+                    onClick={() => resumeSession(s.id)}
+                    className="w-full text-left px-3 py-2.5 rounded-lg hover:bg-gray-50 transition-colors group"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2 min-w-0">
+                        <span className="text-sm">{'🧘'}</span>
+                        <span className="text-sm font-medium text-gray-800 truncate">
+                          {s.title.length > 40 ? s.title.slice(0, 40) + '…' : s.title}
+                        </span>
+                      </div>
+                      <button
+                        onClick={(e) => deleteSession(s.id, e)}
+                        className="opacity-0 group-hover:opacity-100 text-gray-400 hover:text-red-500 transition-all"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="text-[10px] text-gray-400">{s.message_count} messages</span>
+                      <span className="text-[10px] text-gray-300">·</span>
+                      <span className="text-[10px] text-gray-400">
+                        {new Date(s.updated_at).toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                      </span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="flex-1" onClick={() => setShowHistory(false)} />
         </div>
+      )}
 
-        {/* Navigation breadcrumb */}
-        {!showCatalog && activePlugin && (
-          <button
-            onClick={() => { setActivePlugin(null); setShowDashboard(true); }}
-            className="flex items-center gap-1 text-sm text-gray-400 hover:text-gray-600 mb-4 transition-colors"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            Dashboard
-          </button>
-        )}
-
-        {/* Main content: Dashboard → Catalog → Plugin Detail */}
-        {showCatalog ? (
-          <PluginCatalog
-            state={state}
-            onActivate={handleActivate}
-            onClose={() => { setShowCatalog(false); refresh(); }}
-          />
-        ) : activePlugin ? (
-          <PluginDetail
-            plugin={activePlugin}
-            plugins={state.plugins}
-            onCompleteTask={handleCompleteTask}
-            onSelectPlugin={handleSelectPlugin}
-          />
-        ) : showDashboard ? (
-          <DashboardHome
-            state={state}
-            onSelectPlugin={handleSelectPlugin}
-            onOpenCatalog={() => setShowCatalog(true)}
-          />
-        ) : (
-          <DashboardHome
-            state={state}
-            onSelectPlugin={handleSelectPlugin}
-            onOpenCatalog={() => setShowCatalog(true)}
-          />
-        )}
-
-        {/* Auth Modal */}
-        {showAuth && <AuthModal onClose={() => setShowAuth(false)} />}
-      </div>
+      {/* ── PLUGIN SWITCHER (mini overlay in chat view) ── */}
+      {showPluginOverlay && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" onClick={() => setShowPluginOverlay(false)} />
+          <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 max-w-lg mx-4 w-full">
+            <h3 className="text-sm font-semibold text-gray-800 mb-4">Switch Plugin</h3>
+            <div className="grid grid-cols-2 gap-2">
+              {plugins.filter(p => p.status === 'active' || p.status === 'beta').map(plugin => (
+                <button
+                  key={plugin.id}
+                  onClick={() => {
+                    setShowPluginOverlay(false);
+                    selectPlugin(plugin);
+                  }}
+                  className={`p-3 rounded-xl border text-left transition-all ${
+                    selectedPlugin?.id === plugin.id
+                      ? 'bg-teal-50 border-teal-300 shadow-sm'
+                      : 'bg-white border-gray-200 hover:border-teal-200 hover:bg-gray-50'
+                  }`}
+                >
+                  <div className="text-xl mb-1">{plugin.emoji}</div>
+                  <div className="text-xs font-semibold text-gray-800">{plugin.name}</div>
+                  <div className="text-[10px] text-gray-400">{plugin.description}</div>
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={() => setShowPluginOverlay(false)}
+              className="mt-4 w-full py-2 text-xs text-gray-400 hover:text-gray-600 border border-gray-200 rounded-xl"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

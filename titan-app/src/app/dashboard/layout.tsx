@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Terminal, Trophy, Sun, Cuboid, Zap, Bot, Shield, TrendingUp,
-  Orbit, Rocket, Puzzle, Layers, CreditCard,
+  Orbit, Rocket, Puzzle, Layers, CreditCard, BarChart3,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { loadProgression, loadFeed, saveFeed } from "@/lib/persistence";
@@ -42,6 +42,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "lifeos", label: "LifeOS", icon: Puzzle, color: "#14B8A6", path: "/dashboard/lifeos" },
   { id: "security", label: "Security", icon: Shield, color: "#10B981", path: "/dashboard/security" },
   { id: "automation", label: "Automation", icon: Orbit, color: "#7C3AED", path: "/dashboard/automation" },
+  { id: "analytics", label: "Analytics", icon: BarChart3, color: "#7C3AED", path: "/dashboard/analytics" },
   { id: "progression", label: "Progression", icon: Rocket, color: "#F59E0B", path: "/dashboard/progression" },
   { id: "billing", label: "Billing", icon: CreditCard, color: "#14B8A6", path: "/dashboard/billing" },
 ];
@@ -84,6 +85,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     router.push(path);
   }, [router]);
 
+  const currentLevel = useMemo(() => Math.max(1, Math.floor(progression.totalXp / 500) + 1), [progression.totalXp]);
   const estValue = (progression.totalTasksRun * 3.8).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
   // ▸ Off-white monotone palette is the default for dashboard mode
@@ -132,8 +134,24 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <span className="hidden sm:inline" style={{ color: '#666666' }}>{THEMES.find(t => t.id === theme)?.label}</span>
             </div>
 
-            {/* Level + XP Bar + Achievement Badges */}
+            {/* Level + XP Bar + Achievement Badges — more prominent */}
             <div className="hidden md:flex items-center gap-2.5">
+              {/* Level badge — always visible */}
+              <motion.div
+                className="flex items-center gap-1 px-2 py-1 rounded-full cursor-pointer border"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(14,165,165,0.12), rgba(212,160,23,0.06))',
+                  borderColor: '#0EA5A5/30',
+                }}
+                whileHover={{ scale: 1.05 }}
+                onClick={() => router.push('/dashboard/progression')}
+                title="View progression page"
+              >
+                <Rocket className="h-3 w-3" style={{ color: '#0EA5A5' }} />
+                <span className="text-[10px] font-mono font-bold" style={{ color: '#0EA5A5' }}>
+                  Lv.{currentLevel}
+                </span>
+              </motion.div>
               {/* Achievement badges tooltip */}
               {progression.achievements.length > 0 && (
                 <motion.div

@@ -54,6 +54,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -317,6 +318,18 @@ For litigation-heavy practices across Asia's common law jurisdictions (Singapore
 
 const toolSlugs = ['chatgpt', 'claude', 'perplexity', 'gemini', 'notion-ai'];
 
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI tool for legal document review?",
+    "answer": "Claude Pro with its 1M token context window is unmatched for reviewing lengthy legal documents \u2014 contracts, NDAs, operating agreements, and compliance filings. For Asian legal systems, Harvey AI is building specific support for Singapore and Hong Kong common law systems."
+  },
+  {
+    "question": "Can AI replace lawyers for contract review?",
+    "answer": "AI excels at identifying risky clauses, flagging missing terms, and comparing contracts against standards \u2014 covering about 70% of basic contract review. However, legal advice requires understanding jurisdiction-specific nuances, negotiation strategy, and risk appetite that AI cannot fully replicate. AI is best used as a first-pass review tool."
+  }
+];
+
 export default function AIToolsForLegalGuide() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-950">
@@ -570,6 +583,8 @@ export default function AIToolsForLegalGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

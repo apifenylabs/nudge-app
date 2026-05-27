@@ -1,8 +1,8 @@
 {
-  "version": "2026-05-25-consolidation-primary",
-  "generated": "2026-05-25T02:00:00+08:00",
-  "semanticCount": 31,
-  "graphEdgeCount": 44,
+  "version": "2026-05-27-consolidation-primary",
+  "generated": "2026-05-27T02:00:00+08:00",
+  "semanticCount": 46,
+  "graphEdgeCount": 72,
   "nodes": [
     {
       "id": "chunk-crypnuevo-cross-1779217287655",
@@ -251,6 +251,126 @@
       "type": "semantic",
       "confidence": 1.0,
       "timestamp": "2026-05-25T02:00:00+08:00"
+    },
+    {
+      "id": "first-real-drawdown-may26",
+      "name": "First Real Drawdown \u2014 ETH Short Unrealized Loss",
+      "summary": "Portfolio swung from $117.12 peak to $104.01 (-11.2%) as ETH rallied against 0.3673 short @ $2,122. This is the bot's first drawdown since live trading began May 24. Kill switch not triggered ($104 > $20 floor). Positions structurally unchanged. The swing is unrealized \u2014 PnL will crystallize at $2,058 TP. Key insight: single-position concentration risk is the portfolio's dominant sensitivity.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-05-25T18:01:16.000Z"
+    },
+    {
+      "id": "eth-short-flagship-concentration",
+      "name": "ETH Short is the Portfolio \u2014 Single-Asset Concentration Risk",
+      "summary": "90%+ of PnL sensitivity is to ETH price. No diversification beyond the single ETH short position (0.3673 @ $2,122). Other positions (HYPE, WIF) are negligible in size. The bot needs multi-asset signals or larger positions on HYPE/WIF before the single-ETH concentration is addressed.",
+      "type": "semantic",
+      "confidence": 0.9,
+      "timestamp": "2026-05-25T18:01:16.000Z"
+    },
+    {
+      "id": "overnight-autonomy-fragile",
+      "name": "Overnight Autonomy Working But Fragile",
+      "summary": "Bot ran silently 22:00-02:00 executing cron ticks every 60s with no errors. No new signals fired during ETH volatility \u2014 correctly prioritized existing position management. Risk: self-healing cron is the ONLY protection for TP/SL. If cron fails, ETH short becomes naked. No redundant fallback exists.",
+      "type": "semantic",
+      "confidence": 0.85,
+      "timestamp": "2026-05-25T18:01:16.000Z"
+    },
+    {
+      "id": "lifeos-vs-revenue-gap-widening",
+      "name": "LifeOS Expansion vs Revenue Gap \u2014 Structural Problem",
+      "summary": "LifeOS grew from 27 to 30 plugins (May 24-26) while revenue stays at $0.00. Plugin development is output-visible and gratifying; stripe checkout + affiliate deploy is grunt work. System naturally gravitates toward visible output over revenue-critical chores. 70/30 rule violated: LifeOS + trading consume 90%+ of output.",
+      "type": "semantic",
+      "confidence": 0.95,
+      "timestamp": "2026-05-25T18:01:16.000Z"
+    },
+    {
+      "id": "regime-filter-exp31-built",
+      "name": "Regime Filter (exp31) Built \u2014 BTC 1h Macro Tagging",
+      "summary": "BTC 1h regime filter tags each bar with trend (up/down/sideways), ATR regime (calm/killzone/mixed), and regime score (-2 to +2). 90d data shows 53% kill zone, only 2 trending up days out of 90. Current regime: mixed, ATR 2.5%. Filter says reduce alt exposure. Redundant for Vol Surge (98.5% WR). Useful for lower-WR strategies.",
+      "type": "semantic",
+      "confidence": 0.85,
+      "timestamp": "2026-05-25T18:01:16.000Z"
+    },
+    {
+      "id": "pending-actions-liability-10-items",
+      "name": "10 Pending Actions \u2014 Zero Execution, Growing Liability",
+      "summary": "10 items carried from May 22-26 with 0 execution. 5 are Wosobu-free: (1) core_bb playbook wire, (2) PnL reconciliation fix, (3) FMP equity screener, (4) Jupiter API meme execution, (5) forex ADX filter. System generates ~3 new actions/day but executes ~0.3/day. Action queue grows faster than execution capacity. Needs execution focus, not generation.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-05-25T18:01:16.000Z"
+    },
+    {
+      "id": "pipeline-decisions-locked-may25",
+      "name": "Pipeline Decisions Locked May 25",
+      "summary": "FOMC/news: daily check only. Kill zone: disabled for BB Core (15m), reserved for sub-5m scalpers. Closing early on BTC strength: reduces PnL 120R->107-109R \u2014 macro informs entry, not exit. Personality/skin: entertainment only \u2014 edge from market structure. Pipeline formula: Research\u2192Backtest\u219210/10 confidence\u2192Paper\u2192Live. No asking permission.",
+      "type": "semantic",
+      "confidence": 0.9,
+      "timestamp": "2026-05-25T18:01:16.000Z"
+    },
+    {
+      "id": "polymarket-infrastructure-built-may26",
+      "name": "Polymarket Infrastructure Built \u2014 Wallet + Scanner Deployed",
+      "summary": "Polymarket setup completed: fresh Solana wallet GjsLvC1t5iJaTAtfXFFNDV46uG9bQHfTe36twPCvmK7U, strategy + live scanner built. Blocked: needs SOL (/bin/bash.01) + JupUSD (0-50) from Wosobu. Expected ~2%/week ROI. Wosobu confirmed he will fund.",
+      "type": "semantic",
+      "confidence": 0.9,
+      "timestamp": "2026-05-26T18:00:00.000Z"
+    },
+    {
+      "id": "cron-surgery-may26",
+      "name": "Cron Surgery May 26 \u2014 24\u219223 Active Crons, R&D Schedule Formalized",
+      "summary": "3 crons killed (update-dashboard-hourly, trading-pulse-check, fetch-live-data), 2 added (rd-research-loop 6h, wick-improvement-daily 07:00 HKT), fetch-live-data merged into data-pipeline-hourly. Total: 24\u219223 crons. R&D agent formalized: rd-agent-daily (04:30), kalman-drl-backtest (05:00), wick-improvement-daily (07:00), rd-research-loop (every 6h).",
+      "type": "semantic",
+      "confidence": 0.95,
+      "timestamp": "2026-05-26T18:00:00.000Z"
+    },
+    {
+      "id": "portfolio-surge-229-may27",
+      "name": "Portfolio Surges to 29 \u2014 Wosobu SOL Deposit",
+      "summary": "Portfolio jumped from ~18 (23:13 HKT May 26) to 19.61 (00:19 HKT May 27), an +85.4% swing attributed to Wosobu SOL deposit. By 01:49 HKT: 29.01. ETH short resolved at TP ,058 overnight. Only HYPE short remains (0.21 @ 2.31) with native TP/SL. Cron uptime: 7+ days without failure.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-05-26T18:00:00.000Z"
+    },
+    {
+      "id": "wick-imbalance-research-may26",
+      "name": "Wick Imbalance Research Started \u2014 Building on CrypNuevo Framework",
+      "summary": "New cron wick-improvement-daily at 07:00 HKT sweeping wick_ratio [1.5-4.0] \u00d7 EMA [20, 50, 100]. Builds on May 19-20 CrypNuevo wick framework with broader parameter search. Part of formalized R&D agent schedule.",
+      "type": "semantic",
+      "confidence": 0.85,
+      "timestamp": "2026-05-26T18:00:00.000Z"
+    },
+    {
+      "id": "throughput-priority-locked-may26",
+      "name": "Throughput Priority Locked \u2014 More Algos Over Optimization",
+      "summary": "Wosobu directive May 26: \"More algos, more wins, more compound\" \u2014 throughput priority. Full framework: backtest \u2192 walk-forward \u2192 paper \u2192 graduated live. Polymarket + HL micro in parallel. 00k/3mo target. Strategy pipeline: 3 live + 3 in progress + 4 backlog.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-05-26T18:00:00.000Z"
+    },
+    {
+      "id": "micro-scalp-strategy-researched",
+      "name": "Micro Scalp Strategy Researched \u2014 BTC/ETH 1m Limit-Only",
+      "summary": "Order book imbalance + tape reading on BTC/ETH 1m, limit-only (maker rebate), 20-30 trades/day. Estimated -10/day on 05 capital. Must pass: 500+ backtested trades, max 3% drawdown before live. Not built yet \u2014 in strategy pipeline backlog.",
+      "type": "semantic",
+      "confidence": 0.8,
+      "timestamp": "2026-05-26T18:00:00.000Z"
+    },
+    {
+      "id": "eth-tp-resolved-self-correcting",
+      "name": "Pattern: ETH Short Self-Resolved via TP \u2014 Exit Systems Work",
+      "summary": "The May 25-26 ETH short drawdown (17.12\u2192~02) resolved itself when TP @ ,058 hit overnight. This validates: (1) TP/SL workaround works in both profit and loss direction, (2) the bot correctly held position without panic-closing, (3) single-position concentration risk partially self-corrected via TP hit. This is the first real validation of the exit system.",
+      "type": "semantic",
+      "confidence": 0.9,
+      "timestamp": "2026-05-26T18:00:00.000Z"
+    },
+    {
+      "id": "lifeos-plugin-hold-30",
+      "name": "LifeOS Plugin Count Held at 30 \u2014 Expansion Paused",
+      "summary": "LifeOS plugin count stayed at 30 (unchanged from prior day). No new categories added. This is the first day without LifeOS expansion since May 22. Revenue still /bin/bash.00. The hold suggests the system responded to the synthesis recommendation to stop plugin development until revenue infrastructure is deployed.",
+      "type": "semantic",
+      "confidence": 0.7,
+      "timestamp": "2026-05-26T18:00:00.000Z"
     }
   ],
   "edges": [
@@ -517,6 +637,174 @@
       "target_id": "next-actions-may23",
       "relation_type": "action_items",
       "weight": 0.9
+    },
+    {
+      "source_id": "first-real-drawdown-may26",
+      "target_id": "live-trading-confirmed-may25",
+      "relation_type": "follows",
+      "weight": 0.9
+    },
+    {
+      "source_id": "first-real-drawdown-may26",
+      "target_id": "balance-endpoint-never-clearinghouse",
+      "relation_type": "depends_on",
+      "weight": 0.8
+    },
+    {
+      "source_id": "first-real-drawdown-may26",
+      "target_id": "tp-sl-workaround-resting-orders",
+      "relation_type": "uses",
+      "weight": 0.9
+    },
+    {
+      "source_id": "eth-short-flagship-concentration",
+      "target_id": "first-real-drawdown-may26",
+      "relation_type": "explains",
+      "weight": 0.95
+    },
+    {
+      "source_id": "eth-short-flagship-concentration",
+      "target_id": "trading-dashboard-deployed",
+      "relation_type": "monitored_by",
+      "weight": 0.7
+    },
+    {
+      "source_id": "overnight-autonomy-fragile",
+      "target_id": "autonomous-may24-wosobu-sleep",
+      "relation_type": "continues",
+      "weight": 0.85
+    },
+    {
+      "source_id": "overnight-autonomy-fragile",
+      "target_id": "tp-sl-workaround-resting-orders",
+      "relation_type": "uses",
+      "weight": 0.85
+    },
+    {
+      "source_id": "lifeos-vs-revenue-gap-widening",
+      "target_id": "heartbeat-lifeos-plugins-may24",
+      "relation_type": "extends",
+      "weight": 0.9
+    },
+    {
+      "source_id": "lifeos-vs-revenue-gap-widening",
+      "target_id": "portfolio-revenue-at-zero-day-25",
+      "relation_type": "contrasts",
+      "weight": 1.0
+    },
+    {
+      "source_id": "lifeos-vs-revenue-gap-widening",
+      "target_id": "seventy-thirty-prioritization",
+      "relation_type": "violates",
+      "weight": 1.0
+    },
+    {
+      "source_id": "pending-actions-liability-10-items",
+      "target_id": "pending-actions-accumulation",
+      "relation_type": "amplifies",
+      "weight": 1.0
+    },
+    {
+      "source_id": "pending-actions-liability-10-items",
+      "target_id": "next-actions-may23",
+      "relation_type": "references",
+      "weight": 0.9
+    },
+    {
+      "source_id": "pending-actions-liability-10-items",
+      "target_id": "live-trading-confirmed-may25",
+      "relation_type": "context",
+      "weight": 0.7
+    },
+    {
+      "source_id": "regime-filter-exp31-built",
+      "target_id": "kalman-drl-deployed-may23",
+      "relation_type": "enhances",
+      "weight": 0.7
+    },
+    {
+      "source_id": "pipeline-decisions-locked-may25",
+      "target_id": "trading-strategy-pivot-sol-hyperliquid",
+      "relation_type": "governs",
+      "weight": 0.8
+    },
+    {
+      "source_id": "pipeline-decisions-locked-may25",
+      "target_id": "live-hl-bot-status-may23",
+      "relation_type": "refines",
+      "weight": 0.7
+    },
+    {
+      "source_id": "polymarket-infrastructure-built-may26",
+      "target_id": "throughput-priority-locked-may26",
+      "relation_type": "implements",
+      "weight": 0.9
+    },
+    {
+      "source_id": "cron-surgery-may26",
+      "target_id": "trading-dashboard-deployed",
+      "relation_type": "supports",
+      "weight": 0.7
+    },
+    {
+      "source_id": "portfolio-surge-229-may27",
+      "target_id": "eth-tp-resolved-self-correcting",
+      "relation_type": "follows",
+      "weight": 0.9
+    },
+    {
+      "source_id": "portfolio-surge-229-may27",
+      "target_id": "live-trading-confirmed-may25",
+      "relation_type": "continues",
+      "weight": 0.95
+    },
+    {
+      "source_id": "eth-tp-resolved-self-correcting",
+      "target_id": "first-real-drawdown-may26",
+      "relation_type": "resolves",
+      "weight": 1.0
+    },
+    {
+      "source_id": "eth-tp-resolved-self-correcting",
+      "target_id": "tp-sl-workaround-resting-orders",
+      "relation_type": "uses",
+      "weight": 0.9
+    },
+    {
+      "source_id": "eth-tp-resolved-self-correcting",
+      "target_id": "eth-short-flagship-concentration",
+      "relation_type": "resolves",
+      "weight": 0.85
+    },
+    {
+      "source_id": "wick-imbalance-research-may26",
+      "target_id": "chunk-crypnuevo-method-1779217287655",
+      "relation_type": "extends",
+      "weight": 0.8
+    },
+    {
+      "source_id": "throughput-priority-locked-may26",
+      "target_id": "pipeline-decisions-locked-may25",
+      "relation_type": "supports",
+      "weight": 0.85
+    },
+    {
+      "source_id": "micro-scalp-strategy-researched",
+      "target_id": "throughput-priority-locked-may26",
+      "relation_type": "implements",
+      "weight": 0.7
+    },
+    {
+      "source_id": "lifeos-plugin-hold-30",
+      "target_id": "lifeos-vs-revenue-gap-widening",
+      "relation_type": "responds_to",
+      "weight": 0.8
+    },
+    {
+      "source_id": "lifeos-plugin-hold-30",
+      "target_id": "portfolio-revenue-at-zero-day-25",
+      "relation_type": "context",
+      "weight": 0.7
     }
   ]
 }

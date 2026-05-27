@@ -67,6 +67,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -338,6 +339,14 @@ For first-generation wealth builders across Asia — where many families lack mu
 
 const toolSlugs = ['chatgpt', 'claude', 'perplexity', 'gemini', 'notion-ai'];
 
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI tool for personal budgeting?",
+    "answer": "For personal finance, tools like You Need A Budget (YNAB) with AI insights and Copilot Money are top choices. For Asian users, Plato handles Singapore-specific personal finance. ChatGPT can also serve as a financial advisor \u2014 upload your spending data and ask for personalized budgeting recommendations."
+  }
+];
+
 export default function AIToolsForPersonalFinanceGuide() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-950">
@@ -591,6 +600,8 @@ export default function AIToolsForPersonalFinanceGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 

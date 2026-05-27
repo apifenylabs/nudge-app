@@ -59,6 +59,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -323,6 +324,18 @@ For CHROs and HR directors in Asia's competitive markets, AI people analytics tr
 
 const toolSlugs = ['chatgpt', 'claude', 'perplexity', 'gemini', 'notion-ai'];
 
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI recruiting tool for Asian companies?",
+    "answer": "AI recruitment platforms like LinkedIn Recruiter AI and SmartRecruiters help source candidates across Asian markets. For small businesses, ChatGPT can screen resumes and generate interview questions. In Southeast Asia, Kakitangan.com (Malaysia) handles HR compliance with EPF/SOCSO/PCB auto-calculation."
+  },
+  {
+    "question": "Can AI reduce bias in hiring?",
+    "answer": "AI can reduce certain biases by focusing on skills and experience rather than demographic factors. However, AI trained on historical hiring data may perpetuate existing biases. The best approach is to use AI as a screening assistant while maintaining human oversight for final hiring decisions."
+  }
+];
+
 export default function AIToolsForHRRecruitingGuide() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-950">
@@ -576,6 +589,8 @@ export default function AIToolsForHRRecruitingGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 

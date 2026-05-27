@@ -62,3 +62,8 @@
 [2026-04-24T03:05:03.250Z] [telegram] [OK] chiangmai-001 — Elephant Nature Park (Chiang Mai, Thailand)
 [2026-04-24T03:05:03.250Z] [twitter] [OK] chiangmai-002 — Chiang Mai Night Safari (Chiang Mai, Thailand)
 [2026-04-24T03:05:03.250Z] [telegram] [OK] chiangmai-002 — Chiang Mai Night Safari (Chiang Mai, Thailand)
+[2026-05-27T02:07:41.648696] [devto] [DRY_RUN] 
+[2026-05-27T02:07:41.648764] [reddit/selfhosted] [DRY_RUN] 
+[2026-05-27T02:07:41.648781] [clawhub] [DRY_RUN] 
+[2026-05-27T02:07:41.648815] [reddit/openclaw] [DRY_RUN] 
+[2026-05-27T02:07:41.648991] [twitter] [DRY_RUN] 10 tweets

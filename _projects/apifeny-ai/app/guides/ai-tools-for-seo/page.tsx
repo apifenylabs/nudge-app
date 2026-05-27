@@ -32,6 +32,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -228,6 +229,26 @@ For businesses targeting Singapore, Malaysia, Thailand, Indonesia, Vietnam, or t
       { name: 'ChatGPT', slug: 'chatgpt', note: 'Generate localized content and review responses' },
     ],
   },
+];
+
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI SEO tool in 2026?",
+    "answer": "Semrush and Ahrefs remain the industry standards for comprehensive AI-powered SEO. Semrush offers AI content optimization, keyword gap analysis, and site audits. For content-specific SEO, SurferSEO provides real-time optimization scoring. Perplexity Pro is excellent for AI-powered keyword research and content strategy development."
+  },
+  {
+    "question": "Can AI tools replace SEO specialists?",
+    "answer": "AI tools handle technical SEO audits, keyword research, content optimization, and competitor analysis \u2014 about 60% of what an SEO specialist does. However, strategic decisions, link building relationships, and Google algorithm interpretation still require human expertise. AI makes SEO teams more efficient but doesn't fully replace them."
+  },
+  {
+    "question": "Which AI SEO tools work best for Asian markets?",
+    "answer": "For Asian markets, look for tools that support Baidu (China), Naver (Korea), and Yahoo Japan optimization. Semrush supports Baidu and Naver keyword databases. Ahrefs works for most Asian domains. For multi-language SEO, SurferSEO supports content optimization in Chinese, Japanese, Korean, Thai, and Vietnamese."
+  },
+  {
+    "question": "How can AI improve my SEO rankings?",
+    "answer": "AI improves SEO rankings by: analyzing top-ranking content to identify keyword gaps and optimization opportunities, generating content briefs with ideal structure and word count, predicting content performance before publishing, automating technical SEO audits, and providing data-driven internal linking suggestions."
+  }
 ];
 
 export default function AIToolsForSEOGuide() {
@@ -454,6 +475,8 @@ export default function AIToolsForSEOGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

@@ -26,15 +26,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'bangkok-to-phuket-road-trip': 'bangkok-phuket',
     'bangkok-to-chiang-mai-road-trip': 'bangkok-chiang-mai',
     'singapore-to-kuala-lumpur-road-trip': 'singapore-kuala-lumpur',
+    'singapore-to-kuala-lumpur-family-ev-road-trip': 'singapore-kuala-lumpur-family',
     'bali-ev-road-trip-loop': 'bali-loop',
+    'bali-family-ev-road-trip-loop': 'bali-family',
     'hong-kong-to-macau-road-trip': 'hong-kong-macau',
     'hanoi-to-ha-long-bay-road-trip': 'hanoi-ha-long',
     'osaka-to-tokyo-road-trip': 'osaka-tokyo',
     'kuala-lumpur-to-penang-road-trip': 'kuala-lumpur-penang',
+    'kuala-lumpur-to-penang-family-ev-road-trip': 'kuala-lumpur-penang-family',
     'mumbai-to-pune-road-trip': 'mumbai-pune',
     'tokyo-to-hakone-fuji-road-trip': 'tokyo-hakone-fuji',
     'delhi-to-jaipur-agra-road-trip': 'delhi-jaipur-agra',
     'chiang-mai-to-pai-mae-hong-son-road-trip': 'chiang-mai-pai-mae-hong-son',
+    'seoul-to-busan-road-trip': 'seoul-busan',
+    'manila-to-baguio-road-trip': 'manila-baguio',
   };
 
   const itineraryUrls = allRoutes.map(r => ({

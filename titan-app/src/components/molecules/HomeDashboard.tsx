@@ -90,12 +90,14 @@ function QuickNavCard({
   icon: Icon,
   color,
   onClick,
+  badge,
 }: {
   label: string;
   description: string;
   icon: typeof Bot;
   color: string;
   onClick: () => void;
+  badge?: string;
 }) {
   return (
     <motion.button
@@ -108,7 +110,13 @@ function QuickNavCard({
       whileHover={{ y: -2, scale: 1.01 }}
       onClick={onClick}
     >
-      <div className="flex items-center gap-3">
+      <div
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-xl"
+        style={{
+          background: `radial-gradient(circle at 0% 50%, ${color}05, transparent 70%)`,
+        }}
+      />
+      <div className="flex items-center gap-3 relative z-10">
         <div
           className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center shrink-0"
           style={{ background: `${color}15` }}
@@ -116,10 +124,18 @@ function QuickNavCard({
           <Icon className="h-4 w-4 sm:h-5 sm:w-5" style={{ color }} />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-xs sm:text-sm font-semibold font-mono" style={{ color: '#1F1F1F' }}>{label}</p>
+          <div className="flex items-center gap-2">
+            <p className="text-xs sm:text-sm font-semibold font-mono" style={{ color: '#1F1F1F' }}>{label}</p>
+            {badge && (
+              <span className="text-[8px] font-mono px-1.5 py-0.5 rounded-full"
+                style={{ background: `${color}12`, color }}>
+                {badge}
+              </span>
+            )}
+          </div>
           <p className="text-[9px] sm:text-[10px] mt-0.5 truncate" style={{ color: '#666666' }}>{description}</p>
         </div>
-        <ChevronRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 group-hover:transition-colors shrink-0" style={{ color: '#666666' }} />
+        <ChevronRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 group-hover:translate-x-0.5 transition-transform shrink-0" style={{ color }} />
       </div>
     </motion.button>
   );
@@ -243,12 +259,14 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
       {/* Mini swarm + quick actions — two columns on desktop */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         {/* Mini Swarm Preview */}
-        <div className="relative p-4 sm:p-5 rounded-xl border overflow-hidden"
+        <motion.div
+          className="relative p-4 sm:p-5 rounded-xl border overflow-hidden group"
           style={{
             background: '#FFFFFF',
             borderColor: `${currentMascot.colorTint}15`,
             boxShadow: '0 10px 30px -10px rgba(31,31,31,0.08)',
           }}
+          whileHover={{ y: -2, scale: 1.005 }}
         >
           <div
             className="absolute inset-0 pointer-events-none"
@@ -326,7 +344,7 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
             Open Swarm View
             <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
           </motion.button>
-        </div>
+        </motion.div>
 
         {/* Quick actions */}
         <div className="space-y-2">
@@ -339,6 +357,7 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
             description="Craft new skills & templates"
             icon={Bot}
             color="#D4A017"
+            badge="New"
             onClick={() => onNavigate("forge")}
           />
           <QuickNavCard

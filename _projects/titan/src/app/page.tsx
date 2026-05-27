@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import WaitlistForm from "./components/WaitlistForm";
 
 /* ─────────────────────────────────────────────────────────────
    Particle Background
@@ -518,13 +519,7 @@ export default function HomePage() {
                 agent army — no experience required.
               </p>
 
-              <button className="px-10 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-lg hover:shadow-2xl hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300">
-                Start Free — Ascend Now
-              </button>
-
-              <p className="text-xs text-slate-600 mt-4">
-                No credit card required • 14-day free trial • Cancel anytime
-              </p>
+              <WaitlistForm />
             </div>
           </div>
         </section>

@@ -4,7 +4,8 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Puzzle, Play, CheckCircle2, ChevronRight, Sparkles, 
-  Zap, ArrowRight, Layers, TrendingUp
+  Zap, ArrowRight, Layers, TrendingUp, Archive, 
+  ArrowUp, ArrowDown, RotateCcw, EyeOff
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -29,6 +30,15 @@ import {
   logAction,
   getLifeOSState,
 } from "@/lib/db/lifeos-supabase";
+import {
+  toggleArchive,
+  isArchived,
+  sortPlugins,
+  assignInitialOrders,
+  movePlugin,
+  getAllMeta,
+  type PluginMeta,
+} from "@/lib/lifeos/archive-sort";
 
 // ─── LifeOS Tab Component ──────────────────────────────────────────────
 
@@ -38,10 +48,16 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
   const [activePlugin, setActivePlugin] = useState<LifeCategory | null>(null);
   const [showCatalog, setShowCatalog] = useState(false);
   const [showAnalytics, setShowAnalytics] = useState(false);
+  const [showArchived, setShowArchived] = useState(false);
   const [downloads, setDownloads] = useState(0);
+  const [metaState, setMetaState] = useState<Record<string, PluginMeta>>({});
 
   const refresh = useCallback(() => {
-    setPlugins(getAllPlugins());
+    const allPlugins = getAllPlugins();
+    const ids = allPlugins.map(p => p.id);
+    assignInitialOrders(ids);
+    setPlugins(sortPlugins(allPlugins));
+    setMetaState(getAllMeta());
     setDownloads(getDownloadsCount());
   }, []);
 
@@ -94,7 +110,27 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
     });
   }, [catalog, refresh, onFeedAdd]);
 
+  const handleToggleArchive = useCallback((pluginId: string) => {
+    const archived = toggleArchive(pluginId);
+    setMetaState(getAllMeta());
+    refresh();
+    onFeedAdd?.({
+      avatar: archived ? '📦' : '📂',
+      name: 'LifeOS',
+      text: archived ? `Archived plugin` : `Restored plugin from archive`,
+    });
+  }, [refresh, onFeedAdd]);
+
+  const handleMove = useCallback((pluginId: string, direction: 'up' | 'down') => {
+    const allIds = plugins.map(p => p.id);
+    movePlugin(pluginId, direction, allIds);
+    setMetaState(getAllMeta());
+    refresh();
+  }, [plugins, refresh]);
+
   const currentPlugin = activePlugin ? plugins.find(p => p.category === activePlugin) : null;
+  const activePlugins = plugins.filter(p => !isArchived(p.id));
+  const archivedPlugins = plugins.filter(p => isArchived(p.id));
 
   return (
     <div className="space-y-6">
@@ -109,7 +145,7 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
       <div className="flex items-center gap-4 text-[10px] font-mono text-titan-muted/70 bg-titan-card/40 border border-titan-border/20 rounded-xl px-4 py-2">
         <span className="flex items-center gap-1">
           <Puzzle className="h-3 w-3 text-titan-teal" />
-          <span className="text-titan-teal font-semibold">{plugins.length}</span> active plugins
+          <span className="text-titan-teal font-semibold">{activePlugins.length}</span> / {plugins.length} plugins
         </span>
         <span className="flex items-center gap-1">
           <Zap className="h-3 w-3 text-titan-golden" />
@@ -133,11 +169,27 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
             <Puzzle className="h-3 w-3" />
             {showCatalog ? 'Close' : 'Browse'}
           </Button>
+          {archivedPlugins.length > 0 && (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => { setShowCatalog(false); setShowAnalytics(false); setShowArchived(!showArchived); }}
+              className="text-[10px] h-6 gap-1"
+              style={{
+                borderColor: showArchived ? 'rgba(139,92,246,0.4)' : 'rgba(139,92,246,0.2)',
+                color: showArchived ? '#A78BFA' : '#8B5CF6',
+              }}
+            >
+              <Archive className="h-3 w-3" />
+              Archive ({archivedPlugins.length})
+            </Button>
+          )}
           <Button
             variant="outline"
             size="sm"
             onClick={() => {
               setShowCatalog(false);
+              setShowArchived(false);
               setShowAnalytics(!showAnalytics);
             }}
             className="text-[10px] h-6 gap-1"
@@ -261,47 +313,131 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
         </motion.div>
       )}
 
-      {/* Plugin grid (all active plugins) */}
-      {plugins.length > 0 && (
+      {/* Active plugin grid */}
+      {activePlugins.length > 0 && (
         <div>
-          <h3 className="text-xs font-mono text-titan-muted/70 mb-2 uppercase tracking-wider">All Active Plugins</h3>
+          <h3 className="text-xs font-mono text-titan-muted/70 mb-2 uppercase tracking-wider">Active Plugins</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            {plugins.map(p => (
-              <motion.button
-                key={p.id}
-                onClick={() => setActivePlugin(p.category)}
-                className={`p-3 rounded-xl border text-left transition-all ${
-                  activePlugin === p.category 
-                    ? 'bg-titan-card/80 border-titan-teal/40' 
-                    : 'bg-titan-surface/40 border-titan-border/20 hover:border-titan-teal/30'
-                }`}
-                whileHover={{ y: -2 }}
-              >
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-lg">{p.emoji}</span>
-                  <span className="text-[11px] font-semibold">{p.name}</span>
+            {activePlugins.map((p, idx) => {
+              const isFirst = idx === 0;
+              const isLast = idx === activePlugins.length - 1;
+              return (
+                <div key={p.id} className="relative group">
+                  <motion.button
+                    onClick={() => setActivePlugin(p.category)}
+                    className={`w-full p-3 rounded-xl border text-left transition-all ${
+                      activePlugin === p.category 
+                        ? 'bg-titan-card/80 border-titan-teal/40' 
+                        : 'bg-titan-surface/40 border-titan-border/20 hover:border-titan-teal/30'
+                    }`}
+                    whileHover={{ y: -2 }}
+                  >
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-lg">{p.emoji}</span>
+                      <span className="text-[11px] font-semibold">{p.name}</span>
+                    </div>
+                    {/* Phase progress dots */}
+                    <div className="flex gap-1 mt-1.5">
+                      {p.phases.map((ph, i) => (
+                        <div
+                          key={i}
+                          className="h-1 flex-1 rounded-full"
+                          style={{ 
+                            background: ph.completed 
+                              ? 'linear-gradient(90deg, #14B8A6, #F59E0B)' 
+                              : ph.progress > 0 
+                                ? `linear-gradient(90deg, #14B8A6 ${ph.progress}%, rgba(255,255,255,0.08) ${ph.progress}%)`
+                                : 'rgba(255,255,255,0.08)'
+                          }}
+                        />
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-between mt-1.5">
+                      <span className="text-[9px] text-titan-muted/50 font-mono">{p.overallProgress}%</span>
+                      <ChevronRight className="h-2.5 w-2.5 text-titan-muted/30" />
+                    </div>
+                  </motion.button>
+                  {/* Hover controls: reorder + archive */}
+                  <div className="absolute -top-2 -right-2 flex gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                    {!isFirst && (
+                      <button
+                        onClick={(e) => { e.stopPropagation(); handleMove(p.id, 'up'); }}
+                        className="w-5 h-5 rounded-full flex items-center justify-center text-[9px] bg-titan-card border border-titan-border/30 hover:bg-titan-teal/10 hover:border-titan-teal/40 transition-all"
+                        title="Move up"
+                        style={{ color: '#14B8A6' }}
+                      >
+                        <ArrowUp className="h-3 w-3" />
+                      </button>
+                    )}
+                    {!isLast && (
+                      <button
+                        onClick={(e) => { e.stopPropagation(); handleMove(p.id, 'down'); }}
+                        className="w-5 h-5 rounded-full flex items-center justify-center text-[9px] bg-titan-card border border-titan-border/30 hover:bg-titan-teal/10 hover:border-titan-teal/40 transition-all"
+                        title="Move down"
+                        style={{ color: '#14B8A6' }}
+                      >
+                        <ArrowDown className="h-3 w-3" />
+                      </button>
+                    )}
+                    <button
+                      onClick={(e) => { e.stopPropagation(); handleToggleArchive(p.id); }}
+                      className="w-5 h-5 rounded-full flex items-center justify-center text-[9px] bg-titan-card border border-titan-border/30 hover:bg-amber-500/10 hover:border-amber-500/40 transition-all"
+                      title="Archive"
+                      style={{ color: '#D4A017' }}
+                    >
+                      <EyeOff className="h-3 w-3" />
+                    </button>
+                  </div>
                 </div>
-                {/* Phase progress dots */}
-                <div className="flex gap-1 mt-1.5">
-                  {p.phases.map((ph, i) => (
-                    <div
-                      key={i}
-                      className="h-1 flex-1 rounded-full"
-                      style={{ 
-                        background: ph.completed 
-                          ? 'linear-gradient(90deg, #14B8A6, #F59E0B)' 
-                          : ph.progress > 0 
-                            ? `linear-gradient(90deg, #14B8A6 ${ph.progress}%, rgba(255,255,255,0.08) ${ph.progress}%)`
-                            : 'rgba(255,255,255,0.08)'
-                      }}
-                    />
-                  ))}
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Archived plugin section */}
+      {showArchived && archivedPlugins.length > 0 && (
+        <div>
+          <h3 className="text-xs font-mono text-titan-muted/50 mb-2 uppercase tracking-wider flex items-center gap-2">
+            <Archive className="h-3 w-3" />
+            Archived ({archivedPlugins.length})
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 opacity-60">
+            {archivedPlugins.map(p => (
+              <div key={p.id} className="relative group">
+                <motion.button
+                  onClick={() => setActivePlugin(p.category)}
+                  className={`w-full p-3 rounded-xl border text-left transition-all bg-titan-surface/20 border-titan-border/10`}
+                  whileHover={{ y: -2 }}
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-lg">{p.emoji}</span>
+                    <span className="text-[11px] font-semibold text-titan-muted/50">{p.name}</span>
+                    <span className="text-[7px] font-mono text-titan-muted/40 ml-auto uppercase">Archived</span>
+                  </div>
+                  <div className="flex gap-1 mt-1.5">
+                    {p.phases.map((ph, i) => (
+                      <div key={i} className="h-1 flex-1 rounded-full" style={{
+                        background: ph.completed ? 'rgba(20,184,166,0.3)' : 'rgba(255,255,255,0.05)'
+                      }} />
+                    ))}
+                  </div>
+                  <div className="flex items-center justify-between mt-1.5">
+                    <span className="text-[9px] text-titan-muted/30 font-mono">{p.overallProgress}%</span>
+                  </div>
+                </motion.button>
+                {/* Restore button */}
+                <div className="absolute -top-2 -right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <button
+                    onClick={(e) => { e.stopPropagation(); handleToggleArchive(p.id); }}
+                    className="w-5 h-5 rounded-full flex items-center justify-center bg-titan-card border border-titan-border/30 hover:bg-emerald-500/10 hover:border-emerald-500/40 transition-all"
+                    title="Restore"
+                    style={{ color: '#10B981' }}
+                  >
+                    <RotateCcw className="h-3 w-3" />
+                  </button>
                 </div>
-                <div className="flex items-center justify-between mt-1.5">
-                  <span className="text-[9px] text-titan-muted/50 font-mono">{p.overallProgress}%</span>
-                  <ChevronRight className="h-2.5 w-2.5 text-titan-muted/30" />
-                </div>
-              </motion.button>
+              </div>
             ))}
           </div>
         </div>

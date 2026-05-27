@@ -35,6 +35,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -250,6 +251,26 @@ For Asian support operations, AI QA tools that support languages like Chinese, J
       { name: 'Intercom', slug: 'intercom-fin', note: 'Conversation analytics with Fin insights' },
     ],
   },
+];
+
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI customer support tool for small businesses?",
+    "answer": "Intercom Fin is the best AI customer support agent, resolving up to 47% of queries without human handoff. Zendesk Answer Bot is excellent for businesses already using Zendesk. For budget-conscious businesses, Tidio offers an affordable AI chatbot with a free tier for basic automation."
+  },
+  {
+    "question": "Can AI chatbots handle multiple Asian languages?",
+    "answer": "Yes \u2014 Intercom Fin supports Chinese, Japanese, Korean, and Southeast Asian languages. Zendesk Answer Bot handles multilingual queries. For Asian-specific needs, Novel AI (Malaysia-built) handles Bahasa Melayu, Manglish, Chinese dialects including Cantonese and Hokkien."
+  },
+  {
+    "question": "How much does an AI customer support tool cost?",
+    "answer": "Intercom starts at $39/month (Essential plan) with Fin AI included. Zendesk Support starts at $19/month per agent. Tidio offers a free tier with limited conversations. The most affordable full-featured option for small businesses is Tidio at $29/month for the Chatbot plan."
+  },
+  {
+    "question": "Can AI customer support replace human agents?",
+    "answer": "AI handles 30-50% of customer queries fully automatically \u2014 order status, shipping info, FAQ responses. Complex issues, escalations, and sensitive conversations still need human agents. The best approach is AI for first-line support with seamless handoff to humans when needed."
+  }
 ];
 
 export default function AIToolsForCustomerSupportGuide() {
@@ -595,6 +616,8 @@ export default function AIToolsForCustomerSupportGuide() {
             </div>
           </div>
         </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

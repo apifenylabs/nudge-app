@@ -36,6 +36,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -259,6 +260,22 @@ For Asian video creators — whether on YouTube, TikTok, or local platforms like
       { name: 'HeyGen', slug: 'heygen', note: 'Performance tracking for avatar videos' },
     ],
   },
+];
+
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI video creation tool in 2026?",
+    "answer": "Runway Gen-3 leads for AI video generation from text and images. CapCut is the best free AI video editor, especially for TikTok and social media content. For AI avatars and professional talking-head videos, Synthesia and HeyGen are the top choices. Descript is best for AI-powered editing and transcription."
+  },
+  {
+    "question": "Can AI generate videos from text?",
+    "answer": "Yes \u2014 Runway Gen-3, Pika, and Luma AI generate videos from text prompts. Sora by OpenAI (when available) will further advance text-to-video capabilities. Current tools generate 5-10 second clips suitable for social media. Longer videos still require traditional editing combined with AI generation."
+  },
+  {
+    "question": "Which AI video tool is best for Asian content creators?",
+    "answer": "CapCut (by ByteDance, TikTok's parent company) is the most popular AI video editor in Asia, with strong support for Chinese, Japanese, Korean, Thai, and Vietnamese. It offers auto-captions, trending templates, and effects optimized for Asian platforms including TikTok, Douyin, and Xiaohongshu."
+  }
 ];
 
 export default function AIToolsForVideoGuide() {
@@ -486,6 +503,8 @@ export default function AIToolsForVideoGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

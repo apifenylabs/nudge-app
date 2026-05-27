@@ -196,6 +196,64 @@ const SLUG_OVERRIDES: Record<string, { slug: string; label: string }[]> = {
     { slug: 'jasper', label: 'Jasper — product copy at scale' },
     { slug: 'canva-ai', label: 'Canva Magic Studio — product images and ads' },
   ],
+
+  // ── Country-specific solopreneur guides ──
+  'best-ai-tools-singapore-solopreneurs-2026': [
+    { slug: 'chatgpt', label: 'ChatGPT — daily productivity for SG solopreneurs' },
+    { slug: 'bolt-new', label: 'Bolt.new — build MVPs in minutes' },
+    { slug: 'notion-ai', label: 'Notion AI — organise your one-person business' },
+  ],
+  'best-ai-tools-hong-kong-2026': [
+    { slug: 'chatgpt', label: 'ChatGPT — bilingual Cantonese/English assistant' },
+    { slug: 'claude', label: 'Claude — deep document analysis for finance' },
+    { slug: 'deepl', label: 'DeepL Pro — accurate Traditional Chinese translations' },
+  ],
+  'best-ai-tools-malaysia-2026': [
+    { slug: 'chatgpt', label: 'ChatGPT — Bahasa Malaysia content creation' },
+    { slug: 'canva-ai', label: 'Canva Magic Studio — social media graphics' },
+    { slug: 'bolt-new', label: 'Bolt.new — build Malaysia-focused web apps' },
+  ],
+  'best-ai-tools-indonesia-2026': [
+    { slug: 'chatgpt', label: 'ChatGPT — Indonesian language content at scale' },
+    { slug: 'jasper', label: 'Jasper — marketing copy for Indo audiences' },
+    { slug: 'canva-ai', label: 'Canva Magic Studio — visual content for Indonesian market' },
+  ],
+  'best-ai-tools-thailand-2026': [
+    { slug: 'chatgpt', label: 'ChatGPT — Thai language assistant' },
+    { slug: 'gemini', label: 'Gemini — strong Thai language understanding' },
+    { slug: 'canva-ai', label: 'Canva Magic Studio — Thai-friendly design templates' },
+  ],
+
+  // ── Tool comparison guides ──
+  'cursor-vs-copilot-2026-coding-comparison': [
+    { slug: 'cursor', label: 'Cursor — AI-first code editor' },
+    { slug: 'copilot', label: 'GitHub Copilot — integrated AI pair programmer' },
+    { slug: 'windsurf', label: 'Windsurf — agentic alternative to both' },
+  ],
+  'deepseek-vs-chatgpt-2026-comparison': [
+    { slug: 'deepseek', label: 'DeepSeek — free, open-weight challenger' },
+    { slug: 'chatgpt', label: 'ChatGPT — the established AI leader' },
+    { slug: 'claude', label: 'Claude — the thoughtful third option' },
+  ],
+
+  // ── General & Asia solopreneur guides ──
+  'best-ai-tools-solopreneurs-2026': [
+    { slug: 'chatgpt', label: 'ChatGPT — all-in-one solopreneur assistant' },
+    { slug: 'notion-ai', label: 'Notion AI — knowledge management for one' },
+    { slug: 'bolt-new', label: 'Bolt.new — launch MVPs without a developer' },
+  ],
+  'best-ai-tools-asia-2026-solopreneur-guide': [
+    { slug: 'chatgpt', label: 'ChatGPT — multilingual support across Asia' },
+    { slug: 'bolt-new', label: 'Bolt.new — build apps without a co-founder' },
+    { slug: 'notion-ai', label: 'Notion AI — organise your Asia ops' },
+  ],
+
+  // ── Niche role guides ──
+  'best-ai-tools-freelance-designers-asia-2026': [
+    { slug: 'midjourney', label: 'Midjourney — generate concept art and assets' },
+    { slug: 'canva-ai', label: 'Canva Magic Studio — quick client deliverables' },
+    { slug: 'runway', label: 'Runway — AI video for motion design projects' },
+  ],
 };
 
 // ─── Tool display data ───

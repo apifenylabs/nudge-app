@@ -14,6 +14,7 @@ import {
   Globe,
   Lightbulb,
   Info,
+  ExternalLink,
 } from 'lucide-react';
 import { RANKING_CATEGORIES, getRankingCategory } from '@/lib/ranking-categories';
 import { toolsData } from '@/lib/data';
@@ -21,6 +22,7 @@ import type { Tool } from '@/lib/types';
 import { computeAllScores, RankedTool } from '@/lib/ranking-algorithm';
 import { cn } from '@/lib/utils';
 import { playbooks } from '@/lib/playbooks';
+import AffiliateButton from '@/components/AffiliateButton';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 interface RankingCategoryPageProps {
@@ -331,8 +333,8 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
                 )}
               </div>
 
-              {/* Score */}
-              <div className="hidden sm:flex flex-col items-center gap-1 shrink-0">
+              {/* Score + Affiliate CTA */}
+              <div className="flex flex-col items-center gap-1.5 shrink-0">
                 <div
                   className={cn(
                     'w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold border',
@@ -348,6 +350,14 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
                   {rt.score.toFixed(1)}
                 </div>
                 <span className="text-[9px] text-tech-400 uppercase tracking-wider">Score</span>
+                <div className="hidden lg:block mt-1">
+                  <AffiliateButton
+                    toolSlug={rt.tool.slug}
+                    toolName={rt.tool.name}
+                    fallbackUrl={rt.tool.website_url}
+                    variant="small"
+                  />
+                </div>
               </div>
 
               {/* Chevron */}

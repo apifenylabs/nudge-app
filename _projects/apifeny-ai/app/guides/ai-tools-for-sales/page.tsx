@@ -38,6 +38,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -312,6 +313,18 @@ Leading platforms like Gong and Chorus (ZoomInfo) have invested heavily in Asia-
   },
 ];
 
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI tool for sales in 2026?",
+    "answer": "Freshsales (Freshworks) offers native WhatsApp Business API integration essential for Asian markets. Salesforce Einstein provides enterprise-grade AI sales features. For solopreneurs, combining ChatGPT for outreach with a CRM like Freshsales or HubSpot creates an effective low-cost AI sales stack starting at $0-12/month."
+  },
+  {
+    "question": "Can AI write sales emails that convert?",
+    "answer": "Yes \u2014 AI sales email tools can generate personalized outreach sequences at scale. ChatGPT with proper custom instructions creates effective cold emails. Tools like Jasper have specific sales copy templates. The key is personalization \u2014 AI can research prospects and tailor messaging based on their company, role, and recent activity."
+  }
+];
+
 export default function AIToolsForSalesGuide() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-950">
@@ -539,6 +552,8 @@ export default function AIToolsForSalesGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

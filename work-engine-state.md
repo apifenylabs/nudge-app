@@ -1,63 +1,76 @@
-# Work Engine State
-Last Updated: 2026-05-25 20:24 HKT
+# Work Engine State — May 27, 2026, 8:55 AM HKT
 
-## ✅ P0 REVENUE — All 4 travel sites deployed to Vercel production with affiliate beacon wiring
-- luxury-family-travel, senior-friendly-travel-asia, kids-activities-asia, family-travel-directory all live
-- All affiliate beacon calls (BookingCTA, StickyBookBar, BlogBookingCTA, ContextualRecommendations) live in production
+## Tasks Completed
 
-## ✅ P1-P2 REVENUE — Affiliate Tracking Supabase integration ready + deployed
-- **affiliate-tracking.vercel.app** deployed with Supabase client configured
-- .env.local has all NEXT_PUBLIC_ vars (URL + anon key)
-- 8 pages building clean (/, /dashboard, /api/export, /api/stats, /api/track-click)
-- ⚠️ **Blocker**: Supabase schema needs manual SQL apply via Supabase dashboard — DNS unreachable from WSL
-- 📝 **Workaround**: `scripts/apply-supabase-schema.sh` ready for when DNS/Supabase CLI access available
+### ✅ P5 STRATEGIC — AI Directory: Tier 1 SEO Landing Pages
+- All 4 pages deployed and live:
+  1. `/best-ai-tools` — 200 ✅ 24 internal links
+  2. `/best-ai-coding-tools` — 200 ✅ 13 internal links
+  3. `/best-ai-writing-tools` — 200 ✅ 14 internal links
+  4. `/best-ai-marketing-tools` — 200 ✅ 12 internal links
+- Sitemap updated, JSON-LD structured data present
+- Editorial curation style (rankings, ratings, reviews, stats)
 
-## ✅ P2 REVENUE — Senior-Friendly Travel: Blog post already deployed
-## ✅ P2 REVENUE — kids-activities-asia: Blog post deployed (best-water-parks, 47 posts)
+### ✅ P5 STRATEGIC — AI Directory: SSR Metadata for Landing Pages
+- Added server-component layout.tsx to each of the 4 landing page directories
+- Each layout exports page-specific title, description, OG tags, and canonical URL
+- Before: all 4 pages showed generic "Apifeny AI — AI Tools & Playbooks That Actually Work"
+- After: each page has unique SEO title, meta description, OG tags
 
-## ✅ P3 STRATEGIC — LifeOS: 3 new plugins added [THIS SESSION]
-- **Creative Projects** (`creative_projects`): project type, progress %, hours, milestone, feedback, notes — creativity category
-- **Daily Creative Ritual** (`daily_creative_ritual`): ritual type, minutes, enjoyment, new ideas, streak tracking — creativity category
-- **Crypto & Web3** (`crypto_web3`): wallet check, DeFi trades, research minutes, risk mgmt, gas fees — finance_invest category
-- Build verified: ✅ zero errors
-- URL: https://lifeos-weld.vercel.app
+### ✅ P5 STRATEGIC — AI Directory: Topic Cluster Category Pages (NEW)
+- Built **11 SEO-optimized category/topic cluster pages** at `/blog/category/[slug]`:
+  1. `/blog/category/ai-tools` — 68 AI tools reviews & guides
+  2. `/blog/category/asia` — 39 Asia-focused tools
+  3. `/blog/category/productivity` — 18 productivity/automation guides
+  4. `/blog/category/solopreneur` — 16 solopreneur-focused guides
+  5. `/blog/category/marketing` — Marketing & social media tools
+  6. `/blog/category/coding-development` — Coding assistants & dev tools
+  7. `/blog/category/content-creation` — Writing, image, video creation
+  8. `/blog/category/comparisons` — Head-to-head AI tool comparisons
+  9. `/blog/category/translation-language` — Translation & localization
+  10. `/blog/category/accounting-finance` — Business finance tools
+  11. `/blog/category/ecommerce` — E-commerce & retail AI
+- Each page: unique SSR metadata (title, description, OG, Twitter), JSON-LD breadcrumbs + CollectionPage schema, cross-links to other categories
+- Added **"Browse by Topic"** category grid to main blog page — 11 topic clusters visible above post list
+- Build: 11 SSG pages pre-rendered, deployed ✅
+- All returning 200 ✅
 
-## ✅ P3 STRATEGIC — LifeOS: 3 more plugins added to thin categories [THIS SESSION, ROUND 2]
-- **Meal Prep & Grocery** (`meal_prep_grocery`): grocery runs, cost, meals planned, prep time, food waste — meal_planning category
-- **Breathing & Grounding** (`breathing_grounding`): breathwork sessions/minutes, grounding exercises, emotional check-ins, presence — mindfulness category
-- **Social Energy Budget** (`social_energy_budget`): social battery start/end, events attended, recovery time, energy protection — events category
-- Build verified: ✅ zero errors
-- Now at 57 plugins across 30 categories
+## LifeOS Plugin Status
+| Plugin | Status | Notes |
+|--------|--------|-------|
+| Travel OS | ✅ Active | Full 6-phase AI-led travel planning |
+| Finance OS | ✅ Active | Full 5-phase AI financial coaching |
+| Health OS | ✅ Active | Full 5-phase wellness coaching |
+| Career OS | ✅ Active | Full 5-phase career strategy |
+| Learning OS | ✅ Beta | 5-phase learning path builder |
+| Family OS | ✅ Beta | 5-phase family coordination |
+| Home OS | ✅ Beta | 5-phase home improvement/maintenance |
+| Social OS | ✅ Beta | 4-phase social life management |
+| Relationships OS | ✅ Beta | 4-phase relationship health |
 
-## ✅ P3 STRATEGIC — LifeOS: Previously added 12+ categories, 41 plugins, Supabase sync
+### Blocked (Needs Wosobu)
+- ⬜ Supabase RLS migration (`lifeos_plugin_sessions` table + v2 columns) — needs Supabase SQL editor access
 
-## ✅ P3 STRATEGIC — Titan: Build verified + deployed to Vercel production with God-Tier landing callout
-- https://titan-app-puce.vercel.app
+## Deployments
+| Site | Status | URL |
+|------|--------|------|
+| LifeOS | ✅ v2.1 — 9 plugins active | https://lifeos-weld.vercel.app |
+| Apifeny AI | ✅ 11 topic cluster pages live | https://apifeny-ai.vercel.app |
+| Affiliate Tracking | ✅ Real Stripe Checkout | https://affiliate-tracking.vercel.app |
+| EV Charging Asia | ✅ 143 posts | https://ev-charging-asia.vercel.app |
+| Luxury Family Travel Asia | ✅ | https://luxury-family-travel-asia.vercel.app |
 
-## ✅ P5 STRATEGIC — AI Directory (apifeny-ai): 2 new comparison pages + compare index [THIS SESSION]
-- **New route live**: `/compare/` — comparison hub index page
-- **New route live**: `/compare/chatgpt-vs-claude` — ChatGPT vs Claude head-to-head
-  - Scorecards (7 dims), 4 comparison tables (16 rows), 4 use-case scenarios, 6 FAQs
-  - Full SEO: meta/OG/twitter, Breadcrumb JSON-LD, FAQPage schema
-  - Build zero errors → deployed to https://apifeny-ai.vercel.app
-- Existing `/compare/deepseek-vs-chatgpt` still live
-- App now at: 428 static pages (3 new), 54 blog posts, 88+ tools, 100 playbooks
+## Next Cursor
+- ✅ P0-P2 REVENUE — Complete
+- ✅ P3 STRATEGIC — LifeOS: All 9 plugins activated
+- ⏳ P3 STRATEGIC — LifeOS: Supabase RLS migration (needs Wosobu)
+- ✅ P4 STRATEGIC — Titan: Complete (waiting on CEO direction)
+- ✅ P5 STRATEGIC — AI Directory: 4 SEO landing pages + SSR metadata + 11 topic cluster category pages
+- ✅ P6 ANALYTICS — Complete
+- ⏳ NEXT UP: AI Directory deeper SEO (affiliate links in blog posts, internal linking between category pages and landing pages), LifeOS (if unblocked), or Titan (if CEO direction arrives)
 
-## Revenue Next Step (P1 Priority)
-- ⏳ Apply Supabase schema — DNS blocked from WSL (need `.env` setup for Supabase CLI)
-
-## Strategic Next Step (P4 Priority)
-- Titan: progression polish, visual refinements, dashboard route testing
-- LifeOS: more plugins for remaining thin categories (volunteering, family_parenting, career, learning, local_seo, content_marketing, biz_ops, digital_minimalism, pets)
-- AI Directory: add SEO-optimized affiliate hooks to tool pages, more comparison pages
-
-## Project Status
-- ✅ ev-charging-asia — Live, affiliate beacon wired
-- ✅ luxury-family-travel — Live, 54 blog posts
-- ✅ family-travel-directory — Live, 825 pages
-- ✅ senior-friendly-travel-asia — Live, 52 blog posts
-- ✅ kids-activities-asia — Live, 42 blog posts → 47
-- ✅ affiliate-tracking.vercel.app — Live, Supabase client ready, schema needs SQL apply
-- ✅ LifeOS — Deployed to lifeos-weld.vercel.app, 57 plugins (6 added this session — 3 round 1, 3 round 2)
-- ✅ Titan — Deployed to titan-app-puce.vercel.app
-- ✅ AI Directory (apifeny-ai) — Deployed to vercel.app with /compare/deepseek-vs-chatgpt live
+## Ideas for Next Session
+1. Add affiliate links to the 68 blog posts (BlogAffiliateCTA already exists — could integrate with real affiliate IDs)
+2. Connect the `/best-ai-*` landing pages to cross-link to relevant category pages
+3. LifeOS: if Supabase access granted, run RLS migration
+4. If all else done: add more country-specific landing pages (AI tools Singapore, AI tools Malaysia, etc. as dedicated pages)

@@ -92,3 +92,21 @@ CREATE POLICY "anon_all_orchs" ON orchestrations FOR ALL USING (true) WITH CHECK
 CREATE POLICY "anon_all_audit" ON audit_logs FOR ALL USING (true) WITH CHECK (true);
 CREATE POLICY "anon_all_memory" ON memory_graph FOR ALL USING (true) WITH CHECK (true);
 CREATE POLICY "anon_all_heartbeats" ON heartbeats FOR ALL USING (true) WITH CHECK (true);
+
+-- ─── Waitlist Signups ─────────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS waitlist_signups (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  email TEXT NOT NULL UNIQUE,
+  name TEXT DEFAULT '',
+  preferred_mascot TEXT DEFAULT '',
+  referral_source TEXT DEFAULT '',
+  consented BOOLEAN DEFAULT false,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+
+ALTER TABLE waitlist_signups ENABLE ROW LEVEL SECURITY;
+
+-- Insert-only policy for anon (visitors can sign up, not read)
+CREATE POLICY "anon_insert_waitlist" ON waitlist_signups FOR INSERT TO anon WITH CHECK (true);
+-- Authenticated users can read their own (but this is just email, so service_role only reads)
+CREATE POLICY "service_read_waitlist" ON waitlist_signups FOR SELECT TO service_role USING (true);

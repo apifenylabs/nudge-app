@@ -31,6 +31,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 import { getRelatedPosts } from '@/lib/blog-data';
 
 const BASE_URL = 'https://apifeny.ai';
@@ -340,6 +341,17 @@ const faqItems = [
     q: 'What about data privacy and customer data?',
     a: 'For customer data (chat logs, order history, review data), avoid feeding raw customer data into free-tier AI tools. Use paid plans (ChatGPT Team, Claude Pro) which don\'t train on your data. For marketplace data going through Shopee or Lazada, their AI tools process data within their platform — no additional data sharing. For sensitive pricing and inventory data, consider open-source models via Hugging Face or local inference with tools like Ollama or LM Studio.',
   },
+];
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI e-commerce tool for Asian sellers?",
+    "answer": "Sirclo AI is the best multi-platform e-commerce management tool for Southeast Asia, connecting to Tokopedia, Shopee, Bukalapak, Blibli, Lazada, and TikTok Shop. EasyStore offers affordable omnichannel management from RM 39/month. For product photography, AI tools from Canva and Pebblely create professional product images."
+  },
+  {
+    "question": "Which AI tools work best for TikTok Shop sellers?",
+    "answer": "CapCut for AI video editing, Canva for product image creation, ChatGPT for product descriptions and ad copy, and EasyStore/Sirclo for inventory management across TikTok Shop and other platforms are essential."
+  }
 ];
 
 export default function AIEcommerceAsiaGuide() {
@@ -904,7 +916,9 @@ export default function AIEcommerceAsiaGuide() {
             </Link>
           </div>
         </div>
-      </section>
+            {/* FAQ Schema */}
+      <FAQSchema faqs={guideFaqs} />
+    </section>
     </div>
   );
 }

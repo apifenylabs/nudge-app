@@ -54,6 +54,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -330,6 +331,18 @@ For the growing number of cross-border property investors in Asia — Singaporea
 
 const toolSlugs = ['chatgpt', 'perplexity', 'jasper', 'copy-ai', 'midjourney', 'leonardo-ai', 'canva-magic-studio', 'intercom-fin', 'zendesk-answer-bot', 'make', 'zapier-central', 'semrush', 'surferseo', 'grammarly'];
 
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI tool for real estate agents in Asia?",
+    "answer": "AI virtual staging tools transform empty rooms into furnished spaces. Canva AI generates property listing graphics. ChatGPT creates listing descriptions in multiple languages. For Asian markets, PropertyGuru AI in Singapore and Ohmyhome offer localized AI features for property agents."
+  },
+  {
+    "question": "Can AI predict property prices in Asian markets?",
+    "answer": "AI price prediction models exist for Singapore (based on URA data), Hong Kong (based on EPD data), and Malaysia (based on NAPIC data). Tools like Ohmyhome use AI for HDB resale price prediction. These are directional estimates \u2014 always verify with licensed property agents."
+  }
+];
+
 export default function AIToolsForRealEstateGuide() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-950">
@@ -589,6 +602,8 @@ export default function AIToolsForRealEstateGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

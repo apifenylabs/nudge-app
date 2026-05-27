@@ -7,6 +7,19 @@ Consolidation-tracked issues across all cron jobs.
 | Job | Issue | Status | Since |
 |-----|-------|--------|-------|
 | trading-beast-hourly | 180s timeout too tight → bumped to 300s | ✅ Fixed 2026-05-21 | 2026-05-21 |
+| kill-switch / balance check | HL 429 rate limiting causes false-positive "stuck" state. Add retry/backoff before declaring stuck. | ⚠️ New | 2026-05-26 |
+
+## Latest Build Run
+
+**2026-05-27 01:30 HKT** — Overnight build triggered all 6 projects:
+- ✅ family-travel-directory → 200 (queued Vercel build)
+- ✅ luxury-family-travel → 200 (queued Vercel build)
+- ✅ ev-charging-asia → 200 (queued Vercel build)
+- ✅ apifeny-ai → 200 (queued Vercel build)
+- ✅ nudge → 200 (queued Vercel build)
+- ✅ social-beast → 200 (deployed, build completed)
+
+All prod URLs returning 200. Vercel builds in queue will alias when ready.
 
 ## Resolved History
 

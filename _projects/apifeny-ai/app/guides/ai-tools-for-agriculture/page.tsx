@@ -12,6 +12,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -402,6 +403,14 @@ const comparisonTools = [
   { name: 'ChatGPT', category: 'General AI Assistant', strength: 'Farm planning, record keeping', costMonthly: 20, bestFor: 'Any farm size, versatile planning' },
 ];
 
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI tool for agriculture in Asia?",
+    "answer": "AI agriculture tools include satellite imagery analysis for crop health monitoring, soil sensors with AI predictions for optimal planting, and drone-based AI for pest detection. For Asian small farmers, mobile-first AI tools that work offline and support local languages are most practical."
+  }
+];
+
 export default function AiForAgriculturePage() {
   const allTools = toolsData || [];
 
@@ -572,6 +581,8 @@ export default function AiForAgriculturePage() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { toolsData } from '@/lib/data';
 import { playbooks } from '@/lib/playbooks';
+import BlogCategoryLinks from '@/components/BlogCategoryLinks';
 import type { Playbook } from '@/lib/playbooks';
 
 const BASE_URL = 'https://apifeny.ai';
@@ -596,6 +597,12 @@ export default function MarketersPage() {
       </section>
 
       {/* CTA */}
+      {/* ── BLOG CROSS-LINKS ── */}
+      <BlogCategoryLinks
+        slugs={['marketing', 'content-creation', 'ai-tools']}
+        heading="Marketing & Content Guides"
+      />
+
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <div className="bg-gradient-to-br from-neon/10 to-purple-600/10 border border-neon/20 rounded-2xl p-8 sm:p-12">
           <Sparkles className="w-8 h-8 text-neon mx-auto mb-4" />

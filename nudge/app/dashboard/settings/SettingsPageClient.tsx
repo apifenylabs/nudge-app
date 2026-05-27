@@ -6,7 +6,8 @@ import {
   ArrowLeft, Crown, User, CreditCard, Bell, Shield,
   LogOut, ChevronRight, CheckCircle, XCircle, Loader2,
   ExternalLink, MessageSquare, Sparkles, Zap, Info,
-  Smartphone, FileText, Eye, ChevronDown, Gift
+  Smartphone, FileText, Eye, ChevronDown, Gift,
+  BarChart3,
 } from 'lucide-react'
 import Link from 'next/link'
 import { supabase as supabaseFn } from '@/lib/supabase'
@@ -15,6 +16,8 @@ import InvoiceHistory from '@/components/billing/InvoiceHistory'
 import PWAPrompt from '@/components/billing/PWAPrompt'
 import PlanComparison from '@/components/billing/PlanComparison'
 import ReferralProgram from '@/components/billing/ReferralProgram'
+import PaymentMethodCard from '@/components/billing/PaymentMethodCard'
+import UsageDashboard from '@/components/billing/UsageDashboard'
 import InlineSetupGuide from '@/components/telegram/InlineSetupGuide'
 import NotificationPreferences from '@/components/notifications/NotificationPreferences'
 import BottomNav from '@/components/layout/BottomNav'
@@ -52,6 +55,7 @@ export default function SettingsPageClient({ user, familyMembership }: SettingsP
   const [showBilling, setShowBilling] = useState(false)
   const [showPaymentHistory, setShowPaymentHistory] = useState(false)
   const [showPlanCompare, setShowPlanCompare] = useState(false)
+  const [showUsage, setShowUsage] = useState(false)
   const [currentPlan, setCurrentPlan] = useState<'free' | 'pro' | 'family'>('free')
   const [loadingPlan, setLoadingPlan] = useState(true)
 
@@ -245,6 +249,32 @@ export default function SettingsPageClient({ user, familyMembership }: SettingsP
                 {showPaymentHistory && (
                   <div className="animate-fade-in">
                     <InvoiceHistory />
+                  </div>
+                )}
+
+                {/* Payment Method — Phase 37 */}
+                <PaymentMethodCard />
+
+                {/* Usage Dashboard — Phase 37 */}
+                <button
+                  onClick={() => setShowUsage(!showUsage)}
+                  className="w-full flex items-center justify-between px-4 py-3 glass-card rounded-xl hover:shadow-card-hover transition-all"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center">
+                      <BarChart3 className="w-4 h-4 text-muted-foreground" />
+                    </div>
+                    <div className="text-left">
+                      <p className="text-sm font-medium text-foreground">Usage Dashboard</p>
+                      <p className="text-xs text-muted-foreground">Tasks, members & limits</p>
+                    </div>
+                  </div>
+                  <ChevronRight className={`w-4 h-4 text-muted-foreground transition-transform ${showUsage ? 'rotate-90' : ''}`} />
+                </button>
+
+                {showUsage && (
+                  <div className="animate-fade-in">
+                    <UsageDashboard />
                   </div>
                 )}
               </div>

@@ -40,6 +40,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -266,6 +267,26 @@ Top tools: Luma AI leads for photorealistic 3D reconstruction, Odyssey specializ
 
 const toolSlugs = ['midjourney', 'leonardo-ai', 'canva-ai', 'runway', 'pika', 'gamma'];
 
+
+const guideFaqs = [
+  {
+    "question": "What is the best AI design tool in 2026?",
+    "answer": "Canva Magic Studio is the best all-in-one AI design tool for most users, offering AI image generation, background removal, text-to-design, and brand kit features. For professional designers, Adobe Firefly integrates with Creative Cloud. Midjourney remains the best for high-quality AI image generation and artistic exploration."
+  },
+  {
+    "question": "Can AI image generators create commercially safe content?",
+    "answer": "Yes \u2014 Adobe Firefly is trained on licensed content and offers commercial safety guarantees. Canva's AI image generator also provides commercial licensing. Midjourney and DALL-E 3 offer broad usage rights. Always check each tool's licensing terms for commercial use \u2014 most major platforms now offer commercial safety."
+  },
+  {
+    "question": "Which AI design tool is best for Asian creators?",
+    "answer": "Canva has the strongest Asia support with templates for Chinese New Year, Hari Raya, Deepavali, and regional design styles. It supports Chinese, Japanese, Korean, and Thai fonts natively. Adobe Firefly generates Asian faces and settings accurately. Canva Pro at $13/month is the best value for Asian small businesses."
+  },
+  {
+    "question": "What is the cheapest AI design tool?",
+    "answer": "Canva Free covers basic design needs including limited AI features (50 Magic Media generations/month). Leonardo AI offers a generous free tier for AI image generation. The cheapest all-in-one paid option is Canva Pro at $13/month, which includes unlimited AI features and brand kits."
+  }
+];
+
 export default function AIToolsForDesignGuide() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-950">
@@ -477,6 +498,8 @@ export default function AIToolsForDesignGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={guideFaqs} />
     </main>
   );
 }

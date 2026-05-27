@@ -364,6 +364,85 @@ INSERT INTO public.changelog_entries (title, body, category, icon, tags) VALUES
   )
 ON CONFLICT DO NOTHING;
 `,
+
+  'changelog_phase37': `
+-- Phase 37: Payment Method Management + Usage Dashboard
+INSERT INTO public.changelog_entries (title, body, category, icon, tags) VALUES
+  (
+    'Payment Method Management',
+    'See your saved card on file right in settings — brand, last 4 digits, expiry date. Update your payment method with one click or add a card if you don\'t have one yet. Never wonder what card you used again.',
+    'new_feature',
+    '💳',
+    ARRAY['billing', 'settings']
+  ),
+  (
+    'Usage Dashboard',
+    'A new usage overview in Settings shows you exactly how many daily tasks, family members, and recurring tasks you\'ve used vs your plan limits. Color-coded progress bars let you know when you\'re approaching limits so you can upgrade before hitting them.',
+    'new_feature',
+    '📊',
+    ARRAY['billing', 'settings', 'ux']
+  )
+ON CONFLICT DO NOTHING;
+`,
+
+  'cancellation_survey': `
+-- Phase 38: Cancellation survey responses table
+CREATE TABLE IF NOT EXISTS public.cancellation_survey (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID REFERENCES public.users(id) ON DELETE SET NULL,
+  email TEXT,
+  full_name TEXT,
+  primary_reason TEXT NOT NULL CHECK (primary_reason IN (
+    'too_expensive', 'missing_features', 'not_using_enough', 'too_complex',
+    'switching_to_competitor', 'technical_issues', 'family_moved_away',
+    'privacy_concerns', 'temporary_pause', 'other'
+  )),
+  details TEXT,
+  feedback TEXT,
+  would_recommend INTEGER CHECK (would_recommend >= 1 AND would_recommend <= 10),
+  alternative_used TEXT,
+  plan_at_cancel TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_cancel_survey_reason ON public.cancellation_survey(primary_reason);
+CREATE INDEX IF NOT EXISTS idx_cancel_survey_created ON public.cancellation_survey(created_at DESC);
+
+ALTER TABLE public.cancellation_survey ENABLE ROW LEVEL SECURITY;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'Service role can manage cancellation survey') THEN
+    CREATE POLICY \"Service role can manage cancellation survey\" ON public.cancellation_survey FOR ALL USING (true);
+  END IF;
+END $$;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE policyname = 'Users can view own survey response') THEN
+    CREATE POLICY \"Users can view own survey response\" ON public.cancellation_survey
+      FOR SELECT USING (user_id IN (SELECT id FROM public.users WHERE auth_uid = auth.uid()));
+  END IF;
+END $$;
+`,
+
+  'changelog_phase38': `
+-- Phase 38: Cancellation Survey + Push Notification Preferences
+INSERT INTO public.changelog_entries (title, body, category, icon, tags) VALUES
+  (
+    'Cancellation Survey',
+    'Before you cancel, we now ask a quick 2-minute survey to understand why. Your feedback helps us improve Nudge for everyone. Select your reason, share details, and rate how likely you\'d recommend us — all in one flow before the cancellation goes through.',
+    'new_feature',
+    '📋',
+    ARRAY['billing', 'retention', 'ux']
+  ),
+  (
+    'Push Notification Preferences',
+    'Fine-tune which notifications you receive across channels right from Settings. Toggle Telegram, in-app, and email notifications per event type — task assigned, completed, due soon, overdue, and more. Changes apply instantly.',
+    'improvement',
+    '🔔',
+    ARRAY['notifications', 'settings', 'ux']
+  )
+ON CONFLICT DO NOTHING;
+`,
 }
 
 // ── MIGRATION STATE TRACKING ──────────────────────────────────────

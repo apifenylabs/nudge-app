@@ -34,6 +34,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -240,6 +241,41 @@ For solopreneurs and small teams, an AI CRM replaces an entire sales operations 
 ];
 
 const toolSlugs = ['jasper', 'chatgpt', 'copy-ai', 'grammarly', 'perplexity', 'semrush', 'ahrefs', 'surferseo'];
+
+const faqs = [
+  {
+    question: 'What is the best AI marketing tool for solopreneurs?',
+    answer: 'For solopreneurs, Jasper is the best all-in-one AI marketing tool because it combines content writing, social media management, and email marketing in one platform with Brand Voice features. ChatGPT Plus ($20/mo) is the best generalist alternative if you need broader AI capabilities beyond marketing.'
+  },
+  {
+    question: 'Which AI marketing tools are best for Asian markets?',
+    answer: 'For Asian markets, look for tools with multi-language support (Chinese, Japanese, Korean, Thai, Vietnamese). ChatGPT handles Asian languages well, Canva has Asia-specific templates, and Brevo supports SMS gateways for Singapore, Malaysia, and Hong Kong. Perplexity Pro is excellent for Asia-market research and competitive analysis.'
+  },
+  {
+    question: 'Can AI marketing tools really replace a marketing team?',
+    answer: 'For solopreneurs and small businesses, AI marketing tools can replace 60-80% of what a marketing team does — content creation, social media scheduling, email automation, ad optimization, and basic analytics. However, strategic decisions, brand voice development, and high-level campaign planning still benefit from human expertise.'
+  },
+  {
+    question: 'What is the cheapest AI marketing stack that works?',
+    answer: 'The cheapest effective AI marketing stack is: ChatGPT Free for content and strategy, Canva Free for design, Brevo Free (300 emails/day) for email marketing, and Otter.ai Free for meeting notes. Total: $0/month. Upgrade to paid tiers as your marketing needs grow.'
+  },
+  {
+    question: 'Which AI tool is best for social media management?',
+    answer: 'For solopreneurs, combining ChatGPT (content generation) with Canva (visual creation) covers most social media needs. For dedicated scheduling and analytics, Hootsuite or Buffer offer AI features including best-posting-time optimization and content suggestion. Jasper also has built-in social media content generation.'
+  },
+  {
+    question: 'Do I need separate AI tools for email marketing?',
+    answer: 'Yes — email marketing requires dedicated tools for deliverability, list management, and automation. Brevo (free tier available) is excellent for Asian solopreneurs with SMS support. ChatGPT can draft your emails, but you need a proper email platform to send them with good deliverability.'
+  },
+  {
+    question: 'How can AI improve my ad targeting and ROI?',
+    answer: 'AI ad tools improve ROI by predicting audience segments, optimizing bid strategies in real-time, auto-generating ad creative variants, and identifying the best-performing combinations through automated A/B testing. Facebook\'s Advantage+ and Google\'s Performance Max campaigns use AI to optimize across all targeting parameters simultaneously.'
+  },
+  {
+    question: 'Which AI marketing analytics tool should I use?',
+    answer: 'For comprehensive marketing analytics, Semrush and Ahrefs are the industry standards. For lighter needs, Google Analytics 4 with its AI-powered Insights gives you automated anomaly detection and predictive metrics. ChatGPT can also analyze your exported data and provide strategic recommendations.'
+  }
+];
 
 export default function AIToolsForMarketingGuide() {
   return (
@@ -449,6 +485,8 @@ export default function AIToolsForMarketingGuide() {
           </div>
         </div>
       </section>
+      {/* ─── FAQ Schema ─── */}
+      <FAQSchema faqs={faqs} />
     </main>
   );
 }
