@@ -213,3 +213,8 @@ MIT License - see LICENSE file for details
 ---
 
 **Built with ❤️ for busy families everywhere.**
+## 🅿️ PARKED — May 28, 2026
+
+Nudge is parked indefinitely. LifeOS is the successor vision.
+Key components (Telegram notification pipeline, task engine, NLP parser) salvaged to `_salvage/nudge/`.
+Production Vercel deployment deleted.
