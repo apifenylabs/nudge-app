@@ -2,6 +2,56 @@
 
 > **Auto-generated.** Each `main_bot.py` cron run appends here (every ~1 min).
 
+## 2026-05-29 02:35 HKT — Cron Run
+- **Balance:** $1,234.57 (▲ $3.14 from $1,231.43 at 02:20, +0.25%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+- Account balance via bot: $41.00 (paper sub-account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
+- Bot skipped BTC (native TP/SL active), HYPE/XRP/WIF/TAO not in BB allowlist — no signals fired
+- No kill switch ($1,234.57 > $20 ✅), no connection errors ✅
+- Balance change +0.25% — well within 10% threshold, silently passing
+
+## 2026-05-29 02:30 HKT — Cron Run
+- **Balance:** $1,239.40 (▲ $16.91 from $1,222.49 at 02:23, +1.38%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+- Account balance via bot: $41.00 (paper sub-account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
+- Bot skipped BTC (native TP/SL order active), HYPE/XRP/WIF/TAO not in BB allowlist — no signals fired
+- Positions unchanged: BTC/ETH/WIF long via main account (bot paper empty)
+- Open perp positions: BTC 0.0044L, ETH 3.284L, WIF 21,167L | UPnL: +$153.27 combined | Notional: $10,863
+- ✅ No alerts: balance $1,239.40 > $20, +1.38% within 10%, no errors
+
+## 2026-05-29 02:23 HKT — Cron Run
+- **Balance:** $1,222.49 (▼ $8.94 from $1,231.43 at 02:20, -0.73%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+- Account balance via bot: $41.00 (paper sub-account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
+- Bot skipped BTC (native TP/SL order active), HYPE/XRP/WIF/TAO not in BB allowlist — no signals fired
+- Positions unchanged (BTC/ETH/WIF long via main account, bot paper empty)
+- ✅ No alerts: balance $1,222.49 > $20, -0.73% change within 10%, no errors
+
+## 2026-05-29 02:20 HKT — Cron Run
+- **Balance:** $1,231.43 (▲ $14.57 from $1,216.86 at 02:07, +1.20%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+- Account balance via bot: $41.00 (paper sub-account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
+- Bot skipped BTC (native TP/SL order active), HYPE/XRP/WIF/TAO not in BB allowlist — no signals fired
+- No kill switch ($1,231.43 > $20 ✅), no connection errors ✅
+- Balance change +1.20% — well within 10% threshold, silently passing
+
+---
+
+## 2026-05-29 02:07 HKT — Cron Run
+- **Balance:** $1,216.86 (▲ $107.20 from $1,109.66 at 01:29, +9.66%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+- Account balance via bot: $41.00 (paper sub-account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
+- Bot skipped BTC (native TP/SL active), HYPE/XRP/WIF/TAO not in BB allowlist — no signals fired
+- No kill switch ($1,216.86 > $20 ✅), no connection errors ✅
+- Balance change +9.66% — just under 10% threshold, silently passing
+
+---
+
 ## 2026-05-29 01:29 HKT — Cron Run
 - **Balance:** $1,109.66 (▲ $0.28 from $1,109.38 at 01:11, +0.03%)
 - Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
@@ -933,3 +983,73 @@
 - Delta: Balance +0.72% (<10% ✅), positions unchanged ✅, bot clean ✅
 
 **Verdict: ✅ Silent success — no alerts warranted**
+
+## Cron Run — 2026-05-29 02:15 HKT
+
+**hl_balance.py:**
+- TOTAL ACCOUNT: **$1,236.09**
+- Spot Cash: $0.00
+- In Margin (hold): $1,236.09
+- Perp Equity: $1,236.09
+
+**Open Positions:**
+- BTC LONG 0.0044 @ $74,777.10 | UPnL: -$5.09
+- ETH LONG 3.2840 @ $2,001.15 | UPnL: +$73.40
+- WIF LONG 21,167 @ $0.18 | UPnL: +$81.65
+
+**main_bot.py:**
+- Mode: PAPER (bot SDK wallet)
+- Status: Success — bot ran cleanly
+- Bot SDK balance: $41.00 (paper account, not real)
+- 12 hist trades | 0 live positions (bot SDK) | WR=67% | DD=10.6% | KS=False
+- No new signals fired
+
+**Delta from last recorded (22:10 HKT 2026-05-28):**
+- Total account: $942.45 → **$1,236.09 (+$293.64, +31.2%) 🔔 exceeds 10%**
+- BTC: 0.0022 @ $76,116 → 0.0044 @ $74,777 (size doubled)
+- ETH: 1.642 @ $1,988.50 → 3.284 @ $2,001.15 (size doubled)
+- WIF: 11,533 @ $0.18 → 21,167 @ $0.18 (size nearly doubled)
+- SOL: 33.35 position **CLOSED**
+- UPnL swing: -$111.46 → +$149.96 (massive reversal)
+
+**Verdict: ⚠️ Alert — Balance +31.2% (>10% threshold), positions changed significantly.**
+
+## Cron Run — 2026-05-29 02:17 HKT
+
+**hl_balance.py:**
+- TOTAL ACCOUNT: **$1,240.58**
+- Spot Cash: $0.00
+- In Margin (hold): $1,240.58
+- Perp Equity: $1,240.58
+
+**Open Positions:**
+- BTC LONG 0.0044 @ $74,777 | UPnL: -$4.90
+- ETH LONG 3.284 @ $2,001.15 | UPnL: +$72.41
+- WIF LONG 21,167 @ $0.18 | UPnL: +$86.94
+
+**main_bot.py:**
+- Mode: PAPER (bot SDK wallet)
+- Status: Success — bot ran cleanly
+- Bot SDK balance: $41.00 (paper account, not real)
+- 12 hist trades | 0 live positions (bot SDK) | WR=67% | DD=10.6% | KS=False
+- No new signals fired
+
+**Delta from last recorded:**
+- Total account: $1,236.09 → **$1,240.58 (+$4.49, +0.36%) ✅ within 10%**
+- Positions: unchanged (BTC/ETH/WIF same sizes)
+
+**Verdict: ✅ Silent success**
+
+## 2026-05-29 02:56 HKT — Cron Run
+- **Balance:** $1,248.09 (▲ $7.51 from $1,240.58, +0.61%)
+- Mode: PAPER (bot SDK wallet)
+- Status: Success — bot ran cleanly
+- Bot SDK balance: $41.00 (paper account)
+- 12 hist trades | 0 live positions (bot SDK) | WR=67% | DD=10.6% | KS=False
+- No new signals fired; BTC native TP/SL active
+
+**Delta from last recorded:**
+- Total account: $1,240.58 → **$1,248.09 (+$7.51, +0.61%) ✅ within 10%**
+- Positions: unchanged (BTC/ETH/WIF same sizes)
+
+**Verdict: ✅ Silent success**

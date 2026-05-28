@@ -1,8 +1,8 @@
 {
-  "version": "2026-05-28-consolidation-primary",
-  "generated": "2026-05-28T02:00:00+08:00",
-  "semanticCount": 49,
-  "graphEdgeCount": 72,
+  "version": "2026-05-29-consolidation-primary",
+  "generated": "2026-05-28T18:04:24+08:00",
+  "semanticCount": 56,
+  "graphEdgeCount": 81,
   "nodes": [
     {
       "id": "chunk-crypnuevo-cross-1779217287655",
@@ -395,6 +395,62 @@
       "type": "semantic",
       "confidence": 0.85,
       "timestamp": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "id": "accidental-doubling-incident-may29",
+      "name": "accidental-doubling-incident-may29",
+      "summary": "May 29 00:57 HKT: test script with paper=False accidentally placed live market buys, doubling BTC/ETH/WIF positions from $1,031 to $1,113 notional. Root cause: no PAPER_MODE_FORCE guard in ad-hoc scripts. Response quality was good (caught immediately, documented, SOP updated). Second major live-trading bug after May 24 balance bug.",
+      "type": "episodic",
+      "confidence": 1,
+      "timestamp": "2026-05-28T18:04:24.000Z"
+    },
+    {
+      "id": "shadow-mode-transition-may28",
+      "name": "shadow-mode-transition-may28",
+      "summary": "Bot switched to PAPER_MODE=True (shadow mode) at 23:34 HKT May 28. Processes 7 symbols, runs all 6 strategies, grid lifecycle, funding veto \u2014 but logs orders instead of executing. First intentional pause in live execution since May 24. Validation period for config refactor.",
+      "type": "semantic",
+      "confidence": 1,
+      "timestamp": "2026-05-28T18:04:24.000Z"
+    },
+    {
+      "id": "config-refactor-may28-largest-change",
+      "name": "config-refactor-may28-largest-change",
+      "summary": "May 28 22:32-23:46 HKT: most comprehensive strategy change since bot went live. 3 critical bugs fixed (BB 1h phantom allocation, Fund Proxy/Taker Flow 0% returns, indentation bug). 3 features added (Limit Grid Entry, Funding Rate Veto, Funding History Cache). Allocation rebalance: BB 1h 55->30%, BB 15m 0->20%, Fund Proxy 20->15%, Taker Flow 15->10%, Vol Surge 5->15%. Cap 3->4. WIF gated. Projected monthly +$12.30 (was -$7.12).",
+      "type": "semantic",
+      "confidence": 1,
+      "timestamp": "2026-05-28T18:04:24.000Z"
+    },
+    {
+      "id": "portfolio-correlation-risk-all-longs",
+      "name": "portfolio-correlation-risk-all-longs",
+      "summary": "All trading positions are crypto longs (BTC, ETH, SOL, WIF). They move together \u2014 simultaneous drawdowns at 20:25 and 21:44 on May 28 confirm this. Portfolio has directional bias across all legs. Structurally equivalent to 4x leveraged on one direction. True diversification requires a short, cross-market, or funding-arb position.",
+      "type": "semantic",
+      "confidence": 1,
+      "timestamp": "2026-05-28T18:04:24.000Z"
+    },
+    {
+      "id": "wif-gate-process-failure",
+      "name": "wif-gate-process-failure",
+      "summary": "WIF went live without backtesting, violating the permission framework (backtest -> paper -> live). Drawdown of -$56 to -$82 persisted for days before it was gated. The gate closes a process failure, not a new discovery. Governance gap: strategies can enter live without validation.",
+      "type": "semantic",
+      "confidence": 1,
+      "timestamp": "2026-05-28T18:04:24.000Z"
+    },
+    {
+      "id": "execution-vs-attention-gap",
+      "name": "execution-vs-attention-gap",
+      "summary": "System can execute large work (3 bugs + 3 features in ~1h) when focus is on active trading. But the 10-item backlog has zero execution for 8 consecutive days. The bottleneck is attention allocation, not skill or infrastructure. Backlog items are 'offline' and never get addressed because no structured triage mechanism routes attention to them.",
+      "type": "semantic",
+      "confidence": 1,
+      "timestamp": "2026-05-28T18:04:24.000Z"
+    },
+    {
+      "id": "singapore-ev-seo-content-marketing",
+      "name": "singapore-ev-seo-content-marketing",
+      "summary": "First real content marketing play for ev-charging-asia: 5,000+ word Singapore EV Complete Guide 2026. Covers operators, costs, HDB/condo installation, cross-border JB travel. First geo-specific SEO content for the site. Deploy blocked by Vercel rate-limit.",
+      "type": "episodic",
+      "confidence": 1,
+      "timestamp": "2026-05-28T18:04:24.000Z"
     }
   ],
   "edges": [
@@ -827,6 +883,60 @@
     {
       "source_id": "lifeos-plugin-hold-30",
       "target_id": "portfolio-revenue-at-zero-day-25",
+      "relation_type": "context",
+      "weight": 0.7
+    },
+    {
+      "source_id": "accidental-doubling-incident-may29",
+      "target_id": "balance-bug-fixed-confirmed-may24",
+      "relation_type": "similar_to",
+      "weight": 0.8
+    },
+    {
+      "source_id": "accidental-doubling-incident-may29",
+      "target_id": "wr-60-drawdown-106-bar",
+      "relation_type": "context",
+      "weight": 0.7
+    },
+    {
+      "source_id": "shadow-mode-transition-may28",
+      "target_id": "accidental-doubling-incident-may29",
+      "relation_type": "mitigates",
+      "weight": 0.6
+    },
+    {
+      "source_id": "config-refactor-may28-largest-change",
+      "target_id": "shadow-mode-transition-may28",
+      "relation_type": "requires",
+      "weight": 0.9
+    },
+    {
+      "source_id": "config-refactor-may28-largest-change",
+      "target_id": "pipeline-decisions-locked-may25",
+      "relation_type": "extends",
+      "weight": 0.7
+    },
+    {
+      "source_id": "portfolio-correlation-risk-all-longs",
+      "target_id": "balance-high-low-range-67-may28",
+      "relation_type": "evidence_of",
+      "weight": 0.85
+    },
+    {
+      "source_id": "wif-gate-process-failure",
+      "target_id": "pipeline-decisions-locked-may25",
+      "relation_type": "violates",
+      "weight": 0.9
+    },
+    {
+      "source_id": "execution-vs-attention-gap",
+      "target_id": "scaffolding-over-product-pattern",
+      "relation_type": "explains",
+      "weight": 0.8
+    },
+    {
+      "source_id": "singapore-ev-seo-content-marketing",
+      "target_id": "site-status-healthy-200-ok",
       "relation_type": "context",
       "weight": 0.7
     }

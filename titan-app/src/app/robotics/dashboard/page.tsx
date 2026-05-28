@@ -9,8 +9,10 @@ import {
   Bot, Cpu, CircuitBoard, Monitor, Cog, HardDrive,
   ChevronRight, Radio, Wifi, Terminal, Power, PowerOff,
   Activity, AlertTriangle, Clock, RefreshCw, Trash2, Eye,
-  CirclePlay, CircleStop, Share2
+  CirclePlay, CircleStop, Share2, Plus, Globe, WifiOff
 } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
 import { JSX } from 'react';
 import type { RobotDeployment, PlatformType, DeploymentStatus } from '@/types';
 
@@ -287,6 +289,8 @@ export default function RoboticsDashboardPage() {
   const [loading, setLoading] = useState(true);
   const [selectedDeployment, setSelectedDeployment] = useState<DisplayDeployment | null>(null);
   const [filter, setFilter] = useState<DisplayStatus | 'all'>('all');
+  const [deployModalOpen, setDeployModalOpen] = useState(false);
+  const [deployForm, setDeployForm] = useState<{ name: string; agentName: string; endpoint: string; platform: PlatformType }>({ name: '', agentName: '', endpoint: '', platform: 'ros2' });
 
   // Fetch deployments from API
   const fetchDeployments = useCallback(async () => {
@@ -370,17 +374,125 @@ export default function RoboticsDashboardPage() {
                   <p className="text-xs font-mono text-titan-muted">{stats.online}/{stats.total} online · {stats.totalCommands.toLocaleString()} commands</p>
                 </div>
               </div>
-              {/* Refresh button */}
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={fetchDeployments}
-                disabled={loading}
-                className="gap-1.5 text-[10px] h-8 border-titan-border/30 text-titan-muted/70 hover:text-titan-teal"
-              >
-                <RefreshCw className={`h-3 w-3 ${loading ? 'animate-spin' : ''}`} />
-                {loading ? 'Loading…' : 'Refresh'}
-              </Button>
+              {/* Action buttons */}
+              <div className="flex items-center gap-2">
+                <Dialog open={deployModalOpen} onOpenChange={setDeployModalOpen}>
+                  <Button
+                    size="sm"
+                    onClick={() => setDeployModalOpen(true)}
+                    className="gap-1.5 text-[10px] h-8 bg-gradient-to-r from-titan-teal to-teal-500 hover:from-titan-teal/90 hover:to-teal-500/90 text-white"
+                  >
+                    <Plus className="h-3 w-3" />
+                    New Deployment
+                  </Button>
+                  <DialogContent className="sm:max-w-md !bg-titan-card border border-titan-border/40">
+                    <DialogHeader>
+                      <DialogTitle className="text-titan-text">New Robot Deployment</DialogTitle>
+                      <DialogDescription className="text-titan-muted/70">
+                        Connect a new robot or agent endpoint to your swarm. Enter the connection details below.
+                      </DialogDescription>
+                    </DialogHeader>
+                    <div className="grid gap-4 py-2">
+                      <div className="grid gap-1.5">
+                        <label htmlFor="deploy-name" className="text-[10px] font-mono text-titan-muted/60 uppercase tracking-wider">
+                          Name
+                        </label>
+                        <Input
+                          id="deploy-name"
+                          placeholder="My Robot"
+                          value={deployForm.name}
+                          onChange={(e) => setDeployForm(p => ({ ...p, name: e.target.value }))}
+                          className="border-titan-border/30 bg-titan-card/60 text-titan-text text-sm"
+                        />
+                      </div>
+                      <div className="grid gap-1.5">
+                        <label htmlFor="deploy-agent" className="text-[10px] font-mono text-titan-muted/60 uppercase tracking-wider">
+                          Agent Name
+                        </label>
+                        <Input
+                          id="deploy-agent"
+                          placeholder="ros2-navigation"
+                          value={deployForm.agentName}
+                          onChange={(e) => setDeployForm(p => ({ ...p, agentName: e.target.value }))}
+                          className="border-titan-border/30 bg-titan-card/60 text-titan-text text-sm"
+                        />
+                      </div>
+                      <div className="grid gap-1.5">
+                        <label htmlFor="deploy-endpoint" className="text-[10px] font-mono text-titan-muted/60 uppercase tracking-wider">
+                          Endpoint URL
+                        </label>
+                        <Input
+                          id="deploy-endpoint"
+                          placeholder="http://192.168.1.100:8080"
+                          value={deployForm.endpoint}
+                          onChange={(e) => setDeployForm(p => ({ ...p, endpoint: e.target.value }))}
+                          className="border-titan-border/30 bg-titan-card/60 text-titan-text text-sm"
+                        />
+                      </div>
+                      <div className="grid gap-1.5">
+                        <label htmlFor="deploy-platform" className="text-[10px] font-mono text-titan-muted/60 uppercase tracking-wider">
+                          Platform
+                        </label>
+                        <select
+                          id="deploy-platform"
+                          value={deployForm.platform}
+                          onChange={(e) => setDeployForm(p => ({ ...p, platform: e.target.value as PlatformType }))}
+                          className="w-full px-3 py-2 rounded-lg border border-titan-border/30 bg-titan-card/60 text-titan-text text-sm focus:outline-none focus:ring-2 focus:ring-titan-teal/30 focus:border-titan-teal/50"
+                        >
+                          <option value="ros2">ROS2 (NVIDIA Jetson / Robot)</option>
+                          <option value="raspberry-pi">Raspberry Pi</option>
+                          <option value="arduino">Arduino / ESP32</option>
+                          <option value="custom">Custom Hardware</option>
+                        </select>
+                      </div>
+                    </div>
+                    <DialogFooter className="!bg-transparent !border-titan-border/20">
+                      <Button
+                        variant="outline"
+                        onClick={() => setDeployModalOpen(false)}
+                        className="border-titan-border/30 text-titan-muted/70"
+                      >
+                        Cancel
+                      </Button>
+                      <Button
+                        onClick={() => {
+                          // Create a new deployment entry and add to list
+                          const newDep: RobotDeployment = {
+                            id: `dep-${Date.now()}`,
+                            agentName: deployForm.agentName,
+                            platform: deployForm.platform,
+                            status: 'pending',
+                            agentId: `agent-${deployForm.agentName.toLowerCase().replace(/[^a-z0-9]/g, '-')}`,
+                            endpoint: deployForm.endpoint || undefined,
+                            deployedAt: new Date().toISOString(),
+                            lastHeartbeat: new Date().toISOString(),
+                            config: {},
+                          };
+                          const display = toDisplayDeployment(newDep);
+                          setDeployments(prev => [display, ...prev]);
+                          setDeployModalOpen(false);
+                          setDeployForm({ name: '', agentName: '', endpoint: '', platform: 'ros2' });
+                        }}
+                        disabled={!deployForm.agentName}
+                        className="bg-gradient-to-r from-titan-teal to-teal-500 hover:from-titan-teal/90 hover:to-teal-500/90 text-white"
+                      >
+                        <Globe className="h-3 w-3 mr-1" />
+                        Deploy
+                      </Button>
+                    </DialogFooter>
+                  </DialogContent>
+                </Dialog>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={fetchDeployments}
+                  disabled={loading}
+                  className="gap-1.5 text-[10px] h-8 border-titan-border/30 text-titan-muted/70 hover:text-titan-teal"
+                >
+                  <RefreshCw className={`h-3 w-3 ${loading ? 'animate-spin' : ''}`} />
+                  {loading ? 'Loading…' : 'Refresh'}
+                </Button>
+              </div>
             </div>
           </motion.div>
         </div>
