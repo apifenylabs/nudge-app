@@ -13,24 +13,18 @@ Consolidation-tracked issues across all cron jobs.
 ## Observed Noise Patterns
 
 ### trading-log.md Bloat (Identified 2026-05-27)
-- **Problem**: ~680 lines, ~107 daily entries all with identical boilerplate ("No kill switch ✅", "within 10% threshold, silently passing").
+- **Problem**: ~680 lines, ~107 daily entries all with identical boilerplate.
 - **Verdict**: 99/107 entries have unique balance data — append-only is correct for data fidelity.
 - **Mitigation**: Added header explaining auto-generation + reference to daily memories for summaries.
 - **No change needed**: Data is too granular to collapse without loss.
 
+### Memory File Cron-Dump Bloat (Identified 2026-05-28)
+- **Problem**: 32 near-identical cron run entries appended to memory/2026-05-28.md = 28KB, 740 lines.
+- **Root cause**: Each cron bot run writes a full structured entry with boilerplate (balance check, bot run, delta, assessment). ~80% of content is repeated across entries.
+- **Mitigation**: Collapse into a compact timeline table + shared state header. 28KB → 4.4KB (84% reduction).
+- **Rule**: Memory files get the timeline-table compression treatment during nightly consolidation. Raw full entries go to trading-log.md only.
+
 ## Latest Build Run
-
-**2026-05-28 01:30 HKT** — Overnight build triggered all 6 projects:
-- ✅ family-travel-directory → 200 ✅ aliased ✓
-- ✅ luxury-family-travel → 200 ✅ aliased ✓
-- ✅ ev-charging-asia → 200 ✅ aliased ✓
-- ✅ apifeny-ai → 200 ✅ aliased ✓ *(fixed 2 apostrophe escapes + 1 div close in geo pages)*
-- ✅ nudge → 200 ✅ aliased ✓
-- ✅ social-beast → 200 ✅ aliased ✓
-
-All 6 deployed, aliased, returning 200. Full success this cycle.
-
-## Resolved History
 
 - **2026-05-16**: ceo-proactive-improvement, ceo-site-health-audit — delivery channel `@heartbeat` unresolvable. Resolved when cron was recreated through scrapping — no longer an issue.
 - **2026-05-16**: ceo-social-publisher, proactive-builder — 300s timeouts too short. Resolved: not active cron jobs anymore (consolidation took over).

@@ -112,7 +112,7 @@ _SEARCH['why_text']  = _extract(_CANADA,
     "regulatory and cultural landscape.", 'why_text')
 
 _SEARCH['hero_text']  = "actually work for Canada"
-_SEARCH['unique_market'] = "for Canada's unique market"
+_SEARCH['unique_market'] = "Canada's unique market."
 _SEARCH['market_ready']  = "Canada-market readiness"
 _SEARCH['cta_line'] = _extract(_CANADA,
     "actually work for Canada</strong>. \n              We rank every tool on PIPEDA compliance,",
@@ -285,7 +285,7 @@ def make(slug, name, code, capital, currency, lang, langCode,
 
     # ── Hero text mentions ──
     page = page.replace(_SEARCH['hero_text'], 'actually work for ' + name)
-    page = page.replace(_SEARCH['unique_market'], "for " + name + "'s unique market")
+    page = page.replace(_SEARCH['unique_market'], name + "'s unique market.")
     # H1 heading: the Canada text inside the <span> (with whitespace)
     page = page.replace(_SEARCH['h1_canada'], '\n                ' + name + '\n              ')
 

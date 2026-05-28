@@ -20,6 +20,7 @@ import FeaturedCollections from '@/components/FeaturedCollections';
 import FeaturedRankings from '@/components/FeaturedRankings';
 import SuccessStories from '@/components/SuccessStories';
 import NewsletterSignup from '@/components/NewsletterSignup';
+import EcosystemSplash from '@/components/EcosystemSplash';
 
 const PAID_PLAYBOOKS = [
   { slug: 'ai-solopreneur-toolkit', price: '$9', icon: '🚀', title: 'AI Solopreneur Toolkit', gradient: 'from-violet-500/20 to-purple-500/20' },
@@ -138,6 +139,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* AI COFOUNDER ECOSYSTEM */}
+      <EcosystemSplash />
 
       {/* FREE TEMPLATES — Immediate Value */}
       <section className="py-16 sm:py-20 bg-white border-t border-gray-200">

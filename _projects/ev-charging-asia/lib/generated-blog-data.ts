@@ -15,6 +15,38 @@ export interface BlogPost {
 
 const allPosts: BlogPost[] = [
   {
+    "slug": "singapore-ev-charging-complete-guide-2026",
+    "title": "Singapore EV Charging Guide 2026: Complete Guide for EV Owners &amp; Visitors",
+    "metaDescription": "The ultimate guide to EV charging in Singapore in 2026. Blue SG, SP Group, Charge+, and Shell Recharge coverage map. HDB and condo charging installation, per-kWh costs, best apps, and driving to Johor via the Causeway.",
+    "published": "2026-05-29",
+    "author": "EV Charging Asia Team",
+    "category": "guide",
+    "readTime": "12 min read",
+    "image": "https://images.unsplash.com/photo-1555626040-e1c57de52163?w=1200&h=630&fit=crop",
+    "content": "Singapore is one of the world's most EV-ready cities in 2026. With over 25,000 public charging points across the island — from HDB car parks to luxury condo basements to Sentosa Cove — the Lion City has quietly built a charging network that rivals Oslo and Shenzhen on a per-capita basis. The government's 2030 target of 60,000 charging points is well ahead of schedule, and every new residential development since 2024 is required to install EV-ready infrastructure.\n\nThis guide covers everything: which operator to use, how much you'll pay per kWh, where the fastest chargers are, how to get a charger installed in your HDB or condo, and how to plan a cross-border drive to Johor Bahru (including the new EV-only Causeway charging hub).\n\n## Singapore's EV Charging Operators Compared\n\n| Operator | Chargers | Power (DC) | Power (AC) | Per kWh (SGD) | Best For |\n|----------|----------|------------|------------|---------------|----------|\n| Blue SG | 500+ DC | 50–120 kW | — | 0.55–0.75 | Fast charging at HDB hubs & malls |\n| SP Group | 1,500+ | 50 kW | 7.4 kW | 0.55–0.85 DC / 0.30–0.50 AC | Public carparks & leisure centres |\n| Charge+ | 2,500+ | 60–180 kW | 7.4 kW | 0.50–0.75 DC / 0.35–0.45 AC | Best island-wide coverage |\n| Shell Recharge | 200+ | 300 kW | — | 0.75–0.85 | Ultra-fast charging at Shell stations |\n| Tesla Supercharger | 120+ | 250 kW | — | 0.55–0.65 | Tesla owners |\n| BYD Charging Hub | 80+ | 150 kW | — | 0.50–0.60 | BYD owners |\n\nInsider tip: If you don't have a subscription, Charge+ gives the best balance of price and coverage. If you need a quick top-up, Shell Recharge's 300 kW ultra-fast stations can add 250 km of range in 12 minutes.\n\n## Charging Costs in Singapore: Full Breakdown\n\nHome charging at a condo or landed property costs SGD 0.25–0.35/kWh off-peak, translating to SGD 75–105/month for 1,500 km. Public DC fast charging costs SGD 0.55–0.85/kWh, or SGD 82–127/month. By comparison, a Toyota Corolla Altis costs SGD 210–280/month in petrol — EVs save 50–65% even on full public charging.\n\nMonthly subscription passes from Charge+ (SGD 14.90/mo), SP Mobility (SGD 9.90/mo), and Shell Recharge+ (SGD 15/mo) drop per-kWh rates by 20–40%. Most drivers doing 1,500 km/month save SGD 15–30/month with a subscription.\n\n## HDB & Condo Charging\n\n60% of HDB car parks now have at least 2 EV chargers under the HDB EV Common Charger Programme. Applying is straightforward via the HDB e-Licence system.\n\nFor condos, the EV Common Charger Grant (ECCG) subsidises 50% of installation costs up to SGD 4,000 per charger. MCSTs can submit via LTA's OneMotoring portal with a quotation from an approved vendor. New post-2024 condos must have EV-ready infrastructure.\n\n## Best Charging Locations\n\nWest Singapore: Jurong Point (Charge+, 180 kW, 8 stalls), IMM Building (SP Group, 50 kW, 6 stalls), Shell Recharge Jurong West (300 kW, 4 stalls).\n\nCentral/Orchard: ION Orchard (Tesla, 250 kW, 6 stalls), Plaza Singapura (Charge+, 150 kW, 8 stalls), Suntec City (Shell, 300 kW, 6 stalls), Marina Bay Sands (SP Group, 50 kW, 12 stalls — free for hotel guests).\n\nEast Singapore: Changi Airport T3 (Charge+, 180 kW, 10 stalls — free 3h EV parking), East Coast Park (SP Group, 50 kW, 4 stalls), Shell Recharge Tampines (300 kW).\n\nNorth Singapore: Causeway Point Woodlands (Charge+, 180 kW, 8 stalls), Shell Recharge Woodlands (300 kW, 4 stalls — strategic last/first stop before JB).\n\n## Cross-Border: Singapore to Johor Bahru\n\nDriving to JB in an EV is easier than ever in 2026. Ensure your EV uses CCS2 (CHAdeMO is rare in Malaysia), install JomCharge and Gentari Go before crossing, and activate roaming in your Singapore app.\n\nThe new Woodlands EV Hub (opened 2026) features 12x 150 kW CCS2 chargers with an air-conditioned lounge and priority lane access to Malaysia customs. Charge here before crossing, then enjoy JB's cheaper rates (MYR 0.55–0.90/kWh ≈ SGD 0.16–0.26).\n\nTuas Checkpoint alternative: 6x 120 kW DC chargers at the checkpoint and 4x 150 kW DC at LINK@896 (5 min after customs).\n\n## EV Registration Incentives\n\nThe EV Early Adoption Incentive (EEAI) gives a 45% rebate on ARF capped at SGD 20,000 until Dec 2027. Combined with other rebates, a SGD 180,000 EV can drop to SGD 145,000. Road tax is waived until 2028. The ECCG grant covers 50% of condo charger installation.\n\n## Which App to Use\n\nInstall Charge+ (daily use), Shell Recharge (ultra-fast backup), and JomCharge (JB/Malaysia roaming). These three cover 95% of your needs across Singapore and southern Malaysia.\n\nFind EV chargers near you in Singapore\n\n<!-- affiliate:booking.com/search?destination=Singapore\\&filter=ev_charging -->",
+    "tags": [
+      "singapore",
+      "ev-charging",
+      "guide",
+      "hdb-charging",
+      "condo-charging",
+      "cross-border",
+      "johor",
+      "charging-costs"
+    ],
+    "excerpt": "The ultimate guide to EV charging in Singapore in 2026. Blue SG, SP Group, Charge+, and Shell Recharge coverage map. HDB and condo charging installation, per-kWh costs, best apps, and driving to Johor via the Causeway.",
+    "date": "2026-05-29",
+    "readingTime": "12 min read",
+    "relatedStations": [
+      "mys-johor-bahru-001",
+      "mys-johor-bahru-002",
+      "mys-johor-bahru-003"
+    ],
+    "country": "singapore",
+    "featuredImage": "https://images.unsplash.com/photo-1555626040-e1c57de52163?w=1200",
+    "schemaType": "Guide"
+  },
+  {
     "slug": "top-10-ev-friendly-hotels-hong-kong-best-stays-with-ev-charging-2026",
     "title": "Top 10 EV-Friendly Hotels in Hong Kong: Best Stays with EV Charging 2026",
     "excerpt": "Hong Kong's best EV-friendly hotels ranked by charging speed, reliability, and overall experience. From Kowloon's luxury towers to Island-side boutique stays in Central, Wan Chai, and Repulse Bay — find your perfect EV-ready stay in Asia's most vertical city.",

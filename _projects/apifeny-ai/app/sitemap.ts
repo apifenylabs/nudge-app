@@ -73,6 +73,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     } catch { return []; }
   })();
 
+  // Dynamically discover all ai-tools-* country pages from the app directory
+  const aiToolCountryEntries: MetadataRoute.Sitemap = (() => {
+    try {
+      const appDir = path.join(process.cwd(), 'app');
+      const entries = fs.readdirSync(appDir, { withFileTypes: true });
+      return entries
+        .filter(d => d.isDirectory() && d.name.startsWith('ai-tools-') && d.name !== 'ai-tools-for-startups')
+        .map(d => ({
+          url: `${BASE_URL}/${d.name}`,
+          lastModified: new Date(),
+          changeFrequency: 'daily' as const,
+          priority: 0.8,
+        }));
+    } catch { return []; }
+  })();
+
   // Static pages
   const staticEntries: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: new Date(), changeFrequency: 'daily', priority: 1.0 },
@@ -91,59 +107,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/best-ai-coding-tools`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
     { url: `${BASE_URL}/best-ai-writing-tools`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
     { url: `${BASE_URL}/best-ai-marketing-tools`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-singapore`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-malaysia`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-hong-kong`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-vietnam`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-philippines`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-indonesia`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-thailand`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-cambodia`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-japan`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-south-korea`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-taiwan`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-india`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-myanmar`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-bangladesh`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-sri-lanka`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-nepal`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-turkey`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-nigeria`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    // Major markets (added in bulk)
-    { url: `${BASE_URL}/ai-tools-argentina`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-australia`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
-    { url: `${BASE_URL}/ai-tools-austria`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-belgium`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-brazil`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-canada`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
-    { url: `${BASE_URL}/ai-tools-chile`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-china`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
-    { url: `${BASE_URL}/ai-tools-colombia`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-denmark`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-egypt`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-finland`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-france`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-germany`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
-    { url: `${BASE_URL}/ai-tools-ireland`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-israel`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-italy`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-kenya`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-mexico`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-netherlands`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-new-zealand`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-norway`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-pakistan`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-poland`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-portugal`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-russia`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
-    { url: `${BASE_URL}/ai-tools-saudi-arabia`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-south-africa`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-spain`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-sweden`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/ai-tools-switzerland`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-uae`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE_URL}/ai-tools-uk`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
-    { url: `${BASE_URL}/ai-tools-usa`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
     { url: `${BASE_URL}/guides`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE_URL}/guides/how-to-choose-ai-tools`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/guides/ai-automation-for-small-business`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
@@ -238,6 +201,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   return [
+    ...aiToolCountryEntries,
     ...staticEntries,
     ...toolEntries,
     ...collectionEntries,

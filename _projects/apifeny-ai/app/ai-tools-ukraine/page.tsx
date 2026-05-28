@@ -34,12 +34,12 @@ import GeoSeoSchema from '@/components/GeoSeoSchema';
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 const META = {
-  title: 'Best AI Tools in Canada (2026) — Curated for Canadian Teams & Startups',
+  title: 'Best AI Tools in Ukraine (2026) — Curated for Ukrainian Teams & Startups',
   description:
-    'Discover the best AI tools for Canadian businesses and founders. Curated directory of 85+ tools ranked by trending score, Canada-market readiness, and local relevance. Updated daily. Built for Toronto, Montreal, Vancouver, and Canada\'s thriving AI ecosystem.',
-  ogTitle: 'Best AI Tools in Canada (2026) — Apifeny AI',
+    'Discover the best AI tools for Ukrainian businesses and developers. Curated directory of 85+ tools ranked by trending score, Ukraine-market readiness, and local relevance. Updated daily. Built for Kyiv, Lviv, Kharkiv, and Ukraine\'s resilient tech ecosystem.',
+  ogTitle: 'Best AI Tools in Ukraine (2026) — Apifeny AI',
   ogDescription:
-    'Find AI tools built for Canada: CIFAR-aligned research, Vector Institute ecosystem, CAD pricing, bilingual (EN/FR) support, and Canadian data compliance. 85+ tools, expert ranked.',
+    'Find AI tools built for Ukraine: EU-aligned, UAH/pricing, Ukrainian/English support, and GDPR compliance. 85+ tools, expert ranked.',
   ogImage: '/og',
 };
 
@@ -53,7 +53,7 @@ function topByCategory(category: string, limit: number) {
   return [...toolsData].filter((t) => t.is_published && t.category === category).sort((a, b) => b.trending_score - a.trending_score).slice(0, limit);
 }
 
-export default function AIToolsCanadaPage() {
+export default function AIToolsUkrainePage() {
   const top12 = useMemo(() => topByTrending(12), []);
   const categorySections = useMemo(() =>
     CATEGORY_NAMES.map((name) => ({
@@ -66,24 +66,25 @@ export default function AIToolsCanadaPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: 'Home', item: '/' }, { name: 'AI Tools Canada', item: '/ai-tools-canada' }]} />
+      <BreadcrumbSchema items={[{ name: 'Home', item: '/' }, { name: 'AI Tools Ukraine', item: '/ai-tools-ukraine' }]} />
       <GeoSeoSchema
-        countryName="Canada"
-        countryCode="ca"
-        capital="Ottawa"
-        currency="CAD"
-        language="English / French"
-        languageCode="en"
-        marketSize={"$2.2T economy, 40M population, world-leading AI research ecosystem (Vector Institute, CIFAR, MILA), G7 member with strong tech immigration pipelines, rapidly growing VC scene"}
-        slug="ai-tools-canada"
+        countryName="Ukraine"
+        countryCode="UA"
+        capital="Kyiv"
+        currency="UAH"
+        language="Ukrainian"
+        languageCode="uk"
+        marketSize={"Ukraine stands at the intersection of deep technical talent, a thriving IT outsourcing industry, and a startup ecosystem that has produced global successes like Grammarly, GitLab, and People.ai. With over 200,000 IT professionals, a government-driven 'AI for Ukraine' initiative under the Ministry of Digital Transformation, and world-class math & CS education, Ukraine is uniquely positioned to adopt and build AI solutions across defense, agriculture, fintech, and health tech."}
+        slug="ai-tools-ukraine"
         faqs={[
-          { question: "What are the best AI tools in Canada?", answer: "The best AI tools in Canada include ChatGPT for content and productivity, GitHub Copilot for development, Claude for advanced reasoning, Canva AI for design, and Jasper for marketing. Canada is a global AI powerhouse — home to the Vector Institute in Toronto, Mila in Montreal, and the Alberta Machine Intelligence Institute (Amii). The country's AI research ecosystem (CIFAR, Pan-Canadian AI Strategy) has produced foundational AI breakthroughs and top talent from U of T, McGill, UBC, and Waterloo." },
-          { question: "How does Canadian privacy law (PIPEDA) affect AI tool selection?", answer: "Canada's Personal Information Protection and Electronic Documents Act (PIPEDA) and Quebec's Law 25 impose strict requirements on how AI tools collect, use, and disclose personal information. The proposed Artificial Intelligence and Data Act (AIDA) will further regulate high-impact AI systems. We flag every tool for PIPEDA compliance, provincial privacy law readiness (especially Quebec's Law 25), data residency options within Canada, and alignment with OPC guidance on AI and automated decision-making." },
-          { question: "What AI tools are best for Canada's key industries?", answer: "Canada's economy has distinct AI priorities: AI research and deep learning tools for Toronto's Vector Institute and Montreal's Mila ecosystem, fintech AI in Vancouver and Toronto (wealth management, payments), cleantech and energy AI in Alberta and BC, healthcare AI for Canada's public health system, natural language tools for French and English bilingual requirements, and autonomous vehicle AI in Waterloo and Toronto. Canadian businesses also lead in AI for mining, forestry, and agricultural technology." },
-          { question: "How can Canadian startups access AI funding and support?", answer: "Canada offers extensive AI innovation support. The Pan-Canadian AI Strategy (CIFAR) funds research and commercialization. The Scientific Research and Experimental Development (SR&ED) tax credit provides 35-45% cash refunds on qualifying AI R&D costs for Canadian companies. IRAP (National Research Council) provides grants for AI technology adoption. BDC Capital and federal/provincial VC programs support AI startups. The Global Talent Stream fast-tracks AI talent visas. Programs like NextAI, Creative Destruction Lab (CDL), and BC Tech's AI initiatives provide mentorship and funding." },
-          { question: "What AI regulations exist in Canada?", answer: "Canada's AI regulatory framework is evolving. The proposed Artificial Intelligence and Data Act (AIDA), part of Bill C-27, will establish requirements for high-impact AI systems including risk assessments, transparency, and accountability. PIPEDA governs data used in AI training. Quebec's Law 25 sets additional privacy requirements. Specific sectors have regulations: Health Canada for medical AI, OSFI for financial AI, and Transport Canada for autonomous vehicles. Canada's Voluntary AI Code of Conduct sets early standards for responsible AI development." },
+          { question: "What are the best AI tools for Ukrainian startups in 2026?", answer: "Top AI tools for Ukrainian startups include ChatGPT for bilingual UA/EN workflows, Grammarly (founded by Ukrainians) for writing, GitHub Copilot for development, and Notion AI for project management. For EU-market expansion, HubSpot AI, Jasper, and TensorFlow-based custom models are widely adopted." },
+          { question: "How can Ukrainian developers access AI tools despite sanctions and payment restrictions?", answer: "Many AI tool providers now accept UAH via local payment processors (Portmone, LiqPay) or cryptocurrency. Service-based tools like OpenAI's API accept international cards and EUR/USD accounts. Some tools offer special wartime pricing or extended trials for Ukrainian users." },
+          { question: "Do AI tools support the Ukrainian language?", answer: "Major AI platforms including ChatGPT, Claude, and Google AI now fully support Ukrainian language input and output. Grammarly offers Ukrainian English grammar correction. For NLP and text analytics, Ukrainian-specific models (like Ukrainian BERT) are available on Hugging Face." },
+          { question: "What AI tools are best for Ukraine's defense and agritech sectors?", answer: "For defense: Palantir, drone AI analytics (via local startups like Himera), and SIGINT AI tools. For agritech: John Deere Operations Center AI, Cropio, and local platforms like Kray. Many defense and agritech tools offer Ukrainian-language interfaces and offline-capable deployments." },
+          { question: "Are there free or low-cost AI tools for Ukrainian students and educators?", answer: "Yes — Microsoft Education AI, Google Workspace for Education, and ChatGPT Free provide robust free tiers. The Ministry of Digital Transformation's 'Diia' platform also integrates AI services. GitHub Education Pack offers free Copilot access for verified Ukrainian students." },
         ]}
       />
+      
       <SeoMetadata title={META.title} description={META.description} ogTitle={META.ogTitle} ogDescription={META.ogDescription} ogImage={META.ogImage} />
 
       {/* HERO */}
@@ -94,24 +95,23 @@ export default function AIToolsCanadaPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-300 text-xs sm:text-sm font-medium mb-6 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-300 text-xs sm:text-sm font-medium mb-6 animate-fade-in">
               <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              Canada-Focused · Updated Daily · {totalCount}+ Curated Tools
+              Ukraine-Focused · Updated Daily · {totalCount}+ Curated Tools
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight animate-slide-up">
               Best AI Tools for{' '}
-              <span className="bg-gradient-to-r from-red-400 via-white to-red-300 bg-clip-text text-transparent">
-                Canada
+              <span className="bg-gradient-to-r from-[#0057B7] via-[#FFD700]/30 to-[#0057B7] bg-clip-text text-transparent">
+                Ukraine
               </span>
               <br />
               <span className="text-tech-100">in 2026</span>
             </h1>
 
             <p className="mt-5 sm:mt-6 text-base sm:text-lg text-tech-200 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
-              Curated AI tools that <strong className="text-white">actually work for Canada</strong>. 
-              We rank every tool on PIPEDA compliance, CAD pricing, bilingual (EN/FR) support,
-              and Canadian AI ecosystem readiness — so you find tools built for Canada's unique market.
+              Curated AI tools that <strong className="text-white">actually work for Ukraine</strong>. 
+              and start building with AI tools designed for Ukraine's unique ecosystem.
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
@@ -125,10 +125,10 @@ export default function AIToolsCanadaPage() {
             </div>
 
             <div className="mt-10 sm:mt-14 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-tech-300 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="flex items-center gap-2"><Globe className="w-4 h-4 text-red-400" /><span>English / Français</span></div>
-              <div className="flex items-center gap-2"><Wallet className="w-4 h-4 text-yellow-400" /><span>CAD Pricing</span></div>
-              <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-aqua" /><span>PIPEDA & Law 25</span></div>
-              <div className="flex items-center gap-2"><Zap className="w-4 h-4 text-neon-light" /><span>AI Research-Ready</span></div>
+              <div className="flex items-center gap-2"><Globe className="w-4 h-4 text-yellow-400" /><span>🇺🇦 Ukrainian</span></div>
+              <div className="flex items-center gap-2"><Wallet className="w-4 h-4 text-yellow-400" /><span>💰 UAH</span></div>
+              <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-aqua" /><span>🛡️ GDPR + PDPL</span></div>
+              <div className="flex items-center gap-2"><Zap className="w-4 h-4 text-neon-light" /><span>🚀 EU Integration</span></div>
             </div>
           </div>
         </div>
@@ -139,10 +139,10 @@ export default function AIToolsCanadaPage() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center shrink-0"><Trophy className="w-5 h-5 text-red-400" /></div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">Top AI Tools in Canada</h2>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center shrink-0"><Trophy className="w-5 h-5 text-yellow-400" /></div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">Top AI Tools in Ukraine</h2>
             </div>
-            <p className="text-sm sm:text-base text-tech-200 ml-[52px]">Highest-rated tools across all categories — ranked by trending score and Canada-market readiness</p>
+            <p className="text-sm sm:text-base text-tech-200 ml-[52px]">Highest-rated tools across all categories — ranked by trending score and Ukraine-market readiness</p>
           </div>
           <Link href="/tools" className="group inline-flex items-center gap-1.5 text-sm text-neon-light hover:text-neon transition shrink-0">
             See full rankings<ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -152,7 +152,7 @@ export default function AIToolsCanadaPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
           {top12.map((tool, i) => (
             <Link key={tool.id} href={`/tools/${tool.slug}`} className={cn('group relative block rounded-xl border border-tech-500/30 bg-tech-700 p-5 transition-all duration-300', 'hover:border-neon/40 hover:shadow-lg hover:shadow-neon/5 hover:-translate-y-1', 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon/50')}>
-              <div className={cn('absolute -top-2 -left-2 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow-lg z-10', i === 0 ? 'bg-gradient-to-br from-red-400 to-white text-black' : i === 1 ? 'bg-gradient-to-br from-slate-300 to-slate-400 text-black' : i === 2 ? 'bg-gradient-to-br from-amber-600 to-amber-700 text-white' : 'bg-tech-500 text-tech-100 border border-tech-400/30')}>#{i + 1}</div>
+              <div className={cn('absolute -top-2 -left-2 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow-lg z-10', i === 0 ? 'bg-gradient-to-br yellow text-black' : i === 1 ? 'bg-gradient-to-br from-slate-300 to-slate-400 text-black' : i === 2 ? 'bg-gradient-to-br from-amber-600 to-amber-700 text-white' : 'bg-tech-500 text-tech-100 border border-tech-400/30')}>#{i + 1}</div>
               <div className="flex items-start gap-3 mb-3">
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-tech-400/30 group-hover:border-neon/30 transition"><span className="text-white font-bold text-sm">{tool.name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase()}</span></div>
                 <div className="min-w-0 flex-1">
@@ -166,7 +166,7 @@ export default function AIToolsCanadaPage() {
               </div>
               <div className="flex items-center gap-2 mb-3">
                 <div className="flex items-center gap-0.5">
-                  {(() => { const stars = []; for (let i = 1; i <= 5; i++) { if (tool.avg_rating >= i) stars.push('full'); else if (tool.avg_rating >= i - 0.5) stars.push('half'); else stars.push('empty'); } return stars.map((s, si) => (<Star key={si} className={cn('w-3 h-3', s === 'full' ? 'fill-red-400 text-red-400' : s === 'half' ? 'fill-red-400/50 text-red-400' : 'fill-none text-tech-400')} />)); })()}
+                  {(() => { const stars = []; for (let i = 1; i <= 5; i++) { if (tool.avg_rating >= i) stars.push('full'); else if (tool.avg_rating >= i - 0.5) stars.push('half'); else stars.push('empty'); } return stars.map((s, si) => (<Star key={si} className={cn('w-3 h-3', s === 'full' ? 'fill-red-400 text-yellow-400' : s === 'half' ? 'fill-red-400/50 text-yellow-400' : 'fill-none text-tech-400')} />)); })()}
                 </div>
                 <span className="text-xs text-tech-200">{tool.avg_rating.toFixed(1)}{tool.total_ratings >= 1000 ? ` (${(tool.total_ratings / 1000).toFixed(1)}K)` : ` (${tool.total_ratings})`}</span>
               </div>
@@ -188,17 +188,17 @@ export default function AIToolsCanadaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10 sm:mb-12">
             <div className="flex items-center justify-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-white/10 flex items-center justify-center shrink-0"><MapPin className="w-5 h-5 text-red-400" /></div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">Why Canada Needs Its Own AI Tool Directory</h2>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-white/10 flex items-center justify-center shrink-0"><MapPin className="w-5 h-5 text-yellow-400" /></div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">Why Ukrainian Teams Need Localized AI Tools</h2>
             </div>
-            <p className="text-sm sm:text-base text-tech-200 max-w-xl mx-auto">Canada's AI ecosystem is unique — world-leading research meets a distinct regulatory and cultural landscape.</p>
+            <p className="text-sm sm:text-base text-tech-200 max-w-xl mx-auto">Ukrainian businesses face unique challenges — war-time resilience, a rapidly digitizing economy, EU integration, and a bilingual Ukrainian/English user base. Generic AI tools miss critical requirements: native Ukrainian language support, combat-tested IT infrastructure, UAH pricing sensitivity, and GDPR-plus-domestic data protection. Our Ukraine-curated directory filters for tools that understand these realities.regulatory and cultural landscape.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {[
-              { icon: Globe, title: 'Bilingual by Law (EN/FR)', description: 'Canada is officially bilingual and Quebec\'s Law 25 and Charter of the French Language require business operations in French. We flag every tool for French-language support, Quebec compliance, and Canadian English/French localization — critical for serving markets from Vancouver to Montreal.', gradient: 'from-neon/10 to-purple-900/10' },
-              { icon: ShieldCheck, title: 'PIPEDA, AIDA & Law 25', description: 'Canada\'s privacy landscape includes federal PIPEDA, Quebec\'s Law 25 (the strictest in North America), and the upcoming Artificial Intelligence and Data Act (AIDA). We evaluate tools for Canadian data residency, consent management, AI transparency obligations, and OPC guidance alignment.', gradient: 'from-red-500/10 to-rose-900/10' },
-              { icon: Zap, title: 'Vector Institute & CIFAR Ecosystem', description: 'Canada\'s $125M+ Pan-Canadian AI Strategy (CIFAR, Vector, Mila, Amii) produces world-leading AI research. We prioritize tools that integrate with academic licensing, research workflows, and Canada\'s unique commercialization pipeline from discovery to startup spinout.', gradient: 'from-aqua/10 to-cyan-900/10' },
+              { icon: Globe, title: '🇺🇦 200K+ IT Professionals', description: 'Ukraine has one of the largest tech talent pools in Europe, with over 200,000 IT professionals excelling in AI/ML, data science, and full-stack engineering. Kyiv, Lviv, and Kharkiv are recognized as top outsourcing destinations.', gradient: 'from-neon/10 to-purple-900/10' },
+              { icon: ShieldCheck, title: '📜 GDPR + Personal Data Protection Law', description: 'Ukraine adopted a GDPR-aligned Personal Data Protection Law and is actively pursuing EU digital integration. AI companies must comply with both national PDPL and GDPR for cross-border data flows.', gradient: 'from-red-500/10 to-rose-900/10' },
+              { icon: Zap, title: '🎓 World-Class STEM & Math Education', description: 'Ukraine\'s math olympiad tradition and strong CS programs at Kyiv Polytechnic, KNU, and UCU produce some of the world\'s best AI engineers. Over 30 universities now offer dedicated AI/ML tracks.', gradient: 'from-aqua/10 to-cyan-900/10' },
             ].map((item) => (
               <div key={item.title} className={`relative rounded-xl bg-gradient-to-br ${item.gradient} bg-tech-700 border border-tech-500/30 p-6`}>
                 <div className="absolute inset-0 bg-tech-grid opacity-20 rounded-xl pointer-events-none" />
@@ -220,8 +220,8 @@ export default function AIToolsCanadaPage() {
           <section key={section.name} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 border-b border-tech-500/10 last:border-b-0">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold text-white">Best AI {section.name.replace('Writing & Content', 'Writing Tools').replace('Code & Development', 'Coding Tools').replace('Design & Creative', 'Design Tools').replace('Marketing & SEO', 'Marketing Tools')} for Canada</h2>
-                <p className="text-sm text-tech-200 mt-1 max-w-xl">Top picks for Canadian teams — rated for PIPEDA compliance, CAD pricing, and bilingual support.</p>
+                <h2 className="text-xl sm:text-2xl font-bold text-white">Best AI {section.name.replace('Writing & Content', 'Writing Tools').replace('Code & Development', 'Coding Tools').replace('Marketing & SEO', 'Marketing Tools')} for Ukraine</h2>
+                <p className="text-sm text-tech-200 mt-1 max-w-xl">Top picks for Ukrainian teams — rated for multilingual support, UAH-friendly pricing, data sovereignty resilience, and war-proof infrastructure.</p>
               </div>
               <Link href={`/categories/${sectionSlug}`} className="group inline-flex items-center gap-1.5 text-sm text-neon-light hover:text-neon transition shrink-0">View all {section.count} tools<ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" /></Link>
             </div>
@@ -234,14 +234,14 @@ export default function AIToolsCanadaPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className={cn('inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium border', tool.pricing_tier === 'Free' ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' : tool.pricing_tier === 'Freemium' ? 'bg-sky-500/20 text-sky-400 border-sky-500/30' : 'bg-neon/20 text-neon-light border-neon/30')}>{tool.pricing_tier === 'Freemium' ? 'Free+' : tool.pricing_tier}</span>
-                    <div className="flex items-center gap-1"><Star className="w-2.5 h-2.5 fill-red-400 text-red-400" /><span className="text-[10px] text-tech-200">{tool.avg_rating.toFixed(1)}</span></div>
+                    <div className="flex items-center gap-1"><Star className="w-2.5 h-2.5 fill-red-400 text-yellow-400" /><span className="text-[10px] text-tech-200">{tool.avg_rating.toFixed(1)}</span></div>
                     <div className="flex items-center gap-0.5 ml-auto"><TrendingUp className="w-2.5 h-2.5 text-neon-light" /><span className="text-[9px] text-neon-light font-medium">{tool.trending_score}</span></div>
                   </div>
                 </Link>
               ))}
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-3">
-              <Link href={`/categories/${sectionSlug}`} className="inline-flex items-center gap-1 text-xs text-tech-300 hover:text-neon-light transition">Browse all {section.name} tools for Canada<ArrowRight className="w-3 h-3" /></Link>
+              <Link href={`/categories/${sectionSlug}`} className="inline-flex items-center gap-1 text-xs text-tech-300 hover:text-neon-light transition">Browse all {section.name} tools for Ukraine<ArrowRight className="w-3 h-3" /></Link>
             </div>
           </section>
         );
@@ -251,7 +251,7 @@ export default function AIToolsCanadaPage() {
       <section className="border-y border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="flex items-center gap-3 mb-6 sm:mb-8">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center shrink-0"><BookOpen className="w-5 h-5 text-red-400" /></div>
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center shrink-0"><BookOpen className="w-5 h-5 text-yellow-400" /></div>
             <div><h2 className="text-xl sm:text-2xl font-bold text-white">Step-by-Step AI Playbooks</h2><p className="text-xs sm:text-sm text-tech-200">Battle-tested guides to ship AI workflows — built for Canadian teams and startups</p></div>
           </div>
           <FeaturedPlaybooks />
@@ -269,7 +269,7 @@ export default function AIToolsCanadaPage() {
               { label: 'Curated AI Tools', value: `${totalCount}+`, icon: Layers },
               { label: 'Playbooks', value: `${playbooks.length}+`, icon: BookOpen },
               { label: 'Expert Rankings', value: '5+', icon: Trophy },
-              { label: 'CA-Ready Filters', value: '4', icon: CheckCircle },
+              { label: 'Ukraine Filters', value: '4', icon: CheckCircle },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col items-center gap-2">
                 <div className="w-10 h-10 rounded-xl bg-tech-600/60 flex items-center justify-center border border-tech-500/20"><stat.icon className="w-5 h-5 text-neon-light" /></div>
@@ -286,21 +286,20 @@ export default function AIToolsCanadaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10">
             <div className="flex items-center justify-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-rose-500/10 flex items-center justify-center shrink-0"><BookOpen className="w-5 h-5 text-red-400" /></div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">Canada's AI Ecosystem Is a Global Research Powerhouse</h2>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-rose-500/10 flex items-center justify-center shrink-0"><BookOpen className="w-5 h-5 text-yellow-400" /></div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">🇺🇦 Ukraine's AI Ecosystem</h2>
             </div>
             <p className="text-sm sm:text-base text-tech-200 max-w-2xl mx-auto">
-              From Toronto's Vector Institute to Montreal's Mila, Canada produces foundational AI research
-              that powers the world's most advanced systems — with a distinctly Canadian approach to responsible AI.
+              Ukraine's AI ecosystem combines brilliant engineering talent from Kyiv, Lviv, and Kharkiv with a government committed to digital transformation. From NLP tools supporting Ukrainian language processing to defense AI and agricultural tech, Ukraine is rapidly becoming an AI powerhouse in Eastern Europe.to responsible AI.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {[
-              { title: '🇨🇦 Toronto — Vector Institute & AI Hub', description: 'Toronto is one of the world\'s top three AI research cities, anchored by the Vector Institute, the Schwartz Reisman Innovation Centre, and U of T\'s world-leading ML faculty. The ecosystem spans deep learning, NLP, computer vision, and health AI — driving spinouts like Cohere, Waabi, and Layer 6.' },
-              { title: '🎓 Montreal — Mila & Deep Learning', description: 'Montreal\'s Mila (Quebec AI Institute), founded by Yoshua Bengio, is a global epicentre of deep learning research. Quebec\'s unique AI talent pipeline feeds into a booming startup ecosystem. Bilingual (French/English) tools are essential — we flag every tool for Québec compliance and French-language support.' },
-              { title: '🏢 Vancouver & Waterloo — Tech & Autonomy', description: 'Vancouver\'s growing AI scene spans fintech (Wealthsimple, PayByPhone), gaming AI, and cleantech. Waterloo\'s Velocity incubator and autonomous vehicle ecosystem (BlackBerry QNX, Darwin AI) produce cutting-edge AI for transportation, manufacturing, and enterprise SaaS.' },
-              { title: '🔬 Pan-Canadian AI Strategy & CIFAR', description: 'Canada\'s $125M+ Pan-Canadian AI Strategy, coordinated by CIFAR, funds the Vector Institute, Mila, Amii (Alberta), and dozens of AI chairs nationally. Combined with SR&ED tax credits (up to 45% R&D cash refunds), Global Talent Stream visas, and active angel/VC networks, Canada offers one of the best environments for AI startups globally.' },
+              { title: '🏛️ Kyiv — Ministry of Digital Transformation & AI Hub', description: 'The Ministry of Digital Transformation drives Ukraine\'s "AI for Ukraine" roadmap, while UNIT.City in Kyiv serves as the country\'s largest innovation park, hosting 300+ tech companies and AI startups.' },
+              { title: '💻 Lviv — IT Cluster & AI R&D Centre', description: 'Lviv IT Cluster unites 200+ companies including SoftServe, EPAM, and GlobalLogic, with dedicated AI/ML labs. The city is a major hub for AI research and commercial R&D outsourcing.' },
+              { title: '🎯 Kharkiv — Math Olympiad Legacy & Deep Tech', description: 'Kharkiv produces a disproportionate share of Ukraine\'s top math and AI talent through Karazin University and the Kharkiv IT Cluster. Deep tech startups in defense AI, computer vision, and NLP thrive here.' },
+              { title: '🚀 Grammarly, GitLab & the Ukrainian Diaspora Effect', description: 'Ukrainian founders have built globally successful AI companies including Grammarly (Kyiv-born), GitLab, and People.ai. The strong diaspora networks in Silicon Valley and Berlin continue to fuel investment and mentorship back home.' },
             ].map((item) => (
               <div key={item.title} className="bg-tech-800/70 border border-tech-500/20 rounded-xl p-5 hover:border-neon/20 transition">
                 <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
@@ -318,7 +317,7 @@ export default function AIToolsCanadaPage() {
         <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-aqua/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-300 text-xs font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-300 text-xs font-medium mb-6">
             <MapPin className="w-3.5 h-3.5" />
             Built for Canadian Founders, Researchers & Enterprises
           </div>
@@ -340,19 +339,16 @@ export default function AIToolsCanadaPage() {
         </div>
       </section>
 
-      <BlogCategoryLinks slugs={['ai-tools', 'comparisons', 'productivity', 'solopreneur']} heading="Canada-Focused AI Guides" />
-      <LandingPageCrossLinks currentSlug="ai-tools-canada" />
+      <BlogCategoryLinks slugs={['ai-tools', 'comparisons', 'productivity', 'solopreneur']} heading="Your Guide to AI Tools in Ukraine for 2026" />
+      <LandingPageCrossLinks currentSlug="ai-tools-ukraine" />
 
       {/* SEO FOOTER KEYWORDS */}
       <section className="border-t border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
           <div className="text-center">
             <p className="text-[10px] text-tech-400 leading-loose max-w-3xl mx-auto">
-              <strong className="text-tech-300">Canada AI tools:</strong>{' '}
-              best AI tools in Canada 2026 · AI tools for Canadian businesses · Canada AI software · 
-              AI writing tools Canada · AI coding tools Canada · AI marketing Canada · 
-              Canada AI directory · AI tools for Canadian startups · enterprise AI tools Canada · 
-              free AI tools Canada · AI productivity Canada · Canadian tech stack · 
+              <strong className="text-tech-300">Ukraine AI tools:</strong>{' '}
+              best AI tools in Ukraine 2026 · AI tools for Ukraine · machine learning Ukraine · AI startups Kyiv · Ukrainian tech ecosystem · AI for defense and agriculture Ukraine · Ukrainian AI directory · top AI tools Ukrainian teams · UAH AI tools · Canadian tech stack · 
               AI tools Toronto · AI tools Montreal · AI tools Vancouver
             </p>
           </div>

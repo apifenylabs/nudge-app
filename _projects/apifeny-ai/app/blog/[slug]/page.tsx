@@ -7,6 +7,7 @@ import type { BlogPost } from '@/lib/blog-data';
 import BlogAffiliateCTA from '../../components/BlogAffiliateCTA';
 import BlogRelatedTools from '../../components/BlogRelatedTools';
 import BlogGeoLinks from '../../components/BlogGeoLinks';
+import BlogPlaybookLinks from '../../components/BlogPlaybookLinks';
 
 const BASE_URL = 'https://apifeny.ai';
 
@@ -143,6 +144,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       {/* Geo-specific cross-links — strengthen topical authority */}
       <BlogGeoLinks
         postSlug={post.slug}
+        postTags={post.tags}
+      />
+
+      {/* Internal linking: blog → playbooks — cross-sell how-to guides */}
+      <BlogPlaybookLinks
         postTags={post.tags}
       />
 

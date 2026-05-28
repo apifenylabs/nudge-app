@@ -367,6 +367,106 @@ export default function ProgressionPage() {
         <LevelPathTimeline currentLevel={currentLevel} totalXp={progression.totalXp} />
       </div>
 
+      {/* God-Tier Preview — shown before unlocking */}
+      {currentLevel < 30 && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="p-5 rounded-xl border relative overflow-hidden"
+          style={{
+            background: 'linear-gradient(135deg, rgba(212,160,23,0.06), rgba(14,165,165,0.03))',
+            borderColor: 'rgba(212,160,23,0.18)',
+          }}
+        >
+          {/* Subtle glow */}
+          <motion.div
+            className="absolute -inset-8 opacity-20 pointer-events-none"
+            style={{
+              background: 'radial-gradient(ellipse at 30% 50%, rgba(212,160,23,0.25) 0%, transparent 60%)',
+            }}
+            animate={{ opacity: [0.15, 0.3, 0.15] }}
+            transition={{ duration: 3, repeat: Infinity }}
+          />
+          <div className="relative z-10">
+            <div className="flex items-center gap-2 mb-3">
+              <Sparkles className="h-4 w-4" style={{ color: '#D4A017' }} />
+              <h3 className="text-sm font-bold" style={{ color: '#D4A017' }}>
+                God-Tier Preview
+              </h3>
+              <Badge
+                className="text-[9px] font-mono font-semibold"
+                style={{
+                  background: 'rgba(212,160,23,0.15)',
+                  color: '#D4A017',
+                  borderColor: 'rgba(212,160,23,0.25)',
+                }}
+              >
+                Unlocks Lv.30
+              </Badge>
+              <span className="text-[9px] font-mono ml-auto" style={{ color: '#666666' }}>
+                {30 - currentLevel} levels to go
+              </span>
+            </div>
+            <p className="text-xs mb-3" style={{ color: '#666666' }}>
+              Push to <strong style={{ color: '#D4A017' }}>Level 30</strong> and unlock transcendent abilities that transform
+              your agent swarm. Here&apos;s what awaits:
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              {[
+                { icon: '✨', name: 'God-Tier Aura', desc: 'Golden radial pulse aura' },
+                { icon: '👑', name: 'Crown Badge', desc: 'Level badge transforms' },
+                { icon: '💫', name: 'Premium Ring', desc: 'Shimmering gold orbit' },
+                { icon: '🗣️', name: 'God Command', desc: 'Command 5 agents at once' },
+                { icon: '🔒', name: 'Soulbound Skill', desc: 'One immortal skill' },
+                { icon: '⚡', name: 'Aura Pressure', desc: '+10% XP for nearby agents' },
+              ].map((preview, i) => (
+                <motion.div
+                  key={i}
+                  className="p-2.5 rounded-lg flex items-center gap-2 text-xs"
+                  style={{
+                    background: 'rgba(212,160,23,0.05)',
+                    border: '1px solid rgba(212,160,23,0.1)',
+                  }}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                >
+                  <span className="text-base shrink-0">{preview.icon}</span>
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-semibold truncate" style={{ color: '#1F1F1F' }}>
+                      {preview.name}
+                    </p>
+                    <p className="text-[8px] font-mono truncate" style={{ color: '#666666' }}>
+                      {preview.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            <div className="mt-3 flex items-center justify-center gap-2">
+              <div
+                className="h-1.5 rounded-full flex-1 max-w-xs overflow-hidden"
+                style={{ background: 'rgba(14,165,165,0.1)' }}
+              >
+                <motion.div
+                  className="h-full rounded-full"
+                  style={{
+                    background: 'linear-gradient(90deg, #14B8A6, #D4A017)',
+                    width: `${Math.min(100, (currentLevel / 30) * 100)}%`,
+                  }}
+                  initial={{ width: 0 }}
+                  animate={{ width: `${Math.min(100, (currentLevel / 30) * 100)}%` }}
+                  transition={{ duration: 1, ease: 'easeOut' }}
+                />
+              </div>
+              <span className="text-[9px] font-mono font-semibold shrink-0" style={{ color: '#D4A017' }}>
+                Lv.{currentLevel} / 30
+              </span>
+            </div>
+          </div>
+        </motion.div>
+      )}
+
       {/* God-Tier Abilities */}
       {currentLevel >= 30 && (
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}

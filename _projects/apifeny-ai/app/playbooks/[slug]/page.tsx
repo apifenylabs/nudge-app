@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { ArrowLeft, Clock, BookOpen, Lightbulb, AlertTriangle, Sparkles, CheckCircle, Target, Zap, TrendingUp, DollarSign, Star, BarChart3 } from 'lucide-react';
 import { playbooks, type Playbook } from '@/lib/playbooks';
 import { cn, getPipelineStageBadge } from '@/lib/utils';
+import BlogPlaybookLinks from '../../components/BlogPlaybookLinks';
 
 const EXCLUDED_SLUGS = new Set([
   'ai-content-creation-busy-founders', 'ai-for-customer-support', 'ai-for-data-analysis',
@@ -233,6 +234,12 @@ export default async function PlaybookDetailPage({ params }: { params: Promise<{
             </div>
           </section>
         )}
+
+        {/* Internal linking: playbooks → blog posts — cross-link to related guides and comparisons */}
+        <BlogPlaybookLinks
+          playbookSlug={playbook.slug}
+          relatedToolSlugs={playbook.related_tool_slugs}
+        />
       </div>
     </div>
   );

@@ -1,0 +1,84 @@
+{
+ "platform": "AI Cofounder Hub",
+ "description": "Structured AI-guided platform to discover, build, and distribute in the AI ecosystem: Directory, Newsletter, Products, and Omnimind Memory Layer.",
+ "mascots": [
+ {
+ "id": "archie",
+ "name": "Archie the Archivist",
+ "role": "AI Directory Guide",
+ "emoji": "🗂️",
+ "color": "#3B82F6",
+ "description": "Helps users list and discover AI tools, projects, and resources in the directory. Always has a map or catalog in hand.",
+ "personality": "Organized, curious, helpful, loves connections and categories.",
+ "catchphrase": "Every great AI tool deserves its spot in the directory!"
+ },
+ {
+ "id": "nova",
+ "name": "Nova the Narrator",
+ "role": "AI Newsletter Curator",
+ "emoji": "📰",
+ "color": "#8B5CF6",
+ "description": "Crafts and personalizes the AI newsletter. Keeps the community informed with the latest insights, launches, and trends.",
+ "personality": "Witty, insightful, storyteller, always up-to-date.",
+ "catchphrase": "The story of AI, delivered fresh to your inbox every week."
+ },
+ {
+ "id": "pixel",
+ "name": "Pixel the Pioneer",
+ "role": "AI Products Builder",
+ "emoji": "🚀",
+ "color": "#10B981",
+ "description": "Guides users through building and launching AI products. From idea to MVP to distribution.",
+ "personality": "Energetic, creative, builder mindset, celebrates every launch.",
+ "catchphrase": "From zero to shipped – let's build something people actually want!"
+ },
+ {
+ "id": "echo",
+ "name": "Echo the Eternal",
+ "role": "Omnimind Memory Keeper",
+ "emoji": "🧠",
+ "color": "#F59E0B",
+ "description": "The living memory layer of the ecosystem. Connects all your AI projects, remembers context across sessions, and distributes knowledge.",
+ "personality": "Wise, calm, infinite recall, the glue that holds everything together.",
+ "catchphrase": "Your memories, your projects, your ecosystem – always with you, always evolving."
+ }
+ ],
+ "phases": [
+ {
+ "id": "discover",
+ "name": "Discover",
+ "mascot": "archie",
+ "title": "Find your next AI tool or list your own",
+ "description": "Explore our curated directory of AI tools and agents, organized by workflow. Have a tool? Archie helps you position it perfectly.",
+ "cta": "Browse Directory",
+ "ctaLink": "/"
+ },
+ {
+ "id": "learn",
+ "name": "Learn",
+ "mascot": "nova",
+ "title": "Stay ahead of the AI curve",
+ "description": "Weekly newsletter covering real launches, trends, and community stories. Nova curates what actually matters — not the noise.",
+ "cta": "Join Newsletter",
+ "ctaLink": "/#newsletter"
+ },
+ {
+ "id": "build",
+ "name": "Build",
+ "mascot": "pixel",
+ "title": "Ship AI products people actually want",
+ "description": "Step-by-step playbooks, templates, and frameworks. From idea validation to MVP to distribution. Pixel guides every phase.",
+ "cta": "Browse Playbooks",
+ "ctaLink": "/playbooks"
+ },
+ {
+ "id": "remember",
+ "name": "Remember & Distribute",
+ "mascot": "echo",
+ "title": "Memory that works across every project",
+ "description": "Omnimind is the distributed memory infrastructure for your AI ecosystem. Persistent context, cross-project knowledge, always evolving.",
+ "cta": "Learn About Omnimind",
+ "ctaLink": "/omnimind"
+ }
+ ]
+}
