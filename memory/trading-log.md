@@ -1,6 +1,28 @@
 # Trading Log — Full Minute-Level Feed
 
 > **Auto-generated.** Each `main_bot.py` cron run appends here (every ~1 min).
+
+---
+
+## 2026-05-28 18:07 HKT — Cron Run
+- **Balance:** $1,039.22 (▼ $4.97 from $1,044.19 at 18:04, -0.48%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+- Account balance via bot: $1,039.55
+- Open orders on BTC, ETH, SOL, WIF, XRP — native TP/SL active, skipping signal checks for those
+- Checked signals for HYPE-PERP and TAO-PERP (no matching entries)
+- 10 hist trades | 5 live positions (BTC, ETH, SOL, XRP, WIF) | WR=60% | DD=10.6% | Kill Switch=False
+- No kill switch ($1,039.22 > $20 ✅), no connection errors ✅
+
+## 2026-05-28 18:04 HKT — Cron Run
+- **Balance:** $1,044.19 (▲ $16.56 from $1,027.63 at 09:11, +1.61%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+- Account balance via bot: $1,044.19
+- Open orders on BTC, ETH, SOL, WIF, XRP — native TP/SL active, skipping signal checks for those
+- Checked signals for HYPE-PERP and TAO-PERP (no matching entries)
+- 10 hist trades | 5 live positions (BTC, ETH, SOL, XRP, WIF) | WR=60% | DD=10.6% | Kill Switch=False
+- **Positions changed significantly** (was 1 → now 5) — positions likely re-opened from a prior session
+- No kill switch ($1,044.19 > $20 ✅), no connection errors ✅
+- Balance change +1.61% — well within 10% threshold, silently passing
 > 99/107 entries have unique balance data — kept in full for signal fidelity.
 > For daily summaries, see `/home/captain/life/memory/YYYY-MM-DD.md`.
 

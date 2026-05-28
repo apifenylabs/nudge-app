@@ -5,6 +5,8 @@ const SITE_URL = 'https://ev-charging-asia.vercel.app';
 
 interface BlogIndexEntry {
   slug: string;
+  title: string;
+  description: string;
   date: string;
 }
 

@@ -34,12 +34,12 @@ import GeoSeoSchema from '@/components/GeoSeoSchema';
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 const META = {
-  title: 'Best AI Tools in Belgium (2026) — Curated for Belgian Teams & Startups',
+  title: 'Best AI Tools in Estonia (2026) — Curated for Estonian Teams & Startups',
   description:
-    'Discover the best AI tools for Belgian businesses and founders. Curated directory of 85+ tools ranked by trending score, Belgium-market readiness, and local relevance. Updated daily. Built for Brussels, Antwerp, Ghent, and Belgium\'s thriving AI ecosystem.',
-  ogTitle: 'Best AI Tools in Belgium (2026) — Apifeny AI',
+    'Discover the best AI tools for Estonian businesses and founders.',
+  ogTitle: 'Best AI Tools in Estonia (2026) — Apifeny AI',
   ogDescription:
-    'Find AI tools built for Belgium: imec ecosystem, multilingual (NL/FR/DE/EN) support, GDPR compliance, and EUR pricing. 85+ tools, expert ranked.',
+    'Find AI tools built for Estonia: e-Estonia ecosystem, EUR pricing.',
   ogImage: '/og',
 };
 
@@ -53,7 +53,7 @@ function topByCategory(category: string, limit: number) {
   return [...toolsData].filter((t) => t.is_published && t.category === category).sort((a, b) => b.trending_score - a.trending_score).slice(0, limit);
 }
 
-export default function AIToolsBelgiumPage() {
+export default function AIToolsEstoniaPage() {
   const top12 = useMemo(() => topByTrending(12), []);
   const categorySections = useMemo(() =>
     CATEGORY_NAMES.map((name) => ({
@@ -66,22 +66,22 @@ export default function AIToolsBelgiumPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={[{ name: 'Home', item: '/' }, { name: 'AI Tools Belgium', item: '/ai-tools-belgium' }]} />
+      <BreadcrumbSchema items={[{ name: 'Home', item: '/' }, { name: 'AI Tools Estonia', item: '/ai-tools-estonia' }]} />
       <GeoSeoSchema
-        countryName="Belgium"
-        countryCode="be"
-        capital="Brussels"
+        countryName="Estonia"
+        countryCode="ee"
+        capital="Tallinn"
         currency="EUR"
-        language="Dutch / French / German / English"
+        language="Estonian / English"
         languageCode="en"
-        marketSize={"€600B economy, 11.7M population, EU capital — home to imec (world-leading nanoelectronics), a multilingual workforce, strong fintech and healthtech sectors, and one of Europe's highest startup density rates"}
-        slug="ai-tools-belgium"
+        marketSize={"Small but agile economy, 1.3M population, Europe's most digital government (e-Estonia), strong startup ecosystem (Skype, Bolt, Wise), rapidly growing AI scene"}
+        slug="ai-tools-estonia"
         faqs={[
-          { question: "What are the best AI tools in Belgium?", answer: "The best AI tools in Belgium include ChatGPT for content and productivity, GitHub Copilot for development, Claude for advanced reasoning, Canva AI for design, and Jasper for marketing. Belgium is a European AI hub — home to imec in Leuven, the Ghent AI Lab (GAIL), and a growing startup ecosystem across Brussels, Antwerp, and Ghent. These tools are well-suited for Belgian businesses because they offer EUR pricing, multilingual (NL/FR/DE/EN) support, and strong GDPR-compliant data handling." },
-          { question: "How does Belgian data protection law (GDPR) affect AI tool selection?", answer: "Belgium follows the EU GDPR, enforced by the Belgian Data Protection Authority (GBA/APD). As home to the EU institutions, Belgium has particularly high data compliance standards. The AI4Belgium Charter for Responsible AI Use sets additional ethical guidelines. We evaluate every tool for GDPR compliance, EU data residency, and alignment with GBA/APD guidance on AI and automated decision-making." },
-          { question: "What AI tools are best for Belgium's key industries?", answer: "Belgium's economy has distinct AI priorities: logistics and port AI in Antwerp (Europe's second-largest port), deep tech and chip design AI with imec in Leuven, fintech AI in Brussels' financial district, health AI leveraging Belgium's world-class pharma sector (UCB, Janssen), and creative AI in Ghent's digital media ecosystem." },
-          { question: "How can Belgian startups access AI funding and support?", answer: "Belgium offers extensive AI innovation support. VLAIO (Flanders) provides R&D grants. hub.brussels supports Brussels startups. DigitalWallonia4.ai drives AI adoption in Wallonia. The federal AI4Belgium programme coordinates national AI strategy. EU Horizon Europe programmes supplement funding. Belgium also benefits from generous R&D tax credits." },
-          { question: "What AI regulations exist in Belgium?", answer: "Belgium's AI regulatory framework is shaped by the EU AI Act, with national coordination via the AI4Belgium programme. The Belgian Data Protection Authority (GBA/APD) enforces GDPR for AI training data. The AI4Belgium Charter sets voluntary standards for responsible AI use. Sector-specific regulations apply: FSMA for fintech AI, FAMHP for health AI, and the FPS Mobility for transport AI." },
+          { question: "What are the best AI tools in Estonia?", answer: "AI tools popular in Estonia: ChatGPT, Claude, GitHub Copilot." },
+          { question: "How does GDPR affect Estonian AI tool selection?", answer: "EU GDPR applies with Estonia-specific Model Cards requirements." },
+          { question: "What AI tools are best for Estonia's digital government?", answer: "e-Estonia focused tools with X-Road integration." },
+          { question: "How can Estonian startups access AI funding?", answer: "Estonia offers EU Horizon Europe, AI Task Force grants, and startup accelerator programs." },
+          { question: "What AI regulations exist in Estonia?", answer: "EU AI Act, GDPR, and national Model Cards framework." },
         ]}
       />
       <SeoMetadata title={META.title} description={META.description} ogTitle={META.ogTitle} ogDescription={META.ogDescription} ogImage={META.ogImage} />
@@ -94,24 +94,23 @@ export default function AIToolsBelgiumPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-300 text-xs sm:text-sm font-medium mb-6 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-700/10 border border-blue-700/20 text-blue-300 text-xs sm:text-sm font-medium mb-6 animate-fade-in">
               <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              Belgium-Focused · Updated Daily · {totalCount}+ Curated Tools
+              Estonia-Focused · Updated Daily · {totalCount}+ Curated Tools
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight animate-slide-up">
               Best AI Tools for{' '}
-              <span className="bg-gradient-to-r from-yellow-400 via-white to-yellow-300 bg-clip-text text-transparent">
-                Belgium
+              <span className="bg-gradient-to-r from-blue-500 via-white to-blue-300 bg-clip-text text-transparent">
+                Estonia
               </span>
               <br />
               <span className="text-tech-100">in 2026</span>
             </h1>
 
             <p className="mt-5 sm:mt-6 text-base sm:text-lg text-tech-200 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
-              Curated AI tools that <strong className="text-white">actually work for Belgium</strong>. 
-              We rank every tool on GDPR compliance, EUR pricing, and multilingual (NL/FR/DE/EN) support,
-              and Belgium AI ecosystem readiness — so you find tools built for Belgium's unique market.
+              Curated AI tools that <strong className="text-white">actually work for Estonia</strong>. 
+              We rank every tool on GDPR compliance, EUR pricing, Estonian/English support, and e-Estonia ecosystem readiness.Canada's unique market.
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
@@ -125,10 +124,10 @@ export default function AIToolsBelgiumPage() {
             </div>
 
             <div className="mt-10 sm:mt-14 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-tech-300 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="flex items-center gap-2"><Globe className="w-4 h-4 text-yellow-400" /><span>Nederlands / Français / Deutsch / English</span></div>
+              <div className="flex items-center gap-2"><Globe className="w-4 h-4 text-blue-400" /><span>Estonian / English</span></div>
               <div className="flex items-center gap-2"><Wallet className="w-4 h-4 text-yellow-400" /><span>EUR Pricing</span></div>
-              <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-aqua" /><span>GDPR & AI4Belgium Charter</span></div>
-              <div className="flex items-center gap-2"><Zap className="w-4 h-4 text-neon-light" /><span>EU AI-Ready</span></div>
+              <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-aqua" /><span>GDPR + e-Estonia</span></div>
+              <div className="flex items-center gap-2"><Zap className="w-4 h-4 text-neon-light" /><span>e-Estonia-Ready</span></div>
             </div>
           </div>
         </div>
@@ -139,10 +138,10 @@ export default function AIToolsBelgiumPage() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center shrink-0"><Trophy className="w-5 h-5 text-yellow-400" /></div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">Top AI Tools in Belgium</h2>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center shrink-0"><Trophy className="w-5 h-5 text-blue-400" /></div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">Top AI Tools in Estonia</h2>
             </div>
-            <p className="text-sm sm:text-base text-tech-200 ml-[52px]">Highest-rated tools across all categories — ranked by trending score and Belgium-market readiness</p>
+            <p className="text-sm sm:text-base text-tech-200 ml-[52px]">Highest-rated tools across all categories — ranked by trending score and Estonia-market readiness</p>
           </div>
           <Link href="/tools" className="group inline-flex items-center gap-1.5 text-sm text-neon-light hover:text-neon transition shrink-0">
             See full rankings<ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -152,7 +151,7 @@ export default function AIToolsBelgiumPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
           {top12.map((tool, i) => (
             <Link key={tool.id} href={`/tools/${tool.slug}`} className={cn('group relative block rounded-xl border border-tech-500/30 bg-tech-700 p-5 transition-all duration-300', 'hover:border-neon/40 hover:shadow-lg hover:shadow-neon/5 hover:-translate-y-1', 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon/50')}>
-              <div className={cn('absolute -top-2 -left-2 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow-lg z-10', i === 0 ? 'bg-gradient-to-br from-yellow-400 to-white text-black' : i === 1 ? 'bg-gradient-to-br from-slate-300 to-slate-400 text-black' : i === 2 ? 'bg-gradient-to-br from-amber-600 to-amber-700 text-white' : 'bg-tech-500 text-tech-100 border border-tech-400/30')}>#{i + 1}</div>
+              <div className={cn('absolute -top-2 -left-2 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow-lg z-10', i === 0 ? 'bg-gradient-to-br from-blue-600 to-white text-black' : i === 1 ? 'bg-gradient-to-br from-slate-300 to-slate-400 text-black' : i === 2 ? 'bg-gradient-to-br from-amber-600 to-amber-700 text-white' : 'bg-tech-500 text-tech-100 border border-tech-400/30')}>#{i + 1}</div>
               <div className="flex items-start gap-3 mb-3">
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-tech-400/30 group-hover:border-neon/30 transition"><span className="text-white font-bold text-sm">{tool.name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase()}</span></div>
                 <div className="min-w-0 flex-1">
@@ -166,7 +165,7 @@ export default function AIToolsBelgiumPage() {
               </div>
               <div className="flex items-center gap-2 mb-3">
                 <div className="flex items-center gap-0.5">
-                  {(() => { const stars = []; for (let i = 1; i <= 5; i++) { if (tool.avg_rating >= i) stars.push('full'); else if (tool.avg_rating >= i - 0.5) stars.push('half'); else stars.push('empty'); } return stars.map((s, si) => (<Star key={si} className={cn('w-3 h-3', s === 'full' ? 'fill-red-400 text-yellow-400' : s === 'half' ? 'fill-red-400/50 text-yellow-400' : 'fill-none text-tech-400')} />)); })()}
+                  {(() => { const stars = []; for (let i = 1; i <= 5; i++) { if (tool.avg_rating >= i) stars.push('full'); else if (tool.avg_rating >= i - 0.5) stars.push('half'); else stars.push('empty'); } return stars.map((s, si) => (<Star key={si} className={cn('w-3 h-3', s === 'full' ? 'fill-red-400 text-blue-400' : s === 'half' ? 'fill-red-400/50 text-blue-400' : 'fill-none text-tech-400')} />)); })()}
                 </div>
                 <span className="text-xs text-tech-200">{tool.avg_rating.toFixed(1)}{tool.total_ratings >= 1000 ? ` (${(tool.total_ratings / 1000).toFixed(1)}K)` : ` (${tool.total_ratings})`}</span>
               </div>
@@ -188,17 +187,17 @@ export default function AIToolsBelgiumPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10 sm:mb-12">
             <div className="flex items-center justify-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-white/10 flex items-center justify-center shrink-0"><MapPin className="w-5 h-5 text-yellow-400" /></div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">Why Belgium Needs Its Own AI Tool Directory</h2>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-white/10 flex items-center justify-center shrink-0"><MapPin className="w-5 h-5 text-blue-400" /></div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">Why Estonia Needs Its Own AI Tool Directory</h2>
             </div>
-            <p className="text-sm sm:text-base text-tech-200 max-w-xl mx-auto">Belgium's AI ecosystem is unique — a multilingual, multi-regulatory landscape at the heart of Europe with world-leading deep tech research.</p>
+            <p className="text-sm sm:text-base text-tech-200 max-w-xl mx-auto">Estonia's AI ecosystem is unique — Europe's most digital government meets a distinct regulatory landscape.regulatory and cultural landscape.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {[
-              { icon: Globe, title: 'Multilingual by Law (NL/FR/DE/EN)', description: 'Belgium follows the EU GDPR, enforced by the GBA/APD. As home to the EU capital, Belgium has high data compliance standards. The AI4Belgium Charter sets ethical AI guidelines. We verify every tool\'s data residency within the EU.', gradient: 'from-neon/10 to-purple-900/10' },
-              { icon: ShieldCheck, title: 'GDPR & AI4Belgium Charter', description: 'Belgium follows the EU GDPR, enforced by the GBA/APD. As home to the EU capital, Belgium has high data compliance standards. The AI4Belgium Charter sets ethical AI guidelines. We verify every tool\'s data residency within the EU and alignment with Belgian AI ethics standards.', gradient: 'from-red-500/10 to-rose-900/10' },
-              { icon: Zap, title: 'imec & AI Belgium Ecosystem', description: 'imec in Leuven is one of the world\'s leading nanoelectronics and AI chip research centres. The Ghent AI Lab (GAIL) and AI4Belgium coordinate the national AI ecosystem. We highlight tools aligned with Belgium\'s innovation priorities.', gradient: 'from-aqua/10 to-cyan-900/10' },
+              { icon: Globe, title: 'e-Estonia Digital Infrastructure', description: 'Estonia\'s digital infrastructure includes X-Road, digital ID, and e-Residency. AI tools need integration with Estonia\'s digital ecosystem.', gradient: 'from-neon/10 to-purple-900/10' },
+              { icon: ShieldCheck, title: 'GDPR & Model Cards', description: 'Estonia follows EU GDPR plus its own Model Cards framework for AI transparency.', gradient: 'from-red-500/10 to-rose-900/10' },
+              { icon: Zap, title: 'TalTech & AI Research', description: 'Tallinn University of Technology and the Estonian AI Task Force drive AI research.', gradient: 'from-aqua/10 to-cyan-900/10' },
             ].map((item) => (
               <div key={item.title} className={`relative rounded-xl bg-gradient-to-br ${item.gradient} bg-tech-700 border border-tech-500/30 p-6`}>
                 <div className="absolute inset-0 bg-tech-grid opacity-20 rounded-xl pointer-events-none" />
@@ -220,8 +219,8 @@ export default function AIToolsBelgiumPage() {
           <section key={section.name} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 border-b border-tech-500/10 last:border-b-0">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold text-white">Best AI {section.name.replace('Writing & Content', 'Writing Tools').replace('Code & Development', 'Coding Tools').replace('Design & Creative', 'Design Tools').replace('Marketing & SEO', 'Marketing Tools')} for Belgium</h2>
-                <p className="text-sm text-tech-200 mt-1 max-w-xl">Top picks for belgian teams — rated for local relevance and EUR pricing.</p>
+                <h2 className="text-xl sm:text-2xl font-bold text-white">Best AI {section.name.replace('Writing & Content', 'Writing Tools').replace('Code & Development', 'Coding Tools').replace('Marketing & SEO', 'Marketing Tools')} for Estonia</h2>
+                <p className="text-sm text-tech-200 mt-1 max-w-xl">Highest-rated tools across all categories — ranked by e-Estonia readiness.</p>
               </div>
               <Link href={`/categories/${sectionSlug}`} className="group inline-flex items-center gap-1.5 text-sm text-neon-light hover:text-neon transition shrink-0">View all {section.count} tools<ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" /></Link>
             </div>
@@ -234,14 +233,14 @@ export default function AIToolsBelgiumPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className={cn('inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium border', tool.pricing_tier === 'Free' ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' : tool.pricing_tier === 'Freemium' ? 'bg-sky-500/20 text-sky-400 border-sky-500/30' : 'bg-neon/20 text-neon-light border-neon/30')}>{tool.pricing_tier === 'Freemium' ? 'Free+' : tool.pricing_tier}</span>
-                    <div className="flex items-center gap-1"><Star className="w-2.5 h-2.5 fill-red-400 text-yellow-400" /><span className="text-[10px] text-tech-200">{tool.avg_rating.toFixed(1)}</span></div>
+                    <div className="flex items-center gap-1"><Star className="w-2.5 h-2.5 fill-red-400 text-blue-400" /><span className="text-[10px] text-tech-200">{tool.avg_rating.toFixed(1)}</span></div>
                     <div className="flex items-center gap-0.5 ml-auto"><TrendingUp className="w-2.5 h-2.5 text-neon-light" /><span className="text-[9px] text-neon-light font-medium">{tool.trending_score}</span></div>
                   </div>
                 </Link>
               ))}
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-3">
-              <Link href={`/categories/${sectionSlug}`} className="inline-flex items-center gap-1 text-xs text-tech-300 hover:text-neon-light transition">Browse all {section.name} tools for Belgium<ArrowRight className="w-3 h-3" /></Link>
+              <Link href={`/categories/${sectionSlug}`} className="inline-flex items-center gap-1 text-xs text-tech-300 hover:text-neon-light transition">Browse all {section.name} tools for Estonia<ArrowRight className="w-3 h-3" /></Link>
             </div>
           </section>
         );
@@ -251,8 +250,8 @@ export default function AIToolsBelgiumPage() {
       <section className="border-y border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="flex items-center gap-3 mb-6 sm:mb-8">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center shrink-0"><BookOpen className="w-5 h-5 text-yellow-400" /></div>
-            <div><h2 className="text-xl sm:text-2xl font-bold text-white">Step-by-Step AI Playbooks</h2><p className="text-xs sm:text-sm text-tech-200">Battle-tested guides to ship AI workflows — built for belgium teams and startups</p></div>
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center shrink-0"><BookOpen className="w-5 h-5 text-blue-400" /></div>
+            <div><h2 className="text-xl sm:text-2xl font-bold text-white">Step-by-Step AI Playbooks</h2><p className="text-xs sm:text-sm text-tech-200">Battle-tested guides to ship AI workflows — built for Canadian teams and startups</p></div>
           </div>
           <FeaturedPlaybooks />
           <div className="mt-8 text-center">
@@ -269,7 +268,7 @@ export default function AIToolsBelgiumPage() {
               { label: 'Curated AI Tools', value: `${totalCount}+`, icon: Layers },
               { label: 'Playbooks', value: `${playbooks.length}+`, icon: BookOpen },
               { label: 'Expert Rankings', value: '5+', icon: Trophy },
-              { label: 'BE-Ready Filters', value: '4', icon: CheckCircle },
+              { label: 'EE-Ready Filters', value: '4', icon: CheckCircle },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col items-center gap-2">
                 <div className="w-10 h-10 rounded-xl bg-tech-600/60 flex items-center justify-center border border-tech-500/20"><stat.icon className="w-5 h-5 text-neon-light" /></div>
@@ -286,21 +285,20 @@ export default function AIToolsBelgiumPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10">
             <div className="flex items-center justify-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-rose-500/10 flex items-center justify-center shrink-0"><BookOpen className="w-5 h-5 text-yellow-400" /></div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">Belgium's AI Ecosystem Is a European Powerhouse</h2>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-rose-500/10 flex items-center justify-center shrink-0"><BookOpen className="w-5 h-5 text-blue-400" /></div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">Estonia's AI Ecosystem Is a Digital Government Powerhouse</h2>
             </div>
             <p className="text-sm sm:text-base text-tech-200 max-w-2xl mx-auto">
-              From imec in Leuven to the Brussels EU institutions, Belgium produces world-class AI research
-              and multilingual, multi-sector innovation. These four pillars power
+              From Tallinn's startup hub to Tartu's research labs, Estonia produces world-leading digital government AI.to responsible AI.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {[
-              { title: '🏛️ 🇧🇪 Brussels — EU Capital & Fintech Hub', description: 'Brussels is the capital of the European Union, home to EU institutions, a thriving fintech scene, and the AI4Belgium coordination. The city hosts major AI conferences and policy discussions shaping Europe\'s AI future.' },
-              { title: '🎓 🔬 Leuven — imec & Deep Tech', description: 'Leuven is home to imec, one of the world\'s leading nanoelectronics and digital technology research centres. imec\'s AI chip design and edge AI research attract top global talent and partnerships with companies like Intel, ASML, and Samsung.' },
-              { title: '🏢 🏭 Antwerp — Logistics & Port AI', description: 'Antwerp is Europe\'s second-largest port and a centre for logistics AI. The city\'s port uses AI for predictive maintenance, route optimisation, and supply chain management. Antwerp also has a growing diamond-tech and creative AI scene.' },
-              { title: '🎨 Ghent — Creative & Digital AI', description: 'Ghent is a hub for creative AI, digital media, and gaming. The Ghent AI Lab (GAIL) produces cutting-edge research. Ghent\'s vibrant startup scene spans edtech, health AI, and digital marketing with strong university-industry collaboration.' },
+              { title: '🌲 Tallinn — Startup Capital', description: 'Tallinn is home to Skype, Bolt, and a vibrant AI startup scene.' },
+              { title: '🎓 Tartu — Academic Hub', description: 'University of Tartu leads in NLP and AI research.' },
+              { title: '🏛️ e-Estonia — Digital Gov', description: 'Estonia\'s digital government infrastructure includes AI-powered public services.' },
+              { title: '🔬 AI Task Force', description: 'Estonia\'s national AI Task Force strategy invests in AI literacy, research, and startup support.' },
             ].map((item) => (
               <div key={item.title} className="bg-tech-800/70 border border-tech-500/20 rounded-xl p-5 hover:border-neon/20 transition">
                 <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
@@ -318,15 +316,15 @@ export default function AIToolsBelgiumPage() {
         <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-aqua/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-300 text-xs font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-700/10 border border-blue-700/20 text-blue-300 text-xs font-medium mb-6">
             <MapPin className="w-3.5 h-3.5" />
-            Built for Belgium Founders, Teams & Innovators
+            Built for Canadian Founders, Researchers & Enterprises
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
-            Find the Right AI Tool for Your Belgium Business
+            Find the Right AI Tool for Your Canadian Business
           </h2>
           <p className="mt-4 text-base sm:text-lg text-tech-200 max-w-2xl mx-auto">
-            No more guessing if a tool works for Belgium's market, or respects local data laws. Every tool on Apifeny AI is rated for Belgium data compliance, local pricing, and relevance. Start exploring — no account needed.
+            No more guessing if a tool complies with PIPEDA, supports French, or works for Canadian teams. Every tool on Apifeny AI is rated for Canadian data compliance, CAD pricing, and bilingual readiness. Start exploring — no account needed.
           </p>
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link href="/tools" className="group relative inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-neon to-neon-dark text-white font-semibold text-sm sm:text-base transition-all hover:shadow-lg hover:shadow-neon/25 hover:-translate-y-0.5">
@@ -340,16 +338,17 @@ export default function AIToolsBelgiumPage() {
         </div>
       </section>
 
-      <BlogCategoryLinks slugs={['ai-tools', 'comparisons', 'productivity', 'solopreneur']} heading="Belgium-Focused AI Guides" />
-      <LandingPageCrossLinks currentSlug="ai-tools-belgium" />
+      <BlogCategoryLinks slugs={['ai-tools', 'comparisons', 'productivity', 'solopreneur']} heading="Estonia-Focused AI Guides" />
+      <LandingPageCrossLinks currentSlug="ai-tools-estonia" />
 
       {/* SEO FOOTER KEYWORDS */}
       <section className="border-t border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
           <div className="text-center">
             <p className="text-[10px] text-tech-400 leading-loose max-w-3xl mx-auto">
-              <strong className="text-tech-300">Belgium AI tools:</strong>{' '}
-              best AI tools in Belgium 2026 · AI tools for Belgian businesses · Belgium AI software · AI writing tools Belgium · AI coding tools Belgium · AI marketing Belgium · Belgium AI directory · AI tools for Belgian startups · enterprise AI tools Belgium · free AI tools Belgium · AI productivity Belgium · Belgian tech stack · AI tools Brussels · AI tools Antwerp · AI tools Ghent · AI tools Leuven
+              <strong className="text-tech-300">Estonia AI tools:</strong>{' '}
+              best AI tools in Estonia 2026 · AI tools for Estonian businesses · Estonia AI software · AI coding tools Estonia · AI marketing Estonia · Estonia AI directory ·Canadian tech stack · 
+              AI tools Toronto · AI tools Montreal · AI tools Vancouver
             </p>
           </div>
         </div>

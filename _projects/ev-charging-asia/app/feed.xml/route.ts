@@ -7,7 +7,10 @@ const SITE_DESC = 'Guides, comparisons, and tips about EV charging across Asia.'
 
 interface BlogIndexEntry {
   slug: string;
+  title: string;
+  description: string;
   date: string;
+  tags?: string[];
 }
 
 export async function GET() {
@@ -16,13 +19,16 @@ export async function GET() {
   );
 
   const items = posts.map(post => {
-    const safeTitle = post.slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
+    const title = post.title || post.slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
+    const description = post.description || `Read our guide about ${title} on EV Charging Asia.`;
+    const tags = post.tags?.length ? post.tags.slice(0, 5).join(', ') : '';
     return `
     <item>
-      <title><![CDATA[${safeTitle}]]></title>
+      <title><![CDATA[${title}]]></title>
       <link>${SITE_URL}/blog/${post.slug}</link>
       <guid isPermaLink="true">${SITE_URL}/blog/${post.slug}</guid>
-      <description><![CDATA[Read our guide about ${safeTitle} on EV Charging Asia.]]></description>
+      <description><![CDATA[${description}]]></description>
+      ${tags ? `<category><![CDATA[${tags}]]></category>` : ''}
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>
       <author>EV Charging Asia Team</author>
     </item>`;

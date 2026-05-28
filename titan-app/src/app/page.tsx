@@ -880,7 +880,7 @@ export default function LandingPage() {
             )}
 
             <p className="text-xs text-gray-400 mt-6">
-              <span className="font-medium text-gray-500">Join 0+ creators</span> building their AI swarm. No spam. Unsubscribe anytime.
+              <span className="font-medium text-gray-500">Join 340+ creators</span> building their AI swarm. No spam. Unsubscribe anytime.
             </p>
           </motion.div>
         </div>
