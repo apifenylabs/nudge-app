@@ -1,24 +1,23 @@
-# Work Engine State — May 28, 2026, 1:07 AM HKT (Heartbeat)
+# Work Engine State — May 28, 2026, 9:37 AM HKT (Heartbeat Session)
 
 ## Tasks Completed (This Cycle)
 
-### ✅ Fixed Turkey page build error + Added 3 missing cross-links
-- Fixed duplicate malformed `<div` tag on line 516 of `ai-tools-turkey/page.tsx` (broken by previous build)
-- Added **Nigeria**, **Turkey**, **for-startups** to `LandingPageCrossLinks.tsx` (23 entries, up from 20)
-- Turkey, Nigeria, for-startups all verified 200 ✅
+### 🐛 P5 STRATEGIC — AI Directory: gen_lib.py FAQ Bug Fix
+- **Fixed** `gen_everything.py`: Hero Canada span now uses regex for cross-line matching
+- **Fixed** `gen_everything.py`: Section category links `for Canada<ArrowRight` now replaced
+- **Fixed** `gen_everything.py`: `kw_old` keyword search string now includes actual template whitespace (newlines + spaces)
+- **Fixed** `countries_data.py`: 4 apostrophe escapes (Latin America's in single-quoted strings)
+- **Verified**: Austria, Chile, Colombia pages are 100% Canada-free
+- **Belgium edge case**: 1 Canada reference remaining in trust block (pre-existing `replace_trust_block` bug)
+- **Build passes**: 90 ai-tools-* pages prerendered
 
-### ✅ P5 STRATEGIC — 3 New Geo Pages: Pakistan, UAE, Saudi Arabia
-- Created **ai-tools-pakistan/page.tsx** — Urdu/English, PKR, Islamabad, PECA, freelancer ecosystem
-- Created **ai-tools-uae/page.tsx** — Arabic/English, AED, Abu Dhabi, UAE AI Strategy 2031, Smart Dubai
-- Created **ai-tools-saudi-arabia/page.tsx** — Arabic, SAR, Riyadh, SDAIA + Vision 2030, NEOM
-- Each page includes:
-  - **GeoSeoSchema** (Place, CollectionPage, FAQPage with 5 localized questions)
-  - **BreadcrumbSchema**, SeoMetadata
-  - Localized hero, trust indicators, ecosystem section, SEO footer keywords
-- ✅ Updated **LandingPageCrossLinks** to include all 3 new pages
-- ✅ Build passed (0 errors, 0 warnings, 475 static pages)
-- ✅ Deployed to production — all 3 returning 200
-- **19 geo pages now live** (up from 16)
+### ✅ Health Check
+- All 7 sites return 200
+- All 24 cron jobs healthy (3 non-critical: proactive-builder restart-interrupt, wick-improvement timeout, morning-pulse script warning)
+- No new errors on any jobs
+
+## Geo Pages — 90 prerendered ✅ (22 more possible via countries_data)
+## Industry/Guides Pages — 22 guides pages at `/guides/` ✅
 
 ## LifeOS Plugin Status
 | Plugin | Status | Notes |
@@ -38,18 +37,20 @@
 - ⬜ Affiliate link integration across 68 blog posts — needs Stripe API keys / env vars
 
 ## Next Cursor
-### ✅ Geo Pages — 19 geo pages live, cross-links updated
-
-### Still Open / Next Priority:
-1. 🌏 **AI Directory — More geo pages**: More new markets
-2. 📱 **LifeOS**: RLS migration (needs Supabase access from Wosobu)
-3. 🔗 **Affiliate link env vars** (needs Wosobu)
+### 🔄 P5: AI Directory — FAQ fix complete, 22 more countries possible
+### Next Available Work:
+1. 🌏 **AI Directory (P5 STRATEGIC)**: 22 more countries remain (Caribbean, Central America, more EU, Africa)
+2. 📱 **LifeOS (P3 STRATEGIC)**: RLS migration (needs Supabase access from Wosobu)
+3. 🔗 **Affiliate link env vars (P0 REVENUE)** (needs Wosobu)
+4. 🎮 **Titan (P4 STRATEGIC)**: Consider adding social proof / testimonials section, or pricing page refinements
 
 ## Deployments
 | Site | Status | URL |
 |------|--------|------|
 | LifeOS | ✅ v2.1 — 9 plugins active | https://lifeos-weld.vercel.app |
-| Apifeny AI | ✅ 19 geo pages live (PK/UAE/SA added this cycle) | https://apifeny-ai.vercel.app |
+| Apifeny AI | ✅ 90 geo pages — FAQ fix ready for deploy | https://apifeny-ai.vercel.app |
 | Affiliate Tracking | ✅ Real Stripe Checkout | https://affiliate-tracking.vercel.app |
 | EV Charging Asia | ✅ 143 posts | https://ev-charging-asia.vercel.app |
 | Luxury Family Travel Asia | ✅ | https://luxury-family-travel-asia.vercel.app |
+| Senior-Friendly Travel Asia | ✅ | https://senior-friendly-travel-asia.vercel.app |
+| Titan App | ✅ God-Tier + Analytics deployed | https://titan-app-puce.vercel.app |

@@ -1,0 +1,49 @@
+CANADIAN PATTERNS TO REPLACE (exact substrings):
+
+1. FAQ Q1 body after "include ChatGPT ..."
+   CANADIAN: "Canada is a global AI powerhouse — home to the Vector Institute in Toronto, Mila in Montreal, and the Alberta Machine Intelligence Institute (Amii). The country's AI research ecosystem (CIFAR, Pan-Canadian AI Strategy) has produced foundational AI breakthroughs and top talent from U of T, McGill, UBC, and Waterloo."
+
+2. FAQ Q2 body
+   CANADIAN: "Argentina's Personal Information Protection and Electronic Documents Act (PIPEDA) and Quebec's Law 25 impose strict requirements on how AI tools collect, use, and disclose personal information. The proposed Artificial Intelligence and Data Act (AIDA) will further regulate high-impact AI systems. We flag every tool for PIPEDA compliance, provincial privacy law readiness (especially Quebec's Law 25), data residency options within Argentina, and alignment with OPC guidance on AI and automated decision-making."
+   NOTE: "{country}'s" prefix + Canadian content
+
+3. FAQ Q3 body
+   CANADIAN: "AI research and deep learning tools for Toronto's Vector Institute and Montreal's Mila ecosystem, fintech AI in Vancouver and Toronto (wealth management, payments), cleantech and energy AI in Alberta and BC, healthcare AI for Argentina's public health system, natural language tools for French and English bilingual requirements, and autonomous vehicle AI in Waterloo and Toronto. Canadian businesses also lead in AI for mining, forestry, and agricultural technology."
+
+4. FAQ Q4 body (funding)
+   CANADIAN: "The Pan-Canadian AI Strategy (CIFAR) funds research and commercialization. The Scientific Research and Experimental Development (SR&ED) tax credit provides 35-45% cash refunds on qualifying AI R&D costs for Canadian companies. IRAP (National Research Council) provides grants for AI technology adoption. BDC Capital and federal/provincial VC programs support AI startups. The Global Talent Stream fast-tracks AI talent visas. Programs like NextAI, Creative Destruction Lab (CDL), and BC Tech's AI initiatives provide mentorship and funding."
+
+5. FAQ Q5 body (regulations)
+   CANADIAN: "The proposed Artificial Intelligence and Data Act (AIDA), part of Bill C-27, will establish requirements for high-impact AI systems including risk assessments, transparency, and accountability. PIPEDA governs data used in AI training. Quebec's Law 25 sets additional privacy requirements. Specific sectors have regulations: Health Canada for medical AI, OSFI for financial AI, and Transport Canada for autonomous vehicles. Canada's Voluntary AI Code of Conduct sets early standards for responsible AI development."
+
+6. Hero section: Pipepda/CAD/compliance text
+   CANADIAN (one of subparts): "We rank every tool on PIPEDA compliance, CAD pricing, bilingual (EN/FR) support, and Canadian AI ecosystem readiness — so you find tools built for Canada's unique market."
+
+7. "Why X needs its own AI tool directory" - 3 cards
+   Card 1: French/Quebec references
+   Card 2: PIPEDA/Law 25 references  
+   Card 3: Pan-Canadian AI Strategy/Vector/Mila/Amii references
+
+8. Category section subtitle
+   CANADIAN: "Top picks for Canadian teams — rated for PIPEDA compliance, CAD pricing, and bilingual support."
+
+9. Playbooks section subtitle
+   CANADIAN: "Battle-tested guides to ship AI workflows — built for Canadian teams and startups"
+
+10. Ecosystem section (4 cards)
+    Header+sub: "Argentina's AI Ecosystem Is a Global Research Powerhouse" / "From Toronto's Vector Institute to Montreal's Mila, Argentina produces foundational AI research"
+    Card 1: Toronto/Vector Institute/Cohere/Waabi/Layer 6
+    Card 2: Montreal/Mila/Yoshua Bengio/Quebec/French
+    Card 3: Vancouver/Waterloo/Wealthsimple/BlackBerry/Darwin AI
+    Card 4: Pan-Canadian/CIFAR/Vector/Mila/Amii/SR&ED/Global Talent
+
+11. CTA section
+    "Built for Canadian Founders, Researchers & Enterprises"
+    "No more guessing if a tool complies with PIPEDA, supports French, or works for Canadian teams..."
+
+12. SEO footer keywords
+    Canadian city names: "AI tools Toronto · AI tools Montreal · AI tools Vancouver"
+    
+13. Hero badge + text
+    Badge: "Canada-Focused" (actually different per country already)
+    CTA: "Built for Canadian Founders, Researchers & Enterprises"

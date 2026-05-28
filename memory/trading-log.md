@@ -551,6 +551,17 @@
 - Positions unchanged
 - Balance change +0.07% — within 10% threshold, silently passing
 
+## 2026-05-28 05:05 HKT — Cron Run
+- **Balance:** $1,029.20 (▼ $0.17 from $1,029.37 at 04:51, -0.017%)
+- BTC LONG 0.00223 @ $76,116 | UPnL: -$2.13
+- Mode: LIVE
+- Status: Success — bot ran cleanly
+- 10 hist trades | 1 live position (BTC) | WR=60% | DD=10.6% | Kill Switch=False
+- Open orders on BTC (native TP/SL active), no new signals on other symbols
+- No kill switch ($1,029.20 > $20 ✅), no connection errors ✅
+- Positions unchanged
+- Balance change -0.017% — within 10% threshold, silently passing
+
 ## 2026-05-27 07:06 HKT — Cron Run
 - **Balance:** $229.03 (▲ $0.18 from $228.85 at 06:57, +0.08%)
 - Open order exists — native TP/SL active, skipping new signal check
@@ -711,3 +722,48 @@
 - No kill switch ($1,029.68 > $20 ✅), no connection errors ✅
 - Positions unchanged
 - Balance change 0.00% — within 10% threshold, silently passing
+
+## 2026-05-28 02:47 HKT — Cron Run
+- **Balance:** $1,028.67 (▼ ~$1.00 from ~$1,029.68, -0.10%)
+- BTC LONG 0.00223 @ $76,116 | UPnL: -$2.66
+- Mode: LIVE
+- Status: Success — bot ran cleanly
+- 10 hist trades | 1 live position (BTC) | WR=60% | DD=10.6% | Kill Switch=False
+- Open orders on BTC (native TP/SL active), no new signals on other symbols
+- No kill switch ($1,028.67 > $20 ✅), no connection errors ✅
+- Positions unchanged
+- Balance change -0.10% — within 10% threshold, silently passing
+
+## 2026-05-28 04:51 HKT — Cron Run
+- **Balance:** $1,029.37 (▲ $0.70 from $1,028.67 at 02:47, +0.07%)
+- BTC LONG 0.00223 @ $76,116 | UPnL: -$1.96
+- Mode: LIVE
+- Status: Success — bot ran cleanly
+- 10 hist trades | 1 live position (BTC) | WR=60% | DD=10.6% | Kill Switch=False
+- Open orders on BTC (native TP/SL active), no new signals on other symbols
+- No kill switch ($1,029.37 > $20 ✅), no connection errors ✅
+- Positions unchanged
+- Balance change +0.07% — within 10% threshold, silently passing
+
+## 2026-05-28 08:37 HKT — Cron Run
+- **Balance:** $1,027.74 (▲ $0.16 from $1,027.58 at 05:59, +0.016%)
+- Open orders on BTC — native TP/SL active, skipping new signal check
+- No kill switch ($1,027.74 > $20 ✅), no connection errors ✅
+- Positions unchanged (BTC 0.0022 long)
+- Balance change +0.016% — well within 10% threshold, silently passing
+
+## 2026-05-28 08:45 HKT — Cron Run
+- **Balance:** $1,027.78 (▲ $0.04 from $1,027.74 at 08:37, +0.004%)
+- BTC LONG 0.00223 @ $76,116 | UPnL: -$3.55
+- 10 hist trades | 1 live position (BTC) | WR=60% | DD=10.6% | Kill Switch=False
+- Open orders on BTC — native TP/SL active, skipping signal check for BTC
+- No kill switch ($1,027.78 > $20 ✅), no connection errors ✅
+- Positions unchanged (BTC 0.0022 long)
+- Balance change +0.004% — well within 10% threshold, silently passing
+
+## 2026-05-28 09:11 HKT — Cron Run
+- **Balance:** $1,027.63 (▼ $0.05 from $1,027.58 at 05:59, -0.005%)
+- Open orders on BTC — native TP/SL active, skipping signal check for BTC
+- No kill switch ($1,027.63 > $20 ✅), no connection errors ✅
+- Positions unchanged (BTC 0.0022 long)
+- Balance change -0.005% — within 10% threshold, silently passing

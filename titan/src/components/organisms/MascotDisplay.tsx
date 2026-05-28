@@ -31,6 +31,7 @@ export default function MascotDisplay({ level, mascotName, className }: MascotDi
   const stage = getStage(level);
   const isGodTier = level >= 30;
   const [showGodModal, setShowGodModal] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   // Show the God-Tier modal on mount for level 30+
   useEffect(() => {
@@ -42,6 +43,14 @@ export default function MascotDisplay({ level, mascotName, className }: MascotDi
       }
     }
   }, [isGodTier]);
+
+  // Hover glow intensity scales with level
+  const glowIntensity = Math.min(level / 30, 1); // 0 → 1 as level goes 0 → 30+
+  const hoverGlow = hovered
+    ? `brightness(1.3) drop-shadow(0 0 ${12 + glowIntensity * 20}px rgba(245, 158, 11, ${0.3 + glowIntensity * 0.5}))`
+    : isGodTier
+      ? 'brightness(1.2) drop-shadow(0 0 12px rgba(245, 158, 11, 0.5))'
+      : 'none';
 
   return (
     <div
@@ -66,9 +75,13 @@ export default function MascotDisplay({ level, mascotName, className }: MascotDi
           lineHeight: 1,
           position: 'relative',
           zIndex: 1,
-          filter: isGodTier ? 'brightness(1.2) drop-shadow(0 0 12px rgba(245, 158, 11, 0.5))' : 'none',
-          transition: 'filter 0.5s ease',
+          filter: hoverGlow,
+          transform: hovered ? `scale(${1 + glowIntensity * 0.08})` : 'scale(1)',
+          transition: 'filter 0.4s ease, transform 0.3s ease',
+          cursor: 'pointer',
         }}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
       >
         {stage.emoji}
       </div>

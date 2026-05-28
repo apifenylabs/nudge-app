@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { track } from "@vercel/analytics";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -342,20 +343,42 @@ export default function LandingPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.06, duration: 0.4 }}
+                    whileHover={{ scale: 1.02 }}
                   >
-                    <Card className={`w-28 sm:w-32 h-44 sm:h-48 ${mascot.border} hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group overflow-hidden`}>
+                    <Card className={`relative w-28 sm:w-32 h-44 sm:h-48 ${mascot.border} hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group overflow-hidden`}>
+                      {/* Hover glow aura */}
+                      <motion.div
+                        className="absolute -inset-4 rounded-full opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-500"
+                        style={{
+                          background: `radial-gradient(circle at 50% 50%, ${mascot.src.includes('starlight') ? '#FDE047' : mascot.src.includes('orb-weaver') ? '#EC4899' : mascot.src.includes('ember-dragon') ? '#F59E0B' : mascot.src.includes('cosmic-fox') ? '#F97316' : mascot.src.includes('little-robot') ? '#06B6D4' : mascot.src.includes('purrbot') ? '#A78BFA' : mascot.src.includes('chompy') ? '#10B981' : '#14B8A6'}20 0%, transparent 70%)`,
+                          filter: 'blur(12px)',
+                        }}
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" />
-                      <CardContent className="p-0 h-full flex flex-col">
+                      <CardContent className="p-0 h-full flex flex-col relative z-[1]">
                         {/* Mascot image area */}
-                        <div className={`flex-1 flex items-center justify-center bg-gradient-to-b ${mascot.bg} p-3`}>
-                          <img
+                        <div className={`flex-1 flex items-center justify-center bg-gradient-to-b ${mascot.bg} p-3 relative overflow-hidden`}>
+                          {/* Animated shimmer overlay on hover */}
+                          <motion.div
+                            className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
+                            style={{
+                              background: `linear-gradient(105deg, transparent 30%, ${mascot.src.includes('starlight') ? '#FDE047' : mascot.src.includes('orb-weaver') ? '#EC4899' : mascot.src.includes('ember-dragon') ? '#F59E0B' : mascot.src.includes('cosmic-fox') ? '#F97316' : mascot.src.includes('little-robot') ? '#06B6D4' : mascot.src.includes('purrbot') ? '#A78BFA' : mascot.src.includes('chompy') ? '#10B981' : '#14B8A6'}15 50%, transparent 70%)`,
+                              backgroundSize: '200% 100%',
+                            }}
+                          />
+                          <Image
                             src={mascot.src}
                             alt={mascot.name}
-                            className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-110 transition-transform duration-300"
+                            width={80}
+                            height={80}
+                            className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-lg"
+                            style={{
+                              filter: `drop-shadow(0 0 ${mascot.src.includes('starlight') ? '12px #FDE047' : mascot.src.includes('orb-weaver') ? '12px #EC4899' : mascot.src.includes('ember-dragon') ? '10px #F59E0B' : '6px transparent'})`,
+                            }}
                           />
                         </div>
                         {/* Info bar */}
-                        <div className="px-2 py-1.5 text-center border-t border-gray-100">
+                        <div className="px-2 py-1.5 text-center border-t border-gray-100 relative z-[1] bg-white/80 backdrop-blur-sm">
                           <p className="text-xs font-semibold text-gray-900 truncate">{mascot.emoji} {mascot.name}</p>
                           <div className="flex items-center justify-center gap-1 mt-0.5">
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${rarityBadge}`}>

@@ -153,6 +153,7 @@ function getCountryCoords(code: string): { latitude: number; longitude: number }
     bd: { latitude: 23.6850, longitude: 90.3563 },
     lk: { latitude: 7.8731, longitude: 80.7718 },
     np: { latitude: 28.3949, longitude: 84.1240 },
+    au: { latitude: -25.2744, longitude: 133.7751 },
     tr: { latitude: 38.9637, longitude: 35.2433 },
   };
   return coords[code] ?? { latitude: 0, longitude: 0 };

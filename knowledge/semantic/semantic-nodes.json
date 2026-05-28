@@ -1,7 +1,7 @@
 {
-  "version": "2026-05-27-consolidation-primary",
-  "generated": "2026-05-27T02:00:00+08:00",
-  "semanticCount": 46,
+  "version": "2026-05-28-consolidation-primary",
+  "generated": "2026-05-28T02:00:00+08:00",
+  "semanticCount": 49,
   "graphEdgeCount": 72,
   "nodes": [
     {
@@ -371,6 +371,30 @@
       "type": "semantic",
       "confidence": 0.7,
       "timestamp": "2026-05-26T18:00:00.000Z"
+    },
+    {
+      "id": "balance-authority-hard-rule",
+      "name": "Balance Authority Hard Rule \u2014 hl_balance.py Canonical",
+      "summary": "hl_balance.py (spot USDC total) is the sole canonical balance source. Never use clearinghouseState. Never add spot USDC + perp equity. Portfolio endpoint shows cross-margin notional (1,029) vs spot (228). The 4.5x gap persisted for days before reconciliation. Documented as hard rule in hl-balance-hard-rule.md May 27.",
+      "type": "semantic",
+      "confidence": 0.95,
+      "timestamp": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "id": "backlog-execution-gap-7days",
+      "name": "Pattern: 10-Item Backlog at Zero Execution \u2014 7 Days",
+      "summary": "10 identified, self-authorizable improvements have sat at 0 execution for 7 consecutive days (May 22-28). Includes: core_bb wire, PnL reconciliation fix, FMP screener, Jupiter API, forex ADX filter, Kalman funding rate alignment, micro scalp build. May 23 permission framework explicitly authorizes these without Wosobu. This is an execution failure, not a blockage. The #1 synthesis concern.",
+      "type": "semantic",
+      "confidence": 0.9,
+      "timestamp": "2026-05-27T18:00:00.000Z"
+    },
+    {
+      "id": "tp-sl-self-heal-validated",
+      "name": "Pattern: TP/SL Self-Heal Mechanism Validated Under Position Churn",
+      "summary": "Concern that new positions (BTC LONG, TAO SHORT) lacked TP/SL exits was resolved by self-heal cron within same tick. BTC LONG confirmed with native TP/SL active. The exit system (resting reduce-only limit GTC orders + self-heal) works under real position churn. May 27 initial concern was a false alarm.",
+      "type": "semantic",
+      "confidence": 0.85,
+      "timestamp": "2026-05-27T18:00:00.000Z"
     }
   ],
   "edges": [

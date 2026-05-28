@@ -7,6 +7,7 @@ import RoutePlannerForm from '@/components/RoutePlannerForm';
 import ItineraryCard from '@/components/itineraries/ItineraryCard';
 import RouteFilterBar from '@/components/itineraries/RouteFilterBar';
 import RouteFinderQuiz from '@/components/RouteFinderQuiz';
+import RoutePopularityLeaderboard from '@/components/itineraries/RoutePopularityLeaderboard';
 import { BreadcrumbSchemaSSR } from '@/components/SchemaOrg';
 
 export const revalidate = 3600;
@@ -128,6 +129,11 @@ export default function RoutesPage() {
 
         {/* Route filter bar */}
         <RouteFilterBar allItineraries={allItineraries} />
+
+        {/* Route Popularity Leaderboard */}
+        <div className="mt-12">
+          <RoutePopularityLeaderboard />
+        </div>
 
         {/* Find Your Route — Interactive Quiz */}
         <div className="mt-12">

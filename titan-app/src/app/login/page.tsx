@@ -17,6 +17,7 @@ import { MASCOTS } from "@/data/mascots";
 import { loadProgression } from "@/lib/persistence";
 import { createAuthClient } from "@/lib/auth/client";
 import { getGodTierStatus } from "@/lib/swarm/god-tier-engine";
+import GodTierModal from "@/components/organisms/GodTierModal";
 
 // ─── Particle Field ────────────────────────────────────────────────────
 
@@ -91,6 +92,7 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showGodModal, setShowGodModal] = useState(false);
   const [authSuccess, setAuthSuccess] = useState(false);
 
   interface ProgressionStateType {
@@ -111,6 +113,12 @@ export default function LoginPage() {
   });
 
   const agentLevel = useMemo(() => Math.max(1, Math.floor(progState.totalXp / 500) + 1), [progState.totalXp]);
+  // Auto-show god-tier celebration on mount if level >= 30
+  useEffect(() => {
+    if (agentLevel >= 30) {
+      setShowGodModal(true);
+    }
+  }, [agentLevel]);
   const godTierStatus = useMemo(() => getGodTierStatus(agentLevel, progState.totalXp, 6, progState.skillsCertified, progState.totalTasksRun), [agentLevel, progState]);
   const { currentMascot, hasCompletedOnboarding, openPicker } = useMascotStore();
   const [showOnboarding, setShowOnboarding] = useState(!hasCompletedOnboarding);
@@ -462,6 +470,11 @@ export default function LoginPage() {
       </div>
 
       <MascotPickerModal />
+      <GodTierModal
+        open={showGodModal}
+        onClose={() => setShowGodModal(false)}
+        level={agentLevel}
+      />
     </motion.div>
   );
 }

@@ -20,15 +20,15 @@ Consolidation-tracked issues across all cron jobs.
 
 ## Latest Build Run
 
-**2026-05-27 01:30 HKT** — Overnight build triggered all 6 projects:
-- ✅ family-travel-directory → 200 (queued Vercel build)
-- ✅ luxury-family-travel → 200 (queued Vercel build)
-- ✅ ev-charging-asia → 200 (queued Vercel build)
-- ✅ apifeny-ai → 200 (queued Vercel build)
-- ✅ nudge → 200 (queued Vercel build)
-- ✅ social-beast → 200 (deployed, build completed)
+**2026-05-28 01:30 HKT** — Overnight build triggered all 6 projects:
+- ✅ family-travel-directory → 200 ✅ aliased ✓
+- ✅ luxury-family-travel → 200 ✅ aliased ✓
+- ✅ ev-charging-asia → 200 ✅ aliased ✓
+- ✅ apifeny-ai → 200 ✅ aliased ✓ *(fixed 2 apostrophe escapes + 1 div close in geo pages)*
+- ✅ nudge → 200 ✅ aliased ✓
+- ✅ social-beast → 200 ✅ aliased ✓
 
-All prod URLs returning 200. Vercel builds in queue will alias when ready.
+All 6 deployed, aliased, returning 200. Full success this cycle.
 
 ## Resolved History
 

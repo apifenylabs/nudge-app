@@ -1,34 +1,60 @@
-# Session: May 27, 2026 03:45 HKT — EV Itinerary Enhancement Session
+# Session: May 28, 2026 03:45 HKT — Revenue Enhancement & MRR Growth Session
 
 ## What We Did
-1. **Added "Compare" button to ItineraryCard component**
-   - Each route card on the routes listing page now has a subtle "Compare" link
-   - Links to `/compare?route=<slug>` to pre-select the route
-   - Stops click propagation so the main card click still goes to the route detail page
+1. **Free Route Checklist Lead Magnet** (`components/itineraries/FreeRouteChecklistCTA.tsx`)
+   - Added to every route detail page (`/routes/[slug]/page.tsx`)
+   - Converts visitors by offering a free "10-Point EV Road Trip Checklist" in exchange for email
+   - "Get Free Guide" button → email form → auto-download + subscribe API
+   - Generates a formatted 10-point checklist text file covering range planning, charging stops, offline maps, EV accessories, family essentials, cross-border requirements, emergencies, and more
+   - Graceful: non-intrusive compact banner, expands to form on click, success state
 
-2. **Updated sitemap.ts with all 17 itinerary slug mappings**
-   - Previously only had 12 routes in slugMapping
-   - Added: family route variants (singapore-kuala-lumpur-family, bali-family, kuala-lumpur-penang-family)
-   - Added: seoul-to-busan-road-trip → seoul-busan
-   - Added: manila-to-baguio-road-trip → manila-baguio
-   - Now covers all routes in `/app/itinerary/[slug]/page.tsx` slugToItineraryMap
+2. **Trip Cost Calculator** (`components/itineraries/TripCostCalculator.tsx`)
+   - Added to every route detail page above the star rating section
+   - 20+ EV models to choose from (Tesla, BYD, MG, Hyundai, Kia, Nissan, VinFast, XPeng, NIO, etc.)
+   - Custom car mode with adjustable consumption & battery size
+   - Country-specific electricity rates for public/home charging (12 countries)
+   - Toll cost estimates per country
+   - Shows: energy needed (kWh), charging sessions, public/home/mixed charging costs, toll estimate, total estimated cost
+   - Cost-per-km and charging time estimates
+   - Fuel comparison note (2.5x more for petrol)
+   - Collapsible UI to avoid clutter
 
-## Assessment of 6 Enhancements
-| Enhancement | Status |
-|-------------|--------|
-| 12+ routes (was 6) | ✅ DONE — 17 itineraries |
-| User rankings (TipForm/TipList UI) | ✅ DONE — on route detail + station pages |
-| SEO for itinerary pages | ✅ DONE — JSON-LD, OG, FAQ, schema.org TouristTrip |
-| Route comparison feature | ✅ DONE — fully functional at /compare with route param |
-| Map integration | ✅ DONE — RouteMap component on every route detail page |
-| Seasonal recommendations | ✅ DONE — SeasonalRecommendations + SeasonalComparisonTable |
+3. **Route Popularity Leaderboard** (`components/itineraries/RoutePopularityLeaderboard.tsx`)
+   - Added to `/routes` listing page, between the route grid and the quiz
+   - Fetches vote data from `/api/vote/leaderboard` endpoint
+   - Toggle between "Top Rated" and "Most Votes" sort
+   - Top 6 entries with medal icons for 1-3, rank numbers for 4-6
+   - Route name, duration, difficulty, countries shown
 
-## Additional Improvements This Session
-- Added "Compare" CTA to ItineraryCard component (routes listing)
-- Updated sitemap with all 17 itinerary slugs for full index coverage
-- All 7 pages verified: /, /routes, /compare, /seasons, /blog, /search, route details all return 200
+4. **Leaderboard API** (`app/api/vote/leaderboard/route.ts`)
+   - GET endpoint that merges vote store with itinerary data (names, difficulty, duration, countries)
+   - Returns enriched entries array for the leaderboard component
 
-## Deploy
-✅ Build passes (2 min)
-✅ Vercel deploy successful
-✅ All 7 smoke tests pass
+## Files Created
+- `components/itineraries/FreeRouteChecklistCTA.tsx` — Lead magnet with email capture + auto-download
+- `components/itineraries/TripCostCalculator.tsx` — Interactive trip cost estimator with 20+ EV models
+- `components/itineraries/RoutePopularityLeaderboard.tsx` — Social proof leaderboard for /routes page
+- `app/api/vote/leaderboard/route.ts` — API endpoint merging vote data with itinerary metadata
+
+## Files Modified
+- `app/routes/[slug]/page.tsx` — Added FreeRouteChecklistCTA + TripCostCalculator imports and sections
+- `app/routes/page.tsx` — Added RoutePopularityLeaderboard import and section
+
+## Build
+✅ `npm run build` — Compiled successfully (165 pages)
+✅ Vercel deploy — Successful
+✅ Smoke tests: /routes (200), /routes/[slug] (200), /api/vote/leaderboard (200), /compare (200)
+
+## MRR Impact Analysis
+| Feature | Impact | Notes |
+|---------|--------|-------|
+| Free Checklist Lead Magnet | 🟢 High | Email capture = retargeting + nurture → premium guide sales. Every route page gets it. |
+| Trip Cost Calculator | 🟡 Medium | Increases time-on-page + trust → higher affiliate conversion. Practical utility drives repeat visits. |
+| Route Popularity Leaderboard | 🟡 Medium | Social proof drives urgency. "Most popular" badge = FOMO for premium guide purchases. |
+
+## Next Recommendations
+- [ ] Connect email capture to real CRM (Mailchimp, ConvertKit) instead of in-memory store
+- [ ] Add CTAs to free checklist download success page (cross-sell route guide PDFs)
+- [ ] A/B test free checklist placement (above fold vs. mid-page)
+- [ ] Implement Stripe affiliate program tracking
+- [ ] Add "Compare" upsell: when comparing 2 routes, suggest the premium guide for both

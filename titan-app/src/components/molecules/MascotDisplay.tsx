@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useMascotStore } from "@/stores/mascotStore";
 import type { MascotDef } from "@/data/mascots";
+import GodTierAura from "./GodTierAura";
 
 interface MascotDisplayProps {
   size?: number;
@@ -92,6 +93,9 @@ export default function MascotDisplay({
         ease: "easeInOut",
       }}
     >
+      {/* God-Tier aura (level >= 30) */}
+      <GodTierAura level={level} size={glowSize * 1.3} pulseDuration={3} />
+
       {/* Outer glow aura */}
       <motion.div
         className="absolute rounded-full pointer-events-none"

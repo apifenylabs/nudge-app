@@ -20,6 +20,8 @@ import PrintButton from '@/components/itineraries/PrintButton';
 import RouteShareBar from '@/components/itineraries/RouteShareBar';
 import DownloadRouteGuide from '@/components/itineraries/DownloadRouteGuide';
 import PremiumRouteCTA from '@/components/itineraries/PremiumRouteCTA';
+import FreeRouteChecklistCTA from '@/components/itineraries/FreeRouteChecklistCTA';
+import TripCostCalculator from '@/components/itineraries/TripCostCalculator';
 
 interface Props {
   params: { slug: string };
@@ -67,6 +69,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
+
+// Car consumption data constant for calculator
+const CAR_CONSUMPTION: Record<string, number> = {
+  'Tesla Model 3': 15,
+  'Tesla Model Y': 16,
+  'BYD Atto 3': 17,
+  'BYD Seal': 15,
+  'MG4 Electric': 16,
+  'Hyundai Ioniq 5': 17,
+  'Nissan Leaf': 17,
+  'Kia EV6': 17,
+  'VinFast VF 8': 20,
+};
 
 const difficultyColors: Record<string, string> = {
   easy: 'bg-emerald-100 text-emerald-800 border-emerald-300',
@@ -373,6 +388,16 @@ export default function ItineraryDetailPage({ params }: Props) {
         {/* Related Blog Posts */}
         <RelatedBlogPosts keywords={it.tags} countries={it.countries} limit={3} />
 
+        {/* Trip Cost Calculator */}
+        <div className="mb-8">
+          <TripCostCalculator
+            totalDistanceKm={it.totalDistanceKm}
+            totalDrivingHours={it.totalDrivingHours}
+            estimatedChargingStops={it.estimatedChargingStops}
+            countries={it.countries}
+          />
+        </div>
+
         {/* Route Popularity — Star Rating */}
         <div className="mb-8">
           <RoutePopularity routeId={it.id} routeName={it.title} />
@@ -381,6 +406,11 @@ export default function ItineraryDetailPage({ params }: Props) {
         {/* Newsletter Signup */}
         <div className="mb-8">
           <NewsletterSignup variant="inline" source={`route-${it.slug}`} />
+        </div>
+
+        {/* Free Route Checklist Lead Magnet */}
+        <div className="mb-8">
+          <FreeRouteChecklistCTA routeName={it.title} routeSlug={it.slug} />
         </div>
 
         {/* Compare route CTA */}
