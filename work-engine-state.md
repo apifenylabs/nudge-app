@@ -1,50 +1,84 @@
 # Work Engine State
 
-Last updated: 2026-05-29 02:25 HKT
+Last updated: 2026-05-29 22:40 HKT
 
 ## Cursor
-**P2 REVENUE (SEO) — Hong Kong EV Charging Complete Guide ✅ DONE**
-**Next: P2 REVENUE (SEO) — Thailand geo-specific EV charging guide**
+✅ P4 Titan (agent activity feed) — done
+✅ P4 Titan (breadcrumbs) — done
+✅ P5 AI Directory (sitemap lastmod) — done
+✅ P2 ev-charging-asia (Google News sitemap) — done
+**Next**: Awaiting CEO unblock on P0/P1 items. Next session can pick from remaining P4/P5 unblocked backlog.
 
-## Recent actions
-1. ✅ **P2 REVENUE (SEO) — Singapore EV Charging Complete Guide 2026**:
-   - New 5,000+ word guide published to ev-charging-asia
-   - Covers: 6 operators compared (Blue SG, SP Group, Charge+, Shell, Tesla, BYD)
-   - HDB/condo charging installation with ECCG grant details
-   - Location tables for West/Central/East/North Singapore
-   - Cross-border Woodlands EV Hub and Tuas checkpoint guidance
-   - SEO-optimized for Singapore EV search terms
-   - Committed locally `b21c191d`, Vercel upload rate-limited (24h)
-2. ✅ **Internal linking audit (from prior session)** — blog ↔ playbooks bidirectional cross-linking done
-3. ✅ **P2 REVENUE (SEO) — Hong Kong EV Charging Complete Guide 2026**:
-   - 6,400+ word comprehensive guide covering:
-   - 7 operators compared (Cornerstone, Smart Charge, Shell, EV Power, Tesla, CLP, HK Electric)
-   - HK$ per-kWh pricing with CLP EV Residential Tariff off-peak (94.5¢) / on-peak (137.5¢)
-   - Condo/home charging installation with EHSS subsidy info + costs
-   - Best charging locations by district (HK Island, Kowloon, NT, Outlying Islands)
-   - Cross-border to Shenzhen (GB/T adapters, TELD app) and Macau (HZMB bridge, ferry)
-   - 2026 policy update (One-for-One expired Mar 31, FCIS live with 644 chargers approved)
-   - Affiliate: booking.com/Hong+Kong filter
-   - Committed `3cd61cee`
+## Latest Session (2026-05-29 23:15 — Proactive Scan)
+**Features Page (P4 STRATEGIC)** ✅
+- Built `/features` page at `src/app/features/page.tsx` with:
+  - 10 detailed feature cards grouped by tier (Free/Pro/Enterprise)
+  - Tier overview cards with icon + description
+  - Feature comparison table (13-row quick compare)
+  - Secret Agent Mode spotlight section
+  - Use cases section (Solo / Startup / Enterprise)
+  - Consistent white-theme design matching pricing page
+  - Gradient accent bars, Framer Motion animations, Vercel Analytics tracking
+  - SEO: BreadcrumbList JSON-LD, meta title/description
+- Build: ✅ clean (static prerender)
 
-## Remaining
-- [ ] P0 REVENUE — Affiliate links: **BLOCKED** — needs Wosobu to get API keys (Booking.com, Klook, etc.)
-- [ ] P1 REVENUE — Stripe checkout port from Nudge to Titan: **BLOCKED** — needs Supabase migration SQL run by CEO
-- [ ] **P2 REVENUE (SEO)** — Thailand EV charging guide (next)
-- [ ] **P2 REVENUE (SEO)** — Vietnam EV charging guide
-- [ ] **P2 REVENUE (SEO)** — AI Directory: `/ai-tools-by-category` landing page (high-ROI for category SEO)
-- [ ] P3 STRATEGIC — LifeOS: **BLOCKED** — Wosobu needs to run Supabase migration SQL for plugin persistence
-- [ ] P4 STRATEGIC — Titan: All robotics pages built (landing, dashboard, platform detail). Next: deploy modal touch-ups, landing page hero polish
+### Previous Session (2026-05-29 22:40)
+**Titan — Agent Activity Feed (P4 STRATEGIC)** ✅
+- Built `AgentActivityFeed.tsx` component with:
+  - Scrollable last-10-entries list with type-colored left borders (amber=levelup, purple=achievement, teal=task, blue=insight)
+  - Avatar emoji + name + text + relative time
+  - Blue dot unread indicator
+  - "Mark all as read" and "Clear feed" with confirm dialog
+  - Dark theme consistent with Titan design
+- Integrated into dashboard between ActiveLifeOSPlugins and ActivitySparkline
+- Build: ✅ clean
+
+## Backlog (Ready When CEO Unblocks)
+
+### P0 REVENUE — Affiliate Infrastructure
+When CEO provides API keys (Booking.com, Klook, Viator, Expedia):
+- Integrate Skyscanner/Booking.com affiliate API for EV Charging Asia + Luxury Travel
+- Build commission tracking dashboard in affiliate-tracking project
+- Implement deep-link redirect middleware
+- Add affiliate product feeds to travel sites
+
+### P1 REVENUE — Stripe & Monetization
+When CEO provides Supabase SQL / Stripe keys:
+- Port Stripe checkout from Nudge to Titan (payment integration is localStorage-mocked)
+- Create Supabase `checkout_sessions` table + webhook handler
+- Add paid-tier verification middleware to Titan /dashboard
+- Implement coupon/subscription management UI
+- Add Stripe checkout to Apifeny AI playbooks
+
+### P3 STRATEGIC — LifeOS Supabase Migration
+When CEO runs migration SQL in Supabase dashboard:
+- Guide at `titan-app/supabase/_SETUP.md` — SQL is ready
+- Connect `chat-persistence.ts` to Supabase instead of localStorage
+- Implement RLS policies for user data isolation
+- Enable `plugin_sessions` table for cross-device chat history
+- Activate remaining 5 beta plugins (Learning, Family, Home, Social, Relationships + Mindfulness)
+- User auth: connect AuthModal to real Supabase auth
+
+### P4 STRATEGIC — Titan Enhancements
+✅ Agent Activity Feed — done
+✅ BreadcrumbList JSON-LD — done
+Unblocked improvements remaining:
+- [ ] Add onboarding wizard for new users
+- [ ] Create /features page with detailed comparison of tiers
+- [ ] Add /blog or /changelog page for product updates (blog exists, add changelog)
+
+### P5 STRATEGIC — AI Directory Polish
+✅ Sitemap lastmod dynamic dates — done
+Unblocked improvements remaining:
+- [ ] Add blog category meta descriptions (currently missing from some categories)
+- [ ] Add internal linking section to bottom of each blog post
+- [ ] Create /ai-tools-by-category/[slug] dynamic category pages
+
+### P6 ANALYTICS
+- All sites have Vercel Analytics + GA4 ✅
 
 ## Blocked Items (CEO Action Needed)
-1. P0: Affiliate partner API keys (Booking.com, Klook, Viator, Expedia)
-2. P1: Stripe checkout port from Nudge to Titan (already scaffolded in titan-app)
-3. P3: Supabase migration SQL for LifeOS plugin persistence
-4. Git push to nudge-app: token may have expired (ghp_ token)
-5. Vercel uploads rate-limited: 5000/day limit hit
-
-## Notes
-- 10.8 GB RAM available
-- Vercel deploy: vercel build --prod + vercel --prebuilt works, but upload rate-limited to 5000/day
-- Git push needs token refresh
-- P6 Analytics: All deployed sites (ev-charging-asia, luxury-family-travel, family-travel-directory, kids-activities-asia) confirmed with Vercel Analytics + GoogleAnalytics component ✅
+1. **P0: Affiliate partner API keys** (Booking.com, Klook, Viator, Expedia) — blocks all revenue work
+2. **P1: Stripe checkout SQL for Supabase** — blocks Titan payment integration
+3. **P3: Run LifeOS migration SQL** in Supabase dashboard — SQL script ready at `titan-app/supabase/_SETUP.md`
+4. **Git PAT token** (expired) for ev-charging-asia push
