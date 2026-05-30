@@ -61,6 +61,12 @@ export default function Footer() {
  </Link>
  </li>
  <li>
+ <Link href="/premium" className="text-gray-500 hover:text-gray-900 text-sm transition flex items-center gap-1.5 group">
+ <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-neon transition" />
+ <span className="text-amber-600 font-medium">Pro</span>
+ </Link>
+ </li>
+ <li>
  <Link href="/about" className="text-gray-500 hover:text-gray-900 text-sm transition flex items-center gap-1.5 group">
  <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-neon transition" />
  About Us

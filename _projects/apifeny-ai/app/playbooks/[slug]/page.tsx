@@ -1,12 +1,24 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { ArrowLeft, Clock, BookOpen, Lightbulb, AlertTriangle, Sparkles, CheckCircle, Target, Zap, TrendingUp, DollarSign, Star, BarChart3 } from 'lucide-react';
 import { playbooks, type Playbook } from '@/lib/playbooks';
 import { cn, getPipelineStageBadge } from '@/lib/utils';
 import BlogPlaybookLinks from '../../components/BlogPlaybookLinks';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import FAQJsonLd from '@/components/FAQJsonLd';
+
+const InfographicSaveTokens = dynamic(() => import('@/components/InfographicSaveTokens'), { ssr: false });
+const InfographicBuildGame = dynamic(() => import('@/components/InfographicBuildGame'), { ssr: false });
+const InfographicPromptEngineering = dynamic(() => import('@/components/InfographicPromptEngineering'), { ssr: false });
+const EmailCapture = dynamic(() => import('@/components/EmailCapture'), { ssr: false });
+
+const PLAYBOOK_INFOGRAPHICS: Record<string, React.ComponentType<{ width?: number; height?: number }>> = {
+  'how-to-save-on-ai-tokens': InfographicSaveTokens,
+  'build-a-game-with-ai': InfographicBuildGame,
+  'ultimate-prompt-engineering': InfographicPromptEngineering,
+};
 
 const EXCLUDED_SLUGS = new Set([
  'ai-content-creation-busy-founders', 'ai-for-customer-support', 'ai-for-data-analysis',
@@ -147,6 +159,18 @@ export default async function PlaybookDetailPage({ params }: { params: Promise<{
  </div>
  </div>
  </section>
+
+ {/* Featured Infographic */}
+ {PLAYBOOK_INFOGRAPHICS[playbook.slug] && (() => {
+   const Infographic = PLAYBOOK_INFOGRAPHICS[playbook.slug];
+   return (
+     <section className="mb-10">
+       <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+         <Infographic />
+       </div>
+     </section>
+   );
+ })()}
 
  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
  <div className="lg:col-span-2 space-y-10">
@@ -300,6 +324,31 @@ export default async function PlaybookDetailPage({ params }: { params: Promise<{
  </div>
  </section>
  )}
+
+ {/* Free Template Section */}
+ <section className="mb-8 sm:mb-10 mt-10">
+ <EmailCapture
+ templateContent={`You are an AI workflow expert. I need a step-by-step plan to accomplish a specific task using AI.
+
+My task: [describe what you want to accomplish]
+Tools I have access to: [ChatGPT, Claude, Cursor, etc.]
+My skill level: [beginner, intermediate, advanced]
+Time available: [X hours/days]
+
+Give me:
+1. The exact prompt I should use to start (copy-paste ready)
+2. A 5-step workflow broken down into actionable steps
+3. Which AI tool to use at each step and why
+4. Expected time per step
+5. How to verify the output quality at each stage
+
+Make it concrete — I should be able to start in 5 minutes.`}
+ templateTitle="Free Prompt: Your Personalized AI Workflow"
+ playbookSlug={playbook.slug}
+ playbookTitle={playbook.title}
+ gradient="from-violet-500/10 to-cyan-500/10"
+ />
+ </section>
 
  <FAQJsonLd
  faqs={buildPlaybookFAQs(playbook)}

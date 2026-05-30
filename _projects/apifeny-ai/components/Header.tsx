@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Search, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Search, Menu, X, ArrowUpRight, Crown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function Header() {
@@ -221,9 +221,16 @@ export default function Header() {
  className="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition"
  >
  Playbooks
- </Link>
- <Link
- href="/build-in-public"
+              </Link>
+              <Link
+                href="/premium"
+                className="block px-4 py-2.5 rounded-lg text-sm font-medium text-amber-600 hover:text-amber-700 hover:bg-amber-50 transition flex items-center gap-2"
+              >
+                <Crown className="w-4 h-4" />
+                Pro
+              </Link>
+              <Link
+                href="/build-in-public"
  className="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition"
  >
  Build in Public

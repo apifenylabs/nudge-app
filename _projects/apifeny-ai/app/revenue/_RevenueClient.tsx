@@ -239,6 +239,31 @@ export default function RevenuePage() {
  </Link>
  </div>
  </div>
+
+ {/* Affiliate Disclosure & Monetization Summary */}
+ <div className="rounded-xl border border-tech-500/30 bg-tech-700/40 p-5">
+ <h3 className="text-xs font-semibold text-tech-200 mb-3 uppercase tracking-wider">Monetization Summary</h3>
+ <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+ <div className="p-3 rounded-lg bg-tech-600/40 border border-tech-500/20">
+ <div className="text-lg font-bold text-amber-400">{totalMRR.toLocaleString()}+</div>
+ <div className="text-[10px] text-tech-300">Total Reported MRR</div>
+ </div>
+ <div className="p-3 rounded-lg bg-tech-600/40 border border-tech-500/20">
+ <div className="text-lg font-bold text-emerald-400">{avgRevenue.toLocaleString()}</div>
+ <div className="text-[10px] text-tech-300">Average MRR per Playbook</div>
+ </div>
+ <div className="p-3 rounded-lg bg-tech-600/40 border border-tech-500/20">
+ <div className="text-lg font-bold text-white">{maxRevenue.toLocaleString()}</div>
+ <div className="text-[10px] text-tech-300">Highest MRR Reported</div>
+ </div>
+ </div>
+ <p className="text-[10px] text-tech-400 leading-relaxed">
+ <strong className="text-tech-200">Affiliate Disclosure:</strong> Some playbooks and tools linked on this page include affiliate links.
+ Apifeny AI may earn a commission at no extra cost to you. Revenue stories are self-reported by users and
+ may not reflect typical results. Individual results vary based on effort, market conditions, and execution.
+ As an Amazon Associate and Klook Partner, we earn from qualifying purchases.
+ </p>
+ </div>
  </div>
  );
 }
