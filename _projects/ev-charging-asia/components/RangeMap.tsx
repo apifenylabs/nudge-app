@@ -28,9 +28,15 @@ const iconRetinaUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2
 const shadowUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png';
 
 if (typeof window !== 'undefined') {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  delete (L.Icon.Default.prototype as any)._getIconUrl;
-  L.Icon.Default.mergeOptions({ iconUrl, iconRetinaUrl, shadowUrl });
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if (L?.Icon?.Default?.prototype) {
+      try { delete (L.Icon.Default.prototype as any)._getIconUrl; } catch { /* already removed */ }
+      L.Icon.Default.mergeOptions({ iconUrl, iconRetinaUrl, shadowUrl });
+    }
+  } catch (e) {
+    console.warn('[RangeMap] Failed to initialize Leaflet icons:', e);
+  }
 }
 
 // ─── Asia bounds ────────────────────────────────────────────────

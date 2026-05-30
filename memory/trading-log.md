@@ -1,4 +1,42 @@
 
+## 2026-05-30 14:59 HKT — Cron Run
+- **Balance (hl_balance):** $1,090.89 (△ -$0.07 from $1,090.96 prior, -0.01%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,090.89 — no new trades
+- Bot status: 13 hist trades | 1 live position (ETH 1.4792 LONG @ $2,020.80, UPnL -$6.51) | WR=62% | DD=0.6% | KS=False
+- ETH skipped — native TP/SL order active
+- SOL, BTC checked — no signals fired
+- HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Silently succeeded: balance $1,090.89 > $20, change -0.19% (within 10%), no errors, position unchanged
+
+## 2026-05-30 14:53 HKT — Cron Run
+- **Balance (hl_balance):** $1,090.60 (▼ $0.29 from $1,090.89 at 14:52, -0.03%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,090.60 — no new trades
+- Bot status: 13 hist trades | 1 live position (ETH 1.4792 LONG @ $2,020.80, UPnL $-6.80) | WR=62% | DD=0.6% | KS=False
+- ETH skipped — native TP/SL order active
+- SOL, BTC checked — no signals; HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Silently succeeded: balance $1,090.60 > $20, change -0.03% (within 10%), no errors, positions unchanged
+
+## 2026-05-30 14:52 HKT — Cron Run
+- **Balance (hl_balance):** $1,090.89 (△ +$3.40 from $1,087.49 at 14:04, +0.31%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,090.89 — no new trades
+- Bot status: 13 hist trades | 1 live positions | WR=62% | DD=0.6% | KS=False
+- ETH LONG 1.4792 @ $2,020.80 | UPnL: $-6.51 — native TP/SL active, skipped
+- SOL/BTC checked — no signals; HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Silently succeeded: balance $1,090.89 > $20, change +0.31% < 10%, bot clean
+
+## 2026-05-30 14:50 HKT — Cron Run
+- **Balance (hl_balance):** $1,090.89 (▼ $15.29 from $1,106.18, -1.38%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,090.89 — no new trades
+- Bot status: 13 hist trades | 1 live position (ETH 1.4792 LONG @ $2,020.80, UPnL -$6.51) | WR=62% | DD=0.6% | KS=False
+- ETH skipped — native TP/SL order active
+- SOL, BTC checked — no signals fired
+- HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Silently succeeded: balance $1,090.89 > $20, change -1.38% (within 10%), no errors, position unchanged
+
 ## 2026-05-30 14:42 HKT — Cron Run
 - **Balance (hl_balance):** $1,092.96 (▼ $13.22 from $1,106.18 at 14:11, -1.19%)
 - Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
@@ -2412,3 +2450,12 @@ These trade as spot pairs against USDC on the HyperEVM. Not leveragable perps, b
 - ETH LONG 1.4792 @ $2,020.80 | UPnL: $-9.76 — native TP/SL active, skipped
 - SOL/BTC checked — no signals; HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
 - ✅ Silently succeeded: balance $1,087.49 > $20, change +0.15% < 10%, bot clean
+
+## 2026-05-30 15:01 HKT — Cron Run
+- **Balance (hl_balance):** $1,090.12 (△ +$2.63 from $1,087.49, +0.24%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,089.67
+- Bot status: 13 hist trades | 1 live positions | WR=62% | DD=0.6% | KS=False | Balance=$1089.67
+- ETH LONG 1.4792 @ $2,020.80 | UPnL: $-7.69 — native TP/SL active, skipped
+- SOL/BTC checked — no signals; HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ No alerts: balance $1,090.12 > $20, change +0.24% < 10%, bot clean

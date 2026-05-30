@@ -258,11 +258,11 @@ export default function LandingPage() {
       {/* ── Navigation ── */}
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-500 to-amber-500 flex items-center justify-center">
+          <div className="flex items-center gap-2 group">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-500 to-amber-500 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:shadow-teal-200/50 group-hover:scale-105">
               <span className="text-sm font-bold text-white">T</span>
             </div>
-            <span className="text-sm font-semibold text-gray-900">Titan</span>
+            <span className="text-sm font-semibold text-gray-900 group-hover:text-teal-700 transition-colors duration-300">Titan</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="#features" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Features</a>
@@ -289,6 +289,19 @@ export default function LandingPage() {
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-teal-50/60 to-transparent" />
           <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-amber-50/60 to-transparent" />
+          {/* Animated floating orbs */}
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full opacity-[0.04]"
+            style={{ background: 'radial-gradient(circle, #14B8A6 0%, transparent 70%)' }}
+            animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full opacity-[0.03]"
+            style={{ background: 'radial-gradient(circle, #F59E0B 0%, transparent 70%)' }}
+            animate={{ y: [0, 15, 0], scale: [1, 1.08, 1] }}
+            transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-12 sm:pt-24 sm:pb-16">
@@ -301,7 +314,7 @@ export default function LandingPage() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-4 leading-tight">
               Your AI Agent
               <br />
-              <span className="bg-gradient-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-teal-600 to-amber-500 bg-clip-text text-transparent" style={{ animation: 'pulse 3s ease-in-out infinite' }}>
                 Grows With You
               </span>
             </h1>
@@ -482,9 +495,9 @@ export default function LandingPage() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
               >
-                <Card className="h-full border-gray-200 hover:border-gray-300 hover:shadow-md transition-all">
+                <Card className="h-full border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
                   <CardContent className="p-6 text-center">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center mx-auto mb-4`}>
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110`}>
                       <span className="text-white font-bold text-lg">{step.step}</span>
                     </div>
                     <h3 className="font-semibold text-gray-900 mb-2">{step.title}</h3>
@@ -700,13 +713,13 @@ export default function LandingPage() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, duration: 0.4 }}
             >
-              <Card className="h-full border-gray-200 hover:border-gray-300 hover:shadow-md transition-all group">
+              <Card className="h-full border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1">
                 <CardContent className="p-6">
-                  <div className={`w-10 h-10 rounded-lg ${feature.bg} ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <div className={`w-10 h-10 rounded-lg ${feature.bg} ${feature.color} flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6`}>
                     {feature.icon}
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">{feature.description}</p>
+                  <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-teal-700 transition-colors duration-300">{feature.title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed group-hover:text-gray-600 transition-colors duration-300">{feature.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
