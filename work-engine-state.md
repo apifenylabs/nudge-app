@@ -1,78 +1,50 @@
-# Work Engine State
+# Work Engine State — May 30, 2026, 2:28 PM HKT
 
-Last updated: 2026-05-30 11:28 HKT
+## Current Status
 
-## Cursor
-✅ **P5 AI Directory — Canonical URL domain sweep COMPLETE** (DONE)
-   - Swept all 13 geo-page layouts + root layout + ~65 page files: replaced dead `apifeny.ai` with `https://apifeny-ai.vercel.app`
-   - Fixed root `app/layout.tsx`: BASE_URL, metadataBase, JSON-LD Organization url, WebSite url, SearchAction urlTemplate
-   - Fixed all non-root layouts: `app/collections/layout.tsx`, `app/ai-tools-{taiwan,bangladesh,singapore,nepal,india,sri-lanka}/layout.tsx`, `app/playbooks/layout.tsx`, `app/best-ai-{coding,marketing,writing,tools}/layout.tsx`, `app/tools/layout.tsx`
-   - Fixed ~60 page files with `BASE_URL = 'https://apifeny.ai'` → corrected to `.vercel.app`
-   - Left intentional: `privacy@apifeny.ai` / `legal@apifeny.ai` emails (brand, not URLs)
-   - Built ✅ → Deployed to production ✅
-   - Verified: sitemap.xml now uses correct working domain; JSON-LD present on root page
+### Revenue Projects (P0-P2) — ✅ All Green
+- **EV Charging Asia**: Live, 143+ posts, 200 OK
+- **Luxury Family Travel**: Live, 200 OK, familytravelasia.com domain configured
+- **Apifeny AI Directory**: Live, 70 blog posts (+1 new), 28 geo landing pages, 9 comparison pages
+- **Affiliate Tracking**: Live with Stripe checkout
+- **Trading Bot**: Grid bot running, $1,000 balance, 13 historical trades, $41.62 PnL
+- **Nudge**: Previous iteration (superseded by LifeOS)
 
-## Confirmed Completed (Previous Sessions)
-- FAQ JSON-LD on 88/95 playbook pages — done
-- BlogLandingLinks component — cross-links from 32 blog posts — done
-- Dashboard loading skeleton — done
-- Changelog page with 7 version entries — done
-- Agent Activity Feed — done
-- BreadcrumbList JSON-LD — done
-- /features page — done
-- /changelog page — done
-- Onboarding wizard integrated into /dashboard — done
-- XP bar with level-up toast animation on dashboard header — done
-- Progression page with milestones, XP breakdown, God-Tier preview, achievements grid — done
-- XPBar component with shimmer, sparkle, and level-up detection — done
-- All 18 LifeOS categories (incl. Spirituality OS, Hobbies OS) — done
-- LifeOS analytics + recommendations engine — done
-- LifeOS cross-plugin synergies (18 pairs, 6 clusters, XP multipliers) — done
-- LifeOS cross-plugin suggestion cards in plugin detail view — done
-- AI Directory canonical link auto-injection (SeoMetadata extension) — done
-- AI Directory blog internal linking — 100% coverage — done
-- Blog detail pages (`/blog/[slug]`) with full article rendering, engagement features, related articles — done
-- BlogLandingLinks component — cross-links from all 32 blog posts to strategic landing pages — done
-- P4 Titan dead imports, loading/error boundaries, middleware demo bypass — done
-- AI Directory homepage "Explore More AI Resources" section with 8 internal links — done
-- P4 Titan sitemap + SoftwareApplication JSON-LD — done
-- P4 Titan Blog RSS feed + OpenGraph metadata — done
-- AI Directory canonical URL domain sweep (all layouts + pages) — DONE
+### Strategic Projects (P3-P5)
 
-## Backlog (Ready When CEO Unblocks)
+#### P3: LifeOS — ✅ Phase-enriched, build passes
+- 4 active plugins (Travel, Finance, Health, Career) — aicofounder-grade
+- 5 coming-soon plugins (Learning, Family, Home, Social, Relationships, Mindfulness) — all have full phase data and system prompts
+- Excalidraw integration deployed
+- Supabase RLS migration **blocked** — needs service_role key (CEO action in Supabase dashboard)
+- Build: ✅ passes (95.8 kB), deployed to https://lifeos-weld.vercel.app
 
-### P0 REVENUE — Affiliate Infrastructure
-When CEO provides API keys (Booking.com, Klook, Viator, Expedia):
-- Integrate Skyscanner/Booking.com affiliate API for EV Charging Asia + Luxury Travel
-- Build commission tracking dashboard in affiliate-tracking project
-- Implement deep-link redirect middleware
-- Add affiliate product feeds to travel sites
+#### P4: Titan — ✅ Phase 6 Implemented
+- Robotics dashboard, features page, pricing, dashboard, waitlist system
+- Vercel Analytics + SpeedInsights ✅ configured
+- Build: ✅ passes, 10 routes
 
-### P1 REVENUE — Stripe & Monetization
-When CEO provides Supabase SQL / Stripe keys:
-- Port Stripe checkout from Nudge to Titan
-- Create Supabase `checkout_sessions` table + webhook handler
-- Add paid-tier verification middleware to Titan /dashboard
-- Implement coupon/subscription management UI
-- Add Stripe checkout to Apifeny AI playbooks
+#### P5: AI Directory — ✅ 70 blog posts
+- 9 comparison pages, 28 geo landing pages, 70 blog posts
+- **New: "Best AI Project Management Tools for Asian Teams (2026)"** blog post added
+- Build: ✅ passes, 472+ static pages
 
-### P3 STRATEGIC — LifeOS Supabase Migration
-When CEO runs migration SQL in Supabase dashboard:
-- Guide at `titan-app/supabase/_SETUP.md` — SQL is ready
-- Connect `chat-persistence.ts` to Supabase instead of localStorage
-- Implement RLS policies for user data isolation
-- Enable `plugin_sessions` table for cross-device chat history
-- Activate remaining 5 beta plugins (Learning, Family, Home, Social, Relationships + Mindfulness)
-- User auth: connect AuthModal to real Supabase auth
+## Actions Taken (14:28 HKT)
+1. ✅ Added new blog post: "Best AI Project Management Tools for Asian Teams (2026)" — fills a content gap (no project management post existed among 69)
+2. ✅ Regenerated blog data (70 posts now in generated-blog-data.ts)
+3. ✅ Build verified passes with new post included
+4. ✅ Verified all strategic projects (LifeOS, Titan, AI Directory) build cleanly
 
-### P5 STRATEGIC — AI Directory SEO (Next Actions)
-- SEO audit item: Add `lastmod` dates to all sitemap entries (partially done — blog posts now have dates)
-- When DNS fixed + custom domain restored: revert BASE_URL back to custom domain
-- Next AI Directory task: content gap analysis for missing countries/categories
+## Next Cursor
+- ✅ P0-P2 REVENUE — All green (no action needed)
+- ✅ P3 STRATEGIC — LifeOS: Plugin architecture complete. Supabase migration blocked (CEO key)
+- ✅ P4 STRATEGIC — Titan: All features implemented. No action needed
+- ✅ P5 STRATEGIC — AI Directory: 70 blog posts now. Content gaps: AI for lawyers, AI for doctors, customer engagement tools still missing
+- ⏳ Consider generating AI-for-lawyers or AI-customer-engagement post on next cycle
 
 ## Blocked Items (CEO Action Needed)
-1. **P0: Affiliate partner API keys** (Booking.com, Klook, Viator, Expedia) — blocks all revenue work
-2. **P1: Stripe checkout SQL for Supabase** — blocks Titan payment integration
-3. **P3: Run LifeOS migration SQL** in Supabase dashboard — SQL script ready at `titan-app/supabase/_SETUP.md`
-4. **Git PAT token** (expired) for ev-charging-asia push
-5. **🔴 NEW: Domain renewal needed** — both `apifeny.ai` and `apifeny-ai.com` are NXDOMAIN. CEO needs to check registrar.
+1. **P0**: Affiliate partner API keys (Booking.com, Klook, Viator, Expedia)
+2. **P1**: Stripe checkout SQL for Supabase (awaiting context on which project)
+3. **P3**: Run LifeOS migration SQL in Supabase dashboard — schema at `_projects/lifeos/supabase-schema.sql`
+4. **Git PAT token** (expired) for ev-charging-asia
+5. **Domain registration** — apifeny.ai + apifeny-ai.com both NXDOMAIN

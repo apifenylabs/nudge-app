@@ -274,7 +274,12 @@ function Navbar() {
    ───────────────────────────────────────────────────────────── */
 export default function FeaturesPage() {
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    document.title = 'Features — Titan | AI-Powered Agent Builder Platform';
+    const existing = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+    if (existing) existing.content = 'Explore Titan features: Visual Agent Studio, Skill Trees, Multi-Agent Orchestration, Memory System, and Rank-Based Progression. Build AI agents without code.';
+  }, []);
 
   if (!mounted) return null;
 

@@ -1,68 +1,68 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  Zap,
-  Clock,
-  DollarSign,
-  TrendingUp,
-  Target,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Sparkles,
-  Bot,
-  MessageSquare,
-  BarChart3,
-  Code,
-  Globe,
-  Shield,
-  Smartphone,
-  BookOpen,
-  Lightbulb,
-  Rocket,
-  Star,
-  ChevronRight,
-  Search,
-  Pen,
-  FileText,
-  Edit3,
-  Share2,
-  Phone,
-  Mail,
-  PieChart,
-  Headphones,
-  Building2,
-  LineChart,
-  Presentation,
-  Gamepad2,
-  Swords,
-  Cuboid,
-  Joystick,
-  Palette,
-  Music,
-  Monitor,
-  Users2,
-  Brain,
-  Puzzle,
-  Trophy,
-  Layers,
-  ScrollText,
-  Wand2,
-  Repeat,
-  Shuffle,
-  Image,
-  Volume2,
-  PencilRuler,
-  LayoutGrid,
-  Triangle,
-  HardHat,
-  FileCheck,
-  Map,
-  Leaf,
-  DollarSign as DollarSignIcon,
-  Cog,
-  Route,
-  CircleDot,
+ Zap,
+ Clock,
+ DollarSign,
+ TrendingUp,
+ Target,
+ Users,
+ CheckCircle,
+ ArrowRight,
+ Sparkles,
+ Bot,
+ MessageSquare,
+ BarChart3,
+ Code,
+ Globe,
+ Shield,
+ Smartphone,
+ BookOpen,
+ Lightbulb,
+ Rocket,
+ Star,
+ ChevronRight,
+ Search,
+ Pen,
+ FileText,
+ Edit3,
+ Share2,
+ Phone,
+ Mail,
+ PieChart,
+ Headphones,
+ Building2,
+ LineChart,
+ Presentation,
+ Gamepad2,
+ Swords,
+ Cuboid,
+ Joystick,
+ Palette,
+ Music,
+ Monitor,
+ Users2,
+ Brain,
+ Puzzle,
+ Trophy,
+ Layers,
+ ScrollText,
+ Wand2,
+ Repeat,
+ Shuffle,
+ Image,
+ Volume2,
+ PencilRuler,
+ LayoutGrid,
+ Triangle,
+ HardHat,
+ FileCheck,
+ Map,
+ Leaf,
+ DollarSign as DollarSignIcon,
+ Cog,
+ Route,
+ CircleDot,
 } from 'lucide-react';
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
@@ -72,62 +72,62 @@ import FAQSchema from '@/components/FAQSchema';
 const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
-  title: 'Best AI Tools for Architecture & Engineering in 2026 — Design, BIM, Structural Analysis & Construction | Apifeny AI',
-  description:
-    'Compare the best AI tools for architecture and engineering in 2026. AI-powered architectural design, BIM automation, structural analysis, generative design, MEP engineering, construction management, and building code compliance — vetted for Asia-Pacific AEC firms.',
-  keywords: [
-    'ai architecture tools',
-    'ai engineering tools',
-    'ai architectural design',
-    'ai bim automation',
-    'ai generative design',
-    'ai structural analysis',
-    'ai mep engineering',
-    'ai construction management',
-    'ai building code compliance',
-    'ai revit plugins',
-    'ai autocad tools',
-    'architect ai 2026',
-    'best ai for architects',
-    'best ai for civil engineers',
-    'apac aec firms',
-    'ai construction technology',
-  ],
-  alternates: {
-    canonical: `${BASE_URL}/guides/ai-tools-for-architecture-engineering`,
-  },
-  openGraph: {
-    title: 'Best AI Tools for Architecture & Engineering in 2026 — Design, BIM, Structural Analysis & Construction',
-    description:
-      'Definitive guide to the best AI tools for architecture and engineering in 2026. AI-powered architectural design, BIM automation, structural analysis, generative design, MEP engineering, construction management, and building code compliance — vetted for Asia-Pacific AEC firms.',
-    url: `${BASE_URL}/guides/ai-tools-for-architecture-engineering`,
-    type: 'article',
-    locale: 'en_US',
-    siteName: 'Apifeny AI',
-    images: [
-      {
-        url: `${BASE_URL}/og/ai-tools-for-architecture-engineering.jpg`,
-        width: 1200,
-        height: 630,
-        alt: 'Best AI Tools for Architecture & Engineering in 2026',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best AI Tools for Architecture & Engineering in 2026 — Design, BIM, Structural Analysis & Construction',
-    description:
-      'Definitive guide to AI tools for architecture and engineering — AI-powered architectural design, BIM automation, generative design, structural analysis, MEP engineering, construction management, and building code compliance, vetted for Asia-Pacific AEC firms.',
-  },
+ title: 'Best AI Tools for Architecture & Engineering in 2026 — Design, BIM, Structural Analysis & Construction | Apifeny AI',
+ description:
+ 'Compare the best AI tools for architecture and engineering in 2026. AI-powered architectural design, BIM automation, structural analysis, generative design, MEP engineering, construction management, and building code compliance — vetted for Asia-Pacific AEC firms.',
+ keywords: [
+ 'ai architecture tools',
+ 'ai engineering tools',
+ 'ai architectural design',
+ 'ai bim automation',
+ 'ai generative design',
+ 'ai structural analysis',
+ 'ai mep engineering',
+ 'ai construction management',
+ 'ai building code compliance',
+ 'ai revit plugins',
+ 'ai autocad tools',
+ 'architect ai 2026',
+ 'best ai for architects',
+ 'best ai for civil engineers',
+ 'apac aec firms',
+ 'ai construction technology',
+ ],
+ alternates: {
+ canonical: `${BASE_URL}/guides/ai-tools-for-architecture-engineering`,
+ },
+ openGraph: {
+ title: 'Best AI Tools for Architecture & Engineering in 2026 — Design, BIM, Structural Analysis & Construction',
+ description:
+ 'Definitive guide to the best AI tools for architecture and engineering in 2026. AI-powered architectural design, BIM automation, structural analysis, generative design, MEP engineering, construction management, and building code compliance — vetted for Asia-Pacific AEC firms.',
+ url: `${BASE_URL}/guides/ai-tools-for-architecture-engineering`,
+ type: 'article',
+ locale: 'en_US',
+ siteName: 'Apifeny AI',
+ images: [
+ {
+ url: `${BASE_URL}/og/ai-tools-for-architecture-engineering.jpg`,
+ width: 1200,
+ height: 630,
+ alt: 'Best AI Tools for Architecture & Engineering in 2026',
+ },
+ ],
+ },
+ twitter: {
+ card: 'summary_large_image',
+ title: 'Best AI Tools for Architecture & Engineering in 2026 — Design, BIM, Structural Analysis & Construction',
+ description:
+ 'Definitive guide to AI tools for architecture and engineering — AI-powered architectural design, BIM automation, generative design, structural analysis, MEP engineering, construction management, and building code compliance, vetted for Asia-Pacific AEC firms.',
+ },
 };
 
 const sections = [
-  {
-    id: 'ai-architectural-design-concept-generation',
-    title: '1. AI for Architectural Design & Concept Generation',
-    icon: Building2,
-    color: 'bg-blue-50 dark:bg-blue-950/30',
-    text: `AI-powered architectural design and concept generation has revolutionised how architects approach the early stages of a project. What traditionally required weeks of sketching, massing studies, and iterative revisions can now be accomplished in hours. In 2026, AI tools serve as creative collaborators that expand the architect's design space rather than replace their expertise.
+ {
+ id: 'ai-architectural-design-concept-generation',
+ title: '1. AI for Architectural Design & Concept Generation',
+ icon: Building2,
+ color: 'bg-blue-50 ',
+ text: `AI-powered architectural design and concept generation has revolutionised how architects approach the early stages of a project. What traditionally required weeks of sketching, massing studies, and iterative revisions can now be accomplished in hours. In 2026, AI tools serve as creative collaborators that expand the architect's design space rather than replace their expertise.
 
 How AI transforms architectural design and concept generation in 2026:
 • Text-to-schematic design: Generate floor plans, elevations, and building massing from natural language prompts
@@ -146,20 +146,20 @@ For Asia-Pacific architecture firms, AI concept generation is especially transfo
 • Indian architecture firms use AI for affordable housing design that maximises natural ventilation and daylight
 • Southeast Asian architects (Vietnam, Thailand, Indonesia) leverage AI for tropical climate-responsive building concepts
 • Australian and New Zealand practices use AI for bushfire-resilient design and sustainable coastal architecture`,
-    tools: ['midjourney', 'leonardo-ai', 'chatgpt', 'gemini'],
-    affiliateSuggestions: [
-      { name: 'Midjourney', slug: 'midjourney', note: 'Architectural concept art, style exploration, and visualisation' },
-      { name: 'Leonardo AI', slug: 'leonardo-ai', note: 'AI-generated architectural renders with material control' },
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Design brief analysis, code compliance research, and specification drafting' },
-      { name: 'Gemini', slug: 'gemini', note: 'Site context research and climate data analysis for design decisions' },
-    ],
-  },
-  {
-    id: 'ai-bim-revit-automation',
-    title: '2. AI for BIM & Revit Automation',
-    icon: PencilRuler,
-    color: 'bg-amber-50 dark:bg-amber-950/30',
-    text: `Building Information Modelling (BIM) is the backbone of modern AEC workflows, and AI is supercharging every aspect of BIM authoring. From automating repetitive modelling tasks to intelligent clash detection, AI-powered BIM tools are driving dramatic productivity gains across the design-to-construction pipeline.
+ tools: ['midjourney', 'leonardo-ai', 'chatgpt', 'gemini'],
+ affiliateSuggestions: [
+ { name: 'Midjourney', slug: 'midjourney', note: 'Architectural concept art, style exploration, and visualisation' },
+ { name: 'Leonardo AI', slug: 'leonardo-ai', note: 'AI-generated architectural renders with material control' },
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Design brief analysis, code compliance research, and specification drafting' },
+ { name: 'Gemini', slug: 'gemini', note: 'Site context research and climate data analysis for design decisions' },
+ ],
+ },
+ {
+ id: 'ai-bim-revit-automation',
+ title: '2. AI for BIM & Revit Automation',
+ icon: PencilRuler,
+ color: 'bg-amber-50 ',
+ text: `Building Information Modelling (BIM) is the backbone of modern AEC workflows, and AI is supercharging every aspect of BIM authoring. From automating repetitive modelling tasks to intelligent clash detection, AI-powered BIM tools are driving dramatic productivity gains across the design-to-construction pipeline.
 
 How AI transforms BIM and Revit workflows in 2026:
 • Automated parametric modelling: AI generates Revit families and parametric components from specifications
@@ -179,19 +179,19 @@ For Asia-Pacific markets, BIM is increasingly mandated by regulation:
 • Hong Kong's Housing Authority mandates BIM for all public housing developments
 • China's 14th Five-Year Plan for construction industry targets full BIM adoption for large-scale projects
 • Australian state governments (NSW, Victoria, Queensland) require BIM for government-funded projects`,
-    tools: ['claude', 'chatgpt', 'deepseek'],
-    affiliateSuggestions: [
-      { name: 'Claude', slug: 'claude', note: 'BIM documentation review, specification drafting, and compliance checking' },
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Revit Dynamo script generation and BIM workflow automation logic' },
-      { name: 'DeepSeek Chat', slug: 'deepseek', note: 'Cost-effective batch processing of BIM data enrichment tasks' },
-    ],
-  },
-  {
-    id: 'ai-generative-design-space-planning',
-    title: '3. AI for Generative Design & Space Planning',
-    icon: LayoutGrid,
-    color: 'bg-blue-50 dark:bg-blue-950/30',
-    text: `Generative design powered by AI has moved beyond experimental into production-ready workflows. Architects and interior designers now use AI to explore thousands of space planning options against competing constraints — maximising floor area, daylight, circulation efficiency, and programme adjacency simultaneously.
+ tools: ['claude', 'chatgpt', 'deepseek'],
+ affiliateSuggestions: [
+ { name: 'Claude', slug: 'claude', note: 'BIM documentation review, specification drafting, and compliance checking' },
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Revit Dynamo script generation and BIM workflow automation logic' },
+ { name: 'DeepSeek Chat', slug: 'deepseek', note: 'Cost-effective batch processing of BIM data enrichment tasks' },
+ ],
+ },
+ {
+ id: 'ai-generative-design-space-planning',
+ title: '3. AI for Generative Design & Space Planning',
+ icon: LayoutGrid,
+ color: 'bg-blue-50 ',
+ text: `Generative design powered by AI has moved beyond experimental into production-ready workflows. Architects and interior designers now use AI to explore thousands of space planning options against competing constraints — maximising floor area, daylight, circulation efficiency, and programme adjacency simultaneously.
 
 AI capabilities in generative design and space planning in 2026:
 • Automated floor plan generation: AI produces multiple layout options from room programmes, site boundaries, and design briefs
@@ -210,19 +210,19 @@ Asia-Pacific space planning trends benefiting from AI:
 • Chinese property developers generate hundreds of unit layout variants for residential sales gallery comparison
 • Indian co-living and student housing operators use AI for efficient space planning across large portfolios
 • Manila and Jakarta developers leverage AI to optimise parking layouts within tight urban site constraints`,
-    tools: ['midjourney', 'leonardo-ai', 'chatgpt'],
-    affiliateSuggestions: [
-      { name: 'Midjourney', slug: 'midjourney', note: 'Visualising generative design options for client presentations' },
-      { name: 'Leonardo AI', slug: 'leonardo-ai', note: 'Rendering space planning options with realistic materials' },
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Design optimisation logic and programme adjacency analysis' },
-    ],
-  },
-  {
-    id: 'ai-structural-analysis-engineering',
-    title: '4. AI for Structural Analysis & Engineering',
-    icon: Triangle,
-    color: 'bg-amber-50 dark:bg-amber-950/30',
-    text: `Structural engineering, long reliant on manual calculations and iterative finite element analysis, is being transformed by AI. Machine learning models trained on thousands of structural configurations can predict beam sizes, column layouts, and reinforcement requirements in seconds — work that traditionally consumed days of an engineer's time.
+ tools: ['midjourney', 'leonardo-ai', 'chatgpt'],
+ affiliateSuggestions: [
+ { name: 'Midjourney', slug: 'midjourney', note: 'Visualising generative design options for client presentations' },
+ { name: 'Leonardo AI', slug: 'leonardo-ai', note: 'Rendering space planning options with realistic materials' },
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Design optimisation logic and programme adjacency analysis' },
+ ],
+ },
+ {
+ id: 'ai-structural-analysis-engineering',
+ title: '4. AI for Structural Analysis & Engineering',
+ icon: Triangle,
+ color: 'bg-amber-50 ',
+ text: `Structural engineering, long reliant on manual calculations and iterative finite element analysis, is being transformed by AI. Machine learning models trained on thousands of structural configurations can predict beam sizes, column layouts, and reinforcement requirements in seconds — work that traditionally consumed days of an engineer's time.
 
 How AI is transforming structural analysis and engineering in 2026:
 • ML-based member sizing: AI predicts optimal beam, column, slab, and foundation dimensions from architectural loads
@@ -241,19 +241,19 @@ Asia-Pacific seismic design context:
 • China's GB 50011-2025 code updates incorporate AI-based structural design verification methods
 • Indian structural engineers use AI for wind analysis on tall buildings in cyclone-prone coastal regions
 • South Korea's response to the 2017 Pohang earthquake accelerated AI-based seismic retrofitting design tools`,
-    tools: ['claude', 'chatgpt', 'perplexity'],
-    affiliateSuggestions: [
-      { name: 'Claude', slug: 'claude', note: 'Structural calculation reports and seismic design narrative review' },
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Load combination checks and structural design code queries' },
-      { name: 'Perplexity', slug: 'perplexity', note: 'Research on seismic analysis methodologies and international code comparisons' },
-    ],
-  },
-  {
-    id: 'ai-mep-engineering',
-    title: '5. AI for MEP (Mechanical, Electrical, Plumbing) Engineering',
-    icon: Zap,
-    color: 'bg-blue-50 dark:bg-blue-950/30',
-    text: `MEP engineering involves complex systems that must coordinate within tight building voids while meeting performance, energy, and code requirements. AI is streamlining MEP design by automating system sizing, routing, and coordination — traditionally one of the most labour-intensive parts of building design.
+ tools: ['claude', 'chatgpt', 'perplexity'],
+ affiliateSuggestions: [
+ { name: 'Claude', slug: 'claude', note: 'Structural calculation reports and seismic design narrative review' },
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Load combination checks and structural design code queries' },
+ { name: 'Perplexity', slug: 'perplexity', note: 'Research on seismic analysis methodologies and international code comparisons' },
+ ],
+ },
+ {
+ id: 'ai-mep-engineering',
+ title: '5. AI for MEP (Mechanical, Electrical, Plumbing) Engineering',
+ icon: Zap,
+ color: 'bg-blue-50 ',
+ text: `MEP engineering involves complex systems that must coordinate within tight building voids while meeting performance, energy, and code requirements. AI is streamlining MEP design by automating system sizing, routing, and coordination — traditionally one of the most labour-intensive parts of building design.
 
 AI capabilities in MEP engineering in 2026:
 • Automated duct and pipe routing: AI generates optimal HVAC duct, plumbing pipe, and electrical conduit routes avoiding structural clashes
@@ -274,19 +274,19 @@ Asia-Pacific MEP engineering context:
 • Australian engineers use AI for bushfire smoke management system design in fire-prone regions
 
 AI reduces MEP design time by 40-60% while improving system coordination quality, reducing site conflicts by an estimated 35%.`,
-    tools: ['chatgpt', 'claude', 'gemini'],
-    affiliateSuggestions: [
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'HVAC load calculations, equipment selection, and system design logic' },
-      { name: 'Claude', slug: 'claude', note: 'MEP specification review, coordination reports, and code compliance verification' },
-      { name: 'Gemini', slug: 'gemini', note: 'Energy code research and climate data analysis for MEP system design' },
-    ],
-  },
-  {
-    id: 'ai-construction-management-site-monitoring',
-    title: '6. AI for Construction Management & Site Monitoring',
-    icon: HardHat,
-    color: 'bg-amber-50 dark:bg-amber-950/30',
-    text: `Construction site monitoring and project management have been transformed by AI-powered computer vision, drone analysis, and predictive scheduling. General contractors and project managers now have real-time visibility into site progress, safety compliance, and material logistics that was unimaginable a few years ago.
+ tools: ['chatgpt', 'claude', 'gemini'],
+ affiliateSuggestions: [
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'HVAC load calculations, equipment selection, and system design logic' },
+ { name: 'Claude', slug: 'claude', note: 'MEP specification review, coordination reports, and code compliance verification' },
+ { name: 'Gemini', slug: 'gemini', note: 'Energy code research and climate data analysis for MEP system design' },
+ ],
+ },
+ {
+ id: 'ai-construction-management-site-monitoring',
+ title: '6. AI for Construction Management & Site Monitoring',
+ icon: HardHat,
+ color: 'bg-amber-50 ',
+ text: `Construction site monitoring and project management have been transformed by AI-powered computer vision, drone analysis, and predictive scheduling. General contractors and project managers now have real-time visibility into site progress, safety compliance, and material logistics that was unimaginable a few years ago.
 
 AI applications in construction management in 2026:
 • Computer vision for progress tracking: AI analyses site photos and drone footage to track construction progress against BIM models
@@ -307,19 +307,19 @@ Asia-Pacific construction management trends:
 • Australian and New Zealand firms use AI for safety compliance monitoring, reducing on-site injuries by 25-40%
 
 Leading contractors report 15-20% schedule compression and 20-30% reduction in rework costs after implementing AI site monitoring.`,
-    tools: ['chatgpt', 'gemini', 'claude'],
-    affiliateSuggestions: [
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Construction schedule generation, progress reporting, and logistical planning' },
-      { name: 'Gemini', slug: 'gemini', note: 'Site photo analysis, drone footage interpretation, and inspection documentation' },
-      { name: 'Claude', slug: 'claude', note: 'Contract review, RFI responses, and construction documentation management' },
-    ],
-  },
-  {
-    id: 'ai-building-code-compliance-permitting',
-    title: '7. AI for Building Code Compliance & Permitting',
-    icon: FileCheck,
-    color: 'bg-blue-50 dark:bg-blue-950/30',
-    text: `Building code compliance is one of the most time-consuming and error-prone aspects of architectural design. With thousands of code clauses varying by jurisdiction, project type, and occupancy, even experienced architects spend weeks verifying compliance. AI-powered code checking tools automate this process, flagging violations in real time as models are developed.
+ tools: ['chatgpt', 'gemini', 'claude'],
+ affiliateSuggestions: [
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Construction schedule generation, progress reporting, and logistical planning' },
+ { name: 'Gemini', slug: 'gemini', note: 'Site photo analysis, drone footage interpretation, and inspection documentation' },
+ { name: 'Claude', slug: 'claude', note: 'Contract review, RFI responses, and construction documentation management' },
+ ],
+ },
+ {
+ id: 'ai-building-code-compliance-permitting',
+ title: '7. AI for Building Code Compliance & Permitting',
+ icon: FileCheck,
+ color: 'bg-blue-50 ',
+ text: `Building code compliance is one of the most time-consuming and error-prone aspects of architectural design. With thousands of code clauses varying by jurisdiction, project type, and occupancy, even experienced architects spend weeks verifying compliance. AI-powered code checking tools automate this process, flagging violations in real time as models are developed.
 
 How AI is transforming building code compliance in 2026:
 • Automated code checking: AI scans BIM models and identifies zoning, fire safety, accessibility, and structural code violations
@@ -338,19 +338,19 @@ Asia-Pacific building code automation:
 • China's GB code system covers 80+ standards — AI compliance tools handle the complexity across provinces
 • Indian building byelaws vary by municipality — AI tools adapt to local rules across 100+ urban authorities
 • Saudi Arabia's Building Code (SBC) implementation for Vision 2030 mega-projects uses AI compliance verification`,
-    tools: ['chatgpt', 'claude', 'deepseek'],
-    affiliateSuggestions: [
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Code clause interpretation, compliance matrices, and permit document drafting' },
-      { name: 'Claude', slug: 'claude', note: 'Long-form building code analysis, accessibility compliance verification' },
-      { name: 'DeepSeek Chat', slug: 'deepseek', note: 'Cost-effective batch code checking across large project portfolios' },
-    ],
-  },
-  {
-    id: 'ai-rendering-visualization-vr',
-    title: '8. AI for Rendering, Visualization & VR Walkthroughs',
-    icon: Image,
-    color: 'bg-amber-50 dark:bg-amber-950/30',
-    text: `Architectural visualisation has always been critical for client approval, marketing, and design communication. AI has dramatically accelerated rendering pipelines — what once required overnight GPU renders or expensive render farm time can now be generated in minutes via cloud-based AI services. The quality gap between AI renders and traditional ray-traced outputs has virtually disappeared in 2026.
+ tools: ['chatgpt', 'claude', 'deepseek'],
+ affiliateSuggestions: [
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Code clause interpretation, compliance matrices, and permit document drafting' },
+ { name: 'Claude', slug: 'claude', note: 'Long-form building code analysis, accessibility compliance verification' },
+ { name: 'DeepSeek Chat', slug: 'deepseek', note: 'Cost-effective batch code checking across large project portfolios' },
+ ],
+ },
+ {
+ id: 'ai-rendering-visualization-vr',
+ title: '8. AI for Rendering, Visualization & VR Walkthroughs',
+ icon: Image,
+ color: 'bg-amber-50 ',
+ text: `Architectural visualisation has always been critical for client approval, marketing, and design communication. AI has dramatically accelerated rendering pipelines — what once required overnight GPU renders or expensive render farm time can now be generated in minutes via cloud-based AI services. The quality gap between AI renders and traditional ray-traced outputs has virtually disappeared in 2026.
 
 AI rendering and visualisation capabilities in 2026:
 • AI upscaling and denoising: Generate 4K-8K renders from lower-resolution outputs with realistic detail enhancement
@@ -369,19 +369,19 @@ Asia-Pacific visualisation trends:
 • Indian architectural firms use AI rendering for international project pitches, competing at global quality with local budgets
 • Australian and New Zealand practices use AI for environmental impact visualisation — how developments integrate with natural landscapes
 • Southeast Asian hospitality projects use AI renders to showcase resort designs with tropical vegetation and ocean views`,
-    tools: ['midjourney', 'leonardo-ai', 'runway'],
-    affiliateSuggestions: [
-      { name: 'Midjourney', slug: 'midjourney', note: 'Concept renders, material exploration, and visual mood boards' },
-      { name: 'Leonardo AI', slug: 'leonardo-ai', note: 'High-quality architectural renders with realistic materials and lighting' },
-      { name: 'Runway', slug: 'runway', note: 'Video walkthroughs and animated architectural flythroughs' },
-    ],
-  },
-  {
-    id: 'ai-urban-planning-smart-city-design',
-    title: '9. AI for Urban Planning & Smart City Design',
-    icon: Map,
-    color: 'bg-blue-50 dark:bg-blue-950/30',
-    text: `Urban planning — the complex discipline of designing cities, transport networks, and public spaces — has embraced AI for data-driven decision making at a scale that was previously impossible. From new city master plans to retrofitting existing urban fabrics, AI allows planners to simulate millions of design scenarios before breaking ground.
+ tools: ['midjourney', 'leonardo-ai', 'runway'],
+ affiliateSuggestions: [
+ { name: 'Midjourney', slug: 'midjourney', note: 'Concept renders, material exploration, and visual mood boards' },
+ { name: 'Leonardo AI', slug: 'leonardo-ai', note: 'High-quality architectural renders with realistic materials and lighting' },
+ { name: 'Runway', slug: 'runway', note: 'Video walkthroughs and animated architectural flythroughs' },
+ ],
+ },
+ {
+ id: 'ai-urban-planning-smart-city-design',
+ title: '9. AI for Urban Planning & Smart City Design',
+ icon: Map,
+ color: 'bg-blue-50 ',
+ text: `Urban planning — the complex discipline of designing cities, transport networks, and public spaces — has embraced AI for data-driven decision making at a scale that was previously impossible. From new city master plans to retrofitting existing urban fabrics, AI allows planners to simulate millions of design scenarios before breaking ground.
 
 AI capabilities in urban planning and smart city design in 2026:
 • Generative master planning: AI produces master plan options optimised for density, green space, transport access, and solar access
@@ -401,19 +401,19 @@ Asia-Pacific smart city landmarks driving AI adoption:
 • Japan's Super City programme — designating regions for AI-integrated urban planning with autonomous mobility
 • India's 100 Smart Cities Mission — using AI for integrated command and control centres in cities like Pune, Ahmedabad, and Surat
 • Malaysia's Forest City and Smart Selangor initiatives applying AI to tropical urban planning challenges`,
-    tools: ['gemini', 'perplexity', 'claude'],
-    affiliateSuggestions: [
-      { name: 'Gemini', slug: 'gemini', note: 'Geospatial analysis, demographic research, and transport modelling data' },
-      { name: 'Perplexity', slug: 'perplexity', note: 'Urban planning research, policy analysis, and case study research' },
-      { name: 'Claude', slug: 'claude', note: 'Master plan narrative documents, sustainability reports, and policy drafting' },
-    ],
-  },
-  {
-    id: 'ai-sustainable-design-energy-analysis',
-    title: '10. AI for Sustainable Design & Energy Analysis',
-    icon: Leaf,
-    color: 'bg-amber-50 dark:bg-amber-950/30',
-    text: `Sustainability is no longer optional in architecture and engineering — every project must meet stringent energy performance and carbon reduction targets. AI has become central to sustainable design, optimising building performance across energy, water, materials, and embodied carbon long before construction begins.
+ tools: ['gemini', 'perplexity', 'claude'],
+ affiliateSuggestions: [
+ { name: 'Gemini', slug: 'gemini', note: 'Geospatial analysis, demographic research, and transport modelling data' },
+ { name: 'Perplexity', slug: 'perplexity', note: 'Urban planning research, policy analysis, and case study research' },
+ { name: 'Claude', slug: 'claude', note: 'Master plan narrative documents, sustainability reports, and policy drafting' },
+ ],
+ },
+ {
+ id: 'ai-sustainable-design-energy-analysis',
+ title: '10. AI for Sustainable Design & Energy Analysis',
+ icon: Leaf,
+ color: 'bg-amber-50 ',
+ text: `Sustainability is no longer optional in architecture and engineering — every project must meet stringent energy performance and carbon reduction targets. AI has become central to sustainable design, optimising building performance across energy, water, materials, and embodied carbon long before construction begins.
 
 AI capabilities in sustainable design and energy analysis in 2026:
 • Early-stage energy modelling: AI predicts annual energy consumption from simple building geometry and glazing ratios
@@ -433,19 +433,19 @@ Asia-Pacific sustainability mandates:
 • China's carbon neutrality target by 2060 accelerates AI for building energy benchmarking and retrofit optimisation
 • India's Energy Conservation Building Code (ECBC) 2025 updates incorporate performance-based compliance pathways
 • New Zealand's Building Code upgrades for climate resilience drive AI adoption for both energy and carbon analysis`,
-    tools: ['chatgpt', 'claude', 'perplexity'],
-    affiliateSuggestions: [
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Energy modelling integration, sustainability report drafting, compliance verification' },
-      { name: 'Claude', slug: 'claude', note: 'Embodied carbon analysis, environmental product declaration review' },
-      { name: 'Perplexity', slug: 'perplexity', note: 'Green building rating system research (LEED, Green Mark, BREEAM, CASBEE, GRIHA)' },
-    ],
-  },
-  {
-    id: 'ai-construction-document-management',
-    title: '11. AI for Construction Document Management',
-    icon: FileText,
-    color: 'bg-blue-50 dark:bg-blue-950/30',
-    text: `A typical large construction project generates tens of thousands of documents — drawings, specifications, RFIs, submittals, change orders, meeting minutes, and site instructions. Managing this document volume manually is overwhelming. AI-powered document management systems automate classification, search, retrieval, and version control, ensuring teams always work from the latest information.
+ tools: ['chatgpt', 'claude', 'perplexity'],
+ affiliateSuggestions: [
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Energy modelling integration, sustainability report drafting, compliance verification' },
+ { name: 'Claude', slug: 'claude', note: 'Embodied carbon analysis, environmental product declaration review' },
+ { name: 'Perplexity', slug: 'perplexity', note: 'Green building rating system research (LEED, Green Mark, BREEAM, CASBEE, GRIHA)' },
+ ],
+ },
+ {
+ id: 'ai-construction-document-management',
+ title: '11. AI for Construction Document Management',
+ icon: FileText,
+ color: 'bg-blue-50 ',
+ text: `A typical large construction project generates tens of thousands of documents — drawings, specifications, RFIs, submittals, change orders, meeting minutes, and site instructions. Managing this document volume manually is overwhelming. AI-powered document management systems automate classification, search, retrieval, and version control, ensuring teams always work from the latest information.
 
 AI capabilities in construction document management in 2026:
 • Intelligent document classification: AI automatically categorises incoming documents by type, project, trade, and phase
@@ -464,19 +464,19 @@ Asia-Pacific context for document management:
 • Southeast Asian infrastructure projects (Indonesia's new capital Nusantara) use cloud-based AI document systems across distributed teams
 • Australian projects leverage AI for claims avoidance — tracking contractual correspondence to prevent disputes
 • PDF is the universal construction document format — AI tools that process PDFs natively are most effective`,
-    tools: ['claude', 'chatgpt', 'notion-ai'],
-    affiliateSuggestions: [
-      { name: 'Claude', slug: 'claude', note: 'Long document review, specification comparison, and contract analysis' },
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'RFI drafting, submittal review summaries, and meeting minutes' },
-      { name: 'Notion AI', slug: 'notion-ai', note: 'Project wiki, document repository, and team knowledge base' },
-    ],
-  },
-  {
-    id: 'ai-quantity-surveying-cost-estimation',
-    title: '12. AI for Quantity Surveying & Cost Estimation',
-    icon: DollarSignIcon,
-    color: 'bg-amber-50 dark:bg-amber-950/30',
-    text: `Quantity surveying and cost estimation — traditionally manual processes requiring detailed measurement and pricing of every building element — have been transformed by AI. Machine learning models trained on thousands of completed project cost databases can generate accurate budget estimates from early-stage design information and automatically quantify model elements.
+ tools: ['claude', 'chatgpt', 'notion-ai'],
+ affiliateSuggestions: [
+ { name: 'Claude', slug: 'claude', note: 'Long document review, specification comparison, and contract analysis' },
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'RFI drafting, submittal review summaries, and meeting minutes' },
+ { name: 'Notion AI', slug: 'notion-ai', note: 'Project wiki, document repository, and team knowledge base' },
+ ],
+ },
+ {
+ id: 'ai-quantity-surveying-cost-estimation',
+ title: '12. AI for Quantity Surveying & Cost Estimation',
+ icon: DollarSignIcon,
+ color: 'bg-amber-50 ',
+ text: `Quantity surveying and cost estimation — traditionally manual processes requiring detailed measurement and pricing of every building element — have been transformed by AI. Machine learning models trained on thousands of completed project cost databases can generate accurate budget estimates from early-stage design information and automatically quantify model elements.
 
 AI capabilities in quantity surveying and cost estimation in 2026:
 • Automated quantity takeoff: AI extracts quantities of concrete, steel, rebar, finishes, and MEP elements from BIM models
@@ -498,19 +498,19 @@ Asia-Pacific cost estimation context:
 • Japanese construction cost data — extremely detailed for earthquake-resistant construction — is AI-processed for consistent estimates
 
 AI-powered quantity surveying reduces takeoff time by 60-80% and improves estimate accuracy by 15-25%.`,
-    tools: ['deepseek', 'claude', 'chatgpt'],
-    affiliateSuggestions: [
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Cost estimate compilation, rate analysis, and BOQ formatting' },
-      { name: 'Claude', slug: 'claude', note: 'Value engineering analysis, cost plan reviews, and contract pricing schedules' },
-      { name: 'DeepSeek Chat', slug: 'deepseek', note: 'Cost-effective batch quantity takeoff spreadsheet processing' },
-    ],
-  },
-  {
-    id: 'ai-facility-management-digital-twins',
-    title: '13. AI for Facility Management & Digital Twins',
-    icon: Cog,
-    color: 'bg-blue-50 dark:bg-blue-950/30',
-    text: `Digital twins — real-time digital replicas of physical buildings — are powered by AI that ingests IoT sensor data, BMS (Building Management System) outputs, maintenance logs, and occupancy patterns to optimise building operations. For owners and facility managers, AI digital twins deliver measurable energy savings, predictive maintenance, and enhanced occupant comfort.
+ tools: ['deepseek', 'claude', 'chatgpt'],
+ affiliateSuggestions: [
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Cost estimate compilation, rate analysis, and BOQ formatting' },
+ { name: 'Claude', slug: 'claude', note: 'Value engineering analysis, cost plan reviews, and contract pricing schedules' },
+ { name: 'DeepSeek Chat', slug: 'deepseek', note: 'Cost-effective batch quantity takeoff spreadsheet processing' },
+ ],
+ },
+ {
+ id: 'ai-facility-management-digital-twins',
+ title: '13. AI for Facility Management & Digital Twins',
+ icon: Cog,
+ color: 'bg-blue-50 ',
+ text: `Digital twins — real-time digital replicas of physical buildings — are powered by AI that ingests IoT sensor data, BMS (Building Management System) outputs, maintenance logs, and occupancy patterns to optimise building operations. For owners and facility managers, AI digital twins deliver measurable energy savings, predictive maintenance, and enhanced occupant comfort.
 
 AI capabilities in facility management and digital twins in 2026:
 • Real-time energy optimisation: AI adjusts HVAC scheduling, lighting levels, and setpoints based on occupancy and weather forecasts
@@ -529,19 +529,19 @@ Asia-Pacific digital twin leaders:
 • Japan's Shimizu Corporation uses digital twins for smart building operations in Tokyo and Osaka
 • Australian universities (University of Melbourne, UNSW) operate campus digital twins for energy and space management
 • Thailand's One Bangkok — a 16.7-hectare development with full digital twin for integrated facilities management`,
-    tools: ['gemini', 'chatgpt', 'claude'],
-    affiliateSuggestions: [
-      { name: 'Gemini', slug: 'gemini', note: 'IoT data analysis, sensor integration logic, and operational analytics' },
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'IoT data analysis, sensor data processing, and operational reporting' },
-      { name: 'Claude', slug: 'claude', note: 'Facility management reports, maintenance schedules, and compliance documentation' },
-    ],
-  },
-  {
-    id: 'ai-civil-engineering-infrastructure-design',
-    title: '14. AI for Civil Engineering & Infrastructure Design',
-    icon: Route,
-    color: 'bg-amber-50 dark:bg-amber-950/30',
-    text: `Civil engineering — covering roads, bridges, tunnels, dams, airports, and water infrastructure — has embraced AI for design optimisation, geotechnical analysis, and construction sequencing. Infrastructure projects in Asia-Pacific are among the largest globally, and AI is essential for managing their complexity and compressed delivery schedules.
+ tools: ['gemini', 'chatgpt', 'claude'],
+ affiliateSuggestions: [
+ { name: 'Gemini', slug: 'gemini', note: 'IoT data analysis, sensor integration logic, and operational analytics' },
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'IoT data analysis, sensor data processing, and operational reporting' },
+ { name: 'Claude', slug: 'claude', note: 'Facility management reports, maintenance schedules, and compliance documentation' },
+ ],
+ },
+ {
+ id: 'ai-civil-engineering-infrastructure-design',
+ title: '14. AI for Civil Engineering & Infrastructure Design',
+ icon: Route,
+ color: 'bg-amber-50 ',
+ text: `Civil engineering — covering roads, bridges, tunnels, dams, airports, and water infrastructure — has embraced AI for design optimisation, geotechnical analysis, and construction sequencing. Infrastructure projects in Asia-Pacific are among the largest globally, and AI is essential for managing their complexity and compressed delivery schedules.
 
 AI capabilities in civil engineering and infrastructure design in 2026:
 • Automated road and highway alignment: AI generates optimal horizontal and vertical alignments minimising earthworks and construction cost
@@ -562,401 +562,401 @@ Asia-Pacific infrastructure AI adoption:
 • Japan's i-Construction 2.0 applies AI to infrastructure lifecycle management — from survey to demolition
 • Thailand and Vietnam use AI for flood mitigation infrastructure — drainage networks, retention basins, and dyke systems
 • Philippines' Build Better More programme leverages AI for rapid bridge and road design in disaster-prone regions`,
-    tools: ['gemini', 'chatgpt', 'claude'],
-    affiliateSuggestions: [
-      { name: 'Gemini', slug: 'gemini', note: 'Geospatial analysis, topographic survey data processing, and transport modelling' },
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Infrastructure design calculations, drainage analysis, and specification drafting' },
-      { name: 'Claude', slug: 'claude', note: 'Geotechnical report analysis, construction sequencing, and infrastructure asset management' },
-    ],
-  },
+ tools: ['gemini', 'chatgpt', 'claude'],
+ affiliateSuggestions: [
+ { name: 'Gemini', slug: 'gemini', note: 'Geospatial analysis, topographic survey data processing, and transport modelling' },
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Infrastructure design calculations, drainage analysis, and specification drafting' },
+ { name: 'Claude', slug: 'claude', note: 'Geotechnical report analysis, construction sequencing, and infrastructure asset management' },
+ ],
+ },
 ];
 
 const guideFaqs = [
-  {
-    "question": "What is the best AI design tool for architects?",
-    "answer": "Generative design tools like Autodesk Forma use AI to explore thousands of design options based on constraints. For visualization, Midjourney creates concept renders from text descriptions. For Asian projects, local building code compliance tools are essential."
-  },
-  {
-    "question": "Can AI help with structural engineering calculations?",
-    "answer": "AI tools assist with structural analysis by running simulations and optimizing designs for load distribution. However, critical calculations require licensed professional engineers to verify outputs."
-  }
+ {
+ "question": "What is the best AI design tool for architects?",
+ "answer": "Generative design tools like Autodesk Forma use AI to explore thousands of design options based on constraints. For visualization, Midjourney creates concept renders from text descriptions. For Asian projects, local building code compliance tools are essential."
+ },
+ {
+ "question": "Can AI help with structural engineering calculations?",
+ "answer": "AI tools assist with structural analysis by running simulations and optimizing designs for load distribution. However, critical calculations require licensed professional engineers to verify outputs."
+ }
 ];
 
 export default function AIToolsForArchEngPage() {
-  const breadcrumbItems = [
-    { name: 'Home', item: '/' },
-    { name: 'Guides', item: '/guides' },
-    { name: 'AI for Architecture & Engineering', item: '/guides/ai-tools-for-architecture-engineering' },
-  ];
+ const breadcrumbItems = [
+ { name: 'Home', item: '/' },
+ { name: 'Guides', item: '/guides' },
+ { name: 'AI for Architecture & Engineering', item: '/guides/ai-tools-for-architecture-engineering' },
+ ];
 
-  const allToolSlugs = [...new Set(sections.flatMap((s) => s.tools))];
-  const featuredTools = toolsData.filter((t) => allToolSlugs.includes(t.slug));
+ const allToolSlugs = [...new Set(sections.flatMap((s) => s.tools))];
+ const featuredTools = toolsData.filter((t) => allToolSlugs.includes(t.slug));
 
-  return (
-    <>
-      <BreadcrumbSchema items={breadcrumbItems} />
-      <article className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900">
-        {/* Hero */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-cyan-600 to-teal-700 dark:from-blue-950 dark:via-cyan-950 dark:to-teal-950">
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-          <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-4xl text-center">
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm">
-                <Building2 className="h-4 w-4" />
-                Architecture & Engineering
-              </div>
-              <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Best AI Tools for Architecture & Engineering in 2026
-              </h1>
-              <p className="mx-auto mb-8 max-w-3xl text-lg text-white/80 sm:text-xl">
-                From AI-powered architectural design and BIM automation to structural analysis, construction management, and digital twins — the definitive guide to AI tools transforming the AEC industry for firms across Asia-Pacific.
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/70">
-                <span className="flex items-center gap-1.5">
-                  <BookOpen className="h-4 w-4" />
-                  30 min read
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <Layers className="h-4 w-4" />
-                  14 categories
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <Trophy className="h-4 w-4" />
-                  12+ tools reviewed
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
+ return (
+ <>
+ <BreadcrumbSchema items={breadcrumbItems} />
+ <article className="min-h-screen bg-gradient-to-b from-slate-50 to-white ">
+ {/* Hero */}
+ <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-cyan-600 to-teal-700 ">
+ <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+ <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl text-center">
+ <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm">
+ <Building2 className="h-4 w-4" />
+ Architecture & Engineering
+ </div>
+ <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+ Best AI Tools for Architecture & Engineering in 2026
+ </h1>
+ <p className="mx-auto mb-8 max-w-3xl text-lg text-white/80 sm:text-xl">
+ From AI-powered architectural design and BIM automation to structural analysis, construction management, and digital twins — the definitive guide to AI tools transforming the AEC industry for firms across Asia-Pacific.
+ </p>
+ <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/70">
+ <span className="flex items-center gap-1.5">
+ <BookOpen className="h-4 w-4" />
+ 30 min read
+ </span>
+ <span className="flex items-center gap-1.5">
+ <Layers className="h-4 w-4" />
+ 14 categories
+ </span>
+ <span className="flex items-center gap-1.5">
+ <Trophy className="h-4 w-4" />
+ 12+ tools reviewed
+ </span>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        {/* Table of Contents */}
-        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800/50">
-              <h2 className="mb-4 text-xl font-semibold text-slate-900 dark:text-white">
-                Table of Contents
-              </h2>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {sections.map((section) => (
-                  <Link
-                    key={section.id}
-                    href={`#${section.id}`}
-                    className="flex items-center gap-3 rounded-lg p-3 text-sm text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-700/50 dark:hover:text-white"
-                  >
-                    <section.icon className="h-5 w-5 shrink-0 text-cyan-500" />
-                    <span>{section.title}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+ {/* Table of Contents */}
+ <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl">
+ <div className="rounded-2xl border border-slate-200 bg-white p-6 ">
+ <h2 className="mb-4 text-xl font-semibold text-slate-900 ">
+ Table of Contents
+ </h2>
+ <div className="grid gap-3 sm:grid-cols-2">
+ {sections.map((section) => (
+ <Link
+ key={section.id}
+ href={`#${section.id}`}
+ className="flex items-center gap-3 rounded-lg p-3 text-sm text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-900 "
+ >
+ <section.icon className="h-5 w-5 shrink-0 text-cyan-500" />
+ <span>{section.title}</span>
+ </Link>
+ ))}
+ </div>
+ </div>
+ </div>
+ </section>
 
-        {/* Each Section */}
-        {sections.map((section) => (
-          <section
-            key={section.id}
-            id={section.id}
-            className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"
-          >
-            <div className="mx-auto max-w-4xl">
-              <div className={`rounded-2xl border border-slate-200 p-8 dark:border-slate-700 ${section.color}`}>
-                <div className="mb-6 flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-sm dark:bg-slate-800">
-                    <section.icon className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
-                  </div>
-                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                    {section.title}
-                  </h2>
-                </div>
+ {/* Each Section */}
+ {sections.map((section) => (
+ <section
+ key={section.id}
+ id={section.id}
+ className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"
+ >
+ <div className="mx-auto max-w-4xl">
+ <div className={`rounded-2xl border border-slate-200 p-8 ${section.color}`}>
+ <div className="mb-6 flex items-center gap-4">
+ <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-sm ">
+ <section.icon className="h-6 w-6 text-cyan-600 " />
+ </div>
+ <h2 className="text-2xl font-bold text-slate-900 ">
+ {section.title}
+ </h2>
+ </div>
 
-                <div className="prose prose-lg max-w-none dark:prose-invert">
-                  {section.text.split('\n').map((paragraph, i) => {
-                    if (paragraph.trim().startsWith('•')) {
-                      return (
-                        <li key={i} className="ml-4 text-slate-700 dark:text-slate-300">
-                          {paragraph.trim().replace('• ', '')}
-                        </li>
-                      );
-                    }
-                    if (paragraph.trim().startsWith('|') && paragraph.includes('|')) {
-                      return <p key={i} className="text-sm font-mono text-slate-500">{paragraph.trim()}</p>;
-                    }
-                    if (paragraph.trim() === '') return null;
-                    return (
-                      <p key={i} className="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">
-                        {paragraph.trim()}
-                      </p>
-                    );
-                  })}
-                </div>
+ <div className="prose prose-lg max-w-none ">
+ {section.text.split('\n').map((paragraph, i) => {
+ if (paragraph.trim().startsWith('•')) {
+ return (
+ <li key={i} className="ml-4 text-slate-700 ">
+ {paragraph.trim().replace('• ', '')}
+ </li>
+ );
+ }
+ if (paragraph.trim().startsWith('|') && paragraph.includes('|')) {
+ return <p key={i} className="text-sm font-mono text-slate-500">{paragraph.trim()}</p>;
+ }
+ if (paragraph.trim() === '') return null;
+ return (
+ <p key={i} className="mb-4 text-slate-700 leading-relaxed">
+ {paragraph.trim()}
+ </p>
+ );
+ })}
+ </div>
 
-                {/* Tool Cards */}
-                {section.tools && section.tools.length > 0 && (
-                  <div className="mt-8">
-                    <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-white">
-                      <Wand2 className="h-5 w-5 text-cyan-500" />
-                      Recommended Tools
-                    </h3>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      {section.tools.map((slug) => {
-                        const tool = toolsData.find((t) => t.slug === slug);
-                        if (!tool) return null;
-                        return (
-                          <ToolCard
-                            key={tool.slug}
-                            tool={tool}
-                          />
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </section>
-        ))}
+ {/* Tool Cards */}
+ {section.tools && section.tools.length > 0 && (
+ <div className="mt-8">
+ <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-slate-900 ">
+ <Wand2 className="h-5 w-5 text-cyan-500" />
+ Recommended Tools
+ </h3>
+ <div className="grid gap-4 sm:grid-cols-2">
+ {section.tools.map((slug) => {
+ const tool = toolsData.find((t) => t.slug === slug);
+ if (!tool) return null;
+ return (
+ <ToolCard
+ key={tool.slug}
+ tool={tool}
+ />
+ );
+ })}
+ </div>
+ </div>
+ )}
+ </div>
+ </div>
+ </section>
+ ))}
 
-        {/* Comparison Table */}
-        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-slate-200 bg-white p-8 dark:border-slate-700 dark:bg-slate-800/50">
-              <h2 className="mb-6 text-2xl font-bold text-slate-900 dark:text-white">
-                AI Tools for Architecture & Engineering: Quick Comparison
-              </h2>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-slate-200 dark:border-slate-700">
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900 dark:text-white">Category</th>
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900 dark:text-white">Best AI Tool</th>
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900 dark:text-white">Key Feature</th>
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900 dark:text-white">Starting Price</th>
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900 dark:text-white">Asia-Pacific Compatibility</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100 dark:divide-slate-700">
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Architectural Design</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Midjourney</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Text-to-render, style exploration</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 dark:bg-green-900/30 dark:text-green-300">$10/mo</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Global — excellent for Asian architectural styles</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">BIM & Revit Automation</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">ChatGPT + Dynamo</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Automated parametric modelling, script generation</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 dark:bg-green-900/30 dark:text-green-300">$20/mo</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Excellent — supports CJK documentation</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Generative Design</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Leonardo AI</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Floor plan generation, space optimisation</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 dark:bg-green-900/30 dark:text-green-300">Free tier</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">High — works with Asian design standards</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Structural Analysis</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Claude</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Seismic code analysis, calculation reports</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 dark:bg-green-900/30 dark:text-green-300">$20/mo</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Excellent — understands AIJ, NZS, GB codes</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">MEP Engineering</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">ChatGPT</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">HVAC load calc, equipment sizing</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 dark:bg-green-900/30 dark:text-green-300">$20/mo</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">High — supports ASHRAE, Green Mark compliance</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Construction Management</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Gemini</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Site photo analysis, progress tracking</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 dark:bg-green-900/30 dark:text-green-300">Free</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Excellent — native multilingual support</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Code Compliance</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Claude</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Long-document code analysis</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 dark:bg-green-900/30 dark:text-green-300">$20/mo</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Excellent — handles IBC, BSL, GB, NCC codes</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Visualisation & VR</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Midjourney</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Photorealistic renders, material studies</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 dark:bg-green-900/30 dark:text-green-300">$10/mo</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Global — excellent for Asian landscape renders</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Sustainability Analysis</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Claude</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Embodied carbon, lifecycle assessment</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 dark:bg-green-900/30 dark:text-green-300">$20/mo</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Excellent — supports Green Mark, CASBEE, GRIHA</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Quantity Surveying</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">DeepSeek</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Batch BOQ processing, cost estimation</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 dark:bg-green-900/30 dark:text-green-300">Free</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Excellent — strong CJK, economical for scale</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
+ {/* Comparison Table */}
+ <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl">
+ <div className="rounded-2xl border border-slate-200 bg-white p-8 ">
+ <h2 className="mb-6 text-2xl font-bold text-slate-900 ">
+ AI Tools for Architecture & Engineering: Quick Comparison
+ </h2>
+ <div className="overflow-x-auto">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-slate-200 ">
+ <th className="px-4 py-3 text-left font-semibold text-slate-900 ">Category</th>
+ <th className="px-4 py-3 text-left font-semibold text-slate-900 ">Best AI Tool</th>
+ <th className="px-4 py-3 text-left font-semibold text-slate-900 ">Key Feature</th>
+ <th className="px-4 py-3 text-left font-semibold text-slate-900 ">Starting Price</th>
+ <th className="px-4 py-3 text-left font-semibold text-slate-900 ">Asia-Pacific Compatibility</th>
+ </tr>
+ </thead>
+ <tbody className="divide-y divide-slate-100 ">
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">Architectural Design</td>
+ <td className="px-4 py-3 text-slate-600 ">Midjourney</td>
+ <td className="px-4 py-3 text-slate-600 ">Text-to-render, style exploration</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 ">$10/mo</span></td>
+ <td className="px-4 py-3 text-slate-600 ">Global — excellent for Asian architectural styles</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">BIM & Revit Automation</td>
+ <td className="px-4 py-3 text-slate-600 ">ChatGPT + Dynamo</td>
+ <td className="px-4 py-3 text-slate-600 ">Automated parametric modelling, script generation</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 ">$20/mo</span></td>
+ <td className="px-4 py-3 text-slate-600 ">Excellent — supports CJK documentation</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">Generative Design</td>
+ <td className="px-4 py-3 text-slate-600 ">Leonardo AI</td>
+ <td className="px-4 py-3 text-slate-600 ">Floor plan generation, space optimisation</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 ">Free tier</span></td>
+ <td className="px-4 py-3 text-slate-600 ">High — works with Asian design standards</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">Structural Analysis</td>
+ <td className="px-4 py-3 text-slate-600 ">Claude</td>
+ <td className="px-4 py-3 text-slate-600 ">Seismic code analysis, calculation reports</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 ">$20/mo</span></td>
+ <td className="px-4 py-3 text-slate-600 ">Excellent — understands AIJ, NZS, GB codes</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">MEP Engineering</td>
+ <td className="px-4 py-3 text-slate-600 ">ChatGPT</td>
+ <td className="px-4 py-3 text-slate-600 ">HVAC load calc, equipment sizing</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 ">$20/mo</span></td>
+ <td className="px-4 py-3 text-slate-600 ">High — supports ASHRAE, Green Mark compliance</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">Construction Management</td>
+ <td className="px-4 py-3 text-slate-600 ">Gemini</td>
+ <td className="px-4 py-3 text-slate-600 ">Site photo analysis, progress tracking</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 ">Free</span></td>
+ <td className="px-4 py-3 text-slate-600 ">Excellent — native multilingual support</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">Code Compliance</td>
+ <td className="px-4 py-3 text-slate-600 ">Claude</td>
+ <td className="px-4 py-3 text-slate-600 ">Long-document code analysis</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 ">$20/mo</span></td>
+ <td className="px-4 py-3 text-slate-600 ">Excellent — handles IBC, BSL, GB, NCC codes</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">Visualisation & VR</td>
+ <td className="px-4 py-3 text-slate-600 ">Midjourney</td>
+ <td className="px-4 py-3 text-slate-600 ">Photorealistic renders, material studies</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 ">$10/mo</span></td>
+ <td className="px-4 py-3 text-slate-600 ">Global — excellent for Asian landscape renders</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">Sustainability Analysis</td>
+ <td className="px-4 py-3 text-slate-600 ">Claude</td>
+ <td className="px-4 py-3 text-slate-600 ">Embodied carbon, lifecycle assessment</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 ">$20/mo</span></td>
+ <td className="px-4 py-3 text-slate-600 ">Excellent — supports Green Mark, CASBEE, GRIHA</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">Quantity Surveying</td>
+ <td className="px-4 py-3 text-slate-600 ">DeepSeek</td>
+ <td className="px-4 py-3 text-slate-600 ">Batch BOQ processing, cost estimation</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700 ">Free</span></td>
+ <td className="px-4 py-3 text-slate-600 ">Excellent — strong CJK, economical for scale</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        {/* Pricing Guide */}
-        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-green-50 to-emerald-50 p-8 dark:border-slate-700 dark:from-green-950/30 dark:to-emerald-950/30">
-              <h2 className="mb-4 text-2xl font-bold text-slate-900 dark:text-white">
-                AEC Firm AI Budget Guide
-              </h2>
-              <p className="mb-6 text-slate-700 dark:text-slate-300">
-                Estimated monthly AI tool costs for different AEC firm sizes. These estimates assume pro/paid tiers of the recommended tools.
-              </p>
-              <div className="grid gap-4 sm:grid-cols-3">
-                <div className="rounded-xl border border-green-200 bg-white p-6 dark:border-green-800 dark:bg-slate-800">
-                  <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">Small Practice</h3>
-                  <p className="mb-4 text-3xl font-bold text-green-600">$80-150<span className="text-base font-normal text-slate-500">/mo</span></p>
-                  <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 image AI ($10-30)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 LLM ($20)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 code assistant ($10-20)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 document AI ($10)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> Free tier for research (Gemini)</li>
-                    <li className="mt-3 text-xs font-medium text-green-600">Covers core design & documentation</li>
-                  </ul>
-                </div>
-                <div className="rounded-xl border border-blue-200 bg-white p-6 dark:border-blue-800 dark:bg-slate-800">
-                  <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">Medium Firm</h3>
-                  <p className="mb-4 text-3xl font-bold text-blue-600">$400-1,200<span className="text-base font-normal text-slate-500">/mo</span></p>
-                  <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> 3-5 LLM seats ($60-100)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> 2-3 image AI seats ($30-90)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> 2 document AI ($20-40)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> BIM automation scripts ($50-200)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> Research & compliance ($20)</li>
-                    <li className="mt-3 text-xs font-medium text-blue-600">Multi-disciplinary team coverage</li>
-                  </ul>
-                </div>
-                <div className="rounded-xl border border-purple-200 bg-white p-6 dark:border-purple-800 dark:bg-slate-800">
-                  <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">Large Enterprise</h3>
-                  <p className="mb-4 text-3xl font-bold text-purple-600">$3,000-10,000<span className="text-base font-normal text-slate-500">/mo</span></p>
-                  <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Enterprise-wide license seats</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Custom AI model training</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Digital twin integration</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> AI-powered QA pipeline</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Dedicated API infrastructure</li>
-                    <li className="mt-3 text-xs font-medium text-purple-600">Enterprise-grade digital transformation</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+ {/* Pricing Guide */}
+ <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl">
+ <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-green-50 to-emerald-50 p-8 ">
+ <h2 className="mb-4 text-2xl font-bold text-slate-900 ">
+ AEC Firm AI Budget Guide
+ </h2>
+ <p className="mb-6 text-slate-700 ">
+ Estimated monthly AI tool costs for different AEC firm sizes. These estimates assume pro/paid tiers of the recommended tools.
+ </p>
+ <div className="grid gap-4 sm:grid-cols-3">
+ <div className="rounded-xl border border-green-200 bg-white p-6 ">
+ <h3 className="mb-2 text-lg font-semibold text-slate-900 ">Small Practice</h3>
+ <p className="mb-4 text-3xl font-bold text-green-600">$80-150<span className="text-base font-normal text-slate-500">/mo</span></p>
+ <ul className="space-y-2 text-sm text-slate-600 ">
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 image AI ($10-30)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 LLM ($20)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 code assistant ($10-20)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 document AI ($10)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> Free tier for research (Gemini)</li>
+ <li className="mt-3 text-xs font-medium text-green-600">Covers core design & documentation</li>
+ </ul>
+ </div>
+ <div className="rounded-xl border border-blue-200 bg-white p-6 ">
+ <h3 className="mb-2 text-lg font-semibold text-slate-900 ">Medium Firm</h3>
+ <p className="mb-4 text-3xl font-bold text-blue-600">$400-1,200<span className="text-base font-normal text-slate-500">/mo</span></p>
+ <ul className="space-y-2 text-sm text-slate-600 ">
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> 3-5 LLM seats ($60-100)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> 2-3 image AI seats ($30-90)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> 2 document AI ($20-40)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> BIM automation scripts ($50-200)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> Research & compliance ($20)</li>
+ <li className="mt-3 text-xs font-medium text-blue-600">Multi-disciplinary team coverage</li>
+ </ul>
+ </div>
+ <div className="rounded-xl border border-purple-200 bg-white p-6 ">
+ <h3 className="mb-2 text-lg font-semibold text-slate-900 ">Large Enterprise</h3>
+ <p className="mb-4 text-3xl font-bold text-purple-600">$3,000-10,000<span className="text-base font-normal text-slate-500">/mo</span></p>
+ <ul className="space-y-2 text-sm text-slate-600 ">
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Enterprise-wide license seats</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Custom AI model training</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Digital twin integration</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> AI-powered QA pipeline</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Dedicated API infrastructure</li>
+ <li className="mt-3 text-xs font-medium text-purple-600">Enterprise-grade digital transformation</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        {/* FAQ */}
-        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-slate-200 bg-white p-8 dark:border-slate-700 dark:bg-slate-800/50">
-              <h2 className="mb-6 text-2xl font-bold text-slate-900 dark:text-white">
-                Frequently Asked Questions
-              </h2>
-              <div className="space-y-6">
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    Can AI replace architects and engineers entirely?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    No — AI excels at generating design options, automating repetitive drafting, analysing structural calculations, and checking code compliance. However, human architects and engineers remain essential for design intent, client relationships, creative vision, ethical judgement, and professional liability. The most successful AEC firms treat AI as a force multiplier — handling the heavy lifting while professionals focus on design quality, innovation, and client service.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    What's the best AI tool for an architecture firm just getting started?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Start with Midjourney or Leonardo AI for concept visualisation ($10-30/mo each) and ChatGPT or Claude for documentation and code compliance ($20/mo each). This $30-50/month starter stack covers the two biggest time drains: early-stage visualisation for client presentations and document drafting. Add Gemini (free) for research. As your firm becomes more comfortable, expand into BIM automation tools and AI site monitoring.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    How reliable is AI-generated building code compliance checking?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    AI code checking is highly reliable for well-defined, rule-based clauses — minimum door widths, fire ratings, egress distances, accessibility requirements. However, AI should be treated as a first-pass filter rather than a final authority. Complex interpretive clauses, performance-based code pathways, and jurisdiction-specific amendments still require human expert review. The most effective workflow is AI flagging + senior engineer verification. Singapore's CORENET system demonstrates this hybrid approach at scale.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    What's the return on investment for AI tools in AEC?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Firms report 30-50% faster design iterations, 40-60% reduction in documentation time, 20-30% fewer site conflicts, and 15-20% project schedule compression after adopting AI tools. For a typical medium-sized architecture firm (20-50 staff), this translates to $200,000-500,000 annual savings from increased productivity and reduced rework. The ROI period is typically 3-6 months — AI tool subscriptions are small relative to the productivity gains.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    What are the professional liability implications of using AI in design?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Professional liability remains with the architect or engineer of record, regardless of whether AI was used in the design process. Best practices: document your AI tool usage and verification process, maintain human review of all AI-generated outputs, include AI verification in your quality management system, and check professional indemnity insurance coverage for AI-assisted work. Jurisdictions like Singapore, Australia, and the UK are developing specific guidance on AI use in regulated design professions.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    Which building codes can AI currently handle in Asia-Pacific?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    AI compliance tools currently support Singapore's Building Control Act and Code of Practice, Japan's Building Standard Law, China's GB series (GB 50011 seismic, GB 50016 fire, GB 50352 accessibility), Australia's NCC, Hong Kong's Building Regulations, India's NBC and ECBC, and New Zealand's Building Code. Support for codes in Vietnam, Thailand, Indonesia, and the Philippines is growing as demand from local AEC firms increases. Always verify AI compliance outputs with a qualified professional.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+ {/* FAQ */}
+ <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl">
+ <div className="rounded-2xl border border-slate-200 bg-white p-8 ">
+ <h2 className="mb-6 text-2xl font-bold text-slate-900 ">
+ Frequently Asked Questions
+ </h2>
+ <div className="space-y-6">
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ Can AI replace architects and engineers entirely?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ No — AI excels at generating design options, automating repetitive drafting, analysing structural calculations, and checking code compliance. However, human architects and engineers remain essential for design intent, client relationships, creative vision, ethical judgement, and professional liability. The most successful AEC firms treat AI as a force multiplier — handling the heavy lifting while professionals focus on design quality, innovation, and client service.
+ </p>
+ </div>
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ What's the best AI tool for an architecture firm just getting started?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ Start with Midjourney or Leonardo AI for concept visualisation ($10-30/mo each) and ChatGPT or Claude for documentation and code compliance ($20/mo each). This $30-50/month starter stack covers the two biggest time drains: early-stage visualisation for client presentations and document drafting. Add Gemini (free) for research. As your firm becomes more comfortable, expand into BIM automation tools and AI site monitoring.
+ </p>
+ </div>
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ How reliable is AI-generated building code compliance checking?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ AI code checking is highly reliable for well-defined, rule-based clauses — minimum door widths, fire ratings, egress distances, accessibility requirements. However, AI should be treated as a first-pass filter rather than a final authority. Complex interpretive clauses, performance-based code pathways, and jurisdiction-specific amendments still require human expert review. The most effective workflow is AI flagging + senior engineer verification. Singapore's CORENET system demonstrates this hybrid approach at scale.
+ </p>
+ </div>
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ What's the return on investment for AI tools in AEC?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ Firms report 30-50% faster design iterations, 40-60% reduction in documentation time, 20-30% fewer site conflicts, and 15-20% project schedule compression after adopting AI tools. For a typical medium-sized architecture firm (20-50 staff), this translates to $200,000-500,000 annual savings from increased productivity and reduced rework. The ROI period is typically 3-6 months — AI tool subscriptions are small relative to the productivity gains.
+ </p>
+ </div>
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ What are the professional liability implications of using AI in design?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ Professional liability remains with the architect or engineer of record, regardless of whether AI was used in the design process. Best practices: document your AI tool usage and verification process, maintain human review of all AI-generated outputs, include AI verification in your quality management system, and check professional indemnity insurance coverage for AI-assisted work. Jurisdictions like Singapore, Australia, and the UK are developing specific guidance on AI use in regulated design professions.
+ </p>
+ </div>
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ Which building codes can AI currently handle in Asia-Pacific?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ AI compliance tools currently support Singapore's Building Control Act and Code of Practice, Japan's Building Standard Law, China's GB series (GB 50011 seismic, GB 50016 fire, GB 50352 accessibility), Australia's NCC, Hong Kong's Building Regulations, India's NBC and ECBC, and New Zealand's Building Code. Support for codes in Vietnam, Thailand, Indonesia, and the Philippines is growing as demand from local AEC firms increases. Always verify AI compliance outputs with a qualified professional.
+ </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        {/* CTA */}
-        <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl bg-gradient-to-br from-cyan-600 to-blue-600 p-12 text-center dark:from-cyan-900 dark:to-blue-900">
-              <h2 className="mb-4 text-3xl font-bold text-white">
-                Ready to Transform Your AEC Practice?
-              </h2>
-              <p className="mx-auto mb-8 max-w-2xl text-lg text-white/80">
-                Explore all AI tools and find the perfect stack for your architecture or engineering firm. Compare pricing, features, and Asia-Pacific availability.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/tools"
-                  className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 font-semibold text-cyan-700 shadow-lg transition-all hover:bg-white/90 hover:shadow-xl"
-                >
-                  Browse All AI Tools
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-                <Link
-                  href="/guides"
-                  className="inline-flex items-center gap-2 rounded-xl border border-white/30 px-8 py-4 font-semibold text-white transition-all hover:bg-white/10"
-                >
-                  More Industry Guides
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-            {/* FAQ Schema */}
-      <FAQSchema faqs={guideFaqs} />
-    </article>
-    </>
-  );
+ {/* CTA */}
+ <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl">
+ <div className="rounded-2xl bg-gradient-to-br from-cyan-600 to-blue-600 p-12 text-center ">
+ <h2 className="mb-4 text-3xl font-bold text-white">
+ Ready to Transform Your AEC Practice?
+ </h2>
+ <p className="mx-auto mb-8 max-w-2xl text-lg text-white/80">
+ Explore all AI tools and find the perfect stack for your architecture or engineering firm. Compare pricing, features, and Asia-Pacific availability.
+ </p>
+ <div className="flex flex-wrap justify-center gap-4">
+ <Link
+ href="/tools"
+ className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 font-semibold text-cyan-700 shadow-lg transition-all hover:bg-white/90 hover:shadow-xl"
+ >
+ Browse All AI Tools
+ <ArrowRight className="h-5 w-5" />
+ </Link>
+ <Link
+ href="/guides"
+ className="inline-flex items-center gap-2 rounded-xl border border-white/30 px-8 py-4 font-semibold text-white transition-all hover:bg-white/10"
+ >
+ More Industry Guides
+ </Link>
+ </div>
+ </div>
+ </div>
+ </section>
+ {/* FAQ Schema */}
+ <FAQSchema faqs={guideFaqs} />
+ </article>
+ </>
+ );
 }

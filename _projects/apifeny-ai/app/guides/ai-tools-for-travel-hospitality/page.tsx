@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  Zap, Clock, DollarSign, TrendingUp, Target, Users, CheckCircle, ArrowRight,
-  Sparkles, Bot, MessageSquare, BarChart3, Code, Globe, Shield, Smartphone,
-  BookOpen, Lightbulb, Rocket, Star, ChevronRight, Search, Pen, FileText, Edit3,
-  Share2, Phone, Mail, PieChart, Headphones, Building2, LineChart, Presentation,
-  Route, Compass, Plane, Star as StarIcon, Languages, CreditCard, Leaf, Hotel,
-  UtensilsCrossed, Camera, MapPin
+ Zap, Clock, DollarSign, TrendingUp, Target, Users, CheckCircle, ArrowRight,
+ Sparkles, Bot, MessageSquare, BarChart3, Code, Globe, Shield, Smartphone,
+ BookOpen, Lightbulb, Rocket, Star, ChevronRight, Search, Pen, FileText, Edit3,
+ Share2, Phone, Mail, PieChart, Headphones, Building2, LineChart, Presentation,
+ Route, Compass, Plane, Star as StarIcon, Languages, CreditCard, Leaf, Hotel,
+ UtensilsCrossed, Camera, MapPin
 } from 'lucide-react';
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
@@ -16,42 +16,42 @@ import FAQSchema from '@/components/FAQSchema';
 const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
-  title: 'Best AI Tools for Travel & Hospitality in 2026 — Itineraries, Hotel Ops, Marketing | Apifeny AI',
-  description:
-    'Compare the best AI tools for travel and hospitality in 2026. AI-powered itinerary planning, hotel revenue management, travel content marketing, airline operations, restaurant management, guest experience, and destination marketing — vetted for Asia-Pacific travelers, hotels, and travel businesses.',
-  keywords: [
-    'AI travel tools', 'AI hospitality tools', 'AI itinerary planner',
-    'AI hotel revenue management', 'AI travel content marketing',
-    'AI airline operations', 'AI restaurant management', 'AI guest experience',
-    'AI destination marketing', 'travel tech 2026', 'hotel AI tools',
-    'best AI for travel', 'AI travel planning', 'AI for hotels',
-    'AI for airlines', 'AI for restaurants', 'travel industry AI',
-    'APAC travel tech', 'AI tourism',
-  ],
-  alternates: { canonical: `${BASE_URL}/guides/ai-tools-for-travel-hospitality` },
-  openGraph: {
-    title: 'Best AI Tools for Travel & Hospitality in 2026 — Itineraries, Hotel Ops, Marketing',
-    description:
-      'Definitive guide to the best AI tools for travel and hospitality in 2026. AI-powered itinerary planning, hotel revenue management, travel content marketing, airline operations, restaurant management, guest experience, and destination marketing — vetted for Asia-Pacific travelers, hotels, and travel businesses.',
-    url: `${BASE_URL}/guides/ai-tools-for-travel-hospitality`,
-    type: 'article', locale: 'en_US', siteName: 'Apifeny AI',
-    images: [{ url: `${BASE_URL}/og/ai-tools-for-travel-hospitality.jpg`, width: 1200, height: 630, alt: 'Best AI Tools for Travel & Hospitality in 2026' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best AI Tools for Travel & Hospitality in 2026 — Itineraries, Hotel Ops, Marketing',
-    description:
-      'Definitive guide to AI tools for travel and hospitality — AI-powered itinerary planning, hotel revenue management, travel content marketing, airline operations, restaurant management, guest experience, and destination marketing, vetted for Asia-Pacific travelers, hotels, and travel businesses.',
-  },
+ title: 'Best AI Tools for Travel & Hospitality in 2026 — Itineraries, Hotel Ops, Marketing | Apifeny AI',
+ description:
+ 'Compare the best AI tools for travel and hospitality in 2026. AI-powered itinerary planning, hotel revenue management, travel content marketing, airline operations, restaurant management, guest experience, and destination marketing — vetted for Asia-Pacific travelers, hotels, and travel businesses.',
+ keywords: [
+ 'AI travel tools', 'AI hospitality tools', 'AI itinerary planner',
+ 'AI hotel revenue management', 'AI travel content marketing',
+ 'AI airline operations', 'AI restaurant management', 'AI guest experience',
+ 'AI destination marketing', 'travel tech 2026', 'hotel AI tools',
+ 'best AI for travel', 'AI travel planning', 'AI for hotels',
+ 'AI for airlines', 'AI for restaurants', 'travel industry AI',
+ 'APAC travel tech', 'AI tourism',
+ ],
+ alternates: { canonical: `${BASE_URL}/guides/ai-tools-for-travel-hospitality` },
+ openGraph: {
+ title: 'Best AI Tools for Travel & Hospitality in 2026 — Itineraries, Hotel Ops, Marketing',
+ description:
+ 'Definitive guide to the best AI tools for travel and hospitality in 2026. AI-powered itinerary planning, hotel revenue management, travel content marketing, airline operations, restaurant management, guest experience, and destination marketing — vetted for Asia-Pacific travelers, hotels, and travel businesses.',
+ url: `${BASE_URL}/guides/ai-tools-for-travel-hospitality`,
+ type: 'article', locale: 'en_US', siteName: 'Apifeny AI',
+ images: [{ url: `${BASE_URL}/og/ai-tools-for-travel-hospitality.jpg`, width: 1200, height: 630, alt: 'Best AI Tools for Travel & Hospitality in 2026' }],
+ },
+ twitter: {
+ card: 'summary_large_image',
+ title: 'Best AI Tools for Travel & Hospitality in 2026 — Itineraries, Hotel Ops, Marketing',
+ description:
+ 'Definitive guide to AI tools for travel and hospitality — AI-powered itinerary planning, hotel revenue management, travel content marketing, airline operations, restaurant management, guest experience, and destination marketing, vetted for Asia-Pacific travelers, hotels, and travel businesses.',
+ },
 };
 
 const sections = [
-  {
-    id: 'ai-itinerary-planning',
-    title: '1. AI for Itinerary Planning & Travel Booking',
-    icon: Route,
-    color: 'bg-sky-50 dark:bg-sky-950/30',
-    text: `AI-powered itinerary planning has transformed how travelers research, book, and navigate trips in 2026. What used to require hours of cross-referencing blogs, maps, and booking sites now happens in minutes with AI travel planners.
+ {
+ id: 'ai-itinerary-planning',
+ title: '1. AI for Itinerary Planning & Travel Booking',
+ icon: Route,
+ color: 'bg-sky-50 ',
+ text: `AI-powered itinerary planning has transformed how travelers research, book, and navigate trips in 2026. What used to require hours of cross-referencing blogs, maps, and booking sites now happens in minutes with AI travel planners.
 
 How AI transforms itinerary planning and travel booking:
 • Multi-destination itinerary generation: AI creates optimal travel routes considering distance, transport, opening hours, and traveler preferences
@@ -71,19 +71,19 @@ For Asia-Pacific travelers and travel businesses, AI itinerary planning is espec
 • Chinese outbound travel platforms use AI to curate itineraries for Chinese travelers visiting ASEAN countries, with WeChat Pay integration
 • Australian and New Zealand travel agencies use AI for self-drive itinerary planning across South Island and the Outback
 • Indian domestic travel apps use AI to optimize train and flight combinations for pilgrimages and multi-city business trips`,
-    tools: ['chatgpt', 'gemini', 'perplexity'],
-    affiliateSuggestions: [
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Conversational itinerary building with real-time updates' },
-      { name: 'Gemini', slug: 'gemini', note: 'Google Maps and Flights integration for seamless trip planning' },
-      { name: 'Perplexity', slug: 'perplexity', note: 'Cited research for destination information and reviews' },
-    ],
-  },
-  {
-    id: 'ai-hotel-revenue-management',
-    title: '2. AI for Hotel Revenue Management & Operations',
-    icon: Hotel,
-    color: 'bg-amber-50 dark:bg-amber-950/30',
-    text: `AI-driven revenue management has become the standard for hotels of all sizes in 2026. Independent hotels and boutique properties can now access revenue optimization technology that was previously available only to major hotel chains.
+ tools: ['chatgpt', 'gemini', 'perplexity'],
+ affiliateSuggestions: [
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Conversational itinerary building with real-time updates' },
+ { name: 'Gemini', slug: 'gemini', note: 'Google Maps and Flights integration for seamless trip planning' },
+ { name: 'Perplexity', slug: 'perplexity', note: 'Cited research for destination information and reviews' },
+ ],
+ },
+ {
+ id: 'ai-hotel-revenue-management',
+ title: '2. AI for Hotel Revenue Management & Operations',
+ icon: Hotel,
+ color: 'bg-amber-50 ',
+ text: `AI-driven revenue management has become the standard for hotels of all sizes in 2026. Independent hotels and boutique properties can now access revenue optimization technology that was previously available only to major hotel chains.
 
 AI capabilities in hotel revenue management and operations in 2026:
 • Dynamic pricing optimization: AI adjusts room rates in real time based on demand, competitor pricing, local events, seasons, and booking pace
@@ -103,18 +103,18 @@ For Asia-Pacific hotels, AI revenue management is especially impactful:
 • Singapore hotels use AI for corporate rate management
 • Bali villa operators use AI for extended-stay pricing
 • Australian hotel groups use AI for indigenous tourism experiences`,
-    tools: ['gemini', 'perplexity'],
-    affiliateSuggestions: [
-      { name: 'Gemini', slug: 'gemini', note: 'Data analysis for occupancy patterns and pricing forecasts' },
-      { name: 'Perplexity', slug: 'perplexity', note: 'Competitor pricing research and market intelligence' },
-    ],
-  },
-  {
-    id: 'ai-travel-content-marketing',
-    title: '3. AI for Travel Content & Destination Marketing',
-    icon: Camera,
-    color: 'bg-emerald-50 dark:bg-emerald-950/30',
-    text: `Travel content marketing has been revolutionized by AI in 2026. Destination marketing organizations, travel bloggers, OTAs, and tourism boards use AI to create, optimize, and distribute content at unprecedented scale.
+ tools: ['gemini', 'perplexity'],
+ affiliateSuggestions: [
+ { name: 'Gemini', slug: 'gemini', note: 'Data analysis for occupancy patterns and pricing forecasts' },
+ { name: 'Perplexity', slug: 'perplexity', note: 'Competitor pricing research and market intelligence' },
+ ],
+ },
+ {
+ id: 'ai-travel-content-marketing',
+ title: '3. AI for Travel Content & Destination Marketing',
+ icon: Camera,
+ color: 'bg-emerald-50 ',
+ text: `Travel content marketing has been revolutionized by AI in 2026. Destination marketing organizations, travel bloggers, OTAs, and tourism boards use AI to create, optimize, and distribute content at unprecedented scale.
 
 AI applications in travel content and destination marketing in 2026:
 • AI-generated travel guides: Create comprehensive destination guides from structured data feeds
@@ -134,19 +134,19 @@ For Asia-Pacific travel marketing:
 • Bali tourism stakeholders use AI for post-pandemic reputation marketing
 • Australian tourism leverages AI for indigenous tourism storytelling
 • South Korean tourism uses AI for K-culture content marketing`,
-    tools: ['chatgpt', 'midjourney', 'gemini'],
-    affiliateSuggestions: [
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Content creation for destination guides and blogs' },
-      { name: 'Midjourney', slug: 'midjourney', note: 'Visual assets and promotional imagery for destinations' },
-      { name: 'Gemini', slug: 'gemini', note: 'Multi-language content and SEO research' },
-    ],
-  },
-  {
-    id: 'ai-airline-operations',
-    title: '4. AI for Airline Operations & Customer Experience',
-    icon: Plane,
-    color: 'bg-blue-50 dark:bg-blue-950/30',
-    text: `Airlines across Asia-Pacific are investing heavily in AI to optimize operations, improve customer experience, and reduce costs.
+ tools: ['chatgpt', 'midjourney', 'gemini'],
+ affiliateSuggestions: [
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Content creation for destination guides and blogs' },
+ { name: 'Midjourney', slug: 'midjourney', note: 'Visual assets and promotional imagery for destinations' },
+ { name: 'Gemini', slug: 'gemini', note: 'Multi-language content and SEO research' },
+ ],
+ },
+ {
+ id: 'ai-airline-operations',
+ title: '4. AI for Airline Operations & Customer Experience',
+ icon: Plane,
+ color: 'bg-blue-50 ',
+ text: `Airlines across Asia-Pacific are investing heavily in AI to optimize operations, improve customer experience, and reduce costs.
 
 AI capabilities in airline operations in 2026:
 • Dynamic ticket pricing: AI adjusts fare classes based on booking curves, competitor pricing, and seasonality
@@ -167,18 +167,18 @@ Asia-Pacific airline innovation highlights:
 • Qantas leverages AI for customer sentiment analysis
 • Cathay Pacific uses AI for cargo revenue management
 • IndiGo uses AI for crew pairing optimization across their massive domestic network`,
-    tools: ['perplexity', 'gemini'],
-    affiliateSuggestions: [
-      { name: 'Perplexity', slug: 'perplexity', note: 'Competitive analysis and route market research' },
-      { name: 'Gemini', slug: 'gemini', note: 'Data analysis for operational patterns and customer insights' },
-    ],
-  },
-  {
-    id: 'ai-restaurant-management',
-    title: '5. AI for Restaurant & F&B Management',
-    icon: UtensilsCrossed,
-    color: 'bg-orange-50 dark:bg-orange-950/30',
-    text: `The restaurant and F&B industry has embraced AI for everything from kitchen operations to customer experience.
+ tools: ['perplexity', 'gemini'],
+ affiliateSuggestions: [
+ { name: 'Perplexity', slug: 'perplexity', note: 'Competitive analysis and route market research' },
+ { name: 'Gemini', slug: 'gemini', note: 'Data analysis for operational patterns and customer insights' },
+ ],
+ },
+ {
+ id: 'ai-restaurant-management',
+ title: '5. AI for Restaurant & F&B Management',
+ icon: UtensilsCrossed,
+ color: 'bg-orange-50 ',
+ text: `The restaurant and F&B industry has embraced AI for everything from kitchen operations to customer experience.
 
 AI applications in restaurant and F&B management in 2026:
 • Menu optimization: AI analyzes sales data to recommend menu pricing and seasonal specials
@@ -199,18 +199,18 @@ Asia-Pacific restaurant AI trends:
 • Melbourne cafes use AI for coffee bean roast profiling
 • Seoul K-BBQ restaurants use AI for table turnover optimization
 • Mumbai cloud kitchens use AI for hyperlocal menu engineering`,
-    tools: ['chatgpt', 'gemini'],
-    affiliateSuggestions: [
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Menu descriptions, customer feedback analysis, staff training docs' },
-      { name: 'Gemini', slug: 'gemini', note: 'Data analysis for inventory forecasting and sales trends' },
-    ],
-  },
-  {
-    id: 'ai-guest-experience',
-    title: '6. AI for Guest Experience & Personalization',
-    icon: StarIcon,
-    color: 'bg-rose-50 dark:bg-rose-950/30',
-    text: `Guest experience personalization has become the key competitive differentiator for hotels and hospitality businesses in 2026. AI enables hyper-personalization at scale.
+ tools: ['chatgpt', 'gemini'],
+ affiliateSuggestions: [
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Menu descriptions, customer feedback analysis, staff training docs' },
+ { name: 'Gemini', slug: 'gemini', note: 'Data analysis for inventory forecasting and sales trends' },
+ ],
+ },
+ {
+ id: 'ai-guest-experience',
+ title: '6. AI for Guest Experience & Personalization',
+ icon: StarIcon,
+ color: 'bg-rose-50 ',
+ text: `Guest experience personalization has become the key competitive differentiator for hotels and hospitality businesses in 2026. AI enables hyper-personalization at scale.
 
 AI capabilities for guest experience in 2026:
 • Pre-arrival personalization: AI analyzes guest profiles to prepare room preferences and welcome amenities
@@ -230,19 +230,19 @@ Asia-Pacific guest experience innovation:
 • Shangri-La Hotels uses AI for seamless check-in across their Asia-Pacific properties
 • Japanese capsule hotels use AI for contactless check-in
 • Thai luxury resorts use AI for personalized excursion planning`,
-    tools: ['chatgpt', 'gemini', 'claude'],
-    affiliateSuggestions: [
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Guest communication and chatbot responses' },
-      { name: 'Claude', slug: 'claude', note: 'Long-form guest preference analysis' },
-      { name: 'Gemini', slug: 'gemini', note: 'Multi-language guest communications' },
-    ],
-  },
-  {
-    id: 'ai-destination-marketing',
-    title: '7. AI for Destination Marketing & Tourism Boards',
-    icon: Globe,
-    color: 'bg-teal-50 dark:bg-teal-950/30',
-    text: `Destination marketing organizations and tourism boards across Asia-Pacific use AI to attract travelers, manage visitor flows, and promote sustainable tourism.
+ tools: ['chatgpt', 'gemini', 'claude'],
+ affiliateSuggestions: [
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Guest communication and chatbot responses' },
+ { name: 'Claude', slug: 'claude', note: 'Long-form guest preference analysis' },
+ { name: 'Gemini', slug: 'gemini', note: 'Multi-language guest communications' },
+ ],
+ },
+ {
+ id: 'ai-destination-marketing',
+ title: '7. AI for Destination Marketing & Tourism Boards',
+ icon: Globe,
+ color: 'bg-teal-50 ',
+ text: `Destination marketing organizations and tourism boards across Asia-Pacific use AI to attract travelers, manage visitor flows, and promote sustainable tourism.
 
 AI applications in destination marketing in 2026:
 • Visitor flow prediction: AI forecasts tourist numbers by origin market and season
@@ -262,19 +262,19 @@ Asia-Pacific DMO success stories:
 • Tourism Authority of Thailand uses AI for campaign personalization
 • Singapore Tourism Board uses AI for visitor flow management
 • Visit Korea uses AI for Hallyu tourism campaign measurement`,
-    tools: ['perplexity', 'gemini', 'chatgpt'],
-    affiliateSuggestions: [
-      { name: 'Perplexity', slug: 'perplexity', note: 'Market research and competitive benchmarking' },
-      { name: 'Gemini', slug: 'gemini', note: 'Multi-language content creation' },
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Campaign content generation' },
-    ],
-  },
-  {
-    id: 'ai-travel-language',
-    title: '8. AI for Language Translation & Cross-Cultural Communication',
-    icon: Languages,
-    color: 'bg-indigo-50 dark:bg-indigo-950/30',
-    text: `Language barriers remain one of the biggest friction points in travel and hospitality. By 2026, AI translation has become seamless, real-time, and culturally aware.
+ tools: ['perplexity', 'gemini', 'chatgpt'],
+ affiliateSuggestions: [
+ { name: 'Perplexity', slug: 'perplexity', note: 'Market research and competitive benchmarking' },
+ { name: 'Gemini', slug: 'gemini', note: 'Multi-language content creation' },
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Campaign content generation' },
+ ],
+ },
+ {
+ id: 'ai-travel-language',
+ title: '8. AI for Language Translation & Cross-Cultural Communication',
+ icon: Languages,
+ color: 'bg-indigo-50 ',
+ text: `Language barriers remain one of the biggest friction points in travel and hospitality. By 2026, AI translation has become seamless, real-time, and culturally aware.
 
 AI translation capabilities for travel and hospitality in 2026:
 • Real-time speech translation: AI translates conversations between travelers and staff
@@ -294,18 +294,18 @@ Asia-Pacific translation impact:
 • Vietnamese hospitality businesses use AI to replace multi-language front desk staff
 • Indian hotels use AI to manage 22 official languages
 • South Korea's tourism apps integrate AI translation for navigation and menus`,
-    tools: ['gemini', 'chatgpt'],
-    affiliateSuggestions: [
-      { name: 'Gemini', slug: 'gemini', note: 'Google Translate-powered real-time translation' },
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Context-aware translation with cultural nuance' },
-    ],
-  },
-  {
-    id: 'ai-sustainable-travel',
-    title: '9. AI for Sustainable & Eco-Tourism',
-    icon: Leaf,
-    color: 'bg-green-50 dark:bg-green-950/30',
-    text: `Sustainability has moved from niche concern to core requirement in travel. AI helps destinations, hotels, and travelers make environmentally responsible choices.
+ tools: ['gemini', 'chatgpt'],
+ affiliateSuggestions: [
+ { name: 'Gemini', slug: 'gemini', note: 'Google Translate-powered real-time translation' },
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Context-aware translation with cultural nuance' },
+ ],
+ },
+ {
+ id: 'ai-sustainable-travel',
+ title: '9. AI for Sustainable & Eco-Tourism',
+ icon: Leaf,
+ color: 'bg-green-50 ',
+ text: `Sustainability has moved from niche concern to core requirement in travel. AI helps destinations, hotels, and travelers make environmentally responsible choices.
 
 AI applications for sustainable tourism in 2026:
 • Carbon footprint calculation: AI estimates trip carbon footprints and suggests offsets
@@ -325,18 +325,18 @@ Asia-Pacific sustainable tourism AI applications:
 • Bali uses AI for water table monitoring
 • Bhutan uses AI for visitor quota management
 • New Zealand's Tiaki Promise uses AI for visitor education`,
-    tools: ['perplexity', 'gemini'],
-    affiliateSuggestions: [
-      { name: 'Perplexity', slug: 'perplexity', note: 'Sustainability research and eco-certification verification' },
-      { name: 'Gemini', slug: 'gemini', note: 'Carbon footprint calculations and environmental data analysis' },
-    ],
-  },
-  {
-    id: 'ai-travel-payments',
-    title: '10. AI for Travel Payments, Insurance & Fintech',
-    icon: CreditCard,
-    color: 'bg-violet-50 dark:bg-violet-950/30',
-    text: `Travel payments in Asia-Pacific are uniquely complex — fragmented across dozens of payment systems, currencies, and regulatory frameworks. AI simplifies travel finance.
+ tools: ['perplexity', 'gemini'],
+ affiliateSuggestions: [
+ { name: 'Perplexity', slug: 'perplexity', note: 'Sustainability research and eco-certification verification' },
+ { name: 'Gemini', slug: 'gemini', note: 'Carbon footprint calculations and environmental data analysis' },
+ ],
+ },
+ {
+ id: 'ai-travel-payments',
+ title: '10. AI for Travel Payments, Insurance & Fintech',
+ icon: CreditCard,
+ color: 'bg-violet-50 ',
+ text: `Travel payments in Asia-Pacific are uniquely complex — fragmented across dozens of payment systems, currencies, and regulatory frameworks. AI simplifies travel finance.
 
 AI applications in travel payments and fintech in 2026:
 • Dynamic currency conversion: AI finds the best exchange rates for travelers
@@ -356,364 +356,364 @@ Asia-Pacific travel fintech landscape:
 • Chinese outbound travel uses AI WeChat Pay and Alipay integration
 • Indian travelers use AI-optimized forex cards
 • Australian travel insurers use AI for real-time risk assessment`,
-    tools: ['chatgpt', 'gemini'],
-    affiliateSuggestions: [
-      { name: 'ChatGPT', slug: 'chatgpt', note: 'Document analysis for insurance claims' },
-      { name: 'Gemini', slug: 'gemini', note: 'Multi-currency analysis and payment method research' },
-    ],
-  },
+ tools: ['chatgpt', 'gemini'],
+ affiliateSuggestions: [
+ { name: 'ChatGPT', slug: 'chatgpt', note: 'Document analysis for insurance claims' },
+ { name: 'Gemini', slug: 'gemini', note: 'Multi-currency analysis and payment method research' },
+ ],
+ },
 ];
 
 const toolsSections = [
-  { number: 1, id: 'ai-itinerary-planning', label: 'Itinerary Planning' },
-  { number: 2, id: 'ai-hotel-revenue-management', label: 'Hotel Revenue' },
-  { number: 3, id: 'ai-travel-content-marketing', label: 'Content Marketing' },
-  { number: 4, id: 'ai-airline-operations', label: 'Airline Operations' },
-  { number: 5, id: 'ai-restaurant-management', label: 'Restaurant & F&B' },
-  { number: 6, id: 'ai-guest-experience', label: 'Guest Experience' },
-  { number: 7, id: 'ai-destination-marketing', label: 'Destination Marketing' },
-  { number: 8, id: 'ai-travel-language', label: 'Language Translation' },
-  { number: 9, id: 'ai-sustainable-travel', label: 'Sustainable Tourism' },
-  { number: 10, id: 'ai-travel-payments', label: 'Payments & Fintech' },
+ { number: 1, id: 'ai-itinerary-planning', label: 'Itinerary Planning' },
+ { number: 2, id: 'ai-hotel-revenue-management', label: 'Hotel Revenue' },
+ { number: 3, id: 'ai-travel-content-marketing', label: 'Content Marketing' },
+ { number: 4, id: 'ai-airline-operations', label: 'Airline Operations' },
+ { number: 5, id: 'ai-restaurant-management', label: 'Restaurant & F&B' },
+ { number: 6, id: 'ai-guest-experience', label: 'Guest Experience' },
+ { number: 7, id: 'ai-destination-marketing', label: 'Destination Marketing' },
+ { number: 8, id: 'ai-travel-language', label: 'Language Translation' },
+ { number: 9, id: 'ai-sustainable-travel', label: 'Sustainable Tourism' },
+ { number: 10, id: 'ai-travel-payments', label: 'Payments & Fintech' },
 ];
 
 const guideFaqs = [
-  {
-    "question": "What is the best AI travel planning tool?",
-    "answer": "AI travel planners like GuideGeek and Trip Planner AI create personalized itineraries. ChatGPT and Gemini research flights, hotels, and activities. For Asian travel, tools that understand local transport and visa requirements are most practical."
-  },
-  {
-    "question": "Can AI help with hotel pricing optimization?",
-    "answer": "Yes \u2014 AI revenue management tools analyze competitor pricing, seasonal demand, and local events. For Asian hospitality, tools understanding Chinese New Year, Songkran, and Golden Week surges are most effective."
-  }
+ {
+ "question": "What is the best AI travel planning tool?",
+ "answer": "AI travel planners like GuideGeek and Trip Planner AI create personalized itineraries. ChatGPT and Gemini research flights, hotels, and activities. For Asian travel, tools that understand local transport and visa requirements are most practical."
+ },
+ {
+ "question": "Can AI help with hotel pricing optimization?",
+ "answer": "Yes \u2014 AI revenue management tools analyze competitor pricing, seasonal demand, and local events. For Asian hospitality, tools understanding Chinese New Year, Songkran, and Golden Week surges are most effective."
+ }
 ];
 
 export default function AIToolsForTravelHospitalityPage() {
-  const breadcrumbItems = [
-    { name: 'Home', item: '/' },
-    { name: 'Guides', item: '/guides' },
-    { name: 'AI for Travel & Hospitality', item: '/guides/ai-tools-for-travel-hospitality' },
-  ];
+ const breadcrumbItems = [
+ { name: 'Home', item: '/' },
+ { name: 'Guides', item: '/guides' },
+ { name: 'AI for Travel & Hospitality', item: '/guides/ai-tools-for-travel-hospitality' },
+ ];
 
-  const allToolSlugs = [...new Set(sections.flatMap((s) => s.tools))];
-  const featuredTools = toolsData.filter((t) => allToolSlugs.includes(t.slug));
+ const allToolSlugs = [...new Set(sections.flatMap((s) => s.tools))];
+ const featuredTools = toolsData.filter((t) => allToolSlugs.includes(t.slug));
 
-  return (
-    <>
-      <BreadcrumbSchema items={breadcrumbItems} />
-      <article className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900">
-        {/* Hero */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-sky-600 via-blue-600 to-teal-700 dark:from-sky-950 dark:via-blue-950 dark:to-teal-950">
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-          <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-4xl text-center">
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm">
-                <Compass className="h-4 w-4" />
-                Travel & Hospitality
-              </div>
-              <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Best AI Tools for Travel & Hospitality in 2026
-              </h1>
-              <p className="mx-auto mb-8 max-w-3xl text-lg text-white/80 sm:text-xl">
-                From AI-powered itinerary planning and hotel revenue management to destination marketing and sustainable tourism — the definitive guide to AI tools transforming the travel and hospitality industry across Asia-Pacific.
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/70">
-                <span className="flex items-center gap-1.5">
-                  <BookOpen className="h-4 w-4" />
-                  20 min read
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <Zap className="h-4 w-4" />
-                  10 categories
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <Sparkles className="h-4 w-4" />
-                  10+ tools reviewed
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
+ return (
+ <>
+ <BreadcrumbSchema items={breadcrumbItems} />
+ <article className="min-h-screen bg-gradient-to-b from-slate-50 to-white ">
+ {/* Hero */}
+ <section className="relative overflow-hidden bg-gradient-to-br from-sky-600 via-blue-600 to-teal-700 ">
+ <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+ <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl text-center">
+ <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm">
+ <Compass className="h-4 w-4" />
+ Travel & Hospitality
+ </div>
+ <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+ Best AI Tools for Travel & Hospitality in 2026
+ </h1>
+ <p className="mx-auto mb-8 max-w-3xl text-lg text-white/80 sm:text-xl">
+ From AI-powered itinerary planning and hotel revenue management to destination marketing and sustainable tourism — the definitive guide to AI tools transforming the travel and hospitality industry across Asia-Pacific.
+ </p>
+ <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/70">
+ <span className="flex items-center gap-1.5">
+ <BookOpen className="h-4 w-4" />
+ 20 min read
+ </span>
+ <span className="flex items-center gap-1.5">
+ <Zap className="h-4 w-4" />
+ 10 categories
+ </span>
+ <span className="flex items-center gap-1.5">
+ <Sparkles className="h-4 w-4" />
+ 10+ tools reviewed
+ </span>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        {/* Table of Contents */}
-        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800/50">
-              <h2 className="mb-4 text-xl font-semibold text-slate-900 dark:text-white">Table of Contents</h2>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {sections.map((section) => (
-                  <Link
-                    key={section.id}
-                    href={`#${section.id}`}
-                    className="flex items-center gap-3 rounded-lg p-3 text-sm text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-700/50 dark:hover:text-white"
-                  >
-                    <section.icon className="h-5 w-5 shrink-0 text-sky-500" />
-                    <span>{section.title}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+ {/* Table of Contents */}
+ <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl">
+ <div className="rounded-2xl border border-slate-200 bg-white p-6 ">
+ <h2 className="mb-4 text-xl font-semibold text-slate-900 ">Table of Contents</h2>
+ <div className="grid gap-3 sm:grid-cols-2">
+ {sections.map((section) => (
+ <Link
+ key={section.id}
+ href={`#${section.id}`}
+ className="flex items-center gap-3 rounded-lg p-3 text-sm text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-900 "
+ >
+ <section.icon className="h-5 w-5 shrink-0 text-sky-500" />
+ <span>{section.title}</span>
+ </Link>
+ ))}
+ </div>
+ </div>
+ </div>
+ </section>
 
-        {/* Each Section */}
-        {sections.map((section) => (
-          <section key={section.id} id={section.id} className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-4xl">
-              <div className={`rounded-2xl border border-slate-200 p-8 dark:border-slate-700 ${section.color}`}>
-                <div className="mb-6 flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-sm dark:bg-slate-800">
-                    <section.icon className="h-6 w-6 text-sky-600 dark:text-sky-400" />
-                  </div>
-                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white">{section.title}</h2>
-                </div>
+ {/* Each Section */}
+ {sections.map((section) => (
+ <section key={section.id} id={section.id} className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl">
+ <div className={`rounded-2xl border border-slate-200 p-8 ${section.color}`}>
+ <div className="mb-6 flex items-center gap-4">
+ <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-sm ">
+ <section.icon className="h-6 w-6 text-sky-600 " />
+ </div>
+ <h2 className="text-2xl font-bold text-slate-900 ">{section.title}</h2>
+ </div>
 
-                <div className="prose prose-lg max-w-none dark:prose-invert">
-                  {section.text.split('\n').map((paragraph, i) => {
-                    if (paragraph.trim().startsWith('•')) {
-                      return (
-                        <li key={i} className="ml-4 text-slate-700 dark:text-slate-300">
-                          {paragraph.trim().replace('• ', '')}
-                        </li>
-                      );
-                    }
-                    if (paragraph.trim().startsWith('|') && paragraph.includes('|')) {
-                      return <p key={i} className="text-sm font-mono text-slate-500">{paragraph.trim()}</p>;
-                    }
-                    if (paragraph.trim() === '') return null;
-                    return (
-                      <p key={i} className="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">
-                        {paragraph.trim()}
-                      </p>
-                    );
-                  })}
-                </div>
+ <div className="prose prose-lg max-w-none ">
+ {section.text.split('\n').map((paragraph, i) => {
+ if (paragraph.trim().startsWith('•')) {
+ return (
+ <li key={i} className="ml-4 text-slate-700 ">
+ {paragraph.trim().replace('• ', '')}
+ </li>
+ );
+ }
+ if (paragraph.trim().startsWith('|') && paragraph.includes('|')) {
+ return <p key={i} className="text-sm font-mono text-slate-500">{paragraph.trim()}</p>;
+ }
+ if (paragraph.trim() === '') return null;
+ return (
+ <p key={i} className="mb-4 text-slate-700 leading-relaxed">
+ {paragraph.trim()}
+ </p>
+ );
+ })}
+ </div>
 
-                {/* Tool Cards */}
-                {section.tools && section.tools.length > 0 && (
-                  <div className="mt-8">
-                    <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-white">
-                      <Sparkles className="h-5 w-5 text-sky-500" />
-                      Recommended Tools
-                    </h3>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      {section.tools.map((slug) => {
-                        const tool = toolsData.find((t) => t.slug === slug);
-                        if (!tool) return null;
-                        return <ToolCard key={tool.slug} tool={tool} />;
-                      })}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </section>
-        ))}
+ {/* Tool Cards */}
+ {section.tools && section.tools.length > 0 && (
+ <div className="mt-8">
+ <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-slate-900 ">
+ <Sparkles className="h-5 w-5 text-sky-500" />
+ Recommended Tools
+ </h3>
+ <div className="grid gap-4 sm:grid-cols-2">
+ {section.tools.map((slug) => {
+ const tool = toolsData.find((t) => t.slug === slug);
+ if (!tool) return null;
+ return <ToolCard key={tool.slug} tool={tool} />;
+ })}
+ </div>
+ </div>
+ )}
+ </div>
+ </div>
+ </section>
+ ))}
 
-        {/* Comparison Table */}
-        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-slate-200 bg-white p-8 dark:border-slate-700 dark:bg-slate-800/50">
-              <h2 className="mb-6 text-2xl font-bold text-slate-900 dark:text-white">
-                AI Tools for Travel & Hospitality: Quick Comparison
-              </h2>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-slate-200 dark:border-slate-700">
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900 dark:text-white">Tool</th>
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900 dark:text-white">Best For</th>
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900 dark:text-white">Category</th>
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900 dark:text-white">Pricing</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100 dark:divide-slate-700">
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">ChatGPT</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Itinerary planning, content creation</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-sky-100 px-2 py-0.5 text-xs text-sky-700 dark:bg-sky-900/30 dark:text-sky-300">Planning</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">$</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Gemini</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Maps integration, multi-language</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-sky-100 px-2 py-0.5 text-xs text-sky-700 dark:bg-sky-900/30 dark:text-sky-300">Planning</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Free</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Perplexity</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Market research, competitor analysis</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">Research</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">$</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Claude</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Guest preference analysis, loyalty</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-rose-100 px-2 py-0.5 text-xs text-rose-700 dark:bg-rose-900/30 dark:text-rose-300">Analytics</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">$$</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50 dark:hover:bg-slate-700/30">
-                      <td className="px-4 py-3 font-medium text-slate-900 dark:text-white">Midjourney</td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">Destination imagery, visual assets</td>
-                      <td className="px-4 py-3"><span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">Visual</span></td>
-                      <td className="px-4 py-3 text-slate-600 dark:text-slate-400">$</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
+ {/* Comparison Table */}
+ <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl">
+ <div className="rounded-2xl border border-slate-200 bg-white p-8 ">
+ <h2 className="mb-6 text-2xl font-bold text-slate-900 ">
+ AI Tools for Travel & Hospitality: Quick Comparison
+ </h2>
+ <div className="overflow-x-auto">
+ <table className="w-full text-sm">
+ <thead>
+ <tr className="border-b border-slate-200 ">
+ <th className="px-4 py-3 text-left font-semibold text-slate-900 ">Tool</th>
+ <th className="px-4 py-3 text-left font-semibold text-slate-900 ">Best For</th>
+ <th className="px-4 py-3 text-left font-semibold text-slate-900 ">Category</th>
+ <th className="px-4 py-3 text-left font-semibold text-slate-900 ">Pricing</th>
+ </tr>
+ </thead>
+ <tbody className="divide-y divide-slate-100 ">
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">ChatGPT</td>
+ <td className="px-4 py-3 text-slate-600 ">Itinerary planning, content creation</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-sky-100 px-2 py-0.5 text-xs text-sky-700 ">Planning</span></td>
+ <td className="px-4 py-3 text-slate-600 ">$</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">Gemini</td>
+ <td className="px-4 py-3 text-slate-600 ">Maps integration, multi-language</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-sky-100 px-2 py-0.5 text-xs text-sky-700 ">Planning</span></td>
+ <td className="px-4 py-3 text-slate-600 ">Free</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">Perplexity</td>
+ <td className="px-4 py-3 text-slate-600 ">Market research, competitor analysis</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs text-amber-700 ">Research</span></td>
+ <td className="px-4 py-3 text-slate-600 ">$</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">Claude</td>
+ <td className="px-4 py-3 text-slate-600 ">Guest preference analysis, loyalty</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-rose-100 px-2 py-0.5 text-xs text-rose-700 ">Analytics</span></td>
+ <td className="px-4 py-3 text-slate-600 ">$$</td>
+ </tr>
+ <tr className="hover:bg-slate-50 ">
+ <td className="px-4 py-3 font-medium text-slate-900 ">Midjourney</td>
+ <td className="px-4 py-3 text-slate-600 ">Destination imagery, visual assets</td>
+ <td className="px-4 py-3"><span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs text-emerald-700 ">Visual</span></td>
+ <td className="px-4 py-3 text-slate-600 ">$</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        {/* Budget Guide */}
-        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-green-50 to-emerald-50 p-8 dark:border-slate-700 dark:from-green-950/30 dark:to-emerald-950/30">
-              <h2 className="mb-4 text-2xl font-bold text-slate-900 dark:text-white">
-                Travel & Hospitality AI Budget Guide
-              </h2>
-              <p className="mb-6 text-slate-700 dark:text-slate-300">
-                Estimated monthly AI tool costs for different travel business sizes.
-              </p>
-              <div className="grid gap-4 sm:grid-cols-3">
-                <div className="rounded-xl border border-green-200 bg-white p-6 dark:border-green-800 dark:bg-slate-800">
-                  <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">Solo Travel Creator</h3>
-                  <p className="mb-4 text-3xl font-bold text-green-600">$30-70<span className="text-base font-normal text-slate-500">/mo</span></p>
-                  <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 LLM ($20)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 image AI ($10-30)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 translation AI ($0-20)</li>
-                    <li className="mt-3 text-xs font-medium text-green-600">Perfect for bloggers and solo agents</li>
-                  </ul>
-                </div>
-                <div className="rounded-xl border border-blue-200 bg-white p-6 dark:border-blue-800 dark:bg-slate-800">
-                  <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">Boutique Hotel / Agency</h3>
-                  <p className="mb-4 text-3xl font-bold text-blue-600">$150-500<span className="text-base font-normal text-slate-500">/mo</span></p>
-                  <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> 2-3 LLM seats ($40-60)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> Revenue management AI ($50-200)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> Guest experience platform ($30-150)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> Translation tools ($20-50)</li>
-                    <li className="mt-3 text-xs font-medium text-blue-600">Full operations support</li>
-                  </ul>
-                </div>
-                <div className="rounded-xl border border-purple-200 bg-white p-6 dark:border-purple-800 dark:bg-slate-800">
-                  <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">Hotel Chain / DMO</h3>
-                  <p className="mb-4 text-3xl font-bold text-purple-600">$1,000-5,000<span className="text-base font-normal text-slate-500">/mo</span></p>
-                  <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Enterprise LLM licenses</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Full revenue management suite</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Multi-property analytics</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Destination marketing platform</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Sustainability tracking</li>
-                    <li className="mt-3 text-xs font-medium text-purple-600">Enterprise-grade pipeline</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+ {/* Budget Guide */}
+ <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl">
+ <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-green-50 to-emerald-50 p-8 ">
+ <h2 className="mb-4 text-2xl font-bold text-slate-900 ">
+ Travel & Hospitality AI Budget Guide
+ </h2>
+ <p className="mb-6 text-slate-700 ">
+ Estimated monthly AI tool costs for different travel business sizes.
+ </p>
+ <div className="grid gap-4 sm:grid-cols-3">
+ <div className="rounded-xl border border-green-200 bg-white p-6 ">
+ <h3 className="mb-2 text-lg font-semibold text-slate-900 ">Solo Travel Creator</h3>
+ <p className="mb-4 text-3xl font-bold text-green-600">$30-70<span className="text-base font-normal text-slate-500">/mo</span></p>
+ <ul className="space-y-2 text-sm text-slate-600 ">
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 LLM ($20)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 image AI ($10-30)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /> 1 translation AI ($0-20)</li>
+ <li className="mt-3 text-xs font-medium text-green-600">Perfect for bloggers and solo agents</li>
+ </ul>
+ </div>
+ <div className="rounded-xl border border-blue-200 bg-white p-6 ">
+ <h3 className="mb-2 text-lg font-semibold text-slate-900 ">Boutique Hotel / Agency</h3>
+ <p className="mb-4 text-3xl font-bold text-blue-600">$150-500<span className="text-base font-normal text-slate-500">/mo</span></p>
+ <ul className="space-y-2 text-sm text-slate-600 ">
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> 2-3 LLM seats ($40-60)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> Revenue management AI ($50-200)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> Guest experience platform ($30-150)</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-blue-500" /> Translation tools ($20-50)</li>
+ <li className="mt-3 text-xs font-medium text-blue-600">Full operations support</li>
+ </ul>
+ </div>
+ <div className="rounded-xl border border-purple-200 bg-white p-6 ">
+ <h3 className="mb-2 text-lg font-semibold text-slate-900 ">Hotel Chain / DMO</h3>
+ <p className="mb-4 text-3xl font-bold text-purple-600">$1,000-5,000<span className="text-base font-normal text-slate-500">/mo</span></p>
+ <ul className="space-y-2 text-sm text-slate-600 ">
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Enterprise LLM licenses</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Full revenue management suite</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Multi-property analytics</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Destination marketing platform</li>
+ <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-purple-500" /> Sustainability tracking</li>
+ <li className="mt-3 text-xs font-medium text-purple-600">Enterprise-grade pipeline</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        {/* FAQ */}
-        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-slate-200 bg-white p-8 dark:border-slate-700 dark:bg-slate-800/50">
-              <h2 className="mb-6 text-2xl font-bold text-slate-900 dark:text-white">
-                Frequently Asked Questions
-              </h2>
-              <div className="space-y-6">
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    Can AI fully replace a human travel agent?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    No — AI excels at research, itinerary generation, and booking optimization, but human travel agents still provide value for complex itineraries, crisis management, and personalized recommendations. The best approach is AI-assisted travel planning where the agent uses AI tools to research and optimize while providing human judgment and personal service.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    What's the best AI tool for a solo travel blogger?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Start with ChatGPT for content creation and itinerary research, Midjourney for destination imagery, and Gemini for multi-language translation and Google Maps integration. This $40-60/month stack covers the three most time-consuming aspects of travel content creation.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    How accurate are AI hotel pricing recommendations?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    AI revenue management systems have matured significantly by 2026. Leading platforms achieve 92-96% accuracy for occupancy forecasting and 88-93% accuracy for rate optimization when trained on sufficient historical data. Accuracy depends on data quality, market volatility, and the length of historical data available.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    Do AI translation tools handle Asian languages well?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Yes — by 2026, AI translation quality for major Asian languages (Japanese, Korean, Chinese, Thai, Vietnamese, Indonesian) has reached near-human quality for standard travel communications. Regional dialects and culturally specific terms (like Thai royal language or Japanese keigo) still require human review, but mainstream translation handles menus, directions, and hotel communications excellently.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    How can small hotels compete with chains using AI?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Small hotels have unprecedented access to enterprise-grade AI through SaaS platforms. Cloud-based revenue management with AI optimization costs as little as $50-150/month for independent hotels. Boutique properties can also differentiate with personalized guest experiences that AI enables — something chains often struggle with due to scale.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    Is AI for sustainable tourism actually effective?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Yes — AI-powered sustainability tools have demonstrated measurable impact. Hotels using AI energy management reduce utility costs by 20-30%. Destinations using AI visitor flow management have reduced overcrowding at popular attractions by 15-25%. AI food waste prediction reduces hotel buffet waste by 25-35%. These tools make sustainability both environmentally beneficial and cost-effective.
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 dark:border-slate-700 dark:bg-slate-800/30">
-                  <h3 className="mb-2 font-semibold text-slate-900 dark:text-white">
-                    Which platforms integrate best with AI travel tools?
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Google ecosystem (Maps, Flights, Hotels) has the most comprehensive AI integration for travel planning. Meta and TikTok offer the best AI-powered travel marketing platforms with audience targeting. For hotel operations, major PMS systems (Opera, Mews, Cloudbeds) all offer API integrations with AI revenue management and guest experience tools. For booking, Agoda and Booking.com have the best AI-powered API integrations in Asia-Pacific.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+ {/* FAQ */}
+ <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl">
+ <div className="rounded-2xl border border-slate-200 bg-white p-8 ">
+ <h2 className="mb-6 text-2xl font-bold text-slate-900 ">
+ Frequently Asked Questions
+ </h2>
+ <div className="space-y-6">
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ Can AI fully replace a human travel agent?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ No — AI excels at research, itinerary generation, and booking optimization, but human travel agents still provide value for complex itineraries, crisis management, and personalized recommendations. The best approach is AI-assisted travel planning where the agent uses AI tools to research and optimize while providing human judgment and personal service.
+ </p>
+ </div>
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ What's the best AI tool for a solo travel blogger?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ Start with ChatGPT for content creation and itinerary research, Midjourney for destination imagery, and Gemini for multi-language translation and Google Maps integration. This $40-60/month stack covers the three most time-consuming aspects of travel content creation.
+ </p>
+ </div>
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ How accurate are AI hotel pricing recommendations?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ AI revenue management systems have matured significantly by 2026. Leading platforms achieve 92-96% accuracy for occupancy forecasting and 88-93% accuracy for rate optimization when trained on sufficient historical data. Accuracy depends on data quality, market volatility, and the length of historical data available.
+ </p>
+ </div>
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ Do AI translation tools handle Asian languages well?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ Yes — by 2026, AI translation quality for major Asian languages (Japanese, Korean, Chinese, Thai, Vietnamese, Indonesian) has reached near-human quality for standard travel communications. Regional dialects and culturally specific terms (like Thai royal language or Japanese keigo) still require human review, but mainstream translation handles menus, directions, and hotel communications excellently.
+ </p>
+ </div>
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ How can small hotels compete with chains using AI?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ Small hotels have unprecedented access to enterprise-grade AI through SaaS platforms. Cloud-based revenue management with AI optimization costs as little as $50-150/month for independent hotels. Boutique properties can also differentiate with personalized guest experiences that AI enables — something chains often struggle with due to scale.
+ </p>
+ </div>
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ Is AI for sustainable tourism actually effective?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ Yes — AI-powered sustainability tools have demonstrated measurable impact. Hotels using AI energy management reduce utility costs by 20-30%. Destinations using AI visitor flow management have reduced overcrowding at popular attractions by 15-25%. AI food waste prediction reduces hotel buffet waste by 25-35%. These tools make sustainability both environmentally beneficial and cost-effective.
+ </p>
+ </div>
+ <div className="rounded-xl border border-slate-100 bg-slate-50 p-5 ">
+ <h3 className="mb-2 font-semibold text-slate-900 ">
+ Which platforms integrate best with AI travel tools?
+ </h3>
+ <p className="text-sm text-slate-600 ">
+ Google ecosystem (Maps, Flights, Hotels) has the most comprehensive AI integration for travel planning. Meta and TikTok offer the best AI-powered travel marketing platforms with audience targeting. For hotel operations, major PMS systems (Opera, Mews, Cloudbeds) all offer API integrations with AI revenue management and guest experience tools. For booking, Agoda and Booking.com have the best AI-powered API integrations in Asia-Pacific.
+ </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        {/* CTA */}
-        <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl bg-gradient-to-br from-sky-600 to-teal-600 p-12 text-center dark:from-sky-900 dark:to-teal-900">
-              <h2 className="mb-4 text-3xl font-bold text-white">
-                Ready to Transform Your Travel Business?
-              </h2>
-              <p className="mx-auto mb-8 max-w-2xl text-lg text-white/80">
-                Explore all AI tools and find the perfect stack for your travel or hospitality business. Compare pricing, features, and Asia-Pacific availability.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/tools"
-                  className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 font-semibold text-sky-700 shadow-lg transition-all hover:bg-white/90 hover:shadow-xl"
-                >
-                  Browse All AI Tools
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-                <Link
-                  href="/guides"
-                  className="inline-flex items-center gap-2 rounded-xl border border-white/30 px-8 py-4 font-semibold text-white transition-all hover:bg-white/10"
-                >
-                  More Industry Guides
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-            {/* FAQ Schema */}
-      <FAQSchema faqs={guideFaqs} />
-    </article>
-    </>
-  );
+ {/* CTA */}
+ <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+ <div className="mx-auto max-w-4xl">
+ <div className="rounded-2xl bg-gradient-to-br from-sky-600 to-teal-600 p-12 text-center ">
+ <h2 className="mb-4 text-3xl font-bold text-white">
+ Ready to Transform Your Travel Business?
+ </h2>
+ <p className="mx-auto mb-8 max-w-2xl text-lg text-white/80">
+ Explore all AI tools and find the perfect stack for your travel or hospitality business. Compare pricing, features, and Asia-Pacific availability.
+ </p>
+ <div className="flex flex-wrap justify-center gap-4">
+ <Link
+ href="/tools"
+ className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 font-semibold text-sky-700 shadow-lg transition-all hover:bg-white/90 hover:shadow-xl"
+ >
+ Browse All AI Tools
+ <ArrowRight className="h-5 w-5" />
+ </Link>
+ <Link
+ href="/guides"
+ className="inline-flex items-center gap-2 rounded-xl border border-white/30 px-8 py-4 font-semibold text-white transition-all hover:bg-white/10"
+ >
+ More Industry Guides
+ </Link>
+ </div>
+ </div>
+ </div>
+ </section>
+ {/* FAQ Schema */}
+ <FAQSchema faqs={guideFaqs} />
+ </article>
+ </>
+ );
 }

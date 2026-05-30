@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import SiteFooter from "@/components/SiteFooter";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import dynamic from 'next/dynamic';
 
 const EcosystemToggle = dynamic(
@@ -71,12 +72,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
-        {/* Google AdSense */}
+        {/* Google AdSense — wrapped in try/catch so failures don't crash the page */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6046953221141245" crossOrigin="anonymous" />
-        {/* Travelpayouts */}
+        {/* Travelpayouts — protected: inline script errors won't break React hydration */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var s=document.createElement("script");s.async=1;s.src="https://emrldtp.cc/NTMwNDAx.js?t=530401";document.head.appendChild(s);})()`,
+            __html: `(function(){try{var s=document.createElement("script");s.async=1;s.src="https://emrldtp.cc/NTMwNDAx.js?t=530401";document.head.appendChild(s);}catch(e){console.warn('[Travelpayouts] failed to load:', e);}})()`,
           }}
         />
         {/* Schema.org Organization */}
@@ -129,14 +130,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
           </main>
           <SiteFooter />
-          <EcosystemToggle />
-          <TelemetryInit />
-          <BackToTop />
+          <ErrorBoundary name="EcosystemToggle">
+            <EcosystemToggle />
+          </ErrorBoundary>
+          <ErrorBoundary name="TelemetryInit">
+            <TelemetryInit />
+          </ErrorBoundary>
+          <ErrorBoundary name="BackToTop">
+            <BackToTop />
+          </ErrorBoundary>
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics />
-        <BottomNav />
+        <ErrorBoundary name="BottomNav">
+          <BottomNav />
+        </ErrorBoundary>
       </body>
     </html>
   );

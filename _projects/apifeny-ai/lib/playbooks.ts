@@ -7178,6 +7178,254 @@ export const playbooks: Playbook[] = [
       { metric: 'Vetting Efficiency', value: '10x faster', description: 'AI analyzes 50 influencer profiles in minutes vs hours of manual research' },
     ],
   },
+
+  // ════════════════════════════════════════════════════
+  // NEW PLAYBOOK: How to Save $100/mo on AI Token Costs
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'how-to-save-on-ai-tokens',
+    title: 'How to Save $100/mo on AI Token Costs',
+    subtitle: 'Prompt compression, model switching & caching strategies',
+    description:
+      'Most solopreneurs overpay for AI tokens by 2-5x without realizing it. This playbook shows you how to slash your monthly AI spend from $150-200 down to $50 or less using prompt compression, cheaper model switching, batching, and caching — all without sacrificing output quality.',
+    meta_title: 'How to Save $100/mo on AI Token Costs — Apifeny AI Playbook',
+    meta_description: 'Cut your AI spend by 60%+ with prompt compression, model switching, batching, and caching strategies. Save $100+/mo on ChatGPT, Claude, and API costs.',
+    related_tool_slugs: ['chatgpt', 'claude', 'gemini', 'langchain', 'openrouter'],
+    difficulty: 'Intermediate',
+    read_time_minutes: 10,
+    icon: '💰',
+    gradient: 'from-emerald-500/30 to-teal-500/30',
+    steps: [
+      {
+        title: 'Audit your current AI spend',
+        description:
+          'Check your ChatGPT and Claude billing pages. Most people are surprised by how much they spend. Categorize usage: long-form writing, coding, analysis, chat. The top 20% of usage types usually drive 80% of cost. Target those first.',
+        tip: 'Export your usage data and ask ChatGPT: "Analyze this billing data and tell me which types of prompts cost me the most."',
+      },
+      {
+        title: 'Use prompt compression techniques',
+        description:
+          'Long prompts = more tokens = more cost. Compress prompts by: removing redundant instructions, using shorthand for repeated phrases, setting word limits on outputs, and moving static context into system prompts. A well-compressed prompt can be 60% shorter for the same result.',
+        tip: 'Wrap non-essential context in <optional>...</optional> tags and tell the model to only use if needed. This can cut 30-50% off token usage.',
+      },
+      {
+        title: 'Switch models by task complexity',
+        description:
+          'Use the cheapest model that gets the job done. Pattern: GPT-4o-mini or Claude Haiku for simple tasks (drafts, summaries, classification), Sonnet/4o for medium complexity, Opus/o1 for hard problems. This alone saves 60-80% on token costs.',
+        tip: 'OpenRouter lets you set an auto-fallback chain: try cheap model first, fall back to expensive if needed. This way you never overpay.',
+      },
+      {
+        title: 'Batch requests to reduce overhead',
+        description:
+          'Instead of 20 single requests, batch them into one prompt. For example: "Summarize these 10 articles" costs less than 10 separate "Summarize this" calls because you pay the system prompt + context once instead of 10 times.',
+        tip: 'Collect 5-10 tasks in a queue, then process them in one large batch. Use the same system prompt across sessions.',
+      },
+      {
+        title: 'Implement caching strategies',
+        description:
+          'Cache frequent responses: save common prompts and their outputs in a local database or Notion. Before hitting an API, check your cache. For code, save snippets you generate often. For analysis, store results instead of re-asking.',
+        tip: 'Set up a simple key-value cache: hash the prompt, check if result exists. For similar prompts, ask the model to paraphrase and then check the cache again.',
+      },
+      {
+        title: 'Set up token budgets and alerts',
+        description:
+          'Most AI platforms let you set usage limits. Set a daily and monthly budget. Configure alerts at 50%, 80%, and 100% of budget. Review weekly which tasks consumed the most tokens and optimize those specifically.',
+      },
+    ],
+    pro_tips: [
+      'Use OpenRouter to compare prices across providers — same model can cost 2-3x less on different providers',
+      'Set a hard output token limit in your API calls. ChatGPT defaults to max output; explicitly set max_tokens to 500-1000 for most tasks',
+      'Clear conversation history regularly — long chat threads burn tokens on every message because the full history is re-processed',
+      'Create reusable system prompts that work across models — so you can seamlessly switch to cheaper models without rewriting instructions',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Paying for the most expensive model for every task',
+        fix: 'Use GPT-4o-mini or Claude Haiku for 80% of tasks. Reserve expensive models only for the hardest 20%.',
+      },
+      {
+        mistake: 'Not clearing chat history between sessions',
+        fix: 'Long conversations burn tokens on re-processing history. Start fresh for each session or use short context windows.',
+      },
+      {
+        mistake: 'Using unnecessarily long prompts',
+        fix: 'Review your best-performing prompts and trim them by 50%. The short version usually works just as well.',
+      },
+    ],
+    pipeline_stage: 'deployment',
+    revenue_impact: 'Save $100-150/mo on AI subscriptions and API costs — that\'s $1,200-1,800/year reinvested into growth',
+    real_results: [
+      { metric: 'Monthly AI Spend', value: '-65%', description: 'From $160/mo to $55/mo after implementing all strategies' },
+      { metric: 'Output Quality', value: 'Same', description: 'No measurable quality drop — quality actually improved with model-task matching' },
+      { metric: 'Time Invested', value: '2 hours', description: 'One weekend to set up. Passive savings from week two onwards' },
+    ],
+  },
+
+  // ════════════════════════════════════════════════════
+  // NEW PLAYBOOK: Build a Game with AI in One Weekend
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'build-a-game-with-ai',
+    title: 'Build a Game with AI in One Weekend',
+    subtitle: 'From zero coding to a playable game in 48 hours',
+    description:
+      'You don\'t need to know how to code. This playbook walks you through building a real, playable game (Snake, platformer, or puzzle) in a single weekend using Cursor and Claude. No coding experience required — just creativity and the willingness to iterate.',
+    meta_title: 'Build a Game with AI in One Weekend — Apifeny AI Playbook',
+    meta_description: 'Build a playable game from scratch in one weekend with zero coding experience. Use Cursor and Claude to create Snake, platformers, and more.',
+    related_tool_slugs: ['cursor', 'claude', 'chatgpt'],
+    difficulty: 'Beginner',
+    read_time_minutes: 11,
+    icon: '🎮',
+    gradient: 'from-fuchsia-500/30 to-violet-500/30',
+    steps: [
+      {
+        title: 'Choose your game and set up the environment',
+        description:
+          'Pick a simple game genre for your first build: Snake, Pong, a 2D platformer, or a memory puzzle. Download Cursor (free), create a new folder, and open it in Cursor. Tell Cursor in Agent mode: "I want to build a Snake game using HTML, CSS, and JavaScript in a single file. Create the project."',
+        tip: 'Start with Snake or Pong — these can be done in 2-4 hours. Save platformers for day two.',
+      },
+      {
+        title: 'Describe your vision to Claude',
+        description:
+          'Before writing code, describe your game idea to Claude: "I want a snake game where the snake speeds up as it eats more food, with a score counter, game over screen, and restart button. The snake should have a gradient color that changes as it grows." Claude will help refine your spec and suggest mechanics you haven\'t thought of.',
+        tip: 'Ask Claude for a one-page game design document (GDD). This catches feature gaps before you start coding.',
+      },
+      {
+        title: 'Build the core game loop with Cursor Agent',
+        description:
+          'In Cursor Agent mode (Cmd+Shift+A), describe your GDD. Cursor will scaffold the entire game. Let it build the full loop: game canvas, player movement, collision detection, scoring, and game states. Review the generated code and play the game in your browser.',
+        tip: 'Use Ctrl+K (Cmd+K) to make targeted edits. Cursor can add features one at a time. Don\'t ask for everything at once.',
+      },
+      {
+        title: 'Polish gameplay and add juice',
+        description:
+          'This is where AI shines. Ask Cursor to add: particle effects on collision, smooth animations, screen shake, sound effects (generated with a simple Web Audio API library), and responsive controls. Small visual touches make a weekend project feel like a real game.',
+        tip: 'Use ChatGPT to generate 8-bit sound effects: "Write a JavaScript function that generates an 8-bit sound for eating food in a snake game."',
+      },
+      {
+        title: 'Add difficulty scaling and a leaderboard',
+        description:
+          'Ask Cursor to implement: progressive difficulty (speed increase, obstacles), a local high score saved in localStorage, and a start screen with instructions. These features turn a demo into something you can share with friends.',
+        tip: 'The leaderboard is optional but adds huge replayability. Ask Claude to design a simple scoring formula.',
+      },
+      {
+        title: 'Deploy and share your game',
+        description:
+          'Deploy your game to Vercel, Netlify, or GitHub Pages for free. Deploy with one command: npx vercel deploy. Share the link on X, Product Hunt, or your portfolio. You built a game in a weekend — that\'s a portfolio piece.',
+        tip: 'Use Cursor\'s built-in terminal — deploy takes 2 minutes. Then share on Reddit r/webdev or r/gamedev for feedback.',
+      },
+    ],
+    pro_tips: [
+      'Record a 30-second screen recording of your game and post it on X with the build story — AI-built games get great engagement',
+      'Create a "changelog" file in your project for Cursor to read. It helps maintain context across sessions',
+      'Use Claude for game design questions and Cursor for implementation — this two-tool combo is the fastest route to a working game',
+      'Don\'t worry about perfection. A simple, working game shared on day one is worth more than a perfect game never shipped',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Trying to build an RPG or open-world game in a weekend',
+        fix: 'Pick a game that can be completed in 4-6 hours of coding: Snake, Pong, Breakout, memory game, simple platformer with 3 levels.',
+      },
+      {
+        mistake: 'Over-engineering before seeing the game run',
+        fix: 'Get a playable version running first. Add polish, juice, and features only after the core loop works.',
+      },
+      {
+        mistake: 'Not sharing the game because it\'s imperfect',
+        fix: 'Ship it. Every game you build teaches you something. The next one will be better — but only if you ship the first one.',
+      },
+    ],
+    pipeline_stage: 'coding',
+    revenue_impact: 'Build a portfolio of 3-5 games in a month that can generate freelance leads, ad revenue, or be sold as HTML templates',
+    real_results: [
+      { metric: 'Time to Playable Game', value: '4-6 hours', description: 'From zero code to a working Snake/Pong game with AI assistance' },
+      { metric: 'Cost', value: '$0', description: 'Free tier of Cursor + free deployment. No paid tools required' },
+      { metric: 'Coding Experience Needed', value: 'None', description: 'Complete beginners succeed with the step-by-step AI-assisted workflow' },
+    ],
+  },
+
+  // ════════════════════════════════════════════════════
+  // NEW PLAYBOOK: The Ultimate Prompt Engineering Playbook
+  // ════════════════════════════════════════════════════
+  {
+    slug: 'ultimate-prompt-engineering',
+    title: 'The Ultimate Prompt Engineering Playbook',
+    subtitle: 'System prompts, chain-of-thought, few-shot & output formatting',
+    description:
+      'Master the art of prompt engineering. From writing killer system prompts to chain-of-thought reasoning, few-shot examples, role prompting, and structured output formatting — this playbook covers every technique you need to get consistent, high-quality outputs from any LLM.',
+    meta_title: 'The Ultimate Prompt Engineering Playbook — Apifeny AI Guide',
+    meta_description: 'Master prompt engineering: system prompts, chain-of-thought, few-shot prompting, role prompting, and structured output formatting for ChatGPT, Claude, and Gemini.',
+    related_tool_slugs: ['chatgpt', 'claude', 'gemini', 'perplexity'],
+    difficulty: 'Beginner',
+    read_time_minutes: 12,
+    icon: '🧠',
+    gradient: 'from-violet-500/30 to-indigo-500/30',
+    steps: [
+      {
+        title: 'Master the art of system prompts',
+        description:
+          'A system prompt sets the model\'s persona and constraints. It\'s the single highest-leverage prompt technique. Write a system prompt that defines: who the AI is (role), how it should behave (tone/constraints), what it should never do (guardrails), and what format to use.',
+        tip: 'Best system prompt formula: "You are a [ROLE]. You speak in [TONE]. You always [BEHAVIOR]. You never [GUARDRAIL]. When given [INPUT], produce [OUTPUT]. If unsure, say [UNSURE RESPONSE]."',
+      },
+      {
+        title: 'Use chain-of-thought (CoT) reasoning',
+        description:
+          'Ask the model to think step-by-step before answering. CoT dramatically improves accuracy on complex tasks. Use explicit phrases like "Let\'s think through this step by step" or provide a reasoning template. For math and logic, CoT can boost accuracy from 50% to 90%+.',
+        tip: 'For best results, ask for structured reasoning: "First, list what you know. Second, identify the constraints. Third, work through each option. Fourth, select the best solution and explain why."',
+      },
+      {
+        title: 'Master few-shot prompting',
+        description:
+          'Give the model 2-3 examples of exactly what you want before asking it to generate. Few-shot prompting is the most reliable way to control output format, style, and quality. Structure examples as: input → expected output. The model will pattern-match and follow suit.',
+        tip: 'Include one edge-case example to teach the model how to handle unusual inputs. Three examples is the sweet spot — too few lacks specificity, too many reduces flexibility.',
+      },
+      {
+        title: 'Leverage role prompting',
+        description:
+          'Assign the model a specific role and expertise level. This shapes the depth, vocabulary, and perspective of the response. Roles to try: "Senior software architect", "Marketing director at a Fortune 500", "10-year-old explaining to a friend", "Socratic tutor". The more specific the role, the better the output.',
+        tip: 'Combine role + constraints: "You are a skeptical VC reviewing a pitch deck. Challenge every assumption. Point out 5 risks the founder hasn\'t mentioned."',
+      },
+      {
+        title: 'Enforce structured output formatting',
+        description:
+          'Always specify the exact output format you want. Best practice: JSON for data, markdown for documents, table for comparisons, bullet points for quick reads. Provide a template in your prompt: "Output as JSON with keys: title, summary, steps[], and risks[]."',
+        tip: 'For Claude, request XML tags: <output><summary>...</summary><steps>...</steps></output>. For ChatGPT, request JSON with an example schema.',
+      },
+      {
+        title: 'Iterate and refine your prompts',
+        description:
+          'The best prompts are refined, not written. After each output, identify what\'s missing or wrong, and add specific instructions. Common refinements: "Shorter sentences", "Add a table of contents", "Use simpler language", "Include examples for each point", "Start with a controversial take."',
+        tip: 'Create a Prompt Library in Notion. Save every version of your best prompts with notes on what changed and why. This compounds your prompt quality over time.',
+      },
+    ],
+    pro_tips: [
+      'Use Claude\'s Projects feature to save your best system prompts — one-click access to your optimized prompt library',
+      'For ChatGPT, create Custom GPTs with your system prompts baked in. Share them with your team for consistent outputs',
+      'Test your prompts with the cheapest model first (GPT-4o-mini, Haiku), then validate with the expensive model. Saves 60% on prompt engineering costs',
+      'Add a "quality check" step at the end of every prompt: "Before responding, check if your answer meets these criteria: [list 3 criteria]. If not, revise."',
+    ],
+    common_mistakes: [
+      {
+        mistake: 'Writing one-shot prompts and expecting perfection',
+        fix: 'Plan for 3-5 iterations per prompt. Each iteration is a small improvement that compounds into dramatically better outputs.',
+      },
+      {
+        mistake: 'Being too vague about the output format',
+        fix: 'Always specify format explicitly. Give a template or example. "Write a blog post" → "Write a 500-word blog post in markdown with: H1 title, 3 H2 sections, bullet points in each section, and a conclusion paragraph."',
+      },
+      {
+        mistake: 'Trying to control everything in one prompt',
+        fix: 'Break complex tasks into chained prompts: first prompt designs the structure, second prompt fills in content, third prompt polishes formatting.',
+      },
+    ],
+    pipeline_stage: 'content',
+    revenue_impact: 'Better prompts = better AI outputs = higher conversion on AI-generated content and more productive coding sessions',
+    real_results: [
+      { metric: 'Output Quality Improvement', value: '+70%', description: 'Systematic prompting produced higher quality results compared to ad-hoc prompts' },
+      { metric: 'Iteration Reduction', value: '5x fewer', description: 'Structured prompts need 5x fewer revisions than unstructured prompts' },
+      { metric: 'Time to Mastery', value: '2 weeks', description: 'Most users see dramatic improvement after practicing these techniques for 2 weeks' },
+    ],
+  },
 ];
 
 export function getPlaybookBySlug(slug: string): Playbook | undefined {

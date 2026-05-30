@@ -137,22 +137,22 @@ Deploy with Vercel for frontend, Railway for backend.
 ### Batch Production Workflow
 
 1. **Strategy session** (1 hour/month with ChatGPT)
-   - Define monthly theme, topics, and keywords
-   - Create outline for 4 blog posts, 20 social posts, 4 emails
+ - Define monthly theme, topics, and keywords
+ - Create outline for 4 blog posts, 20 social posts, 4 emails
 
 2. **Writing day** (4 hours/week with ChatGPT + Claude)
-   - Write 1 long-form piece in Claude
-   - Optimize for SEO with ChatGPT
-   - Generate 20 social variants from the long-form piece
+ - Write 1 long-form piece in Claude
+ - Optimize for SEO with ChatGPT
+ - Generate 20 social variants from the long-form piece
 
 3. **Design day** (2 hours/week with Canva AI)
-   - Create featured images, social graphics, and email headers
-   - Use Canva Magic Design for batch creation
+ - Create featured images, social graphics, and email headers
+ - Use Canva Magic Design for batch creation
 
 4. **Schedule & distribute** (1 hour/week)
-   - Schedule all content using Buffer/Hootsuite
-   - Set up email automation sequences
-   - Track performance and iterate
+ - Schedule all content using Buffer/Hootsuite
+ - Set up email automation sequences
+ - Track performance and iterate
 
 ### SEO With AI
 Use Perplexity + ChatGPT for keyword research:
@@ -386,21 +386,21 @@ Example:
 // ─── Playbook Content Map ───────────────────────────────
 
 const PLAYBOOK_CONTENT: Record<string, { content: string; filename: string; title: string }> = {
-  'ai-solopreneur-toolkit': {
-    content: playbookContent,
-    filename: 'ai-solopreneur-toolkit.pdf',
-    title: 'AI Solopreneur Toolkit',
-  },
-  'ai-workflow-automation': {
-    content: workflowPlaybookContent,
-    filename: 'ai-workflow-automation.pdf',
-    title: 'AI Workflow Automation',
-  },
-  'directory-builder-template': {
-    content: playbookContent, // TODO: Add dedicated Directory Builder content
-    filename: 'directory-builder-template.pdf',
-    title: 'Directory Builder Template',
-  },
+ 'ai-solopreneur-toolkit': {
+ content: playbookContent,
+ filename: 'ai-solopreneur-toolkit.pdf',
+ title: 'AI Solopreneur Toolkit',
+ },
+ 'ai-workflow-automation': {
+ content: workflowPlaybookContent,
+ filename: 'ai-workflow-automation.pdf',
+ title: 'AI Workflow Automation',
+ },
+ 'directory-builder-template': {
+ content: playbookContent, // TODO: Add dedicated Directory Builder content
+ filename: 'directory-builder-template.pdf',
+ title: 'Directory Builder Template',
+ },
 };
 
 const VALID_PRODUCTS = Object.keys(PLAYBOOK_CONTENT);
@@ -408,66 +408,66 @@ const VALID_PRODUCTS = Object.keys(PLAYBOOK_CONTENT);
 // ─── Route Handlers ─────────────────────────────────────────
 
 export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json();
-    const { email, product } = body;
+ try {
+ const body = await request.json();
+ const { email, product } = body;
 
-    if (!email) {
-      return NextResponse.json(
-        { error: 'Email is required' },
-        { status: 400 }
-      );
-    }
+ if (!email) {
+ return NextResponse.json(
+ { error: 'Email is required' },
+ { status: 400 }
+ );
+ }
 
-    if (!product || !PLAYBOOK_CONTENT[product]) {
-      return NextResponse.json(
-        { error: 'Invalid product. Valid products: ' + VALID_PRODUCTS.join(', ') },
-        { status: 400 }
-      );
-    }
+ if (!product || !PLAYBOOK_CONTENT[product]) {
+ return NextResponse.json(
+ { error: 'Invalid product. Valid products: ' + VALID_PRODUCTS.join(', ') },
+ { status: 400 }
+ );
+ }
 
-    // In production: process Stripe payment here.
-    // Test mode: we accept the purchase and generate the PDF.
-    //
-    // Stripe test mode:
-    //   sk_test_51R7wTyIBXlBKCzAw7CU2e0CuLsruKm1gsLhSiKxKISyb2xCXEOoxcsH3DEGO9GKPb6Y2dqtHzOPDvA8eKpu3xEQE00PXiDciy0
-    //
-    // To integrate Stripe:
-    // 1. npm install stripe
-    // 2. const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
-    // 3. const session = await stripe.checkout.sessions.create({...})
-    // 4. redirect to session.url or confirm payment here
+ // In production: process Stripe payment here.
+ // Test mode: we accept the purchase and generate the PDF.
+ //
+ // Stripe test mode:
+ // sk_test_51R7wTyIBXlBKCzAw7CU2e0CuLsruKm1gsLhSiKxKISyb2xCXEOoxcsH3DEGO9GKPb6Y2dqtHzOPDvA8eKpu3xEQE00PXiDciy0
+ //
+ // To integrate Stripe:
+ // 1. npm install stripe
+ // 2. const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
+ // 3. const session = await stripe.checkout.sessions.create({...})
+ // 4. redirect to session.url or confirm payment here
 
-    const playbook = PLAYBOOK_CONTENT[product];
+ const playbook = PLAYBOOK_CONTENT[product];
 
-    // Log purchase (in production: save to Supabase/DB)
-    console.log(`[PDF Purchase] product=${product}, email=${email}, timestamp=${new Date().toISOString()}`);
+ // Log purchase (in production: save to Supabase/DB)
+ console.log(`[PDF Purchase] product=${product}, email=${email}, timestamp=${new Date().toISOString()}`);
 
-    return new NextResponse(playbook.content, {
-      headers: {
-        'Content-Type': 'text/markdown; charset=utf-8',
-        'Content-Disposition': `attachment; filename="${playbook.filename}"`,
-      },
-    });
-  } catch (error) {
-    console.error('PDF generation error:', error);
-    return NextResponse.json(
-      { error: 'Failed to generate PDF' },
-      { status: 500 }
-    );
-  }
+ return new NextResponse(playbook.content, {
+ headers: {
+ 'Content-Type': 'text/markdown; charset=utf-8',
+ 'Content-Disposition': `attachment; filename="${playbook.filename}"`,
+ },
+ });
+ } catch (error) {
+ console.error('PDF generation error:', error);
+ return NextResponse.json(
+ { error: 'Failed to generate PDF' },
+ { status: 500 }
+ );
+ }
 }
 
 export async function GET() {
-  return NextResponse.json({
-    name: 'Apifeny AI PDF Generator',
-    version: '1.0.0',
-    status: 'active',
-    products: VALID_PRODUCTS.map((slug) => ({
-      slug,
-      title: PLAYBOOK_CONTENT[slug].title,
-      filename: PLAYBOOK_CONTENT[slug].filename,
-    })),
-    message: 'Send a POST request with email and product to download.',
-  });
+ return NextResponse.json({
+ name: 'Apifeny AI PDF Generator',
+ version: '1.0.0',
+ status: 'active',
+ products: VALID_PRODUCTS.map((slug) => ({
+ slug,
+ title: PLAYBOOK_CONTENT[slug].title,
+ filename: PLAYBOOK_CONTENT[slug].filename,
+ })),
+ message: 'Send a POST request with email and product to download.',
+ });
 }

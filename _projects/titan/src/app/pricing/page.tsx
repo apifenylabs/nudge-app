@@ -284,6 +284,9 @@ export default function PricingPage() {
 
   useEffect(() => {
     setMounted(true);
+    document.title = 'Pricing — Titan | AI Agent Builder Plans';
+    const existing = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+    if (existing) existing.content = 'Titan pricing plans: Free tier, Pro $20/mo, Team $50/mo, Enterprise $200/mo. Build unlimited AI agents with rank-based progression, skill trees, and multi-agent orchestration.';
     setActivePlans(getActivePlans());
   }, []);
 

@@ -3,8 +3,8 @@
 import { useEffect } from 'react';
 
 interface StructuredDataProps {
-  /** The JSON-LD schema object(s) to inject into the page head */
-  data: Record<string, unknown> | Record<string, unknown>[];
+ /** The JSON-LD schema object(s) to inject into the page head */
+ data: Record<string, unknown> | Record<string, unknown>[];
 }
 
 /**
@@ -13,23 +13,23 @@ interface StructuredDataProps {
  * Use for breadcrumbs, local business / item list schemas, FAQ, etc.
  */
 export default function StructuredData({ data }: StructuredDataProps) {
-  useEffect(() => {
-    const scriptId = '__structured_data__';
+ useEffect(() => {
+ const scriptId = '__structured_data__';
 
-    // Remove any existing instance
-    const existing = document.getElementById(scriptId);
-    if (existing) existing.remove();
+ // Remove any existing instance
+ const existing = document.getElementById(scriptId);
+ if (existing) existing.remove();
 
-    const script = document.createElement('script');
-    script.id = scriptId;
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
+ const script = document.createElement('script');
+ script.id = scriptId;
+ script.type = 'application/ld+json';
+ script.textContent = JSON.stringify(data);
+ document.head.appendChild(script);
 
-    return () => {
-      document.getElementById(scriptId)?.remove();
-    };
-  }, [data]);
+ return () => {
+ document.getElementById(scriptId)?.remove();
+ };
+ }, [data]);
 
-  return null;
+ return null;
 }

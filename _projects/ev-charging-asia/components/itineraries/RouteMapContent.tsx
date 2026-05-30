@@ -14,13 +14,19 @@ const chargingIcon = new L.DivIcon({
   popupAnchor: [0, -14],
 });
 
-// Fix Leaflet icon paths
-const iconUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png';
-const iconRetinaUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png';
-const shadowUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png';
+// Fix Leaflet icon paths — wrapped in try/catch to prevent runtime crashes
+try {
+  const iconUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png';
+  const iconRetinaUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png';
+  const shadowUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png';
 
-delete (L.Icon.Default.prototype as Record<string, unknown>)._getIconUrl;
-L.Icon.Default.mergeOptions({ iconUrl, iconRetinaUrl, shadowUrl });
+  if (L?.Icon?.Default?.prototype) {
+    try { delete (L.Icon.Default.prototype as Record<string, unknown>)._getIconUrl; } catch { /* already removed in leaflet 1.9+ */ }
+    L.Icon.Default.mergeOptions({ iconUrl, iconRetinaUrl, shadowUrl });
+  }
+} catch (e) {
+  console.warn('[RouteMapContent] Failed to initialize Leaflet icons:', e);
+}
 
 // Asia bounds
 const asiaBounds: L.LatLngBoundsExpression = [

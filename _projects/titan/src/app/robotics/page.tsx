@@ -55,7 +55,12 @@ const platforms = [
 
 export default function RoboticsLanding() {
   const [loaded, setLoaded] = useState(false);
-  useEffect(() => setLoaded(true), []);
+  useEffect(() => {
+    setLoaded(true);
+    document.title = 'Robotics — Titan | AI Robotics Integration Platform';
+    const existing = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+    if (existing) existing.content = 'Explore Titan\'s robotics integration platform. Connect AI agents to ROS 2, NVIDIA Isaac, Boston Dynamics Spot, DJI drones, and custom robotic systems. Deploy intelligent automation.';
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#0A0E17] text-[#E2E8F0]">

@@ -1,11 +1,11 @@
 interface FAQ {
-  question: string;
-  answer: string;
+ question: string;
+ answer: string;
 }
 
 interface FAQJsonLdProps {
-  faqs: FAQ[];
-  mainEntityName?: string;
+ faqs: FAQ[];
+ mainEntityName?: string;
 }
 
 /**
@@ -17,27 +17,27 @@ interface FAQJsonLdProps {
  * Place near the end of the page content.
  */
 export default function FAQJsonLd({ faqs }: FAQJsonLdProps) {
-  if (!faqs || faqs.length < 2) return null;
+ if (!faqs || faqs.length < 2) return null;
 
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer.substring(0, 500),
-      },
-    })),
-  };
+ const faqJsonLd = {
+ '@context': 'https://schema.org',
+ '@type': 'FAQPage',
+ mainEntity: faqs.map((faq) => ({
+ '@type': 'Question',
+ name: faq.question,
+ acceptedAnswer: {
+ '@type': 'Answer',
+ text: faq.answer.substring(0, 500),
+ },
+ })),
+ };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(faqJsonLd),
-      }}
-    />
-  );
+ return (
+ <script
+ type="application/ld+json"
+ dangerouslySetInnerHTML={{
+ __html: JSON.stringify(faqJsonLd),
+ }}
+ />
+ );
 }

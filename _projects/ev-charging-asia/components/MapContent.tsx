@@ -5,13 +5,20 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import Link from 'next/link';
 
-// Fix Leaflet icon paths
-const iconUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png';
-const iconRetinaUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png';
-const shadowUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png';
+// Fix Leaflet icon paths — wrapped in try/catch to prevent runtime crashes
+// This runs at module import time, so any Leaflet loading issue won't crash the whole page
+try {
+  const iconUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png';
+  const iconRetinaUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png';
+  const shadowUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png';
 
-delete (L.Icon.Default.prototype as Record<string, unknown>)._getIconUrl;
-L.Icon.Default.mergeOptions({ iconUrl, iconRetinaUrl, shadowUrl });
+  if (L?.Icon?.Default?.prototype) {
+    try { delete (L.Icon.Default.prototype as Record<string, unknown>)._getIconUrl; } catch { /* already removed in leaflet 1.9+ */ }
+    L.Icon.Default.mergeOptions({ iconUrl, iconRetinaUrl, shadowUrl });
+  }
+} catch (e) {
+  console.warn('[MapContent] Failed to initialize Leaflet icons:', e);
+}
 
 // Asia bounds: users cannot pan outside Asia
 const asiaBounds: L.LatLngBoundsExpression = [
