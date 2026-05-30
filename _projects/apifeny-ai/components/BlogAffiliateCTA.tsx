@@ -1,7 +1,5 @@
-// ══════════════════════════════════════════════════════════
 // BlogAffiliateCTA — Boost monetization on blog posts by
 // showing contextual affiliate CTAs based on post tags.
-// ══════════════════════════════════════════════════════════
 
 import Link from 'next/link';
 import { Sparkles, ArrowRight, Zap } from 'lucide-react';
@@ -111,32 +109,34 @@ export default function BlogAffiliateCTA({ postSlug, postTags, postTitle }: Blog
   const lowerTags = postTags.map(t => t.toLowerCase());
   const lowerTitle = postTitle.toLowerCase();
 
-  // Find best matching offer
   const matchedOffer = OFFERS.find(offer =>
     offer.keywords.some(kw =>
       lowerTags.some(t => t.includes(kw)) || lowerTitle.includes(kw)
     )
   );
 
+  const cardClass = "mt-10 p-6 rounded-xl border border-blue-200 bg-gradient-to-r from-blue-50 to-purple-50";
+  const iconClass = "flex-shrink-0 w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center";
+  const iconStyle = "w-5 h-5 text-blue-600";
+  const headingClass = "text-lg font-semibold text-gray-900 mb-1";
+  const descClass = "text-sm text-gray-600 mb-3";
+  const linkClass = "inline-flex items-center gap-1.5 text-sm font-medium text-blue-700 hover:text-blue-800 transition";
+
   if (!matchedOffer) {
-    // Default fallback CTA
     return (
-      <div className="mt-10 p-6 rounded-xl border border-neon/20 bg-gradient-to-r from-neon/5 to-purple-500/5">
+      <div className={cardClass}>
         <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-neon/10 flex items-center justify-center">
-            <Sparkles className="w-5 h-5 text-neon" />
+          <div className={iconClass}>
+            <Sparkles className={iconStyle} />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-lg font-semibold text-white mb-1">
+            <h3 className={headingClass}>
               Explore AI Tools for {postTitle.split(' ').slice(0, 3).join(' ')}
             </h3>
-            <p className="text-sm text-tech-300 mb-3">
-              Discover the best AI tools reviewed and ranked by our team. Free &amp; paid options for every budget.
+            <p className={descClass}>
+              Discover the best AI tools reviewed and ranked by our team. Free & paid options for every budget.
             </p>
-            <Link
-              href="/best-ai-tools"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-neon-light hover:text-neon transition"
-            >
+            <Link href="/best-ai-tools" className={linkClass}>
               Browse All AI Tools
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
@@ -147,23 +147,23 @@ export default function BlogAffiliateCTA({ postSlug, postTags, postTitle }: Blog
   }
 
   return (
-    <div className="mt-10 p-6 rounded-xl border border-neon/20 bg-gradient-to-r from-neon/5 to-purple-500/5">
+    <div className={cardClass}>
       <div className="flex items-start gap-4">
-        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-neon/10 flex items-center justify-center">
-          <Zap className="w-5 h-5 text-neon" />
+        <div className={iconClass}>
+          <Zap className={iconStyle} />
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="text-lg font-semibold text-white mb-1">
+          <h3 className={headingClass}>
             {matchedOffer.title}
           </h3>
-          <p className="text-sm text-tech-300 mb-3">
+          <p className={descClass}>
             {matchedOffer.description}
           </p>
           <a
             href={matchedOffer.href}
             target="_blank"
             rel="noopener noreferrer sponsored"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-neon-light hover:text-neon transition"
+            className={linkClass}
           >
             {matchedOffer.cta}
             <ArrowRight className="w-3.5 h-3.5" />

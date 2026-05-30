@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     title: 'Best AI Marketing Tools 2026 — Apifeny AI',
     description:
       '12 best AI marketing tools ranked by trends and real reviews. Automate campaigns, optimize SEO, and scale your marketing with AI.',
-    url: 'https://apifeny.ai/best-ai-marketing-tools',
+    url: 'https://apifeny-ai.vercel.app/best-ai-marketing-tools',
   },
   alternates: {
-    canonical: 'https://apifeny.ai/best-ai-marketing-tools',
+    canonical: 'https://apifeny-ai.vercel.app/best-ai-marketing-tools',
   },
 };
 

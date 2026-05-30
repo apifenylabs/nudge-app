@@ -71,7 +71,7 @@ function BarChart({
                 className="w-full rounded-t-sm transition-all duration-300 hover:opacity-80"
                 style={{
                   height: `${Math.max(2, pct)}%`,
-                  background: d.value > 0 ? color : "#E5E0D8",
+                  background: d.value > 0 ? color : "#E5E7EB",
                   opacity: d.value > 0 ? 0.5 + pct / 200 : 0.25,
                 }}
               >
@@ -80,7 +80,7 @@ function BarChart({
                   <div
                     className="text-[9px] font-mono px-1.5 py-0.5 rounded whitespace-nowrap shadow-sm"
                     style={{
-                      background: "#1F1F1F",
+                      background: "#111827",
                       color: "#FFFFFF",
                     }}
                   >
@@ -102,7 +102,7 @@ function BarChart({
               key={i}
               className="flex-1 text-[7px] font-mono text-center truncate"
               style={{
-                color: "#999999",
+                color: "#9CA3AF",
                 visibility: show ? "visible" : "hidden",
               }}
             >
@@ -137,8 +137,8 @@ function StatCard({
       className="p-4 rounded-xl border"
       style={{
         background: "#FFFFFF",
-        borderColor: "#E5E0D8",
-        boxShadow: "0 4px 12px -4px rgba(31,31,31,0.06)",
+        borderColor: "#E5E7EB",
+        boxShadow: "0 4px 12px -4px rgba(0,0,0,0.04)",
       }}
     >
       <div className="flex items-center gap-2 mb-2">
@@ -157,21 +157,21 @@ function StatCard({
                   ? "#10B981"
                   : trend === "down"
                     ? "#EF4444"
-                    : "#999999",
+                    : "#9CA3AF",
             }}
           >
             {trend === "up" ? "↑" : trend === "down" ? "↓" : "→"}
           </span>
         )}
       </div>
-      <div className="text-2xl font-bold font-mono" style={{ color: "#1F1F1F" }}>
+      <div className="text-2xl font-bold font-mono" style={{ color: "#111827" }}>
         {value}
       </div>
-      <div className="text-[10px] font-mono uppercase tracking-wider mt-0.5" style={{ color: "#666666" }}>
+      <div className="text-[10px] font-mono uppercase tracking-wider mt-0.5" style={{ color: "#6B7280" }}>
         {label}
       </div>
       {sub && (
-        <div className="text-[9px] font-mono mt-1" style={{ color: "#999999" }}>
+        <div className="text-[9px] font-mono mt-1" style={{ color: "#9CA3AF" }}>
           {sub}
         </div>
       )}
@@ -275,14 +275,14 @@ export default function AnalyticsPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <BarChart3 className="h-4 w-4" style={{ color: "#0EA5A5" }} />
+          <BarChart3 className="h-4 w-4" style={{ color: "#0D9488" }} />
           <h1
             className="text-base sm:text-lg font-bold tracking-tight"
-            style={{ color: "#1F1F1F" }}
+            style={{ color: "#111827" }}
           >
             Analytics
           </h1>
-          <span className="text-[10px] font-mono" style={{ color: "#999999" }}>
+          <span className="text-[10px] font-mono" style={{ color: "#9CA3AF" }}>
             {fullHistory.length} days tracked
           </span>
         </div>
@@ -292,7 +292,7 @@ export default function AnalyticsPage() {
           className="flex rounded-full p-0.5 border"
           style={{
             background: "#FFFFFF",
-            borderColor: "#E5E0D8",
+            borderColor: "#E5E7EB",
           }}
         >
           {RANGE_OPTS.map((opt) => (
@@ -302,8 +302,8 @@ export default function AnalyticsPage() {
               className="px-3 py-1 rounded-full text-[10px] font-mono transition-all"
               style={{
                 background:
-                  range === opt.value ? "#0EA5A5" : "transparent",
-                color: range === opt.value ? "#FFFFFF" : "#666666",
+                  range === opt.value ? "#0D9488" : "transparent",
+                color: range === opt.value ? "#FFFFFF" : "#6B7280",
               }}
             >
               {opt.label}
@@ -319,7 +319,7 @@ export default function AnalyticsPage() {
           label="Tasks Run"
           value={stats.totalTasks.toLocaleString()}
           sub={`${stats.avgDailyTasks} avg/day`}
-          color="#0EA5A5"
+          color="#0D9488"
           trend={stats.trend}
         />
         <StatCard
@@ -327,7 +327,7 @@ export default function AnalyticsPage() {
           label="XP Earned"
           value={stats.totalXp.toLocaleString()}
           sub={`+${stats.avgDailyXp}/day`}
-          color="#D4A017"
+          color="#F59E0B"
           trend={stats.trend}
         />
         <StatCard
@@ -351,22 +351,22 @@ export default function AnalyticsPage() {
         className="p-4 sm:p-6"
         style={{
           background: "#FFFFFF",
-          border: "1px solid #E5E0D8",
+          border: "1px solid #E5E7EB",
           borderRadius: "20px",
-          boxShadow: "0 10px 30px -10px rgba(31,31,31,0.08)",
+          boxShadow: "0 10px 30px -10px rgba(0,0,0,0.06)",
         }}
       >
         <div className="flex items-center gap-2 mb-4">
-          <Activity className="h-3.5 w-3.5" style={{ color: "#0EA5A5" }} />
+          <Activity className="h-3.5 w-3.5" style={{ color: "#0D9488" }} />
           <h3
             className="text-xs font-semibold font-mono uppercase tracking-wider"
-            style={{ color: "#1F1F1F" }}
+            style={{ color: "#111827" }}
           >
             Daily Active Users / Tasks
           </h3>
           <span
             className="text-[9px] font-mono ml-auto"
-            style={{ color: "#999999" }}
+            style={{ color: "#9CA3AF" }}
           >
             {taskSeries.length} data points
           </span>
@@ -374,14 +374,14 @@ export default function AnalyticsPage() {
         {taskSeries.length === 0 ? (
           <div
             className="text-center py-8 text-[10px] font-mono"
-            style={{ color: "#999999" }}
+            style={{ color: "#9CA3AF" }}
           >
             No usage data yet. Start running tasks to see charts here.
           </div>
         ) : (
           <BarChart
             data={taskSeries}
-            color="#0EA5A5"
+            color="#0D9488"
             label="Tasks"
             height={160}
           />
@@ -393,22 +393,22 @@ export default function AnalyticsPage() {
         className="p-4 sm:p-6"
         style={{
           background: "#FFFFFF",
-          border: "1px solid #E5E0D8",
+          border: "1px solid #E5E7EB",
           borderRadius: "20px",
-          boxShadow: "0 10px 30px -10px rgba(31,31,31,0.08)",
+          boxShadow: "0 10px 30px -10px rgba(0,0,0,0.06)",
         }}
       >
         <div className="flex items-center gap-2 mb-4">
-          <Zap className="h-3.5 w-3.5" style={{ color: "#D4A017" }} />
+          <Zap className="h-3.5 w-3.5" style={{ color: "#F59E0B" }} />
           <h3
             className="text-xs font-semibold font-mono uppercase tracking-wider"
-            style={{ color: "#1F1F1F" }}
+            style={{ color: "#111827" }}
           >
             XP Earned Over Time
           </h3>
           <span
             className="text-[9px] font-mono ml-auto"
-            style={{ color: "#999999" }}
+            style={{ color: "#9CA3AF" }}
           >
             +{stats.totalXp.toLocaleString()} total
           </span>
@@ -416,14 +416,14 @@ export default function AnalyticsPage() {
         {xpSeries.length === 0 ? (
           <div
             className="text-center py-8 text-[10px] font-mono"
-            style={{ color: "#999999" }}
+            style={{ color: "#9CA3AF" }}
           >
             No XP data yet. Complete tasks to earn XP and track it here.
           </div>
         ) : (
           <BarChart
             data={xpSeries}
-            color="#D4A017"
+            color="#F59E0B"
             label="XP"
             height={160}
             formatValue={(v) => `+${v.toLocaleString()}`}
@@ -437,22 +437,22 @@ export default function AnalyticsPage() {
           className="p-4 sm:p-6"
           style={{
             background: "#FFFFFF",
-            border: "1px solid #E5E0D8",
+            border: "1px solid #E5E7EB",
             borderRadius: "20px",
-            boxShadow: "0 10px 30px -10px rgba(31,31,31,0.08)",
+            boxShadow: "0 10px 30px -10px rgba(0,0,0,0.06)",
           }}
         >
           <div className="flex items-center gap-2 mb-4">
             <Users className="h-3.5 w-3.5" style={{ color: "#10B981" }} />
             <h3
               className="text-xs font-semibold font-mono uppercase tracking-wider"
-              style={{ color: "#1F1F1F" }}
+              style={{ color: "#111827" }}
             >
               Skills Certified
             </h3>
             <span
               className="text-[9px] font-mono ml-auto"
-              style={{ color: "#999999" }}
+              style={{ color: "#9CA3AF" }}
             >
               {stats.totalSkills} total
             </span>
@@ -471,10 +471,10 @@ export default function AnalyticsPage() {
         className="p-4 rounded-xl border text-center"
         style={{
           background: "#FFFFFF",
-          borderColor: "#E5E0D8",
+          borderColor: "#E5E7EB",
         }}
       >
-        <p className="text-[10px] font-mono" style={{ color: "#666666" }}>
+        <p className="text-[10px] font-mono" style={{ color: "#6B7280" }}>
           Data sourced from local storage ({fullHistory.length} days).{" "}
           {stats.trend === "up"
             ? "Your engagement is trending upward — keep it up! 🚀"

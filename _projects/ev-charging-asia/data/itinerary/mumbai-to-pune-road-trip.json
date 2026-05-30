@@ -1,0 +1,44 @@
+{
+  "slug": "mumbai-to-pune-road-trip",
+  "title": "Mumbai to Pune: Western Ghats EV Express",
+  "subtitle": "A 2-day family EV road trip through India's mountain gateway",
+  "route": [
+    {
+      "day": 1,
+      "from": "Mumbai",
+      "to": "Pune",
+      "distance": "150 km",
+      "drivingTime": "2.5 hours",
+      "charger": "Tata Power Lonavala (120kW)",
+      "kidActivities": "Lonavala Hill Station, Imagica Theme Park"
+    },
+    {
+      "day": 2,
+      "from": "Pune",
+      "to": "Pune",
+      "distance": "Local",
+      "drivingTime": "Full day",
+      "charger": "Tata Power Phoenix Market City",
+      "kidActivities": "Dagdusheth Temple, Raja Dinkar Kelkar Museum, Shinde's Chhatri"
+    }
+  ],
+  "totalDistance": "150 km",
+  "totalChargingCost": "₹400-600",
+  "bestFor": "Weekend getaway from Mumbai with hill station scenery",
+  "carRecommendations": [
+    "Tata Nexon EV",
+    "MG ZS EV",
+    "Hyundai Ioniq 5",
+    "BYD Atto 3"
+  ],
+  "tips": [
+    "Mumbai-Pune Expressway is India's finest highway — 6-lane concrete road",
+    "Reliance BP and Tata Power chargers at expressway rest stops",
+    "Charge fully in Mumbai before departure — Lonavala is the key charging point"
+  ],
+  "chargerTypes": [
+    "CCS2",
+    "Type 2"
+  ],
+  "seasonal": "October to March (post-monsoon, lush green hills)"
+}

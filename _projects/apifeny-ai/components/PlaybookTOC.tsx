@@ -18,9 +18,9 @@ export default function PlaybookTOC({ steps }: PlaybookTOCProps) {
   if (steps.length === 0) return null;
 
   return (
-    <div className="mb-8 rounded-xl border border-tech-500/30 bg-tech-700/60 p-4 sm:p-5">
-      <h2 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-        <BookOpen className="w-4 h-4 text-neon-light" />
+    <div className="mb-8 rounded-xl border border-gray-200 bg-gray-50 p-4 sm:p-5">
+      <h2 className="text-sm font-semibold text-gray-900 mb-3 flex items-center gap-2">
+        <BookOpen className="w-4 h-4 text-blue-600" />
         Table of Contents
       </h2>
       <nav className="space-y-1.5">
@@ -29,7 +29,7 @@ export default function PlaybookTOC({ steps }: PlaybookTOCProps) {
             key={i}
             href={`#step-${i + 1}`}
             onClick={(e) => handleClick(e, i)}
-            className="block text-xs text-tech-200 hover:text-neon-light transition pl-3 border-l-2 border-tech-500/30 hover:border-neon-light py-0.5 hover:scale-[1.02] origin-left"
+            className="block text-xs text-gray-600 hover:text-blue-700 transition pl-3 border-l-2 border-gray-200 hover:border-blue-600 py-0.5 hover:scale-[1.02] origin-left"
           >
             Step {i + 1}: {step.title}
           </a>

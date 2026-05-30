@@ -35,16 +35,16 @@ export default function LifeOSPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-2 mb-4">
-        <div className="w-2 h-2 rounded-full" style={{ background: '#0EA5A5' }} />
-        <h2 className="text-sm font-mono font-semibold tracking-wider" style={{ color: '#0EA5A5' }}>LIFEOS</h2>
-        <span className="text-[10px] font-mono" style={{ color: '#666666' }}>// plugin ecosystem</span>
+        <div className="w-2 h-2 rounded-full" style={{ background: '#0D9488' }} />
+        <h2 className="text-sm font-mono font-semibold tracking-wider" style={{ color: '#0D9488' }}>LIFEOS</h2>
+        <span className="text-[10px] font-mono" style={{ color: '#6B7280' }}>// plugin ecosystem</span>
       </div>
 
       <Card className="p-4 sm:p-6" style={{
         background: '#FFFFFF',
-        border: '1px solid #E5E0D8',
+        border: '1px solid #E5E7EB',
         borderRadius: '20px',
-        boxShadow: '0 10px 30px -10px rgba(31,31,31,0.08)',
+        boxShadow: '0 10px 30px -10px rgba(0,0,0,0.06)',
       }}>
         <LifeOSTab onFeedAdd={handleFeedAdd} />
       </Card>

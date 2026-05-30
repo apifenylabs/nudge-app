@@ -527,4 +527,55 @@ Charger reliability varies by network:
 - **PTT and EA Anywhere** have the best uptime records (~95%+ availability)
 - **Smaller networks** can have chargers offline for days or weeks
 - **What to do:** Always have a backup charger within 20 km. Use Plugshare to check recent user reports before you leave
-- **Reporting:** Most apps have a "Report Issue" button — use it to help other drivers 
+- **Reporting:** Most apps have a "Report Issue" button — use it to help other drivers
+
+### 9. How does Thailand's EV charging compare to petrol in 2026?
+
+At current prices (May 2026):
+
+| Metric | EV (Public DC) | EV (Home) | Petrol Car |
+|---|---|---|---|
+| Cost per 100 km | 91–160 THB | 72 THB | ~350 THB |
+| Cost for 1,500 km/month | 1,365–2,400 THB | 1,080 THB | ~5,250 THB |
+| Cost for 20,000 km/year | 18,200–32,000 THB | 14,400 THB | ~70,000 THB |
+| Fuel/energy cost (3-year ownership) | ~55,000–96,000 THB | ~43,000 THB | ~210,000 THB |
+
+**Bottom line:** Even charging exclusively at public DC rates, an EV owner saves roughly 55–65% on fuel costs compared to petrol. Home charging pushes the savings to 75–80%.
+
+### 10. Is now a good time to buy an EV in Thailand?
+
+**Mid-2026 presents a mixed picture:**
+
+**Reasons to buy now:**
+- EV3.5 subsidies of 50,000 THB are still available for locally assembled models
+- The charging network is at its most mature point ever — 11,600+ chargers and growing
+- Electricity prices are stable vs. volatile petrol prices
+- Chinese automakers (BYD, GWM, Neta, Aion) continue to launch compelling new models at competitive prices
+
+**Reasons to wait:**
+- Subsidies are decreasing (were 150,000 THB under EV3.0, now 50,000 THB under EV3.5)
+- Chinese automakers have raised 2026 prices due to reduced incentives and higher import taxes
+- More model choices are arriving monthly — the BYD Sealion 07, GWM Ora 07, and new Aion models are all scheduled for late 2026
+- Interest rates for EV loans have tightened since 2024
+
+**Verdict:** If you find a locally assembled EV that meets your needs at a price you're comfortable with, 2026 is a solid time to buy. The infrastructure is ready, the savings are real, and the market is competitive enough that manufacturers are absorbing some of the subsidy reduction.
+
+## Conclusion
+
+Thailand's EV charging ecosystem in 2026 is mature, competitive, and genuinely practical for both daily commuting and long-distance travel. The 3,720+ stations and 11,622 chargers across the country mean that range anxiety — while not eliminated — is increasingly a thing of the past for anyone willing to plan ahead.
+
+Here's your cheat sheet:
+
+- **For daily city driving:** Charge at home (PEA/MEA TOU off-peak) or use PEA VOLTA off-peak public DC at 5.30 THB/kWh
+- **For highway road trips:** Use EA Anywhere (flat 7.29 THB/kWh, best coverage) or PTT EV Station PluZ (6.00–7.70 THB/kWh TOU)
+- **For Tesla owners:** Rely on Superchargers but keep EA Anywhere as backup
+- **For condo dwellers:** Push your building management for shared charging facilities — the demand is there
+- **For tourists renting an EV:** Download three apps before you go, buy a Thai SIM, and book hotels with complimentary charging
+
+Thailand's ambition to be Southeast Asia's EV hub isn't just talk — it's backed by policy, investment, and infrastructure that's already one of the best in the region. Whether you're a Bangkok commuter, a Phuket beach-hopper, or a Chiang Mai mountain explorer, 2026 is the year to go electric in the Land of Smiles.
+
+---
+
+*Thailand EV Charging Guide 2026 was first published on **29 May 2026** by the EV Charging Asia Team. Pricing and availability are subject to change. Always verify rates in the respective charging apps before starting a charging session.*
+
+*This guide contains affiliate links. We may earn a commission if you book accommodation through our links, at no extra cost to you.* 

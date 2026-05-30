@@ -634,7 +634,7 @@ export default function AIToolsKenyaPage() {
               AI writing tools Kenya · AI coding tools Kenya · AI marketing Kenya · 
               Kenya AI directory · AI tools for Kenya startups · affordable AI tools Kenya · 
               free AI tools Kenya · AI productivity Kenya · Kenya tech stack · 
-              AI tools Nairobi · AI tools Mombasa · AI tools Nairobi · Swahili AI tools
+              'AI tools for Nairobi · AI tools for Mombasa · AI tools for Nairobi' · Swahili AI tools
             </p>
           </div>
         </div>

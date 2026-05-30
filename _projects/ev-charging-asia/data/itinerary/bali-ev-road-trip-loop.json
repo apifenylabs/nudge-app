@@ -1,0 +1,62 @@
+{
+  "slug": "bali-ev-road-trip-loop",
+  "title": "Bali EV Road Trip Loop: Beaches → Rice Terraces → Culture",
+  "subtitle": "A 4-day electric circuit of paradise island",
+  "route": [
+    {
+      "day": 1,
+      "from": "Canggu",
+      "to": "Seminyak",
+      "distance": "10 km",
+      "drivingTime": "0.5 hours",
+      "charger": "Go-Ion Seminyak Square (90kW)",
+      "kidActivities": "Finns Recreation Club, Seminyak Beach"
+    },
+    {
+      "day": 2,
+      "from": "Seminyak",
+      "to": "Ubud",
+      "distance": "35 km",
+      "drivingTime": "1 hour",
+      "charger": "Casion Trans Studio Mall Denpasar (90kW)",
+      "kidActivities": "Ubud Monkey Forest, Tegalalang Rice Terraces"
+    },
+    {
+      "day": 3,
+      "from": "Ubud",
+      "to": "Nusa Dua",
+      "distance": "45 km",
+      "drivingTime": "1.5 hours",
+      "charger": "Go-Ion Sanur (90kW), Bali Collection (90kW)",
+      "kidActivities": "Sanur Beach, Bali Safari & Marine Park"
+    },
+    {
+      "day": 4,
+      "from": "Nusa Dua",
+      "to": "Airport",
+      "distance": "15 km",
+      "drivingTime": "0.5 hours",
+      "charger": "Ion Ciputra World (90kW)",
+      "kidActivities": "Waterbom Bali, GWK Cultural Park"
+    }
+  ],
+  "totalDistance": "180 km",
+  "totalChargingCost": "IDR 150,000-250,000",
+  "bestFor": "First-time Bali visitors who want a taste of everything in a short trip",
+  "carRecommendations": [
+    "BYD Atto 3",
+    "Hyundai Ioniq 5",
+    "MG 4",
+    "Wuling Air EV"
+  ],
+  "tips": [
+    "Chargers are concentrated in Seminyak, Denpasar, and Nusa Dua",
+    "Many luxury hotels now offer overnight charging for guests",
+    "Traffic in Canggu and Seminyak can be heavy — plan driving time accordingly"
+  ],
+  "chargerTypes": [
+    "CCS2",
+    "Type 2"
+  ],
+  "seasonal": "April to October (dry season)"
+}

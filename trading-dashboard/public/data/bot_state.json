@@ -1,0 +1,27 @@
+{
+  "open_orders": [],
+  "last_signal_time": 0,
+  "kill_switched": false,
+  "last_cycle": "2026-05-30T11:22:10.658219",
+  "pending_grids": [],
+  "last_check": "2026-05-28T16:03:01.466659+00:00",
+  "balance": 1000,
+  "trade_history": [
+    {
+      "timestamp": "2026-05-29T22:25:00",
+      "symbol": "BTC-PERP",
+      "strategy": "kalman_drl",
+      "direction": "LONG",
+      "entry": 72854.5,
+      "exit": 72589.5,
+      "pnl_r": -0.31,
+      "r_multiple": -0.31,
+      "pnl_usd": -0.27,
+      "exit_reason": "liquidity_sweep_stopout"
+    }
+  ],
+  "realized_pnl": -0.27,
+  "turtle_tracker": {
+    "history": []
+  }
+}

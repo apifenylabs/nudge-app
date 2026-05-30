@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'AI Tool Collections — Apifeny AI',
     description:
       'Curated collections of AI tools grouped by use case and workflow.',
-    url: 'https://apifeny.ai/collections',
+    url: 'https://apifeny-ai.vercel.app/collections',
   },
 };
 

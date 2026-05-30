@@ -28,7 +28,7 @@ import { playbooks } from '@/lib/playbooks';
 import BlogCategoryLinks from '@/components/BlogCategoryLinks';
 import type { Playbook } from '@/lib/playbooks';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Best AI Marketing Tools for Asian Markets (2026) — SEO, Content, Social | Apifeny AI',

@@ -23,6 +23,9 @@ import {
   type LifeCategory,
   type PluginPhase,
 } from "@/lib/lifeos/plugins";
+import {
+  getCrossPluginSuggestions,
+} from "@/lib/lifeos/synergies";
 import { recordAction } from "@/lib/lifeos/analytics";
 import LifeOSAnalytics from "@/components/LifeOSAnalytics";
 import {
@@ -120,6 +123,20 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
       text: archived ? `Archived plugin` : `Restored plugin from archive`,
     });
   }, [refresh, onFeedAdd]);
+
+  // Listen for activate events from cross-plugin suggestion cards
+  useEffect(() => {
+    const handler = (e: CustomEvent) => {
+      const cat = e.detail as LifeCategory;
+      if (!plugins.some(p => p.category === cat)) {
+        handleActivate(cat);
+      } else {
+        setActivePlugin(cat);
+      }
+    };
+    window.addEventListener('lifeos-activate', handler as EventListener);
+    return () => window.removeEventListener('lifeos-activate', handler as EventListener);
+  }, [plugins, handleActivate]);
 
   const handleMove = useCallback((pluginId: string, direction: 'up' | 'down') => {
     const allIds = plugins.map(p => p.id);
@@ -504,6 +521,12 @@ function PluginDetail({ plugin, onCompleteTask }: {
         </div>
       </div>
 
+      {/* Cross-Plugin Suggestions */}
+      <CrossPluginSuggestions plugin={plugin} onActivatePlugin={(cat) => {
+        // handled via parent — this triggers the activation flow
+        window.dispatchEvent(new CustomEvent('lifeos-activate', { detail: cat }));
+      }} />
+
       {/* Phases */}
       <div className="p-5 space-y-4">
         {plugin.phases.map((phase, i) => (
@@ -593,5 +616,83 @@ function PluginDetail({ plugin, onCompleteTask }: {
         ))}
       </div>
     </motion.div>
+  );
+}
+
+// ─── Cross-Plugin Suggestion Cards ────────────────────────────────────
+
+function CrossPluginSuggestions({ plugin, onActivatePlugin }: {
+  plugin: LifeOSPlugin;
+  onActivatePlugin: (category: LifeCategory) => void;
+}) {
+  const suggestions = getCrossPluginSuggestions(plugin);
+
+  if (suggestions.length === 0) return null;
+
+  return (
+    <div className="px-5 pt-5 pb-1">
+      <div className="flex items-center gap-2 mb-3">
+        <div className="w-2 h-2 rounded-full" style={{ background: '#A78BFA' }} />
+        <h3 className="text-xs font-mono font-semibold tracking-wider" style={{ color: '#A78BFA' }}>
+          CROSS-PLUGIN SUGGESTIONS
+        </h3>
+        <span className="text-[9px] font-mono text-titan-muted/50">// {plugin.emoji} {plugin.name} &rarr; partners</span>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {suggestions.map((s, i) => (
+          <motion.div
+            key={`${s.targetCategory}-${i}`}
+            className="rounded-xl border p-3.5 transition-all hover:scale-[1.01]"
+            style={{
+              background: 'linear-gradient(135deg, rgba(168,85,247,0.06), rgba(59,130,246,0.03))',
+              borderColor: 'rgba(168,85,247,0.2)',
+            }}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.08 }}
+          >
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-lg">{s.targetPluginEmoji}</span>
+              <div>
+                <p className="text-[11px] font-semibold">{s.targetPluginName}</p>
+                <p className="text-[9px] text-titan-muted/50">{s.synergyLabel}</p>
+              </div>
+              <Badge
+                className="ml-auto text-[8px] h-4 px-1.5 uppercase"
+                style={{
+                  background: 'rgba(168,85,247,0.15)',
+                  color: '#A78BFA',
+                  border: '1px solid rgba(168,85,247,0.25)',
+                }}
+              >
+                +{((plugin.overallProgress >= 50 ? 1.25 : 1.2) * 100 - 100).toFixed(0)}% XP
+              </Badge>
+            </div>
+            <ul className="space-y-1.5">
+              {s.suggestions.map((sg, j) => (
+                <li key={j} className="flex items-start gap-2 text-[10px] text-titan-muted/80">
+                  <span className="text-titan-muted/30 mt-0.5 shrink-0">&#8226;</span>
+                  <span>{sg.message}</span>
+                </li>
+              ))}
+            </ul>
+            <button
+              onClick={() => onActivatePlugin(s.targetCategory)}
+              className="mt-2.5 w-full text-[10px] py-1.5 rounded-lg font-medium flex items-center justify-center gap-1 transition-all"
+              style={{
+                background: 'rgba(168,85,247,0.1)',
+                color: '#A78BFA',
+                border: '1px solid rgba(168,85,247,0.2)',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(168,85,247,0.18)'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(168,85,247,0.1)'; }}
+            >
+              Open {s.targetPluginName}
+              <ChevronRight className="h-3 w-3" />
+            </button>
+          </motion.div>
+        ))}
+      </div>
+    </div>
   );
 }

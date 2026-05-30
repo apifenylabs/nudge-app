@@ -70,11 +70,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       locale: 'en_US',
       siteName: 'EV Charging Asia',
+      images: [
+        {
+          url: `https://ev-charging-asia.vercel.app/og/routes/${fullSlug || params.slug}.png`,
+          width: 1200,
+          height: 630,
+          alt: `${it.title} — EV road trip in ${it.countries.join(' & ')}`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${it.title} | EV Charging Asia`,
       description: it.description.slice(0, 160),
+      images: [`https://ev-charging-asia.vercel.app/og/routes/${fullSlug || params.slug}.png`],
     },
     other: {
       'article:tag': it.tags.slice(0, 6).join(','),

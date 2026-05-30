@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'AI Tools Directory — Apifeny AI',
     description:
       'Browse 60+ curated AI tools with Asia-ready filters, pricing comparison, and user ratings.',
-    url: 'https://apifeny.ai/tools',
+    url: 'https://apifeny-ai.vercel.app/tools',
   },
   twitter: {
     title: 'AI Tools Directory — Apifeny AI',

@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     title: 'Best AI Coding Tools 2026 — Apifeny AI',
     description:
       '13 best AI coding tools ranked by trending score and user ratings. Find the perfect code assistant for your stack — from Copilot to Claude Code.',
-    url: 'https://apifeny.ai/best-ai-coding-tools',
+    url: 'https://apifeny-ai.vercel.app/best-ai-coding-tools',
   },
   alternates: {
-    canonical: 'https://apifeny.ai/best-ai-coding-tools',
+    canonical: 'https://apifeny-ai.vercel.app/best-ai-coding-tools',
   },
 };
 

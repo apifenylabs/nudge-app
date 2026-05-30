@@ -634,7 +634,7 @@ export default function AIToolsSaudiArabiaPage() {
               AI writing tools Saudi Arabia · AI coding tools Saudi Arabia · AI marketing Saudi Arabia · 
               Saudi Arabia AI directory · AI tools for KSA startups · affordable AI tools Saudi Arabia · 
               free AI tools Saudi Arabia · AI productivity Saudi Arabia · Saudi Arabia tech stack · 
-              AI tools Riyadh · AI tools Jeddah · AI tools Riyadh · Arabic AI tools
+              'AI tools for Riyadh · AI tools for Jeddah · AI tools for Riyadh' · Arabic AI tools
             </p>
           </div>
         </div>

@@ -1,203 +1,366 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Shield, Download, Upload, FileKey, Fingerprint, Building2, Lock, Globe } from 'lucide-react';
+import { useState, useMemo, useCallback, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
+import {
+  ArrowLeft, Scan, CheckCircle2, AlertCircle, Terminal, Wifi,
+  Zap, Shield, Bot, Globe, Microchip, Cpu, HardDrive,
+} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
-export default function BYOEnterprisePage() {
-  const [step, setStep] = useState<'welcome' | 'upload' | 'scanning' | 'ready'>('welcome');
-  const [progress, setProgress] = useState(0);
+type ScanStatus = 'idle' | 'scanning' | 'ready' | 'error';
 
-  const handleUpload = () => {
-    setStep('scanning');
-    // Simulate compliance scan
-    const interval = setInterval(() => {
-      setProgress((p) => {
-        if (p >= 100) {
-          clearInterval(interval);
-          setStep('ready');
-          return 100;
-        }
-        return p + 5;
-      });
-    }, 200);
-  };
+interface Device {
+  id: string;
+  name: string;
+  type: string;
+  status: 'online' | 'offline' | 'unavailable';
+  ip: string;
+  lastSeen: string;
+  capabilities: string[];
+}
+
+const MOCK_DEVICES: Device[] = [
+  { id: 'd1', name: 'Jetson Nano', type: 'ros2', status: 'online', ip: '192.168.1.42', lastSeen: '2s ago', capabilities: ['object-detection', 'navigation', 'speech'] },
+  { id: 'd2', name: 'ESP32-CAM', type: 'arduino', status: 'online', ip: '192.168.1.101', lastSeen: '5s ago', capabilities: ['camera', 'motion-sensor'] },
+  { id: 'd3', name: 'Raspberry Pi 5', type: 'raspberry-pi', status: 'offline', ip: '192.168.1.77', lastSeen: '3h ago', capabilities: ['home-assistant', 'mqtt-broker'] },
+  { id: 'd4', name: 'Servo Controller', type: 'arduino', status: 'unavailable', ip: '192.168.1.200', lastSeen: '2d ago', capabilities: ['motor-control', 'encoder'] },
+  { id: 'd5', name: 'LiDAR Scanner', type: 'custom', status: 'online', ip: '192.168.1.88', lastSeen: '1m ago', capabilities: ['mapping', 'obstacle-avoidance'] },
+];
+
+const STATUS_STYLES: Record<string, { label: string; dot: string; bg: string; text: string }> = {
+  online: { label: 'Online', dot: '#10B981', bg: 'bg-emerald-50', text: 'text-emerald-700' },
+  offline: { label: 'Offline', dot: '#6B7280', bg: 'bg-gray-100', text: 'text-gray-500' },
+  unavailable: { label: 'Unavailable', dot: '#EF4444', bg: 'bg-red-50', text: 'text-red-600' },
+};
+
+const TYPE_CONFIG: Record<string, { label: string; icon: typeof Cpu; color: string; bg: string }> = {
+  ros2: { label: 'ROS2', icon: Cpu, color: '#0D9488', bg: 'bg-teal-50' },
+  arduino: { label: 'Arduino / ESP32', icon: Microchip, color: '#10B981', bg: 'bg-emerald-50' },
+  'raspberry-pi': { label: 'Raspberry Pi', icon: HardDrive, color: '#F59E0B', bg: 'bg-amber-50' },
+  custom: { label: 'Custom Hardware', icon: Globe, color: '#7C3AED', bg: 'bg-purple-50' },
+};
+
+function ScanAnimation() {
+  return (
+    <div className="relative w-24 h-24 mx-auto mb-4">
+      <motion.div
+        className="absolute inset-0 rounded-full border-2 border-teal-400/40"
+        animate={{ scale: [1, 1.08, 1] }}
+        transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+      />
+      <motion.div
+        className="absolute inset-2 rounded-full border-2 border-teal-400/20"
+        animate={{ scale: [1, 1.08, 1] }}
+        transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut', delay: 0.3 }}
+      />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <motion.div animate={{ rotate: 360 }} transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}>
+          <Scan className="h-8 w-8 text-teal-600" />
+        </motion.div>
+      </div>
+    </div>
+  );
+}
+
+function ScanButton({ scanStatus, onScan }: { scanStatus: ScanStatus; onScan: () => void }) {
+  const isScanning = scanStatus === 'scanning';
+  return (
+    <Button
+      onClick={onScan}
+      disabled={isScanning}
+      className="text-xs font-semibold"
+      style={{
+        background: isScanning ? '#E5E7EB' : 'linear-gradient(135deg, #14B8A6, #0D9488)',
+        color: isScanning ? '#6B7280' : '#FFFFFF',
+        cursor: isScanning ? 'not-allowed' : 'pointer',
+        borderRadius: '12px',
+        height: '44px',
+        padding: '0 24px',
+      }}
+    >
+      {isScanning ? (
+        <span className="flex items-center gap-2">
+          <motion.span
+            className="inline-block w-3 h-3 rounded-full border-2 border-gray-400 border-t-gray-600"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}
+          />
+          Scanning network...
+        </span>
+      ) : (
+        <span className="flex items-center gap-2">
+          <Scan className="h-4 w-4" />
+          {scanStatus === 'ready' ? 'Re-scan Network' : 'Scan Network'}
+        </span>
+      )}
+    </Button>
+  );
+}
+
+export default function BYOPage() {
+  const router = useRouter();
+  const [scanStatus, setScanStatus] = useState<ScanStatus>('idle');
+  const [devices, setDevices] = useState<Device[]>([]);
+  const [customIP, setCustomIP] = useState('');
+  const [connecting, setConnecting] = useState<string | null>(null);
+  const [currentColor, setCurrentColor] = useState('#0D9488');
+
+  const handleScan = useCallback(() => {
+    setScanStatus('scanning');
+    setCurrentColor('#0D9488');
+    // Simulate network scan
+    const timeout = setTimeout(() => {
+      setDevices(MOCK_DEVICES);
+      setScanStatus('ready');
+    }, 2500);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleConnect = useCallback(async (device: Device) => {
+    if (device.status !== 'online') return;
+    setConnecting(device.id);
+    await new Promise(r => setTimeout(r, 800));
+    setConnecting(null);
+    // Successfully connected — add to feed / redirect
+    router.push('/robotics/dashboard');
+  }, [router]);
+
+  const handleCustomConnect = useCallback(() => {
+    if (!customIP.trim()) return;
+    setCurrentColor('#0D9488');
+    // Add custom device logic would go here
+    setConnecting('custom');
+    setTimeout(() => {
+      setConnecting(null);
+      setCustomIP('');
+    }, 800);
+  }, [customIP]);
+
+  // Scan on mount — auto-discover
+  const hasScanned = useRef(false);
+  useEffect(() => {
+    if (!hasScanned.current) {
+      hasScanned.current = true;
+      handleScan();
+    }
+  }, [handleScan]);
+
+  const onlineCount = devices.filter(d => d.status === 'online').length;
 
   return (
-    <div className="min-h-screen titan-gradient titan-grid-bg">
-      <div className="max-w-4xl mx-auto px-6 py-12">
-        {/* Header */}
-        <div className="flex items-center gap-3 mb-8">
-          <div className="w-10 h-10 rounded-xl bg-titan-cyan/10 border border-titan-cyan/30 flex items-center justify-center">
-            <Building2 className="h-5 w-5 text-titan-cyan" />
-          </div>
+    <div className="min-h-screen bg-white">
+      {/* Background gradient */}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-bl from-teal-50/60 to-transparent" />
+
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-8">
+        {/* Back + Header */}
+        <div className="flex items-center gap-3 mb-6">
+          <button
+            onClick={() => router.push('/dashboard')}
+            className="p-2 rounded-xl border transition-colors"
+            style={{
+              background: '#FFFFFF',
+              borderColor: '#E5E7EB',
+              color: '#6B7280',
+            }}
+          >
+            <ArrowLeft className="h-4 w-4" />
+          </button>
           <div>
-            <h1 className="text-lg font-bold titan-text-gradient tracking-tight">BYO Enterprise</h1>
-            <p className="text-xs font-mono text-titan-muted">Bring Your Own Agent to any organization</p>
+            <h1 className="text-lg sm:text-xl font-bold flex items-center gap-2 text-gray-900">
+              <Terminal className="h-5 w-5 text-teal-600" />
+              Bring Your Own Robot
+              <Badge className="text-[9px] font-mono bg-teal-50 text-teal-700 border-teal-200">BETA</Badge>
+            </h1>
+            <p className="text-sm text-gray-500">Connect your hardware to the Titan swarm</p>
           </div>
         </div>
 
-        {/* State: Welcome */}
-        {step === 'welcome' && (
-          <Card className="p-8 bg-titan-card/60 border-titan-border/50 text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-titan-cyan/20 via-titan-card to-titan-violet/10 border border-titan-border/40 flex items-center justify-center mx-auto">
-              <Download className="h-8 w-8 text-titan-cyan" />
-            </div>
-            <h2 className="font-mono text-sm text-titan-text">Export Your Agent Manifest</h2>
-            <p className="text-xs font-mono text-titan-muted/80 max-w-md mx-auto leading-relaxed">
-              Generate an encrypted, OWASP-scanned manifest of your agent's skills, memory graph, and certification.
-              Enterprises use this to onboard you securely with a one-click compliance check.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-lg mx-auto">
-              {[
-                { icon: FileKey, label: 'Encrypted', desc: '256-bit RSA' },
-                { icon: Fingerprint, label: 'Immutable', desc: 'SHA-256 hashed' },
-                { icon: Shield, label: 'Compliant', desc: 'OWASP + TDAD' },
-              ].map((f) => (
-                <div key={f.label} className="p-3 rounded-xl bg-titan-bg/50 border border-titan-border/30">
-                  <f.icon className="h-4 w-4 text-titan-cyan mb-1" />
-                  <p className="text-xs font-mono text-titan-text/80">{f.label}</p>
-                  <p className="text-[10px] font-mono text-titan-muted">{f.desc}</p>
-                </div>
-              ))}
-            </div>
-            <Button onClick={() => setStep('upload')}
-              className="bg-titan-cyan/15 text-titan-cyan border border-titan-cyan/30 hover:bg-titan-cyan/25 font-mono text-xs">
-              <Download className="h-3.5 w-3.5 mr-1.5" />Generate Manifest
-            </Button>
-          </Card>
-        )}
-
-        {/* State: Upload / Enterprise Onboarding */}
-        {step === 'upload' && (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Left: Import existing manifest */}
-            <Card className="p-6 bg-titan-card/60 border-titan-border/50 space-y-4">
-              <div className="flex items-center gap-2">
-                <Upload className="h-4 w-4 text-titan-cyan" />
-                <h3 className="text-xs font-mono text-titan-cyan tracking-widest uppercase">Import Manifest</h3>
-              </div>
-              <p className="text-[11px] font-mono text-titan-muted/80">
-                Upload a previously exported .titan-manifest file
-              </p>
-              <div className="border-2 border-dashed border-titan-border/40 rounded-xl p-8 text-center">
-                <Upload className="h-8 w-8 mx-auto mb-2 text-titan-muted" />
-                <p className="text-xs font-mono text-titan-muted/60">Drop file or click to browse</p>
-              </div>
-              <Button variant="outline" className="w-full border-titan-border/50 text-xs font-mono text-titan-muted hover:text-titan-cyan h-8">
-                Select .titan-manifest
-              </Button>
-            </Card>
-
-            {/* Right: License selector */}
-            <Card className="p-6 bg-titan-card/60 border-titan-border/50 space-y-4">
-              <div className="flex items-center gap-2">
-                <Lock className="h-4 w-4 text-titan-cyan" />
-                <h3 className="text-xs font-mono text-titan-cyan tracking-widest uppercase">License</h3>
-              </div>
-              <div className="space-y-2">
-                {[
-                  { type: 'Creator Owned + Royalty', icon: Globe, desc: 'Public marketplace, 5-15% royalty to Titan' },
-                  { type: 'Private Encrypted', icon: Lock, desc: 'Only you can access. No royalties.' },
-                  { type: 'Enterprise Commercial', icon: Building2, desc: 'Full enterprise license, compliance gates' },
-                ].map((l) => (
-                  <label key={l.type} className="flex items-start gap-3 p-3 rounded-xl bg-titan-bg/50 border border-titan-border/30 cursor-pointer hover:border-titan-cyan/30 transition-colors">
-                    <input type="radio" name="license" className="mt-1 accent-titan-cyan" />
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <l.icon className="h-3 w-3 text-titan-cyan" />
-                        <span className="text-xs font-mono text-titan-text">{l.type}</span>
-                      </div>
-                      <p className="text-[10px] font-mono text-titan-muted mt-0.5">{l.desc}</p>
-                    </div>
-                  </label>
-                ))}
-              </div>
-              <Button onClick={handleUpload}
-                className="w-full bg-titan-cyan/15 text-titan-cyan border border-titan-cyan/30 hover:bg-titan-cyan/25 font-mono text-xs">
-                <Shield className="h-3.5 w-3.5 mr-1.5" />Start Compliance Scan
-              </Button>
-            </Card>
-          </div>
-        )}
-
-        {/* State: Scanning */}
-        {step === 'scanning' && (
-          <Card className="p-8 bg-titan-card/60 border-titan-border/50 text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-titan-cyan/20 to-titan-violet/10 border border-titan-border/40 flex items-center justify-center mx-auto">
-              <motion.div animate={{ rotate: 360 }} transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}>
-                <Shield className="h-8 w-8 text-titan-cyan" />
-              </motion.div>
-            </div>
-            <h2 className="font-mono text-sm text-titan-text">Compliance Scan in Progress</h2>
-            <p className="text-xs font-mono text-titan-muted/60">OWASP Agentic + TDAD + IP leak detection</p>
-
-            {/* Progress bar */}
-            <div className="w-full max-w-md mx-auto">
-              <div className="h-2 bg-titan-bg rounded-full overflow-hidden border border-titan-border/30">
-                <motion.div
-                  className="h-full bg-gradient-to-r from-titan-cyan to-titan-emerald rounded-full"
-                  animate={{ width: `${progress}%` }}
-                  transition={{ duration: 0.3 }}
+        {/* Scan Controls */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+          <div className="flex items-center gap-3">
+            <ScanButton scanStatus={scanStatus} onScan={handleScan} />
+            {scanStatus === 'ready' && (
+              <div className="flex items-center gap-2 text-[11px] font-mono">
+                <motion.span
+                  className="w-2 h-2 rounded-full bg-emerald-500"
+                  animate={{ opacity: [1, 0.4, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
                 />
+                <span className="text-emerald-700 font-medium">{onlineCount} online</span>
+                <span className="text-gray-400">· {devices.length} found</span>
               </div>
-              <p className="text-[10px] font-mono text-titan-cyan/60 mt-2">{progress}% complete</p>
-            </div>
+            )}
+          </div>
 
-            {/* Scan stages */}
-            <div className="space-y-2 max-w-sm mx-auto text-left">
-              {[
-                { label: 'OWASP Agentic Top 10', done: progress > 30 },
-                { label: 'TDAD Impact Analysis', done: progress > 55 },
-                { label: 'IP Fingerprint Check', done: progress > 80 },
-                { label: 'Encryption & Key Generation', done: progress > 95 },
-              ].map((s) => (
-                <div key={s.label} className="flex items-center gap-2 text-xs font-mono">
-                  <div className={`w-2 h-2 rounded-full ${s.done ? 'bg-titan-emerald' : 'bg-titan-muted/30'}`} />
-                  <span className={s.done ? 'text-titan-emerald/80' : 'text-titan-muted/50'}>{s.label}</span>
-                </div>
-              ))}
-            </div>
-          </Card>
-        )}
+          {/* Custom IP connect */}
+          <div className="flex items-center gap-2 w-full sm:w-auto">
+            <Input
+              placeholder="Enter IP to connect..."
+              value={customIP}
+              onChange={(e) => setCustomIP(e.target.value)}
+              className="text-xs h-9 border-gray-200"
+              onKeyDown={(e) => e.key === 'Enter' && handleCustomConnect()}
+            />
+            <Button
+              size="sm"
+              onClick={handleCustomConnect}
+              disabled={!customIP.trim() || connecting === 'custom'}
+              className="text-[10px] h-9 whitespace-nowrap"
+              style={{
+                background: 'linear-gradient(135deg, #14B8A6, #0D9488)',
+                color: '#FFFFFF',
+              }}
+            >
+              {connecting === 'custom' ? 'Connecting...' : 'Connect'}
+            </Button>
+          </div>
+        </div>
 
-        {/* State: Ready */}
-        {step === 'ready' && (
-          <Card className="p-8 bg-titan-card/60 border-titan-border/50 text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-titan-emerald/10 border border-titan-emerald/30 flex items-center justify-center mx-auto">
-              <Shield className="h-8 w-8 text-titan-emerald" />
-            </div>
-            <h2 className="font-mono text-sm titan-text-gradient">Manifest Ready</h2>
-            <p className="text-xs font-mono text-titan-muted/80 max-w-md mx-auto">
-              Your agent manifest is encrypted, signed, and compliant.
-              Share it with any enterprise to onboard in one click.
-            </p>
-            <div className="grid grid-cols-3 gap-3 max-w-sm mx-auto">
-              {[
-                { label: 'Score', value: '97/100' },
-                { label: 'License', value: 'Creator Royalty' },
-                { label: 'Size', value: '2.4 KB' },
-              ].map((m) => (
-                <div key={m.label} className="p-3 rounded-xl bg-titan-bg/50 border border-titan-border/30">
-                  <p className="text-lg font-mono font-bold titan-text-gradient">{m.value}</p>
-                  <p className="text-[10px] font-mono text-titan-muted">{m.label}</p>
-                </div>
-              ))}
-            </div>
-            <div className="flex gap-3 justify-center">
-              <Button className="bg-titan-cyan/15 text-titan-cyan border border-titan-cyan/30 hover:bg-titan-cyan/25 font-mono text-xs">
-                <Download className="h-3.5 w-3.5 mr-1.5" />Download .titan-manifest
-              </Button>
-              <Button variant="outline" className="border-titan-border/50 text-xs font-mono text-titan-muted">
-                Copy Share Link
-              </Button>
-            </div>
-          </Card>
-        )}
+        {/* Status Cards */}
+        <AnimatePresence mode="wait">
+          {scanStatus === 'scanning' && (
+            <motion.div
+              key="scanning"
+              className="text-center py-16 rounded-2xl border border-gray-200 bg-white"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <ScanAnimation />
+              <p className="text-sm font-medium text-gray-900">Scanning your local network...</p>
+              <p className="text-xs text-gray-500 mt-1 font-mono">Discovering ROS2, Arduino, and custom devices</p>
+            </motion.div>
+          )}
+
+          {scanStatus === 'idle' && (
+            <motion.div
+              key="idle"
+              className="text-center py-16 rounded-2xl border border-dashed border-gray-200 bg-white"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <Scan className="h-12 w-12 mx-auto mb-3 text-gray-300" />
+              <p className="text-sm text-gray-500">Click "Scan Network" to discover devices</p>
+            </motion.div>
+          )}
+
+          {scanStatus === 'ready' && (
+            <motion.div
+              key="devices"
+              className="space-y-3"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              {devices.map((device, i) => {
+                const typeCfg = TYPE_CONFIG[device.type] || TYPE_CONFIG.custom;
+                const TypeIcon = typeCfg.icon;
+                const statusStyle = STATUS_STYLES[device.status];
+                const isConnecting = connecting === device.id;
+
+                return (
+                  <motion.div
+                    key={device.id}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.06 }}
+                  >
+                    <Card
+                      className="transition-all duration-200 hover:shadow-md"
+                      style={{
+                        background: '#FFFFFF',
+                        border: '1px solid #E5E7EB',
+                        borderLeft: `3px solid ${typeCfg.color}`,
+                      }}
+                    >
+                      <CardContent className="p-4">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3 min-w-0">
+                            <div className={`w-10 h-10 rounded-xl ${typeCfg.bg} flex items-center justify-center shrink-0`}>
+                              <TypeIcon className="h-5 w-5" style={{ color: typeCfg.color }} />
+                            </div>
+                            <div className="min-w-0">
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <h3 className="text-sm font-semibold text-gray-900">{device.name}</h3>
+                                <Badge
+                                  className="text-[9px] h-4 px-1.5 font-mono border-0"
+                                  style={{
+                                    background: device.status === 'online' ? 'rgba(16,185,129,0.15)' : 'rgba(107,114,128,0.1)',
+                                    color: device.status === 'online' ? '#10B981' : '#6B7280',
+                                  }}
+                                >
+                                  {statusStyle.label}
+                                </Badge>
+                              </div>
+                              <p className="text-xs text-gray-500 mt-0.5 font-mono flex items-center gap-2">
+                                {typeCfg.label}
+                                <span className="text-gray-300">·</span>
+                                {device.ip}
+                                <span className="text-gray-300">·</span>
+                                {device.lastSeen}
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-center gap-2 shrink-0">
+                            {/* Capability badges */}
+                            <div className="hidden sm:flex items-center gap-1">
+                              {device.capabilities.slice(0, 2).map((cap) => (
+                                <Badge
+                                  key={cap}
+                                  variant="outline"
+                                  className="text-[8px] h-4 px-1.5 font-mono border-gray-200 text-gray-500"
+                                >
+                                  {cap}
+                                </Badge>
+                              ))}
+                              {device.capabilities.length > 2 && (
+                                <span className="text-[9px] text-gray-400 font-mono">+{device.capabilities.length - 2}</span>
+                              )}
+                            </div>
+
+                            {/* Connect Button */}
+                            <Button
+                              size="sm"
+                              onClick={() => handleConnect(device)}
+                              disabled={device.status !== 'online' || isConnecting}
+                              className="text-[10px] h-8 gap-1.5"
+                              style={{
+                                background: device.status === 'online'
+                                  ? 'linear-gradient(135deg, #14B8A6, #0D9488)'
+                                  : '#E5E7EB',
+                                color: device.status === 'online' ? '#FFFFFF' : '#6B7280',
+                                borderRadius: '10px',
+                              }}
+                            >
+                              {isConnecting ? (
+                                <motion.span
+                                  className="inline-block w-2.5 h-2.5 rounded-full border-2 border-white/30 border-t-white"
+                                  animate={{ rotate: 360 }}
+                                  transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}
+                                />
+                              ) : (
+                                <Wifi className="h-3 w-3" />
+                              )}
+                              {isConnecting ? 'Connecting...' : 'Connect'}
+                            </Button>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

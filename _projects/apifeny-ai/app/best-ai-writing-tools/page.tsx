@@ -93,7 +93,7 @@ export default function BestAIWritingToolsPage() {
       item: {
         '@type': 'SoftwareApplication',
         name: t.name,
-        url: `https://apifeny.ai/tools/${t.slug}`,
+        url: `https://apifeny-ai.vercel.app/tools/${t.slug}`,
         description: t.tagline || t.description.slice(0, 150),
         applicationCategory: 'Multimedia',
       },
@@ -107,7 +107,7 @@ export default function BestAIWritingToolsPage() {
       '@type': 'ItemList',
       name: 'Best AI Writing Tools in 2026',
       description: 'Top AI writing assistants and content creation tools ranked by real user ratings and features.',
-      url: 'https://apifeny.ai/best-ai-writing-tools',
+      url: 'https://apifeny-ai.vercel.app/best-ai-writing-tools',
       numberOfItems: allWritingTools.length,
       itemListElement: toolItems,
     });

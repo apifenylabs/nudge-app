@@ -183,7 +183,7 @@ export default function AIToolsAustriaPage() {
         </div>
       </section>
 
-      {/* WHY CANADA MATTERS */}
+      {/* WHY THIS COUNTRY MATTERS */}
       <section className="border-y border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10 sm:mb-12">
@@ -281,7 +281,7 @@ export default function AIToolsAustriaPage() {
         </div>
       </section>
 
-      {/* CANADA ECOSYSTEM */}
+      {/* LOCAL ECOSYSTEM */}
       <section className="border-y border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10">
@@ -349,7 +349,7 @@ export default function AIToolsAustriaPage() {
           <div className="text-center">
             <p className="text-[10px] text-tech-400 leading-loose max-w-3xl mx-auto">
               <strong className="text-tech-300">Austria AI tools:</strong>{' '}
-              best AI tools in Austria 2026 · AI tools for Austrian businesses · Austria AI software · AI writing tools Austria · AI coding tools Austria · AI marketing Austria · Austria AI directory · AI tools for Austrian startups · enterprise AI tools Austria · free AI tools Austria · AI productivity Austria · Austrian tech stack · AI tools Vienna · AI tools Graz · AI tools Linz · AI tools Salzburg
+              best AI tools in Austria 2026 · AI tools for Austrian businesses · Austria AI software · AI writing tools Austria · AI coding tools Austria · AI marketing Austria · Austria AI directory · AI tools for Austrian startups · enterprise AI tools Austria · free AI tools Austria · AI productivity Austria · Austrian tech stack · 'AI tools for Vienna · AI tools for Graz · AI tools for Linz' · AI tools Salzburg
             </p>
           </div>
         </div>

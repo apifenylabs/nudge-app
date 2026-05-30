@@ -55,7 +55,7 @@ import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import FAQSchema from '@/components/FAQSchema';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Best AI Tools for Cybersecurity in 2026 — Threat Detection, EDR & SOC Automation | Apifeny AI',
@@ -596,7 +596,7 @@ export default function AIToolsForCybersecurityGuide() {
                       (tool as any).affiliateUrl ||
                       (tool as any).website_url ||
                       (tool as any).url ||
-                      `https://apifeny.ai/tools/${a.slug}`;
+                      `https://apifeny-ai.vercel.app/tools/${a.slug}`;
                     return (
                       <a
                         key={a.slug}

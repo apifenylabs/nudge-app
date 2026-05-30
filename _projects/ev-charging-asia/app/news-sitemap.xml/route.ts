@@ -1,56 +1,54 @@
-import { NextResponse } from 'next/server';
+// Google News Sitemap for EV Charging Asia
+// Serves the 10 most recent blog posts for Google News eligibility
+// https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap
+
 import blogIndex from '@/data/blog-index.json';
 
-const SITE_URL = 'https://ev-charging-asia.vercel.app';
+const BASE_URL = 'https://ev-charging-asia.vercel.app';
 
-interface BlogIndexEntry {
+interface BlogEntry {
   slug: string;
   title: string;
-  description: string;
   date: string;
+  keywords?: string[];
 }
 
-function slugToTitle(slug: string): string {
-  return slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
-}
+export const dynamic = 'force-static';
+export const revalidate = 3600;
 
 export async function GET() {
-  // Google News sitemap: last 90 days only, max 1000 articles
-  const ninetyDaysAgo = new Date();
-  ninetyDaysAgo.setDate(ninetyDaysAgo.getDate() - 90);
-
-  const recentPosts = (blogIndex as BlogIndexEntry[])
-    .filter(p => new Date(p.date) >= ninetyDaysAgo)
+  const posts = (blogIndex as BlogEntry[])
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 1000);
+    .slice(0, 10);
 
-  const urls = recentPosts.map(post => {
-    const title = slugToTitle(post.slug);
-    return `
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  ${posts.map(post => `
   <url>
-    <loc>${SITE_URL}/blog/${post.slug}</loc>
+    <loc>${BASE_URL}/blog/${post.slug}</loc>
+    <lastmod>${new Date(post.date).toISOString().split('T')[0]}</lastmod>
+    <changefreq>weekly</changefreq>
     <news:news>
       <news:publication>
         <news:name>EV Charging Asia</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>${post.date}</news:publication_date>
-      <news:title><![CDATA[${title}]]></news:title>
-      <news:keywords>EV charging,Asia,electric vehicle,road trip</news:keywords>
+      <news:publication_date>${new Date(post.date).toISOString().split('T')[0]}</news:publication_date>
+      <news:title>${escapeXml(post.title)}</news:title>
+      ${post.keywords ? `<news:keywords>${escapeXml(post.keywords.slice(0, 5).join(', '))}</news:keywords>` : ''}
     </news:news>
-  </url>`;
-  }).join('\n');
-
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-${urls}
+  </url>`).join('')}
 </urlset>`;
 
-  return new NextResponse(xml, {
+  return new Response(xml, {
     headers: {
       'Content-Type': 'application/xml; charset=utf-8',
       'Cache-Control': 'public, max-age=3600, s-maxage=3600',
     },
   });
+}
+
+function escapeXml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
 }

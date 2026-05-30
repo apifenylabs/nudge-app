@@ -24,7 +24,7 @@ import { toolsData } from '@/lib/data';
 import { playbooks } from '@/lib/playbooks';
 import type { Playbook } from '@/lib/playbooks';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Best AI Tools for Startups in Asia (2026) — Lean, Scalable, Affordable | Apifeny AI',

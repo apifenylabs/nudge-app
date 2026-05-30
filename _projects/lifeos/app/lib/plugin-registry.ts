@@ -830,6 +830,126 @@ These check-ins prevent small cracks from becoming big ones. Let's be honest.`,
   },
 ];
 
+// ─── Mindfulness Phases ─────────────────────────────────────────────
+
+const MINDFULNESS_PHASES: PluginPhase[] = [
+  {
+    id: 'baseline',
+    name: 'Baseline',
+    description: 'Assess your current mental landscape',
+    leadPrompt: `Let's understand your mindfulness starting point:
+
+• Current meditation or mindfulness practice (if any)
+• Stress triggers and patterns in your daily life
+• Focus and attention span — how easily distracted?
+• Sleep quality and its effect on mental clarity
+• Emotional regulation: how do you handle frustration or anxiety?
+• What brings you genuine joy or peace?
+
+Be honest, not aspirational. This baseline helps me track your growth.`,
+    objectives: [
+      'Assess current mindfulness and meditation practice',
+      'Identify stress triggers and attention patterns',
+      'Establish baseline for tracking mental clarity progress',
+    ],
+  },
+  {
+    id: 'awareness',
+    name: 'Awareness',
+    description: 'Build self-awareness through guided exploration',
+    leadPrompt: `Self-awareness is the foundation of mindfulness. Let's explore:
+
+• When do you feel most present and focused during the day?
+• What activities make time feel like it disappears (flow state)?
+• What's your default reaction to unexpected stress?
+• How do you talk to yourself when things go wrong?
+• What's one recurring thought pattern you'd like to change?
+
+I'll help you map your emotional landscape — the first step to mastery.`,
+    objectives: [
+      'Identify flow-state triggers and peak presence moments',
+      'Map emotional reaction patterns',
+      'Recognize self-talk patterns that need reframing',
+    ],
+  },
+  {
+    id: 'practice',
+    name: 'Practice',
+    description: 'Build a daily mindfulness routine',
+    leadPrompt: `Time to build your practice. Let's find what works for YOU:
+
+• Preferred time of day for quiet practice
+• Mindfulness style preferences: breathwork, body scan, walking meditation, journaling, or other?
+• How many minutes can you commit daily? (Start small, 5 min is enough)
+• Guided vs unguided — do you prefer someone talking you through it?
+• Apps or tools you already use (Headspace, Calm, Waking Up, etc.)
+
+Here's a 7-day starter plan based on what you've shared. Let's adjust as we go.`,
+    objectives: [
+      'Design a personalized 7-day starter mindfulness routine',
+      'Choose meditation style and duration',
+      'Set up environmental triggers and reminders',
+    ],
+  },
+  {
+    id: 'focus',
+    name: 'Deep Focus',
+    description: 'Strengthen attention and reduce mental clutter',
+    leadPrompt: `Focus is a muscle — let's train it together.
+
+• What's your current focus span like during deep work?
+• How many times per hour do you check your phone?
+• What's your biggest source of digital distraction?
+• Have you tried any focus techniques? (Pomodoro, time-blocking, single-tasking)
+• What environment helps you focus best?
+
+I'll suggest focus exercises tailored to your distractibility level.`,
+    objectives: [
+      'Measure and track focus span improvement',
+      'Practice distraction management techniques',
+      'Build deep work sessions into weekly routine',
+    ],
+  },
+  {
+    id: 'resilience',
+    name: 'Emotional Resilience',
+    description: 'Handle stress and setbacks with grace',
+    leadPrompt: `Life will test your practice. Let's prepare.
+
+• What recent situation tested your emotional limits?
+• How did you respond — and how would you have preferred to respond?
+• What's your go-to stress coping mechanism? (healthy or not)
+• Who in your life supports your mental well-being?
+• On a scale of 1-10, how resilient do you feel right now?
+
+We'll build resilience frameworks you can use when real challenges hit.`,
+    objectives: [
+      'Identify stress triggers and coping mechanisms',
+      'Build resilience frameworks for real-world challenges',
+      'Create a personal crisis-response plan',
+    ],
+  },
+  {
+    id: 'review',
+    name: 'Review & Evolve',
+    description: 'Monthly reflection and practice adjustment',
+    leadPrompt: `Monthly review time. Let's look at your practice:
+
+• Days practiced this month vs target
+• Changes in focus span, stress levels, emotional reactivity
+• Biggest insight or breakthrough this month
+• What practice style worked best? What didn't?
+• What's one mindfulness principle you've applied outside meditation?
+
+Let's adjust your practice for next month based on what the data shows.`,
+    objectives: [
+      'Generate monthly mindfulness score and trend analysis',
+      'Review practice consistency and quality',
+      'Adjust routine for next month based on progress',
+    ],
+  },
+];
+
 // ─── Plugin Registry ────────────────────────────────────────────────
 
 export const PLUGINS: PluginDefinition[] = [
@@ -1210,6 +1330,50 @@ BEHAVIOR:
 - Be inclusive: use "your partner" not "your husband/wife" unless they specify
 - Encourage direct communication with partner over triangulation
 - End with a concrete action to improve connection this week`,
+  },
+  {
+    id: 'mindfulness',
+    name: 'Mindfulness OS',
+    emoji: '🧘',
+    description: 'Meditation, focus, stress relief, mental clarity',
+    color: 'from-indigo-400 to-violet-500',
+    gradient: 'linear-gradient(135deg, #818CF8, #8B5CF6)',
+    badge: 'Coming soon',
+    phases: MINDFULNESS_PHASES,
+    status: 'beta',
+    features: [
+      'Full mindfulness baseline — stress, focus, awareness, resilience',
+      'Guided self-awareness exploration with emotional landscape mapping',
+      'Personalized daily practice builder (5 min starter plan)',
+      'Focus span training with distraction management exercises',
+      'Emotional resilience frameworks for real-world challenges',
+      'Monthly mindfulness score with trend tracking',
+    ],
+    systemPrompt: `You are Mindfulness OS — a specialized LifeOS plugin for meditation, focus, and mental clarity.
+You are inspired by aicofounder.com. You lead the conversation.
+
+YOUR JOB:
+- Help the user build a sustainable mindfulness practice from scratch
+- Map their emotional landscape and identify recurring thought patterns
+- Train their focus span through guided exercises and tracking
+- Build emotional resilience frameworks for real-world stress
+- Create accountability through daily check-ins and monthly reviews
+
+YOUR PHASES:
+1. Baseline → Assess current mindfulness level, stress, focus, awareness
+2. Awareness → Map emotional landscape, identify patterns, recognize triggers
+3. Practice → Build daily mindfulness routine (5-15 min, any style)
+4. Focus → Train attention span, reduce distraction, build deep work
+5. Resilience → Prepare for stress, build coping frameworks
+6. Review → Monthly mindfulness score, trend analysis, plan adjustment
+
+BEHAVIOR:
+- Start small. 5 minutes of breathwork beats an hour of guilt about not meditating.
+- Reference: Thich Nhat Hanh, Sam Harris (Waking Up), Jon Kabat-Zinn, James Clear
+- Adapt to the user's lifestyle — busy parents, remote workers, students all need different approaches
+- Don't force any one tradition (Zen, Vipassana, etc.) — find what resonates
+- Be direct: "Your phone is a slot machine for attention. Let's limit the damage."
+- DISCLAIMER: If you're experiencing severe depression, anxiety, or trauma, please consult a mental health professional. Mindfulness is a complement, not a replacement, for therapy.`,
   },
 ];
 

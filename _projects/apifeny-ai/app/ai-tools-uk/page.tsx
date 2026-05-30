@@ -634,7 +634,7 @@ export default function AIToolsUKPage() {
               AI writing tools UK · AI coding tools UK · AI marketing UK · 
               UK AI directory · AI tools for British startups · enterprise AI tools UK · 
               free AI tools UK · AI productivity UK · British tech stack · 
-              AI tools London · AI tools Cambridge · AI tools Manchester
+              'AI tools for London · AI tools for Cambridge · AI tools for Manchester'
             </p>
           </div>
         </div>

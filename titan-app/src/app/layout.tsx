@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   description: "Build your own AI agent collective with Titan. Gamified XP progression, 8 unique mascot companions, skill forge, certifications, and God-Tier unlocks. Like raising a Pokémon that actually does your work.",
   keywords: ["AI agent platform", "agent builder", "AI swarm", "gamified AI", "mascot AI", "agent orchestration", "Titan AI", "skill forge", "AI progression"],
   robots: { index: true, follow: true },
+  alternates: {
+    types: {
+      "application/atom+xml": "https://titan.apifeny.com/feed",
+    },
+  },
   openGraph: {
     title: "Titan — Your Personal AI Agent Platform",
     description: "Build, train, and orchestrate your own AI agent collective. Gamified progression with XP, skills, and certifications.",

@@ -61,7 +61,7 @@ import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import FAQSchema from '@/components/FAQSchema';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Best AI Tools for HR and Recruiting in 2026 — Complete Guide | Apifeny AI',

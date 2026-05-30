@@ -183,7 +183,7 @@ export default function AIToolsBelgiumPage() {
         </div>
       </section>
 
-      {/* WHY CANADA MATTERS */}
+      {/* WHY THIS COUNTRY MATTERS */}
       <section className="border-y border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10 sm:mb-12">
@@ -281,7 +281,7 @@ export default function AIToolsBelgiumPage() {
         </div>
       </section>
 
-      {/* CANADA ECOSYSTEM */}
+      {/* LOCAL ECOSYSTEM */}
       <section className="border-y border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10">
@@ -349,7 +349,7 @@ export default function AIToolsBelgiumPage() {
           <div className="text-center">
             <p className="text-[10px] text-tech-400 leading-loose max-w-3xl mx-auto">
               <strong className="text-tech-300">Belgium AI tools:</strong>{' '}
-              best AI tools in Belgium 2026 · AI tools for Belgian businesses · Belgium AI software · AI writing tools Belgium · AI coding tools Belgium · AI marketing Belgium · Belgium AI directory · AI tools for Belgian startups · enterprise AI tools Belgium · free AI tools Belgium · AI productivity Belgium · Belgian tech stack · AI tools Brussels · AI tools Antwerp · AI tools Ghent · AI tools Leuven
+              best AI tools in Belgium 2026 · AI tools for Belgian businesses · Belgium AI software · AI writing tools Belgium · AI coding tools Belgium · AI marketing Belgium · Belgium AI directory · AI tools for Belgian startups · enterprise AI tools Belgium · free AI tools Belgium · AI productivity Belgium · Belgian tech stack · 'AI tools for Brussels · AI tools for Antwerp · AI tools for Ghent' · AI tools Leuven
             </p>
           </div>
         </div>

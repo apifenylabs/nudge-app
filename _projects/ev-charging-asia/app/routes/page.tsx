@@ -127,6 +127,34 @@ export default function RoutesPage() {
           </div>
         </div>
 
+        {/* Country quick-links */}
+        <div className="mb-6 flex flex-wrap gap-2">
+          {['thailand', 'malaysia', 'singapore', 'japan', 'india', 'indonesia', 'vietnam', 'china', 'philippines', 'korea']
+            .filter(c => allItineraries.some(i => i.countries.some(cc => cc.toLowerCase() === c)))
+            .map(country => {
+              const flag: Record<string, string> = {
+                thailand: '🇹🇭', malaysia: '🇲🇾', singapore: '🇸🇬', japan: '🇯🇵',
+                india: '🇮🇳', indonesia: '🇮🇩', vietnam: '🇻🇳', china: '🇨🇳',
+                philippines: '🇵🇭', korea: '🇰🇷',
+              };
+              const name: Record<string, string> = {
+                thailand: 'Thailand', malaysia: 'Malaysia', singapore: 'Singapore', japan: 'Japan',
+                india: 'India', indonesia: 'Indonesia', vietnam: 'Vietnam', china: 'China',
+                philippines: 'Philippines', korea: 'South Korea',
+              };
+              return (
+                <Link
+                  key={country}
+                  href={`/countries/${country}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-full border border-gray-200 text-xs font-medium text-gray-700 hover:border-sky-300 hover:text-sky-700 hover:bg-sky-50 transition-all"
+                >
+                  <span>{flag[country]}</span>
+                  {name[country]}
+                </Link>
+              );
+            })}
+        </div>
+
         {/* Route filter bar */}
         <RouteFilterBar allItineraries={allItineraries} />
 

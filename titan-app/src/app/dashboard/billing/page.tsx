@@ -32,15 +32,15 @@ export default function BillingPage() {
           className="p-2 rounded-xl border transition-colors"
           style={{
             background: '#FFFFFF',
-            borderColor: '#E5E0D8',
-            color: '#666666',
+            borderColor: '#E5E7EB',
+            color: '#6B7280',
           }}
         >
           <ArrowLeft className="h-4 w-4" />
         </button>
         <div>
-          <h1 className="text-base sm:text-lg font-bold" style={{ color: '#1F1F1F' }}>Billing & Plan</h1>
-          <p className="text-xs font-mono" style={{ color: '#666666' }}>Manage your subscription</p>
+          <h1 className="text-base sm:text-lg font-bold" style={{ color: '#111827' }}>Billing & Plan</h1>
+          <p className="text-xs font-mono" style={{ color: '#6B7280' }}>Manage your subscription</p>
         </div>
       </div>
 
@@ -50,10 +50,10 @@ export default function BillingPage() {
           className="px-3 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1.5"
           style={{
             background: isPro
-              ? 'linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(245, 158, 11, 0.1))'
+              ? 'rgba(13,148,136,0.1)'
               : 'rgba(148, 163, 184, 0.1)',
-            color: isPro ? '#14B8A6' : '#94A3B8',
-            border: `1px solid ${isPro ? 'rgba(20, 184, 166, 0.2)' : 'rgba(148, 163, 184, 0.2)'}`,
+            color: isPro ? '#0D9488' : '#94A3B8',
+            border: `1px solid ${isPro ? 'rgba(13,148,136,0.2)' : 'rgba(148, 163, 184, 0.2)'}`,
           }}
         >
           <Crown className="h-3.5 w-3.5" />
@@ -70,20 +70,20 @@ export default function BillingPage() {
       <div className="rounded-2xl border overflow-hidden"
         style={{
           background: '#FFFFFF',
-          borderColor: '#E5E0D8',
+          borderColor: '#E5E7EB',
         }}>
         {/* Header row */}
         <div className="grid grid-cols-3 gap-0 border-b"
-          style={{ borderColor: '#E5E0D8' }}>
+          style={{ borderColor: '#E5E7EB' }}>
           <div className="p-3 sm:p-4"></div>
           <div className="p-3 sm:p-4 text-center font-semibold text-xs font-mono"
-            style={{ color: '#666666' }}>
+            style={{ color: '#6B7280' }}>
             Free
           </div>
           <div className="p-3 sm:p-4 text-center font-semibold text-xs font-mono"
             style={{
-              color: '#14B8A6',
-              background: 'rgba(20, 184, 166, 0.04)',
+              color: '#0D9488',
+              background: 'rgba(13,148,136,0.04)',
             }}>
             <span className="titan-text-gradient">Pro</span>
           </div>
@@ -95,19 +95,19 @@ export default function BillingPage() {
             key={row.label}
             className="grid grid-cols-3 gap-0 border-b"
             style={{
-              borderColor: '#E5E0D8',
+              borderColor: '#E5E7EB',
               background: i % 2 === 0 ? 'transparent' : 'rgba(0,0,0,0.015)',
             }}
           >
             <div className="p-3 sm:p-4 flex items-center gap-2 text-xs font-medium"
-              style={{ color: '#1F1F1F' }}>
-              <row.icon className="h-3.5 w-3.5 shrink-0" style={{ color: '#666666' }} />
+              style={{ color: '#111827' }}>
+              <row.icon className="h-3.5 w-3.5 shrink-0" style={{ color: '#6B7280' }} />
               {row.label}
             </div>
             <div className="p-3 sm:p-4 text-center text-xs" style={{ color: '#94A3B8' }}>
               {row.free}
             </div>
-            <div className="p-3 sm:p-4 text-center text-xs font-medium" style={{ color: '#14B8A6' }}>
+            <div className="p-3 sm:p-4 text-center text-xs font-medium" style={{ color: '#0D9488' }}>
               {row.pro}
             </div>
           </div>
@@ -117,12 +117,12 @@ export default function BillingPage() {
         <div className="grid grid-cols-3 gap-0">
           <div className="p-3 sm:p-4"></div>
           <div className="p-3 sm:p-4 text-center">
-            <span className="text-2xl font-bold" style={{ color: '#1F1F1F' }}>$0</span>
+            <span className="text-2xl font-bold" style={{ color: '#111827' }}>$0</span>
             <span className="text-xs" style={{ color: '#94A3B8' }}>/mo</span>
           </div>
           <div className="p-3 sm:p-4 text-center"
-            style={{ background: 'rgba(20, 184, 166, 0.04)' }}>
-            <span className="text-2xl font-bold" style={{ color: '#14B8A6' }}>$19</span>
+            style={{ background: 'rgba(13,148,136,0.04)' }}>
+            <span className="text-2xl font-bold" style={{ color: '#0D9488' }}>$19</span>
             <span className="text-xs" style={{ color: '#94A3B8' }}>/mo</span>
           </div>
         </div>
@@ -133,23 +133,23 @@ export default function BillingPage() {
         <motion.div
           className="rounded-2xl border p-5 text-center"
           style={{
-            background: 'linear-gradient(135deg, rgba(20, 184, 166, 0.06), rgba(245, 158, 11, 0.04))',
-            borderColor: 'rgba(20, 184, 166, 0.15)',
+            background: 'rgba(13,148,136,0.04)',
+            borderColor: 'rgba(13,148,136,0.15)',
           }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
         >
           <Crown className="h-8 w-8 mx-auto mb-2" style={{ color: '#F59E0B' }} />
-          <h3 className="text-sm font-semibold mb-1" style={{ color: '#1F1F1F' }}>You're on Pro</h3>
-          <p className="text-xs" style={{ color: '#94A3B8' }}>
+          <h3 className="text-sm font-semibold mb-1" style={{ color: '#111827' }}>You're on Pro</h3>
+          <p className="text-xs" style={{ color: '#6B7280' }}>
             You have unlimited access to all features.
           </p>
           <button
             onClick={downgrade}
             className="mt-4 px-4 py-1.5 rounded-lg text-[11px] font-mono border transition-colors"
             style={{
-              borderColor: '#E5E0D8',
-              color: '#94A3B8',
+              borderColor: '#E5E7EB',
+              color: '#6B7280',
             }}
           >
             Downgrade to Free (dev only)
@@ -159,18 +159,18 @@ export default function BillingPage() {
         <motion.div
           className="rounded-2xl border p-5 text-center"
           style={{
-            background: 'linear-gradient(135deg, rgba(20, 184, 166, 0.06), rgba(245, 158, 11, 0.04))',
-            borderColor: 'rgba(245, 158, 11, 0.15)',
-            boxShadow: '0 0 30px rgba(245, 158, 11, 0.05)',
+            background: 'rgba(13,148,136,0.04)',
+            borderColor: 'rgba(245,158,11,0.15)',
+            boxShadow: '0 0 30px rgba(245,158,11,0.05)',
           }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
         >
           <Sparkles className="h-8 w-8 mx-auto mb-2" style={{ color: '#F59E0B' }} />
-          <h3 className="text-sm font-semibold mb-1" style={{ color: '#1F1F1F' }}>
+          <h3 className="text-sm font-semibold mb-1" style={{ color: '#111827' }}>
             Unlock the full ecosystem
           </h3>
-          <p className="text-xs mb-4" style={{ color: '#94A3B8' }}>
+          <p className="text-xs mb-4" style={{ color: '#6B7280' }}>
             Get unlimited swarms, all mascots, and save/load support for $19/mo.
           </p>
           <motion.button
@@ -178,7 +178,7 @@ export default function BillingPage() {
             className="px-6 py-2.5 rounded-xl text-sm font-semibold inline-flex items-center gap-2 shadow-lg mx-auto"
             style={{
               background: 'linear-gradient(135deg, #14B8A6, #F59E0B)',
-              color: '#0A0E17',
+              color: '#FFFFFF',
             }}
             whileHover={{ scale: 1.03, y: -1 }}
             whileTap={{ scale: 0.97 }}

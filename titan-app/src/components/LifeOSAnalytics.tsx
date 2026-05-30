@@ -17,7 +17,14 @@ import {
   type LifeOSAnalytics,
   type CategoryScore,
 } from "@/lib/lifeos/analytics";
-import { getAvailableCategories, type LifeCategory } from "@/lib/lifeos/plugins";
+import { getAvailableCategories, getAllPlugins, type LifeCategory } from "@/lib/lifeos/plugins";
+import {
+  getActiveSynergies,
+  getClusterStatus,
+  computeXpMultiplier,
+  getRecommendedSynergies,
+  type SynergyClusterWithStatus,
+} from "@/lib/lifeos/synergies";
 
 // ─── LifeOS Analytics Tab ───────────────────────────────────────────────
 
@@ -25,12 +32,24 @@ export default function LifeOSAnalytics({ onActivateCategory }: { onActivateCate
   const [analytics, setAnalytics] = useState<LifeOSAnalytics | null>(null);
   const [recommendations, setRecommendations] = useState<LifeCategory[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [xpMultiplier, setXpMultiplier] = useState(1);
+  const [activeSynergies, setActiveSynergies] = useState<number>(0);
+  const [clusters, setClusters] = useState<SynergyClusterWithStatus[]>([]);
+  const [recommendedSynergies, setRecommendedSynergies] = useState<number>(0);
   const catalog = getAvailableCategories();
 
   const refresh = useCallback(() => {
     const result = computeAnalytics();
     setAnalytics(result);
     setRecommendations(getRecommendations(3));
+    
+    // Synergy state
+    const plugins = getAllPlugins();
+    const active = getActiveSynergies(plugins);
+    setActiveSynergies(active.length);
+    setXpMultiplier(computeXpMultiplier(plugins));
+    setClusters(getClusterStatus(plugins));
+    setRecommendedSynergies(getRecommendedSynergies(plugins).length);
   }, []);
 
   useEffect(() => {
@@ -82,6 +101,88 @@ export default function LifeOSAnalytics({ onActivateCategory }: { onActivateCate
           </motion.div>
         ))}
       </div>
+
+      {/* Synergy Overview Card */}
+      <motion.div
+        className="p-4 sm:p-5 rounded-2xl border overflow-hidden relative"
+        style={{
+          background: 'linear-gradient(135deg, rgba(168,85,247,0.08), rgba(59,130,246,0.04))',
+          borderColor: 'rgba(168,85,247,0.2)',
+        }}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.12 }}
+      >
+        <div className="flex items-center gap-2 mb-3">
+          <Puzzle className="h-4 w-4 text-purple-400" />
+          <span className="text-[10px] font-mono text-purple-400/70 uppercase tracking-wider">Plugin Synergies</span>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+          <div className="p-2.5 rounded-xl bg-titan-surface/40 border border-titan-border/10 text-center">
+            <p className="text-lg font-bold font-mono text-purple-400">{activeSynergies}</p>
+            <p className="text-[9px] font-mono text-titan-muted/50 mt-0.5">Active Synergies</p>
+          </div>
+          <div className="p-2.5 rounded-xl bg-titan-surface/40 border border-titan-border/10 text-center">
+            <p className="text-lg font-bold font-mono text-emerald-400">{(xpMultiplier * 100).toFixed(0)}%</p>
+            <p className="text-[9px] font-mono text-titan-muted/50 mt-0.5">XP Multiplier</p>
+          </div>
+          <div className="p-2.5 rounded-xl bg-titan-surface/40 border border-titan-border/10 text-center">
+            <p className="text-lg font-bold font-mono text-amber-400">{recommendedSynergies}</p>
+            <p className="text-[9px] font-mono text-titan-muted/50 mt-0.5">Recommended</p>
+          </div>
+          <div className="p-2.5 rounded-xl bg-titan-surface/40 border border-titan-border/10 text-center">
+            <p className="text-lg font-bold font-mono text-sky-400">{clusters.length}</p>
+            <p className="text-[9px] font-mono text-titan-muted/50 mt-0.5">Clusters</p>
+          </div>
+        </div>
+
+        {/* Cluster progress bars */}
+        <div className="space-y-2">
+          {clusters.map((cluster, i) => (
+            <div key={cluster.name} className="group">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-sm">{cluster.emoji}</span>
+                <span className="text-[11px] font-medium flex-1">{cluster.name}</span>
+                <span className="text-[10px] font-mono text-titan-muted/60">
+                  {cluster.activeCategories.length}/{cluster.categories.length}
+                </span>
+              </div>
+              <div className="h-1.5 bg-titan-border/10 rounded-full overflow-hidden">
+                <motion.div
+                  className="h-full rounded-full"
+                  style={{
+                    background: cluster.progress >= 100
+                      ? 'linear-gradient(90deg, #10B981, #34D399)'
+                      : cluster.progress >= 50
+                      ? 'linear-gradient(90deg, #8B5CF6, #A78BFA)'
+                      : 'linear-gradient(90deg, #6B7280, #9CA3AF)',
+                  }}
+                  initial={{ width: 0 }}
+                  animate={{ width: `${cluster.progress}%` }}
+                  transition={{ duration: 0.6, delay: i * 0.08, ease: 'easeOut' }}
+                />
+              </div>
+              <p className="text-[9px] text-titan-muted/40 mt-0.5 line-clamp-1">{cluster.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Recommended synergy hint */}
+        {recommendedSynergies > 0 && (
+          <div
+            className="mt-3 p-2.5 rounded-xl border text-[10px] leading-relaxed"
+            style={{
+              background: 'rgba(168,85,247,0.06)',
+              borderColor: 'rgba(168,85,247,0.15)',
+              color: 'rgba(192,132,252,0.8)',
+            }}
+          >
+            💡 Activate {recommendedSynergies} recommended plugin{recommendedSynergies > 1 ? 's' : ''} to unlock cross-plugin XP bonuses.
+            Each synergy pair adds an XP multiplier — the more connected plugins you activate, the faster you level up.
+          </div>
+        )}
+      </motion.div>
 
       {/* Personality match card */}
       {analytics.personalityMatch && (

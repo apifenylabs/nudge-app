@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <radialGradient id="drift-g" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#6EE7B7"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </radialGradient>
+    <radialGradient id="drift-b" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#A7F3D0"/>
+      <stop offset="100%" stop-color="#6EE7B7"/>
+    </radialGradient>
+    <radialGradient id="drift-w" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="#D1FAE5"/>
+      <stop offset="100%" stop-color="#A7F3D0"/>
+    </radialGradient>
+  </defs>
+  <!-- Wings (small, dragonfly-like) -->
+  <g opacity="0.5">
+    <path d="M30 70 Q10 40 25 30 Q40 40 35 65" fill="#6EE7B7" stroke="#34D399" stroke-width="1"/>
+    <path d="M170 70 Q190 40 175 30 Q160 40 165 65" fill="#6EE7B7" stroke="#34D399" stroke-width="1"/>
+    <path d="M35 85 Q15 70 20 60 Q32 68 38 82" fill="#A7F3D0" stroke="#6EE7B7" stroke-width="0.5"/>
+    <path d="M165 85 Q185 70 180 60 Q168 68 162 82" fill="#A7F3D0" stroke="#6EE7B7" stroke-width="0.5"/>
+  </g>
+  <!-- Body (Dragonite-like chubby dragon) -->
+  <ellipse cx="100" cy="108" rx="50" ry="48" fill="url(#drift-g)"/>
+  <!-- Belly -->
+  <ellipse cx="100" cy="118" rx="30" ry="26" fill="url(#drift-w)"/>
+  <!-- Small horns -->
+  <path d="M65 68 L55 45 L75 63" fill="#34D399"/>
+  <path d="M135 68 L145 45 L125 63" fill="#34D399"/>
+  <!-- Big, friendly eyes -->
+  <ellipse cx="78" cy="88" rx="13" ry="13" fill="white"/>
+  <ellipse cx="122" cy="88" rx="13" ry="13" fill="white"/>
+  <ellipse cx="80" cy="90" rx="7" ry="8.5" fill="#064E3B"/>
+  <ellipse cx="124" cy="90" rx="7" ry="8.5" fill="#064E3B"/>
+  <ellipse cx="77" cy="85" rx="3.5" ry="3.5" fill="white" opacity="0.8"/>
+  <ellipse cx="121" cy="85" rx="3.5" ry="3.5" fill="white" opacity="0.8"/>
+  <!-- Nostrils -->
+  <ellipse cx="92" cy="102" rx="2.5" ry="1.5" fill="#047857" opacity="0.4"/>
+  <ellipse cx="108" cy="102" rx="2.5" ry="1.5" fill="#047857" opacity="0.4"/>
+  <!-- Mouth -->
+  <path d="M88 110 Q100 122 112 110" fill="none" stroke="#064E3B" stroke-width="2" stroke-linecap="round"/>
+  <!-- Blush -->
+  <ellipse cx="66" cy="98" rx="7" ry="4" fill="#A7F3D0" opacity="0.5"/>
+  <ellipse cx="134" cy="98" rx="7" ry="4" fill="#A7F3D0" opacity="0.5"/>
+  <!-- Map/scroll accessory -->
+  <g transform="translate(145, 125) rotate(15)">
+    <rect x="0" y="0" width="14" height="10" rx="1" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+    <circle cx="7" cy="5" r="1.5" fill="none" stroke="#059669" stroke-width="0.8"/>
+    <path d="M3 3 L5 7 L7 4 L9 7 L11 3" fill="none" stroke="#059669" stroke-width="0.6"/>
+  </g>
+  <!-- Floating drift particles -->
+  <g opacity="0.5">
+    <circle cx="45" cy="140" r="2" fill="#34D399"/>
+    <circle cx="158" cy="90" r="1.5" fill="#6EE7B7"/>
+    <circle cx="50" cy="60" r="1.5" fill="#34D399"/>
+    <circle cx="155" cy="145" r="2" fill="#6EE7B7"/>
+  </g>
+</svg>

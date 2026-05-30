@@ -1,0 +1,51 @@
+{
+  "slug": "hanoi-to-ha-long-bay-road-trip",
+  "title": "Hanoi to Ha Long Bay: Vietnam's Bay of Dragons",
+  "subtitle": "A 3-day family EV road trip from Vietnam's capital to the natural wonder",
+  "route": [
+    {
+      "day": 1,
+      "from": "Hanoi",
+      "to": "Ha Long Bay",
+      "distance": "170 km",
+      "drivingTime": "3 hours",
+      "charger": "Haiphong VinFast charger (mid-way)",
+      "kidActivities": "Haiphong Opera House, Halong Bay Marina"
+    },
+    {
+      "day": 2,
+      "from": "Ha Long Bay",
+      "to": "Ha Long Bay",
+      "distance": "Cruise",
+      "drivingTime": "Full day",
+      "charger": "Hotel overnight charge",
+      "kidActivities": "Sung Sot Cave, Ti Top Island, floating fishing village"
+    },
+    {
+      "day": 3,
+      "from": "Ha Long Bay",
+      "to": "Hanoi",
+      "distance": "170 km",
+      "drivingTime": "3 hours",
+      "charger": "Haiphong VinFast charger (return)",
+      "kidActivities": "Water Puppet Theatre (Hanoi evening show)"
+    }
+  ],
+  "totalDistance": "340 km",
+  "totalChargingCost": "VND 200,000-350,000",
+  "bestFor": "Families wanting a mix of city culture and natural wonder in a compact trip",
+  "carRecommendations": [
+    "VinFast VF 8",
+    "VinFast VF 9",
+    "VinFast VF e34"
+  ],
+  "tips": [
+    "VinFast chargers are available along the Hanoi-Haiphong Expressway",
+    "Vinpearl Ha Long Bay has dedicated EV charging for resort guests",
+    "The overnight Ha Long Bay cruise is the highlight — book a family-friendly junk boat"
+  ],
+  "chargerTypes": [
+    "CCS2"
+  ],
+  "seasonal": "March to May, September to November"
+}

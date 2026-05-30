@@ -7,6 +7,7 @@ import Image from "next/image";
 import { track } from "@vercel/analytics";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import { Badge } from "@/components/ui/badge";
 import {
   Bot,
@@ -31,14 +32,11 @@ import {
 } from "lucide-react";
 
 const MASCOTS = [
-  { name: "Teal Blob", emoji: "🫧", src: "/mascots/teal-blob.svg", element: "Water", rarity: "Common", bg: "from-teal-100 to-teal-50", border: "border-teal-200", accent: "text-teal-600" },
-  { name: "Chompy Plant", emoji: "🌱", src: "/mascots/chompy-plant.svg", element: "Nature", rarity: "Common", bg: "from-emerald-100 to-emerald-50", border: "border-emerald-200", accent: "text-emerald-600" },
-  { name: "Cosmic Fox", emoji: "🦊", src: "/mascots/cosmic-fox.svg", element: "Fire", rarity: "Uncommon", bg: "from-orange-100 to-orange-50", border: "border-orange-200", accent: "text-orange-600" },
-  { name: "Ember Dragon", emoji: "🐉", src: "/mascots/ember-dragon.svg", element: "Fire", rarity: "Rare", bg: "from-amber-100 to-amber-50", border: "border-amber-200", accent: "text-amber-600" },
-  { name: "Orb Weaver", emoji: "🕸️", src: "/mascots/orb-weaver.svg", element: "Cosmic", rarity: "Rare", bg: "from-pink-100 to-pink-50", border: "border-pink-200", accent: "text-pink-600" },
-  { name: "Starlight", emoji: "⭐", src: "/mascots/starlight.svg", element: "Light", rarity: "Epic", bg: "from-yellow-100 to-yellow-50", border: "border-yellow-200", accent: "text-yellow-600" },
-  { name: "Purrbot", emoji: "🤖", src: "/mascots/purrbot-cat.svg", element: "Tech", rarity: "Epic", bg: "from-violet-100 to-violet-50", border: "border-violet-200", accent: "text-violet-600" },
-  { name: "Little Robot", emoji: "⚙️", src: "/mascots/little-robot.svg", element: "Tech", rarity: "Legendary", bg: "from-cyan-100 to-cyan-50", border: "border-cyan-200", accent: "text-cyan-600" },
+  { name: "Sage", emoji: "🦉", src: "/mascots/sage.svg", element: "Wisdom", rarity: "Uncommon", bg: "from-indigo-100 to-indigo-50", border: "border-indigo-200", accent: "text-indigo-600" },
+  { name: "Spark", emoji: "⚡", src: "/mascots/spark.svg", element: "Energy", rarity: "Uncommon", bg: "from-yellow-100 to-yellow-50", border: "border-yellow-200", accent: "text-yellow-600" },
+  { name: "Aegis", emoji: "🛡️", src: "/mascots/aegis.svg", element: "Protection", rarity: "Rare", bg: "from-pink-100 to-pink-50", border: "border-pink-200", accent: "text-pink-600" },
+  { name: "Drift", emoji: "🐉", src: "/mascots/drift.svg", element: "Exploration", rarity: "Rare", bg: "from-emerald-100 to-emerald-50", border: "border-emerald-200", accent: "text-emerald-600" },
+  { name: "Pixel", emoji: "🎮", src: "/mascots/pixel.svg", element: "Creation", rarity: "Legendary", bg: "from-sky-100 to-sky-50", border: "border-sky-200", accent: "text-sky-600" },
 ];
 
 const RARITY_COLORS: Record<string, string> = {
@@ -50,14 +48,11 @@ const RARITY_COLORS: Record<string, string> = {
 };
 
 const MASCOT_OPTIONS = [
-  { name: "Teal Blob", emoji: "🫧" },
-  { name: "Chompy Plant", emoji: "🌱" },
-  { name: "Cosmic Fox", emoji: "🦊" },
-  { name: "Ember Dragon", emoji: "🐉" },
-  { name: "Orb Weaver", emoji: "🕸️" },
-  { name: "Starlight", emoji: "⭐" },
-  { name: "Purrbot", emoji: "🤖" },
-  { name: "Little Robot", emoji: "⚙️" },
+  { name: "Sage", emoji: "🦉" },
+  { name: "Spark", emoji: "⚡" },
+  { name: "Aegis", emoji: "🛡️" },
+  { name: "Drift", emoji: "🐉" },
+  { name: "Pixel", emoji: "🎮" },
 ];
 
 const SKINS_PLANS = [
@@ -230,6 +225,36 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd items={[
+        { label: "Home", href: "/" },
+      ]} />
+
+      {/* ── SoftwareApplication JSON-LD ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Titan — AI Agent Platform",
+            operatingSystem: "Web",
+            applicationCategory: "AIApplication",
+            description:
+              "Build your own AI agent collective with Titan. Gamified XP progression, 5 iconic companion archetypes, skill forge, certifications, and God-Tier unlocks.",
+            url: "https://titan-app-puce.vercel.app",
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "USD",
+            },
+            author: {
+              "@type": "Organization",
+              name: "Apifeny Labs",
+            },
+          }),
+        }}
+      />
+
       {/* ── Navigation ── */}
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
@@ -350,7 +375,7 @@ export default function LandingPage() {
                       <motion.div
                         className="absolute -inset-4 rounded-full opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-500"
                         style={{
-                          background: `radial-gradient(circle at 50% 50%, ${mascot.src.includes('starlight') ? '#FDE047' : mascot.src.includes('orb-weaver') ? '#EC4899' : mascot.src.includes('ember-dragon') ? '#F59E0B' : mascot.src.includes('cosmic-fox') ? '#F97316' : mascot.src.includes('little-robot') ? '#06B6D4' : mascot.src.includes('purrbot') ? '#A78BFA' : mascot.src.includes('chompy') ? '#10B981' : '#14B8A6'}20 0%, transparent 70%)`,
+                          background: `radial-gradient(circle at 50% 50%, ${mascot.src.includes('sage') ? '#6366F1' : mascot.src.includes('spark') ? '#FACC15' : mascot.src.includes('aegis') ? '#F472B6' : mascot.src.includes('drift') ? '#34D399' : '#0EA5E9'}20 0%, transparent 70%)`,
                           filter: 'blur(12px)',
                         }}
                       />
@@ -362,7 +387,7 @@ export default function LandingPage() {
                           <motion.div
                             className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
                             style={{
-                              background: `linear-gradient(105deg, transparent 30%, ${mascot.src.includes('starlight') ? '#FDE047' : mascot.src.includes('orb-weaver') ? '#EC4899' : mascot.src.includes('ember-dragon') ? '#F59E0B' : mascot.src.includes('cosmic-fox') ? '#F97316' : mascot.src.includes('little-robot') ? '#06B6D4' : mascot.src.includes('purrbot') ? '#A78BFA' : mascot.src.includes('chompy') ? '#10B981' : '#14B8A6'}15 50%, transparent 70%)`,
+                              background: `linear-gradient(105deg, transparent 30%, ${mascot.src.includes('sage') ? '#6366F1' : mascot.src.includes('spark') ? '#FACC15' : mascot.src.includes('aegis') ? '#F472B6' : mascot.src.includes('drift') ? '#34D399' : '#0EA5E9'}15 50%, transparent 70%)`,
                               backgroundSize: '200% 100%',
                             }}
                           />
@@ -373,7 +398,7 @@ export default function LandingPage() {
                             height={80}
                             className="w-16 h-16 sm:w-20 sm:h-20 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-lg"
                             style={{
-                              filter: `drop-shadow(0 0 ${mascot.src.includes('starlight') ? '12px #FDE047' : mascot.src.includes('orb-weaver') ? '12px #EC4899' : mascot.src.includes('ember-dragon') ? '10px #F59E0B' : '6px transparent'})`,
+                              filter: `drop-shadow(0 0 ${mascot.src.includes('pixel') ? '12px #0EA5E9' : mascot.src.includes('aegis') ? '10px #F472B6' : mascot.src.includes('drift') ? '10px #34D399' : '8px transparent'})`,
                             }}
                           />
                         </div>
@@ -915,6 +940,8 @@ export default function LandingPage() {
             <span className="text-xs text-gray-400">Phasr Forge · © 2026</span>
           </div>
           <div className="flex items-center gap-4 text-xs text-gray-400">
+            <a href="/privacy" className="hover:text-gray-600 transition-colors">Privacy</a>
+            <span className="text-gray-300">·</span>
             <span>Built with shadcn/ui</span>
           </div>
         </div>

@@ -1,0 +1,71 @@
+{
+  "slug": "bangkok-to-chiang-mai-road-trip",
+  "title": "Bangkok to Chiang Mai: Northern Thailand Highlands",
+  "subtitle": "A 5-day mountain EV road trip through ancient cities and lush highlands",
+  "route": [
+    {
+      "day": 1,
+      "from": "Bangkok",
+      "to": "Ayutthaya",
+      "distance": "85 km",
+      "drivingTime": "1 hour",
+      "charger": "Ayutthaya mall charger",
+      "kidActivities": "Ayutthaya Historical Park, Elephantstay"
+    },
+    {
+      "day": 2,
+      "from": "Ayutthaya",
+      "to": "Nakhon Sawan",
+      "distance": "240 km",
+      "drivingTime": "3 hours",
+      "charger": "PTT EA Anyonde (120kW)",
+      "kidActivities": "Nakhon Sawan Bird Park, Bueng Boraphet"
+    },
+    {
+      "day": 3,
+      "from": "Nakhon Sawan",
+      "to": "Lampang",
+      "distance": "200 km",
+      "drivingTime": "2.5 hours",
+      "charger": "Lampang City charger (90kW)",
+      "kidActivities": "Lampang Elephant Conservation Center"
+    },
+    {
+      "day": 4,
+      "from": "Lampang",
+      "to": "Chiang Mai",
+      "distance": "100 km",
+      "drivingTime": "1.5 hours",
+      "charger": "Chiang Mai Central Festival charger",
+      "kidActivities": "Chiang Mai Night Safari, Doi Suthep"
+    },
+    {
+      "day": 5,
+      "from": "Chiang Mai",
+      "to": "Chiang Mai",
+      "distance": "Local",
+      "drivingTime": "Full day",
+      "charger": "Hotel overnight or Central Festival",
+      "kidActivities": "Elephant Nature Park, Chiang Mai Zoo, Grand Canyon water park"
+    }
+  ],
+  "totalDistance": "700 km",
+  "totalChargingCost": "THB 600-1,000",
+  "bestFor": "Families wanting cultural sites and mountain scenery without extreme driving days",
+  "carRecommendations": [
+    "MG ZS EV",
+    "BYD Atto 3",
+    "Neta V",
+    "Tesla Model Y"
+  ],
+  "tips": [
+    "Chargers are concentrated in cities along Route 1",
+    "The Nakhon Sawan to Lampang gap (~200km) requires careful charge planning",
+    "Mountain roads near Chiang Mai are winding but well-paved — drive carefully in rain"
+  ],
+  "chargerTypes": [
+    "CCS2",
+    "CHAdeMO"
+  ],
+  "seasonal": "November to February (cool season, mountain views)"
+}

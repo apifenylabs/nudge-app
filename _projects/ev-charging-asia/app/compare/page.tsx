@@ -10,6 +10,193 @@ import type { Itinerary } from '@/data/itineraries';
 
 const allItineraries = getAllItineraries();
 
+/** Route ranking card — shows vote stats and a click-to-vote widget */
+function RouteRankingCard({ route, compact }: { route: Itinerary; compact?: boolean }) {
+  const [score, setScore] = useState<{ totalVotes: number; averageRating: number } | null>(null);
+  const [userRating, setUserRating] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    fetch(`/api/vote?routeId=${route.id}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(d => { if (d) setScore(d.score); })
+      .catch(() => {});
+  }, [route.id]);
+
+  const handleVote = async (rating: number) => {
+    if (submitting || rating === userRating) return;
+    setSubmitting(true);
+    try {
+      const res = await fetch('/api/vote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ routeId: route.id, rating }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setScore(data.score);
+        setUserRating(rating);
+      }
+    } catch {} finally {
+      setSubmitting(false);
+    }
+  };
+
+  const avg = score?.averageRating || 0;
+  const total = score?.totalVotes || 0;
+
+  if (compact) {
+    return (
+      <div className="flex items-center gap-1.5 text-xs text-gray-500">
+        <Star size={12} className={avg > 0 ? 'text-amber-400 fill-amber-400' : 'text-gray-300'} />
+        <span className="font-medium text-gray-700">{avg > 0 ? avg.toFixed(1) : '—'}</span>
+        <span className="text-gray-400">({total})</span>
+      </div>
+    );
+  }
+
+  return (
+    <Link
+      href={`/routes/${route.slug}`}
+      className="group flex items-center gap-3 p-3 rounded-xl border border-gray-100 hover:border-amber-200 hover:bg-amber-50/30 transition-all"
+    >
+      <div className="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+        <RouteIcon size={18} className="text-amber-600" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <h4 className="text-sm font-semibold text-gray-900 group-hover:text-amber-700 transition-colors truncate">
+          {route.title.split(':')[0] || route.title}
+        </h4>
+        <div className="flex items-center gap-2 mt-0.5 text-[11px] text-gray-400">
+          <span>{route.countries[0]}</span>
+          <span>·</span>
+          <span>{route.totalDistanceKm}km</span>
+        </div>
+        {/* Star rating + vote button */}
+        <div className="flex items-center gap-2 mt-1.5">
+          <div className="flex items-center gap-0.5">
+            {[1, 2, 3, 4, 5].map(s => (
+              <button
+                key={s}
+                onClick={e => { e.preventDefault(); e.stopPropagation(); handleVote(s); }}
+                disabled={submitting}
+                className={`w-3.5 h-3.5 transition-all ${submitting ? 'opacity-50 cursor-wait' : 'hover:scale-125'}`}
+                aria-label={`Rate ${s} stars`}
+              >
+                <Star
+                  size={14}
+                  className={`${
+                    s <= (userRating || avg)
+                      ? 'text-amber-400 fill-amber-400'
+                      : 'text-gray-300'
+                  }`}
+                />
+              </button>
+            ))}
+          </div>
+          <span className="text-[10px] text-gray-400">
+            {avg > 0 ? `${avg.toFixed(1)} (${total} vote${total !== 1 ? 's' : ''})` : 'No votes yet'}
+          </span>
+        </div>
+      </div>
+      <ArrowRight size={14} className="text-gray-300 group-hover:text-amber-500 shrink-0 transition-colors" />
+    </Link>
+  );
+}
+
+/** Community rankings section — all routes sorted by popularity */
+function CommunityRankingsSection() {
+  const [scores, setScores] = useState<Record<string, { totalVotes: number; averageRating: number }>>({});
+  const [loading, setLoading] = useState(true);
+  const [sortBy, setSortBy] = useState<'votes' | 'rating'>('votes');
+
+  useEffect(() => {
+    fetch('/api/vote/leaderboard')
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (data && data.entries) {
+          const scoresMap: Record<string, { totalVotes: number; averageRating: number }> = {};
+          data.entries.forEach((e: { slug: string; averageRating: number; totalVotes: number }) => {
+            const route = allItineraries.find(r => r.slug === e.slug);
+            if (route) {
+              scoresMap[route.id] = { totalVotes: e.totalVotes, averageRating: e.averageRating };
+            }
+          });
+          setScores(scoresMap);
+        }
+      })
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  }, []);
+
+  const ranked = useMemo(() => {
+    return [...allItineraries]
+      .map(it => ({
+        ...it,
+        totalVotes: scores[it.id]?.totalVotes || 0,
+        averageRating: scores[it.id]?.averageRating || 0,
+      }))
+      .sort((a, b) => {
+        if (sortBy === 'votes') return b.totalVotes - a.totalVotes || b.averageRating - a.averageRating;
+        return b.averageRating - a.averageRating || b.totalVotes - a.totalVotes;
+      });
+  }, [scores, sortBy]);
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+        <div className="px-5 py-4 bg-gradient-to-r from-amber-50 to-white border-b border-gray-200 flex items-center justify-between">
+          <h2 className="text-base font-bold text-gray-900 flex items-center gap-2">
+            <Star size={18} className="text-amber-500" />
+            Community Rankings — All Routes
+          </h2>
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] text-gray-400">Sort by:</span>
+            <button
+              onClick={() => setSortBy('votes')}
+              className={`text-[11px] px-2 py-1 rounded-full font-medium transition-colors ${
+                sortBy === 'votes' ? 'bg-amber-100 text-amber-700' : 'text-gray-400 hover:text-gray-600'
+              }`}
+            >
+              Most Votes
+            </button>
+            <button
+              onClick={() => setSortBy('rating')}
+              className={`text-[11px] px-2 py-1 rounded-full font-medium transition-colors ${
+                sortBy === 'rating' ? 'bg-amber-100 text-amber-700' : 'text-gray-400 hover:text-gray-600'
+              }`}
+            >
+              Highest Rated
+            </button>
+          </div>
+        </div>
+        <div className="p-4">
+          {loading ? (
+            <div className="flex items-center justify-center py-8">
+              <div className="w-5 h-5 border-2 border-amber-400 border-t-transparent rounded-full animate-spin" />
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+              {ranked.map((route, i) => (
+                <div key={route.id} className="flex items-center gap-2">
+                  <span className={`shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${
+                    i < 3 ? 'bg-amber-100 text-amber-700' : 'bg-gray-100 text-gray-500'
+                  }`}>
+                    {i + 1}
+                  </span>
+                  <div className="flex-1">
+                    <RouteRankingCard route={route} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const difficultyOrder: Record<string, number> = {
   easy: 1,
   moderate: 2,
@@ -121,23 +308,37 @@ export default function ComparePage() {
   const [routeA, setRouteA] = useState<string>('');
   const [routeB, setRouteB] = useState<string>('');
   const [showOverview, setShowOverview] = useState(false);
+  const [countryFilter, setCountryFilter] = useState<string>('');
 
   // Read URL params on mount
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const routeParam = params.get('route');
+    const countryParam = params.get('country');
+
+    const countryP = countryParam || '';
+    setCountryFilter(countryP);
+    let filtered = allItineraries;
+    if (countryP) {
+      filtered = allItineraries.filter(i =>
+        i.countries.some(c => c.toLowerCase() === countryP.toLowerCase())
+      );
+    }
+
     if (routeParam) {
-      const found = allItineraries.find(i => i.slug === routeParam || i.id === routeParam);
+      const found = filtered.find(i => i.slug === routeParam || i.id === routeParam);
       if (found) {
         setRouteA(found.id);
-        // Set the second to a different route
-        const others = allItineraries.filter(i => i.id !== found.id);
+        const others = filtered.filter(i => i.id !== found.id);
         if (others.length > 0) {
           setRouteB(others[0].id);
         }
       }
+    } else if (filtered.length >= 2) {
+      // Default: first two from filtered list
+      setRouteA(filtered[0]?.id || '');
+      setRouteB(filtered[1]?.id || '');
     } else {
-      // Default: first two routes
       setRouteA(allItineraries[0]?.id || '');
       setRouteB(allItineraries[1]?.id || '');
     }
@@ -193,13 +394,47 @@ export default function ComparePage() {
           Pick two itinerary routes to compare total distance, difficulty, family highlights, and luxury options side by side.
         </p>
 
+        {/* Country filter pills */}
+        <div className="flex flex-wrap items-center gap-2 mb-4 text-xs">
+          <span className="text-gray-400 font-medium">Filter by country:</span>
+          <button
+            onClick={() => { setCountryFilter(''); if (allItineraries.length >= 2) { setRouteA(allItineraries[0]?.id || ''); setRouteB(allItineraries[1]?.id || ''); } }}
+            className={`px-2.5 py-1 rounded-full border font-medium transition-colors ${!countryFilter ? 'bg-sky-100 text-sky-700 border-sky-200' : 'bg-white text-gray-500 border-gray-200 hover:bg-gray-50'}`}
+          >All</button>
+          {['thailand', 'malaysia', 'singapore', 'japan', 'india', 'indonesia', 'vietnam', 'china', 'philippines', 'korea']
+            .filter(c => allItineraries.some(i => i.countries.some(cc => cc.toLowerCase() === c)))
+            .map(c => {
+              const flags: Record<string, string> = { thailand: '🇹🇭', malaysia: '🇲🇾', singapore: '🇸🇬', japan: '🇯🇵', india: '🇮🇳', indonesia: '🇮🇩', vietnam: '🇻🇳', china: '🇨🇳', philippines: '🇵🇭', korea: '🇰🇷' };
+              return (
+                <button
+                  key={c}
+                  onClick={() => {
+                    setCountryFilter(c);
+                    const filtered = allItineraries.filter(i => i.countries.some(cc => cc.toLowerCase() === c));
+                    if (filtered.length >= 2) {
+                      setRouteA(filtered[0]?.id || '');
+                      setRouteB(filtered[1]?.id || '');
+                    } else if (filtered.length === 1) {
+                      setRouteA(filtered[0]?.id || '');
+                      const others = allItineraries.filter(i => i.id !== filtered[0]?.id);
+                      setRouteB(others[0]?.id || '');
+                    }
+                  }}
+                  className={`px-2.5 py-1 rounded-full border font-medium transition-colors ${countryFilter === c ? 'bg-sky-100 text-sky-700 border-sky-200' : 'bg-white text-gray-500 border-gray-200 hover:bg-gray-50'}`}
+                >
+                  {flags[c]} {c.charAt(0).toUpperCase() + c.slice(1)}
+                </button>
+              );
+            })}
+        </div>
+
         {/* Toggle overview table button */}
         <button
           onClick={() => setShowOverview(!showOverview)}
           className="flex items-center gap-1.5 text-xs text-sky-600 hover:text-sky-700 mb-6 font-medium"
         >
           {showOverview ? <List size={14} /> : <Table size={14} />}
-          {showOverview ? 'Show side-by-side comparison' : 'Show overview of all 12 routes'}
+          {showOverview ? 'Show side-by-side comparison' : `Show overview of all ${allItineraries.length} routes`}
         </button>
 
         {/* All-routes overview table */}
@@ -208,7 +443,7 @@ export default function ComparePage() {
             <div className="px-4 py-3 bg-gradient-to-r from-gray-50 to-white border-b border-gray-100">
               <h3 className="text-sm font-bold text-gray-900 flex items-center gap-2">
                 <Table size={16} className="text-sky-500" />
-                All {allItineraries.length} Routes at a Glance
+                {countryFilter ? `${countryFilter.charAt(0).toUpperCase() + countryFilter.slice(1)} Routes` : `All ${allItineraries.length} Routes`} at a Glance
               </h3>
             </div>
             <div className="overflow-x-auto">
@@ -562,6 +797,9 @@ export default function ComparePage() {
           </div>
         )}
       </div>
+
+      {/* Community Rankings — all routes by popularity */}
+      <CommunityRankingsSection />
 
       {/* JSON-LD Structured Data */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

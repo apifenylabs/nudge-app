@@ -3,6 +3,9 @@
  *
  * Redirects unauthenticated users to /login.
  * Uses Supabase SSR session validation.
+ *
+ * Demo/Offline mode: Set TITAN_DEMO_MODE=true to bypass auth.
+ * Useful for local dev or when Supabase is unavailable.
  */
 
 import { createServerClient } from '@supabase/ssr'
@@ -11,6 +14,7 @@ import type { CookieOptions } from '@supabase/ssr'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+const isDemoMode = process.env.TITAN_DEMO_MODE === 'true'
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
@@ -22,6 +26,16 @@ export async function middleware(request: NextRequest) {
 
   // Exclude public dashboard routes (e.g., billing callback)
   if (pathname === '/dashboard/billing/callback') {
+    return NextResponse.next()
+  }
+
+  // Demo/offline mode: skip auth entirely
+  if (isDemoMode) {
+    return NextResponse.next()
+  }
+
+  // No Supabase configured: skip auth gracefully (prevent crash loop)
+  if (!supabaseUrl || !supabaseAnonKey) {
     return NextResponse.next()
   }
 

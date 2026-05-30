@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Cursor vs GitHub Copilot 2026 — Pricing, Features, Coding Compared | Apifeny AI',

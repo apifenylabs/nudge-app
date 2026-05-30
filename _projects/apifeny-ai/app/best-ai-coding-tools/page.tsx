@@ -93,7 +93,7 @@ export default function BestAICodingToolsPage() {
       item: {
         '@type': 'SoftwareApplication',
         name: t.name,
-        url: `https://apifeny.ai/tools/${t.slug}`,
+        url: `https://apifeny-ai.vercel.app/tools/${t.slug}`,
         description: t.tagline || t.description.slice(0, 150),
         applicationCategory: 'DeveloperApplication',
       },
@@ -107,7 +107,7 @@ export default function BestAICodingToolsPage() {
       '@type': 'ItemList',
       name: 'Best AI Coding Tools in 2026',
       description: 'Top AI coding assistants and tools ranked by trending score, user ratings, and features.',
-      url: 'https://apifeny.ai/best-ai-coding-tools',
+      url: 'https://apifeny-ai.vercel.app/best-ai-coding-tools',
       numberOfItems: allCodingTools.length,
       itemListElement: toolItems,
     });

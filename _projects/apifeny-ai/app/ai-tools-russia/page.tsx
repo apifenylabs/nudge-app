@@ -183,7 +183,7 @@ export default function AIToolsRussiaPage() {
         </div>
       </section>
 
-      {/* WHY CANADA MATTERS */}
+      {/* WHY THIS COUNTRY MATTERS */}
       <section className="border-y border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10 sm:mb-12">
@@ -281,7 +281,7 @@ export default function AIToolsRussiaPage() {
         </div>
       </section>
 
-      {/* CANADA ECOSYSTEM */}
+      {/* LOCAL ECOSYSTEM */}
       <section className="border-y border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10">
@@ -296,10 +296,10 @@ export default function AIToolsRussiaPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {[
-              { title: '🇨🇦 Expert Guidance', description: 'Get expert guidance on implementing AI in your Russian business.' },
-              { title: '🎓 AI Training and Development', description: 'Improve your team\'s AI skills with our training and development programs.' },
+              { title: 'Expert Guidance', description: 'Get expert guidance on implementing AI in your Russian business.' },
+              { title: '🎓 Research & Innovation Hub', description: 'Improve your team\'s AI skills with our training and development programs.' },
               { title: '🏢 Russian AI Community', description: 'Connect with the Russian AI community to stay informed and network.' },
-              { title: 'AI News and Updates', description: "Stay current on the latest news and updates from Russia's AI scene. Russia's 25M+ Pan-Russia AI Strategy, coordinated by CIFAR, funds the Vector Institute, Mila, Amii (Alberta), and dozens of AI chairs nationally. Combined with SR&ED tax credits (up to 45% R&D cash refunds), Global Talent Stream visas, and active angel/VC networks, Russia offers one of the best environments for AI startups globally." },
+              { title: 'AI News and Updates', description: "Stay current on the latest news and updates from Russia's AI scene. Russia's 25M+ Pan-Russia AI Strategy, coordinated by AI research networks, funds the leading AI research institutes, top-tier AI labs, leading AI institutes (Alberta), and dozens of AI chairs nationally. Combined with R&D tax incentives, fast-track visa programs, and active angel/VC networks, Russia offers one of the best environments for AI startups globally." },
             ].map((item) => (
               <div key={item.title} className="bg-tech-800/70 border border-tech-500/20 rounded-xl p-5 hover:border-neon/20 transition">
                 <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
@@ -352,7 +352,7 @@ export default function AIToolsRussiaPage() {
               AI writing tools Russia · AI coding tools Russia · AI marketing Russia · 
               Russia AI directory · AI tools for Russia startups · enterprise AI tools Russia · 
               free AI tools Russia · AI productivity Russia · Russia tech stack · 
-              AI tools Toronto · AI tools Montreal · AI tools Vancouver
+              AI tools · AI tools · AI tools
             </p>
           </div>
         </div>

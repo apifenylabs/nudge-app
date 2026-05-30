@@ -140,7 +140,7 @@ export default function BestAIToolsPage() {
       item: {
         '@type': 'SoftwareApplication',
         name: t.name,
-        url: `https://apifeny.ai/tools/${t.slug}`,
+        url: `https://apifeny-ai.vercel.app/tools/${t.slug}`,
         description: t.tagline || t.description.slice(0, 150),
         applicationCategory: t.category || 'AI Tool',
       },
@@ -154,7 +154,7 @@ export default function BestAIToolsPage() {
       '@type': 'ItemList',
       name: 'Best AI Tools in 2026',
       description: 'Curated directory of 85+ top-rated AI tools across writing, coding, design, marketing, and more.',
-      url: 'https://apifeny.ai/best-ai-tools',
+      url: 'https://apifeny-ai.vercel.app/best-ai-tools',
       numberOfItems: totalCount,
       itemListElement: toolItems,
     });

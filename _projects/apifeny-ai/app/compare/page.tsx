@@ -5,19 +5,24 @@ import {
   ArrowRight,
   BarChart3,
   ChevronRight,
+  Code,
   Sparkles,
   Zap,
   Star,
   Brain,
+  Search,
+  Globe,
+  Image,
+  MessageSquare,
 } from 'lucide-react';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'AI Tool Comparisons — Side-by-Side | Apifeny AI',
   description:
-    'Head-to-head AI tool comparisons: ChatGPT vs Claude, DeepSeek vs ChatGPT, and more. Pricing, coding, features — find the best AI for your needs.',
+    'Head-to-head AI tool comparisons: ChatGPT vs Claude, Claude vs Gemini, DeepSeek vs ChatGPT, Cursor vs Copilot, and more. Pricing, coding, features — find the best AI for your needs.',
   alternates: { canonical: `${BASE_URL}/compare` },
   openGraph: {
     title: 'AI Tool Comparisons — Side-by-Side | Apifeny AI',
@@ -49,6 +54,76 @@ const COMPARISONS = [
     icon: Brain,
     color: 'from-aqua/10 via-neon/5 to-tech-800',
     border: 'aqua/30',
+  },
+  {
+    slug: 'cursor-vs-copilot',
+    title: 'Cursor vs GitHub Copilot',
+    description:
+      'Cursor (AI-first IDE) vs GitHub Copilot (VS Code extension): coding workflows, agent mode, pricing ($20/mo vs $10/mo), and which developer should choose which.',
+    score: 'Cursor 8.1 · Copilot 7.6',
+    icon: Code,
+    color: 'from-violet-500/10 via-fuchsia-500/5 to-tech-800',
+    border: 'violet-500/30',
+  },
+  {
+    slug: 'windsurf-vs-cursor',
+    title: 'Windsurf vs Cursor',
+    description:
+      'Windsurf (Codeium) vs Cursor (Anysphere): pricing ($15/mo vs $20/mo), tab completion, agent mode, multi-file editing, and which AI coding IDE wins for developers in Asia.',
+    score: 'Windsurf 7.9 · Cursor 8.2',
+    icon: ArrowRight,
+    color: 'from-cyan-500/10 via-teal-500/5 to-tech-800',
+    border: 'cyan-500/30',
+  },
+  {
+    slug: 'perplexity-vs-chatgpt',
+    title: 'Perplexity vs ChatGPT',
+    description:
+      'Perplexity (Sonar) vs ChatGPT (GPT-4o/o3): deep research, real-time citations, pricing (free vs $20/mo), coding, and which AI wins for researchers and founders in Asia.',
+    score: 'Perplexity 7.9 · ChatGPT 7.6',
+    icon: Search,
+    color: 'from-violet-500/10 via-pink-500/5 to-tech-800',
+    border: 'violet-500/30',
+  },
+  {
+    slug: 'gemini-vs-chatgpt',
+    title: 'Gemini vs ChatGPT',
+    description:
+      'Google Gemini vs ChatGPT: pricing (free/$19.99 vs $20/$200), 2M token context window, multimodal capabilities, Google ecosystem integration, and which AI wins for Asia businesses.',
+    score: 'Gemini 8.3 · ChatGPT 8.0',
+    icon: Globe,
+    color: 'from-blue-500/10 via-cyan-500/5 to-tech-800',
+    border: 'blue-500/30',
+  },
+  {
+    slug: 'midjourney-vs-dalle',
+    title: 'Midjourney vs DALL-E 3',
+    description:
+      'Midjourney vs DALL-E 3: pricing ($10-60/mo vs included in ChatGPT Plus $20/mo), image quality, aesthetic control, text rendering, editing capabilities, and which AI image generator wins for designers, marketers, and artists.',
+    score: 'Midjourney 7.7 · DALL-E 3 8.1',
+    icon: Image,
+    color: 'from-purple-500/10 via-fuchsia-500/5 to-tech-800',
+    border: 'purple-500/30',
+  },
+  {
+    slug: 'claude-vs-gemini',
+    title: 'Claude vs Gemini',
+    description:
+      'Anthropic Claude vs Google Gemini: pricing ($20 vs $20), 200K vs 1M context window, coding benchmarks, multimodal capabilities, safety approach, and which AI wins for developers and enterprises in 2026.',
+    score: 'Claude 8.2 · Gemini 7.9',
+    icon: Brain,
+    color: 'from-amber-500/10 via-blue-500/5 to-tech-800',
+    border: 'amber-500/30',
+  },
+  {
+    slug: 'grok-vs-chatgpt',
+    title: 'Grok vs ChatGPT',
+    description:
+      'xAI Grok-3 vs OpenAI ChatGPT: pricing ($30 SuperGrok vs $20 Plus), 1M context window, real-time X data, Aurora image gen, coding benchmarks, and ecosystem.',
+    score: 'Grok 7.3 · ChatGPT 8.0',
+    icon: MessageSquare,
+    color: 'from-zinc-500/10 via-neon/5 to-tech-800',
+    border: 'zinc-500/30',
   },
 ];
 

@@ -106,7 +106,7 @@ export default function BestAIMarketingToolsPage() {
       item: {
         '@type': 'SoftwareApplication',
         name: t.name,
-        url: `https://apifeny.ai/tools/${t.slug}`,
+        url: `https://apifeny-ai.vercel.app/tools/${t.slug}`,
         description: t.tagline || t.description.slice(0, 150),
         applicationCategory: 'BusinessApplication',
       },
@@ -120,7 +120,7 @@ export default function BestAIMarketingToolsPage() {
       '@type': 'ItemList',
       name: 'Best AI Marketing Tools in 2026',
       description: 'Top AI marketing tools for every stage of the marketing pipeline — research, content, design, video, and analytics.',
-      url: 'https://apifeny.ai/best-ai-marketing-tools',
+      url: 'https://apifeny-ai.vercel.app/best-ai-marketing-tools',
       numberOfItems: allMarketingTools.length,
       itemListElement: toolItems,
     });

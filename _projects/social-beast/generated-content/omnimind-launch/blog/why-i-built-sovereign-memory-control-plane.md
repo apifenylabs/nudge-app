@@ -1,3 +1,13 @@
+---
+title: "Why I Built a Sovereign Memory Control Plane for OpenClaw"
+published: true
+description: "How I replaced cloud memory APIs with a 100% local, three-database memory layer for AI agents — using LanceDB, Kuzu, SQLite, and a nightly self-evolution worker."
+tags: openclaw, ai, memory, selfhosted, opensource
+date: 2026-05-29
+canonical_url: https://github.com/apifenylabs/omni-mind
+series: OmniMind
+---
+
 # Why I Built a Sovereign Memory Control Plane for OpenClaw
 
 **Or: The day I realized my AI agent had a 20-minute memory and I couldn't fix it with a cloud API.**

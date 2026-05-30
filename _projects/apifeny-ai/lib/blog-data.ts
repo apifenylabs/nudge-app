@@ -1,6 +1,7 @@
 // Blog data loaded from generated-blog-data.ts
 import allPosts, { BlogPost } from './generated-blog-data';
 import { toolsData } from './data';
+import { getAllCategories } from './blog-categories';
 import type { Tool } from './types';
 
 export type { BlogPost };
@@ -25,6 +26,59 @@ export function getRelatedPosts(currentSlug: string, limit: number = 3): BlogPos
     })
     .sort((a, b) => b.score - a.score);
   return scored.slice(0, limit).map(s => s.post);
+}
+
+/**
+ * Find the best-matching blog category for a post by comparing its tags
+ * against each category's tag list. Returns the category with the most overlap.
+ */
+export function getCategoryForPost(post: BlogPost): { slug: string; title: string } | null {
+  const postTagsLower = post.tags.map(t => t.toLowerCase());
+  let bestMatch: { slug: string; title: string } | null = null;
+  let bestScore = 0;
+
+  for (const cat of getAllCategories()) {
+    const catTagsLower = cat.tags.map(t => t.toLowerCase());
+    const overlap = postTagsLower.filter(t => catTagsLower.includes(t)).length;
+    // Bonus: if post title mentions category keywords
+    const titleLower = post.title.toLowerCase();
+    const keywordBonus = cat.keywords.some(kw => titleLower.includes(kw.toLowerCase())) ? 2 : 0;
+    const score = overlap + keywordBonus;
+    if (score > bestScore) {
+      bestScore = score;
+      bestMatch = { slug: cat.slug, title: cat.title };
+    }
+  }
+
+  return bestMatch;
+}
+
+/**
+ * Get related posts that belong to the same blog category as the current post.
+ * Falls back to tag-based related posts if no category match is found.
+ */
+export function getRelatedPostsByCategory(currentSlug: string, limit: number = 4): { post: BlogPost; category: { slug: string; title: string } | null }[] {
+  const current = allPosts.find(p => p.slug === currentSlug);
+  if (!current) return [];
+
+  const category = getCategoryForPost(current);
+  if (!category) {
+    // Fallback: use tag-based related posts with no category label
+    return getRelatedPosts(currentSlug, limit).map(p => ({ post: p, category: null }));
+  }
+
+  // Find all posts in the same category (excluding current)
+  const catTagsLower = getAllCategories().find(c => c.slug === category.slug)?.tags.map(t => t.toLowerCase()) || [];
+  const sameCategoryPosts = allPosts
+    .filter(p => p.slug !== currentSlug)
+    .filter(p => p.tags.some(t => catTagsLower.includes(t.toLowerCase())))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  if (sameCategoryPosts.length === 0) {
+    return getRelatedPosts(currentSlug, limit).map(p => ({ post: p, category: null }));
+  }
+
+  return sameCategoryPosts.slice(0, limit).map(p => ({ post: p, category }));
 }
 
 /**

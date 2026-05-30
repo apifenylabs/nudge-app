@@ -179,21 +179,21 @@ export default function ForgePage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-2 mb-4">
-        <div className="w-2 h-2 rounded-full" style={{ background: '#D4A017' }} />
-        <h2 className="text-sm font-mono font-semibold tracking-wider" style={{ color: '#D4A017' }}>SKILL WORKSHOP</h2>
-        <span className="text-[10px] font-mono" style={{ color: '#666666' }}>// craft, compile, certify</span>
+        <div className="w-2 h-2 rounded-full" style={{ background: '#F59E0B' }} />
+        <h2 className="text-sm font-mono font-semibold tracking-wider" style={{ color: '#F59E0B' }}>SKILL WORKSHOP</h2>
+        <span className="text-[10px] font-mono" style={{ color: '#6B7280' }}>// craft, compile, certify</span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Templates */}
         <Card className="p-4" style={{
           background: '#FFFFFF',
-          border: '1px solid #E5E0D8',
-          borderLeft: '3px solid #D4A017',
+          border: '1px solid #E5E7EB',
+          borderLeft: '3px solid #F59E0B',
           borderRadius: '20px',
-          boxShadow: '0 10px 30px -10px rgba(31,31,31,0.08)',
+          boxShadow: '0 10px 30px -10px rgba(0,0,0,0.06)',
         }}>
-          <h3 className="text-sm font-semibold mb-3 flex items-center gap-2" style={{ color: '#D4A017' }}>
+          <h3 className="text-sm font-semibold mb-3 flex items-center gap-2" style={{ color: '#F59E0B' }}>
             <Star className="h-3.5 w-3.5" />Templates
           </h3>
           <div className="space-y-2">
@@ -202,44 +202,44 @@ export default function ForgePage() {
                 key={i}
                 className="p-2.5 rounded-lg cursor-pointer transition-all"
                 style={{
-                  background: '#F8F6F3',
-                  border: '1px solid #E5E0D8',
+                  background: '#F9FAFB',
+                  border: '1px solid #E5E7EB',
                 }}
                 whileHover={{ x: 3 }}
                 onClick={() => { setEditorCode(t.code); setSkillName(t.name); }}
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-xs font-medium" style={{ color: '#1F1F1F' }}>{t.name}</p>
-                    <p className="text-[10px]" style={{ color: '#666666' }}>{t.desc}</p>
+                    <p className="text-xs font-medium" style={{ color: '#111827' }}>{t.name}</p>
+                    <p className="text-[10px]" style={{ color: '#6B7280' }}>{t.desc}</p>
                   </div>
                   <Badge className="text-[9px]" style={{
-                    background: 'rgba(212,160,23,0.15)',
-                    color: '#D4A017',
-                    borderColor: 'rgba(212,160,23,0.3)'
+                    background: 'rgba(245,158,11,0.15)',
+                    color: '#F59E0B',
+                    borderColor: 'rgba(245,158,11,0.3)'
                   }}>{t.level}</Badge>
                 </div>
               </motion.div>
             ))}
             {skillsLoaded && savedSkills.length > 0 && (
               <>
-                <div className="border-t pt-3 mt-3" style={{ borderColor: '#E5E0D8' }}>
-                  <h4 className="text-[10px] font-mono mb-2 uppercase tracking-wider" style={{ color: '#666666' }}>
+                <div className="border-t pt-3 mt-3" style={{ borderColor: '#E5E7EB' }}>
+                  <h4 className="text-[10px] font-mono mb-2 uppercase tracking-wider" style={{ color: '#6B7280' }}>
                     <Download className="h-2.5 w-2.5 inline mr-1" />
                     Saved Skills ({savedSkills.length})
                   </h4>
                   {savedSkills.map((s) => (
                     <motion.div key={s.id} className="p-2 rounded-lg cursor-pointer transition-all mb-1.5"
-                      style={{ background: '#F8F6F3', border: '1px solid #E5E0D8' }}
+                      style={{ background: '#F9FAFB', border: '1px solid #E5E7EB' }}
                       whileHover={{ x: 2 }}
                       onClick={() => { setEditorCode(s.skillMd); setSkillName(s.name); }}>
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="text-[11px] font-medium" style={{ color: '#1F1F1F' }}>{s.name}</p>
-                          <p className="text-[9px] font-mono" style={{ color: '#666666' }}>
+                          <p className="text-[11px] font-medium" style={{ color: '#111827' }}>{s.name}</p>
+                          <p className="text-[9px] font-mono" style={{ color: '#6B7280' }}>
                             {s.auditTier ? (
                               <span style={{
-                                color: s.auditTier === 'gold' ? '#D4A017' : s.auditTier === 'silver' ? '#94A3B8' : s.auditTier === 'bronze' ? '#D97706' : '#EF4444'
+                                color: s.auditTier === 'gold' ? '#F59E0B' : s.auditTier === 'silver' ? '#94A3B8' : s.auditTier === 'bronze' ? '#D97706' : '#EF4444'
                               }}>
                                 {s.auditTier.toUpperCase()} · {s.auditScore}%
                               </span>
@@ -258,29 +258,29 @@ export default function ForgePage() {
         {/* Code Editor */}
         <Card className="p-4" style={{
           background: '#FFFFFF',
-          border: '1px solid #E5E0D8',
-          borderTop: '3px solid #D4A017',
+          border: '1px solid #E5E7EB',
+          borderTop: '3px solid #F59E0B',
           borderRadius: '20px',
-          boxShadow: '0 10px 30px -10px rgba(31,31,31,0.08)',
+          boxShadow: '0 10px 30px -10px rgba(0,0,0,0.06)',
         }}>
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2 flex-1">
-              <h3 className="text-sm font-semibold" style={{ color: '#D4A017' }}>SKILL EDITOR</h3>
+              <h3 className="text-sm font-semibold" style={{ color: '#F59E0B' }}>SKILL EDITOR</h3>
               <input
                 value={skillName}
                 onChange={(e) => setSkillName(e.target.value)}
                 placeholder="Skill name..."
                 className="bg-transparent border-b text-xs font-mono outline-none px-1 py-0.5 max-w-[140px]"
                 style={{
-                  borderColor: '#E5E0D8',
-                  color: '#1F1F1F',
+                  borderColor: '#E5E7EB',
+                  color: '#111827',
                 }}
               />
             </div>
             <Badge className="text-[9px] font-mono" style={{
-              background: 'rgba(212,160,23,0.15)',
-              color: '#D4A017',
-              borderColor: 'rgba(212,160,23,0.3)',
+              background: 'rgba(245,158,11,0.15)',
+              color: '#F59E0B',
+              borderColor: 'rgba(245,158,11,0.3)',
             }}>v1 · Draft</Badge>
           </div>
           <textarea
@@ -288,9 +288,9 @@ export default function ForgePage() {
             onChange={(e) => setEditorCode(e.target.value)}
             className="rounded-lg p-3 font-mono text-[11px] leading-relaxed border min-h-[240px] w-full resize-y outline-none"
             style={{
-              background: '#F8F6F3',
-              borderColor: '#E5E0D8',
-              color: '#1F1F1F',
+              background: '#F9FAFB',
+              borderColor: '#E5E7EB',
+              color: '#111827',
             }}
             spellCheck={false}
             placeholder="// Write your skill code here..."
@@ -299,7 +299,7 @@ export default function ForgePage() {
             <Button
               className="flex-1 font-semibold text-xs border-0 gap-1"
               style={{
-                background: 'linear-gradient(135deg, #0EA5A5, #0D9488)',
+                background: 'linear-gradient(135deg, #14B8A6, #0D9488)',
                 color: '#FFFFFF',
                 height: '56px',
                 borderRadius: '16px',
@@ -313,7 +313,7 @@ export default function ForgePage() {
             <Button
               className="flex-1 font-semibold text-xs border-0"
               style={{
-                background: 'linear-gradient(135deg, #D4A017, #D97706)',
+                background: 'linear-gradient(135deg, #F59E0B, #D97706)',
                 color: '#FFFFFF',
                 height: '56px',
                 borderRadius: '16px',
@@ -326,8 +326,8 @@ export default function ForgePage() {
               variant="outline"
               className="text-xs gap-1 shrink-0"
               style={{
-                borderColor: 'rgba(212,160,23,0.3)',
-                color: '#D4A017',
+                borderColor: 'rgba(245,158,11,0.3)',
+                color: '#F59E0B',
                 height: '56px',
                 borderRadius: '16px',
               }}
@@ -343,29 +343,29 @@ export default function ForgePage() {
         {/* Preview */}
         <Card className="p-4" style={{
           background: '#FFFFFF',
-          border: '1px solid #E5E0D8',
-          borderRight: '3px solid #D4A017',
+          border: '1px solid #E5E7EB',
+          borderRight: '3px solid #F59E0B',
           borderRadius: '20px',
-          boxShadow: '0 10px 30px -10px rgba(31,31,31,0.08)',
+          boxShadow: '0 10px 30px -10px rgba(0,0,0,0.06)',
         }}>
-          <h3 className="text-sm font-semibold mb-3 flex items-center gap-2" style={{ color: '#D4A017' }}>
+          <h3 className="text-sm font-semibold mb-3 flex items-center gap-2" style={{ color: '#F59E0B' }}>
             <Bot className="h-3.5 w-3.5" />Preview
           </h3>
           <div className="flex flex-col items-center py-6">
             <motion.div className="w-24 h-24 rounded-2xl flex items-center justify-center text-3xl border mb-3"
               style={{
-                background: 'linear-gradient(135deg, rgba(212,160,23,0.2), rgba(14,165,165,0.1))',
-                borderColor: 'rgba(212,160,23,0.2)',
+                background: 'linear-gradient(135deg, rgba(245,158,11,0.2), rgba(20,184,166,0.1))',
+                borderColor: 'rgba(245,158,11,0.2)',
               }}
               animate={{ y: [0, -4, 0] }}
               transition={{ duration: 3, repeat: Infinity }}>
               {skillName ? '🌍' : '🌍'}
             </motion.div>
-            <p className="font-mono text-sm font-medium" style={{ color: '#1F1F1F' }}>{skillName || 'Travel Guide v2'}</p>
+            <p className="font-mono text-sm font-medium" style={{ color: '#111827' }}>{skillName || 'Travel Guide v2'}</p>
             {certifiedTier && certifiedSkill === (skillName || 'Untitled Skill') && (
               <Badge className="mt-1 text-[9px] font-mono" style={{
-                background: certifiedTier === 'gold' ? 'rgba(212,160,23,0.2)' : certifiedTier === 'silver' ? 'rgba(148,163,184,0.2)' : certifiedTier === 'bronze' ? 'rgba(217,119,6,0.2)' : 'rgba(239,68,68,0.2)',
-                color: certifiedTier === 'gold' ? '#D4A017' : certifiedTier === 'silver' ? '#94A3B8' : certifiedTier === 'bronze' ? '#D97706' : '#EF4444',
+                background: certifiedTier === 'gold' ? 'rgba(245,158,11,0.2)' : certifiedTier === 'silver' ? 'rgba(148,163,184,0.2)' : certifiedTier === 'bronze' ? 'rgba(217,119,6,0.2)' : 'rgba(239,68,68,0.2)',
+                color: certifiedTier === 'gold' ? '#F59E0B' : certifiedTier === 'silver' ? '#94A3B8' : certifiedTier === 'bronze' ? '#D97706' : '#EF4444',
                 borderColor: 'currentColor',
               }}>
                 {certifiedTier.toUpperCase()} · {certifiedScore}%
@@ -374,9 +374,9 @@ export default function ForgePage() {
             <div className="flex gap-1 mt-2">
               {['Research', 'Summarize', 'Notify'].map(s => (
                 <Badge key={s} className="text-[8px]" style={{
-                  background: 'rgba(212,160,23,0.1)',
-                  color: 'rgba(212,160,23,0.8)',
-                  borderColor: 'rgba(212,160,23,0.2)',
+                  background: 'rgba(245,158,11,0.1)',
+                  color: 'rgba(245,158,11,0.8)',
+                  borderColor: 'rgba(245,158,11,0.2)',
                 }}>{s}</Badge>
               ))}
             </div>
@@ -389,13 +389,12 @@ export default function ForgePage() {
         {showAuditModal && auditResult && (
           <motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <motion.div className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            <motion.div className="absolute inset-0 bg-gray-900/60 backdrop-blur-sm"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
               onClick={handleCloseAuditModal} />
             <motion.div
-              className="relative z-10 w-full max-w-lg rounded-2xl border p-6 shadow-2xl"
+              className="relative z-10 w-full max-w-lg rounded-2xl border p-6 shadow-2xl bg-white"
               style={{
-                background: 'linear-gradient(135deg, #0F172A, #1E2937)',
                 borderColor: auditResult.auditTier === 'gold'
                   ? 'rgba(245,158,11,0.4)' : auditResult.auditTier === 'silver'
                     ? 'rgba(148,163,184,0.4)' : auditResult.auditTier === 'bronze'
@@ -410,12 +409,12 @@ export default function ForgePage() {
                   <Shield className="h-5 w-5" style={{
                     color: auditResult.auditTier === 'gold' ? '#F59E0B' : auditResult.auditTier === 'silver' ? '#94A3B8' : auditResult.auditTier === 'bronze' ? '#D97706' : '#EF4444'
                   }} />
-                  <h3 className="text-base font-bold text-titan-text">Audit Results</h3>
+                  <h3 className="text-base font-bold text-gray-900">Audit Results</h3>
                 </div>
                 <Badge className="text-[10px] font-mono border-0"
                   style={{
                     background: auditResult.auditTier === 'gold' ? 'linear-gradient(135deg, #F59E0B, #D97706)' : auditResult.auditTier === 'silver' ? 'linear-gradient(135deg, #94A3B8, #64748B)' : auditResult.auditTier === 'bronze' ? 'linear-gradient(135deg, #D97706, #B45309)' : 'linear-gradient(135deg, #EF4444, #DC2626)',
-                    color: auditResult.auditTier === 'gold' ? '#0A0E17' : '#fff',
+                    color: '#fff',
                   }}>
                   {auditResult.auditTier.toUpperCase()}
                 </Badge>
@@ -423,7 +422,7 @@ export default function ForgePage() {
               <div className="flex flex-col items-center mb-4">
                 <div className="relative w-24 h-24 flex items-center justify-center">
                   <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="6" />
+                    <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(0,0,0,0.08)" strokeWidth="6" />
                     <motion.circle cx="50" cy="50" r="42" fill="none"
                       stroke={auditResult.auditTier === 'gold' ? '#F59E0B' : auditResult.auditTier === 'silver' ? '#94A3B8' : auditResult.auditTier === 'bronze' ? '#D97706' : '#EF4444'}
                       strokeWidth="6" strokeLinecap="round"
@@ -437,19 +436,19 @@ export default function ForgePage() {
                   }}>{auditResult.overallScore}%</span>
                 </div>
               </div>
-              <p className="text-xs text-titan-muted/80 mb-4 leading-relaxed text-center">{auditResult.summary}</p>
+              <p className="text-xs text-gray-500 mb-4 leading-relaxed text-center">{auditResult.summary}</p>
               <div className="space-y-2 mb-4">
                 {auditResult.categories.map((cat, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <span className={`w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${cat.passed ? 'bg-emerald-500/20' : 'bg-red-500/20'}`}>
-                      <span className={`text-[8px] ${cat.passed ? 'text-emerald-400' : 'text-red-400'}`}>{cat.passed ? '✓' : '✗'}</span>
+                    <span className={`w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${cat.passed ? 'bg-emerald-100' : 'bg-red-100'}`}>
+                      <span className={`text-[8px] ${cat.passed ? 'text-emerald-600' : 'text-red-500'}`}>{cat.passed ? '✓' : '✗'}</span>
                     </span>
                     <div className="flex-1 min-w-0">
-                      <div className="flex justify-between text-[11px] text-titan-text">
+                      <div className="flex justify-between text-[11px] text-gray-900">
                         <span className="font-medium truncate">{cat.name}</span>
                         <span style={{ color: cat.passed ? '#10B981' : '#EF4444' }} className="font-mono">{cat.score}/{cat.maxScore}</span>
                       </div>
-                      <div className="h-1 bg-titan-border/20 rounded-full overflow-hidden mt-0.5">
+                      <div className="h-1 bg-gray-200 rounded-full overflow-hidden mt-0.5">
                         <motion.div className="h-full rounded-full"
                           style={{ background: cat.passed ? '#10B981' : '#EF4444' }}
                           initial={{ width: 0 }} animate={{ width: `${(cat.score / cat.maxScore) * 100}%` }}
@@ -461,12 +460,12 @@ export default function ForgePage() {
               </div>
               {auditResult.violations.length > 0 && (
                 <div className="mb-4">
-                  <p className="text-[10px] font-mono text-red-400/80 mb-1.5 uppercase tracking-wider">
+                  <p className="text-[10px] font-mono text-red-500 mb-1.5 uppercase tracking-wider">
                     ⚠ {auditResult.violations.length} Violation{auditResult.violations.length > 1 ? 's' : ''}
                   </p>
                   <div className="space-y-1">
                     {auditResult.violations.map((v, i) => (
-                      <div key={i} className="text-[10px] font-mono text-red-400/60 bg-red-500/5 rounded px-2 py-1">{v}</div>
+                      <div key={i} className="text-[10px] font-mono text-red-400 bg-red-50 rounded px-2 py-1">{v}</div>
                     ))}
                   </div>
                 </div>
@@ -474,7 +473,7 @@ export default function ForgePage() {
               <Button className="w-full text-xs font-semibold" onClick={handleCloseAuditModal}
                 style={{
                   background: auditResult.auditTier === 'gold' ? 'linear-gradient(135deg, #F59E0B, #D97706)' : 'linear-gradient(135deg, #14B8A6, #0D9488)',
-                  color: auditResult.auditTier === 'gold' ? '#0A0E17' : '#fff',
+                  color: '#fff',
                   height: '56px',
                   borderRadius: '16px',
                 }}>

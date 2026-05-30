@@ -14,7 +14,7 @@ import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import FAQSchema from '@/components/FAQSchema';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Best AI Tools for Agriculture in 2026 — Precision Farming, Crop Monitoring, Supply Chain | Apifeny AI',

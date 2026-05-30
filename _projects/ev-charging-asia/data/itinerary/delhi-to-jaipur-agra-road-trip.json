@@ -1,0 +1,62 @@
+{
+  "slug": "delhi-to-jaipur-agra-road-trip",
+  "title": "Delhi to Jaipur to Agra: India Golden Triangle EV",
+  "subtitle": "A 4-day heritage road trip through India's most iconic landmarks",
+  "route": [
+    {
+      "day": 1,
+      "from": "Delhi",
+      "to": "Jaipur",
+      "distance": "280 km",
+      "drivingTime": "5 hours",
+      "charger": "Tata Power Neemrana (mid-way)",
+      "kidActivities": "Qutub Minar, Amber Fort, Jal Mahal"
+    },
+    {
+      "day": 2,
+      "from": "Jaipur",
+      "to": "Jaipur",
+      "distance": "Local",
+      "drivingTime": "Full day",
+      "charger": "Tata Power World Trade Park",
+      "kidActivities": "Elephant Village, Hawa Mahal, Jantar Mantar, Amer Fort light show"
+    },
+    {
+      "day": 3,
+      "from": "Jaipur",
+      "to": "Agra",
+      "distance": "230 km",
+      "drivingTime": "4 hours",
+      "charger": "Fatehpur Sikri rest stop",
+      "kidActivities": "Fatehpur Sikri, Bharatpur Bird Sanctuary"
+    },
+    {
+      "day": 4,
+      "from": "Agra",
+      "to": "Delhi",
+      "distance": "230 km",
+      "drivingTime": "3.5 hours",
+      "charger": "Tata Power Yamuna Expressway",
+      "kidActivities": "Taj Mahal sunrise, Agra Fort, Mehtab Bagh"
+    }
+  ],
+  "totalDistance": "500 km",
+  "totalChargingCost": "₹1,200-2,000",
+  "bestFor": "Culture-focused families wanting India's top three heritage destinations",
+  "carRecommendations": [
+    "Tata Nexon EV",
+    "MG ZS EV",
+    "Hyundai Ioniq 5",
+    "BYD Atto 3"
+  ],
+  "tips": [
+    "Tata Power chargers available at rest stops on the Yamuna Expressway",
+    "Jaipur has good charging at World Trade Park mall",
+    "Delhi-NCR has the best EV charging infrastructure in India"
+  ],
+  "chargerTypes": [
+    "CCS2",
+    "Type 2"
+  ],
+  "seasonal": "October to March (pleasant weather)"
+}

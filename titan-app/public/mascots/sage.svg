@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <radialGradient id="sage-g" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4338CA"/>
+    </radialGradient>
+    <radialGradient id="sage-w" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="#E0E7FF"/>
+      <stop offset="100%" stop-color="#A5B4FC"/>
+    </radialGradient>
+  </defs>
+  <!-- Spectacles / glasses -->
+  <circle cx="72" cy="78" r="16" fill="none" stroke="#4338CA" stroke-width="2.5"/>
+  <circle cx="128" cy="78" r="16" fill="none" stroke="#4338CA" stroke-width="2.5"/>
+  <line x1="88" y1="78" x2="112" y2="78" stroke="#4338CA" stroke-width="2.5"/>
+  <line x1="56" y1="76" x2="60" y2="82" stroke="#4338CA" stroke-width="2"/>
+  <line x1="144" y1="76" x2="140" y2="82" stroke="#4338CA" stroke-width="2"/>
+  <!-- Head -->
+  <ellipse cx="100" cy="100" rx="55" ry="55" fill="url(#sage-g)"/>
+  <!-- Tuft of feathers on top -->
+  <path d="M85 48 L80 28 L92 45" fill="#818CF8" stroke="#6366F1" stroke-width="1"/>
+  <path d="M95 46 L92 24 L100 43" fill="#A5B4FC" stroke="#818CF8" stroke-width="1"/>
+  <path d="M105 48 L108 26 L114 44" fill="#818CF8" stroke="#6366F1" stroke-width="1"/>
+  <!-- Eyes behind glasses -->
+  <ellipse cx="72" cy="78" rx="8" ry="8" fill="white"/>
+  <ellipse cx="128" cy="78" rx="8" ry="8" fill="white"/>
+  <ellipse cx="74" cy="79" rx="4" ry="5" fill="#1E1B4B"/>
+  <ellipse cx="130" cy="79" rx="4" ry="5" fill="#1E1B4B"/>
+  <ellipse cx="72" cy="76" rx="2" ry="2" fill="white" opacity="0.6"/>
+  <ellipse cx="128" cy="76" rx="2" ry="2" fill="white" opacity="0.6"/>
+  <!-- Beak -->
+  <path d="M88 105 L100 120 L112 105 Z" fill="url(#sage-w)" stroke="#818CF8" stroke-width="1"/>
+  <!-- Tiny book in wing -->
+  <g transform="translate(140, 110)">
+    <rect x="0" y="0" width="18" height="22" rx="2" fill="#A5B4FC" stroke="#6366F1" stroke-width="1.5"/>
+    <line x1="3" y1="5" x2="15" y2="5" stroke="#4338CA" stroke-width="1" opacity="0.5"/>
+    <line x1="3" y1="9" x2="15" y2="9" stroke="#4338CA" stroke-width="1" opacity="0.5"/>
+    <line x1="3" y1="13" x2="12" y2="13" stroke="#4338CA" stroke-width="1" opacity="0.5"/>
+  </g>
+  <!-- Blush -->
+  <ellipse cx="62" cy="92" rx="7" ry="4" fill="#C7D2FE" opacity="0.4"/>
+  <ellipse cx="138" cy="92" rx="7" ry="4" fill="#C7D2FE" opacity="0.4"/>
+</svg>

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import HomeClient from './_HomeClient';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Apifeny AI — Copy-Paste Playbooks That Replace $2,200/mo in Services',

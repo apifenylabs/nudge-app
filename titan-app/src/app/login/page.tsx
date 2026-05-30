@@ -6,12 +6,10 @@ import { useRouter } from "next/navigation";
 import {
   Zap, Trophy, ChevronRight, Bot, Star, Sparkles, Mail, Lock, Eye, EyeOff, AlertCircle, LogIn, UserPlus
 } from "lucide-react";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import MascotPicker from "@/components/molecules/MascotPicker";
 import { MascotPickerModal } from "@/components/molecules/MascotDisplay";
 import MascotDisplay from "@/components/molecules/MascotDisplay";
-import { AnimatedStatCounter } from "@/components/molecules/AnimatedStatCounter";
-import { TestimonialsSection } from "@/components/molecules/TestimonialsSection";
-import { FeaturesGrid } from "@/components/molecules/FeaturesGrid";
 import { useMascotStore } from "@/stores/mascotStore";
 import { MASCOTS } from "@/data/mascots";
 import { loadProgression } from "@/lib/persistence";
@@ -23,28 +21,27 @@ import GodTierModal from "@/components/organisms/GodTierModal";
 
 function ParticleField() {
   const particles = useMemo(() =>
-    Array.from({ length: 48 }, (_, i) => {
-      const isTeal = Math.random() < 0.62;
+    Array.from({ length: 24 }, (_, i) => {
       return {
         id: i,
         x: Math.random() * 100,
         y: Math.random() * 100,
-        size: 3.5 + Math.random() * 5,
-        duration: 160 + Math.random() * 120,
-        delay: Math.random() * 80,
-        color: isTeal ? 'rgba(20, 184, 166,' : 'rgba(245, 158, 11,',
-        opacity: isTeal ? 0.78 : 0.58,
-        glowSize: 5 + Math.random() * 6,
-        layer: Math.floor(Math.random() * 3),
+        size: 2 + Math.random() * 3,
+        duration: 200 + Math.random() * 160,
+        delay: Math.random() * 100,
+        color: 'rgba(13, 148, 136,',
+        opacity: 0.1,
+        glowSize: 3 + Math.random() * 4,
+        layer: Math.floor(Math.random() * 2),
       };
     }), []);
 
-  const layerStyles = ['z-0', 'z-[1]', 'z-[2]'];
+  const layerStyles = ['z-0', 'z-[1]'];
 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
       {particles.map((p) => (
-        <div key={p.id} className={`absolute ${layerStyles[p.layer]} titan-particle-glow`}
+        <div key={p.id} className={`absolute ${layerStyles[p.layer]}`}
           style={{ left: `${p.x}%`, top: `${p.y}%`, width: p.size + p.glowSize * 2, height: p.size + p.glowSize * 2 }}>
           <motion.div
             className="absolute rounded-full"
@@ -54,18 +51,13 @@ function ParticleField() {
               background: `${p.color} ${p.opacity})`,
               left: '50%', top: '50%',
               x: '-50%', y: '-50%',
-              boxShadow: `0 0 ${p.glowSize * 4.2}px ${p.color} ${p.opacity * 0.7})`,
+              boxShadow: `0 0 ${p.glowSize * 2}px ${p.color} ${p.opacity * 0.5})`,
             }}
             animate={{
-              y: [0, -8, 2, -12, -3, -18, 0, -10, -5, -14, 0],
-              x: [0, 5, -3, 8, -5, 6, -7, 4, -4, 3, 0],
-              scale: [1, 1.12, 0.78, 1.2, 0.85, 1.15, 0.72, 1.08, 0.8, 1.05, 1],
-              opacity: [
-                p.opacity * 0.25, p.opacity * 0.65, p.opacity * 0.45,
-                p.opacity * 0.85, p.opacity * 0.3, p.opacity * 0.75,
-                p.opacity * 0.2, p.opacity * 0.7, p.opacity * 0.4,
-                p.opacity * 0.6, p.opacity * 0.25
-              ],
+              y: [0, -6, 2, -10, -3, -14, 0, -8, -5, -10, 0],
+              x: [0, 4, -2, 6, -4, 5, -5, 3, -3, 2, 0],
+              scale: [1, 1.08, 0.82, 1.12, 0.88, 1.1, 0.78, 1.04, 0.84, 1.02, 1],
+              opacity: [0.05, 0.12, 0.08, 0.15, 0.06, 0.14, 0.04, 0.1, 0.05, 0.09, 0.05],
             }}
             transition={{
               duration: p.duration,
@@ -85,7 +77,6 @@ type AuthMode = 'login' | 'signup';
 export default function LoginPage() {
   const router = useRouter();
 
-  // Auth state
   const [authMode, setAuthMode] = useState<AuthMode>('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -104,6 +95,17 @@ export default function LoginPage() {
     lastSavedAt: string;
   }
 
+  // Check if user was previously in demo mode — auto-redirect
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      try {
+        if (localStorage.getItem('titan-demo-mode') === 'true') {
+          router.push('/dashboard');
+        }
+      } catch {}
+    }
+  }, [router]);
+
   const [progState, setProgState] = useState<ProgressionStateType>(() => {
     if (typeof window === 'undefined') return { totalXp: 0, totalTasksRun: 0, skillsCertified: 0, goldSkills: 0, achievements: [], lastSavedAt: '' };
     try {
@@ -113,7 +115,6 @@ export default function LoginPage() {
   });
 
   const agentLevel = useMemo(() => Math.max(1, Math.floor(progState.totalXp / 500) + 1), [progState.totalXp]);
-  // Auto-show god-tier celebration on mount if level >= 30
   useEffect(() => {
     if (agentLevel >= 30) {
       setShowGodModal(true);
@@ -155,6 +156,10 @@ export default function LoginPage() {
       if (authMode === 'login') {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) {
+          // If Supabase is unreachable (network error), fall through to demo mode
+          if (error.message?.includes('fetch') || error.message?.includes('Failed to fetch') || error.status === 0) {
+            throw new Error('SUPABASE_UNREACHABLE');
+          }
           setError(error.message);
           setLoading(false);
           return;
@@ -168,13 +173,16 @@ export default function LoginPage() {
           },
         });
         if (error) {
+          // If Supabase is unreachable (network error), fall through to demo mode
+          if (error.message?.includes('fetch') || error.message?.includes('Failed to fetch') || error.status === 0) {
+            throw new Error('SUPABASE_UNREACHABLE');
+          }
           setError(error.message);
           setLoading(false);
           return;
         }
       }
 
-      // Store in localStorage as fallback reference
       try {
         localStorage.setItem('titan-auth-email', email);
         localStorage.setItem('titan-auth-mode', authMode);
@@ -184,11 +192,16 @@ export default function LoginPage() {
       setAuthSuccess(true);
       setLoading(false);
 
-      // Redirect to dashboard
       setTimeout(() => {
         router.push('/dashboard');
       }, 300);
-    } catch (err) {
+    } catch (err: any) {
+      // If Supabase is unreachable, offer demo mode
+      if (err?.message === 'SUPABASE_UNREACHABLE' || err?.message?.includes('fetch') || err?.message?.includes('Failed to fetch')) {
+        setError('Supabase server is unreachable. Would you like to enter Demo Mode? All features work locally.');
+        setLoading(false);
+        return;
+      }
       setError('An unexpected error occurred. Please try again.');
       setLoading(false);
     }
@@ -201,17 +214,15 @@ export default function LoginPage() {
 
   if (authSuccess) {
     return (
-      <div className="min-h-screen titan-gradient relative flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none z-0 titan-radial-glow-warm" />
-        <ParticleField />
+      <div className="min-h-screen bg-white relative flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden">
         <div className="relative z-10 text-center">
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", stiffness: 200, damping: 15 }}
           >
-            <div className="w-20 h-20 rounded-full bg-titan-teal/20 border border-titan-teal/30 flex items-center justify-center mx-auto mb-4">
-              <Sparkles className="h-10 w-10 text-titan-teal" />
+            <div className="w-20 h-20 rounded-full bg-teal-50 border border-teal-200 flex items-center justify-center mx-auto mb-4">
+              <Sparkles className="h-10 w-10 text-teal-600" />
             </div>
           </motion.div>
           <motion.h2
@@ -223,7 +234,7 @@ export default function LoginPage() {
             Welcome to Titan
           </motion.h2>
           <motion.p
-            className="text-titan-muted text-sm"
+            className="text-gray-500 text-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -237,12 +248,7 @@ export default function LoginPage() {
 
   if (showOnboarding) {
     return (
-      <div className="min-h-screen titan-gradient relative flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none z-0 titan-radial-glow-warm" />
-        <div className="absolute inset-0 pointer-events-none z-0" style={{
-          background: 'radial-gradient(ellipse at 50% 30%, rgba(245, 158, 11, 0.06) 0%, transparent 65%)',
-          mixBlendMode: 'screen',
-        }} />
+      <div className="min-h-screen bg-white relative flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden">
         <ParticleField />
         <div className="relative z-10 max-w-lg w-full">
           <MascotPicker onComplete={() => setShowOnboarding(false)} />
@@ -253,25 +259,23 @@ export default function LoginPage() {
 
   return (
     <motion.div
-      className="min-h-screen titan-gradient relative flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden"
+      className="min-h-screen bg-white relative flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="absolute inset-0 pointer-events-none z-0 titan-radial-glow-warm" />
-      <div className="absolute inset-0 pointer-events-none z-0" style={{
-        background: 'radial-gradient(ellipse at 50% 30%, rgba(245, 158, 11, 0.06) 0%, transparent 65%)',
-        mixBlendMode: 'screen',
-      }} />
-      <div className="absolute inset-0 pointer-events-none z-0 titan-grid-bg"
-        style={{ transform: `translateY(${scrollY * 0.08}px)` }} />
+      <BreadcrumbJsonLd items={[
+        { label: "Home", href: "/" },
+        { label: "Sign In", href: "/login" },
+      ]} />
+      <div className="absolute inset-0 pointer-events-none z-0 bg-gradient-to-bl from-teal-50/60 to-transparent" />
       <ParticleField />
 
       {/* Back link */}
       <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
         <button
           onClick={() => router.push('/')}
-          className="flex items-center gap-1.5 text-xs font-mono text-titan-muted/60 hover:text-titan-teal transition-colors"
+          className="flex items-center gap-1.5 text-xs font-mono text-gray-400 hover:text-teal-600 transition-colors"
         >
           <ChevronRight className="h-3 w-3 rotate-180" />
           Back to Home
@@ -312,11 +316,11 @@ export default function LoginPage() {
 
         {/* Auth card */}
         <motion.div
-          className="rounded-2xl border p-5 sm:p-6 backdrop-blur-md"
+          className="rounded-2xl border p-5 sm:p-6"
           style={{
-            background: 'rgba(15, 23, 42, 0.75)',
-            borderColor: 'rgba(20, 184, 166, 0.2)',
-            boxShadow: '0 0 30px rgba(20, 184, 166, 0.08)',
+            background: '#FFFFFF',
+            borderColor: '#E5E7EB',
+            boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
           }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -324,9 +328,9 @@ export default function LoginPage() {
         >
           {/* Header */}
           <div className="text-center mb-5">
-            <div className="inline-flex items-center gap-2 mb-2 px-3 py-1 rounded-full bg-titan-teal/10 border border-titan-teal/20">
-              <Sparkles className="h-3 w-3 text-titan-teal" />
-              <span className="text-[10px] font-mono text-titan-teal tracking-wider">
+            <div className="inline-flex items-center gap-2 mb-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200">
+              <Sparkles className="h-3 w-3 text-teal-600" />
+              <span className="text-[10px] font-mono text-teal-600 tracking-wider">
                 {authMode === 'login' ? 'WELCOME BACK' : 'JOIN TITAN'}
               </span>
             </div>
@@ -335,7 +339,7 @@ export default function LoginPage() {
                 {authMode === 'login' ? 'Sign In' : 'Create Account'}
               </span>
             </h2>
-            <p className="text-xs text-titan-muted/70 mt-1 font-mono">
+            <p className="text-xs text-gray-500 mt-1 font-mono">
               {authMode === 'login'
                 ? 'Enter your credentials to access your swarm'
                 : 'Start free. No credit card needed.'}
@@ -361,18 +365,18 @@ export default function LoginPage() {
 
           {/* Email */}
           <div className="mb-3.5">
-            <label className="block text-[11px] font-mono text-titan-muted/80 mb-1.5">Email</label>
+            <label className="block text-[11px] font-mono text-gray-500 mb-1.5">Email</label>
             <div className="relative">
-              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-titan-muted/40" />
+              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-gray-400" />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="w-full pl-9 pr-3 py-2.5 rounded-lg text-xs font-mono border bg-transparent transition-all focus:outline-none focus:ring-2"
+                className="w-full pl-9 pr-3 py-2.5 rounded-lg text-xs font-mono border bg-white transition-all focus:outline-none focus:ring-2"
                 style={{
-                  borderColor: 'rgba(20, 184, 166, 0.2)',
-                  color: '#F1F5F9',
+                  borderColor: '#E5E7EB',
+                  color: '#111827',
                   '--tw-ring-color': 'rgba(20, 184, 166, 0.4)',
                 } as React.CSSProperties}
               />
@@ -381,18 +385,18 @@ export default function LoginPage() {
 
           {/* Password */}
           <div className="mb-5">
-            <label className="block text-[11px] font-mono text-titan-muted/80 mb-1.5">Password</label>
+            <label className="block text-[11px] font-mono text-gray-500 mb-1.5">Password</label>
             <div className="relative">
-              <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-titan-muted/40" />
+              <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-gray-400" />
               <input
                 type={showPassword ? 'text' : 'password'}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full pl-9 pr-9 py-2.5 rounded-lg text-xs font-mono border bg-transparent transition-all focus:outline-none focus:ring-2"
+                className="w-full pl-9 pr-9 py-2.5 rounded-lg text-xs font-mono border bg-white transition-all focus:outline-none focus:ring-2"
                 style={{
-                  borderColor: 'rgba(20, 184, 166, 0.2)',
-                  color: '#F1F5F9',
+                  borderColor: '#E5E7EB',
+                  color: '#111827',
                 }}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') handleAuth();
@@ -400,7 +404,7 @@ export default function LoginPage() {
               />
               <button
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-titan-muted/40 hover:text-titan-muted/70 transition-colors"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
               >
                 {showPassword ? <EyeOff className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
               </button>
@@ -411,10 +415,10 @@ export default function LoginPage() {
           <motion.button
             onClick={handleAuth}
             disabled={loading}
-            className="w-full py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 shadow-2xl disabled:opacity-60"
+            className="w-full py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 shadow-lg disabled:opacity-60"
             style={{
               background: 'linear-gradient(135deg, #14B8A6, #F59E0B)',
-              color: '#0A0E17',
+              color: '#FFFFFF',
             }}
             whileHover={loading ? {} : { scale: 1.02, y: -1 }}
             whileTap={loading ? {} : { scale: 0.98 }}
@@ -422,7 +426,7 @@ export default function LoginPage() {
             {loading ? (
               <span className="flex items-center gap-2">
                 <motion.span
-                  className="inline-block w-3.5 h-3.5 rounded-full border-2 border-titan-bg/30 border-t-titan-bg"
+                  className="inline-block w-3.5 h-3.5 rounded-full border-2 border-white/30 border-t-white"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}
                 />
@@ -440,15 +444,41 @@ export default function LoginPage() {
           <div className="mt-4 text-center">
             <button
               onClick={toggleMode}
-              className="text-[11px] font-mono text-titan-muted/60 hover:text-titan-teal transition-colors"
+              className="text-[11px] font-mono text-gray-500 hover:text-teal-600 transition-colors"
             >
               {authMode === 'login' ? (
-                <>Don't have an account? <span className="text-titan-teal font-semibold">Sign up</span></>
+                <>Don't have an account? <span className="text-teal-600 font-semibold">Sign up</span></>
               ) : (
-                <>Already have an account? <span className="text-titan-teal font-semibold">Sign in</span></>
+                <>Already have an account? <span className="text-teal-600 font-semibold">Sign in</span></>
               )}
             </button>
           </div>
+
+          {/* Demo mode bypass (shown when Supabase error detected) */}
+          {error?.includes('Supabase') && (
+            <motion.button
+              onClick={async () => {
+                try {
+                  localStorage.setItem('titan-auth-email', email || 'demo@titan.local');
+                  localStorage.setItem('titan-auth-mode', 'demo');
+                  localStorage.setItem('titan-auth-timestamp', new Date().toISOString());
+                  localStorage.setItem('titan-demo-mode', 'true');
+                } catch {}
+                setAuthSuccess(true);
+                setTimeout(() => router.push('/dashboard'), 300);
+              }}
+              className="w-full mt-2 py-2 rounded-xl text-xs font-semibold flex items-center justify-center gap-2"
+              style={{
+                background: '#FFFFFF',
+                color: '#14B8A6',
+                border: '1.5px dashed #14B8A6',
+              }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              🧪 Enter Demo Mode (offline)
+            </motion.button>
+          )}
         </motion.div>
 
         {/* Stats preview */}
@@ -458,13 +488,13 @@ export default function LoginPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <div className="flex items-center gap-1.5 bg-titan-emerald/10 px-3 py-1.5 rounded-full border border-titan-emerald/20 justify-center">
-            <Zap className="h-3 w-3 text-titan-emerald" />
-            <span className="text-[10px] font-mono text-titan-emerald font-medium">+${estSavings} value</span>
+          <div className="flex items-center gap-1.5 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-200 justify-center">
+            <Zap className="h-3 w-3 text-emerald-600" />
+            <span className="text-[10px] font-mono text-emerald-700 font-medium">+${estSavings} value</span>
           </div>
-          <div className="flex items-center gap-1.5 bg-titan-golden/10 px-3 py-1.5 rounded-full border border-titan-golden/20 justify-center">
-            <Trophy className="h-3 w-3 text-titan-golden" />
-            <span className="text-[10px] font-mono text-titan-golden font-medium">Lv{agentLevel} Agent</span>
+          <div className="flex items-center gap-1.5 bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200 justify-center">
+            <Trophy className="h-3 w-3 text-amber-600" />
+            <span className="text-[10px] font-mono text-amber-700 font-medium">Lv{agentLevel} Agent</span>
           </div>
         </motion.div>
       </div>

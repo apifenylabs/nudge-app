@@ -582,7 +582,7 @@ export default function AIToolsChinaPage() {
               AI writing tools China · AI coding tools China · AI marketing China · 
               China AI directory · AI tools for China startups · affordable AI tools China · 
               free AI tools China · AI productivity China · China tech stack · 
-              AI tools Beijing · AI tools Shanghai · AI tools Shenzhen · 
+              'AI tools for Beijing · AI tools for Shanghai · AI tools for Shenzhen' · 
               中国AI工具 · 国内最好的AI工具 · AI软件中国 · 中文AI工具
             </p>
           </div>

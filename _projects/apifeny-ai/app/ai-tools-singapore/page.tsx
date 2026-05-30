@@ -110,7 +110,7 @@ export default function AIToolsSingaporePage() {
 
             <p className="mt-5 sm:mt-6 text-base sm:text-lg text-tech-200 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
               Curated AI tools that <strong className="text-white">actually work for Singapore</strong>. 
-              We rank every tool on PDPA compliance, SGD pricing, multilingual support, and Smart Nation readiness.Canada's unique market.
+              We rank every tool on PDPA compliance, SGD pricing, multilingual support, and Smart Nation readiness.
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
@@ -182,7 +182,7 @@ export default function AIToolsSingaporePage() {
         </div>
       </section>
 
-      {/* WHY CANADA MATTERS */}
+      {/* WHY SINGAPORE MATTERS */}
       <section className="border-y border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10 sm:mb-12">
@@ -251,7 +251,7 @@ export default function AIToolsSingaporePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="flex items-center gap-3 mb-6 sm:mb-8">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center shrink-0"><BookOpen className="w-5 h-5 text-red-400" /></div>
-            <div><h2 className="text-xl sm:text-2xl font-bold text-white">Step-by-Step AI Playbooks</h2><p className="text-xs sm:text-sm text-tech-200">Battle-tested guides to ship AI workflows — built for Canadian teams and startups</p></div>
+            <div><h2 className="text-xl sm:text-2xl font-bold text-white">Step-by-Step AI Playbooks</h2><p className="text-xs sm:text-sm text-tech-200">Battle-tested guides to ship AI workflows — built for Singapore teams and startups</p></div>
           </div>
           <FeaturedPlaybooks />
           <div className="mt-8 text-center">
@@ -280,7 +280,7 @@ export default function AIToolsSingaporePage() {
         </div>
       </section>
 
-      {/* CANADA ECOSYSTEM */}
+      {/* SINGAPORE ECOSYSTEM */}
       <section className="border-y border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10">
@@ -318,13 +318,13 @@ export default function AIToolsSingaporePage() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-700/10 border border-red-700/20 text-red-300 text-xs font-medium mb-6">
             <MapPin className="w-3.5 h-3.5" />
-            Built for Canadian Founders, Researchers & Enterprises
+            Built for Singapore Founders, Researchers & Enterprises
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
-            Find the Right AI Tool for Your Canadian Business
+            Find the Right AI Tool for Your Singapore Business
           </h2>
           <p className="mt-4 text-base sm:text-lg text-tech-200 max-w-2xl mx-auto">
-            No more guessing if a tool complies with PIPEDA, supports French, or works for Canadian teams. Every tool on Apifeny AI is rated for Canadian data compliance, CAD pricing, and bilingual readiness. Start exploring — no account needed.
+            No more guessing if a tool complies with PDPA, supports English/Mandarin/Malay, or works for Singapore teams. Every tool on Apifeny AI is rated for Singapore data compliance, SGD pricing, and multilingual readiness. Start exploring — no account needed.
           </p>
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link href="/tools" className="group relative inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-neon to-neon-dark text-white font-semibold text-sm sm:text-base transition-all hover:shadow-lg hover:shadow-neon/25 hover:-translate-y-0.5">
@@ -347,8 +347,8 @@ export default function AIToolsSingaporePage() {
           <div className="text-center">
             <p className="text-[10px] text-tech-400 leading-loose max-w-3xl mx-auto">
               <strong className="text-tech-300">Singapore AI tools:</strong>{' '}
-              best AI tools in Singapore 2026 · AI tools for Singapore businesses · Singapore AI software · AI fintech Singapore · AI coding tools Singapore ·Canadian tech stack · 
-              AI tools Toronto · AI tools Montreal · AI tools Vancouver
+              best AI tools in Singapore 2026 · AI tools for Singapore businesses · Singapore AI software · AI fintech Singapore · AI coding tools Singapore · Smart Nation readiness · 
+              AI tools Singapore · AI tools Southeast Asia · Smart Nation AI
             </p>
           </div>
         </div>

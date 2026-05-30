@@ -634,7 +634,7 @@ export default function AIToolsNigeriaPage() {
               AI writing tools Nigeria · AI coding tools Nigeria · AI marketing Nigeria · 
               Nigeria AI directory · AI tools for NG startups · affordable AI tools Nigeria · 
               free AI tools Nigeria · AI productivity Nigeria · Nigeria tech stack · 
-              AI tools Lagos · AI tools Abuja · AI tools Port Harcourt · African AI tools
+              'AI tools for Lagos · AI tools for Abuja · AI tools for Port' Harcourt · African AI tools
             </p>
           </div>
         </div>

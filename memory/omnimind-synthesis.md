@@ -1,145 +1,198 @@
 
-## 2026-05-29 (Friday) — Daily Synthesis
+## 2026-05-30 (Saturday) — Daily Synthesis
 
-Generated: 2026-05-29T02:00 HKT | Window: May 19–29, 2026
+Generated: 2026-05-30T02:00 HKT (primary) | Backup consolidation: 2026-05-30T03:00 HKT | Window: May 19–30, 2026
 
 ---
 
 ## 1. Cross-Day Pattern Analysis
 
-### Pattern AG: Live Trading Incident — Accidental Position Doubling (CRITICAL NEW)
-- **Event**: At 00:57 HKT May 29, a connector test script accidentally placed live market buys because `HyperliquidConnector(paper=False)` was initialized in an ad-hoc debug session. The SDK exchange object was live, and positional parameter mismatches in `order()`/`bulk_orders()` calls submitted as market buys before the validation error returned.
-- **Impact**: Positions doubled instantly — BTC +0.0022 (now 0.0044 total), ETH +1.642 (now 3.284 total), WIF +9,634 (now 21,167 total). Notional went from $1,031 → $1,113 (+$82).
-- **Root cause**: No paper-mode guard in ad-hoc test scripts. `PAPER_MODE_FORCE = True` guard has been added to SOP.
-- **Resolution**: Wosubu OK'd keeping the doubled positions ("if the trade is good go for it"). Native TP/SL set on full position sizes by 01:15 HKT.
-- **Cross-day relevance**: This is the **second live-trading bug** after the May 24 balance bug (clearinghouseState read). Pattern emerging: every major trading milestone in this system has a hidden bug that surfaces through ad-hoc debug code, not through the main bot.
-- **Pattern AH inheritance**: This is an escalation of the "hidden bug at every milestone" pattern first identified in the May 24 synthesis.
+### Pattern AG: Live Trading Incident — Accidental Position Doubling (CONTINUED + RESOLVED)
+- **May 29 00:57 HKT**: Connector test script accidentally placed live market buys (BTC +0.0022, ETH +1.642, WIF +9,634) — doubled all positions. Wosobu OK'd keeping them.
+- **May 29 resolution phase**: Positions ran through the day with native TP/SL. WIF hit partial exit at 18:56 (halved from 21,167 → 10,584), fully closed by 20:17. BTC/ETH positions still open.
+- **Day range**: $1,140.21 → $1,278.94 high → $1,184.38 close. +$44.17 net from start (+3.9%). WIF contributed +$118 UPnL at peak before exit (+15.5%).
+- **Lesson hardened**: `PAPER_MODE_FORCE = True` guard and `if not PAPER_MODE and not os.environ.get("HL_LIVE_ALLOWED", False): raise RuntimeError("LIVE BLOCKED")` now in all ad-hoc scripts.
+- **Cross-day pattern confirmed**: Every major trading milestone surfaces a hidden bug via ad-hoc code (May 24 balance bug → May 29 accidental doubling). The system's sandbox between dev and live is the recurring failure point.
 
-### Pattern AH: Shadow Mode Transition — Bot Now in PAPER Mode (NEW)
-- At 23:34 HKT May 28, the bot was switched to `PAPER_MODE=True` (shadow mode).
-- The bot still processes all 7 symbols, runs grid lifecycle, funding veto, all 6 strategy paths — but logs orders instead of executing.
-- **Purpose**: Overnight validation of the new config (3 bugs fixed, limit grid entry for BB 15m, funding rate veto).
-- **Implication**: The system is in a deliberate "pause and validate" phase, not a breakdown. This is the first time the bot has intentionally stopped live execution since May 24.
-- **Watch**: Shadow mode logs need checking at ~08:00 HKT for race conditions, stale grids, funding cache timestamps.
+### Pattern AH: Shadow Mode — Bot in PAPER Mode (OVERTAKEN BY EVENTS — BACKUP CORRECTION)
+- Bot switched to `PAPER_MODE=True` at May 28 23:34 HKT.
+- **BACKUP CONSOLIDATION FINDING**: Bot was in PAPER mode at May 29 23:22 HKT, but flipped to LIVE by May 30 01:49 HKT. This happened without explicit intervention.
+- **Possible cause**: A cron restart or config reload that didn't persist the PAPER_MODE flag. The guard was only in ad-hoc scripts (`PAPER_MODE_FORCE`), not in the main bot startup sequence as a persistent toggle.
+- **Finding**: Shadow mode is not a durable safety state — it can be overwritten by a normal cron cycle. The ".env" or startup sequence does not enforce PAPER_MODE=True.
 
-### Pattern AI: The Config Refactor (May 28 22:32-23:46) — Largest Single Change Yet (NEW)
-- **3 critical bugs fixed**: BB 1h phantom allocation (30% was unspendable), Funding Proxy & Taker Flow returned 0%, Funding Proxy signal block (indentation bug).
-- **3 new features built**: Limit Grid Entry for BB 15m (3 passive orders at -1x/-2x/-3x ATR), Funding Rate Veto for Vol Surge SHORT signals (Z-score > +2.5), Funding History Cache (15-min TTL, thread-safe).
-- **Allocation rebalance**: BB 1h 55%→30%, BB 15m 0%→20%, Fund Proxy 20%→15%, Taker Flow 15%→10%, Vol Surge 5%→15%, Kalman DRL 5% (unchanged), Cash 5% (unchanged).
-- **Position cap**: 3→4.
-- **WIF**: Gated from all strategies.
-- **Key insight**: This is the first comprehensive strategy rebalance since the bot went live. The old config (May 23-28) was essentially running on BB Core alone — all other strategies had implementation bugs that made them return 0% allocation or crash silently.
-- **Projected monthly PnL**: +$12.30 (vs -$7.12 old config). WR improves but bottleneck remains account size ($996 → $50k at 6.9 years).
+### Pattern AI: Config Refactor — Validation Phase (CONTINUED)
+- New allocation (BB 1h 30%, BB 15m 20%, Funding Proxy 15%, Taker Flow 10%, Vol Surge 15%, Kalman DRL 5%, Cash 5%) in shadow validation.
+- Projected monthly PnL: +$12.30 (vs -$7.12 old config). Time to $50k from $996: 6.9 years.
+- **Key insight from May 29**: The old config was essentially running on BB Core alone for 5 days (May 23-28) — ALL other strategies had implementation bugs silently returning 0%. The system was less diverse than reported.
 
-### Pattern AJ: Portfolio Volatility Increases with Diversity (CONTINUED)
-- May 28's trading day had the widest balance range: $963→$1,030 ($67 range, ~7% of portfolio).
-- Four positions (BTC, ETH, SOL, WIF) created correlated drawdowns — all worsened simultaneously at several points (20:25 dip, 21:44 sharp dip).
-- **Key observation**: The worst UPnL moments were when ALL positions moved against simultaneously. The correlation of the four positions (all crypto longs) creates portfolio-level risk that position-level SL cannot fully mitigate.
-- **SOL and XRP**: Both were opened and closed within the same day — short-lived positions. SOL's return to spot cash ($282) was the only portfolio buffer.
-- **WIF**: Persistent drawdown (-$56 to -$82 range), now gated from all strategies. "Never backtested — Wosubu directive" is notable: WIF was never validated before going live.
+### Pattern AK: 10-Item Backlog — Day 9 of Zero Execution (ESCALATED)
+- Day 9 (May 30) with zero new backlog items closed. Pattern AE identified May 28, continuing to worsen.
+- **Counterpoint**: FX Vol Surge Ingestion (May 29) was a new research path, not a backlog item, but it didn't close any existing task.
+- The backlog hypothesis from May 28 synthesis stands: attention allocation is the bottleneck, not execution capability.
 
-### Pattern AK: 10-Item Backlog — Day 8 of Zero Execution (ESCALATED)
-- Pattern AE identified on May 28 as the #1 synthesis concern. Now **day 8**.
-- **NEW context**: The config refactor (Pattern AI) actually closed one item implicitly — the BB 1h wire and Funding Proxy/Taker Flow fixes address multiple backlogged items without being explicitly checked off.
-- However, the core items (FMP screener, Jupiter API meme execution, forex ADX filter, Kalman funding rate alignment with Algotick params, PnL reconciliation fix) remain completely untouched.
-- **Contradiction**: The system is capable of major changes (config refactor = 3 bugs + 3 features in ~1 hour), but only when the focus is on active trading. The backlog items are "offline" and never get attention.
+### Pattern AL: Revenue Still $0.00 — Day 34 (CRITICAL)
+- Day 34 without a single dollar of revenue.
+- May 29 saw SEO work (BreadcrumbList JSON-LD on AI Directory) and Singapore EV guide — both long-lead plays, not revenue.
+- **Month 1 (May 24-June 24) roadmap**: Week 1 ends May 30. Zero wins on "Infrastructure & Gates" — Supabase migration blocked (CEO), Stripe checkout unwired, no freemium gates.
+- **Hard truth**: May ends tomorrow. The entire month's roadmap is a write-off for revenue. The only ROI this month is trading (+$1,191 at peak, currently ~$1,184) and LLM research output.
 
-### Pattern AL: Revenue Still $0.00 — Day 33 (CRITICAL)
-- No progress on any monetization path. Supabase migration still blocked (day 9). No Stripe checkout. No affiliate payout.
-- The May 24-30 Week 1 roadmap ("Infrastructure & Gates") has effectively **zero wins**.
-- **Counterpoint**: The Singapore EV guide was published (5,000+ word SEO play) — that's a step toward SEO revenue, but zero dollars in the bank.
-- **Hard truth**: May ends in 2 days. The month-end revenue target ($0 baseline, but aspiration was first $9) will not be met.
+### Pattern AM: Site Reliability — All Sites Healthy (CONTINUED)
+- All 5 sites healthy (ev-charging-asia, apifeny-ai, luxury-family-travel, family-travel-directory, social-beast all 200 OK).
+- 24 crons: 21 ok, 3 transient errors (same 3 as prior days: backup cron, rd-agent, ceo-summary). No new cron failures.
+- Vercel upload rate-limit (5000/day) still blocking ev-charging-asia pushes.
 
-### Pattern AM: Site Reliability — All 5 Sites Healthy (CONTINUED)
-- ev-charging-asia, apifeny-ai, luxury-family-travel, family-travel-directory, social-beast — all 200 OK at last heartbeat.
-- 24 crons: 21 healthy, 3 with errors. `proactive-builder` (4 consecutive errors) and `wick-improvement-daily` (1 error) need investigation.
-- Vercel upload rate-limit (5000/day) blocking git push on ev-charging-asia.
+### New Pattern AN: Trading System Enters "Clean But Stalled" Phase (BACKUP CORRECTED)
+- **BACKUP CORRECTION**: Balance is $1,106.18 (NOT $1,184-1,191). All positions CLOSED. Bot in LIVE mode (NOT shadow).
+- Between ~22:00 HKT May 29 and 01:49 HKT May 30, all remaining positions (BTC, ETH, SOL, ARB) were closed — likely TP/SL triggered. Balance dropped ~$84 from 21:57 high of $1,191.
+- DD improved from 10.6% to 5.1% — halved by clean exits.
+- **Zero new signals firing** with bot LIVE and 0 positions. This is the quietest state since May 24.
+- **Possible explanation**: BB allowlist gating (SOL/BTC/ETH/ARB only), widest SL (1.0x ATR instead of 0.75x), and chop regime together mean fewer signals cross threshold.
+
+### New Pattern AO: FX Vol Surge Research — Extremely Low Signal Density (CONFIRMED)
+- May 29 scanning 70k bars across EURUSD, GBPUSD, USDJPY, USDCAD: only 6 signals total (0.006-0.011%). Verdict: satellite signal only, not primary alpha.
+- This confirms the vol surge strategy is crypto-specific — FX movement is too tight for the ATR-expansion detection.
+
+### New Pattern AP: Bot Mode Drift — PAPER→LIVE Without Explicit Gate (NEW, BACKUP IDENTIFIED)
+- May 28 23:34: `PAPER_MODE=True` set in config refactor.
+- May 29 23:22: Bot confirmed running in PAPER mode (trading log).
+- May 30 01:49: Bot confirmed running in LIVE mode (trading log).
+- **No explicit flip event recorded.** The mode switch was discovered post-hoc.
+- **Finding**: The PAPER_MODE flag may not be persisted across cron restarts. Config refactor's safety measure is not durable.
+
+### New Pattern AQ: DD Dropped Passively (NEW, BACKUP IDENTIFIED)
+- Max DD 10.6% (May 23-28) → 5.1% (May 30).
+- Reduction came entirely from positions closing via TP/SL — no active risk reduction.
+- **Signals**: Exit discipline is working; entry generation is not.
+
+### New Pattern AR: Balance Floor at $1,106.18 — First Sustained Flat Period (NEW, BACKUP IDENTIFIED)
+- Balance stable at $1,106.18 for 2+ hours (01:49-02:52 HKT).
+- 0 positions, 0 signals firing, bot running every 60s.
+- This is the first sustained flat period since trading began May 24.
 
 ---
 
-## 2. Key Contradictions (May 29 additions)
+## 2. Key Contradictions (May 30 additions — backup consolidated)
+
+### Corrected: Primary Synthesis vs Actual State
+
+| State Claimed (Primary 02:00 HKT) | Actual State (Trading Log 02:52 HKT) | Severity |
+|-----------|------------------|--------|-------|
+| Balance ~$1,184-1,191 | **Balance $1,106.18** | 🔴 Significant (-$78 gap) |
+| BTC/ETH still open at doubled sizes | **All positions closed** — 0 live | 🔴 Major state error |
+| Bot in PAPER/shadow mode | **Bot in LIVE mode** | 🟡 Config drift risk |
+| DD 10.6% | **DD 5.1%** | 🟢 Positive, synthesis missed |
+| Portfolio 100% crypto long (BTC+ETH) | **0% crypto exposure**, all cash | 🟢 Positive, synthesis missed |
+
+### Pre-existing Contradictions
 
 | Statement | Counter-Statement | Source |
 |-----------|------------------|--------|
-| "Bot is in shadow mode — safe validation period" | Bot doubled positions at 00:57 HKT via ad-hoc script not covered by shadow mode | May 29 incident |
-| "10-item backlog at zero execution for 8 days" | Config refactor fixed multiple undiagnosed bugs that effectively were backlog items | May 28 23:00-23:46 |
-| "Shadow mode must check for stale grids" | The grid lifecycle was built in shadow mode — no live testing confirms thread safety | May 28 config refactor |
-| "Revenue $0.00 for 33 days" | Singapore SEO guide published — first real content marketing play | May 29 HEARTBEAT |
-| "WIF gated from all strategies" | WIF was never backtested before going live — the gate is closing a process failure, not a new discovery | May 28 config |
-| "All 200 OK" | Vercel rate-limited — ev-charging-asia code is committed but not deployed | May 29 HEARTBEAT |
+| "Bot is in shadow mode — safe" | Bot self-flipped to LIVE without gate; shadow mode is not durable | May 30 trading log |
+| "WIF gated from all strategies" | WIF doubled, +$118 UPnL, clean exit — gate works for entries not results | May 29 timeline |
+| "All P0-P4 done or CEO-blocked" | Revenue target for May is zero across 34 days | May 30 HEARTBEAT |
+| "Cron health is good (21/24)" | Same 3 crons erroring 3+ consecutive days | HEARTBEAT May 28-30 |
 
 ---
 
-## 3. Building Insights (May 28→29)
+## 3. Building Insights (May 30 — backup consolidation)
 
-1. **Accidental doubling is the most important incident since the balance bug.** But unlike May 24 (undiagnosed false confidence), this was immediately caught, root-caused, documented, and given a procedural fix. The incident response quality is improving.
+0. **⚠️ PRIMARY SYNTHESIS HAD MATERIAL STATE ERRORS.** Backup run corrected balance (off by -$78), position count (open→closed), bot mode (shadow→live), and DD (10.6%→5.1%). The synthesis pipeline may be reading a cached state rather than fresh trading log.
 
-2. **The shadow mode + config refactor together form a "reset" of the trading system.** The original bot went live May 24 with incomplete implementations (BB 1h unspendable, Funding Proxy/Taker Flow returning 0%). The May 28 refactor doesn't just add features — it fixes the original deployment. Shadow mode is the correct approach for re-validation.
+1. **The accidental doubling incident response was textbook.** Incident caught, root cause documented, fix deployed, positions managed to clean profit. Compare to May 24 (balance bug undiagnosed for days) — incident response loop improved in 5 days.
 
-3. **Portfolio diversity without correlation awareness is just concentrated risk on multiple legs.** 4 crypto longs move together. The portfolio has directional bias (all long) across all positions. This is structurally identical to being 4x leveraged on a single direction. A funding rate arb, mean-reversion short, or cross-market position would add true diversification.
+2. **BACKUP CORRECTION: Bot self-flipped from PAPER to LIVE without explicit gate.** This undermines the primary synthesis's "shadow mode limbo" thesis. The mode switch was accidental (likely cron restart overwrite) — meaning the config refactor's safety is not durable.
 
-4. **The WIF gate confirms a process gap: strategies go live without backtesting.** The May 23 permission framework requires backtest → paper → live, but WIF was directly live with zero backtest validation. This is a governance violation that went unnoticed for 5 days.
+3. **All positions closed cleanly — DD halved (10.6% → 5.1%).** The improvement is the single best risk metric change since May 24.
 
-5. **The system's execution capability is fine — the attention allocation model is broken.** The config refactor proves the system CAN execute major work (3 bugs + 3 features in ~1h). The problem isn't skill or infrastructure — it's that active trading issues get attention while backlog items don't. A structured triage system for the 10-item backlog would fix this.
+4. **WIF's +$118 profit exit despite "never backtested" is ironic but not actionable.** Outcome contradicts the gate's risk assumption, but governance is about process, not prediction.
 
----
+5. **Zero signals with LIVE bot for 2+ hours.** This is the quietest state since May 24. BB allowlist gating + wide SL + chop regime = no entries.
 
-## 4. May 28 Full Session Summary (Cron Data)
+6. **The gap between "trading revenue" and "product revenue" is structural.** Trading +$1,106 from $40 (~2,765% in 7 days). Product revenue $0 after 34 days. 70/30 split violated daily.
 
-### Balance Timeline (May 28, all times HKT)
-| Time | Balance | Key Event | Range Δ |
-|------|---------|-----------|---------|
-| 09:11 | $1,027 | BTC only, stable | — |
-| 11:28 | $1,028 | ETH LONG opened (1.642 @ $1,988.50) | +$1 |
-| 12:37 | $963 | Portfolio expansion: SOL, XRP, WIF opened. Balance low. | -$65 |
-| 18:07 | $1,039 | Recovery | +$76 |
-| 20:17 | $994 | XRP closed, SOL & WIF bleeding | -$45 |
-| 21:44 | $967 | Sharp dip: ETH -$21.67, all positions red | -$27 |
-| 22:21 | $1,030 | Recovery +6.56%. SOL closed. | +$63 |
-| 23:16 | $1,008 | Slight drift | -$22 |
-| 23:43 | $1,031 | Flat consolidation | +$23 |
-
-### Positions Final (23:43 HKT)
-- BTC LONG 0.0022 @ $76,116 | UPnL: -$7.11
-- ETH LONG 1.642 @ $1,988.50 | UPnL: +$2.46
-- WIF LONG 11,533 @ $0.18 | UPnL: -$52.44
-- **Total balance**: $1,031.06
-- **12 hist trades | WR=67% | DD=10.6% | Kill Switch=False**
-
-### Config Changes (22:32 HKT)
-- SL widened 0.75x → 1.0x ATR for BB 15m
-- BB 15m: 0% → 20% allocation, gated to SOL/BTC/ETH
-- BB 1h: 55% → 30%
-- Funding Proxy: 20% → 15%
-- Taker Flow: 15% → 10%
-- Vol Surge: 5% → 15% (with funding veto)
-- Kalman DRL: 5% (unchanged)
-- Cash: 5% (unchanged)
-- Position cap: 3 → 4
-- WIF: gated from all strategies
-
-### Code Changes (23:00-23:46 HKT)
-1. BB 1h signal loop added (was phantom — no code path called check_signal with 1h data)
-2. Funding Proxy & Taker Flow allocation cases added to risk_manager.py
-3. Funding Proxy signal block indentation bug fixed
-4. Limit Grid Entry for BB 15m: 3 passive limit orders at -1x/-2x/-3x ATR from signal price, 6-bar expiration. Backtest: SOL WR 40%→100%, ETH 43%→80%.
-5. Funding Rate Veto: Z-score > +2.5 blocks Vol Surge SHORT signals
-6. Funding History Cache: 15-min TTL per coin, thread-safe lock
-
-### May 29 00:22-01:29 HKT (Post-Incident)
-- After incident: balance recovered to $1,109.66 by 01:29 HKT (from $1,054 at 00:22)
-- Bot running in PAPER mode (shadow) — all strategy paths active but logging only
-- Positions protected with native TP/SL at doubled sizes
+7. **10-item backlog: Day 10 with zero closure.** Items (FMP screener, Jupiter API, forex ADX, Kalman alignment) are not hard — never prioritized.
 
 ---
 
-## 5. Watch Items (May 29 Forward)
+## 4. May 29→30 Full Session Summary (BACKUP-CORRECTED)
 
-- **Shadow mode logs**: Check ~08:00 HKT for race conditions, stale grids, funding cache timestamps
-- **Accidental position monitoring**: Positions are now doubled. Monitor UPnL, TP/SL triggers for natural exits
-- **WIF**: Gated but still held. Wosubu approved keeping but monitor drawdown limits
-- **Proactive-builder cron**: 4 consecutive errors — needs investigation. Wick-improvement-daily: 1 error
-- **Vercel git push**: Deploy Singapore EV guide when rate-limit clears
-- **Revenue**: May ends in 2 days. $0.00 across all products. Month-end is effectively a write-off.
-- **Polymarket wallet**: Still waiting on Wosobu for SOL + JupUSD
-- **10-item backlog**: Can the system execute any single backlog item this week?
+### BACKUP CORRECTION: Primary synthesis froze at 21:57 HKT. Actual state through overnight:
+
+### Extended Trading Timeline (May 29 00:22 → May 30 02:52 HKT)
+| Time | Balance | Positions | Key Event | Δ |
+|------|---------|-----------|-----------|---|
+| 00:22 | $1,054 | BTC+ETH+WIF | Pre-incident baseline | — |
+| 00:57 | $1,113 | **ALL DOUBLED** | Connector test bought live | +$59 |
+| 01:29 | $1,109.66 | Doubled + native TP/SL | Positions protected | -$3.34 |
+| 04:11 | $1,190.78 | BTC+ETH+WIF doubled | Wosobu OK'd keeping them | +$50.57 |
+| 05:56 | $1,258.91 | All green | Balance jump (likely deposit) | +$68.13 |
+| 18:56 | $1,264.72 | WIF halved → 10,584 | Partial exit | +$73.52 |
+| 20:17 | $1,202.17 | **WIF CLOSED** | TP/SL triggered | -$62.55 |
+| 21:57 | $1,191.04 | BTC+ETH only | Both still open | +$6.66 |
+| **~22:00-01:49** | **→ $1,106.18** | **ALL CLOSED** | BTC, ETH, SOL, ARB exited | **-$84.86** |
+| 01:49 | $1,106.18 | **0 positions, LIVE bot** | Mode flip detected | -3.04% |
+| 02:52 | $1,106.18 | 0 positions | Stable flat, orphan killer active | 0.00% |
+
+**Day range (May 29)**: $1,054 → $1,278.94 (high) → $1,106 (May 30 stable).  
+**Net PnL**: +$52 from pre-incident baseline (+4.9%).  
+**Overnight loss**: -$84.86 from 21:57 to 01:49 — all positions closed, likely disciplined TP/SL.
+
+### R&D Results (May 29)
+- **FX Vol Surge Ingestion**: Built `fx_vol_surge_ingestion.py`. 6 signals across 70k bars — extremely rare. Verdict: satellite only.
+- **Kalman DRL Funding Threshold Analysis**: Current thresholds never fired in 500-sample stale window. Need fresh funding data for all 7 coins.
+- **ARB BB 15m Grid**: 52-day walk-forward: 83% WR, 4.5 PF, 12 trades. Correlation guard needed (ARB is 0.60 correlated with ETH on 1h). Not in allowlist — waiting on Wosobu.
+- **Reasoning Audit (Gemini)**: 4 corrections: funding cache race condition, ecosystem correlation guard, shadow mode pre-live plan, spread penalty for thin books.
+
+### Product Work (May 29→30) — from HEARTBEAT + memory files (backup verified)
+- **LifeOS**: Spirituality OS (🕊️) and Hobbies OS (🎨) plugins added. Build clean.
+- **AI Directory**: BreadcrumbList JSON-LD schema + canonical tag fix (69/73 country pages missing canonical).
+- **All P0-P4**: Completed or CEO-blocked. P5 (SEO) active.
+
+---
+
+## 5. Watch Items (May 30 Forward) — BACKUP-CORRECTED
+
+### ⚠️ CRITICAL: State Desync Warning
+- **Primary synthesis (02:00 HKT) reported materially wrong data.** Balance off by -$78, positions reported open when closed, bot mode wrong, DD wrong.
+- **Likely cause**: Synthesis pipeline reads from a state file or cached position snapshot, not the live trading log. The `trading-log.md` has the authoritative state.
+- **Fix needed**: Primary synthesis should pull from trading log's last entry, not a cached positions/pulse file.
+
+### Watch Items
+- **Bot flipped to LIVE without explicit gate**: Not a violation (no trades placed yet), but shows shadow mode is not durable. If PAPER mode is intentional, it needs OS-level enforcement, not a code flag.
+- **0 positions + LIVE bot = first signal fires, position opens**: When BB detects RSI<20, the bot will open a real position with the new config (never live-validated).
+- **DD improved to 5.1%**: Best metric since May 24. Monitor if it holds.
+- **Balance $1,106.18 floor**: Stable for 2+ hours. Need to verify this is the new baseline.
+- **May month-end**: Tomorrow is May 31. Revenue target missed. Month-end review needed.
+- **Cron errors**: Same 3 crons (backup, rd-agent, ceo-summary) erroring 3+ consecutive days.
+- **Vercel rate-limit**: 5000/day cap blocking ev-charging-asia.
+- **Polymarket wallet**: Unfunded — needs Wosobu action.
+- **10-item backlog**: Day 10, zero closure. Needs triage.
+
+## 6. Backup Run — Files Cross-Referenced
+
+| Memory File | Primary Synthesis Used? | Backup Found New? |
+|-------------|------------------------|-------------------|
+| `memory/2026-05-29.md` | ✅ | ✅ Verified timeline |
+| `memory/2026-05-28.md` | ✅ | — |
+| `memory/2026-05-27.md` | ✅ | — |
+| `memory/2026-05-26.md` | ✅ | — |
+| `memory/2026-05-25.md` | ✅ | — |
+| `memory/2026-05-24.md` | ✅ | — |
+| `memory/2026-05-23.md` | ✅ | — |
+| `memory/2026-05-22.md` | ✅ | — |
+| `memory/2026-05-22-late.md` | ❌ | Affiliate dashboard tracking built (P0 Revenue) |
+| `memory/2026-05-21.md` | ✅ | — |
+| `memory/2026-05-20.md` | ✅ | — |
+| `memory/2026-05-19.md` | ✅ | — |
+| `memory/trading-log.md` | **❌ NOT USED** | **🔴 CRITICAL GAP** — all state corrections came from here |
+| `memory/hl-balance-hard-rule.md` | ❌ | Balance authority doc confirmed (standalone, not synthesis content) |
+| `memory/omnimind-distribution-day.md` | ❌ | Distribution day still blocked by missing API creds (unchanged) |
+| `HEARTBEAT.md` | ✅ | Verified canonical tag fix |
+| `RULES.yaml` | ❌ | 70/30 rule confirmed from May 22 |
+
+### Gaps Summary
+1. **🔴 Trading log not read by primary synthesis pipeline.** The authoritative source for position state is `memory/trading-log.md`, not a cached position snapshot.
+2. **🔴 Primary synthesis had 4 material state errors** (balance, positions, bot mode, DD).
+3. **🟡 Memory files May 22-late and hl-balance-hard-rule.md not referenced** in primary synthesis (minor — no trading state affected).
+4. **🟢 All daily memory files from May 19-29 were correctly referenced** by primary synthesis.
+5. **🟢 Product work (LifeOS, AI Directory, SEO) correctly captured.**

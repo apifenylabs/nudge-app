@@ -52,8 +52,9 @@ The canvas is where the user's plan, research, and decisions live. Add to it whe
 
 function buildPluginSystemPrompt(pluginId: string, currentPhase?: string): string {
   const plugin = getPlugin(pluginId);
-  if (!plugin) {
-    // Fallback to generic LifeOS prompt
+  
+  // ─── Life / Free Chat Mode ─────────────────────────────────
+  if (!plugin || pluginId === 'life') {
     return `You are LifeOS — a personality-aware AI copilot.
 ${PERSONALITY_PROMPT}
 
@@ -170,7 +171,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Resolve plugin — mode is now the plugin ID (e.g., 'travel', 'finance')
-    const pluginId = (typeof mode === 'string' && getPlugin(mode)) ? mode : 'travel';
+    // If mode is 'life' or unknown, use a general LifeOS prompt (no plugin)
+    const isLifeMode = (typeof mode === 'string' && (mode === 'life' || !getPlugin(mode)));
+    const pluginId = isLifeMode ? 'life' : ((typeof mode === 'string' && getPlugin(mode)) ? mode : 'life');
     const currentPhase = typeof phase === 'string' ? phase : undefined;
     const validMode = pluginId as ConversationMode;
 

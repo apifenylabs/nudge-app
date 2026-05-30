@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'Best AI Tools in Taiwan (2026) — Apifeny AI',
     description:
       'Find AI tools built for Taiwan: Traditional Chinese (繁體中文) support, NT$ TWD pricing, PDPA compliance, and semiconductor industry readiness. 100+ tools, expert ranked.',
-    url: 'https://apifeny.ai/ai-tools-taiwan',
+    url: 'https://apifeny-ai.vercel.app/ai-tools-taiwan',
     siteName: 'Apifeny AI',
     locale: 'zh_TW',
     type: 'website',
@@ -20,10 +20,10 @@ export const metadata: Metadata = {
       'Find the best AI tools for Taiwan. Expert-ranked directory with Traditional Chinese interface support and local pricing info.',
   },
   alternates: {
-    canonical: 'https://apifeny.ai/ai-tools-taiwan',
+    canonical: 'https://apifeny-ai.vercel.app/ai-tools-taiwan',
     languages: {
-      'zh-TW': 'https://apifeny.ai/ai-tools-taiwan',
-      'en': 'https://apifeny.ai/ai-tools-taiwan',
+      'zh-TW': 'https://apifeny-ai.vercel.app/ai-tools-taiwan',
+      'en': 'https://apifeny-ai.vercel.app/ai-tools-taiwan',
     },
   },
 };

@@ -7,7 +7,7 @@
 
 import supabase, { isSupabaseConfigured } from './supabase-client';
 
-export type ConversationMode = 'life' | 'work' | 'health' | 'finance' | 'travel' | 'home';
+export type ConversationMode = 'life' | 'work' | 'health' | 'finance' | 'travel' | 'home' | 'career' | 'learning' | 'family' | 'social' | 'relationships';
 
 export interface CanvasSection {
   id: string;

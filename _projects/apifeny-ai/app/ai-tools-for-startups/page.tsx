@@ -23,7 +23,7 @@ import { playbooks } from '@/lib/playbooks';
 import ToolCard from '@/components/ToolCard';
 import BlogCategoryLinks from '@/components/BlogCategoryLinks';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Best AI Tools for Startups in 2026 — Affordable, Scalable, Asia-Ready | Apifeny AI',
@@ -205,6 +205,67 @@ export default function AIToolsForStartupsPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* ── Quick Comparison Table ──────────────────────────────────── */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+            Top Startup AI Tools — <span className="text-rocket-400">At a Glance</span>
+          </h2>
+          <p className="text-tech-300 max-w-2xl mx-auto leading-relaxed">
+            The most popular AI tools among early-stage founders. All rated for startup value,
+            pricing, and Asia-readiness.
+          </p>
+        </div>
+
+        <div className="overflow-x-auto rounded-xl border border-tech-500/20">
+          <table className="w-full text-sm text-left">
+            <thead>
+              <tr className="bg-tech-800 border-b border-tech-500/20">
+                <th className="px-5 py-4 text-tech-200 font-semibold">Tool</th>
+                <th className="px-5 py-4 text-tech-200 font-semibold hidden sm:table-cell">Best For</th>
+                <th className="px-5 py-4 text-tech-200 font-semibold">Starting Price</th>
+                <th className="px-5 py-4 text-tech-200 font-semibold hidden md:table-cell">Free Tier</th>
+                <th className="px-5 py-4 text-tech-200 font-semibold">Rating</th>
+                <th className="px-5 py-4 text-tech-200 font-semibold">Asia Ready</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { slug: 'chatgpt', name: 'ChatGPT', best: 'Daily assistant, coding, content', price: 'Free / $20/mo', free: '✅ Full access', rating: 4.7, asia: '✅' },
+                { slug: 'claude', name: 'Claude', best: 'Long docs, reasoning, coding', price: 'Free / $20/mo', free: '✅ Generous', rating: 4.6, asia: '✅' },
+                { slug: 'cursor', name: 'Cursor', best: 'AI-native coding', price: 'Free / $20/mo', free: '✅ 2K completions', rating: 4.7, asia: '✅' },
+                { slug: 'deepseek', name: 'DeepSeek Chat', best: 'Reasoning, coding, low cost', price: 'Free', free: '✅ Full access', rating: 4.4, asia: '✅✅' },
+                { slug: 'copilot', name: 'GitHub Copilot', best: 'Code completion, IDE native', price: 'Free / $10/mo', free: '✅ 2K completions', rating: 4.5, asia: '✅' },
+                { slug: 'canva-ai', name: 'Canva AI', best: 'Design for non-designers', price: 'Free / $13/mo', free: '✅ Robust', rating: 4.6, asia: '✅' },
+              ].map((row, i) => (
+                <tr key={row.slug} className={`border-b border-tech-500/10 ${i % 2 === 0 ? 'bg-tech-800/30' : 'bg-tech-900/20'} hover:bg-tech-800/60 transition-colors`}>
+                  <td className="px-5 py-4">
+                    <Link href={`/tools/${row.slug}`} className="text-white font-medium hover:text-rocket-400 transition">
+                      {row.name}
+                    </Link>
+                  </td>
+                  <td className="px-5 py-4 text-tech-300 hidden sm:table-cell">{row.best}</td>
+                  <td className="px-5 py-4 text-green-400 font-medium">{row.price}</td>
+                  <td className="px-5 py-4 text-tech-300 hidden md:table-cell">{row.free}</td>
+                  <td className="px-5 py-4">
+                    <div className="flex items-center gap-1">
+                      <Star className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
+                      <span className="text-tech-200">{row.rating}</span>
+                    </div>
+                  </td>
+                  <td className="px-5 py-4 text-tech-300">{row.asia}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p className="text-center text-xs text-tech-500 mt-4">
+          Prices as of May 2026. All tools have free tiers suitable for early-stage startups.{' '}
+          <Link href="/tools" className="text-rocket-400 hover:text-rocket-300 underline">Browse all {toolCount} tools →</Link>
+        </p>
       </section>
 
       {/* ── Category Sections ───────────────────────────────────────── */}

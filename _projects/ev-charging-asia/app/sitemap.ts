@@ -49,10 +49,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  const blogSlugs = (blogIndex as Array<{ slug: string; date: string }>).map(b => b.slug);
-  const blogUrls = blogSlugs.map(slug => ({
-    url: `https://ev-charging-asia.vercel.app/blog/${slug}`,
-    lastModified: new Date(),
+  const blogPosts = blogIndex as Array<{ slug: string; date: string }>;
+  const blogUrls = blogPosts.map(b => ({
+    url: `https://ev-charging-asia.vercel.app/blog/${b.slug}`,
+    lastModified: new Date(b.date),
     changeFrequency: 'monthly' as const,
     priority: 0.65,
   }));

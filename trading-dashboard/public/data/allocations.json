@@ -1,0 +1,42 @@
+{
+  "bb_1h": {
+    "alloc": 0.2,
+    "comment": "1h BB Core \u2014 swing (proven 78-91% WR / PF 7-21 on BTC/ETH/SOL)"
+  },
+  "bb_15m": {
+    "alloc": 0.1,
+    "comment": "15m BB Core \u2014 intraday (phase-gate capped at 10% pending backtest JSON; re-enabled SL 1.0x ATR, gated to SOL/BTC/ETH)"
+  },
+  "trend": {
+    "alloc": 0.0,
+    "comment": "\ud83d\udc80 KILLED \u2014 failed backtest (43.4% WR / PF 1.04 on 175 trades, negative edge on SOL)"
+  },
+  "funding_proxy": {
+    "alloc": 0.1,
+    "comment": "Funding+OI perp (96% WR / PF 17.78 on BTC)"
+  },
+  "vol_surge": {
+    "alloc": 0.15,
+    "comment": "Vol Surge breakouts (89.8% WR / PF 17.51 on SOL)"
+  },
+  "kalman_drl": {
+    "alloc": 0.0,
+    "comment": "\ud83d\udc80 KILLED \u2014 backtest failed (PF 0.61, WR 23.4%, 1523t, Sharpe -4.5)"
+  },
+  "taker_flow": {
+    "alloc": 0.1,
+    "comment": "Taker flow proxy (65.3% WR / PF 3.13 on BTC shorts)"
+  },
+  "wick": {
+    "alloc": 0.05,
+    "comment": "Wick imbalance \u2014 ETH liquidity grabs (45% WR / PF 2.67, satellite)"
+  },
+  "forex": {
+    "alloc": 0.1,
+    "comment": "Forex BB/RSI long-only \u2014 paper only (EURUSD PF 3.99, AUDUSD PF 2.43)"
+  },
+  "cash": {
+    "alloc": 0.05,
+    "comment": "cash reserve (5% \u2014 trend 10% + kalman 5% freed = 15%, forex took 10%)"
+  }
+}

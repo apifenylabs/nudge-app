@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import RevenueClient from './_RevenueClient';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'AI Revenue & Success Stories — Real MRR from AI Side Hustles | Apifeny AI',

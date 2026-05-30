@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'Best AI Tools in Nepal (2026) — Apifeny AI',
     description:
       'Find AI tools built for Nepal: Nepali (नेपाली) language support, NPR/USD pricing, and trekking/tourism industry readiness. 100+ tools, expert ranked.',
-    url: 'https://apifeny.ai/ai-tools-nepal',
+    url: 'https://apifeny-ai.vercel.app/ai-tools-nepal',
     siteName: 'Apifeny AI',
     locale: 'ne_NP',
     type: 'website',
@@ -20,10 +20,10 @@ export const metadata: Metadata = {
       'Find the best AI tools for Nepal. Expert-ranked directory with Nepali interface support and local pricing info.',
   },
   alternates: {
-    canonical: 'https://apifeny.ai/ai-tools-nepal',
+    canonical: 'https://apifeny-ai.vercel.app/ai-tools-nepal',
     languages: {
-      'ne-NP': 'https://apifeny.ai/ai-tools-nepal',
-      'en': 'https://apifeny.ai/ai-tools-nepal',
+      'ne-NP': 'https://apifeny-ai.vercel.app/ai-tools-nepal',
+      'en': 'https://apifeny-ai.vercel.app/ai-tools-nepal',
     },
   },
 };

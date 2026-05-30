@@ -311,14 +311,14 @@ function Navbar() {
 
         {/* Nav links */}
         <div className="hidden md:flex items-center gap-8 text-sm text-slate-400">
-          <a href="#features" className="hover:text-cyan-400 transition-colors">
-            Tiers
+          <a href="/features" className="hover:text-cyan-400 transition-colors">
+            Features
           </a>
-          <a href="#progression" className="hover:text-cyan-400 transition-colors">
-            Progression
+          <a href="/pricing" className="hover:text-cyan-400 transition-colors">
+            Pricing
           </a>
-          <a href="#cta" className="hover:text-cyan-400 transition-colors">
-            Get Started
+          <a href="/robotics" className="hover:text-cyan-400 transition-colors">
+            Robotics
           </a>
         </div>
 

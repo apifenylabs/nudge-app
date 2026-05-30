@@ -1,0 +1,53 @@
+{
+  "slug": "manila-to-baguio-road-trip",
+  "title": "Manila to Baguio: Philippines Mountain Highway EV Drive",
+  "subtitle": "A 3-day family road trip up the Cordillera Mountains to the Summer Capital",
+  "route": [
+    {
+      "day": 1,
+      "from": "Manila",
+      "to": "Tarlac",
+      "distance": "130 km",
+      "drivingTime": "2 hours",
+      "charger": "Cleanfuel SCTEX (100kW)",
+      "kidActivities": "Aqua Planet Pampanga (largest water park in the Philippines)"
+    },
+    {
+      "day": 2,
+      "from": "Tarlac",
+      "to": "Baguio",
+      "distance": "130 km",
+      "drivingTime": "3 hours",
+      "charger": "Cleanfuel Tarlac (departure), Baguio hotel overnight charger",
+      "kidActivities": "Kennon Road mountain views, Baguio Country Club"
+    },
+    {
+      "day": 3,
+      "from": "Baguio",
+      "to": "Manila",
+      "distance": "260 km",
+      "drivingTime": "5 hours",
+      "charger": "Cleanfuel SCTEX (return charge)",
+      "kidActivities": "Mines View Park, Burnham Park boating, Session Road shopping"
+    }
+  ],
+  "totalDistance": "520 km (round trip)",
+  "totalChargingCost": "₱1,500-2,500",
+  "bestFor": "Filipino families wanting a cool mountain escape from Manila heat",
+  "carRecommendations": [
+    "BYD Atto 3",
+    "MG 4",
+    "Tesla Model 3",
+    "Nissan Leaf"
+  ],
+  "tips": [
+    "Cleanfuel chargers are the most reliable on the NLEX-SCTEX corridor",
+    "The mountain ascent to Baguio uses more battery — charge fully in Tarlac before climbing",
+    "Leave Manila before 6am to avoid traffic — return on a weekday if possible"
+  ],
+  "chargerTypes": [
+    "CCS2",
+    "Type 2"
+  ],
+  "seasonal": "November to May (dry season, cooler in Baguio)"
+}

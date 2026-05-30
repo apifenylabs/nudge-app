@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npx tsx -e \"const { generateManifestJson } = require('./app/lib/plugin-manifest-schema'); require('fs').writeFileSync('public/plugin-manifest.json', generateManifestJson()); console.log('Generated plugin-manifest.json');\"",
     "build": "next build",
     "start": "next start"
   },

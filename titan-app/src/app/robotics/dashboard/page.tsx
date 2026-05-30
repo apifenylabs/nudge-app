@@ -152,22 +152,18 @@ const SAMPLE_DEPLOYMENTS: DisplayDeployment[] = [
 
 function toDisplayDeployment(d: RobotDeployment): DisplayDeployment {
   const displayStatus = API_TO_DISPLAY_STATUS[d.status] ?? 'offline';
-  // Derive a friendly name from agent + platform
   const platformLabel = PLATFORM_CONFIG[d.platform]?.label ?? d.platform.toUpperCase();
   const name = `${d.agentName} (${platformLabel})`;
-
-  // Calculate pseudo uptime from deployedAt
   const uptimeHours = Math.floor(
     (Date.now() - new Date(d.deployedAt).getTime()) / 3600_000
   );
-
   return {
     ...d,
     name,
     platformLabel,
     displayStatus,
     uptimeHours,
-    commandsExecuted: Math.floor(Math.random() * 1000), // mock — replace with real counter
+    commandsExecuted: Math.floor(Math.random() * 1000),
     ipAddress: d.endpoint ? new URL(d.endpoint).hostname : '—',
     firmwareVersion: '—',
   };
@@ -208,7 +204,7 @@ function DetailPanel({
       exit={{ opacity: 0, x: 20 }}
       transition={{ duration: 0.25 }}
     >
-      <Card className="p-5 bg-titan-card/60 border-titan-border/30">
+      <Card className="p-5 bg-white border border-gray-200">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
             <div
@@ -218,13 +214,13 @@ function DetailPanel({
               <PlatformIcon className="h-5 w-5" style={{ color: platformCfg.color }} />
             </div>
             <div>
-              <h3 className="text-sm font-bold text-titan-text">{deployment.name}</h3>
-              <p className="text-[10px] font-mono text-titan-muted/70">{deployment.agentName}</p>
+              <h3 className="text-sm font-bold text-gray-900">{deployment.name}</h3>
+              <p className="text-[10px] font-mono text-gray-500">{deployment.agentName}</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="text-titan-muted/50 hover:text-titan-text transition-colors"
+            className="text-gray-400 hover:text-gray-700 transition-colors"
           >
             ✕
           </button>
@@ -241,11 +237,11 @@ function DetailPanel({
             { label: 'Agent ID', value: deployment.agentId },
             { label: 'Deployed', value: new Date(deployment.deployedAt).toLocaleDateString() },
           ].map((item) => (
-            <div key={item.label} className="text-center p-2 rounded-lg bg-titan-card/40 border border-titan-border/20">
-              <p className="text-[9px] font-mono text-titan-muted/60 uppercase tracking-wider mb-0.5">{item.label}</p>
+            <div key={item.label} className="text-center p-2 rounded-lg bg-gray-50 border border-gray-200">
+              <p className="text-[9px] font-mono text-gray-500 uppercase tracking-wider mb-0.5">{item.label}</p>
               <p
                 className="text-xs font-semibold font-mono"
-                style={item.color ? { color: item.color } : { color: '#E2E8F0' }}
+                style={item.color ? { color: item.color } : { color: '#111827' }}
               >
                 {item.value}
               </p>
@@ -261,7 +257,7 @@ function DetailPanel({
               background: deployment.displayStatus === 'online'
                 ? 'linear-gradient(135deg, #14B8A6, #F59E0B)'
                 : `${platformCfg.color}25`,
-              color: deployment.displayStatus === 'online' ? '#0A0E17' : platformCfg.color,
+              color: deployment.displayStatus === 'online' ? '#FFFFFF' : platformCfg.color,
               border: deployment.displayStatus !== 'online' ? `1px solid ${platformCfg.color}30` : 'none',
             }}
           >
@@ -271,7 +267,7 @@ function DetailPanel({
           <Button
             size="sm"
             variant="outline"
-            className="flex-1 text-[10px] h-8 gap-1.5 border-titan-border/30 text-titan-muted/70"
+            className="flex-1 text-[10px] h-8 gap-1.5 border-gray-200 text-gray-500"
           >
             <Activity className="h-3 w-3" />
             View Logs
@@ -292,7 +288,6 @@ export default function RoboticsDashboardPage() {
   const [deployModalOpen, setDeployModalOpen] = useState(false);
   const [deployForm, setDeployForm] = useState<{ name: string; agentName: string; endpoint: string; platform: PlatformType }>({ name: '', agentName: '', endpoint: '', platform: 'ros2' });
 
-  // Fetch deployments from API
   const fetchDeployments = useCallback(async () => {
     setLoading(true);
     try {
@@ -303,7 +298,6 @@ export default function RoboticsDashboardPage() {
         setDeployments(json.data.map(toDisplayDeployment));
       }
     } catch {
-      // Fallback to sample data
       setDeployments(SAMPLE_DEPLOYMENTS);
     } finally {
       setLoading(false);
@@ -336,17 +330,9 @@ export default function RoboticsDashboardPage() {
   }), [deployments]);
 
   return (
-    <div className="min-h-screen titan-gradient relative overflow-hidden">
+    <div className="min-h-screen bg-white relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 pointer-events-none z-0 titan-radial-glow-warm" />
-      <div
-        className="absolute inset-0 pointer-events-none z-0"
-        style={{
-          background: 'radial-gradient(ellipse at 70% 20%, rgba(20, 184, 166, 0.08) 0%, transparent 60%)',
-          mixBlendMode: 'screen',
-        }}
-      />
-      <div className="absolute inset-0 pointer-events-none z-0 titan-grid-bg" />
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-bl from-teal-50/60 to-transparent" />
 
       <div className="relative z-10">
         {/* Navigation */}
@@ -356,22 +342,22 @@ export default function RoboticsDashboardPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="flex items-center gap-2 mb-3 text-[10px] font-mono text-titan-muted/60">
-              <span className="hover:text-titan-teal/80 cursor-pointer transition-colors">Dashboard</span>
+            <div className="flex items-center gap-2 mb-3 text-[10px] font-mono text-gray-400">
+              <span className="hover:text-teal-600 cursor-pointer transition-colors">Dashboard</span>
               <ChevronRight className="h-2.5 w-2.5" />
-              <span className="hover:text-titan-teal/80 cursor-pointer transition-colors">Robotics</span>
+              <span className="hover:text-teal-600 cursor-pointer transition-colors">Robotics</span>
               <ChevronRight className="h-2.5 w-2.5" />
-              <span className="text-titan-teal/80">Deployments</span>
+              <span className="text-teal-600">Deployments</span>
             </div>
 
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-titan-teal/10 border border-titan-teal/30 flex items-center justify-center">
-                  <HardDrive className="h-5 w-5 text-titan-teal" />
+                <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center">
+                  <HardDrive className="h-5 w-5 text-teal-600" />
                 </div>
                 <div>
                   <h1 className="text-lg font-bold titan-text-gradient tracking-tight">Robot Deployments</h1>
-                  <p className="text-xs font-mono text-titan-muted">{stats.online}/{stats.total} online · {stats.totalCommands.toLocaleString()} commands</p>
+                  <p className="text-xs font-mono text-gray-500">{stats.online}/{stats.total} online · {stats.totalCommands.toLocaleString()} commands</p>
                 </div>
               </div>
               {/* Action buttons */}
@@ -380,64 +366,56 @@ export default function RoboticsDashboardPage() {
                   <Button
                     size="sm"
                     onClick={() => setDeployModalOpen(true)}
-                    className="gap-1.5 text-[10px] h-8 bg-gradient-to-r from-titan-teal to-teal-500 hover:from-titan-teal/90 hover:to-teal-500/90 text-white"
+                    className="gap-1.5 text-[10px] h-8"
+                    style={{
+                      background: 'linear-gradient(135deg, #14B8A6, #0D9488)',
+                      color: '#FFFFFF',
+                    }}
                   >
                     <Plus className="h-3 w-3" />
                     New Deployment
                   </Button>
-                  <DialogContent className="sm:max-w-md !bg-titan-card border border-titan-border/40">
+                  <DialogContent className="sm:max-w-md !bg-white border border-gray-200">
                     <DialogHeader>
-                      <DialogTitle className="text-titan-text">New Robot Deployment</DialogTitle>
-                      <DialogDescription className="text-titan-muted/70">
-                        Connect a new robot or agent endpoint to your swarm. Enter the connection details below.
+                      <DialogTitle className="text-gray-900">New Robot Deployment</DialogTitle>
+                      <DialogDescription className="text-gray-500">
+                        Connect a new robot or agent endpoint to your swarm.
                       </DialogDescription>
                     </DialogHeader>
                     <div className="grid gap-4 py-2">
                       <div className="grid gap-1.5">
-                        <label htmlFor="deploy-name" className="text-[10px] font-mono text-titan-muted/60 uppercase tracking-wider">
-                          Name
-                        </label>
+                        <label className="text-[10px] font-mono text-gray-500 uppercase tracking-wider">Name</label>
                         <Input
-                          id="deploy-name"
                           placeholder="My Robot"
                           value={deployForm.name}
                           onChange={(e) => setDeployForm(p => ({ ...p, name: e.target.value }))}
-                          className="border-titan-border/30 bg-titan-card/60 text-titan-text text-sm"
+                          className="border-gray-200 bg-white text-gray-900 text-sm"
                         />
                       </div>
                       <div className="grid gap-1.5">
-                        <label htmlFor="deploy-agent" className="text-[10px] font-mono text-titan-muted/60 uppercase tracking-wider">
-                          Agent Name
-                        </label>
+                        <label className="text-[10px] font-mono text-gray-500 uppercase tracking-wider">Agent Name</label>
                         <Input
-                          id="deploy-agent"
                           placeholder="ros2-navigation"
                           value={deployForm.agentName}
                           onChange={(e) => setDeployForm(p => ({ ...p, agentName: e.target.value }))}
-                          className="border-titan-border/30 bg-titan-card/60 text-titan-text text-sm"
+                          className="border-gray-200 bg-white text-gray-900 text-sm"
                         />
                       </div>
                       <div className="grid gap-1.5">
-                        <label htmlFor="deploy-endpoint" className="text-[10px] font-mono text-titan-muted/60 uppercase tracking-wider">
-                          Endpoint URL
-                        </label>
+                        <label className="text-[10px] font-mono text-gray-500 uppercase tracking-wider">Endpoint URL</label>
                         <Input
-                          id="deploy-endpoint"
                           placeholder="http://192.168.1.100:8080"
                           value={deployForm.endpoint}
                           onChange={(e) => setDeployForm(p => ({ ...p, endpoint: e.target.value }))}
-                          className="border-titan-border/30 bg-titan-card/60 text-titan-text text-sm"
+                          className="border-gray-200 bg-white text-gray-900 text-sm"
                         />
                       </div>
                       <div className="grid gap-1.5">
-                        <label htmlFor="deploy-platform" className="text-[10px] font-mono text-titan-muted/60 uppercase tracking-wider">
-                          Platform
-                        </label>
+                        <label className="text-[10px] font-mono text-gray-500 uppercase tracking-wider">Platform</label>
                         <select
-                          id="deploy-platform"
                           value={deployForm.platform}
                           onChange={(e) => setDeployForm(p => ({ ...p, platform: e.target.value as PlatformType }))}
-                          className="w-full px-3 py-2 rounded-lg border border-titan-border/30 bg-titan-card/60 text-titan-text text-sm focus:outline-none focus:ring-2 focus:ring-titan-teal/30 focus:border-titan-teal/50"
+                          className="w-full px-3 py-2 rounded-lg border border-gray-200 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/30"
                         >
                           <option value="ros2">ROS2 (NVIDIA Jetson / Robot)</option>
                           <option value="raspberry-pi">Raspberry Pi</option>
@@ -446,17 +424,16 @@ export default function RoboticsDashboardPage() {
                         </select>
                       </div>
                     </div>
-                    <DialogFooter className="!bg-transparent !border-titan-border/20">
+                    <DialogFooter className="!bg-transparent !border-t-gray-200">
                       <Button
                         variant="outline"
                         onClick={() => setDeployModalOpen(false)}
-                        className="border-titan-border/30 text-titan-muted/70"
+                        className="border-gray-200 text-gray-500"
                       >
                         Cancel
                       </Button>
                       <Button
                         onClick={() => {
-                          // Create a new deployment entry and add to list
                           const newDep: RobotDeployment = {
                             id: `dep-${Date.now()}`,
                             agentName: deployForm.agentName,
@@ -474,7 +451,10 @@ export default function RoboticsDashboardPage() {
                           setDeployForm({ name: '', agentName: '', endpoint: '', platform: 'ros2' });
                         }}
                         disabled={!deployForm.agentName}
-                        className="bg-gradient-to-r from-titan-teal to-teal-500 hover:from-titan-teal/90 hover:to-teal-500/90 text-white"
+                        style={{
+                          background: 'linear-gradient(135deg, #14B8A6, #0D9488)',
+                          color: '#FFFFFF',
+                        }}
                       >
                         <Globe className="h-3 w-3 mr-1" />
                         Deploy
@@ -487,7 +467,7 @@ export default function RoboticsDashboardPage() {
                   variant="outline"
                   onClick={fetchDeployments}
                   disabled={loading}
-                  className="gap-1.5 text-[10px] h-8 border-titan-border/30 text-titan-muted/70 hover:text-titan-teal"
+                  className="gap-1.5 text-[10px] h-8 border-gray-200 text-gray-500 hover:text-teal-600"
                 >
                   <RefreshCw className={`h-3 w-3 ${loading ? 'animate-spin' : ''}`} />
                   {loading ? 'Loading…' : 'Refresh'}
@@ -513,11 +493,11 @@ export default function RoboticsDashboardPage() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="p-3 rounded-xl bg-titan-card/40 border border-titan-border/30 text-center"
+                className="p-3 rounded-xl bg-white border border-gray-200 text-center"
               >
                 <div className="flex justify-center mb-1" style={{ color: stat.color }}>{stat.icon}</div>
                 <p className="text-lg font-bold font-mono" style={{ color: stat.color }}>{stat.value}</p>
-                <p className="text-[9px] font-mono text-titan-muted/60 uppercase tracking-wider mt-0.5">{stat.label}</p>
+                <p className="text-[9px] font-mono text-gray-500 uppercase tracking-wider mt-0.5">{stat.label}</p>
               </div>
             ))}
           </motion.div>
@@ -526,7 +506,7 @@ export default function RoboticsDashboardPage() {
         {/* Filter tabs */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-4">
           <motion.div
-            className="flex gap-1 p-1 rounded-lg bg-titan-card/30 border border-titan-border/20 w-fit"
+            className="flex gap-1 p-1 rounded-lg bg-white border border-gray-200 w-fit"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.15 }}
@@ -539,8 +519,8 @@ export default function RoboticsDashboardPage() {
                   onClick={() => setFilter(opt.key)}
                   className={`px-3 py-1.5 text-[10px] font-mono rounded-md transition-all ${
                     active
-                      ? 'bg-titan-teal/15 text-titan-teal border border-titan-teal/20'
-                      : 'text-titan-muted/60 hover:text-titan-text border border-transparent'
+                      ? 'bg-teal-50 text-teal-700 border border-teal-200'
+                      : 'text-gray-500 hover:text-gray-700 border border-transparent'
                   }`}
                 >
                   {opt.label}
@@ -572,10 +552,10 @@ export default function RoboticsDashboardPage() {
                       transition={{ duration: 0.2 }}
                     >
                       <Card
-                        className={`p-4 bg-titan-card/40 border transition-all duration-200 cursor-pointer ${
+                        className={`p-4 bg-white border transition-all duration-200 cursor-pointer ${
                           isSelected
-                            ? 'border-titan-teal/40 shadow-lg shadow-titan-teal/5'
-                            : 'border-titan-border/30 hover:border-titan-border/60'
+                            ? 'border-teal-400 shadow-lg shadow-teal-100/50'
+                            : 'border-gray-200 hover:border-gray-300'
                         }`}
                         onClick={() => setSelectedDeployment(isSelected ? null : dep)}
                       >
@@ -590,7 +570,7 @@ export default function RoboticsDashboardPage() {
                                 <PlatformIcon className="h-4 w-4" style={{ color: platformCfg.color }} />
                               </div>
                               <motion.span
-                                className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border-2 border-titan-card"
+                                className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border-2 border-white"
                                 style={{ background: statusCfg.dot }}
                                 animate={dep.displayStatus === 'online' ? { opacity: [1, 0.4, 1] } : {}}
                                 transition={dep.displayStatus === 'online' ? { duration: 2, repeat: Infinity } : {}}
@@ -599,7 +579,7 @@ export default function RoboticsDashboardPage() {
 
                             <div className="min-w-0">
                               <div className="flex items-center gap-2">
-                                <h3 className="text-sm font-bold text-titan-text truncate">{dep.name}</h3>
+                                <h3 className="text-sm font-bold text-gray-900 truncate">{dep.name}</h3>
                                 <Badge
                                   className="text-[8px] h-3.5 px-1 font-mono border-0 shrink-0"
                                   style={{ background: `${statusCfg.color}20`, color: statusCfg.color }}
@@ -607,7 +587,7 @@ export default function RoboticsDashboardPage() {
                                   {statusCfg.label}
                                 </Badge>
                               </div>
-                              <p className="text-[10px] font-mono text-titan-muted/70 flex items-center gap-1.5 mt-0.5">
+                              <p className="text-[10px] font-mono text-gray-500 flex items-center gap-1.5 mt-0.5">
                                 <Bot className="h-2.5 w-2.5 inline" />
                                 {dep.agentName}
                                 <span className="mx-1">·</span>
@@ -619,8 +599,8 @@ export default function RoboticsDashboardPage() {
 
                           {/* Commands count */}
                           <div className="text-right shrink-0 ml-3">
-                            <p className="text-xs font-bold font-mono text-titan-text/80">{dep.commandsExecuted.toLocaleString()}</p>
-                            <p className="text-[8px] font-mono text-titan-muted/50">cmds</p>
+                            <p className="text-xs font-bold font-mono text-gray-700">{dep.commandsExecuted.toLocaleString()}</p>
+                            <p className="text-[8px] font-mono text-gray-400">cmds</p>
                           </div>
                         </div>
                       </Card>
@@ -630,10 +610,10 @@ export default function RoboticsDashboardPage() {
               </AnimatePresence>
 
               {filteredDeployments.length === 0 && (
-                <div className="text-center py-16 text-titan-muted/60">
+                <div className="text-center py-16 text-gray-400">
                   <Bot className="h-12 w-12 mx-auto mb-3 opacity-30" />
-                  <p className="text-sm font-medium">No deployments match this filter</p>
-                  <p className="text-[10px] font-mono mt-1">Try a different filter or connect new hardware</p>
+                  <p className="text-sm font-medium text-gray-500">No deployments match this filter</p>
+                  <p className="text-[10px] font-mono mt-1 text-gray-400">Try a different filter or connect new hardware</p>
                 </div>
               )}
             </div>

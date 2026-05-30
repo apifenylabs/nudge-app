@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-29T05:29:57.994Z",
+  "plugins": [
+    {
+      "id": "travel",
+      "name": "Travel OS",
+      "emoji": "✈️",
+      "description": "Plan trips, build itineraries, discover destinations",
+      "status": "active",
+      "gradient": "linear-gradient(135deg, #06B6D4, #2563EB)",
+      "badge": "AI-led planning",
+      "category": "lifestyle",
+      "features": [
+        "AI leads the conversation — asks probing questions",
+        "Parallel research: weather, forums, flight trends, safety",
+        "Interactive itinerary building on canvas",
+        "Real-time trip tips during travel",
+        "Post-trip reflection and preference learning"
+      ],
+      "phaseCount": 6,
+      "displayOrder": 1,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-05-29T05:29:57.994Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 100,
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "finance",
+      "name": "Finance OS",
+      "emoji": "💰",
+      "description": "Budget, invest, save, plan big purchases",
+      "status": "active",
+      "gradient": "linear-gradient(135deg, #10B981, #0D9488)",
+      "badge": "AI financial coach",
+      "category": "finance",
+      "features": [
+        "Full financial snapshot on canvas",
+        "Identify biggest financial drain with evidence",
+        "Personalized budget and investment plan",
+        "Step-by-step execution guidance",
+        "Monthly review and adjustment cycle"
+      ],
+      "phaseCount": 5,
+      "displayOrder": 2,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-05-29T05:29:57.994Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.5
+      }
+    },
+    {
+      "id": "health",
+      "name": "Health OS",
+      "emoji": "💪",
+      "description": "Diet, sleep, fitness, mental health",
+      "status": "active",
+      "gradient": "linear-gradient(135deg, #F43F5E, #E11D48)",
+      "badge": "Wellness coach",
+      "category": "health",
+      "features": [
+        "Full health baseline — sleep, diet, exercise, stress, mental",
+        "AI challenges myths with citations (NIH, Examine.com)",
+        "Goal-based plan with habit stacking chains",
+        "Weekly tracking with pattern detection",
+        "Monthly health score with trend analysis",
+        "Gamified streaks and milestone badges"
+      ],
+      "phaseCount": 5,
+      "displayOrder": 3,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-05-29T05:29:57.994Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "career",
+      "name": "Career OS",
+      "emoji": "💼",
+      "description": "Job strategy, skills, networking, promotions",
+      "status": "active",
+      "gradient": "linear-gradient(135deg, #8B5CF6, #7C3AED)",
+      "badge": "Career strategist",
+      "category": "career",
+      "features": [
+        "Full career snapshot and satisfaction assessment",
+        "Market research with real salary benchmarks",
+        "Grow-in-place, pivot, or independent strategy",
+        "Resume, LinkedIn, and networking execution",
+        "Interview prep and negotiation tactics",
+        "Long-term upskill roadmap with industry radar"
+      ],
+      "phaseCount": 5,
+      "displayOrder": 4,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-05-29T05:29:57.994Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "learning",
+      "name": "Learning OS",
+      "emoji": "📚",
+      "description": "Courses, skills, reading, certifications",
+      "status": "beta",
+      "gradient": "linear-gradient(135deg, #F59E0B, #EA580C)",
+      "badge": "Coming soon",
+      "category": "learning",
+      "features": [
+        "AI maps your learning goals and motivation",
+        "Structured curriculum with measurable milestones",
+        "Interactive study sessions with recall exercises",
+        "Real-world projects and applied practice",
+        "Progress review and adaptive path adjustment"
+      ],
+      "phaseCount": 5,
+      "displayOrder": 5,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-05-29T05:29:57.994Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "family",
+      "name": "Family OS",
+      "emoji": "❤️",
+      "description": "Family events, care plans, shared goals",
+      "status": "beta",
+      "gradient": "linear-gradient(135deg, #EC4899, #F43F5E)",
+      "badge": "Coming soon",
+      "category": "lifestyle",
+      "features": [
+        "Family profile and relationship mapping",
+        "Shared goals, traditions, and quality time planning",
+        "Calendar and event coordination",
+        "Task assignment and chore tracking",
+        "Regular relationship check-ins"
+      ],
+      "phaseCount": 5,
+      "displayOrder": 6,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-05-29T05:29:57.994Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "home",
+      "name": "Home OS",
+      "emoji": "🏠",
+      "description": "Home improvement, maintenance, organization",
+      "status": "beta",
+      "gradient": "linear-gradient(135deg, #EAB308, #D97706)",
+      "badge": "Coming soon",
+      "category": "home",
+      "features": [
+        "Full home inventory and project catalog",
+        "Priority ranking by urgency, cost, and impact",
+        "Step-by-step project plans with cost estimates",
+        "DIY vs hire guidance",
+        "Task tracking with budget monitoring",
+        "Automated seasonal maintenance calendar"
+      ],
+      "phaseCount": 5,
+      "displayOrder": 7,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-05-29T05:29:57.994Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "social",
+      "name": "Social OS",
+      "emoji": "🎉",
+      "description": "Social calendar, friendships, events",
+      "status": "beta",
+      "gradient": "linear-gradient(135deg, #D946EF, #9333EA)",
+      "badge": "Coming soon",
+      "category": "lifestyle",
+      "features": [
+        "Social landscape mapping with relationship frequency",
+        "Personalized social goals (depth vs breadth)",
+        "Event and interaction planning",
+        "Catch-up reminders and birthday tracking",
+        "Relationship maintenance and rekindling strategies"
+      ],
+      "phaseCount": 4,
+      "displayOrder": 8,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-05-29T05:29:57.994Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "relationships",
+      "name": "Relationships OS",
+      "emoji": "💑",
+      "description": "Partner, communication, quality time",
+      "status": "beta",
+      "gradient": "linear-gradient(135deg, #EF4444, #E11D48)",
+      "badge": "Coming soon",
+      "category": "relationships",
+      "features": [
+        "Relationship health assessment and baseline",
+        "Love languages and communication style analysis",
+        "Quality time planning with personalized ideas",
+        "Conflict resolution guidance",
+        "Shared goal setting and future vision",
+        "Regular relationship pulse check-ins"
+      ],
+      "phaseCount": 4,
+      "displayOrder": 9,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-05-29T05:29:57.994Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "mindfulness",
+      "name": "Mindfulness OS",
+      "emoji": "🧘",
+      "description": "Meditation, focus, stress relief, mental clarity",
+      "status": "beta",
+      "gradient": "linear-gradient(135deg, #818CF8, #8B5CF6)",
+      "badge": "Coming soon",
+      "category": "mindfulness",
+      "features": [
+        "Full mindfulness baseline — stress, focus, awareness, resilience",
+        "Guided self-awareness exploration with emotional landscape mapping",
+        "Personalized daily practice builder (5 min starter plan)",
+        "Focus span training with distraction management exercises",
+        "Emotional resilience frameworks for real-world challenges",
+        "Monthly mindfulness score with trend tracking"
+      ],
+      "phaseCount": 6,
+      "displayOrder": 10,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-05-29T05:29:57.994Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.7
+      }
+    }
+  ]
+}

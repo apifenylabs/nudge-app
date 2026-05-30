@@ -34,7 +34,10 @@ export type LifeCategory =
   | 'fitness'
   | 'business'
   | 'home'
-  | 'relationships';
+  | 'relationships'
+  | 'mindfulness'
+  | 'spirituality'
+  | 'hobbies';
 
 export type PluginPhase = 'research' | 'canvas' | 'build' | 'ship' | 'maintain';
 
@@ -783,9 +786,154 @@ const ALL_CATEGORIES: { category: LifeCategory; name: string; emoji: string; des
       ]},
     ],
   },
+  {
+    category: 'mindfulness',
+    name: 'Mindfulness OS',
+    emoji: '🧘',
+    description: 'Meditation tracking, breathwork, journaling, gratitude, flow state optimization',
+    color: '#A855F7',
+    phases: [
+      { phase: 'research', tasks: [
+        { label: 'Assess current mindfulness practice', description: 'How often do you meditate, journal, or practice presence? What gets in the way?' },
+        { label: 'Identify stress patterns', description: 'When do you feel most anxious, reactive, or disconnected? Log triggers and contexts' },
+        { label: 'Explore meditation styles', description: 'Guided, breath focus, body scan, walking, loving-kindness — what resonates?' },
+        { label: 'Audit screen and media diet', description: 'Daily screen time, doomscrolling habits, content consumption — identify drains vs fills' },
+        { label: 'Read mindfulness fundamentals', description: 'Pick one book or course on mindfulness science — understand the why' },
+      ]},
+      { phase: 'canvas', tasks: [
+        { label: 'Design daily mindfulness routine', description: 'Morning meditation, midday check-in, evening wind-down — design your rhythm' },
+        { label: 'Build journaling framework', description: 'Gratitude log, emotional check-in, free write — pick a format and commit to it' },
+        { label: 'Plan breathwork protocol', description: 'Box breathing, 4-7-8, Wim Hof — when and how long for each' },
+        { label: 'Create digital boundary system', description: 'App limits, notification schedules, phone-free hours and zones' },
+        { label: 'Design flow state triggers', description: 'What conditions help you enter flow? Time of day, environment, music, pre-ritual' },
+      ]},
+      { phase: 'build', tasks: [
+        { label: 'Set up meditation tracker', description: 'App or journal to log sessions, duration, type, and post-meditation state' },
+        { label: 'Start daily journal', description: 'Write at least 5 minutes every day for 7 days straight' },
+        { label: 'Configure device mindfulness', description: 'Set up focus modes, app timers, and grayscale schedule' },
+        { label: 'Build morning ritual', description: 'Design and follow a 10-minute morning stack: breathe, set intention, gratitude' },
+        { label: 'Create evening wind-down', description: 'Screen-off 30min before bed, journal, stretch, read — ritualize the transition' },
+        { label: 'Establish weekly digital Sabbath', description: 'Designate 4-8 hours per week with no screens' },
+      ]},
+      { phase: 'ship', tasks: [
+        { label: 'Complete 14-day streak', description: 'Daily meditation + journal — 14 consecutive days without a miss' },
+        { label: 'Reduce daily screen time by 20%', description: 'Compare week 1 vs week 2 screen time stats' },
+        { label: 'Journal through one difficult emotion', description: 'Use journaling framework to process anger, anxiety, or sadness intentionally' },
+        { label: 'Practice loving-kindness meditation', description: 'Extend goodwill to yourself, a loved one, a neutral person, and a difficult person' },
+        { label: 'Share mindfulness practice with someone', description: 'Invite a friend or partner to meditate together, or teach one technique' },
+        { label: 'Host a tech-free evening', description: 'Plan and execute an evening with zero screens — games, conversation, nature, art' },
+      ]},
+      { phase: 'maintain', tasks: [
+        { label: 'Weekly reflection', description: 'Review journal entries, note patterns, celebrate wins, adjust practice' },
+        { label: 'Monthly meditation review', description: 'Total minutes, consistency score, types explored — track progress toward mastery' },
+        { label: 'Quarterly digital declutter', description: 'Review app usage, unsubscribe from noise, re-evaluate boundaries' },
+        { label: 'Refresh environment', description: 'Declutter meditation space, update playlists, adjust lighting and comfort' },
+        { label: 'Learn one new technique', description: 'Every month, try a new meditation style or breathwork pattern' },
+        { label: 'Annual mindfulness retreat', description: 'Plan a half-day or full-day silent retreat, solo or with a group' },
+      ]},
+    ],
+  },
+  {
+    category: 'spirituality',
+    name: 'Spirituality OS',
+    emoji: '🕊️',
+    description: 'Meditation, prayer, gratitude journaling, nature connection, purpose exploration, inner peace',
+    color: '#C084FC',
+    phases: [
+      { phase: 'research', tasks: [
+        { label: 'Define what spirituality means to you', description: 'Journal your current beliefs, practices, and what draws you to this path' },
+        { label: 'Explore spiritual traditions', description: 'Learn about different approaches — mindfulness, nature-based, religious, philosophical' },
+        { label: 'Assess current spiritual practice', description: 'What existing rituals or habits already nurture your inner life? What is missing?' },
+        { label: 'Find community or mentor', description: 'Local groups, online communities, teachers, or elders who align with your path' },
+        { label: 'Read foundational texts', description: 'Pick one book or scripture from a tradition that resonates and study it deeply' },
+        { label: 'Set spiritual intentions', description: 'What do you seek? Peace, purpose, connection, transcendence? Write your north star' },
+      ]},
+      { phase: 'canvas', tasks: [
+        { label: 'Design daily spiritual ritual', description: 'Morning prayer/meditation, midday gratitude, evening reflection — design your rhythm' },
+        { label: 'Create gratitude practice', description: 'Daily gratitude list, thank-you letters, appreciation walks — make it a habit' },
+        { label: 'Build nature connection plan', description: 'Weekly time outdoors, nature walks, stargazing, gardening — reconnect with the earth' },
+        { label: 'Plan weekly sacred time', description: 'Dedicated screen-free time for reflection, journaling, or quiet contemplation' },
+        { label: 'Design personal ritual space', description: 'Create a physical or mental space for practice — altar, corner, playlist, candle' },
+        { label: 'Map your purpose pillars', description: 'What gives your life meaning? Health, creativity, service, family, growth? Map them' },
+      ]},
+      { phase: 'build', tasks: [
+        { label: 'Start daily spiritual log', description: '5-minute log each day: mood, gratitude, insights, or prayer' },
+        { label: 'Establish morning ritual', description: 'Wake, breathe, set intention, read, journal — a 15-minute morning anchor' },
+        { label: 'Create evening wind-down', description: 'Screen-off 30 min before bed, reflect, pray or meditate, thank the day' },
+        { label: 'Build nature habit', description: 'Weekly nature immersion — no phone, no music, just presence' },
+        { label: 'Join a spiritual group', description: 'Attend at least one group session, service, or circle per month' },
+        { label: 'Create gratitude jar or log', description: 'Daily notes of gratitude — visual accumulation over time' },
+      ]},
+      { phase: 'ship', tasks: [
+        { label: 'Complete 30-day practice streak', description: 'Daily spiritual practice of any form — 30 consecutive days' },
+        { label: 'Write personal mission statement', description: 'One-page document: your values, purpose, and how you want to show up in the world' },
+        { label: 'Share your practice with one person', description: 'Discuss your spiritual journey with a trusted friend, partner, or mentor' },
+        { label: 'Host a gratitude circle', description: 'Invite 2-3 people to share what they are grateful for — in person or online' },
+        { label: 'Go on a tech-free day', description: '24 hours with no screens — observe how your mind and spirit respond' },
+        { label: 'Complete a service act', description: 'Volunteer, help someone in need, or give anonymously — practice selfless service' },
+      ]},
+      { phase: 'maintain', tasks: [
+        { label: 'Weekly spiritual check-in', description: 'Review practice consistency, insights, struggles — adjust as needed' },
+        { label: 'Monthly deep reflection', description: 'Longer journal session: what stirred my soul this month? Where did I feel alive?' },
+        { label: 'Quarterly nature retreat', description: 'Half-day or full-day in nature with no agenda — just being' },
+        { label: 'Refresh ritual space', description: 'Clean, rearrange, update your physical or digital spiritual space' },
+        { label: 'Learn one new spiritual practice', description: 'Try breathwork, chanting, walking meditation, or a new form of prayer' },
+        { label: 'Annual spiritual growth review', description: 'Write a year-in-review focused on inner growth, purpose evolution, and next steps' },
+      ]},
+    ],
+  },
+  {
+    category: 'hobbies',
+    name: 'Hobbies OS',
+    emoji: '🎨',
+    description: 'Creative pursuits, skill building, passion projects, leisure optimization, maker mindset',
+    color: '#F472B6',
+    phases: [
+      { phase: 'research', tasks: [
+        { label: 'Inventory current hobbies', description: 'List all hobbies past and present — what lights you up vs what drains you?' },
+        { label: 'Identify hobby gaps', description: 'What creative or fun activity have you always wanted to try but never started?' },
+        { label: 'Assess time & energy budget', description: 'How much time can you realistically dedicate to hobbies each week?' },
+        { label: 'Explore hobby categories', description: 'Creative (art, music, writing), physical (sports, dance, hiking), mental (chess, puzzles, coding), social (board games, clubs)' },
+        { label: 'Research starter resources', description: 'YouTube tutorials, community classes, local clubs, online courses — find the on-ramp' },
+        { label: 'Find your hobby community', description: 'Reddit, Discord, Meetup, local shops, Facebook groups — surround yourself with enthusiasts' },
+      ]},
+      { phase: 'canvas', tasks: [
+        { label: 'Design hobby rotation schedule', description: 'Rotate between active hobbies to prevent burnout and maintain freshness' },
+        { label: 'Plan skill progression path', description: 'Beginner → intermediate → advanced — what milestones matter for each hobby?' },
+        { label: 'Create project backlog', description: 'List specific hobby projects you want to try: a painting, a song, a garden, a game' },
+        { label: 'Budget for supplies', description: 'Tools, materials, equipment — one-time vs recurring costs per hobby' },
+        { label: 'Design hobby space', description: 'Dedicated corner or timeblock for creative pursuit — physical and mental space' },
+        { label: 'Plan hobby showcase', description: 'How will you share your work? Gallery, open mic, social media, gift to a friend' },
+      ]},
+      { phase: 'build', tasks: [
+        { label: 'Acquire starter kit', description: 'Buy or borrow the minimum viable set of tools/supplies for your hobby' },
+        { label: 'Complete first project', description: 'Finish something small — a sketch, a playlist, a planted pot, a code snippet' },
+        { label: 'Join hobby group or class', description: 'Attend first in-person or online session with fellow enthusiasts' },
+        { label: 'Set up progress tracker', description: 'Photos, log entries, or a simple checklist to track skill growth' },
+        { label: 'Create inspiration board', description: 'Pinterest wall, Notion board, or folder of work that inspires you' },
+        { label: 'Establish hobby routine', description: 'Fixed time slot per week for uninterrupted hobby time — protect it fiercely' },
+      ]},
+      { phase: 'ship', tasks: [
+        { label: 'Complete a showcase project', description: 'Finish something you are proud enough to share with others' },
+        { label: 'Share work publicly', description: 'Post on social media, show a friend, enter a contest — put it out there' },
+        { label: 'Teach someone else', description: 'Teach a beginner the basics of your hobby — teaching deepens mastery' },
+        { label: 'Reflect on joy vs pressure', description: 'Is this hobby still fun? Or has it become another chore? Adjust accordingly' },
+        { label: 'Host a hobby session', description: 'Invite friends for a crafting night, game session, or jam' },
+        { label: 'Expand into advanced territory', description: 'Level up: more complex project, better tools, mentorship or advanced class' },
+      ]},
+      { phase: 'maintain', tasks: [
+        { label: 'Weekly hobby hour', description: 'At least one hour per week dedicated to a creative or fun pursuit' },
+        { label: 'Monthly skill check', description: 'Review progress, note plateaus, set next learning goal' },
+        { label: 'Rotate hobbies', description: 'Switch primary hobby every season to keep things fresh and cross-pollinate ideas' },
+        { label: 'Replenish supplies', description: 'Restock consumables, maintain tools, upgrade equipment when ready' },
+        { label: 'Document journey', description: 'Keep a hobby journal or social feed tracking your projects and growth' },
+        { label: 'Annual hobby fair', description: 'Showcase all your year\'s projects in one session — celebrate your creative output' },
+      ]},
+    ],
+  },
 ];
 
-// ─── Plugin Engine ─────────────────────────────────────────────────────
+// ─── Plugin Engine
 
 /**
  * Runtime sync target — set by LifeOSTab on mount if Supabase is available.

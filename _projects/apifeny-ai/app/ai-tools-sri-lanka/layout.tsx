@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'Best AI Tools in Sri Lanka (2026) — Apifeny AI',
     description:
       'Find AI tools built for Sri Lanka: Sinhala (සිංහල) & Tamil (தமிழ்) language support, LKR/USD pricing, and tourism industry readiness. 100+ tools, expert ranked.',
-    url: 'https://apifeny.ai/ai-tools-sri-lanka',
+    url: 'https://apifeny-ai.vercel.app/ai-tools-sri-lanka',
     siteName: 'Apifeny AI',
     locale: 'si_LK',
     type: 'website',
@@ -20,10 +20,10 @@ export const metadata: Metadata = {
       'Find the best AI tools for Sri Lanka. Expert-ranked directory with Sinhala & Tamil interface support and local pricing info.',
   },
   alternates: {
-    canonical: 'https://apifeny.ai/ai-tools-sri-lanka',
+    canonical: 'https://apifeny-ai.vercel.app/ai-tools-sri-lanka',
     languages: {
-      'si-LK': 'https://apifeny.ai/ai-tools-sri-lanka',
-      'en': 'https://apifeny.ai/ai-tools-sri-lanka',
+      'si-LK': 'https://apifeny-ai.vercel.app/ai-tools-sri-lanka',
+      'en': 'https://apifeny-ai.vercel.app/ai-tools-sri-lanka',
     },
   },
 };

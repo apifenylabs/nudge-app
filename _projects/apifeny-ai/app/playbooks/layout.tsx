@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'AI Playbooks — Apifeny AI',
     description:
       'Step-by-step AI workflow guides for content creation, coding, research, and more.',
-    url: 'https://apifeny.ai/playbooks',
+    url: 'https://apifeny-ai.vercel.app/playbooks',
   },
 };
 

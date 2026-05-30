@@ -1,0 +1,44 @@
+{
+  "slug": "hong-kong-to-macau-road-trip",
+  "title": "Hong Kong to Macau: The Hong Kong-Zhuhai-Macao Bridge Express",
+  "subtitle": "A 2-day cross-border EV adventure via the world's longest sea bridge",
+  "route": [
+    {
+      "day": 1,
+      "from": "Hong Kong",
+      "to": "Zhuhai",
+      "distance": "65 km",
+      "drivingTime": "1.5 hours",
+      "charger": "Zhuhai State Grid charger",
+      "kidActivities": "Hong Kong Disneyland (pre-trip), Chimelong Ocean Kingdom"
+    },
+    {
+      "day": 2,
+      "from": "Zhuhai",
+      "to": "Macau",
+      "distance": "15 km",
+      "drivingTime": "0.5 hours",
+      "charger": "Macau hotel overnight charge",
+      "kidActivities": "Macau Giant Panda Pavilion, Macau Science Center, Macau Tower"
+    }
+  ],
+  "totalDistance": "200 km",
+  "totalChargingCost": "CNY 80-120",
+  "bestFor": "Adventurous families wanting a unique cross-border bridge experience",
+  "carRecommendations": [
+    "BYD Dolphin",
+    "NIO ET5",
+    "XPeng P7",
+    "Tesla Model 3 (GB/T compatible)"
+  ],
+  "tips": [
+    "China uses GB/T standard — vehicle must be GB/T compatible",
+    "Requires Guangdong temporary license plates — pre-booking necessary",
+    "State Grid chargers available at most highway rest stops in Guangdong"
+  ],
+  "chargerTypes": [
+    "GB/T",
+    "CCS2"
+  ],
+  "seasonal": "October to March (pleasant weather)"
+}

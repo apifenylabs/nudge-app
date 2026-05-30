@@ -1,0 +1,71 @@
+{
+  "slug": "osaka-to-tokyo-road-trip",
+  "title": "Osaka to Tokyo: Japan Classic EV Expressway Run",
+  "subtitle": "A 5-day journey through Japan's cultural heartland",
+  "route": [
+    {
+      "day": 1,
+      "from": "Osaka",
+      "to": "Kyoto",
+      "distance": "55 km",
+      "drivingTime": "1 hour",
+      "charger": "Meishin Expressway Kyoto Minami SA",
+      "kidActivities": "Universal Studios Japan, Kyoto Tower"
+    },
+    {
+      "day": 2,
+      "from": "Kyoto",
+      "to": "Kyoto",
+      "distance": "Local",
+      "drivingTime": "Full day",
+      "charger": "Kyoto station building charger",
+      "kidActivities": "Arashiyama Bamboo Grove, Kyoto Railway Museum, Fushimi Inari Shrine"
+    },
+    {
+      "day": 3,
+      "from": "Kyoto",
+      "to": "Nagoya",
+      "distance": "150 km",
+      "drivingTime": "2 hours",
+      "charger": "Meishin Expressway Gozaishi SA",
+      "kidActivities": "Nagoya Science Museum, Toyota Museum, Nagoya Castle"
+    },
+    {
+      "day": 4,
+      "from": "Nagoya",
+      "to": "Hakone",
+      "distance": "220 km",
+      "drivingTime": "3 hours",
+      "charger": "Tomei Expressway Ashigara SA",
+      "kidActivities": "Hakone Ropeway, Open-Air Museum, Lake Ashi cruise"
+    },
+    {
+      "day": 5,
+      "from": "Hakone",
+      "to": "Tokyo",
+      "distance": "100 km",
+      "drivingTime": "1.5 hours",
+      "charger": "Tomei Expressway Ebina SA",
+      "kidActivities": "Tokyo Disneyland, teamLab Planets, Shibuya Sky"
+    }
+  ],
+  "totalDistance": "560 km",
+  "totalChargingCost": "JPY 4,000-6,000",
+  "bestFor": "Families wanting a comprehensive Japan experience with theme parks and culture",
+  "carRecommendations": [
+    "Nissan Sakura",
+    "Toyota bZ4X",
+    "Honda e:N1",
+    "Tesla Model 3"
+  ],
+  "tips": [
+    "Japan uses CHAdeMO — charge at expressway service areas every stop",
+    "Tomei/Meishin Expressway is excellent but tolls are expensive (~¥15,000)",
+    "Download the NCS app for finding CHAdeMO chargers",
+    "Most luxury hotels offer overnight AC 200V charging"
+  ],
+  "chargerTypes": [
+    "CHAdeMO"
+  ],
+  "seasonal": "March to May (cherry blossom) or October to November (autumn foliage)"
+}

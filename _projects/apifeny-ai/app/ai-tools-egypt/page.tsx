@@ -634,7 +634,7 @@ export default function AIToolsEgyptPage() {
               AI writing tools Egypt · AI coding tools Egypt · AI marketing Egypt · 
               Egypt AI directory · AI tools for Egypt startups · affordable AI tools Egypt · 
               free AI tools Egypt · AI productivity Egypt · Egypt tech stack · 
-              AI tools Cairo · AI tools Alexandria · AI tools Islamabad · Arabic AI tools
+              'AI tools for Cairo · AI tools for Alexandria · AI tools for Islamabad' · Arabic AI tools
             </p>
           </div>
         </div>

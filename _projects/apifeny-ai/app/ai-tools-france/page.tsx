@@ -352,7 +352,7 @@ export default function AIToolsFrancePage() {
               {
                 icon: Globe,
                 title: 'Bilingual by Default',
-                description: 'France operates in French and English across business, government, and daily life. We flag every tool for French-language support so you never discover language gaps mid-workflow — critical for serving a market of 68M+ that values its linguistic heritage.',
+                description: 'France operates in French and English across business, government, and daily life. We flag every tool for local language support so you never discover language gaps mid-workflow — critical for serving a market of 68M+ that values its linguistic heritage.',
                 gradient: 'from-neon/10 to-purple-900/10',
               },
               {
@@ -628,7 +628,7 @@ export default function AIToolsFrancePage() {
               AI writing tools France · AI coding tools France · AI marketing France · 
               France AI directory · AI tools for French startups · affordable AI tools France · 
               free AI tools France · AI productivity France · French tech stack · 
-              AI tools Paris · AI tools Lyon · AI tools Marseille · French AI tools · 
+              'AI tools for Paris · AI tools for Lyon · AI tools for Marseille' · French AI tools · 
               outils IA France · IA en France · intelligence artificielle France
             </p>
           </div>

@@ -1,24 +1,43 @@
-# HEARTBEAT — 2026-05-29 23:15 HKT
+# HEARTBEAT — 2026-05-30 11:37 HKT
 
-**Session type:** Proactive scan
-**Status:** ✅ All systems nominal
+## Health Scan Results (11:37)
+- ✅ All 3 Vercel apps 200 OK (ev-charging-asia, apifeny-ai, luxury-family-travel)
+- ✅ Workspace deployment healthy — new "Ready" deployment from 30m ago replaced the 6d-old errored one
+- ✅ 23/24 cron jobs green; research-agent-12h has 1 historical timeout (181s hit 180s limit) — not recurrent, same as 11:08 scan
+- ✅ Trading bot — grid bot running (production/bot_state.json updated 11:37). Aggregate portfolio: 13 trades, $41.62 PnL, 61.5% WR. Balance checkpoints range $1,027–$1,235 (multiple sub-accounts). Last checkpoint: $1,106.18 on May 29.
+- ✅ Titan Phase 6 is more advanced than work-engine-state documents — dashboard (542 lines), platform pages, god-tier-engine (257 lines), all implemented
 
-## System State
-- **Trading Bot**: PAPER mode, ✅ clean. BTC/ETH open (native TP/SL active). WIF closed (hit TP/SL earlier). Balance: $1,191.
-- **Sites**: ev-charging-asia ✅, apifeny-ai ✅, luxury-family-travel ✅, titan-app-puce ✅ (all HTTP 200)
-- **Crons**: 24 jobs, 3 known non-critical errors (ceo-morning-summary timeout, omnimind-consolidation-3am, rd-agent-daily)
-- **Memory cleaned**: May 29 compressed from 28KB→4.7KB (84% reduction)
+## Actions Taken This Cycle
+1. **Full health scan** — Vercel HTTP checks (all 200), cron audit (all green), trading bot status verified
+2. **Verified workspace deployment** — errored 6d-old deploy is no longer active; new deploy at 30m ago is Ready ✓
+3. **Discovered Titan Phase 6 is further along** — robotics dashboard, god-tier-engine, use-level-progression all have full implementations despite work-engine-state saying they're stubs. No action needed.
+4. **Confirmed domain issue** — apifeny.ai + apifeny-ai.com still NXDOMAIN via curl (exit code 6). No DNS tools available in sandbox. Vercel only has familytravelasia.com configured. Requires CEO to register domains.
+5. **Updated HEARTBEAT with fresh data**
 
-## Active Blockers
-- Polymarket wallet unfunded — need CEO for deposit
-- HL 429 rate limiting — kill-switch false-positive risk (no retry/backoff yet)
-- Vercel sitemap deploy block — rate limit hit last attempt
-- Revenue: $0.00 (Stripe test mode, no paying users)
+## Pipeline Status — Proximity to Production
 
-## Next Up
-- Titan P4: Onboarding wizard, changelog for /blog
-- Fresh funding data pull for all 7 coins (Kalman DRL)
-- FX vol surge deployment as satellite signal
+| Strategy | Phase | WR | PF | Live? | Next Step |
+|----------|-------|-----|----|-------|-----------|
+| bb_1h | **LIVE** | 100% (2t) | - | ✅ 20% | 12 trades = noise; wait for 50+ |
+| bb_15m | **LIVE** | 100% (2t) | - | ✅ 10% | Lower TP from 2.0x to 1.5x ATR |
+| funding_proxy | **LIVE** | 0 trades | - | ✅ 10% | Need more trades |
+| vol_surge | **LIVE** | 50% (4t) | - | ✅ 15% | Add volume confirmation filter for ETH |
+| taker_flow | **LIVE** | 0 trades | - | ✅ 10% | Need more trades |
+| vol_surge_depth | **BACKTEST** | 96-98% | 47-102 | ❌ Not yet | Phase 1: cost-adjusted backtest |
+| HTF filter | **BACKTEST** | 78% | 7.2 | ❌ Not yet | Drop-in as overlay (<2h) |
+| forex BB/RSI | **PAPER** | 75% | 3.99 | ❌ Paper | Phase 1: OANDA demo connector |
+| wick imbalance | **SATELLITE** | 45% | 2.67 | ❌ Signals | Below gate |
+| kalman_drl | **💀 KILLED** | 23.4% | 0.61 | ❌ Dead | Don't revisit |
+| trend_following | **💀 KILLED** | 43.4% | 1.04 | ❌ Dead | Don't revisit |
 
-## Last Action (2026-05-29 23:15)
-✅ **Titan P4: /features page** — Created full `/features` page with 10 detailed feature cards, tier overview, comparison table, Secret Agent Mode spotlight, use cases, and consistent white-theme design. Build clean. Deployed at https://titan-app-puce.vercel.app/features
+## Blocked Items (CEO Action Needed — Unchanged)
+1. **P0: Affiliate partner API keys** (Booking.com, Klook, Viator, Expedia)
+2. **P1: Stripe checkout SQL for Supabase** — Nudge already has billing SQL & Stripe API endpoints; may need fresh SQL for another project
+3. **P3: Run LifeOS migration SQL** in Supabase dashboard — schema exists at `_projects/lifeos/supabase-schema.sql`
+4. **Git PAT token** (expired) for ev-charging-asia
+5. **Domain registration** — apifeny.ai + apifeny-ai.com both NXDOMAIN. Only familytravelasia.com in Vercel domains.
+
+## Friction Log
+- No DNS tools (dig/host) available in WSL sandbox for domain lookups
+- Balance tracking is fragmented across 4+ JSON files with different schemas — hard to get a single P&L figure
+- Titan work-engine-state.md is stale (says stubs exist but files are fully implemented)

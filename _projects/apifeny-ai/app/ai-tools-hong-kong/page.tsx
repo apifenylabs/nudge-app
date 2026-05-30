@@ -96,12 +96,12 @@ export default function AIToolsHongKongPage() {
       '@type': 'CollectionPage',
       name: 'Best AI Tools in Hong Kong (2026)',
       description: 'Curated directory of 85+ top-rated AI tools relevant to Hong Kong businesses, startups, and enterprises.',
-      url: 'https://apifeny.ai/ai-tools-hong-kong',
+      url: 'https://apifeny-ai.vercel.app/ai-tools-hong-kong',
       inLanguage: 'zh-HK',
       isPartOf: {
         '@type': 'WebSite',
         name: 'Apifeny AI',
-        url: 'https://apifeny.ai',
+        url: 'https://apifeny-ai.vercel.app',
       },
     });
     const existing = document.getElementById('ai-tools-hong-kong-jsonld');

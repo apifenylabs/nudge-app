@@ -1,0 +1,62 @@
+{
+  "slug": "chiang-mai-to-pai-mae-hong-son-road-trip",
+  "title": "Chiang Mai to Pai & Mae Hong Son: Northern Thailand Mountain Loop",
+  "subtitle": "A 4-day adventure through 762 curves in the Thai highlands",
+  "route": [
+    {
+      "day": 1,
+      "from": "Chiang Mai",
+      "to": "Pai",
+      "distance": "130 km",
+      "drivingTime": "3 hours",
+      "charger": "EA Anyonde Pai (limited — charge fully in Chiang Mai)",
+      "kidActivities": "Pai Canyon walking trails, Pam Bok Waterfall"
+    },
+    {
+      "day": 2,
+      "from": "Pai",
+      "to": "Pai",
+      "distance": "Local",
+      "drivingTime": "Full day",
+      "charger": "Hotel wall outlet (portable charger recommended)",
+      "kidActivities": "Tham Lod Cave (bamboo rafting), Pai night market"
+    },
+    {
+      "day": 3,
+      "from": "Pai",
+      "to": "Mae Hong Son",
+      "distance": "120 km",
+      "drivingTime": "3 hours",
+      "charger": "Hotel overnight wall outlet",
+      "kidActivities": "Long Neck Karen Village, Mae Hong Son Lake, Tham Pla Cave"
+    },
+    {
+      "day": 4,
+      "from": "Mae Hong Son",
+      "to": "Chiang Mai",
+      "distance": "350 km",
+      "drivingTime": "8 hours",
+      "charger": "Full hotel charge overnight, EA Anyonde Chiang Mai on return",
+      "kidActivities": "Morning market visit, mountain viewpoints, Doi Inthanon National Park"
+    }
+  ],
+  "totalDistance": "700 km (loop)",
+  "totalChargingCost": "THB 400-800",
+  "bestFor": "Adventurous families wanting Thailand's most scenic mountain drive",
+  "carRecommendations": [
+    "MG ZS EV",
+    "BYD Atto 3",
+    "Neta V"
+  ],
+  "tips": [
+    "Charging is sparse in Mae Hong Son province — charge fully before departing Chiang Mai",
+    "Bring a portable Type 2 charger for hotel wall outlet charging",
+    "762 curves on Route 1095 — drive slowly, especially in rain (June-October)",
+    "Pai has a couple of EA Anyonde chargers — use them whenever available"
+  ],
+  "chargerTypes": [
+    "CCS2",
+    "Type 2"
+  ],
+  "seasonal": "November to February (cool, clear skies, no rain)"
+}

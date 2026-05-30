@@ -27,7 +27,7 @@ import type { Playbook } from '@/lib/playbooks';
 import ToolCard from '@/components/ToolCard';
 import BlogCategoryLinks from '@/components/BlogCategoryLinks';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Best AI Tools for Developers in Asia (2026) — Code, Deploy, Ship Faster | Apifeny AI',

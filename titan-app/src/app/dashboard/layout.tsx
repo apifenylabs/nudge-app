@@ -7,6 +7,7 @@ import {
   Terminal, Trophy, Sun, Cuboid, Zap, Bot, Shield, TrendingUp,
   Orbit, Rocket, Puzzle, Layers, CreditCard, BarChart3,
 } from "lucide-react";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import { Badge } from "@/components/ui/badge";
 import { loadProgression, loadFeed, saveFeed } from "@/lib/persistence";
 import { useMascotStore } from "@/stores/mascotStore";
@@ -36,15 +37,15 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { id: "home", label: "Home", icon: Layers, color: "#14B8A6", path: "/dashboard" },
-  { id: "swarm", label: "Swarm", icon: Layers, color: "#14B8A6", path: "/dashboard/swarm" },
+  { id: "home", label: "Home", icon: Layers, color: "#0D9488", path: "/dashboard" },
+  { id: "swarm", label: "Swarm", icon: Layers, color: "#0D9488", path: "/dashboard/swarm" },
   { id: "forge", label: "Forge", icon: Bot, color: "#F59E0B", path: "/dashboard/forge" },
-  { id: "lifeos", label: "LifeOS", icon: Puzzle, color: "#14B8A6", path: "/dashboard/lifeos" },
+  { id: "lifeos", label: "LifeOS", icon: Puzzle, color: "#0D9488", path: "/dashboard/lifeos" },
   { id: "security", label: "Security", icon: Shield, color: "#10B981", path: "/dashboard/security" },
   { id: "automation", label: "Automation", icon: Orbit, color: "#7C3AED", path: "/dashboard/automation" },
   { id: "analytics", label: "Analytics", icon: BarChart3, color: "#7C3AED", path: "/dashboard/analytics" },
   { id: "progression", label: "Progression", icon: Rocket, color: "#F59E0B", path: "/dashboard/progression" },
-  { id: "billing", label: "Billing", icon: CreditCard, color: "#14B8A6", path: "/dashboard/billing" },
+  { id: "billing", label: "Billing", icon: CreditCard, color: "#0D9488", path: "/dashboard/billing" },
 ];
 
 
@@ -88,35 +89,38 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const currentLevel = useMemo(() => Math.max(1, Math.floor(progression.totalXp / 500) + 1), [progression.totalXp]);
   const estValue = (progression.totalTasksRun * 3.8).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
-  // ▸ Off-white monotone palette is the default for dashboard mode
-  //   Theme toggle (dark teal/gold) stored in localStorage
+  // ▸ Clean white theme matching landing page
 
   return (
     <motion.div
       className="min-h-screen relative"
-      style={{ background: '#F8F6F3' }}
+      style={{ background: '#FFFFFF' }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+      <BreadcrumbJsonLd items={[
+        { label: "Home", href: "/" },
+        { label: "Dashboard", href: "/dashboard" },
+      ]} />
       {/* ── Header ── */}
       <header className="sticky top-0 z-30 border-b backdrop-blur-sm"
-        style={{ borderColor: '#E5E0D8', background: 'rgba(255,255,255,0.85)' }}>
+        style={{ borderColor: '#E5E7EB', background: '#FFFFFF' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3 shrink-0">
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center border"
               style={{
-                background: 'linear-gradient(135deg, #0EA5A5/20, #D4A017/10)',
-                borderColor: '#0EA5A5/20'
+                background: 'rgba(13,148,136,0.12)',
+                borderColor: 'rgba(13,148,136,0.2)'
               }}>
-              <Terminal className="h-3.5 w-3.5 sm:h-4 sm:w-4" style={{ color: '#0EA5A5' }} />
+              <Terminal className="h-3.5 w-3.5 sm:h-4 sm:w-4" style={{ color: '#0D9488' }} />
             </div>
-            <h1 className="text-base sm:text-lg font-bold tracking-tight" style={{ color: '#1F1F1F' }}>TITAN</h1>
+            <h1 className="text-base sm:text-lg font-bold tracking-tight" style={{ color: '#111827' }}>TITAN</h1>
             <Badge className="hidden sm:inline-flex text-[10px] tracking-widest uppercase font-mono"
               style={{
-                background: '#0EA5A5/10',
-                color: '#0EA5A5',
-                borderColor: '#0EA5A5/20'
+                background: 'rgba(13,148,136,0.1)',
+                color: '#0D9488',
+                borderColor: 'rgba(13,148,136,0.2)'
               }}>
               v0.4 · Living
             </Badge>
@@ -126,12 +130,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             {/* Theme indicator */}
             <div className="flex items-center gap-1 text-[9px] sm:text-[10px] font-mono px-2 sm:px-2.5 py-1 rounded-full border"
               style={{
-                color: '#666666',
+                color: '#6B7280',
                 background: '#FFFFFF',
-                borderColor: '#E5E0D8'
+                borderColor: '#E5E7EB'
               }}>
-              <Sun className="h-2.5 w-2.5 sm:h-3 sm:w-3" style={{ color: '#D4A017' }} />
-              <span className="hidden sm:inline" style={{ color: '#666666' }}>{THEMES.find(t => t.id === theme)?.label}</span>
+              <Sun className="h-2.5 w-2.5 sm:h-3 sm:w-3" style={{ color: '#F59E0B' }} />
+              <span className="hidden sm:inline" style={{ color: '#6B7280' }}>{THEMES.find(t => t.id === theme)?.label}</span>
             </div>
 
             {/* Level + XP Bar + Achievement Badges — more prominent */}
@@ -140,15 +144,15 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <motion.div
                 className="flex items-center gap-1 px-2 py-1 rounded-full cursor-pointer border"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(14,165,165,0.12), rgba(212,160,23,0.06))',
-                  borderColor: '#0EA5A5/30',
+                  background: 'rgba(13,148,136,0.1)',
+                  borderColor: 'rgba(13,148,136,0.25)',
                 }}
                 whileHover={{ scale: 1.05 }}
                 onClick={() => router.push('/dashboard/progression')}
                 title="View progression page"
               >
-                <Rocket className="h-3 w-3" style={{ color: '#0EA5A5' }} />
-                <span className="text-[10px] font-mono font-bold" style={{ color: '#0EA5A5' }}>
+                <Rocket className="h-3 w-3" style={{ color: '#0D9488' }} />
+                <span className="text-[10px] font-mono font-bold" style={{ color: '#0D9488' }}>
                   Lv.{currentLevel}
                 </span>
               </motion.div>
@@ -157,15 +161,15 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <motion.div
                   className="flex items-center gap-0.5 px-1.5 py-0.5 rounded-full border cursor-pointer"
                   style={{
-                    background: 'rgba(212,160,23,0.08)',
-                    borderColor: 'rgba(212,160,23,0.2)',
+                    background: 'rgba(245,158,11,0.08)',
+                    borderColor: 'rgba(245,158,11,0.2)',
                   }}
                   whileHover={{ scale: 1.05 }}
                   onClick={() => router.push('/dashboard/progression')}
                   title={`${progression.achievements.length} achievements unlocked`}
                 >
-                  <Trophy className="h-2.5 w-2.5" style={{ color: '#D4A017' }} />
-                  <span className="text-[9px] font-mono font-semibold" style={{ color: '#D4A017' }}>
+                  <Trophy className="h-2.5 w-2.5" style={{ color: '#F59E0B' }} />
+                  <span className="text-[9px] font-mono font-semibold" style={{ color: '#F59E0B' }}>
                     {progression.achievements.length}
                   </span>
                 </motion.div>
@@ -186,9 +190,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               onClick={handleThreeDToggle}
               className="flex items-center gap-1 text-[10px] sm:text-xs px-2 sm:px-2.5 py-1 rounded-full border transition-all"
               style={{
-                background: threeDMode ? '#0EA5A5/15' : '#FFFFFF',
-                borderColor: threeDMode ? '#0EA5A5/40' : '#E5E0D8',
-                color: threeDMode ? '#0EA5A5' : '#666666',
+                background: threeDMode ? 'rgba(13,148,136,0.12)' : '#FFFFFF',
+                borderColor: threeDMode ? 'rgba(13,148,136,0.35)' : '#E5E7EB',
+                color: threeDMode ? '#0D9488' : '#6B7280',
               }}
               title={threeDMode ? '3D Agents (on)' : '3D Agents (off)'}
             >
@@ -201,9 +205,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               onClick={() => router.push('/dashboard/billing')}
               className="flex items-center gap-1 text-[10px] sm:text-xs px-2 sm:px-2.5 py-1 rounded-full border transition-all cursor-pointer"
               style={{
-                background: '#0EA5A5/8',
-                borderColor: '#0EA5A5/20',
-                color: '#0EA5A5',
+                background: 'rgba(13,148,136,0.08)',
+                borderColor: 'rgba(13,148,136,0.2)',
+                color: '#0D9488',
               }}
               title="Manage Billing"
             >
@@ -214,9 +218,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             {/* ROI widget */}
             <div className="flex items-center gap-1 text-[10px] sm:text-xs px-2 sm:px-2.5 py-1 rounded-full border"
               style={{
-                background: '#0EA5A5/10',
-                borderColor: '#0EA5A5/20',
-                color: '#0EA5A5'
+                background: 'rgba(13,148,136,0.1)',
+                borderColor: 'rgba(13,148,136,0.2)',
+                color: '#0D9488'
               }}>
               <Zap className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
               <span className="font-mono font-medium">+${estValue}</span>
@@ -225,8 +229,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             {/* Mascot avatar */}
             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden flex items-center justify-center border cursor-pointer hover:scale-110 transition-transform"
               style={{
-                background: 'linear-gradient(135deg, #0EA5A5/30, #D4A017/20)',
-                borderColor: '#0EA5A5/30'
+                background: 'rgba(13,148,136,0.12)',
+                borderColor: 'rgba(13,148,136,0.25)'
               }}
               onClick={openPicker}>
               <img src={currentMascot.image} alt={currentMascot.name}
@@ -242,7 +246,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="flex items-center gap-1 rounded-full p-0.5 shadow-sm border"
           style={{
             background: '#FFFFFF',
-            borderColor: '#E5E0D8',
+            borderColor: '#E5E7EB',
           }}>
           {(['game' as const, 'modular' as const]).map(v => (
             <button
@@ -251,9 +255,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               className="px-4 py-1.5 rounded-full text-[11px] font-mono transition-all"
               style={{
                 background: theme === v
-                  ? 'linear-gradient(135deg, #0EA5A5/25, #D4A017/15)'
+                  ? 'rgba(13,148,136,0.15)'
                   : 'transparent',
-                color: theme === v ? '#1F1F1F' : '#666666',
+                color: theme === v ? '#111827' : '#6B7280',
                 boxShadow: theme === v ? '0 1px 3px rgba(0,0,0,0.06)' : 'none',
               }}
             >
@@ -268,7 +272,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <nav className="inline-flex gap-1 p-1 rounded-xl border"
           style={{
             background: '#FFFFFF',
-            borderColor: '#E5E0D8',
+            borderColor: '#E5E7EB',
           }}>
           {NAV_ITEMS.map(item => {
             const isActive = item.id === activeTab;
@@ -279,7 +283,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 className="px-3 py-1.5 rounded-lg text-xs gap-1.5 transition-all duration-200 flex items-center whitespace-nowrap"
                 style={{
                   background: isActive ? `${item.color}10` : 'transparent',
-                  color: isActive ? item.color : '#666666',
+                  color: isActive ? item.color : '#6B7280',
                   fontWeight: isActive ? 600 : 400,
                 }}
               >

@@ -27,7 +27,7 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import FAQSchema from '@/components/FAQSchema';
 import { getRelatedPosts } from '@/lib/blog-data';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'How to Choose AI Tools in 2026 — A Practical Guide for Teams & Solopreneurs | Apifeny AI',

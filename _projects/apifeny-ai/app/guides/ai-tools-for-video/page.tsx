@@ -38,7 +38,7 @@ import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import FAQSchema from '@/components/FAQSchema';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Best AI Tools for Video in 2026 — Create, Edit & Scale Video Content | Apifeny AI',
@@ -454,7 +454,7 @@ export default function AIToolsForVideoGuide() {
                   {s.affiliateSuggestions.map((a) => {
                     const tool = toolsData.find((t: any) => t.slug === a.slug);
                     if (!tool) return null;
-                    const link = (tool as any).affiliateUrl || (tool as any).website_url || (tool as any).url || `https://apifeny.ai/tools/${a.slug}`;
+                    const link = (tool as any).affiliateUrl || (tool as any).website_url || (tool as any).url || `https://apifeny-ai.vercel.app/tools/${a.slug}`;
                     return (
                       <a
                         key={a.slug}

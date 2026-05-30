@@ -306,6 +306,8 @@ export function getRecommendations(count: number = 3): LifeCategory[] {
     { category: 'career' as LifeCategory, order: 10 },
     { category: 'learning' as LifeCategory, order: 11 },
     { category: 'fitness' as LifeCategory, order: 12 },
+    { category: 'spirituality' as LifeCategory, order: 13 },
+    { category: 'hobbies' as LifeCategory, order: 14 },
   ].filter(c => !active.has(c.category));
 
   // Personality-aware ordering

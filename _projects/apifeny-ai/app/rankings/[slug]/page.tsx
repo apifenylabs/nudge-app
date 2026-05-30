@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { getRankingCategory } from '@/lib/ranking-categories';
 import RankingCategoryClient from './_RankingCategoryClient';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const cat = getRankingCategory(params.slug);

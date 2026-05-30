@@ -1,0 +1,52 @@
+{
+  "slug": "tokyo-to-hakone-fuji-road-trip",
+  "title": "Tokyo to Hakone & Fuji Five Lakes: Japan Nature Loop",
+  "subtitle": "A 3-day mountain loop from Tokyo to the shadow of Mount Fuji",
+  "route": [
+    {
+      "day": 1,
+      "from": "Tokyo",
+      "to": "Hakone",
+      "distance": "85 km",
+      "drivingTime": "1.5 hours",
+      "charger": "Tomei Expressway Ebina SA, Hakone Town NCS",
+      "kidActivities": "Hakone Open-Air Museum, Hakone Ropeway, Owakudani"
+    },
+    {
+      "day": 2,
+      "from": "Hakone",
+      "to": "Kawaguchiko",
+      "distance": "65 km",
+      "drivingTime": "1.5 hours",
+      "charger": "Kawaguchiko Station area charger",
+      "kidActivities": "Lake Ashi Cruise, Oshino Hakkai, Fuji Q Highlands"
+    },
+    {
+      "day": 3,
+      "from": "Kawaguchiko",
+      "to": "Tokyo",
+      "distance": "100 km",
+      "drivingTime": "1.5 hours",
+      "charger": "Tomei Expressway Ashigara SA",
+      "kidActivities": "Oshino Hakkai morning walk, Kawaguchiko sightseeing boat"
+    }
+  ],
+  "totalDistance": "250 km",
+  "totalChargingCost": "JPY 2,000-3,500",
+  "bestFor": "Nature-loving families wanting Mount Fuji views and hot springs",
+  "carRecommendations": [
+    "Nissan Sakura",
+    "Toyota bZ4X",
+    "Honda e:N1",
+    "Mitsubishi eK X EV"
+  ],
+  "tips": [
+    "CHAdEMO chargers at Hakone town and Kawaguchiko station area",
+    "Many ryokan offer overnight 200V AC charging — confirm when booking",
+    "Return via Gotemba or Ashigara SA on the Tomei Expressway"
+  ],
+  "chargerTypes": [
+    "CHAdeMO"
+  ],
+  "seasonal": "April to May (spring) or October to November (autumn foliage)"
+}

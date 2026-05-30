@@ -435,6 +435,66 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* EXPLORE MORE — Internal SEO links to key landing pages */}
+      <section className="py-8 sm:py-10 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">Explore More AI Resources</h2>
+            <p className="text-sm text-gray-500 mt-1">AI tools, comparisons, and guides to level up your stack</p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              href="/best-ai-tools"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-teal-50 to-teal-100/50 border border-teal-200 text-sm font-medium text-teal-700 hover:from-teal-100 hover:to-teal-200 transition-all"
+            >
+              ⭐ Best AI Tools 2026
+            </Link>
+            <Link
+              href="/ai-tools-for-startups"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-blue-100/50 border border-blue-200 text-sm font-medium text-blue-700 hover:from-blue-100 hover:to-blue-200 transition-all"
+            >
+              🚀 AI Tools for Startups
+            </Link>
+            <Link
+              href="/compare"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-amber-50 to-amber-100/50 border border-amber-200 text-sm font-medium text-amber-700 hover:from-amber-100 hover:to-amber-200 transition-all"
+            >
+              ⚔️ AI Tool Comparisons
+            </Link>
+            <Link
+              href="/ai-tools-by-category"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-purple-50 to-purple-100/50 border border-purple-200 text-sm font-medium text-purple-700 hover:from-purple-100 hover:to-purple-200 transition-all"
+            >
+              📂 Browse by Category
+            </Link>
+            <Link
+              href="/for/solopreneurs"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-emerald-50 to-emerald-100/50 border border-emerald-200 text-sm font-medium text-emerald-700 hover:from-emerald-100 hover:to-emerald-200 transition-all"
+            >
+              👤 For Solopreneurs
+            </Link>
+            <Link
+              href="/for/developers"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-sky-50 to-sky-100/50 border border-sky-200 text-sm font-medium text-sky-700 hover:from-sky-100 hover:to-sky-200 transition-all"
+            >
+              💻 For Developers
+            </Link>
+            <Link
+              href="/for/marketers"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-rose-50 to-rose-100/50 border border-rose-200 text-sm font-medium text-rose-700 hover:from-rose-100 hover:to-rose-200 transition-all"
+            >
+              📊 For Marketers
+            </Link>
+            <Link
+              href="/rankings"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-l from-orange-50 to-orange-100/50 border border-orange-200 text-sm font-medium text-orange-700 hover:from-orange-100 hover:to-orange-200 transition-all"
+            >
+              🏆 Rankings & Awards
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FOMO BAR */}
       <div className="border-b border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">

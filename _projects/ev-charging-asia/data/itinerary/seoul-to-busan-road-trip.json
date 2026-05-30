@@ -1,0 +1,62 @@
+{
+  "slug": "seoul-to-busan-road-trip",
+  "title": "Seoul to Busan: South Korea's K-EV Expressway Run",
+  "subtitle": "A 4-day family road trip via Sejong Smart City and historic Gyeongju",
+  "route": [
+    {
+      "day": 1,
+      "from": "Seoul",
+      "to": "Sejong Smart City",
+      "distance": "150 km",
+      "drivingTime": "2 hours",
+      "charger": "Gyeongbu Expressway rest stop (350kW)",
+      "kidActivities": "Sejong Artificial Intelligence Park, National Sejong Museum"
+    },
+    {
+      "day": 2,
+      "from": "Sejong",
+      "to": "Gyeongju",
+      "distance": "200 km",
+      "drivingTime": "2.5 hours",
+      "charger": "Gyeongnam Expressway rest stop (350kW)",
+      "kidActivities": "Bulguksa Temple, Seokguram Grotto, Cheomseongdae Observatory"
+    },
+    {
+      "day": 3,
+      "from": "Gyeongju",
+      "to": "Busan",
+      "distance": "100 km",
+      "drivingTime": "1.5 hours",
+      "charger": "Haeundae area charger",
+      "kidActivities": "Haeundae Beach, Busan Aquarium, Gamcheon Culture Village"
+    },
+    {
+      "day": 4,
+      "from": "Busan",
+      "to": "Seoul (via KTX)",
+      "distance": "Return trip",
+      "drivingTime": "—",
+      "charger": "Busan Station area (return EV to rental office)",
+      "kidActivities": "Jagalchi Fish Market, Busan city tour"
+    }
+  ],
+  "totalDistance": "450 km (one-way)",
+  "totalChargingCost": "₩30,000-50,000",
+  "bestFor": "Tech-savvy families wanting Korea's best EV infrastructure and cultural heritage",
+  "carRecommendations": [
+    "Hyundai Ioniq 6",
+    "Kia EV6",
+    "Kia EV9",
+    "Tesla Model Y"
+  ],
+  "tips": [
+    "Korea has Asia's best DC fast charging network — 350kW chargers at every expressway rest stop",
+    "Gyeongju is compact and very walkable — perfect for EV day trips",
+    "Download the EV Infra app for real-time charger availability across all networks"
+  ],
+  "chargerTypes": [
+    "CCS2",
+    "CHAdeMO"
+  ],
+  "seasonal": "March to May (spring) or September to November (autumn)"
+}

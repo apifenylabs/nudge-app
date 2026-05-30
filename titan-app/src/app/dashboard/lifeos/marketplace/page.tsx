@@ -37,9 +37,10 @@ const CATEGORY_TAGS: Record<string, string[]> = {
   business: ["Business", "Productivity"],
   home: ["Home"],
   relationships: ["Social", "Health"],
+  mindfulness: ["Health", "Productivity"],
 };
 
-const FILTER_TABS = ["All", "Family", "Finance", "Business", "Health"] as const;
+const FILTER_TABS = ["All", "Family", "Travel", "Finance", "Business", "Health", "Productivity", "Home", "Social"] as const;
 type FilterTab = (typeof FILTER_TABS)[number];
 
 // ─── Tag Color Map ─────────────────────────────────────────────────────
@@ -175,7 +176,7 @@ export default function LifeOSMarketplacePage() {
             <h2 className="text-sm font-mono font-semibold tracking-wider" style={{ color: "#14B8A6" }}>
               PLUGIN MARKETPLACE
             </h2>
-            <span className="text-[10px] font-mono text-titan-muted/50">// discover &amp; activate</span>
+            <span className="text-[10px] font-mono text-gray-400">// discover &amp; activate</span>
           </div>
         </div>
       </div>
@@ -227,7 +228,7 @@ export default function LifeOSMarketplacePage() {
             <p className="text-xl font-bold font-mono" style={{ color: stat.color }}>
               {stat.value}
             </p>
-            <p className="text-[10px] font-mono text-titan-muted/60 mt-0.5">{stat.label}</p>
+            <p className="text-[10px] font-mono text-gray-500 mt-0.5">{stat.label}</p>
           </motion.div>
         ))}
       </motion.div>

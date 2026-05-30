@@ -99,13 +99,13 @@ const FEATURES: Feature[] = [
   },
   {
     icon: <Star className="h-6 w-6" />,
-    title: "8 Unique Mascot Companions",
-    description: "Each agent pairs with a mascot — from Teal Blob to Little Robot. Collect, evolve, and customize them all.",
+    title: "5 Iconic Mascot Archetypes",
+    description: "Each agent pairs with a mascot archetype — from Sage's wisdom to Pixel's creativity. Collect, evolve, and customize them all.",
     gradient: "from-rose-500 to-pink-500",
     highlight: "Collectible mascots",
     items: [
-      "8 unique mascots with distinct personalities",
-      "Element-based typing (Water, Fire, Nature, Tech, etc.)",
+      "5 iconic mascot archetypes — Sage, Spark, Aegis, Drift, Pixel",
+      "Archetype-based personalities (Wisdom, Energy, Protection, Exploration, Creation)",
       "Rarity tiers from Common to Legendary",
       "Each mascot changes agent interaction style",
       "Unlockable evolution forms at higher levels",
@@ -119,7 +119,7 @@ const FEATURES: Feature[] = [
     gradient: "from-violet-500 to-indigo-500",
     highlight: "Collectible + tradable",
     items: [
-      "100+ skins across all mascot types",
+      "Skins for all 5 archetype mascots",
       "Rarity system: Common → Legendary",
       "Skin marketplace for trading with other users",
       "Seasonal limited-edition skins",

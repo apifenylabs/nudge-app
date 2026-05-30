@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { TrendingUp, BarChart3, Cpu, Target, Zap, Activity, Shield, Layers, Calendar, GitBranch } from 'lucide-react';
 import Link from 'next/link';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Alpha Orchestras | Apifeny AI',

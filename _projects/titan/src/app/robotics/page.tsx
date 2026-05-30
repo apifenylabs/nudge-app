@@ -59,6 +59,20 @@ export default function RoboticsLanding() {
 
   return (
     <div className="min-h-screen bg-[#0A0E17] text-[#E2E8F0]">
+      {/* BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://titan.vercel.app/" },
+              { "@type": "ListItem", "position": 2, "name": "Robotics", "item": "https://titan.vercel.app/robotics" },
+            ],
+          }),
+        }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden px-4 sm:px-6 pt-20 pb-16 sm:pt-28 sm:pb-20">
         <div className="absolute inset-0 pointer-events-none">

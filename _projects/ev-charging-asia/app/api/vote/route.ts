@@ -1,35 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import {
+  addOrUpdateVote,
+  getVotesForRoute,
+  getAllScores,
+} from '@/lib/vote-store';
 
-// In-memory vote store for route popularity
-// In production, use a database
-interface VoteRecord {
-  routeId: string;
-  ip: string;
-  rating: number; // 1-5 stars
-  votedAt: string;
-}
-
-const votes: VoteRecord[] = [];
-
-// Aggregated scores
-const routeScores: Record<string, { totalVotes: number; averageRating: number; starDistribution: number[] }> = {};
-
-function recalculate(routeId: string) {
-  const routeVotes = votes.filter(v => v.routeId === routeId);
-  const total = routeVotes.length;
-  if (total === 0) {
-    delete routeScores[routeId];
-    return;
-  }
-  const sum = routeVotes.reduce((a, v) => a + v.rating, 0);
-  const distribution = [0, 0, 0, 0, 0]; // 1-5
-  routeVotes.forEach(v => { distribution[v.rating - 1]++; });
-  routeScores[routeId] = {
-    totalVotes: total,
-    averageRating: Math.round((sum / total) * 10) / 10,
-    starDistribution: distribution,
-  };
-}
+export const dynamic = 'force-dynamic';
 
 export async function POST(request: NextRequest) {
   try {
@@ -43,25 +19,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Get client IP for dedup
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'anonymous';
+    const { updated } = addOrUpdateVote(routeId, ip, rating);
 
-    // Check if this IP already voted for this route
-    const existingVoteIndex = votes.findIndex(v => v.routeId === routeId && v.ip === ip);
-    if (existingVoteIndex >= 0) {
-      // Update existing vote
-      votes[existingVoteIndex] = { routeId, ip, rating, votedAt: new Date().toISOString() };
-    } else {
-      votes.push({ routeId, ip, rating, votedAt: new Date().toISOString() });
-    }
-
-    recalculate(routeId);
+    const routeScore = getVotesForRoute(routeId);
 
     return NextResponse.json({
       success: true,
       routeId,
-      score: routeScores[routeId],
-      updated: existingVoteIndex >= 0,
+      score: routeScore?.score,
+      updated,
     });
   } catch {
     return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
@@ -73,17 +40,17 @@ export async function GET(request: NextRequest) {
   const routeId = searchParams.get('routeId');
 
   if (routeId) {
-    const score = routeScores[routeId] || { totalVotes: 0, averageRating: 0, starDistribution: [0, 0, 0, 0, 0] };
-    // Get user's vote if available
-    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'anonymous';
-    const userVote = votes.find(v => v.routeId === routeId && v.ip === ip);
-    return NextResponse.json({ routeId, score, userVote: userVote?.rating || 0 });
+    const result = getVotesForRoute(routeId);
+    if (result) {
+      return NextResponse.json({ routeId, score: result.score, userVote: result.userVote });
+    }
+    return NextResponse.json({
+      routeId,
+      score: { totalVotes: 0, averageRating: 0, starDistribution: [0, 0, 0, 0, 0] },
+      userVote: 0,
+    });
   }
 
-  // Return all scores sorted by popularity
-  const allScores = Object.entries(routeScores)
-    .map(([id, score]) => ({ routeId: id, ...score }))
-    .sort((a, b) => b.totalVotes - a.totalVotes || b.averageRating - a.averageRating);
-
+  const allScores = getAllScores();
   return NextResponse.json({ scores: allScores });
 }

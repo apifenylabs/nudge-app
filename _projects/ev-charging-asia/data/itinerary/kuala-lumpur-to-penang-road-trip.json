@@ -1,0 +1,53 @@
+{
+  "slug": "kuala-lumpur-to-penang-road-trip",
+  "title": "Kuala Lumpur to Penang: Malaysia West Coast Express",
+  "subtitle": "A 3-day family EV road trip through Ipoh to the Pearl of the Orient",
+  "route": [
+    {
+      "day": 1,
+      "from": "Kuala Lumpur",
+      "to": "Ipoh",
+      "distance": "200 km",
+      "drivingTime": "2.5 hours",
+      "charger": "Gentari Tapah R&R (180kW)",
+      "kidActivities": "Batu Caves, Lost World of Tambun water park"
+    },
+    {
+      "day": 2,
+      "from": "Ipoh",
+      "to": "George Town",
+      "distance": "170 km",
+      "drivingTime": "2 hours",
+      "charger": "ChargeSini Queensbay Mall Penang",
+      "kidActivities": "Penang Hill railway, Batu Ferringhi Beach, ESCAPE Penang"
+    },
+    {
+      "day": 3,
+      "from": "George Town",
+      "to": "George Town",
+      "distance": "Local",
+      "drivingTime": "Full day",
+      "charger": "ChargeSini Gurney Plaza",
+      "kidActivities": "Pinang Peranakan Mansion, street art walk, Cheong Fatt Tze Mansion"
+    }
+  ],
+  "totalDistance": "370 km",
+  "totalChargingCost": "RM 50-80",
+  "bestFor": "Foodie families wanting Malaysia's best street food and cultural heritage",
+  "carRecommendations": [
+    "BYD Atto 3",
+    "Tesla Model 3",
+    "Hyundai Ioniq 5",
+    "Neta V"
+  ],
+  "tips": [
+    "Gentari and ChargeSini chargers are plentiful along the PLUS Highway",
+    "Charge at Sungai Buloh R&R (departure), Tapah R&R (mid-way), and hotel in Penang",
+    "Penang's George Town is a UNESCO World Heritage site — walkable with great food"
+  ],
+  "chargerTypes": [
+    "CCS2",
+    "Type 2"
+  ],
+  "seasonal": "December to February (dry season)"
+}

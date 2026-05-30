@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'Best AI Tools in Bangladesh (2026) — Apifeny AI',
     description:
       'Find AI tools built for Bangladesh: Bengali (বাংলা) language support, BDT/USD pricing, PDPA compliance, and garment/textile industry readiness. 100+ tools, expert ranked.',
-    url: 'https://apifeny.ai/ai-tools-bangladesh',
+    url: 'https://apifeny-ai.vercel.app/ai-tools-bangladesh',
     siteName: 'Apifeny AI',
     locale: 'bn_BD',
     type: 'website',
@@ -20,10 +20,10 @@ export const metadata: Metadata = {
       'Find the best AI tools for Bangladesh. Expert-ranked directory with Bengali interface support and local pricing info.',
   },
   alternates: {
-    canonical: 'https://apifeny.ai/ai-tools-bangladesh',
+    canonical: 'https://apifeny-ai.vercel.app/ai-tools-bangladesh',
     languages: {
-      'bn-BD': 'https://apifeny.ai/ai-tools-bangladesh',
-      'en': 'https://apifeny.ai/ai-tools-bangladesh',
+      'bn-BD': 'https://apifeny-ai.vercel.app/ai-tools-bangladesh',
+      'en': 'https://apifeny-ai.vercel.app/ai-tools-bangladesh',
     },
   },
 };

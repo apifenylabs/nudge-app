@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://titan-app-puce.vercel.app/sitemap.xml
+Sitemap: https://titan-app-puce.vercel.app/sitemap

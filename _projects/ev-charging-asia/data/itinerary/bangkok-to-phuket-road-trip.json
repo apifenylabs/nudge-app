@@ -1,0 +1,62 @@
+{
+  "slug": "bangkok-to-phuket-road-trip",
+  "title": "Bangkok to Phuket: Southern Thailand EV Adventure",
+  "subtitle": "A 4-day family EV road trip through tropical Thailand",
+  "route": [
+    {
+      "day": 1,
+      "from": "Bangkok",
+      "to": "Hua Hin",
+      "distance": "200 km",
+      "drivingTime": "3 hours",
+      "charger": "PTT EA Anyonde Ratchaburi (120kW)",
+      "kidActivities": "Hua Hin Beach playground, Vana Nava Water Jungle"
+    },
+    {
+      "day": 2,
+      "from": "Hua Hin",
+      "to": "Chumphon",
+      "distance": "270 km",
+      "drivingTime": "3.5 hours",
+      "charger": "MG Charge Chumphon (90kW)",
+      "kidActivities": "Chumphon Aquarium, Thung Wua Laen Beach"
+    },
+    {
+      "day": 3,
+      "from": "Chumphon",
+      "to": "Phuket",
+      "distance": "380 km",
+      "drivingTime": "5 hours",
+      "charger": "MG Charge Makro Surat Thani (150kW)",
+      "kidActivities": "Phuket Elephant Sanctuary, Patong Beach"
+    },
+    {
+      "day": 4,
+      "from": "Phuket",
+      "to": "Phuket",
+      "distance": "Local",
+      "drivingTime": "Full day",
+      "charger": "MG Charge CentralPlaza Phuket (120kW)",
+      "kidActivities": "Phuket Aquarium, Big Buddha, Kata Beach"
+    }
+  ],
+  "totalDistance": "850 km",
+  "totalChargingCost": "THB 800-1,200",
+  "bestFor": "Families wanting a relaxed south Thailand road trip with easy highway driving",
+  "carRecommendations": [
+    "MG ZS EV",
+    "Tesla Model Y",
+    "BYD Atto 3",
+    "Ora Good Cat"
+  ],
+  "tips": [
+    "PTT stations along Route 4 have EA Anyonde fast chargers every 30-40km",
+    "The Surat Thani MG Charge Makro (150kW) is a critical mid-point stop",
+    "Book EV-friendly hotels in advance — Banyan Tree Hua Hin and Rosewood Phuket offer charging"
+  ],
+  "chargerTypes": [
+    "CCS2",
+    "CHAdeMO"
+  ],
+  "seasonal": "November to February (cool season)"
+}

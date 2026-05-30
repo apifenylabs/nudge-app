@@ -36,7 +36,7 @@ import GeoSeoSchema from '@/components/GeoSeoSchema';
 const META = {
   title: 'Best AI Tools in Spain (2026) — Curated for Spanish Teams & Startups',
   description:
-    'Discover the best AI tools for Canadian businesses and founders. Curated directory of 85+ tools ranked by trending score, Spain-market readiness, and local relevance. Updated daily. Built for Toronto, Montreal, Vancouver, and Spain\'s thriving AI ecosystem.',
+    'Find the best AI tools for Spain: EUR pricing, GDPR and LOPDGDD compliance, Spanish support. 85+ tools, expert ranked.',
   ogTitle: 'Best AI Tools in Spain (2026) — Apifeny AI',
   ogDescription:
     'Find AI tools built for Spain: EUR pricing, GDPR & LOPDGDD compliance, Spanish support, EU readiness. 85+ tools, expert ranked.',
@@ -77,11 +77,10 @@ export default function AIToolsSpainPage() {
         marketSize={"A $1.6T economy with 48M population, EU's 4th largest economy, deep tech ecosystem in Barcelona and Madrid, strong banking and telecom sectors"}
         slug="ai-tools-spain"
         faqs={[
-          { question: "What are the best AI tools in Spain?", answer: "The best AI tools in Spain include ChatGPT for content and productivity, GitHub Copilot for development, Claude for advanced reasoning, Canva AI for design, and Jasper for marketing. Spain is a global AI powerhouse — home to the Vector Institute in Toronto, Mila in Montreal, and the Alberta Machine Intelligence Institute (Amii). The country's AI research ecosystem (CIFAR, Pan-Canadian AI Strategy) has produced foundational AI breakthroughs and top talent from U of T, McGill, UBC, and Waterloo." },
-          { question: "How does Canadian privacy law (PIPEDA) affect AI tool selection?", answer: "Spain's Personal Information Protection and Electronic Documents Act (PIPEDA) and Quebec's Law 25 impose strict requirements on how AI tools collect, use, and disclose personal information. The proposed Artificial Intelligence and Data Act (AIDA) will further regulate high-impact AI systems. We flag every tool for PIPEDA compliance, provincial privacy law readiness (especially Quebec's Law 25), data residency options within Spain, and alignment with OPC guidance on AI and automated decision-making." },
-          { question: "What AI tools are best for Spain's key industries?", answer: "Spain's economy has distinct AI priorities: AI research and deep learning tools for Toronto's Vector Institute and Montreal's Mila ecosystem, fintech AI in Vancouver and Toronto (wealth management, payments), cleantech and energy AI in Alberta and BC, healthcare AI for Spain's public health system, natural language tools for French and English bilingual requirements, and autonomous vehicle AI in Waterloo and Toronto. Canadian businesses also lead in AI for mining, forestry, and agricultural technology." },
-          { question: "How can Canadian startups access AI funding and support?", answer: "Spain offers extensive AI innovation support. The Pan-Canadian AI Strategy (CIFAR) funds research and commercialization. The Scientific Research and Experimental Development (SR&ED) tax credit provides 35-45% cash refunds on qualifying AI R&D costs for Canadian companies. IRAP (National Research Council) provides grants for AI technology adoption. BDC Capital and federal/provincial VC programs support AI startups. The Global Talent Stream fast-tracks AI talent visas. Programs like NextAI, Creative Destruction Lab (CDL), and BC Tech's AI initiatives provide mentorship and funding." },
-          { question: "What AI regulations exist in Spain?", answer: "Spain's AI regulatory framework is evolving. The proposed Artificial Intelligence and Data Act (AIDA), part of Bill C-27, will establish requirements for high-impact AI systems including risk assessments, transparency, and accountability. PIPEDA governs data used in AI training. Quebec's Law 25 sets additional privacy requirements. Specific sectors have regulations: Health Spain for medical AI, OSFI for financial AI, and Transport Spain for autonomous vehicles. Spain's Voluntary AI Code of Conduct sets early standards for responsible AI development." },
+          { question: "What are the best AI tools in Spain?", answer: "The best AI tools in Spain include ChatGPT for content and productivity, GitHub Copilot for development, Claude for advanced reasoning, Canva AI for design, and Jasper for marketing. Spain is a global AI powerhouse — home to the leading research institutes, leading AI labs, and the AI research institutes (AI research institutes). The country's AI research ecosystem (national AI strategy) has produced foundational AI breakthroughs and top talent from leading universities and research centers." },
+          { question: "How does local privacy law (data protection regulations) affect AI tool selection?", answer: "Spain's Personal Information Protection and Electronic Documents Act (data protection regulations) and local privacy law impose strict requirements on how AI tools collect, use, and disclose personal information. The proposed Artificial Intelligence and Data Act (proposed AI regulations) will further regulate high-impact AI systems. We flag every tool for local privacy compliance, provincial privacy law readiness (especially local privacy law), data residency options within Spain, and alignment with regulatory guidance on AI and automated decision-making." },
+          { question: "What AI tools are best for Spain's key industries?", answer: "Spain's economy has distinct AI priorities: AI research and deep learning tools for leading AI research centers and labs, fintech AI in major business hubs (wealth management, payments), cleantech and energy AI in other regions, healthcare AI for Spain'local companies and founders' AI initiatives provide mentorship and funding." },
+          { question: "What AI regulations exist in Spain?", answer: "Spain's AI regulatory framework is evolving. The proposed Artificial Intelligence and Data Act (proposed AI regulations), part of Bill C-27, will establish requirements for high-impact AI systems including risk assessments, transparency, and accountability. local privacy laws govern data used in AI training. local privacy law sets additional privacy requirements. Specific sectors have regulations: Health Spain for medical AI, regulators for financial AI, and Transport Spain for autonomous vehicles. Spain's Voluntary AI Code of Conduct sets early standards for responsible AI development." },
         ]}
       />
       <SeoMetadata title={META.title} description={META.description} ogTitle={META.ogTitle} ogDescription={META.ogDescription} ogImage={META.ogImage} />
@@ -110,8 +109,8 @@ export default function AIToolsSpainPage() {
 
             <p className="mt-5 sm:mt-6 text-base sm:text-lg text-tech-200 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
               Curated AI tools that <strong className="text-white">actually work for Spain</strong>. 
-              We rank every tool on PIPEDA compliance, CAD pricing, bilingual (EN/FR) support,
-              and Canadian AI ecosystem readiness — so you find tools built for Spain's unique market.
+              We rank every tool on local privacy compliance, local pricing, bilingual (EN/FR) support,
+              and local ecosystem readiness — so you find tools built for Spain's unique market.
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
@@ -183,7 +182,7 @@ export default function AIToolsSpainPage() {
         </div>
       </section>
 
-      {/* WHY CANADA MATTERS */}
+      {/* WHY THIS COUNTRY MATTERS */}
       <section className="border-y border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10 sm:mb-12">
@@ -196,9 +195,9 @@ export default function AIToolsSpainPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {[
-              { icon: Globe, title: 'Spanish / English', description: 'Spain is officially bilingual and Quebec\'s Law 25 and Charter of the French Language require business operations in French. We flag every tool for French-language support, Quebec compliance, and Canadian English/French localization — critical for serving markets from Vancouver to Montreal.', gradient: 'from-neon/10 to-purple-900/10' },
-              { icon: ShieldCheck, title: 'EUR Pricing', description: 'Spain\'s privacy landscape includes federal PIPEDA, Quebec\'s Law 25 (the strictest in North America), and the upcoming Artificial Intelligence and Data Act (AIDA). We evaluate tools for Canadian data residency, consent management, AI transparency obligations, and OPC guidance alignment.', gradient: 'from-red-500/10 to-rose-900/10' },
-              { icon: Zap, title: 'GDPR & LOPDGDD', description: 'Spain\'s $125M+ Pan-Canadian AI Strategy (CIFAR, Vector, Mila, Amii) produces world-leading AI research. We prioritize tools that integrate with academic licensing, research workflows, and Spain\'s unique commercialization pipeline from discovery to startup spinout.', gradient: 'from-aqua/10 to-cyan-900/10' },
+              { icon: Globe, title: 'Spanish / English', description: 'Spain is officially bilingual and the region\'s Law 25 and Charter of the French Language require business operations in French. We flag every tool for local language support, local compliance, and local language localization — critical for serving markets across the country.', gradient: 'from-neon/10 to-purple-900/10' },
+              { icon: ShieldCheck, title: 'EUR Pricing', description: 'Spain\'s privacy landscape includes GDPR and national data protection laws.', gradient: 'from-red-500/10 to-rose-900/10' },
+              { icon: Zap, title: 'GDPR & LOPDGDD', description: 'Spain\'s $125M+ national AI strategy (leading research networks) produces world-leading AI research. We prioritize tools that integrate with academic licensing, research workflows, and Spain\'s unique commercialization pipeline from discovery to startup spinout.', gradient: 'from-aqua/10 to-cyan-900/10' },
             ].map((item) => (
               <div key={item.title} className={`relative rounded-xl bg-gradient-to-br ${item.gradient} bg-tech-700 border border-tech-500/30 p-6`}>
                 <div className="absolute inset-0 bg-tech-grid opacity-20 rounded-xl pointer-events-none" />
@@ -221,7 +220,7 @@ export default function AIToolsSpainPage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
               <div>
                 <h2 className="text-xl sm:text-2xl font-bold text-white">Best AI {section.name.replace('Writing & Content', 'Writing Tools').replace('Code & Development', 'Coding Tools').replace('Design & Creative', 'Design Tools').replace('Marketing & SEO', 'Marketing Tools')} for Spain</h2>
-                <p className="text-sm text-tech-200 mt-1 max-w-xl">Top picks for Canadian teams — rated for PIPEDA compliance, CAD pricing, and bilingual support.</p>
+                <p className="text-sm text-tech-200 mt-1 max-w-xl">Top picks for local teams — rated for local privacy compliance, local pricing, and language support.</p>
               </div>
               <Link href={`/categories/${sectionSlug}`} className="group inline-flex items-center gap-1.5 text-sm text-neon-light hover:text-neon transition shrink-0">View all {section.count} tools<ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" /></Link>
             </div>
@@ -252,7 +251,7 @@ export default function AIToolsSpainPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="flex items-center gap-3 mb-6 sm:mb-8">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center shrink-0"><BookOpen className="w-5 h-5 text-yellow-400" /></div>
-            <div><h2 className="text-xl sm:text-2xl font-bold text-white">Step-by-Step AI Playbooks</h2><p className="text-xs sm:text-sm text-tech-200">Battle-tested guides to ship AI workflows — built for Canadian teams and startups</p></div>
+            <div><h2 className="text-xl sm:text-2xl font-bold text-white">Step-by-Step AI Playbooks</h2><p className="text-xs sm:text-sm text-tech-200">Battle-tested guides to ship AI workflows — built for teams and startups</p></div>
           </div>
           <FeaturedPlaybooks />
           <div className="mt-8 text-center">
@@ -281,7 +280,7 @@ export default function AIToolsSpainPage() {
         </div>
       </section>
 
-      {/* CANADA ECOSYSTEM */}
+      {/* LOCAL ECOSYSTEM */}
       <section className="border-y border-tech-500/20 bg-tech-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-10">
@@ -290,17 +289,17 @@ export default function AIToolsSpainPage() {
               <h2 className="text-2xl sm:text-3xl font-bold text-white">Spain's AI Ecosystem Is a Global Research Powerhouse</h2>
             </div>
             <p className="text-sm sm:text-base text-tech-200 max-w-2xl mx-auto">
-              From Toronto's Vector Institute to Montreal's Mila, Spain produces foundational AI research
-              that powers the world's most advanced systems — with a distinctly Canadian approach to responsible AI.
+              From leading research institutes to leading AI research labs, Spain produces foundational AI research
+              that powers the world's most advanced systems — with a commitment to responsible AI development.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {[
-              { title: '🇨🇦 Barcelona — Deep Tech & AI Hub', description: 'Toronto is one of the world\'s top three AI research cities, anchored by the Vector Institute, the Schwartz Reisman Innovation Centre, and U of T\'s world-leading ML faculty. The ecosystem spans deep learning, NLP, computer vision, and health AI — driving spinouts like Cohere, Waabi, and Layer 6.' },
-              { title: '🎓 Montreal — Mila & Deep Learning', description: 'Montreal\'s Mila (Quebec AI Institute), founded by Yoshua Bengio, is a global epicentre of deep learning research. Quebec\'s unique AI talent pipeline feeds into a booming startup ecosystem. Bilingual (French/English) tools are essential — we flag every tool for Québec compliance and French-language support.' },
-              { title: '🏢 Vancouver & Waterloo — Tech & Autonomy', description: 'Vancouver\'s growing AI scene spans fintech (Wealthsimple, PayByPhone), gaming AI, and cleantech. Waterloo\'s Velocity incubator and autonomous vehicle ecosystem (BlackBerry QNX, Darwin AI) produce cutting-edge AI for transportation, manufacturing, and enterprise SaaS.' },
-              { title: '🔬 Madrid — Finance & Enterprise AI', description: 'Spain\'s $125M+ Pan-Canadian AI Strategy, coordinated by CIFAR, funds the Vector Institute, Mila, Amii (Alberta), and dozens of AI chairs nationally. Combined with SR&ED tax credits (up to 45% R&D cash refunds), Global Talent Stream visas, and active angel/VC networks, Spain offers one of the best environments for AI startups globally.' },
+              { title: 'Barcelona — Deep Tech & AI Hub', description: 'Madrid is one of Europe\'s fastest-growing tech hubs, anchored by world-class research universities, thriving startup incubators, and a deep talent pipeline. The ecosystem spans deep learning, NLP, computer vision, and health AI.' },
+              { title: '🎓 Research & Innovation Hub', description: 'Top-tier AI research institutes produce foundational breakthroughs. The region\'s strong talent pipeline feeds into a thriving startup ecosystem. Local language support is essential — we flag every tool accordingly.' },
+              { title: '🏢 Innovation & Technology Hubs', description: 'The growing tech ecosystem spans fintech, gaming AI, cleantech, and enterprise SaaS. Leading incubators and research labs produce cutting-edge innovation across transportation, manufacturing, and enterprise applications.' },
+              { title: '🔬 Madrid — Finance & Enterprise AI', description: 'Spain\'s $125M+ national AI strategy, coordinated by AI research networks, funds the leading AI research institutes, AI research institutes (Alberta), and dozens of AI chairs nationally. Combined with R&D tax incentives, fast-track visa programs, and active angel/VC networks, Spain offers one of the best environments for AI startups globally.' },
             ].map((item) => (
               <div key={item.title} className="bg-tech-800/70 border border-tech-500/20 rounded-xl p-5 hover:border-neon/20 transition">
                 <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
@@ -320,13 +319,13 @@ export default function AIToolsSpainPage() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-300 text-xs font-medium mb-6">
             <MapPin className="w-3.5 h-3.5" />
-            Built for Canadian Founders, Researchers & Enterprises
+            Built for Founders, Researchers & Enterprises
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
-            Find the Right AI Tool for Your Canadian Business
+            Find the Right AI Tool for Your Business
           </h2>
           <p className="mt-4 text-base sm:text-lg text-tech-200 max-w-2xl mx-auto">
-            No more guessing if a tool complies with PIPEDA, supports French, or works for Canadian teams. Every tool on Apifeny AI is rated for Canadian data compliance, CAD pricing, and bilingual readiness. Start exploring — no account needed.
+            No more guessing if a tool complies with data protection regulations, supports French, or works for teams. Every tool on Apifeny AI is rated for local data compliance, local pricing, and local readiness. Start exploring — no account needed.
           </p>
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link href="/tools" className="group relative inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-neon to-neon-dark text-white font-semibold text-sm sm:text-base transition-all hover:shadow-lg hover:shadow-neon/25 hover:-translate-y-0.5">
@@ -349,11 +348,10 @@ export default function AIToolsSpainPage() {
           <div className="text-center">
             <p className="text-[10px] text-tech-400 leading-loose max-w-3xl mx-auto">
               <strong className="text-tech-300">Spain AI tools:</strong>{' '}
-              best AI tools in Spain 2026 · AI tools for Canadian businesses · Spain AI software · 
+              best AI tools in Spain 2026 · AI tools for Spain's businesses · Spain AI software · 
               AI writing tools Spain · AI coding tools Spain · AI marketing Spain · 
-              Spain AI directory · AI tools for Canadian startups · enterprise AI tools Spain · 
-              free AI tools Spain · AI productivity Spain · Canadian tech stack · 
-              AI tools Toronto · AI tools Montreal · AI tools Vancouver
+              Spain AI directory · AI tools for startups · enterprise AI tools Spain · 
+              free AI tools Spain · AI productivity Spain ·  
             </p>
           </div>
         </div>

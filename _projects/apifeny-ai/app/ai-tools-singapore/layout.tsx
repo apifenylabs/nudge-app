@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'Best AI Tools in Singapore (2026) — Apifeny AI',
     description:
       'Find AI tools built for Singapore: multilingual support, local pricing, data residency, and Asian market readiness. 85+ tools, expert ranked.',
-    url: 'https://apifeny.ai/ai-tools-singapore',
+    url: 'https://apifeny-ai.vercel.app/ai-tools-singapore',
     siteName: 'Apifeny AI',
     locale: 'en_SG',
     type: 'website',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       'Find the best AI tools for Singapore. Expert-ranked directory with Asia-ready filters and local pricing info.',
   },
   alternates: {
-    canonical: 'https://apifeny.ai/ai-tools-singapore',
+    canonical: 'https://apifeny-ai.vercel.app/ai-tools-singapore',
   },
 };
 

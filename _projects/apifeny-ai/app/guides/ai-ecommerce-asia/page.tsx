@@ -34,7 +34,7 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import FAQSchema from '@/components/FAQSchema';
 import { getRelatedPosts } from '@/lib/blog-data';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'AI for E-Commerce in Asia (2026) — Top Tools & Strategies | Apifeny AI',
@@ -648,7 +648,7 @@ export default function AIEcommerceAsiaGuide() {
                     {s.affiliateSuggestions.map((a) => {
                       const tool = toolsData.find((t: any) => t.slug === a.slug);
                       if (!tool) return null;
-                      const link = (tool as any).affiliateUrl || (tool as any).url || `https://apifeny.ai/tools/${a.slug}`;
+                      const link = (tool as any).affiliateUrl || (tool as any).url || `https://apifeny-ai.vercel.app/tools/${a.slug}`;
                       return (
                         <a
                           key={a.slug}

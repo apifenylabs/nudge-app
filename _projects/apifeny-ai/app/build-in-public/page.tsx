@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { Calendar, GitCommit, Globe, Sparkles, Bug, TrendingUp, Layers, Zap } from 'lucide-react';
 import Link from 'next/link';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Build in Public | Apifeny AI',

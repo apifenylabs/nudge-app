@@ -42,7 +42,7 @@ function AgentAvatar({ agent, size = 'md' }: { agent: TitanAgent; size?: 'sm' | 
         className="relative rounded-2xl flex items-center justify-center"
         style={{
           width: dims, height: dims,
-          background: `linear-gradient(145deg, ${agent.color}15, #0F172A 60%, ${agent.color}10)`,
+          background: `linear-gradient(145deg, ${agent.color}15, #FFFFFF 60%, ${agent.color}10)`,
           border: `1.5px solid ${agent.color}35`,
         }}
         animate={{ y: [0, -3, 0] }}
@@ -62,7 +62,7 @@ function AgentAvatar({ agent, size = 'md' }: { agent: TitanAgent; size?: 'sm' | 
         </motion.div>
       </motion.div>
       <motion.span
-        className="text-xs font-mono text-titan-text/60 truncate max-w-[100px] text-center"
+        className="text-xs font-mono text-gray-500 truncate max-w-[100px] text-center"
         whileHover={{ color: agent.color, textShadow: `0 0 8px ${agent.color}40` }}
       >
         {agent.name}
@@ -255,35 +255,34 @@ export default function SwarmPage() {
   return (
     <div className="space-y-4 sm:space-y-6">
       {/* Orbit view */}
-      <Card className="relative h-[400px] sm:h-[500px] md:h-[550px] overflow-hidden titan-glow"
+      <Card className="relative h-[400px] sm:h-[500px] md:h-[550px] overflow-hidden"
         style={{
           background: '#FFFFFF',
-          border: '1px solid #E5E0D8',
+          border: '1px solid #E5E7EB',
           borderRadius: '20px',
-          boxShadow: '0 10px 30px -10px rgba(31,31,31,0.08)',
+          boxShadow: '0 10px 30px -10px rgba(0,0,0,0.06)',
         }}>
-        <div className="absolute inset-0 titan-radial-glow" />
         <div className="relative z-10 h-full flex items-center justify-center p-2 sm:p-4 max-w-full">
           <OrbitingSwarm agents={orderedAgents} />
         </div>
         <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 w-full max-w-[90vw] sm:max-w-lg px-2 sm:px-4 z-30">
           <div className="flex gap-1.5 sm:gap-2 rounded-xl p-1.5 shadow-2xl"
             style={{
-              background: 'rgba(255,255,255,0.95)',
-              border: '1px solid #E5E0D8',
+              background: '#FFFFFF',
+              border: '1px solid #E5E7EB',
             }}>
             <input
               value={swarmInput}
               onChange={(e) => setSwarmInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSwarmExecute()}
               placeholder="tell your swarm what to do..."
-              className="flex-1 bg-transparent px-2 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm outline-none placeholder:text-titan-muted/50 font-mono min-w-0"
+              className="flex-1 bg-transparent px-2 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm outline-none placeholder:text-gray-400 font-mono min-w-0"
             />
             <Button
               onClick={handleSwarmExecute}
               className="font-semibold gap-1 text-[10px] sm:text-xs shrink-0"
               style={{
-                background: '#0EA5A5',
+                background: 'linear-gradient(135deg, #14B8A6, #0D9488)',
                 color: '#FFFFFF',
                 height: '56px',
                 borderRadius: '16px',
@@ -298,13 +297,13 @@ export default function SwarmPage() {
 
       {/* Drag-and-Drop Agent List */}
       <div className="flex items-center justify-between mb-2">
-        <p className="text-xs font-mono" style={{ color: '#666666' }}>Drag agents to reorder swarm</p>
+        <p className="text-xs font-mono" style={{ color: '#6B7280' }}>Drag agents to reorder swarm</p>
         <Button
           variant="outline"
           size="sm"
           onClick={handleSaveSwarm}
           className="text-[10px] h-7 gap-1"
-          style={{ borderColor: '#0EA5A5/30', color: '#0EA5A5' }}
+          style={{ borderColor: 'rgba(13,148,136,0.3)', color: '#0D9488' }}
         >
           <Save className="h-3 w-3" />
           Save Swarm
@@ -321,28 +320,28 @@ export default function SwarmPage() {
             className="p-3 rounded-xl cursor-grab active:cursor-grabbing group relative transition-all duration-300"
             style={{
               background: '#FFFFFF',
-              border: '1px solid #E5E0D8',
-              boxShadow: '0 10px 30px -10px rgba(31,31,31,0.08)',
+              border: '1px solid #E5E7EB',
+              boxShadow: '0 4px 12px -4px rgba(0,0,0,0.04)',
             }}
             whileHover={{ y: -2 }}
             layout
           >
             <div className="absolute top-1 right-1 opacity-0 group-hover:opacity-40 transition-opacity">
-              <GripVertical className="h-3 w-3" style={{ color: '#666666' }} />
+              <GripVertical className="h-3 w-3" style={{ color: '#6B7280' }} />
             </div>
             <div className="flex items-center gap-2.5">
               <motion.div className="w-9 h-9 rounded-xl flex items-center justify-center text-base border shrink-0"
                 style={{
-                  background: `linear-gradient(135deg, ${agent.color}20, #0F172A)`,
-                  borderColor: '#E5E0D8',
+                  background: `linear-gradient(135deg, ${agent.color}20, #FFFFFF)`,
+                  borderColor: '#E5E7EB',
                 }}
                 animate={{ y: [0, -3, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: Math.random() * 2 }}>
                 {agent.emoji}
               </motion.div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-mono font-medium truncate" style={{ color: '#1F1F1F' }}>{agent.name}</p>
-                <p className="text-[10px] font-mono" style={{ color: '#666666' }}>Lv{agent.level} · {agent.xp.toLocaleString()} XP</p>
+                <p className="text-sm font-mono font-medium truncate" style={{ color: '#111827' }}>{agent.name}</p>
+                <p className="text-[10px] font-mono" style={{ color: '#6B7280' }}>Lv{agent.level} · {agent.xp.toLocaleString()} XP</p>
               </div>
             </div>
           </motion.div>

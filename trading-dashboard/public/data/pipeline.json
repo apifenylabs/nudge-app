@@ -1,0 +1,90 @@
+[
+  {
+    "name": "bb_1h",
+    "phase": "**LIVE**",
+    "wr": "100% (2t)",
+    "pf": "-",
+    "live": true,
+    "next_step": "12 trades = noise; wait for 50+"
+  },
+  {
+    "name": "bb_15m",
+    "phase": "**LIVE**",
+    "wr": "100% (2t)",
+    "pf": "-",
+    "live": true,
+    "next_step": "Lower TP from 2.0x to 1.5x ATR"
+  },
+  {
+    "name": "funding_proxy",
+    "phase": "**LIVE**",
+    "wr": "0 trades",
+    "pf": "-",
+    "live": true,
+    "next_step": "Need more trades"
+  },
+  {
+    "name": "vol_surge",
+    "phase": "**LIVE**",
+    "wr": "50% (4t)",
+    "pf": "-",
+    "live": true,
+    "next_step": "Add volume confirmation filter for ETH"
+  },
+  {
+    "name": "taker_flow",
+    "phase": "**LIVE**",
+    "wr": "0 trades",
+    "pf": "-",
+    "live": true,
+    "next_step": "Need more trades"
+  },
+  {
+    "name": "vol_surge_depth",
+    "phase": "**BACKTEST**",
+    "wr": "96-98%",
+    "pf": "47-102",
+    "live": false,
+    "next_step": "Phase 1: cost-adjusted backtest"
+  },
+  {
+    "name": "HTF filter",
+    "phase": "**BACKTEST**",
+    "wr": "78%",
+    "pf": "7.2",
+    "live": false,
+    "next_step": "Drop-in as overlay (<2h)"
+  },
+  {
+    "name": "forex BB/RSI",
+    "phase": "**PAPER**",
+    "wr": "75%",
+    "pf": "3.99",
+    "live": false,
+    "next_step": "Phase 1: OANDA demo connector"
+  },
+  {
+    "name": "wick imbalance",
+    "phase": "**SATELLITE**",
+    "wr": "45%",
+    "pf": "2.67",
+    "live": false,
+    "next_step": "Below gate"
+  },
+  {
+    "name": "kalman_drl",
+    "phase": "**\ud83d\udc80 KILLED**",
+    "wr": "23.4%",
+    "pf": "0.61",
+    "live": false,
+    "next_step": "Don't revisit"
+  },
+  {
+    "name": "trend_following",
+    "phase": "**\ud83d\udc80 KILLED**",
+    "wr": "43.4%",
+    "pf": "1.04",
+    "live": false,
+    "next_step": "Don't revisit"
+  }
+]

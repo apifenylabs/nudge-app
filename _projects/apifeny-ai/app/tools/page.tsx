@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import ToolsClient from './_ToolsClient';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'AI Tools Directory — 90+ Curated AI Tools | Apifeny AI',

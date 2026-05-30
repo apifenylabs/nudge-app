@@ -178,6 +178,7 @@ export default function Home() {
   const [loadingSessions, setLoadingSessions] = useState(false);
   const [plugins, setPlugins] = useState<PluginDefinition[]>([]);
   const [showPluginOverlay, setShowPluginOverlay] = useState(false);
+  const [freeChatInput, setFreeChatInput] = useState('');
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -373,6 +374,65 @@ export default function Home() {
                   </div>
                 ))
               )}
+            </div>
+
+            {/* Free chat entry — start without a plugin */}
+            <div className="mb-6">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-teal-400/10 via-emerald-400/10 to-teal-400/10 rounded-2xl" />
+                <div className="relative bg-white/80 border border-teal-100 rounded-2xl p-4 backdrop-blur-sm">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-teal-400 to-emerald-500 flex items-center justify-center">
+                      <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                      </svg>
+                    </div>
+                    <span className="text-sm font-semibold text-gray-800">LifeOS Free Chat</span>
+                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full border border-teal-200 bg-teal-50 text-teal-600">
+                      No plugin needed
+                    </span>
+                  </div>
+                  <p className="text-xs text-gray-500 mb-3">
+                    Just talk. Ask anything — LifeOS will figure out what you need.
+                  </p>
+                  <div className="flex gap-2">
+                    <input
+                      value={freeChatInput}
+                      onChange={e => setFreeChatInput(e.target.value)}
+                      onKeyDown={e => {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                          e.preventDefault();
+                          if (freeChatInput.trim()) {
+                            setStarted(true);
+                            const msg = freeChatInput.trim();
+                            setFreeChatInput('');
+                            setMessages([{ role: 'user', content: msg }]);
+                            // Create a virtual 'life' plugin
+                            callChatApi(msg, true);
+                          }
+                        }
+                      }}
+                      placeholder="e.g. I want to plan a trip to Japan..."
+                      className="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent"
+                    />
+                    <button
+                      onClick={() => {
+                        if (freeChatInput.trim()) {
+                          setStarted(true);
+                          const msg = freeChatInput.trim();
+                          setFreeChatInput('');
+                          setMessages([{ role: 'user', content: msg }]);
+                          callChatApi(msg, true);
+                        }
+                      }}
+                      disabled={!freeChatInput.trim()}
+                      className="px-3 py-2 bg-teal-500 hover:bg-teal-600 disabled:bg-gray-200 disabled:cursor-not-allowed text-white rounded-lg transition-colors text-sm font-medium"
+                    >
+                      Chat
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Footer */}

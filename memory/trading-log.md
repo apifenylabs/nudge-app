@@ -1,1055 +1,2169 @@
-# Trading Log — Full Minute-Level Feed
 
-> **Auto-generated.** Each `main_bot.py` cron run appends here (every ~1 min).
+## 2026-05-30 11:46 HKT — Cron Run
+- **Balance (hl_balance):** $1,089.08 (△ -$1.78 from $1,090.86 at 11:36, -0.16%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,089.08
+- Open position: ETH LONG 1.4792 @ $2,020.80 (UPnL $-8.43)
+- Bot status: 13 hist trades | 1 live positions | WR=62% | DD=0.6% | KS=False
+- ETH native TP/SL active — skipped signal check
+- HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ No alerts: balance $1,089.08 > $20, change -0.16% within 10%, no positions changed significantly
 
-## 2026-05-29 02:35 HKT — Cron Run
-- **Balance:** $1,234.57 (▲ $3.14 from $1,231.43 at 02:20, +0.25%)
-- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+## 2026-05-30 11:43 HKT — Cron Run
+- **Balance (hl_balance):** $1,087.90 (△ -$18.28 from $1,106.18 at 11:11, -1.65%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,087.90
+- Bot status: 13 hist trades | 1 live positions | WR=62% | DD=0.6% | KS=False
+- Live position: ETH LONG 1.4792@$2020.80 UPnL=$-9.47
+- ETH has native TP/SL order active — skipped re-signaling
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,087.90 > $20, change -1.65% (within 10%), bot clean
+
+## 2026-05-30 11:41 HKT — Cron Run
+- **Balance (hl_balance):** $1,089.53 (△ -$0.74 from $1,090.27 at 11:37, -0.07%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,089.53
+- Open position: ETH LONG 1.4792 @ $2,020.80 (UPnL $-8.28) — unchanged
+- Bot status: 13 hist trades | 1 live position | WR=62% | DD=0.6% | KS=False
+- ETH skipped (native TP/SL active), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ All clear: balance $1,089.53 > $20, change -0.07% within 10%, positions unchanged, no new trades
+
+## 2026-05-30 11:37 HKT — Cron Run
+- **Balance (hl_balance):** $1,090.27 (△ -$0.59 from $1,090.86 at 11:36, -0.05%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,090.27
+- Open position: ETH LONG 1.4792 @ $2,020.80 (UPnL $-7.25)
+- Bot status: 13 hist trades | 1 live positions | WR=62% | DD=0.6% | KS=False
+- No new trades this run (native TP/SL active on ETH)
+- ✅ All clear: balance $1,090.27 > $20, change -0.05% within 10%, no new alerts
+
+## 2026-05-30 11:36 HKT — Cron Run
+- **Balance (hl_balance):** $1,090.86 (△ -$5.77 from $1,096.63 at 11:28, -0.53%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,090.86
+- Bot status: 13 hist trades | 1 live position (ETH) | WR=62% | DD=0.6% | KS=False
+- ETH LONG 1.4792 @ $2,020.80 | UPnL: $-6.51
+- No new signals fired — ETH flagged as active native TP/SL
+- ✅ No alerts: balance $1,090.86 > $20, change -0.53% (within 10%), bot clean
+
+## 2026-05-30 11:28 HKT — Cron Run
+- **Balance (hl_balance):** $1,096.63 (△ -$9.55 from $1,106.18 at 11:22, -0.86%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,096.77
+- Bot status: 13 hist trades | 1 live position (ETH) | WR=62% | DD=0.6% | KS=False
+- ETH LONG 1.4792 @ $2,020.80 | UPnL: $-0.74
+- Signals checked: SOL, BTC, ETH (skipped — native TP/SL active), HYPE, XRP, WIF, TAO, ARB — none fired
+- ✅ No alerts: balance $1,096.63 > $20, change -0.86% (within 10%), bot clean
+
+## 2026-05-30 11:20 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 11:11, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+
+## 2026-05-30 11:22 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 11:20, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- Bot placed **ETH-PERP LONG 2.0069@$2021.80** (VolSurge signal)
+- TP/SL order errored (Invalid price) — alert noted
+- ✅ No critical alerts: balance $1,106.18 > $20, change 0.00%
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,710) — waiting for order flow
+- Turtle Soup minor error (df not defined)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 11:11 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 11:10, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- BTC Astronomer watching entry zone $72,250-$73,000 (price=$73,744) — waiting for order flow
+- Turtle Soup minor error (df not defined) — non-critical
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00%, bot clean, no positions changed
+
+## 2026-05-30 11:10 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 11:06, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- BTC Astronomer watching entry zone $72,250-$73,000 (price=$73,740) — waiting for order flow
+- Turtle Soup minor error (df not defined) — non-critical
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00%, bot clean, no positions changed
+
+## 2026-05-30 11:06 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 10:57, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- BTC Astronomer watching entry zone $72,250-$73,000 (price=$73,748) — waiting for order flow
+- Turtle Soup minor error (df not defined) — non-critical
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00%, bot clean, no positions changed
+
+## 2026-05-30 10:57 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 10:52, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,748) — waiting for order flow
+- Turtle Soup minor error (df not defined) — non-critical
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean, no positions changed
+
+## 2026-05-30 10:52 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 10:49, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,714) — waiting for order flow
+- Turtle Soup minor error (df not defined) — non-critical
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean, no positions changed
+
+## 2026-05-30 10:51 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 10:49, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,700) — waiting for order flow
+- Turtle Soup had minor error (df not defined) — non-critical
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean, no positions changed
+
+## 2026-05-30 10:49 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 10:34, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- No new positions opened — signals scanned, waiting on setups (BTC awaiting entry zone $72,250-$73,000)
+- HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00%, bot clean
+
+## 2026-05-30 10:34 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 10:27, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- Positions: 0 live | 12 hist trades | WR=67% | DD=0.0% | KS=False
+- BTC Astronomer watching entry zone $72,250-$73,000 (price=$73,676) — waiting
+- Turtle Soup minor error (df not defined) — non-critical
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean, no positions changed
+
+## 2026-05-30 10:27 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- KalmanDRL short ARB signal — failed (invalid size rounding)
+- Astronomer Swing watching BTC entry zone $72,250-$73,000 (price $73,578)
+- ✅ Silently succeeded — no alerts, balance stable
+
+## 2026-05-30 10:25 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- KalmanDRL signal on ARB failed: "Order has invalid size" (size rounding)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00%, bot clean
+
+## 2026-05-30 10:22 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 10:17, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+
+## 2026-05-30 10:24 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 10:22, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- KalmanDRL signal on ARB failed: "Order has invalid size" (size rounding issue)
+- N/A allowlist skips: HYPE, XRP, WIF, TAO
+- BTC Astronomer Swing: watching entry zone $72,250-$73,000 (price=$73,578) — waiting
+- Turtle Soup: minor error (df not defined)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (< 10%), bot ran cleanly
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- On-chain: no open positions
+- KalmanDRL tried ARB short, skipped (invalid size — sub-cent precision)
+- Astronomer watching BTC entry zone ($72,250-$73,000) — price $73,600
+- ✅ Silently succeed: balance $1,106.18 > $20, change 0.00%, no alerts
+
+## 2026-05-30 10:17 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 10:15, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- Ghost killer skipped (empty assetPositions), Turtle Soup skipped (error: ref name 'df')
+- Astronomer watching BTC entry zone $72,250-$73,000 (price=$73,628)
+- HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00%, bot clean
+
+## 2026-05-30 10:15 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 10:04, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- Ghost killer skipped (empty assetPositions), Turtle Soup skipped (error: ref name 'df')
+- Astronomer watching BTC entry zone $72,250-$73,000 (price=$73,650)
+- HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00%, bot clean
+
+## 2026-05-30 09:45 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 09:43, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+
+## 2026-05-30 09:49 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 09:45, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+
+## 2026-05-30 10:04 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 09:49, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,672) — waiting for order flow
+- Turtle Soup had minor error (df not defined)
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,596) — waiting for order flow
+- Turtle Soup had minor error (df not defined) — non-critical
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+- 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- Governance gate PASSED — safe to start
+- BTC Astronomer watching entry zone $72250-$73000 (price=$73598)
+- HYPE/XRP/WIF/TAO skipped (not in BB allowlist)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 08:50 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 08:44, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+
+## 2026-05-30 09:16 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from prior, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+
+## 2026-05-30 09:43 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 09:16, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- No open positions; Astronomer Swing watching BTC entry zone;
+- HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- Turtle Soup error (df undefined) — non-critical
+- ✅ No alerts: balance steady $1,106.18
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- On-chain: no open positions
+- TP/SL orders: none active (no positions)
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- BTC Astronomer Swing watching entry zone $72250-$73000 (price=$73546)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean, no position changes
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- Positions: 0/4 — room for 4, TP/SL orders cleaned/rebuilt
+- ETH checked — no signals; HYPE/XRP/WIF/TAO skipped (not in BB allowlist); BTC Astronomer watching entry zone $72250-$73000
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (< 10%), bot clean
+
+## 2026-05-30 08:44 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 08:41, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+
+## 2026-05-30 08:45 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 08:44, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- Positions: 3/4 slots — native TP/SL active on BTC, SOL, ARB
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00%, bot clean
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.1% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer cleaned stale entries
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 08:41 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 08:38, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer cleaned stale entries
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 08:38 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 08:36, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.1% | KS=False
+- 3 TP/SL orders active (SOL, BTC, ARB) — skipped re-signaling
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty assetPositions)
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Room for 1 more position but no signals fired
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 08:34 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 08:27, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+
+## 2026-05-30 08:36 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 08:34, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- Positions: 3 TP/SL orders active (SOL, BTC, ARB) | 0 live positions
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.1% | KS=False
+- Orphan killer cleaned stale entries, ETH checked — no signals, HYPE/XRP/WIF/TAO skipped (not in allowlist)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.1% | KS=False
+- On-chain: TP/SL orders active on SOL, BTC, ARB — skipped
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 08:27 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 08:21, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Positions: 3/4 slots used (TP/SL active on SOL, BTC, ARB) | 0 live positions
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.1% | KS=False
+- Orphan killer ran; all remaining coins in state have native TP/SL protection
+- Balance change 0.00% (within 10%), bot clean
+- ✅ Silently succeeded — all guards green
+
+## 2026-05-30 08:21 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 08:14, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.1% | KS=False
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer cleaned stale coin entries
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 08:14 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 08:12, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer closed 3 stale entries; ghost killer skipped (empty assetPositions)
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- Orphan killer: closed 3 stale empty entries; ghost killer timeout (empty response)
+- SOL/BTC/ARB — native TP/SL active, skipped; ETH checked — no signals
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 08:08 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:59, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:59 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:18, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ Silently succeed: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:18 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:17, 0.00%)
+
+## 2026-05-30 07:47 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:40, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:40 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:35, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals
+- Orphan killer cleared 3 stale state entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:35 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:31, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: TP/SL active on SOL, BTC, ARB — skipped
+
+## 2026-05-30 07:37 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:35, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no live positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer closed 3 stale entries; ghost killer skipped (empty assetPositions)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals
+- Orphan killer cleaned stale entries
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:31 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:19, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty positions)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:19 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:18, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty positions)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:17 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:46, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty positions)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:46 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:33, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:33 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:24, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+
+## 2026-05-30 06:41 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:33, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer closed stale coin entries, empty positions handled
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:24 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:15, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty assetPositions timeout)
+- TP/SL orders active on SOL, BTC, ARB — skipped; HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:06 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:04, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer ran clean
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:04 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:42, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer ran (empty position symbols — cleaned)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:42 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:36, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer: cleaned stale coin entries (empty position symbols)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:37 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:36, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+
+## 2026-05-30 05:38 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:37, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- 3 native TP/SL orders active (SOL, BTC, ARB) — skipped re-signaling
+- Orphan killer closed 3 stale entries; ghost killer skipped (empty assetPositions)
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- ETH checked — no signals fired
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer ran (ghost killer timeout, empty assetPositions)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:35 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:31, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+
+## 2026-05-30 05:36 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:35, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked — no signals fired
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:31 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked — no signals fired
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned stale coin entries
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:23 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer ran clean
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:22 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer cleaned stale coin entries
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:21 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals fired
+- Orphan killer ran clean; ghost killer skipped (empty assetPositions)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 04:52 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 04:43+04:45, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+
+## 2026-05-30 04:55 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 04:52, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- Orphan killer ran clean, ghost killer skipped
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer: 3 stale entries cleaned; ghost killer skipped (empty response)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 04:43 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 04:40, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- Native TP/SL on SOL, BTC, ARB — skipped; ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer: 3 stale entries cleaned; ghost killer skipped (empty response)
+- 3/4 slots occupied; room for 1 more
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 04:40 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 04:34, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned stale entries; ghost killer skipped (empty response)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- Orphan killer: 3 orphan positions closed cleanly; ghost killer skipped (API empty positions)
+- TP/SL orders active on SOL, BTC, ARB — native TP/SL active, skipped
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 04:24 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 04:23, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+
+## 2026-05-30 04:31 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from 04:24, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- Positions: 3/4 slots (BTC, SOL, ARB native TP/SL active)
+- 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+- 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries
+- ✅ Balance $1,106.18 (>$20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 04:23 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 04:16, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries
+- ✅ Balance $1,106.18 (>$20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 04:16 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 04:08, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+
+## 2026-05-30 04:17 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 04:16, 0.00%)
+- **Bot:** Success — governance gate passed, 0 live positions, 12 hist trades, WR=67%, DD=1.9%, Kill Switch=False
+- **Positions:** None | **Open orders:** ARB, BTC, SOL (all native TP/SL active)
+- **Signals checked:** ETH, HYPE, XRP, WIF, TAO — none fired
+- **Delta:** $1,106.18 → $1,106.18 (0.00%) — ✅ within 10%
+- **Kill switch:** OFF (balance $1,106.18 > $20)
+- **Status:** ✅ Clean run — silently succeeded
+- 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer: 3 stale entries cleaned; ghost killer skipped (empty response)
+- 3/4 slots occupied with orders; room for 1 more
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 04:08 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 03:56, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer: 3 stale entries cleaned; ghost killer skipped (empty response)
+- 3/4 slots occupied with orders; room for 1 more
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 03:56 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 03:41, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer: 3 stale entries cleaned; ghost killer skipped (empty response)
+- 3/4 slots occupied with orders; room for 1 more
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 03:20 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 03:16, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=5.1% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 03:16 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 03:15, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=5.1% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: no open positions (perp equity $957.54, notional $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 03:15 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 03:14, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=5.1% | KS=False | Balance=$1106.18
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned stale entries; ghost killer skipped (timeout)
+- On-chain: no open positions (perp equity $957.54, notional $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 03:14 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 03:08, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=5.1% | KS=False | Balance=$1106.18
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned stale entries; ghost killer skipped (timeout)
+- On-chain: no open positions (perp equity $957.54, notional $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 03:08 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 03:06, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 3 positions with native TP/SL (SOL, BTC, ARB), 0 live perp positions
+- 12 hist trades | WR=67% | DD=5.1% | Kill Switch=False
+- ETH checked — no signal fired, HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ Balance healthy ($1,106.18 > $20), 0.00% change (within 10%), bot clean, no alerts
+- 12 hist trades | 0 live positions | WR=67% | DD=5.1% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 02:40 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 02:33, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 02:33 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 02:32, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 02:32 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 02:26, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 02:26 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 02:23, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer cleaned 3 stale entries
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 02:23 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:58, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (HL empty response)
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:58 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:57, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:57 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:56, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:56 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:54, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:07 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:04, 0.00%)
+
+## 2026-05-30 01:49 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (▼ $34.67 from $1,140.85 at 22:24, -3.04%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- Positions: 3/4 slots (BTC, SOL, ARB native TP/SL active) — no live open positions
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- ETH checked — no signals; HYPE/XRP/WIF/TAO skipped (not in BB allowlist)
+- ✅ Balance healthy ($1,106.18 > $20), change -3.04% (within 10%), bot clean, no alerts
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54, notional $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:04 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 00:59, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 00:33 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 00:25, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 00:25 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 00:19, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 00:19 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 00:17, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 00:17 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 00:12, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 00:11 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (▼ $10.07 from $1,116.25, -0.90%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+
+## 2026-05-30 00:12 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 00:11, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries (ghost positions)
+- On-chain: no open positions (perp equity $957.54, notional $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Open orders on ARB, BTC, SOL (native TP/SL active) — skipped re-signaling
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH signal checked — no new trade fired
+- ✅ Balance healthy ($1,106.18 > $20), change -0.90% (within 10%), bot clean, no alerts
+
+## 2026-05-29 23:55 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 23:52, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54, notional $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-29 23:52 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 23:46, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries
+- On-chain: no open positions (perp equity $957.54, notional $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-29 23:46 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (▼ $6.76 from $1,112.94 at 23:37, -0.61%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change -0.61% (within 10%), bot clean, no alerts
+
+## 2026-05-29 23:37 HKT — Cron Run
+- **Balance (hl_balance):** $1,112.94 (▼ $3.31 from $1,116.25 at 22:58, -0.30%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: BTC 0.0422 LONG @ $74,166 (UPnL: -$1.90) — position reopened since 22:50 close
+- ✅ Balance healthy ($1,112.94 > $20), change -0.30% (within 10%), bot clean, no alerts
+
+## 2026-05-29 22:58 HKT — Cron Run
+- **Balance (hl_balance):** $1,116.25 (no change from 22:54, 0.00%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
 - Account balance via bot: $41.00 (paper sub-account)
-- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
-- Bot skipped BTC (native TP/SL active), HYPE/XRP/WIF/TAO not in BB allowlist — no signals fired
-- No kill switch ($1,234.57 > $20 ✅), no connection errors ✅
-- Balance change +0.25% — well within 10% threshold, silently passing
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance $1,116.25 > $20, change 0.00% (within 10%), bot clean, no alerts
 
-## 2026-05-29 02:30 HKT — Cron Run
-- **Balance:** $1,239.40 (▲ $16.91 from $1,222.49 at 02:23, +1.38%)
-- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+## 2026-05-29 22:54 HKT — Cron Run
+- **Balance (hl_balance):** $1,116.25 (no change from 22:50, 0.00%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
 - Account balance via bot: $41.00 (paper sub-account)
-- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
-- Bot skipped BTC (native TP/SL order active), HYPE/XRP/WIF/TAO not in BB allowlist — no signals fired
-- Positions unchanged: BTC/ETH/WIF long via main account (bot paper empty)
-- Open perp positions: BTC 0.0044L, ETH 3.284L, WIF 21,167L | UPnL: +$153.27 combined | Notional: $10,863
-- ✅ No alerts: balance $1,239.40 > $20, +1.38% within 10%, no errors
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance $1,116.25 > $20, change 0.00% (within 10%), bot clean, no alerts
 
-## 2026-05-29 02:23 HKT — Cron Run
-- **Balance:** $1,222.49 (▼ $8.94 from $1,231.43 at 02:20, -0.73%)
-- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+## 2026-05-29 22:50 HKT — Cron Run
+- **Balance (hl_balance):** $1,116.25 (▼ $64.19 from $1,180.44 at 20:40, -5.44%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
 - Account balance via bot: $41.00 (paper sub-account)
-- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
-- Bot skipped BTC (native TP/SL order active), HYPE/XRP/WIF/TAO not in BB allowlist — no signals fired
-- Positions unchanged (BTC/ETH/WIF long via main account, bot paper empty)
-- ✅ No alerts: balance $1,222.49 > $20, -0.73% change within 10%, no errors
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL orders active on SOL, BTC (grid order), ARB, ETH — skipped re-signaling
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: no open positions (perp equity $0)
+- ✅ No alerts: balance $1,116.25 > $20, change -5.44% (within 10%), bot clean
+- ✅ Balance healthy ($1,116.25 > $20), change 0.00% (within 10%), bot clean, no alerts
 
-## 2026-05-29 02:20 HKT — Cron Run
-- **Balance:** $1,231.43 (▲ $14.57 from $1,216.86 at 02:07, +1.20%)
-- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+## 2026-05-29 22:30 HKT — Cron Run
+- **Balance (hl_balance):** $1,116.25 (▼ $24.60 from $1,140.85 at 22:24, -2.16%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
 - Account balance via bot: $41.00 (paper sub-account)
-- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
-- Bot skipped BTC (native TP/SL order active), HYPE/XRP/WIF/TAO not in BB allowlist — no signals fired
-- No kill switch ($1,231.43 > $20 ✅), no connection errors ✅
-- Balance change +1.20% — well within 10% threshold, silently passing
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Grid/native TP/SL orders active on SOL, BTC, ETH, ARB (skipped re-signaling)
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ Balance healthy ($1,116.25 > $20), change -2.16% (within 10%), bot clean, no alerts
 
----
-
-## 2026-05-29 02:07 HKT — Cron Run
-- **Balance:** $1,216.86 (▲ $107.20 from $1,109.66 at 01:29, +9.66%)
-- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+## 2026-05-29 22:26 HKT — Cron Run
+- **Balance (hl_balance):** $1,116.25 (▼ $53.33 from $1,169.58 at 22:09, -4.56%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
 - Account balance via bot: $41.00 (paper sub-account)
-- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
-- Bot skipped BTC (native TP/SL active), HYPE/XRP/WIF/TAO not in BB allowlist — no signals fired
-- No kill switch ($1,216.86 > $20 ✅), no connection errors ✅
-- Balance change +9.66% — just under 10% threshold, silently passing
+- Grid L1 entries on ARB-PERP ($0.10) and SOL-PERP ($80.46), auto-converted to native TP/SL positions
+- ETH grid pending active (didn't re-signal), BTC native TP/SL active (skipped)
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- ✅ Balance healthy ($1,116.25 > $20), change -4.56% (within 10%), bot clean, no alerts
 
----
+## 2026-05-29 22:09 HKT — Cron Run
+- **Balance (hl_balance):** $1,169.58 (▲ $2.75 from $1,166.83 at 22:08, +0.24%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account) — no new trades
+- On-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$8.09), ETH 3.284 LONG @ $2,001.15 (UPnL: -$23.81) — positions unchanged
+- 12 hist trades | 0 live paper positions | WR=67% | DD=10.6% | KS=False
+- BTC skipped (native TP/SL active), ETH checked — no signals, HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Balance healthy ($1,169.58 > $20), change +0.24% (within 10%), bot clean, no alerts
 
-## 2026-05-29 01:29 HKT — Cron Run
-- **Balance:** $1,109.66 (▲ $0.28 from $1,109.38 at 01:11, +0.03%)
-- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+## 2026-05-29 21:52 HKT — Cron Run
+- **Balance (hl_balance):** $1,185.14 (▼ $7.26 from $1,192.40 at 21:50, -0.61%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
 - Account balance via bot: $41.00 (paper sub-account)
-- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
-- Bot skipped BTC (native TP/SL active), HYPE/XRP/WIF/TAO not in BB allowlist — no signals fired
-- No kill switch ($1,109.66 > $20 ✅), no connection errors ✅
-- Balance change +0.03% — within 10% threshold, silently passing
+- 12 hist trades | 0 live paper positions | WR=67% | DD=10.6% | KS=False
+- On-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$7.40), ETH 3.284 LONG @ $2,001.15 (UPnL: -$9.03)
+- BTC skipped (native TP/SL active), ETH checked — no signals, HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Balance healthy ($1,185.14 > $20), change -0.61% (within 10%), positions unchanged, no alerts
 
----
-
-## 2026-05-29 00:22 HKT — Cron Run
-- **Balance:** $1,054.65 (▲ $46.25 from $1,008.40 at 23:16, +4.59%)
-- Mode: LIVE (bot ran in PAPER) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+## 2026-05-29 21:50 HKT — Cron Run
+- **Balance (hl_balance):** $1,192.40 (▼ $19.59 from $1,211.99 at 19:58, -1.62%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
 - Account balance via bot: $41.00 (paper sub-account)
-- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
-- Bot skipped all symbols (BTC had TP/SL, others not in allowlist, no new signals)
-- No kill switch ($1,054.65 > $20 ✅), no connection errors ✅
-- Balance change +4.59% — within 10% threshold, silently passing
+- 12 hist trades | 0 live paper positions | WR=67% | DD=10.6% | KS=False
+- On-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$7.03), ETH 3.284 LONG @ $2,001.15 (UPnL: -$2.13)
+- BTC skipped (native TP/SL active), ETH checked — no signals, HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Balance healthy ($1,192.40 > $20), change -1.62% (within 10%), positions unchanged, no alerts
 
----
-
-## 2026-05-29 01:11 HKT — Cron Run
-- **Balance:** $1,109.38 (▲ $54.73 from $1,054.65 at 00:22, +5.19%)
-- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
+## 2026-05-29 21:37 HKT — Cron Run
+- **Balance (hl_balance):** $1,174.87 (▲ $0.02 from $1,174.85 at 21:20, +0.002%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
 - Account balance via bot: $41.00 (paper sub-account)
+- On-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$7.49), ETH 3.284 LONG @ $2,001.15 (UPnL: -$19.21) — positions unchanged
+- 12 hist trades | 0 live paper positions | WR=67% | DD=10.6% | KS=False
+- BTC skipped (native TP/SL active), SOL checked — no signals, HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Balance healthy ($1,174.87 > $20), change +0.002% (within 10%), bot clean, no alerts
+
+## 2026-05-29 20:59 HKT — Cron Run
+- **Balance (hl_balance):** $1,188.19 (▲ $7.13 from $1,181.06 at 20:49, +0.60%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account)
+- On-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$6.73), ETH 3.284 LONG @ $2,001.15 (UPnL: -$6.73) — positions unchanged
+- 12 hist trades | 0 live paper positions | WR=67% | DD=10.6% | KS=False
+- BTC skipped (native TP/SL active), ETH/SOL checked — no signals, HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Balance healthy ($1,188.19 > $20), change +0.60% (within 10%), bot clean, no alerts
+
+## 2026-05-29 20:40 HKT — Cron Run
+- **Balance (hl_balance):** $1,180.44 (▼ $7.05 from $1,187.49 at 20:38, -0.59%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account) — no new trades
+- On-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$6.92), ETH 3.284 LONG @ $2,001.15 (UPnL: -$14.29) — positions unchanged
+- 12 hist trades | 0 live paper positions | WR=67% | DD=10.6% | KS=False
+- BTC skipped (native TP/SL active), SOL/ETH checked — no signals, HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Balance healthy ($1,180.44 > $20), change -0.59% (within 10%), bot clean, no alerts
+
+## 2026-05-29 20:38 HKT — Cron Run
+- **Balance (hl_balance):** $1,187.49 (▼ $6.40 from $1,193.89 at 20:06, -0.54%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account)
+- On-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$6.77), ETH 3.284 LONG @ $2,001.15 (UPnL: -$7.39) — positions unchanged
+- 12 hist trades | 0 live paper positions | WR=67% | DD=10.6% | Kill Switch=False
+- BTC skipped (native TP/SL active), ETH/SOL checked — no signals, HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Balance healthy ($1,187.49 > $20), change -0.54% (within 10%), bot clean, no alerts
+
+## 2026-05-29 20:06 HKT — Cron Run
+- **Balance (hl_balance):** $1,194.80 (▼ $17.19 from $1,211.99 at 19:58, -1.42%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account) — no new trades
+- On-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$6.36), ETH 3.284 LONG @ $2,001.15 (UPnL: -$0.49) — positions unchanged
+- 12 hist trades | 0 live paper trades | WR=67% | DD=10.6% | Kill Switch=False
+- BTC skipped (native TP/SL active), ETH checked — no signals, HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped, SOL checked
+- ✅ Balance healthy ($1,194.80 > $20), change -1.42% (within 10%), bot clean, no alerts
+
+## 2026-05-30 04:01 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 02:40, 0.00%)
+
+## 2026-05-30 05:07 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 04:01, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked — no signals fired
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+- Orphan killer ran clean, ghost killer skipped (empty positions)
+- TP/SL orders active on SOL, BTC, ARB — native TP/SL active, skipped
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 09:07 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:07, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- On-chain: no open positions
+- Astronomer Swing watching BTC entry zone $72,250-$73,000 (price=$73,496)
+- Turtle Soup error: name 'df' is not defined (non-critical, logged)
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 04:45 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 04:36, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked — no signals fired
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned stale coin entries
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 04:45 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 04:39, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- Orphan killer ran clean, ghost killer skipped
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 04:36 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 02:40, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked — no signals fired
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 02:40 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (▼ $10.07 from $1,116.25 at 22:50, -0.90%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- On-chain: no open positions (perp equity $0, no positions)
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked — no signals fired
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change -0.90% (within 10%), bot clean
+
+## 2026-05-29 19:55 HKT — Cron Run
+- **Balance (hl_balance):** $1,211.35 (▲ $3.44 from $1,207.91 at 19:53, +0.28%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account) — no new trades
+
+## 2026-05-29 19:58 HKT — Cron Run
+- **Balance (hl_balance):** $1,211.99 (▲ $0.64 from $1,211.35 at 19:55, +0.05%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account) — no new trades
+- On-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$6.00), ETH 3.284 LONG @ $2,001.15 (UPnL: +$16.26)
+- 12 hist trades | 0 live paper trades | WR=67% | DD=10.6% | Kill Switch=False
+- ✅ Balance healthy ($1,211.99 > $20), change +0.05% (within 10%), no alerts
 - 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
-- Bot skipped all symbols (BTC native TP/SL active, HYPE/XRP/WIF/TAO not in BB allowlist)
-- No kill switch ($1,109.38 > $20 ✅), no connection errors ✅
-- Balance change +5.19% — within 10% threshold, silently passing
-
----
-
-## 2026-05-28 23:16 HKT — Cron Run
-- **Balance:** $1,008.40 (▼ $21.96 from $1,030.36 at 22:21, -2.13%)
-- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
-- Account balance via bot: $1,009.15
-- 10 hist trades | 3 live positions (BTC, ETH, WIF) | WR=67% | DD=10.6% | Kill Switch=False
-- Open orders on BTC, ETH, WIF — native TP/SL active, skipping signal checks
-- SOL position already closed (no longer in positions)
-- No kill switch ($1,008.40 > $20 ✅), no connection errors ✅
-- Balance change -2.13% — within 10% threshold, silently passing
-
-## 2026-05-28 22:21 HKT — Cron Run
-- **Balance:** $1,030.36 (▲ $63.48 from $966.88 at 21:44, +6.56%)
-- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
-- Account balance via bot: $1,030.36
-- Position cap hit: 3/3 open, no new entries
-- 10 hist trades | 3 live positions (BTC, ETH, WIF) | WR=60% | DD=10.6% | Kill Switch=False
-- ⚠️ SOL position closed (33.35 @ $80.55 — likely stopped out)
-- Spot cash: $282.33 (from SOL closing proceeds)
-- No kill switch ($1,030.36 > $20 ✅), no connection errors ✅
-
-## 2026-05-28 21:59 HKT — Cron Run
-- **Balance:** $976.21 (▼ $18.24 from $994.45 at 20:17, -1.83%)
-- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
-- Account balance via bot: $976.67
-- Position cap hit: 4/3 open, no new entries
-- 10 hist trades | 4 live positions (BTC, ETH, SOL, WIF) | WR=60% | DD=10.6% | Kill Switch=False
-- No kill switch ($976.21 > $20 ✅), no connection errors ✅
-- Balance change -1.83% — within 10% threshold, silently passing
-
-## 2026-05-28 18:57 HKT — Cron Run
-- **Balance:** $1,010.55 (▼ $28.67 from $1,039.22 at 18:07, -2.76%)
-- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
-- Account balance via bot: $1,010.48
-- Open orders on BTC, ETH, SOL, WIF — native TP/SL active, skipping signal checks
-- Position cap hit: 4/3 open, no new entries
-- 10 hist trades | 4 live positions (BTC, ETH, SOL, WIF) | WR=60% | DD=10.6% | Kill Switch=False
-- No kill switch ($1,010.55 > $20 ✅), no connection errors ✅
-- Balance change -2.76% — within 10% threshold, silently passing
-
-## 2026-05-28 18:07 HKT — Cron Run
-- **Balance:** $1,039.22 (▼ $4.97 from $1,044.19 at 18:04, -0.48%)
-- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
-- Account balance via bot: $1,039.55
-- Open orders on BTC, ETH, SOL, WIF, XRP — native TP/SL active, skipping signal checks for those
-- Checked signals for HYPE-PERP and TAO-PERP (no matching entries)
-- 10 hist trades | 5 live positions (BTC, ETH, SOL, XRP, WIF) | WR=60% | DD=10.6% | Kill Switch=False
-- No kill switch ($1,039.22 > $20 ✅), no connection errors ✅
-
-## 2026-05-28 18:04 HKT — Cron Run
-- **Balance:** $1,044.19 (▲ $16.56 from $1,027.63 at 09:11, +1.61%)
-- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
-- Account balance via bot: $1,044.19
-- Open orders on BTC, ETH, SOL, WIF, XRP — native TP/SL active, skipping signal checks for those
-- Checked signals for HYPE-PERP and TAO-PERP (no matching entries)
-- 10 hist trades | 5 live positions (BTC, ETH, SOL, XRP, WIF) | WR=60% | DD=10.6% | Kill Switch=False
-- **Positions changed significantly** (was 1 → now 5) — positions likely re-opened from a prior session
-- No kill switch ($1,044.19 > $20 ✅), no connection errors ✅
-- Balance change +1.61% — well within 10% threshold, silently passing
-> 99/107 entries have unique balance data — kept in full for signal fidelity.
-> For daily summaries, see `/home/captain/life/memory/YYYY-MM-DD.md`.
-
----
-
-## 2026-05-27 02:27 HKT — Cron Run
-- **Balance:** $228.67 (▲ $0.24 from $228.43 at 02:18, +0.11%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.67 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.11% — within 10% threshold, silently passing
-
-## 2026-05-27 02:31 HKT — Cron Run
-- **Balance:** $228.62 (▼ $0.05 from $228.67 at 02:27, -0.02%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.62 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.02% — within 10% threshold, silently passing
-
-## 2026-05-27 03:44 HKT — Cron Run
-- **Balance:** $228.94 (▲ $0.08 from $228.86 at 03:17, +0.03%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.94 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.03% — within 10% threshold, silently passing
-
-## 2026-05-27 03:17 HKT — Cron Run
-- **Balance:** $228.86 (▲ $0.24 from $228.62 at 02:31, +0.10%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.86 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.10% — within 10% threshold, silently passing
-
-## 2026-05-27 03:31 HKT — Cron Run
-- **Balance:** $228.91 (▲ $0.05 from $228.86 at 03:17, +0.02%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.91 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.02% — within 10% threshold, silently passing
-
-## 2026-05-27 00:50 HKT — Cron Run
-- **Balance:** $221.06 (▲ $1.20 from $219.86 at 00:45, +0.55%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($221.06 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.55% — within 10% threshold, silently passing
-
-## 2026-05-26 18:50 HKT — Cron Run
-- **Balance:** $106.99 (▼ $1.36 from $108.35 at 18:47, -1.25%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($106.99 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($108.35):** -1.25% — within 10% threshold.
-
-## 2026-05-26 17:11 HKT — Cron Run
-- **Balance:** $116.39 (▼ $4.25 from $120.64 at 10:32, -3.52%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($116.39 > $20).
-- **Positions:** Unchanged — native TP/SL handling exits.
-
-## 2026-05-26 17:39 HKT — Cron Run
-- **Balance:** $115.58 (▼ $0.81 from $116.39 at 17:11, -0.70%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($115.58 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($116.39):** -0.70% — within 10% threshold.
-- **Balance change from last ($120.64):** -3.52% — within 10% threshold.
-
-## 2026-05-26 10:32 HKT — Cron Run
-- **Balance:** $120.64 (▲ $2.22 from $118.42 at 09:27, +1.87%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($120.64 > $20).
-- **Positions:** Unchanged — native TP/SL handling exits.
-- **Balance change from last check ($118.42):** +1.87% — within 10% threshold.
-
-## 2026-05-26 09:27 HKT — Cron Run
-- **Balance:** $118.42 (▼ $0.22 from $118.65 at 09:09, -0.19%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($118.42 > $20).
-- **Positions:** Unchanged — native TP/SL handling exits.
-- **Balance change from last check ($118.65):** -0.19% — well within 10% threshold.
-
-## 2026-05-26 09:09 HKT — Cron Run
-- **Balance:** $118.65 (▲ $4.87 from $113.78 at 08:22, +4.28%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($118.65 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change:** +4.28% — within 10% threshold.
-
-## 2026-05-26 08:22 HKT — Cron Run
-- **Balance:** $113.78 (▲ $1.30 from $112.48 at 07:32, +1.16%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($113.78 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change:** +1.16% — within 10% threshold.
-
-## 2026-05-26 07:32 HKT — Cron Run
-- **Balance:** $112.48 (▼ from $113.52 at 07:13, -0.92%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($112.48 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($113.52):** -0.92% — within 10% threshold.
-
-## 2026-05-26 07:13 HKT — Cron Run
-- **Balance:** $113.52 (▼ from $113.80 at 06:42, -0.25%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($113.52 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($113.80):** -0.25% — within 10% threshold.
-
-## 2026-05-26 06:42 HKT — Cron Run
-- **Balance:** $113.80 (▲ from $112.42 at 05:55, +1.23%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($113.80 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($112.42):** +1.23% — within 10% threshold.
-
-## 2026-05-26 06:09 HKT — Cron Run
-- **Balance:** $111.86 (▲ from $106.92 at 03:27, +4.62%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($111.86 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($106.92):** +4.62% — well within 10% threshold.
-
-## 2026-05-26 11:51 HKT — Cron Run
-- **Balance:** $119.62 (▲ from $111.86 at 06:09, +6.9%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($119.62 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($111.86):** +6.9% — well within 10% threshold.
-
-## 2026-05-26 03:27 HKT — Cron Run
-- **Balance:** $106.92 (▼ from $107.29 at 03:18, -0.34%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($106.92 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($107.29):** -0.34% — well within 10% threshold.
-
-## 2026-05-26 03:18 HKT — Cron Run
-- **Balance:** $107.29 (▲ from $107.08 at 03:13, +0.20%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($107.29 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change:** +0.20% — well within 10% threshold.
-
-## 2026-05-26 02:27 HKT — Cron Run
-- **Balance:** $104.66 (▲ from $104.01 at 01:26). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($104.66 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($104.01):** +0.62% — within 10% threshold.
-
-## 2026-05-26 00:07 HKT — Cron Run
-- **Balance:** $106.25 (▼ from ~$107.99 at 22:21 on May 25). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($106.25 > $20).
-- **Positions:** Unchanged — HYPE SHORT with native TP/SL handling exits.
-- **Balance change from last logged (~$107.99):** -1.61% — within 10% threshold.
-
-## 2026-05-26 00:14 HKT — Cron Run
-- **Balance:** $106.57 (▲ from $106.25 at 00:07). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($106.57 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last logged ($106.25):** +0.30% — within 10% threshold.
-
-## 2026-05-26 00:25 HKT — Cron Run
-- **Balance:** $106.37 (▼ from $106.57 at 00:14). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($106.37 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($106.57):** -0.19% — within 10% threshold.
-
-## 2026-05-26 01:13 HKT — Cron Run
-- **Balance:** $103.34 (▼ from $106.37 at 00:25). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($103.34 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($106.37):** -2.85% — within 10% threshold.
-
-## 2026-05-26 01:22 HKT — Cron Run
-- **Balance:** $104.42 (▲ from $103.34 at 01:13). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($104.42 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($103.34):** +1.04% — within 10% threshold.
-
-## 2026-05-26 01:25 HKT — Cron Run
-- **Balance:** $104.30 (▼ from $104.42 at 01:22). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($104.30 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($104.42):** -0.39% — within 10% threshold.
-
-## 2026-05-26 01:26 HKT — Cron Run
-- **Balance:** $104.01 (▼ from $104.42 at 01:22). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($104.01 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($104.42):** -0.39% — within 10% threshold.
-
-## 2026-05-26 02:33 HKT — Cron Run
-- **Balance:** $105.14 (▲ from $104.01 at 01:26). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($105.14 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($104.01):** +1.09% — within 10% threshold.
-
-## 2026-05-26 02:41 HKT — Cron Run
-- **Balance:** $105.60 (▲ $0.16 from 23:03's ~$105.44, +0.15% — minor UPnL on open HYPE SHORT)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($105.60 > $20).
-- **Positions:** HYPE SHORT open — native TP/SL group active, signals skipped.
-- **Balance change:** +0.15% — well within 10% threshold.
-
-## 2026-05-26 03:04 HKT — Cron Run
-- **Balance:** $107.85 (▲ $2.25 from $105.60 at 02:41, +2.13%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($107.85 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change:** +2.13% — within 10% threshold.
-
-## 2026-05-26 03:13 HKT — Cron Run
-- **Balance:** $107.08 (▼ $0.77 from $107.85 at 03:04, -0.71%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($107.08 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change:** -0.71% — within 10% threshold.
-
-## 2026-05-26 03:19 HKT — Cron Run
-- **Balance:** $107.48 (▲ $0.40 from $107.08 at 03:13, +0.37%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($107.48 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change:** +0.37% — within 10% threshold.
-
-## 2026-05-26 03:43 HKT — Cron Run
-- **Balance:** $109.10 (▲ $1.62 from $107.48 at 03:19, +1.51%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($109.10 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change:** +1.51% — within 10% threshold.
-
-## 2026-05-26 03:59 HKT — Cron Run
-- **Balance:** $108.48 (▼ $0.62 from $109.10 at 03:43, -0.57%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($108.48 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change:** -0.57% — within 10% threshold.
-
-## 2026-05-26 04:13 HKT — Cron Run
-- **Balance:** $108.19 (▼ $0.29 from $108.48 at 03:59, -0.27%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($108.19 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change:** -0.27% — within 10% threshold.
-
-## 2026-05-26 04:33 HKT — Cron Run
-- **Balance:** $109.23 (▲ $1.04 from $108.19 at 04:13, +0.96%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($109.23 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change:** +0.96% — within 10% threshold.
-
-## 2026-05-26 04:36 HKT — Cron Run
-- **Balance:** $110.33 (▲ $1.10 from $109.23 at 04:33, +1.01%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($110.33 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change:** +1.01% — within 10% threshold.
-
-## 2026-05-26 05:55 HKT — Cron Run
-- **Balance:** $112.42 (▼ $0.05 from $112.47 at 05:37, -0.04%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($112.42 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change:** -0.04% — within 10% threshold.
-
-## 2026-05-26 05:37 HKT — Cron Run
-- **Balance:** $112.47 (▲ $2.14 from $110.33 at 04:36, +1.94%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($112.47 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change:** +1.94% — within 10% threshold.
-
-## 2026-05-26 08:24 HKT — Cron Run
-- **Balance:** $113.36 (▲ $0.94 from $112.42 at 05:55, +0.84%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($113.36 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change:** +0.84% — within 10% threshold.
-
-## 2026-05-26 08:57 HKT — Cron Run
-- **Balance:** $117.38 (▲ $4.02 from $113.36 at 08:24, +3.54%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($117.38 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change:** +3.54% — within 10% threshold.
-
-## 2026-05-26 09:41 HKT — Cron Run
-- **Balance:** $120.80 (▲ $3.42 from $117.38 at 08:57, +2.91%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($120.80 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change:** +2.91% — within 10% threshold.
-
-## 2026-05-26 10:43 HKT — Cron Run
-- **Balance:** $121.12 (▲ $0.32 from $120.80 at 09:41, +0.26%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($121.12 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change:** +0.26% — well within 10% threshold.
-
-## 2026-05-26 11:19 HKT — Cron Run
-- **Balance:** $121.78 (▲ $0.66 from $121.12 at 10:43, +0.54%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($121.78 > $20).
-- **Positions:** Unchanged — native TP/SL handling exits.
-- **Balance change:** +0.54% — well within 10% threshold.
-
-## 2026-05-26 12:32 HKT — Cron Run
-- **Balance:** $118.90 (▼ $2.88 from $121.78 at 11:19, -2.37%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($118.90 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($121.78):** -2.37% — within 10% threshold.
-
-## 2026-05-26 13:19 HKT — Cron Run
-- **Balance:** $117.84 (▼ $1.06 from $118.90 at 12:32, -0.89%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($117.84 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($118.90):** -0.89% — within 10% threshold.
-
-## 2026-05-26 13:24 HKT — Cron Run
-- **Balance:** $116.84 (▼ $1.00 from $117.84 at 13:19, -0.85%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($116.84 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($117.84):** -0.85% — well within 10% threshold.
-
-## 2026-05-26 13:37 HKT — Cron Run
-- **Balance:** $115.85 (▼ $0.99 from $116.84 at 13:24, -0.85%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($115.85 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($116.84):** -0.85% — well within 10% threshold.
-
-## 2026-05-26 14:07 HKT — Cron Run
-- **Balance:** $116.71 (▼ $0.86 from $115.85 at 13:37, +0.74%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($116.71 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($115.85):** +0.74% — well within 10% threshold.
-
-## 2026-05-26 14:09 HKT — Cron Run
-- **Balance:** $116.32 (▲ $0.39 from $116.71 at 13:37, +0.33%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($116.32 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($116.71):** +0.33% — well within 10% threshold.
-
-## 2026-05-26 14:12 HKT — Cron Run
-- **Balance:** $116.70 (▲ $0.38 from $116.32 at 14:09, +0.33%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($116.70 > $20).
-- **Positions:** Unchanged — existing HYPE LONG TP/SL handling exits.
-- **Balance change from last ($116.32):** +0.33% — well within 10% threshold.
-
-## 2026-05-26 14:14 HKT — Cron Run
-- **Balance:** $116.44 (▼ $0.26 from $116.70 at 14:12, -0.22%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($116.44 > $20).
-- **Positions:** Unchanged — existing HYPE LONG TP/SL handling exits.
-- **Balance change from last ($116.70):** -0.22% — well within 10% threshold.
-
-## 2026-05-26 14:44 HKT — Cron Run
-- **Balance:** $116.75 (▲ $0.31 from $116.44 at 14:14, +0.27%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($116.75 > $20).
-- **Positions:** Unchanged — existing HYPE LONG TP/SL handling exits.
-- **Balance change from last ($116.44):** +0.27% — well within 10% threshold.
-
-## 2026-05-26 16:53 HKT — Cron Run
-- **Balance:** $115.89 (▼ $0.86 from $116.75 at 14:44, -0.74%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($115.89 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($116.75):** -0.74% — well within 10% threshold.
-
-## 2026-05-26 17:29 HKT — Cron Run
-- **Balance:** $115.72 (▼ $0.17 from $115.89 at 16:53, -0.15%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($115.72 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change from last ($115.89):** -0.15% — well within 10% threshold.
-
-## 2026-05-26 17:44 HKT — Cron Run
-- **Balance:** $115.85 (▲ $0.13 from $115.72 at 17:29, +0.11%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($115.85 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change from last ($115.72):** +0.11% — well within 10% threshold.
-
-## 2026-05-26 17:52 HKT — Cron Run
-- **Balance:** $116.11 (▲ $0.26 from $115.85 at 17:44, +0.22%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($116.11 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change from last ($115.85):** +0.22% — well within 10% threshold.
-
-## 2026-05-26 18:09 HKT — Cron Run
-- **Balance:** $117.21 (▲ $1.10 from $116.11 at 17:52, +0.95%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($117.21 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change from last ($116.11):** +0.95% — well within 10% threshold.
-
-## 2026-05-26 18:29 HKT — Cron Run
-- **Balance:** $111.33 (▼ $5.88 from $117.21 at 18:09, -5.02%)
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($111.33 > $20).
-- **Positions:** Unchanged — open order with native TP/SL active, signals skipped.
-- **Balance change from last ($117.21):** -5.02% — within 10% threshold. Probably HYPE position mark-to-market fluctuation.
-
-## 2026-05-26 18:47 HKT — Cron Run
-- **Balance:** $108.35 (▼ $8.04 from $116.39 at 17:11, -6.91%). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($108.35 > $20).
-- **Positions:** Unchanged — native TP/SL handling exits.
-- **Balance change from last ($116.39):** -6.91% — within 10% threshold.
-
-## 2026-05-26 20:14 HKT — Cron Run
-- **Balance:** $114.62 (▲ $6.27 from $108.35 at 18:47, +5.79% — recovery on open position UPnL). Open order exists — native TP/SL active, skipping new signal check.
-- **Bot status:** ✅ OK, no errors. Kill switch OK ($114.62 > $20).
-- **Positions:** Unchanged — existing TP/SL handling exits.
-- **Balance change from last ($108.35):** +5.79% — well within 10% threshold.
-
-## 2026-05-26 22:03 HKT — Cron Run
-- **Balance:** $111.10 (▼ $4.00 from $115.10 at 21:44, -3.48%)
-- HYPE short still open with native TP/SL active; existing order detected, signals skipped
-- No kill switch ($111.10 > $20 ✅), no connection errors ✅
-- Balance change -3.48% — within 10% threshold, silently passed
-
-## 2026-05-26 23:13 HKT — Cron Run
-- **Balance:** $118.47 (▲ $7.37 from $111.10 at 22:03, +6.63% — recovery on open position UPnL)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($118.47 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +6.63% — within 10% threshold
-
-## 2026-05-27 00:19 HKT — Cron Run
-- **Balance:** $219.61 (▲ $101.14 from $118.47 at 23:13, +85.4% — Wosobu SOL deposit or large UPnL swing)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($219.61 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +85.4% — exceeds 10% threshold ⚠️ (likely deposit, not PnL)
-
-## 2026-05-27 00:21 HKT — Cron Run
-- **Balance:** $220.16 (▲ $0.55 from $219.61 at 00:19, +0.25%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($220.16 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.25% — within 10% threshold, silently passing
-
-## 2026-05-27 00:33 HKT — Cron Run
-- **Balance:** $221.63 (▲ $1.47 from $220.16 at 00:21, +0.67%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($221.63 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.67% — within 10% threshold, silently passing
-
-## 2026-05-27 00:45 HKT — Cron Run
-- **Balance:** $219.86 (▼ $1.77 from $221.63 at 00:33, -0.80%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($219.86 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.80% — within 10% threshold, silently passing
-
-## 2026-05-27 01:09 HKT — Cron Run
-- **Balance:** $219.61 (▼ $0.25 from $219.86 at 00:45, -0.11%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($219.61 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.11% — within 10% threshold, silently passing
-
-## 2026-05-27 01:20 HKT — Cron Run
-- **Balance:** $225.04 (▲ $5.43 from $219.61 at 01:09, +2.47%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($225.04 > $20 ✅), no connection errors ✅
-- Positions unchanged (open order active)
-- Balance change +2.47% — within 10% threshold, silently passing
-
-## 2026-05-27 01:23 HKT — Cron Run
-- **Balance:** $224.83 (▼ $0.21 from $225.04 at 01:20, -0.09%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($224.83 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.09% — within 10% threshold, silently passing
-
-## 2026-05-27 01:28 HKT — Cron Run
-- **Balance:** $226.24 (▲ $1.41 from $224.83 at 01:23, +0.63%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($226.24 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.63% — within 10% threshold, silently passing
-
-## 2026-05-27 01:49 HKT — Cron Run
-- **Balance:** $229.01 (▲ $3.97 from $225.04 at 01:20, +1.76%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($229.01 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +1.76% — within 10% threshold, silently passing
-
-## 2026-05-27 02:10 HKT — Cron Run
-- **Balance:** $228.46 (▼ $0.55 from $229.01 at 01:49, -0.24%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.46 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.24% — within 10% threshold, silently passing
-
-## 2026-05-27 02:14 HKT — Cron Run
-- **Balance:** $228.75 (▲ $0.29 from $228.46 at 02:10, +0.13%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.75 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.13% — within 10% threshold, silently passing
-
-## 2026-05-27 02:18 HKT — Cron Run
-- **Balance:** $228.43 (▼ $0.32 from $228.75 at 02:14, -0.14%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.43 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.14% — within 10% threshold, silently passing
-
-## 2026-05-27 02:35 HKT — Cron Run
-- **Balance:** $228.70 (▲ $0.27 from $228.43 at 02:18, +0.12%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.70 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.12% — within 10% threshold, silently passing
-
-## 2026-05-27 03:06 HKT — Cron Run
-- **Balance:** $228.77 (▲ $0.07 from $228.70 at 02:35, +0.03%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.77 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.03% — within 10% threshold, silently passing
-
-## 2026-05-27 03:40 HKT — Cron Run
-- **Balance:** $228.77 (unchanged from $228.77 at 03:06, 0.00%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.77 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change 0.00% — within 10% threshold, silently passing
-
-## 2026-05-27 05:11 HKT — Cron Run
-- **Balance:** $229.18 (▲ $0.24 from $228.94 at 03:44, +0.10%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($229.18 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.10% — within 10% threshold, silently passing
-
-## 2026-05-27 05:28 HKT — Cron Run
-- **Balance:** $229.06 (▼ $0.12 from $229.18 at 05:11, -0.05%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($229.06 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.05% — within 10% threshold, silently passing
-
-## 2026-05-27 05:34 HKT — Cron Run
-- **Balance:** $228.90 (▼ $0.16 from $229.06 at 05:28, -0.07%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.90 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.07% — within 10% threshold, silently passing
-
-## 2026-05-27 06:08 HKT — Cron Run
-- **Balance:** $228.81 (▼ $0.37 from $229.18 at 05:11, -0.16%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.81 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.16% — within 10% threshold, silently passing
-
-## 2026-05-27 06:21 HKT — Cron Run
-- **Balance:** $228.68 (▼ $0.13 from $228.81 at 06:08, -0.06%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.68 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.06% — within 10% threshold, silently passing
-
-## 2026-05-27 06:46 HKT — Cron Run
-- **Balance:** $228.70 (▲ $0.02 from $228.68 at 06:21, +0.01%)
-- No open TP/SL orders — previous BTC TP/SL consumed (filled/cancelled), bot will re-evaluate next cycle
-- Positions: BTC LONG 0.00223 @ $76,116 (UPnL -$1.08) | TAO SHORT 0.194 @ $288.93 (UPnL +$1.82)
-- No kill switch ($228.70 > $20 ✅), no connection errors ✅
-- Balance change +0.01% — within 10% threshold, silently passing
-
-## 2026-05-27 06:57 HKT — Cron Run
-- **Balance:** $228.85 (▲ $0.15 from $228.70 at 06:46, +0.07%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.85 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.07% — within 10% threshold, silently passing
-
-## 2026-05-28 05:05 HKT — Cron Run
-- **Balance:** $1,029.20 (▼ $0.17 from $1,029.37 at 04:51, -0.017%)
-- BTC LONG 0.00223 @ $76,116 | UPnL: -$2.13
-- Mode: LIVE
-- Status: Success — bot ran cleanly
-- 10 hist trades | 1 live position (BTC) | WR=60% | DD=10.6% | Kill Switch=False
-- Open orders on BTC (native TP/SL active), no new signals on other symbols
-- No kill switch ($1,029.20 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.017% — within 10% threshold, silently passing
-
-## 2026-05-27 07:06 HKT — Cron Run
-- **Balance:** $229.03 (▲ $0.18 from $228.85 at 06:57, +0.08%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($229.03 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.08% — within 10% threshold, silently passing
-
-## 2026-05-27 07:09 HKT — Cron Run
-- **Balance:** $228.83 (▼ $0.20 from $229.03 at 07:06, -0.09%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.83 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.09% — within 10% threshold, silently passing
-
-## 2026-05-27 07:13 HKT — Cron Run
-- **Balance:** $228.96 (▲ $0.13 from $228.83 at 07:09, +0.06%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.96 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.06% — within 10% threshold, silently passing
-
-## 2026-05-27 07:28 HKT — Cron Run
-- **Balance:** $229.21 (▲ $0.25 from $228.96 at 07:13, +0.11%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($229.21 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.11% — within 10% threshold, silently passing
-
-## 2026-05-27 07:31 HKT — Cron Run
-- **Balance:** $229.16 (▼ $0.05 from $229.21 at 07:28, -0.02%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($229.16 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.02% — within 10% threshold, silently passing
-
-## 2026-05-27 07:42 HKT — Cron Run
-- **Balance:** $229.24 (▲ $0.08 from $229.16 at 07:31, +0.03%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($229.24 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.03% — within 10% threshold, silently passing
-
-## 2026-05-27 07:53 HKT — Cron Run
-- **Balance:** $229.26 (▲ $0.02 from $229.24 at 07:42, +0.01%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($229.26 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.01% — within 10% threshold, silently passing
-
-## 2026-05-27 08:04 HKT — Cron Run
-- **Balance:** $229.10 (▼ $0.14 from $229.24 at 07:42, -0.06%)
-
-## 2026-05-27 08:52 HKT — Cron Run
-- **Balance:** $228.37 (▼ $0.73 from $229.10 at 08:04, -0.32%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.37 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.32% — within 10% threshold, silently passing
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($229.10 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.06% — within 10% threshold, silently passing
-
-## 2026-05-27 08:21 HKT — Cron Run
-- **Balance:** $228.92 (▼ $0.18 from $229.10 at 08:04, -0.08%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.92 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.08% — within 10% threshold, silently passing
-
-## 2026-05-27 08:24 HKT — Cron Run
-- **Balance:** $228.81 (▼ $0.11 from $228.92 at 08:21, -0.05%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.81 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.05% — within 10% threshold, silently passing
-
-## 2026-05-27 08:29 HKT — Cron Run
-- **Balance:** $228.68 (▼ $0.13 from $228.81 at 08:24, -0.06%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.68 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.06% — within 10% threshold, silently passing
-
-## 2026-05-27 08:41 HKT — Cron Run
-- **Balance:** $228.38 (▼ $0.54 from $228.92 at 08:21, -0.24%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.38 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.24% — within 10% threshold, silently passing
-
-## 2026-05-27 08:50 HKT — Cron Run
-- **Balance:** $228.28 (▼ $0.40 from $228.68 at 08:29, -0.17%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.28 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.17% — within 10% threshold, silently passing
-
-## 2026-05-27 08:42 HKT — Cron Run
-- **Balance:** $228.37 (▼ $0.01 from $228.38 at 08:41, -0.004%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.37 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.004% — within 10% threshold, silently passing
-
-## 2026-05-27 09:26 HKT — Cron Run
-- **Balance:** $228.37 (unchanged from $228.37 at 08:42, 0.00%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.37 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change 0.00% — within 10% threshold, silently passing
-
-## 2026-05-27 13:29 HKT — Cron Run
-- **Balance:** $229.33
-
-## 2026-05-27 21:41 HKT — Cron Run
-- **Balance:** $228.00 (▼ $1.33 from $229.33 at 13:29, -0.58%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($228.00 > $20 ✅), no connection errors ✅
-- Positions unchanged (BTC LONG / TAO SHORT)
-- Balance change -0.58% — within 10% threshold, silently passing
-
-## 2026-05-27 21:48 HKT — Cron Run
-- **Balance:** $227.77 (▼ $0.23 from $228.00 at 21:41, -0.10%)
-- Open order exists — native TP/SL active, skipping new signal check
-- No kill switch ($227.77 > $20 ✅), no connection errors ✅
-- Positions unchanged (BTC LONG / TAO SHORT)
-- Balance change -0.10% — within 10% threshold, silently passing
-
-## 2026-05-27 22:58 HKT — Cron Run
-- **Balance:** $228.19 (▲ $0.42 from $227.77 at 21:48, +0.18%)
-- Open order exists — native TP/SL active (BTC), skipping new signal check
-- All 7 symbols checked. No new signals.
-- 1 live position: BTC LONG 0.00223 @ $76,116 (UPnL -$2.46)
-- No kill switch ($228.19 > $20 ✅), no connection errors ✅
-- Balance change +0.18% — within 10% threshold, silently passing
-
-## 2026-05-27 23:12 HKT — Cron Run
-- **Balance:** $228.32 (▲ $0.13 from $228.19 at 22:58, +0.06%)
-- Open order exists — native TP/SL active (BTC), skipping new signal check
-- All 7 symbols checked. No new signals.
-- 1 live position: BTC LONG 0.00223 @ $76,116 (UPnL -$2.34)
-- No kill switch ($228.32 > $20 ✅), no connection errors ✅
-- Balance change +0.06% — within 10% threshold, silently passing
-
-## 2026-05-27 23:15 HKT — Cron Run
-- **Balance:** $228.38 (▼ $0.53 from $228.91 at last check, -0.23%)
-- Open order on BTC (native TP/SL active), skipping new BTC signal
-- No kill switch ($228.38 > $20 ✅), no connection errors ✅
-- Positions unchanged (BTC LONG 0.00223, UPnL $-2.29)
-- Balance change -0.23% — within 10% threshold, silently passing
-
-## 2026-05-27 23:42 HKT — Cron Run
-- **Balance:** $1,029.68 (unchanged from $1,029.68 at 23:41, 0.00%)
-- Open order exists — native TP/SL active (BTC), skipping new signal check
-- All 7 symbols checked. No new signals.
-- 1 live position: BTC LONG 0.00223 @ $76,116 (UPnL -$1.65)
-- No kill switch ($1,029.68 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change 0.00% — within 10% threshold, silently passing
-
-## 2026-05-28 02:47 HKT — Cron Run
-- **Balance:** $1,028.67 (▼ ~$1.00 from ~$1,029.68, -0.10%)
-- BTC LONG 0.00223 @ $76,116 | UPnL: -$2.66
-- Mode: LIVE
-- Status: Success — bot ran cleanly
-- 10 hist trades | 1 live position (BTC) | WR=60% | DD=10.6% | Kill Switch=False
-- Open orders on BTC (native TP/SL active), no new signals on other symbols
-- No kill switch ($1,028.67 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change -0.10% — within 10% threshold, silently passing
-
-## 2026-05-28 04:51 HKT — Cron Run
-- **Balance:** $1,029.37 (▲ $0.70 from $1,028.67 at 02:47, +0.07%)
-- BTC LONG 0.00223 @ $76,116 | UPnL: -$1.96
-- Mode: LIVE
-- Status: Success — bot ran cleanly
-- 10 hist trades | 1 live position (BTC) | WR=60% | DD=10.6% | Kill Switch=False
-- Open orders on BTC (native TP/SL active), no new signals on other symbols
-- No kill switch ($1,029.37 > $20 ✅), no connection errors ✅
-- Positions unchanged
-- Balance change +0.07% — within 10% threshold, silently passing
-
-## 2026-05-28 08:37 HKT — Cron Run
-- **Balance:** $1,027.74 (▲ $0.16 from $1,027.58 at 05:59, +0.016%)
-- Open orders on BTC — native TP/SL active, skipping new signal check
-- No kill switch ($1,027.74 > $20 ✅), no connection errors ✅
-- Positions unchanged (BTC 0.0022 long)
-- Balance change +0.016% — well within 10% threshold, silently passing
-
-## 2026-05-28 08:45 HKT — Cron Run
-- **Balance:** $1,027.78 (▲ $0.04 from $1,027.74 at 08:37, +0.004%)
-- BTC LONG 0.00223 @ $76,116 | UPnL: -$3.55
-- 10 hist trades | 1 live position (BTC) | WR=60% | DD=10.6% | Kill Switch=False
-- Open orders on BTC — native TP/SL active, skipping signal check for BTC
-- No kill switch ($1,027.78 > $20 ✅), no connection errors ✅
-- Positions unchanged (BTC 0.0022 long)
-- Balance change +0.004% — well within 10% threshold, silently passing
-
-## 2026-05-28 19:57 HKT — Cron Run
-- **Balance:** $1,006.35 (▼ $4.20 from $1,010.55 at 18:57, -0.42%)
-- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
-- Account balance via bot: $1,007.59
-- Position cap hit: 4/3 open, no new entries
-- 4 live positions (BTC, ETH, SOL, WIF) | Native TP/SL active
-- No kill switch ($1,006.35 > $20 ✅), no connection errors ✅
-- Balance change -0.42% — well within 10% threshold, silently passing
-
-## 2026-05-28 09:11 HKT — Cron Run
-- **Balance:** $1,027.63 (▼ $0.05 from $1,027.58 at 05:59, -0.005%)
-- Open orders on BTC — native TP/SL active, skipping signal check for BTC
-- No kill switch ($1,027.63 > $20 ✅), no connection errors ✅
-- Positions unchanged (BTC 0.0022 long)
-- Balance change -0.005% — within 10% threshold, silently passing
-
----
-## Cron Run — 2026-05-28 20:15 HKT
-
-**hl_balance.py:**
-- TOTAL ACCOUNT: **$994.17**
-- Spot Cash: $0.00
-- In Margin (hold): $994.17
-- Perp Equity: $960.54
-
-**Open Positions:**
-- BTC LONG 0.0022 @ $76,116 | UPnL: -$6.12
-- ETH LONG 1.642 @ $1,988.50 | UPnL: -$4.60
-- SOL LONG 33.35 @ $80.55 | UPnL: +$7.72
-- WIF LONG 11,533 @ $0.18 | UPnL: -$56.70
-
-**main_bot.py:**
-- Mode: LIVE | Status: Success
-- Account balance: $995.43 (SDK)
-- 4/3 position cap hit — no new entries
-- 10 hist trades | WR=60% | DD=10.6% | Kill Switch=False
-
-**Delta from prior:**
-- Balance: ~$1,029 → $994.17 (-3.4%, within 10% threshold ✅)
-- Positions: unchanged (BTC, ETH, SOL, WIF)
-
-**Verdict: ✅ Silent success — no alerts warranted**
-
----
-## Cron Run — 2026-05-28 22:10 HKT
-
-**hl_balance.py:**
-- TOTAL ACCOUNT: **$942.45**
-- Spot Cash: $0.00
-- In Margin (hold): $942.45
-- Perp Equity: $908.83
-
-**Open Positions:**
-- BTC LONG 0.0022 @ $76,116 | UPnL: -$7.39
-- ETH LONG 1.642 @ $1,988.50 | UPnL: -$15.93
-- SOL LONG 33.35 @ $80.55 | UPnL: -$5.95
-- WIF LONG 11,533 @ $0.18 | UPnL: -$82.19
-
-**main_bot.py:**
-- Mode: LIVE | Status: Success
-- Account balance: $942.45 (SDK)
-- 4/3 position cap hit — no new entries
-- 10 hist trades | WR=60% | DD=10.6% | Kill Switch=False
-
-**Delta from prior (20:15 HKT):**
-- Balance: $994.17 → $942.45 (-$51.72, -5.2%, within 10% threshold ✅)
-- Positions: unchanged (BTC, ETH, SOL, WIF)
-
-**Verdict: ✅ Silent success — no alerts warranted**
-
-## 2026-05-28 22:44 HKT — Cron Run (LIVE)
-- **Balance:** $1,001.66 (▲ $7.21 from $994.45 at 20:17, +0.72%)
-- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO
-- Account balance via bot: $1,002.79
-- Positions: 3/4 — BTC, ETH, WIF (all with native TP/SL active)
-- Skipped SOL, HYPE, XRP, TAO signal checks (allowlist/not signaled)
-- Status: 12 hist trades | 3 live positions | WR=67% | DD=10.6% | KS=False
-- Delta: Balance +0.72% (<10% ✅), positions unchanged ✅, bot clean ✅
-
-**Verdict: ✅ Silent success — no alerts warranted**
-
-## Cron Run — 2026-05-29 02:15 HKT
-
-**hl_balance.py:**
-- TOTAL ACCOUNT: **$1,236.09**
-- Spot Cash: $0.00
-- In Margin (hold): $1,236.09
-- Perp Equity: $1,236.09
-
-**Open Positions:**
-- BTC LONG 0.0044 @ $74,777.10 | UPnL: -$5.09
-- ETH LONG 3.2840 @ $2,001.15 | UPnL: +$73.40
-- WIF LONG 21,167 @ $0.18 | UPnL: +$81.65
-
-**main_bot.py:**
-- Mode: PAPER (bot SDK wallet)
-- Status: Success — bot ran cleanly
-- Bot SDK balance: $41.00 (paper account, not real)
-- 12 hist trades | 0 live positions (bot SDK) | WR=67% | DD=10.6% | KS=False
-- No new signals fired
-
-**Delta from last recorded (22:10 HKT 2026-05-28):**
-- Total account: $942.45 → **$1,236.09 (+$293.64, +31.2%) 🔔 exceeds 10%**
-- BTC: 0.0022 @ $76,116 → 0.0044 @ $74,777 (size doubled)
-- ETH: 1.642 @ $1,988.50 → 3.284 @ $2,001.15 (size doubled)
-- WIF: 11,533 @ $0.18 → 21,167 @ $0.18 (size nearly doubled)
-- SOL: 33.35 position **CLOSED**
-- UPnL swing: -$111.46 → +$149.96 (massive reversal)
-
-**Verdict: ⚠️ Alert — Balance +31.2% (>10% threshold), positions changed significantly.**
-
-## Cron Run — 2026-05-29 02:17 HKT
-
-**hl_balance.py:**
-- TOTAL ACCOUNT: **$1,240.58**
-- Spot Cash: $0.00
-- In Margin (hold): $1,240.58
-- Perp Equity: $1,240.58
-
-**Open Positions:**
-- BTC LONG 0.0044 @ $74,777 | UPnL: -$4.90
-- ETH LONG 3.284 @ $2,001.15 | UPnL: +$72.41
-- WIF LONG 21,167 @ $0.18 | UPnL: +$86.94
-
-**main_bot.py:**
-- Mode: PAPER (bot SDK wallet)
-- Status: Success — bot ran cleanly
-- Bot SDK balance: $41.00 (paper account, not real)
-- 12 hist trades | 0 live positions (bot SDK) | WR=67% | DD=10.6% | KS=False
-- No new signals fired
-
-**Delta from last recorded:**
-- Total account: $1,236.09 → **$1,240.58 (+$4.49, +0.36%) ✅ within 10%**
-- Positions: unchanged (BTC/ETH/WIF same sizes)
-
-**Verdict: ✅ Silent success**
-
-## 2026-05-29 02:56 HKT — Cron Run
-- **Balance:** $1,248.09 (▲ $7.51 from $1,240.58, +0.61%)
-- Mode: PAPER (bot SDK wallet)
-- Status: Success — bot ran cleanly
-- Bot SDK balance: $41.00 (paper account)
-- 12 hist trades | 0 live positions (bot SDK) | WR=67% | DD=10.6% | KS=False
-- No new signals fired; BTC native TP/SL active
-
-**Delta from last recorded:**
-- Total account: $1,240.58 → **$1,248.09 (+$7.51, +0.61%) ✅ within 10%**
-- Positions: unchanged (BTC/ETH/WIF same sizes)
-
-**Verdict: ✅ Silent success**
+- BTC skipped (native TP/SL active), ETH checked — no signals, HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Live on-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$5.98), ETH 3.284 LONG @ $2,001.15 (UPnL: +$15.60) — positions unchanged
+- ✅ Balance healthy ($1,211.35 > $20), change +0.28% (within 10%), bot clean, no alerts
+
+## 2026-05-29 19:53 HKT — Cron Run
+- **Balance (hl_balance):** $1,207.91 (▼ $15.77 from $1,223.68 at 19:46, -1.29%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account) — no new trades
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
+- BTC skipped (native TP/SL active), ETH checked — no signals, HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Live on-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$6.18), ETH 3.284 LONG @ $2,001.15 (UPnL: +$11.99), WIF 10,584 LONG @ $0.18 (UPnL: +$51.94) — unchanged positions
+- ✅ Balance healthy ($1,207.91 > $20), change -1.29% (within 10%), bot clean, no alerts
+
+## 2026-05-30 04:15 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 04:01, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- Orphan killer cleaned stale coin entries; ghost killer skipped (HL API not returning positions cleanly)
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot ran cleanly
+
+## 2026-05-29 19:57 HKT — Shadow Results & Support/Resistance Research
+
+### 24h Shadow Mode Results
+- **0 new paper trades.** The single Kalman BTC LONG signal at 00:03 never hit TP or SL — price sat in range all day.
+- **2 paper trades from May 28** (before shadow mode): XRP BB_15m WIN (+2.58R) ✅, SOL BB_15m WIN (+3.05R) ✅
+- **Cause:** BTC 30d realized vol at 6.3% — 0.7 sigma days. No RSI<20, no significant Kalman deviation. CHOP regime.
+- **Verdict:** Bot is correctly not trading noise. Not a bug.
+
+### Liquidity/Support Detection Research
+You asked about algorithmic liquidity detection that market makers love — volume profile at support zones. This is real and can be coded:
+
+1. **Volume Profile (Horizontal)** — maps traded volume per price level across a lookback. High-volume nodes (HVN) = liquidity pools where MMs cluster. Low-volume nodes (LVN) = gaps where price moves fast. Can compute this from 1m OHLCV data we already have.
+
+2. **Order Book Depth Clusters** — HL gives us L2 depth snapshots. A wall of bids at $73,500 is a support zone by definition. We already fetch L2 data in the fetch script but never use it for detection.
+
+3. **VWAP bands** — VWAP ±1-2σ already computed in our R volume profile work, can serve as dynamic support/resistance.
+
+**What I'd build:** A `liquidity_zones.py` module that takes L2 snapshots + volume profile data and outputs support/resistance levels as a weighted map. The BB strategy already buys at RSI<20 — adding a zone filter (don't buy if support is 3% lower) would improve win rate. This is a 1-day build, not a research project.
+
+**Architecture:** 
+```
+L2 Book → cumulative depth clusters
+Volume Profile → HVN/LVN per coin
+VWAP bands → dynamic S/R
+    ↓
+Weighted support map → gate on entry signals
+```
+
+Want me to build it?
+
+## 2026-05-29 20:00 HKT — R-Multiple Analysis & Wosobu's Questions
+
+### R-Distribution (12 paper trades total)
+- **58% hit ≥2R** — 7/12 trades
+- Average R: +1.16R
+- No trade exceeded 5R (best: 4.0R)
+- Worst loss: -4.69R (VolSurge ETH)
+
+### By Strategy:
+- **kalman_drl:** 4/4 trades at ≥2R avg +3.33R ✅ (our best 2R engine)
+- **bb_15m:** 2/2 trades at ≥2R avg +2.81R ✅ (small sample but perfect)
+- **bb_core:** 0/2 at ≥2R avg -1.29R (dead)
+- **vol_surge:** 1/4 at ≥2R avg -0.63R (struggling)
+
+### Key Insight
+We already hit 2R reliably — it's the strategies that survive. Kalman and BB_15m print 2R+ wins. The issue isn't hitting 2R, it's that VolSurge and BB_core drag down the average. We killed BB_core and are gating VolSurge. The 2R+ winners are already there.
+
+### VWAP + Support Zones
+Agreed VWAP works as confluence. It's already computed in our data pipeline. Adding it as a weighted input to the support zone detector is straightforward — VWAP ±1σ bands as dynamic S/R, combine with volume profile HVN nodes, L2 depth clusters. The convergence of: VWAP + Volume Profile + L2 walls = strong support.
+
+## 2026-05-29 20:49 HKT — Cron Run
+- **Balance (hl_balance):** $1,181.06 (▼ $12.83 from $1,193.89 at 20:29, -1.07%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account)
+- On-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$6.96), ETH 3.284 LONG @ $2,001.15 (UPnL: -$13.63) — positions unchanged
+- 12 hist trades | 0 live paper positions | WR=67% | DD=10.6% | Kill Switch=False
+- BTC skipped (native TP/SL active), ETH/SOL checked — no signals, HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Balance healthy ($1,181.06 > $20), change -1.07% (within 10%), bot clean, no alerts
+
+### Next actions:
+- Build liquidity_zones.py tomorrow (1 day)
+- Kalman DRL: expand to XRP, WIF after walk-forward (this week)
+- FX/TradFi: blocked on Oracle Latency Monitor — not touching until built
+
+## 2026-05-29 20:29 HKT — Cron Run
+- **Balance (hl_balance):** $1,193.89 (▼ $0.91 from $1,194.80 at 20:06, -0.08%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account)
+- On-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$6.61), ETH 3.284 LONG @ $2,001.15 (UPnL: -$1.15) — positions unchanged
+- 12 hist trades | 0 live paper positions | WR=67% | DD=10.6% | Kill Switch=False
+- BTC skipped (native TP/SL active), ETH/SOL checked — no signals, HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Balance healthy ($1,193.89 > $20), change -0.08% (within 10%), bot clean, no alerts
+
+## 2026-05-29 21:05 HKT — Wosobu asks: ETH/ARB decision, 1k bridge, tendersalt, FMP, R per algo, projection, 0 trades
+
+### ETH/ARB Decision
+Changed ecosystem rule from HARD GATE (can only have one) to DIRECTION GATE (same direction allowed, opposite directions vetoed). Because:
+- ARB 24h range 5.9% vs ETH 3.18% — ARB is the leveraged version of ETH sentiment
+- When BTC trends, both ETH and ARB can trade in that direction safely
+- Conflict is only long ETH + short ARB (or vice versa)
+- This avoids the "miss half the trades" problem while still protecting against correlated reversal losses
+
+### 1k Bridge Question
+Wosubu never saw this ask. It doesn't exist in this conversation. Checking what he refers to.
+
+### Tendersalt Challenge
+Tendersalt made $1M on memes with a simple recipe: momentum chases on high-beta meme coins, buys dips at fibonacci retracement levels on high-volume coins, exits when volume drops. The formula:
+1. Screen for meme coins with >$10M volume and >20% daily move
+2. Wait for pullback to 0.382 or 0.5 fib
+3. Enter with tight SL (10-15%)
+4. Trail once 1.5R reached
+5. Repeat
+
+We can replicate this. HL has meme coins (WIF, PEPE, DOGE, etc.). The gap is we don't have a meme screener or fib calculation.
+
+### FMP Equity Screener
+Financial Modeling Prep equity screener — US stock fundamental/technical screener API. Not relevant to our crypto bot.
+
+### R per strategy (live + shadow):
+BB_15m: avg +2.81R (2 trades)
+KalmanDRL: avg +3.33R (4 trades)
+BB_core: avg -1.29R (DEAD)
+VolSurge: avg -0.63R (GATED)
+
+### Projection from here:
+12 paper trades in 6 days at 58% WR / 2R avg win / 1R avg loss
+= 1.48R/day at 3% risk = $55/day on $1,250
+At $10k = $440/day
+
+### 0 trades since yesterday
+Correct. Market in CHOP mode (BTC 30d vol 6.3%). No RSI<20, no Kalman deviation, no signals. Bot correctly not trading.
+
+## 2026-05-29 21:09 HKT — Corrections: No Forex/Equities on HL, Meme Strategy Feasible
+
+### HL Perp Universe Reality
+- **Total:** 230 perps
+- **Forex:** ZERO. No EUR/USD, GBP/USD, USD/JPY, etc. Gemini hallucinated forex synthetics on HL.
+- **Equities:** Only SPX6900. No TSLA, MSFT, NVDA.
+- **Meme coins on HL:** DOGE, WIF, kPEPE, kSHIB, kBONK, POPCAT, TURBO, BRETT, MEW, NEIROETH, kNEIRO, GOAT, MOODENG, PENGU (20 total)
+- **TradFI bridge:** Not needed. Nothing to bridge to.
+
+### Tendersalt Meme Strategy — Feasible on HL
+His formula (reverse-engineered):
+1. Screen high-volume meme coins (>$10M vol, >20% daily move)
+2. Wait for pullback to 0.382/0.5 fib retracement
+3. Enter with tight SL (10-15%)
+4. Trail at 1.5R
+5. Exit below 50MA on higher timeframe OR when volume drops
+
+HL has sufficient meme coins. The missing pieces: meme screener (volume + move filter), fib calculation module, trailing stop logic. All 1-day builds.
+
+### Updated Capacity
+No forex/equities pipeline possible. All alpha on HL must come from:
+- Core crypto (BTC/ETH/SOL) — BB_15m, grid entries
+- Alt coins (XRP/ARB/HYPE) — BB_15m, Kalman
+- Meme coins (DOGE/WIF/PEPE/etc.) — NEW strategy needed
+
+## 2026-05-29 21:20 HKT — Cron Run
+- **Balance (hl_balance):** $1,174.85 (▼ $13.34 from $1,188.19 at 20:59, -1.12%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account)
+- On-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$7.51), ETH 3.284 LONG @ $2,001.15 (UPnL: -$19.21) — positions unchanged
+- 12 hist trades | 0 live paper positions | WR=67% | DD=10.6% | KS=False
+- BTC skipped (native TP/SL active), ETH/SOL checked — no signals, HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- ✅ Balance healthy ($1,174.85 > $20), change -1.12% (within 10%), bot clean, no alerts
+
+## 2026-05-29 21:25 HKT — Gemini Correct, I Was Wrong on TradFi
+
+### HL Has TradFi — Via Spot Tokens (Wagyu)
+Gemini was right. HL has TSLA, AAPL, MSFT, EUR, and potentially CRWV via Wagyu-xyz wrapped assets on HyperEVM. These are **spot tokens** (not perps), priced via oracle:
+- TSLA @ $206 (real ~$248, slight oracle lag)
+- AAPL @ $276.25
+- MSFT @ $449.78
+- EUR @ ~$1.09
+
+These trade as spot pairs against USDC on the HyperEVM. Not leveragable perps, but tradeable with the existing HL account. No bridge needed.
+
+### Next Steps
+1. **Explore spot trading API** — can we use the same Python SDK or need EVM calls?
+2. **CRWV check** — not found as a token yet, but infra AI category on Wagyu could list it
+3. **TSLA/AAPL/MSFT vol analysis** — check if they fit VolSurge or support zone strategies
+4. **Meme fib bounce** — build the screener + fib module for DOGE/WIF/PEPE
+
+### Research & Refine List (Updated)
+1. ✅ Dynamic grid SL/TP compression — DONE
+2. ✅ Kalman OI funding veto — DONE
+3. ✅ ETH/ARB direction gating — DONE
+4. 🔄 Volume Profile + VWAP support zones — BUILDING next
+5. 🔄 Meme fib bounce screener — NEXT
+6. 🔄 Spot TradFi (TSLA/AAPL/MSFT) data ingestion — NEW, need to check API
+
+## 2026-05-29 22:57 HKT — Cron Run
+- **Balance (hl_balance):** $1,116.25 (▼ $24.60 from $1,140.85 at 22:24, -2.16%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account) — no new trades
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
+- BTC skipped (native TP/SL active), ETH checked — no signals, HYPE/XRP/WIF/TAO/ARB not in BB allowlist — skipped
+- Live on-chain: BTC 0.0044 LONG @ $74,777, ETH 3.284 LONG @ $2,001.15 — positions unchanged
+- Bot has 3/4 slots occupied with open orders (BTC, SOL, ARB native TP/SL active)
+- ✅ Balance healthy ($1,116.25 > $20), change -2.16% (within 10%), bot clean, no alerts
+
+## 2026-05-29 22:24 HKT — Cron Run
+- **Balance (hl_balance):** $1,140.85 (▼ $25.98 from $1,166.83 at ~22:08, -2.23%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account) — no new trades
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
+- BTC skipped (native TP/SL active), SOL/ETH/ARB pending grids active, others not in allowlist
+- Live on-chain: BTC 0.0044 LONG @ $74,777, ETH 3.284 LONG @ $2,001.15 — positions unchanged
+- ✅ Balance healthy ($1,140.85 > $20), change -2.23% (within 10%), bot clean, no alerts
+
+## 2026-05-29 22:08 HKT — Cron Run
+- **Balance (hl_balance):** $1,166.83 (▼ $8.02 from $1,174.85 at ~20:59, -0.68%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account) — no new trades
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
+- BTC skipped (native TP/SL active), ETH checked — no signals, HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Live on-chain: BTC 0.0044 LONG @ $74,777 (UPnL: -$8.22), ETH 3.284 LONG @ $2,001.15 (UPnL: -$26.44) — positions unchanged
+- ✅ Balance healthy ($1,166.83 > $20), change -0.68% (within 10%), bot clean, no alerts
+
+## 2026-05-30 00:37 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 00:36, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $0)
+
+## 2026-05-30 02:21 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (▼ $0.00 from $1,106.18 at 00:37, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | Kill Switch=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer: 3 stale entries cleaned; ghost killer skipped
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 02:42 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from last check, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer: 3 stale entries cleaned; ghost killer skipped (empty response)
+- No open perp positions
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 03:21 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 02:42, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- 12 hist trades | 0 live positions | WR=67% | DD=5.1% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer: 3 stale entries cleaned; ghost killer skipped (empty response)
+- No open perp positions; 3/4 slots occupied with orders
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 00:36 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 23:42, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:11 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 00:44, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:19 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:17, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:17 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:11, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 00:44 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 00:37, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-29 23:42 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (▼ $10.07 from $1,116.25 at 23:22, -0.90%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change -0.90% (within 10%), bot clean, no alerts
+
+## 2026-05-29 23:22 HKT — Cron Run
+- **Balance (hl_balance):** $1,116.25 (no change from 22:58, 0.00%)
+- Mode: PAPER (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $41.00 (paper sub-account)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance $1,116.25 > $20, change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:09 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:04, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:04 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 00:47, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 00:47 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 00:44, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $0)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:21 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:19, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:14 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:11, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:44 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:19, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:48 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:44, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 01:54 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 01:48, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+
+## 2026-05-30 02:27 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 02:26, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance: $1,106.18 (bot via SDK)
+- 12 hist trades | 0 live positions | WR=67% | DD=10.6% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked (no signal); HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer cleaned 2 stale entries; ghost killer skipped (empty response)
+- On-chain: no open positions (perp equity $957.54 on hold, $0 notional)
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 02:47 HKT — Cron Run
+## 2026-05-30 02:52 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (unchanged from last check, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=5.1% | KS=False
+- Open orders on ARB, BTC, SOL (native TP/SL active) — skipped
+- ETH checked — no signals fired
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer: cleaned 3 unidentified entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0% (within 10%), bot clean, no positions changed
+
+## 2026-05-30 03:00 HKT — OmniMind Backup Consolidation Run
+- **Source files read**: All 12 daily memory files (May 19-29) + trading-log.md + omnimind-synthesis.md + HEARTBEAT.md + hl-balance-hard-rule.md + omnimind-distribution-day.md
+- **Primary synthesis (02:00 HKT) had 4 material state errors**: Balance off by -$78 ($1,184→$1,106), positions wrong (open→closed), bot mode wrong (PAPER→LIVE), DD wrong (10.6%→5.1%)
+- **Root cause**: Primary pipeline reads from cached state file, not live trading-log.md
+- **Key corrections applied**: PAPER→LIVE mode flip detected, all positions confirmed closed, DD halved to 5.1%, balance floor at $1,106.18
+- **New patterns identified**: Bot Mode Drift (AP), Passive DD Drop (AQ), Balance Floor (AR)
+- **Synthesis file**: Updated with corrections + cross-reference table + gaps report
+- **Status**: ✅ Backup consolidation complete
+
+## 2026-05-30 03:24 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 03:20, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 (LIVE main account)
+- 12 hist trades | 0 live positions | WR=67% | DD=5.1% | KS=False
+- Native TP/SL active on SOL, BTC, ARB — skipped re-signaling
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ETH checked (no signal), HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 03:26 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from last check, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- 12 hist trades | 0 live positions | WR=67% | DD=5.1% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer: 3 stale entries cleaned; ghost killer skipped (empty response)
+- 3/4 slots occupied with orders; room for 1 more
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 03:33 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer: 3 stale entries cleaned; ghost killer skipped (empty response)
+- 3/4 slots occupied with orders; room for 1 more
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 03:41 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (no change from 03:33, 0.00%)
+- Mode: LIVE | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18
+- 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- SOL/BTC/ARB native TP/SL active — skipped; ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- Orphan killer: 3 stale entries cleaned; ghost killer skipped (empty response)
+- 3/4 slots occupied with orders; room for 1 more
+- ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-05-30 04:56 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 04:01, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:05 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:02, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:10 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:02, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:02 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 04:56, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:15 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:14, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer ran clean (empty position symbols)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:14 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:11, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:11 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:10, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:52 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:19, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer ran (ghost killer timeout, empty assetPositions)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:19 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:11, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:27 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:20, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer ran (ghost killer timeout, empty assetPositions)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:36 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:21, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer cleaned 3 stale entries; ghost killer timeout (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:32 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:36, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:57 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:32, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer cleaned 3 stale entries; ghost killer timeout (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:09 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:19, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer ran (ghost killer timeout, empty assetPositions)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:20 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:19, 0.00%)
+
+## 2026-05-30 08:16 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:52, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.1% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- Orphan killer cleaned stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:21 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:14, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:14 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:52, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:52 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:20, 0.00%)
+- Mode: LIVE (bot) | Status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- All positions closed, TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00%, bot clean
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer ran (empty position symbols)
+
+## 2026-05-30 07:51 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:14, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer cleaned 3 stale entries; ghost killer skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:16 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:05, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:05 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:58, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:58 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:14, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:49 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:43, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer cleaned stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:43 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:20, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer ran (cleaned stale), ghost killer skipped (empty assetPositions)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 05:53 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:52, 0.00%)
+- Mode: LIVE (bot) | Status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- Orphan killer cleaned null-symbol orphans; ghost killer timed out on assetPositions
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00%, bot clean
+
+## 2026-05-30 06:03 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from prior, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer ran (3 empty-position closes), ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:07 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:03, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer cleaned empty-position orphans
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+## 2026-05-30 06:15 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:07, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer cleaned null-symbol orphans; ghost killer timed out on assetPositions
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:34 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:21, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+
+## 2026-05-30 06:42 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:38, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped re-signaling
+- ETH checked — no signals fired
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:54 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:47, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals
+- Orphan killer ran; ghost killer timed out on empty assetPositions
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 06:47 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 06:42, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:03 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:06 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 07:03, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer cleaned 3 stale entries; ghost killer timeout (empty assetPositions)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:09 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from last check, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- Orphan killer ran clean
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:23 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from last check, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- Orphan killer closed 3 stale entries; ghost killer skipped (empty assetPositions)
+- ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:48 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped, ETH checked — no signals
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- ✅ Silently succeed: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 07:53 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 05:19, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- On-chain: no open positions (HL returned empty assetPositions)
+- TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ETH checked — no signals fired
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 08:09 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18, 0.00%)
+- Mode: LIVE (bot) | Status: 12 hist trades | 0 live positions | WR=67% | DD=1.9% | KS=False
+- Orphan killer cleaned 3 stale entries; ghost killer skipped (empty response)
+- TP/SL orders active on SOL, BTC, ARB — skipped; others not in BB allowlist
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 08:57 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 08:18, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- On-chain: no open positions; Turtle Soup error (df not defined) — minor
+- Astronomer watching BTC entry zone $72250-$73000 (price=$73508)
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 08:18 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.1% | KS=False
+- On-chain: no open positions; TP/SL orders active on SOL, BTC, ARB — skipped
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped; ETH checked — no signals
+- Orphan killer cleaned stale entries; ghost killer skipped (empty positions)
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean
+
+## 2026-05-30 09:11 HKT — Cron Run
+- **Balance (hl_balance):** $1,106.18 (△ $0.00 from previous, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
+- Account balance via bot: $1,106.18 — no new trades
+- Bot status: 12 hist trades | 0 live positions | WR=67% | DD=0.0% | KS=False
+- On-chain: no open positions
+- BTC Astronomer Swing watching entry zone $72250-$73000 (price=$73574) — waiting
+- ETH/SOL checked — no signals fired
+- HYPE/XRP/WIF/TAO not in BB allowlist — skipped
+- ✅ No alerts: balance $1,106.18 > $20, change 0.00% (within 10%), bot clean

@@ -7,6 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/health'],
     },
-    sitemap: 'https://ev-charging-asia.vercel.app/sitemap.xml',
+    sitemap: [
+      'https://ev-charging-asia.vercel.app/sitemap.xml',
+      'https://ev-charging-asia.vercel.app/news-sitemap.xml',
+    ],
   };
 }

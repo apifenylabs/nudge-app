@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Calendar, Clock, Tag, User, BookOpen, CheckCircle, XCircle, DollarSign, Globe, Code, PenTool, BarChart, Star, Zap, Users, ChevronRight, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Calendar, Clock, Tag, User, BookOpen, CheckCircle, XCircle, DollarSign, Globe, Code, PenTool, BarChart, Star, Zap, Users, ChevronRight, ExternalLink, Layers } from 'lucide-react';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
-import { getRelatedPosts } from '@/lib/blog-data';
+import { getRelatedPosts, getRelatedPostsByCategory } from '@/lib/blog-data';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 const POST = {
   slug: 'cursor-vs-copilot-vs-windsurf-2026',
@@ -283,7 +283,7 @@ export default function CursorVsCopilotPage() {
               href="https://github.com/features/copilot"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gray-800 text-white px-5 py-2.5 rounded-xl hover:bg-gray-900 transition-colors font-medium"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:bg-blue-700 transition-colors font-medium"
             >
               Get GitHub Copilot {'\u2192'} <ExternalLink className="w-4 h-4" />
             </a>

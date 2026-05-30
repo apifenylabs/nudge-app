@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Star, TrendingUp, Users, Zap, Medal, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -28,24 +28,43 @@ export default function RoutePopularityLeaderboard() {
   const [loading, setLoading] = useState(true);
   const [sortBy, setSortBy] = useState<'rating' | 'votes'>('rating');
 
-  useEffect(() => {
-    // Fetch route slugs from the page — this component is embedded in the /routes page
-    // which has access to route data. For SSR compatibility, we fetch via API.
-    const fetchAll = async () => {
-      try {
-        const res = await fetch('/api/vote/leaderboard');
-        if (res.ok) {
-          const data = await res.json();
-          setRanked(data.entries || []);
-        }
-      } catch {
-        // Silently fail — non-critical
-      } finally {
-        setLoading(false);
+  // localStorage cache key for offline resilience
+  const STORAGE_KEY = 'evca-leaderboard-cache';
+
+  const fetchAll = useCallback(async () => {
+    try {
+      // Try API first
+      const res = await fetch('/api/vote/leaderboard');
+      if (res.ok) {
+        const data = await res.json();
+        const entries = data.entries || [];
+        setRanked(entries);
+        // Cache in localStorage for fallback
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({ entries, ts: Date.now() }));
+        } catch { /* quota exceeded */ }
+      } else {
+        throw new Error('API error');
       }
-    };
-    fetchAll();
+    } catch {
+      // Fallback to localStorage cache
+      try {
+        const cached = localStorage.getItem(STORAGE_KEY);
+        if (cached) {
+          const parsed = JSON.parse(cached);
+          if (Array.isArray(parsed.entries)) {
+            setRanked(parsed.entries);
+          }
+        }
+      } catch { /* ignore */ }
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  useEffect(() => {
+    fetchAll();
+  }, [fetchAll]);
 
   if (loading) {
     return (

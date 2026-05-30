@@ -7,7 +7,7 @@ import { NextRequest, NextResponse } from 'next/server';
 //
 // Setup in Stripe Dashboard:
 //   1. Go to https://dashboard.stripe.com/webhooks
-//   2. Add endpoint: https://apifeny.ai/api/stripe-webhook
+//   2. Add endpoint: https://apifeny-ai.vercel.app/api/stripe-webhook
 //   3. Listen for: checkout.session.completed
 //   4. Set signing secret (STRIPE_WEBHOOK_SECRET env var) — optional for now
 //

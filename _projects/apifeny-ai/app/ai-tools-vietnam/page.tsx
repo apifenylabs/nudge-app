@@ -104,12 +104,12 @@ export default function AIToolsVietnamPage() {
       '@type': 'CollectionPage',
       name: 'Công Cụ AI Tốt Nhất tại Việt Nam (2026)',
       description: 'Danh mục 85+ công cụ AI hàng đầu cho doanh nghiệp, startup và đội nhóm tại Việt Nam.',
-      url: 'https://apifeny.ai/ai-tools-vietnam',
+      url: 'https://apifeny-ai.vercel.app/ai-tools-vietnam',
       inLanguage: 'vi-VN',
       isPartOf: {
         '@type': 'WebSite',
         name: 'Apifeny AI',
-        url: 'https://apifeny.ai',
+        url: 'https://apifeny-ai.vercel.app',
       },
     });
     const existing = document.getElementById('ai-tools-vietnam-jsonld');
@@ -703,10 +703,10 @@ export default function AIToolsVietnamPage() {
 function HeadHreflang() {
   useEffect(() => {
     const links = [
-      { rel: 'alternate', hrefLang: 'vi-VN', href: 'https://apifeny.ai/ai-tools-vietnam' },
-      { rel: 'alternate', hrefLang: 'en-VN', href: 'https://apifeny.ai/ai-tools-vietnam' },
-      { rel: 'alternate', hrefLang: 'x-default', href: 'https://apifeny.ai/ai-tools-vietnam' },
-      { rel: 'canonical', hrefLang: '', href: 'https://apifeny.ai/ai-tools-vietnam' },
+      { rel: 'alternate', hrefLang: 'vi-VN', href: 'https://apifeny-ai.vercel.app/ai-tools-vietnam' },
+      { rel: 'alternate', hrefLang: 'en-VN', href: 'https://apifeny-ai.vercel.app/ai-tools-vietnam' },
+      { rel: 'alternate', hrefLang: 'x-default', href: 'https://apifeny-ai.vercel.app/ai-tools-vietnam' },
+      { rel: 'canonical', hrefLang: '', href: 'https://apifeny-ai.vercel.app/ai-tools-vietnam' },
     ];
 
     links.forEach(({ rel, hrefLang, href }) => {

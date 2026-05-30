@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { CATEGORIES, type CategoryInfo } from '@/lib/category-data';
 import { toolsData } from '@/lib/data';
 import { Sparkles } from 'lucide-react';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'AI Tool Categories — Apifeny AI',
@@ -17,7 +18,14 @@ export default function CategoriesPage() {
   const categories = Object.values(CATEGORIES);
 
   return (
-    <main className="min-h-screen bg-gray-950">
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', item: '/' },
+          { name: 'Categories', item: '/categories' },
+        ]}
+      />
+      <main className="min-h-screen bg-gray-950">
       <section className="max-w-5xl mx-auto px-4 py-16 sm:py-24">
         <div className="mb-12">
           <span className="text-neon font-semibold text-sm uppercase tracking-wider">Categories</span>
@@ -54,5 +62,6 @@ export default function CategoriesPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

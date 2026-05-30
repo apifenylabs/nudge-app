@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   title: 'ChatGPT vs Claude 2026 — Pricing, Coding, Features Compared | Apifeny AI',

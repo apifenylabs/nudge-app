@@ -492,7 +492,6 @@ function ParticleField() {
             background: `rgba(20, 184, 166, 0.3)`,
             boxShadow: `0 0 ${p.size * 3}px rgba(20, 184, 166, 0.2)`,
             filter: 'blur(1px)',
-            mixBlendMode: 'screen',
           }}
           animate={{
             y: [0, -4, 2, -8, -2, -10, 0, -6, -2, -8, 0],
@@ -516,18 +515,18 @@ function ParticleField() {
 
 function CodeBlock({ title, language, code }: { title: string; language: string; code: string }) {
   return (
-    <div className="rounded-xl overflow-hidden border border-titan-border/30 bg-titan-bg/80">
-      <div className="flex items-center justify-between px-4 py-2.5 bg-titan-surface/50 border-b border-titan-border/20">
+    <div className="rounded-xl overflow-hidden border border-gray-200 bg-white">
+      <div className="flex items-center justify-between px-4 py-2.5 bg-gray-50 border-b border-gray-200">
         <div className="flex items-center gap-2">
-          <Terminal className="h-3.5 w-3.5 text-titan-teal/70" />
-          <span className="text-xs font-mono text-titan-muted/80">{title}</span>
+          <Terminal className="h-3.5 w-3.5 text-teal-600" />
+          <span className="text-xs font-mono text-gray-500">{title}</span>
         </div>
         <div className="flex items-center gap-2">
-          <Badge className="text-[9px] h-4 px-1.5 font-mono border-0 bg-titan-teal/10 text-titan-teal/70">
+          <Badge className="text-[9px] h-4 px-1.5 font-mono border-0 bg-teal-50 text-teal-600">
             {language}
           </Badge>
           <button
-            className="text-titan-muted/50 hover:text-titan-teal/70 transition-colors"
+            className="text-gray-400 hover:text-teal-600 transition-colors"
             onClick={() => navigator.clipboard.writeText(code)}
             title="Copy code"
           >
@@ -535,7 +534,7 @@ function CodeBlock({ title, language, code }: { title: string; language: string;
           </button>
         </div>
       </div>
-      <pre className="p-4 text-[11px] sm:text-xs leading-relaxed font-mono text-titan-text/80 overflow-x-auto">
+      <pre className="p-4 text-[11px] sm:text-xs leading-relaxed font-mono text-gray-800 overflow-x-auto">
         <code>{code}</code>
       </pre>
     </div>
@@ -562,9 +561,9 @@ export default function PlatformDetailPage() {
   // ─-- Fallback: unknown platform --─────────────────────────────────────
   if (!platform) {
     return (
-      <div className="min-h-screen titan-gradient relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none z-0 titan-radial-glow-warm" />
-        <div className="absolute inset-0 pointer-events-none z-0 titan-grid-bg" />
+      <div className="min-h-screen bg-white relative overflow-hidden">
+        
+        
         <ParticleField />
 
         <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 pt-20 text-center">
@@ -573,16 +572,16 @@ export default function PlatformDetailPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="w-16 h-16 rounded-2xl bg-titan-card/40 border border-titan-border/30 flex items-center justify-center mx-auto mb-4">
-              <Bot className="h-8 w-8 text-titan-muted/50" />
+            <div className="w-16 h-16 rounded-2xl bg-white border border-gray-200 flex items-center justify-center mx-auto mb-4">
+              <Bot className="h-8 w-8 text-gray-400" />
             </div>
             <h1 className="text-xl font-bold titan-text-gradient mb-2">Platform Not Found</h1>
-            <p className="text-sm text-titan-muted font-mono mb-6">
+            <p className="text-sm text-gray-500 font-mono mb-6">
               &quot;{formatPlatformName(platformId)}&quot; is not a recognized platform.
             </p>
             <button
               onClick={() => router.push('/robotics')}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-mono border border-titan-border/40 text-titan-muted/70 hover:bg-titan-card/40 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-mono border border-gray-200 text-gray-500 hover:bg-white transition-colors"
             >
               <ArrowLeft className="h-3.5 w-3.5" />
               Back to Robotics Dashboard
@@ -601,37 +600,36 @@ export default function PlatformDetailPage() {
   };
 
   return (
-    <div className="min-h-screen titan-gradient relative overflow-hidden">
+    <div className="min-h-screen bg-white relative overflow-hidden">
       {/* -- Background layers -- */}
-      <div className="absolute inset-0 pointer-events-none z-0 titan-radial-glow-warm" />
+      
       <div
         className="absolute inset-0 pointer-events-none z-0"
         style={{
           background: `radial-gradient(ellipse at 70% 20%, ${platform.color}10 0%, transparent 60%)`,
-          mixBlendMode: 'screen',
         }}
       />
-      <div className="absolute inset-0 pointer-events-none z-0 titan-grid-bg" />
+      
       <ParticleField />
 
       <div className="relative z-10">
         {/* -- Navigation -- */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-8 pb-2">
           <motion.div
-            className="flex items-center gap-1.5 text-[10px] font-mono text-titan-muted/50 mb-4"
+            className="flex items-center gap-1.5 text-[10px] font-mono text-gray-400 mb-4"
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
           >
             <button
               onClick={() => router.push('/robotics')}
-              className="hover:text-titan-teal/80 transition-colors flex items-center gap-1"
+              className="hover:text-teal-600 transition-colors flex items-center gap-1"
             >
               <ChevronLeft className="h-2.5 w-2.5" />
               Robotics
             </button>
             <ChevronRight className="h-2.5 w-2.5" />
-            <span className="text-titan-teal/80">{platform.name}</span>
+            <span className="text-teal-600">{platform.name}</span>
           </motion.div>
         </div>
 
@@ -660,7 +658,7 @@ export default function PlatformDetailPage() {
             {/* Info */}
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 sm:gap-3 flex-wrap mb-1.5">
-                <h1 className="text-xl sm:text-2xl font-bold text-titan-text tracking-tight">
+                <h1 className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">
                   {platform.name}
                 </h1>
                 <Badge
@@ -674,7 +672,7 @@ export default function PlatformDetailPage() {
                 </Badge>
               </div>
 
-              <p className="text-xs sm:text-sm text-titan-muted leading-relaxed mb-3 max-w-xl">
+              <p className="text-xs sm:text-sm text-gray-500 leading-relaxed mb-3 max-w-xl">
                 {platform.description}
               </p>
 
@@ -682,28 +680,28 @@ export default function PlatformDetailPage() {
                 {/* Status badge */}
                 <div className="flex items-center gap-1.5">
                   <span className={`w-2 h-2 rounded-full ${statusColors[platform.status] || 'bg-gray-500'}`} />
-                  <span className="text-[10px] font-mono text-titan-muted/60 uppercase tracking-wider">
+                  <span className="text-[10px] font-mono text-gray-500 uppercase tracking-wider">
                     {platform.status}
                   </span>
                 </div>
 
                 {/* Divider */}
-                <span className="text-titan-border/40 text-[10px]">|</span>
+                <span className="text-gray-300 text-[10px]">|</span>
 
                 {/* Activity indicator */}
                 <div className="flex items-center gap-1.5">
-                  <Activity className="h-3 w-3 text-titan-emerald/60" />
-                  <span className="text-[10px] font-mono text-titan-muted/60">
+                  <Activity className="h-3 w-3 text-emerald-500" />
+                  <span className="text-[10px] font-mono text-gray-500">
                     Last ping: 12s ago
                   </span>
                 </div>
 
                 {/* Signal */}
-                <span className="text-titan-border/40 text-[10px]">|</span>
+                <span className="text-gray-300 text-[10px]">|</span>
 
                 <div className="flex items-center gap-1.5">
-                  <Signal className="h-3 w-3 text-titan-teal/60" />
-                  <span className="text-[10px] font-mono text-titan-muted/60">
+                  <Signal className="h-3 w-3 text-teal-600/60" />
+                  <span className="text-[10px] font-mono text-gray-500">
                     Latency: 24 ms
                   </span>
                 </div>
@@ -713,7 +711,7 @@ export default function PlatformDetailPage() {
             {/* Back button */}
             <motion.button
               onClick={() => router.push('/robotics')}
-              className="shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-xl text-[10px] sm:text-xs font-mono border border-titan-border/40 text-titan-muted/70 hover:bg-titan-card/40 hover:text-titan-teal/80 transition-all"
+              className="shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-xl text-[10px] sm:text-xs font-mono border border-gray-200 text-gray-500 hover:bg-white hover:text-teal-600 transition-all"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
             >
@@ -724,7 +722,7 @@ export default function PlatformDetailPage() {
 
           {/* Long description */}
           <motion.p
-            className="text-xs sm:text-sm text-titan-muted/70 leading-relaxed mt-4 pl-0 sm:pl-[88px] max-w-2xl font-mono"
+            className="text-xs sm:text-sm text-gray-500 leading-relaxed mt-4 pl-0 sm:pl-[88px] max-w-2xl font-mono"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
@@ -742,18 +740,18 @@ export default function PlatformDetailPage() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-2 mb-4">
-              <HardDrive className="h-4 w-4 text-titan-teal" />
+              <HardDrive className="h-4 w-4 text-teal-600" />
               <h2 className="text-sm sm:text-base font-bold tracking-tight">
                 <span className="titan-text-gradient">Hardware Requirements</span>
               </h2>
             </div>
 
-            <Card className="p-4 sm:p-6 bg-titan-card/30 border-titan-border/30">
+            <Card className="p-4 sm:p-6 bg-white border-gray-200">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                 {platform.hardware.map((item, idx) => (
                   <motion.div
                     key={idx}
-                    className="flex items-start gap-2.5 p-2.5 rounded-lg bg-titan-bg/40 border border-titan-border/20"
+                    className="flex items-start gap-2.5 p-2.5 rounded-lg bg-gray-50 border border-gray-200"
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -761,17 +759,17 @@ export default function PlatformDetailPage() {
                   >
                     <CheckCircle2
                       className={`h-4 w-4 shrink-0 mt-0.5 ${
-                        item.optional ? 'text-titan-muted/40' : 'text-titan-emerald'
+                        item.optional ? 'text-gray-500/40' : 'text-emerald-500'
                       }`}
                     />
                     <span
                       className={`text-[11px] sm:text-xs font-mono leading-relaxed ${
-                        item.optional ? 'text-titan-muted/50' : 'text-titan-text/80'
+                        item.optional ? 'text-gray-400' : 'text-gray-800'
                       }`}
                     >
                       {item.item}
                       {item.optional && (
-                        <span className="text-titan-muted/40 ml-1">(optional)</span>
+                        <span className="text-gray-500/40 ml-1">(optional)</span>
                       )}
                     </span>
                   </motion.div>
@@ -788,7 +786,7 @@ export default function PlatformDetailPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <div className="flex items-center gap-2 mb-4">
-              <BookOpen className="h-4 w-4 text-titan-teal" />
+              <BookOpen className="h-4 w-4 text-teal-600" />
               <h2 className="text-sm sm:text-base font-bold tracking-tight">
                 <span className="titan-text-gradient">Setup Guide</span>
               </h2>
@@ -803,7 +801,7 @@ export default function PlatformDetailPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.08 }}
                 >
-                  <Card className="p-4 sm:p-5 bg-titan-card/30 border-titan-border/30 hover:border-titan-teal/20 transition-colors">
+                  <Card className="p-4 sm:p-5 bg-white border-gray-200 hover:border-teal-200/30 transition-colors">
                     <div className="flex items-start gap-3 sm:gap-4">
                       {/* Step number */}
                       <div
@@ -818,10 +816,10 @@ export default function PlatformDetailPage() {
                       </div>
 
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-xs sm:text-sm font-semibold text-titan-text mb-1 tracking-tight">
+                        <h3 className="text-xs sm:text-sm font-semibold text-gray-900 mb-1 tracking-tight">
                           {step.title}
                         </h3>
-                        <p className="text-[11px] sm:text-xs font-mono text-titan-muted/70 leading-relaxed">
+                        <p className="text-[11px] sm:text-xs font-mono text-gray-500 leading-relaxed">
                           {step.detail}
                         </p>
                       </div>
@@ -840,7 +838,7 @@ export default function PlatformDetailPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="flex items-center gap-2 mb-4">
-              <Terminal className="h-4 w-4 text-titan-teal" />
+              <Terminal className="h-4 w-4 text-teal-600" />
               <h2 className="text-sm sm:text-base font-bold tracking-tight">
                 <span className="titan-text-gradient">Sample Code</span>
               </h2>
@@ -862,7 +860,7 @@ export default function PlatformDetailPage() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <div className="flex items-center gap-2 mb-4">
-                <Zap className="h-4 w-4 text-titan-teal" />
+                <Zap className="h-4 w-4 text-teal-600" />
                 <h2 className="text-sm sm:text-base font-bold tracking-tight">
                   <span className="titan-text-gradient">Capabilities</span>
                 </h2>
@@ -901,7 +899,7 @@ export default function PlatformDetailPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.35 }}
           >
-            <Card className="p-5 sm:p-6 bg-titan-card/30 border-titan-border/30 text-center relative overflow-hidden">
+            <Card className="p-5 sm:p-6 bg-white border-gray-200 text-center relative overflow-hidden">
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
@@ -909,7 +907,7 @@ export default function PlatformDetailPage() {
                 }}
               />
               <div className="relative z-10">
-                <p className="text-xs sm:text-sm text-titan-muted/80 font-mono mb-3 max-w-lg mx-auto">
+                <p className="text-xs sm:text-sm text-gray-500 font-mono mb-3 max-w-lg mx-auto">
                   Ready to deploy your Titan agent to {platform.name}?
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -917,7 +915,7 @@ export default function PlatformDetailPage() {
                     className="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold inline-flex items-center gap-2 shadow-xl"
                     style={{
                       background: 'linear-gradient(135deg, #14B8A6, #10B981)',
-                      color: '#0A0E17',
+                      color: '#FFFFFF',
                     }}
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.97 }}
@@ -928,7 +926,7 @@ export default function PlatformDetailPage() {
 
                   <motion.button
                     onClick={() => router.push('/robotics')}
-                    className="px-5 py-2.5 rounded-xl text-xs font-mono border border-titan-border/40 text-titan-muted/70 hover:bg-titan-card/40 transition-colors inline-flex items-center gap-2"
+                    className="px-5 py-2.5 rounded-xl text-xs font-mono border border-gray-200 text-gray-500 hover:bg-gray-50 transition-colors inline-flex items-center gap-2"
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
                   >

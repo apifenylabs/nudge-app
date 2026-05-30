@@ -67,3 +67,14 @@
 [2026-05-27T02:07:41.648781] [clawhub] [DRY_RUN] 
 [2026-05-27T02:07:41.648815] [reddit/openclaw] [DRY_RUN] 
 [2026-05-27T02:07:41.648991] [twitter] [DRY_RUN] 10 tweets
+
+[2026-05-29T10:00:00] [DISTRIBUTION] [ATTEMPT_2] OmniMind Phase 1 distribution triggered by cron
+[2026-05-29T10:00:01] [SYSTEM] [BLOCKED] No API credentials for any publishing channel
+[2026-05-29T10:00:02] [devto] [BLOCKED] Missing DEV_TO_API_KEY
+[2026-05-29T10:00:03] [reddit/selfhosted] [BLOCKED] Missing Reddit credentials
+[2026-05-29T10:00:04] [clawhub] [BLOCKED] Not logged in, no npm token
+[2026-05-29T10:00:05] [reddit/openclaw] [BLOCKED] Missing Reddit credentials
+[2026-05-29T10:00:06] [twitter] [BLOCKED] Missing Twitter credentials
+[2026-05-29T10:00:07] [CONTENT] [DONE] SEO front matter added to blog post
+[2026-05-29T10:00:08] [CONTENT] [DONE] All 5 content pieces verified ready
+[2026-05-29T10:00:09] [ACTION] [REQUIRED] Wosobu needs to provide 4 API credentials to unblock

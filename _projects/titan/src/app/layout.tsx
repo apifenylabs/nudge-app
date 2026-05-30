@@ -23,6 +23,12 @@ export const metadata: Metadata = {
     description:
       "Visual AI agent builder with gamified progression. Start free.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Titan — Build Your AI Agent Army",
+    description:
+      "Visual AI agent builder with gamified progression. Solo Leveling meets Replit.",
+  },
 };
 
 export default function RootLayout({
@@ -36,6 +42,27 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Titan",
+              "url": "https://titan.vercel.app/",
+              "description":
+                "Build your AI agent army with Solo Leveling progression mechanics. Train, evolve, and deploy agents from Novice to Sovereign.",
+              "applicationCategory": "AI Agent Builder",
+              "operatingSystem": "Web",
+              "offers": {
+                "@type": "AggregateOffer",
+                "lowPrice": "0",
+                "highPrice": "499",
+                "priceCurrency": "USD",
+              },
+            }),
+          }}
+        />
         {children}
         <Analytics />
         <SpeedInsights />

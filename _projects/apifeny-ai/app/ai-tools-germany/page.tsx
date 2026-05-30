@@ -634,7 +634,7 @@ export default function AIToolsGermanyPage() {
               AI writing tools Germany · AI coding tools Germany · AI marketing Germany · 
               Germany AI directory · AI tools for German startups · enterprise AI tools Germany · 
               free AI tools Germany · AI productivity Germany · German tech stack · 
-              AI tools Berlin · AI tools Munich · AI tools Hamburg · KI Tools Deutschland
+              'AI tools for Berlin · AI tools for Munich · AI tools for Hamburg' · KI Tools Deutschland
             </p>
           </div>
         </div>

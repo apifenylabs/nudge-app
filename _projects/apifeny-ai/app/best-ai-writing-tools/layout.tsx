@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     title: 'Best AI Writing Tools 2026 — Apifeny AI',
     description:
       '14 best AI writing tools ranked by trending and ratings. Find your perfect AI writing assistant for blogs, emails, social media, and more.',
-    url: 'https://apifeny.ai/best-ai-writing-tools',
+    url: 'https://apifeny-ai.vercel.app/best-ai-writing-tools',
   },
   alternates: {
-    canonical: 'https://apifeny.ai/best-ai-writing-tools',
+    canonical: 'https://apifeny-ai.vercel.app/best-ai-writing-tools',
   },
 };
 

@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     title: 'Best AI Tools in 2026 — Apifeny AI',
     description:
       'Find the single best AI tool for every task. 85+ hand-picked tools ranked by trending score, real user ratings, and Asia-readiness. Updated daily.',
-    url: 'https://apifeny.ai/best-ai-tools',
+    url: 'https://apifeny-ai.vercel.app/best-ai-tools',
   },
   alternates: {
-    canonical: 'https://apifeny.ai/best-ai-tools',
+    canonical: 'https://apifeny-ai.vercel.app/best-ai-tools',
   },
 };
 

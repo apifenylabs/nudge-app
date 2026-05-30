@@ -302,6 +302,52 @@ const quickActions = [
 ];
 
 /* ─────────────────────────────────────────────────────────────
+   Loading Skeleton — shown before hydration
+   ───────────────────────────────────────────────────────────── */
+function DashboardSkeleton() {
+  const rows = Array.from({ length: 6 }, (_, i) => (
+    <div key={i} className="glass rounded-xl p-4">
+      <div className="flex items-start justify-between mb-3">
+        <div className="w-8 h-8 rounded-lg skeleton-pulse bg-slate-700" />
+        <div className="w-14 h-5 rounded-full skeleton-pulse bg-slate-700" />
+      </div>
+      <div className="w-20 h-8 rounded skeleton-pulse bg-slate-700 mb-2" />
+      <div className="w-24 h-3 rounded skeleton-pulse bg-slate-700" />
+    </div>
+  ));
+
+  return (
+    <main className="min-h-screen bg-[#08080f]">
+      <header className="sticky top-0 z-40 border-b border-[#1e293b]/50 bg-[#08080fe0] backdrop-blur-xl">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded skeleton-pulse bg-slate-700" />
+            <div className="w-32 h-5 rounded skeleton-pulse bg-slate-700" />
+          </div>
+          <div className="w-24 h-8 rounded-lg skeleton-pulse bg-slate-700" />
+        </div>
+      </header>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
+          {rows}
+        </div>
+        <div className="grid lg:grid-cols-3 gap-4 mb-6">
+          <div className="lg:col-span-2 glass rounded-xl p-5">
+            <div className="w-24 h-4 rounded skeleton-pulse bg-slate-700 mb-4" />
+            <div className="w-full h-10 rounded skeleton-pulse bg-slate-700 mb-3" />
+            <div className="w-full h-10 rounded skeleton-pulse bg-slate-700" />
+          </div>
+          <div className="glass rounded-xl p-5">
+            <div className="w-28 h-4 rounded skeleton-pulse bg-slate-700 mb-4" />
+            <div className="w-20 h-20 rounded-full skeleton-pulse bg-slate-700 mx-auto" />
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
    DASHBOARD PAGE
    ───────────────────────────────────────────────────────────── */
 export default function DashboardPage() {
@@ -312,10 +358,24 @@ export default function DashboardPage() {
 
   const dailyData = useMemo(() => generateDailyUsage(), []);
 
-  if (!mounted) return null;
+  if (!mounted) return <DashboardSkeleton />;
 
   return (
     <main className="min-h-screen bg-[#08080f]">
+      {/* BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://titan.vercel.app/" },
+              { "@type": "ListItem", "position": 2, "name": "Dashboard", "item": "https://titan.vercel.app/dashboard" },
+            ],
+          }),
+        }}
+      />
       {/* ── Header ──────────────────────────────────────── */}
       <header className="sticky top-0 z-40 border-b border-[#1e293b]/50 bg-[#08080fe0] backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
@@ -422,6 +482,11 @@ export default function DashboardPage() {
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(8px); }
           to { opacity: 1; transform: translateY(0); }
+        }
+        .skeleton-pulse { animation: skeletonPulse 1.5s ease-in-out infinite; }
+        @keyframes skeletonPulse {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.7; }
         }
       `}</style>
     </main>

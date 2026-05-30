@@ -8,6 +8,7 @@
 
 import Link from 'next/link';
 import { ArrowRight, BookOpen, Layers, PenTool, Code, Megaphone, Sparkles, MapPin, Building2, GraduationCap, Stethoscope, Shield, ShoppingCart, Briefcase, Users, Heart, Glasses, Newspaper, Scale, TreePine, Cpu, Film, Plane } from 'lucide-react';
+import { getAllCategories } from '@/lib/blog-categories';
 
 interface LandingPageEntry {
   slug: string;
@@ -696,11 +697,7 @@ const ALL_LANDING_PAGES: LandingPageEntry[] = [
   },
 ];
 
-const BLOG_CATEGORY_LINKS = [
-  { slug: 'ai-tools', title: 'AI Tools Overview', count: 68 },
-  { slug: 'comparisons', title: 'Tool Comparisons', count: 7 },
-  { slug: 'productivity', title: 'Productivity & Automation', count: 18 },
-];
+const blogCategories = getAllCategories();
 
 interface Props {
   /** Current page slug — will exclude this from cross-links */
@@ -764,7 +761,7 @@ export default function LandingPageCrossLinks({ currentSlug }: Props) {
             </h3>
           </div>
           <div className="flex flex-wrap gap-2">
-            {BLOG_CATEGORY_LINKS.map(cat => (
+            {blogCategories.map(cat => (
               <Link
                 key={cat.slug}
                 href={`/blog/category/${cat.slug}`}
@@ -772,7 +769,7 @@ export default function LandingPageCrossLinks({ currentSlug }: Props) {
               >
                 <Sparkles className="w-3 h-3" />
                 <span>{cat.title}</span>
-                <span className="text-tech-500">({cat.count})</span>
+                <span className="text-tech-500">({cat.postCount})</span>
               </Link>
             ))}
             <Link

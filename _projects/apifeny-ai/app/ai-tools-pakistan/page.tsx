@@ -634,7 +634,7 @@ export default function AIToolsPakistanPage() {
               AI writing tools Pakistan · AI coding tools Pakistan · AI marketing Pakistan · 
               Pakistan AI directory · AI tools for PK startups · affordable AI tools Pakistan · 
               free AI tools Pakistan · AI productivity Pakistan · Pakistan tech stack · 
-              AI tools Karachi · AI tools Lahore · AI tools Islamabad · Urdu AI tools
+              'AI tools for Karachi · AI tools for Lahore · AI tools for Islamabad' · Urdu AI tools
             </p>
           </div>
         </div>

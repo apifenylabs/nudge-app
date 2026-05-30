@@ -20,7 +20,7 @@ const TelemetryInit = dynamic(
 );
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const BASE_URL = 'https://apifeny.ai';
+const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -56,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Apifeny AI",
-              "url": "https://apifeny.ai",
+              "url": "https://apifeny-ai.vercel.app",
               "description": "Curated AI tools, agents, and playbooks with Asia-ready filters and editorial rankings.",
               "sameAs": [
                 "https://www.familytravelasia.com",
@@ -78,13 +78,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Apifeny AI",
-              "url": "https://apifeny.ai",
+              "url": "https://apifeny-ai.vercel.app",
               "description": "Curated AI tools, agents, and playbooks with Asia-ready filters and editorial rankings.",
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://apifeny.ai/tools?q={search_term_string}"
+                  "urlTemplate": "https://apifeny-ai.vercel.app/tools?q={search_term_string}"
                 },
                 "query-input": "required name=search_term_string"
               }

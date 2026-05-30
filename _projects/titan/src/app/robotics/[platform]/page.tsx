@@ -392,6 +392,22 @@ export default function PlatformSetupPage({
 
   return (
     <main className="min-h-screen bg-[#08080f]">
+      {/* BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://titan.vercel.app/" },
+              { "@type": "ListItem", "position": 2, "name": "Robotics", "item": "https://titan.vercel.app/robotics" },
+              { "@type": "ListItem", "position": 3, "name": plat.name, "item": `https://titan.vercel.app/robotics/${platform}` },
+            ],
+          }),
+        }}
+      />
+
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-[#1e293b]/50 bg-[#08080fe0] backdrop-blur-xl">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
