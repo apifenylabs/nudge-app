@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback, useRef, useEffect, useReducer } from "react";
 import type { NodeDef } from "./NodePalette";
 
 /* ─────────────────────────────────────────────────────────────
@@ -17,8 +17,16 @@ interface CanvasNode {
   connectedTo: string[]; // node ids
 }
 
+/* Props for communicating state up to parent (Sandbox Preview) */
+type OnNodesChange = (
+  nodes: { id: string; label: string; icon: string; defId: string; config?: Record<string, string> }[],
+  connections: { from: string; to: string }[],
+  xp: number
+) => void;
+
 interface Props {
   selectedRank: string;
+  onNodesChange?: OnNodesChange;
 }
 
 const RANK_XP: Record<string, { label: string; color: string; maxXp: number }> = {
@@ -79,15 +87,124 @@ function nodeId() {
   return `n${_nodeCounter}-${Date.now().toString(36)}`;
 }
 
-export default function AgentStudio({ selectedRank }: Props) {
-  const [nodes, setNodes] = useState<CanvasNode[]>([]);
-  const [connections, setConnections] = useState<{ from: string; to: string }[]>([]);
+/* ─────────────────────────────────────────────────────────────
+   Undo/Redo History Stack
+   ───────────────────────────────────────────────────────────── */
+interface CanvasSnapshot {
+  nodes: CanvasNode[];
+  connections: { from: string; to: string }[];
+  canvasXp: number;
+}
+
+const MAX_HISTORY = 50;
+
+function useHistory(initial: CanvasSnapshot) {
+  const [past, setPast] = useState<CanvasSnapshot[]>([]);
+  const [present, setPresent] = useState<CanvasSnapshot>(initial);
+  const [future, setFuture] = useState<CanvasSnapshot[]>([]);
+
+  const push = useCallback((snapshot: CanvasSnapshot) => {
+    setPast((prev) => {
+      const next = [...prev, snapshot];
+      return next.length > MAX_HISTORY ? next.slice(next.length - MAX_HISTORY) : next;
+    });
+    setFuture([]);
+  }, []);
+
+  const undo = useCallback(() => {
+    setPast((prev) => {
+      if (prev.length === 0) return prev;
+      const previous = prev[prev.length - 1];
+      const newPast = prev.slice(0, -1);
+      setPresent(previous);
+      setFuture((f) => [present, ...f]);
+      return newPast;
+    });
+  }, [present]);
+
+  const redo = useCallback(() => {
+    setFuture((prev) => {
+      if (prev.length === 0) return prev;
+      const next = prev[0];
+      const newFuture = prev.slice(1);
+      setPresent(next);
+      setPast((p) => [...p, present]);
+      return newFuture;
+    });
+  }, [present]);
+
+  const reset = useCallback((snapshot: CanvasSnapshot) => {
+    setPast([]);
+    setPresent(snapshot);
+    setFuture([]);
+  }, []);
+
+  return { present, setPresent, push, undo, redo, reset, canUndo: past.length > 0, canRedo: future.length > 0 };
+}
+
+export default function AgentStudio({ selectedRank, onNodesChange }: Props) {
+  const hist = useHistory({ nodes: [], connections: [], canvasXp: 0 });
+  const { present: state, setPresent, push: pushHistory, undo, redo, canUndo, canRedo } = hist;
+  const { nodes, connections, canvasXp } = state;
+
+  const setNodes = useCallback((updater: CanvasNode[] | ((prev: CanvasNode[]) => CanvasNode[])) => {
+    setPresent((prev) => {
+      const nextNodes = typeof updater === 'function' ? updater(prev.nodes) : updater;
+      pushHistory({ nodes: prev.nodes, connections: prev.connections, canvasXp: prev.canvasXp });
+      return { ...prev, nodes: nextNodes };
+    });
+  }, [setPresent, pushHistory]);
+
+  const setConnections = useCallback((updater: { from: string; to: string }[] | ((prev: { from: string; to: string }[]) => { from: string; to: string }[])) => {
+    setPresent((prev) => {
+      const nextConnections = typeof updater === 'function' ? updater(prev.connections) : updater;
+      pushHistory({ nodes: prev.nodes, connections: prev.connections, canvasXp: prev.canvasXp });
+      return { ...prev, connections: nextConnections };
+    });
+  }, [setPresent, pushHistory]);
+
+  const setCanvasXp = useCallback((updater: number | ((prev: number) => number)) => {
+    setPresent((prev) => {
+      const next = typeof updater === 'function' ? updater(prev.canvasXp) : updater;
+      return { ...prev, canvasXp: next };
+    });
+  }, [setPresent]);
+
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   const [draggingNode, setDraggingNode] = useState<string | null>(null);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
-  const [canvasXp, setCanvasXp] = useState(0);
+  /* Remit state to parent on change */
+  const prevSnapshotRef = useRef("");
+  useEffect(() => {
+    if (!onNodesChange) return;
+    const snapshot = JSON.stringify({ n: nodes.length, c: connections.length, xp: canvasXp });
+    if (snapshot !== prevSnapshotRef.current) {
+      prevSnapshotRef.current = snapshot;
+      onNodesChange(
+        nodes.map((n) => ({ id: n.id, label: n.label, icon: n.icon, defId: n.defId, config: n.config })),
+        connections,
+        canvasXp
+      );
+    }
+  }, [nodes, connections, canvasXp, onNodesChange]);
   const [connectingFrom, setConnectingFrom] = useState<string | null>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
+
+  /* ── Keyboard shortcuts (Ctrl+Z / Ctrl+Shift+Z) ── */
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'z') {
+        e.preventDefault();
+        if (e.shiftKey) {
+          redo();
+        } else {
+          undo();
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [undo, redo]);
 
   const rank = RANK_XP[selectedRank] || RANK_XP.E;
   const rankIndex = RANK_ORDER.indexOf(selectedRank);
@@ -182,8 +299,14 @@ export default function AgentStudio({ selectedRank }: Props) {
 
   /* ── Delete node ── */
   const deleteNode = (nodeId: string) => {
-    setNodes((prev) => prev.filter((n) => n.id !== nodeId));
-    setConnections((prev) => prev.filter((c) => c.from !== nodeId && c.to !== nodeId));
+    setPresent((prev) => {
+      pushHistory({ nodes: prev.nodes, connections: prev.connections, canvasXp: prev.canvasXp });
+      return {
+        nodes: prev.nodes.filter((n) => n.id !== nodeId),
+        connections: prev.connections.filter((c) => c.from !== nodeId && c.to !== nodeId),
+        canvasXp: prev.canvasXp,
+      };
+    });
     setSelectedNode(null);
   };
 
@@ -199,6 +322,24 @@ export default function AgentStudio({ selectedRank }: Props) {
           <span className="text-[10px] text-white/30">{nodes.length} nodes · {connections.length} links</span>
         </div>
         <div className="flex items-center gap-2">
+          {/* Undo/Redo buttons */}
+          <button
+            onClick={undo}
+            disabled={!canUndo}
+            className="px-2 py-1 rounded text-[10px] font-mono font-medium transition-colors disabled:opacity-30 disabled:cursor-not-allowed enabled:hover:bg-white/5 enabled:text-white/60"
+            title="Undo (Ctrl+Z)"
+          >
+            ↩ Undo
+          </button>
+          <button
+            onClick={redo}
+            disabled={!canRedo}
+            className="px-2 py-1 rounded text-[10px] font-mono font-medium transition-colors disabled:opacity-30 disabled:cursor-not-allowed enabled:hover:bg-white/5 enabled:text-white/60"
+            title="Redo (Ctrl+Shift+Z)"
+          >
+            ↪ Redo
+          </button>
+          <div className="w-px h-4 bg-white/10 mx-1" />
           <button
             onClick={() => setConnectingFrom(null)}
             className={`px-2 py-1 rounded text-[10px] font-medium transition-colors ${
@@ -208,7 +349,7 @@ export default function AgentStudio({ selectedRank }: Props) {
             {connectingFrom ? "🔗 Linking..." : "Link Mode"}
           </button>
           <button
-            onClick={() => { setNodes([]); setConnections([]); setSelectedNode(null); setCanvasXp(0); }}
+            onClick={() => { setPresent({ nodes: [], connections: [], canvasXp: 0 }); setSelectedNode(null); }}
             className="px-2 py-1 rounded text-[10px] text-white/40 hover:text-white/70 hover:bg-white/5"
           >
             Clear

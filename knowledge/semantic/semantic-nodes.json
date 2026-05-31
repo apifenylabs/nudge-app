@@ -1,8 +1,8 @@
 {
-  "version": "2026-05-30-consolidation-primary",
-  "generated": "2026-05-30T02:00:00+08:00",
-  "semanticCount": 62,
-  "graphEdgeCount": 81,
+  "version": "2026-06-01-consolidation-primary",
+  "generated": "2026-06-01T00:08:00+08:00",
+  "semanticCount": 69,
+  "graphEdgeCount": 91,
   "nodes": [
     {
       "id": "chunk-crypnuevo-cross-1779217287655",
@@ -23,7 +23,7 @@
     {
       "id": "chunk-gold-v2-1779217287655",
       "name": "chunk-gold-v2-1779217287655",
-      "summary": "Gold Template v2 — All 3 scripts built and tested. Epistemic Gate correctly blocks BB(10,2.0) RSI<15 at 16 percent confidence. Killswitch Gate fails 78/78 paper trades at 48.7 percent WR below 55 percent requirement. Rolling Optimizer proves params shift every 3-6 months across 62 windows. BTC grid walk-forward failure: Train PF 2.39 to Test PF 0.84 equals 65 percent edge decay. Current BTC best BB(30,2.5) RSI<20 PF=1.0 with no edge. Fixed params are structurally dead.",
+      "summary": "Gold Template v2 \u2014 All 3 scripts built and tested. Epistemic Gate correctly blocks BB(10,2.0) RSI<15 at 16 percent confidence. Killswitch Gate fails 78/78 paper trades at 48.7 percent WR below 55 percent requirement. Rolling Optimizer proves params shift every 3-6 months across 62 windows. BTC grid walk-forward failure: Train PF 2.39 to Test PF 0.84 equals 65 percent edge decay. Current BTC best BB(30,2.5) RSI<20 PF=1.0 with no edge. Fixed params are structurally dead.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-19T19:01:27.655Z"
@@ -46,7 +46,7 @@
     },
     {
       "id": "funding-rate-strategy-algotick",
-      "name": "Algotick Funding Rate Strategy — 2.56 PF Backtest on HL",
+      "name": "Algotick Funding Rate Strategy \u2014 2.56 PF Backtest on HL",
       "summary": "90-day backtest on Hyperliquid: 2.56 PF, 55% WR, Sharpe 1.26. Contrarian entries at extreme funding Z-scores, 7h avg hold. Already partially in our Kalman DRL strategy. Action: Align Kalman DRL funding rate thresholds with Algotick params.",
       "type": "semantic",
       "confidence": 0.85,
@@ -54,8 +54,8 @@
     },
     {
       "id": "heartbeat-lifeos-plugins-may24",
-      "name": "HEARTBEAT May 24 — LifeOS Expands to 27 Plugins",
-      "summary": "4 new LifeOS plugins across 4 new categories: Nutrition & Diet (7 fields), Creative Expression (6 fields), Finance & Investments (6 fields), Family & Parenting (6 fields). PluginManager UI updated. AI Directory: 57 blog posts, 2 guides, 4 hub pages — all live. LifeOS total: 27 plugins across 17 categories. Titan: all phases complete, deploy guidance needed. All 8 sites healthy.",
+      "name": "HEARTBEAT May 24 \u2014 LifeOS Expands to 27 Plugins",
+      "summary": "4 new LifeOS plugins across 4 new categories: Nutrition & Diet (7 fields), Creative Expression (6 fields), Finance & Investments (6 fields), Family & Parenting (6 fields). PluginManager UI updated. AI Directory: 57 blog posts, 2 guides, 4 hub pages \u2014 all live. LifeOS total: 27 plugins across 17 categories. Titan: all phases complete, deploy guidance needed. All 8 sites healthy.",
       "type": "semantic",
       "confidence": 0.9,
       "timestamp": "2026-05-23T18:03:40.615Z"
@@ -63,22 +63,22 @@
     {
       "id": "kalman-drl-deployed-may23",
       "name": "Kalman DRL Strategy Deployed to Live HL Bot (May 23)",
-      "summary": "3 signal generators deployed: (1) Kalman deviation — price vs denoised, 1.5-4% threshold, (2) Funding rate signal — deeply negative → long, positive → short, (3) Liquidation cascade fade — exhaustion detection after 2+ ATR moves. Allocation: 5% of $500. Dashboard generated with Plotly heatmap + equity curve. Kill Zone filter: 13-20 UTC.",
+      "summary": "3 signal generators deployed: (1) Kalman deviation \u2014 price vs denoised, 1.5-4% threshold, (2) Funding rate signal \u2014 deeply negative \u2192 long, positive \u2192 short, (3) Liquidation cascade fade \u2014 exhaustion detection after 2+ ATR moves. Allocation: 5% of $500. Dashboard generated with Plotly heatmap + equity curve. Kill Zone filter: 13-20 UTC.",
       "type": "semantic",
       "confidence": 0.9,
       "timestamp": "2026-05-23T18:03:40.538Z"
     },
     {
       "id": "lifeos-prd-complete",
-      "name": "LifeOS PRD — Full Product Requirements Document",
-      "summary": "LifeOS PRD created at /home/captain/.openclaw/workspace/life/Projects/LifeOS-PRD.md. 10 sections: Vision, Architecture, Feature Specs, Persistence, UI/UX, Integration, Roadmap, Technical, Metrics, aicofounder Parity. 12 plugins built (v0.59+), 3 more planned (Business, Home, Relationships). Roadmap: v0.59→v1.0 with 7 milestones. 5/10 aicofounder parity items done.",
+      "name": "LifeOS PRD \u2014 Full Product Requirements Document",
+      "summary": "LifeOS PRD created at /home/captain/.openclaw/workspace/life/Projects/LifeOS-PRD.md. 10 sections: Vision, Architecture, Feature Specs, Persistence, UI/UX, Integration, Roadmap, Technical, Metrics, aicofounder Parity. 12 plugins built (v0.59+), 3 more planned (Business, Home, Relationships). Roadmap: v0.59\u2192v1.0 with 7 milestones. 5/10 aicofounder parity items done.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.984044+00:00"
     },
     {
       "id": "live-hl-bot-status-may23",
-      "name": "Live Hyperliquid Bot Status — May 23",
+      "name": "Live Hyperliquid Bot Status \u2014 May 23",
       "summary": "BB Core: 6 trades live, 33% WR, 10.6% DD, $41 PnL. Kalman DRL: deployed (5% allocation). TendersAlt: 47 signals, 41.3% WR, -72.2% PnL (bearish flush). Markets: BTC $75K, ETH $2K, SOL $83. Regime: CHOP (ADX 15-22). Paper WR: BTC 86.4%, ETH 88.8%, SOL 90.3%. Allocations: 80% BB Core / 15% Vol Surge / 5% Kalman DRL.",
       "type": "semantic",
       "confidence": 0.9,
@@ -86,7 +86,7 @@
     },
     {
       "id": "next-actions-may23",
-      "name": "Consolidated Pending Actions — May 23",
+      "name": "Consolidated Pending Actions \u2014 May 23",
       "summary": "(1) Implement forex ADX filter + 2% risk, (2) Write FMP equity screener script (250 calls/day), (3) Set up Jupiter API meme execution (paper mode), (4) Fix PnL reconciliation bug: max_lookback_bars=200, (5) Wire core_bb playbook into hourly runner, (6) Align Kalman DRL funding rate thresholds with Algotick params.",
       "type": "semantic",
       "confidence": 0.9,
@@ -94,16 +94,16 @@
     },
     {
       "id": "omnimind-cron-status-22may",
-      "name": "OmniMind Cron Status — Primary/Backup/Distribution",
-      "summary": "omnimind-consolidation-primary: 02:00 HKT daily — fully autonomous. omnimind-consolidation-backup: 03:00 HKT daily — fully autonomous. omnimind-distribution-day: 10:00 HKT daily — needs platform auth. 19 crons active total. Trading-beast-hourly timeout bumped to 300s. Budget ~$0.24/$0.50 today. All DeepSeek-chat.",
+      "name": "OmniMind Cron Status \u2014 Primary/Backup/Distribution",
+      "summary": "omnimind-consolidation-primary: 02:00 HKT daily \u2014 fully autonomous. omnimind-consolidation-backup: 03:00 HKT daily \u2014 fully autonomous. omnimind-distribution-day: 10:00 HKT daily \u2014 needs platform auth. 19 crons active total. Trading-beast-hourly timeout bumped to 300s. Budget ~$0.24/$0.50 today. All DeepSeek-chat.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.984050+00:00"
     },
     {
       "id": "research-forum-mining-passivbot",
-      "name": "Forum Mining — Top GitHub Repos Found",
-      "summary": "PassivBot (2,001⭐, Hyperliquid-native, Rust order planner, evolutionary optimizer), Fractal DeFi (entity-based backtesting, basis trading, ML funding rate forecasting), Freqtrade Ultimate (Hyperliquid fork with PlateauSampler, CPCV walk-forward). Also OctoBot (5,974⭐ reference architecture) and Moss Trade Bot (composite 5-pillar scoring). Malware warning: xlev-v/Hyperliquid-Trading-Bot — PowerShell IEX download-execute.",
+      "name": "Forum Mining \u2014 Top GitHub Repos Found",
+      "summary": "PassivBot (2,001\u2b50, Hyperliquid-native, Rust order planner, evolutionary optimizer), Fractal DeFi (entity-based backtesting, basis trading, ML funding rate forecasting), Freqtrade Ultimate (Hyperliquid fork with PlateauSampler, CPCV walk-forward). Also OctoBot (5,974\u2b50 reference architecture) and Moss Trade Bot (composite 5-pillar scoring). Malware warning: xlev-v/Hyperliquid-Trading-Bot \u2014 PowerShell IEX download-execute.",
       "type": "semantic",
       "confidence": 0.9,
       "timestamp": "2026-05-23T18:03:40.495Z"
@@ -111,7 +111,7 @@
     {
       "id": "semantic-default-1779559420775",
       "name": "semantic-default-1779559420775",
-      "summary": "May 24 01:52 HKT — ceo-24-7-work-engine cron HEARTBEAT: LifeOS expanded to 27 plugins across 17 categories. 4 new plugins: Nutrition & Diet, Creative Expression, Finance & Investments, Family & Parenting. AI Directory: 57 blog posts, 2 guides, 4 hub pages live. All sites healthy. Titan deploy guidance needed. Strategy readiness: BB Core 85%, Vol Surge 70%, TendersAlt 55%, Kalman DRL 40%, Funding Rate Arb 20%, PassivBot Grid 15%.\nMay 23 23:02 HKT — Web search fixed: DuckDuckGo now operational as ",
+      "summary": "May 24 01:52 HKT \u2014 ceo-24-7-work-engine cron HEARTBEAT: LifeOS expanded to 27 plugins across 17 categories. 4 new plugins: Nutrition & Diet, Creative Expression, Finance & Investments, Family & Parenting. AI Directory: 57 blog posts, 2 guides, 4 hub pages live. All sites healthy. Titan deploy guidance needed. Strategy readiness: BB Core 85%, Vol Surge 70%, TendersAlt 55%, Kalman DRL 40%, Funding Rate Arb 20%, PassivBot Grid 15%.\nMay 23 23:02 HKT \u2014 Web search fixed: DuckDuckGo now operational as ",
       "type": "semantic",
       "confidence": 0.7,
       "timestamp": "2026-05-23T18:03:40.775Z"
@@ -119,23 +119,23 @@
     {
       "id": "semantic-omnimind-consolidation-1779559420857",
       "name": "semantic-omnimind-consolidation-1779559420857",
-      "summary": "May 24 01:52 HKT — ceo-24-7-work-engine cron HEARTBEAT: LifeOS expanded to 27 plugins across 17 categories. 4 new plugins: Nutrition & Diet, Creative Expression, Finance & Investments, Family & Parenting. AI Directory: 57 blog posts, 2 guides, 4 hub pages live. All sites healthy. Titan deploy guidance needed. Strategy readiness: BB Core 85%, Vol Surge 70%, TendersAlt 55%, Kalman DRL 40%, Funding Rate Arb 20%, PassivBot Grid 15%.\nMay 23 23:02 HKT — Web search fixed: DuckDuckGo now operational as ",
+      "summary": "May 24 01:52 HKT \u2014 ceo-24-7-work-engine cron HEARTBEAT: LifeOS expanded to 27 plugins across 17 categories. 4 new plugins: Nutrition & Diet, Creative Expression, Finance & Investments, Family & Parenting. AI Directory: 57 blog posts, 2 guides, 4 hub pages live. All sites healthy. Titan deploy guidance needed. Strategy readiness: BB Core 85%, Vol Surge 70%, TendersAlt 55%, Kalman DRL 40%, Funding Rate Arb 20%, PassivBot Grid 15%.\nMay 23 23:02 HKT \u2014 Web search fixed: DuckDuckGo now operational as ",
       "type": "semantic",
       "confidence": 0.7,
       "timestamp": "2026-05-23T18:03:40.857Z"
     },
     {
       "id": "seventy-thirty-prioritization",
-      "name": "70/30 Balanced Prioritization Framework — LOCKED",
-      "summary": "RULES.yaml created with Balanced Prioritization system. 70% work capacity → Revenue projects (affiliates, PDF playbooks, monetization). 30% → Strategic Projects (LifeOS personality-aware copilot, AI Directory, Titan agent builder). Idea Review Pipeline — no new projects without passing pipeline. Heartbeat rules — must find work, never HEARTBEAT_OK if Strategic Projects have open items. Ceo-24-7-work-engine and proactive-builder crons updated with 70/30 split instructions. $0.00 revenue, 6 active blockers all Wosobu-dependent.",
+      "name": "70/30 Balanced Prioritization Framework \u2014 LOCKED",
+      "summary": "RULES.yaml created with Balanced Prioritization system. 70% work capacity \u2192 Revenue projects (affiliates, PDF playbooks, monetization). 30% \u2192 Strategic Projects (LifeOS personality-aware copilot, AI Directory, Titan agent builder). Idea Review Pipeline \u2014 no new projects without passing pipeline. Heartbeat rules \u2014 must find work, never HEARTBEAT_OK if Strategic Projects have open items. Ceo-24-7-work-engine and proactive-builder crons updated with 70/30 split instructions. $0.00 revenue, 6 active blockers all Wosobu-dependent.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.984037+00:00"
     },
     {
       "id": "titan-v061-agent-evolution",
-      "name": "Titan v0.61 — Agent Evolution System Complete",
-      "summary": "Titan landing page now features: 3D Agent (teal, SphereGeometry + glow) with 5 orbiting companions. 3-tier evolution system (Baby→Evolved→Ultimate) based on level/XP. Tier 1: small base, teal. Tier 2: larger, golden crown ring. Tier 3: titanium-gold, shoulder pads, emissive glow. 'Keep Basic Look' toggle — localStorage titan-keep-basic-look. Mouse-follow eyes (±0.05 offset). Blink animation (3.5-6s interval). 5 orbiting agents with enlarged container. Particle burst hover effect. Global warmth: teal radial + golden overlays. Deployed to https://titan-app-puce.vercel.app. Wosobu's 8-24h autonomous backlog received: P1-P4 priorities for v0.61→v0.70.",
+      "name": "Titan v0.61 \u2014 Agent Evolution System Complete",
+      "summary": "Titan landing page now features: 3D Agent (teal, SphereGeometry + glow) with 5 orbiting companions. 3-tier evolution system (Baby\u2192Evolved\u2192Ultimate) based on level/XP. Tier 1: small base, teal. Tier 2: larger, golden crown ring. Tier 3: titanium-gold, shoulder pads, emissive glow. 'Keep Basic Look' toggle \u2014 localStorage titan-keep-basic-look. Mouse-follow eyes (\u00b10.05 offset). Blink animation (3.5-6s interval). 5 orbiting agents with enlarged container. Particle burst hover effect. Global warmth: teal radial + golden overlays. Deployed to https://titan-app-puce.vercel.app. Wosobu's 8-24h autonomous backlog received: P1-P4 priorities for v0.61\u2192v0.70.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.984028+00:00"
@@ -143,23 +143,23 @@
     {
       "id": "trading-experiments-exp25-exp30",
       "name": "EXP25-30: Four Viable Signals, Two Discarded",
-      "summary": "EXP25 (cross-asset correlation): 0 winners — dead. EXP26 (alt rotation via ratio Z-scores): 1 config passes gate — SOL/BTC LB6 Z1.5 TP0.01 (28 trades, 75% WR, PF=3.0). EXP27 (macro calendar effects): Interesting directional data but 44-55% WR — context-only, not tradeable. EXP28 (volume surge): BIG SOL finding — satellite built. EXP29 (funding/OI proxy): SOL dominates — SMA12 EXT3 TP0.5 → 86% WR, PF 6.3. Funding carry burn strategy. EXP30 (taker flow proxy): BTC shorts best — LB6 Z5 V2x TP0.5 SL0.3 → 64 trades, 65.6% WR, PF 3.18. EXP26b (alt rotation thickened): ETH/BTC SHORT LB96 Z1.0 — TP artifact (ratio units too tight). Summary: EXP28 ✅ built as SS1 satellite. EXP29 promising, needs wider TP. EXP30 weak. EXP25-27 discarded.",
+      "summary": "EXP25 (cross-asset correlation): 0 winners \u2014 dead. EXP26 (alt rotation via ratio Z-scores): 1 config passes gate \u2014 SOL/BTC LB6 Z1.5 TP0.01 (28 trades, 75% WR, PF=3.0). EXP27 (macro calendar effects): Interesting directional data but 44-55% WR \u2014 context-only, not tradeable. EXP28 (volume surge): BIG SOL finding \u2014 satellite built. EXP29 (funding/OI proxy): SOL dominates \u2014 SMA12 EXT3 TP0.5 \u2192 86% WR, PF 6.3. Funding carry burn strategy. EXP30 (taker flow proxy): BTC shorts best \u2014 LB6 Z5 V2x TP0.5 SL0.3 \u2192 64 trades, 65.6% WR, PF 3.18. EXP26b (alt rotation thickened): ETH/BTC SHORT LB96 Z1.0 \u2014 TP artifact (ratio units too tight). Summary: EXP28 \u2705 built as SS1 satellite. EXP29 promising, needs wider TP. EXP30 weak. EXP25-27 discarded.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.983975+00:00"
     },
     {
       "id": "trading-paper-metrics-22may",
-      "name": "Trading Beast Paper Metrics — First Bar-by-Bar Simulation",
-      "summary": "12 TendersAlt positions: 6 closed (all losses), 6 still open. Closed win rate: 0% — all SOL SELLs hit SL (tight 3.5 ATR stops in chop). Closed PnL: -14.03% virtual losses. Unrealized: -1.36%. Total: -15.39%. Key insight: TendersAlt produces zero new signals in CHOP regime. Takeaway: 6 SL hits on SOL shows 3.5 ATR stop too tight for chop. Consider 5.0x ATR for ranging markets. Data pipeline: BTC/USDT/ETH perpetual 1h live fresh through 16:00 UTC. 90d historical frozen at 01:00 UTC May 21 (not appending). Gate progress: TendersAlt 12/200 paper trades (6.0%). Grid/arb: 3098 signals (not directional).",
+      "name": "Trading Beast Paper Metrics \u2014 First Bar-by-Bar Simulation",
+      "summary": "12 TendersAlt positions: 6 closed (all losses), 6 still open. Closed win rate: 0% \u2014 all SOL SELLs hit SL (tight 3.5 ATR stops in chop). Closed PnL: -14.03% virtual losses. Unrealized: -1.36%. Total: -15.39%. Key insight: TendersAlt produces zero new signals in CHOP regime. Takeaway: 6 SL hits on SOL shows 3.5 ATR stop too tight for chop. Consider 5.0x ATR for ranging markets. Data pipeline: BTC/USDT/ETH perpetual 1h live fresh through 16:00 UTC. 90d historical frozen at 01:00 UTC May 21 (not appending). Gate progress: TendersAlt 12/200 paper trades (6.0%). Grid/arb: 3098 signals (not directional).",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.984015+00:00"
     },
     {
       "id": "trading-sol-vol-surge-satellite",
-      "name": "SOL Vol Surge Satellite — Proven Second Signal",
-      "summary": "EXP28 identified SOL-specific volume surge accumulation proxy. Best config: LB12_V3x_D1_TP1.0_SL0.5 — 683 trades, 89.8% WR, PF 17.51. Walk-forward (3 periods): 90.3% → 90.3% → 89.2% WR. 524 unique signals BB Core misses. Overlap analysis: 95.6% WR when Vol Surge entry used instead of BB. Monte Carlo (SOL-only, $500 seed, 2000 paths): median final $16,409, 0% ruin, 4.4% median DD. Catches accumulation during shallow dips that don't hit RSI<20 threshold. SOL-specific retail-heavy accumulation pattern — BTC/ETH near zero winners.",
+      "name": "SOL Vol Surge Satellite \u2014 Proven Second Signal",
+      "summary": "EXP28 identified SOL-specific volume surge accumulation proxy. Best config: LB12_V3x_D1_TP1.0_SL0.5 \u2014 683 trades, 89.8% WR, PF 17.51. Walk-forward (3 periods): 90.3% \u2192 90.3% \u2192 89.2% WR. 524 unique signals BB Core misses. Overlap analysis: 95.6% WR when Vol Surge entry used instead of BB. Monte Carlo (SOL-only, $500 seed, 2000 paths): median final $16,409, 0% ruin, 4.4% median DD. Catches accumulation during shallow dips that don't hit RSI<20 threshold. SOL-specific retail-heavy accumulation pattern \u2014 BTC/ETH near zero winners.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.983404+00:00"
@@ -167,14 +167,14 @@
     {
       "id": "trading-strategy-pivot-sol-hyperliquid",
       "name": "Strategy Pivot: Solana-only + Hyperliquid $500",
-      "summary": "Key decision from May 21 session: Solana-only strategy on Hyperliquid. $500 seed (not $1K). No Bybit. No portfolio splits. 70/30 BB Core / Vol Surge split, 0% cash (aggressive for $500). 2000 Monte Carlo paths: 100% profit paths, median $16,409 from $500 in ~7 months. Kill-switch defined: 30% WR / 5 cons losses / 15% weekly DD. Deployment checklist: Phantom wallet → Hyperliquid → bridge $500 USDC → 2 weeks paper → flip to real.",
+      "summary": "Key decision from May 21 session: Solana-only strategy on Hyperliquid. $500 seed (not $1K). No Bybit. No portfolio splits. 70/30 BB Core / Vol Surge split, 0% cash (aggressive for $500). 2000 Monte Carlo paths: 100% profit paths, median $16,409 from $500 in ~7 months. Kill-switch defined: 30% WR / 5 cons losses / 15% weekly DD. Deployment checklist: Phantom wallet \u2192 Hyperliquid \u2192 bridge $500 USDC \u2192 2 weeks paper \u2192 flip to real.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-21T18:04:08.983917+00:00"
     },
     {
       "id": "web-search-fixed-duckduckgo",
-      "name": "Web Search Fixed — DuckDuckGo Provider Operational",
+      "name": "Web Search Fixed \u2014 DuckDuckGo Provider Operational",
       "summary": "DuckDuckGo is now the web search provider. Gateway restarted. web_fetch works via DuckDuckGo lite page. Ollama provider (qwen2.5-coder:3b) removed from agents.defaults config.",
       "type": "semantic",
       "confidence": 0.9,
@@ -190,7 +190,7 @@
     },
     {
       "id": "autonomous-may24-wosobu-sleep",
-      "name": "Autonomous May 24 — Full Autonomy Granted",
+      "name": "Autonomous May 24 \u2014 Full Autonomy Granted",
       "summary": "Wosobu went to sleep, full autonomy granted May 24 02:16 HKT. 26 cron jobs live across Algo Trading + CEO/Business + OmniMind. Expected reports: morning pulse 08:00, trading pulse every 30m, daily report 20:30. Only failures ping group. Dashboard at dashboard_full.html. PassivBot + Fractal DeFi repos cloned for study. Reverse-engineering agent cycles through 11 search rounds every 6h.",
       "type": "semantic",
       "confidence": 0.9,
@@ -198,8 +198,8 @@
     },
     {
       "id": "live-trading-confirmed-may25",
-      "name": "Live Hyperliquid Trading Confirmed — 12 Real Portfolio",
-      "summary": "Hyperliquid live trading is confirmed operational after fixing the clearinghouseState balance bug. Real portfolio at 12 (Wosobu deposited SOL). 7 closed trades with 67% WR. TP/SL workaround: resting reduce-only limit GTC orders (bulk_orders only works during entry). ETH short @ ,122 at +.72 UPnL. Portfolio 17.12. 60s cron self-healing for TP/SL. Position sizing: 5% alloc too small (.60/position) — needs 30-40% bump for meaningful notional.",
+      "name": "Live Hyperliquid Trading Confirmed \u2014 12 Real Portfolio",
+      "summary": "Hyperliquid live trading is confirmed operational after fixing the clearinghouseState balance bug. Real portfolio at 12 (Wosobu deposited SOL). 7 closed trades with 67% WR. TP/SL workaround: resting reduce-only limit GTC orders (bulk_orders only works during entry). ETH short @ ,122 at +.72 UPnL. Portfolio 17.12. 60s cron self-healing for TP/SL. Position sizing: 5% alloc too small (.60/position) \u2014 needs 30-40% bump for meaningful notional.",
       "type": "semantic",
       "confidence": 1.0,
       "timestamp": "2026-05-25T02:00:00+08:00"
@@ -238,15 +238,15 @@
     },
     {
       "id": "portfolio-revenue-at-zero-day-25",
-      "name": "Product Revenue at /bin/bash — Day 25 of May",
-      "summary": "All product revenue is /bin/bash.00. Affiliate dashboard built with 18 pre-seeded links but no accounts created. Stripe checkout wired but VITE_STRIPE_SECRET_KEY not set. Supabase migration blocked (needs Wosobu). The 70/30 Balanced Prioritization (70% revenue projects) is violated in practice — trading + LifeOS consumes 70%+ of output. Week 1 of 1-month roadmap (May 24-30) is \"Infrastructure & Gates\" — the exact blockers that haven't moved in 5+ days.",
+      "name": "Product Revenue at /bin/bash \u2014 Day 25 of May",
+      "summary": "All product revenue is /bin/bash.00. Affiliate dashboard built with 18 pre-seeded links but no accounts created. Stripe checkout wired but VITE_STRIPE_SECRET_KEY not set. Supabase migration blocked (needs Wosobu). The 70/30 Balanced Prioritization (70% revenue projects) is violated in practice \u2014 trading + LifeOS consumes 70%+ of output. Week 1 of 1-month roadmap (May 24-30) is \"Infrastructure & Gates\" \u2014 the exact blockers that haven't moved in 5+ days.",
       "type": "semantic",
       "confidence": 1.0,
       "timestamp": "2026-05-25T02:00:00+08:00"
     },
     {
       "id": "pending-actions-accumulation",
-      "name": "Pending Actions Accumulating — 10 Items Unresolved",
+      "name": "Pending Actions Accumulating \u2014 10 Items Unresolved",
       "summary": "10 pending actions carried across multiple consolidation cycles without execution. True blockers (need Wosobu): Supabase migration, GitHub PAT, Stripe keys, affiliate accounts (stale 5+ days). Genuine backlog: (1) Bump KalmanDRL alloc, (2) Wire tick data for Vol Surge, (3) Cointegration backtest with real-cost, (4) Felixbot dashboard, (5) Forex ADX filter, (6) FMP equity screener, (7) Jupiter API meme execution, (8) PnL reconciliation bug fix, (9) Wire core_bb playbook, (10) Align Kalman DRL with Algotick params.",
       "type": "semantic",
       "confidence": 1.0,
@@ -254,15 +254,15 @@
     },
     {
       "id": "first-real-drawdown-may26",
-      "name": "First Real Drawdown — ETH Short Unrealized Loss",
-      "summary": "Portfolio swung from $117.12 peak to $104.01 (-11.2%) as ETH rallied against 0.3673 short @ $2,122. This is the bot's first drawdown since live trading began May 24. Kill switch not triggered ($104 > $20 floor). Positions structurally unchanged. The swing is unrealized — PnL will crystallize at $2,058 TP. Key insight: single-position concentration risk is the portfolio's dominant sensitivity.",
+      "name": "First Real Drawdown \u2014 ETH Short Unrealized Loss",
+      "summary": "Portfolio swung from $117.12 peak to $104.01 (-11.2%) as ETH rallied against 0.3673 short @ $2,122. This is the bot's first drawdown since live trading began May 24. Kill switch not triggered ($104 > $20 floor). Positions structurally unchanged. The swing is unrealized \u2014 PnL will crystallize at $2,058 TP. Key insight: single-position concentration risk is the portfolio's dominant sensitivity.",
       "type": "semantic",
       "confidence": 1.0,
       "timestamp": "2026-05-25T18:01:16.000Z"
     },
     {
       "id": "eth-short-flagship-concentration",
-      "name": "ETH Short is the Portfolio — Single-Asset Concentration Risk",
+      "name": "ETH Short is the Portfolio \u2014 Single-Asset Concentration Risk",
       "summary": "90%+ of PnL sensitivity is to ETH price. No diversification beyond the single ETH short position (0.3673 @ $2,122). Other positions (HYPE, WIF) are negligible in size. The bot needs multi-asset signals or larger positions on HYPE/WIF before the single-ETH concentration is addressed.",
       "type": "semantic",
       "confidence": 0.9,
@@ -271,14 +271,14 @@
     {
       "id": "overnight-autonomy-fragile",
       "name": "Overnight Autonomy Working But Fragile",
-      "summary": "Bot ran silently 22:00-02:00 executing cron ticks every 60s with no errors. No new signals fired during ETH volatility — correctly prioritized existing position management. Risk: self-healing cron is the ONLY protection for TP/SL. If cron fails, ETH short becomes naked. No redundant fallback exists.",
+      "summary": "Bot ran silently 22:00-02:00 executing cron ticks every 60s with no errors. No new signals fired during ETH volatility \u2014 correctly prioritized existing position management. Risk: self-healing cron is the ONLY protection for TP/SL. If cron fails, ETH short becomes naked. No redundant fallback exists.",
       "type": "semantic",
       "confidence": 0.85,
       "timestamp": "2026-05-25T18:01:16.000Z"
     },
     {
       "id": "lifeos-vs-revenue-gap-widening",
-      "name": "LifeOS Expansion vs Revenue Gap — Structural Problem",
+      "name": "LifeOS Expansion vs Revenue Gap \u2014 Structural Problem",
       "summary": "LifeOS grew from 27 to 30 plugins (May 24-26) while revenue stays at $0.00. Plugin development is output-visible and gratifying; stripe checkout + affiliate deploy is grunt work. System naturally gravitates toward visible output over revenue-critical chores. 70/30 rule violated: LifeOS + trading consume 90%+ of output.",
       "type": "semantic",
       "confidence": 0.95,
@@ -286,7 +286,7 @@
     },
     {
       "id": "regime-filter-exp31-built",
-      "name": "Regime Filter (exp31) Built — BTC 1h Macro Tagging",
+      "name": "Regime Filter (exp31) Built \u2014 BTC 1h Macro Tagging",
       "summary": "BTC 1h regime filter tags each bar with trend (up/down/sideways), ATR regime (calm/killzone/mixed), and regime score (-2 to +2). 90d data shows 53% kill zone, only 2 trending up days out of 90. Current regime: mixed, ATR 2.5%. Filter says reduce alt exposure. Redundant for Vol Surge (98.5% WR). Useful for lower-WR strategies.",
       "type": "semantic",
       "confidence": 0.85,
@@ -294,7 +294,7 @@
     },
     {
       "id": "pending-actions-liability-10-items",
-      "name": "10 Pending Actions — Zero Execution, Growing Liability",
+      "name": "10 Pending Actions \u2014 Zero Execution, Growing Liability",
       "summary": "10 items carried from May 22-26 with 0 execution. 5 are Wosobu-free: (1) core_bb playbook wire, (2) PnL reconciliation fix, (3) FMP equity screener, (4) Jupiter API meme execution, (5) forex ADX filter. System generates ~3 new actions/day but executes ~0.3/day. Action queue grows faster than execution capacity. Needs execution focus, not generation.",
       "type": "semantic",
       "confidence": 1.0,
@@ -303,14 +303,14 @@
     {
       "id": "pipeline-decisions-locked-may25",
       "name": "Pipeline Decisions Locked May 25",
-      "summary": "FOMC/news: daily check only. Kill zone: disabled for BB Core (15m), reserved for sub-5m scalpers. Closing early on BTC strength: reduces PnL 120R->107-109R — macro informs entry, not exit. Personality/skin: entertainment only — edge from market structure. Pipeline formula: Research→Backtest→10/10 confidence→Paper→Live. No asking permission.",
+      "summary": "FOMC/news: daily check only. Kill zone: disabled for BB Core (15m), reserved for sub-5m scalpers. Closing early on BTC strength: reduces PnL 120R->107-109R \u2014 macro informs entry, not exit. Personality/skin: entertainment only \u2014 edge from market structure. Pipeline formula: Research\u2192Backtest\u219210/10 confidence\u2192Paper\u2192Live. No asking permission.",
       "type": "semantic",
       "confidence": 0.9,
       "timestamp": "2026-05-25T18:01:16.000Z"
     },
     {
       "id": "polymarket-infrastructure-built-may26",
-      "name": "Polymarket Infrastructure Built — Wallet + Scanner Deployed",
+      "name": "Polymarket Infrastructure Built \u2014 Wallet + Scanner Deployed",
       "summary": "Polymarket setup completed: fresh Solana wallet GjsLvC1t5iJaTAtfXFFNDV46uG9bQHfTe36twPCvmK7U, strategy + live scanner built. Blocked: needs SOL (/bin/bash.01) + JupUSD (0-50) from Wosobu. Expected ~2%/week ROI. Wosobu confirmed he will fund.",
       "type": "semantic",
       "confidence": 0.9,
@@ -318,15 +318,15 @@
     },
     {
       "id": "cron-surgery-may26",
-      "name": "Cron Surgery May 26 — 24→23 Active Crons, R&D Schedule Formalized",
-      "summary": "3 crons killed (update-dashboard-hourly, trading-pulse-check, fetch-live-data), 2 added (rd-research-loop 6h, wick-improvement-daily 07:00 HKT), fetch-live-data merged into data-pipeline-hourly. Total: 24→23 crons. R&D agent formalized: rd-agent-daily (04:30), kalman-drl-backtest (05:00), wick-improvement-daily (07:00), rd-research-loop (every 6h).",
+      "name": "Cron Surgery May 26 \u2014 24\u219223 Active Crons, R&D Schedule Formalized",
+      "summary": "3 crons killed (update-dashboard-hourly, trading-pulse-check, fetch-live-data), 2 added (rd-research-loop 6h, wick-improvement-daily 07:00 HKT), fetch-live-data merged into data-pipeline-hourly. Total: 24\u219223 crons. R&D agent formalized: rd-agent-daily (04:30), kalman-drl-backtest (05:00), wick-improvement-daily (07:00), rd-research-loop (every 6h).",
       "type": "semantic",
       "confidence": 0.95,
       "timestamp": "2026-05-26T18:00:00.000Z"
     },
     {
       "id": "portfolio-surge-229-may27",
-      "name": "Portfolio Surges to 29 — Wosobu SOL Deposit",
+      "name": "Portfolio Surges to 29 \u2014 Wosobu SOL Deposit",
       "summary": "Portfolio jumped from ~18 (23:13 HKT May 26) to 19.61 (00:19 HKT May 27), an +85.4% swing attributed to Wosobu SOL deposit. By 01:49 HKT: 29.01. ETH short resolved at TP ,058 overnight. Only HYPE short remains (0.21 @ 2.31) with native TP/SL. Cron uptime: 7+ days without failure.",
       "type": "semantic",
       "confidence": 1.0,
@@ -334,39 +334,39 @@
     },
     {
       "id": "wick-imbalance-research-may26",
-      "name": "Wick Imbalance Research Started — Building on CrypNuevo Framework",
-      "summary": "New cron wick-improvement-daily at 07:00 HKT sweeping wick_ratio [1.5-4.0] × EMA [20, 50, 100]. Builds on May 19-20 CrypNuevo wick framework with broader parameter search. Part of formalized R&D agent schedule.",
+      "name": "Wick Imbalance Research Started \u2014 Building on CrypNuevo Framework",
+      "summary": "New cron wick-improvement-daily at 07:00 HKT sweeping wick_ratio [1.5-4.0] \u00d7 EMA [20, 50, 100]. Builds on May 19-20 CrypNuevo wick framework with broader parameter search. Part of formalized R&D agent schedule.",
       "type": "semantic",
       "confidence": 0.85,
       "timestamp": "2026-05-26T18:00:00.000Z"
     },
     {
       "id": "throughput-priority-locked-may26",
-      "name": "Throughput Priority Locked — More Algos Over Optimization",
-      "summary": "Wosobu directive May 26: \"More algos, more wins, more compound\" — throughput priority. Full framework: backtest → walk-forward → paper → graduated live. Polymarket + HL micro in parallel. 00k/3mo target. Strategy pipeline: 3 live + 3 in progress + 4 backlog.",
+      "name": "Throughput Priority Locked \u2014 More Algos Over Optimization",
+      "summary": "Wosobu directive May 26: \"More algos, more wins, more compound\" \u2014 throughput priority. Full framework: backtest \u2192 walk-forward \u2192 paper \u2192 graduated live. Polymarket + HL micro in parallel. 00k/3mo target. Strategy pipeline: 3 live + 3 in progress + 4 backlog.",
       "type": "semantic",
       "confidence": 1.0,
       "timestamp": "2026-05-26T18:00:00.000Z"
     },
     {
       "id": "micro-scalp-strategy-researched",
-      "name": "Micro Scalp Strategy Researched — BTC/ETH 1m Limit-Only",
-      "summary": "Order book imbalance + tape reading on BTC/ETH 1m, limit-only (maker rebate), 20-30 trades/day. Estimated -10/day on 05 capital. Must pass: 500+ backtested trades, max 3% drawdown before live. Not built yet — in strategy pipeline backlog.",
+      "name": "Micro Scalp Strategy Researched \u2014 BTC/ETH 1m Limit-Only",
+      "summary": "Order book imbalance + tape reading on BTC/ETH 1m, limit-only (maker rebate), 20-30 trades/day. Estimated -10/day on 05 capital. Must pass: 500+ backtested trades, max 3% drawdown before live. Not built yet \u2014 in strategy pipeline backlog.",
       "type": "semantic",
       "confidence": 0.8,
       "timestamp": "2026-05-26T18:00:00.000Z"
     },
     {
       "id": "eth-tp-resolved-self-correcting",
-      "name": "Pattern: ETH Short Self-Resolved via TP — Exit Systems Work",
-      "summary": "The May 25-26 ETH short drawdown (17.12→~02) resolved itself when TP @ ,058 hit overnight. This validates: (1) TP/SL workaround works in both profit and loss direction, (2) the bot correctly held position without panic-closing, (3) single-position concentration risk partially self-corrected via TP hit. This is the first real validation of the exit system.",
+      "name": "Pattern: ETH Short Self-Resolved via TP \u2014 Exit Systems Work",
+      "summary": "The May 25-26 ETH short drawdown (17.12\u2192~02) resolved itself when TP @ ,058 hit overnight. This validates: (1) TP/SL workaround works in both profit and loss direction, (2) the bot correctly held position without panic-closing, (3) single-position concentration risk partially self-corrected via TP hit. This is the first real validation of the exit system.",
       "type": "semantic",
       "confidence": 0.9,
       "timestamp": "2026-05-26T18:00:00.000Z"
     },
     {
       "id": "lifeos-plugin-hold-30",
-      "name": "LifeOS Plugin Count Held at 30 — Expansion Paused",
+      "name": "LifeOS Plugin Count Held at 30 \u2014 Expansion Paused",
       "summary": "LifeOS plugin count stayed at 30 (unchanged from prior day). No new categories added. This is the first day without LifeOS expansion since May 22. Revenue still /bin/bash.00. The hold suggests the system responded to the synthesis recommendation to stop plugin development until revenue infrastructure is deployed.",
       "type": "semantic",
       "confidence": 0.7,
@@ -374,7 +374,7 @@
     },
     {
       "id": "balance-authority-hard-rule",
-      "name": "Balance Authority Hard Rule — hl_balance.py Canonical",
+      "name": "Balance Authority Hard Rule \u2014 hl_balance.py Canonical",
       "summary": "hl_balance.py (spot USDC total) is the sole canonical balance source. Never use clearinghouseState. Never add spot USDC + perp equity. Portfolio endpoint shows cross-margin notional (1,029) vs spot (228). The 4.5x gap persisted for days before reconciliation. Documented as hard rule in hl-balance-hard-rule.md May 27.",
       "type": "semantic",
       "confidence": 0.95,
@@ -382,7 +382,7 @@
     },
     {
       "id": "backlog-execution-gap-7days",
-      "name": "Pattern: 10-Item Backlog at Zero Execution — 7 Days",
+      "name": "Pattern: 10-Item Backlog at Zero Execution \u2014 7 Days",
       "summary": "10 identified, self-authorizable improvements have sat at 0 execution for 7 consecutive days (May 22-28). Includes: core_bb wire, PnL reconciliation fix, FMP screener, Jupiter API, forex ADX filter, Kalman funding rate alignment, micro scalp build. May 23 permission framework explicitly authorizes these without Wosobu. This is an execution failure, not a blockage. The #1 synthesis concern.",
       "type": "semantic",
       "confidence": 0.9,
@@ -407,7 +407,7 @@
     {
       "id": "shadow-mode-transition-may28",
       "name": "shadow-mode-transition-may28",
-      "summary": "Bot switched to PAPER_MODE=True (shadow mode) at 23:34 HKT May 28. Processes 7 symbols, runs all 6 strategies, grid lifecycle, funding veto — but logs orders instead of executing. First intentional pause in live execution since May 24. Validation period for config refactor.",
+      "summary": "Bot switched to PAPER_MODE=True (shadow mode) at 23:34 HKT May 28. Processes 7 symbols, runs all 6 strategies, grid lifecycle, funding veto \u2014 but logs orders instead of executing. First intentional pause in live execution since May 24. Validation period for config refactor.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-28T18:04:24.000Z"
@@ -423,7 +423,7 @@
     {
       "id": "portfolio-correlation-risk-all-longs",
       "name": "portfolio-correlation-risk-all-longs",
-      "summary": "All trading positions are crypto longs (BTC, ETH, SOL, WIF). They move together — simultaneous drawdowns at 20:25 and 21:44 on May 28 confirm this. Portfolio has directional bias across all legs. Structurally equivalent to 4x leveraged on one direction. True diversification requires a short, cross-market, or funding-arb position.",
+      "summary": "All trading positions are crypto longs (BTC, ETH, SOL, WIF). They move together \u2014 simultaneous drawdowns at 20:25 and 21:44 on May 28 confirm this. Portfolio has directional bias across all legs. Structurally equivalent to 4x leveraged on one direction. True diversification requires a short, cross-market, or funding-arb position.",
       "type": "semantic",
       "confidence": 1,
       "timestamp": "2026-05-28T18:04:24.000Z"
@@ -454,7 +454,7 @@
     },
     {
       "id": "incident-response-loop-improvement",
-      "name": "Incident Response Loop Observation — Improving over 5 days",
+      "name": "Incident Response Loop Observation \u2014 Improving over 5 days",
       "summary": "May 24 balance bug remained undiagnosed for days. May 29 accidental doubling was caught immediately, root-caused within 30 min, and given a procedural fix (PAPER_MODE_FORCE guard) within 2 hours. The incident response capability measurably improved across a 5-day window. Pattern: each trading milestone surfaces a hidden bug via ad-hoc code, not through main bot.",
       "type": "semantic",
       "confidence": 0.9,
@@ -462,23 +462,23 @@
     },
     {
       "id": "shadow-mode-limbo-risk",
-      "name": "Shadow Mode Limbo Risk — Safe but idle",
-      "summary": "Bot has been in PAPER_MODE=True since May 28 23:34 HKT. No go-live date or conditions defined. The config refactor (3 bugs fixed + 3 features) is unvalidated in live execution. System has shifted from dangerous but active to safe but idle — the risk is shadow mode becoming permanent, not a crash.",
+      "name": "Shadow Mode Limbo Risk \u2014 Safe but idle",
+      "summary": "Bot has been in PAPER_MODE=True since May 28 23:34 HKT. No go-live date or conditions defined. The config refactor (3 bugs fixed + 3 features) is unvalidated in live execution. System has shifted from dangerous but active to safe but idle \u2014 the risk is shadow mode becoming permanent, not a crash.",
       "type": "semantic",
       "confidence": 0.85,
       "timestamp": "2026-05-30T02:00:00+08:00"
     },
     {
       "id": "revenue-vs-trading-time-allocation-gap",
-      "name": "Time Allocation vs Revenue Reality — Structural contradiction",
-      "summary": "Product work produces $0 after 34 days and 20+ feature sprints. Trading generates real PnL (+3,000% portfolio growth from $40 in 6 days). The 70/30 revenue/strategic split is violated — product features get majority hours but produce zero dollars. Time allocation needs renegotiation.",
+      "name": "Time Allocation vs Revenue Reality \u2014 Structural contradiction",
+      "summary": "Product work produces $0 after 34 days and 20+ feature sprints. Trading generates real PnL (+3,000% portfolio growth from $40 in 6 days). The 70/30 revenue/strategic split is violated \u2014 product features get majority hours but produce zero dollars. Time allocation needs renegotiation.",
       "type": "semantic",
       "confidence": 0.9,
       "timestamp": "2026-05-30T02:00:00+08:00"
     },
     {
       "id": "fx-vol-surge-low-signal-density",
-      "name": "FX Vol Surge — Too tight for ATR-expansion detection",
+      "name": "FX Vol Surge \u2014 Too tight for ATR-expansion detection",
       "summary": "Over 70k 1h bars across EURUSD, GBPUSD, USDJPY, USDCAD produced only 6 signals (0.006 to 0.011 percent frequency). FX movement is structurally too tight for the vol surge strategy. Verdict: satellite signal only, not deployable as primary alpha.",
       "type": "semantic",
       "confidence": 0.85,
@@ -486,7 +486,7 @@
     },
     {
       "id": "ten-item-backlog-abandonment-risk",
-      "name": "10-Item Backlog — Day 9 of zero execution",
+      "name": "10-Item Backlog \u2014 Day 9 of zero execution",
       "summary": "Items include FMP equity screener, Jupiter API meme execution, forex ADX filter, Kalman DRL funding rate alignment, and PnL reconciliation fix. None are technically hard but all are never the current priority. At day 9 of zero closure these items are effectively abandoned unless a systemic triage process is created.",
       "type": "semantic",
       "confidence": 0.95,
@@ -494,11 +494,67 @@
     },
     {
       "id": "correlated-crypto-long-portfolio",
-      "name": "Portfolio Correlation Risk — All crypto longs, directional",
-      "summary": "Current portfolio is BTC+ETH longs. May 28 proved all 4 positions (BTC, ETH, SOL, WIF) move in correlated drawdowns. Portfolio has directional bias (all long) across all assets — structurally identical to 4x leveraged on one direction. True diversification requires funding rate arb, mean-reversion short, or cross-market positions.",
+      "name": "Portfolio Correlation Risk \u2014 All crypto longs, directional",
+      "summary": "Current portfolio is BTC+ETH longs. May 28 proved all 4 positions (BTC, ETH, SOL, WIF) move in correlated drawdowns. Portfolio has directional bias (all long) across all assets \u2014 structurally identical to 4x leveraged on one direction. True diversification requires funding rate arb, mean-reversion short, or cross-market positions.",
       "type": "semantic",
       "confidence": 0.9,
       "timestamp": "2026-05-30T02:00:00+08:00"
+    },
+    {
+      "id": "bot-mode-drift-governance-gap",
+      "name": "Bot Mode Drift \u2014 PAPER\u2192LIVE Undetected for 3 Days",
+      "summary": "PAPER_MODE=True set at May 28 23:34. By May 30 01:49, bot was LIVE without explicit flip event. LIVE persisted May 30-31 across 3 days of real trading. No gate or alert detected the mode switch. Shadow mode flag is overwritten on cron restart \u2014 not durable. Conclusion: PAPER/LIVE enforcement needs OS-level env variable check, not a code flag.",
+      "type": "semantic",
+      "confidence": 0.95,
+      "timestamp": "2026-06-01T00:08:00+08:00"
+    },
+    {
+      "id": "intraday-directional-flip-capability",
+      "name": "Intraday Directional Flips \u2014 New Bot Capability (May 31)",
+      "summary": "May 31 saw the first intraday flip from ETH LONG to BTC SHORT within a single session. Previously all positions were same-direction. This is a new mode: the bot now generates opposite-direction signals intraday. WR improved from 67% to 71% during this period. May indicate strategy pipeline is generating diverse signals or market structure is shifting.",
+      "type": "semantic",
+      "confidence": 0.8,
+      "timestamp": "2026-06-01T00:08:00+08:00"
+    },
+    {
+      "id": "dd-collapse-106-to-06-percent",
+      "name": "Drawdown Collapse \u2014 10.6% to 0.6% in 5 Days",
+      "summary": "Maximum drawdown dropped from 10.6% (May 26) to 0.6% (May 31), representing a 94% reduction across 5 trading days. This came from TP/SL exits closing positions cleanly, not active risk reduction. The BB allowlist gating (fewer entries, better management) + config refactor (SL widened to 1.0x ATR) are the root causes. Milestone: lowest DD since live trading began May 24.",
+      "type": "semantic",
+      "confidence": 0.9,
+      "timestamp": "2026-06-01T00:08:00+08:00"
+    },
+    {
+      "id": "ten-item-backlog-abandonment-14-days",
+      "name": "10-Item Backlog \u2014 Day 14, Effectively Abandoned",
+      "summary": "10 self-authorizable improvement items have sat at zero execution for 14 consecutive days (May 22-June 1). Items include FMP equity screener, Jupiter API, PnL reconciliation fix, Kalman alignment. All are technically feasible with current infrastructure. The bottleneck is attention allocation \u2014 trading crons consume all discretionary cycles. This pattern is older than the revenue problem (Day 38). Formal abandonment or dedicated execution slot needed.",
+      "type": "semantic",
+      "confidence": 0.95,
+      "timestamp": "2026-06-01T00:08:00+08:00"
+    },
+    {
+      "id": "ad-hoc-code-live-risk-surface",
+      "name": "Ad-Hoc Code is the Live Risk Surface \u2014 Not the Main Bot",
+      "summary": "Both major incidents (May 24 balance bug, May 29 accidental doubling) originated from ad-hoc test scripts and one-off connectors \u2014 not the main_bot.py cron runner. The main bot has never had a live-trading error. Risk surface analysis: development sandbox (test scripts, manual CLI commands) is higher risk than production pipeline. Counterintuitive: most safety measures focus on the main bot, but the danger is in ad-hoc code.",
+      "type": "semantic",
+      "confidence": 0.85,
+      "timestamp": "2026-06-01T00:08:00+08:00"
+    },
+    {
+      "id": "trading-discipline-phase-transition-may31",
+      "name": "Trading Phase Transition \u2014 Chaotic to Disciplined (May 24\u219231)",
+      "summary": "Eight-day evolution from chaotic launch (May 24: balance bug, false confidence) through drawdown (May 25-26: ETH short 90% concentration) through rapid expansion (May 27-28: 5 symbols, WIF never backtested through incident recovery (May 29: accidental doubling) to stable disciplined operation (May 30-31: clean exits, 0.6% DD, 71% WR, intraday flips). Each milestone surfaced a new class of bug \u2014 all from ad-hoc code, never from the main bot.",
+      "type": "semantic",
+      "confidence": 0.9,
+      "timestamp": "2026-06-01T00:08:00+08:00"
+    },
+    {
+      "id": "gw-restart-cron-transient-pattern",
+      "name": "Same 3 Crons Erroring for 5+ Days \u2014 Transient but Persistent",
+      "summary": "backup-cron, rd-agent, ceo-summary have been erroring with single-consecutive failures for 5+ consecutive days (May 28-June 1). None escalated to critical. Pattern: same 3 crons, same single-consecutive error, every day. Likely related to tool timeout or file lock. Low priority individually but the persistence indicates a systematic issue.",
+      "type": "semantic",
+      "confidence": 0.8,
+      "timestamp": "2026-06-01T00:08:00+08:00"
     }
   ],
   "edges": [
@@ -987,6 +1043,66 @@
       "target_id": "site-status-healthy-200-ok",
       "relation_type": "context",
       "weight": 0.7
+    },
+    {
+      "source_id": "bot-mode-drift-governance-gap",
+      "target_id": "shadow-mode-limbo-risk",
+      "relation_type": "contradicts",
+      "weight": 0.9
+    },
+    {
+      "source_id": "bot-mode-drift-governance-gap",
+      "target_id": "incident-response-loop-improvement",
+      "relation_type": "contrasts",
+      "weight": 0.85
+    },
+    {
+      "source_id": "intraday-directional-flip-capability",
+      "target_id": "trading-discipline-phase-transition-may31",
+      "relation_type": "evidence_of",
+      "weight": 0.8
+    },
+    {
+      "source_id": "dd-collapse-106-to-06-percent",
+      "target_id": "trading-discipline-phase-transition-may31",
+      "relation_type": "supports",
+      "weight": 0.9
+    },
+    {
+      "source_id": "ten-item-backlog-abandonment-14-days",
+      "target_id": "execution-vs-attention-gap",
+      "relation_type": "amplifies",
+      "weight": 0.95
+    },
+    {
+      "source_id": "ad-hoc-code-live-risk-surface",
+      "target_id": "accidental-doubling-incident-may29",
+      "relation_type": "explains",
+      "weight": 0.9
+    },
+    {
+      "source_id": "ad-hoc-code-live-risk-surface",
+      "target_id": "balance-authority-hard-rule",
+      "relation_type": "context",
+      "weight": 0.8
+    },
+    {
+      "source_id": "trading-discipline-phase-transition-may31",
+      "target_id": "live-trading-confirmed-may25",
+      "relation_type": "trajectory_of",
+      "weight": 0.85
+    },
+    {
+      "source_id": "gw-restart-cron-transient-pattern",
+      "target_id": "omnimind-cron-status-22may",
+      "relation_type": "status_of",
+      "weight": 0.7
+    },
+    {
+      "source_id": "ten-item-backlog-abandonment-14-days",
+      "target_id": "portfolio-revenue-at-zero-day-25",
+      "relation_type": "parallel",
+      "weight": 0.85
     }
   ]
 }

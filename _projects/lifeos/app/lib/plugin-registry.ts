@@ -832,6 +832,138 @@ These check-ins prevent small cracks from becoming big ones. Let's be honest.`,
 
 // ─── Mindfulness Phases ─────────────────────────────────────────────
 
+const PRODUCTIVITY_PHASES: PluginPhase[] = [
+  {
+    id: 'audit',
+    name: 'Audit',
+    description: 'Understand current habits, time allocation, and bottlenecks',
+    leadPrompt: `Let's audit how you actually spend your time and energy. Be honest, not aspirational.
+
+• Walk me through your typical day — hour by hour if you can.
+• What's your biggest time sink? Be honest: social media? meetings? indecision?
+• What systems are you using right now? (Todoist? Notion? Calendar blocking? Nothing?)
+• When do you have the most energy? The least?
+• What are your top 3 priorities right now — the ones that actually move the needle?
+• What's your current completion rate on daily tasks? Be real.
+
+I'll map your time and energy on your canvas so we can find the leaks.`,
+    objectives: [
+      'Understand daily routine, time allocation, and energy patterns',
+      'Identify the single biggest productivity bottleneck',
+      'Audit current tools and systems (or lack thereof)',
+      'Establish baseline: completion rate, deep work hours, distraction level',
+    ],
+  },
+  {
+    id: 'design',
+    name: 'Design',
+    description: 'Build your ideal day and system blueprint',
+    leadPrompt: `Here's what I see from your audit. Let me challenge a few things:
+
+• You say you work 10h but your output doesn't match — here's the leak.
+• Your energy peaks at X but you're doing low-value work then. Let's fix that.
+• Your current system (or lack of one) is costing you Y hours per week.
+
+Now let's design your system. Pick a methodology or let me suggest:
+• GTD — full capture/process/organize/review cycle
+• ZTD — Zen To Done, minimal habits approach
+• Eisenhower Matrix — urgent vs important, ruthless prioritization
+• Time blocking — schedule every block with intent
+• Custom — we build your own hybrid
+
+What resonates? Let's design your optimal day.`,
+    objectives: [
+      'Challenge assumptions about time spent vs output produced',
+      'Select a task management methodology (GTD, ZTD, Eisenhower, or custom)',
+      'Design ideal daily/weekly time-blocked schedule',
+      'Define workspace and environment setup',
+    ],
+  },
+  {
+    id: 'system',
+    name: 'System',
+    description: 'Set up tools, routines, and review cadence',
+    leadPrompt: `Great, we have a design. Now let's make it real.
+
+Choose your stack — I'll guide setup step by step:
+
+• Task manager: Todoist, Things 3, TickTick, Notion, or paper?
+• Calendar: Google Calendar, Apple Calendar, or physical?
+• Notes: Notion, Obsidian, Roam, Apple Notes, or bullet journal?
+• Review cadence: Daily planning (5 min), Weekly review (30 min), Monthly reflection (1h)
+
+Let's set up:
+1. Your capture system — where ideas and tasks go immediately
+2. Your weekly review template — what to reflect on every Sunday
+3. Your daily planning ritual — first 5 minutes of each day
+
+What's your preferred tool stack? Ready to set this up?`,
+    objectives: [
+      'Select and set up task management tool with project/area structure',
+      'Set up calendar blocking with time-blocked weekly template',
+      'Establish note-taking workflow and review cadence',
+      'Create daily planning, weekly review, and monthly reflection routines',
+    ],
+  },
+  {
+    id: 'optimize',
+    name: 'Optimize',
+    description: 'Deep work training, distraction elimination, energy management',
+    leadPrompt: `Your system is in place. Now let's optimize the engine.
+
+DEEP WORK:
+• How many consecutive minutes can you focus without checking anything?
+• Let's train that. Start with X minutes, increase by 5 each week.
+• Block 2-3 deep work sessions in your calendar. Treat them like surgery.
+
+DISTRACTION ELIMINATION:
+• Notifications: turn off ALL non-essential. Calling you? That's what phone calls are for.
+• Phone: grayscale mode, app blockers (Freedom, Cold Turkey, Screen Time)
+• Context switching: batch all shallow work into one afternoon block
+• Environment: clean desk, noise-canceling headphones, do not disturb sign
+
+ENERGY MANAGEMENT:
+• What drains you? What fuels you? Let's map that.
+• Schedule high-cognitive work during YOUR peak energy hours.
+• Set hard boundaries for meetings — only if they need your specific input.
+
+Let me suggest your first optimization sprint. Ready?`,
+    objectives: [
+      'Identify and protect deep work blocks with time-boxed sessions',
+      'Eliminate notifications, context switching, and environmental distractions',
+      'Batch shallow work (email, Slack, meetings) into dedicated windows',
+      'Align work schedule with personal energy peak/valley patterns',
+    ],
+  },
+  {
+    id: 'review',
+    name: 'Review',
+    description: 'Weekly productivity review with score and trend',
+    leadPrompt: `Weekly productivity review time. Let's look at the data.
+
+THIS WEEK'S SCORE:
+• Task completion rate: X% (Y of Z tasks done)
+• Deep work hours: Xh (target: Yh) — trend: up/down/flat
+• Biggest distraction this week: [what sucked your time]
+• Energy alignment: did you work when you had energy, or fight it?
+
+ADJUSTMENTS:
+• What worked this week that you should keep doing?
+• What fell apart? Why? What can we change?]
+• One experiment for next week: [small change to test]
+
+OVERALL PRODUCTIVITY TREND: 📈 / 📉 / ➡️
+
+How'd this week feel to you? Let's tune the system.`,
+    objectives: [
+      'Calculate weekly productivity score (completion rate, deep work hours)',
+      'Identify the single biggest distraction and create mitigation',
+      'Track trend across weeks and adjust the system',
+      'Set one small experiment for next week to improve',
+    ],
+  },
+];
+
 const MINDFULNESS_PHASES: PluginPhase[] = [
   {
     id: 'baseline',
@@ -1332,15 +1464,61 @@ BEHAVIOR:
 - End with a concrete action to improve connection this week`,
   },
   {
+    id: 'productivity',
+    name: 'Productivity OS',
+    emoji: '⚡',
+    description: 'Habits, systems, deep work, and personal effectiveness',
+    color: 'from-amber-400 to-yellow-600',
+    gradient: 'linear-gradient(135deg, #FBBF24, #CA8A04)',
+    badge: 'Coming soon',
+    phases: PRODUCTIVITY_PHASES,
+    status: 'beta',
+    features: [
+      'Habit audit with time tracking and energy mapping',
+      'System design with multiple methodologies (GTD, ZTD, Eisenhower, custom)',
+      'Tool stack recommendation (task manager, calendar, notes)',
+      'Deep work training with progressive focus sessions',
+      'Distraction elimination and energy management',
+      'Weekly productivity score with trend tracking',
+    ],
+    systemPrompt: `You are Productivity OS — a specialized LifeOS plugin for habits, systems, deep work, and personal effectiveness.
+You are inspired by aicofounder.com. You lead the conversation.
+
+YOUR JOB:
+- Immediately audit the user's current daily routine, time allocation, energy patterns, and existing systems
+- Challenge assumptions ruthlessly: "You say you work 10h but your output doesn't match — here's the leak."
+- Design a system: pick a methodology (GTD, ZTD, Eisenhower Matrix, Time Blocking, or custom)
+- Set up the tool stack: task manager, calendar system, note-taking workflow
+- Establish review cadence: daily planning, weekly review, monthly reflection
+- Train deep work capacity: progressive focus sessions, distraction elimination, energy alignment
+- Run weekly reviews with a productivity score and trend tracking
+
+YOUR PHASES:
+1. Audit → Map time, energy, habits, systems
+2. Design → Build ideal day and system blueprint
+3. System → Set up tools, routines, cadence
+4. Optimize → Deep work, distraction elimination, energy management
+5. Review → Weekly score, trend, adjustments
+
+BEHAVIOR:
+- Be direct and practical. No fluff, no theory without application.
+- Reference: Getting Things Done (David Allen), Deep Work (Cal Newport), Atomic Habits (James Clear), The ONE Thing (Gary Keller)
+- Challenge every claim with data from their own reported patterns
+- Never accept "I'm just not disciplined" — find the system failure instead
+- Tools are means, not ends. Don't obsess over which app — obsess over the workflow
+- End every response with a concrete, specific next action
+- Build canvas sections: Time Audit, System Blueprint, Tool Setup, Deep Work Tracker, Weekly Review`,
+  },
+  {
     id: 'mindfulness',
     name: 'Mindfulness OS',
     emoji: '🧘',
     description: 'Meditation, focus, stress relief, mental clarity',
     color: 'from-indigo-400 to-violet-500',
     gradient: 'linear-gradient(135deg, #818CF8, #8B5CF6)',
-    badge: 'Coming soon',
+    badge: 'Daily practice',
     phases: MINDFULNESS_PHASES,
-    status: 'beta',
+    status: 'active',
     features: [
       'Full mindfulness baseline — stress, focus, awareness, resilience',
       'Guided self-awareness exploration with emotional landscape mapping',

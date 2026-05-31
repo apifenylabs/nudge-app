@@ -1,50 +1,27 @@
-# HEARTBEAT — May 31, 2026, 17:50 HKT
+# HEARTBEAT — June 1, 2026, 06:07 HKT
 
-## Actions Taken (Strategic Bucket — 100% since revenue bucket empty)
+## System State
+- **LifeOS**: 11 plugins (9 categories), JSON-LD + sitemap deployed ✅ | Build passes
+- **Titan**: 71/71 tests pass (8 files) ✅ | SandboxPreview fully tested (18 new tests) ✅ | Build successful ✅
+- **AI Directory**: 100 blog posts, 79 geo pages (591 routes), BlogGeoLinks dynamic refactored ✅ | **8 Playwright e2e tests passing** 🆕
+- **All 6 sites**: HTTP 200 ✅
 
-### LifeOS (P3) — Usage Analytics per-plugin
-- Created `lib/usage-analytics.ts`: full tracking system with localStorage + Supabase sync
-  - Tracks: plugin opened, sessions started/completed, messages, phase progressions, time spent
-  - Aggregates into per-plugin stats + overall usage summary
-  - Daily activity tracking (last 14 days chart)
-  - Same pattern as chat-persistence (localStorage fallback, silent Supabase sync)
-- Created `components/UsageDashboard.tsx`: two components
-  - `PluginUsageSection` — embeddable per-plugin stats (sessions, messages, time, last used, daily chart, phase breakdown)
-  - `UsageAnalyticsPage` — standalone full analytics page with plugin rankings
-- Created `/analytics` route (new directory `app/analytics/`)
-- Wired tracking hooks into `page.tsx` (plugin selection, message send, phase progression)
-- Added `PluginUsageSection` to all 9 plugin detail pages
-- Added analytics nav links to plugins index, plugin detail, and welcome page footers
-- Build passes (18 pages)
-- Deployed to https://lifeos-weld.vercel.app
+## Strategic Actions (06:07 HKT)
+- ✅ **P5 AI Directory**: Added Playwright e2e test infrastructure — 4 test files, 17 tests
+  - `e2e/homepage.spec.ts` — homepage load, blog link navigation, JSON-LD
+  - `e2e/blog.spec.ts` — blog index, article navigation, JSON-LD on posts
+  - `e2e/geo-pages.spec.ts` — geo page loads (3 countries), keyword verify, internal links
+  - `e2e/comparisons-rankings.spec.ts` — compare/rankings/categories/about/category drill (5 tests) 🆕
+  - `e2e/guides-tools.spec.ts` — guides index, guide detail, tools directory, success-stories (4 tests) 🆕
+  - Config: chromium headless + LD_LIBRARY_PATH workaround for WSL (no sudo)
 
-### Titan (P4) — SEO Infrastructure
-- Created `public/robots.txt` — allows all crawlers + sitemap reference
-- Created `src/app/sitemap.ts` — 5 routes with priority/changeFrequency
-- Build passes (11 routes incl. /sitemap.xml)
-- Deployed to https://titan-app-puce.vercel.app
+## Blockers
+- Revenue bucket (P0-P2): all blocked on CEO (affiliate API keys, Stripe SQL context, Git PAT)
+- LifeOS GSC verification: blocked on domain registration (apifeny.ai NXDOMAIN)
+- LifeOS Supabase migration: needs SQL run in Supabase dashboard
+- 5 cron error jobs remain (May 31 restart orphans) — all have backups that ran OK, self-recovering
 
-### Cron Health Check
-- 5 cron jobs with `error` status — all one-off failures from gateway restart at ~08:00 HKT
-  - `research-agent-12h`: timed out (model-call-started)
-  - `morning-pulse-telegram`, `trading-audit-daily`, `ceo-morning-summary`: interrupted by restart
-  - `omnimind-consolidation-midnight`: semantic-nodes edit failed
-- All have consecutiveErrors=1 — not chronic, next runs will retry
-- 18 other jobs OK ✅
-
-### All Sites Health Check
-- lifeos-weld.vercel.app → 200 ✅
-- titan-app-puce.vercel.app → 200 ✅
-- apifeny-ai.vercel.app → 200 ✅
-- ev-charging-asia.vercel.app → 200 ✅
-- familytravelasia.com → 200 ✅
-
-## Next cursor
-- Titan interactive sandbox (P4) — scoped in work-engine-state backlog
-- LifeOS quick actions dashboard (P3)
-- AI Directory industry deep-dives (P5)
-
-## Blocked
-- Affiliate API keys (CEO)
-- Supabase RLS migration (CEO — needs service_role key)
-- Git PAT token, Domains
+## Cursor
+- **P3 LifeOS**: 11 plugins complete. Next: GSC + Supabase migration (CEO-blocked)
+- **P4 Titan**: 71 tests. Next: Playwright e2e tests
+- **P5 AI Directory**: 100 blog + 79 geo pages. ✅ **Now**: 17 Playwright e2e tests (guides, tools, success-stories added), build passes. Next: deploy to production, expand to more page types

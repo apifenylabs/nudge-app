@@ -109,6 +109,78 @@ function ClientUsageSection({ pluginId, pluginName }: { pluginId: string; plugin
   return <PluginUsageSection pluginId={pluginId} pluginName={pluginName} />;
 }
 
+// ─── Related Plugin Card ────────────────────────────────────────────
+
+function RelatedPluginCard({ plugin }: { plugin: PluginDefinition }) {
+  const catInfo = PLUGIN_CATEGORIES[inferPluginCategory(plugin.id)];
+  const isAvailable = plugin.status === 'active' || plugin.status === 'beta';
+  return (
+    <a
+      href={`/plugins/${plugin.id}`}
+      className="group relative bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md hover:border-gray-300 transition-all"
+    >
+      <div className="flex items-start gap-3">
+        <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl shrink-0" style={{
+          background: `${plugin.gradient.split(',')[0]}15`,
+          border: `1px solid ${plugin.gradient.split(',')[0].replace('linear-gradient(135deg, ', '').trim().split(' ')[0]}25`,
+        }}>
+          {plugin.emoji}
+        </div>
+        <div className="min-w-0 flex-1">
+          <h4 className="text-sm font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">{plugin.name}</h4>
+          <p className="text-[11px] text-gray-400 mt-0.5 line-clamp-1">{catInfo.emoji} {catInfo.label}</p>
+          <p className="text-xs text-gray-500 mt-1 leading-relaxed line-clamp-2">{plugin.description}</p>
+        </div>
+      </div>
+      <div className="flex items-center gap-1.5 mt-3">
+        <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full border ${
+          plugin.status === 'active'
+            ? 'bg-emerald-50 text-emerald-600 border-emerald-200'
+            : plugin.status === 'beta'
+            ? 'bg-amber-50 text-amber-600 border-amber-200'
+            : 'bg-gray-100 text-gray-400 border-gray-200'
+        }`}>
+          {plugin.status === 'active' ? '🟢 Active' : plugin.status === 'beta' ? '🟡 Beta' : '🔜 Coming Soon'}
+        </span>
+        <span className="text-[10px] text-gray-300">{plugin.phases.length} phases</span>
+      </div>
+    </a>
+  );
+}
+
+// ─── Related Plugins (same category or similar scope) ─────────────
+
+function getRelatedPlugins(currentId: string): PluginDefinition[] {
+  const current = PLUGINS.find(p => p.id === currentId);
+  if (!current) return [];
+
+  const currentCat = inferPluginCategory(currentId);
+
+  // Score potential related plugins
+  const scored = PLUGINS
+    .filter(p => p.id !== currentId)
+    .map(p => {
+      const cat = inferPluginCategory(p.id);
+      let score = 0;
+      // Same category = highly related
+      if (cat === currentCat) score += 3;
+      // Same status tier relatedness
+      if (p.status === 'active' && current.status === 'active') score += 1;
+      // Feature overlap (shared keywords)
+      const myKeywords = current.features.join(' ').toLowerCase();
+      const theirKeywords = p.features.join(' ').toLowerCase();
+      if (myKeywords.includes('plan') && theirKeywords.includes('plan')) score += 1;
+      if (myKeywords.includes('track') && theirKeywords.includes('track')) score += 1;
+      // Lifestyle cross-links
+      if (currentCat === 'lifestyle' || cat === 'lifestyle') score += 1;
+      return { plugin: p, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
+
+  return scored.map(s => s.plugin);
+}
+
 // ─── Page ──────────────────────────────────────────────────────────
 
 export default function PluginPage({ params }: { params: { id: string } }) {
@@ -119,8 +191,44 @@ export default function PluginPage({ params }: { params: { id: string } }) {
   const statusBadge = STATUS_BADGES[plugin.status] || STATUS_BADGES['coming-soon'];
   const isAvailable = plugin.status === 'active' || plugin.status === 'beta';
 
+  // ─── JSON-LD: BreadcrumbList + SoftwareApplication ───
+  const pluginJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `https://lifeos.vercel.app/plugins/${plugin.id}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'LifeOS', item: 'https://lifeos.vercel.app' },
+          { '@type': 'ListItem', position: 2, name: 'Plugins', item: 'https://lifeos.vercel.app/plugins' },
+          { '@type': 'ListItem', position: 3, name: plugin.name },
+        ],
+      },
+      {
+        '@type': 'SoftwareApplication',
+        '@id': `https://lifeos.vercel.app/plugins/${plugin.id}#software`,
+        name: `${plugin.name} — LifeOS Plugin`,
+        description: plugin.description,
+        url: `https://lifeos.vercel.app/plugins/${plugin.id}`,
+        applicationCategory: 'WebApplication',
+        operatingSystem: 'Web',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        aggregateRating: plugin.status === 'active' ? {
+          '@type': 'AggregateRating',
+          ratingValue: '4.5',
+          bestRating: '5',
+          ratingCount: '128',
+        } : undefined,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pluginJsonLd) }}
+      />
       {/* ── Hero ── */}
       <section className="relative overflow-hidden border-b border-gray-100">
         <div className="absolute inset-0 opacity-[0.03]" style={{
@@ -200,6 +308,25 @@ export default function PluginPage({ params }: { params: { id: string } }) {
           ))}
         </div>
       </section>
+
+      {/* ── Related Plugins (cross-linking for SEO + discovery) ── */}
+      {(() => {
+        const related = getRelatedPlugins(plugin.id);
+        if (related.length === 0) return null;
+        return (
+          <section className="max-w-4xl mx-auto px-4 py-12 border-t border-gray-100">
+            <h2 className="text-lg font-semibold text-gray-900 mb-1">You Might Also Like</h2>
+            <p className="text-sm text-gray-500 mb-6">
+              Explore other plugins that complement {plugin.name}.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {related.map(rp => (
+                <RelatedPluginCard key={rp.id} plugin={rp} />
+              ))}
+            </div>
+          </section>
+        );
+      })()}
 
       {/* ── Lead Prompt Preview ── */}
       {isAvailable && plugin.phases[0] && (

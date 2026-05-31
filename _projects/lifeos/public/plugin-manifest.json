@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-05-31T09:36:40.780Z",
+  "generatedAt": "2026-05-31T21:18:46.530Z",
   "plugins": [
     {
       "id": "travel",
@@ -21,7 +21,7 @@
       "phaseCount": 6,
       "displayOrder": 1,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T09:36:40.780Z",
+      "updatedAt": "2026-05-31T21:18:46.529Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -50,7 +50,7 @@
       "phaseCount": 5,
       "displayOrder": 2,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T09:36:40.780Z",
+      "updatedAt": "2026-05-31T21:18:46.529Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -80,7 +80,7 @@
       "phaseCount": 5,
       "displayOrder": 3,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T09:36:40.780Z",
+      "updatedAt": "2026-05-31T21:18:46.529Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -110,7 +110,7 @@
       "phaseCount": 5,
       "displayOrder": 4,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T09:36:40.780Z",
+      "updatedAt": "2026-05-31T21:18:46.529Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -139,7 +139,7 @@
       "phaseCount": 5,
       "displayOrder": 5,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T09:36:40.780Z",
+      "updatedAt": "2026-05-31T21:18:46.529Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -168,7 +168,7 @@
       "phaseCount": 5,
       "displayOrder": 6,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T09:36:40.780Z",
+      "updatedAt": "2026-05-31T21:18:46.529Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -198,7 +198,7 @@
       "phaseCount": 5,
       "displayOrder": 7,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T09:36:40.780Z",
+      "updatedAt": "2026-05-31T21:18:46.529Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -227,7 +227,7 @@
       "phaseCount": 4,
       "displayOrder": 8,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T09:36:40.780Z",
+      "updatedAt": "2026-05-31T21:18:46.529Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -257,7 +257,37 @@
       "phaseCount": 4,
       "displayOrder": 9,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T09:36:40.780Z",
+      "updatedAt": "2026-05-31T21:18:46.529Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "productivity",
+      "name": "Productivity OS",
+      "emoji": "⚡",
+      "description": "Habits, systems, deep work, and personal effectiveness",
+      "status": "beta",
+      "gradient": "linear-gradient(135deg, #FBBF24, #CA8A04)",
+      "badge": "Coming soon",
+      "category": "productivity",
+      "features": [
+        "Habit audit with time tracking and energy mapping",
+        "System design with multiple methodologies (GTD, ZTD, Eisenhower, custom)",
+        "Tool stack recommendation (task manager, calendar, notes)",
+        "Deep work training with progressive focus sessions",
+        "Distraction elimination and energy management",
+        "Weekly productivity score with trend tracking"
+      ],
+      "phaseCount": 5,
+      "displayOrder": 10,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-05-31T21:18:46.530Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -272,9 +302,9 @@
       "name": "Mindfulness OS",
       "emoji": "🧘",
       "description": "Meditation, focus, stress relief, mental clarity",
-      "status": "beta",
+      "status": "active",
       "gradient": "linear-gradient(135deg, #818CF8, #8B5CF6)",
-      "badge": "Coming soon",
+      "badge": "Daily practice",
       "category": "mindfulness",
       "features": [
         "Full mindfulness baseline — stress, focus, awareness, resilience",
@@ -285,9 +315,9 @@
         "Monthly mindfulness score with trend tracking"
       ],
       "phaseCount": 6,
-      "displayOrder": 10,
+      "displayOrder": 11,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T09:36:40.780Z",
+      "updatedAt": "2026-05-31T21:18:46.530Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,

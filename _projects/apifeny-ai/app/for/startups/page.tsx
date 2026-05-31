@@ -23,6 +23,7 @@ import {
 import { toolsData } from '@/lib/data';
 import { playbooks } from '@/lib/playbooks';
 import type { Playbook } from '@/lib/playbooks';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const BASE_URL = 'https://apifeny-ai.vercel.app';
 
@@ -218,6 +219,10 @@ export default function ForStartupsPage() {
  return (
  <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
  {/* SEO breadcrumb */}
+ <BreadcrumbSchema items={[
+ { name: 'Home', item: '/' },
+ { name: 'AI Tools for Startups', item: '/for/startups' },
+ ]} />
  <script
  type="application/ld+json"
  dangerouslySetInnerHTML={{

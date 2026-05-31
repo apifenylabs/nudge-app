@@ -1,4 +1,329 @@
 
+## 2026-06-01 06:58 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (△ unchanged from $1,140.05 at 06:56, +0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+
+## 2026-06-01 07:09 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▲ +$10.50 from $1,129.55 at 05:35, +0.93%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist)
+- Minor HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,140.05 > $20, +0.93% change (within 10%), positions flat, bot ran cleanly
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), SOL/BTC/ETH/ARB checked (no signal), VWAP variance SHORT HYPE signal (alloc=0, skipped), ghost killer skipped (assetPositions timeout)
+- ✅ Silently succeeded: balance $1,140.05 > $20, change +0.00% (within 10%), positions stable (0 live), bot ran cleanly
+
+## 2026-06-01 06:56 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (△ unchanged from $1,140.05 at 06:39, +0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), SOL/BTC/ETH/ARB checked (no signal), VWAP variance SHORT HYPE signal (alloc=0, skipped), ghost killer skipped (assetPositions timeout)
+- ✅ Silently succeeded: balance $1,140.05 > $20, change +0.00% (within 10%), positions stable (0 live), bot ran cleanly
+
+## 2026-06-01 06:39 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (△ unchanged from $1,140.05 at 06:35, +0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), SOL/BTC/ETH/ARB checked (no signal), VWAP variance SHORT HYPE signal (alloc=0, skipped), ghost killer skipped (assetPositions timeout)
+- ✅ Silently succeeded: balance $1,140.05 > $20, change +0.00% (within 10%), positions stable (0 live), bot ran cleanly
+
+## 2026-06-01 06:35 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (△ unchanged from $1,140.05 at 06:05, +0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), SOL/BTC/ETH/ARB checked (no signal), ghost killer skipped (assetPositions timeout)
+- ✅ Silently succeeded: balance $1,140.05 > $20, change +0.00% (within 10%), positions stable (0 live), bot ran cleanly
+
+## 2026-06-01 06:05 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (△ unchanged from $1,140.05 at 05:56, +0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), SOL/BTC/ETH/ARB checked (no signal), ghost killer skipped (assetPositions timeout)
+- ✅ Silently succeeded: balance $1,140.05 > $20, change +0.65% from last logged ($1,132.65, within 10%), positions stable (0 live), bot ran cleanly
+
+## 2026-06-01 05:56 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (△ +$5.42 from $1,134.63 at 05:45, +0.48%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC/ETH/checked (no signal), SOL checked (no signal), ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- Minor HL empty assetPositions warning (timeout) — non-critical
+- ✅ Silently succeeded: balance $1,140.05 > $20, change +0.48% (within 10%), positions flat, bot clean
+
+## 2026-06-01 05:11 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,125.78 (△ +$8.41 from $1,117.37 at 04:14, +0.75%)
+
+## 2026-06-01 05:45 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,134.63 (△ +$8.85 from $1,125.78 at 05:11, +0.79%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,135.38 — SOL long 41.36 UPnL=$7.90, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC/ETH/ARB checked (no signal), SOL (native TP/SL active — skipped), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- Minor VWAP Variance warning (df_1h not defined) — non-critical
+- ✅ Silently succeeded: balance $1,134.63 > $20, change +0.79% (within 10%), bot clean, SOL position open (unchanged)
+
+## 2026-06-01 05:16 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.01 (▲ +$3.97 from $1,125.04 at 05:08, +0.35%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.38 — 1 live position (SOL size=41.36, UPnL=$1.82), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal, VWAP variance warnings)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,129.01 > $20, change +0.35% (within 10%), SOL position stable (size=41.36, UPnL $1.82), bot ran cleanly
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,125.78 — 1 live position (SOL size=41.36, UPnL=$-1.78), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- SOL UPnL improved from -$10.17 to -$1.78 ✅
+- ✅ Silently succeeded: balance $1,125.78 > $20, change +0.75% (within 10%), SOL position improving, bot ran cleanly
+
+## 2026-06-01 04:14 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,117.37 (△ +$3.31 from $1,114.06 at 03:58, +0.30%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,117.41 — 1 live position (SOL size=41.36, UPnL=$-10.17), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,117.37 > $20, change +0.30% (within 10%), SOL UPnL improved from -$13.57 to -$10.17, bot ran cleanly
+
+## 2026-06-01 03:58 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,114.06 (△ +$4.05 from $1,110.01 at 03:41, +0.36%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,114.02 — 1 live position (SOL size=41.36, UPnL=$-13.57), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH checked (no signal), ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,114.06 > $20, change +0.36% (within 10%), SOL position unchanged, bot ran cleanly
+
+## 2026-06-01 03:41 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,110.01 (△ +$1.33 from $1,108.68 at 03:40, +0.12%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,110.01 — 1 live position (SOL size=41.36, UPnL=$-17.62), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,110.01 > $20, change +0.12% (within 10%), SOL position unchanged (UPnL -$17.62), bot ran cleanly
+
+## 2026-06-01 03:34 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,104.22 (▼ -$13.98 from $1,118.20 at 02:45, -1.25%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,103.97 — 1 live position (SOL size=41.36, UPnL=$-23.49), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked — no signals fired
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,104.22 > $20, change -1.25% (within 10%), SOL position unchanged (native TP/SL active), bot ran cleanly
+
+## 2026-06-01 02:19 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,115.84 (▼ $2.81 from $1,118.65 at 01:28, -0.25%)
+
+## 2026-06-01 02:45 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,118.20 (△ +$2.36 from $1,115.84 at 02:19, +0.21%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,118.28 — 1 live position (SOL size=41.36, UPnL=$-9.39), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX not in BB allowlist, BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,118.20 > $20, change +0.21% (within 10%), SOL position unchanged (native TP/SL active), bot ran cleanly
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,115.84 — 1 live position (SOL size=41.36, UPnL=$-11.83), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX not in BB allowlist, BTC/ETH/ARB checked — no signals fired
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,115.84 > $20, change -0.25% (within 10%), positions stable, bot clean
+
+## 2026-06-01 01:28 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,118.65 (▲ +$7.94 from $1,110.71 at 01:11, +0.72%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,118.65 — 1 live position (SOL size=41.36, UPnL=$-9.06), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: SOL skipped (native TP/SL order active), BTC/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), minor VWAP Variance warning (non-critical)
+- ✅ Silently succeeded: balance $1,118.65 > $20, change +0.72% (within 10%), no positions changed, bot ran cleanly
+
+## 2026-06-01 01:11 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,110.71 (▼ -$0.84 from $1,111.55 at 00:58, -0.08%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,110.92 — 1 live position (SOL size=41.36, UPnL=$-16.71), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal, VWAP df_1h warnings)
+- ✅ Silently succeeded: balance $1,110.71 > $20, change -0.08% (within 10%), SOL position intact (UPnL -$16.71), bot ran cleanly
+
+## 2026-06-01 00:17 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,122.51 (▼ -$4.59 from $1,127.10 at 23:58, -0.41%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,121.60 — 1 live position (SOL 41.36, UPnL=$-6.12), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: SOL skipped (native TP/SL active). HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist). BTC/ETH/ARB checked (no signal, VWAP variance warnings). VWAP Variance df_1h warnings (non-critical).
+- ✅ Silently succeeded: balance $1,122.51 > $20, change -0.41% (within 10%), SOL position unchanged, bot ran cleanly
+
+## 2026-05-31 23:55 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.63 (▼ -$8.27 from $1,137.90 at 23:39, -0.73%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.63 — 1 live position (SOL 41.36, UPnL=$1.90), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: SOL skipped (native TP/SL active). VWAP Variance warnings on multiple symbols (non-critical). No new trades.
+- ✅ Silently succeeded: balance $1,129.63 > $20, change -0.73% (within 10%), same SOL position, no significant changes
+
+## 2026-05-31 23:11 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.67 (▼ -$2.23 from $1,131.90 at 22:49, -0.20%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.67 — 1 live position (SOL 41.36, UPnL=$1.99), 17 hist trades, WR=71%, DD=0.6%, KS=False
+
+## 2026-05-31 23:39 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,137.90 (▲ +$8.23 from $1,129.67 at 23:11, +0.73%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,137.78 — SOL LONG 41.36 UPnL=$10.13, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: SOL skipped (native TP/SL active). VWAP Variance warnings on BTC/ETH/ARB (non-critical, variable scoping issue).
+- ✅ Silently succeeded: balance $1,137.90 > $20, change +0.73% (within 10%), same SOL position active
+- Bot status: no new trades — SOL (native TP/SL active, skipped), BTC/ETH checked (no signal), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped, ARB checked (no signal)
+- Minor VWAP Variance warning (df_1h not defined) — non-critical
+- ✅ Silently succeeded: balance $1,129.67 > $20, change -0.20% (within 10%), bot clean, positions unchanged
+
+## 2026-05-31 22:49 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,131.90 (△ +$2.57 from $1,129.33 at 22:29, +0.23%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,131.94 — 1 live position (SOL 41.36, UPnL=$4.14), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL (native TP/SL active, skipped), HYPE/XRP/WIF/TAO/SPX not in BB allowlist, BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warning (df_1h not defined) — non-critical
+- ✅ Silently succeeded: balance $1,131.90 > $20, change +0.23% (within 10%), bot clean, SOL position unchanged
+
+## 2026-05-31 22:39 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,135.21 (△ +$4.84 from $1,130.37 at 22:29, +0.43%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,135.21 — SOL LONG 41.36 UPnL=$7.03, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: SOL skipped (native TP/SL active). BTC/ETH/HYPE/XRP/WIF/TAO/ARB/SPX checked — BTC/ETH/ARB had VWAP Variance warnings (non-critical). HYPE/XRP/WIF/TAO/SPX not in BB allowlists — skipped.
+- ✅ Silently succeeded: balance $1,135.21 > $20, change +0.43% (within 10%), SOL position stable (UPnL=$7.03), bot ran cleanly
+
+## 2026-05-31 22:30 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,128.43 (▼ -$0.90 from $1,129.33 at 21:51, -0.08%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,128.39 — SOL long 41.36@$2.044 UPnL=$0.91, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped, SOL/ETH/ARB checked (no signal)
+- Minor VWAP Variance warning (df_1h not defined) — non-critical
+- ✅ Silently succeeded: balance $1,128.43 > $20, change -0.08% (within 10%), bot clean, SOL position active
+
+## 2026-05-31 21:51 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 21:17, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — signals checked, most skipped (BB allowlist), minor Turtle Soup error (non-critical)
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), positions flat, bot clean
+
+## 2026-05-31 21:17 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 21:13, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — most symbols skipped (BB allowlist), SOL/BTC/ETH/HYPE/ARB checked (no signals), BTC no signal, minor Turtle Soup error (non-critical)
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), positions flat, bot clean
+
+## 2026-05-31 21:13 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 21:12, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/XRP/WIF/TAO/ARB/SPX checked (no signals triggered), most skipped via BB allowlist; Turtle Soup minor error (df not defined) — non-critical
+- ✅ Silently succeeded: balance $1,129.33 ≥ $20, change 0.00% (within 10%), bot clean, no positions changed
+
+## 2026-05-31 21:12 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 21:11, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — signals checked, most skipped (BB allowlist), no signals triggered
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, positions unchanged
+
+## 2026-05-31 21:12 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 21:12, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped. Turtle Soup warning (df not defined) non-critical.
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, positions unchanged
+- Bot status: SOL checked (no signal), BTC checked (Turtle Soup error — df not defined, non-critical), ETH checked (no signal), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped, ARB checked (no signal)
+- Ghost killer skipped (empty assetPositions from HL — possible timeout)
+- Minor Turtle Soup warning (df not defined) — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, 0% change (within 10%), bot clean, no positions changed
+
+## 2026-05-31 21:11 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 20:15, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: SOL checked (no signal), BTC checked (Turtle Soup error — df not defined, non-critical), ETH checked (no signal), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped, ARB checked (no signal)
+- Ghost killer skipped (empty assetPositions from HL — possible timeout)
+- Minor Turtle Soup warning (df not defined) — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, 0% change (within 10%), bot clean, no positions changed
+
+## 2026-05-31 20:15 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:55, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: SOL checked (no signal), BTC checked (Turtle Soup error — df not defined, non-critical), ETH checked (no signal), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped, ARB checked (no signal)
+- Minor Turtle Soup warning on BTC (df not defined) — non-critical, doesn't affect trading
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no positions changed
+
+## 2026-05-31 19:55 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:53, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+
+## 2026-05-31 20:12 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:55, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Minor warning: Turtle Soup error (df not defined), empty assetPositions from HL (possible timeout) — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, 0% change (within 10%), bot clean, no positions
+
+## 2026-05-31 19:59 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:55, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Signals checked: SOL/BTC/ETH/HYPE/XRP/WIF/TAO/ARB/SPX — HYPE/XRP/WIF/TAO/SPX not in BB allowlists (skipped), BTC/SOL/ETH/ARB checked (no signals fired)
+- Ghost killer skipped (empty assetPositions from HL)
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no positions changed
+- Minor Turtle Soup (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 19:50 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:48, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB checked (no signals), XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 19:48 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:45, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB checked (no signals), XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 19:39 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:48, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 18:48 HKT — Cron Run
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:32, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+
+## 2026-05-31 19:13 HKT — Cron Run
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:48, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC/ETH/SOL/ARB checked (no signals), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- Minor Turtle Soup error (df not defined) — non-critical, doesn't affect trading
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no positions
+
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB checked (no signal), XRP/WIF/TAO/SPX not in BB allowlists; BTC Astronomer Swing watching $72,250-$73,000 entry (price=$73,778)
+- Minor Turtle Soup error (df not defined) — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), positions flat, bot clean
+
+## 2026-05-31 18:32 HKT — Cron Run
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:27, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB checked (no signal), XRP/WIF/TAO/SPX not in BB allowlists — skipped; BTC Astronomer Swing watching $72,250-$73,000 entry (price=$73,786)
+- Minor Turtle Soup error (df not defined) — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), positions flat, bot clean
+
+## 2026-05-31 18:27 HKT — Cron Run
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:06, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB checked (no signal), XRP/WIF/TAO/SPX not in BB allowlists — skipped; BTC Astronomer Swing watching $72,250-$73,000 entry (price=$73,768)
+- Minor Turtle Soup error (df not defined) — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), positions flat (BTC short closed between runs), bot clean
+
 ## 2026-05-31 17:44 HKT — Cron Run
 - **Balance (hl_balance):** $1,124.05 (▼ $2.04 from $1,126.09 at 17:17, -0.18%)
 - Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
@@ -896,6 +1221,15 @@
 - ETH checked — no signals; HYPE/XRP/WIF/TAO skipped (not in BB allowlist); BTC Astronomer watching entry zone $72250-$73000
 - ✅ No alerts: balance $1,106.18 > $20, change 0.00% (< 10%), bot clean
 
+## 2026-05-31 19:53 HKT — Cron Run
+- **Balance (hl_balance):** $1,129.33 (△ +$23.15 from $1,106.18, +2.09%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — no new trades
+- Bot status: 17 hist trades | 0 live positions | WR=71% | DD=0.6% | KS=False | Balance=$1,129.33
+- Turtle Soup minor error (df undefined — non-critical)
+- HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- ✅ No alerts: balance $1,129.33 > $20, change +2.09% (< 10%), no errors, positions unchanged (0 live)
+
 ## 2026-05-30 08:44 HKT — Cron Run
 - **Balance (hl_balance):** $1,106.18 (△ $0.00 from $1,106.18 at 08:41, 0.00%)
 - Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB
@@ -1284,6 +1618,16 @@
 - SOL/BTC/ARB native TP/SL active — skipped; ETH checked — no signals; HYPE/XRP/WIF/TAO not in BB allowlist — skipped
 - Orphan killer: 3 stale entries cleaned; ghost killer skipped (empty response)
 - ✅ Balance healthy ($1,106.18 > $20), change 0.00% (within 10%), bot clean, no alerts
+
+## 2026-06-01 04:26 HKT — Cron Run
+- **Balance (hl_balance):** $1,121.26 (△ +$15.08 from $1,106.18 at last check, +1.36%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,121.26 — SOL UPnL=$-6.70, 1 live position
+- 17 hist trades | 1 live position (SOL) | WR=71% | DD=0.6% | KS=False
+- Native TP/SL active on SOL — skipped re-signaling
+- BTC/ETH checked (no signals); HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- VWAP Variance warnings (df_1h) — non-blocking
+- ✅ Balance healthy ($1,121.26 > $20), change +1.36% (within 10%), bot clean — no alerts
 
 ## 2026-05-30 04:43 HKT — Cron Run
 - **Balance (hl_balance):** $1,106.18 (no change from 04:40, 0.00%)
@@ -2952,6 +3296,14 @@ These trade as spot pairs against USDC on the HyperEVM. Not leveragable perps, b
 - Minor VWAP Variance warning (df_1h not defined) — non-critical
 - ✅ Silently succeeded: balance $1,127.71 > $20, change -0.12% (within 10%), bot clean, positions unchanged
 
+## 2026-05-31 18:42 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ +$2.24 from $1,127.09 at 17:25, +0.20%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC skipped (Astronomer watching entry zone), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped, SOL/ETH/ARB checked (no signal)
+- Minor warnings: Turtle Soup error (df not defined), HL empty assetPositions — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change +0.20% (within 10%), bot clean
+
 ## 2026-05-31 17:17 HKT — Live Trading Cron
 - **Balance (hl_balance):** $1,126.09 (△ -$0.99 from $1,127.08 at 17:13, -0.09%)
 - Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
@@ -3007,3 +3359,760 @@ These trade as spot pairs against USDC on the HyperEVM. Not leveragable perps, b
 - Bot status: no new trades — BTC (native TP/SL order active, skipped), SOL/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
 - Minor VWAP Variance warning (df_1h not defined) — non-critical
 - ✅ Silently succeeded: balance $1,122.97 > $20, change -0.13% (within 10%), bot clean, positions unchanged
+
+## 2026-05-31 18:21 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ +$1.53 from $1,127.80 at 17:55, +0.14%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — BTC no longer in positions (0 live positions), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,772), SOL/ETH/HYPE/ARB checked (no signal), XRP/WIF/TAO/SPX not in BB allowlists — skipped
+
+## 2026-05-31 19:01 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ +$0.00 from $1,129.33 at 18:21, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX not in BB allowlists — skipped
+- Expected non-critical Turtle Soup warning (name 'df' not defined)
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no positions
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change +0.14% (within 10%), bot clean, 0 live positions
+
+## 2026-05-31 18:24 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:21, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,720), SOL/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX not in BB allowlists — skipped. HL empty assetPositions warning (possible timeout).
+- Minor Turtle Soup error (df not defined) — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, positions unchanged
+
+## 2026-05-31 18:25 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:21, 0.00%)
+
+## 2026-05-31 18:51 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:25, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,810), waiting for order flow signature. SOL/ETH/HYPE/XRP/WIF/TAO/ARB/SPX checked — no signals fired. HL empty assetPositions warning.
+- Minor Turtle Soup error (df not defined) — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, positions unchanged
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions (no active BTC short), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- All signals checked — BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,736), waiting for order flow signature
+- HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- Minor Turtle Soup error (df not defined) — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 21:22 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:52, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- All signals checked — BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,820), waiting for order flow sig. HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 18:52 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:51, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,820), waiting for order flow signature. HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 18:53 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:52, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC Astronomer Swing watching entry zone $72,250-$73,000 (price=$73,822), waiting for order flow signature. SOL/ETH/HYPE/ARB/SPX checked (no signal), XRP/WIF/TAO not in BB allowlist — skipped
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 18:55 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:53, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC Astronomer Swing watching entry (price=$73,822), no signal. SOL/ETH/HYPE/ARB/SPX checked (no signal), XRP/WIF/TAO not in BB allowlist — skipped
+- Minor Turtle Soup error (df not defined), HL empty assetPositions — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 19:08 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ +$3.29 from $1,126.04 at 17:24, +0.29%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC/ETH/SOL/ARB checked (no signals), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- Minor Turtle Soup error (df not defined) — non-critical, doesn't affect trading
+- ✅ Silently succeeded: balance $1,129.33 > $20, change +0.29% (within 10%), bot clean, no positions
+
+## 2026-05-31 20:19 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:08, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — BTC Astronomer Swing watching entry zone (price=$73,822), no signal. SOL/ETH/HYPE/ARB/SPX checked (no signal), XRP/WIF/TAO not in BB allowlist — skipped
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 19:19 HKT — Cron Run
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 18:48, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — signals checked, most skipped (BB allowlist), no signals triggered
+- ✅ Silently succeed: balance $1,129.33 > $20, change 0.00%
+
+## 2026-05-31 19:38 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:34, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/XRP/WIF/TAO/ARB/SPX checked, most skipped (BB allowlist), no signals triggered
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 19:52 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:45, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — signals checked, most skipped (BB allowlist), no signals triggered
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 19:45 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:38, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB/SPX checked (no signals), XRP/WIF/TAO not in BB allowlist — skipped
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 19:34 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:31, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/XRP/WIF/TAO/ARB/SPX checked, most skipped (BB allowlist), no signals triggered
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 19:31 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:26, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/XRP/WIF/TAO/ARB/SPX checked, most skipped (BB allowlist), no signals triggered
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 19:25 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:19, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/XRP/WIF/TAO/ARB/SPX checked, most skipped (BB allowlist), no signals triggered
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 19:52 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:01, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB checked (no signal), XRP/WIF/TAO/SPX not in BB allowlists — skipped, BTC already closed
+- Non-critical warnings: Turtle Soup (name 'df' not defined), HL empty assetPositions
+- ✅ **Silently succeeded**: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, positions unchanged
+
+## 2026-05-31 20:11 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 19:52, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/XRP/WIF/TAO/ARB/SPX checked, most skipped (BB allowlist), no signals triggered
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 20:12 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 20:11, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/XRP/WIF/TAO/ARB/SPX checked, most skipped (BB allowlist), no signals triggered
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 21:04 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 20:16, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), Turtle Soup minor error (non-critical), HL empty assetPositions warning (non-critical)
+- ✅ Silently succeeded
+
+## 2026-05-31 20:16 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 20:12, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/XRP/WIF/TAO/ARB/SPX checked, HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC Turtle Soup minor error (non-critical), no signals triggered
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 20:30 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 20:16, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC Turtle Soup minor error (non-critical), no signals triggered
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, 0 live positions unchanged
+
+## 2026-05-31 20:31 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 20:16, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/XRP/WIF/TAO/ARB/SPX checked, HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC Turtle Soup minor error (non-critical), no signals triggered
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), bot clean, no new positions
+
+## 2026-05-31 20:39 HKT — Cron Run
+- **Balance (hl_balance):** $1,129.33 (△ +$41.32 from $1,088.01 at 20:39, +3.8%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33
+- Positions: 0 live positions (all 4 slots available)
+- Bot status: 17 hist trades | 0 live positions | WR=71% | DD=0.6% | KS=False
+- No new trades this run; ghost killer skipped (empty assetPositions from HL)
+- Turtle Soup signal error (minor: `df` not defined) — non-blocking
+- ✅ All clear: balance $1,129.33 > $20, change +3.8% within 10%, no positions changed, bot ran cleanly
+
+
+## 2026-05-31 20:41 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 20:39, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC Turtle Soup minor error (non-critical), no signals triggered
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ All clear: balance $1,129.33 > $20, change 0.00% (within 10%), no positions changed, bot ran cleanly
+
+## 2026-05-31 20:47 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 20:42, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC Turtle Soup minor error (non-critical), no signals triggered
+- ✅ All clear: balance $1,129.33 > $20, change 0.00% (within 10%), no positions changed, bot ran cleanly
+
+## 2026-05-31 20:42 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 20:41, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC Turtle Soup minor error (non-critical), no signals triggered
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ All clear: balance $1,129.33 > $20, change 0.00% (within 10%), no positions changed, bot ran cleanly
+
+## 2026-05-31 20:48 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 20:42, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC Turtle Soup minor error (non-critical), no signals triggered
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ All clear: balance $1,129.33 > $20, change 0.00% (within 10%), no positions changed, bot ran cleanly
+
+## 2026-05-31 20:50 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 20:48, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal), Turtle Soup minor error (non-critical)
+- Minor Turtle Soup error (df not defined), HL empty assetPositions warning — non-critical
+- ✅ All clear: balance $1,129.33 > $20, change 0.00% (within 10%), no positions changed, bot ran cleanly
+
+## 2026-05-31 21:23 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 20:50, 0.00%)
+
+## 2026-05-31 21:27 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 21:23, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal), Turtle Soup minor error (non-critical)
+- ✅ All clear: balance $1,129.33 > $20, change 0.00% (within 10%), no positions changed, bot ran cleanly
+
+## 2026-05-31 21:30 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 21:27, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal), Turtle Soup minor error (non-critical)
+- ✅ All clear: balance $1,129.33 > $20, change 0.00% (within 10%), no positions changed, bot ran cleanly
+
+## 2026-05-31 21:42 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB/SPX checked (no signal), SOL checked (no signal), Turtle Soup minor error (non-critical)
+- Minor HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), no positions changed, bot ran cleanly
+
+## 2026-05-31 21:44 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 21:42, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB/SPX checked (no signal), SOL checked (no signal), Turtle Soup minor error (non-critical)
+- Minor HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), no positions changed, bot ran cleanly
+
+## 2026-05-31 23:14 HKT — Live Trading Cron
+
+- **Balance (hl_balance):** $1,131.45 (△ +$2.12 from $1,129.33 at 22:06, +0.19%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,131.45 — 1 live position (SOL size=41.36, UPnL=$3.68), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal), SOL skipped (native TP/SL active)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,131.45 > $20, change +0.19% (within 10%), positions stable, bot ran cleanly
+
+## 2026-05-31 22:06 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.33 (△ $0.00 from $1,129.33 at 21:44, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.33 — 0 live positions, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB/SPX checked (no signal), SOL checked (no signal), Turtle Soup minor error (non-critical)
+- Minor HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,129.33 > $20, change 0.00% (within 10%), no positions changed, bot ran cleanly
+
+## 2026-05-31 23:47 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,132.65 (△ +$1.20 from $1,131.45 at 23:14, +0.11%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,132.65 — 1 live position (SOL size=41.36, UPnL=$4.88), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,132.65 > $20, change +0.11% (within 10%), positions stable, bot ran cleanly
+
+## 2026-05-31 23:58 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,127.10 (▼ -$5.55 from $1,132.65 at 23:47, -0.49%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,127.10 — 1 live position (SOL size=41.36, UPnL=$-0.66), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal, VWAP variance warnings)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,127.10 > $20, change -0.49% (within 10%), SOL position unchanged, bot ran cleanly
+
+## 2026-06-01 02:33 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,122.09 (△ -$0.93 from $1,123.02 at 00:46, -0.08%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,122.13 — 1 live position (SOL size=41.36, UPnL=$-5.96), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal, VWAP variance warnings)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ All clear: balance $1,122.09 > $20, change -0.50% (within 10%), SOL position unchanged (delta $0), bot ran cleanly
+
+## 2026-05-31 22:24 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,132.11 (△ +$2.78 from $1,129.33 at 22:06, +0.25%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,132.23 — **NEW SOL LONG 41.36 UPnL=$4.26**, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Signals: SOL skipped (native TP/SL order active from before). BTC/ETH/HYPE/ARB checked — BTC/ETH had VWAP Variance warning (non-critical). HYPE/XRP/WIF/TAO/SPX not in BB allowlists.
+- ⚠️ **Position change**: New SOL position (size=41.36, UPnL=$4.26) — this is a new entry since last cron (was 0 positions at 22:06). The bot logs show SOL was skipped due to existing native TP/SL, suggesting the position was opened by a prior tick and is now being managed.
+
+## 2026-05-31 22:27 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.09 (▼ -$3.02 from $1,132.11 at 22:24, -0.27%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.13 — SOL LONG 41.36 UPnL=$1.32, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: SOL skipped (native TP/SL active). BTC/ETH had VWAP Variance warning (non-critical). HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped. ARB/SPX checked — no signal.
+- ✅ Silently succeeded: balance $1,129.09 > $20, change -0.27% (within 10%), SOL position still held (UPnL fluctuation normal), bot ran cleanly
+
+## 2026-05-31 22:29 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,130.37 (△ +$1.28 from $1,129.09 at 22:27, +0.11%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,130.37 — SOL LONG 41.36 UPnL=$2.94, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: SOL skipped (native TP/SL active). BTC/ETH/ARB checked (VWAP Variance warnings, non-critical). HYPE/XRP/WIF/TAO/SPX not in BB allowlists — skipped.
+- ✅ Silently succeeded: balance $1,130.37 > $20, change +0.11% (within 10%), SOL position stable (UPnL=$2.94), bot clean
+
+## 2026-05-31 22:48 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,132.32 (△ +$1.95 from $1,130.37 at 22:29, +0.17%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,133.10 — SOL LONG 41.36 UPnL=$5.34, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: SOL skipped (native TP/SL active). HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist). BTC/ETH/ARB/SPX checked (VWAP Variance warnings, non-critical). No new signals triggered.
+- Minor VWAP Variance error (df_1h not defined) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,132.32 > $20, change +0.17% (within 10%), SOL position unchanged (UPnL=$5.34), bot ran cleanly
+
+## 2026-05-31 23:06 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,130.29 (△ +$1.11 from $1,129.33 at 20:12, +0.09%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,130.29 — 1 live position: SOL size=41.36 UPnL=$2.52
+- Bot status: 17 hist trades | WR=71% | DD=0.6% | KS=False
+- SOL skipped (native TP/SL order active), BTC/ETH checked (no signals, VWAP Variance warnings), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- Minor VWAP Variance errors (df_1h unset) — non-critical, doesn't affect trading
+- ✅ Silently succeeded: balance $1,130.29 > $20, change +0.09% (within 10%), bot clean, no errors
+
+## 2026-05-31 23:08 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.38 (▼ -$0.91 from $1,130.29 at 23:06, -0.08%)
+
+## 2026-05-31 23:23 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,136.20 (△ +$6.82 from $1,129.38 at 23:08, +0.60%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,136.78 — SOL LONG 41.36 UPnL=$9.02, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: SOL skipped (native TP/SL active). HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist). BTC/ETH/ARB/SPX checked — VWAP Variance warnings (non-critical). No new signals.
+- Minor VWAP Variance error (df_1h not defined) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,136.20 > $20, change +0.60% (within 10%), SOL position unchanged (UPnL=$9.02), bot ran cleanly
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.46 — SOL LONG 41.36 UPnL=$2.19, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: SOL skipped (native TP/SL active). HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist). BTC/ETH/ARB/SPX checked — VWAP Variance warnings (non-critical). No new signals.
+- Minor VWAP Variance error (df_1h not defined) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,129.38 > $20, change -0.08% (within 10%), SOL position unchanged, bot ran cleanly
+
+## 2026-06-01 00:07 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.63 (▼ -$3.02 from $1,132.65 at 23:47, -0.27%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.63 — 1 live position (SOL size=41.36, UPnL=$1.99), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal), SPX skipped (BB allowlist)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,129.63 > $20, change -0.27% (within 10%), SOL position stable (UPnL $1.99), bot ran cleanly
+
+## 2026-06-01 00:35 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,108.45 (▼ -$14.06 from $1,122.51 at 00:17, -1.25%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,108.57 — 1 live position (SOL size=41.36, UPnL=$-18.86), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,108.57 > $20, change -1.25% (within 10%), SOL position intact (UPnL -$18.86), bot ran cleanly
+
+## 2026-06-01 00:51 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,111.26 (△ +$2.81 from $1,108.45 at 00:35, +0.25%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,111.39 — 1 live position (SOL size=41.36, UPnL=$-16.13), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,111.26 > $20, change +0.25% (within 10%), SOL position intact (UPnL -$16.13), bot ran cleanly
+
+## 2026-06-01 00:55 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,112.05 (△ +$0.79 from $1,111.26 at 00:51, +0.07%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,112.05 — 1 live position (SOL size=41.36, UPnL=$-15.68), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,112.05 > $20, change +0.07% (within 10%), SOL position intact (UPnL -$15.68), bot ran cleanly
+
+## 2026-06-01 00:58 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,111.55 (△ -$0.50 from $1,112.05 at 00:55, -0.04%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,111.59 — 1 live position (SOL size=41.36, UPnL=$-16.13), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,111.55 > $20, change -0.04% (within 10%), SOL position intact (UPnL -$16.13), bot ran cleanly
+
+## 2026-06-01 01:18 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,115.14 (△ +$5.30 from $1,109.84 at 01:12, +0.48%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,115.14 — 1 live position (SOL size=41.36, UPnL=$-12.57), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,115.14 > $20, change +0.48% (within 10%), SOL position unchanged, bot ran cleanly
+
+## 2026-06-01 01:19 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,115.18 (△ +$5.34 from $1,109.84 at 01:12, +0.48%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,113.28 — 1 live position (SOL size=41.36, UPnL=$-14.39), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal, VWAP variance warnings)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,115.18 > $20, change +0.48% (within 10%), SOL position unchanged, bot ran cleanly
+
+## 2026-06-01 01:12 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,109.84 (△ -$1.71 from $1,111.55 at 00:58, -0.15%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,109.84 — 1 live position (SOL size=41.36, UPnL=$-17.87), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical
+- ✅ Silently succeeded: balance $1,109.84 > $20, change -0.15% (within 10%), SOL position unchanged, bot ran cleanly
+
+## 2026-06-01 01:25 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,116.17 (△ +$0.99 from $1,115.18 at 01:19, +0.09%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,116.17 — 1 live position (SOL size=41.36, UPnL=$-11.42), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB/SPX checked (no signal, VWAP variance warnings)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,116.17 > $20, change +0.09% (within 10%), SOL position unchanged, bot ran cleanly
+
+## 2026-06-01 02:32 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,122.54 (△ +$6.37 from $1,116.17 at 01:25, +0.57%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,122.54 — 1 live position (SOL size=41.36, UPnL=$-5.13), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB/SPX checked (no signal, VWAP variance warnings)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,122.54 > $20, change +0.57% (within 10%), SOL position unchanged (UPnL recovery from -$11.42 to -$5.13), bot ran cleanly
+
+## 2026-06-01 02:37 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,120.51 (▼ -$2.03 from $1,122.54 at 02:32, -0.18%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,120.51 — 1 live position (SOL size=41.36, UPnL=$-7.16), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,120.51 > $20, change -0.18% (within 10%), SOL position unchanged, bot ran cleanly
+
+## 2026-06-01 02:50 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,117.16 (▼ -$3.35 from $1,120.51 at 02:37, -0.30%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,117.16 — 1 live position (SOL size=41.36, UPnL=$-10.51), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,117.16 > $20, change -0.30% (within 10%), SOL position unchanged (UPnL -$10.51), bot ran cleanly
+
+## 2026-06-01 04:32 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,121.96 (△ +$9.59 from $1,112.37 at 03:44, +0.86%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,121.96 — 1 live position (SOL size=41.36, UPnL=$-5.62), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,121.96 > $20, change +0.86% (within 10%), SOL position unchanged (UPnL recovering to -$5.62), bot ran cleanly
+
+## 2026-06-01 03:44 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,112.37 (▲ +$3.69 from $1,108.68 at 03:40, +0.33%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,112.37 — 1 live position (SOL size=41.36, UPnL=$-15.26), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,112.37 > $20, change +0.33% (within 10%), SOL position unchanged (UPnL -$15.26), bot ran cleanly
+
+## 2026-06-01 03:40 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,108.68 (▼ -$8.48 from $1,117.16 at 03:08, -0.76%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,108.68 — 1 live position (SOL size=41.36, UPnL=$-18.94), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,108.68 > $20, change -0.76% (within 10%), SOL position unchanged (UPnL -$18.94), bot ran cleanly
+
+## 2026-06-01 03:08 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,116.58 (▼ -$0.58 from $1,117.16 at 02:50, -0.05%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,116.79 — 1 live position (SOL size=41.36, UPnL=$-11.50), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,116.58 > $20, change -0.05% (within 10%), SOL position unchanged (UPnL -$11.50), bot ran cleanly
+
+## 2026-06-01 03:15 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,113.77 (▼ -$2.81 from $1,116.58 at 03:08, -0.25%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,113.77 — 1 live position (SOL size=41.36, UPnL=$-13.86), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal), SPX skipped (BB allowlist)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,113.77 > $20, change -0.25% (within 10%), SOL position unchanged (UPnL -$13.86), bot ran cleanly
+
+## 2026-06-01 04:11 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,120.52 (△ +$4.02 from $1,116.50 at 04:06, +0.36%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,120.06 — 1 live position (SOL size=41.36, UPnL=$-7.98), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal), SPX skipped (BB allowlist)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,120.52 > $20, change +0.36% (within 10%), SOL position unchanged (size=41.36, UPnL $-7.98), bot ran cleanly
+
+## 2026-06-01 04:06 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,116.50 (▲ +$5.83 from $1,110.67 at 03:51, +0.52%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,115.92 — 1 live position (SOL size=41.36, UPnL=$-11.87), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal), VWAP variance warnings (df_1h, known issue)
+- ✅ Silently succeeded: balance $1,116.50 > $20, change +0.52% (within 10%), SOL position unchanged (size=41.36, native TP/SL managing), bot ran cleanly
+
+## 2026-06-01 03:51 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,110.67 (▼ -$3.10 from $1,113.77 at 03:15, -0.28%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,110.67 — 1 live position (SOL size=41.36, UPnL=$-16.96), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal, VWAP variance warnings)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,110.67 > $20, change -0.28% (within 10%), SOL position unchanged (size=41.36, UPnL fluctuated -$16.96), bot ran cleanly
+
+## 2026-06-01 04:20 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,122.96 (△ +$2.44 from $1,120.52 at 04:11, +0.22%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,123.04 — 1 live position (SOL size=41.36, UPnL=$-4.55), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ No alerts: balance $1,122.96 > $20, change +0.22% (within 10%), positions unchanged (SOL size=41.36, UPnL recovering to -$4.55), bot ran cleanly
+
+## 2026-06-01 04:27 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,121.55 (▼ -$1.41 from $1,122.96 at 04:20, -0.13%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,121.51 — 1 live position (SOL size=41.36, UPnL=$-6.08), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ No alerts: balance $1,121.55 > $20, change -0.13% (within 10%), SOL position unchanged (size=41.36, UPnL $-6.08), bot ran cleanly
+
+## 2026-06-01 04:46 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,122.42 (△ +$0.04 from $1,122.38 at 04:33, +0.004%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,122.38 — 1 live position (SOL size=41.36, UPnL=$-5.21), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ No alerts: balance $1,122.42 > $20, change +0.004% (within 10%), SOL position unchanged (size=41.36, UPnL $-5.21), bot ran cleanly
+
+## 2026-06-01 04:33 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,122.38 (△ +$0.83 from $1,121.55 at 04:20, +0.07%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,122.25 — 1 live position (SOL size=41.36, UPnL=$-5.62), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ No alerts: balance $1,122.38 > $20, change +0.07% (within 10%), SOL position unchanged (size=41.36, UPnL $-5.62), bot ran cleanly
+
+## 2026-06-01 04:51 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,123.87 (▲ +$3.35 from $1,120.52 at 04:11, +0.30%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,123.87 — 1 live position (SOL size=41.36, UPnL=$-3.72), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal, VWAP variance warnings)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,123.87 > $20, change +0.30% (within 10%), SOL position stable (UPnL $-3.72), bot ran cleanly
+
+## 2026-06-01 04:54 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,125.69 (▲ +$1.82 from $1,123.87 at ~04:33, +0.16%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,126.10 — SOL size=41.36 UPnL=$-1.49, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL (native TP/SL active, skipped), BTC/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped
+- Minor VWAP Variance warning (df_1h not defined) — non-critical
+- ✅ Silently succeeded: balance $1,125.69 > $20, change +0.16% (within 10%), bot ran cleanly, positions unchanged
+
+## 2026-06-01 04:56 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,128.41 (▲ +$2.72 from $1,125.69 at 04:54, +0.24%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,128.41 — SOL size=41.36 UPnL=$0.83, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL (native TP/SL active, skipped), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,128.41 > $20, change +0.24% (within 10%), positions unchanged (SOL size=41.36, UPnL $0.83), bot ran cleanly
+
+## 2026-06-01 04:58 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,127.13 (▼ -$1.28 from $1,128.41 at 04:55, -0.11%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,127.13 — SOL size=41.36 UPnL=$-0.45, 1 live position, 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL (native TP/SL active, skipped), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,127.13 > $20, change -0.11% (within 10%), positions unchanged (SOL size=41.36), bot ran cleanly
+
+## 2026-06-01 05:06 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,125.00 (▼ -$2.13 from $1,127.13 at 04:58, -0.19%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,124.96 — 1 live position (SOL size=41.36, UPnL=$-2.61), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal, VWAP variance warnings)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,125.00 > $20, change -0.19% (within 10%), SOL position unchanged (size=41.36, UPnL $-2.61), bot ran cleanly
+
+## 2026-06-01 05:08 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,125.04 (△ +$0.04 from $1,125.00 at 05:06, +0.004%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,125.04 — 1 live position (SOL size=41.36, UPnL=$-2.52), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal, VWAP variance warnings)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,125.04 > $20, change +0.004% (within 10%), SOL position unchanged (size=41.36, UPnL $-2.52), bot ran cleanly
+
+## 2026-06-01 05:34 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,127.11 (▼ -$0.08 from $1,127.19 at 05:27, -0.007%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,126.94 — 1 live position (SOL size=41.36, UPnL=$-0.58), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB/SPX checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,127.11 > $20, change -0.007% (within 10%), positions unchanged (SOL size=41.36, UPnL near flat at -$0.58), bot ran cleanly
+
+## 2026-06-01 05:48 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▲ +$9.01 from $1,131.04 at 05:36, +0.80%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions (SOL closed between cycles), 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist)
+- Minor HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,140.05 > $20, change +0.80% (within 10%), positions changed from 1 SOL position to 0 (natural close), bot ran cleanly
+
+## 2026-06-01 05:35 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,129.55 (▲ +$2.36 from $1,127.19 at 05:27, +0.21%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,129.55 — 1 live position (SOL size=41.36, UPnL=$1.99), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,129.55 > $20, change +0.21% (within 10%), SOL position unchanged (size=41.36, UPnL $1.99), bot ran cleanly
+
+## 2026-06-01 05:36 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,131.04 (▲ +$1.49 from $1,129.55 at 05:35, +0.13%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,131.24 — 1 live position (SOL size=41.36, UPnL=$3.68), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,131.04 > $20, change +0.13% (within 10%), positions unchanged (SOL size=41.36, UPnL $3.68), bot ran cleanly
+
+## 2026-06-01 06:23 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▲ +$10.50 from $1,129.55 at 05:35, +0.93%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist)
+- Minor HL empty assetPositions warning — non-critical, known intermittent issue
+- ✅ Silently succeeded: balance $1,140.05 > $20, change +0.93% (within 10%), positions unchanged, bot ran cleanly
+
+## 2026-06-01 05:27 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,127.19 (▲ +$18.74 from $1,108.45 at 00:35, +1.69%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,127.19 — 1 live position (SOL size=41.36, UPnL=$-0.37), 17 hist trades, WR=71%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL skipped (native TP/SL order active), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), BTC/ETH/ARB checked (no signal)
+- Minor VWAP Variance warnings (df_1h) — non-critical, known issue
+- ✅ Silently succeeded: balance $1,127.19 > $20, change +1.69% (within 10%), SOL position unchanged (size=41.36, UPnL $-0.37), bot ran cleanly
+
+## 2026-06-01 06:40 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (△ $0.00 from $1,140.05 at 06:23, 0.00%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist)
+- Minor HL empty assetPositions warning — non-critical, known intermittent issue
+- ✅ Silently succeeded: balance $1,140.05 > $20, change 0.00% (within 10%), positions unchanged, bot ran cleanly
+
+## 2026-06-01 05:49 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▲ +$14.41 from $1,125.64 at 16:18, +1.28%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX not in BB allowlist — skipped, no signals on others
+- ✅ Silently succeeded: balance $1,140.05 > $20, change +1.28% (within 10%), positions flat, bot ran cleanly
+
+## 2026-06-01 05:55 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▸ 0.00% from $1,140.05 at 05:49)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), no signals on others
+- ✅ Silently succeeded: balance $1,140.05 > $20, no change (0%), positions flat, bot ran cleanly
+
+## 2026-06-01 05:59 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▸ 0.00% from $1,140.05 at 05:55)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist), no signals on SOL/BTC/ETH/ARB
+- ✅ Silently succeeded: balance $1,140.05 > $20, no change (0%), positions flat, bot ran cleanly
+
+## 2026-06-01 06:07 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▸ 0.00% from $1,140.05 at 05:59)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist)
+- Minor HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,140.05 > $20, no change (0%), positions flat, bot ran cleanly
+
+## 2026-06-01 06:08 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▸ 0.00% from $1,140.05 at 06:07)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/ARB checked (no signal), HYPE/XRP/WIF/TAO/SPX skipped (BB allowlist)
+- Minor HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,140.05 > $20, 0% change (within 10%), positions flat, bot ran cleanly
+
+## 2026-06-01 06:14 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▸ 0.00% from $1,140.05 at 06:08)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+## 2026-06-01 06:31 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (△ +$10.72 from $1,129.33 at 18:42, +0.95%)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB/SPX checked (no signal), XRP/WIF/TAO skipped (BB allowlist)
+- Minor HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,140.05 > $20, change +0.95% (within 10%), positions flat (0 live), bot ran cleanly
+
+## 2026-06-01 06:37 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▸ 0.00% from $1,140.05 at 06:36)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB/SPX checked (no signal), XRP/WIF/TAO skipped (BB allowlist). HYPE VWAP SHORT signal (z=2.3σ) skipped (allocation 0).
+- Minor HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,140.05 > $20, no change, positions flat (0 live), bot ran cleanly
+
+## 2026-06-01 06:36 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▸ 0.00% from $1,140.05 at 06:31)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB/SPX checked (no signal), XRP/WIF/TAO skipped (BB allowlist)
+- Minor HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,140.05 > $20, 0% change (within 10%), positions flat (0 live), bot ran cleanly
+
+## 2026-06-01 06:38 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▸ 0.00% from $1,140.05 at 06:36)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB/SPX checked (no signal), XRP/WIF/TAO skipped (BB allowlist)
+- Minor HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,140.05 > $20, 0% change (within 10%), positions flat (0 live), bot ran cleanly
+
+## 2026-06-01 06:55 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▸ 0.00% from $1,140.05 at 06:38)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB checked (no signal), XRP/WIF/TAO/SPX skipped (BB allowlist)
+- Minor HL empty assetPositions warning — non-critical
+- ✅ Silently succeeded: balance $1,140.05 > $20, 0% change (within 10%), positions flat (0 live), bot ran cleanly
+
+## 2026-06-01 07:05 HKT — Live Trading Cron
+- **Balance (hl_balance):** $1,140.05 (▸ 0.00% from $1,140.05 at 06:55)
+- Mode: LIVE (bot) | Symbols: SOL, BTC, ETH, HYPE, XRP, WIF, TAO, ARB, SPX
+- Account balance via bot: $1,140.05 — 0 live positions, 18 hist trades, WR=72%, DD=0.6%, KS=False
+- Bot status: no new trades — SOL/BTC/ETH/HYPE/ARB checked (no signal), XRP/WIF/TAO/SPX skipped (BB allowlist). Minor HL empty assetPositions warning (non-critical).
+- ✅ Silently succeeded: balance $1,140.05 > $20, 0% change (within 10%), positions flat (0 live), bot ran cleanly

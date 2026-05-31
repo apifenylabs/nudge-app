@@ -2,10 +2,11 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import { Zap, ArrowLeft, ArrowRight, Check, X, Minus, Route as RouteIcon, Clock, BatteryCharging, Calendar, AlertTriangle, ArrowUpDown, Star, Table, List } from 'lucide-react';
+import { Zap, ArrowLeft, ArrowRight, Check, X, Minus, Route as RouteIcon, Clock, BatteryCharging, Calendar, AlertTriangle, ArrowUpDown, Star, Table, List, Lightbulb } from 'lucide-react';
 import { getAllItineraries } from '@/data/itineraries';
 import SiteFooter from '@/components/SiteFooter';
 import NewsletterSignup from '@/components/NewsletterSignup';
+import RouteSuggestions from '@/components/itineraries/RouteSuggestions';
 import type { Itinerary } from '@/data/itineraries';
 
 const allItineraries = getAllItineraries();
@@ -534,6 +535,18 @@ export default function ComparePage() {
             )}
           </div>
         </div>
+
+        {/* Inline route suggestions when both routes selected */}
+        {itineraryA && itineraryB && (
+          <div className="mb-6">
+            <RouteSuggestions
+              currentRouteId={itineraryA.id}
+              allRoutes={allItineraries}
+              maxSuggestions={3}
+              inline
+            />
+          </div>
+        )}
 
         {itineraryA && itineraryB ? (
           <>

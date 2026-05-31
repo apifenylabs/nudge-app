@@ -326,6 +326,9 @@ export default function PluginsIndexPage() {
             ← Back to LifeOS Home
           </Link>
           <div className="flex items-center gap-4">
+            <Link href="/quick-actions" className="text-xs text-gray-400 hover:text-teal-600 transition-colors">
+              ⚡ Quick Actions
+            </Link>
             <Link href="/analytics" className="text-xs text-gray-400 hover:text-teal-600 transition-colors">
               📊 Analytics
             </Link>

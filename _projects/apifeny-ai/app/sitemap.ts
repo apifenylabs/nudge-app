@@ -106,6 +106,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
  } catch { return []; }
  })();
 
+ // Industry deep-dive pages (added for BlogLandingLinks cross-linking)
+ const industryEntries: MetadataRoute.Sitemap = [
+ { url: `${BASE_URL}/industries/education-admin`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+ { url: `${BASE_URL}/industries/construction`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+ { url: `${BASE_URL}/industries/hr`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+ { url: `${BASE_URL}/industries/property-management`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+ { url: `${BASE_URL}/industries/insurance`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+ ];
+
  // Static pages
  const staticEntries: MetadataRoute.Sitemap = [
  { url: BASE_URL, lastModified: new Date(), changeFrequency: 'daily', priority: 1.0 },
@@ -180,6 +189,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${BASE_URL}/blog/cursor-vs-copilot-vs-windsurf-2026`, lastModified: new Date('2026-05-20'), changeFrequency: 'monthly', priority: 0.6 },
  { url: `${BASE_URL}/blog/deepseek-vs-chatgpt-2026`, lastModified: new Date('2026-05-12'), changeFrequency: 'monthly', priority: 0.6 },
  { url: `${BASE_URL}/blog/notion-ai-vs-chatgpt-vs-gemini-2026`, lastModified: new Date('2026-05-08'), changeFrequency: 'monthly', priority: 0.6 },
+ { url: `${BASE_URL}/blog/ai-hr-recruiting-asia-2026`, lastModified: new Date('2026-05-31'), changeFrequency: 'monthly', priority: 0.6 },
+ { url: `${BASE_URL}/blog/ai-legal-compliance-asia-2026`, lastModified: new Date('2026-05-31'), changeFrequency: 'monthly', priority: 0.6 },
+ { url: `${BASE_URL}/blog/ai-supply-chain-logistics-asia-2026`, lastModified: new Date('2026-05-31'), changeFrequency: 'monthly', priority: 0.6 },
  // User-facing pages (lower priority for SEO but still relevant)
  { url: `${BASE_URL}/submit-playbook`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
  { url: `${BASE_URL}/revenue`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
@@ -263,6 +275,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  return [
  ...aiToolCountryEntries,
  ...playbooksPluralEntries,
+ ...industryEntries,
  ...staticEntries,
  ...toolEntries,
  ...collectionEntries,

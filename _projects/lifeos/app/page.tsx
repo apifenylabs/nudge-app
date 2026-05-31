@@ -591,6 +591,12 @@ export default function Home() {
                   Recent conversations
                 </button>
                 <a
+                  href="/quick-actions"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-500 hover:border-teal-300 hover:text-teal-600 transition-all shadow-sm"
+                >
+                  ⚡ Quick Actions
+                </a>
+                <a
                   href="/analytics"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-500 hover:border-teal-300 hover:text-teal-600 transition-all shadow-sm"
                 >

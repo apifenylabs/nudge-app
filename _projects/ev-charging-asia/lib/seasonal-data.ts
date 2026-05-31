@@ -308,7 +308,23 @@ export const routeSeasonsData: RouteSeasonData[] = [
 ];
 
 export function getRouteSeasonData(slug: string): RouteSeasonData | undefined {
-  return routeSeasonsData.find(r => r.slug === slug);
+  // Check exact slug first
+  const exact = routeSeasonsData.find(r => r.slug === slug);
+  if (exact) return exact;
+  
+  // Fallback: match family variant to parent route
+  const familySlugMap: Record<string, string> = {
+    'kuala-lumpur-to-penang-family-ev-road-trip': 'kuala-lumpur-to-penang-road-trip',
+    'singapore-to-kuala-lumpur-family-ev-road-trip': 'singapore-to-kuala-lumpur-road-trip',
+    'bali-family-ev-road-trip-loop': 'bali-ev-road-trip-loop',
+  };
+  
+  const parentSlug = familySlugMap[slug];
+  if (parentSlug) {
+    return routeSeasonsData.find(r => r.slug === parentSlug);
+  }
+  
+  return undefined;
 }
 
 export function getAllRouteSeasonData(): RouteSeasonData[] {
