@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { track } from "@vercel/analytics";
 import { Check, X, HelpCircle, Shield, Sparkles, ChevronRight, Star, Zap, Crown, CreditCard, RefreshCw, Lock, ArrowLeft } from "lucide-react";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
+import FaqPageJsonLd from "@/components/seo/FaqPageJsonLd";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -272,6 +273,7 @@ export default function PricingPage() {
         { label: "Home", href: "/" },
         { label: "Pricing", href: "/pricing" },
       ]} />
+      <FaqPageJsonLd items={FAQS} pageSlug="pricing" />
       {/* ── Navigation ── */}
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">

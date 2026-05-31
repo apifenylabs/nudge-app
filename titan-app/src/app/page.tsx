@@ -30,6 +30,7 @@ import {
   Server,
   ShieldCheck,
 } from "lucide-react";
+import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
 
 const MASCOTS = [
   { name: "Sage", emoji: "🦉", src: "/mascots/sage.svg", element: "Wisdom", rarity: "Uncommon", bg: "from-indigo-100 to-indigo-50", border: "border-indigo-200", accent: "text-indigo-600" },
@@ -574,80 +575,54 @@ export default function LandingPage() {
 
       {/* ── Social Proof / Testimonials ── */}
       <section className="border-t border-gray-100 bg-gray-50/50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-          <div className="text-center mb-12">
-            <Badge variant="outline" className="mb-4 border-teal-200 bg-teal-50 text-teal-700">
-              <Users className="h-3 w-3 mr-1" />
-              Trusted by Builders
-            </Badge>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-              What early adopters are saying
-            </h2>
-            <p className="text-gray-500 max-w-lg mx-auto">
-              Titan is in private beta. Here&apos;s what our first 50 users have experienced.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
+        <div className="py-16 sm:py-20">
+          <TestimonialCarousel
+            testimonials={[
               {
-                quote: "Titan replaces 3 SaaS tools I was paying for. My mascot tracks my trading bot, runs my blog SEO checks, and even manages my affiliate links — all from one dashboard.",
-                author: "Marcus L.",
+                id: "marcus-l",
+                name: "Marcus L.",
                 role: "Solo Developer",
-                xp: "Lv. 18 — 8,420 XP",
-                accent: "teal",
+                content: "Titan replaces 3 SaaS tools I was paying for. My mascot tracks my trading bot, runs my blog SEO checks, and even manages my affiliate links — all from one dashboard.",
+                rating: 5,
+                badge: "Lv. 18 — 8,420 XP",
               },
               {
-                quote: "The progression system is genius. I actually enjoy optimizing my workflows because every optimization gives XP. It turns productivity into a game I want to play.",
-                author: "Sarah K.",
+                id: "sarah-k",
+                name: "Sarah K.",
                 role: "Startup Founder",
-                xp: "Lv. 24 — 11,950 XP",
-                accent: "amber",
+                content: "The progression system is genius. I actually enjoy optimizing my workflows because every optimization gives XP. It turns productivity into a game I want to play.",
+                rating: 5,
+                badge: "Lv. 24 — 11,950 XP",
               },
               {
-                quote: "I built and certified a gold-tier travel planning agent in under 2 hours. The skill forge is the fastest agent builder I've used — and I've used most of them.",
-                author: "James C.",
+                id: "james-c",
+                name: "James C.",
                 role: "Digital Nomad",
-                xp: "Lv. 12 — 5,680 XP",
-                accent: "purple",
+                content: "I built and certified a gold-tier travel planning agent in under 2 hours. The skill forge is the fastest agent builder I've used — and I've used most of them.",
+                rating: 4,
+                badge: "Lv. 12 — 5,680 XP",
               },
-            ].map((t, i) => {
-              const accentColors: Record<string, { text: string; bg: string; border: string; from: string; to: string }> = {
-                teal: { text: "text-teal-600", bg: "bg-teal-50", border: "border-teal-100", from: "from-teal-500", to: "to-teal-600" },
-                amber: { text: "text-amber-600", bg: "bg-amber-50", border: "border-amber-100", from: "from-amber-500", to: "to-amber-600" },
-                purple: { text: "text-purple-600", bg: "bg-purple-50", border: "border-purple-100", from: "from-purple-500", to: "to-purple-600" },
-              };
-              const c = accentColors[t.accent] || accentColors.teal;
-              return (
-                <motion.div
-                  key={t.author}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.5 }}
-                >
-                  <Card className={`h-full border ${c.border} hover:shadow-lg transition-shadow`}>
-                    <CardContent className="p-6 flex flex-col h-full">
-                      <Quote className={`h-5 w-5 ${c.text} mb-3 opacity-50`} />
-                      <p className="text-sm text-gray-600 leading-relaxed flex-1 mb-4">
-                        &ldquo;{t.quote}&rdquo;
-                      </p>
-                      <div className="border-t border-gray-100 pt-3 mt-auto">
-                        <p className="text-sm font-semibold text-gray-900">{t.author}</p>
-                        <div className="flex items-center justify-between mt-1">
-                          <span className="text-xs text-gray-500">{t.role}</span>
-                          <span className={`text-[10px] font-mono ${c.text} font-medium`}>{t.xp}</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </div>
+              {
+                id: "elena-m",
+                name: "Elena M.",
+                role: "Freelance Designer",
+                content: "I was skeptical about gamified productivity, but Titan actually works. I've automated my client intake, invoicing, and portfolio updates. My Spark mascot is at level 15 already.",
+                rating: 5,
+                badge: "Lv. 15 — 6,230 XP",
+              },
+              {
+                id: "ray-t",
+                name: "Ray T.",
+                role: "DevOps Engineer",
+                content: "The orbital swarm visualization alone is worth it. I can see all my agents working in real-time, and the God-Tier automation is legit — it's like having 10 interns.",
+                rating: 4,
+                badge: "Lv. 28 — 14,100 XP",
+              },
+            ]}
+          />
 
           {/* Trust Bar — Social proof numbers */}
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {[
               { label: "Beta Users", value: "50+", icon: <Users className="h-4 w-4" />, color: "text-teal-600", bg: "bg-teal-50" },
               { label: "Agents Built", value: "340+", icon: <Bot className="h-4 w-4" />, color: "text-amber-600", bg: "bg-amber-50" },

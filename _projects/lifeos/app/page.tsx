@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import dynamic from 'next/dynamic';
+import OnboardingWizard from './components/OnboardingWizard';
+import { trackEvent, startSession as startAnalyticsSession, endSession, trackMessage, trackPhaseProgress } from './lib/usage-analytics';
 
 // Dynamic import: Excalidraw is client-only
 const ExcalidrawCanvas = dynamic(
@@ -163,8 +165,6 @@ function TypingBubble() {
   );
 }
 
-// ─── Main Page ─────────────────────────────────────────────────────
-
 export default function Home() {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Message[]>([]);
@@ -178,7 +178,11 @@ export default function Home() {
   const [loadingSessions, setLoadingSessions] = useState(false);
   const [plugins, setPlugins] = useState<PluginDefinition[]>([]);
   const [showPluginOverlay, setShowPluginOverlay] = useState(false);
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const [onboardedCategories, setOnboardedCategories] = useState<string[]>([]);
   const [freeChatInput, setFreeChatInput] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [statusFilter, setStatusFilter] = useState<'all' | 'active' | 'beta' | 'coming-soon'>('all');
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -186,6 +190,21 @@ export default function Home() {
   }, [messages]);
 
   useEffect(() => {
+    // Check if onboarding has been completed
+    const done = localStorage.getItem('lifeos_onboarding_done');
+    if (!done) {
+      setShowOnboarding(true);
+    } else {
+      // Restore previously selected categories
+      const saved = localStorage.getItem('lifeos_onboarding_categories');
+      if (saved) {
+        try {
+          const cats = JSON.parse(saved);
+          if (Array.isArray(cats)) setOnboardedCategories(cats);
+        } catch { /* ignore */ }
+      }
+    }
+
     // Load plugin definitions from API
     fetch('/api/plugins')
       .then(r => r.json())
@@ -255,6 +274,10 @@ export default function Home() {
     setCurrentPhase(plugin.phases[0]?.id || '');
     setShowPluginOverlay(false);
 
+    // Track plugin selection
+    trackEvent(plugin.id, plugin.name, 'plugin_opened');
+    startAnalyticsSession(plugin.id, plugin.name);
+
     // Auto-send first message to trigger AI to LEAD
     const greeting = `I'd like to start with ${plugin.name}. Talk me through it.`;
     setInput('');
@@ -293,7 +316,14 @@ export default function Home() {
         setThinking(false);
         setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
         setSessionId(data.sessionId);
-        if (data.phase) setCurrentPhase(data.phase);
+        if (data.phase) {
+          setCurrentPhase(prevPhase => {
+            if (prevPhase && prevPhase !== data.phase) {
+              trackPhaseProgress(selectedPlugin?.id || 'life', selectedPlugin?.name || 'LifeOS', prevPhase, data.phase);
+            }
+            return data.phase;
+          });
+        }
       })
       .catch(() => {
         setThinking(false);
@@ -308,6 +338,9 @@ export default function Home() {
     setInput('');
     setMessages([{ role: 'user', content: msg }]);
     callChatApi(msg, true);
+
+    // Track free chat message
+    trackMessage('life', 'LifeOS', 'user');
   };
 
   const sendMessage = (text?: string) => {
@@ -316,6 +349,11 @@ export default function Home() {
     setInput('');
     setMessages(prev => [...prev, { role: 'user', content: msg }]);
     callChatApi(msg, false);
+
+    // Track message for current plugin (or free chat)
+    const pid = selectedPlugin?.id || 'life';
+    const pname = selectedPlugin?.name || 'LifeOS';
+    trackMessage(pid, pname, 'user');
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -328,6 +366,16 @@ export default function Home() {
 
   const activePlugin = selectedPlugin;
   const phases = activePlugin?.phases || [];
+
+  // ─── Onboarding handlers ──────────────────────────────────────
+  const handleOnboardingComplete = (categories: string[]) => {
+    setShowOnboarding(false);
+    setOnboardedCategories(categories);
+  };
+
+  const handleOnboardingSkip = () => {
+    setShowOnboarding(false);
+  };
 
   // ─── Render ───────────────────────────────────────────────────
 
@@ -355,26 +403,121 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Plugin Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
-              {plugins.length > 0 ? plugins.map(plugin => (
-                <PluginCard
-                  key={plugin.id}
-                  plugin={plugin}
-                  onSelect={selectPlugin}
+            {/* Search & Filter Bar */}
+            <div className="mb-6 space-y-3">
+              {/* Search input */}
+              <div className="relative">
+                <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                  placeholder="Search plugins..."
+                  className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent shadow-sm"
                 />
-              )) : (
-                // Loading skeleton
-                Array.from({ length: 6 }).map((_, i) => (
-                  <div key={i} className="p-5 rounded-2xl border border-gray-200 bg-white animate-pulse">
-                    <div className="w-12 h-12 rounded-xl bg-gray-200 mb-3" />
-                    <div className="h-4 bg-gray-200 rounded w-24 mb-2" />
-                    <div className="h-3 bg-gray-100 rounded w-full mb-1" />
-                    <div className="h-3 bg-gray-100 rounded w-3/4" />
-                  </div>
-                ))
-              )}
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+
+              {/* Status filter pills */}
+              <div className="flex items-center gap-2 flex-wrap">
+                {(['all', 'active', 'beta', 'coming-soon'] as const).map(status => (
+                  <button
+                    key={status}
+                    onClick={() => setStatusFilter(status)}
+                    className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
+                      statusFilter === status
+                        ? 'bg-teal-500 text-white shadow-sm'
+                        : 'bg-white border border-gray-200 text-gray-500 hover:border-teal-300 hover:text-teal-600'
+                    }`}
+                  >
+                    {status === 'all' ? 'All' : status === 'coming-soon' ? 'Coming Soon' : status.charAt(0).toUpperCase() + status.slice(1)}
+                  </button>
+                ))}
+              </div>
             </div>
+
+            {/* Plugin Grid */}
+            {(() => {
+              if (plugins.length === 0) {
+                // Loading skeleton — plugins not yet loaded
+                return (
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+                    {Array.from({ length: 6 }).map((_, i) => (
+                      <div key={i} className="p-5 rounded-2xl border border-gray-200 bg-white animate-pulse">
+                        <div className="w-12 h-12 rounded-xl bg-gray-200 mb-3" />
+                        <div className="h-4 bg-gray-200 rounded w-24 mb-2" />
+                        <div className="h-3 bg-gray-100 rounded w-full mb-1" />
+                        <div className="h-3 bg-gray-100 rounded w-3/4" />
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+
+              const filtered = plugins.filter(plugin => {
+                const matchesSearch = searchQuery === '' ||
+                  plugin.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                  plugin.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                  plugin.features.some(f => f.toLowerCase().includes(searchQuery.toLowerCase()));
+                const matchesStatus = statusFilter === 'all' || plugin.status === statusFilter;
+                return matchesSearch && matchesStatus;
+              });
+
+              return (
+                <>
+                  {filtered.length === 0 ? (
+                    <div className="text-center py-12">
+                      <div className="w-12 h-12 mx-auto mb-3 bg-gray-100 rounded-xl flex items-center justify-center">
+                        <svg className="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                      </div>
+                      <p className="text-sm text-gray-400">No plugins match your search.</p>
+                      <button
+                        onClick={() => { setSearchQuery(''); setStatusFilter('all'); }}
+                        className="mt-2 text-xs text-teal-500 hover:text-teal-600 underline"
+                      >
+                        Clear filters
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+                      {filtered.map(plugin => (
+                        <PluginCard
+                          key={plugin.id}
+                          plugin={plugin}
+                          onSelect={selectPlugin}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </>
+              );
+            })()}
+
+            {/* Plugins count indicator */}
+            {plugins.length > 0 && (
+              <div className="text-center mb-6">
+                <span className="text-[11px] text-gray-400">
+                  {plugins.filter(p => statusFilter === 'all' || p.status === statusFilter).filter(p =>
+                    searchQuery === '' ||
+                    p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    p.description.toLowerCase().includes(searchQuery.toLowerCase())
+                  ).length} of {plugins.length} plugins
+                </span>
+              </div>
+            )}
 
             {/* Free chat entry — start without a plugin */}
             <div className="mb-6">
@@ -437,15 +580,23 @@ export default function Home() {
 
             {/* Footer */}
             <div className="text-center">
-              <button
-                onClick={() => { setShowHistory(true); }}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-500 hover:border-teal-300 hover:text-teal-600 transition-all shadow-sm"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Recent conversations
-              </button>
+              <div className="flex items-center justify-center gap-3">
+                <button
+                  onClick={() => { setShowHistory(true); }}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-500 hover:border-teal-300 hover:text-teal-600 transition-all shadow-sm"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Recent conversations
+                </button>
+                <a
+                  href="/analytics"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-500 hover:border-teal-300 hover:text-teal-600 transition-all shadow-sm"
+                >
+                  📊 Analytics
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -700,6 +851,14 @@ export default function Home() {
             </button>
           </div>
         </div>
+      )}
+
+      {/* ── ONBOARDING WIZARD — first visit ── */}
+      {showOnboarding && (
+        <OnboardingWizard
+          onComplete={handleOnboardingComplete}
+          onSkip={handleOnboardingSkip}
+        />
       )}
     </div>
   );

@@ -4,6 +4,8 @@ import { Clock, BookOpen, Sparkles, Lightbulb, Search, ArrowRight, ChevronRight 
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import { playbooks } from '@/lib/playbooks';
 import { cn } from '@/lib/utils';
+import PipelineFlowVisual from '@/components/PipelineFlowVisual';
+import PlaybookDecisionHelper from '@/components/PlaybookDecisionHelper';
 
 export const metadata: Metadata = {
  title: 'AI Playbooks — Step-by-Step Guides | Apifeny AI',
@@ -56,6 +58,12 @@ export default function PlaybooksPage() {
  ]}
  />
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+ {/* Visual Decision Flow */}
+ <PlaybookDecisionHelper />
+
+ {/* Pipeline Flow Visual */}
+ <PipelineFlowVisual />
+
  {/* Hero */}
  <section className="relative mb-10 sm:mb-12">
  <div className="relative rounded-2xl bg-gradient-to-br from-violet-50 via-white to-cyan-50 border border-gray-200 p-8 sm:p-12 shadow-sm">
@@ -139,8 +147,13 @@ export default function PlaybooksPage() {
  <span className="text-2xl">{pb.icon}</span>
  {PAID_PLAYBOOKS.includes(pb.slug) && (
  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[9px] font-medium border bg-amber-100 text-amber-700 border-amber-200">
- \ud83d\udcc4 PDF
+ 📄 PDF
  <span className="text-[8px] font-bold text-red-500 ml-0.5">$9</span>
+ </span>
+ )}
+ {pb.free_prompt && pb.free_prompt.length > 20 && (
+ <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px] font-medium border bg-gradient-to-r from-violet-100 to-cyan-100 text-violet-700 border-violet-200 shrink-0">
+ 📝 Prompt
  </span>
  )}
  <span
@@ -185,7 +198,7 @@ export default function PlaybooksPage() {
  {uncategorized.length > 0 && (
  <section className="mb-10">
  <h2 className="text-base sm:text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
- <span>\ud83d\udccb</span>
+ <span>📋</span>
  <span>More Playbooks</span>
  <span className="text-xs font-normal text-gray-400">\u2014 {uncategorized.length} playbook{uncategorized.length !== 1 ? 's' : ''}</span>
  </h2>
@@ -205,8 +218,13 @@ export default function PlaybooksPage() {
  <span className="text-2xl">{pb.icon}</span>
  {PAID_PLAYBOOKS.includes(pb.slug) && (
  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[9px] font-medium border bg-amber-100 text-amber-700 border-amber-200">
- \ud83d\udcc4 PDF
+ 📄 PDF
  <span className="text-[8px] font-bold text-red-500 ml-0.5">$9</span>
+ </span>
+ )}
+ {pb.free_prompt && pb.free_prompt.length > 20 && (
+ <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px] font-medium border bg-gradient-to-r from-violet-100 to-cyan-100 text-violet-700 border-violet-200 shrink-0">
+ 📝 Prompt
  </span>
  )}
  <span

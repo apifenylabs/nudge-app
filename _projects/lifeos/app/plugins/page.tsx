@@ -325,7 +325,12 @@ export default function PluginsIndexPage() {
           <Link href="/" className="text-sm font-semibold text-gray-800 hover:text-teal-600 transition-colors">
             ← Back to LifeOS Home
           </Link>
-          <span className="text-xs text-gray-400">LifeOS · {plugins.length} plugins</span>
+          <div className="flex items-center gap-4">
+            <Link href="/analytics" className="text-xs text-gray-400 hover:text-teal-600 transition-colors">
+              📊 Analytics
+            </Link>
+            <span className="text-xs text-gray-400">LifeOS · {plugins.length} plugins</span>
+          </div>
         </div>
       </footer>
     </main>

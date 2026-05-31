@@ -469,6 +469,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'coding',
+    free_prompt: 'You are a senior developer helping a founder pick the right coding AI. I\'m building [describe project]. Give me a decision tree to choose between Cursor, Claude, ChatGPT, Copilot, and Gemini based on my needs, then give me 3 starter prompts for the best tool.',
     revenue_impact: 'Build full-stack apps 10x faster with AI coding assistants',
     real_results: [
       { metric: 'Development Speed', value: '10x', description: 'From idea to working code with AI assistance' },
@@ -551,6 +552,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'deployment',
+    free_prompt: 'You are a technical product manager guiding a solo founder through shipping an app with AI. I have an app idea: [describe briefly]. Walk me through the 8-step pipeline from idea to deployment. Start with the one strategic question I must answer before writing any code.',
     revenue_impact: 'From idea to deployment in days instead of weeks',
     real_results: [
       { metric: 'Time to Deploy', value: '3-7 days', description: 'Full pipeline from idea to production' },
@@ -615,6 +617,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'planning',
+    free_prompt: 'You are a strategic planning consultant helping founders make smarter decisions. I\'m exploring [business idea/decision]. Walk me through a 4-phase strategic analysis: 1) Brainstorm 10 angles with ChatGPT, 2) Validate market assumptions with Perplexity (with sources), 3) Analyze risks with Claude, 4) Synthesize into a go-to-market recommendation. Give exact prompts for each phase.',
     revenue_impact: 'Better strategic decisions with AI-powered market analysis',
     real_results: [
       { metric: 'Planning Efficiency', value: '3x faster', description: 'Competitive analysis in hours instead of days' },
@@ -684,6 +687,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'deployment',
+    free_prompt: 'You are a solopreneur coach who helps founders build their one-person AI team. I\'m a solo founder working on [business]. Tell me the 3 AI agent roles I should set up THIS WEEK — my CTO (coding), marketing lead (content), and CFO (analysis). For each: the tool, the exact training prompt, and a 15-minute setup script. Prioritize by revenue impact.',
     revenue_impact: 'Automate entire workflows with multi-agent AI teams',
     real_results: [
       { metric: 'Tasks Automated', value: '15+', description: 'Recurring weekly tasks now fully autonomous' },
@@ -745,6 +749,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'deployment',
+    free_prompt: 'You are a startup advisor helping solopreneurs cut tool costs by 80%. I\'m a solo founder with a budget under $50/month. Give me the essential AI toolkit: 1) One coding tool, 2) One writing tool, 3) One design tool, 4) One research tool. For each: monthly cost, what SaaS it replaces, and the one thing I must do in week 1 to get ROI. No fluff.',
     revenue_impact: 'Save $2,130/mo by replacing 5 services with AI tools',
     real_results: [
       { metric: 'Monthly Savings', value: '$2,130/mo', description: 'Replace $2,200/mo in services for $70/mo in AI tools' },
@@ -823,6 +828,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'research',
+    free_prompt: 'You are a market researcher helping founders make data-driven decisions. I\'m in [industry] in [market]. Give me: 1) How to run competitive analysis with Perplexity, 2) Template to analyze trends with AI, 3) A research brief I can generate in 30 minutes.',
     revenue_impact: 'Save $5K-15K on market research consulting fees and 2-3 weeks per project',
     real_results: [
       { metric: 'Research Time Saved', value: '80%', description: 'Competitive analysis in 2 hours vs 2 weeks manually' },
@@ -896,6 +902,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'review',
+    free_prompt: 'You are a QA automation engineer helping teams ship quality software faster. I\'m building [app]. Give me: 1) Test types catching 90% of bugs, 2) Prompts for test cases, 3) CI/CD integration, 4) 30-min weekly QA routine.',
     revenue_impact: 'Reduce QA costs by 70% and catch 3x more bugs before production',
     real_results: [
       { metric: 'Bugs Caught Pre-Production', value: '3x more', description: 'AI review catches edge cases human reviewers miss' },
@@ -972,6 +979,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are an edtech consultant helping teachers personalize learning with AI. I teach [subject] to [age group]. Help me: 1) Adaptive lesson plans by student level, 2) AI-generated quizzes, 3) Automated feedback on student work. 3 prompts for next class.',
     revenue_impact: 'Teachers save 10+ hours/week on lesson planning with AI-generated materials',
     real_results: [
       { metric: 'Planning Time Saved', value: '10+ hours/week', description: 'AI lesson plans, quizzes, and worksheets replace manual prep' },
@@ -1048,6 +1056,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'deployment',
+    free_prompt: 'You are a support automation expert answering tickets faster. I get [number] requests/week about [issues]. Build a system: 1) AI chatbot handling 80%, 2) Prompts for replies that sound like me, 3) Escalation rules. 1-day setup plan.',
     revenue_impact: 'Reduce support costs by 60-80% while maintaining or improving CSAT scores',
     real_results: [
       { metric: 'Auto-Resolution Rate', value: '75-85%', description: 'Tickets resolved without human intervention' },
@@ -1124,6 +1133,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a creative director helping non-designers create professional visuals. I need [type of design] for my [business]. Give me: 1) Best AI design tool for this task, 2) Prompt structure for usable results, 3) How to maintain brand consistency.',
     revenue_impact: 'Design costs drop from $5K/mo agency to $100/mo AI tooling for a startup',
     real_results: [
       { metric: 'Design Output', value: '5x faster', description: 'From brief to final design in hours instead of days' },
@@ -1201,6 +1211,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'research',
+    free_prompt: 'You are a financial analyst helping owners understand their numbers. I run a [type] business. Give me: 1) 3 monthly reports I should run, 2) How AI finds revenue/expense patterns, 3) Prompt for a P&L summary I can understand.',
     revenue_impact: 'Financial analysis tasks in hours instead of days, saving $2K-5K/week in analyst time',
     real_results: [
       { metric: 'Report Creation Time', value: '80% faster', description: 'From 2 days to 2 hours for quarterly financial reports' },
@@ -1278,6 +1289,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are a marketing automation expert helping businesses run campaigns on autopilot. I use [tools]. Help me: 1) Triggered email sequences for key actions, 2) Auto-schedule social posts with AI content, 3) Lead scoring system. Start with highest-ROI automation.',
     revenue_impact: 'Replace a $10K/mo marketing agency with $300/mo in AI tools for in-house content creation',
     real_results: [
       { metric: 'Content Output', value: '5x more', description: '10 blog posts + 30 social posts + 5 emails per week vs 2 blog posts manually' },
@@ -1357,6 +1369,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are a real estate tech consultant helping agents/investors use AI. I\'m a [agent/investor/broker]. Help me: 1) Generate property listings that sell faster, 2) Automate client follow-ups, 3) Analyze market trends for deals. Give exact prompts.',
     revenue_impact: 'Save $500-2K/listing on staging + photography, close 2x faster with AI-powered lead responses',
     real_results: [
       { metric: 'Listing Response Time', value: '90% faster', description: 'From 4 hours to 15 min for personalized client responses' },
@@ -1433,6 +1446,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'research',
+    free_prompt: 'You are a healthcare tech advisor helping practices adopt AI responsibly. I run a [practice type]. Help me: 1) Automate intake/scheduling, 2) Create patient education with AI, 3) Stay compliant. Focus on low-risk applications deployable this week.',
     revenue_impact: 'Reduce documentation time by 70%, saving $20K-50K/year per clinician in administrative overhead',
     real_results: [
       { metric: 'Documentation Time', value: '75% faster', description: 'Discharge summaries from 45 min to 10 min per patient' },
@@ -1508,6 +1522,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are an e-commerce growth specialist increasing sales with AI. I sell [products]. Give me: 1) Product descriptions that convert, 2) AI dynamic pricing and inventory, 3) Customer segmentation for repeat purchases.',
     revenue_impact: 'Reduce product listing time by 90%, increase conversion through personalized recommendations',
     real_results: [
       { metric: 'Listing Creation Time', value: '95% faster', description: '500 products listed in 2 days vs 4 weeks manually' },
@@ -1584,6 +1599,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'research',
+    free_prompt: 'You are an HR tech specialist helping small businesses hire without HR. I\'m hiring [roles]. Give me: 1) Job descriptions attracting diverse talent, 2) AI screening questions predicting performance, 3) Onboarding checklist.',
     revenue_impact: 'Reduce time-to-hire by 50% and save $10K-20K per hire in recruiter hours and agency fees',
     real_results: [
       { metric: 'Screening Time', value: '85% faster', description: '100 resumes reviewed in 30 min vs 8 hours manually' },
@@ -1659,6 +1675,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'research',
+    free_prompt: 'You are a legal tech advisor helping business owners navigate legal work affordably. I need help with [task]. Give me: 1) Which AI tools are safe for legal work, 2) Prompts to draft documents a lawyer can finalize, 3) When I still need a real attorney.',
     revenue_impact: 'Reduce document review time by 60-80%, saving $50K-150K/year in billable hours and contract review costs',
     real_results: [
       { metric: 'Review Speed', value: '4x faster', description: '50-page contract reviewed in 45 min vs 3 hours manually' },
@@ -1735,6 +1752,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are a hospitality consultant helping restaurants use AI. I run a [type]. Help me: 1) Menu descriptions increasing order value, 2) Demand-based inventory optimization, 3) Automated review management. Start with highest-impact tactic.',
     revenue_impact: 'Reduce menu development from weeks to days, save $2K-5K/month on photography and design',
     real_results: [
       { metric: 'Menu Development', value: '70% faster', description: 'New seasonal menu created in 3 days vs 2 weeks' },
@@ -1811,6 +1829,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'build',
+    free_prompt: 'You are a game industry advisor helping creators build/market games with AI. I\'m creating a [type] game for [platform]. Give me: 1) Generate concepts and storylines, 2) Create concept art with AI, 3) Market to the right audience. 4-week pre-launch plan.',
     revenue_impact: 'Reduce indie game development cost by 60-80%, from $100K+ to under $20K with AI-assisted development',
     real_results: [
       { metric: 'Dev Time', value: '70% faster', description: 'Prototype to playable demo in 2 weeks vs 2 months traditional' },
@@ -1888,6 +1907,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'research',
+    free_prompt: 'You are a venture advisor helping founders build investable startups. I\'m building [idea]. Help me: 1) Pitch deck structure investors want, 2) Financial model with realistic assumptions, 3) 3 key metrics for next funding round. Challenge my assumptions.',
     revenue_impact: 'Reduce fundraising prep from 3 months to 3 weeks, saving $5K-15K in consultants and design services',
     real_results: [
       { metric: 'Fundraising Prep Time', value: '80% faster', description: 'From 12 weeks to 3 weeks for full fundraising materials' },
@@ -1962,6 +1982,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are an SEO strategist helping businesses rank without expensive agencies. My site is [niche]. Give me: 1) 5 SEO actions delivering 80% of results, 2) AI keyword research for terms I can rank for, 3) Prompt to write Google-loved content. Start with a quick site audit.',
     revenue_impact: 'Grow organic traffic 3-5x in 90 days with AI-powered SEO content strategy',
     real_results: [
       { metric: 'Organic Traffic Growth', value: '3-5x', description: '90-day traffic increase with AI SEO content strategy' },
@@ -2035,6 +2056,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'research',
+    free_prompt: 'You are a data analyst helping business owners find insights. I have data on [describe]. I\'m not a data person. Give me: 1) 3 questions to ask my data, 2) How to analyze CSVs with ChatGPT, 3) Simplest visualization telling my data\'s story.',
     revenue_impact: 'Replace $5K/mo data analyst contractor with $100/mo AI tools for standard analysis needs',
     real_results: [
       { metric: 'Analysis Speed', value: '10x faster', description: 'From raw data to insights in 30 min vs 5 hours manually' },
@@ -2143,6 +2165,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a language specialist helping people achieve fluency with AI. I want to learn [language] at [level]. Create a personalized plan: 1) 20-min daily routine, 2) Best AI conversation practice tools, 3) Specific prompting techniques for ChatGPT as a tutor.',
     revenue_impact: 'Replace $60/hr language tutors with $20-40/mo AI tool subscriptions',
     real_results: [
       { metric: 'Daily Practice Time', value: '2x more', description: 'AI tutor available 24/7 removes scheduling barriers' },
@@ -2210,6 +2233,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a music producer helping creators make professional audio with AI. I want to create [type of audio]. No production experience. Give me: 1) AI tools under $50, 2) Idea-to-export process, 3) Prompts for lyrics/melodies/arrangements.',
     revenue_impact: 'Produce music and audio content 10x faster, saving thousands in studio time and session musicians',
     real_results: [
       { metric: 'Production Speed', value: '10x faster', description: 'From idea to finished demo in hours instead of days' },
@@ -2283,6 +2307,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a career coach helping people land better jobs with AI. I\'m applying for [role] at [company]. Help me: 1) Rewrite resume to beat ATS filters, 2) Draft a standout cover letter, 3) AI mock interview prep. Start by analyzing my current resume.',
     revenue_impact: 'Increase callback rate by 3x with AI-optimized applications and interview preparation',
     real_results: [
       { metric: 'Callback Rate', value: '3x higher', description: 'ATS-optimized resumes get 3x more interview invitations' },
@@ -2349,6 +2374,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'research',
+    free_prompt: 'You are a financial planner helping business owners get personal finances in order. My business/personal finances are mixed. Help me: 1) Separate them with an AI system, 2) Budget for irregular income, 3) Set up automated savings and tax prep.',
     revenue_impact: 'Save $5K-20K/year with AI-identified savings opportunities and investment optimization',
     real_results: [
       { metric: 'Monthly Savings', value: '+$200-500', description: 'AI-identified spending cuts and optimization opportunities' },
@@ -2415,6 +2441,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a wellness coach creating personalized AI plans. I want to improve [goal]. Give me: 1) Weekly plan based on my schedule, 2) Simple AI tracking system, 3) Meal and recovery recommendations. Ask 3 questions to personalize.',
     revenue_impact: 'Replace $200-500/mo personal trainer with $20-40/mo AI tools for personalized fitness guidance',
     real_results: [
       { metric: 'Workout Consistency', value: '+60%', description: 'AI-generated plans keep you accountable with daily check-ins' },
@@ -2483,6 +2510,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are a social media manager helping busy founders build presence. I need a strategy for [platform] promoting [business]. Give me: 1) 5 content pillars, 20 posts, 2) Prompts to generate a month of posts in one sitting, 3) 15-minute daily engagement routine.',
     revenue_impact: 'Replace a $3K/mo social media manager with $200/mo AI tools for content creation and scheduling',
     real_results: [
       { metric: 'Post Output', value: '5x more', description: 'AI generates 30+ posts/month vs 5-6 manually' },
@@ -2556,6 +2584,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are an email marketer turning subscribers into customers. I have [number] subscribers selling [product]. Give me: 1) 5-email welcome sequence, 2) Subject line formulas that get opened, 3) Monthly newsletter template I can AI-generate in 20 min.',
     revenue_impact: 'Increase email revenue by 3-5x with AI-optimized sequences and personalization',
     real_results: [
       { metric: 'Open Rate', value: '+40%', description: 'AI-optimized subject lines and preview text drive higher opens' },
@@ -2631,6 +2660,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a podcast producer helping creators launch with AI. I want a podcast about [topic]. Give me: 1) Minimal gear under $200, 2) AI workflow for show notes/transcripts/clips, 3) First 5 episode topics. Write episode 1 script outline.',
     revenue_impact: 'Produce a professional podcast for under $100/mo instead of $1K+/mo for editing and production services',
     real_results: [
       { metric: 'Episode Production Time', value: '80% faster', description: 'From recording to published episode in 2 hours vs 10 hours manually' },
@@ -2700,6 +2730,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a presentation designer helping founders create winning decks. I need a presentation for [purpose]. Give me: 1) 10-slide storytelling structure, 2) Prompts to generate each slide, 3) Design tips for non-designers that look professional.',
     revenue_impact: 'Save $2K-5K per deck on design agency fees with AI-powered presentation creation',
     real_results: [
       { metric: 'Deck Creation Time', value: '90% faster', description: 'From 8+ hours manually to 45 min with AI from outline to finished deck' },
@@ -2770,6 +2801,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'deployment',
+    free_prompt: 'You are a productivity consultant improving meetings. I attend [number] meetings/week. Build a system: 1) Record and transcribe, 2) Prompt for actionable notes (decisions, actions, owners), 3) AI weekly digest. Give exact prompts.',
     revenue_impact: 'Save 5+ hours/week on meeting follow-up and eliminate missed action items',
     real_results: [
       { metric: 'Meeting Follow-Up Time', value: '80% less', description: 'AI handles notes, summaries, and action item tracking in minutes' },
@@ -2853,6 +2885,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'build',
+    free_prompt: 'You are an AI agent architect helping builders create multi-agent systems. I want a system where AI agents [describe task]. Give me: 1) Agent role definitions, 2) Communication protocol, 3) Error handling, 4) Framework recommendation. Start with simplest useful version.',
     revenue_impact: '$3K/mo by replacing a virtual assistant with a 3-agent team (research, draft, review)',
     real_results: [
       { metric: 'Virtual Assistant Cost', value: '-$3,000/mo', description: 'Replaced full-time VA with 3-agent crew handling research, drafting, and quality review' },
@@ -2930,6 +2963,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'review',
+    free_prompt: 'You are a QA engineer helping startups ship bug-free apps with AI testing. I\'ve built [app description] with no QA team. Give me: 1) The 3 test types catching 90% of bugs, 2) An AI prompt for each, 3) A 30-minute weekly testing routine.',
     revenue_impact: '80% reduction in production bugs — saving $10K+/mo in incident response costs',
     real_results: [
       { metric: 'Production Bugs', value: '-80%', description: 'AI-generated E2E tests catch regressions before they reach production' },
@@ -3007,6 +3041,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'deployment',
+    free_prompt: 'You are a monetization strategist helping founders turn free AI users into revenue. I\'m building [AI product]. Give me: 1) 3 pricing models from successful AI startups, 2) Free-to-paid conversion tactics, 3) Feature gating strategy, 4) 90-day plan to $1k MRR.',
     revenue_impact: '$1K MRR from zero — using AI-optimized freemium conversion funnel',
     real_results: [
       { metric: 'Time to $1K MRR', value: '47 days', description: 'Solopreneur hitting $1K/mo from zero using AI pricing analysis and upsell automation' },
@@ -3084,6 +3119,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a voice app developer helping creators build voice-first experiences. I want to build a voice app for [purpose]. Give me: 1) Platform choice, 2) Conversation flow design, 3) Voice UI prototyping tools, 4) Monetization strategy.',
     revenue_impact: '$2.5K MRR from a voice reminder Telegram bot turned SaaS',
     real_results: [
       { metric: 'Voice Message Processing', value: '<3s latency', description: 'Whisper transcription + ChatGPT + ElevenLabs voice in under 3 seconds total' },
@@ -3156,6 +3192,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are a customer success manager reducing churn with AI. My [product] has [churn rate]. Help me: 1) Identify at-risk customers with behavior patterns, 2) Auto-personalized check-in emails, 3) AI onboarding that increases activation.',
     revenue_impact: '30-50% churn reduction = $10K-$50K annual revenue saved for a $100K ARR SaaS',
     real_results: [
       { metric: 'Churn Reduction', value: '34%', description: 'AI-powered proactive outreach reduced monthly churn from 5.2% to 3.4% in 90 days' },
@@ -3227,6 +3264,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are a lead gen specialist filling pipelines without paid ads. I sell [product] to [audience]. Give me: 1) 3 free/cheap channels + AI tactics, 2) Prompt for lead magnets that convert, 3) 2-hour weekly lead gen workflow.',
     revenue_impact: '$5K-$15K/mo in pipeline from a solo operator running AI-powered outbound',
     real_results: [
       { metric: 'Reply Rate', value: '8.3%', description: 'AI-personalized outreach achieved 8.3% reply rate vs 1.5% industry average' },
@@ -3298,6 +3336,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a personal finance coach helping entrepreneurs manage money. I earn [X] and spend [Y]. Help me: 1) Budget for irregular income, 2) Find hidden subscription savings with AI, 3) 3-month financial plan. Ask 3 questions first.',
     revenue_impact: 'Save $200-500/month through AI-identified optimizations = $2,400-$6,000/year',
     real_results: [
       { metric: 'Monthly Savings Identified', value: '$340/mo', description: 'AI audit found 3 unused subscriptions ($67/mo), renegotiated internet bill ($30/mo), optimized grocery spending ($243/mo)' },
@@ -3369,6 +3408,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are an email campaign strategist sending emails people read. I need a campaign for [goal]. Give me: 1) Structure (how many emails, timing), 2) Prompts that feel personal, 3) Metrics to track.',
     revenue_impact: '$2K-$8K/mo from email marketing for a solopreneur using AI-generated campaigns',
     real_results: [
       { metric: 'Open Rate', value: '42.3%', description: 'AI-crafted welcome sequence achieved 42.3% open rate vs 22% industry average' },
@@ -3440,6 +3480,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a repurposing strategist getting 10x from every content piece. I just published [type]. Give me: 1) 7 formats to repurpose into, 2) Prompts for each format, 3) Distribution schedule. Start with my best-performing piece.',
     revenue_impact: 'Save 15-20 hours/week in content production = capacity to run 3x more campaigns',
     real_results: [
       { metric: 'Content Output', value: '22 pieces/week', description: 'One pillar blog post repurposed into 22 unique pieces across 6 platforms' },
@@ -3511,6 +3552,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are an event planner running stress-free events. I\'m planning a [type of event]. Give me: 1) Master checklist with AI prompts per milestone, 2) Invitation/email/follow-up prompts, 3) Budget template and cost-saving ideas.',
     revenue_impact: 'Save 20+ hours of planning time per event = capacity to run 2-3x more events per quarter',
     real_results: [
       { metric: 'Planning Time Saved', value: '22 hrs/event', description: 'Down from 35 hours to 13 hours using AI for vendor research, templates, and communications' },
@@ -3582,6 +3624,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a wellness coach helping busy professionals with AI accountability. I work [hours]/week and my health suffers. Create a protocol: 1) Minimum effective exercise (20 min), 2) Realistic meal suggestions, 3) AI accountability system.',
     revenue_impact: 'Build an AI-powered fitness coaching SaaS or newsletter as a side revenue stream',
     real_results: [
       { metric: 'Workout Consistency', value: '78% → 91%', description: 'AI-generated plans matched to user availability increased workout adherence from 78% to 91% over 12 weeks' },
@@ -3660,6 +3703,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'deployment',
+    free_prompt: 'You are a no-code chatbot builder helping business owners automate customer service in under a day. I want a chatbot for my [website/business type]. I cannot code. Walk me through: 1) What data to feed the bot, 2) Which no-code platform to use and why, 3) The 5 conversations to design first, 4) How to test and improve. Give me a 1-day setup timeline.',
     revenue_impact: 'Handle 70%+ of customer inquiries automatically with 24/7 AI chatbot availability',
     real_results: [
       { metric: 'Auto-Resolution Rate', value: '70-85%', description: 'AI chatbot handles majority of customer inquiries without human involvement' },
@@ -3739,6 +3783,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are an SEO content strategist helping businesses rank without agencies. I run [site/niche]. Give me: 1) Keyword research prompt for terms I can rank for, 2) Content brief template ChatGPT can fill, 3) Publishing workflow: 1 article/week.',
     revenue_impact: 'Rank for 50+ keywords in 6 months with consistent AI-optimized content publishing',
     real_results: [
       { metric: 'Content Output', value: '12 articles/month', description: 'AI pipeline produces 3x more content than a single full-time writer' },
@@ -3818,6 +3863,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a creative AI artist helping businesses generate scroll-stopping visuals. I need social media visuals for [platform] promoting [business]. Give me: 1) Prompt formulas for DALL-E/Midjourney, 2) Batch generation workflow, 3) How to edit AI art to look original.',
     revenue_impact: 'Replace $3K/mo design agency with $100/mo AI art tools for consistent social media visuals',
     real_results: [
       { metric: 'Visual Output', value: '30+ posts/week', description: 'AI art pipeline produces a month of social visuals in one 3-hour session' },
@@ -3897,6 +3943,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a newsletter strategist helping founders grow audiences. I want a newsletter about [topic]. Give me: 1) AI toolstack (free tier), 2) Content calendar template, 3) Prompts for editions that get forwarded, 4) 30-day growth plan.',
     revenue_impact: 'Build a newsletter generating $5K-20K/mo through subscriptions + sponsorships with 5 hours/week of work',
     real_results: [
       { metric: 'Time per Issue', value: '2.5 hours', description: 'From research to published newsletter. Down from 8-10 hours writing manually' },
@@ -3976,6 +4023,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a short-form video strategist helping businesses go viral. I need [type] videos for [platform] promoting [business]. Give me: 1) Hook formulas, 2) Script structure for under-60s videos, 3) AI tools for captions/editing, 4) Batch production for 10 videos in 2 hours.',
     revenue_impact: 'Grow a short-form video channel to 100K followers in 6 months with consistent AI-produced content',
     real_results: [
       { metric: 'Video Production Speed', value: '8x faster', description: 'From script to finished video in 45 minutes vs 6 hours with traditional production' },
@@ -4049,6 +4097,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a career coach optimizing job applications with AI. I\'m targeting [role/industry]. Give me: 1) Prompt to rewrite resume for ATS, 2) Cover letter template, 3) AI mock interview questions, 4) LinkedIn optimization.',
     revenue_impact: 'Applications with AI-optimized resumes and cover letters receive 3x more interview callbacks',
     real_results: [
       { metric: 'Interview Callback Rate', value: '3x increase', description: 'ATS-optimized resumes with targeted keywords receive significantly more recruiter responses' },
@@ -4122,6 +4171,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a competitive intelligence analyst helping businesses understand rivals. I compete in [industry/market]. Give me: 1) Framework to analyze 5 competitors with Perplexity, 2) Prompts to find gaps, 3) AI-generated competitive matrix, 4) 3 strategic moves.',
     revenue_impact: 'Save $5K-15K per research project while producing deeper analysis than traditional competitive intelligence agencies',
     real_results: [
       { metric: 'Research Time', value: '4 hours', description: 'AI-powered competitive analysis produces in 4 hours what takes an agency 2-3 weeks' },
@@ -4201,6 +4251,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'deployment',
+    free_prompt: 'You are a support automation architect helping businesses slash response times. I get [number] tickets/week. Give me: 1) FAQ chatbot from existing docs, 2) Prompt templates for common tickets, 3) Escalation rules, 4) 1-week implementation.',
     revenue_impact: 'Reduce support costs by 50-70% while maintaining or improving CSAT scores',
     real_results: [
       { metric: 'Auto-Resolution Rate', value: '65-82%', description: 'AI agents resolve majority of common support tickets without human involvement' },
@@ -4274,6 +4325,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a personal branding coach helping professionals establish authority. I want a brand around [topic]. Give me: 1) Positioning statement prompt, 2) Content pillar framework, 3) 90-day content calendar, 4) Platform strategy (pick one).',
     revenue_impact: 'Build a professional brand that generates inbound leads, speaking opportunities, and partnerships',
     real_results: [
       { metric: 'Content Output', value: '5x more', description: 'AI-assisted content creation enables 5x more posts without quality degradation' },
@@ -4346,6 +4398,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are a sales development expert helping startups book meetings with cold outreach. I sell [product] to [audience]. Give me: 1) Cold email sequence (3 emails) that sounds human, 2) How to research prospects with AI, 3) Follow-up cadence that doesn\'t annoy.',
     revenue_impact: 'Personalized AI outreach generates 3-5x more meetings than generic mass email campaigns',
     real_results: [
       { metric: 'Reply Rate', value: '3x higher', description: 'AI-personalized outreach outperforms generic templates 3:1 in reply rates' },
@@ -4457,6 +4510,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'coding',
+    free_prompt: 'You are a backend engineer who helps non-technical founders connect apps. I need to integrate [service A] with [service B] with zero coding experience. Give me a plain-English 5-step plan: tools needed, time/cost per step, and my first action right now.',
     revenue_impact: 'Reduce API integration time from days to hours, enabling faster product launches',
     real_results: [
       { metric: 'Integration Time', value: '6 hours', description: 'Complex 5-API integration completed in 6 hours with AI assistance' },
@@ -4529,6 +4583,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'research',
+    free_prompt: 'You are a data viz expert helping business owners see stories in their numbers. I have a CSV of [describe data]. Give me a 3-step plan: 1) Clean data for AI, 2) Exact prompt to generate charts that tell a story, 3) How to interpret what the AI shows me.',
     revenue_impact: 'Data-driven decision making that is 5x faster with automated AI analysis and visualization',
     real_results: [
       { metric: 'Report Creation Time', value: '90% faster', description: 'Weekly reports generated in 10 minutes instead of 2 hours' },
@@ -4640,6 +4695,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a legal tech advisor helping small business owners review contracts. I have a [contract type]. Walk me through: 1) How to scan with AI for red flags, 2) 5 clauses I must understand, 3) Negotiation points AI can help me prepare.',
     revenue_impact: 'Reduce legal review time by 70% and save $500-2K per contract in preliminary legal fees',
     real_results: [
       { metric: 'Contract Review Time', value: '75% faster', description: 'From 2 hours per contract to 30 minutes with AI-assisted review' },
@@ -4712,6 +4768,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are an e-commerce optimization specialist helping stores increase sales per visitor. I sell [products] on [platform]. Give me: 1) AI prompts for product descriptions, 2) How to generate lifestyle images, 3) Pricing optimization strategy.',
     revenue_impact: 'AI-optimized product listings see 15-30% improvement in conversion rates',
     real_results: [
       { metric: 'Conversion Rate', value: '+22%', description: 'AI-optimized titles, descriptions, and images boost conversion' },
@@ -4784,6 +4841,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a project management coach helping founders ship faster. I run a [type] business with [size] team. Give me an AI-powered workflow: 1) Write clear tickets, 2) Estimate effort accurately, 3) Detect bottlenecks, 4) Auto-generate status updates.',
     revenue_impact: 'Save 10+ hours per week on project admin tasks with AI automation',
     real_results: [
       { metric: 'Status Report Time', value: '90% faster', description: 'Weekly status reports generated in 5 minutes instead of 45' },
@@ -4856,6 +4914,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are an email marketing specialist turning cold inboxes into warm leads. I need cold emails promoting [offer] to [target]. Give me: 1) 3-email sequence with subject lines that get opened, 2) Personalization tactics that avoid spam filters, 3) A/B test ideas. Write email #1 with fill-in-the-blanks.',
     revenue_impact: 'AI-personalized cold email campaigns generate 3-10x ROI compared to spray-and-pray outreach',
     real_results: [
       { metric: 'Reply Rate', value: '2.1%', description: 'AI-personalized cold email campaigns average 2-5% reply rates vs 0.3-1% for generic outreach' },
@@ -4928,6 +4987,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'coding',
+    free_prompt: 'You are a database architect who explains schemas to business owners. I\'m building an app storing [type of data]. I don\'t know SQL. Create a 3-step plan: 1) Describe data in plain English, 2) Which AI tool generates the schema, 3) What to ask AI to avoid design mistakes.',
     revenue_impact: 'Reduce database design and query time by 60%, enabling faster development cycles',
     real_results: [
       { metric: 'Query Writing Time', value: '80% faster', description: 'Complex 10-line SQL queries written in 30 seconds instead of 5-10 minutes' },
@@ -5000,6 +5060,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a travel planning expert. I\'m planning a [length]-day trip to [destination] with [group]. Create a detailed itinerary: 1) Balanced activities/rest, 2) Dining and logistics, 3) Daily budget estimates. Ask 3 questions to refine first.',
     revenue_impact: 'Save 10+ hours of trip research and planning time per vacation while discovering better options',
     real_results: [
       { metric: 'Planning Time', value: '80% less', description: 'Trip planned in 1 hour vs 5-8 hours of manual research and comparison' },
@@ -5072,6 +5133,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'coding',
+    free_prompt: 'You are a UX designer helping non-designers create professional prototypes. I need a prototype of [app idea] to show investors with no design skills. Give a 4-step plan: AI tool for mockups, brand style matching, how to make it clickable for testing.',
     revenue_impact: 'Reduce UI prototype time from days to hours, enabling faster design iteration and stakeholder alignment',
     real_results: [
       { metric: 'Prototype Speed', value: '5x faster', description: 'From idea to clickable prototype in 2 hours instead of 2 days' },
@@ -5186,6 +5248,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a product strategist helping founders prioritize. I\'m building [product]. Give me: 1) Feature prioritization framework, 2) How to validate ideas with AI before building, 3) 90-day roadmap template. Challenge what to cut.',
     revenue_impact: 'Data-driven roadmapping with AI reduces time-to-priority-shift by 60%',
     real_results: [
       { metric: 'Roadmap Creation Time', value: '75% faster', description: 'Quarterly roadmap created in 2 hours instead of 2 days' },
@@ -5258,6 +5321,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are an HR tech specialist helping startups hire without an HR team. I need to hire [role]. Give me: 1) Prompt for a killer job description, 2) How to screen 100+ resumes in minutes with AI, 3) 5 interview questions that predict performance.',
     revenue_impact: 'Reduce time-to-hire by 40% and improve candidate quality scores with AI-assisted screening',
     real_results: [
       { metric: 'Time-to-Hire', value: '40% faster', description: 'AI resume screening and question generation cuts hiring cycle time significantly' },
@@ -5331,6 +5395,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'deployment',
+    free_prompt: 'You are a no-code automation expert eliminating manual work. My biggest time-waster is [describe]. Help me automate it: 1) Tool to use, 2) Exact setup steps, 3) Cost estimate.',
     revenue_impact: 'Automate 20+ hours of manual work per week per business process, freeing teams for high-value work',
     real_results: [
       { metric: 'Hours Saved/Week', value: '20+ hours', description: 'A single well-built automation can save 5-20 hours of manual work weekly' },
@@ -5403,6 +5468,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'research',
+    free_prompt: 'You are a user research specialist helping founders validate problems. I\'m exploring [idea]. Help me: 1) Design 5 customer discovery interview questions, 2) Prompt to analyze transcripts for patterns, 3) A 2-week research sprint plan.',
     revenue_impact: 'Reduce user research analysis time by 80% while uncovering deeper insights',
     real_results: [
       { metric: 'Transcript Analysis Time', value: '80% faster', description: '8 hours of interview transcripts analyzed in 90 minutes with Claude' },
@@ -5484,6 +5550,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'deployment',
+    free_prompt: 'You are a directory site builder helping entrepreneurs launch niche directories. I want a directory for [niche]. Give me: 1) Structure data for AI, 2) Prompt to generate 50 listings, 3) SEO strategy, 4) Monetization models.',
     revenue_impact: '$500-5,000/mo per niche directory with 2-3 months of SEO growth',
     real_results: [
       { metric: 'Build Time', value: '2 weeks', description: 'From niche selection to deployed directory with 100+ listings' },
@@ -5576,6 +5643,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'deployment',
+    free_prompt: 'You are a workflow automation expert eliminating repetitive tasks. List my top 5 time-wasting tasks. For each: time cost per week, one automation I can set up today, tools needed (free tier first). Start with the biggest time-saver.',
     revenue_impact: 'Save 20+ hours per week by automating repetitive workflows across content, operations, and business processes',
     real_results: [
       { metric: 'Time Saved', value: '20+ hrs/week', description: 'After deploying 3+ automation pipelines across content, support, and operations' },
@@ -5659,6 +5727,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'build',
+    free_prompt: 'You are a technical writer helping developers document their projects efficiently. I\'ve built [project] and need docs. Give me a 3-step plan: structure, prompt to generate comprehensive docs from codebase, how to ensure beginners can follow it.',
     revenue_impact: 'Reduce documentation time by 80%, improve developer onboarding speed by 50% with comprehensive always-updated docs',
     real_results: [
       { metric: 'Documentation Time', value: '80% faster', description: 'Full API docs generated and reviewed in 4 hours vs 20 hours manually' },
@@ -5740,6 +5809,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'planning',
+    free_prompt: 'You are a supply chain consultant helping businesses cut costs and improve delivery. My [industry] supply chain faces [challenge]. Help me: 1) Predict/prevent stockouts with AI, 2) Optimize supplier selection, 3) Cut logistics costs 15%. Give 5 ChatGPT prompts.',
     revenue_impact: 'Reduce inventory carrying costs by 15-25%, improve on-time delivery by 30% through AI-optimized logistics and demand planning',
     real_results: [
       { metric: 'Forecast Accuracy', value: '+28%', description: 'AI-powered forecasts outperformed traditional methods by 28% after 3 months of refinement' },
@@ -5821,6 +5891,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'research',
+    free_prompt: 'You are a sustainability advisor helping businesses create ESG reports. My company [describe]. I want to: 1) Measure carbon footprint with AI, 2) Generate a sustainability report, 3) Find cost-effective green initiatives.',
     revenue_impact: 'Reduce ESG reporting cycle by 70%, avoid compliance penalties, and identify $500K+ in operational sustainability savings',
     real_results: [
       { metric: 'Report Generation Time', value: '70% faster', description: 'Quarterly ESG report from 3 weeks to 4 days with AI-assisted data collection and drafting' },
@@ -5902,6 +5973,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'ideation',
+    free_prompt: 'You are a negotiation coach helping entrepreneurs close better deals. I\'m preparing to negotiate [what]. Role-play with me: ask about my BATNA, simulate 3 scenarios, then give specific feedback on each response.',
     revenue_impact: 'Improve deal value by 15-25% through better preparation, and reduce negotiation cycle time by 40% with AI-powered scenario planning',
     real_results: [
       { metric: 'Deal Value Improvement', value: '+18%', description: 'Users reported 15-25% improvement in negotiated outcomes after consistent AI preparation' },
@@ -5983,6 +6055,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a mental wellness coach who helps entrepreneurs manage stress and build resilience. I run a [type of business] and my mental health is suffering from [specific challenge]. Create a 4-week protocol: 1) Daily 5-min AI journal check-in, 2) Weekly reflection prompts for stress patterns, 3) 3 boundary-setting scripts, 4) Emergency de-escalation techniques. Each step under 10 minutes.',
     revenue_impact: 'Wellness coaches can scale 1:1 coaching with AI-assisted between-session support, increasing client retention by 40% and reducing coach burnout',
     real_results: [
       { metric: 'Check-in Consistency', value: '85% adherence', description: 'Users maintained daily check-in habit for 90+ days with AI-guided reminders and adaptive questioning' },
@@ -6067,6 +6140,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are a funnel architect helping businesses convert visitors into buyers. I sell [product] at [price]. Build a funnel: 1) Lead magnet that attracts ideal customers, 2) 3-email nurture sequence, 3) Retargeting strategy, 4) Metrics to track. Write the lead magnet outline now.',
     revenue_impact: 'AI-automated sales funnels convert 3-5x more leads and reduce manual follow-up time by 80%',
     real_results: [
       { metric: 'Lead-to-Demo Rate', value: '4.2x higher', description: 'AI-nurtured leads book demos at 4.2x the rate of cold outreach alone, with triggered sequences at each funnel stage' },
@@ -6155,6 +6229,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'build',
+    free_prompt: 'You are a productivity engineer helping busy founders automate personal workload. I need an AI assistant handling: [tasks]. Give a 1-day setup plan: tools, automations to build first, instructions to train my AI assistant.',
     revenue_impact: 'An AI personal assistant saves 15-20 hours/week — worth $50K+/year in reclaimed time for a $100/hr professional',
     real_results: [
       { metric: 'Weekly Hours Saved', value: '17 hours', description: 'Users reclaim 17 hours per week by automating calendar management, email triage, note-taking, and daily planning with an AI assistant stack' },
@@ -6243,6 +6318,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'launch',
+    free_prompt: 'You are a YouTube growth strategist who helps creators build channels with AI. I want a channel about [niche/topic] with [hours/week] to dedicate. Give a complete AI workflow: 1) Research viral topics with AI, 2) Script prompts that retain viewers past 30 seconds, 3) Thumbnail/title generation, 4) Weekly production schedule. Start with topic research prompts.',
     revenue_impact: 'AI-powered YouTube production cuts editing time by 70% and enables solo creators to publish 3+ videos per week',
     real_results: [
       { metric: 'Production Time', value: '70% reduction', description: 'AI tools reduce end-to-end video production from 20+ hours to under 6 hours per 10-minute YouTube video' },
@@ -6305,6 +6381,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'planning',
+    free_prompt: 'You are a business strategist helping entrepreneurs create bankable plans. I\'m starting [idea]. Create a lean business plan: 1) Problem solved, 2) Realistic market size, 3) Revenue model, 4) Key 90-day metrics. Challenge my weakest assumptions.',
     revenue_impact: 'Cut business planning time by 80% and produce more comprehensive, investor-ready plans in days instead of weeks',
     real_results: [
       { metric: 'Planning Time', value: '80% reduction', description: 'Entrepreneurs complete business plans, financial models, and pitch decks in 5 days instead of 4-6 weeks' },
@@ -6367,6 +6444,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'planning',
+    free_prompt: 'You are an agile coach helping teams ship faster without jargon. My [team/business] wants agile but finds it confusing. Give me: 1) Simplest framework for [size], 2) Prompts for user stories devs understand, 3) A 30-minute weekly sprint ritual.',
     revenue_impact: 'Save 10+ hours per week on PM admin and reduce project delays by 30% with AI-driven risk detection',
     real_results: [
       { metric: 'Admin Time', value: '10 hrs/week saved', description: 'Project managers using AI for status reports, task extraction, and standup processing reclaim 10+ hours previously spent on documentation and tracking' },
@@ -6429,6 +6507,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'research',
+    free_prompt: 'You are a UX researcher helping founders understand users without expensive studies. I\'m building [product] for [users]. Help me: 1) 5 interview questions revealing real pain, 2) AI survey with >50% completion rate, 3) Analyze feedback themes without a research team.',
     revenue_impact: 'Cut UX research analysis time by 80% while uncovering deeper, more validated insights from user data',
     real_results: [
       { metric: 'Analysis Time', value: '80% reduction', description: 'UX researchers reduce qualitative analysis time from 40 hours to under 8 hours using AI for transcription, coding, and thematic analysis' },
@@ -6491,6 +6570,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'build',
+    free_prompt: 'You are a technical writing expert helping developers document projects. I\'ve built [project/API] and need documentation. Give me: 1) Document structure users actually read, 2) Prompt to generate docs from codebase, 3) How to keep docs in sync as code changes. Write the README intro now.',
     revenue_impact: 'Reduce documentation time by 80%, improve developer onboarding speed by 50% with comprehensive always-updated docs',
     real_results: [
       { metric: 'Doc Creation Time', value: '80% reduction', description: 'Teams using AI-generated documentation complete API docs, user manuals, and tutorials in days instead of weeks' },
@@ -6553,6 +6633,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'planning',
+    free_prompt: 'You are a grant writing specialist helping organizations secure funding. I need a grant for [project] from [funder]. Give me: 1) Winning proposal structure, 2) How to research funder priorities with AI, 3) Prompt template for compelling impact statements. Write the first 3 sections.',
     revenue_impact: 'Increase grant win rate by 40% and cut application preparation time by 60% with AI-assisted writing and research',
     real_results: [
       { metric: 'Application Time', value: '60% reduction', description: 'Grant writers reduce average application time from 40 hours to 16 hours using AI for research, drafting, and budget creation' },
@@ -6615,6 +6696,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are a fundraising consultant helping nonprofits raise more with AI. I\'m raising funds for [cause/organization]. Give me: 1) Prompt for compelling grant applications, 2) How to personalize donor outreach with AI, 3) AI tool stack under $30/month, 4) A 30-day fundraising calendar.',
     revenue_impact: 'Increase donor retention by 35% and reduce campaign creation time by 70% with AI-personalized outreach',
     real_results: [
       { metric: 'Donor Retention', value: '+35% improvement', description: 'Nonprofits using AI-personalized stewardship sequences retain 35% more donors year-over-year compared to batch-and-blast communications' },
@@ -6677,6 +6759,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'planning',
+    free_prompt: 'You are a supply chain optimizer helping small businesses cut costs. I run a [type] business. Help me: 1) Forecast demand with AI, 2) Optimize inventory, 3) Identify waste. Give 3 prompts I can use today.',
     revenue_impact: 'Reduce inventory carrying costs by 20% and improve on-time delivery by 30% with AI-optimized supply chain decisions',
     real_results: [
       { metric: 'Inventory Costs', value: '20% reduction', description: 'AI-optimized reorder points and safety stock levels reduce average inventory carrying costs by 20% within 3 months of implementation' },
@@ -6745,6 +6828,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'operations',
+    free_prompt: 'You are a property management consultant helping landlords streamline. I manage [number] properties. Give a system to: 1) Automate tenant communication, 2) Screen tenants with AI questions, 3) Generate listings that rent faster.',
     revenue_impact: 'Reduce vacancy rates by 30% and increase rental income by 15% with AI-optimized property management',
     real_results: [
       { metric: 'Vacancy Rate', value: '30% reduction', description: 'AI-optimized pricing and leasing workflows reduce average vacancy from 21 to 14 days' },
@@ -6823,6 +6907,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'sales',
+    free_prompt: 'You are a CRM expert helping small businesses manage relationships. I use [current method]. Help me: 1) Set up an AI-powered CRM workflow, 2) Automate follow-ups and reminders, 3) Score leads based on behavior. Give me a 1-day setup plan.',
     revenue_impact: 'Increase lead-to-close rate by 25% and reduce churn by 20% with AI-driven CRM automation',
     real_results: [
       { metric: 'Lead-to-Close Rate', value: '+25%', description: 'AI lead scoring and personalized follow-ups improve conversion rates' },
@@ -6939,6 +7024,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a training designer creating AI-powered learning programs. I need to train my team on [topic]. Give me: 1) AI-personalized curriculum outline, 2) Prompts to generate quizzes, 3) Progress tracking system. Start with a 5-question needs assessment.',
     revenue_impact: 'Reduce training development costs by 70% and cut time-to-deploy from months to days',
     real_results: [
       { metric: 'Training Dev Time', value: '80% faster', description: 'Full training program from design to deploy in 5 days vs 4 weeks' },
@@ -7017,6 +7103,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are a CRO specialist helping businesses boost conversions. My [site/app] has [current rate]. Give me: 1) Top 3 quick wins this week, 2) One A/B test to run, 3) Prompt for 10 landing page variants.',
     revenue_impact: 'Increase conversion rates by 15-30% with data-driven AI testing and optimization',
     real_results: [
       { metric: 'Conversion Rate Lift', value: '15-30%', description: 'AI-driven copy and A/B testing improve page-level conversions' },
@@ -7095,6 +7182,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'community',
+    free_prompt: 'You are a community manager helping founders build engaged communities from scratch. I want a community around [topic]. Give a 30-day launch plan: 1) Platform (pick one), 2) Content for first 100 members, 3) Engagement loops. Start with day 1.',
     revenue_impact: 'Build an engaged community that generates $5K-20K/mo through memberships, events, and sponsorships',
     real_results: [
       { metric: 'Member Engagement Rate', value: '+40%', description: 'AI-generated daily prompts and personalized messages increase active participation' },
@@ -7171,6 +7259,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'marketing',
+    free_prompt: 'You are an influencer marketing strategist helping brands run campaigns that convert. I need a campaign for [brand]. Give me: 1) How to find brand-aligned influencers, 2) Outreach template, 3) How to measure real ROI.',
     revenue_impact: 'Average $4.50 ROI per $1 spent on influencer marketing with AI-optimized campaigns',
     real_results: [
       { metric: 'Campaign ROI', value: '$4.50 per $1', description: 'AI-optimized influencer selection and briefs drive higher conversion rates' },
@@ -7253,6 +7342,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'deployment',
+    free_prompt: 'You are an AI cost optimization expert cutting AI bills by 50%+. I spend $[amount]/month on AI tools. Give 5 strategies to reduce costs: expected savings, setup time, quality tradeoffs. Rank by easiest first.',
     revenue_impact: 'Save $100-150/mo on AI subscriptions and API costs — that\'s $1,200-1,800/year reinvested into growth',
     real_results: [
       { metric: 'Monthly AI Spend', value: '-65%', description: 'From $160/mo to $55/mo after implementing all strategies' },
@@ -7336,6 +7426,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'coding',
+    free_prompt: 'You are a game designer helping creators build their first game with AI. I want to build a [type of game] with zero game dev experience. Give me a 1-week build plan: engine, AI tools for art/code/music, and prompts to generate my first playable level.',
     revenue_impact: 'Build a portfolio of 3-5 games in a month that can generate freelance leads, ad revenue, or be sold as HTML templates',
     real_results: [
       { metric: 'Time to Playable Game', value: '4-6 hours', description: 'From zero code to a working Snake/Pong game with AI assistance' },
@@ -7419,6 +7510,7 @@ export const playbooks: Playbook[] = [
       },
     ],
     pipeline_stage: 'content',
+    free_prompt: 'You are a prompt engineering expert helping people get better AI results. I use AI for [use case]. I\'m leaving quality on the table. Give me: 1) 5 prompt patterns delivering 90% of value, 2) One advanced technique to learn today, 3) Bad vs. great prompt examples for my use case.',
     revenue_impact: 'Better prompts = better AI outputs = higher conversion on AI-generated content and more productive coding sessions',
     real_results: [
       { metric: 'Output Quality Improvement', value: '+70%', description: 'Systematic prompting produced higher quality results compared to ad-hoc prompts' },

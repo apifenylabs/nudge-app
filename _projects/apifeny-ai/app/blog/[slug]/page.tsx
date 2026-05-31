@@ -9,7 +9,10 @@ import BlogRelatedTools from '../../../components/BlogRelatedTools';
 import BlogGeoLinks from '../../../components/BlogGeoLinks';
 import BlogPlaybookLinks from '../../../components/BlogPlaybookLinks';
 import BlogLandingLinks from '../../../components/BlogLandingLinks';
+import NewsletterSignup from '../../../components/NewsletterSignup';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FAQJsonLd from '@/components/FAQJsonLd';
+import { extractFaqFromContent } from '@/lib/blog-faq';
 
 const BASE_URL = 'https://apifeny-ai.vercel.app';
 
@@ -70,6 +73,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
  const relatedPosts = getRelatedPosts(params.slug, 3);
  const categoryRelated = getRelatedPostsByCategory(params.slug, 4);
+ const faqEntries = extractFaqFromContent(post.content, post.title, post.tags);
 
  const breadcrumbItems = [
  { name: 'Home', item: '/' },
@@ -220,7 +224,17 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
  </section>
  )}
 
- {/* Schema structured data */}
+      {/* Newsletter CTA */}
+      <div className="border-t border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <NewsletterSignup source={`blog-${post.slug}`} />
+        </div>
+      </div>
+
+ {/* FAQ Schema structured data */}
+      {faqEntries.length >= 2 && <FAQJsonLd faqs={faqEntries} />}
+
+      {/* Schema structured data */}
  <script
  type="application/ld+json"
  dangerouslySetInnerHTML={{

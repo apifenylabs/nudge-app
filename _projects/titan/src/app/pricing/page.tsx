@@ -290,6 +290,27 @@ export default function PricingPage() {
     setActivePlans(getActivePlans());
   }, []);
 
+  /* ── FAQPage JSON-LD schema ───────────────────────────── */
+  const pricingFaqs = [
+    { q: "Can I switch plans anytime?", a: "Yes. Upgrade or downgrade instantly. Changes take effect on your next billing cycle." },
+    { q: "What happens when I hit my agent limit?", a: "You can still access existing agents. New agent creation pauses until you upgrade or free up a slot." },
+    { q: "Is there a free trial for paid plans?", a: "All paid plans include a 14-day free trial. No credit card required." },
+    { q: "Can I cancel anytime?", a: "Yes. Cancel with one click. No lock-in contracts." },
+    { q: "Do you offer custom enterprise pricing?", a: "Contact us at enterprise@titan.ai for custom quotes at scale." },
+  ];
+  const pricingFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": pricingFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a,
+      },
+    })),
+  };
+
   const handleCheckout = (planId: string) => {
     const order = simulateCheckout(planId, billing);
     setActivePlans(getActivePlans());
@@ -312,6 +333,14 @@ export default function PricingPage() {
               { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://titan.vercel.app/pricing" },
             ],
           }),
+        }}
+      />
+
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pricingFaqSchema),
         }}
       />
 

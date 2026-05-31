@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-26T15:55:00.000Z",
+  "lastUpdated": "2026-05-31",
   "posts": [
     {
       "slug": "ai-healthcare-clinic-management-asia",
@@ -983,6 +983,22 @@
         "localization"
       ],
       "readingTime": "10 min read"
+    },
+    {
+      "slug": "ai-for-construction",
+      "title": "AI for Construction in Asia (2026): From Blueprint to Handover"
+    },
+    {
+      "slug": "ai-for-education-administration",
+      "title": "AI for Education Administration in Asia (2026): Beyond the Classroom"
+    },
+    {
+      "slug": "ai-for-hr",
+      "title": "AI for HR in Asia (2026): From Compliance to Culture"
+    },
+    {
+      "slug": "ai-for-property-management",
+      "title": "AI for Property Management in Asia (2026): Smart Buildings, Smarter Operations"
     }
   ]
 }

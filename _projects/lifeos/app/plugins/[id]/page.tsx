@@ -12,6 +12,7 @@ import { PLUGINS, type PluginDefinition } from '@/app/lib/plugin-registry';
 import { PLUGIN_CATEGORIES, type PluginCategory } from '@/app/lib/plugin-manifest-schema';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import { PluginUsageSection } from '@/app/components/UsageDashboard';
 
 // ─── Inline category inference (mirrors plugin-manifest-schema) ────
 
@@ -102,9 +103,15 @@ function PhaseCard({ phase, index }: { phase: PluginDefinition['phases'][0]; ind
   );
 }
 
+// ─── Client Wrapper for Usage Section ──────────────────────────────
+
+function ClientUsageSection({ pluginId, pluginName }: { pluginId: string; pluginName: string }) {
+  return <PluginUsageSection pluginId={pluginId} pluginName={pluginName} />;
+}
+
 // ─── Page ──────────────────────────────────────────────────────────
 
-export default async function PluginPage({ params }: { params: { id: string } }) {
+export default function PluginPage({ params }: { params: { id: string } }) {
   const plugin = PLUGINS.find(p => p.id === params.id);
   if (!plugin) notFound();
 
@@ -209,13 +216,23 @@ export default async function PluginPage({ params }: { params: { id: string } })
         </section>
       )}
 
+      {/* ── Usage Analytics Section (client-side) ── */}
+      <section className="max-w-4xl mx-auto px-4 py-12 border-t border-gray-100">
+        <ClientUsageSection pluginId={plugin.id} pluginName={plugin.name} />
+      </section>
+
       {/* ── Footer / Nav ── */}
       <footer className="border-t border-gray-100 py-8">
         <div className="max-w-4xl mx-auto px-4 flex items-center justify-between">
           <a href="/" className="text-sm font-semibold text-gray-800 hover:text-teal-600 transition-colors">
             ← Back to LifeOS
           </a>
-          <span className="text-xs text-gray-400">{plugin.emoji} {plugin.name}</span>
+          <div className="flex items-center gap-4">
+            <a href="/analytics" className="text-xs text-gray-400 hover:text-teal-600 transition-colors">
+              📊 Analytics
+            </a>
+            <span className="text-xs text-gray-400">{plugin.emoji} {plugin.name}</span>
+          </div>
         </div>
       </footer>
     </main>

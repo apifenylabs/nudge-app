@@ -281,11 +281,33 @@ export default function FeaturesPage() {
     if (existing) existing.content = 'Explore Titan features: Visual Agent Studio, Skill Trees, Multi-Agent Orchestration, Memory System, and Rank-Based Progression. Build AI agents without code.';
   }, []);
 
+  /* ── FAQPage JSON-LD schema ───────────────────────────── */
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a,
+      },
+    })),
+  };
+
   if (!mounted) return null;
 
   return (
     <>
       <Navbar />
+
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
 
       <main className="relative min-h-screen bg-[#08080f]">
         {/* ── HERO ──────────────────────────────────────── */}
