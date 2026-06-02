@@ -1,9 +1,0 @@
-node_modules/
-.next/
-*.tsbuildinfo
-.next
-out/
-.vercel/
-.next/
-out/
-*.tsbuildinfo

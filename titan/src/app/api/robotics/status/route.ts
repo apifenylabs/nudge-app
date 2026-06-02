@@ -2,8 +2,8 @@
 // Query deployment status / health. Supports optional filters.
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { getStatus, listDeployments } from '@/titan/src/lib/robotics/deploy';
-import type { RobotPlatform } from '@/titan/src/lib/robotics/types';
+import { getStatus, listDeployments } from '../../../../lib/robotics/deploy';
+import type { RobotPlatform } from '../../../../lib/robotics/types';
 
 const VALID_PLATFORMS: RobotPlatform[] = [
   'ros2',

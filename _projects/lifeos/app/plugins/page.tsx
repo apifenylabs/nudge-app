@@ -43,6 +43,9 @@ function inferCategory(pluginId: string): PluginCategory {
     home: 'home',
     social: 'lifestyle',
     relationships: 'relationships',
+    mindfulness: 'mindfulness',
+    nutrition: 'nutrition',
+    productivity: 'productivity',
   };
   return map[pluginId] || 'productivity';
 }

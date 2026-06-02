@@ -70,7 +70,8 @@ export type PluginCategory =
   | 'relationships'
   | 'home'
   | 'productivity'
-  | 'mindfulness';
+  | 'mindfulness'
+  | 'nutrition';
 
 export interface PluginConfig {
   /** Whether this plugin requires Supabase session persistence */
@@ -105,6 +106,7 @@ export const PLUGIN_CATEGORIES: Record<PluginCategory, {
   home: { label: 'Home', emoji: '🏠', description: 'Home improvement, maintenance, and organization' },
   productivity: { label: 'Productivity', emoji: '⚡', description: 'Habits, systems, and personal effectiveness' },
   mindfulness: { label: 'Mindfulness', emoji: '🧘', description: 'Meditation, focus, stress relief, and mental clarity' },
+  nutrition: { label: 'Nutrition', emoji: '🥗', description: 'Meal planning, diet tracking, and healthy eating habits' },
 };
 
 // ══════════════════════════════════════════════════════════════════
@@ -174,6 +176,8 @@ function inferCategory(pluginId: string): PluginCategory {
     social: 'lifestyle',
     mindfulness: 'mindfulness',
     relationships: 'relationships',
+    nutrition: 'nutrition',
+    productivity: 'productivity',
   };
   return categoryMap[pluginId] || 'productivity';
 }

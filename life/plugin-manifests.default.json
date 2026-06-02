@@ -1,0 +1,3267 @@
+{
+  "$schema": "./plugin-manifest-schema.json",
+  "schemaVersion": "2.0.0",
+  "lastUpdated": "2026-06-02T07:38:00+08:00",
+  "personalityEngine": {
+    "defaultProfile": {
+      "depth": "moderate",
+      "tone": "balanced",
+      "pace": "moderate",
+      "researchDepth": "balanced"
+    },
+    "adaptationDimensions": [
+      {
+        "dimension": "analytical-vs-creative-threshold",
+        "range": {
+          "min": "analytical",
+          "max": "creative"
+        },
+        "effect": "Adjusts how much the AI uses data citations vs intuitive reasoning in responses"
+      },
+      {
+        "dimension": "speed-of-execution",
+        "range": {
+          "min": "relaxed",
+          "max": "aggressive"
+        },
+        "effect": "Shifts how quickly the AI moves through phases and suggests next actions"
+      },
+      {
+        "dimension": "optimism-vs-realism",
+        "range": {
+          "min": "optimistic",
+          "max": "realistic"
+        },
+        "effect": "Changes how the AI frames challenges vs opportunities in each phase"
+      },
+      {
+        "dimension": "detail-density",
+        "range": {
+          "min": "concise",
+          "max": "exhaustive"
+        },
+        "effect": "Controls how much supporting detail and context the AI includes in responses"
+      }
+    ],
+    "learningSignals": [
+      {
+        "signal": "User corrects AI analysis",
+        "source": "Phase conversation",
+        "influence": "Shifts whole personality toward the direction of correction"
+      },
+      {
+        "signal": "User frequently says 'too much detail' or 'TLDR'",
+        "source": "Any",
+        "influence": "Moves detail-density toward concise"
+      },
+      {
+        "signal": "User asks for alternatives unprompted",
+        "source": "Decision phases",
+        "influence": "Increases breadth-first approach, delays auto-advance"
+      },
+      {
+        "signal": "User frequently changes goals mid-phase",
+        "source": "Any phase",
+        "influence": "Extends discovery phase length, adds more confirmation checkpoints"
+      },
+      {
+        "signal": "User cites specific data or sources",
+        "source": "Research phases",
+        "influence": "Shifts toward analytical-deep mode, increases citation density"
+      },
+      {
+        "signal": "User ignores AI recommendations",
+        "source": "Strategy/Plan phases",
+        "influence": "Reduces directive tone, moves toward option-listing format"
+      }
+    ]
+  },
+  "crossCategoryIntegration": {
+    "activeRecommendations": true,
+    "contextBridgeRules": [
+      {
+        "fromCategory": "fitness-os",
+        "toCategory": "health-os",
+        "trigger": "User logs a workout injury or persistent pain",
+        "bridgeMessage": "It looks like your training might be affecting recovery. Should we check in with Health OS about that {issue}?"
+      },
+      {
+        "fromCategory": "finance-os",
+        "toCategory": "career-os",
+        "trigger": "User expresses dissatisfaction with current income during financial planning",
+        "bridgeMessage": "If your income ceiling is frustrating you, maybe Career OS can help explore comp negotiation or a pivot. Want to branch there?"
+      },
+      {
+        "fromCategory": "learning-os",
+        "toCategory": "career-os",
+        "trigger": "User researches a certification or skill that directly applies to their role",
+        "bridgeMessage": "That {skill} could have real career leverage. Want Career OS to factor it into your growth plan?"
+      },
+      {
+        "fromCategory": "home-os",
+        "toCategory": "finance-os",
+        "trigger": "User plans a major home purchase or renovation",
+        "bridgeMessage": "A {purchase} of that scale changes your financial picture. Want Finance OS to model the impact?"
+      },
+      {
+        "fromCategory": "travel-os",
+        "toCategory": "finance-os",
+        "trigger": "User plans a trip during budget review",
+        "bridgeMessage": "Your trip budget needs to fit the financial plan. Should we check with Finance OS first?"
+      },
+      {
+        "fromCategory": "trading-os",
+        "toCategory": "finance-os",
+        "trigger": "User experiences a portfolio drawdown exceeding 10%",
+        "bridgeMessage": "Your trading book took a hit. Want to review overall financial positioning?"
+      },
+      {
+        "fromCategory": "builder-os",
+        "toCategory": "finance-os",
+        "trigger": "User talks about launching a paid product or subscription",
+        "bridgeMessage": "Launching a product changes your revenue picture. Want Finance OS to help model projections?"
+      },
+      {
+        "fromCategory": "social-os",
+        "toCategory": "career-os",
+        "trigger": "User builds significant following or influence in their professional domain",
+        "bridgeMessage": "Your social presence is becoming a career asset. Should Career OS help you leverage it?"
+      }
+    ]
+  },
+  "monetization": {
+    "tiers": [
+      {
+        "id": "free",
+        "name": "Free",
+        "price": 0,
+        "maxPlugins": 2,
+        "features": [
+          "2 active plugins of your choice",
+          "Basic phase flow (discover → plan → review)",
+          "Canvas persistence (5 sessions)",
+          "Community templates"
+        ]
+      },
+      {
+        "id": "pro",
+        "name": "Pro",
+        "price": 12,
+        "annualPrice": 99,
+        "maxPlugins": 6,
+        "features": [
+          "6 active plugins of your choice",
+          "Full phase flow (all phases per plugin)",
+          "Canvas persistence (30 days)",
+          "Personality engine learning",
+          "Cross-category recommendations",
+          "OpenClaw integration"
+        ]
+      },
+      {
+        "id": "max",
+        "name": "Max",
+        "price": 29,
+        "annualPrice": 249,
+        "maxPlugins": 0,
+        "features": [
+          "All plugins",
+          "Full phase flow with skip thresholds",
+          "Unlimited canvas persistence",
+          "Full personality engine learning",
+          "Cross-category recommendations + auto-bridge",
+          "OpenClaw integration",
+          "Local LLM support (Ollama)",
+          "Custom personality overrides",
+          "Priority support"
+        ]
+      }
+    ],
+    "pluginAccess": {
+      "free": [
+        "learning-os",
+        "fitness-os"
+      ],
+      "pro": [
+        "travel-os",
+        "finance-os",
+        "health-os",
+        "learning-os",
+        "fitness-os",
+        "home-os",
+        "family-os",
+        "relationships-os"
+      ],
+      "max": [
+        "travel-os",
+        "finance-os",
+        "health-os",
+        "career-os",
+        "fitness-os",
+        "learning-os",
+        "home-os",
+        "family-os",
+        "social-os",
+        "relationships-os",
+        "trading-os",
+        "builder-os"
+      ]
+    }
+  },
+  "plugins": {
+    "travel-os": {
+      "id": "travel-os",
+      "name": "Travel OS",
+      "emoji": "✈️",
+      "shortDescription": "Plan trips, build itineraries, discover destinations",
+      "longDescription": "Your travel planning copilot. From destination discovery to packing lists.",
+      "aiSpecialization": "Scrapes travel communities, weather APIs, flight data. Leads itinerary conversation.",
+      "statusDot": "idle",
+      "conversationStyle": {
+        "openingPrompt": "Let's plan your travel. First — have you picked a destination or are you exploring?",
+        "challengePattern": "Questions timing/location choices with real data (weather, costs, crowds, events)",
+        "researchTrigger": "When user mentions a destination or timeframe, trigger weather + travel forum + budget agents",
+        "phaseTransitionPrompt": "You've completed the {phase} phase. Ready to move to {nextPhase}?"
+      },
+      "researchDomains": [
+        {
+          "name": "Weather",
+          "source": "WeatherAPI",
+          "description": "Historical weather, typhoon/rain seasons"
+        },
+        {
+          "name": "Travel Forums",
+          "source": "Reddit r/travel",
+          "description": "Real traveler experiences"
+        },
+        {
+          "name": "Budget",
+          "source": "Skyscanner/Numbeo",
+          "description": "Flight trends, accommodation costs"
+        },
+        {
+          "name": "Events",
+          "source": "Eventbrite",
+          "description": "Festivals, peak seasons"
+        }
+      ],
+      "personalityOverrides": {
+        "defaultDepth": "deep",
+        "defaultTone": "balanced",
+        "defaultPace": "moderate",
+        "researchDepth": "balanced"
+      },
+      "canvasDefaults": {
+        "initialSections": [
+          {
+            "title": "Trip Profile",
+            "sectionType": "profile",
+            "autoPopulate": true
+          },
+          {
+            "title": "Itinerary",
+            "sectionType": "timeline",
+            "autoPopulate": true
+          },
+          {
+            "title": "Budget & Costs",
+            "sectionType": "budget",
+            "autoPopulate": true
+          },
+          {
+            "title": "Research Notes",
+            "sectionType": "notes",
+            "autoPopulate": true
+          },
+          {
+            "title": "Packing Checklist",
+            "sectionType": "checklist",
+            "autoPopulate": true
+          },
+          {
+            "title": "Key Decisions",
+            "sectionType": "decisions",
+            "autoPopulate": true
+          }
+        ]
+      },
+      "phases": [
+        {
+          "id": "discover",
+          "name": "Discovery",
+          "order": 1,
+          "description": "AI leads destination exploration: asks about preferences, runs parallel research, presents options with data",
+          "aiLeadDescription": "Asking about travel style → running parallel research on destinations → presenting options with data",
+          "conversationGoals": [
+            "Identify 2-3 destination options with pros/cons",
+            "Establish travel style",
+            "Determine approximate travel window"
+          ],
+          "completionCriteria": "User has selected a destination or narrowed to 2 strong options",
+          "researchTriggers": [
+            "User mentions a city/country",
+            "User asks about timing",
+            "User mentions budget"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "trip-profile",
+              "title": "Trip Profile",
+              "autoFill": true
+            },
+            {
+              "sectionId": "destination-options",
+              "title": "Destination Options",
+              "autoFill": true
+            },
+            {
+              "sectionId": "pros-cons",
+              "title": "Pros & Cons",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 6,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "intent",
+          "name": "Intent",
+          "order": 2,
+          "description": "AI challenges timing/location choices with real data, narrows options",
+          "aiLeadDescription": "Presenting data-backed challenges to chosen destination → providing alternatives → confirming final decision",
+          "conversationGoals": [
+            "Confirm final destination and travel window",
+            "Understand must-see priorities",
+            "Flag travel restrictions"
+          ],
+          "completionCriteria": "Destination and dates locked with constraints documented",
+          "researchTriggers": [
+            "User pushes back on a challenge",
+            "User needs visa/health info",
+            "User has flexible dates"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "final-destination",
+              "title": "Final Destination",
+              "autoFill": true
+            },
+            {
+              "sectionId": "constraints",
+              "title": "Constraints & Requirements",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 1
+          }
+        },
+        {
+          "id": "plan",
+          "name": "Plan",
+          "order": 3,
+          "description": "AI builds itinerary interactively, suggests routes, finds gaps",
+          "aiLeadDescription": "Designing day-by-day itinerary → finding flight and accommodation → filling gaps the user missed",
+          "conversationGoals": [
+            "Build day-by-day itinerary skeleton",
+            "Identify flight options",
+            "Find accommodation",
+            "Surface transit gaps"
+          ],
+          "completionCriteria": "Day-by-day itinerary with flights and accommodation identified",
+          "researchTriggers": [
+            "User wants flight comparison",
+            "User asks about neighborhoods",
+            "User considers route changes"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "itinerary",
+              "title": "Itinerary",
+              "autoFill": true
+            },
+            {
+              "sectionId": "flights",
+              "title": "Flight Options",
+              "autoFill": true
+            },
+            {
+              "sectionId": "accommodation",
+              "title": "Accommodation",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 8,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "prepare",
+          "name": "Prepare",
+          "order": 4,
+          "description": "Ensuring documents, bookings, health prep, local tips",
+          "aiLeadDescription": "Running document checklist → confirming bookings → sharing local tips and cultural notes → packing suggestions",
+          "conversationGoals": [
+            "Complete pre-departure checklist",
+            "Confirm all major bookings",
+            "Tailored packing list",
+            "Local tips: transport, safety"
+          ],
+          "completionCriteria": "Pre-departure checklist complete, bookings confirmed",
+          "researchTriggers": [
+            "User asks about packing",
+            "User mentions local transport",
+            "User has dietary restrictions"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "checklist",
+              "title": "Pre-Departure Checklist",
+              "autoFill": true
+            },
+            {
+              "sectionId": "packing",
+              "title": "Packing List",
+              "autoFill": true
+            },
+            {
+              "sectionId": "local-tips",
+              "title": "Local Tips & Etiquette",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "experience",
+          "name": "Experience",
+          "order": 5,
+          "description": "AI provides real-time tips during travel",
+          "aiLeadDescription": "Checking in → suggesting nearby spots → adapting itinerary for weather → backup planning",
+          "conversationGoals": [
+            "Real-time itinerary adjustments",
+            "Day-specific recommendations",
+            "Backup plans for closures"
+          ],
+          "completionCriteria": "Trip in progress — user has what they need for remaining days",
+          "researchTriggers": [
+            "User shares current location",
+            "User reports a problem",
+            "User asks what's near me"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "live-updates",
+              "title": "Live Updates",
+              "autoFill": true
+            },
+            {
+              "sectionId": "backup-plans",
+              "title": "Backup Plans",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 3,
+            "minGoalsMet": 1
+          }
+        },
+        {
+          "id": "reflect",
+          "name": "Reflect",
+          "order": 6,
+          "description": "Reviewing what worked, capturing memories, updating travel profile",
+          "aiLeadDescription": "Reviewing trip highlights → capturing memories → updating travel profile and personality preferences",
+          "conversationGoals": [
+            "Capture 3 highlights and 1 thing to change",
+            "Log memories",
+            "Update travel preferences"
+          ],
+          "completionCriteria": "Trip reflection documented, travel profile updated",
+          "researchTriggers": [],
+          "canvasSections": [],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        }
+      ]
+    },
+    "finance-os": {
+      "id": "finance-os",
+      "name": "Finance OS",
+      "emoji": "💰",
+      "shortDescription": "Budget, invest, save, plan big purchases",
+      "longDescription": "Your financial coach. From budgeting to investing.",
+      "aiSpecialization": "Pulls financial research, tracks spending patterns. Challenges assumptions about risk.",
+      "statusDot": "idle",
+      "conversationStyle": {
+        "openingPrompt": "Let's talk about your finances. How confident are you your money is working as hard as you?",
+        "challengePattern": "Questions spending priorities with data, flags lifestyle inflation",
+        "researchTrigger": "When user mentions income, expenses, or goals — pull benchmarks and best practices",
+        "phaseTransitionPrompt": "Here's your financial picture. Ready for {nextPhase}?"
+      },
+      "researchDomains": [
+        {
+          "name": "Benchmarks",
+          "source": "BLS, personal finance subs",
+          "description": "Income percentile, savings rate by age/location"
+        },
+        {
+          "name": "Investment Options",
+          "source": "Morningstar, Vanguard",
+          "description": "Fund returns, risk profiles, fee comparisons"
+        },
+        {
+          "name": "Tax Strategy",
+          "source": "IRS, local tax authority",
+          "description": "Tax-advantaged accounts, deductions"
+        }
+      ],
+      "personalityOverrides": {
+        "defaultDepth": "moderate",
+        "defaultTone": "direct",
+        "defaultPace": "moderate",
+        "researchDepth": "balanced"
+      },
+      "canvasDefaults": {
+        "initialSections": [
+          {
+            "title": "Financial Snapshot",
+            "sectionType": "profile",
+            "autoPopulate": true
+          },
+          {
+            "title": "Budget Breakdown",
+            "sectionType": "budget",
+            "autoPopulate": true
+          },
+          {
+            "title": "Investment Research",
+            "sectionType": "research",
+            "autoPopulate": true
+          },
+          {
+            "title": "Key Decisions",
+            "sectionType": "decisions",
+            "autoPopulate": true
+          },
+          {
+            "title": "Action Items",
+            "sectionType": "checklist",
+            "autoPopulate": true
+          }
+        ]
+      },
+      "phases": [
+        {
+          "id": "assess",
+          "name": "Assess",
+          "order": 1,
+          "description": "AI builds complete financial snapshot through conversation",
+          "aiLeadDescription": "Asking about income, expenses, debt, assets → building snapshot → identifying gaps",
+          "conversationGoals": [
+            "Document income sources",
+            "Categorize monthly expenses",
+            "Inventory debts, assets",
+            "Surface missing safeguards"
+          ],
+          "completionCriteria": "Snapshot covers income-expenses-debt-assets-insurance",
+          "researchTriggers": [
+            "User mentions debt",
+            "User unsure about spending",
+            "User has safety net gaps"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "financial-snapshot",
+              "title": "Financial Snapshot",
+              "autoFill": true
+            },
+            {
+              "sectionId": "expenses",
+              "title": "Monthly Expenses",
+              "autoFill": true
+            },
+            {
+              "sectionId": "assets-debts",
+              "title": "Assets & Debts",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 6,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "diagnose",
+          "name": "Diagnose",
+          "order": 2,
+          "description": "AI finds biggest financial leak or risk with evidence",
+          "aiLeadDescription": "Analyzing snapshot for patterns → identifying #1 financial risk/leak → presenting with benchmarks",
+          "conversationGoals": [
+            "Identify #1 financial issue",
+            "Quantify the impact",
+            "Present 2-3 fix options with timelines"
+          ],
+          "completionCriteria": "Primary issue identified with quantified impact and options",
+          "researchTriggers": [
+            "High-interest debt",
+            "Spending-to-income > 90%",
+            "Zero emergency fund"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "diagnosis",
+              "title": "Financial Diagnosis",
+              "autoFill": true
+            },
+            {
+              "sectionId": "options",
+              "title": "Improvement Options",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "plan",
+          "name": "Plan",
+          "order": 3,
+          "description": "Building budget, savings targets, investment strategy interactively",
+          "aiLeadDescription": "Co-creating budget → setting SMART goals → building investment strategy → identifying automation",
+          "conversationGoals": [
+            "Set monthly budget with limits",
+            "Define 3 financial goals",
+            "Build investment strategy",
+            "Identify automation"
+          ],
+          "completionCriteria": "Budget framework + investment strategy documented and agreed",
+          "researchTriggers": [
+            "User unsure about allocation",
+            "User wants fund recommendations",
+            "User has a major purchase goal"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "budget",
+              "title": "Monthly Budget",
+              "autoFill": true
+            },
+            {
+              "sectionId": "goals",
+              "title": "Financial Goals",
+              "autoFill": true
+            },
+            {
+              "sectionId": "investment-plan",
+              "title": "Investment Strategy",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 8,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "execute",
+          "name": "Execute",
+          "order": 4,
+          "description": "Setting up systems step by step",
+          "aiLeadDescription": "Walking through account setup → confirming auto-saves → ensuring tracking → first month check-in",
+          "conversationGoals": [
+            "Set up auto-transfer to savings",
+            "Configure budget tracking",
+            "Check first month actuals",
+            "Adjust plan"
+          ],
+          "completionCriteria": "Systems in place, first month tracked",
+          "researchTriggers": [
+            "User has tool trouble",
+            "First month diverges from budget"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "systems",
+              "title": "Automation Setup",
+              "autoFill": true
+            },
+            {
+              "sectionId": "tracking",
+              "title": "Tracking Dashboard",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "review",
+          "name": "Review",
+          "order": 5,
+          "description": "Monthly check-ins, adjust based on spending data",
+          "aiLeadDescription": "Reviewing spending vs budget → analyzing trends → adjusting categories → recalibrating",
+          "conversationGoals": [
+            "Compare actuals to budget",
+            "Adjust categories",
+            "Check goal progress",
+            "Update allocations"
+          ],
+          "completionCriteria": "Monthly review complete, next budget ready",
+          "researchTriggers": [
+            "Significant variance",
+            "Lifestyle change",
+            "Rebalancing threshold"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "monthly-review",
+              "title": "Monthly Review",
+              "autoFill": true
+            },
+            {
+              "sectionId": "progress",
+              "title": "Goal Progress",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        }
+      ]
+    },
+    "health-os": {
+      "id": "health-os",
+      "name": "Health OS",
+      "emoji": "🩺",
+      "shortDescription": "Diet, sleep, checkups, mental health",
+      "longDescription": "Your health coach. From sleep optimization to stress management.",
+      "aiSpecialization": "Cites medical guidelines, tracks habits. Asks uncomfortable questions about consistency.",
+      "statusDot": "idle",
+      "conversationStyle": {
+        "openingPrompt": "What area of your health — sleep, nutrition, stress, or movement — needs the most attention?",
+        "challengePattern": "Questions consistency, flags risky patterns with cited guidelines",
+        "researchTrigger": "Symptoms, sleep issues, diet changes, stress — pull evidence-based recommendations",
+        "phaseTransitionPrompt": "Here's your health profile. Ready for {nextPhase}?"
+      },
+      "researchDomains": [
+        {
+          "name": "Sleep Science",
+          "source": "CDC, PubMed",
+          "description": "Optimal sleep duration, circadian rhythm"
+        },
+        {
+          "name": "Nutrition",
+          "source": "Dietary Guidelines, NIH",
+          "description": "Macro recommendations, dietary patterns"
+        },
+        {
+          "name": "Mental Health",
+          "source": "APA, NIMH, WHO",
+          "description": "Stress management, therapy options"
+        },
+        {
+          "name": "Preventive Care",
+          "source": "USPSTF",
+          "description": "Screenings, vaccinations by age"
+        }
+      ],
+      "personalityOverrides": {
+        "defaultDepth": "deep",
+        "defaultTone": "balanced",
+        "defaultPace": "relaxed",
+        "researchDepth": "quick"
+      },
+      "canvasDefaults": {
+        "initialSections": [
+          {
+            "title": "Health Profile",
+            "sectionType": "profile",
+            "autoPopulate": true
+          },
+          {
+            "title": "Symptoms & Tracking",
+            "sectionType": "notes",
+            "autoPopulate": true
+          },
+          {
+            "title": "Research & Studies",
+            "sectionType": "research",
+            "autoPopulate": true
+          },
+          {
+            "title": "Treatment Decisions",
+            "sectionType": "decisions",
+            "autoPopulate": true
+          },
+          {
+            "title": "Care Plan",
+            "sectionType": "checklist",
+            "autoPopulate": true
+          }
+        ]
+      },
+      "phases": [
+        {
+          "id": "baseline",
+          "name": "Baseline",
+          "order": 1,
+          "description": "Building comprehensive health profile",
+          "aiLeadDescription": "Asking about sleep, nutrition, exercise, stress, medical history → building baseline → identifying patterns",
+          "conversationGoals": [
+            "Document sleep patterns",
+            "Capture diet overview",
+            "Assess exercise",
+            "Surface stress levels"
+          ],
+          "completionCriteria": "Profile covers sleep-nutrition-exercise-stress",
+          "researchTriggers": [
+            "Sleep < 6 hours",
+            "Chronic stress",
+            "No checkup in 2+ years"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "health-profile",
+              "title": "Health Profile",
+              "autoFill": true
+            },
+            {
+              "sectionId": "habit-patterns",
+              "title": "Current Habits",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 6,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "research",
+          "name": "Research",
+          "order": 2,
+          "description": "AI cites guidelines and recommends checkups",
+          "aiLeadDescription": "Researching guidelines relevant to user → flagging overdue screenings → evidence-based recommendations",
+          "conversationGoals": [
+            "Identify recommended screenings",
+            "Flag guideline conflicts",
+            "Provide cited recommendations",
+            "Prioritize"
+          ],
+          "completionCriteria": "Research presented with citations, priority identified",
+          "researchTriggers": [
+            "Specific health concerns",
+            "Overdue screenings",
+            "Chronic condition"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "research-findings",
+              "title": "Health Research",
+              "autoFill": true
+            },
+            {
+              "sectionId": "screening-checklist",
+              "title": "Screening Checklist",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "plan",
+          "name": "Plan",
+          "order": 3,
+          "description": "Creating measurable health goals and habit chains",
+          "aiLeadDescription": "Designing SMART goals → building habit chains → creating daily/weekly rhythm → accountability",
+          "conversationGoals": [
+            "Set 2-3 specific health goals",
+            "Design habit chains",
+            "Create schedule",
+            "Define progress metrics"
+          ],
+          "completionCriteria": "Goals + habit chains + schedule documented",
+          "researchTriggers": [
+            "User has failed at similar goals",
+            "Conflicting goals"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "goals",
+              "title": "Health Goals",
+              "autoFill": true
+            },
+            {
+              "sectionId": "habit-chains",
+              "title": "Habit Chains",
+              "autoFill": true
+            },
+            {
+              "sectionId": "weekly-rhythm",
+              "title": "Weekly Health Rhythm",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 6,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "habit",
+          "name": "Habit",
+          "order": 4,
+          "description": "Daily/weekly check-ins and plan adjustments",
+          "aiLeadDescription": "Checking habit compliance → adjusting based on real data → celebrating streaks → identifying obstacles",
+          "conversationGoals": [
+            "Track compliance per goal",
+            "Identify obstacles",
+            "Celebrate milestones",
+            "Recalibrate goals"
+          ],
+          "completionCriteria": "Habits showing consistent compliance or adaptively adjusted",
+          "researchTriggers": [
+            "Broken streak",
+            "Multiple missed days",
+            "Schedule change"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "habit-tracker",
+              "title": "Habit Tracker",
+              "autoFill": true
+            },
+            {
+              "sectionId": "streaks",
+              "title": "Streaks & Milestones",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 3,
+            "minGoalsMet": 1
+          }
+        },
+        {
+          "id": "review",
+          "name": "Review",
+          "order": 5,
+          "description": "Monthly health score and profile update",
+          "aiLeadDescription": "Reviewing month's data → calculating health score → updating baseline → setting next goals",
+          "conversationGoals": [
+            "Generate health score",
+            "Compare current vs baseline",
+            "Celebrate and analyze",
+            "Set next focus"
+          ],
+          "completionCriteria": "Monthly review complete, next focus set",
+          "researchTriggers": [
+            "Score declined significantly",
+            "Exceeded or fallen short of all goals"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "health-score",
+              "title": "Health Score",
+              "autoFill": true
+            },
+            {
+              "sectionId": "monthly-review",
+              "title": "Monthly Review",
+              "autoFill": true
+            },
+            {
+              "sectionId": "next-focus",
+              "title": "Next Month's Focus",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        }
+      ]
+    },
+    "career-os": {
+      "id": "career-os",
+      "name": "Career OS",
+      "emoji": "💼",
+      "shortDescription": "Job strategy, skills, networking, promotions",
+      "longDescription": "Your career strategist. From skill gaps to promotion paths.",
+      "aiSpecialization": "Researches industry trends, salary data, skill demands. Ultraplan identifies blockers.",
+      "statusDot": "idle",
+      "conversationStyle": {
+        "openingPrompt": "How aligned is your current role with where you want to be in 3 years?",
+        "challengePattern": "Questions assumptions with market data, identifies blind spots",
+        "researchTrigger": "Job title, industry, or goals → pull salary data, skill trends",
+        "phaseTransitionPrompt": "Here's your career landscape. Ready for {nextPhase}?"
+      },
+      "researchDomains": [
+        {
+          "name": "Salary Data",
+          "source": "Glassdoor, Levels.fyi",
+          "description": "Compensation benchmarks by role"
+        },
+        {
+          "name": "Skill Trends",
+          "source": "LinkedIn, Coursera",
+          "description": "In-demand skills, learning resources"
+        },
+        {
+          "name": "Industry Trends",
+          "source": "CB Insights, Gartner",
+          "description": "Sector growth, emerging roles"
+        }
+      ],
+      "personalityOverrides": {
+        "defaultDepth": "deep",
+        "defaultTone": "direct",
+        "defaultPace": "aggressive",
+        "researchDepth": "exhaustive"
+      },
+      "canvasDefaults": {
+        "initialSections": [
+          {
+            "title": "Career Profile",
+            "sectionType": "profile",
+            "autoPopulate": true
+          },
+          {
+            "title": "Market Research",
+            "sectionType": "research",
+            "autoPopulate": true
+          },
+          {
+            "title": "Career Timeline",
+            "sectionType": "timeline",
+            "autoPopulate": true
+          },
+          {
+            "title": "Key Decisions",
+            "sectionType": "decisions",
+            "autoPopulate": true
+          },
+          {
+            "title": "Action Items",
+            "sectionType": "checklist",
+            "autoPopulate": true
+          }
+        ]
+      },
+      "phases": [
+        {
+          "id": "where",
+          "name": "Where You Are",
+          "order": 1,
+          "description": "Building career snapshot",
+          "aiLeadDescription": "Asking about role, satisfaction, skills → building snapshot → market benchmarks",
+          "conversationGoals": [
+            "Document role and comp",
+            "Assess satisfaction",
+            "Inventory skills",
+            "Establish career stage"
+          ],
+          "completionCriteria": "Snapshot with satisfaction assessment complete",
+          "researchTriggers": [
+            "User mentions comp",
+            "User expresses dissatisfaction",
+            "Skills outdated"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "career-snapshot",
+              "title": "Career Snapshot",
+              "autoFill": true
+            },
+            {
+              "sectionId": "satisfaction",
+              "title": "Satisfaction Assessment",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "market",
+          "name": "Market Research",
+          "order": 2,
+          "description": "AI researches industry trends and opportunities",
+          "aiLeadDescription": "Running parallel research → presenting salary data, skill gaps, hiring trends",
+          "conversationGoals": [
+            "Compare comp to market",
+            "Identify top skill gaps",
+            "Understand industry trajectory",
+            "Flag career paths"
+          ],
+          "completionCriteria": "Market research with cited data, 2-3 skill gaps",
+          "researchTriggers": [
+            "Considering pivot",
+            "Unsure mgmt vs IC",
+            "Industry disruption"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "market-data",
+              "title": "Market Research",
+              "autoFill": true
+            },
+            {
+              "sectionId": "skill-gaps",
+              "title": "Skill Gaps",
+              "autoFill": true
+            },
+            {
+              "sectionId": "career-paths",
+              "title": "Possible Career Paths",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "strategy",
+          "name": "Strategy",
+          "order": 3,
+          "description": "AI identifies optimal path and develops strategy",
+          "aiLeadDescription": "Ultraplan finding #1 blocker → designing path → creating 90-day action plan",
+          "conversationGoals": [
+            "Identify #1 blocker",
+            "Choose path: promote/switch/pivot/venture",
+            "Build 90-day plan",
+            "Define success metrics"
+          ],
+          "completionCriteria": "Strategy selected (path + blocker + 90-day plan)",
+          "researchTriggers": [
+            "Multiple paths with different risk",
+            "User wants to start a company"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "ultraplan",
+              "title": "Career Blocker (Ultraplan)",
+              "autoFill": true
+            },
+            {
+              "sectionId": "career-path",
+              "title": "Chosen Path",
+              "autoFill": true
+            },
+            {
+              "sectionId": "90-day-plan",
+              "title": "90-Day Plan",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 6,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "execute",
+          "name": "Execute",
+          "order": 4,
+          "description": "Resume/LinkedIn updates, networking plan, applications",
+          "aiLeadDescription": "Walking through resume optimization → designing networking strategy → creating pipeline",
+          "conversationGoals": [
+            "Update resume",
+            "Optimize LinkedIn",
+            "Create networking plan",
+            "Set up application tracking"
+          ],
+          "completionCriteria": "Resume updated, networking plan active",
+          "researchTriggers": [
+            "Outdated resume",
+            "Dislikes networking",
+            "No interviews from applications"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "resume",
+              "title": "Resume & LinkedIn",
+              "autoFill": true
+            },
+            {
+              "sectionId": "networking",
+              "title": "Networking Plan",
+              "autoFill": true
+            },
+            {
+              "sectionId": "applications",
+              "title": "Application Tracker",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "grow",
+          "name": "Grow",
+          "order": 5,
+          "description": "Upskill roadmap and industry engagement",
+          "aiLeadDescription": "Creating learning roadmap → recommending projects → tracking skills → encouraging engagement",
+          "conversationGoals": [
+            "Build learning roadmap",
+            "Identify skill projects",
+            "Set public presence goal",
+            "Track weekly progress"
+          ],
+          "completionCriteria": "Learning roadmap active, first project identified",
+          "researchTriggers": [
+            "No portfolio",
+            "Wants to learn specific tech"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "learning-roadmap",
+              "title": "Learning Roadmap",
+              "autoFill": true
+            },
+            {
+              "sectionId": "projects",
+              "title": "Skill Projects",
+              "autoFill": true
+            },
+            {
+              "sectionId": "public-presence",
+              "title": "Public Presence",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        }
+      ]
+    },
+    "fitness-os": {
+      "id": "fitness-os",
+      "name": "Fitness OS",
+      "emoji": "💪",
+      "shortDescription": "Workout plans, progression, recovery, habits",
+      "longDescription": "Your fitness coach. Progressive overload to recovery management.",
+      "aiSpecialization": "Designs progressive plans, adjusts based on feedback, pushes past plateaus.",
+      "statusDot": "idle",
+      "conversationStyle": {
+        "openingPrompt": "What's your current fitness routine, or are you starting fresh?",
+        "challengePattern": "Questions consistency, detects plateaus, adjusts plan based on data",
+        "researchTrigger": "Exercise type, goals, injuries → best practices and programming guidelines",
+        "phaseTransitionPrompt": "Your fitness profile is ready. Design your plan in {nextPhase}?"
+      },
+      "researchDomains": [
+        {
+          "name": "Exercise Science",
+          "source": "ACSM, NSCA",
+          "description": "Progressive overload, periodization"
+        },
+        {
+          "name": "Form Guides",
+          "source": "ExRx, trusted creators",
+          "description": "Form cues, injury modifications"
+        },
+        {
+          "name": "Nutrition",
+          "source": "ISSN, Examine.com",
+          "description": "Protein timing, hydration"
+        }
+      ],
+      "personalityOverrides": {
+        "defaultDepth": "moderate",
+        "defaultTone": "encouraging",
+        "defaultPace": "moderate",
+        "researchDepth": "quick"
+      },
+      "canvasDefaults": {
+        "initialSections": [
+          {
+            "title": "Fitness Profile",
+            "sectionType": "profile",
+            "autoPopulate": true
+          },
+          {
+            "title": "Workout Log",
+            "sectionType": "notes",
+            "autoPopulate": true
+          },
+          {
+            "title": "Progress Timeline",
+            "sectionType": "timeline",
+            "autoPopulate": true
+          },
+          {
+            "title": "Nutrition Budget",
+            "sectionType": "budget",
+            "autoPopulate": true
+          },
+          {
+            "title": "Routine Checklist",
+            "sectionType": "checklist",
+            "autoPopulate": true
+          }
+        ]
+      },
+      "phases": [
+        {
+          "id": "baseline",
+          "name": "Baseline",
+          "order": 1,
+          "description": "Current fitness level, goals, constraints",
+          "aiLeadDescription": "Asking about activity, experience, goals, constraints → building profile",
+          "conversationGoals": [
+            "Document activity level",
+            "Assess experience",
+            "Define fitness goals",
+            "Identify constraints"
+          ],
+          "completionCriteria": "Profile with baseline and goals documented",
+          "researchTriggers": [
+            "Old injuries",
+            "Limited equipment",
+            "Gym intimidation"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "fitness-profile",
+              "title": "Fitness Profile",
+              "autoFill": true
+            },
+            {
+              "sectionId": "constraints",
+              "title": "Constraints",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "design",
+          "name": "Design",
+          "order": 2,
+          "description": "Creates progressive training plan",
+          "aiLeadDescription": "Designing plan based on goals and constraints → selecting exercises, sets, progression → schedule",
+          "conversationGoals": [
+            "Select training split",
+            "Design exercise selection",
+            "Set overload scheme",
+            "Create weekly schedule"
+          ],
+          "completionCriteria": "Training plan designed with progression scheme",
+          "researchTriggers": [
+            "Aesthetic vs performance goals",
+            "Equipment limitations"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "training-plan",
+              "title": "Training Plan",
+              "autoFill": true
+            },
+            {
+              "sectionId": "exercises",
+              "title": "Exercise Selection",
+              "autoFill": true
+            },
+            {
+              "sectionId": "schedule",
+              "title": "Weekly Schedule",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 6,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "execute",
+          "name": "Execute",
+          "order": 3,
+          "description": "Session tracking, form tips, progressive overload",
+          "aiLeadDescription": "Checking in on sessions → tracking metrics → offering form cues → managing overload",
+          "conversationGoals": [
+            "Log sessions with metrics",
+            "Adjust weights/reps",
+            "Provide form corrections",
+            "Track recovery"
+          ],
+          "completionCriteria": "Consistent session logging with progression",
+          "researchTriggers": [
+            "Stall in a lift",
+            "Pain or discomfort",
+            "Missed multiple sessions"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "session-log",
+              "title": "Session Log",
+              "autoFill": true
+            },
+            {
+              "sectionId": "progress",
+              "title": "Progress Tracking",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "push",
+          "name": "Push",
+          "order": 4,
+          "description": "Plateau detection and plan adjustment",
+          "aiLeadDescription": "Detecting plateaus → analyzing cause (recovery, intensity, form) → adjusting plan → pushing limits",
+          "conversationGoals": [
+            "Detect performance plateaus",
+            "Analyze root cause",
+            "Adjust training variables",
+            "Push through barriers"
+          ],
+          "completionCriteria": "Plateau addressed with adjusted plan",
+          "researchTriggers": [
+            "No strength progress for 2+ weeks",
+            "Boredom with routine"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "plateau-analysis",
+              "title": "Plateau Analysis",
+              "autoFill": true
+            },
+            {
+              "sectionId": "adjustments",
+              "title": "Plan Adjustments",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 3,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "maintain",
+          "name": "Maintain",
+          "order": 5,
+          "description": "Recovery management and long-term consistency",
+          "aiLeadDescription": "Managing deload weeks → reviewing long-term trends → adjusting for life changes → celebrating consistency",
+          "conversationGoals": [
+            "Schedule deload weeks",
+            "Review 4-week trends",
+            "Adjust for life changes",
+            "Celebrate consistency"
+          ],
+          "completionCriteria": "Maintenance phase active, recovery managed",
+          "researchTriggers": [
+            "User feels burned out",
+            "User has life disruption",
+            "Injury recovery"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "recovery",
+              "title": "Recovery Management",
+              "autoFill": true
+            },
+            {
+              "sectionId": "trends",
+              "title": "Long-Term Trends",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        }
+      ]
+    },
+    "learning-os": {
+      "id": "learning-os",
+      "name": "Learning OS",
+      "emoji": "📚",
+      "shortDescription": "Courses, skills, reading, certifications",
+      "longDescription": "Your learning coach. From structured courses to self-study.",
+      "aiSpecialization": "Structures learning paths, tests understanding, recommends resources.",
+      "statusDot": "idle",
+      "conversationStyle": {
+        "openingPrompt": "What do you want to learn next, and why does it matter to you?",
+        "challengePattern": "Questions learning goals, tests understanding, ensures depth over breadth",
+        "researchTrigger": "Subject or skill mentioned → best courses, books, learning paths",
+        "phaseTransitionPrompt": "Your learning path is mapped. Ready for {nextPhase}?"
+      },
+      "researchDomains": [
+        {
+          "name": "Courses",
+          "source": "Coursera, edX, Udemy",
+          "description": "Top-rated courses by subject and level"
+        },
+        {
+          "name": "Books",
+          "source": "Goodreads, Amazon",
+          "description": "Highly recommended books and reviews"
+        },
+        {
+          "name": "Community",
+          "source": "Reddit, Discord",
+          "description": "Active learning communities, study groups"
+        }
+      ],
+      "personalityOverrides": {
+        "defaultDepth": "deep",
+        "defaultTone": "balanced",
+        "defaultPace": "moderate",
+        "researchDepth": "balanced"
+      },
+      "canvasDefaults": {
+        "initialSections": [
+          {
+            "title": "Learning Profile",
+            "sectionType": "profile",
+            "autoPopulate": true
+          },
+          {
+            "title": "Course Notes",
+            "sectionType": "notes",
+            "autoPopulate": true
+          },
+          {
+            "title": "Research Sources",
+            "sectionType": "research",
+            "autoPopulate": true
+          },
+          {
+            "title": "Learning Timeline",
+            "sectionType": "timeline",
+            "autoPopulate": true
+          },
+          {
+            "title": "Skill Checklist",
+            "sectionType": "checklist",
+            "autoPopulate": true
+          }
+        ]
+      },
+      "phases": [
+        {
+          "id": "focus",
+          "name": "Focus",
+          "order": 1,
+          "description": "What to learn, why, time available",
+          "aiLeadDescription": "Asking about interests, goals, time budget → suggesting optimal learning path",
+          "conversationGoals": [
+            "Clarify what to learn",
+            "Establish why it matters",
+            "Assess time availability",
+            "Define success criteria"
+          ],
+          "completionCriteria": "Subject and learning scope confirmed",
+          "researchTriggers": [
+            "User wants to learn everything",
+            "User has limited time"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "learning-goal",
+              "title": "Learning Goal",
+              "autoFill": true
+            },
+            {
+              "sectionId": "time-budget",
+              "title": "Time Budget",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "structure",
+          "name": "Structure",
+          "order": 2,
+          "description": "Builds curriculum, finds courses and books",
+          "aiLeadDescription": "Researching best resources → building structured curriculum → setting milestones",
+          "conversationGoals": [
+            "Find top courses and books",
+            "Build learning sequence",
+            "Set weekly milestones",
+            "Gather supplementary materials"
+          ],
+          "completionCriteria": "Curriculum with sequenced resources and milestones",
+          "researchTriggers": [
+            "User prefers one medium (video vs reading)",
+            "User has prerequisite gaps"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "curriculum",
+              "title": "Curriculum",
+              "autoFill": true
+            },
+            {
+              "sectionId": "resources",
+              "title": "Resources",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "study",
+          "name": "Study",
+          "order": 3,
+          "description": "Interactive learning sessions, tests understanding",
+          "aiLeadDescription": "Guiding through study sessions → testing understanding with questions → deepening weak areas",
+          "conversationGoals": [
+            "Complete weekly study targets",
+            "Test understanding",
+            "Identify weak areas",
+            "Adjust pace"
+          ],
+          "completionCriteria": "Materials studied, understanding tested",
+          "researchTriggers": [
+            "User struggles with a concept",
+            "User wants deeper dives"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "study-notes",
+              "title": "Study Notes",
+              "autoFill": true
+            },
+            {
+              "sectionId": "tests",
+              "title": "Understanding Checks",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "apply",
+          "name": "Apply",
+          "order": 4,
+          "description": "Projects and real-world practice",
+          "aiLeadDescription": "Suggesting application projects → guiding through implementation → connecting theory to practice",
+          "conversationGoals": [
+            "Identify application project",
+            "Build implementation plan",
+            "ExecuteReflect on what was learned"
+          ],
+          "completionCriteria": "Application project completed",
+          "researchTriggers": [
+            "User stuck on project",
+            "User wants portfolio piece"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "project",
+              "title": "Application Project",
+              "autoFill": true
+            },
+            {
+              "sectionId": "reflection",
+              "title": "Learning Reflection",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "reflect",
+          "name": "Reflect",
+          "order": 5,
+          "description": "Reviewing progress, adjusting speed and depth",
+          "aiLeadDescription": "Reviewing learning progress → assessing retention → adjusting future learning approach",
+          "conversationGoals": [
+            "Review milestones achieved",
+            "Assess retention (quiz)",
+            "Identify gaps",
+            "Adjust next module"
+          ],
+          "completionCriteria": "Learning review complete, next module planned",
+          "researchTriggers": [
+            "User forgot earlier material",
+            "User wants to branch"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "progress-review",
+              "title": "Progress Review",
+              "autoFill": true
+            },
+            {
+              "sectionId": "next-steps",
+              "title": "Next Module",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        }
+      ]
+    },
+    "home-os": {
+      "id": "home-os",
+      "name": "Home OS",
+      "emoji": "🏠",
+      "shortDescription": "Home improvement, maintenance, organization",
+      "longDescription": "Your home manager. From maintenance schedules to renovations.",
+      "aiSpecialization": "Creates maintenance schedules, researches contractors, plans renovations.",
+      "statusDot": "idle",
+      "conversationStyle": {
+        "openingPrompt": "How's your home doing? Any projects brewing or maintenance slipping?",
+        "challengePattern": "Flags deferred maintenance, surfaces hidden costs, prioritizes by urgency vs impact",
+        "researchTrigger": "Project type → contractor reviews, material costs, DIY guides",
+        "phaseTransitionPrompt": "Home inventory complete. Ready for {nextPhase}?"
+      },
+      "researchDomains": [
+        {
+          "name": "Contractors",
+          "source": "Angi, Thumbtack, Google Maps",
+          "description": "Reviews, estimates, licensing info"
+        },
+        {
+          "name": "Materials",
+          "source": "Home Depot, Lowe's",
+          "description": "Cost estimates, material comparisons"
+        },
+        {
+          "name": "DIY Guides",
+          "source": "YouTube, Instructables",
+          "description": "Step-by-step project guides"
+        }
+      ],
+      "personalityOverrides": {
+        "defaultDepth": "moderate",
+        "defaultTone": "balanced",
+        "defaultPace": "relaxed",
+        "researchDepth": "quick"
+      },
+      "canvasDefaults": {
+        "initialSections": [
+          {
+            "title": "Home Profile",
+            "sectionType": "profile",
+            "autoPopulate": true
+          },
+          {
+            "title": "Project Notes",
+            "sectionType": "notes",
+            "autoPopulate": true
+          },
+          {
+            "title": "Home Budget",
+            "sectionType": "budget",
+            "autoPopulate": true
+          },
+          {
+            "title": "Renovation Timeline",
+            "sectionType": "timeline",
+            "autoPopulate": true
+          },
+          {
+            "title": "Task Checklist",
+            "sectionType": "checklist",
+            "autoPopulate": true
+          }
+        ]
+      },
+      "phases": [
+        {
+          "id": "inventory",
+          "name": "Inventory",
+          "order": 1,
+          "description": "Current state, maintenance needs, improvement wishes",
+          "aiLeadDescription": "Asking about home age, systems, known issues → building home inventory → flagging overdue maintenance",
+          "conversationGoals": [
+            "Document home details (age, size, systems)",
+            "List known issues",
+            "Surface upcoming maintenance",
+            "Capture improvement wishes"
+          ],
+          "completionCriteria": "Home inventory with known issues documented",
+          "researchTriggers": [
+            "Home is old",
+            "Just moved in",
+            "Visible problems"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "home-profile",
+              "title": "Home Profile",
+              "autoFill": true
+            },
+            {
+              "sectionId": "issues",
+              "title": "Known Issues",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "priority",
+          "name": "Priority",
+          "order": 2,
+          "description": "Urgency/cost/impact matrix ranking",
+          "aiLeadDescription": "Creating urgency-cost-impact matrix → ranking projects → proposing budget timeline",
+          "conversationGoals": [
+            "Rank projects by urgency",
+            "Estimate cost per project",
+            "Build priority matrix",
+            "Propose budget timeline"
+          ],
+          "completionCriteria": "Projects ranked with cost estimates and timeline",
+          "researchTriggers": [
+            "Multiple competing projects",
+            "User has limited budget"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "priority-matrix",
+              "title": "Priority Matrix",
+              "autoFill": true
+            },
+            {
+              "sectionId": "budget",
+              "title": "Project Budget",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "plan",
+          "name": "Plan",
+          "order": 3,
+          "description": "Step-by-step plan for each project",
+          "aiLeadDescription": "Breaking down top projects → creating plans with timeline, budget, contractor needs → material sourcing",
+          "conversationGoals": [
+            "Create project breakdown",
+            "Research materials and costs",
+            "Find contractors if needed",
+            "Set timeline"
+          ],
+          "completionCriteria": "Top 1-2 projects have detailed plans",
+          "researchTriggers": [
+            "User wants DIY vs pro",
+            "User concerned about costs"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "project-plan",
+              "title": "Project Plan",
+              "autoFill": true
+            },
+            {
+              "sectionId": "materials",
+              "title": "Materials & Costs",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "execute",
+          "name": "Execute",
+          "order": 4,
+          "description": "Task tracking, contractor management, materials",
+          "aiLeadDescription": "Tracking task progress → managing contractor communication → helping with decisions",
+          "conversationGoals": [
+            "Track project tasks",
+            "Manage contractor schedule",
+            "Handle decisions",
+            "Document progress"
+          ],
+          "completionCriteria": "Project underway with task tracking active",
+          "researchTriggers": [
+            "Contractor delayed",
+            "User frustrated",
+            "Unexpected issue"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "tasks",
+              "title": "Task Tracker",
+              "autoFill": true
+            },
+            {
+              "sectionId": "contractor",
+              "title": "Contractor Management",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 1
+          }
+        },
+        {
+          "id": "maintain",
+          "name": "Maintain",
+          "order": 5,
+          "description": "Scheduled maintenance, seasonal checklists",
+          "aiLeadDescription": "Creating ongoing maintenance calendar → seasonal checklists → setting reminders",
+          "conversationGoals": [
+            "Build annual maintenance calendar",
+            "Create seasonal checklists",
+            "Set reminders",
+            "Document warranties"
+          ],
+          "completionCriteria": "Maintenance calendar active, warranty docs filed",
+          "researchTriggers": [
+            "User never did maintenance",
+            "Spring/fall transition"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "maintenance-calendar",
+              "title": "Maintenance Calendar",
+              "autoFill": true
+            },
+            {
+              "sectionId": "warranties",
+              "title": "Warranties & Docs",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        }
+      ]
+    },
+    "family-os": {
+      "id": "family-os",
+      "name": "Family OS",
+      "emoji": "❤️",
+      "shortDescription": "Family events, care plans, shared goals, traditions",
+      "longDescription": "Your family coordinator. From shared calendars to traditions.",
+      "aiSpecialization": "Mediates shared decision-making, builds calendars and agreement docs.",
+      "statusDot": "idle",
+      "conversationStyle": {
+        "openingPrompt": "Tell me about your family — who's in it, and what's most important to you all?",
+        "challengePattern": "Ensures everyone's needs considered, flags scheduling conflicts",
+        "researchTrigger": "Family events, milestone planning, care needs",
+        "phaseTransitionPrompt": "Your family map is ready. Ready for {nextPhase}?"
+      },
+      "researchDomains": [
+        {
+          "name": "Activities",
+          "source": "Local event calendars, family blogs",
+          "description": "Kid-friendly events, family activities"
+        },
+        {
+          "name": "Care Resources",
+          "source": "Care.com, local agencies",
+          "description": "Childcare, elder care options, costs"
+        }
+      ],
+      "personalityOverrides": {
+        "defaultDepth": "moderate",
+        "defaultTone": "encouraging",
+        "defaultPace": "moderate",
+        "researchDepth": "quick"
+      },
+      "canvasDefaults": {
+        "initialSections": [
+          {
+            "title": "Family Profile",
+            "sectionType": "profile",
+            "autoPopulate": true
+          },
+          {
+            "title": "Family Notes",
+            "sectionType": "notes",
+            "autoPopulate": true
+          },
+          {
+            "title": "Family Budget",
+            "sectionType": "budget",
+            "autoPopulate": true
+          },
+          {
+            "title": "Family Timeline",
+            "sectionType": "timeline",
+            "autoPopulate": true
+          },
+          {
+            "title": "Key Decisions",
+            "sectionType": "decisions",
+            "autoPopulate": true
+          }
+        ]
+      },
+      "phases": [
+        {
+          "id": "map",
+          "name": "Map",
+          "order": 1,
+          "description": "Family structure, members, roles, key events",
+          "aiLeadDescription": "Asking about family composition, roles, schedules, traditions → building family map",
+          "conversationGoals": [
+            "Document family members and roles",
+            "Capture key dates (birthdays, anniversaries)",
+            "Identify care needs",
+            "Surface traditions"
+          ],
+          "completionCriteria": "Family map with members, roles, key dates",
+          "researchTriggers": [
+            "User has complex family",
+            "Care needs for elderly/kids",
+            "Blended family"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "family-map",
+              "title": "Family Map",
+              "autoFill": true
+            },
+            {
+              "sectionId": "key-dates",
+              "title": "Key Dates",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "connect",
+          "name": "Connect",
+          "order": 2,
+          "description": "Shared goals, traditions, quality time planning",
+          "aiLeadDescription": "Discussing shared values → planning quality time → suggesting family traditions and rituals",
+          "conversationGoals": [
+            "Define family values",
+            "Plan quality time activities",
+            "Establish or strengthen traditions",
+            "Set shared goals"
+          ],
+          "completionCriteria": "Family connection plan with traditions and goals",
+          "researchTriggers": [
+            "Family feels disconnected",
+            "User wants more quality time",
+            "Teenagers involved"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "family-values",
+              "title": "Family Values",
+              "autoFill": true
+            },
+            {
+              "sectionId": "traditions",
+              "title": "Traditions & Rituals",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "plan",
+          "name": "Plan",
+          "order": 3,
+          "description": "Events calendar, care schedules, shared budgets",
+          "aiLeadDescription": "Building shared calendar → creating care schedules → establishing shared budget → coordinating with family input",
+          "conversationGoals": [
+            "Create shared events calendar",
+            "Build care schedules if needed",
+            "Establish shared budget",
+            "Document agreements"
+          ],
+          "completionCriteria": "Calendar, schedules, and budget documented",
+          "researchTriggers": [
+            "Conflicting schedules",
+            "Elder care needs",
+            "Multiple kids"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "calendar",
+              "title": "Family Calendar",
+              "autoFill": true
+            },
+            {
+              "sectionId": "budget",
+              "title": "Shared Budget",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 6,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "execute",
+          "name": "Execute",
+          "order": 4,
+          "description": "Coordinating tasks, reminders, shared checklists",
+          "aiLeadDescription": "Creating task assignments → setting reminders → tracking completion → mediating family input",
+          "conversationGoals": [
+            "Assign tasks and responsibilities",
+            "Set up reminders",
+            "Track completion",
+            "Mediate conflicts"
+          ],
+          "completionCriteria": "Tasks assigned and tracking active",
+          "researchTriggers": [
+            "User forgets tasks",
+            "Family conflicts"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "tasks",
+              "title": "Task Tracker",
+              "autoFill": true
+            },
+            {
+              "sectionId": "reminders",
+              "title": "Reminders",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "reflect",
+          "name": "Reflect",
+          "order": 5,
+          "description": "Reviewing what's working for the family",
+          "aiLeadDescription": "Reviewing what's working → discussing family satisfaction → adjusting schedules or goals",
+          "conversationGoals": [
+            "Review calendar adherence",
+            "Check in on family satisfaction",
+            "Adjust goals or schedules",
+            "Celebrate wins"
+          ],
+          "completionCriteria": "Family reflection complete, adjustments made",
+          "researchTriggers": [
+            "User reports dissatisfaction",
+            "Missed important dates"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "family-review",
+              "title": "Family Review",
+              "autoFill": true
+            },
+            {
+              "sectionId": "adjustments",
+              "title": "Adjustments",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        }
+      ]
+    },
+    "social-os": {
+      "id": "social-os",
+      "name": "Social OS",
+      "emoji": "🎉",
+      "shortDescription": "Social calendar, events, friendships, hosting",
+      "longDescription": "Your social connector. From event planning to nurturing friendships.",
+      "aiSpecialization": "Manages social energy, plans gatherings, tracks friend check-ins.",
+      "statusDot": "idle",
+      "conversationStyle": {
+        "openingPrompt": "How's your social life feeling? Connected, scattered, or like you want more?",
+        "challengePattern": "Questions social balance, flags neglected connections, suggests intentionality",
+        "researchTrigger": "Event planning, social goals, friend check-ins",
+        "phaseTransitionPrompt": "Your social landscape is mapped. Ready for {nextPhase}?"
+      },
+      "researchDomains": [
+        {
+          "name": "Events",
+          "source": "Eventbrite, Meetup, local calendars",
+          "description": "Upcoming events and gatherings"
+        },
+        {
+          "name": "Friendship Research",
+          "source": "APA, psychology studies",
+          "description": "Friendship maintenance, social connection science"
+        }
+      ],
+      "personalityOverrides": {
+        "defaultDepth": "shallow",
+        "defaultTone": "encouraging",
+        "defaultPace": "relaxed",
+        "researchDepth": "quick"
+      },
+      "canvasDefaults": {
+        "initialSections": [
+          {
+            "title": "Social Profile",
+            "sectionType": "profile",
+            "autoPopulate": true
+          },
+          {
+            "title": "Relationship Notes",
+            "sectionType": "notes",
+            "autoPopulate": true
+          },
+          {
+            "title": "Event Timeline",
+            "sectionType": "timeline",
+            "autoPopulate": true
+          },
+          {
+            "title": "Goals Checklist",
+            "sectionType": "checklist",
+            "autoPopulate": true
+          },
+          {
+            "title": "Key Decisions",
+            "sectionType": "decisions",
+            "autoPopulate": true
+          }
+        ]
+      },
+      "phases": [
+        {
+          "id": "assess",
+          "name": "Assess",
+          "order": 1,
+          "description": "Current social landscape, energy, priorities",
+          "aiLeadDescription": "Asking about friendships, social frequency, energy levels → mapping social landscape",
+          "conversationGoals": [
+            "Map existing friendships",
+            "Assess social frequency",
+            "Identify energy drainers vs energizers",
+            "Surface social goals"
+          ],
+          "completionCriteria": "Social landscape mapped with energy and priorities",
+          "researchTriggers": [
+            "User feels lonely",
+            "User is overwhelmed socially",
+            "User recently moved"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "social-landscape",
+              "title": "Social Landscape",
+              "autoFill": true
+            },
+            {
+              "sectionId": "energy",
+              "title": "Social Energy",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "intent",
+          "name": "Intent",
+          "order": 2,
+          "description": "Social goals: deepen, expand, host, reconnect",
+          "aiLeadDescription": "Clarifying what user wants socially → defining specific social goals",
+          "conversationGoals": [
+            "Define social goals",
+            "Choose focus: deepen/expand/host/reconnect",
+            "Set measurable targets"
+          ],
+          "completionCriteria": "Social goals defined with weekly targets",
+          "researchTriggers": [
+            "User wants more friends",
+            "User wants to host events"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "social-goals",
+              "title": "Social Goals",
+              "autoFill": true
+            },
+            {
+              "sectionId": "focus",
+              "title": "Focus Area",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "plan",
+          "name": "Plan",
+          "order": 3,
+          "description": "Event ideas, hosting plans, friend check-in schedule",
+          "aiLeadDescription": "Brainstorming events → creating hosting plan → scheduling friend check-ins",
+          "conversationGoals": [
+            "Brainstorm 2-3 event ideas",
+            "Create hosting plan if applicable",
+            "Schedule friend check-ins",
+            "Plan solo vs group balance"
+          ],
+          "completionCriteria": "Plan with events and check-in schedule",
+          "researchTriggers": [
+            "User wants to throw a party",
+            "User lost touch with friends"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "event-ideas",
+              "title": "Event Ideas",
+              "autoFill": true
+            },
+            {
+              "sectionId": "checkins",
+              "title": "Friend Check-ins",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "execute",
+          "name": "Execute",
+          "order": 4,
+          "description": "Hosting, attending, reaching out",
+          "aiLeadDescription": "Executing social plan → attending events → reaching out → tracking follow-ups",
+          "conversationGoals": [
+            "Host or attend events",
+            "Reach out to specific friends",
+            "Follow up on connections",
+            "Track social activity"
+          ],
+          "completionCriteria": "Social activity happening regularly",
+          "researchTriggers": [
+            "User cancels plans",
+            "User feels anxious"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "events",
+              "title": "Events Log",
+              "autoFill": true
+            },
+            {
+              "sectionId": "outreach",
+              "title": "Outreach Tracker",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "review",
+          "name": "Review",
+          "order": 5,
+          "description": "Reflecting on social balance and satisfaction",
+          "aiLeadDescription": "Reviewing social activity → assessing satisfaction → adjusting for balance",
+          "conversationGoals": [
+            "Review social activity vs goals",
+            "Assess satisfaction and energy",
+            "Adjust plan for next period"
+          ],
+          "completionCriteria": "Social review complete, next period adjusted",
+          "researchTriggers": [
+            "User feels drained",
+            "User wants more depth"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "social-review",
+              "title": "Social Review",
+              "autoFill": true
+            },
+            {
+              "sectionId": "next-period",
+              "title": "Next Period Plan",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        }
+      ]
+    },
+    "relationships-os": {
+      "id": "relationships-os",
+      "name": "Relationships OS",
+      "emoji": "💑",
+      "shortDescription": "Partner, communication, quality time, growth",
+      "longDescription": "Your relationship coach. From communication to quality time.",
+      "aiSpecialization": "Sensitive conversation guidance. Suggests activities. Tracks relationship health.",
+      "statusDot": "idle",
+      "conversationStyle": {
+        "openingPrompt": "How's your relationship feeling right now? What's going well, and what could be better?",
+        "challengePattern": "Gently challenges assumptions, flags communication patterns, suggests growth areas",
+        "researchTrigger": "Communication issues, quality time planning, conflict patterns",
+        "phaseTransitionPrompt": "Your relationship reflection is ready. Ready for {nextPhase}?"
+      },
+      "researchDomains": [
+        {
+          "name": "Relationship Science",
+          "source": "Gottman Institute, APA",
+          "description": "Communication frameworks, conflict resolution"
+        },
+        {
+          "name": "Activities",
+          "source": "Local event calendars, relationship blogs",
+          "description": "Date ideas, couple activities"
+        }
+      ],
+      "personalityOverrides": {
+        "defaultDepth": "deep",
+        "defaultTone": "balanced",
+        "defaultPace": "relaxed",
+        "researchDepth": "quick"
+      },
+      "canvasDefaults": {
+        "initialSections": [
+          {
+            "title": "Relationship Profile",
+            "sectionType": "profile",
+            "autoPopulate": true
+          },
+          {
+            "title": "Journal Notes",
+            "sectionType": "notes",
+            "autoPopulate": true
+          },
+          {
+            "title": "Milestone Timeline",
+            "sectionType": "timeline",
+            "autoPopulate": true
+          },
+          {
+            "title": "Growth Checklist",
+            "sectionType": "checklist",
+            "autoPopulate": true
+          },
+          {
+            "title": "Key Decisions",
+            "sectionType": "decisions",
+            "autoPopulate": true
+          }
+        ]
+      },
+      "phases": [
+        {
+          "id": "checkin",
+          "name": "Check-in",
+          "order": 1,
+          "description": "Current state, satisfaction, areas for growth",
+          "aiLeadDescription": "Asking about relationship satisfaction, communication, quality time → identifying areas to work on",
+          "conversationGoals": [
+            "Assess relationship satisfaction",
+            "Identify communication patterns",
+            "Surface quality time sufficiency",
+            "Flag growth areas"
+          ],
+          "completionCriteria": "Check-in complete, growth areas identified",
+          "researchTriggers": [
+            "User mentions conflict",
+            "User feels distant",
+            "User wants more quality time"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "checkin",
+              "title": "Relationship Check-in",
+              "autoFill": true
+            },
+            {
+              "sectionId": "growth-areas",
+              "title": "Growth Areas",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "explore",
+          "name": "Explore",
+          "order": 2,
+          "description": "Digging deeper into specific dynamics",
+          "aiLeadDescription": "Exploring relationship dynamics → understanding needs → identifying patterns → gentle reframing",
+          "conversationGoals": [
+            "Understand each person's needs",
+            "Identify recurring patterns",
+            "Reframe challenges constructively",
+            "Define shared values"
+          ],
+          "completionCriteria": "Relationship dynamics explored, needs and patterns clearer",
+          "researchTriggers": [
+            "User feels unheard",
+            "Same conflict recurring",
+            "Major life change"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "dynamics",
+              "title": "Relationship Dynamics",
+              "autoFill": true
+            },
+            {
+              "sectionId": "needs",
+              "title": "Needs & Values",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "plan",
+          "name": "Plan",
+          "order": 3,
+          "description": "Quality time plans, communication exercises",
+          "aiLeadDescription": "Designing quality time plans → suggesting communication exercises → setting shared goals",
+          "conversationGoals": [
+            "Plan regular quality time",
+            "Choose communication exercises",
+            "Set shared relationship goals",
+            "Schedule check-ins"
+          ],
+          "completionCriteria": "Plan with quality time and exercises defined",
+          "researchTriggers": [
+            "User wants date ideas",
+            "User wants to improve communication"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "quality-time",
+              "title": "Quality Time Plan",
+              "autoFill": true
+            },
+            {
+              "sectionId": "exercises",
+              "title": "Communication Exercises",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "grow",
+          "name": "Grow",
+          "order": 4,
+          "description": "Building habits, tracking growth, deepening connection",
+          "aiLeadDescription": "Implementing plans → practicing exercises → tracking growth → deepening emotional connection",
+          "conversationGoals": [
+            "Practice communication exercises",
+            "Execute quality time schedule",
+            "Track growth metrics",
+            "Deepen emotional connection"
+          ],
+          "completionCriteria": "Growth habits forming, connection deepening",
+          "researchTriggers": [
+            "User struggles with exercises",
+            "User wants to go deeper"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "growth-log",
+              "title": "Growth Log",
+              "autoFill": true
+            },
+            {
+              "sectionId": "connection",
+              "title": "Connection Tracker",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "review",
+          "name": "Review",
+          "order": 5,
+          "description": "Monthly relationship review and adjustment",
+          "aiLeadDescription": "Reviewing growth → discussing what's working → adjusting plan → celebrating wins",
+          "conversationGoals": [
+            "Review growth and connection",
+            "Discuss what's working",
+            "Adjust plan for next period",
+            "Celebrate wins"
+          ],
+          "completionCriteria": "Relationship review complete, next period adjusted",
+          "researchTriggers": [
+            "User feels stuck",
+            "User wants to celebrate"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "relationship-review",
+              "title": "Relationship Review",
+              "autoFill": true
+            },
+            {
+              "sectionId": "next-goals",
+              "title": "Next Period Goals",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        }
+      ]
+    },
+    "trading-os": {
+      "id": "trading-os",
+      "name": "Trading OS",
+      "emoji": "📈",
+      "shortDescription": "Crypto, stocks, options, portfolio management",
+      "longDescription": "Your trading copilot. From strategy design to portfolio risk management.",
+      "aiSpecialization": "Analyzes market data, tracks positions, manages risk. Suggests entries/exits with evidence.",
+      "statusDot": "idle",
+      "conversationStyle": {
+        "openingPrompt": "Let's set up your trading profile. What markets do you trade, and what's your edge?",
+        "challengePattern": "Questions risk assumptions, flags position sizing issues, surfaces confirmation bias",
+        "researchTrigger": "Symbol, market event, or strategy → pull technical data, news sentiment, fundamentals",
+        "phaseTransitionPrompt": "Trading assessment complete. Ready for {nextPhase}?"
+      },
+      "researchDomains": [
+        {
+          "name": "Technical Analysis",
+          "source": "TradingView, CoinGecko",
+          "description": "Price action, indicators, volume analysis"
+        },
+        {
+          "name": "News Sentiment",
+          "source": "Reuters, CryptoPanic, Fear & Greed Index",
+          "description": "Market sentiment, breaking news, event impact"
+        },
+        {
+          "name": "Fundamentals",
+          "source": "CoinMarketCap, SEC filings",
+          "description": "Project fundamentals, team, roadmap, financials"
+        },
+        {
+          "name": "Risk Metrics",
+          "source": "Portfolio backtesting, VaR models",
+          "description": "Position sizing, correlation, drawdown analysis"
+        }
+      ],
+      "personalityOverrides": {
+        "defaultDepth": "deep",
+        "defaultTone": "direct",
+        "defaultPace": "moderate",
+        "researchDepth": "balanced"
+      },
+      "canvasDefaults": {
+        "initialSections": [
+          {
+            "title": "Trading Profile",
+            "sectionType": "profile",
+            "autoPopulate": true
+          },
+          {
+            "title": "Strategy Notes",
+            "sectionType": "notes",
+            "autoPopulate": true
+          },
+          {
+            "title": "Market Research",
+            "sectionType": "research",
+            "autoPopulate": true
+          },
+          {
+            "title": "Trade Log",
+            "sectionType": "timeline",
+            "autoPopulate": true
+          },
+          {
+            "title": "Risk Checklist",
+            "sectionType": "checklist",
+            "autoPopulate": true
+          }
+        ]
+      },
+      "phases": [
+        {
+          "id": "assess",
+          "name": "Assess",
+          "order": 1,
+          "description": "Trader profile, experience, risk tolerance, goals",
+          "aiLeadDescription": "Asking about trading experience, risk appetite, time horizon, capital → building trader profile",
+          "conversationGoals": [
+            "Document trading experience",
+            "Assess risk tolerance",
+            "Define time horizon",
+            "Establish capital parameters"
+          ],
+          "completionCriteria": "Trader profile with risk parameters documented",
+          "researchTriggers": [
+            "User is a beginner",
+            "User has > 6 figures capital",
+            "User day trades"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "trader-profile",
+              "title": "Trader Profile",
+              "autoFill": true
+            },
+            {
+              "sectionId": "risk-parameters",
+              "title": "Risk Parameters",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "strategy",
+          "name": "Strategy",
+          "order": 2,
+          "description": "Strategy design, edge identification, backtesting",
+          "aiLeadDescription": "Discussing trading styles → identifying edge → designing strategy with rules → setting up backtest framework",
+          "conversationGoals": [
+            "Define trading style",
+            "Identify edge",
+            "Design entry/exit rules",
+            "Set up backtest parameters"
+          ],
+          "completionCriteria": "Strategy with rules and backtest framework defined",
+          "researchTriggers": [
+            "User wants a specific strategy",
+            "User has no edge",
+            "User wants algo trading"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "strategy-design",
+              "title": "Strategy Design",
+              "autoFill": true
+            },
+            {
+              "sectionId": "backtest",
+              "title": "Backtest Framework",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 6,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "execute",
+          "name": "Execute",
+          "order": 3,
+          "description": "Live tracking, entries/exits, journaling",
+          "aiLeadDescription": "Tracking live positions → reviewing entries/exits → journaling each trade with evidence",
+          "conversationGoals": [
+            "Track open positions",
+            "Review entries against strategy",
+            "Journal trades with screenshots",
+            "Monitor risk limits"
+          ],
+          "completionCriteria": "Active position tracking with trade journal",
+          "researchTriggers": [
+            "User enters a trade",
+            "User exits a trade",
+            "User FOMOs"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "positions",
+              "title": "Open Positions",
+              "autoFill": true
+            },
+            {
+              "sectionId": "journal",
+              "title": "Trade Journal",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "monitor",
+          "name": "Monitor",
+          "order": 4,
+          "description": "Portfolio health, drawdown alerts, rebalancing",
+          "aiLeadDescription": "Analyzing portfolio health → detecting drawdowns → rebalancing recommendations → reviewing performance vs benchmark",
+          "conversationGoals": [
+            "Calculate portfolio performance",
+            "Flag drawdown > threshold",
+            "Check correlation/concentration",
+            "Compare to benchmark"
+          ],
+          "completionCriteria": "Portfolio monitoring active, alerts configured",
+          "researchTriggers": [
+            "Drawdown exceeds 10%",
+            "User wants to rebalance",
+            "High correlation detected"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "portfolio-health",
+              "title": "Portfolio Health",
+              "autoFill": true
+            },
+            {
+              "sectionId": "performance",
+              "title": "Performance vs Benchmark",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "review",
+          "name": "Review",
+          "order": 5,
+          "description": "Periodic strategy review, P&L analysis, adjustments",
+          "aiLeadDescription": "Reviewing trade journal → analyzing P&L over period → identifying wins and mistakes → adjusting strategy",
+          "conversationGoals": [
+            "Analyze period P&L",
+            "Identify winning patterns",
+            "Identify mistakes to fix",
+            "Adjust strategy rules"
+          ],
+          "completionCriteria": "Strategy review complete, adjustments documented",
+          "researchTriggers": [
+            "User having losing streak",
+            "Strategy outperforming",
+            "User wants to expand"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "pnl-analysis",
+              "title": "P&L Analysis",
+              "autoFill": true
+            },
+            {
+              "sectionId": "strategy-tweaks",
+              "title": "Strategy Adjustments",
+              "autoFill": true
+            },
+            {
+              "sectionId": "lessons",
+              "title": "Lessons Learned",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 3
+          }
+        }
+      ]
+    },
+    "builder-os": {
+      "id": "builder-os",
+      "name": "Builder OS",
+      "emoji": "🛠️",
+      "shortDescription": "AI products, indie projects, MVPs, product-market fit",
+      "longDescription": "Your product builder copilot. From idea validation to growth and iteration.",
+      "aiSpecialization": "Runs lean validation frameworks, designs MVPs, tracks build cycles, surfaces growth levers.",
+      "statusDot": "idle",
+      "conversationStyle": {
+        "openingPrompt": "What product or project are you building? Tell me the idea — or the problem you're solving.",
+        "challengePattern": "Tests assumptions with lean methodology, questions market size and willingness to pay",
+        "researchTrigger": "Idea, domain, or target user → pull competitive landscape, market data, potential users",
+        "phaseTransitionPrompt": "Your build plan is shaping up. Ready for {nextPhase}?"
+      },
+      "researchDomains": [
+        {
+          "name": "Competitive Landscape",
+          "source": "Product Hunt, Crunchbase, G2",
+          "description": "Competing products, market positioning, funding data"
+        },
+        {
+          "name": "Market Sizing",
+          "source": "Statista, CB Insights",
+          "description": "TAM/SAM/SOM estimates, growth trends"
+        },
+        {
+          "name": "User Research",
+          "source": "Reddit, Twitter, product communities",
+          "description": "User pain points, feature requests, sentiment"
+        },
+        {
+          "name": "Tech Stack",
+          "source": "StackShare, GitHub",
+          "description": "Reference architectures, library options"
+        }
+      ],
+      "personalityOverrides": {
+        "defaultDepth": "deep",
+        "defaultTone": "direct",
+        "defaultPace": "aggressive",
+        "researchDepth": "balanced"
+      },
+      "canvasDefaults": {
+        "initialSections": [
+          {
+            "title": "Project Profile",
+            "sectionType": "profile",
+            "autoPopulate": true
+          },
+          {
+            "title": "Architecture Notes",
+            "sectionType": "notes",
+            "autoPopulate": true
+          },
+          {
+            "title": "Technical Research",
+            "sectionType": "research",
+            "autoPopulate": true
+          },
+          {
+            "title": "Project Timeline",
+            "sectionType": "timeline",
+            "autoPopulate": true
+          },
+          {
+            "title": "Budget & Costs",
+            "sectionType": "budget",
+            "autoPopulate": true
+          },
+          {
+            "title": "Key Decisions",
+            "sectionType": "decisions",
+            "autoPopulate": true
+          }
+        ]
+      },
+      "phases": [
+        {
+          "id": "ideate",
+          "name": "Ideate",
+          "order": 1,
+          "description": "Idea generation, problem discovery, opportunity sizing",
+          "aiLeadDescription": "Clarifying the problem → sizing the opportunity → brainstorming solutions → narrowing to one idea",
+          "conversationGoals": [
+            "Define the problem clearly",
+            "Size the market opportunity",
+            "Brainstorm possible solutions",
+            "Select one idea to pursue"
+          ],
+          "completionCriteria": "One idea selected with problem definition and market size",
+          "researchTriggers": [
+            "User has too many ideas",
+            "User doesn't know the problem",
+            "User wants to build in an existing market"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "problem-definition",
+              "title": "Problem Definition",
+              "autoFill": true
+            },
+            {
+              "sectionId": "idea",
+              "title": "Selected Idea",
+              "autoFill": true
+            },
+            {
+              "sectionId": "market-size",
+              "title": "Market Sizing",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 6,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "validate",
+          "name": "Validate",
+          "order": 2,
+          "description": "Validation through customer discovery, competitive analysis",
+          "aiLeadDescription": "Designing validation experiments → running customer interviews → analyzing competitive landscape → confirming willingness to pay",
+          "conversationGoals": [
+            "Design validation experiments",
+            "Run customer interviews",
+            "Analyze competitors",
+            "Confirm willingness to pay"
+          ],
+          "completionCriteria": "Idea validated with customer evidence and competitive positioning",
+          "researchTriggers": [
+            "User hasn't talked to customers",
+            "Strong competition",
+            "Users won't pay"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "validation-experiments",
+              "title": "Validation Experiments",
+              "autoFill": true
+            },
+            {
+              "sectionId": "customer-interviews",
+              "title": "Customer Evidence",
+              "autoFill": true
+            },
+            {
+              "sectionId": "competitive-analysis",
+              "title": "Competitive Analysis",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 8,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "build",
+          "name": "Build",
+          "order": 3,
+          "description": "MVP definition, tech stack, build plan, milestones",
+          "aiLeadDescription": "Defining MVP scope → selecting tech stack → creating build plan → setting milestones",
+          "conversationGoals": [
+            "Define MVP feature set",
+            "Select tech stack",
+            "Create build plan with milestones",
+            "Set success criteria"
+          ],
+          "completionCriteria": "MVP defined with build plan and milestones",
+          "researchTriggers": [
+            "User over-scoping MVP",
+            "User unsure about tech"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "mvp",
+              "title": "MVP Scope",
+              "autoFill": true
+            },
+            {
+              "sectionId": "tech-stack",
+              "title": "Tech Stack",
+              "autoFill": true
+            },
+            {
+              "sectionId": "build-plan",
+              "title": "Build Plan",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 6,
+            "minGoalsMet": 3
+          }
+        },
+        {
+          "id": "launch",
+          "name": "Launch",
+          "order": 4,
+          "description": "Go-to-market, landing page, launch strategy",
+          "aiLeadDescription": "Designing GTM strategy → creating launch plan → setting up distribution channels → pre-launch checklist",
+          "conversationGoals": [
+            "Design GTM strategy",
+            "Create launch plan",
+            "Set up distribution",
+            "Complete pre-launch checklist"
+          ],
+          "completionCriteria": "Launch plan ready with GTM and distribution",
+          "researchTriggers": [
+            "User wants to launch on Product Hunt",
+            "User has no audience"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "gtm",
+              "title": "Go-to-Market Strategy",
+              "autoFill": true
+            },
+            {
+              "sectionId": "launch-plan",
+              "title": "Launch Plan",
+              "autoFill": true
+            },
+            {
+              "sectionId": "distribution",
+              "title": "Distribution Channels",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "grow",
+          "name": "Grow",
+          "order": 5,
+          "description": "Growth loops, metrics, user acquisition, iteration",
+          "aiLeadDescription": "Setting up growth metrics → designing growth loops → acquiring first users → iterating based on data",
+          "conversationGoals": [
+            "Define key growth metrics",
+            "Design growth loops",
+            "Set user acquisition targets",
+            "Iterate based on feedback"
+          ],
+          "completionCriteria": "Growth metrics tracking active, first users acquired",
+          "researchTriggers": [
+            "User wants to grow faster",
+            "User churning",
+            "Need to monetize"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "growth-metrics",
+              "title": "Growth Metrics",
+              "autoFill": true
+            },
+            {
+              "sectionId": "feedback-loop",
+              "title": "Feedback & Iteration",
+              "autoFill": true
+            },
+            {
+              "sectionId": "acquisition",
+              "title": "User Acquisition",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 5,
+            "minGoalsMet": 2
+          }
+        },
+        {
+          "id": "reflect",
+          "name": "Reflect",
+          "order": 6,
+          "description": "Product-market fit assessment, roadmap, pivot or persevere",
+          "aiLeadDescription": "Assessing PMF signals → reviewing build and data → deciding roadmap: pivot, persevere, or scale",
+          "conversationGoals": [
+            "Assess PMF signals",
+            "Review build and traction",
+            "Decide pivot/persevere/scale",
+            "Plan next 90 days"
+          ],
+          "completionCriteria": "PMF assessment complete, next 90 days planned",
+          "researchTriggers": [
+            "User considering pivot",
+            "User has traction",
+            "User wants to raise"
+          ],
+          "canvasSections": [
+            {
+              "sectionId": "pmf-assessment",
+              "title": "PMF Assessment",
+              "autoFill": true
+            },
+            {
+              "sectionId": "roadmap",
+              "title": "Next 90 Days",
+              "autoFill": true
+            }
+          ],
+          "skipThreshold": {
+            "autoAdvanceAfterMessages": 4,
+            "minGoalsMet": 2
+          }
+        }
+      ]
+    }
+  }
+}

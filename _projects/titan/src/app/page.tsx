@@ -4,10 +4,11 @@ import { useState, useEffect, useRef } from "react";
 import WaitlistForm from "./components/WaitlistForm";
 
 /* ─────────────────────────────────────────────────────────────
-   Particle Background
+   Particle Background (Enhanced with Corona, Nebula, Hue Cycling)
    ───────────────────────────────────────────────────────────── */
 function ParticleField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const mouseRef = useRef({ x: -9999, y: -9999 });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -18,6 +19,8 @@ function ParticleField() {
     let animId: number;
     let w = window.innerWidth;
     let h = window.innerHeight;
+    let time = 0;
+    let nebulaTime = 0;
 
     const resize = () => {
       w = window.innerWidth;
@@ -28,8 +31,37 @@ function ParticleField() {
     window.addEventListener("resize", resize);
     resize();
 
-    const particles: { x: number; y: number; vx: number; vy: number; r: number }[] = [];
-    const count = Math.min(80, Math.floor((w * h) / 20000));
+    // mouse tracking
+    const onMouse = (e: MouseEvent) => {
+      mouseRef.current.x = e.clientX;
+      mouseRef.current.y = e.clientY;
+    };
+    const onLeave = () => {
+      mouseRef.current.x = -9999;
+      mouseRef.current.y = -9999;
+    };
+    window.addEventListener("mousemove", onMouse, { passive: true });
+    window.addEventListener("mouseleave", onLeave, { passive: true });
+
+    const particles: {
+      x: number; y: number;
+      vx: number; vy: number;
+      r: number;
+      baseHue: number;
+      hueShift: number;
+      life: number;
+    }[] = [];
+
+    // Nebula wisps — large slow-drifting blobs
+    const nebulaWisps: {
+      x: number; y: number;
+      vx: number; vy: number;
+      r: number;
+      hue: number;
+    }[] = [];
+
+    const count = Math.min(100, Math.floor((w * h) / 18000));
+    const wispCount = Math.min(6, Math.floor((w * h) / 80000));
 
     for (let i = 0; i < count; i++) {
       particles.push({
@@ -37,38 +69,138 @@ function ParticleField() {
         y: Math.random() * h,
         vx: (Math.random() - 0.5) * 0.3,
         vy: (Math.random() - 0.5) * 0.3,
-        r: Math.random() * 1.5 + 0.5,
+        r: Math.random() * 1.8 + 0.4,
+        baseHue: Math.random() * 360,
+        hueShift: Math.random() * Math.PI * 2,
+        life: 1,
+      });
+    }
+
+    for (let i = 0; i < wispCount; i++) {
+      nebulaWisps.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.08,
+        vy: (Math.random() - 0.5) * 0.08,
+        r: 120 + Math.random() * 180,
+        hue: 180 + Math.random() * 60, // cyan to purple range
       });
     }
 
     const draw = () => {
+      time += 0.005;
+      nebulaTime += 0.002;
       ctx!.clearRect(0, 0, w, h);
+
+      const mx = mouseRef.current.x;
+      const my = mouseRef.current.y;
+
+      // ── 1. Draw nebula wisps behind everything ──
+      for (const wisp of nebulaWisps) {
+        wisp.x += wisp.vx + Math.sin(nebulaTime + wisp.hue) * 0.15;
+        wisp.y += wisp.vy + Math.cos(nebulaTime * 0.7 + wisp.hue * 0.5) * 0.15;
+
+        // gentle edge bounce so they stay visible
+        if (wisp.x < -wisp.r) wisp.x = w + wisp.r;
+        if (wisp.x > w + wisp.r) wisp.x = -wisp.r;
+        if (wisp.y < -wisp.r) wisp.y = h + wisp.r;
+        if (wisp.y > h + wisp.r) wisp.y = -wisp.r;
+
+        const alpha = 0.03 + 0.02 * Math.sin(nebulaTime * 1.3 + wisp.hue);
+        const gradient = ctx!.createRadialGradient(wisp.x, wisp.y, 0, wisp.x, wisp.y, wisp.r);
+        gradient.addColorStop(0, `hsla(${wisp.hue + 10 * Math.sin(nebulaTime + wisp.hue)}, 80%, 60%, ${alpha})`);
+        gradient.addColorStop(0.5, `hsla(${wisp.hue - 30}, 70%, 40%, ${alpha * 0.6})`);
+        gradient.addColorStop(1, `hsla(${wisp.hue - 60}, 60%, 20%, 0)`);
+
+        ctx!.beginPath();
+        ctx!.arc(wisp.x, wisp.y, wisp.r, 0, Math.PI * 2);
+        ctx!.fillStyle = gradient;
+        ctx!.fill();
+      }
+
+      // ── 2. Main particles with hue cycling ──
       for (const p of particles) {
+        // drift
         p.x += p.vx;
         p.y += p.vy;
+
+        // subtle sine wave wobble
+        p.vx += Math.sin(time + p.hueShift) * 0.002;
+        p.vy += Math.cos(time + p.hueShift * 1.3) * 0.002;
+
+        // clamp velocity
+        const maxV = 0.4;
+        if (Math.abs(p.vx) > maxV) p.vx = Math.sign(p.vx) * maxV;
+        if (Math.abs(p.vy) > maxV) p.vy = Math.sign(p.vy) * maxV;
+
+        // edge wrap
         if (p.x < 0) p.x = w;
         if (p.x > w) p.x = 0;
         if (p.y < 0) p.y = h;
         if (p.y > h) p.y = 0;
 
+        // mouse repel
+        const dx = p.x - mx;
+        const dy = p.y - my;
+        const distMouse = Math.sqrt(dx * dx + dy * dy);
+        if (distMouse < 120 && distMouse > 0) {
+          const force = (120 - distMouse) / 120;
+          p.x += (dx / distMouse) * force * 2;
+          p.y += (dy / distMouse) * force * 2;
+        }
+
+        // cycle hue over time
+        const hue = (p.baseHue + time * 12 + p.hueShift * 8) % 360;
+        const pulse = 0.25 + 0.15 * Math.sin(time * 2 + p.hueShift);
+
+        // draw particle
         ctx!.beginPath();
         ctx!.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx!.fillStyle = "rgba(34, 211, 238, 0.3)";
+        ctx!.fillStyle = `hsla(${hue}, 80%, 70%, ${pulse})`;
         ctx!.fill();
+
+        // soft glow ring on larger particles
+        if (p.r > 1.3) {
+          ctx!.beginPath();
+          ctx!.arc(p.x, p.y, p.r * 3, 0, Math.PI * 2);
+          ctx!.fillStyle = `hsla(${hue}, 80%, 70%, ${pulse * 0.12})`;
+          ctx!.fill();
+        }
       }
 
-      // subtle connections
+      // ── 3. Corona burst — occasional star-burst from center ──
+      const coronaChance = 0.008;
+      if (Math.random() < coronaChance) {
+        const cx = w / 2 + (Math.random() - 0.5) * w * 0.5;
+        const cy = h / 2 + (Math.random() - 0.5) * h * 0.3;
+        const countBeams = 6 + Math.floor(Math.random() * 8);
+        const hue = (time * 30) % 360;
+        for (let i = 0; i < countBeams; i++) {
+          const angle = (Math.PI * 2 * i) / countBeams + (Math.random() - 0.5) * 0.4;
+          const len = 40 + Math.random() * 80;
+          ctx!.beginPath();
+          ctx!.moveTo(cx, cy);
+          ctx!.lineTo(cx + Math.cos(angle) * len, cy + Math.sin(angle) * len);
+          ctx!.strokeStyle = `hsla(${hue + i * 20}, 90%, 70%, 0.15)`;
+          ctx!.lineWidth = 0.5 + Math.random();
+          ctx!.stroke();
+        }
+      }
+
+      // ── 4. Dynamic connections with hue variation ──
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
+          if (dist < 130) {
+            const alpha = 0.07 * (1 - dist / 130);
+            const hue = (particles[i].baseHue + particles[j].baseHue) / 2 + time * 10;
             ctx!.beginPath();
             ctx!.moveTo(particles[i].x, particles[i].y);
             ctx!.lineTo(particles[j].x, particles[j].y);
-            ctx!.strokeStyle = `rgba(34, 211, 238, ${0.08 * (1 - dist / 120)})`;
-            ctx!.lineWidth = 0.5;
+            ctx!.strokeStyle = `hsla(${hue % 360}, 70%, 70%, ${alpha})`;
+            ctx!.lineWidth = 0.6;
             ctx!.stroke();
           }
         }
@@ -81,6 +213,8 @@ function ParticleField() {
     return () => {
       cancelAnimationFrame(animId);
       window.removeEventListener("resize", resize);
+      window.removeEventListener("mousemove", onMouse);
+      window.removeEventListener("mouseleave", onLeave);
     };
   }, []);
 
@@ -285,11 +419,61 @@ const treeNodes = [
    ───────────────────────────────────────────────────────────── */
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40);
+      // auto-close mobile menu on scroll
+      if (mobileOpen) setMobileOpen(false);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Close on Escape
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [mobileOpen]);
+
+  // Close on outside click
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const onClick = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMobileOpen(false);
+      }
+    };
+    // slight delay so the toggle click itself doesn't close immediately
+    const timer = setTimeout(() => {
+      window.addEventListener("click", onClick);
+    }, 0);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("click", onClick);
+    };
+  }, [mobileOpen]);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  const closeMobile = () => setMobileOpen(false);
 
   return (
     <nav
@@ -299,32 +483,107 @@ function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <span className="text-2xl">🗡️</span>
-          <span className="text-lg font-bold">
-            <span className="text-cyan-400">Ti</span>
-            <span className="text-purple-400">tan</span>
-          </span>
+      <div ref={menuRef}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <span className="text-2xl">🗡️</span>
+            <span className="text-lg font-bold">
+              <span className="text-cyan-400">Ti</span>
+              <span className="text-purple-400">tan</span>
+            </span>
+          </div>
+
+          {/* Nav links (desktop) */}
+          <div className="hidden md:flex items-center gap-8 text-sm text-slate-400">
+            <a href="/features" className="hover:text-cyan-400 transition-colors">
+              Features
+            </a>
+            <a href="/pricing" className="hover:text-cyan-400 transition-colors">
+              Pricing
+            </a>
+            <a href="/robotics" className="hover:text-cyan-400 transition-colors">
+              Robotics
+            </a>
+            <a href="/affiliates" className="hover:text-cyan-400 transition-colors">
+              Affiliates
+            </a>
+          </div>
+
+          {/* Desktop CTA */}
+          <button className="hidden md:inline-flex px-4 py-1.5 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-semibold hover:shadow-lg hover:shadow-cyan-500/30 transition-all">
+            Launch App
+          </button>
+
+          {/* Hamburger button (mobile) */}
+          <button
+            onClick={() => setMobileOpen((o) => !o)}
+            className="md:hidden relative w-8 h-8 flex flex-col items-center justify-center gap-[5px]"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            <span
+              className={`block h-[2px] w-6 rounded bg-slate-300 transition-all duration-300 ${
+                mobileOpen ? "rotate-45 translate-y-[7px]" : ""
+              }`}
+            />
+            <span
+              className={`block h-[2px] w-6 rounded bg-slate-300 transition-all duration-300 ${
+                mobileOpen ? "opacity-0 scale-0" : ""
+              }`}
+            />
+            <span
+              className={`block h-[2px] w-6 rounded bg-slate-300 transition-all duration-300 ${
+                mobileOpen ? "-rotate-45 -translate-y-[7px]" : ""
+              }`}
+            />
+          </button>
         </div>
 
-        {/* Nav links */}
-        <div className="hidden md:flex items-center gap-8 text-sm text-slate-400">
-          <a href="/features" className="hover:text-cyan-400 transition-colors">
-            Features
-          </a>
-          <a href="/pricing" className="hover:text-cyan-400 transition-colors">
-            Pricing
-          </a>
-          <a href="/robotics" className="hover:text-cyan-400 transition-colors">
-            Robotics
-          </a>
+        {/* Mobile slide-down menu */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            mobileOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="mx-4 sm:mx-6 mb-3 rounded-2xl border border-[#1e293b]/60 bg-[#08080ff0] backdrop-blur-xl p-5 space-y-1">
+            <a
+              href="/features"
+              onClick={closeMobile}
+              className="block px-4 py-3 rounded-xl text-sm text-slate-300 hover:text-cyan-400 hover:bg-cyan-500/5 transition-all"
+            >
+              Features
+            </a>
+            <a
+              href="/pricing"
+              onClick={closeMobile}
+              className="block px-4 py-3 rounded-xl text-sm text-slate-300 hover:text-cyan-400 hover:bg-cyan-500/5 transition-all"
+            >
+              Pricing
+            </a>
+            <a
+              href="/robotics"
+              onClick={closeMobile}
+              className="block px-4 py-3 rounded-xl text-sm text-slate-300 hover:text-cyan-400 hover:bg-cyan-500/5 transition-all"
+            >
+              Robotics
+            </a>
+            <a
+              href="/affiliates"
+              onClick={closeMobile}
+              className="block px-4 py-3 rounded-xl text-sm text-slate-300 hover:text-cyan-400 hover:bg-cyan-500/5 transition-all"
+            >
+              Affiliates
+            </a>
+            <div className="pt-2">
+              <button
+                onClick={closeMobile}
+                className="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-semibold hover:shadow-lg hover:shadow-cyan-500/30 transition-all"
+              >
+                Launch App
+              </button>
+            </div>
+          </div>
         </div>
-
-        <button className="px-4 py-1.5 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-semibold hover:shadow-lg hover:shadow-cyan-500/30 transition-all">
-          Launch App
-        </button>
       </div>
     </nav>
   );

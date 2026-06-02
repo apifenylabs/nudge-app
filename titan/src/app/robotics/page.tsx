@@ -19,12 +19,14 @@ import MascotDisplay from '../../components/organisms/MascotDisplay';
 import { useLevelProgression } from '../../lib/swarm/use-level-progression';
 import { checkGodTierUnlock, getGodTierAbilities, getGodTierTier } from '../../lib/swarm/god-tier-engine';
 
-const fadeIn = {
+import type { Variants } from 'framer-motion';
+
+const fadeIn: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: i * 0.12, ease: 'easeOut' },
+    transition: { duration: 0.5, delay: i * 0.12, ease: 'easeOut' as const },
   }),
 };
 

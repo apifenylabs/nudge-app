@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-05-31T21:18:46.530Z",
+  "generatedAt": "2026-06-02T05:21:58.823Z",
   "plugins": [
     {
       "id": "travel",
@@ -21,7 +21,7 @@
       "phaseCount": 6,
       "displayOrder": 1,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T21:18:46.529Z",
+      "updatedAt": "2026-06-02T05:21:58.823Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -50,7 +50,7 @@
       "phaseCount": 5,
       "displayOrder": 2,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T21:18:46.529Z",
+      "updatedAt": "2026-06-02T05:21:58.823Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -80,7 +80,7 @@
       "phaseCount": 5,
       "displayOrder": 3,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T21:18:46.529Z",
+      "updatedAt": "2026-06-02T05:21:58.823Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -110,7 +110,7 @@
       "phaseCount": 5,
       "displayOrder": 4,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T21:18:46.529Z",
+      "updatedAt": "2026-06-02T05:21:58.823Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -125,9 +125,9 @@
       "name": "Learning OS",
       "emoji": "📚",
       "description": "Courses, skills, reading, certifications",
-      "status": "beta",
+      "status": "active",
       "gradient": "linear-gradient(135deg, #F59E0B, #EA580C)",
-      "badge": "Coming soon",
+      "badge": "Skill builder",
       "category": "learning",
       "features": [
         "AI maps your learning goals and motivation",
@@ -139,7 +139,7 @@
       "phaseCount": 5,
       "displayOrder": 5,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T21:18:46.529Z",
+      "updatedAt": "2026-06-02T05:21:58.823Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -154,9 +154,9 @@
       "name": "Family OS",
       "emoji": "❤️",
       "description": "Family events, care plans, shared goals",
-      "status": "beta",
+      "status": "active",
       "gradient": "linear-gradient(135deg, #EC4899, #F43F5E)",
-      "badge": "Coming soon",
+      "badge": "Family hub",
       "category": "lifestyle",
       "features": [
         "Family profile and relationship mapping",
@@ -168,7 +168,7 @@
       "phaseCount": 5,
       "displayOrder": 6,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T21:18:46.529Z",
+      "updatedAt": "2026-06-02T05:21:58.823Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -183,9 +183,9 @@
       "name": "Home OS",
       "emoji": "🏠",
       "description": "Home improvement, maintenance, organization",
-      "status": "beta",
+      "status": "active",
       "gradient": "linear-gradient(135deg, #EAB308, #D97706)",
-      "badge": "Coming soon",
+      "badge": "Home hub",
       "category": "home",
       "features": [
         "Full home inventory and project catalog",
@@ -198,7 +198,7 @@
       "phaseCount": 5,
       "displayOrder": 7,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T21:18:46.529Z",
+      "updatedAt": "2026-06-02T05:21:58.823Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -213,9 +213,9 @@
       "name": "Social OS",
       "emoji": "🎉",
       "description": "Social calendar, friendships, events",
-      "status": "beta",
+      "status": "active",
       "gradient": "linear-gradient(135deg, #D946EF, #9333EA)",
-      "badge": "Coming soon",
+      "badge": "Social hub",
       "category": "lifestyle",
       "features": [
         "Social landscape mapping with relationship frequency",
@@ -227,7 +227,7 @@
       "phaseCount": 4,
       "displayOrder": 8,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T21:18:46.529Z",
+      "updatedAt": "2026-06-02T05:21:58.823Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -242,9 +242,9 @@
       "name": "Relationships OS",
       "emoji": "💑",
       "description": "Partner, communication, quality time",
-      "status": "beta",
+      "status": "active",
       "gradient": "linear-gradient(135deg, #EF4444, #E11D48)",
-      "badge": "Coming soon",
+      "badge": "Relationship hub",
       "category": "relationships",
       "features": [
         "Relationship health assessment and baseline",
@@ -257,7 +257,7 @@
       "phaseCount": 4,
       "displayOrder": 9,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T21:18:46.529Z",
+      "updatedAt": "2026-06-02T05:21:58.823Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -272,9 +272,9 @@
       "name": "Productivity OS",
       "emoji": "⚡",
       "description": "Habits, systems, deep work, and personal effectiveness",
-      "status": "beta",
+      "status": "active",
       "gradient": "linear-gradient(135deg, #FBBF24, #CA8A04)",
-      "badge": "Coming soon",
+      "badge": "System builder",
       "category": "productivity",
       "features": [
         "Habit audit with time tracking and energy mapping",
@@ -287,7 +287,37 @@
       "phaseCount": 5,
       "displayOrder": 10,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T21:18:46.530Z",
+      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "nutrition",
+      "name": "Nutrition OS",
+      "emoji": "🥗",
+      "description": "Meal planning, diet tracking, nutritional goals",
+      "status": "active",
+      "gradient": "linear-gradient(135deg, #22C55E, #65A30D)",
+      "badge": "Diet coach",
+      "category": "nutrition",
+      "features": [
+        "Full nutrition profile — diet, restrictions, goals, health conditions",
+        "Diet quality audit with macronutrient and micronutrient gap analysis",
+        "Personalized eating plan respecting budget, time, and cooking skill",
+        "Habit-first approach: one micro-habit at a time for lasting change",
+        "Weekly check-ins with pattern detection and plan adjustment",
+        "Evidence-based guidance citing nutrition research and guidelines"
+      ],
+      "phaseCount": 5,
+      "displayOrder": 11,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-06-02T05:21:58.823Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -315,9 +345,9 @@
         "Monthly mindfulness score with trend tracking"
       ],
       "phaseCount": 6,
-      "displayOrder": 11,
+      "displayOrder": 12,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-05-31T21:18:46.530Z",
+      "updatedAt": "2026-06-02T05:21:58.823Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,

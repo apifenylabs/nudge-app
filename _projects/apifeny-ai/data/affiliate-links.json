@@ -1,0 +1,478 @@
+{
+  "description": "Apifeny AI — Affiliate & Referral Link Registry (Expanded)",
+  "updated": "2026-06-02",
+  "links": [
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "url": "/api/redirect?tool=notion-ai",
+      "description": "AI-powered workspace that combines docs, wikis, and projects. Notion AI add-on $10/member/mo.",
+      "category": "Productivity",
+      "commission": "50% recurring for 12 months"
+    },
+    {
+      "id": "jasper",
+      "name": "Jasper",
+      "url": "/api/redirect?tool=jasper",
+      "description": "AI marketing copilot for on-brand content 10x faster. 7-day free trial, Creator from $49/mo.",
+      "category": "Writing & Content",
+      "commission": "25-30% recurring commission"
+    },
+    {
+      "id": "copy-ai",
+      "name": "Copy.ai",
+      "url": "/api/redirect?tool=copy-ai",
+      "description": "AI-powered GTM platform. Write copy, automate workflows, and scale content with AI.",
+      "category": "Writing & Content",
+      "commission": "45% first-year commission"
+    },
+    {
+      "id": "writesonic",
+      "name": "Writesonic",
+      "url": "/api/redirect?tool=writesonic",
+      "description": "AI writing assistant for blogs, ads, and marketing content. Free tier, paid from $19/mo.",
+      "category": "Writing & Content",
+      "commission": "Up to 30% recurring commission"
+    },
+    {
+      "id": "rytr",
+      "name": "Rytr",
+      "url": "https://rytr.me/?via=apifeny",
+      "description": "Affordable AI writing assistant. Unlimited plan from $9/mo. Supports 40+ use cases.",
+      "category": "Writing & Content",
+      "commission": "20% recurring commission"
+    },
+    {
+      "id": "synthesia",
+      "name": "Synthesia",
+      "url": "/api/redirect?tool=synthesia",
+      "description": "Create professional AI avatar videos from text. No cameras or actors needed.",
+      "category": "Video & Animation",
+      "commission": "Up to 30% recurring commission"
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "url": "/api/redirect?tool=runway",
+      "description": "AI video creation and editing with state-of-the-art Gen-3 generative models.",
+      "category": "Video & Animation",
+      "commission": "20% recurring on subscription"
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "url": "/api/redirect?tool=elevenlabs",
+      "description": "Industry-leading AI text-to-speech and voice cloning in 29+ languages.",
+      "category": "Audio & Music",
+      "commission": "20% recurring commission"
+    },
+    {
+      "id": "murf-ai",
+      "name": "Murf AI",
+      "url": "/api/redirect?tool=murf-ai",
+      "description": "AI voice generator with 120+ natural-sounding voices across 20+ languages.",
+      "category": "Audio & Music",
+      "commission": "20% recurring for 24 months"
+    },
+    {
+      "id": "pictory-ai",
+      "name": "Pictory AI",
+      "url": "https://pictory.ai/?ref=apifeny",
+      "description": "AI video generator that turns scripts and articles into engaging short videos.",
+      "category": "Video & Animation",
+      "commission": "25% recurring commission"
+    },
+    {
+      "id": "descript",
+      "name": "Descript",
+      "url": "/api/redirect?tool=descript",
+      "description": "All-in-one video and audio editing. Edit media by editing text. Free tier, paid from $12/mo.",
+      "category": "Video & Animation",
+      "commission": "20% recurring commission"
+    },
+    {
+      "id": "canva-ai",
+      "name": "Canva Magic Studio",
+      "url": "/api/redirect?tool=canva-ai",
+      "description": "Design anything with AI — presentations, social media, videos, and documents. Pro from $13/mo.",
+      "category": "Design & Creative",
+      "commission": "Flat fee per conversion"
+    },
+    {
+      "id": "grammarly",
+      "name": "Grammarly",
+      "url": "https://www.grammarly.com/affiliates?ref=apifeny",
+      "description": "AI writing assistant for grammar, tone, and clarity. Premium from $12/mo.",
+      "category": "Writing & Content",
+      "commission": "25% recurring commission"
+    },
+    {
+      "id": "heygen",
+      "name": "HeyGen",
+      "url": "/api/redirect?tool=heygen",
+      "description": "AI video platform with talking avatars. Create videos in minutes from text. Paid from $24/mo.",
+      "category": "Video & Animation",
+      "commission": "Affiliate program available"
+    },
+    {
+      "id": "zapier-central",
+      "name": "Zapier Central",
+      "url": "/api/redirect?tool=zapier-central",
+      "description": "AI-powered automation across 5,000+ apps. Central is Zapier's AI agent.",
+      "category": "Productivity",
+      "commission": "20-25% recurring commission"
+    },
+    {
+      "id": "make",
+      "name": "Make (Integromat)",
+      "url": "/api/redirect?tool=make",
+      "description": "Visual no-code automation platform. Connect apps and build workflows visually.",
+      "category": "No-Code & Automation",
+      "commission": "20% recurring commission"
+    },
+    {
+      "id": "semrush",
+      "name": "Semrush",
+      "url": "/api/redirect?tool=semrush",
+      "description": "All-in-one SEO toolkit with keyword research, competitor analysis, and content optimization.",
+      "category": "Marketing & SEO",
+      "commission": "$200-450 flat per sale (120-day cookie)"
+    },
+    {
+      "id": "surferseo",
+      "name": "SurferSEO",
+      "url": "/api/redirect?tool=surferseo",
+      "description": "AI-powered content optimization for SEO. Data-driven writing recommendations.",
+      "category": "Marketing & SEO",
+      "commission": "25% recurring commission"
+    },
+    {
+      "id": "intercom-ai",
+      "name": "Intercom",
+      "url": "/api/redirect?tool=intercom-ai",
+      "description": "AI customer service platform with Fin AI agent. Paid from $39/mo.",
+      "category": "Customer Service & Support",
+      "commission": "Partner program with recurring commission"
+    },
+    {
+      "id": "bolt-new",
+      "name": "Bolt.new",
+      "url": "/api/redirect?tool=bolt-new",
+      "description": "AI-powered full-stack app builder. Describe your idea in natural language and deploy.",
+      "category": "Code & Development",
+      "commission": "200K bonus tokens + 5M if friend upgrades"
+    },
+    {
+      "id": "replit-agent",
+      "name": "Replit Agent",
+      "url": "/api/redirect?tool=replit-agent",
+      "description": "AI coding environment. Build and deploy apps from browser. Core from $25/mo.",
+      "category": "Code & Development",
+      "commission": "$10 per friend upgrade (referral)"
+    },
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "url": "https://lovable.dev/affiliates",
+      "description": "AI app builder that creates full-stack web applications from prompts. Free tier available.",
+      "category": "Code & Development",
+      "commission": "10-20% recurring commission"
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf",
+      "url": "/api/redirect?tool=windsurf",
+      "description": "AI-native IDE by Codeium with intelligent code flow and context-aware suggestions.",
+      "category": "Code & Development",
+      "commission": "500 bonus flex credits (referral)"
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "description": "Most popular AI assistant by OpenAI for writing, coding, brainstorming, and research. Pro at $20/mo.",
+      "category": "Chatbots & Assistants",
+      "commission": "None (free tier / no public affiliate program)"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "description": "Anthropic's thoughtful AI assistant that excels at long documents and complex reasoning.",
+      "category": "Chatbots & Assistants",
+      "commission": "None (no public affiliate program)"
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini",
+      "url": "https://gemini.google.com",
+      "description": "Google's most capable AI model with deep Google ecosystem integration. Free with Google account.",
+      "category": "Chatbots & Assistants",
+      "commission": "None (free tier)"
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "url": "https://perplexity.ai",
+      "description": "AI answer engine with real-time citations. Free for basic research, Pro at $20/mo.",
+      "category": "Research & Analysis",
+      "commission": "None (no public affiliate program)"
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "url": "https://www.midjourney.com",
+      "description": "Industry-leading AI image generation. From $10/mo for basic plan.",
+      "category": "Image Generation",
+      "commission": "None (no public affiliate program)"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "url": "https://cursor.com",
+      "description": "AI-first code editor. Write code 10x faster with AI. Free tier, Pro at $20/mo.",
+      "category": "Code & Development",
+      "commission": "None (no public affiliate program)"
+    },
+    {
+      "id": "deepl",
+      "name": "DeepL Pro",
+      "url": "https://www.deepl.com/pro",
+      "description": "Best-in-class AI translation for CJK languages. Free tier, Pro from $8.99/mo.",
+      "category": "Writing & Content",
+      "commission": "Partner program available"
+    },
+    {
+      "id": "otter-ai",
+      "name": "Otter.ai",
+      "url": "https://otter.ai",
+      "description": "AI meeting assistant that transcribes and summarizes meetings in real-time.",
+      "category": "Productivity",
+      "commission": "Affiliate program available"
+    },
+    {
+      "id": "fireflies-ai",
+      "name": "Fireflies.ai",
+      "url": "https://fireflies.ai",
+      "description": "AI meeting transcription and note-taking across Zoom, Teams, and Google Meet.",
+      "category": "Productivity",
+      "commission": "Affiliate program available"
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "url": "https://gamma.app",
+      "description": "AI-powered presentation and document creation. Free tier, paid from $8/mo.",
+      "category": "Design & Creative",
+      "commission": "Affiliate program with recurring commission"
+    },
+    {
+      "id": "krisp",
+      "name": "Krisp",
+      "url": "https://krisp.ai",
+      "description": "AI noise cancellation for meetings and calls. Works with any communication app.",
+      "category": "Audio & Music",
+      "commission": "Affiliate program available"
+    },
+    {
+      "id": "suno",
+      "name": "Suno",
+      "url": "https://suno.com",
+      "description": "AI music generation platform. Create songs from text prompts. Free tier, Pro from $10/mo.",
+      "category": "Audio & Music",
+      "commission": "None (no public affiliate program)"
+    },
+    {
+      "id": "udio",
+      "name": "Udio",
+      "url": "https://udio.com",
+      "description": "High-fidelity AI music generation. Free tier with daily credits, Pro from $10/mo.",
+      "category": "Audio & Music",
+      "commission": "None (no public affiliate program)"
+    },
+    {
+      "id": "luma-ai",
+      "name": "Luma AI",
+      "url": "https://lumalabs.ai",
+      "description": "AI video generation and 3D capture. Dream Machine for text-to-video. Paid from $30/mo.",
+      "category": "Video & Animation",
+      "commission": "None (no public affiliate program)"
+    },
+    {
+      "id": "pika",
+      "name": "Pika",
+      "url": "https://pika.art",
+      "description": "AI video generation platform for creators. Free tier, paid from $10/mo.",
+      "category": "Video & Animation",
+      "commission": "None (no public affiliate program)"
+    },
+    {
+      "id": "leonardo-ai",
+      "name": "Leonardo AI",
+      "url": "https://leonardo.ai",
+      "description": "AI image generation with fine-tuned models. Free daily tokens, paid from $10/mo.",
+      "category": "Image Generation",
+      "commission": "None (no public affiliate program)"
+    },
+    {
+      "id": "ahrefs",
+      "name": "Ahrefs",
+      "url": "https://ahrefs.com",
+      "description": "SEO toolkit with the largest live backlink index. Keyword research, site audits, and rank tracking.",
+      "category": "Marketing & SEO",
+      "commission": "Flat fee per sale"
+    },
+    {
+      "id": "motion",
+      "name": "Motion",
+      "url": "https://www.usemotion.com",
+      "description": "AI-powered calendar and project management. Auto-schedules your work. 7-day free trial.",
+      "category": "Productivity",
+      "commission": "Affiliate program available"
+    },
+    {
+      "id": "mem",
+      "name": "Mem",
+      "url": "https://mem.ai",
+      "description": "AI knowledge management that auto-tags and organizes everything you save. Pro from $14.99/mo.",
+      "category": "Productivity",
+      "commission": "Affiliate program available"
+    },
+    {
+      "id": "duolingo-max",
+      "name": "Duolingo Max",
+      "url": "https://www.duolingo.com/max",
+      "description": "Premium AI-powered language learning with explain-my-answer and roleplay features.",
+      "category": "Education & Learning",
+      "commission": "None (no public affiliate program)"
+    },
+    {
+      "id": "khanmigo",
+      "name": "Khanmigo",
+      "url": "https://www.khanacademy.org/khan-labs",
+      "description": "AI tutor by Khan Academy. Socratic-style guidance for learners. $44/mo or $44/yr.",
+      "category": "Education & Learning",
+      "commission": "None (no public affiliate program)"
+    },
+    {
+      "id": "coze",
+      "name": "Coze",
+      "url": "https://www.coze.com",
+      "description": "AI bot builder by ByteDance. Create and publish AI assistants without coding. Free to use.",
+      "category": "No-Code & Automation",
+      "commission": "None (free tier)"
+    },
+    {
+      "id": "dify",
+      "name": "Dify",
+      "url": "https://dify.ai",
+      "description": "Open-source LLM app builder. Create AI workflows with drag-and-drop. Self-host or cloud.",
+      "category": "No-Code & Automation",
+      "commission": "None (open-source / free community edition)"
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "url": "https://n8n.io",
+      "description": "Open-source workflow automation. Self-host free or cloud from $20/mo.",
+      "category": "No-Code & Automation",
+      "commission": "Affiliate program available"
+    },
+    {
+      "id": "browse-ai",
+      "name": "Browse AI",
+      "url": "https://www.browse.ai",
+      "description": "Web scraping and monitoring platform. Extract data from any website without code.",
+      "category": "No-Code & Automation",
+      "commission": "Affiliate program available"
+    },
+    {
+      "id": "lindy-ai",
+      "name": "Lindy AI",
+      "url": "https://lindy.ai",
+      "description": "AI workflow assistant that handles scheduling, emails, and admin tasks. Free tier, Pro from $25/mo.",
+      "category": "No-Code & Automation",
+      "commission": "Affiliate program available"
+    },
+    {
+      "id": "firecrawl",
+      "name": "FireCrawl",
+      "url": "https://firecrawl.dev",
+      "description": "Web crawling API optimized for AI. Converts websites into clean LLM-ready markdown.",
+      "category": "Data & Analytics",
+      "commission": "Affiliate program available"
+    },
+    {
+      "id": "tavily",
+      "name": "Tavily",
+      "url": "https://tavily.com",
+      "description": "AI-optimized search API for agents and LLMs. Free tier with 1000 queries/mo.",
+      "category": "Research & Analysis",
+      "commission": "None (API-based pricing)"
+    },
+    {
+      "id": "exa",
+      "name": "Exa AI",
+      "url": "https://exa.ai",
+      "description": "Semantic web search API built for AI agents. Free tier, Pro from $25/mo.",
+      "category": "Research & Analysis",
+      "commission": "None (API-based pricing)"
+    },
+    {
+      "id": "hugging-face",
+      "name": "Hugging Face",
+      "url": "https://huggingface.co",
+      "description": "The AI community's model hub. Host, train, and deploy ML models. Free tier available.",
+      "category": "Open Source & ML Platforms",
+      "commission": "None (community platform)"
+    },
+    {
+      "id": "langchain",
+      "name": "LangChain",
+      "url": "https://www.langchain.com",
+      "description": "Open-source framework for building LLM-powered applications. LangSmith for observability.",
+      "category": "Open Source & ML Platforms",
+      "commission": "None (open-source / pay-as-you-go)"
+    },
+    {
+      "id": "replicate",
+      "name": "Replicate",
+      "url": "https://replicate.com",
+      "description": "Run and fine-tune open-source ML models with a cloud API. Pay-as-you-go pricing.",
+      "category": "AI Agents",
+      "commission": "None (API-based pricing)"
+    },
+    {
+      "id": "groq",
+      "name": "Groq",
+      "url": "https://groq.com",
+      "description": "Blazing-fast AI inference with LPU architecture. Free API tier, no credit card needed.",
+      "category": "AI Agents",
+      "commission": "None (free inference API)"
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "url": "https://openrouter.ai",
+      "description": "Unified API gateway to 200+ AI models. One API, many models. Free tier available.",
+      "category": "AI Agents",
+      "commission": "None (API-based pricing)"
+    },
+    {
+      "id": "together-ai",
+      "name": "Together AI",
+      "url": "https://together.ai",
+      "description": "Cloud platform for running open-source AI models. API access from $0.10/M tokens.",
+      "category": "AI Agents",
+      "commission": "None (API-based pricing)"
+    },
+    {
+      "id": "zendesk-answer-bot",
+      "name": "Zendesk Answer Bot",
+      "url": "https://www.zendesk.com/answer-bot/",
+      "description": "AI-powered self-service assistant for customer support. Part of Zendesk Suite from $19/mo.",
+      "category": "Customer Service & Support",
+      "commission": "Partner program available"
+    }
+  ]
+}

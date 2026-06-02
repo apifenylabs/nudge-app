@@ -1,0 +1,31 @@
+{
+  "slug": "south-korea-ev-charging-complete-guide-2026",
+  "title": "South Korea EV Charging Guide 2026 — Networks, Highway Stops & Complete Route Planning",
+  "excerpt": "South Korea has one of the densest EV charging networks in Asia. Guide to networks (EV Infra, KEPCO, SK Signet, Hyundai E-Pit), expressway charging at every rest stop, Seoul metro coverage, costs, and the best EV road trips including Seoul-Busan, Seoul-Sokcho, and the southern flavors loop.",
+  "date": "2026-06-02",
+  "author": "EV Charging Asia Team",
+  "tags": [
+    "ev-charging",
+    "south-korea",
+    "seoul",
+    "busan",
+    "kepco",
+    "hyundai-e-pit",
+    "ccs1",
+    "ev-road-trip",
+    "expressway-charging",
+    "korea-travel",
+    "highway",
+    "ev-high-speed"
+  ],
+  "readingTime": "11 min read",
+  "content": "# South Korea EV Charging Guide 2026 — Networks, Highway Stops & Complete Route Planning\n\nSouth Korea has one of the densest EV charging networks in Asia — you're never more than 30 km from a fast charger anywhere on the mainland. With the Korean government aggressively subsidizing EVs and charging infrastructure, 2026 is the best year yet for an EV road trip through Korea.\n\n## The EV Charging Landscape in South Korea (2026)\n\nSouth Korea's charging infrastructure has reached near-ubiquity:\n\n- **240,000+** public charging points\n- **45,000+** DC fast charging stations\n- **Every expressway rest stop** has DC fast charging (100-350 kW)\n- **CCS1** is the standard (not CCS2 — Korea and the US share CCS1)\n- **CHAdeMO** still available at older stations for Nissan Leaf imports\n\n### Major Charging Networks\n\n| Network | Stations | Connectors | Payment |\n|---------|----------|------------|---------|\n| **EV Infra** (Government) | 90,000+ | CCS1, CHAdeMO | App / RFID |\n| **KEPCO** (Korea Electric Power) | 45,000+ | CCS1 | App / Card |\n| **SK Signet** | 30,000+ | CCS1, 350 kW | App |\n| **LS E-Link** | 25,000+ | CCS1 | App / RFID |\n| **Hyundai E-Pit** | 12,000+ | CCS1 (350 kW) | App / Card |\n| **Kia Charge** | 8,000+ | CCS1 | App (Roaming) |\n\n### The 3 Must-Have Apps\n\n1. **EV Infra** — Biggest network, covers government-funded chargers\n2. **Hyundai E-Pit** — Best for fast highway charging (350 kW)\n3. **Kia Charge** — Roaming access to multiple networks\n\n## Expressway Charging (Korea's Superpower)\n\nKorea's expressway rest areas (휴게소) are EV heaven. **Every single expressway rest stop** has at least 4 DC fast chargers, with busier ones having 8-12.\n\n### Key Expressway Corridors\n\n**Gyeongbu Expressway (Seoul → Busan, ~400 km)**\nCharging at every rest stop. Use Hyundai E-Pit for 350 kW charging.\n\n**Honam Expressway (Seoul → Gwangju → Mokpo, ~330 km)**\nThe Iksan rest stop has a dedicated 12-bay EV charging plaza.\n\n**Yeongdong Expressway (Seoul → Gangneung, ~230 km)**\nPopular ski route — winter range is reduced 25-30%.\n\n## Best EV Road Trips from Seoul\n\n### 1. Seoul → Busan (The Classic)\n**Distance**: ~400 km, **Charging**: 6+ rest stops with 350 kW chargers\n**Best for**: Korea's most famous road trip. Do it in a Hyundai Ioniq 6.\n\n### 2. Seoul → Sokcho (East Coast)\n**Distance**: ~200 km, **Duration**: ~2.5 hours\n**Best for**: Seoraksan National Park, fresh seafood.\n\n### 3. Seoul → Jeonju → Suncheon (Southern Flavors)\n**Distance**: ~400 km round trip\n**Best for**: Korean food pilgrimage.\n\n### 4. Busan → Ulsan → Pohang → Gyeongju (Southeastern Loop)\n**Distance**: ~250 km loop\n**Best for**: History, Hyundai EV factory, coastal scenery.\n\n## Charging Costs in Korea\n\n- **EV Infra (Government)**: ~₩250/kWh ($0.18 USD)\n- **Hyundai E-Pit**: ~₩350/kWh ($0.25 USD)\n- **KEPCO**: ~₩280/kWh ($0.20 USD)\n- **AC slow chargers**: Often free at hotels and malls\n\n**Real-world cost**: Full charge for Ioniq 6 (77 kWh) = ~₩19,250 ($14 USD) at EV Infra.\n\n## Practical Tips for Korea\n\n### Winter Range (Important!)\nKorean winters are cold. Expect 20-30% range loss in January.\nUse departure scheduling to pre-heat the cabin while plugged in.\n\n### T-money for Charging\nTap your T-money card to start charging at government stations.\n\n### Hotel Charging\nBest chains: Lotte Hotels (complimentary AC), Shinsegae Chosun (DC fast in Seoul/Busan), Hanwha Resorts.\n\n## Korea's EV Future (2026-2027)\n\nTarget of 500,000 public chargers by 2027, with 800V 350 kW becoming standard. Jeju Island testing V2G bidirectional charging across 500 households.\n\n<!-- affiliate:booking.com/search?destination=South+Korea&filter=ev_charging -->",
+  "relatedDestinations": ["South Korea", "Seoul", "Busan"],
+  "imageUrl": "/blog/images/korea-ev-charging-guide-2026.jpg",
+  "faq": [
+    {"question": "What charging connector does South Korea use?", "answer": "CCS1 (same as North America, different from most of Asia which uses CCS2)."},
+    {"question": "How many EV chargers does South Korea have?", "answer": "Over 240,000 public charging points including 45,000+ DC fast chargers."},
+    {"question": "Can I drive from Seoul to Busan in an EV?", "answer": "Absolutely. The Gyeongbu Expressway has DC fast chargers at every rest stop, many with 350 kW speeds."},
+    {"question": "What app do I need for EV charging in Korea?", "answer": "EV Infra for the largest network. Hyundai E-Pit for fastest charging. Kia Charge for cross-network roaming."}
+  ]
+}

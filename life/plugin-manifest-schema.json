@@ -1,0 +1,367 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lifeos.app/plugin-manifest-schema.json",
+  "title": "LifeOS Plugin Manifest Schema",
+  "description": "Defines the schema and default manifests for LifeOS plugin categories. Each plugin is an aicofounder-style AI conversation agent with category-specific phases, personality adaptation, and canvas persistence.",
+  "type": "object",
+  "version": "2.0.0",
+  "lastUpdated": "2026-06-01",
+
+  "definitions": {
+    "pluginCategory": {
+      "type": "object",
+      "required": ["id", "name", "emoji", "shortDescription", "aiSpecialization", "phases", "statusDot", "conversationStyle", "researchDomains"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique plugin identifier (kebab-case)",
+          "pattern": "^[a-z]+(-[a-z]+)*$",
+          "examples": ["travel-os", "finance-os", "health-os"]
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name",
+          "examples": ["Travel OS", "Finance OS"]
+        },
+        "emoji": {
+          "type": "string",
+          "description": "Category emoji icon",
+          "examples": ["✈️", "💰", "💪"]
+        },
+        "shortDescription": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "One-liner shown on the plugin grid",
+          "examples": ["Plan trips, build itineraries, discover destinations"]
+        },
+        "longDescription": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Detailed description shown on plugin home",
+          "examples": ["Your travel planning copilot. From destination discovery to packing lists, I'll research, challenge, and guide you through every step."]
+        },
+        "aiSpecialization": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "What makes this plugin's AI unique",
+          "examples": ["Scrapes travel communities, weather APIs, flight data. Leads itinerary conversation."]
+        },
+        "statusDot": {
+          "type": "string",
+          "enum": ["active", "pending", "idle"],
+          "description": "Grid status indicator: 🟢 actively in conversation, 🟡 phase pending response, ⚪ not started"
+        },
+        "conversationStyle": {
+          "type": "object",
+          "required": ["openingPrompt", "challengePattern", "researchTrigger", "phaseTransitionPrompt"],
+          "properties": {
+            "openingPrompt": {
+              "type": "string",
+              "description": "First message AI sends when plugin opens for the first time",
+              "examples": ["Let's plan your travel. First — have you picked a destination or are you exploring?"]
+            },
+            "challengePattern": {
+              "type": "string",
+              "description": "How the AI challenges user assumptions for this category",
+              "examples": ["Questions timing/location choices with real data (weather, costs, crowds)"]
+            },
+            "researchTrigger": {
+              "type": "string",
+              "description": "What prompts parallel research agents",
+              "examples": ["When user mentions a destination or timeframe, trigger weather + travel forum + budget agents"]
+            },
+            "phaseTransitionPrompt": {
+              "type": "string",
+              "description": "Template AI uses when moving between phases",
+              "examples": ["You've completed the {phase} phase. Here's what we found. Are you ready to move to {nextPhase}, or do you want to dig deeper on something?"]
+            }
+          }
+        },
+        "researchDomains": {
+          "type": "array",
+          "description": "Domains for parallel research agents when deep research triggers",
+          "items": {
+            "type": "object",
+            "required": ["name", "source", "description"],
+            "properties": {
+              "name": { "type": "string", "examples": ["Weather", "Budget", "Travel Forums"] },
+              "source": { "type": "string", "examples": ["WeatherAPI", "Skyscanner", "Reddit r/travel"], "description": "Data source or API" },
+              "description": { "type": "string", "examples": ["Fetches historical weather data for destination/month"] }
+            }
+          },
+          "minItems": 1
+        },
+        "phases": {
+          "type": "array",
+          "description": "Ordered phases for this plugin's aicofounder-style conversation flow",
+          "items": { "$ref": "#/definitions/phase" },
+          "minItems": 2,
+          "maxItems": 10
+        },
+        "personalityOverrides": {
+          "type": "object",
+          "description": "Per-category overrides for the global personality engine",
+          "properties": {
+            "defaultDepth": { "$ref": "#/definitions/depthLevel" },
+            "defaultTone": { "$ref": "#/definitions/toneLevel" },
+            "defaultPace": { "$ref": "#/definitions/paceLevel" },
+            "researchDepth": { "$ref": "#/definitions/researchDepthLevel" }
+          }
+        },
+        "canvasDefaults": {
+          "type": "object",
+          "description": "Default canvas sections created when plugin first opens",
+          "properties": {
+            "initialSections": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string", "examples": ["Trip Profile", "Notes", "Research Report"] },
+                  "sectionType": { "type": "string", "enum": ["profile", "notes", "research", "decisions", "checklist", "budget", "timeline"] },
+                  "autoPopulate": { "type": "boolean", "description": "AI auto-fills this section during conversation" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "phase": {
+      "type": "object",
+      "required": ["id", "name", "order", "description", "aiLeadDescription", "conversationGoals"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z]+$",
+          "examples": ["discover", "plan", "execute"]
+        },
+        "name": {
+          "type": "string",
+          "examples": ["Discovery", "Plan", "Execute"]
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Phase sequence number (1-based)"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 300,
+          "description": "What happens in this phase"
+        },
+        "aiLeadDescription": {
+          "type": "string",
+          "maxLength": 300,
+          "description": "How the AI leads the conversation during this phase (not what the user does — what the AI does)",
+          "examples": ["Asking about preferences → running parallel research on destinations → presenting options with data"]
+        },
+        "conversationGoals": {
+          "type": "array",
+          "description": "Specific outcomes this phase should achieve conversationally",
+          "items": {
+            "type": "string",
+            "maxLength": 200,
+            "examples": ["Identify 3 destination options with pros/cons", "Establish budget range", "Confirm travel dates"]
+          },
+          "minItems": 1
+        },
+        "completionCriteria": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "How the AI determines this phase is complete enough to transition",
+          "examples": ["User has selected a destination and confirmed travel window"]
+        },
+        "researchTriggers": {
+          "type": "array",
+          "description": "Conversation signals that should trigger parallel research agents",
+          "items": {
+            "type": "string",
+            "examples": ["User mentions a specific destination", "User asks about costs", "User asks about timing/weather"]
+          }
+        },
+        "canvasSections": {
+          "type": "array",
+          "description": "Canvas sections that should exist by end of this phase",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sectionId": { "type": "string" },
+              "title": { "type": "string" },
+              "autoFill": { "type": "boolean", "description": "AI auto-fills this section during phase" }
+            }
+          }
+        },
+        "skipThreshold": {
+          "type": "object",
+          "description": "When the AI can auto-advance without user explicitly completing",
+          "properties": {
+            "autoAdvanceAfterMessages": {
+              "type": "integer",
+              "description": "Number of user messages in phase before auto-advance offer",
+              "minimum": 2
+            },
+            "minGoalsMet": {
+              "type": "integer",
+              "description": "Minimum conversation goals met before auto-advance",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+
+    "depthLevel": {
+      "type": "string",
+      "enum": ["shallow", "moderate", "deep"],
+      "description": "How much detail the AI goes into per phase"
+    },
+
+    "toneLevel": {
+      "type": "string",
+      "enum": ["direct", "balanced", "encouraging"],
+      "description": "Critical feedback vs supportive nudging"
+    },
+
+    "paceLevel": {
+      "type": "string",
+      "enum": ["aggressive", "moderate", "relaxed"],
+      "description": "How fast the AI moves through phases"
+    },
+
+    "researchDepthLevel": {
+      "type": "string",
+      "enum": ["quick", "balanced", "exhaustive"],
+      "description": "Minutes/agents spent on parallel research"
+    }
+  },
+
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "2.0.0"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date"
+    },
+    "plugins": {
+      "type": "object",
+      "description": "Registry of all LifeOS plugins keyed by plugin ID",
+      "additionalProperties": {
+        "$ref": "#/definitions/pluginCategory"
+      },
+      "minProperties": 1
+    },
+    "personalityEngine": {
+      "type": "object",
+      "description": "Global personality engine configuration",
+      "required": ["defaultProfile", "adaptationDimensions", "learningSignals"],
+      "properties": {
+        "defaultProfile": {
+          "type": "object",
+          "description": "Default personality profile for new users",
+          "properties": {
+            "depth": { "$ref": "#/definitions/depthLevel" },
+            "tone": { "$ref": "#/definitions/toneLevel" },
+            "pace": { "$ref": "#/definitions/paceLevel" },
+            "researchDepth": { "$ref": "#/definitions/researchDepthLevel" }
+          }
+        },
+        "adaptationDimensions": {
+          "type": "array",
+          "description": "Axes along which the personality engine can adapt",
+          "items": {
+            "type": "object",
+            "required": ["dimension", "range", "effect"],
+            "properties": {
+              "dimension": { "type": "string" },
+              "range": {
+                "type": "object",
+                "properties": {
+                  "min": { "type": "string" },
+                  "max": { "type": "string" }
+                }
+              },
+              "effect": { "type": "string", "description": "What changes in AI behavior" }
+            }
+          }
+        },
+        "learningSignals": {
+          "type": "array",
+          "description": "Conversation signals the personality engine watches to learn user preferences",
+          "items": {
+            "type": "object",
+            "required": ["signal", "source", "influence"],
+            "properties": {
+              "signal": { "type": "string" },
+              "source": { "type": "string", "description": "Where the signal is detected" },
+              "influence": { "type": "string", "description": "What personality dimension(s) this signal adjusts" }
+            }
+          }
+        }
+      }
+    },
+    "crossCategoryIntegration": {
+      "type": "object",
+      "description": "Cross-category context awareness and recommendations",
+      "properties": {
+        "activeRecommendations": {
+          "type": "boolean",
+          "description": "AI proactively suggests cross-category actions"
+        },
+        "contextBridgeRules": {
+          "type": "array",
+          "description": "Rules for when to bridge context between categories",
+          "items": {
+            "type": "object",
+            "required": ["fromCategory", "toCategory", "trigger", "bridgeMessage"],
+            "properties": {
+              "fromCategory": { "type": "string" },
+              "toCategory": { "type": "string" },
+              "trigger": { "type": "string", "description": "What must be true for this bridge to fire" },
+              "bridgeMessage": { "type": "string", "description": "AI's message when bridging" }
+            }
+          }
+        }
+      }
+    },
+    "monetization": {
+      "type": "object",
+      "description": "Monetization tiers and plugin access",
+      "properties": {
+        "tiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "price", "maxPlugins", "features"],
+            "properties": {
+              "id": { "type": "string", "enum": ["free", "pro", "max"] },
+              "name": { "type": "string" },
+              "price": { "type": "number", "description": "Monthly price in USD" },
+              "annualPrice": { "type": "number", "description": "Annual price in USD" },
+              "maxPlugins": {
+                "type": "integer",
+                "description": "Maximum number of plugins accessible at this tier (0 = all)"
+              },
+              "features": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "pluginAccess": {
+          "type": "object",
+          "description": "Which plugins are accessible at each tier",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  },
+  "required": ["schemaVersion", "plugins", "personalityEngine"]
+}

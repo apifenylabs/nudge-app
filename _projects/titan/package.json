@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:e2e": "playwright test --reporter=list",
+    "test:structural": "node e2e/structural-tests.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.106.2",

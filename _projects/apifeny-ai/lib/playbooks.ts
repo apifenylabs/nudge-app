@@ -7520,8 +7520,31 @@ export const playbooks: Playbook[] = [
   },
 ];
 
+// Alias map: redirect known mistaken or shortened slugs to the canonical slug.
+// Prevents 404s when external links or sidewide nav link to wrong slugs.
+const PLAYBOOK_SLUG_ALIASES: Record<string, string> = {
+  'solopreneur-toolkit': 'ai-solopreneur-toolkit',
+  'personal-assistant-setup': 'ai-personal-assistant-setup',
+  'content-creation': 'content-creation-with-chatgpt',
+  'build-app-with-cursor': 'build-an-app-with-cursor',
+  'travel-planning': 'travel-planning-with-ai',
+  'video-production': 'ai-video-production',
+  'market-research': 'ai-powered-market-research',
+  'ai-sales-funnel': 'ai-sales-funnel-builder',
+  'prompt-engineering': 'ultimate-prompt-engineering',
+  'build-a-game': 'build-a-game-with-ai',
+  'save-on-ai-tokens': 'how-to-save-on-ai-tokens',
+  'directory-builder': 'directory-builder-template',
+  'ai-workflow': 'ai-workflow-automation',
+};
+
 export function getPlaybookBySlug(slug: string): Playbook | undefined {
-  return playbooks.find((p) => p.slug === slug);
+  const resolved = PLAYBOOK_SLUG_ALIASES[slug] ?? slug;
+  return playbooks.find((p) => p.slug === resolved);
+}
+
+export function getPlaybookAliases(): Record<string, string> {
+  return { ...PLAYBOOK_SLUG_ALIASES };
 }
 
 export function getAllPlaybookSlugs(): string[] {

@@ -13,6 +13,7 @@ import { PLUGIN_CATEGORIES, type PluginCategory } from '@/app/lib/plugin-manifes
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { PluginUsageSection } from '@/app/components/UsageDashboard';
+import HabitMoodDashboard from '@/app/components/HabitMoodDashboard';
 
 // ─── Inline category inference (mirrors plugin-manifest-schema) ────
 
@@ -28,11 +29,13 @@ function inferPluginCategory(pluginId: string): PluginCategory {
     social: 'lifestyle',
     relationships: 'relationships',
     mindfulness: 'mindfulness',
+    nutrition: 'nutrition',
+    productivity: 'productivity',
   };
   return map[pluginId] || 'productivity';
 }
 
-// ─── Static Params: Build all 9 plugin pages at build time ─────────
+// ─── Static Params: Build all 12 plugin pages at build time ────────
 
 export async function generateStaticParams() {
   return PLUGINS.map(plugin => ({ id: plugin.id }));
@@ -148,6 +151,65 @@ function RelatedPluginCard({ plugin }: { plugin: PluginDefinition }) {
   );
 }
 
+// ─── Recommended Plugin Pairs ──────────────────────────────────────
+// Curated suggestions for which plugins work well together.
+
+type PluginPair = {
+  pluginId: string;
+  reason: string;
+};
+
+const RECOMMENDED_PAIRS: Record<string, PluginPair[]> = {
+  travel: [
+    { pluginId: 'finance', reason: 'Budget your trip with real-time cost tracking' },
+    { pluginId: 'health', reason: 'Health prep before international travel' },
+  ],
+  finance: [
+    { pluginId: 'travel', reason: 'Trip budget and expense planning' },
+    { pluginId: 'career', reason: 'Negotiate salary with market data' },
+  ],
+  health: [
+    { pluginId: 'nutrition', reason: 'Complete wellness: movement + fuel' },
+    { pluginId: 'mindfulness', reason: 'Physical + mental health synergy' },
+  ],
+  career: [
+    { pluginId: 'learning', reason: 'Upskill for that next promotion' },
+    { pluginId: 'finance', reason: 'Plan comp strategy and negotiate' },
+  ],
+  learning: [
+    { pluginId: 'career', reason: 'Apply new skills to career growth' },
+    { pluginId: 'productivity', reason: 'Optimize study time with deep work' },
+  ],
+  family: [
+    { pluginId: 'travel', reason: 'Plan family trips together' },
+    { pluginId: 'home', reason: 'Organize family space and routines' },
+  ],
+  home: [
+    { pluginId: 'family', reason: 'Align home projects with family needs' },
+    { pluginId: 'finance', reason: 'Budget for renovations and maintenance' },
+  ],
+  social: [
+    { pluginId: 'relationships', reason: 'Deepen the connections that matter' },
+    { pluginId: 'mindfulness', reason: 'Show up as your best self socially' },
+  ],
+  relationships: [
+    { pluginId: 'mindfulness', reason: 'Stay present and intentional with your partner' },
+    { pluginId: 'social', reason: 'Build a strong social circle together' },
+  ],
+  productivity: [
+    { pluginId: 'learning', reason: 'Apply productivity systems to skill-building' },
+    { pluginId: 'mindfulness', reason: 'Focus + calm mindset = peak performance' },
+  ],
+  mindfulness: [
+    { pluginId: 'health', reason: 'Mind-body connection for overall wellness' },
+    { pluginId: 'productivity', reason: 'Clear mind = better decisions and focus' },
+  ],
+  nutrition: [
+    { pluginId: 'health', reason: 'Fuel + movement = complete wellness' },
+    { pluginId: 'mindfulness', reason: 'Mindful eating for better food choices' },
+  ],
+};
+
 // ─── Related Plugins (same category or similar scope) ─────────────
 
 function getRelatedPlugins(currentId: string): PluginDefinition[] {
@@ -156,12 +218,19 @@ function getRelatedPlugins(currentId: string): PluginDefinition[] {
 
   const currentCat = inferPluginCategory(currentId);
 
-  // Score potential related plugins
+  // Collect plugin IDs that are explicitly recommended as pairs
+  const pairedIds = new Set(
+    (RECOMMENDED_PAIRS[currentId] || []).map(p => p.pluginId)
+  );
+
+  // Score potential related plugins with pair-boost
   const scored = PLUGINS
     .filter(p => p.id !== currentId)
     .map(p => {
       const cat = inferPluginCategory(p.id);
       let score = 0;
+      // Explicitly recommended as a pair = highest relevance
+      if (pairedIds.has(p.id)) score += 5;
       // Same category = highly related
       if (cat === currentCat) score += 3;
       // Same status tier relatedness
@@ -171,6 +240,9 @@ function getRelatedPlugins(currentId: string): PluginDefinition[] {
       const theirKeywords = p.features.join(' ').toLowerCase();
       if (myKeywords.includes('plan') && theirKeywords.includes('plan')) score += 1;
       if (myKeywords.includes('track') && theirKeywords.includes('track')) score += 1;
+      if (myKeywords.includes('goal') && theirKeywords.includes('goal')) score += 1;
+      if (myKeywords.includes('habit') && theirKeywords.includes('habit')) score += 1;
+      if (myKeywords.includes('routine') && theirKeywords.includes('routine')) score += 1;
       // Lifestyle cross-links
       if (currentCat === 'lifestyle' || cat === 'lifestyle') score += 1;
       return { plugin: p, score };
@@ -311,7 +383,11 @@ export default function PluginPage({ params }: { params: { id: string } }) {
 
       {/* ── Related Plugins (cross-linking for SEO + discovery) ── */}
       {(() => {
-        const related = getRelatedPlugins(plugin.id);
+        // ─── Plugin Pair Recommendations ───
+      const pairs = RECOMMENDED_PAIRS[plugin.id];
+
+      // ─── Related Plugins ───
+      const related = getRelatedPlugins(plugin.id);
         if (related.length === 0) return null;
         return (
           <section className="max-w-4xl mx-auto px-4 py-12 border-t border-gray-100">
@@ -319,6 +395,30 @@ export default function PluginPage({ params }: { params: { id: string } }) {
             <p className="text-sm text-gray-500 mb-6">
               Explore other plugins that complement {plugin.name}.
             </p>
+            {/* Recommended Pairs */}
+            {pairs && pairs.length > 0 && (
+              <div className="mb-6">
+                <h3 className="text-sm font-medium text-gray-800 mb-3">🗂️ Recommended Pairings</h3>
+                <div className="flex flex-wrap gap-3">
+                  {pairs.map((pair, i) => {
+                    const pairPlugin = PLUGINS.find(p => p.id === pair.pluginId);
+                    if (!pairPlugin) return null;
+                    return (
+                      <a
+                        key={i}
+                        href={`/plugins/${pair.pluginId}`}
+                        className="inline-flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-teal-50 to-emerald-50 border border-teal-200 rounded-lg hover:shadow-sm hover:border-teal-300 transition-all text-xs text-gray-700"
+                      >
+                        <span>{pairPlugin.emoji}</span>
+                        <span className="font-medium">{pairPlugin.name}</span>
+                        <span className="text-gray-400 mx-1" aria-hidden="true">→</span>
+                        <span className="text-gray-500 max-w-[200px] truncate">{pair.reason}</span>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {related.map(rp => (
                 <RelatedPluginCard key={rp.id} plugin={rp} />
@@ -340,6 +440,17 @@ export default function PluginPage({ params }: { params: { id: string } }) {
               ? plugin.phases[0].leadPrompt.slice(0, 600) + '…'
               : plugin.phases[0].leadPrompt}
           </div>
+        </section>
+      )}
+
+      {/* ── Habit → Mood Dashboard (Health OS only) ── */}
+      {plugin.id === 'health' && (
+        <section className="max-w-4xl mx-auto px-4 py-12 border-t border-gray-100">
+          <h2 className="text-lg font-semibold text-gray-900 mb-1">🔬 Habit → Mood Tracker</h2>
+          <p className="text-sm text-gray-500 mb-6">
+            Log your daily habits and mood. LifeOS computes correlations to show you what actually moves the needle.
+          </p>
+          <HabitMoodDashboard />
         </section>
       )}
 

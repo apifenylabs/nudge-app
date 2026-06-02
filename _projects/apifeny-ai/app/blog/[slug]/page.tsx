@@ -5,6 +5,7 @@ import { Calendar, Clock, Tag, ArrowLeft, ArrowRight, User, Sparkles, BookOpen, 
 import { getPostBySlug, getRelatedPosts, getRelatedPostsByCategory } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data';
 import BlogAffiliateCTA from '../../../components/BlogAffiliateCTA';
+import AffiliateCard from '../../../components/AffiliateCard';
 import BlogRelatedTools from '../../../components/BlogRelatedTools';
 import BlogGeoLinks from '../../../components/BlogGeoLinks';
 import BlogPlaybookLinks from '../../../components/BlogPlaybookLinks';
@@ -13,6 +14,7 @@ import NewsletterSignup from '../../../components/NewsletterSignup';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import FAQJsonLd from '@/components/FAQJsonLd';
 import { extractFaqFromContent } from '@/lib/blog-faq';
+import { getAffiliateForTool } from '@/lib/affiliate-links';
 
 const BASE_URL = 'https://apifeny-ai.vercel.app';
 
@@ -135,6 +137,51 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
  <div className="prose prose-gray max-w-none">
  <div dangerouslySetInnerHTML={{ __html: renderContent(post.content) }} />
  </div>
+
+ {/* Affiliate tool recommendations — content-contextual cards */}
+ {(() => {
+ // Match top AI tools mentioned in post tags
+ const toolMap: Record<string, { slug: string; name: string }> = {
+ 'chatgpt': { slug: 'chatgpt', name: 'ChatGPT' },
+ 'openai': { slug: 'chatgpt', name: 'ChatGPT' },
+ 'claude': { slug: 'claude', name: 'Claude' },
+ 'gemini': { slug: 'gemini', name: 'Gemini' },
+ 'midjourney': { slug: 'midjourney', name: 'Midjourney' },
+ 'perplexity': { slug: 'perplexity', name: 'Perplexity' },
+ 'cursor': { slug: 'cursor', name: 'Cursor' },
+ 'notion': { slug: 'notion-ai', name: 'Notion AI' },
+ 'elevenlabs': { slug: 'elevenlabs', name: 'ElevenLabs' },
+ 'canva': { slug: 'canva-ai', name: 'Canva Magic Studio' },
+ 'runway': { slug: 'runway', name: 'Runway' },
+ 'jasper': { slug: 'jasper', name: 'Jasper' },
+ 'bolt': { slug: 'bolt-new', name: 'Bolt.new' },
+ 'devin': { slug: 'devin', name: 'Devin' },
+ 'deepl': { slug: 'deepl', name: 'DeepL Pro' },
+ 'windsurf': { slug: 'windsurf', name: 'Windsurf' },
+ 'copilot': { slug: 'copilot', name: 'GitHub Copilot' },
+ 'synthesia': { slug: 'synthesia', name: 'Synthesia' },
+ 'heygen': { slug: 'heygen', name: 'HeyGen' },
+ 'replit': { slug: 'replit-agent', name: 'Replit Agent' },
+ 'firecrawl': { slug: 'firecrawl', name: 'FireCrawl' },
+ };
+
+ const lowerTags = post.tags.map(t => t.toLowerCase());
+ const matched = Object.entries(toolMap).find(([key]) =>
+ lowerTags.some(t => t === key || t.startsWith(key) || t.includes(key))
+ );
+ const matchedTool = matched ? matched[1] : null;
+ const hasAffiliate = matchedTool ? getAffiliateForTool(matchedTool.slug) : null;
+
+ return matchedTool && hasAffiliate ? (
+ <div className="mt-8 mb-4">
+ <AffiliateCard
+ toolSlug={matchedTool.slug}
+ toolName={matchedTool.name}
+ variant="default"
+ />
+ </div>
+ ) : null;
+ })()}
 
  {/* Affiliate CTA */}
  <BlogAffiliateCTA

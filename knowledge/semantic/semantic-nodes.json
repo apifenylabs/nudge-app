@@ -1,8 +1,8 @@
 {
-  "version": "2026-06-01-consolidation-primary",
-  "generated": "2026-06-01T00:08:00+08:00",
-  "semanticCount": 69,
-  "graphEdgeCount": 91,
+  "version": "2026-06-02-consolidation-primary",
+  "generated": "2026-06-02T02:00:00+08:00",
+  "semanticCount": 74,
+  "graphEdgeCount": 100,
   "nodes": [
     {
       "id": "chunk-crypnuevo-cross-1779217287655",
@@ -555,6 +555,46 @@
       "type": "semantic",
       "confidence": 0.8,
       "timestamp": "2026-06-01T00:08:00+08:00"
+    },
+    {
+      "id": "sol-volsurge-tpsl-loop-jun1",
+      "name": "SOL VolSurge Ghost-Churn Cycle \u2014 TP/SL Attachment Fails Repeatedly",
+      "summary": "June 1 evening: SOL VolSurge entries fired 3x in 40 minutes (21:38, 21:53, 22:12 HKT). Each entry failed TP/SL native grouping ('Main order cannot be trigger order'), leaving positions unprotected. Ghost killer detected the unstaked positions and closed them, triggering a new VolSurge signal \u2014 creating a lossy churn cycle (~22 trades, ~$17 cumulative loss). Root cause: TP/SL cannot be attached post-entry on HL, but VolSurge continues firing entries without checking whether a stop was successfully placed. The May 25 resting-order workaround is not wired into the auto-entry path.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-06-01T22:37:00+08:00"
+    },
+    {
+      "id": "kill-switch-audit-desync",
+      "name": "Kill Switch Audit Trail Desync \u2014 HEARTBEAT vs Cron State",
+      "summary": "June 1 22:37 HKT: HEARTBEAT reported trading 'HALTED' but 3 cron jobs remained enabled:true. The orphan killer placed ~22 SOL-PERP trades while the system believed it was stopped. Fix required manual editing of 2 state files + cron disable. Gap: no single source of truth for halt state \u2014 HEARTBEAT reads one flag, cron ships another. Resolution: kill_switched=true written to both hl_balance.state and hal_config.json, 3 crons explicitly disabled.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-06-01T22:37:00+08:00"
+    },
+    {
+      "id": "cron-error-self-heal-pattern",
+      "name": "Cron Transient Error Pattern \u2014 All Gateway-Restart Induced (Self-Recovering)",
+      "summary": "5-7 crons in error state across May 31-June 1, all with root cause 'interrupted by gateway restart.' Affected: backup-agent, rd-agent, ceo-summary, ceo-24-7-work-engine, trading-beast-news-aware, omnimind-consolidation-primary. All self-recover on next scheduled run. Not actionable but indicates gateway restart cluster impacts 20%+ of cron fleet. No persistent failure \u2014 all errors are transient timeouts during restart window.",
+      "type": "semantic",
+      "confidence": 0.9,
+      "timestamp": "2026-06-01T22:00:00+08:00"
+    },
+    {
+      "id": "revenue-day-39-structural",
+      "name": "Product Revenue $0.00 \u2014 Day 39, Structural Not Situational",
+      "summary": "June 1 (Day 39 of May 24 roadmap): zero product revenue. All 7 blockers remain CEO-gated (Vercel token, deploy protection toggle, Titan alias, Supabase, GA keys, affiliate keys, Stripe context). No code-only path exists to unblock any revenue stream. The 70/30 revenue/strategic split is structurally violated \u2014 output is 100% strategic (LifeOS tests, Titan swarm, AI Directory blogs, EV Charging guides). Trading portfolio ($1,054, 72% WR) is the only revenue-generating activity, contradicting the 70/30 model's product revenue target.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-06-01T22:00:00+08:00"
+    },
+    {
+      "id": "sol-volsurge-allowlist-needs-tpsl-gate",
+      "name": "SOL VolSurge Needs TP/SL Attachment Gate \u2014 Entry Should Require Confirmed Stop",
+      "summary": "Persistent bug since May 25: HL native TP/SL grouping fails on post-entry attachment. SOL VolSurge signals fire every evening and every entry lacks a stop. The ghost-killer closes them, triggering re-entry. Fix: before executing a VolSurge entry, verify a stop can be attached. If TP/SL fails, do not open the position. Alternatively, wire the May 25 resting reduce-only limit GTC order workaround into the auto-entry flow. Current behaviour creates lossy churn cycles that erode gains.",
+      "type": "semantic",
+      "confidence": 0.85,
+      "timestamp": "2026-06-01T22:37:00+08:00"
     }
   ],
   "edges": [
@@ -1103,6 +1143,60 @@
       "target_id": "portfolio-revenue-at-zero-day-25",
       "relation_type": "parallel",
       "weight": 0.85
+    },
+    {
+      "source_id": "sol-volsurge-tpsl-loop-jun1",
+      "target_id": "tp-sl-workaround-resting-orders",
+      "relation_type": "should_use",
+      "weight": 0.9
+    },
+    {
+      "source_id": "sol-volsurge-tpsl-loop-jun1",
+      "target_id": "sol-volsurge-allowlist-needs-tpsl-gate",
+      "relation_type": "evidence_of",
+      "weight": 1.0
+    },
+    {
+      "source_id": "kill-switch-audit-desync",
+      "target_id": "bot-mode-drift-governance-gap",
+      "relation_type": "similar_to",
+      "weight": 0.8
+    },
+    {
+      "source_id": "kill-switch-audit-desync",
+      "target_id": "ad-hoc-code-live-risk-surface",
+      "relation_type": "context",
+      "weight": 0.7
+    },
+    {
+      "source_id": "revenue-day-39-structural",
+      "target_id": "portfolio-revenue-at-zero-day-25",
+      "relation_type": "continues",
+      "weight": 0.95
+    },
+    {
+      "source_id": "revenue-day-39-structural",
+      "target_id": "ten-item-backlog-abandonment-14-days",
+      "relation_type": "parallel",
+      "weight": 0.85
+    },
+    {
+      "source_id": "cron-error-self-heal-pattern",
+      "target_id": "gw-restart-cron-transient-pattern",
+      "relation_type": "extends",
+      "weight": 0.9
+    },
+    {
+      "source_id": "sol-volsurge-tpsl-loop-jun1",
+      "target_id": "trading-discipline-phase-transition-may31",
+      "relation_type": "contrasts",
+      "weight": 0.8
+    },
+    {
+      "source_id": "revenue-day-39-structural",
+      "target_id": "seventy-thirty-prioritization",
+      "relation_type": "violates",
+      "weight": 1.0
     }
   ]
 }

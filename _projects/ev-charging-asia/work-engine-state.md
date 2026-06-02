@@ -1,56 +1,79 @@
 # Work Engine State
 
-## Cursor: COMPLETED — Station [id] routing ISR/dynamic fix
+## Cursor: DONE — Premium Routes Index Page + Nav Integration
 
 ### Task
-Station detail pages: switch from full static generation (SSG of all 1,125 pages) to dynamic rendering with ISR.
+Add a browseable Premium Routes index page, link it from all nav bars, and cross-sell premium PDF guides on the compare page.
 
-### Status: ✅ Already Implemented
-The file `app/station/[id]/page.tsx` already contains the correct ISR/dynamic configuration:
+### What Was Built
+1. **`app/premium-routes/page.tsx`** — Full index page with:
+   - Hero section explaining premium PDF guides
+   - 6 premium route cards with gradients, flags, page counts, feature checks
+   - "What You Get" benefit columns (verified charging, family-first, printable)
+   - Newsletter signup hero section
+   - FAQ section about purchases, printing, updates
+   - Full SEO metadata with JSON-LD ItemList schema
 
-- `export const dynamicParams = true;` — unknown IDs render on-demand
-- `export const revalidate = 3600;` — cached for 1 hour, then revalidates
-- `generateStaticParams()` — seeds only first 50 stations (not all 1,125) to avoid OOM on free tier
-- `generateMetadata` — handles missing station gracefully with `{ title: 'Station Not Found' }`
-- Loading state exists in `loading.tsx` for Suspense fallback
+2. **Nav integration** — Premium link added to:
+   - `/routes/page.tsx` header nav
+   - `/itinerary/page.tsx` header nav
+   - `/compare/page.tsx` header nav
+   - `SiteFooter.tsx` quick links
 
-### Verification
-- TypeScript check: 0 errors in station `[id]` files
-- 116 pre-existing errors in unrelated files (blog-data, getData, FilterBar, map components)
-- Next.js 14.2 — params sync typing is correct for this version
+3. **Compare page premium upsell** — When two routes are compared, premium PDF links auto-appear below the comparison table (uses `premiumRoutes` data + slug matching)
 
-### Next cursor tasks
-No pending cursor tasks identified.
+### Build: ✅ Passes (0 errors)
+### Deploy: ✅ Live at https://ev-charging-asia.vercel.app/premium-routes
+
+### Project Stats
+- 17 free itinerary routes (all fully built with SEO, maps, seasonal data)
+- 6 premium PDF products ($4.99-$5.99) with Stripe checkout
+- Route comparison, seasonal guide, tip voting/leaderboard
+- Affiliate links (Booking.com, Klook, Viator, GetYourGuide, Expedia)
+- Newsletter signup (API-ready)
+- Blog with 148 articles
+- Google Analytics ready (env var)
+- Sitemap + RSS + news-sitemap
+
+## Latest: Indonesia EV Charging Complete Guide 2026 (P2 Revenue Blog Post)
+
+### Task
+Created a comprehensive country-guide blog post: **"Indonesia EV Charging Complete Guide 2026 — Networks, Costs, and Road Trip Essentials"**
+
+### What Was Built
+1. **`data/blog/indonesia-ev-charging-complete-guide-2026.json`** — Full JSON post with:
+   - 32,000+ chars of markdown content covering all required topics
+   - Detailed sections on PLN SPKLU, ChargeIN, and Spot networks
+   - City-by-city coverage: Jakarta (200+ chargers), Bandung, Surabaya, Bali (50+ chargers)
+   - Trans-Java highway charging gaps analysis (Jakarta→Cirebon, Cirebon→Semarang, Semarang→Surabaya)
+   - Cross-island ferry guide (Ketapang↔Gilimanuk)
+   - Government PPnBM incentives table with 5-year TCO comparison
+   - Home charging installation (step-by-step with costs)
+   - Apps directory and cost comparison tables
+   - FAQ section with 9 questions
+   - {{BOOKING}} affiliate links for Bandung and Bali hotels
+   - Tags: indonesia, ev-charging, guide, jakarta, bali, java, surabaya, bandung, pln, trans-java, home-charging, incentives
+
+2. **Regenerated compiled data** via `node scripts/generate-blog-data-node.js` (148 posts total)
+
+### Build: ✅ Passes (0 errors)
+
+### Revenue Impact
+- Adds high-intent SEO content targeting "Indonesia EV charging guide" and related long-tail keywords
+- {{BOOKING}} affiliate links for hotel bookings in Bandung and Bali
+- Internal links to existing guides (Jakarta→Yogyakarta, Jakarta→Bandung, Bali road trip)
+- Country guide format targets top-of-funnel traffic (people researching Indonesia EV feasibility)
 
 ---
 
-## Revenue Bucket: Blog Content Created
-
-### Status: ✅ 4 new blog posts written (2026-05-24 & 2026-05-25)
-
-Three high-quality MDX-format road trip guides were created for missing blog-index.json topics:
-
-1. **japan-ev-road-trip-guide-2026.md** — Japan EV Road Trip Guide 2026: Complete Route Planner, Charging Networks & Must-See Stops
-   - 11.6 KB, ~1,600 words
-   - Covers 3 routes: Golden Route (Tokyo→Kyoto→Osaka), Tohoku Explorer (Tokyo→Aomori), Chubu Mountain Loop
-   - e-Mobility Power, ENECHANGE, Tesla Supercharger networks
-   - 7-day sample itinerary, family-friendly SA/PA stops, seasonal guide
-
-2. **seoul-to-busan-ev-road-trip-family-itinerary.md** — Seoul to Busan EV Road Trip: 5-Day Family Journey via Gyeongju, Daegu & Korea's Ultra-Fast Charging Corridor
-   - 12.2 KB, ~1,700 words
-   - Gyeongbu Expressway corridor with E-Pit and Chaevi 350 kW chargers
-   - Full 5-day itinerary (Seoul→Daegu→Gyeongju→Busan)
-   - Korean EV apps, toll costs, seasonal considerations
-
-3. **jakarta-to-yogyakarta-ev-road-trip.md** — Jakarta to Yogyakarta EV Road Trip: Java's Cultural Heart by Electric Car
-   - 14.4 KB, ~2,000 words
-   - Trans-Java Toll Road with SPKLU/PLN and ChargeIN charging stops
-   - Full 4-day itinerary (Jakarta→Borobudur→Prambanan→Yogyakarta)
-   - Toll cost breakdown (IDR ~317,500), Merapi jeep tour tip
-
-4. **ev-charging-brunei.md** — EV Charging in Brunei: A Practical Guide for Electric Vehicle Owners in the Sultanate (2026)
-   - 24.5 KB, ~4,000 words
-   - 40 charging stations, 45 charging points, 1× 350 kW Porsche charger
-   - Routes: BSB→Kuala Belait, BSB→Temburong via bridge, BSB city loop
-   - Import rules, EV-friendly hotels table, equipment checklist, 7 FAQs
-   - Affiliate CTAs {{BOOKING}} and {{KLOOK}} included
+### Revenue Drivers for $5k MRR
+- [x] Premium route PDFs with Stripe checkout
+- [x] Premium Routes index page (NOW LIVE)
+- [x] Premium upsell on route detail pages (PremiumRouteCTA)
+- [x] Premium upsell on compare page (NOW LIVE)
+- [x] Affiliate links on route pages + footer
+- [x] Newsletter lead capture on key pages
+- [x] Deals & packages page
+- [ ] Bundle pricing for premium guides (future)
+- [ ] Real Google Analytics tracking ID (env not set)
+- [ ] Email automation for newsletter (subscribe API exists, no sending backend)

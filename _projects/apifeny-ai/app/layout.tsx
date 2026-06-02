@@ -60,11 +60,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
  "description": "Curated AI tools, agents, and playbooks with Asia-ready filters and editorial rankings.",
  "sameAs": [
  "https://www.familytravelasia.com",
- "https://luxury-family-travel-asia.vercel.app",
  "https://ev-charging-asia.vercel.app",
  "https://kids-activities-asia.vercel.app",
- "https://senior-friendly-travel-asia.vercel.app",
- "https://nudge-sigma-liart.vercel.app",
  "https://social-beast-two.vercel.app"
  ],
  }),

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 
 /* ─────────────────────────────────────────────────────────────
    Types
@@ -11,6 +11,10 @@ interface StatCard {
   change: string;
   positive: boolean;
   icon: string;
+}
+
+interface StatCardConfig extends StatCard {
+  rawValue: number; // numeric for count-up
 }
 
 interface AgentActivity {
@@ -31,13 +35,13 @@ interface DailyUsage {
 /* ─────────────────────────────────────────────────────────────
    Mock data (will be replaced with real APIs)
    ───────────────────────────────────────────────────────────── */
-const stats: StatCard[] = [
-  { label: "Active Agents", value: "1,247", change: "+12.3%", positive: true, icon: "🤖" },
-  { label: "Queries Today", value: "84.2K", change: "+8.1%", positive: true, icon: "⚡" },
-  { label: "Avg Response", value: "1.2s", change: "-0.3s", positive: true, icon: "⏱️" },
-  { label: "Tokens Used", value: "4.8M", change: "+15.2%", positive: false, icon: "📊" },
-  { label: "Active Deployments", value: "23", change: "+3", positive: true, icon: "🚀" },
-  { label: "Error Rate", value: "0.8%", change: "-0.2%", positive: true, icon: "✅" },
+const stats: StatCardConfig[] = [
+  { label: "Active Agents", value: "1,247", rawValue: 1247, change: "+12.3%", positive: true, icon: "🤖" },
+  { label: "Queries Today", value: "84.2K", rawValue: 84200, change: "+8.1%", positive: true, icon: "⚡" },
+  { label: "Avg Response", value: "1.2s", rawValue: 1200, change: "-0.3s", positive: true, icon: "⏱️" },
+  { label: "Tokens Used", value: "4.8M", rawValue: 4800000, change: "+15.2%", positive: false, icon: "📊" },
+  { label: "Active Deployments", value: "23", rawValue: 23, change: "+3", positive: true, icon: "🚀" },
+  { label: "Error Rate", value: "0.8%", rawValue: 80, change: "-0.2%", positive: true, icon: "✅" },
 ];
 
 const recentActivity: AgentActivity[] = [
@@ -62,44 +66,124 @@ function generateDailyUsage(): DailyUsage[] {
 }
 
 /* ─────────────────────────────────────────────────────────────
-   Mini Sparkline (CSS-based)
+   Greeting Helper
    ───────────────────────────────────────────────────────────── */
-function Sparkline({ data, color }: { data: number[]; color: string }) {
-  const max = Math.max(...data);
-  const min = Math.min(...data);
-  const range = max - min || 1;
+function getGreeting(): string {
+  const h = new Date().getHours();
+  if (h < 12) return "Good morning";
+  if (h < 17) return "Good afternoon";
+  if (h < 21) return "Good evening";
+  return "Good night";
+}
 
-  const points = data.map((v, i) => {
-    const x = (i / (data.length - 1)) * 100;
-    const y = 100 - ((v - min) / range) * 90;
-    return `${x},${y}`;
+function formatLiveTime(): string {
+  return new Date().toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+    timeZone: "Asia/Hong_Kong",
   });
+}
 
-  return (
-    <svg viewBox="0 0 100 100" className="w-full h-10" preserveAspectRatio="none">
-      <polyline
-        fill="none"
-        stroke={color}
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        points={points.join(" ")}
-        className="opacity-60"
-      />
-    </svg>
-  );
+/* ─────────────────────────────────────────────────────────────
+   Count-up hook
+   ───────────────────────────────────────────────────────────── */
+function useCountUp(target: number, duration = 1500) {
+  const [value, setValue] = useState(0);
+  const [started, setStarted] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStarted(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!started) return;
+    let startTime: number | null = null;
+    let raf: number;
+
+    const step = (now: number) => {
+      if (!startTime) startTime = now;
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // ease-out quad
+      const eased = 1 - (1 - progress) * (1 - progress);
+      setValue(Math.floor(eased * target));
+      if (progress < 1) raf = requestAnimationFrame(step);
+    };
+
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [started, target, duration]);
+
+  return { value, ref };
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Format display value from raw number
+   ───────────────────────────────────────────────────────────── */
+function formatStatValue(raw: number, label: string): string {
+  if (label === "Avg Response") return `${(raw / 1000).toFixed(1)}s`;
+  if (label === "Error Rate") return `${(raw / 100).toFixed(1)}%`;
+  if (label === "Tokens Used") {
+    if (raw >= 1_000_000) return `${(raw / 1_000_000).toFixed(1)}M`;
+    if (raw >= 1_000) return `${(raw / 1_000).toFixed(1)}K`;
+    return raw.toLocaleString();
+  }
+  if (label === "Queries Today") {
+    if (raw >= 1_000) return `${(raw / 1_000).toFixed(1)}K`;
+    return raw.toLocaleString();
+  }
+  if (label === "Active Agents" || label === "Active Deployments") {
+    return raw.toLocaleString();
+  }
+  return raw.toLocaleString();
 }
 
 /* ─────────────────────────────────────────────────────────────
    Stat Card Component
    ───────────────────────────────────────────────────────────── */
-function StatCardView({ card, index }: { card: StatCard; index: number }) {
+function StatCardView({ card, index }: { card: StatCardConfig; index: number }) {
   const [hovered, setHovered] = useState(false);
+  const { value, ref } = useCountUp(card.rawValue);
+  const [visible, setVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!cardRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(cardRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div
-      className="glass rounded-xl p-4 transition-all duration-300"
+      ref={cardRef}
+      className="glass rounded-xl p-4 transition-all duration-300 cursor-default group relative"
       style={{
-        animation: `fadeIn 0.4s ease-out ${index * 0.08}s both`,
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(12px)",
+        transition: `opacity 0.4s ease-out ${index * 0.08}s, transform 0.4s ease-out ${index * 0.08}s`,
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -116,8 +200,19 @@ function StatCardView({ card, index }: { card: StatCard; index: number }) {
           {card.change}
         </span>
       </div>
-      <p className="text-2xl font-bold text-white mb-0.5">{card.value}</p>
+      <p ref={ref} className="text-2xl font-bold text-white mb-0.5 tabular-nums">
+        {formatStatValue(value, card.label)}
+      </p>
       <p className="text-xs text-slate-500">{card.label}</p>
+
+      {/* Hover glow border */}
+      <div
+        className={`absolute inset-0 rounded-xl border transition-all duration-500 pointer-events-none ${
+          hovered
+            ? "border-cyan-500/40 shadow-[0_0_20px_-5px_rgba(34,211,238,0.3)]"
+            : "border-transparent"
+        }`}
+      />
     </div>
   );
 }
@@ -295,11 +390,29 @@ function AgentDistribution() {
    Quick Actions
    ───────────────────────────────────────────────────────────── */
 const quickActions = [
-  { label: "Create Agent", icon: "➕", color: "from-cyan-500 to-cyan-600" },
-  { label: "View Logs", icon: "📋", color: "from-purple-500 to-purple-600" },
-  { label: "Deploy", icon: "🚀", color: "from-emerald-500 to-emerald-600" },
-  { label: "Settings", icon: "⚙️", color: "from-slate-500 to-slate-600" },
+  { label: "Create Agent", icon: "➕", color: "from-cyan-500 to-cyan-600", href: "/sandbox" },
+  { label: "View Logs", icon: "📋", color: "from-purple-500 to-purple-600", href: "/dashboard?tab=logs" },
+  { label: "Deploy", icon: "🚀", color: "from-emerald-500 to-emerald-600", href: "/dashboard?tab=deploy" },
+  { label: "Settings", icon: "⚙️", color: "from-slate-500 to-slate-600", href: "/admin" },
 ];
+
+/* ─────────────────────────────────────────────────────────────
+   Live Clock
+   ───────────────────────────────────────────────────────────── */
+function LiveClock() {
+  const [time, setTime] = useState("");
+  useEffect(() => {
+    setTime(formatLiveTime());
+    const id = setInterval(() => setTime(formatLiveTime()), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <span className="text-sm text-slate-500 font-mono tabular-nums">
+      {time} HKT
+    </span>
+  );
+}
 
 /* ─────────────────────────────────────────────────────────────
    Loading Skeleton — shown before hydration
@@ -390,21 +503,29 @@ export default function DashboardPage() {
             </h1>
           </div>
 
-          {/* Timeframe selector */}
-          <div className="flex items-center gap-1 bg-[#1a1a2e] rounded-lg p-0.5">
-            {(["24h", "7d", "30d"] as const).map((t) => (
-              <button
-                key={t}
-                onClick={() => setTimeframe(t)}
-                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
-                  timeframe === t
-                    ? "bg-cyan-500/20 text-cyan-400"
-                    : "text-slate-500 hover:text-slate-300"
-                }`}
-              >
-                {t}
-              </button>
-            ))}
+          {/* Greeting + Live Clock */}
+          <div className="flex items-center gap-4">
+            <div className="hidden sm:flex items-center gap-2 text-xs">
+              <span className="text-slate-500">{getGreeting()}.</span>
+              <LiveClock />
+            </div>
+
+            {/* Timeframe selector */}
+            <div className="flex items-center gap-1 bg-[#1a1a2e] rounded-lg p-0.5">
+              {(["24h", "7d", "30d"] as const).map((t) => (
+                <button
+                  key={t}
+                  onClick={() => setTimeframe(t)}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
+                    timeframe === t
+                      ? "bg-cyan-500/20 text-cyan-400"
+                      : "text-slate-500 hover:text-slate-300"
+                  }`}
+                >
+                  {t}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </header>
@@ -437,35 +558,45 @@ export default function DashboardPage() {
               <h3 className="text-sm font-semibold text-white mb-3">Quick Actions</h3>
               <div className="grid grid-cols-2 gap-2">
                 {quickActions.map((action) => (
-                  <button
+                  <a
                     key={action.label}
+                    href={action.href}
                     className={`flex flex-col items-center gap-1.5 py-3 rounded-xl bg-gradient-to-b ${action.color} text-white text-xs font-medium hover:scale-105 transition-all duration-200 opacity-80 hover:opacity-100`}
                   >
                     <span className="text-lg">{action.icon}</span>
                     {action.label}
-                  </button>
+                  </a>
                 ))}
               </div>
             </div>
 
             {/* System Health mini card */}
             <div className="glass rounded-xl p-4">
-              <h3 className="text-xs font-semibold text-white mb-2">System Health</h3>
+              <h3 className="text-xs font-semibold text-white mb-2">
+                System Health
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse ml-2 align-middle" />
+              </h3>
               <div className="space-y-2">
                 {[
-                  { label: "API", status: "operational", color: "bg-emerald-400" },
-                  { label: "Database", status: "operational", color: "bg-emerald-400" },
-                  { label: "WebSocket", status: "degraded", color: "bg-amber-400" },
-                  { label: "Agents", status: "operational", color: "bg-emerald-400" },
+                  { label: "API", status: "Operational", color: "bg-emerald-400", pulse: false },
+                  { label: "Database", status: "Operational", color: "bg-emerald-400", pulse: false },
+                  { label: "WebSocket", status: "Degraded", color: "bg-amber-400", pulse: true },
+                  { label: "Agents", status: "Operational", color: "bg-emerald-400", pulse: false },
                 ].map((s) => (
                   <div key={s.label} className="flex items-center justify-between text-xs">
                     <span className="text-slate-400">{s.label}</span>
                     <div className="flex items-center gap-1.5">
-                      <span className={`w-1.5 h-1.5 rounded-full ${s.color}`} />
-                      <span className="text-slate-500 capitalize">{s.status}</span>
+                      <span className={`w-1.5 h-1.5 rounded-full ${s.color} ${s.pulse ? "animate-ping" : ""}`} />
+                      <span className={`capitalize ${s.status === "Degraded" ? "text-amber-400" : "text-emerald-400"}`}>
+                        {s.status}
+                      </span>
                     </div>
                   </div>
                 ))}
+              </div>
+              <div className="mt-3 pt-3 border-t border-slate-800/50 text-[10px] text-slate-600 flex items-center justify-between">
+                <span>Last health check</span>
+                <span className="tabular-nums">{formatLiveTime()}</span>
               </div>
             </div>
           </div>

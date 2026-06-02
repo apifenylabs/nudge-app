@@ -106,14 +106,14 @@ const builds: BuildEntry[] = [
  {
  date: '2026-05-12',
  title: 'Family Travel Directory — Build Fix',
- description: 'Removed orphaned post-data module causing build failure. All 52 posts clean. Both family travel and luxury travel sites now building successfully.',
+ description: 'Removed orphaned post-data module causing build failure. All 52 posts clean.',
  type: 'fix',
  stats: ['Build restored', '52 posts clean', '6 sites passing'],
  },
  {
  date: '2026-05-12',
  title: 'Luxury Travel — Affiliate CTAs + Base URL Fix',
- description: 'Fixed canonical URL bug on 23 luxury blog posts (was pointing to wrong domain). Added Booking.com/Klook/Viator affiliate CTAs to blog pages.',
+ description: 'Fixed canonical URL bug on 23 luxury blog posts. Added affiliate CTAs to blog pages.',
  type: 'monetization',
  stats: ['23 URLs fixed', 'Affiliate CTAs added', 'Destination pages monetized'],
  },
@@ -220,7 +220,7 @@ export default function BuildInPublicPage() {
  {' '}·{' '}
  <a href="https://family-travel-directory.vercel.app" className="text-tech-300 hover:underline">Family Travel</a>
  {' '}·{' '}
- <a href="https://luxury-family-travel-asia.vercel.app" className="text-tech-300 hover:underline">Luxury Travel</a>
+
  </p>
  </div>
  </div>

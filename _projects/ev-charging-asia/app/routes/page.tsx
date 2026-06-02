@@ -92,6 +92,7 @@ export default function RoutesPage() {
           <nav className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
             <Link href="/search" className="hover:text-gray-900 dark:hover:text-gray-200">Chargers</Link>
             <Link href="/compare" className="hover:text-gray-900 dark:hover:text-gray-200">Compare</Link>
+            <Link href="/premium-routes" className="text-amber-600 hover:text-amber-700 font-medium">Premium</Link>
             <Link href="/blog" className="hover:text-gray-900 dark:hover:text-gray-200">Blog</Link>
           </nav>
         </div>

@@ -47,6 +47,7 @@ export default function ItinerariesPage() {
           <nav className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
             <Link href="/search" className="hover:text-gray-900">Search</Link>
             <Link href="/routes" className="hover:text-gray-900">Routes</Link>
+            <Link href="/premium-routes" className="text-amber-600 hover:text-amber-700 font-medium">Premium</Link>
             <Link href="/blog" className="hover:text-gray-900">Blog</Link>
           </nav>
         </div>

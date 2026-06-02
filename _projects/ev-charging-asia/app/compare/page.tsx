@@ -2,8 +2,9 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import { Zap, ArrowLeft, ArrowRight, Check, X, Minus, Route as RouteIcon, Clock, BatteryCharging, Calendar, AlertTriangle, ArrowUpDown, Star, Table, List, Lightbulb } from 'lucide-react';
+import { Zap, ArrowLeft, ArrowRight, Check, X, Minus, Route as RouteIcon, Clock, BatteryCharging, Calendar, AlertTriangle, ArrowUpDown, Crown, FileText, Lock, Star, Table, List, Lightbulb } from 'lucide-react';
 import { getAllItineraries } from '@/data/itineraries';
+import { premiumRoutes } from '@/lib/premium-routes';
 import SiteFooter from '@/components/SiteFooter';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import RouteSuggestions from '@/components/itineraries/RouteSuggestions';
@@ -373,9 +374,12 @@ export default function ComparePage() {
             <Zap size={20} className="text-green-500" />
             <span className="font-semibold text-gray-900 text-sm">EV Charging Asia</span>
           </Link>
-          <Link href="/routes" className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
-            <ArrowLeft size={14} /> All routes
-          </Link>
+          <nav className="flex items-center gap-4 text-sm">
+            <Link href="/premium-routes" className="text-amber-600 hover:text-amber-700 font-medium">Premium</Link>
+            <Link href="/routes" className="flex items-center gap-1 text-gray-500 hover:text-gray-700">
+              <ArrowLeft size={14} /> All routes
+            </Link>
+          </nav>
         </div>
       </header>
 
@@ -800,6 +804,46 @@ export default function ComparePage() {
                   View full itinerary →
                 </div>
               </Link>
+            </div>
+
+            {/* Premium upsell — cross-sell premium PDF guides for the compared routes */}
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-5 mb-8">
+              <div className="flex items-center gap-2 mb-2">
+                <Crown size={18} className="text-amber-600" />
+                <h3 className="text-sm font-bold text-gray-900">Download Premium PDF Guides</h3>
+              </div>
+              <p className="text-xs text-gray-600 mb-4">Get the detailed printable guide for both routes — verified charging stations, turn-by-turn directions, and family activities with prices.</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {[itineraryA, itineraryB].map((it, idx) => {
+                  const prem = premiumRoutes.find(r =>
+                    r.slug.includes(it.slug) || it.slug.includes(r.slug.replace('premium-', ''))
+                  );
+                  if (!prem) return null;
+                  return (
+                    <Link
+                      key={idx}
+                      href={`/premium-routes/${prem.slug}/purchase`}
+                      className="flex items-center justify-between bg-white rounded-xl border border-amber-200 p-3 hover:border-amber-300 hover:shadow-sm transition-all"
+                    >
+                      <div className="flex items-center gap-2 min-w-0">
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shrink-0">
+                          <FileText size={14} className="text-white" />
+                        </div>
+                        <div className="min-w-0">
+                          <p className="text-xs font-semibold text-gray-900 truncate">{it.title.split(':')[0]}</p>
+                          <p className="text-[10px] text-gray-500">{prem.pages} pages · ${prem.price.toFixed(2)}</p>
+                        </div>
+                      </div>
+                      <Lock size={14} className="text-amber-500 shrink-0 ml-2" />
+                    </Link>
+                  );
+                })}
+              </div>
+              <div className="mt-3 text-center">
+                <Link href="/premium-routes" className="text-xs text-amber-700 hover:text-amber-800 font-medium hover:underline">
+                  Browse all premium guides →
+                </Link>
+              </div>
             </div>
           </>
         ) : (

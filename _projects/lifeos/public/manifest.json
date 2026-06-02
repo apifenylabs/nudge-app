@@ -1,0 +1,13 @@
+{
+  "name": "LifeOS — AI Copilot for Everything",
+  "short_name": "LifeOS",
+  "description": "A personality-aware AI copilot with 12 specialized plugins for travel, finance, health, career, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2DD4BF",
+  "icons": [
+    { "src": "/icon-192.svg", "sizes": "192x192", "type": "image/svg+xml" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -113,6 +113,9 @@ export default function SiteFooter() {
               <li>
                 <Link href="/compare" className="text-sm text-gray-400 hover:text-green-600 transition-colors">Compare</Link>
               </li>
+              <li>
+                <Link href="/premium-routes" className="text-sm text-amber-500 hover:text-amber-600 transition-colors font-medium">Premium Guides</Link>
+              </li>
             </ul>
           </div>
 

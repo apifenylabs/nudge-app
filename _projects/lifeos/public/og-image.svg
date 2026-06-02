@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="50%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#065F46"/>
+    </linearGradient>
+    <linearGradient id="icon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2DD4BF"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="200" fill="white" opacity="0.03"/>
+  <circle cx="1100" cy="500" r="280" fill="white" opacity="0.03"/>
+  <circle cx="1000" cy="100" r="120" fill="white" opacity="0.02"/>
+  
+  <!-- Icon -->
+  <rect x="80" y="250" width="140" height="140" rx="30" fill="url(#icon)"/>
+  <path d="M120 340 L120 280 L140 300 L150 280 L170 310 L190 290 L190 340" 
+        fill="none" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="150" cy="270" r="10" fill="white"/>
+  
+  <!-- Title -->
+  <text x="260" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="bold" fill="white">LifeOS</text>
+  <text x="260" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="rgba(255,255,255,0.85)">AI Copilot for Everything</text>
+  
+  <!-- Plugin badges -->
+  <g transform="translate(260, 410)">
+    <rect width="100" height="32" rx="16" fill="rgba(255,255,255,0.12)"/>
+    <text x="50" y="21" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)" text-anchor="middle">✈️ Travel</text>
+  </g>
+  <g transform="translate(380, 410)">
+    <rect width="110" height="32" rx="16" fill="rgba(255,255,255,0.12)"/>
+    <text x="55" y="21" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)" text-anchor="middle">💰 Finance</text>
+  </g>
+  <g transform="translate(510, 410)">
+    <rect width="100" height="32" rx="16" fill="rgba(255,255,255,0.12)"/>
+    <text x="50" y="21" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)" text-anchor="middle">💪 Health</text>
+  </g>
+  <g transform="translate(630, 410)">
+    <rect width="100" height="32" rx="16" fill="rgba(255,255,255,0.12)"/>
+    <text x="50" y="21" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)" text-anchor="middle">💼 Career</text>
+  </g>
+  <g transform="translate(260, 455)">
+    <rect width="110" height="32" rx="16" fill="rgba(255,255,255,0.12)"/>
+    <text x="55" y="21" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)" text-anchor="middle">🧘 Mindfulness</text>
+  </g>
+  <g transform="translate(390, 455)">
+    <rect width="110" height="32" rx="16" fill="rgba(255,255,255,0.12)"/>
+    <text x="55" y="21" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)" text-anchor="middle">⚡ Productivity</text>
+  </g>
+  <g transform="translate(520, 455)">
+    <rect width="105" height="32" rx="16" fill="rgba(255,255,255,0.12)"/>
+    <text x="52" y="21" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)" text-anchor="middle">🥗 Nutrition</text>
+  </g>
+  <g transform="translate(640, 455)">
+    <rect width="120" height="32" rx="16" fill="rgba(255,255,255,0.12)"/>
+    <text x="60" y="21" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.9)" text-anchor="middle">📚 Learning</text>
+  </g>
+  
+  <!-- Tagline -->
+  <text x="260" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="rgba(255,255,255,0.6)">
+    12 specialized AI plugins that lead, challenge, and guide you
+  </text>
+  
+  <!-- URL -->
+  <text x="260" y="575" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="rgba(255,255,255,0.4)">
+    lifeos.vercel.app
+  </text>
+</svg>

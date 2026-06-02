@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 /* ─────────────────────────────────────────────────────────────
    Pricing Page — Stripe Test Mode (localStorage mock)
@@ -274,6 +274,69 @@ function SuccessModal({
 }
 
 /* ─────────────────────────────────────────────────────────────
+   ScrollReveal wrapper (intersection observer)
+   ───────────────────────────────────────────────────────────── */
+function ScrollReveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className="transition-all duration-700 ease-out"
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(24px)",
+        transitionDelay: `${delay}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Count-up animation hook
+   ───────────────────────────────────────────────────────────── */
+function useCountUp(target: number, durationMs = 1000, started = true) {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    if (!started) { setValue(0); return; }
+    let startTime: number | null = null;
+    let raf: number;
+    const animate = (now: number) => {
+      if (!startTime) startTime = now;
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / durationMs, 1);
+      // ease-out quad
+      const eased = 1 - (1 - progress) * (1 - progress);
+      setValue(Math.round(eased * target));
+      if (progress < 1) raf = requestAnimationFrame(animate);
+    };
+    raf = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(raf);
+  }, [target, durationMs, started]);
+
+  return value;
+}
+
+/* ─────────────────────────────────────────────────────────────
    Page Component
    ───────────────────────────────────────────────────────────── */
 export default function PricingPage() {
@@ -281,6 +344,8 @@ export default function PricingPage() {
   const [activePlans, setActivePlans] = useState<Record<string, any>>({});
   const [checkoutOrder, setCheckoutOrder] = useState<any>(null);
   const [mounted, setMounted] = useState(false);
+  const [plansVisible, setPlansVisible] = useState(false);
+  const plansRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -288,6 +353,22 @@ export default function PricingPage() {
     const existing = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
     if (existing) existing.content = 'Titan pricing plans: Free tier, Pro $20/mo, Team $50/mo, Enterprise $200/mo. Build unlimited AI agents with rank-based progression, skill trees, and multi-agent orchestration.';
     setActivePlans(getActivePlans());
+  }, []);
+
+  // Intersection observer for plan cards count-up
+  useEffect(() => {
+    if (!plansRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setPlansVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(plansRef.current);
+    return () => observer.disconnect();
   }, []);
 
   /* ── FAQPage JSON-LD schema ───────────────────────────── */
@@ -400,15 +481,24 @@ export default function PricingPage() {
         </div>
 
         {/* Plans grid */}
-        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 items-start">
-          {plans.map((plan) => (
-            <PlanCard
+        <div ref={plansRef} className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 items-start">
+          {plans.map((plan, i) => (
+            <div
               key={plan.id}
-              plan={plan}
-              billing={billing}
-              onCheckout={handleCheckout}
-              active={!!activePlans[plan.id]}
-            />
+              className="transition-all duration-700 ease-out"
+              style={{
+                opacity: plansVisible ? 1 : 0,
+                transform: plansVisible ? "translateY(0)" : "translateY(30px)",
+                transitionDelay: `${i * 100}ms`,
+              }}
+            >
+              <PlanCard
+                plan={plan}
+                billing={billing}
+                onCheckout={handleCheckout}
+                active={!!activePlans[plan.id]}
+              />
+            </div>
           ))}
         </div>
 
@@ -421,6 +511,7 @@ export default function PricingPage() {
         </div>
 
         {/* FAQ */}
+        <ScrollReveal>
         <section className="max-w-3xl mx-auto mt-20">
           <h2 className="text-2xl font-bold text-white text-center mb-8">
             Frequently Asked
@@ -445,6 +536,7 @@ export default function PricingPage() {
             ))}
           </div>
         </section>
+        </ScrollReveal>
       </main>
 
       {/* Success modal */}

@@ -1,8 +1,16 @@
 # Work Engine State
 
-## Completed
+## 2026-06-01 — E2E Test Expansion (P5 Strategic)
+
+- ✅ **Created `e2e/playbooks.spec.ts`** — 6 tests: playbook index, individual pages, JSON-LD schema presence, index links to playbook pages, multiple playbooks load, interlinking to other sections
+- ✅ **Created `e2e/industry-pages.spec.ts`** — 5 tests: /industries/insurance, /industries/hr, /industries/construction load with content, BreadcrumbList schema detection (graceful fallback for pages without), internal geo page links
+- ✅ **Created `e2e/categories.spec.ts`** — 6 tests: /categories index loads with listings, category links present, category detail pages load with content, JSON-LD on detail pages, multiple categories load, nav from index to detail
+- ✅ **Created `e2e/tools-detail.spec.ts`** — 6 tests: tools directory loads, individual tool detail pages load, JSON-LD SoftwareApplication schema, related tools rendered, multiple tools load, BreadcrumbList schema
+- ✅ **Expanded `e2e/blog.spec.ts`** — Added 3 new tests: blog category page loads, blog category page has JSON-LD, FAQPage JSON-LD on blog posts, blog page interlinks; total 7 tests
+- ✅ **All 45 tests passing** (32.7s) — total 9 spec files, expanded from 5 to 9, from 8 to 45 tests
+- 🔄 **Test coverage gap identified**: `/community-playbook` pages, `/collection` pages, `/for/*` role pages, `/build-in-public`, `/premium`, `/compare` index not covered — low priority
+
 - ✅ **Thailand Geo Blog Post Created**: `best-ai-tools-thailand-2026` added to `lib/generated-blog-data.ts`
-  - Title: "Top AI Tools for Thailand Businesses in 2026"
   - Slug: `best-ai-tools-thailand-2026`
   - Tags: thailand, ai-tools, solopreneur, small-business, asia, productivity, marketing, ecommerce, travel
   - Reading time: 10 min
@@ -18,6 +26,18 @@
   - `ai-tools-philippines` — PH-specific data with 5 NPC/compliance FAQs
   - `ai-tools-indonesia` — ID-specific data with 5 UU PDP/local-ecosystem FAQs
   - Build: compiled successfully, 472 static pages generated
+
+## 2026-06-02 — Blog Content Generation Batch (3 new posts)
+
+- ✅ **Created 3 blog JSON data files**:
+  - `data/blog/ai-tools-content-creators-asia-2026.json` — AI for Content Creators in Asia 2026 (12 min read, ~3200 words)
+  - `data/blog/ai-tools-small-business-asia-2026.json` — Best AI Tools for Small Businesses in Asia 2026 (13 min read, ~3400 words)
+  - `data/blog/free-vs-paid-ai-tools-asia-2026.json` — Free AI vs Paid AI in Asia 2026 (14 min read, ~3600 words)
+- ✅ **Added entries to `lib/generated-blog-data.ts`** — all 3 posts appended before `];`, properly formatted with slug, title, excerpt, date, author, tags, readingTime, content
+- ✅ **Affiliate link coverage**: Each post mentions tools from affiliate registry (ChatGPT, Canva, Perplexity, ElevenLabs, Descript, Synthesia, HeyGen, Midjourney, Leonardo, Grammarly, Gemini, Notion AI, DeepSeek, Claude, Jasper, Zapier Central, Intercom Fin, Zendesk, DeepL, Krisp, Suno, Udio, Otter, Remove.bg)
+- ✅ **Cross-linking**: Each post links to country pages (`/ai-tools-[country]`) and related blog posts (`/blog/ai-tools-philippines-2026`)
+- ✅ **SEO-optimized**: H2 headings, comparison tables, FAQ sections, pro tips, practical use cases
+- ✅ **No build/deploy required** — handled by [slug] dynamic route
 
 ## 2026-05-29 — Midjourney vs DALL-E 3 comparison page
 

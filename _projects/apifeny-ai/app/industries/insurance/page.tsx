@@ -254,6 +254,42 @@ export default function InsurancePage() {
     </div>
    </section>
 
+   {/* AI Tool Comparisons */}
+   <section className="bg-gradient-to-br from-slate-50 to-blue-50 border-t border-blue-100">
+    <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+     <h2 className="text-2xl font-bold text-gray-900 mb-2">AI Tool Comparisons for Insurance</h2>
+     <p className="text-gray-600 mb-8 max-w-2xl">
+      Side-by-side comparisons of AI tools and platforms relevant to insurance professionals.
+     </p>
+     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {[
+       { slug: 'best-claims-automation-tools-compared', title: 'Best Claims Automation Platforms', excerpt: 'Snapsheet vs Shift Technology vs FRISS — AI claims processing tools benchmarked.' },
+       { slug: 'best-fraud-detection-ai-compared', title: 'Best Fraud Detection AI Compared', excerpt: 'Featurespace vs SAS Fraud Management vs Kount — ML fraud detection for insurance.' },
+       { slug: 'best-underwriting-ai-compared', title: 'Best Underwriting AI Compared', excerpt: 'Earnix vs BlueVector AI vs Zesty.ai — AI underwriting platforms for P&C and life.' },
+      ].map((comp) => (
+       <Link
+        key={comp.slug}
+        href={`/compare/${comp.slug}`}
+        className="group bg-white border border-gray-200 rounded-xl p-5 hover:border-blue-300 hover:shadow-md transition-all"
+       >
+        <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+         {comp.title}
+        </h3>
+        <p className="text-sm text-gray-500">{comp.excerpt}</p>
+       </Link>
+      ))}
+     </div>
+     <div className="mt-6 text-center">
+      <Link
+       href="/compare"
+       className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm"
+      >
+       View all AI tool comparisons <ArrowRight className="w-4 h-4" />
+      </Link>
+     </div>
+    </div>
+   </section>
+
    {/* Related Content */}
    <section className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
     <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Industry Deep Dives</h2>

@@ -447,6 +447,44 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Recommended For You — based on onboarding preferences */}
+            {onboardedCategories.length > 0 && plugins.length > 0 && (
+              <div className="mb-8">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-lg">🎯</span>
+                  <h2 className="text-sm font-bold text-gray-800">Recommended For You</h2>
+                  <span className="text-[10px] text-teal-500 bg-teal-50 border border-teal-200 px-1.5 py-0.5 rounded-full font-medium">Personalized</span>
+                </div>
+                <p className="text-xs text-gray-400 mb-3">
+                  Based on the areas you selected during onboarding.
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {plugins
+                    .filter(p => onboardedCategories.includes(p.id))
+                    .filter(p => searchQuery === '' || p.name.toLowerCase().includes(searchQuery.toLowerCase()) || p.description.toLowerCase().includes(searchQuery.toLowerCase()))
+                    .filter(p => statusFilter === 'all' || p.status === statusFilter)
+                    .map(plugin => (
+                      <PluginCard
+                        key={plugin.id}
+                        plugin={plugin}
+                        onSelect={selectPlugin}
+                      />
+                    ))}
+                </div>
+                <div className="mt-3 text-center">
+                  <button
+                    onClick={() => {
+                      localStorage.removeItem('lifeos_onboarding_categories');
+                      setOnboardedCategories([]);
+                    }}
+                    className="text-[11px] text-gray-400 hover:text-gray-600 underline"
+                  >
+                    ✕ Dismiss recommendations
+                  </button>
+                </div>
+              </div>
+            )}
+
             {/* Plugin Grid */}
             {(() => {
               if (plugins.length === 0) {

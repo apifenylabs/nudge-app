@@ -2,8 +2,8 @@
 // Deploy an agent to a target robot hardware platform.
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { deploy } from '@/titan/src/lib/robotics/deploy'; // works via @/* → ./
-import type { DeployRequest, RobotPlatform } from '@/titan/src/lib/robotics/types';
+import { deploy } from '../../../../lib/robotics/deploy';
+import type { DeployRequest, RobotPlatform } from '../../../../lib/robotics/types';
 
 const VALID_PLATFORMS: RobotPlatform[] = [
   'ros2',

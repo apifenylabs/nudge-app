@@ -39,6 +39,7 @@ import { getAffiliateForTool } from '@/lib/affiliate-links';
 import PriceComparisonTable from './PriceComparisonTable';
 import ToolComments from './ToolComments';
 import HowToUse from './HowToUse';
+import AffiliateCard from './AffiliateCard';
 
 interface ToolDetailProps {
  tool: Tool;
@@ -224,6 +225,32 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
  bestForPipelineStage={(tool as any).best_for_pipeline_stage}
  />
  </section>
+
+ {/* Contextual affiliate card — recommend the tool */}
+ {(() => {
+ const aff = getAffiliateForTool(tool.slug);
+ if (!aff) return null;
+ const stage = (tool as any).best_for_pipeline_stage;
+ const contextLabels: Record<string, string> = {
+ 'planning': 'planning & strategy',
+ 'coding': 'coding & development',
+ 'research': 'research & analysis',
+ 'content': 'content creation',
+ 'design': 'design & creative',
+ 'testing': 'testing & QA',
+ 'marketing': 'marketing & growth',
+ };
+ const contextLabel = stage ? contextLabels[stage] || stage : undefined;
+ return (
+ <section>
+ <AffiliateCard
+ toolSlug={tool.slug}
+ toolName={tool.name}
+ context={contextLabel}
+ />
+ </section>
+ );
+ })()}
 
  {/* Playbook use cases */}
  {tool.playbook_use_cases && tool.playbook_use_cases.length > 0 && (

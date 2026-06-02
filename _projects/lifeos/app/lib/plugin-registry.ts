@@ -1082,6 +1082,125 @@ Let's adjust your practice for next month based on what the data shows.`,
   },
 ];
 
+const NUTRITION_PHASES: PluginPhase[] = [
+  {
+    id: 'profile',
+    name: 'Profile',
+    description: 'Build your nutritional baseline',
+    leadPrompt: `Let's understand where you are nutritionally right now:
+
+• What does a typical day of eating look like for you?
+• Any dietary restrictions or preferences? (vegetarian, vegan, keto, halal, allergies)
+• What are your goals — weight management, muscle gain, energy, digestive health, or general wellness?
+• Do you track anything currently? (calories, macros, meal prep)
+• What's your relationship with food like — intuitive, stressful, or somewhere in between?
+• Any health conditions that affect your diet? (diabetes, IBS, thyroid, etc.)
+
+I'll build your nutrition profile on canvas so we can track progress together.`,
+    objectives: [
+      'Understand current eating patterns and restrictions',
+      'Identify nutrition goals (weight, energy, performance, health)',
+      'Build a nutrition profile on canvas with baseline metrics',
+      'Flag any diet-related health concerns that need professional input',
+    ],
+  },
+  {
+    id: 'audit',
+    name: 'Audit',
+    description: 'Analyze your diet quality and find gaps',
+    leadPrompt: `Here's what I see from your profile. Let's get specific:
+
+• Protein intake: based on your weight and activity, you need ~Xg/day. Where are you landing?
+• Veggie diversity: how many different plants do you eat per week? (target: 30+)
+• Hydration: rough water intake vs target?
+• Meal timing: when do you eat, and are there long gaps?
+• Processed food ratio: what % of your diet is whole foods vs packaged?
+• Caffeine, alcohol, sugar — what's your relationship with each?
+
+I'll run a quality score based on what you share. Don't worry about being perfect — honesty helps me help you.`,
+    objectives: [
+      'Calculate macronutrient and micronutrient gap analysis',
+      'Assess diet quality score (whole foods vs processed ratio)',
+      'Identify hydration, timing, and dependency patterns',
+      'Surface the single biggest nutritional gap to fix first',
+    ],
+  },
+  {
+    id: 'plan',
+    name: 'Plan',
+    description: 'Build a sustainable eating plan',
+    leadPrompt: `Great, we know where you are and what needs work. Let's build a plan that actually works for your life:
+
+• Based on your audit, here are the 3 highest-impact changes you can make:
+  1. [biggest gap] — here's a simple fix
+  2. [second gap] — here's how to start
+  3. [third gap] — when you're ready for this
+
+• Meal structure: what's your preferred eating pattern? (3 meals, small frequent, IF, etc.)
+• Prep capacity: how much time can you dedicate to food prep?
+• Budget: any constraints on what you can spend?
+• What's your relationship like with cooking? Love it, tolerate it, or avoid it?
+
+Let me build a template week that fits your goals, lifestyle, and preferences.`,
+    objectives: [
+      'Identify top 3 highest-impact dietary changes',
+      "Create a meal structure that fits the user's schedule and preferences",
+      'Build a template week with specific meal ideas',
+      'Respect budget, time, and cooking skill constraints',
+    ],
+  },
+  {
+    id: 'habits',
+    name: 'Habits',
+    description: 'Build small daily nutrition habits',
+    leadPrompt: `Plans fail without habits. Let's build the micro-habits that stick:
+
+• Choose ONE habit to start this week. Here are options based on your profile:
+  - Start each day with a protein-rich breakfast
+  - Drink a glass of water before every meal
+  - Add one serving of vegetables to lunch and dinner
+  - Swap one processed snack for whole fruit or nuts
+  - Prep lunches for the next day, every evening
+
+• What's your trigger? Pick an existing habit to anchor this new one
+• What's the minimum viable version? (e.g., "eat one vegetable at dinner" not "eat 5 servings")
+• When will you do it? Be specific: time, place, context
+
+One habit, one week. That's all. Let's make it automatic.`,
+    objectives: [
+      'Select one small nutrition habit to start this week',
+      'Use habit stacking: anchor to an existing routine',
+      'Define minimum viable version to reduce friction',
+      'Track completion daily without guilt or perfectionism',
+    ],
+  },
+  {
+    id: 'review',
+    name: 'Review',
+    description: 'Weekly check-in and plan adjustment',
+    leadPrompt: `Time for your weekly nutrition check-in. No judgment, just data:
+
+THIS WEEK:
+• Habit consistency: X of 7 days completed
+• What made it easy or hard?
+• Energy levels: any shift since last week?
+• Cravings or slip-ups: what triggered them?
+• Wins: what went better than expected?
+
+ADJUSTMENTS:
+• Keep the same habit? Level it up? Switch to something else?
+• Based on your feedback, here's what I'd suggest for next week...
+
+Small steps compound. Consistency beats perfection every time.`,
+    objectives: [
+      'Track habit consistency without guilt',
+      'Identify patterns: triggers, energy shifts, barriers',
+      'Celebrate wins and adjust the plan based on real feedback',
+      "Set next week's habit or progression level",
+    ],
+  },
+];
+
 // ─── Plugin Registry ────────────────────────────────────────────────
 
 export const PLUGINS: PluginDefinition[] = [
@@ -1265,9 +1384,9 @@ BEHAVIOR:
     description: 'Courses, skills, reading, certifications',
     color: 'from-amber-500 to-orange-600',
     gradient: 'linear-gradient(135deg, #F59E0B, #EA580C)',
-    badge: 'Coming soon',
+    badge: 'Skill builder',
     phases: LEARNING_PHASES,
-    status: 'beta',
+    status: 'active',
     features: [
       'AI maps your learning goals and motivation',
       'Structured curriculum with measurable milestones',
@@ -1306,9 +1425,9 @@ BEHAVIOR:
     description: 'Family events, care plans, shared goals',
     color: 'from-pink-500 to-rose-600',
     gradient: 'linear-gradient(135deg, #EC4899, #F43F5E)',
-    badge: 'Coming soon',
+    badge: 'Family hub',
     phases: FAMILY_PHASES,
-    status: 'beta',
+    status: 'active',
     features: [
       'Family profile and relationship mapping',
       'Shared goals, traditions, and quality time planning',
@@ -1346,9 +1465,9 @@ BEHAVIOR:
     description: 'Home improvement, maintenance, organization',
     color: 'from-yellow-500 to-amber-600',
     gradient: 'linear-gradient(135deg, #EAB308, #D97706)',
-    badge: 'Coming soon',
+    badge: 'Home hub',
     phases: HOME_PHASES,
-    status: 'beta',
+    status: 'active',
     features: [
       'Full home inventory and project catalog',
       'Priority ranking by urgency, cost, and impact',
@@ -1388,9 +1507,9 @@ BEHAVIOR:
     description: 'Social calendar, friendships, events',
     color: 'from-fuchsia-500 to-purple-600',
     gradient: 'linear-gradient(135deg, #D946EF, #9333EA)',
-    badge: 'Coming soon',
+    badge: 'Social hub',
     phases: SOCIAL_PHASES,
-    status: 'beta',
+    status: 'active',
     features: [
       'Social landscape mapping with relationship frequency',
       'Personalized social goals (depth vs breadth)',
@@ -1428,9 +1547,9 @@ BEHAVIOR:
     description: 'Partner, communication, quality time',
     color: 'from-red-500 to-rose-600',
     gradient: 'linear-gradient(135deg, #EF4444, #E11D48)',
-    badge: 'Coming soon',
+    badge: 'Relationship hub',
     phases: RELATIONSHIPS_PHASES,
-    status: 'beta',
+    status: 'active',
     features: [
       'Relationship health assessment and baseline',
       'Love languages and communication style analysis',
@@ -1470,9 +1589,9 @@ BEHAVIOR:
     description: 'Habits, systems, deep work, and personal effectiveness',
     color: 'from-amber-400 to-yellow-600',
     gradient: 'linear-gradient(135deg, #FBBF24, #CA8A04)',
-    badge: 'Coming soon',
+    badge: 'System builder',
     phases: PRODUCTIVITY_PHASES,
-    status: 'beta',
+    status: 'active',
     features: [
       'Habit audit with time tracking and energy mapping',
       'System design with multiple methodologies (GTD, ZTD, Eisenhower, custom)',
@@ -1508,6 +1627,50 @@ BEHAVIOR:
 - Tools are means, not ends. Don't obsess over which app — obsess over the workflow
 - End every response with a concrete, specific next action
 - Build canvas sections: Time Audit, System Blueprint, Tool Setup, Deep Work Tracker, Weekly Review`,
+  },
+  {
+    id: 'nutrition',
+    name: 'Nutrition OS',
+    emoji: '🥗',
+    description: 'Meal planning, diet tracking, nutritional goals',
+    color: 'from-green-500 to-lime-600',
+    gradient: 'linear-gradient(135deg, #22C55E, #65A30D)',
+    badge: 'Diet coach',
+    phases: NUTRITION_PHASES,
+    status: 'active',
+    features: [
+      'Full nutrition profile — diet, restrictions, goals, health conditions',
+      'Diet quality audit with macronutrient and micronutrient gap analysis',
+      'Personalized eating plan respecting budget, time, and cooking skill',
+      'Habit-first approach: one micro-habit at a time for lasting change',
+      'Weekly check-ins with pattern detection and plan adjustment',
+      'Evidence-based guidance citing nutrition research and guidelines',
+    ],
+    systemPrompt: `You are Nutrition OS — a specialized LifeOS plugin for nutritional guidance and healthy eating habits.
+You are inspired by aicofounder.com. You lead the conversation.
+
+YOUR JOB:
+- Build a complete nutrition profile: current diet, restrictions, goals, health conditions
+- Audit diet quality: identify the biggest nutritional gaps with evidence
+- Create a personalized eating plan that fits the user's actual life — budget, time, cooking skill
+- Focus on habit formation over perfection: one micro-habit at a time
+- Run weekly check-ins to track progress and adjust
+
+YOUR PHASES:
+1. Profile → Build nutrition profile on canvas with baseline metrics
+2. Audit → Analyze diet quality, find gaps, identify priorities
+3. Plan → Create a sustainable eating plan with template week
+4. Habits → Build one micro-habit at a time with habit stacking
+5. Review → Weekly check-in with adjustments
+
+BEHAVIOR:
+- Always cite sources: NIH, Examine.com, PubMed, WHO dietary guidelines, Harvard Nutrition Source
+- Be pragmatic, not dogmatic: a sustainable 70% whole foods diet beats a perfect 100% that lasts 2 weeks
+- Don't demonize any food group — context and quantity matter more than absolutes
+- Consider the user's culture, cuisine preferences, and budget — Mediterranean diet guidelines adapted for Asian palates, etc.
+- DISCLAIMER: I am not a doctor or registered dietitian. For medical nutrition therapy (diabetes, kidney disease, eating disorders), please consult a qualified professional.
+- End each response with a specific question or action
+- Build canvas sections: Nutrition Profile, Diet Audit, Meal Plan, Habits Tracker, Weekly Check-in`,
   },
   {
     id: 'mindfulness',

@@ -211,13 +211,36 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.08 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.15 },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, y: 32, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring" as const,
+      stiffness: 80,
+      damping: 20,
+      mass: 1,
+    },
+  },
+};
+
+const tableRowVariants = {
+  hidden: { opacity: 0, x: -8 },
+  visible: (i: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: i * 0.03,
+      duration: 0.4,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  }),
 };
 
 export default function PricingPage() {
@@ -381,7 +404,9 @@ export default function PricingPage() {
             >
               <Card
                 className={cn(
-                  "flex-1 flex flex-col border bg-white/40 backdrop-blur-sm hover:border-teal-200/30 transition-all duration-300 group",
+                  "flex-1 flex flex-col border bg-white/40 backdrop-blur-sm group",
+                  "transition-all duration-500 ease-out",
+                  "hover:-translate-y-1 hover:border-teal-300/50 hover:shadow-xl",
                   plan.popular
                     ? "border-teal-300 ring-2 ring-teal-400 shadow-[0_0_30px_rgba(20,184,166,0.12)]"
                     : "border-gray-200/30 hover:shadow-lg"
@@ -518,12 +543,24 @@ export default function PricingPage() {
             viewport={{ once: true }}
           >
             <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+              <motion.h2
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3"
+              >
                 Compare Plans Side-by-Side
-              </h2>
-              <p className="text-gray-500 max-w-lg mx-auto">
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="text-gray-500 max-w-lg mx-auto"
+              >
                 Every feature, every tier. See exactly what you get at each level.
-              </p>
+              </motion.p>
             </div>
 
             <div className="overflow-x-auto">
@@ -542,18 +579,33 @@ export default function PricingPage() {
                   {FEATURE_COMPARISON.map((section, si) => (
                     <React.Fragment key={`cat-${si}`}>
                       {/* Category header */}
-                      <tr className="border-b border-gray-200/10">
+                      <motion.tr
+                        initial={{ opacity: 0, x: -8 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3 }}
+                        className="border-b border-gray-200/10"
+                      >
                         <td
                           colSpan={4}
                           className="py-3 px-4 text-xs font-semibold text-teal-600 uppercase tracking-wider"
                         >
                           {section.category}
                         </td>
-                      </tr>
+                      </motion.tr>
                       {/* Feature rows */}
                       {section.features.map((feat, fi) => (
-                        <tr
+                        <motion.tr
                           key={`feat-${si}-${fi}`}
+                          custom={si * FEATURE_COMPARISON.reduce((a, s) => a + s.features.length, 0) + fi}
+                          initial={{ opacity: 0, x: -8 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{
+                            delay: fi * 0.04,
+                            duration: 0.4,
+                            ease: [0.16, 1, 0.3, 1],
+                          }}
                           className="border-b border-gray-200/10 hover:bg-gray-50/50 transition-colors"
                         >
                           <td className="py-2.5 px-4 text-gray-500">
@@ -568,7 +620,7 @@ export default function PricingPage() {
                           <td className="py-2.5 px-3 text-center text-amber-600">
                             {feat.enterprise}
                           </td>
-                        </tr>
+                        </motion.tr>
                       ))}
                     </React.Fragment>
                   ))}

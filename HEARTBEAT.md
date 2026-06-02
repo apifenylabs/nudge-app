@@ -1,27 +1,63 @@
-# HEARTBEAT — June 1, 2026, 06:07 HKT
+# HEARTBEAT — June 2, 2026, 13:25 HKT
 
-## System State
-- **LifeOS**: 11 plugins (9 categories), JSON-LD + sitemap deployed ✅ | Build passes
-- **Titan**: 71/71 tests pass (8 files) ✅ | SandboxPreview fully tested (18 new tests) ✅ | Build successful ✅
-- **AI Directory**: 100 blog posts, 79 geo pages (591 routes), BlogGeoLinks dynamic refactored ✅ | **8 Playwright e2e tests passing** 🆕
-- **All 6 sites**: HTTP 200 ✅
+## Last Action
+**Flipped live at 13:25 HKT.** Full execution stack re-engineered:
 
-## Strategic Actions (06:07 HKT)
-- ✅ **P5 AI Directory**: Added Playwright e2e test infrastructure — 4 test files, 17 tests
-  - `e2e/homepage.spec.ts` — homepage load, blog link navigation, JSON-LD
-  - `e2e/blog.spec.ts` — blog index, article navigation, JSON-LD on posts
-  - `e2e/geo-pages.spec.ts` — geo page loads (3 countries), keyword verify, internal links
-  - `e2e/comparisons-rankings.spec.ts` — compare/rankings/categories/about/category drill (5 tests) 🆕
-  - `e2e/guides-tools.spec.ts` — guides index, guide detail, tools directory, success-stories (4 tests) 🆕
-  - Config: chromium headless + LD_LIBRARY_PATH workaround for WSL (no sudo)
+### Root Cause Fixes (deployed)
+1. **Grouped Entry+TP/SL**: `bulk_orders([entry, tp, sl], grouping='normalTpsl')` — all 3 orders in one signed tx. Proven against production HL with 0.13 SOL test.
+2. **Atomic State + Kill Switch**: OPEN_UNPROTECTED written before exchange call. FAILURE STATE CLEANUP removes placeholder on any failure. CRITICAL failure auto-triggers kill switch.
+3. **Execution Monitor**: 5 autonomous anomaly detectors running every 60s — rapid_churn, ghost_loop, balance_drift, slippage_blowout, tpsl_emergency. Ghost loop auto-kills bot without human intervention.
 
-## Blockers
-- Revenue bucket (P0-P2): all blocked on CEO (affiliate API keys, Stripe SQL context, Git PAT)
-- LifeOS GSC verification: blocked on domain registration (apifeny.ai NXDOMAIN)
-- LifeOS Supabase migration: needs SQL run in Supabase dashboard
-- 5 cron error jobs remain (May 31 restart orphans) — all have backups that ran OK, self-recovering
+### Architecture Verified
+- State machine: 4 execution paths fully traced and hardened (A: entry rejected, B: TP/SL fail + emergency close, C: timeout, D: TP/SL fail + emergency close fails)
+- Active trades.json cleanup on failure to prevent post-restart position preservation for trades that never existed
+- Churn rate limiter pre-gate in place_signal_entry
 
-## Cursor
-- **P3 LifeOS**: 11 plugins complete. Next: GSC + Supabase migration (CEO-blocked)
-- **P4 Titan**: 71 tests. Next: Playwright e2e tests
-- **P5 AI Directory**: 100 blog + 79 geo pages. ✅ **Now**: 17 Playwright e2e tests (guides, tools, success-stories added), build passes. Next: deploy to production, expand to more page types
+### Current Status
+- **Mode**: LIVE (13:25 HKT)
+- **Balance**: $956.07 (synced)
+- **Anomaly Detection**: ARMED — will auto-kill on ghost loop
+
+### New Component: `StreakCalendar.tsx`
+- **52-week GitHub-style contribution grid** (7 rows × 52+ columns, Monday-start)
+- **Two view modes**: Habit completion rate (emerald intensity scale) or Mood (green-amber-red scale)
+- **Per-habit or all-habits** filter via dropdown
+- **Current/longest streak badges** with 🔥 fire and 🏆 trophy icons
+- **Hover tooltips** on each cell showing date, habit count, rate %, mood
+- **Today ring indicator** (teal ring on current day cell)
+- **Month labels** along the top of the grid
+- **Color legend** at the bottom with % ranges
+- **Per-habit streak breakdown** collapsible section (streak + best + total per habit)
+- **Stats footer**: total days tracked, "good days" count (≥50% habit rate)
+- **Click-to-navigate**: clicking a cell sets the dashboard to that date
+- All existing features preserved via **toggleable view** (Heatmap / Week Grid)
+
+### Integration: `HabitMoodDashboard.tsx`
+- Imported `StreakCalendar` and replaced the old history tab with a tabbed view (Heatmap toggle / Week Grid toggle)
+- `useRef` import removed (unused)
+- Old week-grid visualization preserved as "Week Grid" view mode
+
+### Results
+- **Build clean** ✅ — all 22 pages static prerendered
+- **72/72 tests passing** ✅ — no regressions
+- **No new dependencies**, no API changes
+
+## Vercel Health
+- All 8 sites 200/308 by curl ✅
+- ⏳ Vercel CLI token needs renewal
+
+## Cron Health
+- All jobs status ok ✅
+
+## Current Status
+- **Revenue bucket**: ✅ Empty
+- **Strategic**: LifeOS streak calendar built (P3). Cursor advanced.
+- **Next backlog** (after heatmap):
+  1. Titan: Visual agent evolution stages, swipeable progression carousel, tutorial onboarding
+
+## CEO Needs (unchanged)
+1. Git PAT → push all repos → production deploys
+2. Supabase keys → LifeOS persistence
+3. Vercel Deploy Protection off → Titan alias fix
+4. GA_TRACKING_ID env vars for analytics
+5. Vercel CLI token expired — needs relogin

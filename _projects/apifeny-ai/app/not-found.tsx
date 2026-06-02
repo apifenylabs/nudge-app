@@ -35,14 +35,6 @@ export default function NotFound() {
  Family Travel Asia
  </a>
  <a
- href="https://luxury-family-travel-asia.vercel.app"
- target="_blank"
- rel="noopener noreferrer"
- className="text-sm text-amber-600 hover:text-amber-700 underline underline-offset-2"
- >
- Luxury Family Travel
- </a>
- <a
  href="https://ev-charging-asia.vercel.app"
  target="_blank"
  rel="noopener noreferrer"

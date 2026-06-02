@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://kids-activities-asia.vercel.app/sitemap.xml
-Disallow: /api/
