@@ -15,6 +15,8 @@ export default function SaveOnTokensInfographic() {
       <svg
         viewBox="0 0 1200 630"
         xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="Save money on AI tokens in 6 steps: Audit your spend, compress prompts, match model to task, batch requests, cache responses, and set budget alerts."
         className="w-full max-w-3xl rounded-2xl shadow-lg"
         style={{ fontFamily: "'Inter', 'SF Pro', system-ui, sans-serif" }}
       >

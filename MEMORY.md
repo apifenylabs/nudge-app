@@ -4,6 +4,13 @@
 - CEO expects every strategy to be backtest-validated BEFORE reaching his decision feed
 - Strategies reach CEO only after PROVEN gate passed or with full data attach
 
+### Trading Bot — OI/Funding Collector + Cooldown Gate + Funding Proxy Live Wiring (2026-06-02 23:43 HKT)
+- **oi_funding_collector.py:** NEW. Native HL metaAndAssetCtxs ingest, 60s cache, 5-target OI/funding extraction with rolling 60-snapshot delta computation
+- **Cooldown Gate:** 2-hour per-symbol cooldown on loss. Prevents VolSurge double-loss bug where bot re-entered SOL LONG 18 minutes after losing (23:09 + 23:27). Backed by full UAT Scenario 6.
+- **Funding Proxy live wired:** OI delta ratio now passed to `check_funding_signal()`. Was running with oi_change=0.0. Now uses real OI deltas from collector.
+- **UAT v2:** 6 scenarios, 34/34 pass. Extended to cover OI delta computation, funding_proxy signal firing, cooldown persistence/expiry.
+- **Preflight:** ALL PASS. Ready for deploy.
+
 ### Trading Bot — Ghost State Fix + Infrastructure (2026-05-30 08:50 HKT)
 - **Bug Fixed:** bot_state.json held 5 stale ghost orders, causing bot to skip all coins ("native TP/SL order active"). State cleared, triple hardening applied (auto-reconciliation, orphan killer safety, stable API format).
 - **Playbook 4 (Trend Following):** Already built in strategies/trend_following.py. REGISTERED in governance gate.

@@ -7,6 +7,7 @@ import {
  DollarSign, Zap, CheckCircle, ChevronRight, FileText, Star,
  Download, Layers, Clock,
 } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -21,6 +22,9 @@ import FeaturedRankings from '@/components/FeaturedRankings';
 import SuccessStories from '@/components/SuccessStories';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import EcosystemSplash from '@/components/EcosystemSplash';
+import BrowseByCountry from '@/components/BrowseByCountry';
+import WorkflowDiagram from '@/components/WorkflowDiagram';
+import AnimatedStats from '@/components/AnimatedStats';
 
 const PAID_PLAYBOOKS = [
  { slug: 'ai-solopreneur-toolkit', price: '$9', icon: '🚀', title: 'AI Solopreneur Toolkit', gradient: 'from-violet-500/20 to-purple-500/20' },
@@ -56,8 +60,8 @@ const freeTemplates = [
 ];
 
 const socialProof = [
- { icon: BookOpen, value: '71', label: 'Playbooks', color: 'text-violet-600', bg: 'bg-violet-100' },
- { icon: Users, value: '500+', label: 'Solopreneurs using Apifeny', color: 'text-cyan-600', bg: 'bg-cyan-100' },
+ { icon: BookOpen, value: '105', label: 'Playbooks', color: 'text-violet-600', bg: 'bg-violet-100' },
+ { icon: Users, value: '630+', label: 'Solopreneurs using Apifeny', color: 'text-cyan-600', bg: 'bg-cyan-100' },
  { icon: TrendingUp, value: '3x', label: 'Faster content production', color: 'text-emerald-600', bg: 'bg-emerald-100' },
  { icon: DollarSign, value: '22 hrs', label: 'Saved per week (avg)', color: 'text-amber-600', bg: 'bg-amber-100' },
 ];
@@ -125,11 +129,11 @@ export default function HomePage() {
  <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-sm">
  <span className="flex items-center gap-1.5 text-gray-500">
  <CheckCircle className="w-4 h-4 text-emerald-500" />
- <strong className="text-gray-900">71</strong> playbooks
+ <strong className="text-gray-900">105</strong> playbooks
  </span>
  <span className="flex items-center gap-1.5 text-gray-500">
  <CheckCircle className="w-4 h-4 text-emerald-500" />
- <strong className="text-gray-900">500+</strong> solopreneurs
+ <strong className="text-gray-900">630+</strong> solopreneurs
  </span>
  <span className="flex items-center gap-1.5 text-gray-500">
  <Shield className="w-4 h-4 text-emerald-500" />
@@ -202,7 +206,7 @@ export default function HomePage() {
  <Link href="/playbooks">
  <Button className="bg-violet-600 hover:bg-violet-700 text-white shadow-lg shadow-violet-200">
  <BookOpen className="w-4 h-4 mr-1" />
- Browse all 71 playbooks
+ Browse all 105 playbooks
  <ArrowRight className="w-4 h-4 ml-1" />
  </Button>
  </Link>
@@ -332,23 +336,29 @@ export default function HomePage() {
  </div>
  </section>
 
- {/* SOCIAL PROOF STATS */}
+ {/* HOW IT WORKS — Workflow Diagram */}
+ <section className="py-16 sm:py-20 bg-white border-t border-gray-200">
+ <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div className="text-center mb-10">
+ <Badge variant="outline" className="mb-4 bg-teal-50 border-teal-200 text-teal-700">
+ <Zap className="w-3.5 h-3.5 mr-1" />
+ How Apifeny Works
+ </Badge>
+ <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 tracking-tight">
+ From problem → shipped in 4 steps
+ </h2>
+ <p className="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto">
+ Not a tool directory. An execution system. Pick your problem, get a playbook, grab the tools, ship.
+ </p>
+ </div>
+ <WorkflowDiagram />
+ </div>
+ </section>
+
+ {/* SOCIAL PROOF STATS — Animated Counters */}
  <section className="py-12 sm:py-16 border-y border-gray-200 bg-gray-50">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
- <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
- {socialProof.map((stat) => {
- const Icon = stat.icon;
- return (
- <div key={stat.label} className="text-center">
- <div className={`inline-flex items-center justify-center w-10 h-10 rounded-lg ${stat.bg} mb-3`}>
- <Icon className={`w-5 h-5 ${stat.color}`} />
- </div>
- <div className="text-2xl sm:text-3xl font-bold text-gray-900">{stat.value}</div>
- <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
- </div>
- );
- })}
- </div>
+ <AnimatedStats />
  </div>
  </section>
 
@@ -413,17 +423,17 @@ export default function HomePage() {
  Pro Membership
  </Badge>
  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 tracking-tight">
- Unlock all playbooks for $47/mo
+ Unlock all playbooks for $37/mo
  </h2>
  <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mb-6">
  Every playbook. Every template. Every update. New playbooks added monthly.
  Cancel anytime.
  </p>
  <div className="flex flex-wrap items-center justify-center gap-4">
- <a href="/api/create-checkout?product=pro-monthly">
+ <a href="/premium">
  <Button size="lg" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white shadow-lg shadow-violet-200">
  <Star className="w-4 h-4 mr-1" />
- Get Pro — $47/mo
+ Get Pro — $37/mo
  </Button>
  </a>
  <div className="text-xs text-gray-500">
@@ -531,6 +541,8 @@ export default function HomePage() {
  <FeaturedCategories />
  </div>
  </section>
+
+ <BrowseByCountry />
 
  <section className="py-16 sm:py-20 bg-gray-50">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

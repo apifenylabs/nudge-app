@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import ClientXpProvider from "@/components/ClientXpProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -56,7 +57,7 @@ export default function RootLayout({
     >
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className="min-h-full flex flex-col">
-        {children}
+        <ClientXpProvider>{children}</ClientXpProvider>
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics />

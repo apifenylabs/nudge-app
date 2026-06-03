@@ -105,14 +105,14 @@ const PRODUCTS: Record<string, ProductConfig> = {
  'pro-monthly': {
  name: 'Apifeny Pro — Monthly',
  description: 'Unlimited access to ALL playbooks, premium prompts, and new releases. Cancel anytime.',
- unitAmount: 4700,
+ unitAmount: 3700,
  mode: 'subscription',
  interval: 'month',
  },
  'pro-yearly': {
  name: 'Apifeny Pro — Yearly',
- description: 'Unlimited access to ALL playbooks + 2 months free. Best value at $47/mo.',
- unitAmount: 47000,
+ description: 'Unlimited access to ALL playbooks + 2 months free. Best value at $30/mo.',
+ unitAmount: 29700,
  mode: 'subscription',
  interval: 'year',
  },

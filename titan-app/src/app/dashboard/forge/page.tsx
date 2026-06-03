@@ -18,9 +18,13 @@ import {
   SKILL_TEMPLATES,
 } from "@/lib/dashboard-store";
 import type { ProgressionState } from "@/lib/dashboard-store";
+import { useXpNotification } from "@/hooks/useXpNotification";
+import { useLevelUpWatcher } from "@/hooks/useLevelUpWatcher";
 
 export default function ForgePage() {
+  const xpNotif = useXpNotification();
   const [progression, setProgression] = useProgressionGame();
+  useLevelUpWatcher(progression.totalXp, progression.totalXp > 0);
   const [editorCode, setEditorCode] = useState<string>(SKILL_TEMPLATES[0].code);
   const [savedSkills, setSavedSkills] = useState<Skill[]>(() => loadSkills());
   const [skillName, setSkillName] = useState('');
@@ -107,8 +111,10 @@ export default function ForgePage() {
         lastSavedAt: new Date().toISOString(),
       };
     });
+    // Push XP notification
+    xpNotif.push(25, `Skill Run — ${name}`);
     setRunningSkill(false);
-  }, [addFeedEntry, setProgression]);
+  }, [addFeedEntry, setProgression, xpNotif]);
 
   const handleSaveSkill = useCallback(async () => {
     if (!skillName.trim()) return;
@@ -133,9 +139,11 @@ export default function ForgePage() {
       text: `Created skill: "${skillName.trim()}"`,
       time: 'Just now', type: 'task',
     });
+    // Push XP notification for skill save
+    xpNotif.push(25, `Skill Saved — ${skillName.trim()}`);
     setSkillSaving(false);
     setSkillName('');
-  }, [skillName, editorCode, savedSkills.length, addFeedEntry, grantXp]);
+  }, [skillName, editorCode, savedSkills.length, addFeedEntry, grantXp, xpNotif]);
 
   const handleAuditSkill = useCallback(() => {
     const currentName = skillName.trim() || 'Untitled Skill';
@@ -169,7 +177,16 @@ export default function ForgePage() {
       text: `Certified ${result.auditTier.toUpperCase()} (${result.overallScore}%)`,
       time: 'Just now', type: 'achievement',
     });
-  }, [skillName, editorCode, grantCertXp, addFeedEntry]);
+
+    // Push XP notification for certification
+    if (result.auditTier === 'gold') {
+      xpNotif.push(200, `Gold Certification — ${currentName}`, { rankUp: true, rankName: 'Gold Standard', rankEmoji: '🌟' });
+    } else if (result.auditTier === 'silver') {
+      xpNotif.push(100, `Silver Certification — ${currentName}`);
+    } else if (result.auditTier === 'bronze') {
+      xpNotif.push(50, `Bronze Certification — ${currentName}`);
+    }
+  }, [skillName, editorCode, grantCertXp, addFeedEntry, xpNotif]);
 
   const handleCloseAuditModal = useCallback(() => {
     setShowAuditModal(false);

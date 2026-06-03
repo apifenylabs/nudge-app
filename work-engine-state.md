@@ -1,58 +1,51 @@
-# Work Engine State — June 2, 2026, 13:19 HKT
+# 🌐 Work Engine State
 
-## Current Status
+**Last updated:** 2026-06-03 12:19 HKT  
+**Session:** Autonomous Work Session — UsageSummaryBar on Dashboard Homepage
 
-### Revenue Projects (P0-P2)
-- **EV Charging Asia**: ✅ Build passes (151 blog entries). All 200.
-- **Luxury Family Travel**: ✅ 200
-- **Kids Activities Asia**: ✅ Fixed PostCSS, building and 200.
-- **Senior Friendly Travel Asia**: ✅ 200
-- **Family Travel Directory**: ✅ 308 (redirects to custom domain)
-- **Affiliate Tracking**: Live with Stripe checkout ✅
-- **Trading Bot**: HALTED (kill_switched=true)
-- **SOCIAL BEAST**: ✅ 200
+---
 
-### Strategic Projects (P3-P5)
+## Priority Bucket Allocation
 
-#### P3: LifeOS — Enhanced ✅
-- 12 plugins live on static HTML version (lifeos-weld.vercel.app)
-- Next.js version building clean in `_projects/lifeos/`
-- Habit→Mood Correlation Engine (Pearson, streaks, localStorage, 4-tab dashboard) ✅
-- Pomodoro Timer / Concentration Plugin ✅
-- Plugin search/filter bar on `/plugins` page ✅
-- Data export (CSV/JSON) ✅
-- **Visual Streak Calendar (GitHub-style heatmap)** ✅ — 13:19 HKT
-  - New `StreakCalendar.tsx` component with 52-week grid, hover tooltips, per-habit filter
-  - Two view modes (habit completion rate + mood score)
-  - Current/longest streak badges, month labels, color legend
-  - Click-to-navigate to any date cell
-  - Integrated into HabitMoodDashboard with toggleable view (Heatmap / Week Grid)
-  - 72/72 tests ✅, Build clean ✅
-- **Next backlog**:
-  1. 🔜 Titan: Visual agent evolution stages, swipeable progression carousel, tutorial onboarding
+| Bucket | Status | Next Action |
+|--------|--------|-------------|
+| 🟢 Revenue (P0-P2) | ✅ Empty — all sites live | Check again next cycle |
+| 🟡 Strategic (P3) | 🟢 LifeOS — UsageSummaryBar created | See Cursor |
 
-#### P4: Titan — ✅ Build passes (78/78 tests)
-- Landing page, robotics guides, progression page with God-Tier system
-- **Blocked on CEO**: Vercel alias fix, Deploy Protection toggle
+---
 
-#### P5: AI Directory — ✅ Build passes ✅ 31/31 tests ✅ 45 e2e tests
-- 79 country pages, 108 blog entries, 61 affiliate links
-- **Blocked on CEO**: git PAT for deploy
+## Cursor
 
-### P6 Analytics
-- All projects have GA4 in code, no env vars set on live
-- **Blocked on CEO**: GA_TRACKING_ID env vars
+**LifeOS — UsageSummaryBar (just completed):**
+- ✅ Created `UsageSummaryBar` component at `_projects/lifeos/app/components/UsageSummaryBar.tsx`
+  - Shows today's sessions and messages in compact stat pills
+  - Top 3 most-used plugins with medal badges + MiniSparkline inline
+  - All-time totals (total sessions + time) on desktop
+  - Auto-refreshes every 60s for long-running sessions
+  - Only renders when usage data exists (no empty-state clutter)
+- ✅ Integrated into homepage (`page.tsx`) — renders after the Hero section, before the search/filter bar
+- ✅ Build passes clean (162 kB for `/`)
 
-## Cursor Position
-- **P0-P2 Revenue**: ✅ All 8 sites 200/308. Revenue bucket empty.
-- **P3 LifeOS**: Heatmap ✅ DONE. Cursor advances to Titan.
-- **P4 Titan**: Next item: visual agent evolution stages, swipeable progression carousel, tutorial onboarding
-- **P5 AI Directory**: Next item: 5 more country pages, playlist/collection curation, tool comparison carousel
-- **P6 Analytics**: Blocked on CEO
+**Next cursor position:**
+1. **LifeOS (P3)** — Next: Consider adding a recent-activity row or "Continue where you left off" quick-resume cards to the homepage. Or move to Titan progression draft.
+2. **Titan (P4)** — Draft progression system design: XP bars, level-up animations, achievement badges. Ready to code when CEO unblocks Vercel/git PAT.
+3. **AI Directory (P5)** — Add affiliate link hooks to top 5 directory listing pages (SEO + monetization).
 
-## Next Actions
-1. 🔜 **Titan**: Visual agent evolution stages, progression swipeable carousel, tutorial onboarding
-2. 🔜 **CEO needs**: Git PAT → push all repos → production deploys
-3. 🔜 **CEO needs**: Supabase keys → LifeOS persistence
-4. 🔜 **CEO needs**: Vercel Deploy Protection off → Titan alias fix
-5. 🔜 **CEO needs**: GA_TRACKING_ID env vars
+---
+
+## Recent Actions
+
+| Time | Action | Result |
+|------|--------|--------|
+| 12:19 HKT | Created UsageSummaryBar component + integrated into homepage dashboard | Build passes clean ✅ |
+| 12:08 HKT | Built LifeOS plugin manifest offline/mock mode: usePluginManifest hook | All 92 tests pass ✅ |
+| 11:15 HKT | Added usage analytics + sparkline integration to Quick Actions | Build clean ✅ |
+
+---
+
+## Blockers
+
+- **Full `next build` (parent workspace)** — missing `kids-activities-asia` dir; building from `_projects/lifeos` sub-project works fine
+- **LifeOS Supabase persistence** — blocked on CEO for API keys
+- **Titan deploy** — blocked on CEO for Vercel alias / git PAT
+- **AI Directory** — already deployed and working

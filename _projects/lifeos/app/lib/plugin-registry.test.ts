@@ -23,8 +23,8 @@ import {
 // ─── Plugin Registry Integrity ─────────────────────────────────────
 
 describe('Plugin Registry', () => {
-  it('exports exactly 12 plugins', () => {
-    expect(PLUGINS).toHaveLength(12);
+  it('exports exactly 14 plugins', () => {
+    expect(PLUGINS).toHaveLength(14);
   });
 
   it('all plugins have unique ids', () => {

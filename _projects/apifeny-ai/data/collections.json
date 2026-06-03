@@ -2,36 +2,67 @@
   {
     "id": "1",
     "name": "Best AI Agents for Solopreneurs",
-    "slug": "ai-agents-solopreneurs"
+    "slug": "ai-agents-solopreneurs",
+    "tool_count": 6
   },
   {
     "id": "2",
     "name": "Best Productivity AI for Busy Parents",
-    "slug": "productivity-ai-busy-parents"
+    "slug": "productivity-ai-busy-parents",
+    "tool_count": 6
   },
   {
     "id": "3",
     "name": "Best AI Tools for Family Travel",
-    "slug": "ai-family-travel"
+    "slug": "ai-family-travel",
+    "tool_count": 6
   },
   {
     "id": "4",
     "name": "Best AI for Asian Languages",
-    "slug": "ai-asian-languages"
+    "slug": "ai-asian-languages",
+    "tool_count": 6
   },
   {
     "id": "5",
     "name": "Best AI for the Coding Pipeline",
-    "slug": "ai-coding-pipeline"
+    "slug": "ai-coding-pipeline",
+    "tool_count": 6
   },
   {
     "id": "6",
     "name": "Best AI for Content Creation",
-    "slug": "ai-content-pipeline"
+    "slug": "ai-content-pipeline",
+    "tool_count": 6
   },
   {
     "id": "7",
     "name": "Best AI for Marketing Pipeline",
-    "slug": "ai-marketing-pipeline"
+    "slug": "ai-marketing-pipeline",
+    "tool_count": 6
+  },
+  {
+    "id": "8",
+    "name": "Best AI Writing & Content Tools",
+    "slug": "ai-writing-content-tools",
+    "tool_count": 6
+  },
+  {
+    "id": "9",
+    "name": "Best AI for Video & Voice",
+    "slug": "ai-video-voice-tools",
+    "tool_count": 6
+  },
+  {
+    "id": "10",
+    "name": "Best AI Design & Creative Tools",
+    "slug": "ai-design-creative-tools",
+    "tool_count": 6
+  },
+  {
+    "id": "11",
+    "name": "Best AI Assistants & Chatbots",
+    "slug": "best-ai-assistants-chatbots",
+    "tool_count": 6
   }
 ]

@@ -16,20 +16,31 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import { getPluginUsage, getUsageSummary, resetUsageData, trackEvent, type PluginUsage, type UsageSummary } from '@/app/lib/usage-analytics';
+import SparklineTrend from './SparklineTrend';
 
 // ─── Sub-components ────────────────────────────────────────────────
 
-function StatCard({ label, value, emoji, trend }: {
+function StatCard({ label, value, emoji, trend, pluginId, pct }: {
   label: string;
   value: string | number;
   emoji: string;
   trend?: 'up' | 'down' | 'neutral';
+  /** If set, renders a SparklineTrend inline instead of a plain arrow */
+  pluginId?: string;
+  /** Completion percentage for the sparkline (0-100). Defaults to value if omitted and pluginId is set. */
+  pct?: number;
 }) {
+  const sparklinePct = pct ?? (typeof value === 'number' ? Math.min(value, 100) : 50);
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-sm transition-shadow">
       <div className="flex items-center justify-between mb-1">
         <span className="text-lg">{emoji}</span>
-        {trend && (
+        {pluginId && (
+          <div className="w-20 max-w-[80px]">
+            <SparklineTrend pluginId={pluginId} currentPct={sparklinePct} simplified />
+          </div>
+        )}
+        {!pluginId && trend && (
           <span className={`text-[10px] font-mono ${
             trend === 'up' ? 'text-emerald-500' : trend === 'down' ? 'text-red-400' : 'text-gray-400'
           }`}>
@@ -240,7 +251,7 @@ export function PluginUsageSection({ pluginId, pluginName }: { pluginId: string;
 
       {/* Stats grid */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
-        <StatCard label="Sessions" value={usage.totalSessions} emoji="💬" trend={usage.totalSessions > 0 ? 'up' : undefined} />
+        <StatCard label="Sessions" value={usage.totalSessions} emoji="💬" pluginId={pluginId} pct={Math.min(usage.totalSessions, 100)} />
         <StatCard label="Messages" value={usage.totalMessages} emoji="✉️" />
         <StatCard label="Time Spent" value={`${usage.totalTimeMinutes}m`} emoji="⏱" />
         <StatCard
@@ -316,7 +327,7 @@ export default function UsageAnalyticsPage() {
           <>
             {/* Summary stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-              <StatCard label="Total Sessions" value={summary?.totalSessions || 0} emoji="💬" />
+              <StatCard label="Total Sessions" value={summary?.totalSessions || 0} emoji="💬" pluginId="_all" pct={Math.min(summary?.totalSessions || 0, 100)} />
               <StatCard label="Total Messages" value={summary?.totalMessages || 0} emoji="✉️" />
               <StatCard label="Time Spent" value={summary ? `${summary.totalTimeMinutes}m` : '0m'} emoji="⏱" />
               <StatCard label="Active Days" value={summary?.activeDays || 0} emoji="📅" />

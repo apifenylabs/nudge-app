@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run generate-blog-data && next build",
+    "build": "npm run generate-blog-data && bash scripts/copy-route-data.sh && next build",
     "generate-blog-data": "node scripts/generate-blog-data-node.js",
     "start": "next start",
     "lint": "next lint"

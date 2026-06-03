@@ -10,6 +10,8 @@ export default function InfographicPromptEngineering({ width = 1200, height = 63
     <svg
       viewBox={`0 0 ${width} ${height}`}
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="Ultimate prompt engineering playbook — 5 techniques: System prompts, chain-of-thought reasoning, few-shot prompting, role prompting, and structured output formatting."
       style={{ width: '100%', height: 'auto', maxWidth: width, fontFamily: 'Inter, system-ui, sans-serif' }}
     >
       <defs>

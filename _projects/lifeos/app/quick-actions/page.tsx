@@ -11,6 +11,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { getUsageSummary, getPluginUsage, type UsageSummary } from '@/app/lib/usage-analytics';
+import SparklineTrend from '@/app/components/SparklineTrend';
 
 // ─── Types ─────────────────────────────────────────────────────────
 
@@ -171,14 +173,57 @@ function formatTimeAgo(timestamp: number): string {
   return new Date(timestamp).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
 }
 
+// ─── Helpers: usage aggregation ─────────────────────────────────
+
+function getPresetActivity(preset: Preset): {
+  label: string;
+  sessions: number;
+  color: 'none' | 'low' | 'medium' | 'high';
+} {
+  if (typeof window === 'undefined') return { label: '—', sessions: 0, color: 'none' };
+
+  let totalSessions = 0;
+  for (const p of preset.plugins) {
+    const usage = getPluginUsage(p.id);
+    if (usage) totalSessions += usage.totalSessions;
+  }
+
+  if (totalSessions === 0) return { label: 'Not used yet', sessions: 0, color: 'none' };
+  if (totalSessions < 5) return { label: `${totalSessions} session${totalSessions !== 1 ? 's' : ''}`, sessions: totalSessions, color: 'low' };
+  if (totalSessions < 20) return { label: `${totalSessions} sessions`, sessions: totalSessions, color: 'medium' };
+  return { label: `${totalSessions} sessions`, sessions: totalSessions, color: 'high' };
+}
+
 // ─── Components ────────────────────────────────────────────────────
+
+function UsageBar({ level }: { level: 'none' | 'low' | 'medium' | 'high' }) {
+  const colors: Record<string, string> = {
+    none: 'bg-gray-100',
+    low: 'bg-teal-200',
+    medium: 'bg-teal-400',
+    high: 'bg-emerald-500',
+  };
+  const widths: Record<string, string> = {
+    none: 'w-1/5',
+    low: 'w-1/3',
+    medium: 'w-2/3',
+    high: 'w-full',
+  };
+  return (
+    <div className="h-1 w-full bg-gray-100 rounded-full overflow-hidden">
+      <div className={`h-full rounded-full transition-all duration-500 ${colors[level]} ${widths[level]}`} />
+    </div>
+  );
+}
 
 function PresetCard({
   preset,
   onLaunch,
+  activity,
 }: {
   preset: Preset;
   onLaunch: (preset: Preset) => void;
+  activity: ReturnType<typeof getPresetActivity>;
 }) {
   return (
     <div className="group relative bg-white border border-gray-200 rounded-2xl p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-transparent">
@@ -215,6 +260,34 @@ function PresetCard({
         <p className="text-xs text-gray-500 leading-relaxed mb-3 line-clamp-2">
           {preset.description}
         </p>
+
+        {/* Activity indicator */}
+        {activity.sessions > 0 && (
+          <div className="mb-2">
+            <UsageBar level={activity.color} />
+          </div>
+        )}
+
+        {/* Usage label + sparkline */}
+        <div className="flex items-center justify-between mb-3">
+          <span className={`text-[10px] font-mono ${
+            activity.color === 'none' ? 'text-gray-300' :
+            activity.color === 'low' ? 'text-teal-500' :
+            activity.color === 'medium' ? 'text-teal-600' :
+            'text-emerald-600'
+          }`}>
+            {activity.sessions > 0 ? '●' : '○'} {activity.label}
+          </span>
+          {activity.sessions > 0 && preset.plugins.length > 0 && (
+            <div className="w-16">
+              <SparklineTrend
+                pluginId={preset.plugins[0].id}
+                currentPct={Math.min(activity.sessions, 100)}
+                simplified
+              />
+            </div>
+          )}
+        </div>
 
         {/* Plugin chips */}
         <div className="flex flex-wrap gap-1.5 mb-4">
@@ -298,9 +371,13 @@ function RecentLaunches({
 export default function QuickActionsPage() {
   const [recent, setRecent] = useState<LaunchRecord[]>([]);
   const [launchedPreset, setLaunchedPreset] = useState<string | null>(null);
+  const [summary, setSummary] = useState<UsageSummary | null>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     setRecent(loadRecent());
+    setSummary(getUsageSummary());
   }, []);
 
   const handleLaunch = (preset: Preset) => {
@@ -329,6 +406,29 @@ export default function QuickActionsPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      {/* ── Usage Summary Bar ── */}
+      {isClient && summary && summary.totalSessions > 0 && (
+        <section className="border-b border-gray-100 bg-teal-50/40">
+          <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-center gap-6 text-xs">
+            <span className="text-gray-600">
+              🎯 <strong className="text-gray-900">{summary.totalSessions}</strong> total sessions
+            </span>
+            <span className="text-gray-400 hidden sm:inline">·</span>
+            <span className="text-gray-600 hidden sm:inline">
+              ✉️ <strong className="text-gray-900">{summary.totalMessages}</strong> messages
+            </span>
+            <span className="text-gray-400 hidden sm:inline">·</span>
+            <span className="text-gray-600">
+              📅 <strong className="text-gray-900">{summary.activeDays}</strong> active days
+            </span>
+            <span className="text-gray-400 hidden sm:inline">·</span>
+            <span className="text-gray-600 hidden sm:inline">
+              🏆 Most used: <strong className="text-gray-900">{summary.mostUsedPlugin}</strong>
+            </span>
+          </div>
+        </section>
+      )}
+
       {/* ── Hero ── */}
       <section className="relative overflow-hidden border-b border-gray-100 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-5xl mx-auto px-4 py-16 sm:py-20 text-center">
@@ -368,7 +468,12 @@ export default function QuickActionsPage() {
       <section className="max-w-5xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {PRESETS.map((preset) => (
-            <PresetCard key={preset.id} preset={preset} onLaunch={handleLaunch} />
+            <PresetCard
+              key={preset.id}
+              preset={preset}
+              onLaunch={handleLaunch}
+              activity={getPresetActivity(preset)}
+            />
           ))}
         </div>
 

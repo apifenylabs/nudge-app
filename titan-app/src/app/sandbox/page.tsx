@@ -18,10 +18,13 @@ import {
   MessageSquare,
   Wand2,
   Brain,
+  Zap,
 } from 'lucide-react';
+import { useXpNotification } from '@/hooks/useXpNotification';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import ScrollReveal from '@/components/ScrollReveal';
+import { getVisualTier, getAbilitiesForLevel, getGodTierStatus } from '@/lib/swarm/god-tier-engine';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -119,6 +122,7 @@ function simulateAgentResponse(userMessage: string, skills: string[], systemProm
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 export default function SandboxPage() {
+  const xpNotif = useXpNotification();
   const [selectedSkills, setSelectedSkills] = useState<string[]>(['web_scrape', 'text_generate']);
   const [systemPrompt, setSystemPrompt] = useState(PRESETS[0].systemPrompt);
   const [activePreset, setActivePreset] = useState(PRESETS[0].name);
@@ -129,6 +133,15 @@ export default function SandboxPage() {
       timestamp: Date.now(),
     },
   ]);
+    // Sandbox progression — seeded from mock XP to preview the level/rank system
+  const SANDBOX_XP = 4200; // ~Lv.9 (Apprentice) as demo
+  const SANDBOX_LEVEL = Math.max(1, Math.floor(SANDBOX_XP / 500) + 1);
+  const sandboxTier = getVisualTier(SANDBOX_LEVEL);
+  const sandboxAbilities = getAbilitiesForLevel(SANDBOX_LEVEL);
+  const sandboxGodStatus = getGodTierStatus(SANDBOX_LEVEL, SANDBOX_XP, 1, 2, 10);
+  const tierLabels = ['', 'Hatchling', 'Apprentice', 'Adept', 'Master', 'Grandmaster', 'Legend', 'God-Tier'];
+  const tierEmojis = ['', '🥚', '🐣', '🦊', '🐉', '🦅', '🌟', '👑'];
+
   const [input, setInput] = useState('');
   const [agentState, setAgentState] = useState<AgentState>('idle');
   const [showSkillPanel, setShowSkillPanel] = useState(true);
@@ -172,6 +185,9 @@ export default function SandboxPage() {
     const agentMsg: Message = { role: 'agent', content: response, timestamp: Date.now() };
     setMessages(prev => [...prev, agentMsg]);
     setAgentState('success');
+    // Push XP notification for sandbox execution
+    const sandboxXp = Math.floor(Math.random() * 50) + 15;
+    xpNotif.push(sandboxXp, 'Agent Sandbox — task executed');
     setTimeout(() => setAgentState('idle'), 1500);
   };
 
@@ -204,10 +220,38 @@ export default function SandboxPage() {
                 <Bot className="h-5 w-5 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-white">AI Agent Sandbox</h1>
-                <p className="text-sm text-slate-400">
-                  Configure, test, and experiment with agent behaviors
-                </p>
+                <div className="flex items-center gap-2">
+                  <h1 className="text-2xl font-bold text-white">AI Agent Sandbox</h1>
+                  <Badge className="bg-gradient-to-r from-amber-500/20 to-purple-500/20 border-amber-500/30 text-amber-300 text-[10px] font-mono px-2 py-0.5">
+                    {tierEmojis[sandboxTier]} {tierLabels[sandboxTier]} · Lv.{SANDBOX_LEVEL}
+                  </Badge>
+                </div>
+                <div className="flex items-center gap-2 mt-1">
+                  <p className="text-sm text-slate-400">
+                    Configure, test, and experiment with agent behaviors
+                  </p>
+                  <button
+                    onClick={() => {
+                      const randomXp = Math.floor(Math.random() * 150) + 25;
+                      const tierIdx = getVisualTier(SANDBOX_LEVEL);
+                      const isRankUp = Math.random() > 0.7;
+                      if (isRankUp) {
+                        const nextRank = Math.min(tierIdx + 1, 7);
+                        xpNotif.push(randomXp, 'Agent Sandbox — Rank milestone achieved!', {
+                          rankUp: true,
+                          rankName: tierLabels[nextRank],
+                          rankEmoji: tierEmojis[nextRank],
+                        });
+                      } else {
+                        xpNotif.push(randomXp, 'Agent Sandbox — skill execution completed');
+                      }
+                    }}
+                    className="flex items-center gap-1 rounded-lg border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-[10px] font-mono text-amber-300 hover:bg-amber-500/20 transition-all"
+                  >
+                    <Zap className="h-3 w-3" />
+                    +XP Demo
+                  </button>
+                </div>
               </div>
             </div>
           </ScrollReveal>

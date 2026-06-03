@@ -1,0 +1,359 @@
+{
+  "slug": "singapore-to-kuala-lumpur-road-trip",
+  "routeCoords": [
+    [
+      1.3521,
+      103.8198
+    ],
+    [
+      1.3989666666666667,
+      103.79366666666667
+    ],
+    [
+      1.4458333333333333,
+      103.76753333333333
+    ],
+    [
+      1.4927,
+      103.7414
+    ],
+    [
+      1.7249999999999999,
+      103.2443
+    ],
+    [
+      1.9573,
+      102.7472
+    ],
+    [
+      2.1896,
+      102.2501
+    ],
+    [
+      2.3696333333333333,
+      102.1461
+    ],
+    [
+      2.5496666666666665,
+      102.0421
+    ],
+    [
+      2.7297,
+      101.9381
+    ],
+    [
+      2.866133333333333,
+      101.85436666666666
+    ],
+    [
+      3.0025666666666666,
+      101.77063333333334
+    ],
+    [
+      3.139,
+      101.6869
+    ]
+  ],
+  "stationMarkers": [
+    {
+      "id": "sgp-central-021",
+      "name": "Blue Charge ION Orchard",
+      "lat": 1.2628,
+      "lng": 103.8354,
+      "chargerSpeed": 150,
+      "chargerCount": 14,
+      "costPerKwh": 0.25,
+      "reliability": 3.2
+    },
+    {
+      "id": "sgp-marina-bay-065",
+      "name": "SP Group ION Orchard",
+      "lat": 1.2796,
+      "lng": 103.8723,
+      "chargerSpeed": 60,
+      "chargerCount": 13,
+      "costPerKwh": 0.25,
+      "reliability": 3.2
+    },
+    {
+      "id": "sgp-marina-bay-056",
+      "name": "Tesla Supercharger Suntec City",
+      "lat": 1.2667,
+      "lng": 103.8693,
+      "chargerSpeed": 120,
+      "chargerCount": 5,
+      "costPerKwh": 0.25,
+      "reliability": 3.1
+    },
+    {
+      "id": "sgp-orchard-035",
+      "name": "Shell Recharge Junction 8",
+      "lat": 1.2883,
+      "lng": 103.8436,
+      "chargerSpeed": 175,
+      "chargerCount": 10,
+      "costPerKwh": 0.25,
+      "reliability": 4.5
+    },
+    {
+      "id": "sgp-orchard-031",
+      "name": "SP Group Causeway Point",
+      "lat": 1.3069,
+      "lng": 103.8344,
+      "chargerSpeed": 100,
+      "chargerCount": 16,
+      "costPerKwh": 0.25,
+      "reliability": 3.3
+    },
+    {
+      "id": "sgp-central-008",
+      "name": "SP Group Raffles City",
+      "lat": 1.2651,
+      "lng": 103.8107,
+      "chargerSpeed": 350,
+      "chargerCount": 16,
+      "costPerKwh": 0.25,
+      "reliability": 4.8
+    },
+    {
+      "id": "mys-johor-bahru-061",
+      "name": "Tesla Supercharger CityOne Megamall",
+      "lat": 1.4978,
+      "lng": 103.7291,
+      "chargerSpeed": 150,
+      "chargerCount": 6,
+      "costPerKwh": 0.25,
+      "reliability": 3.9
+    },
+    {
+      "id": "sgp-central-025",
+      "name": "Shell Recharge ION Orchard",
+      "lat": 1.3055,
+      "lng": 103.8444,
+      "chargerSpeed": 250,
+      "chargerCount": 5,
+      "costPerKwh": 0.25,
+      "reliability": 4
+    },
+    {
+      "id": "mys-kuala-lumpur-012",
+      "name": "Tesla Supercharger The Gardens Mall",
+      "lat": 3.1625,
+      "lng": 101.6842,
+      "chargerSpeed": 50,
+      "chargerCount": 16,
+      "costPerKwh": 0.25,
+      "reliability": 3.6
+    },
+    {
+      "id": "mys-kuala-lumpur-043",
+      "name": "Gentari EV Imago KK",
+      "lat": 3.1624,
+      "lng": 101.6979,
+      "chargerSpeed": 90,
+      "chargerCount": 4,
+      "costPerKwh": 0.25,
+      "reliability": 3.8
+    },
+    {
+      "id": "mys-kuala-lumpur-035",
+      "name": "JomCharge Imago KK",
+      "lat": 3.159,
+      "lng": 101.7113,
+      "chargerSpeed": 150,
+      "chargerCount": 14,
+      "costPerKwh": 0.25,
+      "reliability": 3.2
+    },
+    {
+      "id": "mys-kuala-lumpur-007",
+      "name": "Gentari EV IOI City Mall",
+      "lat": 3.1295,
+      "lng": 101.6786,
+      "chargerSpeed": 350,
+      "chargerCount": 4,
+      "costPerKwh": 0.25,
+      "reliability": 3.5
+    },
+    {
+      "id": "mys-melaka-134",
+      "name": "EV Connection Sunway Pyramid",
+      "lat": 2.2099,
+      "lng": 102.2529,
+      "chargerSpeed": 150,
+      "chargerCount": 10,
+      "costPerKwh": 0.25,
+      "reliability": 3.6
+    },
+    {
+      "id": "mys-kuala-lumpur-045",
+      "name": "Tesla Supercharger Suria KLCC",
+      "lat": 3.1497,
+      "lng": 101.6882,
+      "chargerSpeed": 50,
+      "chargerCount": 13,
+      "costPerKwh": 0.25,
+      "reliability": 3.5
+    },
+    {
+      "id": "mys-johor-bahru-052",
+      "name": "EV Connection The Gardens Mall",
+      "lat": 1.4818,
+      "lng": 103.7568,
+      "chargerSpeed": 75,
+      "chargerCount": 9,
+      "costPerKwh": 0.25,
+      "reliability": 3.5
+    },
+    {
+      "id": "sgp-central-028",
+      "name": "SP Group Tampines Mall",
+      "lat": 1.2588,
+      "lng": 103.8181,
+      "chargerSpeed": 90,
+      "chargerCount": 14,
+      "costPerKwh": 0.25,
+      "reliability": 4.9
+    },
+    {
+      "id": "sgp-orchard-045",
+      "name": "Blue Charge NEX",
+      "lat": 1.3128,
+      "lng": 103.835,
+      "chargerSpeed": 60,
+      "chargerCount": 5,
+      "costPerKwh": 0.25,
+      "reliability": 3.9
+    },
+    {
+      "id": "idn-batam-164",
+      "name": "Go-Ion BEC",
+      "lat": 1.1342,
+      "lng": 104.0108,
+      "chargerSpeed": 125,
+      "chargerCount": 10,
+      "costPerKwh": 0.25,
+      "reliability": 4.7
+    },
+    {
+      "id": "sgp-marina-bay-066",
+      "name": "Charge+ (ChargeTronix) Waterway Point",
+      "lat": 1.294,
+      "lng": 103.8624,
+      "chargerSpeed": 200,
+      "chargerCount": 6,
+      "costPerKwh": 0.25,
+      "reliability": 3.8
+    },
+    {
+      "id": "sgp-orchard-041",
+      "name": "Shell Recharge NEX",
+      "lat": 1.3151,
+      "lng": 103.8402,
+      "chargerSpeed": 50,
+      "chargerCount": 5,
+      "costPerKwh": 0.25,
+      "reliability": 4.5
+    },
+    {
+      "id": "mys-kuala-lumpur-014",
+      "name": "EV Connection 1 Utama",
+      "lat": 3.1493,
+      "lng": 101.6905,
+      "chargerSpeed": 175,
+      "chargerCount": 8,
+      "costPerKwh": 0.25,
+      "reliability": 4.1
+    },
+    {
+      "id": "mys-kuala-lumpur-039",
+      "name": "ChargeSini The Gardens Mall",
+      "lat": 3.1297,
+      "lng": 101.6956,
+      "chargerSpeed": 90,
+      "chargerCount": 14,
+      "costPerKwh": 0.25,
+      "reliability": 3.2
+    },
+    {
+      "id": "sgp-orchard-042",
+      "name": "Tesla Supercharger Bugis Junction",
+      "lat": 1.2873,
+      "lng": 103.8563,
+      "chargerSpeed": 350,
+      "chargerCount": 17,
+      "costPerKwh": 0.25,
+      "reliability": 3.3
+    },
+    {
+      "id": "sgp-central-026",
+      "name": "SP Group Jewel Changi",
+      "lat": 1.3025,
+      "lng": 103.815,
+      "chargerSpeed": 250,
+      "chargerCount": 11,
+      "costPerKwh": 0.25,
+      "reliability": 3.9
+    },
+    {
+      "id": "mys-kuala-lumpur-015",
+      "name": "Gentari EV Pavilion KL",
+      "lat": 3.1497,
+      "lng": 101.6856,
+      "chargerSpeed": 175,
+      "chargerCount": 14,
+      "costPerKwh": 0.25,
+      "reliability": 4.3
+    },
+    {
+      "id": "idn-batam-167",
+      "name": "SPKLU Mall Bali Galeria",
+      "lat": 1.1328,
+      "lng": 104.0375,
+      "chargerSpeed": 60,
+      "chargerCount": 13,
+      "costPerKwh": 0.25,
+      "reliability": 4.1
+    },
+    {
+      "id": "sgp-changi-074",
+      "name": "Tesla Supercharger Causeway Point",
+      "lat": 1.3594,
+      "lng": 103.9782,
+      "chargerSpeed": 125,
+      "chargerCount": 10,
+      "costPerKwh": 0.25,
+      "reliability": 3.5
+    },
+    {
+      "id": "sgp-central-006",
+      "name": "Tesla Supercharger Marina Bay Sands",
+      "lat": 1.2827,
+      "lng": 103.8401,
+      "chargerSpeed": 60,
+      "chargerCount": 9,
+      "costPerKwh": 0.25,
+      "reliability": 3.2
+    },
+    {
+      "id": "sgp-marina-bay-061",
+      "name": "SP Group Jewel Changi",
+      "lat": 1.2673,
+      "lng": 103.8758,
+      "chargerSpeed": 60,
+      "chargerCount": 15,
+      "costPerKwh": 0.25,
+      "reliability": 4
+    },
+    {
+      "id": "mys-kuala-lumpur-010",
+      "name": "ChargeSini Dataran Pahlawan",
+      "lat": 3.1348,
+      "lng": 101.6774,
+      "chargerSpeed": 120,
+      "chargerCount": 15,
+      "costPerKwh": 0.25,
+      "reliability": 3.6
+    }
+  ]
+}

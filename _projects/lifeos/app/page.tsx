@@ -13,6 +13,8 @@ const ExcalidrawCanvas = dynamic(
 import type { ChatSession, ChatMessage, ConversationMode } from './lib/chat-persistence';
 import type { PluginDefinition, PluginPhase } from './lib/plugin-registry';
 import * as Persistence from './lib/chat-persistence';
+import MiniSparkline from './components/MiniSparkline';
+import UsageSummaryBar from './components/UsageSummaryBar';
 
 type Message = {
   role: 'user' | 'assistant';
@@ -88,6 +90,13 @@ function PluginCard({
 
         {/* Description */}
         <p className="text-xs text-gray-500 leading-relaxed mb-3">{plugin.description}</p>
+
+        {/* Mini sparkline trend — only for active/beta plugins */}
+        {canSelect && (
+          <div className="mb-2.5">
+            <MiniSparkline pluginId={plugin.id} />
+          </div>
+        )}
 
         {/* Feature pills */}
         <div className="flex flex-wrap gap-1">
@@ -403,6 +412,9 @@ export default function Home() {
               </p>
             </div>
 
+            {/* Usage Summary Bar — top-of-page activity stats */}
+            <UsageSummaryBar />
+
             {/* Search & Filter Bar */}
             <div className="mb-6 space-y-3">
               {/* Search input */}
@@ -541,6 +553,142 @@ export default function Home() {
                     </div>
                   )}
                 </>
+              );
+            })()}
+
+            {/* ── Coming Soon Preview Strip ── */}
+            {(() => {
+              const comingSoonPlugins = plugins.filter(p => p.status === 'coming-soon');
+              const filteredComingSoon = comingSoonPlugins.filter(p =>
+                searchQuery === '' ||
+                p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                p.features.some(f => f.toLowerCase().includes(searchQuery.toLowerCase()))
+              );
+
+              if (filteredComingSoon.length === 0) return null;
+
+              return (
+                <div className="mb-8">
+                  <div className="relative rounded-2xl overflow-hidden">
+                    {/* Gradient background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/80 via-purple-50/80 to-fuchsia-50/80" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/5 via-purple-500/5 to-fuchsia-500/5" />
+
+                    <div className="relative px-5 py-4">
+                      {/* Section header */}
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-base">🔮</span>
+                        <h2 className="text-sm font-bold text-gray-800">Coming Soon</h2>
+                        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full border border-purple-200 bg-purple-50 text-purple-600">
+                          Preview
+                        </span>
+                      </div>
+
+                      {/* Cards row */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {filteredComingSoon.map(plugin => {
+                          const gradientParts = plugin.gradient.match(/[#][\w]+/g) || [];
+                          const color1 = gradientParts[0] || '#8B5CF6';
+                          const color2 = gradientParts[1] || '#7C3AED';
+
+                          return (
+                            <div
+                              key={plugin.id}
+                              className="relative p-4 rounded-xl border border-purple-200/60 bg-white/90 backdrop-blur-sm hover:border-purple-300/80 transition-all duration-300 group"
+                            >
+                              <div className="flex items-start gap-3">
+                                {/* Emoji */}
+                                <div
+                                  className="w-10 h-10 rounded-xl flex items-center justify-center text-xl shrink-0"
+                                  style={{
+                                    background: `${color1}15`,
+                                    border: `1px solid ${color1}25`,
+                                  }}
+                                >
+                                  {plugin.emoji}
+                                </div>
+
+                                <div className="flex-1 min-w-0">
+                                  {/* Name + badge */}
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <h3 className="text-sm font-bold text-gray-900">{plugin.name}</h3>
+                                    <span
+                                      className="text-[9px] font-mono px-1.5 py-0.5 rounded-full border whitespace-nowrap"
+                                      style={{
+                                        borderColor: `${color1}30`,
+                                        background: `${color1}10`,
+                                        color: color1,
+                                      }}
+                                    >
+                                      🔜 Coming Soon
+                                    </span>
+                                  </div>
+
+                                  {/* Description */}
+                                  <p className="text-xs text-gray-500 leading-relaxed mb-2">
+                                    {plugin.description}
+                                  </p>
+
+                                  {/* Features count */}
+                                  <div className="flex items-center gap-2 mb-2">
+                                    <span className="text-[10px] text-gray-400">
+                                      {plugin.features.length} planned features
+                                    </span>
+                                    <span className="text-[8px] text-gray-300">·</span>
+                                    <span className="text-[10px] text-gray-400">
+                                      {plugin.phases.length} phases
+                                    </span>
+                                  </div>
+
+                                  {/* Features preview */}
+                                  <div className="flex flex-wrap gap-1 mb-2.5">
+                                    {plugin.features.slice(0, 2).map(f => (
+                                      <span
+                                        key={f}
+                                        className="text-[9px] font-mono text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded-md border border-gray-100"
+                                      >
+                                        {f.length > 24 ? f.slice(0, 22) + '…' : f}
+                                      </span>
+                                    ))}
+                                    {plugin.features.length > 2 && (
+                                      <span className="text-[9px] font-mono text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded-md border border-gray-100">
+                                        +{plugin.features.length - 2} more
+                                      </span>
+                                    )}
+                                  </div>
+
+                                  {/* Notify me button (placeholder) */}
+                                  <button
+                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-medium transition-all"
+                                    style={{
+                                      background: `${color1}12`,
+                                      color: color1,
+                                      border: `1px solid ${color1}20`,
+                                    }}
+                                    onMouseEnter={e => {
+                                      (e.currentTarget as HTMLElement).style.background = `${color1}20`;
+                                    }}
+                                    onMouseLeave={e => {
+                                      (e.currentTarget as HTMLElement).style.background = `${color1}12`;
+                                    }}
+                                    onClick={() => {
+                                      // Placeholder — no email capture yet
+                                      // Analytics tracking TBD once email capture is implemented
+                                    }}
+                                  >
+                                    <span>🔔</span>
+                                    <span>Notify me</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               );
             })()}
 

@@ -499,14 +499,17 @@ function Navbar() {
             <a href="/features" className="hover:text-cyan-400 transition-colors">
               Features
             </a>
+            <a href="/progression" className="hover:text-cyan-400 transition-colors">
+              Progression
+            </a>
             <a href="/pricing" className="hover:text-cyan-400 transition-colors">
               Pricing
             </a>
             <a href="/robotics" className="hover:text-cyan-400 transition-colors">
               Robotics
             </a>
-            <a href="/affiliates" className="hover:text-cyan-400 transition-colors">
-              Affiliates
+            <a href="/sandbox" className="hover:text-cyan-400 transition-colors">
+              Studio
             </a>
           </div>
 
@@ -554,6 +557,13 @@ function Navbar() {
               Features
             </a>
             <a
+              href="/progression"
+              onClick={closeMobile}
+              className="block px-4 py-3 rounded-xl text-sm text-slate-300 hover:text-cyan-400 hover:bg-cyan-500/5 transition-all"
+            >
+              Progression
+            </a>
+            <a
               href="/pricing"
               onClick={closeMobile}
               className="block px-4 py-3 rounded-xl text-sm text-slate-300 hover:text-cyan-400 hover:bg-cyan-500/5 transition-all"
@@ -568,11 +578,11 @@ function Navbar() {
               Robotics
             </a>
             <a
-              href="/affiliates"
+              href="/sandbox"
               onClick={closeMobile}
               className="block px-4 py-3 rounded-xl text-sm text-slate-300 hover:text-cyan-400 hover:bg-cyan-500/5 transition-all"
             >
-              Affiliates
+              Studio
             </a>
             <div className="pt-2">
               <button

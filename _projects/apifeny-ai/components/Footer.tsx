@@ -86,48 +86,24 @@ export default function Footer() {
  </a>
  </li>
  <li>
- <a href="https://luxury-family-travel-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 text-sm transition flex items-center gap-1.5 group">
- <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-neon transition" />
- Luxury Family Travel Asia
- </a>
- </li>
- <li>
  <a href="https://ev-charging-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 text-sm transition flex items-center gap-1.5 group">
  <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-neon transition" />
  EV Charging Asia
  </a>
  </li>
- <li>
- <a href="https://apifeny-ai.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 text-sm transition flex items-center gap-1.5 group">
- <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-neon transition" />
- Apifeny AI
- </a>
- </li>
- <li>
- <a href="https://kids-activities-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 text-sm transition flex items-center gap-1.5 group">
- <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-neon transition" />
- Kids Activities Asia
- </a>
- </li>
- <li>
- <a href="https://senior-friendly-travel-asia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 text-sm transition flex items-center gap-1.5 group">
- <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-neon transition" />
- Senior-Friendly Travel Asia
- </a>
- </li>
- <li>
- <a href="https://social-beast.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 text-sm transition flex items-center gap-1.5 group">
- <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-neon transition" />
- Social Beast
- </a>
- </li>
  </ul>
  </div>
 
- {/* Legal */}
+ {/* Resources */}
  <div>
- <h3 className="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wider">Legal</h3>
+ <h3 className="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wider">Resources</h3>
  <ul className="space-y-3">
+ <li>
+ <Link href="/changelog" className="text-gray-500 hover:text-gray-900 text-sm transition flex items-center gap-1.5 group">
+ <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-neon transition" />
+ Changelog
+ </Link>
+ </li>
  <li>
  <Link href="/privacy" className="text-gray-500 hover:text-gray-900 text-sm transition flex items-center gap-1.5 group">
  <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-neon transition" />
@@ -144,35 +120,7 @@ export default function Footer() {
  </div>
  </div>
 
- {/* Plan Your Trip — Monetization Bar */}
- <div className="mb-8">
- <h3 className="text-sm font-semibold text-neon mb-4 text-center uppercase tracking-wider">Plan Your Trip</h3>
- <div className="flex flex-wrap justify-center gap-3">
- <AffiliateLink href="https://www.booking.com" provider="booking.com">
- 🏨 Hotels
- </AffiliateLink>
- <AffiliateLink href="https://www.klook.com" provider="klook">
- 🎫 Activities
- </AffiliateLink>
- <AffiliateLink href="https://www.viator.com" provider="viator">
- 🏛️ Tours
- </AffiliateLink>
- <AffiliateLink href="https://www.getyourguide.com" provider="getyourguide">
- 🌟 Experiences
- </AffiliateLink>
- <AffiliateLink href="https://www.expedia.com" provider="expedia">
- 🚗 Car Rental
- </AffiliateLink>
- </div>
- </div>
 
- {/* Affiliate Disclosure */}
- <div className="mb-8 text-center">
- <p className="text-gray-400 text-xs leading-relaxed">
- Some links on this site are affiliate links. We may earn a commission at no extra cost to you.
- As an Amazon Associate and Klook Partner, we earn from qualifying purchases.
- </p>
- </div>
 
  {/* Bottom bar */}
  <div className="pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -184,7 +132,7 @@ export default function Footer() {
  <span className="text-gray-300">·</span>
  <Link href="/terms" className="hover:text-gray-900 transition">Terms</Link>
  <span className="text-gray-300">·</span>
- <Link href="/health" className="hover:text-gray-900 transition">Status</Link>
+ <Link href="/changelog" className="hover:text-gray-900 transition">Changelog</Link>
  </div>
  </div>
  </div>

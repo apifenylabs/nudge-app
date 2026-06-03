@@ -77,38 +77,52 @@ const CITY_COORDS: Record<string, [number, number]> = {
   'Gyeongju': [35.8562, 129.2247],
   'Busan': [35.1796, 129.0756],
   'Seoul': [37.5665, 126.9780],
-  'Gyeongju': [35.8562, 129.2247],
-  'Sejong': [36.4800, 127.2890],
   'Manila': [14.5995, 120.9842],
   'Pampanga': [15.1167, 120.6500],
   'Tarlac': [15.5000, 120.5667],
   'Baguio': [16.4169, 120.5933],
-  'Mae Hong Son': [19.3013, 97.9683],
-  'Ha Long Bay': [20.9559, 107.0793],
-  'Pai': [19.3600, 98.4408],
-  'Fatehpur Sikri': [27.0946, 77.6616],
-  'Bharatpur': [27.2167, 77.4833],
 };
 
 export default function RouteMap({ itinerary, height = '400px' }: RouteMapProps) {
   const [mounted, setMounted] = useState(false);
+  const [routeData, setRouteData] = useState<{ routeCoords: [number, number][]; stationMarkers: any[] } | null>(null);
 
-  useEffect(() => { setMounted(true); }, []);
+  useEffect(() => {
+    setMounted(true);
+    // Try to load enhanced route data from JSON file on client side
+    const slug = itinerary.slug || itinerary.id;
+    if (slug) {
+      fetch(`/data/itinerary/${slug}.json`)
+        .then(r => r.ok ? r.json() : null)
+        .then(data => {
+          if (data?.routeCoords?.length > 0) {
+            setRouteData({
+              routeCoords: data.routeCoords,
+              stationMarkers: data.stationMarkers || [],
+            });
+          }
+        })
+        .catch(() => {});
+    }
+  }, [itinerary.slug, itinerary.id]);
 
   const routeCoords = useMemo(() => {
+    // Prefer enhanced data from JSON file, fall back to city-based coords
+    if (routeData?.routeCoords?.length) return routeData.routeCoords;
     return itinerary.cities
       .map(city => CITY_COORDS[city])
       .filter(Boolean) as [number, number][];
-  }, [itinerary.cities]);
+  }, [itinerary.cities, routeData]);
 
-  // Filter stations to ones near the route cities (within 80km / ~0.72 deg lat)
+  // Filter stations to ones near the route cities
   const stationMarkers = useMemo(() => {
+    // Prefer markers from JSON data file
+    if (routeData?.stationMarkers?.length) return routeData.stationMarkers;
+
     if (!itinerary.cities.length || !rawStations.length) return [];
-    const citySet = new Set(itinerary.cities.map(c => c.toLowerCase()));
     const cityCoords = itinerary.cities.map(c => CITY_COORDS[c]).filter(Boolean) as [number, number][];
     if (!cityCoords.length) return [];
 
-    // Calculate bounding box with 1-degree padding (~110km)
     const lats = cityCoords.map(c => c[0]);
     const lngs = cityCoords.map(c => c[1]);
     const minLat = Math.min(...lats) - 1;
@@ -132,7 +146,7 @@ export default function RouteMap({ itinerary, height = '400px' }: RouteMapProps)
         costPerKwh: (s.costPerKwh as number) || 0.25,
         reliability: (s.reliability as number) || 3.5,
       }));
-  }, [itinerary.cities]);
+  }, [itinerary.cities, routeData]);
 
   if (!mounted) {
     return (

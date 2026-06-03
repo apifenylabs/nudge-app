@@ -48,7 +48,7 @@ export interface GodTierStatus {
 
 // ─── All possible god-tier abilities ───────────────────────────────────
 
-const ALL_ABILITIES: GodTierAbility[] = [
+export const ALL_ABILITIES: GodTierAbility[] = [
   // Level 30 — base god-tier
   { id: 'aura',          name: 'God-Tier Aura',         description: 'Golden radial gradient pulse aura',             minLevel: 30, icon: '✨', type: 'visual',   earned: false },
   { id: 'crown',         name: 'Crown Badge',            description: 'Level badge transforms into 👑 with sparkles',  minLevel: 30, icon: '👑', type: 'visual',   earned: false },

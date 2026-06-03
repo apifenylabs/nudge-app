@@ -13,6 +13,7 @@ import { loadProgression, loadFeed, saveFeed } from "@/lib/persistence";
 import { useMascotStore } from "@/stores/mascotStore";
 import { MAIN_AGENT, ACHIEVEMENT_DEFS, checkAchievements } from "@/lib/dashboard-store";
 import type { FeedEntry } from "@/lib/persistence";
+import { useLevelUpWatcher } from "@/hooks/useLevelUpWatcher";
 import MascotDisplay, { MascotPickerModal } from "@/components/molecules/MascotDisplay";
 import XPBar from "@/components/molecules/XPBar";
 
@@ -88,6 +89,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
   const currentLevel = useMemo(() => Math.max(1, Math.floor(progression.totalXp / 500) + 1), [progression.totalXp]);
   const estValue = (progression.totalTasksRun * 3.8).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+  // ── Level-up watcher: fires XP toasts on level boundaries ──────────────
+  useLevelUpWatcher(progression.totalXp, progression.totalXp > 0);
 
   // ▸ Clean white theme matching landing page
 

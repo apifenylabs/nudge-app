@@ -1,0 +1,5 @@
+  { id: 'relationships', emoji: '💞', name: 'Relationships', tagline: 'Deeper bonds, intentional connection',          color: 'from-red-400 to-rose-500',        gradient: 'linear-gradient(135deg, #F87171, #E11D48)' },
+  { id: 'productivity', emoji: '⚡', name: 'Productivity',  tagline: 'Do what matters, skip the rest',                 color: 'from-indigo-400 to-blue-500',     gradient: 'linear-gradient(135deg, #818CF8, #6366F1)' },
+  { id: 'nutrition',   emoji: '🥗', name: 'Nutrition',    tagline: 'Eat smarter, feel better',                         color: 'from-lime-400 to-green-500',      gradient: 'linear-gradient(135deg, #A3E635, #84CC16)' },
+  { id: 'mindfulness', emoji: '🧘', name: 'Mindfulness',  tagline: 'Presence, peace, clarity',                         color: 'from-cyan-400 to-teal-500',       gradient: 'linear-gradient(135deg, #22D3EE, #14B8A6)' },
+];

@@ -1,0 +1,104 @@
+{
+  "version": "2026-06-03-consolidation-primary",
+  "generated": "2026-06-03T02:00:00+08:00",
+  "semanticCount": 79,
+  "graphEdgeCount": 109,
+  "nodes": [
+    {
+      "id": "grouped-tpsl-fix-deployed",
+      "name": "Grouped TP/SL Fix Deployed (normalTpsl)",
+      "summary": "Jun 2 13:20: single bulk_orders call with grouping='normalTpsl' replaces post-entry TP/SL attachment. HL auto-cancels TP on SL hit. Ghost loop eliminated. Cost to date: ~$47 across 9 days. Supersedes tp-sl-workaround-resting-orders.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-06-02T13:20:00+08:00"
+    },
+    {
+      "id": "execution-monitor-deployed",
+      "name": "Execution Monitor — 5 Anomaly Detectors Deployed",
+      "summary": "Jun 2 12:47-13:10: 5 detectors: rapid_churn (position count change), ghost_loop (same position close+reopen), balance_drift (balance change threshold), slippage_blowout (fill vs signal price), tpsl_emergency (trade without native TP/SL). Auto kill-switch on critical. First self-diagnostic layer for the live trading system.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-06-02T13:10:00+08:00"
+    },
+    {
+      "id": "global-risk-restructure-jun2",
+      "name": "Global Risk Restructure — Flat-Dollar Risk + Single-Slot Rule",
+      "summary": "Jun 2 19:24-19:30: ALLOC_*=1.0 ($19.12/trade) replaces percentage allocation. Single-slot rule: 1 position/symbol max, 4 portfolio max. BB_1H_SYMBOLS allowlist enforced. Ecosystem correlation gate (ETH/ARB co-hold prevented). Choke Collar: variance-gated risk reduction. At $956 account, 2% risk per trade.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-06-02T19:30:00+08:00"
+    },
+    {
+      "id": "cepo-framework-emergence",
+      "name": "CPSO Framework — Strategic Alter Ego Authority",
+      "summary": "Jun 2: Wosobu explicitly references CPSO as strategic alter ego. CPSO directives carry higher authority than tactical requests. First major act: global risk restructure (alloc=1.0, single-slot, BB_1H). CPSO > standard Wosobu for risk decisions. Escalation path for strategic decisions routed through CPSO persona.",
+      "type": "semantic",
+      "confidence": 0.85,
+      "timestamp": "2026-06-02T19:24:00+08:00"
+    },
+    {
+      "id": "knowledge-execution-gap-pattern",
+      "name": "Knowledge-Execution Gap Pattern — Known Fixes Not Deployed",
+      "summary": "Repeating pattern: correct fix documented in semantic nodes/memory but not wired into executing code. Instances: (1) HL balance endpoint docs vs broken clearinghouseState (May 24), (2) PAPER_MODE_FORCE concept vs missing in ad-hoc scripts (May 29), (3) kill switch state fix vs cron enabled flag (Jun 1), (4) TP/SL resting order workaround vs post-entry attachment in auto-entry (May 25-Jun 2, ~$47 cost). Root cause: documentation/code decoupling. Partially addressed by Execution Monitor (runtime detection) but not prevention.",
+      "type": "semantic",
+      "confidence": 0.9,
+      "timestamp": "2026-06-03T02:00:00+08:00"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "grouped-tpsl-fix-deployed",
+      "target_id": "tp-sl-workaround-resting-orders",
+      "relation_type": "supersedes",
+      "weight": 1.0
+    },
+    {
+      "source_id": "grouped-tpsl-fix-deployed",
+      "target_id": "sol-volsurge-tpsl-loop-jun1",
+      "relation_type": "resolves",
+      "weight": 1.0
+    },
+    {
+      "source_id": "execution-monitor-deployed",
+      "target_id": "ad-hoc-code-live-risk-surface",
+      "relation_type": "mitigates",
+      "weight": 0.9
+    },
+    {
+      "source_id": "global-risk-restructure-jun2",
+      "target_id": "pipeline-decisions-locked-may25",
+      "relation_type": "extends",
+      "weight": 0.8
+    },
+    {
+      "source_id": "global-risk-restructure-jun2",
+      "target_id": "trading-discipline-phase-transition-may31",
+      "relation_type": "supports",
+      "weight": 0.85
+    },
+    {
+      "source_id": "cepo-framework-emergence",
+      "target_id": "seventy-thirty-prioritization",
+      "relation_type": "governs",
+      "weight": 0.7
+    },
+    {
+      "source_id": "knowledge-execution-gap-pattern",
+      "target_id": "sol-volsurge-tpsl-loop-jun1",
+      "relation_type": "explains",
+      "weight": 0.9
+    },
+    {
+      "source_id": "knowledge-execution-gap-pattern",
+      "target_id": "bot-mode-drift-governance-gap",
+      "relation_type": "context",
+      "weight": 0.8
+    },
+    {
+      "source_id": "knowledge-execution-gap-pattern",
+      "target_id": "backlog-execution-gap-7days",
+      "relation_type": "related",
+      "weight": 0.7
+    }
+  ]
+}

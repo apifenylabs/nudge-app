@@ -708,15 +708,15 @@ export default function LandingPageCrossLinks({ currentSlug }: Props) {
  const otherLandingPages = ALL_LANDING_PAGES.filter(p => p.slug !== currentSlug);
 
  return (
- <section className="border-t border-tech-500/20 bg-tech-800/30">
+ <section className="border-t border-gray-200 bg-gray-50">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
  {/* Landing page cross-links */}
  <div className="mb-8">
  <div className="flex items-center gap-2 mb-5">
- <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon/20 to-neon-dark/10 flex items-center justify-center shrink-0">
- <Layers className="w-4 h-4 text-neon-light" />
+ <div className="w-8 h-8 rounded-lg bg-violet-100 flex items-center justify-center shrink-0">
+ <Layers className="w-4 h-4 text-violet-600" />
  </div>
- <h2 className="text-xl font-bold text-white">
+ <h2 className="text-xl font-bold text-gray-900">
  Best AI Tools by Category
  </h2>
  </div>
@@ -728,20 +728,20 @@ export default function LandingPageCrossLinks({ currentSlug }: Props) {
  <Link
  key={page.slug}
  href={page.href ?? `/${page.slug}`}
- className="group bg-tech-800/50 border border-tech-500/20 rounded-xl p-4 sm:p-5 hover:border-neon/30 hover:bg-tech-800/70 transition-all"
+ className="group bg-white border border-gray-200 rounded-xl p-4 sm:p-5 hover:border-violet-300 hover:shadow-md transition-all"
  >
  <div className="flex items-start gap-3">
  <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${page.color} flex items-center justify-center shrink-0`}>
  <Icon className="w-5 h-5 text-white" />
  </div>
  <div className="flex-1 min-w-0">
- <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition mb-1">
+ <h3 className="text-sm font-semibold text-gray-900 group-hover:text-violet-700 transition mb-1">
  {page.shortTitle}
  </h3>
- <p className="text-xs text-tech-400 line-clamp-2 leading-relaxed">
+ <p className="text-xs text-gray-500 line-clamp-2 leading-relaxed">
  {page.description}
  </p>
- <div className="flex items-center gap-1 text-xs text-neon-light/60 group-hover:text-neon-light transition mt-2">
+ <div className="flex items-center gap-1 text-xs text-violet-500/60 group-hover:text-violet-600 transition mt-2">
  View page <ArrowRight className="w-3 h-3" />
  </div>
  </div>
@@ -753,10 +753,10 @@ export default function LandingPageCrossLinks({ currentSlug }: Props) {
  </div>
 
  {/* Related blog topics */}
- <div className="pt-6 border-t border-tech-500/10">
+ <div className="pt-6 border-t border-gray-200">
  <div className="flex items-center gap-2 mb-4">
- <BookOpen className="w-4 h-4 text-neon" />
- <h3 className="text-sm font-semibold text-tech-200">
+ <BookOpen className="w-4 h-4 text-violet-500" />
+ <h3 className="text-sm font-semibold text-gray-600">
  Read related guides
  </h3>
  </div>
@@ -765,16 +765,16 @@ export default function LandingPageCrossLinks({ currentSlug }: Props) {
  <Link
  key={cat.slug}
  href={`/blog/category/${cat.slug}`}
- className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-tech-800 border border-tech-500/30 text-xs text-tech-300 hover:border-neon/30 hover:text-neon-light transition"
+ className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white border border-gray-200 text-xs text-gray-500 hover:border-violet-300 hover:text-violet-700 transition"
  >
  <Sparkles className="w-3 h-3" />
  <span>{cat.title}</span>
- <span className="text-tech-500">({cat.postCount})</span>
+ <span className="text-gray-400">({cat.postCount})</span>
  </Link>
  ))}
  <Link
  href="/blog"
- className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-tech-800 border border-tech-500/30 text-xs text-tech-300 hover:border-neon/30 hover:text-neon-light transition"
+ className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white border border-gray-200 text-xs text-gray-500 hover:border-violet-300 hover:text-violet-700 transition"
  >
  All guides <ArrowRight className="w-3 h-3" />
  </Link>

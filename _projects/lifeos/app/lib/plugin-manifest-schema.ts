@@ -126,20 +126,38 @@ export const DEFAULT_PLUGIN_CONFIG: PluginConfig = {
 // BUILD MANIFEST FROM REGISTRY
 // ══════════════════════════════════════════════════════════════════
 
+import { PLUGINS } from './plugin-registry';
+
+// Infer category from plugin ID — bijective map
+function inferCategory(pluginId: string): PluginCategory {
+  const categoryMap: Record<string, PluginCategory> = {
+    travel: 'lifestyle',
+    finance: 'finance',
+    health: 'health',
+    career: 'career',
+    learning: 'learning',
+    family: 'lifestyle',
+    home: 'home',
+    social: 'lifestyle',
+    mindfulness: 'mindfulness',
+    relationships: 'relationships',
+    nutrition: 'nutrition',
+    productivity: 'productivity',
+  };
+  return categoryMap[pluginId] || 'productivity';
+}
+
 /**
  * Build a full plugin manifest from the in-memory plugin definitions.
  * This produces a JSON-serializable manifest for storage, export, or API response.
  */
 export function buildManifest(): PluginManifest {
-  // Dynamic import to avoid circular dependency
-  const { PLUGINS } = require('./plugin-registry');
-
-  const entries: PluginManifestEntry[] = PLUGINS.map((p: any, index: number) => ({
+  const entries: PluginManifestEntry[] = PLUGINS.map((p, index) => ({
     id: p.id,
     name: p.name,
     emoji: p.emoji,
     description: p.description,
-    status: p.status,
+    status: p.status as PluginManifestEntry['status'],
     gradient: p.gradient,
     badge: p.badge,
     category: inferCategory(p.id),
@@ -162,24 +180,6 @@ export function buildManifest(): PluginManifest {
     generatedAt: new Date().toISOString(),
     plugins: entries,
   };
-}
-
-function inferCategory(pluginId: string): PluginCategory {
-  const categoryMap: Record<string, PluginCategory> = {
-    travel: 'lifestyle',
-    finance: 'finance',
-    health: 'health',
-    career: 'career',
-    learning: 'learning',
-    family: 'lifestyle',
-    home: 'home',
-    social: 'lifestyle',
-    mindfulness: 'mindfulness',
-    relationships: 'relationships',
-    nutrition: 'nutrition',
-    productivity: 'productivity',
-  };
-  return categoryMap[pluginId] || 'productivity';
 }
 
 // ══════════════════════════════════════════════════════════════════

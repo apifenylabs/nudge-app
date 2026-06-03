@@ -27,8 +27,8 @@ export default function NotFound() {
  <p className="text-sm text-gray-400 mb-3">Explore our network:</p>
  <div className="flex flex-wrap justify-center gap-3">
  <a
- href="https://family-travel-directory.vercel.app"
- target="_blank"
+ href="/playbooks"
+ target="_self"
  rel="noopener noreferrer"
  className="text-sm text-emerald-600 hover:text-emerald-700 underline underline-offset-2"
  >

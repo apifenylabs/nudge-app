@@ -10,6 +10,8 @@ export default function InfographicBuildGame({ width = 1200, height = 630 }: Inf
     <svg
       viewBox={`0 0 ${width} ${height}`}
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="Build a game with AI in one weekend — 6 steps: Choose and setup, design with Claude, build core loop, polish and juice, add leaderboard, deploy and share."
       style={{ width: '100%', height: 'auto', maxWidth: width, fontFamily: 'Inter, system-ui, sans-serif' }}
     >
       <defs>

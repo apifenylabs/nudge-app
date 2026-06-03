@@ -15,6 +15,8 @@ export default function BuildGameInfographic() {
       <svg
         viewBox="0 0 1200 630"
         xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="Build a game with AI: Set up and pick your game, describe vision to Claude, build core loop with Cursor, add polish and juice, implement difficulty and leaderboard, deploy and share."
         className="w-full max-w-3xl rounded-2xl shadow-lg"
         style={{ fontFamily: "'Inter', 'SF Pro', system-ui, sans-serif" }}
       >

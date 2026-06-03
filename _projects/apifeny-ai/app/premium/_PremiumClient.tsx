@@ -54,13 +54,13 @@ const PLANS = [
   {
     id: 'pro-monthly',
     name: 'Monthly',
-    price: 47,
+    price: 37,
     period: '/mo',
     description: 'Full access. Cancel anytime.',
     cta: 'Subscribe Monthly',
     highlighted: false,
     features: [
-      'All 79+ playbooks',
+      'All 105+ playbooks',
       'PDF downloads',
       '300+ prompts',
       'New playbooks first',
@@ -70,13 +70,13 @@ const PLANS = [
   {
     id: 'pro-yearly',
     name: 'Yearly',
-    price: 39,
+    price: 25,
     period: '/mo',
-    description: '2 months free. Best value.',
+    description: '2 months free. $247/yr. Best value.',
     cta: 'Subscribe Yearly',
     highlighted: true,
     features: [
-      'All 79+ playbooks',
+      'All 105+ playbooks',
       'PDF downloads',
       '300+ prompts',
       'New playbooks first',

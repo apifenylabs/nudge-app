@@ -40,6 +40,7 @@ import PriceComparisonTable from './PriceComparisonTable';
 import ToolComments from './ToolComments';
 import HowToUse from './HowToUse';
 import AffiliateCard from './AffiliateCard';
+import StickyAffiliateBar from './StickyAffiliateBar';
 
 interface ToolDetailProps {
  tool: Tool;
@@ -81,6 +82,7 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
  .slice(0, 6);
 
  return (
+    <>
  <div className="max-w-5xl mx-auto">
  {/* Back link */}
  <Link
@@ -592,5 +594,7 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
  </section>
  )}
  </div>
- );
+      <StickyAffiliateBar toolSlug={tool.slug} toolName={tool.name} />
+    </>
+  );
 }

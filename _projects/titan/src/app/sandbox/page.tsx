@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import NodePalette from "@/components/sandbox/NodePalette";
 import AgentStudio from "@/components/sandbox/AgentStudio";
 import SandboxPreview from "@/components/sandbox/SandboxPreview";
 import ProgressionBar from "@/components/sandbox/ProgressionBar";
+import { useProgression } from "@/hooks/useProgression";
+import { useXpNotification } from "@/components/XpNotification";
 
 /* ─────────────────────────────────────────────────────────────
    Sandbox Page — Interactive Agent Builder
@@ -24,16 +26,87 @@ interface Connection {
   to: string;
 }
 
+const RANKS = ["E", "D", "C", "B", "A", "S"];
+
+const RANK_THRESHOLDS: Record<string, number> = { E: 100, D: 250, C: 500, B: 1000, A: 2000, S: Infinity };
+const RANK_TITLES: Record<string, string> = { D: "Recruit", C: "Veteran", B: "Hunter", A: "Elite", S: "Sovereign" };
+
 export default function SandboxPage() {
-  const [selectedRank, setSelectedRank] = useState("E");
+  const [selectedRank, setSelectedRank] = useState<string>("E");
   const [canvasNodes, setCanvasNodes] = useState<CanvasNode[]>([]);
   const [canvasConnections, setCanvasConnections] = useState<Connection[]>([]);
+
+  // Connected progression — falls back to mock when Supabase unconfigured
+  const progression = useProgression();
   const [canvasXp, setCanvasXp] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
 
-  const handleToggleRun = () => {
+  const xpNotify = useXpNotification();
+
+  // Refs for latest rank/xp so callbacks don't stale-close
+  const rankRef = useRef(selectedRank);
+  const xpRef = useRef(canvasXp);
+  useEffect(() => { rankRef.current = selectedRank; }, [selectedRank]);
+  useEffect(() => { xpRef.current = canvasXp; }, [canvasXp]);
+
+  // Seed from progression when data loads
+  useEffect(() => {
+    if (progression?.profile && canvasXp === 0) {
+      setCanvasXp(progression.profile.total_xp);
+      setSelectedRank(progression.profile.current_rank);
+    }
+  }, [progression?.profile?.total_xp]);
+
+  // Rank-up check helper (uses refs for fresh values)
+  const checkAndApplyRankUp = useCallback((totalXp: number, gain: number, source: string) => {
+    const currentRank = rankRef.current;
+    const currentThreshold = RANK_THRESHOLDS[currentRank];
+    const curIdx = RANKS.indexOf(currentRank);
+
+    if (currentThreshold && totalXp >= currentThreshold && curIdx < RANKS.length - 1) {
+      const nextRank = RANKS[curIdx + 1];
+      setSelectedRank(nextRank);
+      setCanvasXp(totalXp - currentThreshold);
+      xpNotify.push({
+        amount: gain,
+        source,
+        newRank: nextRank,
+        rankTitle: RANK_TITLES[nextRank],
+      });
+      return true;
+    }
+    return false;
+  }, [xpNotify]);
+
+  // Demo: simulate XP gain
+  const handleAddXp = useCallback(() => {
+    const gain = Math.floor(Math.random() * 30) + 5;
+    const currentRank = rankRef.current;
+    const currentXp = xpRef.current;
+    const newXp = currentXp + gain;
+
+    const ranked = checkAndApplyRankUp(newXp, gain, "Agent Studio — Sandbox simulation");
+    if (!ranked) {
+      setCanvasXp(newXp);
+      xpNotify.push({ amount: gain, source: "Agent Studio — Sandbox simulation" });
+    }
+  }, [checkAndApplyRankUp, xpNotify]);
+
+  // Swarm XP handler (called from SandboxPreview)
+  const handleSwarmXp = useCallback((amount: number) => {
+    const currentRank = rankRef.current;
+    const currentXp = xpRef.current;
+    const newXp = currentXp + amount;
+
+    const ranked = checkAndApplyRankUp(newXp, amount, "Swarm Orchestration");
+    if (!ranked) {
+      setCanvasXp(newXp);
+    }
+  }, [checkAndApplyRankUp]);
+
+  const handleToggleRun = useCallback(() => {
     setIsRunning((prev) => !prev);
-  };
+  }, []);
 
   /* Node palette — only as many ranks as current rank or below */
   const unlockedRanks =
@@ -69,7 +142,7 @@ export default function SandboxPage() {
             </p>
             <div className="flex items-center gap-2 mt-3">
               <span className="text-[10px] text-white/40 uppercase tracking-wider">Current Rank:</span>
-              {["E", "D", "C", "B", "A", "S"].map((rank) => (
+              {RANKS.map((rank) => (
                 <button
                   key={rank}
                   onClick={() => setSelectedRank(rank)}
@@ -87,6 +160,14 @@ export default function SandboxPage() {
 
           {/* Progression Bar (compact) */}
           <div className="w-64 shrink-0 mt-1">
+            <div className="flex justify-end mb-2">
+              <button
+                onClick={handleAddXp}
+                className="text-[10px] px-2 py-1 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 hover:bg-cyan-500/20 transition-all"
+              >
+                ✨ +XP
+              </button>
+            </div>
             <ProgressionBar
               currentRank={selectedRank}
               currentXp={canvasXp}
@@ -127,6 +208,8 @@ export default function SandboxPage() {
             isRunning={isRunning}
             onToggleRun={handleToggleRun}
             selectedRank={selectedRank}
+            externalXp={canvasXp}
+            onXpAwarded={handleSwarmXp}
           />
         </div>
       </div>

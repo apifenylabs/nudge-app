@@ -140,22 +140,14 @@ export default function Header() {
  </svg>
  </button>
  <div className="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0">
- <div className="bg-white border border-gray-200/40 rounded-xl p-2 shadow-xl shadow-neon/10 min-w-[200px]">
+ <div className="bg-white border border-gray-200/40 rounded-xl p-2 shadow-xl shadow-neon/10 min-w-[180px]">
  <a
- href="https://family-travel-asia.vercel.app"
+ href="https://www.familytravelasia.com"
  target="_blank"
  rel="noopener noreferrer"
  className="block px-3 py-2 rounded-lg text-xs text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition"
  >
  🧳 Family Travel Asia
- </a>
- <a
- href="https://luxury-family-travel-asia.vercel.app"
- target="_blank"
- rel="noopener noreferrer"
- className="block px-3 py-2 rounded-lg text-xs text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition"
- >
- ✨ Luxury Family Travel
  </a>
  <a
  href="https://ev-charging-asia.vercel.app"
@@ -238,22 +230,14 @@ export default function Header() {
 
  {/* Mobile Sister Sites */}
  <div className="pt-2 border-t border-gray-100">
- <p className="px-4 pb-1.5 text-[10px] font-medium text-gray-400 uppercase tracking-wider">Sister Sites</p>
+ <p className="px-4 pb-1.5 text-[10px] font-medium text-gray-400 uppercase tracking-wider">Our Network</p>
  <a
- href="https://family-travel-asia.vercel.app"
+ href="https://www.familytravelasia.com"
  target="_blank"
  rel="noopener noreferrer"
  className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition"
  >
  🧳 Family Travel Asia
- </a>
- <a
- href="https://luxury-family-travel-asia.vercel.app"
- target="_blank"
- rel="noopener noreferrer"
- className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition"
- >
- ✨ Luxury Family Travel
  </a>
  <a
  href="https://ev-charging-asia.vercel.app"

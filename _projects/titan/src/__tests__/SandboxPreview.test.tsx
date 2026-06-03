@@ -144,9 +144,10 @@ describe('SandboxPreview', () => {
     expect(screen.getByText('Prompt Engine')).toBeInTheDocument();
   });
 
-  it('shows "nodes" and "links" in footer bar when nodes present', () => {
+  it('shows "nodes" and "links" in header and footer when nodes present', () => {
     render(<SandboxPreview {...defaultProps} />);
-    expect(screen.getByText('2 links')).toBeInTheDocument();
+    const linkTexts = screen.getAllByText('2 links');
+    expect(linkTexts.length).toBeGreaterThanOrEqual(1);
   });
 
   it('hides footer stats when no nodes', () => {

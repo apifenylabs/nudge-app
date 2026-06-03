@@ -68,20 +68,28 @@ const FAQS = [
 ];
 
 export default function PremiumPage() {
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [emailMonthly, setEmailMonthly] = useState('');
+  const [emailYearly, setEmailYearly] = useState('');
+  const [loading, setLoading] = useState<'monthly' | 'yearly' | null>(null);
 
-  const handleWaitlist = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
+  const handleSubscribe = async (plan: 'monthly' | 'yearly') => {
+    setLoading(plan);
     try {
-      const existing = JSON.parse(localStorage.getItem('apifeny-emails') || '[]');
-      if (!existing.includes(email.trim().toLowerCase())) {
-        existing.push(email.trim().toLowerCase());
-        localStorage.setItem('apifeny-emails', JSON.stringify(existing));
-      }
-    } catch {}
-    setSubmitted(true);
+      const email = plan === 'monthly' ? emailMonthly : emailYearly;
+      const product = plan === 'monthly' ? 'pro-monthly' : 'pro-yearly';
+      const res = await fetch('/api/create-checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email || undefined, product }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Checkout failed');
+      window.location.href = data.url;
+    } catch (err) {
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setLoading(null);
+    }
   };
 
   return (
@@ -116,7 +124,7 @@ export default function PremiumPage() {
             <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-sm font-semibold text-gray-900 mb-1">Monthly</h3>
               <div className="flex items-baseline gap-1 mb-3">
-                <span className="text-3xl font-bold text-gray-900">$19</span>
+                <span className="text-3xl font-bold text-gray-900">$37</span>
                 <span className="text-sm text-gray-400">/mo</span>
               </div>
               <ul className="space-y-2 mb-4 text-left">
@@ -137,10 +145,26 @@ export default function PremiumPage() {
                   Cancel anytime
                 </li>
               </ul>
-              <button className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium transition">
-                <Crown className="w-4 h-4" />
-                Subscribe Monthly
-              </button>
+              <div className="flex flex-col gap-2">
+                <input
+                  type="email"
+                  value={emailMonthly}
+                  onChange={(e) => setEmailMonthly(e.target.value)}
+                  placeholder="your@email.com"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 bg-gray-50 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-violet-300 focus:ring-2 focus:ring-violet-100 transition"
+                />
+                <button
+                  onClick={() => handleSubscribe('monthly')}
+                  disabled={loading === 'monthly'}
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-violet-600 hover:bg-violet-700 disabled:opacity-60 text-white text-sm font-medium transition"
+                >
+                  {loading === 'monthly' ? (
+                    <span className="animate-pulse">Processing…</span>
+                  ) : (
+                    <><Crown className="w-4 h-4" /> Subscribe $37/mo</>
+                  )}
+                </button>
+              </div>
             </div>
 
             <div className="rounded-xl border-2 border-violet-200 bg-gradient-to-b from-violet-50 to-white p-6 shadow-md relative">
@@ -149,12 +173,12 @@ export default function PremiumPage() {
               </div>
               <h3 className="text-sm font-semibold text-gray-900 mb-1">Yearly</h3>
               <div className="flex items-baseline gap-1 mb-1">
-                <span className="text-3xl font-bold text-gray-900">$149</span>
+                <span className="text-3xl font-bold text-gray-900">$247</span>
                 <span className="text-sm text-gray-400">/yr</span>
               </div>
               <p className="text-xs text-emerald-600 font-medium mb-3 flex items-center gap-1">
                 <Sparkles className="w-3 h-3" />
-                Save 35% — that's $12.42/mo
+                Save ~44% — 2 months free ($20.58/mo)
               </p>
               <ul className="space-y-2 mb-4 text-left">
                 <li className="flex items-start gap-2 text-xs text-gray-600">
@@ -174,52 +198,28 @@ export default function PremiumPage() {
                   Cancel anytime
                 </li>
               </ul>
-              <button className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-700 hover:to-cyan-600 text-white text-sm font-medium transition shadow-md">
-                <Crown className="w-4 h-4" />
-                Subscribe Yearly
-              </button>
-            </div>
-          </div>
-
-          {/* Waitlist / Email Capture */}
-          {!submitted ? (
-            <div className="max-w-md mx-auto rounded-xl border border-violet-100 bg-gradient-to-r from-violet-50/50 to-cyan-50/50 p-6">
-              <h3 className="text-sm font-semibold text-gray-900 mb-1">
-                🔥 Launching soon — join the waitlist
-              </h3>
-              <p className="text-xs text-gray-500 mb-4">
-                Be the first to know when the Pro Playbook Bundle goes live. Early birds get a special discount.
-              </p>
-              <form onSubmit={handleWaitlist} className="flex flex-col sm:flex-row gap-2">
+              <div className="flex flex-col gap-2">
                 <input
                   type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@email.com"
-                  className="flex-1 px-4 py-2.5 rounded-lg border border-gray-200 bg-white text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-violet-300 focus:ring-2 focus:ring-violet-100 transition"
-                  required
+                  value={emailYearly}
+                  onChange={(e) => setEmailYearly(e.target.value)}
+                  placeholder="your@email.com"
+                  className="w-full px-3 py-2 rounded-lg border border-violet-200 bg-white text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-violet-300 focus:ring-2 focus:ring-violet-100 transition"
                 />
                 <button
-                  type="submit"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium transition shrink-0"
+                  onClick={() => handleSubscribe('yearly')}
+                  disabled={loading === 'yearly'}
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-700 hover:to-cyan-600 disabled:opacity-60 text-white text-sm font-medium transition shadow-md"
                 >
-                  <Download className="w-4 h-4" />
-                  Join Waitlist
+                  {loading === 'yearly' ? (
+                    <span className="animate-pulse">Processing…</span>
+                  ) : (
+                    <><Crown className="w-4 h-4" /> Subscribe $247/yr</>
+                  )}
                 </button>
-              </form>
-              <p className="text-[10px] text-gray-400 mt-2">
-                No spam. Unsubscribe anytime.
-              </p>
+              </div>
             </div>
-          ) : (
-            <div className="max-w-md mx-auto rounded-xl border border-emerald-200 bg-emerald-50 p-6 text-center">
-              <CheckCircle className="w-10 h-10 text-emerald-500 mx-auto mb-2" />
-              <h3 className="text-sm font-semibold text-emerald-800 mb-1">You're on the list! 🎉</h3>
-              <p className="text-xs text-emerald-600">
-                We'll notify you when the Pro Playbook Bundle launches. Early bird pricing coming your way.
-              </p>
-            </div>
-          )}
+          </div>
         </div>
       </section>
 

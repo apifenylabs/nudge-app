@@ -27,6 +27,20 @@
   - `ai-tools-indonesia` — ID-specific data with 5 UU PDP/local-ecosystem FAQs
   - Build: compiled successfully, 472 static pages generated
 
+## 2026-06-03 — SEO: SVG Accessibility & Internal Linking Audit
+
+- ✅ **Added `role="img"` + `aria-label` to 6 infographic SVGs**:
+  - `components/InfographicSaveTokens.tsx` — "How to save $100/mo on AI tokens"
+  - `components/InfographicBuildGame.tsx` — "Build a game with AI in one weekend"
+  - `components/InfographicPromptEngineering.tsx` — "Ultimate prompt engineering playbook"
+  - `components/playbook-infographics/SaveOnTokensInfographic.tsx` — "Save money on AI tokens in 6 steps"
+  - `components/playbook-infographics/BuildGameInfographic.tsx` — "Build a game with AI: 6 steps"
+  - `components/playbook-infographics/PromptEngineeringInfographic.tsx` — "Prompt engineering techniques"
+- ✅ **Audited homepage SVGs**: `WorkflowDiagram` already had `role="img"` + `aria-label`. No other inline SVGs on homepage — all Lucide icons are decorative (aria-hidden). No `<img>` tags missing alt text found.
+- ✅ **Audited heading structure**: One `<h1>` (hero), all sections use `<h2>`, card items use `<h3>` — clean hierarchy.
+- ✅ **Audited meta descriptions**: Root layout + all key pages (home, playbooks, tools, blog, compare, rankings, categories, guides) have proper `export const metadata` with title, description, OG, Twitter card. Playbook static pages use `SeoMetadata` client component.
+- ✅ **Build**: `npm run build` passed clean (exit 0, all static pages generated)
+
 ## 2026-06-02 — Blog Content Generation Batch (3 new posts)
 
 - ✅ **Created 3 blog JSON data files**:

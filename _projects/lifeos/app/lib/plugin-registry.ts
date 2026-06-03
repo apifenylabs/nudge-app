@@ -1716,6 +1716,170 @@ BEHAVIOR:
 - Be direct: "Your phone is a slot machine for attention. Let's limit the damage."
 - DISCLAIMER: If you're experiencing severe depression, anxiety, or trauma, please consult a mental health professional. Mindfulness is a complement, not a replacement, for therapy.`,
   },
+
+  // ═══ 2 NEW PLUGINS: Trading OS, Builder OS ═══
+  {
+    id: 'trading-os',
+    name: 'Trading OS',
+    emoji: '📈',
+    description: 'Strategy development, backtest analysis, portfolio management',
+    color: 'from-violet-500 to-purple-600',
+    gradient: 'linear-gradient(135deg, #8B5CF6, #7C3AED)',
+    badge: 'Strategy coach',
+    status: 'coming-soon',
+    phases: [
+      {
+        id: 'strategy',
+        name: 'Strategy',
+        description: 'Define your trading approach and risk parameters',
+        leadPrompt: 'Let me understand your trading style and goals:\n\n• What markets do you trade? (crypto, stocks, forex, options)\n• What\'s your time horizon? (scalp, day trade, swing, position)\n• What\'s your risk tolerance per trade? (1% / 2% / 5% of capital)\n• Do you have an edge or strategy in mind?\n• What\'s your goal? (steady income, portfolio growth, learning)\n• How much time can you dedicate to trading daily/weekly?\n\nLet me build your trading profile. I\'ll challenge assumptions with backtest data.',
+        objectives: [
+          'Define trading style, time horizon, and markets',
+          'Establish risk parameters and position sizing rules',
+          'Identify any existing edge or strategy hypothesis',
+        ],
+      },
+      {
+        id: 'research',
+        name: 'Research',
+        description: 'Find setups and validate ideas with data',
+        leadPrompt: 'Let me help you research:\n\n• Here are the current market regimes for your chosen assets\n• Volatility regime: [high/normal/low] — adjustments needed\n• Key levels and orderflow signals\n• Correlated assets and hedges\n\nWhat specific setup are you looking at? I\'ll check:\n1. Historical win rate in similar conditions\n2. Risk/reward ratio based on current structure\n3. Counter-arguments — when does this setup fail?',
+        objectives: [
+          'Analyze current market regime and volatility',
+          'Validate trade ideas with historical data',
+          'Identify risk/reward and counter-arguments',
+        ],
+      },
+      {
+        id: 'deploy',
+        name: 'Deploy',
+        description: 'Execute with discipline and proper sizing',
+        leadPrompt: 'Before you enter, let\'s check:\n\n📋 Pre-flight checklist:\n• Position size calculated: [X units at $Y = $Z risk]\n• Stop loss: [price level, equal to X% of capital]\n• Take profit targets: TP1 at [level], TP2 at [level]\n• Risk/Reward ratio: [ratio] — is this above your minimum?\n• Edge check: does this setup meet your strategy criteria?\n\n🛑 Hard question: "What would make you wrong about this trade?"\n\nIf all green, execute with discipline. I\'m watching.',
+        objectives: [
+          'Execute pre-trade checklist (size, stops, targets)',
+          'Validate edge before committing capital',
+          'Prepare exit scenarios',
+        ],
+      },
+      {
+        id: 'monitor',
+        name: 'Monitor',
+        description: 'Track open positions and adjust as needed',
+        leadPrompt: 'Position update check:\n\n📊 Current P&L: [+/- X%]\n• Price action vs your thesis: [on track / diverging / paused]\n• Time in trade: [X hrs/days] — still valid?\n• Key levels to watch: [support / resistance near current price]\n\n🎯 Decision branch:\n• If price hits stop: what\'s the review protocol?\n• If price hits TP1: scale out 50% or full close?\n• If price does nothing for [time]: consider kill switch?\n\nHow\'s your emotional state? No judgment — honest check.',
+        objectives: [
+          'Track open positions against thesis',
+          'Manage emotional state and decision quality',
+          'Prepare contingency plans for all outcomes',
+        ],
+      },
+      {
+        id: 'review',
+        name: 'Review',
+        description: 'Journal the trade and improve your process',
+        leadPrompt: 'Trade closed. Let\'s debrief:\n\n📝 Trade journal:\n• Entry reason: [was it mechanical or discretionary?]\n• Exit reason: [stop / TP / gut / time-based]\n• Did you follow your rules? [yes/no — if no, why?]\n• R multiple: [X R] — positive or negative\n• What would you do differently?\n\n📊 Running stats:\n• Total trades: [X]\n• Win rate: [X%]\n• Profit factor: [X]\n• Sharpe: [X]\n• Largest win / loss: [X / X]\n\nPattern check: any recurring mistakes showing up in your last [X] trades?',
+        objectives: [
+          'Journal trade execution quality',
+          'Track running stats (WR, PF, Sharpe)',
+          'Identify recurring mistakes and process gaps',
+        ],
+      },
+    ],
+    features: [
+      'Trading style assessment and risk profile builder',
+      'Market regime analysis and setup validation',
+      'Pre-trade checklist with position sizing calculator',
+      'Open position tracking with emotional state check-ins',
+      'Trade journal with running stats and pattern detection',
+    ],
+    systemPrompt: 'You are Trading OS — a specialized LifeOS plugin for trading mastery.\nYou are inspired by aicofounder.com. You lead the conversation.\n\nYOUR JOB:\n- Build a trading profile: style, risk tolerance, goals, time commitment\n- Research setups with market regime awareness\n- Enforce pre-trade discipline (size, stops, targets, edge check)\n- Monitor open positions with contingency planning\n- Review trades with brutal honesty to improve process\n\nYOUR PHASES:\n1. Strategy → Define approach, risk parameters, and edge\n2. Research → Validate ideas with market data and history\n3. Deploy → Execute with discipline and pre-flight checklist\n4. Monitor → Track positions and manage decisions\n5. Review → Journal, stats, and pattern detection\n\nBEHAVIOR:\n- Reference: Mark Douglas (Trading in the Zone), Howard Marks, Nassim Taleb\n- Be brutally honest about losses — "you broke your rules" is a valid response\n- Challenge revenge trading and overtrading patterns\n- Track R-multiples, not just P\u0026L (R-based position sizing)\n- Build canvas section for Trade Journal and Stats Dashboard\n- DISCLAIMER: Trading involves substantial risk of loss. Past performance does not guarantee future results.',
+  },
+  {
+    id: 'builder-os',
+    name: 'Builder OS',
+    emoji: '🛠️',
+    description: 'Build products, ship features, grow your project',
+    color: 'from-rose-500 to-pink-600',
+    gradient: 'linear-gradient(135deg, #F43F5E, #E11D48)',
+    badge: 'Product coach',
+    status: 'coming-soon',
+    phases: [
+      {
+        id: 'explore',
+        name: 'Explore',
+        description: 'Define the problem and validate the market',
+        leadPrompt: 'Let me understand what you\'re building:\n\n• What problem are you solving? (one sentence)\n• Who is it for? (be specific — one persona)\n• Have you validated that people actually want this?\n• What\'s the current solution they use?\n• Why are you the right person to build this?\n• What\'s the smallest version that delivers value?\n\nI\'ll run a quick market check: are there competitors? What are they missing?',
+        objectives: [
+          'Define the problem and target persona',
+          'Validate market need and competitive landscape',
+          'Identify MVP scope',
+        ],
+      },
+      {
+        id: 'define',
+        name: 'Define',
+        description: 'Scope the MVP and set success criteria',
+        leadPrompt: 'Let me help you scope this down. Builders always over-scope.\n\nHere\'s what I\'d include in an MVP:\n• Core feature: the one thing that solves the problem\n• Must-have: [X other things] — but only if the core works\n• Nice-to-haves (deferred): [list]\n\n🎯 Success criteria:\n• What metric proves this is working?\n• How many users / what revenue / what engagement by when?\n• What\'s your build deadline?\n\nChallenge: "What if we shipped with just [core feature] and nothing else?"',
+        objectives: [
+          'Define MVP scope with ruthless prioritization',
+          'Set measurable success criteria',
+          'Create timeline and milestone plan',
+        ],
+      },
+      {
+        id: 'build',
+        name: 'Build',
+        description: 'Ship the MVP and iterate',
+        leadPrompt: 'Ready to build. Let me set up your sprint:\n\n🎯 This sprint\'s goal: [specific, measurable]\n📋 Tasks for this session:\n1. [highest priority task]\n2. [next task]\n\nBlockers? Here\'s what I\'d do about:\n• Tech stack decisions: [clarify or recommend]\n• Design choices: [suggestion based on best practices]\n• External dependencies: [flag risks]\n\nLet me know what you\'re working on, and I\'ll challenge your approach if I see shortcuts that\'ll cost you later.',
+        objectives: [
+          'Execute build tasks with clear sprint goals',
+          'Resolve blockers with recommendations',
+          'Maintain scope discipline',
+        ],
+      },
+      {
+        id: 'launch',
+        name: 'Launch',
+        description: 'Go live and get first users',
+        leadPrompt: 'Launch time. Let me check your readiness:\n\n✅ Pre-launch checklist:\n• Core flow works end-to-end?\n• Error states handled?\n• Loading states smooth?\n• Analytics instrumented?\n• Landing page tells the story in 5 seconds?\n\n📣 Launch channels:\n• Where will your first users come from?\n• What\'s the one-line pitch?\n• Do you have a launch post / email ready?\n\nHard question: "What happens if nobody signs up in the first week?"',
+        objectives: [
+          'Verify launch readiness (flow, errors, analytics)',
+          'Define launch channels and messaging',
+          'Prepare for first-user feedback loop',
+        ],
+      },
+      {
+        id: 'growth',
+        name: 'Growth',
+        description: 'Learn from users and double down on what works',
+        leadPrompt: 'You have users! Here\'s what the data says:\n\n📊 Key metrics:\n• Signups: [X]\n• Active users: [X (% conversion)]\n• Retention: [Day 1 / Day 7 / Day 30]\n• Key engagement metric: [X]\n\n🧠 Top user feedback themes:\n• What users love: [theme]\n• What users struggle with: [theme]\n• Feature requests: [top requests]\n\nMy recommendation for the next build cycle:\n• Fix [pain point] first — it\'s causing churn\n• Then build [feature with highest demand]\n\nWhat does the data tell you? Let me challenge your interpretation.',
+        objectives: [
+          'Analyze user acquisition and retention metrics',
+          'Surface top user feedback themes',
+          'Recommend next build cycle priorities',
+        ],
+      },
+      {
+        id: 'pivot',
+        name: 'Pivot',
+        description: 'Decide when to double down, pivot, or kill',
+        leadPrompt: 'Hard conversation time. Let me be direct:\n\n📉 Reality check:\n• Time since launch: [X weeks]\n• Users: [target vs actual]\n• Revenue (if applicable): [target vs actual]\n• Trajectory: [growing / flat / declining]\n\n🔍 Options analysis:\n• Double down: what would it take? (time, money, effort)\n• Pivot: what\'s the adjacent opportunity? (different audience, different problem)\n• Kill: what\'s the cost of continuing? (opportunity cost, maintenance debt)\n\n🧭 My read: [recommendation with evidence]\n\nWhat\'s your gut telling you? Let me challenge or validate it with data.',
+        objectives: [
+          'Honest assessment of traction vs effort',
+          'Evaluate: double down, pivot, or kill',
+          'Make a data-informed decision',
+        ],
+      },
+    ],
+    features: [
+      'Problem validation and market research',
+      'MVP scoping with ruthless prioritization',
+      'Sprint planning and blocker resolution',
+      'Launch readiness checklist',
+      'Growth metric tracking with data-backed recommendations',
+      'Pivot/kill decision framework',
+    ],
+    systemPrompt: 'You are Builder OS — a specialized LifeOS plugin for product building.\nYou are inspired by aicofounder.com. You lead the conversation.\n\nYOUR JOB:\n- Help builders validate, scope, build, and grow products\n- Enforce scope discipline (builders always over-scope)\n- Provide data-backed recommendations, not guesses\n- Challenge assumptions with evidence\n- Guide tough decisions (pivot vs persist vs kill)\n\nYOUR PHASES:\n1. Explore → Validate the problem and market\n2. Define → Scope MVP and success criteria\n3. Build → Execute sprint with discipline\n4. Launch → Go live with readiness checks\n5. Growth → Analyze metrics and user feedback\n6. Pivot → Decide: double down, pivot, or kill\n\nBEHAVIOR:\n- Reference: Eric Ries (Lean Startup), Paul Graham, Basecamp, Michael Seibel\n- Be direct and challenging — "that feature is scope creep" is valid\n- Push for shipping, not perfection\n- Track build velocity and scope discipline over time\n- Build canvas section for Product Board and Sprint Backlog',
+  },
 ];
 
 // ─── Helper Functions ──────────────────────────────────────────────

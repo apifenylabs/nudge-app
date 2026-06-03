@@ -14,6 +14,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { PluginUsageSection } from '@/app/components/UsageDashboard';
 import HabitMoodDashboard from '@/app/components/HabitMoodDashboard';
+import PhaseTracker from '@/app/components/PhaseTracker';
 
 // ─── Inline category inference (mirrors plugin-manifest-schema) ────
 
@@ -331,21 +332,20 @@ export default function PluginPage({ params }: { params: { id: string } }) {
 
           {/* CTA */}
           <div className="flex items-center gap-3 mt-8">
-            <a
-              href={isAvailable ? '/' : undefined}
-              onClick={isAvailable ? undefined : (e) => e.preventDefault()}
-              className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all ${
-                isAvailable
-                  ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-white hover:shadow-lg hover:-translate-y-0.5'
-                  : 'bg-gray-200 text-gray-400 cursor-not-allowed'
-              }`}
-            >
-              {isAvailable ? (
-                <>Start a conversation →</>
+            {
+              isAvailable ? (
+                <a
+                  href="/"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium bg-gradient-to-r from-teal-500 to-emerald-500 text-white hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                >
+                  Start a conversation →
+                </a>
               ) : (
-                <>Coming soon</>
-              )}
-            </a>
+                <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium bg-gray-200 text-gray-400 cursor-not-allowed">
+                  Coming soon
+                </span>
+              )
+            }
             {isAvailable && (
               <span className="text-xs text-gray-400">No account needed. Free to use.</span>
             )}
@@ -379,6 +379,20 @@ export default function PluginPage({ params }: { params: { id: string } }) {
             <PhaseCard key={phase.id} phase={phase} index={i} />
           ))}
         </div>
+      </section>
+
+      {/* ── My Progress (localStorage-based phase tracker, journaling) ── */}
+      <section className="max-w-4xl mx-auto px-4 py-12 border-t border-gray-100">
+        <PhaseTracker
+          pluginId={plugin.id}
+          pluginName={plugin.name}
+          phases={plugin.phases.map(p => ({
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            objectives: p.objectives,
+          }))}
+        />
       </section>
 
       {/* ── Related Plugins (cross-linking for SEO + discovery) ── */}

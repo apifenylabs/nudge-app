@@ -18,12 +18,13 @@ import {
   ACHIEVEMENT_DEFS,
   BASE_ORBITING_AGENTS,
 } from "@/lib/dashboard-store";
-import { getAbilitiesForLevel } from "@/lib/swarm/god-tier-engine";
+import { getAbilitiesForLevel, ALL_ABILITIES } from "@/lib/swarm/god-tier-engine";
 import type { ProgressionState } from "@/lib/dashboard-store";
 import {
   getXpSourceBreakdown,
   computeLifeOSXp,
 } from "@/lib/lifeos-xp-bridge";
+import GodTierAbilitiesCard from "@/components/molecules/GodTierAbilitiesCard";
 
 function XpBreakdownCard({ totalXp, level }: { totalXp: number; level: number }) {
   const rawSources = useMemo(() => getXpSourceBreakdown(totalXp), [totalXp]);
@@ -463,35 +464,14 @@ export default function ProgressionPage() {
         </motion.div>
       )}
 
-      {/* God-Tier Abilities */}
-      {currentLevel >= 30 && (
-        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-          className="p-4 rounded-xl border"
-          style={{
-            background: 'linear-gradient(135deg, rgba(245,158,11,0.06), rgba(13,148,136,0.02))',
-            borderColor: 'rgba(245,158,11,0.2)',
-          }}>
-          <div className="flex items-center gap-2 mb-3">
-            <Sparkles className="h-4 w-4 text-amber-600" />
-            <h3 className="text-sm font-bold" style={{ color: '#F59E0B' }}>God-Tier Abilities</h3>
-            <span className="text-[10px] font-mono ml-auto" style={{ color: '#6B7280' }}>
-              {godTierAbilities.length} unlocked · Lv.{currentLevel}
-            </span>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            {godTierAbilities.slice(0, 9).map((ability: any) => (
-              <div key={ability.id} className="p-2.5 rounded-lg flex items-center gap-2 text-xs"
-                style={{ background: 'rgba(245,158,11,0.05)', border: '1px solid rgba(245,158,11,0.1)' }}>
-                <span className="text-base">{ability.icon}</span>
-                <div className="min-w-0">
-                  <p className="text-[11px] font-semibold truncate" style={{ color: '#111827' }}>{ability.name}</p>
-                  <p className="text-[8px] font-mono truncate" style={{ color: '#6B7280' }}>{ability.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      )}
+      {/* God-Tier Abilities — Aspirational Preview Card */}
+      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
+        <GodTierAbilitiesCard
+          currentLevel={currentLevel}
+          unlockedAbilities={godTierAbilities}
+          allAbilities={ALL_ABILITIES}
+        />
+      </motion.div>
 
       {/* Achievement Grid */}
       <div>

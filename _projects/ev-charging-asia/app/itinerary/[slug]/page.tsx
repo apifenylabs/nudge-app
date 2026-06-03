@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { Zap, ArrowLeft, Route, Clock, BatteryCharging, Calendar, MapPin, AlertTriangle, Users, Crown, Star, Wifi, Utensils, ShoppingBag, ChevronRight, ExternalLink } from 'lucide-react';
+import { Zap, ArrowLeft, Route, Clock, BatteryCharging, Calendar, MapPin, AlertTriangle, Users, Crown, Star, Wifi, Utensils, ShoppingBag, ChevronRight, ExternalLink, Mail, Car, Compass } from 'lucide-react';
 import { getAllItineraries, getItineraryBySlug, getRelatedItineraries } from '@/data/itineraries';
 import RouteMap from '@/components/itineraries/RouteMap';
 import SeasonalRecommendations from '@/components/itineraries/SeasonalRecommendations';
@@ -739,6 +739,63 @@ export default async function ItineraryDetailPage({ params }: Props) {
           }}
         />
 
+      </div>
+
+      {/* ===== AFTER-TRIP CTA: Newsletter + Premium + Affiliate Rental ===== */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Newsletter */}
+          <div className="bg-gradient-to-br from-sky-50 to-emerald-50 rounded-2xl border border-sky-200 p-5">
+            <div className="flex items-center gap-2 mb-2">
+              <Mail size={16} className="text-sky-600" />
+              <h3 className="text-sm font-bold text-gray-900">Get More Routes Like This</h3>
+            </div>
+            <p className="text-xs text-gray-500 mb-3">
+              Subscribe for monthly EV road trip guides, new routes, and exclusive partner deals.
+            </p>
+            <NewsletterSignup variant="inline" source={`route-${params.slug}`} />
+          </div>
+
+          {/* Premium / Affiliate */}
+          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-5 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <Crown size={16} className="text-amber-600" />
+                <h3 className="text-sm font-bold text-gray-900">Premium Route Guide</h3>
+              </div>
+              <p className="text-xs text-gray-500 mb-3">
+                Download the full PDF guide with offline maps, restaurant recommendations, and turn-by-turn directions.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <a
+                href="/premium-routes"
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-medium rounded-lg transition-all"
+              >
+                <Crown size={14} />
+                Browse Premium Guides
+              </a>
+              <a
+                href={it.affiliateRentalUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-gray-50 text-gray-700 text-xs font-medium rounded-lg border border-gray-200 transition-all"
+              >
+                <Car size={14} />
+                Rent an EV
+              </a>
+              <a
+                href={it.affiliateTourUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-gray-50 text-gray-700 text-xs font-medium rounded-lg border border-gray-200 transition-all"
+              >
+                <Compass size={14} />
+                Book a Tour
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <footer className="border-t border-gray-200 bg-white">

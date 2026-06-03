@@ -1,60 +1,62 @@
-# OmniMind Distribution Day — June 2, 2026 (Attempt 4)
+# OmniMind Distribution Day — June 3, 2026 (Attempt 5 — Cron-Triggered)
 
-## Result: 🟡 PARTIAL — 1/5 published, blocked on credentials
+## Result: 🔴 BLOCKED — 0/5 external, all channels still credential-gated
 
 ## What WAS Published
 
 | # | Channel | Status | URL |
 |---|---------|--------|-----|
-| 1 | **Apifeny AI Blog** (own site) | ✅ LIVE | https://apifeny-ai.vercel.app/blog/omnimind-sovereign-memory-control-plane |
+| 1 | **Apifeny AI Blog** (own site) | ✅ LIVE (from prior attempt) | https://apifeny-ai.vercel.app/blog/omnimind-sovereign-memory-control-plane |
 
-## What's Still Blocked
+## What's Still Blocked (Identical to Attempt 4)
 
 | # | Channel | Status | Blocked By |
 |---|---------|--------|-----------|
-| 1 | dev.to SEO blog post | ❌ BLOCKED | Missing DEV_TO_API_KEY — dev.to/settings/extensions to generate one |
-| 2 | r/selfhosted | ❌ BLOCKED | Missing Reddit API credentials. Need: REDDIT_CLIENT_ID, REDDIT_CLIENT_SECRET, REDDIT_USERNAME, REDDIT_PASSWORD |
-| 3 | OpenClaw plugins directory (ClawHub) | ❌ BLOCKED | Device flow initiated, requires interactive auth at https://clawhub.ai/cli/device?code=D3TH-RL5U (code: D3TH-RL5U, expires 15 min) |
+| 1 | dev.to SEO blog post | ❌ BLOCKED | Missing `DEV_TO_API_KEY` — dev.to/settings/extensions to generate one |
+| 2 | r/selfhosted | ❌ BLOCKED | Missing Reddit API credentials |
+| 3 | OpenClaw plugins directory (ClawHub) | ❌ BLOCKED | Missing interactive GitHub auth + npm login |
 | 4 | r/openclaw | ❌ BLOCKED | Same Reddit credentials as #2 |
-| 5 | Twitter/X launch thread | ❌ BLOCKED | Missing Twitter API credentials (OAuth 1.0a keys) |
+| 5 | Twitter/X launch thread | ❌ BLOCKED | Missing Twitter API credentials |
 
 ## What Changed This Attempt
 
-1. ✅ **Blog post published to apifeny-ai.vercel.app** — Own site cross-post. 108 blog posts total now.
-2. ✅ **ClawHub device flow initiated** — Code prompt at CLI ready for human approval
-3. ❌ **Same credential wall** — All 5 external platforms require API keys that don't exist in the environment
+1. ✅ ClawHub device flow initiated (code: `2B2S-YCZZ`, expires 15m) — browser opened to GitHub auth page
+2. ❌ GitHub auth requires Wosobu's credentials — cannot proceed without them
+3. ❌ npm not authenticated — cannot publish `@openclaw/omni-mind` package
+4. ❌ Same credential wall for all 5 platforms — this is the 5th consecutive block
 
-## Why I'm Copy-Pasting This Report
+## Root Cause
 
-This is the 4th consecutive attempt (May 27, May 29, May 30, June 2) all hitting the same credential wall. The content is complete, SEO'd, tested. The distribution pipeline works ($0 strategy). The only missing piece is 10 minutes of API key generation.
+This cron (`omnimind-distribution-day`) has fired 5 times (May 27, May 29, May 30, June 2, June 3) and hit the same wall every time. The content is complete, SEO'd, and ready for all 5 channels. The auto-publisher script works. Only API keys are missing.
 
-## Minimal Unblock Guide
+## Minimal Unblock (For Wosobu — ~10 min total)
 
 ```bash
-# 1. dev.to (2 min) — https://dev.to/settings/extensions → Generate API key
-export DEV_TO_API_KEY="xxx"
+# 1. dev.to (2 min)
+# Go to https://dev.to/settings/extensions → Generate API key → paste into env
+export DEV_TO_API_KEY="your_key_here"
 
-# 2. Reddit (3 min) — https://www.reddit.com/prefs/apps → Create "script" app
-export REDDIT_CLIENT_ID="xxx"
-export REDDIT_CLIENT_SECRET="xxx"
-export REDDIT_USERNAME="apifenylabs_reddit_username"
-export REDDIT_PASSWORD="apifenylabs_reddit_password"
+# 2. Reddit (3 min)
+# Go to https://www.reddit.com/prefs/apps → Create "script" app
+export REDDIT_CLIENT_ID="your_id"
+export REDDIT_CLIENT_SECRET="your_secret"
+export REDDIT_USERNAME="your_username"
+export REDDIT_PASSWORD="your_password"
 
-# 3. ClawHub (needs browser, 30s) — visit https://clawhub.ai/cli/device?code=D3TH-RL5U
-# Or just: clawhub login --device (generates new code)
-
-# 4. Twitter (2 min) — https://developer.twitter.com → create project → OAuth 1.0a
+# 3. Twitter/X (2 min)
+# Go to https://developer.twitter.com → Project → OAuth 1.0a keys
 export TWITTER_API_KEY="xxx"
 export TWITTER_API_SECRET="xxx"
 export TWITTER_ACCESS_TOKEN="xxx"
 export TWITTER_ACCESS_TOKEN_SECRET="xxx"
-pip install tweepy
+
+# 4. ClawHub + npm (3 min with browser)
+npm login
+clawhub login
 ```
 
-## Next: Phase 2 Content (when unblocked)
+After export, run: `cd /path/to/social-beast && python3 publish-omnimind.py`
 
-- r/artificial, r/LocalLLaMA follow-ups
-- LinkedIn long-form post
-- Product Hunt launch
-- Hacker News second attempt
-- dev.to series continuation
+## Decision Needed
+
+Should this daily cron be paused until credentials are configured? It fires every day at 10:00 HKT and produces the same result.

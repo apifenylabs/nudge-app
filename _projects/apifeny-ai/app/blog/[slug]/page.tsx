@@ -10,6 +10,7 @@ import BlogRelatedTools from '../../../components/BlogRelatedTools';
 import BlogGeoLinks from '../../../components/BlogGeoLinks';
 import BlogPlaybookLinks from '../../../components/BlogPlaybookLinks';
 import BlogLandingLinks from '../../../components/BlogLandingLinks';
+import BlogPostCrossLinks from '../../../components/BlogPostCrossLinks';
 import NewsletterSignup from '../../../components/NewsletterSignup';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import FAQJsonLd from '@/components/FAQJsonLd';
@@ -137,6 +138,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
  <div className="prose prose-gray max-w-none">
  <div dangerouslySetInnerHTML={{ __html: renderContent(post.content) }} />
  </div>
+
+ {/* In-content cross-links to related blog posts */}
+ <BlogPostCrossLinks
+ currentSlug={post.slug}
+ currentTags={post.tags}
+ maxLinks={3}
+ />
 
  {/* Affiliate tool recommendations — content-contextual cards */}
  {(() => {

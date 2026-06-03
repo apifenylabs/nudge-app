@@ -201,22 +201,22 @@
   },
   {
     "id": "41",
-    "name": "Doubao (豆包)",
+    "name": "Doubao (\u8c46\u5305)",
     "slug": "doubao"
   },
   {
     "id": "42",
-    "name": "Ernie Bot (文心一言)",
+    "name": "Ernie Bot (\u6587\u5fc3\u4e00\u8a00)",
     "slug": "ernie-bot"
   },
   {
     "id": "43",
-    "name": "SparkDesk (讯飞星火)",
+    "name": "SparkDesk (\u8baf\u98de\u661f\u706b)",
     "slug": "sparkdesk"
   },
   {
     "id": "44",
-    "name": "Coze (扣子)",
+    "name": "Coze (\u6263\u5b50)",
     "slug": "coze"
   },
   {
@@ -423,5 +423,60 @@
     "id": "85",
     "name": "QuickBooks (Intuit Assist)",
     "slug": "quickbooks-intuit-assist"
+  },
+  {
+    "id": "86",
+    "name": "Writesonic",
+    "slug": "writesonic"
+  },
+  {
+    "id": "87",
+    "name": "Rytr",
+    "slug": "rytr"
+  },
+  {
+    "id": "88",
+    "name": "Pictory",
+    "slug": "pictory"
+  },
+  {
+    "id": "89",
+    "name": "Grammarly",
+    "slug": "grammarly"
+  },
+  {
+    "id": "90",
+    "name": "Semrush",
+    "slug": "semrush"
+  },
+  {
+    "id": "91",
+    "name": "Surfer SEO",
+    "slug": "surfer-seo"
+  },
+  {
+    "id": "92",
+    "name": "Ahrefs",
+    "slug": "ahrefs"
+  },
+  {
+    "id": "93",
+    "name": "Motion",
+    "slug": "motion"
+  },
+  {
+    "id": "94",
+    "name": "Duolingo Max",
+    "slug": "duolingo-max"
+  },
+  {
+    "id": "95",
+    "name": "Khanmigo",
+    "slug": "khanmigo"
+  },
+  {
+    "id": "96",
+    "name": "Zendesk Answer Bot",
+    "slug": "zendesk-answer-bot"
   }
 ]

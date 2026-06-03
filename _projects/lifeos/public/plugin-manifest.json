@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-02T05:21:58.823Z",
+  "generatedAt": "2026-06-03T04:20:44.194Z",
   "plugins": [
     {
       "id": "travel",
@@ -21,7 +21,7 @@
       "phaseCount": 6,
       "displayOrder": 1,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -50,7 +50,7 @@
       "phaseCount": 5,
       "displayOrder": 2,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -80,7 +80,7 @@
       "phaseCount": 5,
       "displayOrder": 3,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -110,7 +110,7 @@
       "phaseCount": 5,
       "displayOrder": 4,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -139,7 +139,7 @@
       "phaseCount": 5,
       "displayOrder": 5,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -168,7 +168,7 @@
       "phaseCount": 5,
       "displayOrder": 6,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -198,7 +198,7 @@
       "phaseCount": 5,
       "displayOrder": 7,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -227,7 +227,7 @@
       "phaseCount": 4,
       "displayOrder": 8,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -257,7 +257,7 @@
       "phaseCount": 4,
       "displayOrder": 9,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -287,7 +287,7 @@
       "phaseCount": 5,
       "displayOrder": 10,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -317,7 +317,7 @@
       "phaseCount": 5,
       "displayOrder": 11,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,
@@ -347,7 +347,66 @@
       "phaseCount": 6,
       "displayOrder": 12,
       "createdAt": "2026-05-15T00:00:00.000Z",
-      "updatedAt": "2026-06-02T05:21:58.823Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "trading-os",
+      "name": "Trading OS",
+      "emoji": "📈",
+      "description": "Strategy development, backtest analysis, portfolio management",
+      "status": "coming-soon",
+      "gradient": "linear-gradient(135deg, #8B5CF6, #7C3AED)",
+      "badge": "Strategy coach",
+      "category": "productivity",
+      "features": [
+        "Trading style assessment and risk profile builder",
+        "Market regime analysis and setup validation",
+        "Pre-trade checklist with position sizing calculator",
+        "Open position tracking with emotional state check-ins",
+        "Trade journal with running stats and pattern detection"
+      ],
+      "phaseCount": 5,
+      "displayOrder": 13,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
+      "config": {
+        "requiresDb": false,
+        "tracksProgress": true,
+        "supportsCanvas": true,
+        "offlineCapable": true,
+        "maxContextMessages": 50,
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "builder-os",
+      "name": "Builder OS",
+      "emoji": "🛠️",
+      "description": "Build products, ship features, grow your project",
+      "status": "coming-soon",
+      "gradient": "linear-gradient(135deg, #F43F5E, #E11D48)",
+      "badge": "Product coach",
+      "category": "productivity",
+      "features": [
+        "Problem validation and market research",
+        "MVP scoping with ruthless prioritization",
+        "Sprint planning and blocker resolution",
+        "Launch readiness checklist",
+        "Growth metric tracking with data-backed recommendations",
+        "Pivot/kill decision framework"
+      ],
+      "phaseCount": 6,
+      "displayOrder": 14,
+      "createdAt": "2026-05-15T00:00:00.000Z",
+      "updatedAt": "2026-06-03T04:20:44.194Z",
       "config": {
         "requiresDb": false,
         "tracksProgress": true,

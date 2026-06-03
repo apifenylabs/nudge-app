@@ -15,6 +15,8 @@ export default function PromptEngineeringInfographic() {
       <svg
         viewBox="0 0 1200 630"
         xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="Prompt engineering techniques: System prompts, chain-of-thought, few-shot examples, role prompting, structured output, and iterate and refine."
         className="w-full max-w-3xl rounded-2xl shadow-lg"
         style={{ fontFamily: "'Inter', 'SF Pro', system-ui, sans-serif" }}
       >
