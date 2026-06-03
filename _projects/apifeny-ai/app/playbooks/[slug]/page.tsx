@@ -7,6 +7,7 @@ import { playbooks, type Playbook } from '@/lib/playbooks';
 import { cn, getPipelineStageBadge } from '@/lib/utils';
 import BlogPlaybookLinks from '../../components/BlogPlaybookLinks';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FAQJsonLd from '@/components/FAQJsonLd';
 
 const InfographicSaveTokens = dynamic(() => import('@/components/InfographicSaveTokens'), { ssr: false });
@@ -135,6 +136,13 @@ export default async function PlaybookDetailPage({ params }: { params: Promise<{
  ]}
  />
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+ <BreadcrumbNav
+ className="mb-6"
+ items={[
+ { label: 'Playbooks', href: '/playbooks' },
+ { label: playbook.title },
+ ]}
+ />
  <Link href="/playbooks" className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-blue-700 transition mb-6 group">
  <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
  Back to Playbooks

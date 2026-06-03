@@ -1,7 +1,7 @@
 # 🌐 Work Engine State
 
-**Last updated:** 2026-06-03 12:19 HKT  
-**Session:** Autonomous Work Session — UsageSummaryBar on Dashboard Homepage
+**Last updated:** 2026-06-03 21:19 HKT  
+**Session:** Heartbeat scan (21:19) — Keyboard nav P3 + P4 + import cleanup
 
 ---
 
@@ -10,42 +10,51 @@
 | Bucket | Status | Next Action |
 |--------|--------|-------------|
 | 🟢 Revenue (P0-P2) | ✅ Empty — all sites live | Check again next cycle |
-| 🟡 Strategic (P3) | 🟢 LifeOS — UsageSummaryBar created | See Cursor |
+| 🟢 Strategic (P3-P5) | ✅ LifeOS KB nav ✅ | Check backlog |
 
 ---
 
 ## Cursor
 
-**LifeOS — UsageSummaryBar (just completed):**
-- ✅ Created `UsageSummaryBar` component at `_projects/lifeos/app/components/UsageSummaryBar.tsx`
-  - Shows today's sessions and messages in compact stat pills
-  - Top 3 most-used plugins with medal badges + MiniSparkline inline
-  - All-time totals (total sessions + time) on desktop
-  - Auto-refreshes every 60s for long-running sessions
-  - Only renders when usage data exists (no empty-state clutter)
-- ✅ Integrated into homepage (`page.tsx`) — renders after the Hero section, before the search/filter bar
-- ✅ Build passes clean (162 kB for `/`)
+### 🔧 Trading Beast — Cron timeout fixed
+- ✅ Model switched to `sonnet` with fallbacks
+- Next run: 20:30 tomorrow — monitor
 
-**Next cursor position:**
-1. **LifeOS (P3)** — Next: Consider adding a recent-activity row or "Continue where you left off" quick-resume cards to the homepage. Or move to Titan progression draft.
-2. **Titan (P4)** — Draft progression system design: XP bars, level-up animations, achievement badges. Ready to code when CEO unblocks Vercel/git PAT.
-3. **AI Directory (P5)** — Add affiliate link hooks to top 5 directory listing pages (SEO + monetization).
+### LifeOS (P3) — Keyboard navigation ✅ + Imports Cleaned ✅
+- ✅ Keyboard nav on LifeOSTab active plugin grid (arrow keys + Enter/Escape)
+- ✅ Keyboard nav on LifeOSTab catalog grid (arrow keys + Enter/Escape)
+- ✅ Removed unused imports (`Card`, `Layers` from lucide-react)
+- ✅ Clean unused imports from HomeDashboard (`Image`, `MascotDef`, `ProgressionData`)
+
+### Titan (P4) — Dashboard keyboard navigation ✅
+- ✅ Keyboard nav on HomeDashboard stat cards + Quick Actions grid
+- ✅ Arrow key navigation between stats (horizontal), down to quick actions
+- ✅ Enter/Space to activate quick nav items
+- ✅ Escape to dismiss focus
+
+### AI Directory (P5) — All ✅
 
 ---
 
-## Recent Actions
+## Backlog
 
-| Time | Action | Result |
-|------|--------|--------|
-| 12:19 HKT | Created UsageSummaryBar component + integrated into homepage dashboard | Build passes clean ✅ |
-| 12:08 HKT | Built LifeOS plugin manifest offline/mock mode: usePluginManifest hook | All 92 tests pass ✅ |
-| 11:15 HKT | Added usage analytics + sparkline integration to Quick Actions | Build clean ✅ |
+### LifeOS (P3):
+- ⬜ Supabase persistence (blocked on CEO API keys)
+
+### Titan (P4):
+- ⬜ Landing page CTA scroll animation on WaitlistForm
+- ⬜ Progression widget: empty-state illustration for 0 XP users (done via SVG)
+- ✅ Pricing page compare toggle (monthly vs annual) with savings badge
+- ✅ CTA scroll-down indicator + smooth-scroll sections
+
+### AI Directory (P5):
+- ✅ JSON-LD structured data for tool pages
+- ✅ Breadcrumb navigation component
+- ✅ Social share buttons (Twitter/X, LinkedIn, Facebook, Copy) on all 27 geo pages
 
 ---
 
 ## Blockers
-
-- **Full `next build` (parent workspace)** — missing `kids-activities-asia` dir; building from `_projects/lifeos` sub-project works fine
 - **LifeOS Supabase persistence** — blocked on CEO for API keys
-- **Titan deploy** — blocked on CEO for Vercel alias / git PAT
+- **Titan deploy** — needs Vercel alias config (CEO)
 - **AI Directory** — already deployed and working

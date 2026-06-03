@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Sparkles, Swords, Layers, Cpu, Globe, Zap, Star, Trophy } from 'lucide-react';
 import MascotDisplay from '../components/organisms/MascotDisplay';
 import Badge from '../components/ui/badge';
+import PricingSection from '../components/organisms/PricingSection';
 
 export const metadata: Metadata = {
   title: 'Titan — The Solo Leveling Steam of AI Agents',
@@ -57,6 +58,32 @@ const PROGRESSION = [
   { level: '30+', emoji: '👑', label: 'God-Tier', color: 'text-amber-400' },
 ];
 
+function SmoothScrollSection({ id, children, className }: { id?: string; children: React.ReactNode; className?: string }) {
+  return (
+    <section id={id} className={className}>
+      {children}
+    </section>
+  );
+}
+
+function ScrollDownArrow() {
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  return (
+    <button
+      onClick={() => scrollTo('progression')}
+      className="mt-10 animate-bounce text-gray-500 hover:text-amber-400 transition-colors cursor-pointer"
+      aria-label="Scroll to progression path"
+    >
+      <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </button>
+  );
+}
+
 export default function TitanLanding() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white">
@@ -72,7 +99,8 @@ export default function TitanLanding() {
             Visually level-up your personal agent swarm. Certify god-tier skills.
             Own the IP. BYO into any enterprise or robot brain.
           </p>
-          <div className="mt-12 flex flex-wrap justify-center gap-4">
+          <ScrollDownArrow />
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link href="/robotics" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-500 to-purple-600 rounded-xl font-semibold hover:from-amber-400 hover:to-purple-500 transition-all shadow-lg shadow-amber-500/20">
               <Cpu className="w-5 h-5" />
               Deploy to Robot
@@ -87,7 +115,7 @@ export default function TitanLanding() {
       </section>
 
       {/* Progression Path */}
-      <section className="px-6 py-20">
+      <SmoothScrollSection id="progression" className="px-6 py-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Agent Progression Path</h2>
           <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
@@ -112,10 +140,10 @@ export default function TitanLanding() {
             </div>
           </div>
         </div>
-      </section>
+      </SmoothScrollSection>
 
       {/* Features Grid */}
-      <section className="px-6 py-20 bg-gray-900/50">
+      <SmoothScrollSection id="features" className="px-6 py-20 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Platform Capabilities</h2>
           <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
@@ -131,7 +159,10 @@ export default function TitanLanding() {
             ))}
           </div>
         </div>
-      </section>
+      </SmoothScrollSection>
+
+      {/* Pricing Section */}
+      <PricingSection />
 
       {/* Robotics CTA */}
       <section className="px-6 py-20">

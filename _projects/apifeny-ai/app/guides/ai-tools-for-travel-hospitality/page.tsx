@@ -11,6 +11,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny-ai.vercel.app';
@@ -407,7 +408,14 @@ export default function AIToolsForTravelHospitalityPage() {
  <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
  <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
  <div className="mx-auto max-w-4xl text-center">
- <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm">
+           <BreadcrumbNav
+            className="mb-8"
+            items={[
+              { label: 'Guides', href: '/guides' },
+              { label: 'AI Tools for Travel & Hospitality' },
+            ]}
+          />
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm">
  <Compass className="h-4 w-4" />
  Travel & Hospitality
  </div>

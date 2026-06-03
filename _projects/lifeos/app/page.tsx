@@ -10,11 +10,11 @@ const ExcalidrawCanvas = dynamic(
   () => import('./components/ExcalidrawCanvas'),
   { ssr: false },
 );
-import type { ChatSession, ChatMessage, ConversationMode } from './lib/chat-persistence';
+import type { ChatSession, ChatMessage } from './lib/chat-persistence';
 import type { PluginDefinition, PluginPhase } from './lib/plugin-registry';
-import * as Persistence from './lib/chat-persistence';
 import MiniSparkline from './components/MiniSparkline';
 import UsageSummaryBar from './components/UsageSummaryBar';
+
 
 type Message = {
   role: 'user' | 'assistant';
@@ -117,6 +117,125 @@ function PluginCard({
   );
 }
 
+// ─── Recent Session Cards — Quick-Resume (PRD: "Don't make me start over") ──
+
+function RecentSessionCards({
+  sessions,
+  onResume,
+  onDelete,
+  plugins,
+}: {
+  sessions: ChatSession[];
+  onResume: (id: string) => void;
+  onDelete: (id: string, e: React.MouseEvent) => void;
+  plugins: PluginDefinition[];
+}) {
+  if (sessions.length === 0) return null;
+
+  // Show max 3 most recent sessions
+  const recent = sessions.slice(0, 3);
+
+  // Resolve emoji from plugin registry (single source of truth) — fallback to 🧠
+  const getPluginEmoji = (mode: string): string => {
+    const plugin = plugins.find(p => p.id === mode);
+    return plugin?.emoji || '🧠';
+  };
+
+  return (
+    <div className="mb-8">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="text-base">🔄</span>
+        <h2 className="text-sm font-bold text-gray-800">Continue Where You Left Off</h2>
+        <span className="text-[10px] text-teal-500 bg-teal-50 border border-teal-200 px-1.5 py-0.5 rounded-full font-medium">Recent</span>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        {recent.map(s => {
+          const emoji = getPluginEmoji(s.mode);
+          const timeAgo = getTimeAgo(s.updated_at);
+
+          return (
+            <button
+              key={s.id}
+              onClick={() => onResume(s.id)}
+              className="group relative p-4 rounded-2xl border border-gray-200 bg-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-left overflow-hidden"
+            >
+              {/* Subtle gradient accent bar at top */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-400 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+
+              <div className="relative z-10">
+                {/* Header: emoji + time */}
+                <div className="flex items-center justify-between mb-2">
+                  <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center text-lg">
+                    {emoji}
+                  </div>
+                  <span className="text-[10px] font-mono text-gray-400">{timeAgo}</span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-sm font-semibold text-gray-900 mb-1 line-clamp-1">
+                  {s.title.length > 36 ? s.title.slice(0, 34) + '…' : s.title}
+                </h3>
+
+                {/* Meta: message count + mode */}
+                <div className="flex items-center gap-2 text-[10px] text-gray-400">
+                  <span>{s.message_count} {s.message_count === 1 ? 'message' : 'messages'}</span>
+                  <span className="text-gray-200">·</span>
+                  <span className="capitalize">{s.mode}</span>
+                </div>
+
+                {/* Partial message preview — last assistant snippet */}
+                <div className="mt-2 pt-2 border-t border-gray-100">
+                  <div className="flex items-start gap-1.5">
+                    <svg className="w-3 h-3 mt-0.5 text-teal-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                    </svg>
+                    <p className="text-[11px] text-gray-500 leading-relaxed line-clamp-2">
+                      {s.title === 'New Conversation' ? 'Tap to resume your conversation' : 'Continue where you left off…'}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Delete button */}
+              <button
+                onClick={(e) => onDelete(s.id, e)}
+                className="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/80 border border-gray-200 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:bg-red-50 hover:border-red-200 hover:text-red-500 transition-all text-gray-300"
+                title="Delete session"
+              >
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              {/* Resume CTA — always visible subtle */}
+              <div className="mt-3 pt-2 border-t border-gray-100">
+                <span className="inline-flex items-center gap-1 text-[11px] font-medium text-teal-600 group-hover:text-teal-700 transition-colors">
+                  Resume
+                  <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// Helper: human-readable time ago
+function getTimeAgo(dateStr: string): string {
+  const diff = Date.now() - new Date(dateStr).getTime();
+  const mins = Math.floor(diff / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins}m ago`;
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24) return `${hrs}h ago`;
+  const days = Math.floor(hrs / 24);
+  return `${days}d ago`;
+}
+
 // ─── Phase Progress Bar ────────────────────────────────────────────
 
 function PhaseBar({
@@ -192,6 +311,12 @@ export default function Home() {
   const [freeChatInput, setFreeChatInput] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState<'all' | 'active' | 'beta' | 'coming-soon'>('all');
+  const [categoryFilter, setCategoryFilter] = useState<string>('all');
+  const [notifyPlugin, setNotifyPlugin] = useState<PluginDefinition | null>(null);
+  const [notifyEmail, setNotifyEmail] = useState('');
+  const [notifiedPlugins, setNotifiedPlugins] = useState<string[]>([]);
+  const [notifySuccess, setNotifySuccess] = useState(false);
+  const [notifyError, setNotifyError] = useState<string | null>(null);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -225,6 +350,15 @@ export default function Home() {
         import('./lib/plugin-registry').then(mod => {
           setPlugins(mod.PLUGINS);
         });
+
+    // Load previously notified plugins from localStorage
+    const savedNotified = localStorage.getItem('lifeos_notified_plugins');
+    if (savedNotified) {
+      try {
+        const parsed = JSON.parse(savedNotified);
+        if (Array.isArray(parsed)) setNotifiedPlugins(parsed);
+      } catch { /* ignore */ }
+    }
       });
   }, []);
 
@@ -233,6 +367,14 @@ export default function Home() {
       loadSessions();
     }
   }, [showHistory]);
+
+  // Auto-dismiss notify modal after success
+  useEffect(() => {
+    if (notifySuccess) {
+      const timer = setTimeout(() => setNotifyPlugin(null), 3500);
+      return () => clearTimeout(timer);
+    }
+  }, [notifySuccess]);
 
   const loadSessions = async () => {
     setLoadingSessions(true);
@@ -415,6 +557,14 @@ export default function Home() {
             {/* Usage Summary Bar — top-of-page activity stats */}
             <UsageSummaryBar />
 
+            {/* Recent Session Cards — quick resume (last 3) */}
+            <RecentSessionCards
+              sessions={sessions}
+              onResume={resumeSession}
+              onDelete={deleteSession}
+              plugins={plugins}
+            />
+
             {/* Search & Filter Bar */}
             <div className="mb-6 space-y-3">
               {/* Search input */}
@@ -456,6 +606,27 @@ export default function Home() {
                     {status === 'all' ? 'All' : status === 'coming-soon' ? 'Coming Soon' : status.charAt(0).toUpperCase() + status.slice(1)}
                   </button>
                 ))}
+              </div>
+
+              {/* Category filter tags */}
+              <div className="flex items-center gap-1.5 flex-wrap mt-2">
+                {['all', 'travel', 'finance', 'health', 'career', 'learning', 'family', 'home', 'social', 'relationships', 'productivity', 'nutrition', 'mindfulness'].map(cat => {
+                  const catPlugin = cat === 'all' ? null : plugins.find(p => p.id === cat);
+                  const isCategoryActive = categoryFilter === cat;
+                  return (
+                    <button
+                      key={cat}
+                      onClick={() => setCategoryFilter(isCategoryActive ? 'all' : cat)}
+                      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[10px] font-mono font-medium transition-all ${
+                        isCategoryActive
+                          ? 'bg-teal-100 text-teal-700 border border-teal-300 shadow-sm'
+                          : 'bg-white text-gray-400 border border-gray-200 hover:border-teal-200 hover:text-teal-500'
+                      }`}
+                    >
+                      {cat === 'all' ? '✨ All' : `${catPlugin?.emoji || ''} ${cat.charAt(0).toUpperCase() + cat.slice(1)}`}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
@@ -521,7 +692,8 @@ export default function Home() {
                   plugin.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                   plugin.features.some(f => f.toLowerCase().includes(searchQuery.toLowerCase()));
                 const matchesStatus = statusFilter === 'all' || plugin.status === statusFilter;
-                return matchesSearch && matchesStatus;
+                const matchesCategory = categoryFilter === 'all' || plugin.id === categoryFilter;
+                return matchesSearch && matchesStatus && matchesCategory;
               });
 
               return (
@@ -673,8 +845,9 @@ export default function Home() {
                                       (e.currentTarget as HTMLElement).style.background = `${color1}12`;
                                     }}
                                     onClick={() => {
-                                      // Placeholder — no email capture yet
-                                      // Analytics tracking TBD once email capture is implemented
+                                      setNotifyPlugin(plugin);
+                                      setNotifyEmail('');
+                                      setNotifySuccess(false);
                                     }}
                                   >
                                     <span>🔔</span>
@@ -979,7 +1152,7 @@ export default function Home() {
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2 min-w-0">
-                        <span className="text-sm">{'🧘'}</span>
+                        <span className="text-sm">{plugins.find(p => p.id === s.mode)?.emoji || '🧘'}</span>
                         <span className="text-sm font-medium text-gray-800 truncate">
                           {s.title.length > 40 ? s.title.slice(0, 40) + '…' : s.title}
                         </span>
@@ -1044,6 +1217,149 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      {/* ── NOTIFY ME MODAL — for coming-soon plugins ── */}
+      {notifyPlugin && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" onClick={() => setNotifyPlugin(null)} />
+          <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 max-w-sm mx-4 w-full">
+            <div className="text-center mb-4">
+              <div className="text-3xl mb-2">{notifyPlugin.emoji}</div>
+              <h3 className="text-sm font-bold text-gray-900">{notifyPlugin.name}</h3>
+              <p className="text-xs text-gray-500 mt-1">Get notified when this plugin launches.</p>
+            </div>
+
+            {notifySuccess ? (
+              <div className="text-center py-4">
+                <div className="w-10 h-10 mx-auto mb-2 bg-emerald-100 rounded-full flex items-center justify-center">
+                  <svg className="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p className="text-sm font-medium text-gray-800">You're on the list!</p>
+                <p className="text-xs text-gray-500 mt-1">We'll let you know when {notifyPlugin.name} is ready.</p>
+                <button
+                  onClick={() => setNotifyPlugin(null)}
+                  className="mt-4 text-xs text-teal-600 hover:text-teal-700 underline"
+                >
+                  Close
+                </button>
+              </div>
+            ) : (
+              <>
+                <input
+                  type="email"
+                  value={notifyEmail}
+                  onChange={e => {
+                    setNotifyEmail(e.target.value);
+                    if (notifyError) setNotifyError(null);
+                  }}
+                  placeholder="your@email.com"
+                  className="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent mb-1"
+                />
+                {notifyError && (
+                  <p className="text-xs text-red-500 mt-1 mb-2">{notifyError}</p>
+                )}
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setNotifyPlugin(null)}
+                    className="flex-1 py-2.5 text-xs text-gray-500 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    onClick={() => {
+                      const email = notifyEmail.trim();
+                      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                      if (!email || !emailRegex.test(email)) {
+                        setNotifyError('Please enter a valid email address.');
+                        return;
+                      }
+                      // Save to localStorage
+                      const updated = Array.from(new Set(notifiedPlugins.concat([notifyPlugin.id])));
+                      setNotifiedPlugins(updated);
+                      localStorage.setItem('lifeos_notified_plugins', JSON.stringify(updated));
+                      setNotifySuccess(true);
+                    }}
+                    disabled={!notifyEmail.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(notifyEmail.trim())}
+                    className="flex-1 py-2.5 text-xs font-medium text-white bg-gradient-to-r from-teal-500 to-emerald-500 rounded-xl hover:from-teal-600 hover:to-emerald-600 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+                  >
+                    Notify me
+                  </button>
+                </div>
+                <p className="text-[10px] text-gray-400 text-center mt-3">
+                  No spam. Unsubscribe anytime.
+                </p>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* ── CROSS-PLUGIN RECOMMENDATIONS — based on onboarding + usage ── */}
+      {!started && !selectedPlugin && plugins.length > 0 && (() => {
+        // Suggest plugins related to the ones the user already onboarded with
+        const onboardedSet = new Set(onboardedCategories);
+
+        // Plugin affinity pairs: if user has one, suggest the other
+        const AFFINITY_MAP: Record<string, string[]> = {
+          'travel': ['learning', 'finance'],
+          'finance': ['productivity', 'home'],
+          'health': ['nutrition', 'mindfulness'],
+          'career': ['learning', 'productivity'],
+          'learning': ['career', 'productivity'],
+          'family': ['relationships', 'home'],
+          'home': ['finance', 'family'],
+          'social': ['relationships', 'career'],
+          'relationships': ['family', 'social'],
+          'mindfulness': ['health', 'productivity'],
+          'productivity': ['career', 'learning'],
+          'nutrition': ['health', 'mindfulness'],
+        };
+
+        const relatedIds = new Set<string>();
+        for (const cat of onboardedCategories) {
+          const affinity = AFFINITY_MAP[cat];
+          if (affinity) {
+            for (const id of affinity) {
+              if (!onboardedSet.has(id)) relatedIds.add(id);
+            }
+          }
+        }
+
+        if (relatedIds.size === 0) return null;
+
+        const recommended = plugins.filter(p =>
+          relatedIds.has(p.id) &&
+          (p.status === 'active' || p.status === 'beta') &&
+          (searchQuery === '' || p.name.toLowerCase().includes(searchQuery.toLowerCase())) &&
+          (statusFilter === 'all' || p.status === statusFilter)
+        );
+
+        if (recommended.length === 0) return null;
+
+        return (
+          <div className="mb-8">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-lg">🔗</span>
+              <h2 className="text-sm font-bold text-gray-800">You Might Also Like</h2>
+              <span className="text-[10px] text-teal-500 bg-teal-50 border border-teal-200 px-1.5 py-0.5 rounded-full font-medium">Cross-Plugin</span>
+            </div>
+            <p className="text-xs text-gray-400 mb-3">
+              Based on the plugins you use, these might complement your workflow.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {recommended.map(plugin => (
+                <PluginCard
+                  key={plugin.id}
+                  plugin={plugin}
+                  onSelect={selectPlugin}
+                />
+              ))}
+            </div>
+          </div>
+        );
+      })()}
 
       {/* ── ONBOARDING WIZARD — first visit ── */}
       {showOnboarding && (

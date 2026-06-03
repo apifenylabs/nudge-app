@@ -7,6 +7,7 @@ import { RANKING_CATEGORIES } from '@/lib/ranking-categories';
 import { BookOpen, ChevronRight, TrendingUp, Zap, Sparkles } from 'lucide-react';
 import ToolDetail from '@/components/ToolDetail';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import ToolRelatedBlogPosts from '@/components/ToolRelatedBlogPosts';
 import { getAffiliateForTool } from '@/lib/affiliate-links';
 
@@ -33,6 +34,13 @@ export async function generateMetadata({ params }: ToolPageProps): Promise<Metad
  title: `${tool.name} — Apifeny AI`,
  description: tool.tagline || tool.description,
  type: 'article',
+ url: `${BASE_URL}/tools/${tool.slug}`,
+ images: tool.logo_url ? [{ url: tool.logo_url }] : undefined,
+ },
+ twitter: {
+ card: 'summary_large_image',
+ title: `${tool.name} — Apifeny AI`,
+ description: tool.tagline || tool.description,
  },
  };
 }
@@ -44,36 +52,62 @@ export default function ToolPage({ params }: ToolPageProps) {
  notFound();
  }
 
- const jsonLd = {
+ const jsonLd: Record<string, unknown> = {
  '@context': 'https://schema.org',
  '@type': 'SoftwareApplication',
  name: tool.name,
  description: tool.tagline || tool.description,
  url: `${BASE_URL}/tools/${tool.slug}`,
  applicationCategory: tool.category,
- operatingSystem: 'Web, iOS, Android',
- aggregateRating: tool.avg_rating > 0 ? {
+ operatingSystem: (tool.platform && tool.platform.length > 0)
+ ? tool.platform.join(', ')
+ : 'Web',
+ datePublished: tool.created_at,
+ image: tool.logo_url || undefined,
+ author: {
+ '@type': 'Organization',
+ name: 'Apifeny AI',
+ url: BASE_URL,
+ },
+ };
+
+ // Only add aggregateRating if there are actual ratings
+ if (tool.avg_rating > 0 && tool.total_ratings > 0) {
+ jsonLd.aggregateRating = {
  '@type': 'AggregateRating',
  ratingValue: tool.avg_rating,
  ratingCount: tool.total_ratings,
  bestRating: 5,
- } : undefined,
- potentialAction: tool.website_url ? {
- '@type': 'ViewAction',
- target: tool.website_url,
- } : undefined,
- author: {
- '@type': 'Organization',
- name: 'Apifeny AI',
- },
- offers: {
+ worstRating: 1,
+ };
+ }
+
+ // Only add offers block if the tool actually has pricing data
+ if (tool.pricing_min_usd !== undefined && tool.pricing_max_usd !== undefined) {
+ const lowPrice = tool.pricing_min_usd;
+ const highPrice = tool.pricing_max_usd;
+ jsonLd.offers = {
  '@type': 'AggregateOffer',
  priceCurrency: 'USD',
- lowPrice: tool.pricing_min_usd || 0,
- highPrice: tool.pricing_max_usd || 0,
+ lowPrice,
+ highPrice,
  offerCount: 1,
- },
+ availability: 'https://schema.org/OnlineOnly',
  };
+ }
+
+ // Add subcategories as applicationSubCategory if available
+ if (tool.subcategories && tool.subcategories.length > 0) {
+ jsonLd.applicationSubCategory = tool.subcategories.join(', ');
+ }
+
+ // Add potentialAction (ViewAction) to the tool's website
+ if (tool.website_url) {
+ jsonLd.potentialAction = {
+ '@type': 'ViewAction',
+ target: tool.website_url,
+ };
+ }
 
  return (
  <>
@@ -89,6 +123,13 @@ export default function ToolPage({ params }: ToolPageProps) {
  dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
  />
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+ <BreadcrumbNav
+ className="mb-6"
+ items={[
+ { label: 'AI Tools', href: '/tools' },
+ { label: tool.name },
+ ]}
+ />
  <ToolDetail tool={tool} />
 
  {/* Affiliate Best Deal CTA — appears right after hero for paid affiliate tools */}

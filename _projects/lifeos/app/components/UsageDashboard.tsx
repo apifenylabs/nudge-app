@@ -15,8 +15,10 @@
  */
 
 import { useEffect, useState, useCallback } from 'react';
-import { getPluginUsage, getUsageSummary, resetUsageData, trackEvent, type PluginUsage, type UsageSummary } from '@/app/lib/usage-analytics';
+import { getPluginUsage, getUsageSummary, resetUsageData, type PluginUsage, type UsageSummary } from '@/app/lib/usage-analytics';
+import { PLUGINS } from '@/app/lib/plugin-registry';
 import SparklineTrend from './SparklineTrend';
+import PluginEmptyState, { type PluginEmptyStateProps } from './PluginEmptyState';
 
 // ─── Sub-components ────────────────────────────────────────────────
 
@@ -198,15 +200,39 @@ export function PluginUsageSection({ pluginId, pluginName }: { pluginId: string;
   };
 
   if (!usage) {
+    const pluginDef = PLUGINS.find(p => p.id === pluginId);
+    const emptyStateProps: PluginEmptyStateProps = {
+      pluginEmoji: pluginDef?.emoji || '🚀',
+      pluginName,
+      categoryLabel: pluginDef ? undefined : undefined,
+      quickActions: pluginDef ? [
+        {
+          label: `Start a conversation with ${pluginName}`,
+          prompt: `I'd like to start using ${pluginName}. What's the first step?`,
+          icon: '💬',
+        },
+        {
+          label: 'Log your first entry',
+          prompt: `Help me log my first data point in ${pluginName}.`,
+          icon: '📝',
+        },
+        {
+          label: `Explore ${pluginName} phases`,
+          prompt: `Give me an overview of what ${pluginName} can help me with.`,
+          icon: '🔍',
+        },
+      ] : undefined,
+      phases: pluginDef?.phases?.map(ph => ({
+        id: ph.id,
+        name: ph.name,
+        description: ph.description,
+      })) || undefined,
+      pluginHref: pluginDef ? `/plugins/${pluginDef.id}` : undefined,
+    };
+
     return (
-      <div className="bg-white border border-gray-200 rounded-xl p-6">
-        <div className="flex items-center gap-2 mb-3">
-          <span className="text-lg">📊</span>
-          <h3 className="text-sm font-semibold text-gray-800">Your Activity</h3>
-        </div>
-        <p className="text-xs text-gray-400">
-          No activity logged for {pluginName} yet. Start a conversation to see your stats.
-        </p>
+      <div className="mb-6">
+        <PluginEmptyState {...emptyStateProps} />
       </div>
     );
   }

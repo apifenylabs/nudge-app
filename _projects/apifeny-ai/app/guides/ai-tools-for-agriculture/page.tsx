@@ -12,6 +12,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny-ai.vercel.app';
@@ -429,7 +430,14 @@ export default function AiForAgriculturePage() {
  <div className="absolute inset-0 bg-gradient-to-br from-green-900/10 via-emerald-900/5 to-teal-900/10 " />
  <div className="relative max-w-7xl mx-auto">
  <div className="text-center space-y-6">
- <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium">
+           <BreadcrumbNav
+            className="mb-8"
+            items={[
+              { label: 'Guides', href: '/guides' },
+              { label: 'AI Tools for Agriculture' },
+            ]}
+          />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium">
  <Sprout className="w-4 h-4" />
  <span>Definitive Guide 2026</span>
  </div>

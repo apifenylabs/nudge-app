@@ -2,6 +2,18 @@
 
 ## Tasks Completed This Session
 
+### P3 STRATEGIC — Notify Modal UX Refinements
+- ✅ Added proper email regex validation (`/^[^\s@]+@[^\s@]+\.[^\s@]+$/`) replacing basic `includes('@')` check
+- ✅ Added `notifyError` state with red inline error text below input ("Please enter a valid email address.")
+- ✅ Error clears when user starts typing (onChange handler)
+- ✅ Submit button disabled condition now uses the same regex
+- ✅ Auto-dismiss toast timer: success state auto-closes modal after 3.5s via `useEffect` + `setTimeout`
+- ✅ Clean timeout on unmount
+- ✅ Manual Close button preserved
+- ✅ Build: ✓ Compiled successfully
+
+### Previous
+
 ### P3 STRATEGIC — LifeOS Deploy: PhaseTracker bugfix + Production Deploy
 - ✅ Fixed build error: `<a href="#" onClick={...}>` replaced with `<button>` in PhaseTracker.tsx (Next.js 14 RSC serialization rule)
 - ✅ Fixed CTA in plugins/[id]/page.tsx: split into conditional render (real `<a>` when active, `<span>` when coming-soon) to avoid `onClick` on `<a>` with `href={undefined}`

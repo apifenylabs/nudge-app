@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -67,11 +67,12 @@ export default function LifeOSMarketplacePage() {
   const [activePlugins, setActivePlugins] = useState<ReturnType<typeof getAllPlugins>>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTab, setActiveTab] = useState<FilterTab>("All");
-  const [mounted, setMounted] = useState(false);
+  const [focusedIndex, setFocusedIndex] = useState(-1);
+  const gridRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Refresh plugin state on mount and when returning to focus
   useEffect(() => {
-    setMounted(true);
     const refresh = () => {
       setActivePlugins(getAllPlugins());
     };
@@ -154,6 +155,96 @@ export default function LifeOSMarketplacePage() {
     },
     [activePlugins],
   );
+
+  // ─── Keyboard Navigation ───────────────────────────────────────────
+
+  useEffect(() => {
+    // Reset focus when filter/search changes
+    setFocusedIndex(-1);
+  }, [searchQuery, activeTab]);
+
+  const scrollToItem = useCallback((idx: number) => {
+    const el = itemRefs.current[idx];
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }, []);
+
+  useEffect(() => {
+    const len = filteredCatalog.length;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (len === 0) return;
+
+      const cols = window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : window.innerWidth < 1280 ? 3 : 5;
+
+      switch (e.key) {
+        case 'ArrowRight':
+          e.preventDefault();
+          setFocusedIndex(prev => {
+            const next = Math.min(prev + 1, len - 1);
+            scrollToItem(next);
+            return next;
+          });
+          break;
+        case 'ArrowLeft':
+          e.preventDefault();
+          setFocusedIndex(prev => {
+            const next = Math.max(prev - 1, 0);
+            scrollToItem(next);
+            return next;
+          });
+          break;
+        case 'ArrowDown':
+          e.preventDefault();
+          setFocusedIndex(prev => {
+            const next = Math.min(prev + cols, len - 1);
+            scrollToItem(next);
+            return next;
+          });
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          setFocusedIndex(prev => {
+            const next = Math.max(prev - cols, 0);
+            scrollToItem(next);
+            return next;
+          });
+          break;
+        case 'Enter':
+        case ' ':
+          if (focusedIndex >= 0 && focusedIndex < len) {
+            e.preventDefault();
+            const cat = filteredCatalog[focusedIndex];
+            if (cat) handleCardClick(cat.category);
+          }
+          break;
+        case 'Escape':
+          if (focusedIndex >= 0) {
+            e.preventDefault();
+            setFocusedIndex(-1);
+            if (document.activeElement instanceof HTMLElement) {
+              document.activeElement.blur();
+            }
+          }
+          break;
+        default:
+          // Type-to-search: redirect printable chars to search input
+          if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) {
+            const activeEl = document.activeElement;
+            const isInput = activeEl instanceof HTMLInputElement || activeEl instanceof HTMLTextAreaElement || activeEl instanceof HTMLSelectElement;
+            if (!isInput) {
+              const searchInput = document.querySelector<HTMLInputElement>('input[placeholder*="Search"]');
+              searchInput?.focus();
+              searchInput?.setSelectionRange(searchInput.value.length, searchInput.value.length);
+            }
+          }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [filteredCatalog, focusedIndex, handleCardClick, scrollToItem]);
 
   // ─── Render ─────────────────────────────────────────────────────────
 
@@ -340,7 +431,7 @@ export default function LifeOSMarketplacePage() {
               visible: { transition: { staggerChildren: 0.04 } },
             }}
           >
-            {filteredCatalog.map((cat) => {
+            {filteredCatalog.map((cat, idx) => {
               const active = isActive(cat.category);
               const progress = getPluginProgress(cat.category);
               const tags = CATEGORY_TAGS[cat.category] ?? [];
@@ -358,6 +449,11 @@ export default function LifeOSMarketplacePage() {
                   }}
                 >
                   <Card
+                    ref={(el: HTMLDivElement | null) => {
+                      itemRefs.current[idx] = el;
+                    }}
+                    tabIndex={0}
+                    onFocus={() => setFocusedIndex(idx)}
                     className="relative overflow-hidden cursor-pointer h-full border transition-all duration-300 group"
                     style={{
                       background: active
@@ -366,6 +462,9 @@ export default function LifeOSMarketplacePage() {
                       borderColor: active
                         ? `${cat.color}30`
                         : "rgba(255,255,255,0.06)",
+                      ...(focusedIndex === idx
+                        ? { outline: `2px solid ${cat.color}`, outlineOffset: '2px' }
+                        : {}),
                     }}
                     onClick={() => handleCardClick(cat.category)}
                     onMouseEnter={(e) => {

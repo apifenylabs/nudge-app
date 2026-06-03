@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo, useRef } from "react";
+import ProgressionPreview from "./ProgressionPreview";
 
 /* ─────────────────────────────────────────────────────────────
    Types
@@ -544,6 +545,11 @@ export default function DashboardPage() {
             <UsageBarChart data={dailyData} />
           </div>
           <AgentDistribution />
+        </div>
+
+        {/* ── Progression Preview ───────────────────────── */}
+        <div className="mb-6">
+          <ProgressionPreview />
         </div>
 
         {/* ── Activity + Quick Actions ──────────────────── */}

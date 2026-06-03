@@ -199,9 +199,18 @@ function PlanCard({
             </div>
           )}
           {billing === "annual" && price > 0 && (
-            <p className="text-[10px] text-cyan-400 mt-0.5">
-              Save ${plan.monthlyPrice * 12 - price}/yr
-            </p>
+            <>
+              <p className="text-[10px] text-cyan-400 mt-0.5">
+                Save ${plan.monthlyPrice * 12 - price}/yr
+              </p>
+              <p className="text-[10px] font-bold text-emerald-400">
+                (
+                {Math.round(
+                  ((plan.monthlyPrice * 12 - price) / (plan.monthlyPrice * 12)) * 100
+                )}
+                % off)
+              </p>
+            </>
           )}
         </div>
 
@@ -454,29 +463,44 @@ export default function PricingPage() {
             Start free. Upgrade when you outgrow the basics. No hidden fees — cancel anytime.
           </p>
 
-          {/* Billing toggle */}
-          <div className="inline-flex items-center gap-3 bg-slate-900/50 rounded-xl p-1 border border-slate-800/50">
-            <button
-              onClick={() => setBilling("monthly")}
-              className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-all ${
-                billing === "monthly"
-                  ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white"
-                  : "text-slate-400 hover:text-white"
+          {/* Billing toggle — slider style */}
+          <div className="inline-flex items-center gap-3">
+            <span
+              className={`text-xs font-medium transition-colors ${
+                billing === "monthly" ? "text-white" : "text-slate-500"
               }`}
             >
               Monthly
-            </button>
+            </span>
             <button
-              onClick={() => setBilling("annual")}
-              className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-all ${
+              onClick={() => setBilling(billing === "monthly" ? "annual" : "monthly")}
+              className={`relative w-14 h-7 rounded-full transition-all duration-300 ${
                 billing === "annual"
-                  ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white"
-                  : "text-slate-400 hover:text-white"
+                  ? "bg-gradient-to-r from-cyan-500 to-purple-600"
+                  : "bg-slate-700"
               }`}
+              aria-label="Toggle billing cycle"
             >
-              Annual{" "}
-              <span className="text-[10px] text-cyan-400 font-bold">Save 15%</span>
+              <span
+                className={`absolute top-0.5 left-0.5 w-6 h-6 rounded-full bg-white shadow-md transition-transform duration-300 ${
+                  billing === "annual" ? "translate-x-7" : "translate-x-0"
+                }`}
+              />
             </button>
+            <div className="flex items-center gap-1.5">
+              <span
+                className={`text-xs font-medium transition-colors ${
+                  billing === "annual" ? "text-white" : "text-slate-500"
+                }`}
+              >
+                Annual
+              </span>
+              {billing === "annual" && (
+                <span className="text-[10px] font-bold text-cyan-400 animate-pulse">
+                  Best Value
+                </span>
+              )}
+            </div>
           </div>
         </div>
 

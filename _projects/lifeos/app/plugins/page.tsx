@@ -4,13 +4,14 @@
  * LifeOS — Plugins Index Page
  *
  * A browsable, filterable directory of all 9 LifeOS plugins.
- * Users can filter by category, search by name, or filter by status.
+ * Users can filter by category, search by name, filter by status,
+ * or click feature tag pills for quick filtering.
  *
- * SEO metadata is embedded in the component at render time.
- * UX: Category tabs, search bar, status filter, visual cards with gradients.
+ * Keyboard navigation: ↑↓ to move between cards, Enter to open,
+ * Escape to clear search or all filters.
  */
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { Search, X } from 'lucide-react';
 import { PLUGINS } from '@/app/lib/plugin-registry';
@@ -92,11 +93,16 @@ export default function PluginsIndexPage() {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedStatus, setSelectedStatus] = useState<string | null>(null);
+  const [tagFilter, setTagFilter] = useState<string | null>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
+  const [focusedIndex, setFocusedIndex] = useState(-1);
+  const resultsRef = useRef<HTMLDivElement>(null);
 
   const filtered = useMemo(() => {
     return plugins.filter((p) => {
       if (selectedCategory && inferCategory(p.id) !== selectedCategory) return false;
       if (selectedStatus && p.status !== selectedStatus) return false;
+      if (tagFilter && !p.features.some((f) => f.toLowerCase().includes(tagFilter))) return false;
       if (search.trim()) {
         const q = search.toLowerCase();
         const catInfo = PLUGIN_CATEGORIES[inferCategory(p.id)];
@@ -109,15 +115,66 @@ export default function PluginsIndexPage() {
       }
       return true;
     });
-  }, [plugins, selectedCategory, selectedStatus, search]);
+  }, [plugins, selectedCategory, selectedStatus, tagFilter, search]);
 
-  const hasActiveFilters = selectedCategory || selectedStatus || search.trim();
+  const hasActiveFilters = selectedCategory || selectedStatus || tagFilter || search.trim();
 
   const clearFilters = () => {
     setSearch('');
     setSelectedCategory(null);
     setSelectedStatus(null);
+    setTagFilter(null);
   };
+
+  // ── Keyboard navigation ──
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      if (search) {
+        setSearch('');
+        searchRef.current?.focus();
+      } else if (hasActiveFilters) {
+        clearFilters();
+      }
+      e.preventDefault();
+    }
+
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const cards = resultsRef.current?.querySelectorAll('[data-plugin-card]');
+      if (!cards?.length) return;
+      const dir = e.key === 'ArrowDown' ? 1 : -1;
+      setFocusedIndex((prev) => {
+        const next = prev + dir;
+        if (next < 0) return cards.length - 1;
+        if (next >= cards.length) return 0;
+        return next;
+      });
+    }
+
+    if (e.key === 'Enter' && focusedIndex >= 0) {
+      const cards = resultsRef.current?.querySelectorAll('[data-plugin-card]');
+      const card = cards?.[focusedIndex] as HTMLElement | undefined;
+      card?.click();
+    }
+  }, [search, hasActiveFilters, focusedIndex]);
+
+  // Scroll focused card into view
+  useEffect(() => {
+    if (focusedIndex < 0) return;
+    const cards = resultsRef.current?.querySelectorAll('[data-plugin-card]');
+    const card = cards?.[focusedIndex] as HTMLElement | undefined;
+    card?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }, [focusedIndex]);
+
+  // Reset focus ring when filter results change
+  useEffect(() => {
+    setFocusedIndex(-1);
+  }, [search, selectedCategory, selectedStatus, tagFilter]);
+
+  // ── Tag click handler — quick filter by feature tag ──
+  const handleTagClick = useCallback((tag: string) => {
+    setTagFilter((prev) => (prev === tag ? null : tag));
+  }, []);
 
   return (
     <main className="min-h-screen bg-white">
@@ -144,10 +201,12 @@ export default function PluginsIndexPage() {
             <div className="relative flex-1 w-full sm:max-w-sm">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
               <input
+                ref={searchRef}
                 type="text"
                 placeholder="Search plugins…"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
+                onKeyDown={handleKeyDown}
                 className="w-full pl-9 pr-4 py-2 text-sm border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-teal-400/30 focus:border-teal-400 text-gray-700 placeholder:text-gray-400"
               />
             </div>
@@ -180,7 +239,7 @@ export default function PluginsIndexPage() {
             </div>
           </div>
 
-          {/* Status chips + clear */}
+          {/* Status chips + tag pill indicator + clear */}
           <div className="flex items-center gap-2 mt-2 flex-wrap">
             <span className="text-[11px] text-gray-400 font-medium uppercase tracking-wider">Status:</span>
             {statuses.map((s) => (
@@ -196,6 +255,14 @@ export default function PluginsIndexPage() {
                 {s.label} ({s.count})
               </button>
             ))}
+            {tagFilter && (
+              <span className="px-2.5 py-1 text-[11px] font-medium rounded-full bg-teal-50 text-teal-700 border border-teal-200 flex items-center gap-1">
+                🏷️ {tagFilter.length > 16 ? tagFilter.slice(0, 14) + '…' : tagFilter}
+                <button onClick={() => setTagFilter(null)} className="ml-0.5 hover:text-teal-900">
+                  <X className="w-3 h-3" />
+                </button>
+              </span>
+            )}
             {hasActiveFilters && (
               <button
                 onClick={clearFilters}
@@ -209,7 +276,7 @@ export default function PluginsIndexPage() {
       </section>
 
       {/* ── Results ── */}
-      <section className="max-w-5xl mx-auto px-4 py-8">
+      <section className="max-w-5xl mx-auto px-4 py-8" onKeyDown={handleKeyDown}>
         {filtered.length === 0 ? (
           <div className="text-center py-16">
             <p className="text-gray-400 text-lg mb-2">No plugins match your filters</p>
@@ -221,7 +288,7 @@ export default function PluginsIndexPage() {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div ref={resultsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filtered.map((plugin) => {
               const catInfo = PLUGIN_CATEGORIES[inferCategory(plugin.id)];
               const statusCfg = STATUS_CONFIG[plugin.status] || STATUS_CONFIG['coming-soon'];
@@ -267,15 +334,24 @@ export default function PluginsIndexPage() {
                     {plugin.description}
                   </p>
 
-                  {/* Features preview */}
+                  {/* Features preview — clickable tag pills */}
                   <div className="flex flex-wrap gap-1 mb-3">
                     {plugin.features.slice(0, 2).map((f) => (
-                      <span
+                      <button
                         key={f}
-                        className="text-[10px] text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded-md border border-gray-100"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          e.preventDefault();
+                          handleTagClick(f);
+                        }}
+                        className={`text-[10px] px-1.5 py-0.5 rounded-md border transition-colors ${
+                          tagFilter === f
+                            ? 'bg-teal-50 text-teal-700 border-teal-300'
+                            : 'text-gray-400 bg-gray-50 border-gray-100 hover:bg-gray-100 hover:text-gray-600'
+                        }`}
                       >
                         {f.length > 20 ? f.slice(0, 18) + '…' : f}
-                      </span>
+                      </button>
                     ))}
                     {plugin.features.length > 2 && (
                       <span className="text-[10px] text-gray-300">+{plugin.features.length - 2}</span>
@@ -300,12 +376,33 @@ export default function PluginsIndexPage() {
 
               if (isClickable) {
                 return (
-                  <Link key={plugin.id} href={`/plugins/${plugin.id}`} className="block">
+                  <Link
+                    key={plugin.id}
+                    href={`/plugins/${plugin.id}`}
+                    className={`block outline-none rounded-xl ${
+                      focusedIndex >= 0 && filtered[focusedIndex]?.id === plugin.id
+                        ? 'ring-2 ring-teal-400 ring-offset-2'
+                        : ''
+                    }`}
+                    data-plugin-card
+                  >
                     {card}
                   </Link>
                 );
               }
-              return <div key={plugin.id}>{card}</div>;
+              return (
+                <div
+                  key={plugin.id}
+                  data-plugin-card
+                  className={`rounded-xl ${
+                    focusedIndex >= 0 && filtered[focusedIndex]?.id === plugin.id
+                      ? 'ring-2 ring-teal-400 ring-offset-2'
+                      : ''
+                  }`}
+                >
+                  {card}
+                </div>
+              );
             })}
           </div>
         )}
@@ -318,6 +415,7 @@ export default function PluginsIndexPage() {
             {selectedCategory
               ? ` · ${categories.find((c) => c.id === selectedCategory)?.label}`
               : ''}
+            {tagFilter ? ' · 🏷️ filtered by tag' : ''}
           </p>
         </div>
       </section>

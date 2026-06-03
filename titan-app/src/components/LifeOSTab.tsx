@@ -1,15 +1,14 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Puzzle, Play, CheckCircle2, ChevronRight, Sparkles, 
-  Zap, ArrowRight, Layers, TrendingUp, Archive, 
+  Zap, ArrowRight, TrendingUp, Archive, 
   ArrowUp, ArrowDown, RotateCcw, EyeOff
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import {
   activatePlugin,
   completeTask,
@@ -54,6 +53,11 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
   const [showArchived, setShowArchived] = useState(false);
   const [downloads, setDownloads] = useState(0);
   const [metaState, setMetaState] = useState<Record<string, PluginMeta>>({});
+  const [focusedGridIndex, setFocusedGridIndex] = useState(-1);
+  const [focusedCatalogIndex, setFocusedCatalogIndex] = useState(-1);
+  const gridRef = useRef<HTMLDivElement>(null);
+  const gridItemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const catalogItemRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   const refresh = useCallback(() => {
     const allPlugins = getAllPlugins();
@@ -123,6 +127,155 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
       text: archived ? `Archived plugin` : `Restored plugin from archive`,
     });
   }, [refresh, onFeedAdd]);
+
+  // ─── Keyboard Navigation ───────────────────────────────────────────
+
+  const scrollToGridItem = useCallback((idx: number) => {
+    const el = gridItemRefs.current[idx];
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, []);
+
+  const scrollToCatalogItem = useCallback((idx: number) => {
+    const el = catalogItemRefs.current[idx];
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, []);
+
+  useEffect(() => {
+    const activeGridItems = plugins.filter(p => !isArchived(p.id));
+    const gridLen = showCatalog ? catalog.length : activeGridItems.length;
+    if (gridLen === 0) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (showCatalog || showAnalytics) {
+        // Catalog keyboard nav
+        if (showCatalog) {
+          const catLen = catalog.length;
+          const catCols = window.innerWidth < 640 ? 2 : window.innerWidth < 1024 ? 3 : 5;
+
+          switch (e.key) {
+            case 'ArrowRight':
+              e.preventDefault();
+              setFocusedCatalogIndex(prev => {
+                const next = Math.min(prev + 1, catLen - 1);
+                scrollToCatalogItem(next);
+                return next;
+              });
+              break;
+            case 'ArrowLeft':
+              e.preventDefault();
+              setFocusedCatalogIndex(prev => {
+                const next = Math.max(prev - 1, 0);
+                scrollToCatalogItem(next);
+                return next;
+              });
+              break;
+            case 'ArrowDown':
+              e.preventDefault();
+              setFocusedCatalogIndex(prev => {
+                const next = Math.min(prev + catCols, catLen - 1);
+                scrollToCatalogItem(next);
+                return next;
+              });
+              break;
+            case 'ArrowUp':
+              e.preventDefault();
+              setFocusedCatalogIndex(prev => {
+                const next = Math.max(prev - catCols, 0);
+                scrollToCatalogItem(next);
+                return next;
+              });
+              break;
+            case 'Enter':
+            case ' ':
+              if (focusedCatalogIndex >= 0 && focusedCatalogIndex < catLen) {
+                e.preventDefault();
+                handleActivate(catalog[focusedCatalogIndex].category);
+              }
+              break;
+            case 'Escape':
+              e.preventDefault();
+              setShowCatalog(false);
+              setFocusedCatalogIndex(-1);
+              break;
+          }
+        }
+        return;
+      }
+
+      // Focus reset when view changes
+      if (e.key === 'Tab' && focusedGridIndex === -1) return;
+
+      const len = activeGridItems.length;
+      if (len === 0) return;
+      const cols = window.innerWidth < 640 ? 2 : window.innerWidth < 1024 ? 3 : 5;
+
+      switch (e.key) {
+        case 'ArrowRight':
+          e.preventDefault();
+          setFocusedGridIndex(prev => {
+            const next = Math.min(prev + 1, len - 1);
+            scrollToGridItem(next);
+            return next;
+          });
+          break;
+        case 'ArrowLeft':
+          e.preventDefault();
+          setFocusedGridIndex(prev => {
+            const next = Math.max(prev - 1, 0);
+            scrollToGridItem(next);
+            return next;
+          });
+          break;
+        case 'ArrowDown':
+          e.preventDefault();
+          setFocusedGridIndex(prev => {
+            const next = Math.min(prev + cols, len - 1);
+            scrollToGridItem(next);
+            return next;
+          });
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          setFocusedGridIndex(prev => {
+            const next = Math.max(prev - cols, 0);
+            scrollToGridItem(next);
+            return next;
+          });
+          break;
+        case 'Enter':
+        case ' ':
+          if (focusedGridIndex >= 0 && focusedGridIndex < len) {
+            e.preventDefault();
+            const plugin = activeGridItems[focusedGridIndex];
+            setActivePlugin(plugin.category);
+          }
+          break;
+        case 'Escape':
+          if (focusedGridIndex >= 0) {
+            e.preventDefault();
+            setFocusedGridIndex(-1);
+          }
+          break;
+        default:
+          if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) {
+            const activeEl = document.activeElement;
+            const isInput = activeEl instanceof HTMLInputElement || activeEl instanceof HTMLTextAreaElement || activeEl instanceof HTMLSelectElement;
+            if (!isInput && showCatalog) {
+              // Focus search implicitly — but catalog has no search here
+            }
+          }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [plugins, showCatalog, showAnalytics, focusedGridIndex, focusedCatalogIndex, catalog, handleActivate, scrollToGridItem, scrollToCatalogItem]);
+
+  // Reset focus when view changes
+  useEffect(() => {
+    setFocusedGridIndex(-1);
+    setFocusedCatalogIndex(-1);
+  }, [showCatalog, showAnalytics]);
 
   // Listen for activate events from cross-plugin suggestion cards
   useEffect(() => {
@@ -262,12 +415,16 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
                 return (
                   <motion.button
                     key={cat.category}
+                    ref={(el: HTMLButtonElement | null) => { catalogItemRefs.current[i] = el; }}
+                    tabIndex={0}
+                    onFocus={() => setFocusedCatalogIndex(i)}
                     onClick={() => handleActivate(cat.category)}
                     className={`relative p-3 rounded-xl border text-left transition-all ${
                       isActive 
                         ? 'bg-titan-card/60 border-titan-teal/40' 
                         : 'bg-titan-surface/40 border-titan-border/20 hover:border-titan-teal/30'
                     }`}
+                    style={focusedCatalogIndex === i ? { outline: '2px solid #14B8A6', outlineOffset: '2px' } : {}}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.04 }}
@@ -341,12 +498,16 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
               return (
                 <div key={p.id} className="relative group">
                   <motion.button
+                    ref={(el: HTMLButtonElement | null) => { gridItemRefs.current[idx] = el as HTMLDivElement | null; }}
+                    tabIndex={0}
+                    onFocus={() => setFocusedGridIndex(idx)}
                     onClick={() => setActivePlugin(p.category)}
                     className={`w-full p-3 rounded-xl border text-left transition-all ${
                       activePlugin === p.category 
                         ? 'bg-titan-card/80 border-titan-teal/40' 
                         : 'bg-titan-surface/40 border-titan-border/20 hover:border-titan-teal/30'
                     }`}
+                    style={focusedGridIndex === idx ? { outline: '2px solid #14B8A6', outlineOffset: '2px' } : {}}
                     whileHover={{ y: -2 }}
                   >
                     <div className="flex items-center gap-2 mb-1">

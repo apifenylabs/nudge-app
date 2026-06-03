@@ -930,6 +930,12 @@ export default function LandingPage() {
       {/* ── Final CTA ── */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
         <div className="max-w-2xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
           <Card className="border-gray-200 bg-gradient-to-br from-teal-50 to-amber-50">
             <CardContent className="p-8 sm:p-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
@@ -945,6 +951,7 @@ export default function LandingPage() {
               </Button>
             </CardContent>
           </Card>
+          </motion.div>
         </div>
       </section>
 

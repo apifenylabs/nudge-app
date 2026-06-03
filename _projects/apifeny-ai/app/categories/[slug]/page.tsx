@@ -9,6 +9,7 @@ import type { Tool } from '@/lib/types';
 import { getPricingLabel, getPricingColor } from '@/lib/utils';
 import { cn } from '@/lib/utils';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 
 const BASE_URL = 'https://apifeny-ai.vercel.app';
 
@@ -85,14 +86,13 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  ]}
  />
  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
- {/* Breadcrumb */}
- <nav className="flex items-center gap-2 text-sm text-tech-400 mb-6">
- <Link href="/" className="hover:text-white transition">Home</Link>
- <ChevronRight className="w-3.5 h-3.5" />
- <Link href="/tools" className="hover:text-white transition">Tools</Link>
- <ChevronRight className="w-3.5 h-3.5" />
- <span className="text-tech-200">{cat.name}</span>
- </nav>
+ <BreadcrumbNav
+ className="mb-6"
+ items={[
+ { label: 'Categories', href: '/categories' },
+ { label: cat.name },
+ ]}
+ />
 
  {/* Hero */}
  <section className="relative mb-10 sm:mb-12">

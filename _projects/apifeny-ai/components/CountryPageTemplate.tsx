@@ -7,6 +7,7 @@ import {
   Zap, BookOpen, MapPin, Globe, Wallet, ShieldCheck,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import SocialShareButtons from '@/components/SocialShareButtons';
 
 interface CountryConfig {
   slug: string;
@@ -248,6 +249,18 @@ export default function CountryPageTemplate({
           </section>
         );
       })}
+
+      {/* Social Share */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-100">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-gray-400">Share this guide</p>
+          <SocialShareButtons
+            title={`Best AI Tools in ${config.countryName} (2026)`}
+            description={`Curated AI tools for ${config.countryName} — ${totalCount}+ tools ranked.`}
+            compact
+          />
+        </div>
+      </div>
     </>
   );
 }

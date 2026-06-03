@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import WaitlistForm from "./components/WaitlistForm";
 
 /* ─────────────────────────────────────────────────────────────
@@ -778,7 +779,13 @@ export default function HomePage() {
           <FloatingOrbs />
 
           <div className="relative max-w-3xl mx-auto text-center">
-            <div className="glass rounded-3xl p-10 sm:p-16 border border-cyan-500/10">
+            <motion.div
+              className="glass rounded-3xl p-10 sm:p-16 border border-cyan-500/10"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                 The Gates Are{" "}
                 <span className="text-gradient">Opening</span>
@@ -789,7 +796,7 @@ export default function HomePage() {
               </p>
 
               <WaitlistForm />
-            </div>
+            </motion.div>
           </div>
         </section>
 

@@ -41,6 +41,7 @@ import ToolComments from './ToolComments';
 import HowToUse from './HowToUse';
 import AffiliateCard from './AffiliateCard';
 import StickyAffiliateBar from './StickyAffiliateBar';
+import SocialShareButtons from './SocialShareButtons';
 
 interface ToolDetailProps {
  tool: Tool;
@@ -357,6 +358,11 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
  {saved ? <BookmarkCheck className="w-4 h-4" /> : <BookmarkPlus className="w-4 h-4" />}
  {saved ? 'Saved to Stack' : 'Save to My Stack'}
  </button>
+ {/* Share buttons */}
+ <SocialShareButtons
+ title={`${tool.name}: ${tool.tagline}`}
+ className="justify-center pt-1"
+ />
  </div>
 
  {/* Asia Score card */}

@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { Calendar, Clock, Tag, ArrowLeft, ArrowRight, User, Sparkles, BookOpen, Layers } from 'lucide-react';
 import { getPostBySlug, getRelatedPosts, getRelatedPostsByCategory } from '@/lib/blog-data';
 import type { BlogPost } from '@/lib/blog-data';
+import SocialShareButtons from '../../../components/SocialShareButtons';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import BlogAffiliateCTA from '../../../components/BlogAffiliateCTA';
 import AffiliateCard from '../../../components/AffiliateCard';
 import BlogRelatedTools from '../../../components/BlogRelatedTools';
@@ -88,6 +90,15 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
  <main className="min-h-screen bg-white">
  <BreadcrumbSchema items={breadcrumbItems} />
 
+ <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+ <BreadcrumbNav
+ items={[
+ { label: 'Blog', href: '/blog' },
+ { label: post.title },
+ ]}
+ />
+ </div>
+
  {/* Article */}
  <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  {/* Back link */}
@@ -132,6 +143,14 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
  {post.readingTime}
  </span>
  </div>
+
+ {/* Social Share Buttons */}
+ <SocialShareButtons
+ title={post.title}
+ description={post.excerpt}
+ className="mt-4"
+ compact
+ />
  </header>
 
  {/* Content */}

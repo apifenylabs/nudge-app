@@ -31,6 +31,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FAQSchema from '@/components/FAQSchema';
 import { getRelatedPosts } from '@/lib/blog-data';
 
@@ -390,7 +391,14 @@ export default function AIEcommerceAsiaGuide() {
  <section className="relative overflow-hidden">
  <div className="absolute inset-0 bg-gradient-to-b from-rose-500/10 via-transparent to-tech-900 pointer-events-none" />
  <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
- <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-xs font-medium mb-6">
+           <BreadcrumbNav
+            className="mb-8"
+            items={[
+              { label: 'Guides', href: '/guides' },
+              { label: 'AI for E-Commerce in Asia' },
+            ]}
+          />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-xs font-medium mb-6">
  <BookOpen className="w-3.5 h-3.5" />
  Guide &middot; 12 min read
  </div>

@@ -1,32 +1,38 @@
 # 🦊 HEARTBEAT — Captain Alpha
-**Last updated:** 2026-06-03 12:19 HKT | Autonomous Work Session
+**Last updated:** 2026-06-03 23:07 HKT | Autonomous Work Session
 
-## Session: 12:19 — LifeOS UsageSummaryBar on Dashboard Homepage
+## Session: 23:07 — Heartbeat Scan (All Clean ✅)
 
-### What Happened
-- **Revenue bucket**: Empty → 100% Strategic Projects ✅
-- **LifeOS (P3)**: Created `UsageSummaryBar` component — persistent top-of-page stats bar on the homepage showing:
-  - Today's session count and message count (stat pills with emoji)
-  - Top 3 most-used plugins with medal badges + MiniSparkline inline
-  - All-time totals (total sessions + time) visible on desktop
-  - Auto-refreshes every 60s, hides when no usage data exists
-  - Integrated cleanly into `page.tsx` after Hero section
-- **Build**: ✅ Clean (162 kB for `/`, no regressions)
+### ✅ What Got Done
 
-### Deploy Health
-- AI Directory (apifeny-ai): All Ready ✅
-- LifeOS: Build compiles — deploy not needed (local enhancement) ✅
-- Titan: Blocked on CEO (unchanged) ✅
-- ev-charging-asia: Latest Ready ✅
-- luxury-family-travel: Latest Ready ✅
+**Deploy Health Check:**
+- ✅ **workspace (Vercel)**: Latest prod deploy **Ready** (4d ago), 1 error from 11d ago (superseded)
+- ✅ **apifeny-ai**: Latest prod deploy **Ready** (6h ago)
+- ✅ **ev-charging-asia**: Latest prod deploy **Ready** (19h ago)
+- ✅ **All other projects**: in monorepo, no new issues
 
-### Cron Health
-- 19/20 clean ✅ (trading-beast timeout unchanged — retry tonight)
+**Cron Health — ALL 20 JOBS: ✅ OK (zero consecutive errors)**
+- trading-beast-daily-report: consecutiveErrors=0 ✅ (fix holding)
+- trading-pulse-30min: OK (last 36s, delivered)
+- rd-fast-loop-2h: OK (last 59s)
+- ceo-24-7-work-engine: OK (last 822s)
+- All others (audit, morning-pulse, wick-improvement, kalman-drl, research-agent, omnimind, proactive-builder, consolidation, etc.): all OK
 
-### Summary
-P3 push: Dashboard homepage now shows live usage stats at the top. Compact, client-only, no network calls. Ready for CEO to see when they check the site.
+**AI Directory Sitemap Audit (P5):** ✅
+- 525 URLs in sitemap (123 geo/category pages + 132 blog posts + 12 playbooks + tools/rankings/guides)
+- Random sample of 20 URLs: 20/20 returned 200 ✅
+- Affiliate links infrastructure already in place
+- No broken pages, no orphaned URLs found
 
-### Next Steps
-1. LifeOS: Consider "Continue where you left off" quick-resume cards for recent sessions
-2. Titan: Draft progression system design (XP bars, level-up animations)
-3. AI Directory: Affiliate link hooks to top 5 listing pages
+### 📊 Status
+- Revenue bucket: Empty (100% Strategic)
+- **LifeOS (P3)**: Keyboard nav ✅, Supabase persistence 🔒 (blocked — CEO API keys)
+- **Titan (P4)**: Dashboard KB nav ✅, pricing done ✅, empty-state illo ✅, CTA scroll animation ✅
+- **AI Directory (P5)**: All ✅ — sitemap verified clean, 525 live URLs
+- **Trading Beast**: ✅ Fix holding — GPT-5.4 primary, DeepSeek & Sonnet fallbacks; next run tomorrow 20:30 HKT
+- **Build (local)**: 🔴 WasmHash Node v22 bug — Vercel prod unaffected ✅
+
+### ⏭ Backlog Remaining
+- LifeOS Supabase persistence (blocked on CEO API keys)
+- Titan landing page: further refinements (post-P4)
+- Local Node.js v22 + Next.js 14 build issue (need to upgrade Next.js or use nvm to pin Node v20)

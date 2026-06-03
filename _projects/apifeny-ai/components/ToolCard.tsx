@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { Star, TrendingUp } from 'lucide-react';
 import { Tool } from '@/lib/types';
 import { cn, getPricingLabel, getPricingColor, getAsiaScoreColor, getAsiaScoreBgLight, renderStars, formatNumber } from '@/lib/utils';
-import { Sparkles, Zap } from 'lucide-react';
+import { Sparkles, Zap, ExternalLink } from 'lucide-react';
+import { getAffiliateForTool } from '@/lib/affiliate-links';
 
 interface ToolCardProps {
  tool: Tool;
@@ -50,6 +51,7 @@ export default function ToolCard({ tool, rank, showRank = false }: ToolCardProps
  .join('')
  .slice(0, 2)
  .toUpperCase();
+ const aff = getAffiliateForTool(tool.slug);
 
  return (
  <Link
@@ -175,6 +177,30 @@ export default function ToolCard({ tool, rank, showRank = false }: ToolCardProps
  <TrendingUp className="w-3 h-3 text-violet-500" />
  <span className="text-[10px] font-medium text-violet-500">{tool.trending_score}</span>
  </div>
+ </div>
+ )}
+
+ {/* Affiliate CTA hook — direct link for tools with affiliate deals */}
+ {aff && (
+ <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+ <span className="text-[10px] text-gray-400 font-medium">
+ {aff.is_direct ? 'Affiliate Deal' : 'Free Tier'}
+ </span>
+ <a
+ href={aff.referral_url}
+ target="_blank"
+ rel={aff.is_direct ? 'noopener noreferrer sponsored' : 'noopener noreferrer'}
+ onClick={(e) => e.stopPropagation()}
+ className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[10px] font-semibold
+ bg-gradient-to-r from-violet-50 to-cyan-50 text-violet-700
+ hover:from-violet-100 hover:to-cyan-100 hover:shadow-sm
+ border border-violet-200/50 hover:border-violet-300
+ active:scale-95 transition-all duration-150"
+ aria-label={`${aff.cta_label} — ${aff.is_direct ? 'affiliate link' : 'free link'}`}
+ >
+ {aff.cta_label}
+ <ExternalLink className="w-2.5 h-2.5 shrink-0 opacity-60" />
+ </a>
  </div>
  )}
  </Link>

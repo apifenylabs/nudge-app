@@ -41,6 +41,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny-ai.vercel.app';
@@ -286,10 +287,17 @@ export default function AIToolsForSupplyChainGuide() {
  <section className="relative overflow-hidden bg-gradient-to-br from-slate-800 via-blue-900 to-cyan-950 ">
  <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
  <div className="relative max-w-5xl mx-auto px-4 py-20 sm:py-28">
+ <BreadcrumbNav
+          className="mb-8"
+          items={[
+            { label: 'Guides', href: '/guides' },
+            { label: 'AI Tools for Supply Chain' },
+          ]}
+        />
  <span className="inline-flex items-center gap-1.5 text-xs font-medium text-cyan-200 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5 mb-6">
- <Truck className="w-3.5 h-3.5" />
- Guide · 18 min read
- </span>
+              <Truck className="w-3.5 h-3.5" />
+              Guide · 18 min read
+            </span>
  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
  Best AI Tools for Supply Chain &amp; Logistics in 2026
  </h1>

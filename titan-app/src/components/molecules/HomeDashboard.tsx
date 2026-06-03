@@ -1,15 +1,13 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useRef, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useMascotStore } from "@/stores/mascotStore";
 import {
   Zap, TrendingUp, Clock, Shield, Bot, Star,
   ArrowRight, Layers, Sparkles, Trophy, ChevronRight, Orbit,
 } from "lucide-react";
-import type { MascotDef } from "@/data/mascots";
-import type { ProgressionData, FeedEntry } from "@/lib/persistence";
+import type { FeedEntry } from "@/lib/persistence";
 
 // ─── New Palette ────────────────────────────────────────────────────────
 // Page bg: #F8F6F3, Card bg: #FFFFFF
@@ -38,6 +36,10 @@ function StatCard({
   trend,
   color,
   onClick,
+  statIndex,
+  focusedStatIndex,
+  onFocus,
+  refCallback,
 }: {
   label: string;
   value: string;
@@ -45,14 +47,24 @@ function StatCard({
   trend?: string;
   color: string;
   onClick?: () => void;
+  statIndex?: number;
+  focusedStatIndex?: number;
+  onFocus?: () => void;
+  refCallback?: (el: HTMLDivElement | null) => void;
 }) {
   return (
     <motion.div
+      ref={refCallback}
+      tabIndex={0}
+      onFocus={onFocus}
       className="relative p-4 rounded-xl border cursor-pointer group overflow-hidden"
       style={{
         background: '#FFFFFF',
         borderColor: '#E5E0D8',
         boxShadow: '0 10px 30px -10px rgba(31,31,31,0.08)',
+        ...(focusedStatIndex !== undefined && statIndex !== undefined && focusedStatIndex === statIndex
+          ? { outline: '2px solid #0EA5A5', outlineOffset: '2px' }
+          : {}),
       }}
       whileHover={{ y: -3, scale: 1.01 }}
       onClick={onClick}
@@ -91,6 +103,10 @@ function QuickNavCard({
   color,
   onClick,
   badge,
+  quickIndex,
+  focusedQuickIndex,
+  onFocus,
+  refCallback,
 }: {
   label: string;
   description: string;
@@ -98,14 +114,24 @@ function QuickNavCard({
   color: string;
   onClick: () => void;
   badge?: string;
+  quickIndex?: number;
+  focusedQuickIndex?: number;
+  onFocus?: () => void;
+  refCallback?: (el: HTMLButtonElement | null) => void;
 }) {
   return (
     <motion.button
+      ref={refCallback}
+      tabIndex={0}
+      onFocus={onFocus}
       className="relative p-4 rounded-xl border text-left w-full group"
       style={{
         background: '#FFFFFF',
         borderColor: `${color}20`,
         boxShadow: '0 10px 30px -10px rgba(31,31,31,0.08)',
+        ...(focusedQuickIndex !== undefined && quickIndex !== undefined && focusedQuickIndex === quickIndex
+          ? { outline: `2px solid ${color}`, outlineOffset: '2px' }
+          : {}),
       }}
       whileHover={{ y: -2, scale: 1.01 }}
       onClick={onClick}
@@ -143,6 +169,10 @@ function QuickNavCard({
 
 export default function HomeDashboard({ progression, agentLevel, recentFeed, onNavigate }: HomeDashboardProps) {
   const { currentMascot, openPicker } = useMascotStore();
+  const [focusedQuickIndex, setFocusedQuickIndex] = useState(-1);
+  const [focusedStatIndex, setFocusedStatIndex] = useState(-1);
+  const quickRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const statRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const todayImpact = useMemo(() => {
     const tasks = progression.totalTasksRun;
@@ -157,6 +187,91 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
   const recentActivity = useMemo(() => {
     return recentFeed.slice(0, 4);
   }, [recentFeed]);
+
+  // ─── Keyboard Navigation ───────────────────────────────────────────
+
+  const scrollToQuick = useCallback((idx: number) => {
+    const el = quickRefs.current[idx];
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, []);
+
+  const scrollToStat = useCallback((idx: number) => {
+    const el = statRefs.current[idx];
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, []);
+
+  // Quick actions: 4 items
+  const quickLabels = ['Skill Forge', 'Automation Hub', 'Security Center', 'Progression'];
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Enable stat nav when stats are focused
+      if (focusedStatIndex >= 0) {
+        switch (e.key) {
+          case 'ArrowRight':
+            e.preventDefault();
+            setFocusedStatIndex(prev => { const next = Math.min(prev + 1, 2); scrollToStat(next); return next; });
+            return;
+          case 'ArrowLeft':
+            e.preventDefault();
+            setFocusedStatIndex(prev => { const next = Math.max(prev - 1, 0); scrollToStat(next); return next; });
+            return;
+          case 'ArrowDown':
+            e.preventDefault();
+            setFocusedStatIndex(-1);
+            setFocusedQuickIndex(0);
+            scrollToQuick(0);
+            return;
+          case 'Escape':
+            e.preventDefault();
+            setFocusedStatIndex(-1);
+            return;
+        }
+        return;
+      }
+
+      if (focusedQuickIndex >= 0) {
+        switch (e.key) {
+          case 'ArrowRight':
+            e.preventDefault();
+            setFocusedQuickIndex(prev => { const next = Math.min(prev + 1, 3); scrollToQuick(next); return next; });
+            return;
+          case 'ArrowLeft':
+            e.preventDefault();
+            setFocusedQuickIndex(prev => { const next = Math.max(prev - 1, 0); scrollToQuick(next); return next; });
+            return;
+          case 'ArrowUp':
+            e.preventDefault();
+            setFocusedQuickIndex(-1);
+            setFocusedStatIndex(0);
+            scrollToStat(0);
+            return;
+          case 'Enter':
+          case ' ':
+            if (focusedQuickIndex >= 0 && focusedQuickIndex < quickLabels.length) {
+              e.preventDefault();
+              const tabMap: Record<string, string> = {
+                'Skill Forge': 'forge',
+                'Automation Hub': 'bau',
+                'Security Center': 'audit',
+                'Progression': 'progression',
+              };
+              const tab = tabMap[quickLabels[focusedQuickIndex]];
+              if (tab) onNavigate(tab);
+            }
+            return;
+          case 'Escape':
+            e.preventDefault();
+            setFocusedQuickIndex(-1);
+            return;
+        }
+        return;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [focusedStatIndex, focusedQuickIndex, onNavigate, scrollToQuick, scrollToStat]);
 
   return (
     <motion.div
@@ -236,6 +351,10 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
             color="#0EA5A5"
             trend="swarm executed"
             onClick={() => onNavigate("swarm")}
+            statIndex={0}
+            focusedStatIndex={focusedStatIndex}
+            onFocus={() => setFocusedStatIndex(0)}
+            refCallback={(el) => { statRefs.current[0] = el; }}
           />
           <StatCard
             label="Time Saved"
@@ -244,6 +363,10 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
             color="#10B981"
             trend="automated hours"
             onClick={() => onNavigate("bau")}
+            statIndex={1}
+            focusedStatIndex={focusedStatIndex}
+            onFocus={() => setFocusedStatIndex(1)}
+            refCallback={(el) => { statRefs.current[1] = el; }}
           />
           <StatCard
             label="Value Created"
@@ -252,6 +375,10 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
             color="#D4A017"
             trend="total savings"
             onClick={() => onNavigate("roi")}
+            statIndex={2}
+            focusedStatIndex={focusedStatIndex}
+            onFocus={() => setFocusedStatIndex(2)}
+            refCallback={(el) => { statRefs.current[2] = el; }}
           />
         </div>
       </div>
@@ -359,6 +486,10 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
             color="#D4A017"
             badge="New"
             onClick={() => onNavigate("forge")}
+            quickIndex={0}
+            focusedQuickIndex={focusedQuickIndex}
+            onFocus={() => setFocusedQuickIndex(0)}
+            refCallback={(el) => { quickRefs.current[0] = el; }}
           />
           <QuickNavCard
             label="Automation Hub"
@@ -366,6 +497,10 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
             icon={Orbit as typeof Bot}
             color="#7C3AED"
             onClick={() => onNavigate("bau")}
+            quickIndex={1}
+            focusedQuickIndex={focusedQuickIndex}
+            onFocus={() => setFocusedQuickIndex(1)}
+            refCallback={(el) => { quickRefs.current[1] = el; }}
           />
           <QuickNavCard
             label="Security Center"
@@ -373,6 +508,10 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
             icon={Shield}
             color="#10B981"
             onClick={() => onNavigate("audit")}
+            quickIndex={2}
+            focusedQuickIndex={focusedQuickIndex}
+            onFocus={() => setFocusedQuickIndex(2)}
+            refCallback={(el) => { quickRefs.current[2] = el; }}
           />
           <QuickNavCard
             label="Progression"
@@ -380,6 +519,10 @@ export default function HomeDashboard({ progression, agentLevel, recentFeed, onN
             icon={Trophy}
             color="#D4A017"
             onClick={() => onNavigate("progression")}
+            quickIndex={3}
+            focusedQuickIndex={focusedQuickIndex}
+            onFocus={() => setFocusedQuickIndex(3)}
+            refCallback={(el) => { quickRefs.current[3] = el; }}
           />
         </div>
       </div>

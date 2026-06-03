@@ -11,6 +11,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FAQSchema from '@/components/FAQSchema';
 
 const BASE_URL = 'https://apifeny-ai.vercel.app';
@@ -466,7 +467,14 @@ export default function AiForManufacturingPage() {
  <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-cyan-900/5 to-teal-900/10 " />
  <div className="relative max-w-7xl mx-auto">
  <div className="text-center space-y-6">
- <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium">
+           <BreadcrumbNav
+            className="mb-8"
+            items={[
+              { label: 'Guides', href: '/guides' },
+              { label: 'AI Tools for Manufacturing' },
+            ]}
+          />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium">
  <Cog className="w-4 h-4" />
  <span>Definitive Guide 2026</span>
  </div>

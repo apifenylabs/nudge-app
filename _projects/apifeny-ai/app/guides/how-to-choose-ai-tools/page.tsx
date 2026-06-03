@@ -24,6 +24,7 @@ import {
 import { toolsData } from '@/lib/data';
 import ToolCard from '@/components/ToolCard';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import FAQSchema from '@/components/FAQSchema';
 import { getRelatedPosts } from '@/lib/blog-data';
 
@@ -265,7 +266,14 @@ export default function HowToChooseAIToolsPage() {
  <section className="relative overflow-hidden">
  <div className="absolute inset-0 bg-gradient-to-b from-violet-500/10 via-transparent to-tech-900 pointer-events-none" />
  <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
- <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-xs font-medium mb-6">
+           <BreadcrumbNav
+            className="mb-8"
+            items={[
+              { label: 'Guides', href: '/guides' },
+              { label: 'How to Choose AI Tools' },
+            ]}
+          />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-xs font-medium mb-6">
  <BookOpen className="w-3.5 h-3.5" />
  Evergreen Guide
  {/* FAQ Schema */}
