@@ -1,45 +1,50 @@
-# Work Engine State — Jun 3, 2026, 9:37 AM HKT
+# Work Engine State — Jun 4, 2026, 1:07 AM HKT
 
 ## Tasks Completed This Session
 
-### P3 STRATEGIC — Notify Modal UX Refinements
-- ✅ Added proper email regex validation (`/^[^\s@]+@[^\s@]+\.[^\s@]+$/`) replacing basic `includes('@')` check
-- ✅ Added `notifyError` state with red inline error text below input ("Please enter a valid email address.")
-- ✅ Error clears when user starts typing (onChange handler)
-- ✅ Submit button disabled condition now uses the same regex
-- ✅ Auto-dismiss toast timer: success state auto-closes modal after 3.5s via `useEffect` + `setTimeout`
-- ✅ Clean timeout on unmount
-- ✅ Manual Close button preserved
-- ✅ Build: ✓ Compiled successfully
+### Heartbeat Check — All Clean
+- ✅ All 3 production sites HTTP 200 (ev-charging-asia, apifeny-ai, luxury-family-travel)
+- ✅ All 22 cron jobs healthy (0 errors)
+- ✅ Revenue bucket: empty → 100% Strategic
+- ✅ LifeOS codebase audit: PersonalityProfile, SparklineTrend, MiniSparkline, UsageDashboard, UsageSummaryBar, cross-plugin recommendations — all fully built and wired
+- ✅ Titan landing page: particle field, progression tree, CTA, all polished
+- ✅ Commit: plugin-manifest timestamps synced
 
-### Previous
+### R&D Check (Heartbeat)
+- Microstructure collectors still running (day 1 of 7)
+- TDA analysis complete for ETH (passes 4h gate)
+- Path Signatures PoC complete (needs 48-bar window + level 4)
+- All R&D tasks progressing on schedule
 
-### P3 STRATEGIC — LifeOS Deploy: PhaseTracker bugfix + Production Deploy
-- ✅ Fixed build error: `<a href="#" onClick={...}>` replaced with `<button>` in PhaseTracker.tsx (Next.js 14 RSC serialization rule)
-- ✅ Fixed CTA in plugins/[id]/page.tsx: split into conditional render (real `<a>` when active, `<span>` when coming-soon) to avoid `onClick` on `<a>` with `href={undefined}`
-- ✅ Deployed to production: https://lifeos-weld.vercel.app
-- ✅ Build: ✓ Compiled successfully, 25/25 static pages generated, 39s build time
-- ✅ All pages returning 200 (/, /plugins/travel, /plugins/finance)
-- ✅ PhaseTracker, 3 new plugins (Focus Music, Energy Tracker, Quick Journal) now live
+## Cursor
 
-### Previous
-- ✅ Created `FOCUS_MUSIC_PHASES`, `ENERGY_TRACKER_PHASES`, `QUICK_JOURNAL_PHASES`
-- ✅ Registered all 3 in PLUGINS array as 'coming-soon'
-- ✅ PhaseTracker integrated into all plugin detail pages
+### LifeOS (P3 STRATEGIC) — All Dashboard Features Built ✅
+- ✅ PersonalityProfile: archetype radar, trait scoring, archetype recommendations
+- ✅ MiniSparkline: compact trend dots on every plugin card
+- ✅ SparklineTrend: full SVG sparkline in UsageDashboard StatCards
+- ✅ UsageSummaryBar: today's stats, top 3 plugins with sparklines
+- ✅ Cross-plugin recommendations (affinity map based on onboarding)
+- ✅ Recommended For You (onboarding-based)
+- ⬜ Supabase persistence (blocked — CEO API keys)
+- ⬜ Personality engine → recommendations wiring refresh (built but can be deepened)
 
-## Deployments
-| Site | Status | URL |
-|------|--------|------|
-| LifeOS | ✅ **Deployed PhaseTracker + 3 new plugin concepts** | https://lifeos-weld.vercel.app |
+### Titan (P4 STRATEGIC) — Landing Page Complete ✅
+- ✅ Particle field with nebula, corona, mouse-reactive glow
+- ✅ Progression tree with 6 stages + connected nodes
+- ✅ CTA with glass container + scroll animation
+- ✅ Pricing page toggle + keyboard nav
+- ✅ Empty-state illustrations for progression
+- ⬜ Vercel alias config (CEO)
+- ⬜ Backlog: Add "Compare" page content further polish
 
-## Notes
-- Build errors were RSC serialization: Next.js 14 forbids `onClick` on `<a>` with no valid `href` even inside `'use client'` at the production bundling level
-- Fix: replaced `<a href="#" onClick={...}>` with `<button>` and split the CTA into an `isAvailable ? <a href="/"> : <span>` pattern
-- 12 plugins live (4 active, 8 coming-soon)
-- PhaseTracker per-plugin: checklists, goals, journaling, progress bars — all localStorage-persisted
+### AI Directory (P5 STRATEGIC) — Deployed and Healthy ✅
+- ⬜ Geo-specific blog posts (when SEO refresh is due)
 
-## Next Cursor
-- ✅ P3 STRATEGIC — LifeOS: Deployed PhaseTracker + 3 new plugins to production
-- ⏳ P3 STRATEGIC — LifeOS: Activate additional plugins (awaiting Wosobu)
-- ⏳ P3 STRATEGIC — LifeOS: Run Supabase RLS migration (blocked — needs service_role key)
-- ⏳ P3 STRATEGIC — LifeOS: Add sparkline trend charts to dashboard (next code improvement)
+## Backlog Additions
+- 📝 LifeOS: Add weekly digest email format/export feature (markdown summary of personality trends + usage stats)
+- 📝 Titan: Add animated stage-visualization of agent evolution on landing page (sprite/character evolution matching Solo Leveling theme)
+- 📝 AI Directory: Add category-specific landing pages for AI tool niches (next SEO batch)
+
+## Blockers
+- LifeOS Supabase persistence (CEO API keys)
+- Titan Vercel alias config (CEO)

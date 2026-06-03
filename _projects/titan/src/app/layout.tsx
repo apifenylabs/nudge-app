@@ -18,19 +18,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Titan — Build Your AI Agent Army",
+  title: "Titan — Build Your AI Agent Army | Solo Leveling Progression",
   description:
-    "A visual AI agent builder with Solo Leveling progression mechanics. Train, evolve, and deploy your AI army from Novice to Sovereign.",
+    "A visual AI agent builder with Solo Leveling progression mechanics. Train agents across 6 tiers, unlock 24+ skill nodes, and deploy to robots or the cloud. Closed alpha — join the waitlist.",
+  keywords: ["AI agent builder", "Solo Leveling", "agent swarm", "visual progression", "robot deployment"],
   openGraph: {
     title: "Titan — Build Your AI Agent Army",
     description:
-      "Visual AI agent builder with gamified progression. Start free.",
+      "Visual AI agent builder with gamified progression. Train, evolve, and deploy your AI agent swarm across 6 tiers.",
+    type: "website",
+    url: "https://titan.apifeny.com",
+    siteName: "Titan",
   },
   twitter: {
     card: "summary_large_image",
     title: "Titan — Build Your AI Agent Army",
     description:
-      "Visual AI agent builder with gamified progression. Solo Leveling meets Replit.",
+      "Visual AI agent builder with Solo Leveling progression. Train, evolve, and deploy AI agents across 6 tiers.",
   },
 };
 

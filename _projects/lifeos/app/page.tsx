@@ -14,6 +14,16 @@ import type { ChatSession, ChatMessage } from './lib/chat-persistence';
 import type { PluginDefinition, PluginPhase } from './lib/plugin-registry';
 import MiniSparkline from './components/MiniSparkline';
 import UsageSummaryBar from './components/UsageSummaryBar';
+import PersonalityProfile from './components/PersonalityProfile';
+import { getUsageSummary, type UsageSummary } from './lib/usage-analytics';
+import {
+  getDetectionStatus,
+  getRecommendedPlugins,
+  getPluginAffinity,
+  getAffinityBadge,
+  sortByAffinity,
+  type ArchetypeId,
+} from './lib/archetype-affinity';
 
 
 type Message = {
@@ -31,9 +41,11 @@ const CANVAS_COLORS: Record<string, string> = {
 function PluginCard({
   plugin,
   onSelect,
+  affinityBadge,
 }: {
   plugin: PluginDefinition;
   onSelect: (plugin: PluginDefinition) => void;
+  affinityBadge?: { label: string; color: string; bgColor: string } | null;
 }) {
   const statusBadge = plugin.status === 'coming-soon'
     ? { label: 'Coming Soon', style: 'bg-gray-100 text-gray-400 border-gray-200' }
@@ -83,9 +95,19 @@ function PluginCard({
         {/* Name + status */}
         <div className="flex items-center justify-between mb-1.5">
           <h3 className="text-sm font-bold text-gray-900">{plugin.name}</h3>
-          <span className={`text-[9px] font-mono px-1.5 py-0.5 rounded-full border ${statusBadge.style}`}>
-            {statusBadge.label}
-          </span>
+          <div className="flex items-center gap-1 shrink-0">
+            {affinityBadge && (
+              <span
+                className="text-[8px] font-bold px-1.5 py-0.5 rounded-full border shrink-0"
+                style={{ color: affinityBadge.color, backgroundColor: affinityBadge.bgColor, borderColor: `${affinityBadge.color}40` }}
+              >
+                {affinityBadge.label}
+              </span>
+            )}
+            <span className={`text-[9px] font-mono px-1.5 py-0.5 rounded-full border ${statusBadge.style}`}>
+              {statusBadge.label}
+            </span>
+          </div>
         </div>
 
         {/* Description */}
@@ -317,6 +339,13 @@ export default function Home() {
   const [notifiedPlugins, setNotifiedPlugins] = useState<string[]>([]);
   const [notifySuccess, setNotifySuccess] = useState(false);
   const [notifyError, setNotifyError] = useState<string | null>(null);
+  const [usageSummary, setUsageSummary] = useState<UsageSummary | null>(null);
+  const [archetypeData, setArchetypeData] = useState<{
+    archetypeId: ArchetypeId;
+    archetypeName: string;
+    archetypeEmoji: string;
+    hasData: boolean;
+  }>({ archetypeId: 'novice', archetypeName: 'Awakening', archetypeEmoji: '🌟', hasData: false });
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -357,10 +386,17 @@ export default function Home() {
       try {
         const parsed = JSON.parse(savedNotified);
         if (Array.isArray(parsed)) setNotifiedPlugins(parsed);
+        // Load usage summary for personality profile
+        setUsageSummary(getUsageSummary());
       } catch { /* ignore */ }
     }
       });
   }, []);
+
+  // Update archetype detection when usage summary changes
+  useEffect(() => {
+    setArchetypeData(getDetectionStatus(usageSummary ?? undefined));
+  }, [usageSummary]);
 
   useEffect(() => {
     if (showHistory) {
@@ -565,6 +601,14 @@ export default function Home() {
               plugins={plugins}
             />
 
+            {/* Personality Profile — archetype, traits, affinity radar */}
+            <div className="mb-6">
+              <PersonalityProfile
+                summary={usageSummary}
+                pluginUsage={null}
+              />
+            </div>
+
             {/* Search & Filter Bar */}
             <div className="mb-6 space-y-3">
               {/* Search input */}
@@ -630,6 +674,40 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Personality-Driven Recommendations — based on archetype */}
+            {archetypeData.hasData && plugins.length > 0 && (
+              <div className="mb-8">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-lg">{archetypeData.archetypeEmoji}</span>
+                  <h2 className="text-sm font-bold text-gray-800">Recommended for your {archetypeData.archetypeName}</h2>
+                  <span className="text-[10px] text-indigo-500 bg-indigo-50 border border-indigo-200 px-1.5 py-0.5 rounded-full font-medium">Personality Match</span>
+                </div>
+                <p className="text-xs text-gray-400 mb-3">
+                  Based on your {archetypeData.archetypeName} usage patterns — plugins you haven&apos;t explored yet that match your style.
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {(() => {
+                    const recommended = getRecommendedPlugins(plugins, archetypeData.archetypeId, usageSummary ?? undefined, 3);
+                    if (recommended.length === 0) {
+                      return (
+                        <div className="col-span-full text-center py-6">
+                          <p className="text-xs text-gray-400">You&apos;ve explored everything that matches your {archetypeData.archetypeName} style. Check back when new plugins arrive!</p>
+                        </div>
+                      );
+                    }
+                    return recommended.map(plugin => (
+                      <PluginCard
+                        key={plugin.id}
+                        plugin={plugin}
+                        onSelect={selectPlugin}
+                        affinityBadge={getAffinityBadge(plugin, archetypeData.archetypeId)}
+                      />
+                    ));
+                  })()}
+                </div>
+              </div>
+            )}
+
             {/* Recommended For You — based on onboarding preferences */}
             {onboardedCategories.length > 0 && plugins.length > 0 && (
               <div className="mb-8">
@@ -686,7 +764,8 @@ export default function Home() {
                 );
               }
 
-              const filtered = plugins.filter(plugin => {
+              // Filter then sort by archetype affinity
+              let sorted = plugins.filter(plugin => {
                 const matchesSearch = searchQuery === '' ||
                   plugin.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                   plugin.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -696,9 +775,14 @@ export default function Home() {
                 return matchesSearch && matchesStatus && matchesCategory;
               });
 
+              // Sort by affinity when archetype is detected (not novice)
+              if (archetypeData.hasData) {
+                sorted = sortByAffinity(sorted, archetypeData.archetypeId);
+              }
+
               return (
                 <>
-                  {filtered.length === 0 ? (
+                  {sorted.length === 0 ? (
                     <div className="text-center py-12">
                       <div className="w-12 h-12 mx-auto mb-3 bg-gray-100 rounded-xl flex items-center justify-center">
                         <svg className="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -715,11 +799,12 @@ export default function Home() {
                     </div>
                   ) : (
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
-                      {filtered.map(plugin => (
+                      {sorted.map(plugin => (
                         <PluginCard
                           key={plugin.id}
                           plugin={plugin}
                           onSelect={selectPlugin}
+                          affinityBadge={archetypeData.hasData ? getAffinityBadge(plugin, archetypeData.archetypeId) : null}
                         />
                       ))}
                     </div>

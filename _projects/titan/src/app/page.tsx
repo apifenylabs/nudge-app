@@ -603,6 +603,122 @@ function Navbar() {
 /* ─────────────────────────────────────────────────────────────
    Floating orbs (decorative)
    ───────────────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────
+   Back to Top button
+   ───────────────────────────────────────────────────────────── */
+function BackToTop() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setVisible(window.scrollY > 800);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <motion.button
+      onClick={scrollToTop}
+      className="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-gradient-to-r from-cyan-500/80 to-purple-600/80 backdrop-blur-md border border-cyan-400/20 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20"
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{
+        opacity: visible ? 1 : 0,
+        scale: visible ? 1 : 0,
+      }}
+      transition={{ duration: 0.3 }}
+      aria-label="Back to top"
+    >
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+      </svg>
+    </motion.button>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Stats bar — animated social proof counters
+   ───────────────────────────────────────────────────────────── */
+const STATS = [
+  { label: "Hunters On Waitlist", value: 2847, suffix: "+", icon: "🗡️" },
+  { label: "Agent Tiers", value: 6, suffix: "", icon: "👑" },
+  { label: "Skill Nodes", value: 24, suffix: "", icon: "✨" },
+  { label: "Active Developers", value: 156, suffix: "+", icon: "🧙" },
+];
+
+function AnimatedCounter({ target, suffix }: { target: number; suffix: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const counted = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !counted.current) {
+          counted.current = true;
+          const duration = 1500;
+          const steps = 30;
+          const increment = target / steps;
+          let current = 0;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              setCount(target);
+              clearInterval(timer);
+            } else {
+              setCount(Math.floor(current));
+            }
+          }, duration / steps);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [target]);
+
+  return (
+    <span ref={ref} className="text-3xl sm:text-4xl font-black text-white">
+      {count.toLocaleString()}
+      {suffix}
+    </span>
+  );
+}
+
+function StatsSection() {
+  return (
+    <section className="relative py-16 sm:py-20 px-4">
+      <div className="max-w-5xl mx-auto">
+        <div className="glass rounded-3xl p-8 sm:p-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {STATS.map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                className="flex flex-col items-center gap-2"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+              >
+                <span className="text-2xl">{stat.icon}</span>
+                <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                <span className="text-xs text-slate-500 uppercase tracking-wider">
+                  {stat.label}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FloatingOrbs() {
   return (
     <>
@@ -715,7 +831,15 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
               {tiers.map((tier, i) => (
-                <TierCard key={tier.name} tier={tier} index={i} />
+                <motion.div
+                  key={tier.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ delay: i * 0.15, duration: 0.5, ease: "easeOut" }}
+                >
+                  <TierCard tier={tier} index={i} />
+                </motion.div>
               ))}
             </div>
           </div>
@@ -743,7 +867,14 @@ export default function HomePage() {
 
               <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-3">
                 {treeNodes.map((node, i) => (
-                  <div key={node.label} className="flex flex-col items-center text-center">
+                  <motion.div
+                    key={node.label}
+                    className="flex flex-col items-center text-center"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: i * 0.08, duration: 0.4, ease: "easeOut" }}
+                  >
                     {/* Node circle */}
                     <div
                       className={`relative z-10 w-14 h-14 rounded-full flex items-center justify-center border-2 ${node.color} bg-[#0f0f1a] ${node.glow} shadow-lg mb-3 transition-all duration-300 hover:scale-110 hover:shadow-xl`}
@@ -764,12 +895,15 @@ export default function HomePage() {
                       {node.label}
                     </h4>
                     <p className="text-xs text-slate-500">{node.desc}</p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
           </div>
         </section>
+
+        {/* ── STATS ────────────────────────────────────────── */}
+        <StatsSection />
 
         {/* ── CTA ─────────────────────────────────────────── */}
         <section
@@ -810,21 +944,14 @@ export default function HomePage() {
               </span>
             </div>
             <div className="flex gap-6">
-              <span className="hover:text-cyan-400 cursor-pointer transition-colors">
-                Docs
-              </span>
-              <span className="hover:text-cyan-400 cursor-pointer transition-colors">
-                GitHub
-              </span>
-              <span className="hover:text-cyan-400 cursor-pointer transition-colors">
-                Discord
-              </span>
-              <span className="hover:text-cyan-400 cursor-pointer transition-colors">
-                Privacy
-              </span>
+              <a href="/features" className="hover:text-cyan-400 transition-colors">Features</a>
+              <a href="/pricing" className="hover:text-cyan-400 transition-colors">Pricing</a>
+              <a href="/sandbox" className="hover:text-cyan-400 transition-colors">Studio</a>
+              <a href="/robotics" className="hover:text-cyan-400 transition-colors">Robotics</a>
             </div>
           </div>
         </footer>
+        <BackToTop />
       </main>
     </>
   );
