@@ -2,9 +2,9 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
+import {
   Puzzle, Play, CheckCircle2, ChevronRight, Sparkles, 
-  Zap, ArrowRight, TrendingUp, Archive, 
+  Zap, ArrowRight, TrendingUp, Archive, Download,
   ArrowUp, ArrowDown, RotateCcw, EyeOff
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -41,6 +41,7 @@ import {
   getAllMeta,
   type PluginMeta,
 } from "@/lib/lifeos/archive-sort";
+import { exportMarkdown, exportText } from "@/lib/lifeos/export";
 
 // ─── LifeOS Tab Component ──────────────────────────────────────────────
 
@@ -85,12 +86,12 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
     // Try loading state from server
     getLifeOSState().then(serverState => {
       if (serverState && serverState.plugins.length > 0) {
-        // Server has data — merge into localStorage
+        // Server has data - merge into localStorage
         localStorage.setItem('titan-lifeos-state', JSON.stringify(serverState));
         refresh();
       }
     }).catch(() => {
-      // Server unavailable — localStorage works fine
+      // Server unavailable - localStorage works fine
     });
   }, [refresh]);
 
@@ -261,7 +262,7 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
             const activeEl = document.activeElement;
             const isInput = activeEl instanceof HTMLInputElement || activeEl instanceof HTMLTextAreaElement || activeEl instanceof HTMLSelectElement;
             if (!isInput && showCatalog) {
-              // Focus search implicitly — but catalog has no search here
+              // Focus search implicitly - but catalog has no search here
             }
           }
       }
@@ -371,6 +372,28 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
             <TrendingUp className="h-3 w-3" />
             Analytics
           </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => {
+              const md = exportMarkdown({ includeTasks: false });
+              navigator.clipboard.writeText(md);
+              onFeedAdd?.({
+                avatar: '📋',
+                name: 'LifeOS',
+                text: 'Progress report copied to clipboard (Markdown)',
+              });
+            }}
+            className="text-[10px] h-6 gap-1"
+            style={{
+              borderColor: 'rgba(34,197,94,0.3)',
+              color: '#22C55E',
+            }}
+            title="Copy progress report as Markdown"
+          >
+            <Download className="h-3 w-3" />
+            Export
+          </Button>
         </div>
       </div>
 
@@ -420,8 +443,8 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
                     onFocus={() => setFocusedCatalogIndex(i)}
                     onClick={() => handleActivate(cat.category)}
                     className={`relative p-3 rounded-xl border text-left transition-all ${
-                      isActive 
-                        ? 'bg-titan-card/60 border-titan-teal/40' 
+                      isActive
+                        ? 'bg-titan-card/60 border-titan-teal/40'
                         : 'bg-titan-surface/40 border-titan-border/20 hover:border-titan-teal/30'
                     }`}
                     style={focusedCatalogIndex === i ? { outline: '2px solid #14B8A6', outlineOffset: '2px' } : {}}
@@ -454,17 +477,17 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
 
       {/* Active Plugin Detail */}
       {currentPlugin ? (
-        <PluginDetail 
-          plugin={currentPlugin} 
-          onCompleteTask={(phase, taskId, taskLabel) => handleCompleteTask(currentPlugin.category, phase, taskId, taskLabel)} 
+        <PluginDetail
+          plugin={currentPlugin}
+          onCompleteTask={(phase, taskId, taskLabel) => handleCompleteTask(currentPlugin.category, phase, taskId, taskLabel)}
         />
       ) : plugins.length > 0 ? (
         /* Show most recently used plugin */
-        <PluginDetail 
-          plugin={plugins[plugins.length - 1]} 
+        <PluginDetail
+          plugin={plugins[plugins.length - 1]}
           onCompleteTask={(phase, taskId, taskLabel) => handleCompleteTask(
             plugins[plugins.length - 1].category, phase, taskId, taskLabel
-          )} 
+          )}
         />
       ) : (
         /* Empty state */
@@ -503,8 +526,8 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
                     onFocus={() => setFocusedGridIndex(idx)}
                     onClick={() => setActivePlugin(p.category)}
                     className={`w-full p-3 rounded-xl border text-left transition-all ${
-                      activePlugin === p.category 
-                        ? 'bg-titan-card/80 border-titan-teal/40' 
+                      activePlugin === p.category
+                        ? 'bg-titan-card/80 border-titan-teal/40'
                         : 'bg-titan-surface/40 border-titan-border/20 hover:border-titan-teal/30'
                     }`}
                     style={focusedGridIndex === idx ? { outline: '2px solid #14B8A6', outlineOffset: '2px' } : {}}
@@ -520,10 +543,10 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
                         <div
                           key={i}
                           className="h-1 flex-1 rounded-full"
-                          style={{ 
-                            background: ph.completed 
-                              ? 'linear-gradient(90deg, #14B8A6, #F59E0B)' 
-                              : ph.progress > 0 
+                          style={{
+                            background: ph.completed
+                              ? 'linear-gradient(90deg, #14B8A6, #F59E0B)'
+                              : ph.progress > 0
                                 ? `linear-gradient(90deg, #14B8A6 ${ph.progress}%, rgba(255,255,255,0.08) ${ph.progress}%)`
                                 : 'rgba(255,255,255,0.08)'
                           }}
@@ -626,8 +649,8 @@ export default function LifeOSTab({ onFeedAdd }: { onFeedAdd?: (entry: { avatar:
 
 // ─── Plugin Detail View ────────────────────────────────────────────────
 
-function PluginDetail({ plugin, onCompleteTask }: { 
-  plugin: LifeOSPlugin; 
+function PluginDetail({ plugin, onCompleteTask }: {
+  plugin: LifeOSPlugin;
   onCompleteTask: (phase: PluginPhase, taskId: string, taskLabel: string) => void;
 }) {
   const phaseLabels: Record<PluginPhase, string> = {
@@ -655,7 +678,7 @@ function PluginDetail({ plugin, onCompleteTask }: {
       {/* Plugin header */}
       <div className="p-5" style={{ background: `linear-gradient(135deg, ${plugin.color}10, ${plugin.color}05)` }}>
         <div className="flex items-center gap-3 mb-3">
-          <div 
+          <div
             className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
             style={{ background: `${plugin.color}20`, border: `1px solid ${plugin.color}30` }}
           >
@@ -684,7 +707,7 @@ function PluginDetail({ plugin, onCompleteTask }: {
 
       {/* Cross-Plugin Suggestions */}
       <CrossPluginSuggestions plugin={plugin} onActivatePlugin={(cat) => {
-        // handled via parent — this triggers the activation flow
+        // handled via parent - this triggers the activation flow
         window.dispatchEvent(new CustomEvent('lifeos-activate', { detail: cat }));
       }} />
 
@@ -694,9 +717,9 @@ function PluginDetail({ plugin, onCompleteTask }: {
           <motion.div
             key={phase.phase}
             className={`rounded-xl p-4 border transition-all ${
-              phase.completed 
-                ? 'bg-titan-card/40 border-green-500/20' 
-                : phase.progress > 0 
+              phase.completed
+                ? 'bg-titan-card/40 border-green-500/20'
+                : phase.progress > 0
                   ? 'bg-titan-card/30 border-titan-teal/20'
                   : 'bg-titan-surface/20 border-titan-border/10'
             }`}
@@ -734,8 +757,8 @@ function PluginDetail({ plugin, onCompleteTask }: {
                   onClick={() => !task.done && onCompleteTask(phase.phase, task.id, task.label)}
                   disabled={task.done}
                   className={`w-full flex items-start gap-2.5 p-2 rounded-lg text-left transition-all ${
-                    task.done 
-                      ? 'opacity-40 cursor-default' 
+                    task.done
+                      ? 'opacity-40 cursor-default'
                       : 'hover:bg-titan-card/40 cursor-pointer'
                   }`}
                   whileHover={task.done ? {} : { x: 3 }}
