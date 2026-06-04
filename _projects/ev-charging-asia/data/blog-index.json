@@ -1,5 +1,335 @@
 [
   {
+    "slug": "asean-ccs2-cross-border-ev-travel-2026",
+    "title": "ASEAN Unifies EV Charging: CCS-2 Standard Enables Cross-Border Road Trips in 2026",
+    "description": "ASEAN has adopted CCS-2 as the unified EV charging standard, opening up cross-border road trips across Thailand, Malaysia, Singapore, and beyond. Complete guide to the new standard, charging networks, and border crossing tips.",
+    "date": "2026-05-14",
+    "tags": [
+      "ev-charging",
+      "cross-border-travel",
+      "asean",
+      "ccs2",
+      "thailand",
+      "malaysia",
+      "singapore",
+      "road-trip",
+      "ev-travel"
+    ]
+  },
+  {
+    "slug": "asia-ev-battery-recycling-guide-2026",
+    "title": "Asia EV Battery Recycling Guide 2026 — Regulations, Facilities & What Happens to Old EV Batteries",
+    "description": "With 120+ GWh of EV batteries reaching end-of-life globally in 2026, Asia faces a battery waste emergency. This guide covers China's new recycling regulations, Japan's closed-loop system, South Korea's EPR laws, and what SEA countries are doing about old EV batteries.",
+    "date": "2026-05-15",
+    "tags": [
+      "battery-recycling",
+      "environment",
+      "sustainability",
+      "china",
+      "japan",
+      "south-korea",
+      "regulations"
+    ]
+  },
+  {
+    "slug": "bali-ev-road-trip-complete-family-guide",
+    "title": "Bali EV Road Trip: Complete Family Guide to Driving Around the Island of the Gods",
+    "description": "The ultimate family guide to driving an EV in Bali. Discover the best routes from Seminyak to Ubud, Uluwatu, and Amed with charging stops, temple visits, and cost-saving tips for a stress-free electric holiday.",
+    "date": "2026-05-17",
+    "tags": [
+      "bali",
+      "indonesia",
+      "ev-road-trip",
+      "family-travel",
+      "ubud",
+      "seminyak",
+      "uluwatu",
+      "amed",
+      "bali-ev-charging"
+    ]
+  },
+  {
+    "slug": "bali-kuta-ubud-sanur-loop-family-ev-road-trip",
+    "title": "Bali Family EV Loop: Kuta → Ubud → Sanur in 5 Days",
+    "description": "A family-focused 5-day EV loop around Bali's best family destinations: Kuta's water park and beaches, Ubud's monkey forest and rice terraces, and Sanur's calm shores. Only ~100km total driving with charging at hotels, SPKLU stations, and malls. Zero range anxiety, maximum family fun.",
+    "date": "2026-05-18",
+    "tags": [
+      "indonesia",
+      "bali",
+      "kuta",
+      "ubud",
+      "sanur",
+      "ev-road-trip",
+      "family-travel",
+      "loop",
+      "5-day-itinerary",
+      "bali-ev",
+      "family-friendly"
+    ]
+  },
+  {
+    "slug": "bali-kuta-ubud-sanur-uluwatu-ev-road-trip",
+    "title": "Bali EV Road Trip: Kuta → Ubud → Sanur → Uluwatu Loop",
+    "description": "A 5-7 day EV tour around Bali — from Kuta's surf beaches to Ubud's rice terraces, Sanur's calm shores, and Uluwatu's cliff-top temples. Charging at hotels and resorts, range considerations on Bali's narrow roads, and the best EV-friendly itinerary.",
+    "date": "2026-05-18",
+    "tags": [
+      "indonesia",
+      "bali",
+      "kuta",
+      "ubud",
+      "sanur",
+      "uluwatu",
+      "ev-road-trip",
+      "loop",
+      "island",
+      "family-travel",
+      "beaches",
+      "temples"
+    ]
+  },
+  {
+    "slug": "bangkok-ayutthaya-ev-microtrip",
+    "title": "Bangkok to Ayutthaya EV Microtrip: Weekend History Trip for Families",
+    "description": "Ayutthaya is just 1.5 hours from Bangkok — perfect for a weekend EV microtrip. Complete guide to charging stations, range planning, and family-friendly temple cycling.",
+    "date": "2026-05-07",
+    "tags": [
+      "ev-travel",
+      "microtrips",
+      "thailand",
+      "ayutthaya",
+      "weekend-trip",
+      "family-ev"
+    ]
+  },
+  {
+    "slug": "bangkok-chiang-mai-ev-road-trip-itinerary",
+    "title": "Bangkok to Chiang Mai EV Road Trip: 5-Day Northern Thailand Family Adventure Through Lampang, Tak & Nakhon Sawan",
+    "description": "Thailand's classic 700 km northern route in an EV, with family-friendly stops in Nakhon Sawan, Tak's mountain passes, and Lampang's hidden temples. Detailed charging at PTT stations, cost comparison vs flying, and the best kid-friendly attractions along Highway 1.",
+    "date": "2026-05-19",
+    "tags": [
+      "thailand",
+      "bangkok",
+      "chiang-mai",
+      "lampang",
+      "nakhon-sawan",
+      "tak",
+      "ev-road-trip",
+      "family-travel",
+      "northern-thailand",
+      "highway-1",
+      "ptt-ev",
+      "weekend-trip"
+    ]
+  },
+  {
+    "slug": "bangkok-to-krabi-ev-road-trip-southern-thailand",
+    "title": "Bangkok to Krabi EV Road Trip: Southern Thailand Adventure with Charging Stops in Chumphon and Surat Thani",
+    "description": "Embark on an unforgettable EV road trip from Bangkok to Krabi, covering 820 km through Southern Thailand. This guide details essential charging stops in Chumphon and Surat Thani, including station names, costs, and family-friendly tips to make your journey smooth and affordable.",
+    "date": "2026-05-15",
+    "tags": [
+      "Bangkok to Krabi EV",
+      "Thailand EV road trip",
+      "Chumphon charging",
+      "Surat Thani EV charging",
+      "Southern Thailand travel",
+      "family EV trip",
+      "Krabi EV guide"
+    ]
+  },
+  {
+    "slug": "bangkok-pattaya-rayong-ev-road-trip",
+    "title": "Bangkok → Pattaya → Rayong: A 4-Day Family EV Beach Road Trip in Thailand",
+    "description": "A short-and-sweet 4-day EV road trip from Bangkok to Pattaya and Rayong. Short hops (~150km each segment), abundant charging at PTT stations and hotels, and family-packed activities: water parks, beach clubs, aquariums, and fruit farms. Perfect for a long weekend getaway.",
+    "date": "2026-05-18",
+    "tags": [
+      "thailand",
+      "bangkok",
+      "pattaya",
+      "rayong",
+      "ev-road-trip",
+      "beach-trip",
+      "family-travel",
+      "4-day-itinerary",
+      "gulf-of-thailand",
+      "thailand-ev"
+    ]
+  },
+  {
+    "slug": "bangkok-to-phuket-ev-road-trip-guide",
+    "title": "Bangkok to Phuket EV Road Trip Guide: Charging Stops, Costs & Family Tips [2026]",
+    "description": "Complete guide to driving an EV from Bangkok to Phuket in 2026. Route planning along Highway 4, charging stops at PEA Volta stations, cost comparison vs flying, and family-friendly island activities.",
+    "date": "2026-05-17",
+    "tags": [
+      "bangkok",
+      "phuket",
+      "thailand",
+      "ev-road-trip",
+      "highway-4",
+      "family-travel",
+      "southern-thailand",
+      "thailand-ev"
+    ]
+  },
+  {
+    "slug": "beijing-shanghai-ev-road-trip",
+    "title": "Beijing to Shanghai EV Road Trip: China Express Charging Corridor",
+    "description": "Drive 1200km from Beijing to Shanghai in an EV on China G2 expressway with complete charging guide and family stops.",
+    "date": "2026-05-15",
+    "tags": [
+      "china",
+      "beijing",
+      "shanghai",
+      "ev-road-trip",
+      "express-charging"
+    ]
+  },
+  {
+    "slug": "best-ev-charging-apps-asia-comparison",
+    "title": "Best EV Charging Apps for Asia: Which Ones Actually Work [2026]",
+    "description": "Honest comparison of the best EV charging apps in Southeast and East Asia for 2026. From PlugShare to Gentari Go, JomCharge to ACMobility Evro — coverage, prices, reliability, and which to install before your road trip.",
+    "date": "2026-05-12",
+    "tags": [
+      "ev-charging-apps",
+      "digital-tools",
+      "road-trip-planning",
+      "thailand",
+      "malaysia",
+      "singapore",
+      "philippines",
+      "indonesia",
+      "vietnam",
+      "china",
+      "hong-kong"
+    ]
+  },
+  {
+    "slug": "best-ev-hotels-vietnam-free-charging-2026",
+    "title": "Best EV Hotels in Vietnam with Free Charging 2026",
+    "description": "Vietnam's hotel EV charging scene is booming. From Hanoi's Old Quarter to Da Nang's beaches and Ho Chi Minh City's skyscrapers — the best hotels where your EV charges free.",
+    "date": "2026-05-18",
+    "tags": [
+      "vietnam",
+      "ev-hotels",
+      "ev-charging",
+      "free-charging",
+      "hanoi",
+      "ho-chi-minh-city",
+      "da-nang",
+      "hotels",
+      "family-travel"
+    ]
+  },
+  {
+    "slug": "best-evs-asia-road-trips-2026",
+    "title": "Best EVs for Asia Road Trips 2026: Top Models, Range Comparisons & Country-by-Country Guide",
+    "description": "The best EVs for Asia road trips in 2026, from budget-friendly city cars to long-range SUVs. Compare models available in Thailand, Malaysia, Singapore, Japan, and South Korea with real-world range data and country-specific buying tips.",
+    "date": "2026-05-23",
+    "tags": [
+      "ev-comparison",
+      "ev-road-trip",
+      "ev-models",
+      "thailand",
+      "malaysia",
+      "singapore",
+      "japan",
+      "south-korea",
+      "buying-guide",
+      "long-range-ev",
+      "budget-ev"
+    ]
+  },
+  {
+    "slug": "best-evs-longest-range-road-trip-thailand-2026",
+    "title": "Best EVs with the Longest Range for Road Trips in Thailand 2026",
+    "description": "Planning a Thai road trip in an EV in 2026? Here are the electric cars that will take you from Bangkok to Chiang Mai, Phuket, or Isaan without range anxiety.",
+    "date": "2026-05-18",
+    "tags": [
+      "thailand",
+      "ev-road-trip",
+      "ev-ranking",
+      "best-evs",
+      "long-range",
+      "bangkok-chiang-mai",
+      "thailand-ev-charging"
+    ]
+  },
+  {
+    "slug": "best-family-friendly-ev-road-trips-southeast-asia",
+    "title": "Best Family-Friendly EV Road Trips in Southeast Asia",
+    "description": "Southeast Asia's best EV road trips for families with kids — from Bangkok to Phuket and Singapore to KL. Complete guides with charging stops, kid-friendly activities, and practical tips for stress-free family travel.",
+    "date": "2026-05-07",
+    "tags": [
+      "family-travel",
+      "ev-road-trips",
+      "southeast-asia",
+      "thailand",
+      "malaysia",
+      "singapore",
+      "bali",
+      "kids-friendly",
+      "weekend-trip"
+    ]
+  },
+  {
+    "slug": "best-luxury-ev-hotels-resorts-asia",
+    "title": "10 Best Luxury EV Hotels & Resorts in Asia — Butler Service & Destination Charging",
+    "description": "The ultimate guide to luxury hotels in Asia with world-class EV charging. Butler charging service, private destination chargers, and five-star eco-conscious stays.",
+    "date": "2026-05-16",
+    "tags": [
+      "luxury",
+      "hotels",
+      "resorts",
+      "butler-service",
+      "destination-charging",
+      "ranking",
+      "premium",
+      "asia"
+    ]
+  },
+  {
+    "slug": "buying-used-ev-hong-kong-battery-check-guide",
+    "title": "Buying a Used EV in Hong Kong: Complete Battery Health Check Guide",
+    "description": "Hong Kong's used EV market is booming. With new EV registrations surging and the government phasing out petrol car incentives, thousands of 3-5 year o",
+    "date": "2026-05-04",
+    "tags": [
+      "battery-check",
+      "hong-kong",
+      "battery-life",
+      "asia",
+      "used-ev",
+      "ev-charging"
+    ]
+  },
+  {
+    "slug": "cambodia-ev-road-trip-angkor-wat",
+    "title": "Cambodia EV Road Trip — Phnom Penh to Siem Reap (Angkor Wat) in an Electric Car",
+    "description": "Can you drive an EV from Phnom Penh to Siem Reap to see Angkor Wat? Yes — with 200+ charging stations nationwide and the new expressway charging corridor, Cambodia's iconic road trip is now EV-friendly. Complete route guide, charging stops, and costs.",
+    "date": "2026-05-15",
+    "tags": [
+      "cambodia",
+      "road-trip",
+      "ev-travel",
+      "angkor-wat",
+      "phnom-penh",
+      "siem-reap"
+    ]
+  },
+  {
+    "slug": "ccs2-vs-chademo-asia",
+    "title": "CCS2 vs CHAdeMO: Which Charging Standard Should You Pick in Asia?",
+    "description": "Confused about EV charging standards in Asia? We compare CCS2 and CHAdeMO across Japan, China, and Southeast Asia to help you choose the right EV for your travel needs.",
+    "date": "April 20, 2026",
+    "tags": [
+      "ccs2",
+      "chademo",
+      "ev-charging",
+      "comparison",
+      "japan",
+      "china",
+      "southeast-asia"
+    ]
+  },
+  {
     "slug": "cebu-bohol-siquijor-philippines-ev-island-road-trip",
     "title": "Cebu to Bohol to Siquijor EV Island-Hopping Road Trip: Philippines Visayas Guide 2026",
     "description": "The ultimate family EV road trip through the Visayas — drive Cebu, ferry to Bohol's Chocolate Hills and tarsiers, then island-hop to Siquijor's magical beaches. Complete charging guide and itineraries.",
@@ -20,128 +350,122 @@
       "panglao",
       "dumaguete",
       "whale-sharks"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "16 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
-    "slug": "myanmar-ev-road-trip-yangon-bagan-mandalay",
-    "title": "Myanmar EV Road Trip: Yangon to Bagan to Mandalay — Complete Charging Guide 2026",
-    "description": "Plan an epic EV road trip from Yangon through Myanmar's cultural heartland to Bagan and Mandalay. Covers 700 km of driving, charging stations, costs, and essential tips for navigating Myanmar by electric car.",
-    "date": "May 24, 2026",
+    "slug": "chennai-to-pondicherry-ev-road-trip-east-coast-road",
+    "title": "Chennai to Pondicherry EV Road Trip: India's Emerging EV Corridor Along the East Coast Road",
+    "description": "Discover the ultimate electric vehicle road trip from Chennai to Pondicherry along the scenic East Coast Road. This guide covers charging stations, costs, distances, and family-friendly tips for a hassle-free EV journey.",
+    "date": "2026-05-15",
     "tags": [
-      "myanmar",
-      "road-trip",
-      "yangon",
-      "bagan",
-      "mandalay",
-      "charging-stations",
-      "family-travel"
-    ],
-    "category": "",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
+      "EV road trip",
+      "Chennai to Pondicherry",
+      "East Coast Road",
+      "India EV corridor",
+      "electric vehicle charging",
+      "family travel",
+      "Tamil Nadu EV charging"
+    ]
   },
   {
-    "slug": "philippines-ev-road-trip-manila-baguio-tagaytay-batangas",
-    "title": "Philippines EV Road Trip: Manila to Baguio & Tagaytay — Complete Charging Guide 2026",
-    "description": "The complete guide to EV road trips in the Philippines — from Manila up to Baguio via the NLEX-SCTEX corridor, and south to Tagaytay and Batangas. Covers charging stations, costs, EV-friendly hotels, and essential tips for navigating Luzon by electric car.",
-    "date": "May 24, 2026",
+    "slug": "china-ev-charging-guide-foreigners-2026",
+    "title": "China EV Charging Guide for Foreign Tourists 2026: Renting, Apps, WeChat, and City-by-City Breakdown",
+    "description": "Step-by-step guide for foreign tourists driving an EV in China. Covers renting an EV, getting a temporary Chinese license, activating WeChat/Alipay without a Chinese bank account, using NIO/XPeng networks, CCS2-vs-GB/T adapters, and city guides for Shanghai, Beijing, and Guangzhou.",
+    "date": "2026-05-17",
     "tags": [
-      "philippines",
-      "road-trip",
-      "manila",
-      "baguio",
-      "tagaytay",
-      "batangas",
-      "luzon",
-      "charging-stations",
-      "family-travel"
-    ],
-    "category": "",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
+      "china",
+      "foreigner-guide",
+      "ev-charging",
+      "shanghai",
+      "beijing",
+      "guangzhou",
+      "wechat-pay",
+      "alipay",
+      "gb-t-connector",
+      "ev-rental",
+      "tourism"
+    ]
   },
   {
-    "slug": "sri-lanka-ev-road-trip-colombo-kandy-galle",
-    "title": "Sri Lanka EV Road Trip: Colombo to Kandy to Galle — Complete Charging Guide 2026",
-    "description": "A complete EV road trip guide from Colombo through Sri Lanka's Cultural Triangle to Kandy, then down to Galle along the southern coast. Covers charging stations, distances, costs, and family-friendly stops.",
-    "date": "May 24, 2026",
+    "slug": "china-ev-guide-for-foreigners",
+    "title": "China EV Guide for Foreigners 2026 — How to Charge, Apps, Payment, and Cross-Border Driving Tips",
+    "description": "China is the world's largest EV market with 10M+ chargers. But as a foreigner, charging isn't straightforward. This guide covers GB/T connectors, Alipay/WeChat Pay setup, the essential apps (TELD, State Grid), and cross-border driving from HK/Macau.",
+    "date": "2026-05-14",
     "tags": [
-      "sri-lanka",
-      "road-trip",
-      "colombo",
-      "kandy",
-      "galle",
-      "charging-stations",
-      "family-travel"
-    ],
-    "category": "",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
+      "china",
+      "foreigner-guide",
+      "ev-charging",
+      "cross-border",
+      "gb-t-connector",
+      "wechat-pay"
+    ]
   },
   {
-    "slug": "taiwan-east-coast-taroko-taitung-kenting-ev-road-trip",
-    "title": "Taiwan East Coast EV Road Trip: Taroko Gorge to Taitung & Kenting — Complete 7-Day Itinerary 2026",
-    "description": "Discover Taiwan's stunning east coast by electric car — from the marble cliffs of Taroko Gorge down the Huadong Valley to Taitung, and around the southern tip to Kenting National Park. Complete charging guide, hotel recommendations, costs, and essential EV tips for Taiwan's most scenic route.",
-    "date": "May 24, 2026",
+    "slug": "china-yangtze-river-delta-ev-road-trip",
+    "title": "Shanghai to Hangzhou to Nanjing: Yangtze River Delta EV Road Trip 2026",
+    "description": "The ultimate China EV road trip through the Yangtze River Delta: Shanghai, Hangzhou, Nanjing. 800 km, 14,000+ State Grid chargers, and the best grandcation destinations for skip-gen travel in 2026.",
+    "date": "2026-05-14",
     "tags": [
-      "taiwan",
-      "east-coast",
-      "taroko",
-      "taitung",
-      "kenting",
-      "huadong-valley",
-      "road-trip",
-      "charging-stations",
-      "scenic-route",
-      "family-travel"
-    ],
-    "category": "",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "vietnam-da-nang-hoi-an-hue-central-vietnam-ev-road-trip",
-    "title": "Central Vietnam EV Road Trip: Da Nang to Hoi An to Hue — Heritage Route Charging Guide 2026",
-    "description": "The ultimate 5-7 day EV road trip through central Vietnam's cultural heart — from Da Nang's beaches through ancient Hoi An to the imperial citadels of Hue. Complete charging guide for VinFast stations, Hai Van Pass tips, and heritage hotel recommendations.",
-    "date": "May 24, 2026",
-    "tags": [
-      "vietnam",
-      "da-nang",
-      "hoi-an",
-      "hue",
-      "central-vietnam",
+      "china",
+      "shanghai",
+      "hangzhou",
+      "nanjing",
+      "yangtze-river-delta",
       "ev-road-trip",
-      "heritage",
-      "vinfast",
-      "hai-van-pass",
-      "beaches",
+      "skip-gen-travel",
+      "grandcation",
       "family-travel",
-      "culture"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
+      "highway",
+      "luxury"
+    ]
+  },
+  {
+    "slug": "chinese-family-ev-road-trip-spring-festival-2026",
+    "title": "Chinese Families Are Going Viral for EV Road Trips in 2026 — Here's How You Can Too",
+    "description": "A family from Hangzhou drove 2,942km across China during Spring Festival 2026 in their electric car and the internet went wild. Here's why EV road trips are the new trend in China — and how your family can get in on the action.",
+    "date": "2026-05-17",
+    "tags": [
+      "china",
+      "family-travel",
+      "road-trips",
+      "spring-festival",
+      "trending",
+      "ev-road-trip",
+      "yangtze-river-delta",
+      "cross-border",
+      "charging-infrastructure",
+      "green-travel"
+    ]
+  },
+  {
+    "slug": "electric-motorcycles-vs-evs-southeast-asia",
+    "title": "Electric Motorcycles vs EVs in Southeast Asia — Practical Comparison for Urban Commuting in 2026",
+    "description": "Southeast Asia has the world's highest motorcycle penetration. Should you go for an electric motorcycle or a full EV for city commuting? We compare costs, range, practicality, and total ownership across Thailand, Vietnam, Indonesia, and Malaysia.",
+    "date": "2026-05-14",
+    "tags": [
+      "electric-motorcycle",
+      "ev-comparison",
+      "urban-commuting",
+      "thailand",
+      "vietnam",
+      "indonesia",
+      "malaysia"
+    ]
+  },
+  {
+    "slug": "ev-battery-health-tropical-climates",
+    "title": "EV Battery Health Guide for Tropical Climates — How Heat and Humidity Affect Degradation in SEA",
+    "description": "Living in Southeast Asia's heat and humidity affects your EV battery differently than temperate climates. Learn how to maximize battery life with proven strategies for tropical conditions — from charging habits to thermal management.",
+    "date": "2026-05-14",
+    "tags": [
+      "ev-battery",
+      "battery-health",
+      "tropical-climate",
+      "heat",
+      "humidity",
+      "maintenance",
+      "sea"
+    ]
   },
   {
     "slug": "ev-charging-apps-suck-asia",
@@ -156,13 +480,7 @@
       "singapore",
       "pain-points",
       "guide"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
     "slug": "ev-charging-asia-2026-guide",
@@ -184,37 +502,65 @@
       "indonesia",
       "vietnam",
       "beginner"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
-    "slug": "malaysia-ev-charging-crisis-raya-2026",
-    "title": "Malaysia EV Charging Crisis: What Raya 2026 Taught Us About Infrastructure Gaps",
-    "description": "Raya 2026 exposed Malaysia's EV charging problems in full force: broken chargers, hours-long queues, and a network that can't keep up with 118% sales growth. Here's what went wrong and how to survive your next road trip.",
-    "date": "May 13, 2026",
+    "slug": "ev-charging-at-airports-asia",
+    "title": "EV Charging at Airports in Asia — Top 10 Airports with EV Charging for Travelers in 2026",
+    "description": "More Asian airports are adding EV charging for travelers. From Singapore Changi to Tokyo Narita, here are the top 10 airports with the best EV charging facilities, parking rates, charger types, and tips for EV owners leaving their car at the airport.",
+    "date": "2026-05-14",
     "tags": [
-      "malaysia",
-      "raya",
-      "ev-charging-crisis",
-      "ev-infrastructure",
-      "road-trip",
-      "charging-reliability",
-      "ev-charger-shortage",
-      "plus-highway",
-      "jomcharge",
-      "gentari"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
+      "airport",
+      "ev-charging",
+      "travel",
+      "parking",
+      "singapore",
+      "tokyo",
+      "seoul"
+    ]
+  },
+  {
+    "slug": "ev-charging-bangladesh-nepal-south-asia-guide",
+    "title": "EV Charging in Bangladesh & Nepal 2026: The New South Asian EV Frontier",
+    "description": "Bangladesh and Nepal are emerging as unexpected EV markets in South Asia. Here's the complete guide to charging infrastructure, government incentives, and road trip potential in 2026.",
+    "date": "2026-05-14",
+    "tags": [
+      "Bangladesh EV",
+      "Nepal EV",
+      "South Asia EV",
+      "Himalayan EV",
+      "Dhaka EV",
+      "Kathmandu EV",
+      "off-grid EV",
+      "developing market EV"
+    ]
+  },
+  {
+    "slug": "ev-charging-costs-asia-country-comparison",
+    "title": "EV Charging Costs Across Asia: Country-by-Country Price Guide (2026)",
+    "description": "EV running costs vary wildly across Asia. Charge a 60kWh battery at home in Thailand and you'll pay roughly 156 THB (HK$34). Do the same in Japan and ",
+    "date": "2026-05-04",
+    "tags": [
+      "charging-costs",
+      "ev-charging",
+      "cost-comparison",
+      "asia"
+    ]
+  },
+  {
+    "slug": "ev-charging-east-timor-timor-leste-complete-guide",
+    "title": "EV Charging in East Timor (Timor-Leste): A Practical Guide for Electric Vehicle Owners",
+    "description": "East Timor has virtually zero public EV charging infrastructure — but that doesn't mean an electric vehicle is impossible. From hotel wall sockets in Dili to solar charging at eco-lodges, cross-border tips from Indonesia, and practical advice on what EVs can actually work in the world's newest nation.",
+    "date": "2026-05-25",
+    "tags": [
+      "east-timor",
+      "timor-leste",
+      "ev-charging",
+      "charging-guide",
+      "southeast-asia",
+      "dili",
+      "indonesia-cross-border"
+    ]
   },
   {
     "slug": "ev-charging-in-asia-2026-complete-guide",
@@ -233,13 +579,1431 @@
       "malaysia",
       "china",
       "singapore"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "6 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
+  },
+  {
+    "slug": "ev-charging-india-road-trip-complete-guide-2026",
+    "title": "EV Charging in India: Complete Road Trip Guide for 2026 — Networks, Costs & Routes",
+    "description": "India's EV charging network is expanding fast. From Mumbai to Delhi, Bangalore to Chennai, this guide covers everything you need for an EV road trip: charging networks, costs per kWh, must-have apps, route planning, and the best EV-friendly hotels along the way.",
+    "date": "2026-05-24",
+    "tags": [
+      "india",
+      "ev-charging",
+      "road-trip",
+      "mumbai",
+      "delhi",
+      "bangalore",
+      "chennai",
+      "charging-network",
+      "tata-power",
+      "chargezone",
+      "ev-road-trip",
+      "family-travel",
+      "asia"
+    ]
+  },
+  {
+    "slug": "ev-charging-malaysia-vs-singapore",
+    "title": "EV Charging in Malaysia vs Singapore: What's Actually Different?",
+    "description": "Malaysia and Singapore are less than an hour apart across the Causeway, but their EV charging ecosystems could hardly be more different. Singapore has",
+    "date": "2026-05-04",
+    "tags": [
+      "malaysia",
+      "ev-charging",
+      "cost-comparison",
+      "asia"
+    ]
+  },
+  {
+    "slug": "ev-charging-network-comparison-southeast-asia-charge-plus-shell-plugshare",
+    "title": "EV Charging Network Comparison Southeast Asia: Charge+ vs Shell Recharge vs PlugShare (2026 Guide)",
+    "description": "Compare the 3 major EV charging networks in Southeast Asia — Charge+ (Singapore/Malaysia), Shell Recharge (Thailand/Philippines), and PlugShare (regional). Coverage, pricing, reliability, and app experience for each network.",
+    "date": "2026-05-26",
+    "tags": [
+      "ev-charging",
+      "southeast-asia",
+      "charge-plus",
+      "shell-recharge",
+      "plugshare",
+      "charging-network-comparison",
+      "ev-apps",
+      "thailand",
+      "singapore",
+      "malaysia",
+      "philippines"
+    ]
+  },
+  {
+    "slug": "ev-charging-reliability-asia-2026",
+    "title": "EV Charging Reliability in Asia: Which Countries Have Working Chargers?",
+    "description": "From India's 50% non-functional rate to Singapore's gold standard — a country-by-country guide to which Asian nations have working EV chargers and which don't.",
+    "date": "2026-05-14",
+    "tags": [
+      "reliability",
+      "country-guides",
+      "planning",
+      "charging-tips"
+    ]
+  },
+  {
+    "slug": "ev-charging-shopping-malls-asia",
+    "title": "EV Charging at Shopping Malls in Asia: Where to Charge While You Shop (2026)",
+    "description": "The complete guide to EV charging at shopping malls across Asia. Best malls with charging stations in Singapore, Thailand, Malaysia, Hong Kong, and Japan. Free parking, charger speeds, and mall-by-mall breakdown.",
+    "date": "2026-05-24",
+    "tags": [
+      "ev-charging",
+      "shopping-malls",
+      "asia",
+      "singapore",
+      "thailand",
+      "malaysia",
+      "hong-kong",
+      "japan",
+      "public-charging"
+    ]
+  },
+  {
+    "slug": "ev-cross-border-asean-thailand-malaysia-singapore-guide",
+    "title": "EV Cross-Border Travel in ASEAN 2026: Thailand, Malaysia & Singapore Guide",
+    "description": "Planning to drive your EV across ASEAN borders? Here's everything you need to know about cross-border EV travel between Thailand, Malaysia, and Singapore in 2026.",
+    "date": "2026-05-14",
+    "tags": [
+      "cross-border EV travel",
+      "ASEAN EV travel",
+      "Thailand EV",
+      "Malaysia EV",
+      "Singapore EV",
+      "CCS2",
+      "SEA road trip",
+      "charging network"
+    ]
+  },
+  {
+    "slug": "ev-fleet-conversion-southeast-asia-2026",
+    "title": "EV Fleet Conversion Guide 2026 — Switching Delivery & Logistics Fleets to Electric in Southeast Asia",
+    "description": "FedEx, Lazada, and Grab are electrifying their fleets across Southeast Asia. Complete guide to EV fleet conversion for logistics and delivery businesses — costs, TCO analysis, charging depot setup, battery swapping, and real case studies from Singapore, Thailand, and Vietnam.",
+    "date": "2026-05-15",
+    "tags": [
+      "fleet",
+      "logistics",
+      "delivery",
+      "commercial",
+      "business-guide",
+      "singapore",
+      "thailand",
+      "vietnam"
+    ]
+  },
+  {
+    "slug": "ev-insurance-guide-asia",
+    "title": "EV Insurance Guide Asia 2026 — What You Need for Comprehensive Coverage in Different Countries",
+    "description": "EV insurance in Asia varies wildly by country. From mandatory battery coverage in Thailand to EV-specific policies in Singapore, here's a complete guide to comprehensive EV insurance across Asia's key markets and what to look for in a policy.",
+    "date": "2026-05-14",
+    "tags": [
+      "ev-insurance",
+      "insurance-guide",
+      "thailand",
+      "singapore",
+      "malaysia",
+      "comprehensive-coverage",
+      "battery"
+    ]
+  },
+  {
+    "slug": "ev-maintenance-humid-climate-asia",
+    "title": "EV Maintenance in Humid Climates: Essential Guide for Southeast Asian EV Owners [2026]",
+    "description": "Practical maintenance guide for EV owners in humid Asian climates. Covers battery care, cooling systems, connector corrosion, tyre wear, and what every EV owner in Thailand, Malaysia, Singapore, and Indonesia needs to know.",
+    "date": "2026-05-13",
+    "tags": [
+      "ev-maintenance",
+      "humid-climate",
+      "battery-care",
+      "thailand",
+      "malaysia",
+      "singapore",
+      "indonesia",
+      "philippines",
+      "ev-tips",
+      "southeast-asia"
+    ]
+  },
+  {
+    "slug": "ev-road-trip-cost-comparison-asia",
+    "title": "EV Road Trip Cost Comparison Across Asia: Thailand vs Malaysia vs Japan vs India",
+    "description": "Detailed cost comparison of EV road trips across Asia. Compare charging costs, hotel prices, tolls, and food for road trips in Thailand, Malaysia, Japan, India, and Singapore. Find the most affordable EV road trip destination in Asia.",
+    "date": "2026-05-22",
+    "tags": [
+      "ev-road-trip",
+      "cost-comparison",
+      "budget-travel",
+      "thailand",
+      "malaysia",
+      "japan",
+      "india",
+      "singapore",
+      "travel-tips",
+      "ev-charging-costs"
+    ]
+  },
+  {
+    "slug": "ev-road-trip-malaysia-singapore-2026",
+    "title": "Singapore to Kuala Lumpur & Penang: Complete 2026 EV Road Trip Guide",
+    "description": "The ultimate guide to driving your EV from Singapore through Kuala Lumpur to Penang in 2026. Includes border crossing tips, charging stops, range planning, hotel recommendations with chargers, and total cost breakdowns in SGD/MYR.",
+    "date": "2026-05-17",
+    "tags": [
+      "singapore",
+      "malaysia",
+      "kuala-lumpur",
+      "penang",
+      "road-trip",
+      "cross-border",
+      "charging-guide",
+      "north-south-expressway",
+      "family-travel"
+    ]
+  },
+  {
+    "slug": "ev-road-trip-preparation-checklist-asia-2026",
+    "title": "Ultimate EV Road Trip Preparation Checklist for Asia 2026 — What to Pack, Plan & Pre-Check",
+    "description": "Your complete pre-departure checklist for an EV road trip across Asia. From essential cables and apps to thermal prep, backup charging plans, and what to pack for emergencies — designed for Thailand, Malaysia, Singapore, Japan, South Korea, Vietnam, Indonesia, and the Philippines.",
+    "date": "2026-06-02",
+    "tags": [
+      "ev-road-trip",
+      "preparation",
+      "packing-list",
+      "ev-checklist",
+      "travel-tips",
+      "thailand",
+      "malaysia",
+      "singapore",
+      "japan",
+      "south-korea",
+      "vietnam",
+      "indonesia",
+      "philippines",
+      "beginner",
+      "ev-tips"
+    ]
+  },
+  {
+    "slug": "ev-road-trip-singapore-to-kuala-lumpur-charging-stops",
+    "title": "EV Road Trip from Singapore to Kuala Lumpur — Complete Charging Stops Guide 2026",
+    "description": "The complete guide to driving an EV from Singapore to Kuala Lumpur. Every charging stop, border crossing tip, and hotel recommendation for a stress-free 350 km journey.",
+    "date": "2026-05-18",
+    "tags": [
+      "singapore",
+      "kuala-lumpur",
+      "malaysia",
+      "cross-border",
+      "ev-road-trip",
+      "charging-guide",
+      "north-south-highway",
+      "plus-highway"
+    ]
+  },
+  {
+    "slug": "ev-towing-breakdown-asia-guide",
+    "title": "What to Do When Your EV Breaks Down in Asia: Towing, Emergency Charging & Roadside Assistance",
+    "description": "Battery dead at 2am in rural Thailand? Here's exactly what to do when your EV breaks down in Asia — including towing protocols, emergency charging options, and roadside assistance numbers for 7 countries.",
+    "date": "2026-05-14",
+    "tags": [
+      "EV breakdown",
+      "EV towing",
+      "roadside assistance",
+      "EV emergency",
+      "charging emergency",
+      "breakdown Asia",
+      "stranded EV"
+    ]
+  },
+  {
+    "slug": "ev-vs-hybrid-vs-petrol-southeast-asia-tco-2026",
+    "title": "EV vs Hybrid vs Petrol in Southeast Asia 2026 — Total Cost of Ownership Comparison",
+    "description": "Should you buy an EV, hybrid, or petrol car in Southeast Asia? We compare total cost of ownership across Singapore, Thailand, Malaysia, Indonesia, Philippines, and Vietnam with real numbers. BYD Dolphin vs Honda City vs Yaris Cross — the data will surprise you.",
+    "date": "2026-05-25",
+    "tags": [
+      "ev-vs-hybrid",
+      "ev-vs-petrol",
+      "total-cost-of-ownership",
+      "comparison",
+      "buying-guide",
+      "thailand",
+      "singapore",
+      "malaysia",
+      "indonesia",
+      "vietnam",
+      "philippines",
+      "byd",
+      "tesla",
+      "cost-comparison"
+    ]
+  },
+  {
+    "slug": "ev-vs-petrol-cost-thailand-2026",
+    "title": "Cost Analysis: EV vs Petrol Car for Family Travel in Thailand 2026",
+    "description": "We crunched the numbers on a 3,000 km family road trip across Thailand in 2026: EV vs petrol total cost, charging times, real-world range, and when electric actually saves you money.",
+    "date": "2026-05-12",
+    "tags": [
+      "ev-vs-petrol",
+      "thailand",
+      "family-travel",
+      "ev-costs",
+      "charging",
+      "road-trip-budget"
+    ]
+  },
+  {
+    "slug": "ev-winter-driving-japan-korea-guide",
+    "title": "EV Winter Driving in Japan and Korea: Complete Guide for 2026",
+    "description": "Everything EV owners need to know about winter driving in Japan and Korea. Range loss, battery pre-conditioning, winter tyres, charging in snow, and route planning for Hokkaido, Nagano, Seoul, and Pyeongchang.",
+    "date": "2026-05-13",
+    "tags": [
+      "winter-driving",
+      "japan",
+      "korea",
+      "cold-weather",
+      "hokkaido",
+      "seoul",
+      "battery-range",
+      "winter-tyres",
+      "east-asia"
+    ]
+  },
+  {
+    "slug": "family-ev-road-trip-asia-ultimate-guide",
+    "title": "The Ultimate Guide to Family EV Road Trips in Asia: Routes, Tips & Essential Gear",
+    "description": "Everything you need to plan the perfect family EV road trip in Asia. Kid-friendly routes, charging with children, must-pack items, apps for navigation, and the best family stops across Thailand, Malaysia, Japan, and India.",
+    "date": "2026-05-22",
+    "tags": [
+      "family-travel",
+      "ev-road-trip",
+      "kids",
+      "thailand",
+      "malaysia",
+      "japan",
+      "india",
+      "parenting",
+      "travel-tips",
+      "packing-list",
+      "family-friendly"
+    ]
+  },
+  {
+    "slug": "hanoi-sapa-ev-road-trip-vietnam",
+    "title": "Hanoi to Sapa EV Road Trip — Conquering Vietnam's Mountain Roads in an Electric Car",
+    "description": "Can an EV handle the 320 km Hanoi to Sapa mountain drive through Vietnam's northern highlands? Route guide with charging stops at Phu Tho and Lao Cai, elevation challenges, regen braking strategies, cost comparison vs petrol, and pro tips for the Hoang Lien Son mountains.",
+    "date": "2026-05-15",
+    "tags": [
+      "vietnam",
+      "road-trip",
+      "sapa",
+      "hanoi",
+      "ev-travel",
+      "mountains"
+    ]
+  },
+  {
+    "slug": "hanoi-sapa-ha-long-bay-vietnam-ev-road-trip",
+    "title": "Northern Vietnam EV Road Trip: Hanoi → Sapa → Ha Long Bay",
+    "description": "An epic 7-10 day EV road trip through northern Vietnam — from Hanoi's bustling streets to Sapa's terraced rice fields and Ha Long Bay's limestone karsts. Complete charging guide at VinFast stations, hotel charging tips, and scenic mountain drives.",
+    "date": "2026-05-18",
+    "tags": [
+      "vietnam",
+      "hanoi",
+      "sapa",
+      "ha-long-bay",
+      "ev-road-trip",
+      "northern-vietnam",
+      "vinfast",
+      "scenic-drives",
+      "family-travel",
+      "mountains"
+    ]
+  },
+  {
+    "slug": "hokkaido-ev-road-trip-guide",
+    "title": "Hokkaido EV Road Trip Guide 2026: Complete Itinerary, Charging Stations & Essential Tips for Japan's Northern Frontier",
+    "description": "Japan's northern island of Hokkaido is a road trip paradise — volcanic caldera lakes, lavender fields, national parks, and world-class seafood. This complete EV guide covers charging infrastructure along the main routes, winter vs summer driving tips, the best EV-friendly ryokan, and a sample 10-day itinerary from Sapporo to Shiretoko.",
+    "date": "2026-05-25",
+    "tags": [
+      "japan",
+      "hokkaido",
+      "ev-road-trip",
+      "charging-guide",
+      "sapporo",
+      "winter-driving",
+      "national-parks",
+      "onsen",
+      "family-travel"
+    ]
+  },
+  {
+    "slug": "hong-kong-ev-charging-complete-guide-2026",
+    "title": "Hong Kong EV Charging Guide 2026: Complete Guide for EV Owners &amp; Visitors",
+    "description": "The ultimate guide to EV charging in Hong Kong in 2026. Cornerstone, Smart Charge, Shell Recharge, and EV Power coverage and prices. Condo charging installation, HKeMobility app, cross-border driving to Shenzhen and Macau.",
+    "date": "2026-05-29",
+    "tags": [
+      "hong-kong",
+      "ev-charging",
+      "guide",
+      "home-charging",
+      "condo-charging",
+      "cross-border",
+      "shenzhen",
+      "charging-costs"
+    ]
+  },
+  {
+    "slug": "hong-kong-guangzhou-ev-road-trip-guide",
+    "title": "Hong Kong to Guangzhou EV Road Trip Guide: Cross-Border Charging [2026]",
+    "description": "Complete 2026 guide to driving an EV from Hong Kong to Guangzhou via Shenzhen. Cross-border permits, charger compatibility (EU vs GB/T), charging stops, toll costs, and family-friendly stops along the G4 expressway.",
+    "date": "2026-05-12",
+    "tags": [
+      "hong-kong",
+      "guangzhou",
+      "shenzhen",
+      "china",
+      "cross-border",
+      "ev-road-trip",
+      "family-travel",
+      "greater-bay-area"
+    ]
+  },
+  {
+    "slug": "hong-kong-guangzhou-ev-road-trip",
+    "title": "Hong Kong to Guangzhou EV Road Trip: Cross-Border Driving Through Greater Bay Area",
+    "description": "Complete guide to driving an EV from Hong Kong to Guangzhou via Shenzhen. Covers cross-border permits, charging stations on the G4/G15 expressway, and family activities in Guangzhou.",
+    "date": "2026-05-15",
+    "tags": [
+      "hong-kong",
+      "guangzhou",
+      "shenzhen",
+      "china",
+      "ev-road-trip",
+      "cross-border"
+    ]
+  },
+  {
+    "slug": "hong-kong-to-macau-ev-ferry-driving-itinerary",
+    "title": "Hong Kong to Macau by EV: Ferry + Driving Itinerary — Complete Guide for Families",
+    "description": "Can you take your EV from Hong Kong to Macau? Yes! This unique 3-day itinerary covers the car ferry crossing, Macau's UNESCO historic centre, Coloane's beaches, and EV charging on the Cotai Strip. Cross-border permits, ferry booking, and driving tips included.",
+    "date": "2026-05-19",
+    "tags": [
+      "hong-kong",
+      "macau",
+      "china",
+      "ev-road-trip",
+      "family-travel",
+      "ferry",
+      "cross-border",
+      "cotai-strip",
+      "taipa",
+      "coloane",
+      "weekend-trip",
+      "macau-ev-charging"
+    ]
+  },
+  {
+    "slug": "how-to-charge-ev-at-condo-singapore",
+    "title": "How to Charge an EV at a Condo in Singapore — 2026 Guide",
+    "description": "Singapore has 46,000+ EVs on the road in 2026, and 43% of new car registrations are now electric. But here's the problem most condo-dwellers face: you",
+    "date": "2026-05-04",
+    "tags": [
+      "charging-installation",
+      "condo",
+      "ev-charging",
+      "asia"
+    ]
+  },
+  {
+    "slug": "india-ev-charging-complete-guide-2026",
+    "title": "India EV Charging Complete Guide 2026 — Networks, Stations & Road Trip Tips",
+    "description": "Everything you need to know about EV charging in India — major networks (Tata Power EZ Charge, BP Pulse, EESL), charging speeds, payment apps (UPI, GPay), and the best road trip routes for 2026. Covers Delhi-Jaipur, Mumbai-Pune, Bangalore-Chennai, and more.",
+    "date": "2026-06-02",
+    "tags": [
+      "ev-charging",
+      "india",
+      "tata-power",
+      "bp-pulse",
+      "eesl",
+      "ccs2",
+      "ev-road-trip",
+      "golden-triangle",
+      "mumbai-pune",
+      "bangalore-chennai",
+      "ev-travel",
+      "upi-payment"
+    ]
+  },
+  {
+    "slug": "india-ev-charging-guide-2026",
+    "title": "India EV Charging Guide 2026 — City-by-City Breakdown",
+    "description": "Complete guide to EV charging in India's top cities: Delhi, Mumbai, Bangalore, Hyderabad, Chennai, Pune, Ahmedabad, and Kolkata. Connector types, charging speeds, operator apps, and route planning tips.",
+    "date": "2026-04-28",
+    "tags": [
+      "india",
+      "ev-charging",
+      "city-guide",
+      "road-trip"
+    ]
+  },
+  {
+    "slug": "indonesia-ev-charging-complete-guide-2026",
+    "title": "Indonesia EV Charging Complete Guide 2026 — Networks, Stations & Road Trip Tips",
+    "description": "Complete guide to EV charging in Indonesia — Jakarta stations, Java toll road coverage, Bali tourist chargers, payment apps (PLN Mobile, Charge+), and practical tips. Covers the entire Trans-Java corridor from Jakarta to Surabaya plus Bali's resort charging network.",
+    "date": "2026-06-02",
+    "tags": [
+      "ev-charging",
+      "indonesia",
+      "jakarta",
+      "bali",
+      "java",
+      "pln",
+      "spklu",
+      "charge-plus",
+      "ccs2",
+      "ev-road-trip",
+      "trans-java",
+      "bali-ev",
+      "ev-travel",
+      "southeast-asia"
+    ]
+  },
+  {
+    "slug": "indonesia-jakarta-bandung-ev-road-trip",
+    "title": "Indonesia EV Road Trip: Jakarta to Bandung — Complete Family Guide",
+    "description": "Drive an EV from Jakarta to Bandung on the Cipularang Toll Road. Complete guide to charging stations, EV range planning, family activities in Bandung, and cost comparisons for Indonesia’s most popular road trip.",
+    "date": "2026-05-07",
+    "tags": [
+      "indonesia",
+      "jakarta",
+      "bandung",
+      "ev-road-trip",
+      "family-travel",
+      "cipularang",
+      "weekend-trip",
+      "toll-road"
+    ]
+  },
+  {
+    "slug": "indonesia-java-jakarta-yogyakarta-ev-road-trip",
+    "title": "Trans-Java EV Road Trip: Jakarta to Yogyakarta — Indonesia's First EV Highway",
+    "description": "Drive 540 km from Jakarta to Yogyakarta on the Trans-Java Toll Road in an EV. Family-focused guide to charging stations, kid-friendly stops in Bandung, Semarang, and Yogyakarta, EV-friendly hotels, cost breakdowns for a family of 4, and practical tips for Indonesia's premier EV highway.",
+    "date": "2026-05-24",
+    "tags": [
+      "indonesia",
+      "java",
+      "jakarta",
+      "yogyakarta",
+      "trans-java",
+      "ev-road-trip",
+      "toll-road",
+      "borobudur",
+      "family-travel",
+      "wuling"
+    ]
+  },
+  {
+    "slug": "installing-home-wall-charger-asian-cities",
+    "title": "Installing a Home EV Wall Charger in Asian Cities: What Expats Need to Know",
+    "description": "You've moved to Asia. You bought an EV. Now you need to charge it at home. Simple, right? Not quite. Every city has different electrical standards, pe",
+    "date": "2026-05-04",
+    "tags": [
+      "home-charging",
+      "ev-charging",
+      "installation-guide",
+      "asia"
+    ]
+  },
+  {
+    "slug": "jakarta-surabaya-trans-java-ev-road-trip-2026",
+    "title": "Jakarta to Surabaya EV Road Trip: Complete Trans-Java Toll Guide 2026",
+    "description": "Drive 780km across Java from Jakarta to Surabaya via the Trans-Java Toll Road in an EV. Complete guide to charging stations, stopover cities, costs, and practical tips for Indonesia's ultimate electric road trip.",
+    "date": "2026-05-24",
+    "tags": [
+      "indonesia",
+      "jakarta",
+      "surabaya",
+      "semarang",
+      "solo",
+      "cirebon",
+      "trans-java",
+      "ev-road-trip",
+      "family-travel",
+      "toll-road"
+    ]
+  },
+  {
+    "slug": "jakarta-to-yogyakarta-ev-road-trip-javas-cultural-heart-by-electric-car",
+    "title": "Jakarta to Yogyakarta EV Road Trip: Java's Cultural Heart by Electric Car",
+    "description": "Drive 550km from Jakarta to Yogyakarta across Java in an EV. Charging stops along the Trans-Java Toll Road, family-friendly attractions, and cultural highlights.",
+    "date": "2026-05-16",
+    "tags": [
+      "jakarta",
+      "yogyakarta",
+      "road",
+      "trip:",
+      "java's",
+      "cultural",
+      "heart",
+      "electric"
+    ]
+  },
+  {
+    "slug": "japan-ev-road-trip-guide-2026",
+    "title": "Japan EV Road Trip Guide 2026: Complete Route Planner, Charging Networks & Must-See Stops",
+    "description": "Comprehensive guide to EV road trips in Japan for 2026. Covers charging networks (CHAdeMO vs CCS2), best routes from Tokyo to Hakone, Osaka to Kyoto, and Hokkaido, rental EV companies, toll costs, and essential apps.",
+    "date": "2026-05-22",
+    "tags": [
+      "japan",
+      "ev-road-trip",
+      "japan-travel",
+      "tokyo",
+      "osaka",
+      "hokkaido",
+      "kyoto",
+      "hakone",
+      "rental-ev",
+      "chademo",
+      "travel-guide"
+    ]
+  },
+  {
+    "slug": "japan-ev-road-trip-guide-international-visitors",
+    "title": "EV Road Tripping in Japan: Complete Guide for International Visitors (2026)",
+    "description": "Planning to explore Japan by electric car? From rental EV availability and CHAdeMO charging to NEXCO rest stops and hotel charging etiquette — here's everything international visitors need to know about EV road tripping in Japan.",
+    "date": "2026-05-14",
+    "tags": [
+      "Japan EV guide",
+      "Japan road trip",
+      "Japan EV charging",
+      "CHAdeMO Japan",
+      "rental EV Japan",
+      "Japan travel 2026",
+      "Japan charging network",
+      "NEXCO charging",
+      "international visitor Japan EV"
+    ]
+  },
+  {
+    "slug": "japan-tokyo-osaka-chubu-ev-road-trip",
+    "title": "Japan's Chubu Region EV Road Trip: Tokyo to Osaka via the Japanese Alps",
+    "description": "An alternative to the Tokaido Golden Route — drive from Tokyo to Osaka through Japan's Chubu region, taking in the Japanese Alps, Matsumoto Castle, Kanazawa's geisha district, and Gifu's historic villages. With charging stops, family-friendly activities, and onsen recommendations.",
+    "date": "2026-05-18",
+    "tags": [
+      "japan",
+      "chubu",
+      "tokyo",
+      "nagano",
+      "matsumoto",
+      "kanazawa",
+      "takayama",
+      "gifu",
+      "osaka",
+      "ev-road-trip",
+      "japanese-alps",
+      "family-travel",
+      "onsen"
+    ]
+  },
+  {
+    "slug": "japan-tokyo-osaka-ev-family-road-trip",
+    "title": "Japan's Golden Route by EV: Tokyo to Osaka Family Road Trip via Hakone, Nagoya & Kyoto",
+    "description": "The complete family guide to driving Japan's legendary Tokaido corridor by EV from Tokyo to Osaka via Hakone, Nagoya, and Kyoto. Charging stops, kid-friendly temples, onsen stops, and how to navigate Japan's ultra-fast CHAdeMO network with children.",
+    "date": "2026-05-16",
+    "tags": [
+      "japan",
+      "tokyo",
+      "hakone",
+      "nagoya",
+      "kyoto",
+      "osaka",
+      "ev-road-trip",
+      "family-travel",
+      "japan-road-trip",
+      "tokaido",
+      "golden-route",
+      "weekend-trip",
+      "international-visitors"
+    ]
+  },
+  {
+    "slug": "kl-penang-cameron-highlands-ev-road-trip",
+    "title": "KL → Penang → Cameron Highlands: A 5-Day Family EV Road Trip Through Malaysia",
+    "description": "A family-friendly 5-day electric road trip from Kuala Lumpur to Penang and up to the cool Cameron Highlands. ~350km total with Level 2 chargers at highway rest stops and hotels. Includes Batu Caves, Penang Hill street food, tea plantation tours, and practical charging tips for Malaysia's west coast.",
+    "date": "2026-05-18",
+    "tags": [
+      "malaysia",
+      "kuala-lumpur",
+      "penang",
+      "cameron-highlands",
+      "ev-road-trip",
+      "family-travel",
+      "5-day-itinerary",
+      "west-coast-malaysia",
+      "malaysia-ev"
+    ]
+  },
+  {
+    "slug": "kuala-lumpur-to-malacca-ev-road-trip",
+    "title": "Kuala Lumpur to Malacca EV Road Trip: A Short Family Adventure to Malaysia's Historic City",
+    "description": "Planning a family EV road trip from Kuala Lumpur to Malacca? This guide covers the best charging stations, costs, distances, and kid-friendly stops along the way. Discover how to make your journey smooth, affordable, and unforgettable.",
+    "date": "2026-05-15",
+    "tags": [
+      "EV road trip",
+      "Kuala Lumpur to Malacca",
+      "Malaysia EV charging",
+      "family EV travel",
+      "charging stations Malaysia",
+      "electric vehicle road trip",
+      "Malacca EV guide",
+      "EV family tips"
+    ]
+  },
+  {
+    "slug": "kuala-lumpur-penang-ev-microtrip",
+    "title": "Kuala Lumpur to Penang EV Microtrip: Weekend Drive Guide for Families",
+    "description": "Driving your EV from KL to Penang for a weekend family getaway? Here's everything you need — charging stops, range planning, and family-friendly tips for the North-South Expressway route.",
+    "date": "2026-05-07",
+    "tags": [
+      "ev-travel",
+      "microtrips",
+      "malaysia",
+      "penang",
+      "weekend-trip",
+      "family-ev"
+    ]
+  },
+  {
+    "slug": "laos-ev-charging-guide-2026",
+    "title": "Laos EV Charging Guide 2026 — Vientiane, Luang Prabang, and the Slow-Charging Reality",
+    "description": "Laos has 14,000+ EVs and 126 charging stations but 65 are in Vientiane alone. Can you drive an EV from Vientiane to Luang Prabang? The reality of Laos' charging network, costs, solar integration, and what to expect on the road.",
+    "date": "2026-05-15",
+    "tags": [
+      "laos",
+      "charging-guide",
+      "vientiane",
+      "luang-prabang",
+      "road-trip",
+      "solar"
+    ]
+  },
+  {
+    "slug": "malaysia-east-coast-ev-road-trip-guide",
+    "title": "Malaysia East Coast EV Road Trip Guide: KL to Kota Bharu via Kuala Terengganu — Charging Along the Federal Route 3",
+    "description": "Malaysia's East Coast (Pantai Timur) along Federal Route 3 offers one of Southeast Asia's most scenic drives — but it's also the most challenging for EVs. This guide covers charging gaps from Kuantan to Kuala Terengganu to Kota Bharu, the best stops at Cherating, Cherating Turtle Sanctuary, and the Perhentian/Kapas ferry terminals, plus tips for managing the 100+ km charging gaps between Kemaman and Dungun.",
+    "date": "2026-06-04",
+    "tags": [
+      "malaysia",
+      "kuala-terengganu",
+      "kota-bharu",
+      "east-coast",
+      "pantai-timur",
+      "ev-road-trip",
+      "federal-route-3",
+      "kuantan",
+      "cherating",
+      "kemaman",
+      "dungun",
+      "perhentian-islands",
+      "charging-gaps",
+      "kelantan"
+    ]
+  },
+  {
+    "slug": "malaysia-ev-charging-crisis-raya-2026",
+    "title": "Malaysia EV Charging Crisis: What Raya 2026 Taught Us About Infrastructure Gaps",
+    "description": "Raya 2026 exposed Malaysia's EV charging problems in full force: broken chargers, hours-long queues, and a network that can't keep up with 118% sales growth. Here's what went wrong and how to survive your next road trip.",
+    "date": "May 13, 2026",
+    "tags": [
+      "malaysia",
+      "raya",
+      "ev-charging-crisis",
+      "ev-infrastructure",
+      "road-trip",
+      "charging-reliability",
+      "ev-charger-shortage",
+      "plus-highway",
+      "jomcharge",
+      "gentari"
+    ]
+  },
+  {
+    "slug": "malaysia-kl-penang-ev-road-trip-guide",
+    "title": "Malaysia EV Road Trip Guide: Kuala Lumpur to Penang",
+    "description": "A complete EV road trip guide from Kuala Lumpur to Penang covering charging infrastructure on the PLUS Highway, must-see stops in Ipoh and Taiping, practical tips for range management, and a 2-day family itinerary.",
+    "date": "2026-05-18",
+    "tags": [
+      "malaysia",
+      "kuala-lumpur",
+      "penang",
+      "ev-road-trip",
+      "plus-highway",
+      "ipoh",
+      "taiping",
+      "charging-infrastructure",
+      "family-travel",
+      "practical-tips",
+      "weekend-trip",
+      "gentari",
+      "jomcharge",
+      "chargesini"
+    ]
+  },
+  {
+    "slug": "malaysia-kl-penang-extended-ev-road-trip",
+    "title": "Kuala Lumpur to Penang Extended EV Road Trip: Ipoh Detours, Taiping Heritage & Langkawi Ferry",
+    "description": "Take the KL to Penang EV road trip further with a 5-day extended itinerary. Charging stops at Ipoh's white coffee cafes, Taiping's colonial heritage, Cameron Highlands cool air, and a bonus ferry to Langkawi. Practical tips for families, cost breakdown, and backup charging strategy.",
+    "date": "2026-05-18",
+    "tags": [
+      "malaysia",
+      "kuala-lumpur",
+      "penang",
+      "ipoh",
+      "taiping",
+      "cameron-highlands",
+      "langkawi",
+      "ev-road-trip",
+      "plus-highway",
+      "family-travel",
+      "gentari",
+      "jomcharge",
+      "chargesini"
+    ]
+  },
+  {
+    "slug": "malaysia-kuala-lumpur-penang-ev-road-trip",
+    "title": "Malaysia EV Road Trip: Kuala Lumpur to Penang — Coastal Route Family Guide",
+    "description": "Everything you need for an EV road trip from KL to Penang: coastal route via Ipoh, charging stops, family-friendly activities, Penang street food guide, and cost comparisons for a perfect weekend getaway.",
+    "date": "2026-05-07",
+    "tags": [
+      "malaysia",
+      "kuala-lumpur",
+      "penang",
+      "ipoh",
+      "ev-road-trip",
+      "family-travel",
+      "coastal-route",
+      "weekend-trip",
+      "plus-highway"
+    ]
+  },
+  {
+    "slug": "malaysia-to-singapore-ev-road-trip-2026",
+    "title": "Kuala Lumpur to Singapore: The Ultimate EV Road Trip Guide 2026",
+    "description": "Planning an EV road trip from Kuala Lumpur to Singapore in 2026? Our complete guide covers charging stations, route planning, border crossing tips, and the best stops along the North-South Expressway.",
+    "date": "2026-05-14",
+    "tags": [
+      "malaysia",
+      "singapore",
+      "road-trip",
+      "cross-border",
+      "charging-guide",
+      "north-south-expressway"
+    ]
+  },
+  {
+    "slug": "manila-to-baguio-ev-road-trip-philippines-cordillera-mountain-route",
+    "title": "Manila to Baguio EV Road Trip: Philippines' Cordillera Mountain Route",
+    "description": "Complete guide to driving an EV from Manila to Baguio City. 250km through the Cordillera mountains with charging stops at Marcos Highway rest areas.",
+    "date": "2026-05-16",
+    "tags": [
+      "manila",
+      "baguio",
+      "road",
+      "trip:",
+      "philippines'",
+      "cordillera",
+      "mountain",
+      "route"
+    ]
+  },
+  {
+    "slug": "mongolia-ev-charging-guide-2026",
+    "title": "Mongolia EV Charging Guide 2026: Ulaanbaatar to the Gobi Desert — Asia's Next EV Frontier",
+    "description": "Explore Mongolia by EV in 2026: from Ulaanbaatar's first DC fast chargers to Gobi Desert eco-lodges with solar charging. Complete guide to charging infrastructure, EV-friendly hotels, 4WD EVs for off-road adventure, and practical tips for the world's least densely populated country.",
+    "date": "2026-05-25",
+    "tags": [
+      "mongolia",
+      "ulaanbaatar",
+      "gobi-desert",
+      "ev-road-trip",
+      "off-road-ev",
+      "solar-charging",
+      "adventure-travel",
+      "eco-tourism",
+      "asia-frontier",
+      "4x4-ev"
+    ]
+  },
+  {
+    "slug": "mumbai-pune-goa-india-ev-road-trip",
+    "title": "West India EV Road Trip: Mumbai → Pune → Lonavala → Goa",
+    "description": "A 10-12 day EV road trip through western India — from Mumbai's Gateway of India to Pune's cultural heritage, Lonavala's hill station charm, and Goa's beaches. Complete guide to EV charging on Indian highways, range anxiety management, and tips for India's growing EV charging network.",
+    "date": "2026-05-18",
+    "tags": [
+      "india",
+      "mumbai",
+      "pune",
+      "lonavala",
+      "goa",
+      "ev-road-trip",
+      "western-india",
+      "charging-network",
+      "range-anxiety",
+      "family-travel",
+      "beaches",
+      "expressway"
+    ]
+  },
+  {
+    "slug": "myanmar-ev-market-guide-2026",
+    "title": "Myanmar EV Market Guide 2026 — Import Rules, Charging Stations & Best EVs",
+    "description": "Myanmar's EV market is booming with 17,600+ registered EVs and duty-free imports until March 2026. From Yangon charging stations to conversion kits and SKD assembly rules, here is everything you need to know about EV ownership in Myanmar.",
+    "date": "2026-05-15",
+    "tags": [
+      "myanmar",
+      "ev-market",
+      "import-rules",
+      "charging-guide",
+      "yangon"
+    ]
+  },
+  {
+    "slug": "myanmar-ev-road-trip-yangon-bagan-mandalay",
+    "title": "Myanmar EV Road Trip: Yangon to Bagan to Mandalay — Complete Charging Guide 2026",
+    "description": "Plan an epic EV road trip from Yangon through Myanmar's cultural heartland to Bagan and Mandalay. Covers 700 km of driving, charging stations, costs, and essential tips for navigating Myanmar by electric car.",
+    "date": "May 24, 2026",
+    "tags": [
+      "myanmar",
+      "road-trip",
+      "yangon",
+      "bagan",
+      "mandalay",
+      "charging-stations",
+      "family-travel"
+    ]
+  },
+  {
+    "slug": "osaka-kyoto-nara-kansai-ev-road-trip",
+    "title": "Osaka, Kyoto & Nara EV Road Trip: The Perfect Kansai Electric Getaway",
+    "description": "Explore Japan's cultural heart by electric car. This complete guide covers EV charging across the Kansai region — Osaka, Kyoto, and Nara — with CHAdeMO stations, budget hotels, family-friendly temples, and cost comparisons vs Japan Rail.",
+    "date": "2026-05-17",
+    "tags": [
+      "osaka",
+      "kyoto",
+      "nara",
+      "japan",
+      "kansai",
+      "ev-road-trip",
+      "chademo",
+      "family-travel",
+      "japan-ev"
+    ]
+  },
+  {
+    "slug": "papua-new-guinea-ev-guide",
+    "title": "EV Charging in Papua New Guinea: A Practical Guide for Adventurous EV Owners",
+    "description": "Papua New Guinea has virtually zero public EV infrastructure — but that doesn't mean an EV road trip is impossible. Here's how to explore PNG's remote highlands and coastal roads with solar chargers, hotel power, and careful route planning.",
+    "date": "2026-05-25",
+    "tags": [
+      "papua new guinea",
+      "png",
+      "road-trip",
+      "highlands highway",
+      "port moresby",
+      "lae",
+      "solar-charging",
+      "off-grid",
+      "adventure-travel",
+      "developing-market"
+    ]
+  },
+  {
+    "slug": "philippines-ev-charging-guide",
+    "title": "Philippines EV Charging Guide 2026 — Complete Guide to Charging in Manila, Cebu, and Key Routes",
+    "description": "The Philippines EV charging network is growing fast with over 1,500 charging points nationwide. Here's your complete guide to charging stations in Manila and Cebu, the best apps (Evro, Plugshare), key routes, and costs compared to petrol.",
+    "date": "2026-05-14",
+    "tags": [
+      "philippines",
+      "manila",
+      "cebu",
+      "ev-charging",
+      "charging-guide",
+      "ev-travel"
+    ]
+  },
+  {
+    "slug": "philippines-ev-road-trip-manila-baguio-tagaytay-batangas",
+    "title": "Philippines EV Road Trip: Manila to Baguio & Tagaytay — Complete Charging Guide 2026",
+    "description": "The complete guide to EV road trips in the Philippines — from Manila up to Baguio via the NLEX-SCTEX corridor, and south to Tagaytay and Batangas. Covers charging stations, costs, EV-friendly hotels, and essential tips for navigating Luzon by electric car.",
+    "date": "May 24, 2026",
+    "tags": [
+      "philippines",
+      "road-trip",
+      "manila",
+      "baguio",
+      "tagaytay",
+      "batangas",
+      "luzon",
+      "charging-stations",
+      "family-travel"
+    ]
+  },
+  {
+    "slug": "philippines-manila-baguio-ev-road-trip",
+    "title": "Philippines EV Charging Guide 2026: Manila to Baguio Electric Road Trip",
+    "description": "Complete guide to driving an EV from Manila to Baguio in 2026. Charging stops at SM Pampanga, SCTEX lay-bys, and Baguio, with prices, route tips, and family-friendly activities on the summer capital road trip.",
+    "date": "2026-05-12",
+    "tags": [
+      "philippines",
+      "manila",
+      "baguio",
+      "pampanga",
+      "tarlac",
+      "ev-road-trip",
+      "family-travel",
+      "ev-charging-guide",
+      "cross-country"
+    ]
+  },
+  {
+    "slug": "phnom-penh-siem-reap-cambodia-ev-road-trip",
+    "title": "Phnom Penh to Siem Reap EV Road Trip: Angkor Wat by Electric Car [2026]",
+    "description": "Complete guide to driving an EV from Phnom Penh to Siem Reap in 2026. Charging stops along National Highway 6, Angkor Wat temple access, family-friendly activities, and what to expect from Cambodia's growing EV infrastructure.",
+    "date": "2026-05-17",
+    "tags": [
+      "cambodia",
+      "phnom-penh",
+      "siem-reap",
+      "angkor-wat",
+      "ev-road-trip",
+      "southeast-asia",
+      "family-travel",
+      "cambodia-ev"
+    ]
+  },
+  {
+    "slug": "second-life-ev-batteries-home-solar-asia",
+    "title": "Second-Life EV Batteries for Home Solar in Asia — Complete 2026 Guide",
+    "description": "Retired EV batteries with 70-80% capacity can power your home for 5-10 more years. Complete guide to second-life EV battery home storage in Asia — how it works, costs, safety requirements, brands, and where to buy repurposed packs in Japan, China, Thailand, and Singapore.",
+    "date": "2026-05-15",
+    "tags": [
+      "battery",
+      "solar",
+      "home-storage",
+      "second-life",
+      "sustainability",
+      "diy",
+      "cost-saving"
+    ]
+  },
+  {
+    "slug": "seoul-to-busan-ev-road-trip-korea-ultra-fast-charging-corridor",
+    "title": "Seoul to Busan EV Road Trip: Conquer Korea's Ultra-Fast Charging Corridor with Family Stops in Gyeongju and Daegu",
+    "description": "Discover the ultimate EV road trip from Seoul to Busan along Korea's ultra-fast charging corridor. With strategic stops in Gyeongju and Daegu, this guide covers charging stations, costs, family-friendly attractions, and practical tips for a seamless 400 km journey.",
+    "date": "2026-05-15",
+    "tags": [
+      "Seoul to Busan EV road trip",
+      "Korea ultra-fast charging corridor",
+      "EV charging Korea",
+      "family road trip Korea",
+      "Gyeongju EV charging",
+      "Daegu EV charging",
+      "electric vehicle travel Korea",
+      "Korea EV infrastructure"
+    ]
+  },
+  {
+    "slug": "seoul-busan-gyeongju-south-korea-ev-road-trip",
+    "title": "South Korea EV Road Trip: Seoul → Busan → Gyeongju",
+    "description": "A 6-8 day EV road trip through South Korea — from Seoul's futuristic skyline to Busan's coastal temples and Gyeongju's ancient tombs. Excellent charging infrastructure with fast chargers every 50 km on expressways. Korean highway rest stop charging guide included.",
+    "date": "2026-05-18",
+    "tags": [
+      "south-korea",
+      "korea",
+      "seoul",
+      "busan",
+      "gyeongju",
+      "ev-road-trip",
+      "expressway",
+      "highway-rest-stop",
+      "fast-chargers",
+      "family-travel",
+      "culture",
+      "temples"
+    ]
+  },
+  {
+    "slug": "seoul-to-busan-ev-road-trip-family-itinerary",
+    "title": "Seoul to Busan EV Road Trip: 5-Day Family Journey via Gyeongju, Daegu & Korea's Ultra-Fast Charging Corridor",
+    "description": "Korea's 400 km Seoul-Busan corridor is Asia's most advanced EV highway with 350kW E-pit chargers. This 5-day family itinerary includes Gyeongju's ancient temples, Daegu's food markets, and Busan's beaches with detailed charging stops at every leg.",
+    "date": "2026-05-19",
+    "tags": [
+      "south-korea",
+      "seoul",
+      "busan",
+      "gyeongju",
+      "daegu",
+      "ev-road-trip",
+      "family-travel",
+      "e-pit",
+      "korea-ev-highway",
+      "gandong",
+      "weekend-trip"
+    ]
+  },
+  {
+    "slug": "shanghai-hangzhou-ev-road-trip-guide",
+    "title": "Shanghai to Hangzhou EV Road Trip: West Lake, Tea & Charging Guide [2026]",
+    "description": "Complete guide to driving an EV from Shanghai to Hangzhou in 2026. A 175 km journey through the Yangtze River Delta with G60 Expressway charging stops, West Lake parking tips, Longjing tea village visits, and budget costs for families.",
+    "date": "2026-05-17",
+    "tags": [
+      "shanghai",
+      "hangzhou",
+      "china",
+      "ev-road-trip",
+      "yangtze-river-delta",
+      "west-lake",
+      "family-travel",
+      "china-ev"
+    ]
+  },
+  {
+    "slug": "singapore-ev-charging-complete-guide-2026",
+    "title": "Singapore EV Charging Guide 2026: Complete Guide for EV Owners &amp; Visitors",
+    "description": "The ultimate guide to EV charging in Singapore in 2026. Blue SG, SP Group, Charge+, and Shell Recharge coverage map. HDB and condo charging installation, per-kWh costs, best apps, and driving to Johor via the Causeway.",
+    "date": "2026-05-29",
+    "tags": [
+      "singapore",
+      "ev-charging",
+      "guide",
+      "hdb-charging",
+      "condo-charging",
+      "cross-border",
+      "johor",
+      "charging-costs"
+    ]
+  },
+  {
+    "slug": "singapore-best-family-hotels-ev-charging",
+    "title": "5 Best Family-Friendly Hotels in Singapore with EV Charging (2026)",
+    "description": "Planning a family trip to Singapore with your EV? Here are the 5 best family-friendly hotels with EV charging stations, kids' clubs, and family-sized rooms. From Marina Bay Sands to Sentosa, we've got you covered.",
+    "date": "2026-05-15",
+    "tags": [
+      "singapore",
+      "family-travel",
+      "hotels",
+      "ev-charging",
+      "accommodation",
+      "itinerary",
+      "sentosa",
+      "marina-bay"
+    ]
+  },
+  {
+    "slug": "singapore-kuala-lumpur-penang-malaysia-ev-road-trip",
+    "title": "Singapore → KL → Penang EV Road Trip: Extended Malaysia Itinerary",
+    "description": "An 8-10 day EV road trip from Singapore through Malaysia to Penang and back. Complete guide to border crossing with an EV, charging at Johor Bahru, driving the PLUS Highway, and the best EV-friendly stops in KL and Penang.",
+    "date": "2026-05-18",
+    "tags": [
+      "singapore",
+      "malaysia",
+      "kuala-lumpur",
+      "penang",
+      "johor-bahru",
+      "ev-road-trip",
+      "plus-highway",
+      "border-crossing",
+      "family-travel",
+      "culture",
+      "food"
+    ]
+  },
+  {
+    "slug": "singapore-penang-ev-road-trip-guide",
+    "title": "Singapore to Penang EV Road Trip Guide: Best Charging Stops",
+    "description": "Complete EV road trip guide from Singapore to Penang covering charging stops, route planning tips, and family-friendly activities along the way.",
+    "date": "2026-05-13",
+    "tags": [
+      "ev-road-trip",
+      "malaysia",
+      "singapore",
+      "charging-guide",
+      "family-travel"
+    ]
+  },
+  {
+    "slug": "singapore-to-johor-bahru-ev-road-trip-cross-border-charging-guide-for-families",
+    "title": "Singapore to Johor Bahru EV Road Trip: Cross-Border Charging Guide for Families",
+    "description": "Complete guide for driving an EV from Singapore to Johor Bahru. Includes crossing customs, charging at JB malls, and family-friendly activities in Johor.",
+    "date": "2026-05-16",
+    "tags": [
+      "singapore",
+      "johor",
+      "bahru",
+      "road",
+      "trip:",
+      "cross-border",
+      "charging",
+      "guide"
+    ]
+  },
+  {
+    "slug": "singapore-to-kuala-lumpur-by-ev-road-trip",
+    "title": "Singapore to Kuala Lumpur by EV: Complete Family Road Trip Guide with Malacca Stopover",
+    "description": "The ultimate 4-day Singapore to Kuala Lumpur EV itinerary via Malacca. Cross-border tips, PLUS highway charging, kid-friendly attractions, and cost comparisons. Updated for 2026 with new Gentari 180kW stations.",
+    "date": "2026-05-19",
+    "tags": [
+      "singapore",
+      "kuala-lumpur",
+      "malacca",
+      "malaysia",
+      "ev-road-trip",
+      "cross-border",
+      "family-travel",
+      "gentari",
+      "plus-highway",
+      "weekend-trip"
+    ]
+  },
+  {
+    "slug": "singapore-to-kuala-lumpur-ev-family-guide",
+    "title": "Singapore to Kuala Lumpur EV Road Trip — Complete Family Guide",
+    "description": "The complete family guide to driving an EV from Singapore to Kuala Lumpur via Malacca. Charging stops, kid-friendly activities, border crossing tips, and cost comparisons for a stress-free cross-border road trip.",
+    "date": "2026-05-07",
+    "tags": [
+      "singapore",
+      "kuala-lumpur",
+      "malacca",
+      "malaysia",
+      "ev-road-trip",
+      "cross-border",
+      "family-travel",
+      "weekend-trip"
+    ]
+  },
+  {
+    "slug": "solar-panel-ev-charging-guide-asia",
+    "title": "Solar Panels + EV Charging in Asia: Complete Guide for Homeowners [2026]",
+    "description": "Everything you need to know about pairing solar panels with EV charging in Asia. Costs, savings, installation tips, and country-by-country guide for Thailand, Malaysia, Singapore, Japan, and more.",
+    "date": "2026-05-13",
+    "tags": [
+      "solar-panels",
+      "home-charging",
+      "solar-charging",
+      "renewable-energy",
+      "thailand",
+      "malaysia",
+      "singapore",
+      "japan",
+      "australia",
+      "smart-charging",
+      "energy-savings"
+    ]
+  },
+  {
+    "slug": "south-korea-ev-charging-complete-guide-2026",
+    "title": "South Korea EV Charging Guide 2026 — Networks, Highway Stops & Complete Route Planning",
+    "description": "South Korea has one of the densest EV charging networks in Asia. Guide to networks (EV Infra, KEPCO, SK Signet, Hyundai E-Pit), expressway charging at every rest stop, Seoul metro coverage, costs, and the best EV road trips including Seoul-Busan, Seoul-Sokcho, and the southern flavors loop.",
+    "date": "2026-06-02",
+    "tags": [
+      "ev-charging",
+      "south-korea",
+      "seoul",
+      "busan",
+      "kepco",
+      "hyundai-e-pit",
+      "ccs1",
+      "ev-road-trip",
+      "expressway-charging",
+      "korea-travel",
+      "highway",
+      "ev-high-speed"
+    ]
+  },
+  {
+    "slug": "south-korea-ev-charging-network",
+    "title": "South Korea EV Charging Network Guide 2026 — Complete Guide for Foreigners Using Korean Chargers",
+    "description": "South Korea has 100,000+ public charging stations but foreign credit cards are rejected everywhere. Here's your complete guide to charging an EV in Korea as a foreigner — which apps work, payment solutions, and road trip routes.",
+    "date": "2026-05-14",
+    "tags": [
+      "south-korea",
+      "seoul",
+      "busan",
+      "ev-charging",
+      "foreigner-guide",
+      "charging-apps"
+    ]
+  },
+  {
+    "slug": "sri-lanka-ev-charging-guide-2026",
+    "title": "Sri Lanka EV Charging Guide 2026 — Colombo to Kandy, Galle & Beyond",
+    "description": "Complete guide to EV charging in Sri Lanka in 2026. Covers charging stations in Colombo, Kandy, and Galle, rooftop solar integration, road trip routes, costs per kWh, and pro tips for EV owners navigating Sri Lanka's unique energy landscape.",
+    "date": "2026-05-15",
+    "tags": [
+      "sri-lanka",
+      "charging-guide",
+      "colombo",
+      "kandy",
+      "galle",
+      "road-trip"
+    ]
+  },
+  {
+    "slug": "sri-lanka-ev-road-trip-colombo-kandy-galle",
+    "title": "Sri Lanka EV Road Trip: Colombo to Kandy to Galle — Complete Charging Guide 2026",
+    "description": "A complete EV road trip guide from Colombo through Sri Lanka's Cultural Triangle to Kandy, then down to Galle along the southern coast. Covers charging stations, distances, costs, and family-friendly stops.",
+    "date": "May 24, 2026",
+    "tags": [
+      "sri-lanka",
+      "road-trip",
+      "colombo",
+      "kandy",
+      "galle",
+      "charging-stations",
+      "family-travel"
+    ]
+  },
+  {
+    "slug": "summer-ev-road-trip-guide-asia-2026",
+    "title": "Summer EV Road Trip Guide Asia 2026: Best June-August Routes, Heat Management & Family Itineraries",
+    "description": "Maximize your EV road trips across Asia this summer (June-August 2026). Find the best routes for monsoon-season driving, heat-wave battery management, and school-holiday family itineraries with reliable charging.",
+    "date": "2026-06-02",
+    "tags": [
+      "summer",
+      "seasonal-guide",
+      "heat-management",
+      "battery-cooling",
+      "school-holidays",
+      "family-travel",
+      "monsoon",
+      "june",
+      "july",
+      "august",
+      "road-trips",
+      "charging-tips",
+      "asia"
+    ]
+  },
+  {
+    "slug": "survive-broken-ev-chargers-asia",
+    "title": "How to Survive an EV Road Trip When Chargers Are Broken",
+    "description": "Broken chargers are the #1 road trip killer for EV owners in Asia. Here's a practical survival guide — with real stories from Malaysia's Raya 2026 meltdown.",
+    "date": "2026-05-14",
+    "tags": [
+      "road-trip",
+      "charging-tips",
+      "planning",
+      "reliability",
+      "safety"
+    ]
+  },
+  {
+    "slug": "taipei-kaohsiung-ev-family-road-trip-taiwan",
+    "title": "Taiwan West Coast Family EV Road Trip: Taipei to Kaohsiung via Taichung, Sun Moon Lake & Tainan",
+    "description": "The complete family guide to driving Taiwan's west coast by EV from Taipei to Kaohsiung. Day-by-day itinerary via Taichung's science museums, Sun Moon Lake's cable cars, Tainan's historical sites, and Kaohsiung's harbour. Charging stops, family activities, and seasonal tips for Taiwan's EV-friendly highways.",
+    "date": "2026-05-16",
+    "tags": [
+      "taiwan",
+      "taipei",
+      "taichung",
+      "kaohsiung",
+      "tainan",
+      "sun-moon-lake",
+      "ev-road-trip",
+      "family-travel",
+      "taiwan-road-trip",
+      "west-coast",
+      "taroko",
+      "weekend-trip",
+      "family-ev"
+    ]
+  },
+  {
+    "slug": "taiwan-east-coast-taroko-taitung-kenting-ev-road-trip",
+    "title": "Taiwan East Coast EV Road Trip: Taroko Gorge to Taitung & Kenting — Complete 7-Day Itinerary 2026",
+    "description": "Discover Taiwan's stunning east coast by electric car — from the marble cliffs of Taroko Gorge down the Huadong Valley to Taitung, and around the southern tip to Kenting National Park. Complete charging guide, hotel recommendations, costs, and essential EV tips for Taiwan's most scenic route.",
+    "date": "May 24, 2026",
+    "tags": [
+      "taiwan",
+      "east-coast",
+      "taroko",
+      "taitung",
+      "kenting",
+      "huadong-valley",
+      "road-trip",
+      "charging-stations",
+      "scenic-route",
+      "family-travel"
+    ]
+  },
+  {
+    "slug": "taiwan-ev-road-trip-guide",
+    "title": "Taiwan EV Road Trip Guide 2026 — Taipei to Kaohsiung, Hualien Coast, and Charging Infrastructure",
+    "description": "Taiwan's EV infrastructure is booming with over 10,000 charging stations. This guide covers everything from Taipei to Kaohsiung on Highway 1, the stunning Hualien coastal route, and essential apps for navigating Taiwan's charging network.",
+    "date": "2026-05-14",
+    "tags": [
+      "taiwan",
+      "taipei",
+      "kaohsiung",
+      "hualien",
+      "road-trip",
+      "ev-charging",
+      "charging-guide"
+    ]
+  },
+  {
+    "slug": "thailand-bangkok-chiang-mai-ev-guide",
+    "title": "Thailand EV Family Road Trip: Bangkok to Chiang Mai — Complete Route Guide",
+    "description": "The ultimate family guide to driving an EV from Bangkok to Chiang Mai. Detailed charging stops, range planning, kid-friendly attractions, EV rental tips, and cost comparisons for Thailand’s classic northern road trip.",
+    "date": "2026-05-07",
+    "tags": [
+      "thailand",
+      "bangkok",
+      "chiang-mai",
+      "ev-road-trip",
+      "family-travel",
+      "nakhon-sawan",
+      "lampang",
+      "weekend-trip",
+      "charging-guide"
+    ]
+  },
+  {
+    "slug": "thailand-bangkok-chiang-mai-offbeat-ev-road-trip",
+    "title": "Thailand EV Adventure: Bangkok to Chiang Mai via Sukhothai, Lampang & Doi Inthanon",
+    "description": "An off-the-beaten-path EV road trip from Bangkok to Chiang Mai through Sukhothai's ancient temples, Lampang's horse-drawn carriages, and Thailand's highest peak at Doi Inthanon. Charging stops on Highway 11/101, cultural heritage, and practical tips for families.",
+    "date": "2026-05-18",
+    "tags": [
+      "thailand",
+      "bangkok",
+      "chiang-mai",
+      "sukhothai",
+      "lampang",
+      "doi-inthanon",
+      "ev-road-trip",
+      "northern-thailand",
+      "cultural-travel",
+      "family-travel",
+      "thailand-ev",
+      "heritage"
+    ]
+  },
+  {
+    "slug": "thailand-coastal-ev-road-trip",
+    "title": "Thailand Coastal EV Road Trip: Phuket to Hua Hin via Khao Lak (2026)",
+    "description": "Drive 500 km up Thailand's stunning Andaman coast from Phuket to Hua Hin via Khao Lak and Chumphon in your EV. Complete charging guide with PTT EV Station PluZ, EA Anywhere, and hotel chargers for this 3-4 day coastal adventure through tropical beaches, national parks, and seafood towns.",
+    "date": "2026-05-14",
+    "tags": [
+      "thailand",
+      "coastal",
+      "road-trip",
+      "phuket",
+      "hua-hin",
+      "charging-guide",
+      "southeast-asia"
+    ]
   },
   {
     "slug": "thailand-ev-charging-guide-bangkok-chiang-mai-phuket-pattaya",
@@ -255,34 +2019,198 @@
       "road-trip",
       "ev-charging",
       "ea-anywhere"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "5 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
-    "slug": "ccs2-vs-chademo-asia",
-    "title": "CCS2 vs CHAdeMO: Which Charging Standard Should You Pick in Asia?",
-    "description": "Confused about EV charging standards in Asia? We compare CCS2 and CHAdeMO across Japan, China, and Southeast Asia to help you choose the right EV for your travel needs.",
-    "date": "April 20, 2026",
+    "slug": "best-ev-charging-networks-thailand-2026-ptt-ea-mg",
+    "title": "Best EV Charging Networks in Thailand Compared 2026: PTT EV Station PluZ vs EA Anywhere vs MG Charge – Which One Should You Use?",
+    "description": "Planning an EV road trip across Thailand? We compare the top three charging networks – PTT EV Station PluZ, EA Anywhere, and MG Charge – with real station names, costs in THB, charging speeds, and family-friendly tips. Find out which network saves you the most time and money in 2026.",
+    "date": "2026-05-15",
     "tags": [
-      "ccs2",
-      "chademo",
-      "ev-charging",
-      "comparison",
+      "EV charging Thailand",
+      "PTT EV Station PluZ",
+      "EA Anywhere",
+      "MG Charge",
+      "Thailand EV road trip",
+      "EV charging network comparison",
+      "best EV chargers Thailand 2026"
+    ]
+  },
+  {
+    "slug": "thailand-ev-tax-incentives-2026",
+    "title": "Thailand EV Tax Incentives 2026 — Complete Guide to Import Duty Cuts and Excise Tax Reductions",
+    "description": "Thailand's EV tax incentives have shifted in 2026. Here's what buyers need to know about the new excise tax structure, import duty caps, subsidies of 50,000-100,000 THB, and the transition to domestic production mandates under EV3.5.",
+    "date": "2026-05-14",
+    "tags": [
+      "thailand",
+      "ev-tax",
+      "ev-incentives",
+      "ev-buying-guide",
+      "import-duty",
+      "excise-tax",
+      "ev3.5"
+    ]
+  },
+  {
+    "slug": "tokyo-hakone-ev-microtrip",
+    "title": "Tokyo to Hakone EV Microtrip: Weekend Onsen Getaway for Families",
+    "description": "Hakone is the classic weekend escape from Tokyo — and it's surprisingly EV-friendly. Complete guide to charging stations, range planning, and the Hakone Loop by electric car.",
+    "date": "2026-05-07",
+    "tags": [
+      "ev-travel",
+      "microtrips",
       "japan",
-      "china",
-      "southeast-asia"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
+      "hakone",
+      "weekend-trip",
+      "family-ev",
+      "onsen"
+    ]
+  },
+  {
+    "slug": "tokyo-to-osaka-ev-road-trip",
+    "title": "Tokyo to Osaka EV Road Trip: Japan's Golden Route by Electric Car — Complete Family Itinerary",
+    "description": "Japan's iconic Tokyo-Osaka corridor is now fully EV-ready. This 6-day family itinerary covers Nagoya's museums, Kyoto's temples, and Nara's deer park — with detailed charging stops at every leg. Costs, rental tips, and highway station guides included.",
+    "date": "2026-05-19",
+    "tags": [
+      "japan",
+      "tokyo",
+      "osaka",
+      "kyoto",
+      "nagoya",
+      "nara",
+      "ev-road-trip",
+      "family-travel",
+      "tomei-expressway",
+      "shizuoka",
+      "japan-ev-rental",
+      "weekend-trip"
+    ]
+  },
+  {
+    "slug": "top-10-budget-friendly-evs-for-asian-families-2026",
+    "title": "Top 10 Budget-Friendly EVs for Asian Families 2026",
+    "description": "Ranking the 10 most affordable EVs for families in Asia. Includes price in local currencies, range, safety rating, and family-friendly features.",
+    "date": "2026-05-16",
+    "tags": [
+      "top",
+      "ev-ranking",
+      "top-10"
+    ]
+  },
+  {
+    "slug": "top-10-ev-charging-apps-in-asia-compared-2026-which-one-should-you-use",
+    "title": "Top 10 EV Charging Apps in Asia Compared 2026: Which One Should You Use?",
+    "description": "Comparing ChargePlus, PlugShare, State Grid e-Charging, TELD, PTT EV Station PluZ, EA Anywhere, NIO Power, Tesla App, and more. Features, coverage, and user reviews.",
+    "date": "2026-05-16",
+    "tags": [
+      "charging",
+      "apps",
+      "asia",
+      "compared",
+      "2026:",
+      "which",
+      "should",
+      "use?"
+    ]
+  },
+  {
+    "slug": "top-10-ev-friendly-destinations-japan",
+    "title": "Top 10 EV-Friendly Destinations in Japan for Families 2026",
+    "description": "From Tokyo to Hokkaido, we rank the best Japanese destinations for families driving electric vehicles in 2026. Charging infrastructure, family activities, and EV-friendly hotels compared.",
+    "date": "2026-05-16",
+    "tags": [
+      "japan",
+      "ev-ranking",
+      "top-10",
+      "family",
+      "destinations"
+    ]
+  },
+  {
+    "slug": "top-10-ev-friendly-destinations-malaysia-families-2026",
+    "title": "Top 10 EV-Friendly Destinations in Malaysia for Families 2026",
+    "description": "From KL to Cameron Highlands, explore Malaysia top 10 EV-friendly destinations for families in 2026 with charging stations by ChargeSini, Gentari, and JomCharge.",
+    "date": "2026-05-16",
+    "tags": [
+      "malaysia",
+      "ev-ranking",
+      "top-10",
+      "family",
+      "destinations"
+    ]
+  },
+  {
+    "slug": "top-10-ev-friendly-destinations-thailand",
+    "title": "Top 10 EV-Friendly Destinations in Thailand for Families 2026",
+    "description": "Thailand's EV charging network is booming. We rank the top 10 destinations for family EV road trips — from Bangkok's chargers to Phuket's beach resorts and Chiang Mai's mountain routes.",
+    "date": "2026-05-16",
+    "tags": [
+      "thailand",
+      "ev-ranking",
+      "top-10",
+      "family",
+      "destinations"
+    ]
+  },
+  {
+    "slug": "top-10-ev-friendly-hotels-asia-families",
+    "title": "Top 10 EV-Friendly Hotels in Asia for Families",
+    "description": "The best family-friendly hotels in Asia with EV charging — from Bangkok to Bali, KL to Singapore. Detailed reviews with charger types, family amenities, and booking tips for an electric family getaway.",
+    "date": "2026-05-07",
+    "tags": [
+      "hotels",
+      "ev-charging",
+      "family-travel",
+      "bangkok",
+      "kuala-lumpur",
+      "singapore",
+      "bali",
+      "phuket",
+      "penang",
+      "chiang-mai"
+    ]
+  },
+  {
+    "slug": "top-10-ev-friendly-hotels-asia",
+    "title": "Top 10 EV-Friendly Hotels in Asia — Best Stays With Destination Charging",
+    "description": "Discover Asia's top 10 EV-friendly hotels with reliable destination charging. From luxury resorts in Bali to business hotels in Singapore, find your perfect EV-ready stay.",
+    "date": "2026-05-16",
+    "tags": [
+      "hotels",
+      "charging",
+      "accommodation",
+      "ranking",
+      "top-10",
+      "luxury",
+      "family-travel",
+      "asia"
+    ]
+  },
+  {
+    "slug": "top-10-ev-friendly-hotels-bali",
+    "title": "Top 10 EV-Friendly Hotels in Bali: Best Family Stays with EV Charging 2026",
+    "description": "Bali's best EV-friendly hotels ranked by charging speed, reliability, and family-friendliness. From Seminyak's chic beachfront to Ubud's jungle retreats and Nusa Dua's luxury resorts — find your perfect EV-ready stay on the Island of the Gods.",
+    "date": "2026-05-24",
+    "tags": [
+      "bali",
+      "indonesia",
+      "hotels",
+      "ev-charging",
+      "ranking",
+      "top-10",
+      "family-travel",
+      "seminyak",
+      "ubud",
+      "canggu",
+      "nusa-dua",
+      "sanur",
+      "uluwatu",
+      "jimbaran",
+      "kuta",
+      "lovina",
+      "ev-travel",
+      "destination-charging"
+    ]
   },
   {
     "slug": "top-10-ev-friendly-hotels-hong-kong-best-stays-with-ev-charging-2026",
@@ -305,13 +2233,28 @@
       "destination-charging",
       "luxury-travel",
       "business-travel"
-    ],
-    "category": "Rankings",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "9 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
+  },
+  {
+    "slug": "top-10-ev-friendly-hotels-in-malaysia-best-family-stays-with-ev-charging-2026",
+    "title": "Top 10 EV-Friendly Hotels in Malaysia: Best Family Stays with EV Charging 2026",
+    "description": "Malaysia's best EV-friendly hotels ranked by charging speed, reliability, and family-friendliness. From KL luxury towers to Penang beachfront resorts and Langkawi rainforest retreats — find your perfect EV-ready stay.",
+    "date": "2026-05-18",
+    "tags": [
+      "malaysia",
+      "hotels",
+      "ev-charging",
+      "ranking",
+      "top-10",
+      "family-travel",
+      "kuala-lumpur",
+      "penang",
+      "langkawi",
+      "johor",
+      "borneo",
+      "ev-travel",
+      "destination-charging"
+    ]
   },
   {
     "slug": "top-10-ev-friendly-hotels-japan-best-stays-with-ev-charging-2026",
@@ -340,13 +2283,7 @@
       "luxury-travel",
       "business-travel",
       "japan-ev"
-    ],
-    "category": "Rankings",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
     "slug": "top-10-ev-friendly-hotels-south-korea-best-stays-with-ev-charging-2026",
@@ -372,943 +2309,29 @@
       "luxury-travel",
       "business-travel",
       "korea-ev"
-    ],
-    "category": "Rankings",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "9 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
-    "slug": "ev-charging-network-comparison-southeast-asia-charge-plus-shell-plugshare",
-    "title": "EV Charging Network Comparison Southeast Asia: Charge+ vs Shell Recharge vs PlugShare (2026 Guide)",
-    "description": "Compare the 3 major EV charging networks in Southeast Asia — Charge+ (Singapore/Malaysia), Shell Recharge (Thailand/Philippines), and PlugShare (regional). Coverage, pricing, reliability, and app experience for each network.",
-    "date": "2026-05-26",
+    "slug": "top-10-ev-friendly-hotels-thailand-2026",
+    "title": "Top 10 EV-Friendly Hotels in Thailand (2026 Guide)",
+    "description": "Thailand's best EV-friendly hotels ranked by charging speed, reliability, and family-friendliness. From Bangkok luxury to Phuket beachfront and Chiang Mai mountain retreats — find your perfect EV-ready stay.",
+    "date": "2026-05-17",
     "tags": [
-      "ev-charging",
-      "southeast-asia",
-      "charge-plus",
-      "shell-recharge",
-      "plugshare",
-      "charging-network-comparison",
-      "ev-apps",
       "thailand",
-      "singapore",
-      "malaysia",
-      "philippines"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-charging-east-timor-timor-leste-complete-guide",
-    "title": "EV Charging in East Timor (Timor-Leste): A Practical Guide for Electric Vehicle Owners",
-    "description": "East Timor has virtually zero public EV charging infrastructure — but that doesn't mean an electric vehicle is impossible. From hotel wall sockets in Dili to solar charging at eco-lodges, cross-border tips from Indonesia, and practical advice on what EVs can actually work in the world's newest nation.",
-    "date": "2026-05-25",
-    "tags": [
-      "east-timor",
-      "timor-leste",
-      "ev-charging",
-      "charging-guide",
-      "southeast-asia",
-      "dili",
-      "indonesia-cross-border"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-vs-hybrid-vs-petrol-southeast-asia-tco-2026",
-    "title": "EV vs Hybrid vs Petrol in Southeast Asia 2026 — Total Cost of Ownership Comparison",
-    "description": "Should you buy an EV, hybrid, or petrol car in Southeast Asia? We compare total cost of ownership across Singapore, Thailand, Malaysia, Indonesia, Philippines, and Vietnam with real numbers. BYD Dolphin vs Honda City vs Yaris Cross — the data will surprise you.",
-    "date": "2026-05-25",
-    "tags": [
-      "ev-vs-hybrid",
-      "ev-vs-petrol",
-      "total-cost-of-ownership",
-      "comparison",
-      "buying-guide",
-      "thailand",
-      "singapore",
-      "malaysia",
-      "indonesia",
-      "vietnam",
-      "philippines",
-      "byd",
-      "tesla",
-      "cost-comparison"
-    ],
-    "category": "buying-guide",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "hokkaido-ev-road-trip-guide",
-    "title": "Hokkaido EV Road Trip Guide 2026: Complete Itinerary, Charging Stations & Essential Tips for Japan's Northern Frontier",
-    "description": "Japan's northern island of Hokkaido is a road trip paradise — volcanic caldera lakes, lavender fields, national parks, and world-class seafood. This complete EV guide covers charging infrastructure along the main routes, winter vs summer driving tips, the best EV-friendly ryokan, and a sample 10-day itinerary from Sapporo to Shiretoko.",
-    "date": "2026-05-25",
-    "tags": [
-      "japan",
-      "hokkaido",
-      "ev-road-trip",
-      "charging-guide",
-      "sapporo",
-      "winter-driving",
-      "national-parks",
-      "onsen",
-      "family-travel"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "mongolia-ev-charging-guide-2026",
-    "title": "Mongolia EV Charging Guide 2026: Ulaanbaatar to the Gobi Desert — Asia's Next EV Frontier",
-    "description": "Explore Mongolia by EV in 2026: from Ulaanbaatar's first DC fast chargers to Gobi Desert eco-lodges with solar charging. Complete guide to charging infrastructure, EV-friendly hotels, 4WD EVs for off-road adventure, and practical tips for the world's least densely populated country.",
-    "date": "2026-05-25",
-    "tags": [
-      "mongolia",
-      "ulaanbaatar",
-      "gobi-desert",
-      "ev-road-trip",
-      "off-road-ev",
-      "solar-charging",
-      "adventure-travel",
-      "eco-tourism",
-      "asia-frontier",
-      "4x4-ev"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "13 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "papua-new-guinea-ev-guide",
-    "title": "EV Charging in Papua New Guinea: A Practical Guide for Adventurous EV Owners",
-    "description": "Papua New Guinea has virtually zero public EV infrastructure — but that doesn't mean an EV road trip is impossible. Here's how to explore PNG's remote highlands and coastal roads with solar chargers, hotel power, and careful route planning.",
-    "date": "2026-05-25",
-    "tags": [
-      "papua new guinea",
-      "png",
-      "road-trip",
-      "highlands highway",
-      "port moresby",
-      "lae",
-      "solar-charging",
-      "off-grid",
-      "adventure-travel",
-      "developing-market"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-charging-india-road-trip-complete-guide-2026",
-    "title": "EV Charging in India: Complete Road Trip Guide for 2026 — Networks, Costs & Routes",
-    "description": "India's EV charging network is expanding fast. From Mumbai to Delhi, Bangalore to Chennai, this guide covers everything you need for an EV road trip: charging networks, costs per kWh, must-have apps, route planning, and the best EV-friendly hotels along the way.",
-    "date": "2026-05-24",
-    "tags": [
-      "india",
-      "ev-charging",
-      "road-trip",
-      "mumbai",
-      "delhi",
-      "bangalore",
-      "chennai",
-      "charging-network",
-      "tata-power",
-      "chargezone",
-      "ev-road-trip",
-      "family-travel",
-      "asia"
-    ],
-    "category": "",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "16 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-charging-shopping-malls-asia",
-    "title": "EV Charging at Shopping Malls in Asia: Where to Charge While You Shop (2026)",
-    "description": "The complete guide to EV charging at shopping malls across Asia. Best malls with charging stations in Singapore, Thailand, Malaysia, Hong Kong, and Japan. Free parking, charger speeds, and mall-by-mall breakdown.",
-    "date": "2026-05-24",
-    "tags": [
-      "ev-charging",
-      "shopping-malls",
-      "asia",
-      "singapore",
-      "thailand",
-      "malaysia",
-      "hong-kong",
-      "japan",
-      "public-charging"
-    ],
-    "category": "",
-    "author": "Captain",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "indonesia-java-jakarta-yogyakarta-ev-road-trip",
-    "title": "Trans-Java EV Road Trip: Jakarta to Yogyakarta — Indonesia's First EV Highway",
-    "description": "Drive 540 km from Jakarta to Yogyakarta on the Trans-Java Toll Road in an EV. Family-focused guide to charging stations, kid-friendly stops in Bandung, Semarang, and Yogyakarta, EV-friendly hotels, cost breakdowns for a family of 4, and practical tips for Indonesia's premier EV highway.",
-    "date": "2026-05-24",
-    "tags": [
-      "indonesia",
-      "java",
-      "jakarta",
-      "yogyakarta",
-      "trans-java",
-      "ev-road-trip",
-      "toll-road",
-      "borobudur",
-      "family-travel",
-      "wuling"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "jakarta-surabaya-trans-java-ev-road-trip-2026",
-    "title": "Jakarta to Surabaya EV Road Trip: Complete Trans-Java Toll Guide 2026",
-    "description": "Drive 780km across Java from Jakarta to Surabaya via the Trans-Java Toll Road in an EV. Complete guide to charging stations, stopover cities, costs, and practical tips for Indonesia's ultimate electric road trip.",
-    "date": "2026-05-24",
-    "tags": [
-      "indonesia",
-      "jakarta",
-      "surabaya",
-      "semarang",
-      "solo",
-      "cirebon",
-      "trans-java",
-      "ev-road-trip",
-      "family-travel",
-      "toll-road"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "top-10-ev-friendly-hotels-bali",
-    "title": "Top 10 EV-Friendly Hotels in Bali: Best Family Stays with EV Charging 2026",
-    "description": "Bali's best EV-friendly hotels ranked by charging speed, reliability, and family-friendliness. From Seminyak's chic beachfront to Ubud's jungle retreats and Nusa Dua's luxury resorts — find your perfect EV-ready stay on the Island of the Gods.",
-    "date": "2026-05-24",
-    "tags": [
-      "bali",
-      "indonesia",
       "hotels",
       "ev-charging",
       "ranking",
       "top-10",
       "family-travel",
-      "seminyak",
-      "ubud",
-      "canggu",
-      "nusa-dua",
-      "sanur",
-      "uluwatu",
-      "jimbaran",
-      "kuta",
-      "lovina",
-      "ev-travel",
-      "destination-charging"
-    ],
-    "category": "Rankings",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "9 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "vietnam-ev-charging-guide-2026",
-    "title": "Vietnam EV Charging Guide 2026: Road Tripping from Hanoi to Ho Chi Minh City with an Electric Car",
-    "description": "Complete guide to driving an EV from Hanoi to Ho Chi Minh City along Highway QL1A in 2026. VinFast V-Green and CCS2 charging stops, Hai Van Pass route, Mekong Delta exploration, and a family-friendly itinerary covering every major city.",
-    "date": "2026-05-24",
-    "tags": [
-      "vietnam",
-      "ev-charging",
-      "road-trip",
-      "hanoi",
-      "ho-chi-minh-city",
-      "da-nang",
-      "nha-trang",
-      "hoi-an",
-      "vinfast",
-      "v-green",
-      "evone",
-      "mekong-delta",
-      "family-travel",
-      "hai-van-pass",
-      "ql1a"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "15 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "best-evs-asia-road-trips-2026",
-    "title": "Best EVs for Asia Road Trips 2026: Top Models, Range Comparisons & Country-by-Country Guide",
-    "description": "The best EVs for Asia road trips in 2026, from budget-friendly city cars to long-range SUVs. Compare models available in Thailand, Malaysia, Singapore, Japan, and South Korea with real-world range data and country-specific buying tips.",
-    "date": "2026-05-23",
-    "tags": [
-      "ev-comparison",
-      "ev-road-trip",
-      "ev-models",
-      "thailand",
-      "malaysia",
-      "singapore",
-      "japan",
-      "south-korea",
-      "buying-guide",
-      "long-range-ev",
-      "budget-ev"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-road-trip-cost-comparison-asia",
-    "title": "EV Road Trip Cost Comparison Across Asia: Thailand vs Malaysia vs Japan vs India",
-    "description": "Detailed cost comparison of EV road trips across Asia. Compare charging costs, hotel prices, tolls, and food for road trips in Thailand, Malaysia, Japan, India, and Singapore. Find the most affordable EV road trip destination in Asia.",
-    "date": "2026-05-22",
-    "tags": [
-      "ev-road-trip",
-      "cost-comparison",
-      "budget-travel",
-      "thailand",
-      "malaysia",
-      "japan",
-      "india",
-      "singapore",
-      "travel-tips",
-      "ev-charging-costs"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "family-ev-road-trip-asia-ultimate-guide",
-    "title": "The Ultimate Guide to Family EV Road Trips in Asia: Routes, Tips & Essential Gear",
-    "description": "Everything you need to plan the perfect family EV road trip in Asia. Kid-friendly routes, charging with children, must-pack items, apps for navigation, and the best family stops across Thailand, Malaysia, Japan, and India.",
-    "date": "2026-05-22",
-    "tags": [
-      "family-travel",
-      "ev-road-trip",
-      "kids",
-      "thailand",
-      "malaysia",
-      "japan",
-      "india",
-      "parenting",
-      "travel-tips",
-      "packing-list",
-      "family-friendly"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "japan-ev-road-trip-guide-2026",
-    "title": "Japan EV Road Trip Guide 2026: Complete Route Planner, Charging Networks & Must-See Stops",
-    "description": "Comprehensive guide to EV road trips in Japan for 2026. Covers charging networks (CHAdeMO vs CCS2), best routes from Tokyo to Hakone, Osaka to Kyoto, and Hokkaido, rental EV companies, toll costs, and essential apps.",
-    "date": "2026-05-22",
-    "tags": [
-      "japan",
-      "ev-road-trip",
-      "japan-travel",
-      "tokyo",
-      "osaka",
-      "hokkaido",
-      "kyoto",
-      "hakone",
-      "rental-ev",
-      "chademo",
-      "travel-guide"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "bangkok-chiang-mai-ev-road-trip-itinerary",
-    "title": "Bangkok to Chiang Mai EV Road Trip: 5-Day Northern Thailand Family Adventure Through Lampang, Tak & Nakhon Sawan",
-    "description": "Thailand's classic 700 km northern route in an EV, with family-friendly stops in Nakhon Sawan, Tak's mountain passes, and Lampang's hidden temples. Detailed charging at PTT stations, cost comparison vs flying, and the best kid-friendly attractions along Highway 1.",
-    "date": "2026-05-19",
-    "tags": [
-      "thailand",
       "bangkok",
+      "phuket",
       "chiang-mai",
-      "lampang",
-      "nakhon-sawan",
-      "tak",
-      "ev-road-trip",
-      "family-travel",
-      "northern-thailand",
-      "highway-1",
-      "ptt-ev",
-      "weekend-trip"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "hong-kong-to-macau-ev-ferry-driving-itinerary",
-    "title": "Hong Kong to Macau by EV: Ferry + Driving Itinerary — Complete Guide for Families",
-    "description": "Can you take your EV from Hong Kong to Macau? Yes! This unique 3-day itinerary covers the car ferry crossing, Macau's UNESCO historic centre, Coloane's beaches, and EV charging on the Cotai Strip. Cross-border permits, ferry booking, and driving tips included.",
-    "date": "2026-05-19",
-    "tags": [
-      "hong-kong",
-      "macau",
-      "china",
-      "ev-road-trip",
-      "family-travel",
-      "ferry",
-      "cross-border",
-      "cotai-strip",
-      "taipa",
-      "coloane",
-      "weekend-trip",
-      "macau-ev-charging"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "11 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "seoul-to-busan-ev-road-trip-family-itinerary",
-    "title": "Seoul to Busan EV Road Trip: 5-Day Family Journey via Gyeongju, Daegu & Korea's Ultra-Fast Charging Corridor",
-    "description": "Korea's 400 km Seoul-Busan corridor is Asia's most advanced EV highway with 350kW E-pit chargers. This 5-day family itinerary includes Gyeongju's ancient temples, Daegu's food markets, and Busan's beaches with detailed charging stops at every leg.",
-    "date": "2026-05-19",
-    "tags": [
-      "south-korea",
-      "seoul",
-      "busan",
-      "gyeongju",
-      "daegu",
-      "ev-road-trip",
-      "family-travel",
-      "e-pit",
-      "korea-ev-highway",
-      "gandong",
-      "weekend-trip"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "13 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "singapore-to-kuala-lumpur-by-ev-road-trip",
-    "title": "Singapore to Kuala Lumpur by EV: Complete Family Road Trip Guide with Malacca Stopover",
-    "description": "The ultimate 4-day Singapore to Kuala Lumpur EV itinerary via Malacca. Cross-border tips, PLUS highway charging, kid-friendly attractions, and cost comparisons. Updated for 2026 with new Gentari 180kW stations.",
-    "date": "2026-05-19",
-    "tags": [
-      "singapore",
-      "kuala-lumpur",
-      "malacca",
-      "malaysia",
-      "ev-road-trip",
-      "cross-border",
-      "family-travel",
-      "gentari",
-      "plus-highway",
-      "weekend-trip"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "13 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "tokyo-to-osaka-ev-road-trip",
-    "title": "Tokyo to Osaka EV Road Trip: Japan's Golden Route by Electric Car — Complete Family Itinerary",
-    "description": "Japan's iconic Tokyo-Osaka corridor is now fully EV-ready. This 6-day family itinerary covers Nagoya's museums, Kyoto's temples, and Nara's deer park — with detailed charging stops at every leg. Costs, rental tips, and highway station guides included.",
-    "date": "2026-05-19",
-    "tags": [
-      "japan",
-      "tokyo",
-      "osaka",
-      "kyoto",
-      "nagoya",
-      "nara",
-      "ev-road-trip",
-      "family-travel",
-      "tomei-expressway",
-      "shizuoka",
-      "japan-ev-rental",
-      "weekend-trip"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "bali-kuta-ubud-sanur-loop-family-ev-road-trip",
-    "title": "Bali Family EV Loop: Kuta → Ubud → Sanur in 5 Days",
-    "description": "A family-focused 5-day EV loop around Bali's best family destinations: Kuta's water park and beaches, Ubud's monkey forest and rice terraces, and Sanur's calm shores. Only ~100km total driving with charging at hotels, SPKLU stations, and malls. Zero range anxiety, maximum family fun.",
-    "date": "2026-05-18",
-    "tags": [
-      "indonesia",
-      "bali",
-      "kuta",
-      "ubud",
-      "sanur",
-      "ev-road-trip",
-      "family-travel",
-      "loop",
-      "5-day-itinerary",
-      "bali-ev",
-      "family-friendly"
-    ],
-    "category": "",
-    "author": "Captain",
-    "image": "",
-    "readingTime": "11 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "bali-kuta-ubud-sanur-uluwatu-ev-road-trip",
-    "title": "Bali EV Road Trip: Kuta → Ubud → Sanur → Uluwatu Loop",
-    "description": "A 5-7 day EV tour around Bali — from Kuta's surf beaches to Ubud's rice terraces, Sanur's calm shores, and Uluwatu's cliff-top temples. Charging at hotels and resorts, range considerations on Bali's narrow roads, and the best EV-friendly itinerary.",
-    "date": "2026-05-18",
-    "tags": [
-      "indonesia",
-      "bali",
-      "kuta",
-      "ubud",
-      "sanur",
-      "uluwatu",
-      "ev-road-trip",
-      "loop",
-      "island",
-      "family-travel",
-      "beaches",
-      "temples"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "bangkok-pattaya-rayong-ev-road-trip",
-    "title": "Bangkok → Pattaya → Rayong: A 4-Day Family EV Beach Road Trip in Thailand",
-    "description": "A short-and-sweet 4-day EV road trip from Bangkok to Pattaya and Rayong. Short hops (~150km each segment), abundant charging at PTT stations and hotels, and family-packed activities: water parks, beach clubs, aquariums, and fruit farms. Perfect for a long weekend getaway.",
-    "date": "2026-05-18",
-    "tags": [
-      "thailand",
-      "bangkok",
+      "krabi",
       "pattaya",
-      "rayong",
-      "ev-road-trip",
-      "beach-trip",
-      "family-travel",
-      "4-day-itinerary",
-      "gulf-of-thailand",
-      "thailand-ev"
-    ],
-    "category": "",
-    "author": "Captain",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "best-ev-hotels-vietnam-free-charging-2026",
-    "title": "Best EV Hotels in Vietnam with Free Charging 2026",
-    "description": "Vietnam's hotel EV charging scene is booming. From Hanoi's Old Quarter to Da Nang's beaches and Ho Chi Minh City's skyscrapers — the best hotels where your EV charges free.",
-    "date": "2026-05-18",
-    "tags": [
-      "vietnam",
-      "ev-hotels",
-      "ev-charging",
-      "free-charging",
-      "hanoi",
-      "ho-chi-minh-city",
-      "da-nang",
-      "hotels",
-      "family-travel"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "best-evs-longest-range-road-trip-thailand-2026",
-    "title": "Best EVs with the Longest Range for Road Trips in Thailand 2026",
-    "description": "Planning a Thai road trip in an EV in 2026? Here are the electric cars that will take you from Bangkok to Chiang Mai, Phuket, or Isaan without range anxiety.",
-    "date": "2026-05-18",
-    "tags": [
-      "thailand",
-      "ev-road-trip",
-      "ev-ranking",
-      "best-evs",
-      "long-range",
-      "bangkok-chiang-mai",
-      "thailand-ev-charging"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-road-trip-singapore-to-kuala-lumpur-charging-stops",
-    "title": "EV Road Trip from Singapore to Kuala Lumpur — Complete Charging Stops Guide 2026",
-    "description": "The complete guide to driving an EV from Singapore to Kuala Lumpur. Every charging stop, border crossing tip, and hotel recommendation for a stress-free 350 km journey.",
-    "date": "2026-05-18",
-    "tags": [
-      "singapore",
-      "kuala-lumpur",
-      "malaysia",
-      "cross-border",
-      "ev-road-trip",
-      "charging-guide",
-      "north-south-highway",
-      "plus-highway"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "hanoi-sapa-ha-long-bay-vietnam-ev-road-trip",
-    "title": "Northern Vietnam EV Road Trip: Hanoi → Sapa → Ha Long Bay",
-    "description": "An epic 7-10 day EV road trip through northern Vietnam — from Hanoi's bustling streets to Sapa's terraced rice fields and Ha Long Bay's limestone karsts. Complete charging guide at VinFast stations, hotel charging tips, and scenic mountain drives.",
-    "date": "2026-05-18",
-    "tags": [
-      "vietnam",
-      "hanoi",
-      "sapa",
-      "ha-long-bay",
-      "ev-road-trip",
-      "northern-vietnam",
-      "vinfast",
-      "scenic-drives",
-      "family-travel",
-      "mountains"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "16 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "japan-tokyo-osaka-chubu-ev-road-trip",
-    "title": "Japan's Chubu Region EV Road Trip: Tokyo to Osaka via the Japanese Alps",
-    "description": "An alternative to the Tokaido Golden Route — drive from Tokyo to Osaka through Japan's Chubu region, taking in the Japanese Alps, Matsumoto Castle, Kanazawa's geisha district, and Gifu's historic villages. With charging stops, family-friendly activities, and onsen recommendations.",
-    "date": "2026-05-18",
-    "tags": [
-      "japan",
-      "chubu",
-      "tokyo",
-      "nagano",
-      "matsumoto",
-      "kanazawa",
-      "takayama",
-      "gifu",
-      "osaka",
-      "ev-road-trip",
-      "japanese-alps",
-      "family-travel",
-      "onsen"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "kl-penang-cameron-highlands-ev-road-trip",
-    "title": "KL → Penang → Cameron Highlands: A 5-Day Family EV Road Trip Through Malaysia",
-    "description": "A family-friendly 5-day electric road trip from Kuala Lumpur to Penang and up to the cool Cameron Highlands. ~350km total with Level 2 chargers at highway rest stops and hotels. Includes Batu Caves, Penang Hill street food, tea plantation tours, and practical charging tips for Malaysia's west coast.",
-    "date": "2026-05-18",
-    "tags": [
-      "malaysia",
-      "kuala-lumpur",
-      "penang",
-      "cameron-highlands",
-      "ev-road-trip",
-      "family-travel",
-      "5-day-itinerary",
-      "west-coast-malaysia",
-      "malaysia-ev"
-    ],
-    "category": "",
-    "author": "Captain",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "malaysia-kl-penang-ev-road-trip-guide",
-    "title": "Malaysia EV Road Trip Guide: Kuala Lumpur to Penang",
-    "description": "A complete EV road trip guide from Kuala Lumpur to Penang covering charging infrastructure on the PLUS Highway, must-see stops in Ipoh and Taiping, practical tips for range management, and a 2-day family itinerary.",
-    "date": "2026-05-18",
-    "tags": [
-      "malaysia",
-      "kuala-lumpur",
-      "penang",
-      "ev-road-trip",
-      "plus-highway",
-      "ipoh",
-      "taiping",
-      "charging-infrastructure",
-      "family-travel",
-      "practical-tips",
-      "weekend-trip",
-      "gentari",
-      "jomcharge",
-      "chargesini"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "13 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "malaysia-kl-penang-extended-ev-road-trip",
-    "title": "Kuala Lumpur to Penang Extended EV Road Trip: Ipoh Detours, Taiping Heritage & Langkawi Ferry",
-    "description": "Take the KL to Penang EV road trip further with a 5-day extended itinerary. Charging stops at Ipoh's white coffee cafes, Taiping's colonial heritage, Cameron Highlands cool air, and a bonus ferry to Langkawi. Practical tips for families, cost breakdown, and backup charging strategy.",
-    "date": "2026-05-18",
-    "tags": [
-      "malaysia",
-      "kuala-lumpur",
-      "penang",
-      "ipoh",
-      "taiping",
-      "cameron-highlands",
-      "langkawi",
-      "ev-road-trip",
-      "plus-highway",
-      "family-travel",
-      "gentari",
-      "jomcharge",
-      "chargesini"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "15 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "mumbai-pune-goa-india-ev-road-trip",
-    "title": "West India EV Road Trip: Mumbai → Pune → Lonavala → Goa",
-    "description": "A 10-12 day EV road trip through western India — from Mumbai's Gateway of India to Pune's cultural heritage, Lonavala's hill station charm, and Goa's beaches. Complete guide to EV charging on Indian highways, range anxiety management, and tips for India's growing EV charging network.",
-    "date": "2026-05-18",
-    "tags": [
-      "india",
-      "mumbai",
-      "pune",
-      "lonavala",
-      "goa",
-      "ev-road-trip",
-      "western-india",
-      "charging-network",
-      "range-anxiety",
-      "family-travel",
-      "beaches",
-      "expressway"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "17 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "seoul-busan-gyeongju-south-korea-ev-road-trip",
-    "title": "South Korea EV Road Trip: Seoul → Busan → Gyeongju",
-    "description": "A 6-8 day EV road trip through South Korea — from Seoul's futuristic skyline to Busan's coastal temples and Gyeongju's ancient tombs. Excellent charging infrastructure with fast chargers every 50 km on expressways. Korean highway rest stop charging guide included.",
-    "date": "2026-05-18",
-    "tags": [
-      "south-korea",
-      "korea",
-      "seoul",
-      "busan",
-      "gyeongju",
-      "ev-road-trip",
-      "expressway",
-      "highway-rest-stop",
-      "fast-chargers",
-      "family-travel",
-      "culture",
-      "temples"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "15 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "singapore-kuala-lumpur-penang-malaysia-ev-road-trip",
-    "title": "Singapore → KL → Penang EV Road Trip: Extended Malaysia Itinerary",
-    "description": "An 8-10 day EV road trip from Singapore through Malaysia to Penang and back. Complete guide to border crossing with an EV, charging at Johor Bahru, driving the PLUS Highway, and the best EV-friendly stops in KL and Penang.",
-    "date": "2026-05-18",
-    "tags": [
-      "singapore",
-      "malaysia",
-      "kuala-lumpur",
-      "penang",
-      "johor-bahru",
-      "ev-road-trip",
-      "plus-highway",
-      "border-crossing",
-      "family-travel",
-      "culture",
-      "food"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "thailand-bangkok-chiang-mai-offbeat-ev-road-trip",
-    "title": "Thailand EV Adventure: Bangkok to Chiang Mai via Sukhothai, Lampang & Doi Inthanon",
-    "description": "An off-the-beaten-path EV road trip from Bangkok to Chiang Mai through Sukhothai's ancient temples, Lampang's horse-drawn carriages, and Thailand's highest peak at Doi Inthanon. Charging stops on Highway 11/101, cultural heritage, and practical tips for families.",
-    "date": "2026-05-18",
-    "tags": [
-      "thailand",
-      "bangkok",
-      "chiang-mai",
-      "sukhothai",
-      "lampang",
-      "doi-inthanon",
-      "ev-road-trip",
-      "northern-thailand",
-      "cultural-travel",
-      "family-travel",
-      "thailand-ev",
-      "heritage"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "top-10-ev-friendly-hotels-in-malaysia-best-family-stays-with-ev-charging-2026",
-    "title": "Top 10 EV-Friendly Hotels in Malaysia: Best Family Stays with EV Charging 2026",
-    "description": "Malaysia's best EV-friendly hotels ranked by charging speed, reliability, and family-friendliness. From KL luxury towers to Penang beachfront resorts and Langkawi rainforest retreats — find your perfect EV-ready stay.",
-    "date": "2026-05-18",
-    "tags": [
-      "malaysia",
-      "hotels",
-      "ev-charging",
-      "ranking",
-      "top-10",
-      "family-travel",
-      "kuala-lumpur",
-      "penang",
-      "langkawi",
-      "johor",
-      "borneo",
+      "honda-hua-hin",
       "ev-travel",
       "destination-charging"
-    ],
-    "category": "Rankings",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
     "slug": "top-10-ev-friendly-hotels-vietnam-best-family-stays-with-ev-charging-2026",
@@ -1331,531 +2354,7 @@
       "phu-quoc",
       "ev-travel",
       "destination-charging"
-    ],
-    "category": "Rankings",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "top-electric-cars-family-travel-malaysia-2026",
-    "title": "Top Electric Cars for Family Travel in Malaysia 2026",
-    "description": "From KL to Penang, Langkawi to Cameron Highlands — the best EVs for Malaysian families combining safety, space, and range.",
-    "date": "2026-05-18",
-    "tags": [
-      "malaysia",
-      "family-travel",
-      "ev-ranking",
-      "family-car",
-      "ev-road-trip",
-      "kuala-lumpur",
-      "penang",
-      "ev-family"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "where-to-charge-ev-bali-complete-guide",
-    "title": "Where to Charge Your EV in Bali — Complete Guide to the Island's Charging Network 2026",
-    "description": "Every charging station in Bali mapped and reviewed. From Kuta to Ubud, Uluwatu to Amed — know exactly where to plug in on your electric island adventure.",
-    "date": "2026-05-18",
-    "tags": [
-      "bali",
-      "indonesia",
-      "ev-charging",
-      "charging-guide",
-      "bali-ev-charging",
-      "ev-road-trip",
-      "ubud",
-      "kuta",
-      "seminyak",
-      "uluwatu"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "bali-ev-road-trip-complete-family-guide",
-    "title": "Bali EV Road Trip: Complete Family Guide to Driving Around the Island of the Gods",
-    "description": "The ultimate family guide to driving an EV in Bali. Discover the best routes from Seminyak to Ubud, Uluwatu, and Amed with charging stops, temple visits, and cost-saving tips for a stress-free electric holiday.",
-    "date": "2026-05-17",
-    "tags": [
-      "bali",
-      "indonesia",
-      "ev-road-trip",
-      "family-travel",
-      "ubud",
-      "seminyak",
-      "uluwatu",
-      "amed",
-      "bali-ev-charging"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "bangkok-to-phuket-ev-road-trip-guide",
-    "title": "Bangkok to Phuket EV Road Trip Guide: Charging Stops, Costs & Family Tips [2026]",
-    "description": "Complete guide to driving an EV from Bangkok to Phuket in 2026. Route planning along Highway 4, charging stops at PEA Volta stations, cost comparison vs flying, and family-friendly island activities.",
-    "date": "2026-05-17",
-    "tags": [
-      "bangkok",
-      "phuket",
-      "thailand",
-      "ev-road-trip",
-      "highway-4",
-      "family-travel",
-      "southern-thailand",
-      "thailand-ev"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "11 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "china-ev-charging-guide-foreigners-2026",
-    "title": "China EV Charging Guide for Foreign Tourists 2026: Renting, Apps, WeChat, and City-by-City Breakdown",
-    "description": "Step-by-step guide for foreign tourists driving an EV in China. Covers renting an EV, getting a temporary Chinese license, activating WeChat/Alipay without a Chinese bank account, using NIO/XPeng networks, CCS2-vs-GB/T adapters, and city guides for Shanghai, Beijing, and Guangzhou.",
-    "date": "2026-05-17",
-    "tags": [
-      "china",
-      "foreigner-guide",
-      "ev-charging",
-      "shanghai",
-      "beijing",
-      "guangzhou",
-      "wechat-pay",
-      "alipay",
-      "gb-t-connector",
-      "ev-rental",
-      "tourism"
-    ],
-    "category": "",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "chinese-family-ev-road-trip-spring-festival-2026",
-    "title": "Chinese Families Are Going Viral for EV Road Trips in 2026 — Here's How You Can Too",
-    "description": "A family from Hangzhou drove 2,942km across China during Spring Festival 2026 in their electric car and the internet went wild. Here's why EV road trips are the new trend in China — and how your family can get in on the action.",
-    "date": "2026-05-17",
-    "tags": [
-      "china",
-      "family-travel",
-      "road-trips",
-      "spring-festival",
-      "trending",
-      "ev-road-trip",
-      "yangtze-river-delta",
-      "cross-border",
-      "charging-infrastructure",
-      "green-travel"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-road-trip-malaysia-singapore-2026",
-    "title": "Singapore to Kuala Lumpur & Penang: Complete 2026 EV Road Trip Guide",
-    "description": "The ultimate guide to driving your EV from Singapore through Kuala Lumpur to Penang in 2026. Includes border crossing tips, charging stops, range planning, hotel recommendations with chargers, and total cost breakdowns in SGD/MYR.",
-    "date": "2026-05-17",
-    "tags": [
-      "singapore",
-      "malaysia",
-      "kuala-lumpur",
-      "penang",
-      "road-trip",
-      "cross-border",
-      "charging-guide",
-      "north-south-expressway",
-      "family-travel"
-    ],
-    "category": "",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "osaka-kyoto-nara-kansai-ev-road-trip",
-    "title": "Osaka, Kyoto & Nara EV Road Trip: The Perfect Kansai Electric Getaway",
-    "description": "Explore Japan's cultural heart by electric car. This complete guide covers EV charging across the Kansai region — Osaka, Kyoto, and Nara — with CHAdeMO stations, budget hotels, family-friendly temples, and cost comparisons vs Japan Rail.",
-    "date": "2026-05-17",
-    "tags": [
-      "osaka",
-      "kyoto",
-      "nara",
-      "japan",
-      "kansai",
-      "ev-road-trip",
-      "chademo",
-      "family-travel",
-      "japan-ev"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "phnom-penh-siem-reap-cambodia-ev-road-trip",
-    "title": "Phnom Penh to Siem Reap EV Road Trip: Angkor Wat by Electric Car [2026]",
-    "description": "Complete guide to driving an EV from Phnom Penh to Siem Reap in 2026. Charging stops along National Highway 6, Angkor Wat temple access, family-friendly activities, and what to expect from Cambodia's growing EV infrastructure.",
-    "date": "2026-05-17",
-    "tags": [
-      "cambodia",
-      "phnom-penh",
-      "siem-reap",
-      "angkor-wat",
-      "ev-road-trip",
-      "southeast-asia",
-      "family-travel",
-      "cambodia-ev"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "9 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "shanghai-hangzhou-ev-road-trip-guide",
-    "title": "Shanghai to Hangzhou EV Road Trip: West Lake, Tea & Charging Guide [2026]",
-    "description": "Complete guide to driving an EV from Shanghai to Hangzhou in 2026. A 175 km journey through the Yangtze River Delta with G60 Expressway charging stops, West Lake parking tips, Longjing tea village visits, and budget costs for families.",
-    "date": "2026-05-17",
-    "tags": [
-      "shanghai",
-      "hangzhou",
-      "china",
-      "ev-road-trip",
-      "yangtze-river-delta",
-      "west-lake",
-      "family-travel",
-      "china-ev"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "9 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "top-10-ev-friendly-hotels-thailand-2026",
-    "title": "Top 10 EV-Friendly Hotels in Thailand (2026 Guide)",
-    "description": "Thailand's best EV-friendly hotels ranked by charging speed, reliability, and family-friendliness. From Bangkok luxury to Phuket beachfront and Chiang Mai mountain retreats — find your perfect EV-ready stay.",
-    "date": "2026-05-17",
-    "tags": [
-      "thailand",
-      "hotels",
-      "ev-charging",
-      "ranking",
-      "top-10",
-      "family-travel",
-      "bangkok",
-      "phuket",
-      "chiang-mai",
-      "krabi",
-      "pattaya",
-      "honda-hua-hin",
-      "ev-travel",
-      "destination-charging"
-    ],
-    "category": "Rankings",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "best-luxury-ev-hotels-resorts-asia",
-    "title": "10 Best Luxury EV Hotels & Resorts in Asia — Butler Service & Destination Charging",
-    "description": "The ultimate guide to luxury hotels in Asia with world-class EV charging. Butler charging service, private destination chargers, and five-star eco-conscious stays.",
-    "date": "2026-05-16",
-    "tags": [
-      "luxury",
-      "hotels",
-      "resorts",
-      "butler-service",
-      "destination-charging",
-      "ranking",
-      "premium",
-      "asia"
-    ],
-    "category": "rankings",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "jakarta-to-yogyakarta-ev-road-trip-javas-cultural-heart-by-electric-car",
-    "title": "Jakarta to Yogyakarta EV Road Trip: Java's Cultural Heart by Electric Car",
-    "description": "Drive 550km from Jakarta to Yogyakarta across Java in an EV. Charging stops along the Trans-Java Toll Road, family-friendly attractions, and cultural highlights.",
-    "date": "2026-05-16",
-    "tags": [
-      "jakarta",
-      "yogyakarta",
-      "road",
-      "trip:",
-      "java's",
-      "cultural",
-      "heart",
-      "electric"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "japan-tokyo-osaka-ev-family-road-trip",
-    "title": "Japan's Golden Route by EV: Tokyo to Osaka Family Road Trip via Hakone, Nagoya & Kyoto",
-    "description": "The complete family guide to driving Japan's legendary Tokaido corridor by EV from Tokyo to Osaka via Hakone, Nagoya, and Kyoto. Charging stops, kid-friendly temples, onsen stops, and how to navigate Japan's ultra-fast CHAdeMO network with children.",
-    "date": "2026-05-16",
-    "tags": [
-      "japan",
-      "tokyo",
-      "hakone",
-      "nagoya",
-      "kyoto",
-      "osaka",
-      "ev-road-trip",
-      "family-travel",
-      "japan-road-trip",
-      "tokaido",
-      "golden-route",
-      "weekend-trip",
-      "international-visitors"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "manila-to-baguio-ev-road-trip-philippines-cordillera-mountain-route",
-    "title": "Manila to Baguio EV Road Trip: Philippines' Cordillera Mountain Route",
-    "description": "Complete guide to driving an EV from Manila to Baguio City. 250km through the Cordillera mountains with charging stops at Marcos Highway rest areas.",
-    "date": "2026-05-16",
-    "tags": [
-      "manila",
-      "baguio",
-      "road",
-      "trip:",
-      "philippines'",
-      "cordillera",
-      "mountain",
-      "route"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "singapore-to-johor-bahru-ev-road-trip-cross-border-charging-guide-for-families",
-    "title": "Singapore to Johor Bahru EV Road Trip: Cross-Border Charging Guide for Families",
-    "description": "Complete guide for driving an EV from Singapore to Johor Bahru. Includes crossing customs, charging at JB malls, and family-friendly activities in Johor.",
-    "date": "2026-05-16",
-    "tags": [
-      "singapore",
-      "johor",
-      "bahru",
-      "road",
-      "trip:",
-      "cross-border",
-      "charging",
-      "guide"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "taipei-kaohsiung-ev-family-road-trip-taiwan",
-    "title": "Taiwan West Coast Family EV Road Trip: Taipei to Kaohsiung via Taichung, Sun Moon Lake & Tainan",
-    "description": "The complete family guide to driving Taiwan's west coast by EV from Taipei to Kaohsiung. Day-by-day itinerary via Taichung's science museums, Sun Moon Lake's cable cars, Tainan's historical sites, and Kaohsiung's harbour. Charging stops, family activities, and seasonal tips for Taiwan's EV-friendly highways.",
-    "date": "2026-05-16",
-    "tags": [
-      "taiwan",
-      "taipei",
-      "taichung",
-      "kaohsiung",
-      "tainan",
-      "sun-moon-lake",
-      "ev-road-trip",
-      "family-travel",
-      "taiwan-road-trip",
-      "west-coast",
-      "taroko",
-      "weekend-trip",
-      "family-ev"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "top-10-budget-friendly-evs-for-asian-families-2026",
-    "title": "Top 10 Budget-Friendly EVs for Asian Families 2026",
-    "description": "Ranking the 10 most affordable EVs for families in Asia. Includes price in local currencies, range, safety rating, and family-friendly features.",
-    "date": "2026-05-16",
-    "tags": [
-      "top",
-      "ev-ranking",
-      "top-10"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "top-10-ev-charging-apps-in-asia-compared-2026-which-one-should-you-use",
-    "title": "Top 10 EV Charging Apps in Asia Compared 2026: Which One Should You Use?",
-    "description": "Comparing ChargePlus, PlugShare, State Grid e-Charging, TELD, PTT EV Station PluZ, EA Anywhere, NIO Power, Tesla App, and more. Features, coverage, and user reviews.",
-    "date": "2026-05-16",
-    "tags": [
-      "charging",
-      "apps",
-      "asia",
-      "compared",
-      "2026:",
-      "which",
-      "should",
-      "use?"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "top-10-ev-friendly-destinations-japan",
-    "title": "Top 10 EV-Friendly Destinations in Japan for Families 2026",
-    "description": "From Tokyo to Hokkaido, we rank the best Japanese destinations for families driving electric vehicles in 2026. Charging infrastructure, family activities, and EV-friendly hotels compared.",
-    "date": "2026-05-16",
-    "tags": [
-      "japan",
-      "ev-ranking",
-      "top-10",
-      "family",
-      "destinations"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "top-10-ev-friendly-destinations-malaysia-families-2026",
-    "title": "Top 10 EV-Friendly Destinations in Malaysia for Families 2026",
-    "description": "From KL to Cameron Highlands, explore Malaysia top 10 EV-friendly destinations for families in 2026 with charging stations by ChargeSini, Gentari, and JomCharge.",
-    "date": "2026-05-16",
-    "tags": [
-      "malaysia",
-      "ev-ranking",
-      "top-10",
-      "family",
-      "destinations"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "top-10-ev-friendly-destinations-thailand",
-    "title": "Top 10 EV-Friendly Destinations in Thailand for Families 2026",
-    "description": "Thailand's EV charging network is booming. We rank the top 10 destinations for family EV road trips — from Bangkok's chargers to Phuket's beach resorts and Chiang Mai's mountain routes.",
-    "date": "2026-05-16",
-    "tags": [
-      "thailand",
-      "ev-ranking",
-      "top-10",
-      "family",
-      "destinations"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "top-10-ev-friendly-hotels-asia",
-    "title": "Top 10 EV-Friendly Hotels in Asia — Best Stays With Destination Charging",
-    "description": "Discover Asia's top 10 EV-friendly hotels with reliable destination charging. From luxury resorts in Bali to business hotels in Singapore, find your perfect EV-ready stay.",
-    "date": "2026-05-16",
-    "tags": [
-      "hotels",
-      "charging",
-      "accommodation",
-      "ranking",
-      "top-10",
-      "luxury",
-      "family-travel",
-      "asia"
-    ],
-    "category": "rankings",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
     "slug": "top-10-ev-friendly-luxury-resorts-asia",
@@ -1869,13 +2368,7 @@
       "family",
       "hotels",
       "resorts"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
     "slug": "top-10-ev-road-trips-families-asia",
@@ -1891,13 +2384,7 @@
       "charging-stops",
       "asia",
       "ev-road-trip"
-    ],
-    "category": "rankings",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
     "slug": "top-10-longest-range-evs-for-asian-road-trips-2026",
@@ -1908,13 +2395,7 @@
       "top",
       "ev-ranking",
       "top-10"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
     "slug": "top-5-ev-road-trips-in-thailand-every-family-should-try",
@@ -1925,13 +2406,114 @@
       "top",
       "ev-ranking",
       "top-10"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
+  },
+  {
+    "slug": "top-5-evs-family-road-trips-asia-2026",
+    "title": "Top 5 EVs for Family Road Trips in Asia 2026",
+    "description": "Best EVs for family road trips across Asia in 2026 — BYD Atto 3, Tesla Model Y, MG4, NIO ET5 Touring, and XPeng G6 compared. Range, cargo space, child seat fit, charging speed, and real-world pricing across SE Asian markets.",
+    "date": "2026-05-12",
+    "tags": [
+      "ev-comparison",
+      "family-travel",
+      "byd-atto-3",
+      "tesla-model-y",
+      "mg4",
+      "nio",
+      "xpeng",
+      "car-buying",
+      "road-trip"
+    ]
+  },
+  {
+    "slug": "top-electric-cars-family-travel-malaysia-2026",
+    "title": "Top Electric Cars for Family Travel in Malaysia 2026",
+    "description": "From KL to Penang, Langkawi to Cameron Highlands — the best EVs for Malaysian families combining safety, space, and range.",
+    "date": "2026-05-18",
+    "tags": [
+      "malaysia",
+      "family-travel",
+      "ev-ranking",
+      "family-car",
+      "ev-road-trip",
+      "kuala-lumpur",
+      "penang",
+      "ev-family"
+    ]
+  },
+  {
+    "slug": "vietnam-da-nang-hoi-an-hue-central-vietnam-ev-road-trip",
+    "title": "Central Vietnam EV Road Trip: Da Nang to Hoi An to Hue — Heritage Route Charging Guide 2026",
+    "description": "The ultimate 5-7 day EV road trip through central Vietnam's cultural heart — from Da Nang's beaches through ancient Hoi An to the imperial citadels of Hue. Complete charging guide for VinFast stations, Hai Van Pass tips, and heritage hotel recommendations.",
+    "date": "May 24, 2026",
+    "tags": [
+      "vietnam",
+      "da-nang",
+      "hoi-an",
+      "hue",
+      "central-vietnam",
+      "ev-road-trip",
+      "heritage",
+      "vinfast",
+      "hai-van-pass",
+      "beaches",
+      "family-travel",
+      "culture"
+    ]
+  },
+  {
+    "slug": "vietnam-ev-charging-guide-2026",
+    "title": "Vietnam EV Charging Guide 2026: Road Tripping from Hanoi to Ho Chi Minh City with an Electric Car",
+    "description": "Complete guide to driving an EV from Hanoi to Ho Chi Minh City along Highway QL1A in 2026. VinFast V-Green and CCS2 charging stops, Hai Van Pass route, Mekong Delta exploration, and a family-friendly itinerary covering every major city.",
+    "date": "2026-05-24",
+    "tags": [
+      "vietnam",
+      "ev-charging",
+      "road-trip",
+      "hanoi",
+      "ho-chi-minh-city",
+      "da-nang",
+      "nha-trang",
+      "hoi-an",
+      "vinfast",
+      "v-green",
+      "evone",
+      "mekong-delta",
+      "family-travel",
+      "hai-van-pass",
+      "ql1a"
+    ]
+  },
+  {
+    "slug": "vietnam-ev-family-guide",
+    "title": "Vietnam EV Guide for Families: Hanoi to Ho Chi Minh by Electric Car",
+    "description": "Planning an EV family road trip across Vietnam? From Hanoi's Old Quarter to Ho Chi Minh City's bustling streets, here's everything you need to know about charging infrastructure, scenic routes, and kid-friendly stops along the way.",
+    "date": "2026-05-07",
+    "tags": [
+      "vietnam",
+      "ev-road-trips",
+      "family-travel",
+      "southeast-asia",
+      "hanoi",
+      "ho-chi-minh-city",
+      "da-nang",
+      "charging-guide"
+    ]
+  },
+  {
+    "slug": "vietnam-ev-market-guide",
+    "title": "Vietnam EV Market Guide 2026 — VinFast Dominance, Charging Network, and What Expats Need to Know",
+    "description": "Vietnam's EV market is dominated by VinFast with a nationwide charging network across 34 provinces. This guide covers everything expats need to know: how to charge, which apps to use, costs, and the growing non-VinFast options.",
+    "date": "2026-05-14",
+    "tags": [
+      "vietnam",
+      "hanoi",
+      "ho-chi-minh-city",
+      "vinfast",
+      "ev-market",
+      "charging-guide",
+      "expat-guide"
+    ]
   },
   {
     "slug": "vietnam-ev-road-trip-ho-chi-minh-city-to-da-lat-complete-guide",
@@ -1946,13 +2528,7 @@
       "city",
       "complete",
       "guide"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
     "slug": "vietnam-ho-chi-minh-da-nang-ev-family-road-trip",
@@ -1973,1381 +2549,24 @@
       "coastal-route",
       "weekend-trip",
       "da-lat"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
+    ]
   },
   {
-    "slug": "asia-ev-battery-recycling-guide-2026",
-    "title": "Asia EV Battery Recycling Guide 2026 — Regulations, Facilities & What Happens to Old EV Batteries",
-    "description": "With 120+ GWh of EV batteries reaching end-of-life globally in 2026, Asia faces a battery waste emergency. This guide covers China's new recycling regulations, Japan's closed-loop system, South Korea's EPR laws, and what SEA countries are doing about old EV batteries.",
-    "date": "2026-05-15",
+    "slug": "where-to-charge-ev-bali-complete-guide",
+    "title": "Where to Charge Your EV in Bali — Complete Guide to the Island's Charging Network 2026",
+    "description": "Every charging station in Bali mapped and reviewed. From Kuta to Ubud, Uluwatu to Amed — know exactly where to plug in on your electric island adventure.",
+    "date": "2026-05-18",
     "tags": [
-      "battery-recycling",
-      "environment",
-      "sustainability",
-      "china",
-      "japan",
-      "south-korea",
-      "regulations"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "bangkok-to-krabi-ev-road-trip-southern-thailand",
-    "title": "Bangkok to Krabi EV Road Trip: Southern Thailand Adventure with Charging Stops in Chumphon and Surat Thani",
-    "description": "Embark on an unforgettable EV road trip from Bangkok to Krabi, covering 820 km through Southern Thailand. This guide details essential charging stops in Chumphon and Surat Thani, including station names, costs, and family-friendly tips to make your journey smooth and affordable.",
-    "date": "2026-05-15",
-    "tags": [
-      "Bangkok to Krabi EV",
-      "Thailand EV road trip",
-      "Chumphon charging",
-      "Surat Thani EV charging",
-      "Southern Thailand travel",
-      "family EV trip",
-      "Krabi EV guide"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "beijing-shanghai-ev-road-trip",
-    "title": "Beijing to Shanghai EV Road Trip: China Express Charging Corridor",
-    "description": "Drive 1200km from Beijing to Shanghai in an EV on China G2 expressway with complete charging guide and family stops.",
-    "date": "2026-05-15",
-    "tags": [
-      "china",
-      "beijing",
-      "shanghai",
-      "ev-road-trip",
-      "express-charging"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "cambodia-ev-road-trip-angkor-wat",
-    "title": "Cambodia EV Road Trip — Phnom Penh to Siem Reap (Angkor Wat) in an Electric Car",
-    "description": "Can you drive an EV from Phnom Penh to Siem Reap to see Angkor Wat? Yes — with 200+ charging stations nationwide and the new expressway charging corridor, Cambodia's iconic road trip is now EV-friendly. Complete route guide, charging stops, and costs.",
-    "date": "2026-05-15",
-    "tags": [
-      "cambodia",
-      "road-trip",
-      "ev-travel",
-      "angkor-wat",
-      "phnom-penh",
-      "siem-reap"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "chennai-to-pondicherry-ev-road-trip-east-coast-road",
-    "title": "Chennai to Pondicherry EV Road Trip: India's Emerging EV Corridor Along the East Coast Road",
-    "description": "Discover the ultimate electric vehicle road trip from Chennai to Pondicherry along the scenic East Coast Road. This guide covers charging stations, costs, distances, and family-friendly tips for a hassle-free EV journey.",
-    "date": "2026-05-15",
-    "tags": [
-      "EV road trip",
-      "Chennai to Pondicherry",
-      "East Coast Road",
-      "India EV corridor",
-      "electric vehicle charging",
-      "family travel",
-      "Tamil Nadu EV charging"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-fleet-conversion-southeast-asia-2026",
-    "title": "EV Fleet Conversion Guide 2026 — Switching Delivery & Logistics Fleets to Electric in Southeast Asia",
-    "description": "FedEx, Lazada, and Grab are electrifying their fleets across Southeast Asia. Complete guide to EV fleet conversion for logistics and delivery businesses — costs, TCO analysis, charging depot setup, battery swapping, and real case studies from Singapore, Thailand, and Vietnam.",
-    "date": "2026-05-15",
-    "tags": [
-      "fleet",
-      "logistics",
-      "delivery",
-      "commercial",
-      "business-guide",
-      "singapore",
-      "thailand",
-      "vietnam"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "hanoi-sapa-ev-road-trip-vietnam",
-    "title": "Hanoi to Sapa EV Road Trip — Conquering Vietnam's Mountain Roads in an Electric Car",
-    "description": "Can an EV handle the 320 km Hanoi to Sapa mountain drive through Vietnam's northern highlands? Route guide with charging stops at Phu Tho and Lao Cai, elevation challenges, regen braking strategies, cost comparison vs petrol, and pro tips for the Hoang Lien Son mountains.",
-    "date": "2026-05-15",
-    "tags": [
-      "vietnam",
-      "road-trip",
-      "sapa",
-      "hanoi",
-      "ev-travel",
-      "mountains"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "hong-kong-guangzhou-ev-road-trip",
-    "title": "Hong Kong to Guangzhou EV Road Trip: Cross-Border Driving Through Greater Bay Area",
-    "description": "Complete guide to driving an EV from Hong Kong to Guangzhou via Shenzhen. Covers cross-border permits, charging stations on the G4/G15 expressway, and family activities in Guangzhou.",
-    "date": "2026-05-15",
-    "tags": [
-      "hong-kong",
-      "guangzhou",
-      "shenzhen",
-      "china",
-      "ev-road-trip",
-      "cross-border"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "kuala-lumpur-to-malacca-ev-road-trip",
-    "title": "Kuala Lumpur to Malacca EV Road Trip: A Short Family Adventure to Malaysia's Historic City",
-    "description": "Planning a family EV road trip from Kuala Lumpur to Malacca? This guide covers the best charging stations, costs, distances, and kid-friendly stops along the way. Discover how to make your journey smooth, affordable, and unforgettable.",
-    "date": "2026-05-15",
-    "tags": [
-      "EV road trip",
-      "Kuala Lumpur to Malacca",
-      "Malaysia EV charging",
-      "family EV travel",
-      "charging stations Malaysia",
-      "electric vehicle road trip",
-      "Malacca EV guide",
-      "EV family tips"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "laos-ev-charging-guide-2026",
-    "title": "Laos EV Charging Guide 2026 — Vientiane, Luang Prabang, and the Slow-Charging Reality",
-    "description": "Laos has 14,000+ EVs and 126 charging stations but 65 are in Vientiane alone. Can you drive an EV from Vientiane to Luang Prabang? The reality of Laos' charging network, costs, solar integration, and what to expect on the road.",
-    "date": "2026-05-15",
-    "tags": [
-      "laos",
-      "charging-guide",
-      "vientiane",
-      "luang-prabang",
-      "road-trip",
-      "solar"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "myanmar-ev-market-guide-2026",
-    "title": "Myanmar EV Market Guide 2026 — Import Rules, Charging Stations & Best EVs",
-    "description": "Myanmar's EV market is booming with 17,600+ registered EVs and duty-free imports until March 2026. From Yangon charging stations to conversion kits and SKD assembly rules, here is everything you need to know about EV ownership in Myanmar.",
-    "date": "2026-05-15",
-    "tags": [
-      "myanmar",
-      "ev-market",
-      "import-rules",
-      "charging-guide",
-      "yangon"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "second-life-ev-batteries-home-solar-asia",
-    "title": "Second-Life EV Batteries for Home Solar in Asia — Complete 2026 Guide",
-    "description": "Retired EV batteries with 70-80% capacity can power your home for 5-10 more years. Complete guide to second-life EV battery home storage in Asia — how it works, costs, safety requirements, brands, and where to buy repurposed packs in Japan, China, Thailand, and Singapore.",
-    "date": "2026-05-15",
-    "tags": [
-      "battery",
-      "solar",
-      "home-storage",
-      "second-life",
-      "sustainability",
-      "diy",
-      "cost-saving"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "seoul-to-busan-ev-road-trip-korea-ultra-fast-charging-corridor",
-    "title": "Seoul to Busan EV Road Trip: Conquer Korea's Ultra-Fast Charging Corridor with Family Stops in Gyeongju and Daegu",
-    "description": "Discover the ultimate EV road trip from Seoul to Busan along Korea's ultra-fast charging corridor. With strategic stops in Gyeongju and Daegu, this guide covers charging stations, costs, family-friendly attractions, and practical tips for a seamless 400 km journey.",
-    "date": "2026-05-15",
-    "tags": [
-      "Seoul to Busan EV road trip",
-      "Korea ultra-fast charging corridor",
-      "EV charging Korea",
-      "family road trip Korea",
-      "Gyeongju EV charging",
-      "Daegu EV charging",
-      "electric vehicle travel Korea",
-      "Korea EV infrastructure"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "singapore-best-family-hotels-ev-charging",
-    "title": "5 Best Family-Friendly Hotels in Singapore with EV Charging (2026)",
-    "description": "Planning a family trip to Singapore with your EV? Here are the 5 best family-friendly hotels with EV charging stations, kids' clubs, and family-sized rooms. From Marina Bay Sands to Sentosa, we've got you covered.",
-    "date": "2026-05-15",
-    "tags": [
-      "singapore",
-      "family-travel",
-      "hotels",
-      "ev-charging",
-      "accommodation",
-      "itinerary",
-      "sentosa",
-      "marina-bay"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "9 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "sri-lanka-ev-charging-guide-2026",
-    "title": "Sri Lanka EV Charging Guide 2026 — Colombo to Kandy, Galle & Beyond",
-    "description": "Complete guide to EV charging in Sri Lanka in 2026. Covers charging stations in Colombo, Kandy, and Galle, rooftop solar integration, road trip routes, costs per kWh, and pro tips for EV owners navigating Sri Lanka's unique energy landscape.",
-    "date": "2026-05-15",
-    "tags": [
-      "sri-lanka",
-      "charging-guide",
-      "colombo",
-      "kandy",
-      "galle",
-      "road-trip"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "best-ev-charging-networks-thailand-2026-ptt-ea-mg",
-    "title": "Best EV Charging Networks in Thailand Compared 2026: PTT EV Station PluZ vs EA Anywhere vs MG Charge – Which One Should You Use?",
-    "description": "Planning an EV road trip across Thailand? We compare the top three charging networks – PTT EV Station PluZ, EA Anywhere, and MG Charge – with real station names, costs in THB, charging speeds, and family-friendly tips. Find out which network saves you the most time and money in 2026.",
-    "date": "2026-05-15",
-    "tags": [
-      "EV charging Thailand",
-      "PTT EV Station PluZ",
-      "EA Anywhere",
-      "MG Charge",
-      "Thailand EV road trip",
-      "EV charging network comparison",
-      "best EV chargers Thailand 2026"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "asean-ccs2-cross-border-ev-travel-2026",
-    "title": "ASEAN Unifies EV Charging: CCS-2 Standard Enables Cross-Border Road Trips in 2026",
-    "description": "ASEAN has adopted CCS-2 as the unified EV charging standard, opening up cross-border road trips across Thailand, Malaysia, Singapore, and beyond. Complete guide to the new standard, charging networks, and border crossing tips.",
-    "date": "2026-05-14",
-    "tags": [
-      "ev-charging",
-      "cross-border-travel",
-      "asean",
-      "ccs2",
-      "thailand",
-      "malaysia",
-      "singapore",
-      "road-trip",
-      "ev-travel"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "china-ev-guide-for-foreigners",
-    "title": "China EV Guide for Foreigners 2026 — How to Charge, Apps, Payment, and Cross-Border Driving Tips",
-    "description": "China is the world's largest EV market with 10M+ chargers. But as a foreigner, charging isn't straightforward. This guide covers GB/T connectors, Alipay/WeChat Pay setup, the essential apps (TELD, State Grid), and cross-border driving from HK/Macau.",
-    "date": "2026-05-14",
-    "tags": [
-      "china",
-      "foreigner-guide",
-      "ev-charging",
-      "cross-border",
-      "gb-t-connector",
-      "wechat-pay"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "6 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "china-yangtze-river-delta-ev-road-trip",
-    "title": "Shanghai to Hangzhou to Nanjing: Yangtze River Delta EV Road Trip 2026",
-    "description": "The ultimate China EV road trip through the Yangtze River Delta: Shanghai, Hangzhou, Nanjing. 800 km, 14,000+ State Grid chargers, and the best grandcation destinations for skip-gen travel in 2026.",
-    "date": "2026-05-14",
-    "tags": [
-      "china",
-      "shanghai",
-      "hangzhou",
-      "nanjing",
-      "yangtze-river-delta",
-      "ev-road-trip",
-      "skip-gen-travel",
-      "grandcation",
-      "family-travel",
-      "highway",
-      "luxury"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "electric-motorcycles-vs-evs-southeast-asia",
-    "title": "Electric Motorcycles vs EVs in Southeast Asia — Practical Comparison for Urban Commuting in 2026",
-    "description": "Southeast Asia has the world's highest motorcycle penetration. Should you go for an electric motorcycle or a full EV for city commuting? We compare costs, range, practicality, and total ownership across Thailand, Vietnam, Indonesia, and Malaysia.",
-    "date": "2026-05-14",
-    "tags": [
-      "electric-motorcycle",
-      "ev-comparison",
-      "urban-commuting",
-      "thailand",
-      "vietnam",
-      "indonesia",
-      "malaysia"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "6 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-battery-health-tropical-climates",
-    "title": "EV Battery Health Guide for Tropical Climates — How Heat and Humidity Affect Degradation in SEA",
-    "description": "Living in Southeast Asia's heat and humidity affects your EV battery differently than temperate climates. Learn how to maximize battery life with proven strategies for tropical conditions — from charging habits to thermal management.",
-    "date": "2026-05-14",
-    "tags": [
-      "ev-battery",
-      "battery-health",
-      "tropical-climate",
-      "heat",
-      "humidity",
-      "maintenance",
-      "sea"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "6 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-charging-at-airports-asia",
-    "title": "EV Charging at Airports in Asia — Top 10 Airports with EV Charging for Travelers in 2026",
-    "description": "More Asian airports are adding EV charging for travelers. From Singapore Changi to Tokyo Narita, here are the top 10 airports with the best EV charging facilities, parking rates, charger types, and tips for EV owners leaving their car at the airport.",
-    "date": "2026-05-14",
-    "tags": [
-      "airport",
-      "ev-charging",
-      "travel",
-      "parking",
-      "singapore",
-      "tokyo",
-      "seoul"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "5 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-charging-bangladesh-nepal-south-asia-guide",
-    "title": "EV Charging in Bangladesh & Nepal 2026: The New South Asian EV Frontier",
-    "description": "Bangladesh and Nepal are emerging as unexpected EV markets in South Asia. Here's the complete guide to charging infrastructure, government incentives, and road trip potential in 2026.",
-    "date": "2026-05-14",
-    "tags": [
-      "Bangladesh EV",
-      "Nepal EV",
-      "South Asia EV",
-      "Himalayan EV",
-      "Dhaka EV",
-      "Kathmandu EV",
-      "off-grid EV",
-      "developing market EV"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "7 min",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-charging-reliability-asia-2026",
-    "title": "EV Charging Reliability in Asia: Which Countries Have Working Chargers?",
-    "description": "From India's 50% non-functional rate to Singapore's gold standard — a country-by-country guide to which Asian nations have working EV chargers and which don't.",
-    "date": "2026-05-14",
-    "tags": [
-      "reliability",
-      "country-guides",
-      "planning",
-      "charging-tips"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-cross-border-asean-thailand-malaysia-singapore-guide",
-    "title": "EV Cross-Border Travel in ASEAN 2026: Thailand, Malaysia & Singapore Guide",
-    "description": "Planning to drive your EV across ASEAN borders? Here's everything you need to know about cross-border EV travel between Thailand, Malaysia, and Singapore in 2026.",
-    "date": "2026-05-14",
-    "tags": [
-      "cross-border EV travel",
-      "ASEAN EV travel",
-      "Thailand EV",
-      "Malaysia EV",
-      "Singapore EV",
-      "CCS2",
-      "SEA road trip",
-      "charging network"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-insurance-guide-asia",
-    "title": "EV Insurance Guide Asia 2026 — What You Need for Comprehensive Coverage in Different Countries",
-    "description": "EV insurance in Asia varies wildly by country. From mandatory battery coverage in Thailand to EV-specific policies in Singapore, here's a complete guide to comprehensive EV insurance across Asia's key markets and what to look for in a policy.",
-    "date": "2026-05-14",
-    "tags": [
-      "ev-insurance",
-      "insurance-guide",
-      "thailand",
-      "singapore",
-      "malaysia",
-      "comprehensive-coverage",
-      "battery"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "6 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-towing-breakdown-asia-guide",
-    "title": "What to Do When Your EV Breaks Down in Asia: Towing, Emergency Charging & Roadside Assistance",
-    "description": "Battery dead at 2am in rural Thailand? Here's exactly what to do when your EV breaks down in Asia — including towing protocols, emergency charging options, and roadside assistance numbers for 7 countries.",
-    "date": "2026-05-14",
-    "tags": [
-      "EV breakdown",
-      "EV towing",
-      "roadside assistance",
-      "EV emergency",
-      "charging emergency",
-      "breakdown Asia",
-      "stranded EV"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "8 min",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "japan-ev-road-trip-guide-international-visitors",
-    "title": "EV Road Tripping in Japan: Complete Guide for International Visitors (2026)",
-    "description": "Planning to explore Japan by electric car? From rental EV availability and CHAdeMO charging to NEXCO rest stops and hotel charging etiquette — here's everything international visitors need to know about EV road tripping in Japan.",
-    "date": "2026-05-14",
-    "tags": [
-      "Japan EV guide",
-      "Japan road trip",
-      "Japan EV charging",
-      "CHAdeMO Japan",
-      "rental EV Japan",
-      "Japan travel 2026",
-      "Japan charging network",
-      "NEXCO charging",
-      "international visitor Japan EV"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "9 min",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "malaysia-to-singapore-ev-road-trip-2026",
-    "title": "Kuala Lumpur to Singapore: The Ultimate EV Road Trip Guide 2026",
-    "description": "Planning an EV road trip from Kuala Lumpur to Singapore in 2026? Our complete guide covers charging stations, route planning, border crossing tips, and the best stops along the North-South Expressway.",
-    "date": "2026-05-14",
-    "tags": [
-      "malaysia",
-      "singapore",
-      "road-trip",
-      "cross-border",
-      "charging-guide",
-      "north-south-expressway"
-    ],
-    "category": "",
-    "author": "Captain",
-    "image": null,
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "philippines-ev-charging-guide",
-    "title": "Philippines EV Charging Guide 2026 — Complete Guide to Charging in Manila, Cebu, and Key Routes",
-    "description": "The Philippines EV charging network is growing fast with over 1,500 charging points nationwide. Here's your complete guide to charging stations in Manila and Cebu, the best apps (Evro, Plugshare), key routes, and costs compared to petrol.",
-    "date": "2026-05-14",
-    "tags": [
-      "philippines",
-      "manila",
-      "cebu",
-      "ev-charging",
-      "charging-guide",
-      "ev-travel"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "6 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "south-korea-ev-charging-network",
-    "title": "South Korea EV Charging Network Guide 2026 — Complete Guide for Foreigners Using Korean Chargers",
-    "description": "South Korea has 100,000+ public charging stations but foreign credit cards are rejected everywhere. Here's your complete guide to charging an EV in Korea as a foreigner — which apps work, payment solutions, and road trip routes.",
-    "date": "2026-05-14",
-    "tags": [
-      "south-korea",
-      "seoul",
-      "busan",
-      "ev-charging",
-      "foreigner-guide",
-      "charging-apps"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "6 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "survive-broken-ev-chargers-asia",
-    "title": "How to Survive an EV Road Trip When Chargers Are Broken",
-    "description": "Broken chargers are the #1 road trip killer for EV owners in Asia. Here's a practical survival guide — with real stories from Malaysia's Raya 2026 meltdown.",
-    "date": "2026-05-14",
-    "tags": [
-      "road-trip",
-      "charging-tips",
-      "planning",
-      "reliability",
-      "safety"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "6 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "taiwan-ev-road-trip-guide",
-    "title": "Taiwan EV Road Trip Guide 2026 — Taipei to Kaohsiung, Hualien Coast, and Charging Infrastructure",
-    "description": "Taiwan's EV infrastructure is booming with over 10,000 charging stations. This guide covers everything from Taipei to Kaohsiung on Highway 1, the stunning Hualien coastal route, and essential apps for navigating Taiwan's charging network.",
-    "date": "2026-05-14",
-    "tags": [
-      "taiwan",
-      "taipei",
-      "kaohsiung",
-      "hualien",
-      "road-trip",
-      "ev-charging",
-      "charging-guide"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "6 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "thailand-coastal-ev-road-trip",
-    "title": "Thailand Coastal EV Road Trip: Phuket to Hua Hin via Khao Lak (2026)",
-    "description": "Drive 500 km up Thailand's stunning Andaman coast from Phuket to Hua Hin via Khao Lak and Chumphon in your EV. Complete charging guide with PTT EV Station PluZ, EA Anywhere, and hotel chargers for this 3-4 day coastal adventure through tropical beaches, national parks, and seafood towns.",
-    "date": "2026-05-14",
-    "tags": [
-      "thailand",
-      "coastal",
-      "road-trip",
-      "phuket",
-      "hua-hin",
-      "charging-guide",
-      "southeast-asia"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "thailand-ev-tax-incentives-2026",
-    "title": "Thailand EV Tax Incentives 2026 — Complete Guide to Import Duty Cuts and Excise Tax Reductions",
-    "description": "Thailand's EV tax incentives have shifted in 2026. Here's what buyers need to know about the new excise tax structure, import duty caps, subsidies of 50,000-100,000 THB, and the transition to domestic production mandates under EV3.5.",
-    "date": "2026-05-14",
-    "tags": [
-      "thailand",
-      "ev-tax",
-      "ev-incentives",
-      "ev-buying-guide",
-      "import-duty",
-      "excise-tax",
-      "ev3.5"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "6 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "vietnam-ev-market-guide",
-    "title": "Vietnam EV Market Guide 2026 — VinFast Dominance, Charging Network, and What Expats Need to Know",
-    "description": "Vietnam's EV market is dominated by VinFast with a nationwide charging network across 34 provinces. This guide covers everything expats need to know: how to charge, which apps to use, costs, and the growing non-VinFast options.",
-    "date": "2026-05-14",
-    "tags": [
-      "vietnam",
-      "hanoi",
-      "ho-chi-minh-city",
-      "vinfast",
-      "ev-market",
-      "charging-guide",
-      "expat-guide"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "6 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-maintenance-humid-climate-asia",
-    "title": "EV Maintenance in Humid Climates: Essential Guide for Southeast Asian EV Owners [2026]",
-    "description": "Practical maintenance guide for EV owners in humid Asian climates. Covers battery care, cooling systems, connector corrosion, tyre wear, and what every EV owner in Thailand, Malaysia, Singapore, and Indonesia needs to know.",
-    "date": "2026-05-13",
-    "tags": [
-      "ev-maintenance",
-      "humid-climate",
-      "battery-care",
-      "thailand",
-      "malaysia",
-      "singapore",
-      "indonesia",
-      "philippines",
-      "ev-tips",
-      "southeast-asia"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-winter-driving-japan-korea-guide",
-    "title": "EV Winter Driving in Japan and Korea: Complete Guide for 2026",
-    "description": "Everything EV owners need to know about winter driving in Japan and Korea. Range loss, battery pre-conditioning, winter tyres, charging in snow, and route planning for Hokkaido, Nagano, Seoul, and Pyeongchang.",
-    "date": "2026-05-13",
-    "tags": [
-      "winter-driving",
-      "japan",
-      "korea",
-      "cold-weather",
-      "hokkaido",
-      "seoul",
-      "battery-range",
-      "winter-tyres",
-      "east-asia"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "singapore-penang-ev-road-trip-guide",
-    "title": "Singapore to Penang EV Road Trip Guide: Best Charging Stops",
-    "description": "Complete EV road trip guide from Singapore to Penang covering charging stops, route planning tips, and family-friendly activities along the way.",
-    "date": "2026-05-13",
-    "tags": [
-      "ev-road-trip",
-      "malaysia",
-      "singapore",
-      "charging-guide",
-      "family-travel"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "9 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "solar-panel-ev-charging-guide-asia",
-    "title": "Solar Panels + EV Charging in Asia: Complete Guide for Homeowners [2026]",
-    "description": "Everything you need to know about pairing solar panels with EV charging in Asia. Costs, savings, installation tips, and country-by-country guide for Thailand, Malaysia, Singapore, Japan, and more.",
-    "date": "2026-05-13",
-    "tags": [
-      "solar-panels",
-      "home-charging",
-      "solar-charging",
-      "renewable-energy",
-      "thailand",
-      "malaysia",
-      "singapore",
-      "japan",
-      "australia",
-      "smart-charging",
-      "energy-savings"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "best-ev-charging-apps-asia-comparison",
-    "title": "Best EV Charging Apps for Asia: Which Ones Actually Work [2026]",
-    "description": "Honest comparison of the best EV charging apps in Southeast and East Asia for 2026. From PlugShare to Gentari Go, JomCharge to ACMobility Evro — coverage, prices, reliability, and which to install before your road trip.",
-    "date": "2026-05-12",
-    "tags": [
-      "ev-charging-apps",
-      "digital-tools",
-      "road-trip-planning",
-      "thailand",
-      "malaysia",
-      "singapore",
-      "philippines",
-      "indonesia",
-      "vietnam",
-      "china",
-      "hong-kong"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-vs-petrol-cost-thailand-2026",
-    "title": "Cost Analysis: EV vs Petrol Car for Family Travel in Thailand 2026",
-    "description": "We crunched the numbers on a 3,000 km family road trip across Thailand in 2026: EV vs petrol total cost, charging times, real-world range, and when electric actually saves you money.",
-    "date": "2026-05-12",
-    "tags": [
-      "ev-vs-petrol",
-      "thailand",
-      "family-travel",
-      "ev-costs",
-      "charging",
-      "road-trip-budget"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "hong-kong-guangzhou-ev-road-trip-guide",
-    "title": "Hong Kong to Guangzhou EV Road Trip Guide: Cross-Border Charging [2026]",
-    "description": "Complete 2026 guide to driving an EV from Hong Kong to Guangzhou via Shenzhen. Cross-border permits, charger compatibility (EU vs GB/T), charging stops, toll costs, and family-friendly stops along the G4 expressway.",
-    "date": "2026-05-12",
-    "tags": [
-      "hong-kong",
-      "guangzhou",
-      "shenzhen",
-      "china",
-      "cross-border",
-      "ev-road-trip",
-      "family-travel",
-      "greater-bay-area"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "philippines-manila-baguio-ev-road-trip",
-    "title": "Philippines EV Charging Guide 2026: Manila to Baguio Electric Road Trip",
-    "description": "Complete guide to driving an EV from Manila to Baguio in 2026. Charging stops at SM Pampanga, SCTEX lay-bys, and Baguio, with prices, route tips, and family-friendly activities on the summer capital road trip.",
-    "date": "2026-05-12",
-    "tags": [
-      "philippines",
-      "manila",
-      "baguio",
-      "pampanga",
-      "tarlac",
-      "ev-road-trip",
-      "family-travel",
-      "ev-charging-guide",
-      "cross-country"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "top-5-evs-family-road-trips-asia-2026",
-    "title": "Top 5 EVs for Family Road Trips in Asia 2026",
-    "description": "Best EVs for family road trips across Asia in 2026 — BYD Atto 3, Tesla Model Y, MG4, NIO ET5 Touring, and XPeng G6 compared. Range, cargo space, child seat fit, charging speed, and real-world pricing across SE Asian markets.",
-    "date": "2026-05-12",
-    "tags": [
-      "ev-comparison",
-      "family-travel",
-      "byd-atto-3",
-      "tesla-model-y",
-      "mg4",
-      "nio",
-      "xpeng",
-      "car-buying",
-      "road-trip"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "bangkok-ayutthaya-ev-microtrip",
-    "title": "Bangkok to Ayutthaya EV Microtrip: Weekend History Trip for Families",
-    "description": "Ayutthaya is just 1.5 hours from Bangkok — perfect for a weekend EV microtrip. Complete guide to charging stations, range planning, and family-friendly temple cycling.",
-    "date": "2026-05-07",
-    "tags": [
-      "ev-travel",
-      "microtrips",
-      "thailand",
-      "ayutthaya",
-      "weekend-trip",
-      "family-ev"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "4 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "best-family-friendly-ev-road-trips-southeast-asia",
-    "title": "Best Family-Friendly EV Road Trips in Southeast Asia",
-    "description": "Southeast Asia's best EV road trips for families with kids — from Bangkok to Phuket and Singapore to KL. Complete guides with charging stops, kid-friendly activities, and practical tips for stress-free family travel.",
-    "date": "2026-05-07",
-    "tags": [
-      "family-travel",
-      "ev-road-trips",
-      "southeast-asia",
-      "thailand",
-      "malaysia",
-      "singapore",
       "bali",
-      "kids-friendly",
-      "weekend-trip"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "indonesia-jakarta-bandung-ev-road-trip",
-    "title": "Indonesia EV Road Trip: Jakarta to Bandung — Complete Family Guide",
-    "description": "Drive an EV from Jakarta to Bandung on the Cipularang Toll Road. Complete guide to charging stations, EV range planning, family activities in Bandung, and cost comparisons for Indonesia’s most popular road trip.",
-    "date": "2026-05-07",
-    "tags": [
       "indonesia",
-      "jakarta",
-      "bandung",
+      "ev-charging",
+      "charging-guide",
+      "bali-ev-charging",
       "ev-road-trip",
-      "family-travel",
-      "cipularang",
-      "weekend-trip",
-      "toll-road"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "13 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "kuala-lumpur-penang-ev-microtrip",
-    "title": "Kuala Lumpur to Penang EV Microtrip: Weekend Drive Guide for Families",
-    "description": "Driving your EV from KL to Penang for a weekend family getaway? Here's everything you need — charging stops, range planning, and family-friendly tips for the North-South Expressway route.",
-    "date": "2026-05-07",
-    "tags": [
-      "ev-travel",
-      "microtrips",
-      "malaysia",
-      "penang",
-      "weekend-trip",
-      "family-ev"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "4 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "malaysia-kuala-lumpur-penang-ev-road-trip",
-    "title": "Malaysia EV Road Trip: Kuala Lumpur to Penang — Coastal Route Family Guide",
-    "description": "Everything you need for an EV road trip from KL to Penang: coastal route via Ipoh, charging stops, family-friendly activities, Penang street food guide, and cost comparisons for a perfect weekend getaway.",
-    "date": "2026-05-07",
-    "tags": [
-      "malaysia",
-      "kuala-lumpur",
-      "penang",
-      "ipoh",
-      "ev-road-trip",
-      "family-travel",
-      "coastal-route",
-      "weekend-trip",
-      "plus-highway"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "14 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "singapore-to-kuala-lumpur-ev-family-guide",
-    "title": "Singapore to Kuala Lumpur EV Road Trip — Complete Family Guide",
-    "description": "The complete family guide to driving an EV from Singapore to Kuala Lumpur via Malacca. Charging stops, kid-friendly activities, border crossing tips, and cost comparisons for a stress-free cross-border road trip.",
-    "date": "2026-05-07",
-    "tags": [
-      "singapore",
-      "kuala-lumpur",
-      "malacca",
-      "malaysia",
-      "ev-road-trip",
-      "cross-border",
-      "family-travel",
-      "weekend-trip"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "thailand-bangkok-chiang-mai-ev-guide",
-    "title": "Thailand EV Family Road Trip: Bangkok to Chiang Mai — Complete Route Guide",
-    "description": "The ultimate family guide to driving an EV from Bangkok to Chiang Mai. Detailed charging stops, range planning, kid-friendly attractions, EV rental tips, and cost comparisons for Thailand’s classic northern road trip.",
-    "date": "2026-05-07",
-    "tags": [
-      "thailand",
-      "bangkok",
-      "chiang-mai",
-      "ev-road-trip",
-      "family-travel",
-      "nakhon-sawan",
-      "lampang",
-      "weekend-trip",
-      "charging-guide"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "15 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "tokyo-hakone-ev-microtrip",
-    "title": "Tokyo to Hakone EV Microtrip: Weekend Onsen Getaway for Families",
-    "description": "Hakone is the classic weekend escape from Tokyo — and it's surprisingly EV-friendly. Complete guide to charging stations, range planning, and the Hakone Loop by electric car.",
-    "date": "2026-05-07",
-    "tags": [
-      "ev-travel",
-      "microtrips",
-      "japan",
-      "hakone",
-      "weekend-trip",
-      "family-ev",
-      "onsen"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "5 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "top-10-ev-friendly-hotels-asia-families",
-    "title": "Top 10 EV-Friendly Hotels in Asia for Families",
-    "description": "The best family-friendly hotels in Asia with EV charging — from Bangkok to Bali, KL to Singapore. Detailed reviews with charger types, family amenities, and booking tips for an electric family getaway.",
-    "date": "2026-05-07",
-    "tags": [
-      "hotels",
-      "ev-charging",
-      "family-travel",
-      "bangkok",
-      "kuala-lumpur",
-      "singapore",
-      "bali",
-      "phuket",
-      "penang",
-      "chiang-mai"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "10 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "vietnam-ev-family-guide",
-    "title": "Vietnam EV Guide for Families: Hanoi to Ho Chi Minh by Electric Car",
-    "description": "Planning an EV family road trip across Vietnam? From Hanoi's Old Quarter to Ho Chi Minh City's bustling streets, here's everything you need to know about charging infrastructure, scenic routes, and kid-friendly stops along the way.",
-    "date": "2026-05-07",
-    "tags": [
-      "vietnam",
-      "ev-road-trips",
-      "family-travel",
-      "southeast-asia",
-      "hanoi",
-      "ho-chi-minh-city",
-      "da-nang",
-      "charging-guide"
-    ],
-    "category": "",
-    "author": "EV Charging Asia Team",
-    "image": "",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "buying-used-ev-hong-kong-battery-check-guide",
-    "title": "Buying a Used EV in Hong Kong: Complete Battery Health Check Guide",
-    "description": "Hong Kong's used EV market is booming. With new EV registrations surging and the government phasing out petrol car incentives, thousands of 3-5 year o",
-    "date": "2026-05-04",
-    "tags": [
-      "battery-check",
-      "hong-kong",
-      "battery-life",
-      "asia",
-      "used-ev",
-      "ev-charging"
-    ],
-    "category": "guides",
-    "author": "Captain",
-    "image": "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=1200&h=630&fit=crop",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-charging-costs-asia-country-comparison",
-    "title": "EV Charging Costs Across Asia: Country-by-Country Price Guide (2026)",
-    "description": "EV running costs vary wildly across Asia. Charge a 60kWh battery at home in Thailand and you'll pay roughly 156 THB (HK$34). Do the same in Japan and ",
-    "date": "2026-05-04",
-    "tags": [
-      "charging-costs",
-      "ev-charging",
-      "cost-comparison",
-      "asia"
-    ],
-    "category": "comparisons",
-    "author": "Captain",
-    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=630&fit=crop",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "ev-charging-malaysia-vs-singapore",
-    "title": "EV Charging in Malaysia vs Singapore: What's Actually Different?",
-    "description": "Malaysia and Singapore are less than an hour apart across the Causeway, but their EV charging ecosystems could hardly be more different. Singapore has",
-    "date": "2026-05-04",
-    "tags": [
-      "malaysia",
-      "ev-charging",
-      "cost-comparison",
-      "asia"
-    ],
-    "category": "comparisons",
-    "author": "Captain",
-    "image": "https://images.unsplash.com/photo-1619767886558-efdc7b9e0471?w=1200&h=630&fit=crop",
-    "readingTime": "7 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "how-to-charge-ev-at-condo-singapore",
-    "title": "How to Charge an EV at a Condo in Singapore — 2026 Guide",
-    "description": "Singapore has 46,000+ EVs on the road in 2026, and 43% of new car registrations are now electric. But here's the problem most condo-dwellers face: you",
-    "date": "2026-05-04",
-    "tags": [
-      "charging-installation",
-      "condo",
-      "ev-charging",
-      "asia"
-    ],
-    "category": "guides",
-    "author": "Captain",
-    "image": "https://images.unsplash.com/photo-1623282033815-40b05d96c903?w=1200&h=630&fit=crop",
-    "readingTime": "6 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "installing-home-wall-charger-asian-cities",
-    "title": "Installing a Home EV Wall Charger in Asian Cities: What Expats Need to Know",
-    "description": "You've moved to Asia. You bought an EV. Now you need to charge it at home. Simple, right? Not quite. Every city has different electrical standards, pe",
-    "date": "2026-05-04",
-    "tags": [
-      "home-charging",
-      "ev-charging",
-      "installation-guide",
-      "asia"
-    ],
-    "category": "guides",
-    "author": "Captain",
-    "image": "https://images.unsplash.com/photo-1627293356514-358fb7934667?w=1200&h=630&fit=crop",
-    "readingTime": "8 min read",
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "slug": "india-ev-charging-guide-2026",
-    "title": "India EV Charging Guide 2026 — City-by-City Breakdown",
-    "description": "Complete guide to EV charging in India's top cities: Delhi, Mumbai, Bangalore, Hyderabad, Chennai, Pune, Ahmedabad, and Kolkata. Connector types, charging speeds, operator apps, and route planning tips.",
-    "date": "2026-04-28",
-    "tags": [
-      "india",
-      "ev-charging",
-      "city-guide",
-      "road-trip"
-    ],
-    "category": "",
-    "author": "EV Charging Asia",
-    "image": "",
-    "readingTime": 6,
-    "wordCount": 0,
-    "featured": false
-  },
-  {
-    "title": "EV Battery Care in Asia's Humid Tropics: Maintenance Guide 2026",
-    "slug": "ev-battery-care-humid-tropics-maintenance-2026",
-    "date": "2026-06-02",
-    "author": "EV Charging Asia Team",
-    "description": "How to maximize your EV battery lifespan in Asia's hot, humid, and tropical conditions. Charging best practices, thermal management, SoH monitoring, and country-specific tips for 8 markets.",
-    "tags": [
-      "ev",
-      "ev-battery",
-      "battery-health",
-      "battery-maintenance",
-      "tropical-climate",
-      "ev-tips",
-      "thailand",
-      "malaysia",
-      "singapore",
-      "indonesia",
-      "philippines",
-      "vietnam",
-      "hong-kong",
-      "sri-lanka",
-      "ev-care",
-      "beginner"
-    ],
-    "category": "guide"
-  },
-  {
-    "slug": "malaysia-ev-charging-complete-guide-2026",
-    "title": "Malaysia EV Charging Guide 2026: Complete Guide for EV Owners & Visitors",
-    "description": "The definitive 2026 guide to EV charging in Malaysia. Compare all major networks — Gentari, ChargeSini, JomCharge, Tesla Supercharger, Shell Recharge — per-kWh pricing, home installation guide, cross-border routes, and government incentives for 2026.",
-    "date": "2026-06-02",
-    "tags": [
-      "malaysia",
-      "ev-charging",
-      "malaysia-ev-guide",
-      "kuala-lumpur",
-      "penang",
-      "johor-bahru",
-      "ipoh",
-      "melaka",
-      "gentari",
-      "chargesini",
-      "jomcharge",
-      "home-charging",
-      "cross-border",
-      "ev-road-trip"
-    ],
-    "category": "guide",
-    "author": "EV Charging Asia Team",
-    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200",
-    "readingTime": "12 min read",
-    "wordCount": 0,
-    "featured": true
-  },
-  {
-    "slug": "philippines-ev-charging-complete-guide-2026",
-    "title": "Philippines EV Charging Guide 2026: Complete Guide for EV Owners & Visitors",
-    "description": "The definitive 2026 guide to EV charging in the Philippines. Compare all major networks — ACMobility, ChargeSC, EVroam, Meralco, Tesla — per-kWh pricing, home charging installation, Manila to Baguio/Batangas routes, government incentives under EVIDA and EVIS, and city-by-city breakdown.",
-    "date": "2026-06-02",
-    "tags": [
-      "philippines",
-      "ev-charging",
-      "philippines-ev-guide",
-      "manila",
-      "cebu",
-      "davao",
-      "baguio",
-      "batangas",
-      "clark",
-      "acmobility",
-      "chargesc",
-      "evroam",
-      "meralco",
-      "home-charging",
-      "ev-road-trip"
-    ],
-    "category": "guide",
-    "author": "EV Charging Asia Team",
-    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200",
-    "readingTime": "15 min read",
-    "wordCount": 0,
-    "featured": true
+      "ubud",
+      "kuta",
+      "seminyak",
+      "uluwatu"
+    ]
   }
 ]
