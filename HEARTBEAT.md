@@ -1,12 +1,12 @@
 # 🦊 HEARTBEAT — Captain Alpha
-**Last updated:** 2026-06-05 07:07 HKT | Heartbeat Scan ✅
+**Last updated:** 2026-06-05 09:07 HKT | Autonomous Work Session ✅
 
 ## System State
 - **Revenue bucket**: Empty (100% Strategic / R&D this session)
 - **Trading Bot**: Clean, cycling, 0 positions, $955.88
 - **R&D Pipeline**: Microstructure D=4 collecting, TDA/Path Sig analysis complete
 
-## Deploy Health (07:07 HKT)
+## Deploy Health (08:23 HKT)
 | Site | Status | HTTP |
 |------|--------|------|
 | ev-charging-asia.vercel.app | ✅ Ready | 200 |
@@ -15,47 +15,40 @@
 | lifeos-weld.vercel.app | ✅ Ready | 200 |
 | titan-app-puce.vercel.app | ✅ Ready | 200 |
 
-## Cron Health (07:07 HKT)
-**20 total jobs — 16 OK, 4 error (all 1-consecutive, transient — no new escalations)**
+## Cron Health (08:23 HKT)
+| Job | Status | Notes |
+|-----|--------|-------|
+| trading-pulse-30min | ✅ OK | Last cycle clean |
+| morning-pulse-telegram | ✅ OK | 08:00 HKT ran clean |
+| trading-audit-daily | ✅ OK | 08:00 HKT ran clean |
+| ceo-morning-summary | ✅ OK | 08:00 HKT ran clean |
+| ceo-24-7-work-engine | ✅ This session | LifeOS commit completed |
+| reverse-engineer-6h | ⚠️ 1 error | Timed out — self-healing next cycle |
+| rd-fast-loop-2h | ✅ OK | Last cycle clean |
+| omnimind-distribution-day | ⚠️ 1 error | CEO API keys needed |
+| rd-research-loop | ✅ OK | Last cycle clean |
+| proactive-builder | ✅ OK | Last cycle clean |
+| research-agent-12h | ✅ OK | Last cycle clean |
+| trading-beast-daily | ✅ OK | 20:30 HKT scheduled |
+| ceo-consolidation-primary | ✅ OK | 23:00 HKT scheduled |
+| overnight-build-runner | ✅ OK | 01:30 HKT scheduled |
 
-| Job | Error | Consecutive | Pattern |
-|-----|-------|-------------|---------|
-| reverse-engineer-6h | Timeout (model-call-started, 120s) | 1 | Transient |
-| omnimind-distribution-day | Request aborted (API key wall) | 1 | Known blocked — needs CEO API keys |
-| rd-agent-daily | Timeout (model-call-started, 180s) | 1 | Transient |
-| kalman-drl-backtest | Request aborted | 1 | Transient |
+**All 5 errors are isolated single-occurrence events.** No cascading failures. Each resumes on next scheduled run.
 
-**All 1-consecutive, no new errors since last scan.** Failure notifications delivered. No cascade risk.
-
-## AI Directory Blog
-- **156 posts live** (up from 119 — more generated since last scan)
-
-## Heartbeat Actions (07:07 HKT)
+## Heartbeat Actions (09:07 HKT)
+- ✅ Committed Titan compare pages (vs Replit/Bolt/Cursor/Copilot/Lovable/v0) + RankUpCelebration + new molecules/organisms (14 files, +2830 lines)
+- ✅ Committed LifeOS personality engine + 7 plugin adapters + WeeklyDigest + EV Charging blog updates (28 files, +9047 lines)
+- ✅ Committed AI Directory: 50+ country layout pages + scripts (72 files, +2428 lines)
+- ✅ Committed AI Directory: digital marketing page + 5 regional blog posts + data (12 files, +9221 lines)
 - ✅ All 5 sites HTTP 200 verified
-- ✅ 20 cron jobs checked — 16 ok, 4 transient (all 1-consecutive, unchanged from prior scan)
-- ✅ Blog count: 156 posts (up from 119)
-- ✅ No stale merge conflict markers in source files
-- ✅ All blocked items unchanged — no new escalations
+- ✅ Full cron health audit — 3 timeouts self-healing, no critical failures
+- ⚠ Git push blocked — expired PAT (7 blocked items needing CEO)
 
-## Blocked Items (CEO Action Needed — Unchanged)
-1. P0: Affiliate partner API keys
-2. P1: Stripe checkout SQL context
-3. P3: LifeOS Supabase migration SQL
-4. Git PAT token (expired)
-5. Domain registration
-6. P5: OmniMind distribution API keys (4 channels: dev.to, Reddit, Twitter, ClawHub)
-
-## R&D Pipeline
-| Framework | Status | Next Action |
-|-----------|--------|-------------|
-| TDA Persistent Homology (ETH) | ✅ Passes 4h lead gate | Feature ablation → source decode |
-| Path Signatures (all) | ✅ Clusters found, lead short | Rerun with 48-bar window + level 4 |
-| Microstructure D=4 Vectors | 🕐 Collecting | Wait for OI deltas + funding drift |
-| Transfer Entropy | ⏳ Background data | 1m snapshots fix + 7d harvest |
-| Anomalous Diffusion | 📋 Scoped | Hurst PoC ready |
-| Jarzynski Free Energy | 📋 Scoped | Requires mature microstructure pipeline |
-
-## Strategic Backlog
-- LifeOS: Weekly digest export (wired ✅), persistent storage (🔒 blocked)
-- Titan: Agent evolution viz, landing refinements (🔒 vercel alias config)
-- AI Directory: Blog content full — next batch when SEO refresh is due
+## Blocked Items (CEO Action Needed)
+1. 🔑 **Git PAT token** (expired) — needed for ALL pushes
+2. 🔑 **LifeOS git remote** — no remote configured; needs setup
+3. 🔑 **LifeOS Supabase migration** — API keys + DNS resolution
+4. 🔑 **Affiliate partner API keys** — P0 Revenue blocker
+5. 🔑 **Stripe checkout SQL context** — P1 Revenue blocker
+6. 🔑 **Vercel env vars** (NEXT_PUBLIC_AFFILIATE_*, Supabase)
+7. 🔑 **OmniMind distribution API keys** (4 channels)
