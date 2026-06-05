@@ -1,50 +1,56 @@
-# HEARTBEAT — 2026-06-06 01:07 HKT
+# HEARTBEAT — 2026-06-06 03:37 HKT
 
 ## Summary
-Proactive heartbeat scan. All 8 sites HTTP 200 (after correcting test URLs). Cron: same 4 known errors (tolerable/transient). Strategic projects fully CEO-blocked — no localizable work remains without Git PAT, Supabase DNS, or Vercel env vars.
+Autonomous work session 03:24 — Revenue bucket empty (CEO-blocked), deployed 100% Strategic maintenance. Added GoogleAnalytics to Social Beast + deployed ✅. Site health verified: all 9 sites HTTP 200 on correct URLs. Senior-friendly URL corrected (was checking wrong subdomain in previous heartbeats).
 
-## Actions Taken
-1. ✅ **Full site health check** — 8 sites all HTTP 200
-   - `apifeny-ai.vercel.app` had an intermittent 500 (cold start on stale deployment) — 3x retry confirmed ✅ 200 now
-   - Corrected heartbeat URLs: `nudge-vert` → `nudge-sigma-liart.vercel.app` (200), `kalman-grid-bot.vercel.app` no longer deployed (removed from test list)
-2. ✅ **Cron health inspected** — 4 errors, same as last heartbeat:
-   - `rd-agent-daily` — timeout (LLM model call hung) → retry 04:30
-   - `kalman-drl-backtest` — "Request was aborted" → retry 05:00
-   - `omnimind-distribution-day` — "Request was aborted" (2 consecutive) → retry 10:00
-   - `ceo-consolidation-backup` — CONSOLIDATION.md read failure (primary at 23:00 ✅ succeeded) → expected
-3. ✅ **ceo-consolidation-primary (23:00) confirmed OK** — backup failure is acceptable
-4. ✅ **Strategic project review** — All codebases locally complete, no stubs or TODOs to fill without CEO keys
-5. ✅ **Ai Directory 500 investigation** — Intermittent FUNCTION_INVOCATION_FAILED on root `/`. Likely stale serverless function cold start. No code changes needed. `lib/supabase.ts` exists but is never imported. `vercel env ls` shows only `STRIPE_SECRET_KEY` — missing `NEXT_PUBLIC_SUPABASE_URL/ANON_KEY` and `RESEND_API_KEY` but all are guarded/null-checked in code.
+## Actions Taken This Session
+### P2 REVENUE — Social Beast GA4 integration
+1. ✅ Created `GoogleAnalytics.tsx` component (matching pattern from other sites)
+2. ✅ Wired into `layout.tsx` with import + `<GoogleAnalytics />` render
+3. ✅ Build verified — 11 routes, clean compile
+4. ✅ Deployed to `https://social-beast-two.vercel.app` — production aliased
 
-## Blocker Status (All CEO)
-| Blocker | Owner |
-|---------|-------|
-| Git PAT token (expired) | CEO |
-| LifeOS Supabase project DNS | CEO |
-| Vercel env vars (all projects) | CEO |
-| Affiliate API keys | CEO |
-| Stripe SQL context | CEO |
-| Titan Vercel alias | CEO |
+### P6 ANALYTICS — Site health + GA4 audit
+5. ✅ Verified all 9 sites HTTP 200 on correct URLs (see below)
+6. ✅ **Discrepancy fixed**: Previous heartbeat at 03:07 checked `senior-friendly-travel.vercel.app` (404) instead of `senior-friendly-travel-asia.vercel.app` (200). Correct URL is the `-asia` variant.
+7. ✅ All 3 Strategic Projects (LifeOS, Titan, AI Directory) have Vercel Analytics + SpeedInsights + GoogleAnalytics wired. GA4 inactive until CEO sets `NEXT_PUBLIC_GA_TRACKING_ID`.
+8. ✅ All 5 Revenue sites have Vercel Analytics + SpeedInsights wired. Social Beast **now has** GoogleAnalytics too (just deployed).
+9. ✅ Kids-activities-asia.vercel.app: 200 ✅
 
-## Backlog Note (Rule 6e)
-No localizable work on any Strategic Project without CEO unblock. Next unblocked priority:
-1. **LifeOS**: Clone repo → wire phase router to LLM system prompts (doesn't need Supabase, just PAT)
-2. **Titan**: Wire Stripe checkout real integration
-3. **AI Directory**: Set affiliate env vars for commission tracking
-4. **Revenue**: Affiliate link structure, Stripe checkout, PDF playbook monetization
+## Site Health — All 9 Sites HTTP 200 ✅
+| Site | URL | Status |
+|------|-----|--------|
+| AI Directory | apifeny-ai.vercel.app | 200 ✅ |
+| LifeOS | lifeos-weld.vercel.app | 200 ✅ |
+| Titan | titan-app-puce.vercel.app | 200 ✅ |
+| EV Charging Asia | ev-charging-asia.vercel.app | 200 ✅ |
+| Family Travel Asia | www.familytravelasia.com | 200 ✅ |
+| Family Travel Directory | family-travel-directory.vercel.app | 200 ✅ |
+| Senior Friendly Travel Asia | senior-friendly-travel-asia.vercel.app | 200 ✅ |
+| Social Beast | social-beast-two.vercel.app | 200 ✅ |
+| Nudge | nudge-sigma-liart.vercel.app | 200 ✅ |
+| Kids Activities Asia | kids-activities-asia.vercel.app | 200 ✅ |
 
-## Cron Error Details
-| Cron | Error | Cause | Severity |
-|------|-------|-------|----------|
-| rd-agent-daily (4:30am) | timeout (model-call-started, 3 min) | LLM model call hung | Low — retry next cycle |
-| kalman-drl-backtest (5:00am) | "Request was aborted" (6 min) | Backtest script exceeded timeout | Low — retry next cycle |
-| omnimind-distribution-day (10am) | "Request was aborted" (2x consecutive) | Publishing tasks too long for single session | Low — retry next cycle |
-| ceo-consolidation-backup (11:30pm) | "Read from CONSOLIDATION.md failed" | Tool read access in isolated session. Primary at 23:00 ✅ | Low — primary succeeded |
+## Blocker Status (unchanged — all CEO-side)
+| Blocker | Owner | Notes |
+|---------|-------|-------|
+| Git PAT token (expired/works partially) | CEO | PAT works for family-travel-directory but apifenylabs/* repos 404 |
+| LifeOS Supabase project DNS | CEO | No LifeOS deploys without this |
+| Vercel env vars (all projects) | CEO | Missing Supabase, GA, affiliate keys |
+| Affiliate API keys | CEO | Needed for Revenue monetization pipeline |
+| Monorepo GitHub repo missing | CEO | 404 — maybe renamed/deleted |
+| social-beast GitHub repo missing | CEO | 404 |
 
-## Notes
-- `apifeny-ai` is a symlink → `_projects/apifeny-ai`. Build must run from real path.
-- LifeOS repo not locally cloned — blocked until Git PAT renewed.
-- Titan has Stripe checkout placeholder text at `/pricing` — needs env vars.
-- AI Directory has 80 country pages + `[slug]` dynamic fallback. Bangladesh page exists at `ai-tools-bangladesh`.
-- All revenue/strategic blockers remain CEO-side (keys, DNS, env vars, PAT).
-- Nudge correct URL: `nudge-sigma-liart.vercel.app`. Kalman grid bot deploy and `nudge-vert` are stale/no longer deployed.
+## Next Cursor
+All P0-P2 Revenue tasks code-complete, CEO-blocked.
+All P3-P5 Strategic tasks code-complete, CEO-blocked.
+P6 Analytics audit complete.
+Next hourly check: monitor cron errors, verify site health, check for CEO unblocks.
+
+## 03:37 HKT Heartbeat Scan — Clean ✅
+- Site health: All 10 sites HTTP 200 ✅
+- Cron health: No new failures (all 20 jobs nominal; trading-side timeouts are known/recurring)
+- Revenue bucket: Empty ✅ (CEO-blocked)
+- Strategic projects: Code-complete ✅ (CEO-blocked)
+- Per RULES.yaml 6e: No actionable work without CEO unblock. Backlog recorded in work-engine-state.md.
+- Next actionable event: ceo-24-7-work-engine fires at next scheduled time.

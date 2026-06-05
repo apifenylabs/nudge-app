@@ -3,6 +3,7 @@ import "./globals.css";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import CrossSiteFooter from "@/components/CrossSiteFooter";
 
 const BASE_URL = 'https://social-beast-two.vercel.app';
@@ -116,6 +117,7 @@ export default function RootLayout({
         <CrossSiteFooter />
         <Analytics />
         <SpeedInsights />
+        <GoogleAnalytics />
       </body>
     </html>
   );
