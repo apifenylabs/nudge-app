@@ -35,7 +35,36 @@ Add a browseable Premium Routes index page, link it from all nav bars, and cross
 - Google Analytics ready (env var)
 - Sitemap + RSS + news-sitemap
 
-## Latest: Indonesia EV Charging Complete Guide 2026 (P2 Revenue Blog Post)
+## Latest: Vietnam Coastal EV Road Trip Guide (P2 Revenue Blog Post)
+
+### Task
+Created a comprehensive road-trip blog post: **"Vietnam EV Road Trip Guide: Hanoi to Ho Chi Minh City via Da Nang — The Ultimate Coastal Route"**
+
+### What Was Built
+1. **New entry appended to `lib/generated-blog-data.ts`** — Full blog post with:
+   - ~14,000+ chars of markdown content covering Hanoi→Da Nang→HCMC coastal route (~1,600km)
+   - Route overview with detailed charging gap analysis (Vinh→Dong Hoi 190km critical gap)
+   - Day-by-day 10-day itinerary: Ninh Binh, Phong Nha, Hue, Da Nang, Hoi An, Quy Nhon, Nha Trang, Mui Ne
+   - Charging station quick reference table (15 locations with network, power, notes)
+   - Comparison with Malaysia road trips (NS Highway vs East Coast vs Vietnam coastal)
+   - Practical tips: IDP/license requirements, toll roads, apps, best seasons
+   - Cost estimate table for SG/MY travellers (low/high estimates in SGD)
+   - EV rental options in Vietnam
+   - **10+ Booking.com affiliate links** (aid=2875669) across all stops
+   - **5 Amazon affiliate links** (tag=evchargingasia-20) for travel gear
+   - Internal links to 6 related posts
+   - Tags: vietnam, coastal-route, road-trip, charging-guide, southeast-asia
+   - Category: road-trips
+   - Image: /blog/vietnam-coastal-route.jpg
+
+2. **File rebuilt** — The data file was reconstructed with proper array structure after a prior corrupt append
+
+### Build: ✅ Passes (0 errors)
+### Deploy: ✅ Live at https://ev-charging-asia.vercel.app/blog/vietnam-ev-road-trip-guide-hanoi-ho-chi-minh-city (HTTP 200)
+
+---
+
+## Previous: Indonesia EV Charging Complete Guide 2026 (P2 Revenue Blog Post)
 
 ### Task
 Created a comprehensive country-guide blog post: **"Indonesia EV Charging Complete Guide 2026 — Networks, Costs, and Road Trip Essentials"**

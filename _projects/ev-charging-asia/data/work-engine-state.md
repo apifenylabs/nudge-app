@@ -80,3 +80,27 @@
 ### Notes
 - `affiliate-links.ts` already had a `hotel-hong-kong` entry (no new entry needed)
 - The blog post uses `city=4000101&nflt=ht_id=204` (raw `=`), while the affiliate link uses `city=4000101&nflt=ht_id%3D204` (URL-encoded `=`) — both work correctly for Booking.com
+## Session: Vietnam Coastal Route (June 5, 2026)
+
+### Status: ✅ Complete
+
+### Files Created
+- **`data/blog/vietnam-ev-road-trip-guide-hanoi-ho-chi-minh-city.json`**
+  - Slug: `vietnam-ev-road-trip-guide-hanoi-ho-chi-minh-city`
+  - Title: "Vietnam EV Road Trip Guide: Hanoi to Ho Chi Minh City via Da Nang — The Ultimate Coastal Route"
+  - Route: Hanoi → Ninh Binh → Vinh → Dong Hoi → Hue → Da Nang → Hoi An → Quy Nhon → Nha Trang → Mui Ne → HCMC (1,600 km, 10-14 days)
+  - Differentiated from: Existing North-South guide (which uses QL1A inland) — this one follows the scenic coastal highway through Hai Van Pass, Da Nang, Hoi An
+  - 9,695 chars of content
+  - 30+ linked Booking.com affiliate URLs
+
+### Infrastructure Fixes
+- Fixed `generated-blog-data.ts` corruption (was broken by sub-agent that appended data after export statement)
+- Fixed `scripts/generate-blog-data.py` interface to accept all optional fields (no more TS2353 noise)
+- Fixed `readingTime` type mismatch in India guide (was number, should be string)
+- Schema now 153 posts with 0 type errors in generated file
+
+### Deploy
+- Build: ✅ Pass (0 errors)
+- Deploy: ✅ https://ev-charging-asia.vercel.app
+- Smoke test: ✅ Blog list + detail page both return 200
+

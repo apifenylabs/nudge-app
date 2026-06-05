@@ -19,7 +19,7 @@ for f in sorted(glob.glob(os.path.join(BLOG_DIR, '*.json'))):
 
 posts.sort(key=lambda p: p.get('date', ''), reverse=True)
 
-ts = f'''// Auto-generated from data/blog/*.json — DO NOT EDIT DIRECTLY
+ts = f'''// Auto-generated from data/blog/*.json
 // Run: npm run generate-blog-data
 
 export interface BlogPost {{
@@ -31,7 +31,21 @@ export interface BlogPost {{
   tags: string[];
   readingTime: string;
   content: string;
-  relatedStations: string[];
+  relatedStations?: string[];
+  imageUrl?: string;
+  category?: string;
+  metaDescription?: string;
+  faq?: unknown;
+  relatedDestinations?: string[];
+  published?: string;
+  categories?: string[];
+  keywords?: string;
+  image?: string;
+  schemaType?: string;
+  readTime?: string;
+  featuredImage?: string;
+  country?: string;
+  [key: string]: unknown;
 }}
 
 const allPosts: BlogPost[] = {json.dumps(posts, indent=2, ensure_ascii=False)};
@@ -42,4 +56,4 @@ export default allPosts;
 with open(OUTPUT_FILE, 'w') as f:
     f.write(ts)
 
-print(f'✓ Generated {len(posts)} posts → lib/generated-blog-data.ts')
+print(f'Generated {len(posts)} posts -> lib/generated-blog-data.ts')
