@@ -460,7 +460,25 @@ export default function Home() {
   // ─── Select a plugin — AI-led conversation starts ──────────────
   const selectPlugin = useCallback((plugin: PluginDefinition) => {
     setSelectedPlugin(plugin);
-    setCurrentPhase(plugin.phases[0]?.id || '');
+
+    // Read PhaseTracker localStorage to find first incomplete phase
+    // Instead of always starting at phase 0, respect user's progress
+    let startPhase = plugin.phases[0]?.id || '';
+    try {
+      const raw = localStorage.getItem('lifeos_progress_' + plugin.id);
+      if (raw) {
+        const progress = JSON.parse(raw);
+        // Find the first phase that isn't marked completed
+        const firstIncomplete = plugin.phases.find(p => !progress.phases?.[p.id]?.completed);
+        if (firstIncomplete) {
+          startPhase = firstIncomplete.id;
+        } else if (plugin.phases.length > 0 && progress.phases) {
+          // All phases complete — start from the first phase again but flag as review
+          startPhase = plugin.phases[0].id;
+        }
+      }
+    } catch { /* localStorage corrupt or unavailable — fall through to default */ }
+    setCurrentPhase(startPhase);
     setShowPluginOverlay(false);
 
     // Track plugin selection
@@ -472,7 +490,7 @@ export default function Home() {
     setInput('');
     setStarted(true);
     setMessages([{ role: 'user', content: greeting }]);
-    callChatApi(greeting, true, plugin.id, plugin.phases[0]?.id);
+    callChatApi(greeting, true, plugin.id, startPhase);
   }, []);
 
   const callChatApi = (

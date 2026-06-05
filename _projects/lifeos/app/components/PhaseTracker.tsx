@@ -63,6 +63,8 @@ function loadProgress(pluginId: string): PluginProgress {
 function saveProgress(pluginId: string, progress: PluginProgress) {
   progress.lastUpdated = new Date().toISOString();
   localStorage.setItem(STORAGE_PREFIX + pluginId, JSON.stringify(progress));
+  // Notify other tabs and plugin index page about progress change
+  window.dispatchEvent(new CustomEvent('lifeos-storage-changed', { detail: { pluginId } }));
 }
 
 // ─── Goal Input ───────────────────────────────────────────────────────

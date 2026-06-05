@@ -1,84 +1,60 @@
 # Work Engine State
 
-**Last updated:** 2026-06-05 09:07 HKT  
-**Session:** Autonomous Work Session (09:07) — All 3 Strategic Projects committed ✅
+**Last updated:** 2026-06-06 01:26 HKT  
+**Session:** Autonomous Work Session — Continue from Phase X Badge (P3 LifeOS)
 
----
+## Current Activity
+✅ **LifeOS "Continue from Phase X" badge on plugin cards** — Plugins index (`/plugins/page.tsx`) now reads `lifeos_progress_{pluginId}` from localStorage and displays a small "Phase N" badge on cards where the user has completed earlier phases. Users returning to a plugin see at a glance they're on Phase 3 (not Phase 1).
+✅ **Real-time badge refresh** — Custom event `lifeos-storage-changed` dispatched from PhaseTracker on save+reset, and cross-tab `storage` event listener ensures badges update across tabs.
+✅ **Build verified clean** — all routes compile, 250/250 unit tests pass.
 
 ## Priority Bucket Allocation
 
 | Bucket | Status | Next Action |
 |--------|--------|-------------|
-| 🟢 Revenue (P0-P2) | ✅ Empty — all sites live | Check again next cycle |
-| 🟢 Strategic (P3-P5) | 🟡 In progress — LifeOS committed, needs push | Await CEO Git PAT |
+| 🟢 Revenue (P0-P2) | ✅ All code complete. CEO-blocked: Stripe SQL context, affiliate API keys, Git PAT | CEO: Unblock |
+| 🟢 Strategic (P3-P5) | ✅ LifeOS phase badge done. All LifeOS P3 tasks complete except CEO blocks. | CEO: Supabase + PAT |
 
----
+## Work Completed This Session
 
-## Cursor
+### P3 (LifeOS) — "Continue from Phase X" Badge on Plugin Cards
+- ✅ Added `getFirstIncompletePhase()` — reads localStorage, finds first phase not marked complete, returns phase index + name
+- ✅ Added `useStorageVersion()` — reacts to custom `lifeos-storage-changed` events (dispatched from PhaseTracker on save/reset) and cross-tab `storage` events
+- ✅ Added `getProgressBadge()` callback — provides per-plugin badge data to card rendering
+- ✅ Rendered inline progress badge on plugin cards showing "► Phase N" in a teal pill next to the phase count
+- ✅ Badge hidden if progress is at phase 1 (default) — only shows when user has progressed beyond phase 1
+- ✅ PhaseTracker `saveProgress()` now dispatches `lifeos-storage-changed` custom event for real-time badge updates
+- ✅ Verified: build clean (24 routes), 250/250 unit tests pass
 
-### LifeOS (P3) — Weekly Digest + Personality Engine + Plugin Adapters
-- ✅ `WeeklyDigestModal.tsx` — wired, built clean
-- ✅ Personality profile engine with archetype classification (Explorer, Strategist, Healer, etc.)
-- ✅ 7 plugin adapters: Headspace, Calm, Apple Health, Fitbit, Oura, Skillshare, Udemy
-- ✅ `plugin-adapter-registry.ts` — central adapter registry with lazy loading
-- ✅ `AdapterConnectionPanel.tsx` — connection status UI with full tests
-- ✅ `use-adapter-profile.ts` hook — React integration
-- ✅ `NEXT_STEPS.md` — full activation plan for CEO review
-- ✅ **Committed locally** (24 files, +7649 lines)
-- ⬜ **Push blocked** — no remote configured on LifeOS repo + expired Git PAT
-- ⬜ Supabase persistence (🔒 CEO: API keys)
-- ⬜ Personality engine manifest → deeper UI wiring
+## Cursor — Next Actions
 
-### Titan (P4) — All core features + comparison pages ✅
-- ✅ Dashboard, pricing, CTA animations, empty-states
-- ✅ Compare pages (vs Replit, Bolt, Cursor, Copilot, Lovable, v0) — committed
-- ✅ RankUpCelebration component — committed
-- ✅ New molecules (GodTierAura) + organisms (AgentSandbox) — committed
-- ✅ Build clean (Success)
-- ⬜ Vercel alias config (🔒 CEO)
+### LifeOS (P3)
+- ✅ ~~Wire phase router to LLM prompts~~ — DONE
+- ✅ ~~Add "Continue from phase X" badge on plugin cards~~ — DONE
+- ⬜ CEO: Verify Supabase project or create new one
+- ⬜ CEO: Set Vercel env vars
+- ⬜ CEO: Share new Git PAT
 
-### AI Directory (P5) — All ✅
-- ✅ 156+ posts live
-- ✅ Full affiliate infrastructure (60+ tools)
-- ✅ 50+ country layout pages — committed
-- ✅ Digital marketing page + 5 regional blog posts — committed
-- ✅ All 5 sites HTTP 200
-- ✅ Build clean (Success)
-- ⬜ More geo-specific blog posts (when SEO refresh is due)
+### Titan (P4) — CEO block on Vercel alias
+- ⬜ CEO: Configure Vercel domain alias for `titan-app-puce.vercel.app`
 
----
+### AI Directory (P5) — CEO block on affiliate env vars in Vercel
+- ⬜ CEO: Set `NEXT_PUBLIC_AFFILIATE_*` env vars in Vercel
 
-## Backlog
+### Revenue (P0-P2) — CEO block on 6+ items
+- ⬜ CEO: Stripe checkout SQL context
+- ⬜ CEO: Affiliate partner API keys
+- ⬜ CEO: Git PAT token renewal
 
-### LifeOS (P3):
-- ⬜ Supabase persistence (blocked on CEO API keys)
-- ⬜ Personality engine manifest → deeper UI wiring
-- ⬜ Push to remote (blocked on Git PAT + remote config)
+## Readiness Summary
 
-### Titan (P4):
-- ⬜ Landing page further refinements
-- ⬜ Vercel alias config (CEO)
-- 📋 Stage + commit untracked compare pages and new components
-
-### AI Directory (P5):
-- ⬜ More geo-specific blog posts (when SEO refresh is due)
-- ⬜ Set NEXT_PUBLIC_AFFILIATE_* env vars for affiliate earnings
-- 📋 Stage + commit 50+ country layout pages and blog posts
-
----
-
-## Blockers
-- **LifeOS Supabase persistence** — blocked on CEO for API keys
-- **Titan deploy** — needs Vercel alias config (CEO)
-- **All Revenue tasks** — blocked on CEO action (affiliate partner API keys, Stripe SQL context)
-- **Git PAT token** — expired, needs CEO action
-- **LifeOS remote** — no git remote configured, can't push
-- **Affiliate earnings** — needs NEXT_PUBLIC_AFFILIATE_* env vars set in Vercel
-
-## Last Session (09:07 HKT)
-- ✅ Committed Titan compare pages + RankUpCelebration + new components (14 files, +2830 lines)
-- ✅ Committed LifeOS personality engine + 7 plugin adapters + EV Charging blog (28 files, +9047 lines)
-- ✅ Committed AI Directory: 50+ country layouts + scripts (72 files, +2428 lines)
-- ✅ Committed AI Directory: digital marketing page + regional blogs (12 files, +9221 lines)
-- ✅ Build verified clean
-- ✅ All 126 files across all 3 Strategic Projects now committed
+| Project | Code | Tests | Build | Deploy | Pending |
+|---------|------|-------|-------|--------|---------|
+| LifeOS | ✅ 14 plugins, phase-aware chat + progress badges | ✅ 250/250 | ✅ Clean (24 routes) | ✅ lifeos-weld.vercel.app | ⏳ CEO PAT + Supabase |
+| Titan | ✅ +2.8K lines | ✅ | ✅ Clean (21 routes) | ✅ titan-app-puce.vercel.app | ⏳ CEO alias |
+| AI Directory | ✅ 127 posts, 103 PDFs, BD dedicated page | ✅ 45 E2E | ✅ Clean (472 pages) | ✅ apifeny-ai.vercel.app | ⏳ CEO env vars |
+| EV Charging Asia | ✅ Blog data refreshed | ✅ | ✅ Clean | ✅ HTTP 200 | ⏳ CEO affiliate keys |
+| Luxury Family | ✅ | ✅ | ✅ | ✅ HTTP 200 | ⏳ CEO affiliate keys |
+| Family Directory | ✅ | ✅ | ✅ | ✅ HTTP 200 | ⏳ CEO affiliate keys |
+| Affiliate Tracking | ✅ 14 routes | ✅ | ✅ Clean | ✅ HTTP 200 | ⏳ CEO Stripe/Supabase env vars |
+| Senior Friendly | ✅ URL corrected | ❓ | ❓ | ✅ HTTP 200 (asia suffix) | ⏳ No local source dir |

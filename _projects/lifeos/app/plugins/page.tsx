@@ -80,6 +80,52 @@ function buildStatuses(): StatusMeta[] {
 
 // ─── Status badge config ───
 
+// ─── Progress Badge: read localStorage for phase completion ───
+
+const STORAGE_PREFIX = 'lifeos_progress_';
+
+interface PhaseProgress {
+  completed: boolean;
+}
+
+interface PluginProgress {
+  phases: Record<string, PhaseProgress>;
+}
+
+function getFirstIncompletePhase(pluginId: string, phases: { id: string; name: string }[]): { phaseIndex: number; phaseName: string } | null {
+  try {
+    const raw = localStorage.getItem(STORAGE_PREFIX + pluginId);
+    if (!raw) return null;
+    const progress: PluginProgress = JSON.parse(raw);
+    if (!progress.phases) return null;
+    const idx = phases.findIndex(p => !progress.phases?.[p.id]?.completed);
+    if (idx < 0 || idx === 0) return null; // No progress or all done — don't show badge for phase 1
+    return { phaseIndex: idx, phaseName: phases[idx].name };
+  } catch {
+    return null;
+  }
+}
+
+function useStorageVersion(): number {
+  // Track version bumped by custom event + cross-tab storage events
+  const [ver, setVer] = useState(0);
+  useEffect(() => {
+    const handler = () => setVer(v => v + 1);
+    const storageHandler = (e: StorageEvent) => {
+      if (e.key?.startsWith('lifeos_progress_')) setVer(v => v + 1);
+    };
+    window.addEventListener('lifeos-storage-changed', handler);
+    window.addEventListener('storage', storageHandler);
+    return () => {
+      window.removeEventListener('lifeos-storage-changed', handler);
+      window.removeEventListener('storage', storageHandler);
+    };
+  }, []);
+  return ver;
+}
+
+// ─── Status badge config ───
+
 const STATUS_CONFIG: Record<string, { label: string; className: string }> = {
   active: { label: '🟢 Active', className: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
   beta: { label: '🟡 Beta', className: 'bg-amber-50 text-amber-700 border-amber-200' },
@@ -97,6 +143,30 @@ export default function PluginsIndexPage() {
   const searchRef = useRef<HTMLInputElement>(null);
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const resultsRef = useRef<HTMLDivElement>(null);
+
+  // ── Progress-aware phase badges ──
+  const storageVer = useStorageVersion();
+  const [progressMap, setProgressMap] = useState<Record<string, { phaseIndex: number; phaseName: string } | null>>({});
+
+  // Read progress from localStorage on mount and whenever storage changes
+  useEffect(() => {
+    // This runs client-side only
+    const map: Record<string, { phaseIndex: number; phaseName: string } | null> = {};
+    for (const p of PLUGINS) {
+      if (p.status === 'active' || p.status === 'beta') {
+        const result = getFirstIncompletePhase(p.id, p.phases);
+        if (result) map[p.id] = result;
+      }
+    }
+    setProgressMap(map);
+  }, [storageVer]);
+
+  const getProgressBadge = useCallback(
+    (pluginId: string): { phaseIndex: number; phaseName: string } | null => {
+      return progressMap[pluginId] || null;
+    },
+    [progressMap]
+  );
 
   const filtered = useMemo(() => {
     return plugins.filter((p) => {
@@ -358,13 +428,30 @@ export default function PluginsIndexPage() {
                     )}
                   </div>
 
-                  {/* Phase count + CTA */}
+                  {/* Phase count + Progress badge + CTA */}
                   <div className="flex items-center justify-between mt-auto pt-2 border-t border-gray-50">
-                    <span className="text-[11px] text-gray-400">
-                      {plugin.phases.length} phases
-                    </span>
+                    <div className="flex items-center gap-1.5 min-w-0">
+                      <span className="text-[11px] text-gray-400">
+                        {plugin.phases.length} phases
+                      </span>
+                      {(() => {
+                        const badge = getProgressBadge(plugin.id);
+                        if (!badge) return null;
+                        return (
+                          <span
+                            className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[9px] font-medium bg-teal-50 text-teal-700 border border-teal-200 whitespace-nowrap"
+                            title={`Continue from phase ${badge.phaseIndex + 1}: ${badge.phaseName}`}
+                          >
+                            <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                            </svg>
+                            Phase {badge.phaseIndex + 1}
+                          </span>
+                        );
+                      })()}
+                    </div>
                     {isClickable ? (
-                      <span className="text-[11px] font-medium text-teal-600 group-hover:translate-x-0.5 transition-transform">
+                      <span className="text-[11px] font-medium text-teal-600 group-hover:translate-x-0.5 transition-transform shrink-0">
                         Open →
                       </span>
                     ) : (

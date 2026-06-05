@@ -5,6 +5,7 @@ import { ChevronRight, Sparkles, BookOpen, TrendingUp, Star, DollarSign, Globe }
 import { CATEGORIES, getCategoryBySlug, getAllCategorySlugs } from '@/lib/category-data';
 import { toolsData } from '@/lib/data';
 import { playbooks } from '@/lib/playbooks';
+import { getBlogPostsForCategory } from '@/lib/category-blog-links';
 import type { Tool } from '@/lib/types';
 import { getPricingLabel, getPricingColor } from '@/lib/utils';
 import { cn } from '@/lib/utils';
@@ -282,8 +283,47 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  </div>
  </section>
 
- {/* Related Playbooks */}
- {relatedPlaybooks.length > 0 && (
+ {/* Related Blog Posts — SEO Cross-Linking */}
+ {(() => {
+    const relatedPosts = getBlogPostsForCategory(cat, 3);
+    if (relatedPosts.length === 0) return null;
+    return (
+      <section className="mb-12">
+        <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
+          <BookOpen className="w-5 h-5 inline-block text-neon-light mr-2" />
+          Related Articles
+        </h2>
+        <p className="text-tech-300 text-sm mb-6">
+          Read our latest deep-dives on {cat.name.toLocaleLowerCase()} tools and tactics
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {relatedPosts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="group relative rounded-xl border border-tech-500/30 bg-tech-700/60 p-5 hover:border-neon/40 hover:-translate-y-1 transition-all"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-[10px] text-tech-300 font-mono px-1.5 py-0.5 rounded border border-tech-500/20">
+                  {post.tags?.[0] || 'AI Tools'}
+                </span>
+                <span className="text-[10px] text-tech-400">{post.date}</span>
+              </div>
+              <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1 line-clamp-2">
+                {post.title}
+              </h3>
+              <p className="text-[11px] text-tech-300 line-clamp-2 leading-relaxed">
+                {post.excerpt}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    );
+  })()}
+
+  {/* Related Playbooks */}
+  {relatedPlaybooks.length > 0 && (
  <section className="mb-12">
  <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
  <BookOpen className="w-5 h-5 inline-block text-neon-light mr-2" />

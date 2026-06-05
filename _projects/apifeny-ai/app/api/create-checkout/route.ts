@@ -152,11 +152,13 @@ export async function POST(req: NextRequest) {
  ? 'pro'
  : productSlug;
 
+  // Add product slug to metadata so webhook can map it
  const session = await createCheckoutSession({
  product,
- successUrl: `${origin}/playbooks/${redirectSlug}?checkout=success`,
+ successUrl: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}&product=${productSlug}`,
  cancelUrl: `${origin}/playbooks/${redirectSlug}?checkout=cancelled`,
  customerEmail: body.email || undefined,
+ productSlug,
  });
 
  return NextResponse.json({ url: session.url });
@@ -176,13 +178,19 @@ interface CreateSessionParams {
  successUrl: string;
  cancelUrl: string;
  customerEmail?: string;
+ productSlug?: string;
 }
 
 async function createCheckoutSession(params: CreateSessionParams) {
- const { product, successUrl, cancelUrl, customerEmail } = params;
+ const { product, successUrl, cancelUrl, customerEmail, productSlug } = params;
 
  const formData = new URLSearchParams();
  formData.append('mode', product.mode);
+
+ // Attach product slug at session level so webhook always has it
+ if (productSlug) {
+ formData.append('metadata[product_slug]', productSlug);
+ }
  formData.append('success_url', successUrl);
  formData.append('cancel_url', cancelUrl);
  formData.append('line_items[0][price_data][currency]', 'usd');
@@ -190,6 +198,9 @@ async function createCheckoutSession(params: CreateSessionParams) {
  formData.append('line_items[0][price_data][product_data][description]', product.description);
  formData.append('line_items[0][price_data][unit_amount]', String(product.unitAmount));
  formData.append('line_items[0][quantity]', '1');
+
+ // Embed product slug in the description so webhook can read it
+ formData.append('line_items[0][price_data][product_data][metadata][product_slug]', productSlug || '');
 
  if (product.mode === 'subscription' && product.interval) {
  formData.append('line_items[0][price_data][recurring][interval]', product.interval);

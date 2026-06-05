@@ -1,2 +1,6 @@
 .vercel
 .env*.local
+
+# Generated PDF playbooks (reproducible via scripts)
+public/downloads/
+
