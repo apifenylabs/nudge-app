@@ -457,22 +457,6 @@ export default function PluginPage({ params }: { params: { id: string } }) {
         </section>
       )}
 
-      {/* ── Habit → Mood Dashboard (Health OS only) ── */}
-      {plugin.id === 'health' && (
-        <section className="max-w-4xl mx-auto px-4 py-12 border-t border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-900 mb-1">🔬 Habit → Mood Tracker</h2>
-          <p className="text-sm text-gray-500 mb-6">
-            Log your daily habits and mood. LifeOS computes correlations to show you what actually moves the needle.
-          </p>
-          <HabitMoodDashboard />
-        </section>
-      )}
-
-      {/* ── Usage Analytics Section (client-side) ── */}
-      <section className="max-w-4xl mx-auto px-4 py-12 border-t border-gray-100">
-        <ClientUsageSection pluginId={plugin.id} pluginName={plugin.name} />
-      </section>
-
       {/* ── Footer / Nav ── */}
       <footer className="border-t border-gray-100 py-8">
         <div className="max-w-4xl mx-auto px-4 flex items-center justify-between">
