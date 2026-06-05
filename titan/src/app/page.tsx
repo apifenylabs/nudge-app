@@ -179,6 +179,10 @@ export default function TitanLanding() {
             <Zap className="w-5 h-5 text-amber-500" />
             <span className="font-semibold">Titan</span>
           </div>
+          <nav className="flex gap-6 text-sm text-gray-500">
+            <Link href="/changelog" className="hover:text-gray-300 transition-colors">Changelog</Link>
+            <Link href="/about" className="hover:text-gray-300 transition-colors">About</Link>
+          </nav>
           <p className="text-gray-500 text-sm">Phase 6 — Visual Progression & Robotics Bridge</p>
         </div>
       </footer>

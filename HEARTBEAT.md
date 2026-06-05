@@ -1,15 +1,18 @@
-# HEARTBEAT — 2026-06-06 04:24 HKT
+# HEARTBEAT — 2026-06-06 05:24 HKT
 
 ## Summary
-Autonomous work session 04:24 — All code CEO-blocked. Per RULES.yaml section 6e: picked strategic backlog improvement. Created AI Directory README.md + build health verified all 3 strategic projects + updated backlog with improvement ideas.
+Autonomous work session 05:24 — All code CEO-blocked at P0-P2. Per RULES.yaml: pushed Strategic projects forward with docs pages.
 
 ## Actions Taken This Session
-### P5 STRATEGIC — AI Directory docs + backlog
-1. ✅ Created `README.md` for apifeny-ai project (tech stack, structure, features, status)
-2. ✅ Build health check: LifeOS (24 routes) ✅, Titan (21 routes) ✅, AI Directory (472 pages) ✅ — all clean
-3. ✅ SEO audit: All 3 strategic projects have proper sitemaps, metadata, robots.txt
-4. ✅ Updated work-engine-state.md with detailed backlog for next CEO unlock
-5. ✅ Committed all changes to master
+### P4 STRATEGIC — Titan changelog + about pages
+1. ✅ Created `/changelog` page with full Phase 1-6 release history, filterable by major/minor/patch
+2. ✅ Created `/about` page with mission, values, roadmap, feature showcase, use cases, and FAQ
+3. ✅ Added nav links in landing page footer
+4. ✅ Build verified: 21 routes clean ✅
+
+### P3 STRATEGIC — LifeOS changelog page
+1. ✅ Created `/changelog` page with 8 releases from v0.1.0 to v0.8.0
+2. ✅ Build verified: 27 routes clean ✅
 
 ## Site Health — All 10 Sites HTTP 200 ✅
 | Site | URL | Status |
