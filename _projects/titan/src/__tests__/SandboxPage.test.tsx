@@ -70,7 +70,7 @@ describe('SandboxPage', () => {
     // Starts at 0% — found in ProgressBar + maybe AgentStudio toolbar has "0 nodes"
     expect(screen.getAllByText('0%').length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText('0 XP')).toBeInTheDocument();
-    expect(screen.getByText('100 XP needed')).toBeInTheDocument();
+    expect(screen.getByText('100 XP to next rank')).toBeInTheDocument();
   });
 
   it('shows empty state in preview when no nodes exist', () => {

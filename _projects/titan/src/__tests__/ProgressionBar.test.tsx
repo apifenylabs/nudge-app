@@ -14,10 +14,10 @@ describe('ProgressionBar', () => {
     expect(screen.getByText('75%')).toBeInTheDocument();
   });
 
-  it('shows XP counters', () => {
+  it('shows XP counters — E rank (cumulative: 0 threshold)', () => {
     render(<ProgressionBar currentRank="E" currentXp={50} />);
     expect(screen.getByText('50 XP')).toBeInTheDocument();
-    expect(screen.getByText('100 XP needed')).toBeInTheDocument();
+    expect(screen.getByText('100 XP to next rank')).toBeInTheDocument();
   });
 
   it('shows next rank for non-max ranks', () => {
@@ -31,9 +31,10 @@ describe('ProgressionBar', () => {
     expect(screen.getByText('MAX RANK')).toBeInTheDocument();
   });
 
-  it('caps XP display at maxXp', () => {
-    render(<ProgressionBar currentRank="E" currentXp={999} />);
-    // Rendered XP should be capped at 100 (E rank maxXp)
+  it('caps XP progress at 100% within rank', () => {
+    render(<ProgressionBar currentRank="E" currentXp={150} />);
+    // E rank threshold is 0 XP, D rank threshold is 100 XP
+    // 150 XP means xpInRank=100 out of 100 needed = 100%
     expect(screen.getByText('100%')).toBeInTheDocument();
     expect(screen.getByText('100 XP')).toBeInTheDocument();
   });

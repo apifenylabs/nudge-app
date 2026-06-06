@@ -23,8 +23,8 @@ export interface LevelProgressionActions {
   setLevel: (newLevel: number) => void;
   /** Mark the god-tier modal as dismissed */
   dismissGodModal: () => void;
-  /** Add XP and potentially level up */
-  addXp: (amount: number, currentXp: number, xpToNext: number) => number;
+  /** Add XP and potentially level up. xpToNext can be a static value or a function(level) for per-level recalculation. */
+  addXp: (amount: number, currentXp: number, xpToNext: number | ((level: number) => number)) => number;
 }
 
 // ─── Hook ───────────────────────────────────────────────────────────────
@@ -100,14 +100,18 @@ export function useLevelProgression(initialLevel = 1): [LevelProgressionState, L
   /**
    * Add XP and return any level-ups that occurred.
    * Returns the new XP amount after accounting for level-ups.
+   * Accepts xpToNext as a static number or a function(level) for per-level recalculation.
    */
   const addXp = useCallback(
-    (amount: number, currentXp: number, xpToNext: number): number => {
+    (amount: number, currentXp: number, xpToNext: number | ((level: number) => number)): number => {
       let xp = currentXp + amount;
       let newLevel = level;
 
-      while (xp >= xpToNext && xpToNext > 0) {
-        xp -= xpToNext;
+      while (true) {
+        const needed = typeof xpToNext === "function" ? xpToNext(newLevel) : xpToNext;
+        if (needed <= 0) break;
+        if (xp < needed) break;
+        xp -= needed;
         newLevel += 1;
       }
 

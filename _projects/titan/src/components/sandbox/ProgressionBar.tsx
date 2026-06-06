@@ -6,14 +6,17 @@
    provides visual context for the player's progression tier.
    ───────────────────────────────────────────────────────────── */
 
-const RANK_DATA = [
-  { rank: "E", label: "Novice",    color: "from-gray-500 to-gray-600",    textColor: "text-gray-300",  maxXp: 100 },
-  { rank: "D", label: "Recruit",   color: "from-green-500 to-green-600",  textColor: "text-green-300",  maxXp: 250 },
-  { rank: "C", label: "Veteran",   color: "from-blue-500 to-blue-600",    textColor: "text-blue-300",   maxXp: 500 },
-  { rank: "B", label: "Hunter",    color: "from-purple-500 to-fuchsia-600", textColor: "text-purple-300", maxXp: 1000 },
-  { rank: "A", label: "Elite",     color: "from-amber-500 to-orange-600",  textColor: "text-amber-300",  maxXp: 2000 },
-  { rank: "S", label: "Sovereign", color: "from-cyan-400 to-blue-600",     textColor: "text-cyan-300",   maxXp: 5000 },
-];
+import { EVOLUTION_STAGES, rankIndex, xpProgressInRank } from "@/hooks/useProgression";
+
+// Derive RANK_DATA from the single source of truth (EVOLUTION_STAGES in useProgression)
+// This ensures XP thresholds, colors, and labels stay in sync automatically.
+const RANK_DATA = EVOLUTION_STAGES.map((s) => ({
+  rank: s.rank,
+  label: s.title,
+  color: s.color,
+  textColor: s.accentColor,
+  maxXp: s.xpRequired,
+}));
 
 interface Props {
   currentRank: string;
@@ -27,8 +30,13 @@ export default function ProgressionBar({ currentRank, currentXp, onRankSelect, c
   const currentRankData = RANK_DATA[currentIndex] || RANK_DATA[0];
   const nextRankData = RANK_DATA[currentIndex + 1];
 
-  const xpInRank = Math.min(currentXp, currentRankData.maxXp);
-  const xpProgress = Math.min(xpInRank / currentRankData.maxXp, 1);
+  // xpRequired is cumulative (total XP to reach this rank).
+  // Calculate XP earned within the current rank and XP needed to reach next rank.
+  const currentThreshold = currentRankData.maxXp;
+  const nextThreshold = nextRankData?.maxXp ?? currentThreshold;
+  const xpInRank = Math.max(0, Math.min(currentXp - currentThreshold, nextThreshold - currentThreshold));
+  const xpNeededForRank = Math.max(1, nextThreshold - currentThreshold);
+  const xpProgress = Math.min(xpInRank / xpNeededForRank, 1);
   const xpPercent = Math.round(xpProgress * 100);
 
   if (compact) {
@@ -44,7 +52,7 @@ export default function ProgressionBar({ currentRank, currentXp, onRankSelect, c
           />
         </div>
         <span className="text-[9px] text-white/40 w-12 text-right">
-          {xpInRank}/{currentRankData.maxXp} XP
+          {xpInRank}/{xpNeededForRank} XP
         </span>
       </div>
     );
@@ -82,10 +90,10 @@ export default function ProgressionBar({ currentRank, currentXp, onRankSelect, c
         </div>
       </div>
 
-      {/* XP counters */}
+      {/* XP counters — show progress within current rank */}
       <div className="flex items-center justify-between mt-1.5">
         <span className="text-[10px] text-white/40">{xpInRank} XP</span>
-        <span className="text-[10px] text-white/40">{currentRankData.maxXp} XP needed</span>
+        <span className="text-[10px] text-white/40">{xpNeededForRank} XP to next rank</span>
       </div>
 
       {/* Rank selector (clickable badges) */}

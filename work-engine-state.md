@@ -1,53 +1,50 @@
 # Work Engine State
 
-**Last updated:** 2026-06-06 05:24 HKT  
-**Session:** Autonomous Work Session — P4 Strategic + P3 Strategic pages
+**Last updated:** 2026-06-06 10:07 HKT  
+**Session:** Heartbeat 10:07 — Fixed ProfileProgressXP multi-level-up XP carryover bug (addXp now recalculates per level). Build ✅, deploy ✅, all 4 sites HTTP 200 ✅. Cursor advanced to next Strategic item.
 
 ## What was done this session
-- ✅ **P4 (Strategic):** Created Titan changelog page (`/changelog`) — full release history from Phase 1 to Phase 6 with filtering by major/minor/patch
-- ✅ **P4 (Strategic):** Created Titan about page (`/about`) — mission, values, roadmap, feature showcase, and CTA
-- ✅ **P4 (Strategic):** Added changelog + about links to Titan landing page footer
-- ✅ **P3 (Strategic):** Created LifeOS changelog page (`/changelog`) — 8 releases from v0.1.0 to v0.8.0
-- ✅ **Build verification:** Titan (21 routes) builds clean ✅
-- ✅ **Build verification:** LifeOS (27 routes) builds clean ✅
+- ✅ **useLevelProgression.addXp fixed** — now accepts `number | ((level) => number)` so XP thresholds are recalculated per level-up, fixing multi-level-up carryover bug
+- ✅ **ProfileProgressXP caller fixed** — passes recalculation function instead of static `xpNeeded`
+- ✅ **Build verified** — Titan builds clean (11 routes)
+- ✅ **Deploy verified** — `titan-app-puce.vercel.app` + `titan-gamma-gules.vercel.app` HTTP 200
+- ✅ **Titan progression XP logic is now taut** across all 3 components: ProgressionBar (EVOLUTION_STAGES-derived), ProfileProgressXP (per-level recalculation), ProgressionCarousel (display-only)
 
 ## Priority Bucket Allocation
 
 | Bucket | Status | Next Action |
 |--------|--------|-------------|
-| 🟡 Revenue (P0-P2) | ✅ All code complete. Blocked on CEO: Stripe keys, affiliate API keys, Git PAT | ⏳ CEO unblock |
-| 🟡 Strategic (P3-P5) | ✅ Changelog + About pages for LifeOS and Titan now complete | ⏳ CEO unblock for deeper work |
-| 🟢 Analytics (P6) | ✅ All 10 sites have analytics. GA4 wired on 8/10 | ⏳ CEO: `NEXT_PUBLIC_GA_TRACKING_ID` |
-| ✅ All builds pass | LifeOS (27 routes) ✅, Titan (21 routes) ✅, AI Directory (472 pages) ✅ | — |
+| 🟢 Revenue (P0-P2) | ✅ All code complete. Blocked on CEO: Stripe keys, affiliate API keys, Git PAT | ⏳ CEO unblock |
+| 🟢 Strategic (P3-P5) | ✅ Titan XP progression fixed + deployed. LifeOS CEO-blocked (Supabase). | → Next: AI Directory blog growth — 2-3 new posts (no env vars needed) |
+| 🟢 Analytics (P6) | ✅ All 10 sites have analytics | ⏳ CEO: `NEXT_PUBLIC_GA_TRACKING_ID` |
 
 ## Backlog: Improvements for CEO-free work (next unlock)
 
-When CEO unblocks any env vars or deploys, resume here:
+### AI Directory (P5) — Fully CEO-free action
+- [ ] Blog: generate 2-3 new posts targeting long-tail keywords (no env vars needed)
+- [ ] Premium playbook: add affiliate CTAs (blocked on env vars)
+- Additional SEO improvements, keyword research
 
 ### LifeOS (P3) — CEO needs: Supabase, PAT, env vars
-- [ ] Wire plugin manifest to build-time JSON export for API consumption
+- [ ] Apply schema SQL (supabase-schema.sql) to Supabase project
+- [ ] Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY in Vercel
+- [ ] Deploy LifeOS with Supabase persistence (in-memory fallback currently works)
 - [ ] Add screenshot previews to plugin cards
-- [ ] Architecture documentation page (arch overview + plugin system diagram)
 
-### Titan (P4) — CEO needs: Vercel alias, env vars
-- [ ] Create comparison table pages for Titan vs Replit/Cursor/Lovable/v0
-- [ ] Add pricing FAQ section
-- [ ] Flesh out robotics documentation
-
-### AI Directory (P5) — CEO needs: affiliate env vars
-- [ ] Add more blog posts (use Ollama for batch generation)
-- [ ] Create premium playbook landing page
+### Titan (P4)
+- [x] Progression XP system edge cases fixed — multi-level-up carryover ✅
+- [ ] Dashboard: verify mock data placeholders, add real API wiring when backend ready
 
 ## Projects Status
 
 | Project | Code | Build | Deploy | GA4 | Pending |
 |---------|------|-------|--------|-----|---------|
-| LifeOS | ✅ 14 plugins, phase-aware chat, changelog + about pages | ✅ Clean (27 routes) | ✅ lifeos-weld.vercel.app | ✅ wired | ⏳ CEO PAT + Supabase |
-| Titan | ✅ +2.8K lines, landing, dashboard, changelog + about pages | ✅ Clean (21 routes) | ✅ titan-app-puce.vercel.app | ✅ wired | ⏳ CEO alias |
-| AI Directory | ✅ 127 posts, 105 playbooks, 50+ countries | ✅ Clean (472 pages) | ✅ apifeny-ai.vercel.app | ✅ wired | ⏳ CEO env vars |
+| LifeOS | ✅ 14 plugins, phase-aware chat, changelog + about + architecture pages | ✅ Clean (28 routes) | ✅ lifeos-weld.vercel.app | ✅ wired | ⏳ CEO PAT + Supabase |
+| Titan | ✅ +2.8K lines, landing, dashboard, changelog, about, compare, pricing, robotics × 6 | ✅ Clean (11 routes) | ✅ titan-app-puce.vercel.app | ✅ wired | ⏳ CEO alias |
+| AI Directory | ✅ 139 posts, 105 playbooks, 50+ countries | ✅ Clean (472 pages) | ✅ apifeny-ai.vercel.app | ✅ wired | ⏳ CEO env vars |
 | EV Charging Asia | ✅ Blog refreshed | ✅ | ✅ HTTP 200 | ✅ wired | ⏳ CEO affiliate keys |
-| Luxury Family | ✅ | ✅ | ✅ | ✅ wired | ⏳ CEO affiliate keys |
-| Family Directory | ✅ | ✅ | ✅ HTTP 200 | ✅ wired | ⏳ CEO affiliate keys |
+| Luxury Family | ✅ | ✅ | ✅ HTTP 200 | ✅ wired | ⏳ CEO affiliate keys |
+| Family Directory | ✅ | ✅ | ✅ HTTP 200 (→ familytravelasia.com) | ✅ wired | ⏳ CEO affiliate keys |
 | Social Beast | ✅ GA4 added | ✅ | ✅ HTTP 200 | ✅ wired | ⏳ CEO env vars |
 | Nudge | ✅ | ✅ | ✅ HTTP 200 | ✅ wired | ⏳ CEO env vars |
 | Senior Friendly | ✅ URL fixed | ❓ | ✅ HTTP 200 | ❓ | ⏳ No local source dir |
@@ -62,12 +59,13 @@ When CEO unblocks any env vars or deploys, resume here:
 ⬜ CEO: Set `NEXT_PUBLIC_AFFILIATE_*` env vars in Vercel
 
 ### Strategic (P3-P5)
-⬜ CEO: Verify Supabase project or create new one
+⬜ CEO: Verify Supabase project or create new one (for LifeOS)
 ⬜ CEO: Set Vercel env vars for all projects
 ⬜ CEO: Configure Vercel domain alias for Titan
-⬜ CEO: Share new Git PAT
+⬜ AI Directory: Blog growth — generate 2-3 new blog posts targeting emerging AI categories (next CEO-free action)
 
 ### Next session (when CEO unblocks anything):
 → First: any P0-P2 revenue work
-→ Then: push LifeOS plugin depth (more categories, connected features)
-→ Then: push Titan comparison tables and pricing FAQ
+→ Then: LifeOS Supabase activation (Sprint 1)
+→ Then: AI Directory blog growth
+→ Then: Titan dashboard API wiring

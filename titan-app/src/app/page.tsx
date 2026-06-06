@@ -963,6 +963,8 @@ export default function LandingPage() {
             <span className="text-xs text-gray-400">Phasr Forge · © 2026</span>
           </div>
           <div className="flex items-center gap-4 text-xs text-gray-400">
+            <a href="/compare" className="hover:text-gray-600 transition-colors">Compare</a>
+            <span className="text-gray-300">·</span>
             <a href="/privacy" className="hover:text-gray-600 transition-colors">Privacy</a>
             <span className="text-gray-300">·</span>
             <span>Built with shadcn/ui</span>

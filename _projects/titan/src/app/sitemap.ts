@@ -3,7 +3,14 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://titan-app-puce.vercel.app";
 
-  const platformSlugs = ["ros2", "arduino", "raspberry-pi", "custom-hardware"];
+  const platformSlugs = [
+    "ros2",
+    "arduino",
+    "raspberry-pi",
+    "jetson-nano",
+    "rover-pro",
+    "titan-arm",
+  ];
 
   return [
     { url: base, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },

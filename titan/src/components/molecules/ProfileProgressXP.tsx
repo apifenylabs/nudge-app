@@ -208,12 +208,13 @@ export default function ProfileProgressXP({
 
   const handleXpGained = useCallback(
     (amount: number) => {
-      const newXp = actions.addXp(amount, xp, xpNeeded);
+      // Pass a function so addXp recalculates xpNeeded per level (correct multi-level-up carryover)
+      const newXp = actions.addXp(amount, xp, (lvl: number) => xpForLevel(lvl));
       setXp(newXp);
       setFloatId((id) => id + 1);
       setFloatText({ amount, id: floatId + 1 });
     },
-    [xp, xpNeeded, actions, floatId]
+    [xp, actions, floatId]
   );
 
   // Detect level-up from the hook's previousLevel tracking

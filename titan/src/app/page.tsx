@@ -182,6 +182,7 @@ export default function TitanLanding() {
           <nav className="flex gap-6 text-sm text-gray-500">
             <Link href="/changelog" className="hover:text-gray-300 transition-colors">Changelog</Link>
             <Link href="/about" className="hover:text-gray-300 transition-colors">About</Link>
+            <Link href="/compare" className="hover:text-gray-300 transition-colors">Compare</Link>
           </nav>
           <p className="text-gray-500 text-sm">Phase 6 — Visual Progression & Robotics Bridge</p>
         </div>
