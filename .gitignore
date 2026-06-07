@@ -44,3 +44,6 @@ Thumbs.db
 *.tmp
 *.temp
 .vercel
+# Browser artifacts that shouldn't be in version control
+undefined:/Users/*
+lighthouse.*

@@ -132,7 +132,7 @@ export default function MyPlaybooksPage() {
  <Heart className="w-3.5 h-3.5" />
  My Playbook Dashboard
  </div>
- <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+ <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
  Your Playbook Dashboard
  </h1>
  <p className="text-sm text-gray-800/70 max-w-xl mb-4">
@@ -178,7 +178,7 @@ export default function MyPlaybooksPage() {
  {activeTab === 'tracked' && (
  <div>
  {/* Tracked Playbooks */}
- <h2 className="text-lg font-semibold text-white mb-4">Saved Playbooks</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-4">Saved Playbooks</h2>
  {trackedPlaybooks.length > 0 ? (
  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
  {trackedPlaybooks.map((pb) => (
@@ -188,7 +188,7 @@ export default function MyPlaybooksPage() {
  ) : (
  <div className="rounded-xl border border-dashed border-gray-200 bg-white/40 p-8 text-center mb-8">
  <Bookmark className="w-10 h-10 text-gray-400 mx-auto mb-3" />
- <h3 className="text-base font-semibold text-white mb-1">No playbooks tracked yet</h3>
+ <h3 className="text-base font-semibold text-gray-900 mb-1">No playbooks tracked yet</h3>
  <p className="text-xs text-gray-700 max-w-md mx-auto mb-4">
  Browse playbooks and save the ones you want to follow.
  </p>
@@ -205,7 +205,7 @@ export default function MyPlaybooksPage() {
  {/* All Playbooks (to add) */}
  {untrackedPlaybooks.length > 0 && (
  <>
- <h2 className="text-lg font-semibold text-white mb-4">Discover Playbooks</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-4">Discover Playbooks</h2>
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
  {untrackedPlaybooks.slice(0, 6).map((pb) => (
  <UntrackedPlaybookCard key={pb.slug} playbook={pb} onTrack={toggleTrack} />
@@ -218,11 +218,11 @@ export default function MyPlaybooksPage() {
 
  {activeTab === 'results' && (
  <div>
- <h2 className="text-lg font-semibold text-white mb-4">Log Your Results</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-4">Log Your Results</h2>
 
  {/* Add result form */}
  <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-5 mb-6">
- <h3 className="text-sm font-semibold text-white mb-3">Add a Result</h3>
+ <h3 className="text-sm font-semibold text-gray-900 mb-3">Add a Result</h3>
  <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
  <select
  value={newResultPlaybook}
@@ -276,7 +276,7 @@ export default function MyPlaybooksPage() {
  <TrendingUp className="w-4 h-4 text-emerald-400" />
  </div>
  <div className="min-w-0">
- <div className="text-sm font-medium text-white">
+ <div className="text-sm font-medium text-gray-900">
  {result.metric}: <span className="text-emerald-400">{result.value}</span>
  </div>
  <div className="text-[11px] text-gray-600">
@@ -297,7 +297,7 @@ export default function MyPlaybooksPage() {
  ) : (
  <div className="rounded-xl border border-dashed border-gray-200 bg-white/40 p-8 text-center">
  <TrendingUp className="w-10 h-10 text-gray-400 mx-auto mb-3" />
- <h3 className="text-base font-semibold text-white mb-1">No results logged yet</h3>
+ <h3 className="text-base font-semibold text-gray-900 mb-1">No results logged yet</h3>
  <p className="text-xs text-gray-700 max-w-md mx-auto">
  Track your progress by logging metrics from the playbooks you follow.
  </p>
@@ -308,12 +308,12 @@ export default function MyPlaybooksPage() {
 
  {activeTab === 'submit' && (
  <div>
- <h2 className="text-lg font-semibold text-white mb-4">Share Your Success Story</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-4">Share Your Success Story</h2>
 
  {storySubmitted ? (
  <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center">
  <Check className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
- <h3 className="text-lg font-semibold text-white mb-1">Story Submitted! 🎉</h3>
+ <h3 className="text-lg font-semibold text-gray-900 mb-1">Story Submitted! 🎉</h3>
  <p className="text-sm text-gray-700 max-w-md mx-auto mb-4">
  Your story has been saved locally. Our editorial team will review it for inclusion
  on the public feed.
@@ -436,7 +436,7 @@ function TrackedPlaybookCard({
  </button>
  </div>
  <Link href={`/playbook/${playbook.slug}`}>
- <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-0.5">
+ <h3 className="text-sm font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-0.5">
  {playbook.title}
  </h3>
  <p className="text-[11px] text-gray-700 line-clamp-1">{playbook.description}</p>
@@ -487,7 +487,7 @@ function UntrackedPlaybookCard({
  </button>
  </div>
  <Link href={`/playbook/${playbook.slug}`}>
- <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-0.5">
+ <h3 className="text-sm font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-0.5">
  {playbook.title}
  </h3>
  <p className="text-[11px] text-gray-700 line-clamp-1">{playbook.description}</p>

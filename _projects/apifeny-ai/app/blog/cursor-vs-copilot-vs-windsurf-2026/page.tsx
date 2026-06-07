@@ -436,7 +436,7 @@ export default function CursorVsCopilotPage() {
  </div>
  </div>
  <p className="text-blue-100 text-sm mb-4">
- <strong className="text-white">Our pick:</strong> If you can afford $20/mo, <strong>Cursor</strong> is the most productive tool for serious developers. If you&apos;re on a budget or in the GitHub ecosystem, <strong>Copilot</strong> at $10/mo is incredible value. If you want cutting-edge AI without the price tag, <strong>Windsurf</strong>&apos;s free tier punches way above its weight.
+ <strong className="text-gray-900">Our pick:</strong> If you can afford $20/mo, <strong>Cursor</strong> is the most productive tool for serious developers. If you&apos;re on a budget or in the GitHub ecosystem, <strong>Copilot</strong> at $10/mo is incredible value. If you want cutting-edge AI without the price tag, <strong>Windsurf</strong>&apos;s free tier punches way above its weight.
  </p>
  </section>
 

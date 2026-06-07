@@ -236,7 +236,7 @@ export default function MarketersPage() {
  <TrendingUp className="w-5 h-5 text-neon" />
  <span className="text-neon font-semibold text-sm uppercase tracking-wider">For Marketers</span>
  </div>
- <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+ <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
  Best AI Marketing Tools for{' '}
  <span className="bg-gradient-to-r from-purple-400 to-neon-light bg-clip-text text-transparent">
  Asian Markets
@@ -244,9 +244,9 @@ export default function MarketersPage() {
  </h1>
  <p className="text-lg sm:text-xl text-gray-600 max-w-3xl leading-relaxed mb-8">
  Marketing in Asia means multi-language, super-app ecosystems, and regional compliance &mdash; generic
- tool lists won't cut it. These <strong className="text-white">curated AI marketing tools</strong> are
+ tool lists won't cut it. These <strong className="text-gray-900">curated AI marketing tools</strong> are
  tested for SEO, content, social, email, and video in Chinese, Japanese, Korean, Thai, and Vietnamese
- markets. <strong className="text-white">All with local pricing, WeChat/LINE readiness, and Asian data compliance.</strong>
+ markets. <strong className="text-gray-900">All with local pricing, WeChat/LINE readiness, and Asian data compliance.</strong>
  </p>
  <div className="flex flex-wrap gap-3">
  <Link
@@ -279,7 +279,7 @@ export default function MarketersPage() {
  ].map((stat) => (
  <div key={stat.label} className="flex flex-col items-center gap-1">
  <span className="text-neon-light">{stat.icon}</span>
- <span className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</span>
+ <span className="text-2xl sm:text-3xl font-bold text-gray-900">{stat.value}</span>
  <span className="text-sm text-gray-400">{stat.label}</span>
  </div>
  ))}
@@ -290,7 +290,7 @@ export default function MarketersPage() {
  {/* Categories Index */}
  <section id="categories" className="border-b border-gray-200/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
- <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+ <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
  Tools by Marketing Category
  </h2>
  <p className="text-gray-600 max-w-2xl mb-10 leading-relaxed">
@@ -306,7 +306,7 @@ export default function MarketersPage() {
  >
  <div className={`flex items-center gap-2 mb-2 ${cat.textColor}`}>
  {cat.icon}
- <h3 className="font-bold text-white">{cat.title}</h3>
+ <h3 className="font-bold text-gray-900">{cat.title}</h3>
  </div>
  <p className="text-sm text-gray-400 mb-3">
  {cat.tools.length} tools &middot; {cat.blogPosts.length} guides
@@ -324,7 +324,7 @@ export default function MarketersPage() {
  {/* Comparison Table */}
  <section id="comparison" className="border-b border-gray-200/30 bg-white/40">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Quick Comparison: Top AI Marketing Tools for Asia
  </h2>
  <p className="text-gray-600 max-w-3xl mb-8">
@@ -389,7 +389,7 @@ export default function MarketersPage() {
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="flex items-center gap-3 mb-2">
  <span className={cat.textColor}>{cat.icon}</span>
- <h2 className="text-2xl sm:text-3xl font-bold text-white">{cat.title}</h2>
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">{cat.title}</h2>
  </div>
 
  <p className="text-gray-400 max-w-2xl mb-6 leading-relaxed">
@@ -414,7 +414,7 @@ export default function MarketersPage() {
  href={`/tool/${toolSlug}`}
  className="bg-gray-100 border border-gray-200/30 rounded-xl p-4 hover:border-neon/30 transition-all group"
  >
- <h3 className="font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
+ <h3 className="font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-1">
  {fallbackName}
  </h3>
  </Link>
@@ -426,7 +426,7 @@ export default function MarketersPage() {
  href={`/tool/${toolSlug}`}
  className="bg-gray-100 border border-gray-200/30 rounded-xl p-4 hover:border-neon/30 transition-all group"
  >
- <h3 className="font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
+ <h3 className="font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-1">
  {tool.name || tool.title || toolSlug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}
  </h3>
  {tool.tagline && (
@@ -474,7 +474,7 @@ export default function MarketersPage() {
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <div className="flex items-center gap-2 mb-2">
  <BookOpen className="w-5 h-5 text-neon" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
  Asia-Focused Marketing Guides
  </h2>
  </div>
@@ -498,7 +498,7 @@ export default function MarketersPage() {
  href={`/blog/${post.slug}`}
  className="group bg-gray-100 border border-gray-200/30 rounded-xl p-5 hover:border-neon/30 transition-all"
  >
- <h3 className="font-semibold text-white group-hover:text-neon-light transition-colors mb-2">
+ <h3 className="font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-2">
  {post.title}
  </h3>
  <p className="text-sm text-gray-400 line-clamp-2 mb-3">{post.excerpt}</p>
@@ -517,7 +517,7 @@ export default function MarketersPage() {
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <div className="flex items-center gap-2 mb-2">
  <Rocket className="w-5 h-5 text-neon" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
  Marketing Playbooks
  </h2>
  </div>
@@ -541,7 +541,7 @@ export default function MarketersPage() {
  }`}>
  {p.difficulty}
  </span>
- <h3 className="font-semibold text-white mt-2 mb-1 group-hover:text-neon-light transition-colors">
+ <h3 className="font-semibold text-gray-900 mt-2 mb-1 group-hover:text-neon-light transition-colors">
  {p.title}
  </h3>
  <p className="text-sm text-gray-400 line-clamp-2">{p.description}</p>
@@ -567,7 +567,7 @@ export default function MarketersPage() {
  {/* Why Asia */}
  <section className="border-b border-gray-200/30 bg-white/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Why Asian Marketers Need Different AI Tools
  </h2>
  <p className="text-gray-600 max-w-3xl mb-8 leading-relaxed">
@@ -588,7 +588,7 @@ export default function MarketersPage() {
  ].map((item) => (
  <div key={item.title} className="bg-gray-100 border border-gray-200/30 rounded-xl p-5">
  <span className="text-neon-light block mb-2">{item.icon}</span>
- <h3 className="font-semibold text-white mb-1">{item.title}</h3>
+ <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
@@ -606,7 +606,7 @@ export default function MarketersPage() {
  <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
  <div className="bg-gradient-to-br from-neon/10 to-purple-600/10 border border-neon/20 rounded-2xl p-8 sm:p-12">
  <Sparkles className="w-8 h-8 text-neon mx-auto mb-4" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Ready to Build Your Marketing Stack?
  </h2>
  <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">

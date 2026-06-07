@@ -168,7 +168,7 @@ export default function PremiumPage() {
             </div>
 
             <div className="rounded-xl border-2 border-violet-200 bg-gradient-to-b from-violet-50 to-white p-6 shadow-md relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 text-white text-[10px] font-bold">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 text-gray-900 text-[10px] font-bold">
                 Best Value
               </div>
               <h3 className="text-sm font-semibold text-gray-900 mb-1">Yearly</h3>

@@ -301,7 +301,7 @@ export default function AIToolsForCustomerSupportGuide() {
               <BookOpen className="w-3.5 h-3.5" />
               Guide · 12 min read
  </span>
- <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+ <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
  AI Tools for Customer Support: Best Customer Service Automation 2026
  </h1>
  <p className="text-lg sm:text-xl text-emerald-100/90 max-w-2xl mb-8">

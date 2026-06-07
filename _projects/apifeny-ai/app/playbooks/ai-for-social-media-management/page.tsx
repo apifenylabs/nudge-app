@@ -69,11 +69,11 @@ function CheckoutOverlay({ onBack }) {
  <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-neon to-aqua flex items-center justify-center mb-4">
  <FileText className="w-8 h-8 text-white" />
  </div>
- <h3 className="text-xl font-bold text-white mb-1">AI for Social Media Management</h3>
+ <h3 className="text-xl font-bold text-gray-900 mb-1">AI for Social Media Management</h3>
  <p className="text-sm text-gray-700">Complete PDF Playbook</p>
  <div className="mt-3 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-neon/15 border border-neon/20">
  <DollarSign className="w-4 h-4 text-neon-light" />
- <span className="text-lg font-bold text-white">$7</span>
+ <span className="text-lg font-bold text-gray-900">$7</span>
  <span className="text-xs text-gray-700">one-time</span>
  </div>
  </div>
@@ -140,7 +140,7 @@ function AIForSocialMediaManagementInner() {
  <span className="text-3xl">📱</span>
  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-100 text-amber-700 border-amber-200 border border-amber-500/30">Beginner</span>
  </div>
- <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">AI for Social Media Management: Schedule to Viral</h1>
+ <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">AI for Social Media Management: Schedule to Viral</h1>
  <p className="text-sm sm:text-base text-gray-800 max-w-2xl mb-4 leading-relaxed">Manage social media like a pro with AI. From content calendars and scheduling to engagement analysis and trend spotting — this 35+ page PDF shows you how to use ChatGPT, Claude, and Canva AI to grow your presence across 6 platforms.</p>
  <div className="flex flex-wrap gap-3 mb-4">
  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800"><FileText className="w-3 h-3" /> 35+ pages</span>
@@ -185,7 +185,7 @@ For each hook, tell me why it works and what kind of post would follow it.`}
 
  {/* What's Inside */}
  <section className="mb-8 sm:mb-10" id="preview">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-neon-light" /> What's Inside</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-neon-light" /> What's Inside</h2>
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
  {includedItems.map((item, i) => (
  <div key={i} className="flex items-start gap-3 p-4 rounded-xl border border-pink-500/20 bg-pink-500/10">
@@ -198,7 +198,7 @@ For each hook, tell me why it works and what kind of post would follow it.`}
 
  {/* Who This Is For */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Users className="w-4 h-4 text-rose-400" /> Who This Is For</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Users className="w-4 h-4 text-rose-400" /> Who This Is For</h2>
  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
  {whoItsFor.map((item, i) => (
  <div key={i} className="flex items-start gap-3 p-4 rounded-xl border border-rose-500/20 bg-rose-500/5">
@@ -211,7 +211,7 @@ For each hook, tell me why it works and what kind of post would follow it.`}
 
  {/* What You'll Learn */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Target className="w-4 h-4 text-fuchsia-400" /> What You'll Learn</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Target className="w-4 h-4 text-fuchsia-400" /> What You'll Learn</h2>
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
  {whatYoullLearn.map((item, i) => (
  <div key={i} className="flex items-start gap-3 p-4 rounded-xl border border-pink-500/20 bg-pink-500/5">
@@ -224,7 +224,7 @@ For each hook, tell me why it works and what kind of post would follow it.`}
 
  {/* Chapter Preview */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><SearchIcon className="w-4 h-4 text-amber-400" /> Chapter Preview</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><SearchIcon className="w-4 h-4 text-amber-400" /> Chapter Preview</h2>
  <p className="text-sm text-gray-700 mb-6">Here's everything covered. Each chapter has actionable strategies and ready-to-use prompts.</p>
  <div className="space-y-4">
  {sections.map((s) => (
@@ -232,7 +232,7 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none">
  <div className="flex items-center gap-3 min-w-0">
  <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center"><IconRenderer name={s.icon} className={'w-5 h-5 ' + s.color} /></div>
- <div><h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-pink-300">{s.title}</h3><p className="text-xs text-gray-600 mt-0.5 line-clamp-1">{s.desc}</p></div>
+ <div><h3 className="text-sm sm:text-base font-semibold text-gray-900 group-hover:text-pink-300">{s.title}</h3><p className="text-xs text-gray-600 mt-0.5 line-clamp-1">{s.desc}</p></div>
  </div>
  <ChevronRight className="w-5 h-5 text-gray-600 shrink-0 transition-transform group-open:rotate-90" />
  </summary>
@@ -250,7 +250,7 @@ For each hook, tell me why it works and what kind of post would follow it.`}
 
  {/* Real Results */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Users className="w-4 h-4 text-pink-400" /> Real Results</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Users className="w-4 h-4 text-pink-400" /> Real Results</h2>
  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
  {socialProofStats.map((st, i) => (
  <div key={i} className={'flex flex-col items-center text-center p-4 sm:p-5 rounded-xl border ' + st.border + ' ' + st.bg}>
@@ -264,13 +264,13 @@ For each hook, tell me why it works and what kind of post would follow it.`}
 
  {/* Reviews */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Star className="w-4 h-4 text-amber-400" /> Reviews</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Star className="w-4 h-4 text-amber-400" /> Reviews</h2>
  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
  {testimonials.map((t, i) => (
  <div key={i} className="flex flex-col p-5 rounded-xl border border-gray-200 bg-gray-50">
  <div className="flex items-center gap-0.5 mb-3">{Array.from({ length: t.stars }).map((_, si) => (<Star key={si} className="w-4 h-4 text-amber-400 fill-amber-400" />))}</div>
  <blockquote className="text-xs sm:text-sm text-gray-800 leading-relaxed mb-3 flex-1">&ldquo;{t.quote}&rdquo;</blockquote>
- <div className="border-t border-gray-200 pt-3 mt-auto"><div className="text-sm font-medium text-white">{t.name}</div><div className="text-xs text-gray-600">{t.title}</div></div>
+ <div className="border-t border-gray-200 pt-3 mt-auto"><div className="text-sm font-medium text-gray-900">{t.name}</div><div className="text-xs text-gray-600">{t.title}</div></div>
  </div>
  ))}
  </div>
@@ -278,12 +278,12 @@ For each hook, tell me why it works and what kind of post would follow it.`}
 
  {/* Bonuses */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Zap className="w-4 h-4 text-amber-400" /> Free Bonuses ($35 Value)</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Zap className="w-4 h-4 text-amber-400" /> Free Bonuses ($35 Value)</h2>
  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
  {bonuses.map((bonus, i) => (
  <div key={i} className="relative flex flex-col p-5 rounded-xl border border-amber-500/20 bg-amber-500/5">
  <div className="absolute -top-2 right-3"><span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">FREE</span></div>
- <div className="text-base font-semibold text-white mb-1 pr-12">{bonus.name}</div>
+ <div className="text-base font-semibold text-gray-900 mb-1 pr-12">{bonus.name}</div>
  <p className="text-xs text-gray-700 mb-2">{bonus.desc}</p>
  <div className="flex items-center gap-2 mt-auto"><span className="text-lg font-bold text-emerald-400">$0</span><span className="text-xs text-gray-600 line-through">{bonus.value}</span></div>
  </div>
@@ -297,7 +297,7 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8 text-center">
  <div className="absolute inset-0 bg-gradient-to-br from-neon/5 via-transparent to-cyan-500/5 pointer-events-none" />
  <div className="relative">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center justify-center gap-2"><Clock className="w-5 h-5 text-cyan-400" /> Price Increasing Soon</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2"><Clock className="w-5 h-5 text-cyan-400" /> Price Increasing Soon</h2>
  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-4">
  <div className="text-center"><div className="text-3xl sm:text-4xl font-bold text-neon-light">$7</div><div className="text-xs text-gray-600">Current price</div></div>
  <div className="hidden sm:block text-2xl text-gray-500">&rarr;</div>
@@ -314,11 +314,11 @@ For each hook, tell me why it works and what kind of post would follow it.`}
 
  {/* FAQ */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Lightbulb className="w-4 h-4 text-cyan-400" /> Frequently Asked Questions</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Lightbulb className="w-4 h-4 text-cyan-400" /> Frequently Asked Questions</h2>
  <div className="space-y-3">
  {faqItems.map((faq, i) => (
  <details key={i} className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-pink-500/20">
- <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none"><span className="text-sm sm:text-base font-medium text-white group-hover:text-pink-300 pr-4">{faq.q}</span><ChevronRight className="w-5 h-5 text-gray-600 shrink-0 transition-transform group-open:rotate-90" /></summary>
+ <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none"><span className="text-sm sm:text-base font-medium text-gray-900 group-hover:text-pink-300 pr-4">{faq.q}</span><ChevronRight className="w-5 h-5 text-gray-600 shrink-0 transition-transform group-open:rotate-90" /></summary>
  <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-200 pt-3"><p className="text-xs sm:text-sm text-gray-700 leading-relaxed">{faq.a}</p></div>
  </details>
  ))}
@@ -332,7 +332,7 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-emerald-500/15 rounded-full blur-[100px] pointer-events-none" />
  <div className="relative">
  <Shield className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
- <h2 className="text-lg sm:text-xl font-bold text-white mb-2">100% Risk-Free — 30-Day Money-Back Guarantee</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">100% Risk-Free — 30-Day Money-Back Guarantee</h2>
  <p className="text-sm text-gray-700 max-w-lg mx-auto mb-4 leading-relaxed">If AI for Social Media Management doesn't help you grow your reach within 30 days, I'll refund every cent. No questions asked. You keep the bonuses.</p>
  <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-gray-600">
  <span className="flex items-center gap-1"><CheckCircle className="w-3.5 h-3.5 text-emerald-400" /> Instant download</span>
@@ -349,10 +349,10 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-neon/15 rounded-full blur-[100px] pointer-events-none" />
  <div className="relative">
  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-neon to-aqua mb-4"><FileText className="w-8 h-8 text-white" /></div>
- <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Ready to Get Started?</h2>
+ <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Ready to Get Started?</h2>
  <p className="text-sm text-gray-700 max-w-lg mx-auto mb-4">Get the complete 35+ page PDF playbook.</p>
  <div className="inline-flex items-center gap-4 px-4 py-2 rounded-xl bg-white border border-gray-200 mb-4">
- <div className="text-left"><div className="text-2xl font-bold text-white">$7</div><div className="text-[10px] text-gray-600">one-time payment</div></div>
+ <div className="text-left"><div className="text-2xl font-bold text-gray-900">$7</div><div className="text-[10px] text-gray-600">one-time payment</div></div>
  <div className="h-8 w-px border-gray-200" />
  <div className="text-left"><div className="text-xs font-medium text-emerald-400">Lifetime access</div><div className="text-[10px] text-gray-600">Free updates</div></div>
  </div>

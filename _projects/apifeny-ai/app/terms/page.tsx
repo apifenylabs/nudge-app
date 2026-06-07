@@ -13,13 +13,13 @@ export default function TermsPage() {
  <div className="w-10 h-10 rounded-lg bg-neon/10 flex items-center justify-center">
  <Scale className="w-5 h-5 text-neon-light" />
  </div>
- <h1 className="text-2xl sm:text-3xl font-bold text-white">Terms of Service</h1>
+ <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Terms of Service</h1>
  </div>
  <p className="text-sm text-gray-700 mb-8">Last updated: January 2025</p>
 
  <div className="prose prose-sm prose-invert max-w-none space-y-6 text-gray-800">
  <section>
- <h2 className="text-lg font-semibold text-white mb-2">1. Acceptance of Terms</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-2">1. Acceptance of Terms</h2>
  <p className="leading-relaxed">
  By accessing or using Apifeny AI (&ldquo;the Service&rdquo;), you agree to be bound
  by these Terms of Service. If you do not agree with any part of these terms, you
@@ -28,7 +28,7 @@ export default function TermsPage() {
  </section>
 
  <section>
- <h2 className="text-lg font-semibold text-white mb-2">2. Description of Service</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-2">2. Description of Service</h2>
  <p className="leading-relaxed">
  Apifeny AI is an AI tools directory that curates, ranks, and displays information
  about AI tools, agents, and playbooks. We provide a platform for discovering and
@@ -37,7 +37,7 @@ export default function TermsPage() {
  </section>
 
  <section>
- <h2 className="text-lg font-semibold text-white mb-2">3. User Responsibilities</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-2">3. User Responsibilities</h2>
  <p className="leading-relaxed mb-3">As a user of the Service, you agree to:</p>
  <ul className="list-disc pl-5 space-y-1">
  <li>Use the Service for lawful purposes only</li>
@@ -49,7 +49,7 @@ export default function TermsPage() {
  </section>
 
  <section>
- <h2 className="text-lg font-semibold text-white mb-2">4. Tool Listings</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-2">4. Tool Listings</h2>
  <p className="leading-relaxed mb-3">Regarding tool listings on our directory:</p>
  <ul className="list-disc pl-5 space-y-1">
  <li>We make reasonable efforts to ensure accuracy but do not guarantee completeness</li>
@@ -61,7 +61,7 @@ export default function TermsPage() {
  </section>
 
  <section>
- <h2 className="text-lg font-semibold text-white mb-2">5. Third-Party Links</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-2">5. Third-Party Links</h2>
  <p className="leading-relaxed">
  Our Service contains links to third-party websites (tool websites, documentation,
  etc.). We are not responsible for the content, privacy practices, or terms of
@@ -70,7 +70,7 @@ export default function TermsPage() {
  </section>
 
  <section>
- <h2 className="text-lg font-semibold text-white mb-2">6. Intellectual Property</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-2">6. Intellectual Property</h2>
  <p className="leading-relaxed mb-3">
  The Apifeny AI name, logo, design, and editorial ranking system are our
  intellectual property. Our curated data, Asia Scores, and playbook content are
@@ -83,7 +83,7 @@ export default function TermsPage() {
  </section>
 
  <section>
- <h2 className="text-lg font-semibold text-white mb-2">7. Disclaimer</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-2">7. Disclaimer</h2>
  <p className="leading-relaxed">
  The Service is provided &ldquo;as is&rdquo; without warranties of any kind, either
  express or implied. We do not warrant that the Service will be uninterrupted,
@@ -93,7 +93,7 @@ export default function TermsPage() {
  </section>
 
  <section>
- <h2 className="text-lg font-semibold text-white mb-2">8. Limitation of Liability</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-2">8. Limitation of Liability</h2>
  <p className="leading-relaxed">
  Apifeny AI shall not be liable for any indirect, incidental, special,
  consequential, or punitive damages arising from your use of the Service. This
@@ -103,7 +103,7 @@ export default function TermsPage() {
  </section>
 
  <section>
- <h2 className="text-lg font-semibold text-white mb-2">9. Changes to Terms</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-2">9. Changes to Terms</h2>
  <p className="leading-relaxed">
  We reserve the right to modify these terms at any time. We will notify users of
  material changes by posting the updated terms on this page. Continued use of the
@@ -112,7 +112,7 @@ export default function TermsPage() {
  </section>
 
  <section>
- <h2 className="text-lg font-semibold text-white mb-2">10. Contact</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-2">10. Contact</h2>
  <p className="leading-relaxed">
  For questions about these terms, contact us at legal@apifeny.ai.
  </p>

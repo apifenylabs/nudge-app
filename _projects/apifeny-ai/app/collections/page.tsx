@@ -23,7 +23,7 @@ export default function CollectionsPage() {
  <Layers className="w-3.5 h-3.5" />
  Curated Collections
  </div>
- <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+ <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
  Tool Collections —{' '}
  <span className="bg-gradient-to-r from-aqua to-emerald-400 bg-clip-text text-transparent">
  By Workflow
@@ -35,7 +35,7 @@ export default function CollectionsPage() {
  </p>
  <div className="flex items-center gap-2 text-xs text-gray-700">
  <BookmarkPlus className="w-4 h-4 text-aqua" />
- <span className="font-semibold text-white">{collections.length}</span> collections
+ <span className="font-semibold text-gray-900">{collections.length}</span> collections
  </div>
  </div>
  </section>
@@ -52,10 +52,10 @@ export default function CollectionsPage() {
  <div className="absolute inset-0 bg-gray-50 opacity-20" />
  <div className="relative">
  <span className="text-2xl mb-3 block">{col.icon}</span>
- <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-white/10 text-white/80 border border-white/20 uppercase tracking-wider mb-2 inline-block">
+ <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-white/10 text-gray-900/80 border border-white/20 uppercase tracking-wider mb-2 inline-block">
  {col.tool_slugs.length} tools
  </span>
- <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1.5">
+ <h3 className="text-sm font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-1.5">
  {col.title}
  </h3>
  <p className="text-xs text-gray-700 line-clamp-2 mb-3 leading-relaxed">

@@ -104,7 +104,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  <div className="flex items-center gap-3 mb-3">
  <span className="text-4xl">{cat.icon}</span>
  <div>
- <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+ <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
  Best {cat.name} Tools
  </h1>
  <p className="text-gray-600 text-sm mt-1">
@@ -121,7 +121,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  {/* Quick stats */}
  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-10">
  <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 text-center">
- <div className="text-2xl font-bold text-white">{categoryTools.length}</div>
+ <div className="text-2xl font-bold text-gray-900">{categoryTools.length}</div>
  <div className="text-[11px] text-gray-600 mt-0.5">Tools Listed</div>
  </div>
  <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 text-center">
@@ -144,7 +144,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
  {/* Tool Comparison Table */}
  <section className="mb-12">
- <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
+ <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
  Compare {cat.name} Tools
  </h2>
  <p className="text-gray-600 text-sm mb-6">
@@ -165,11 +165,11 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  <div className="min-w-0 flex-1">
  <div className="flex items-center gap-2 mb-1">
  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-gray-200/30">
- <span className="text-white font-bold text-xs">
+ <span className="text-gray-900 font-bold text-xs">
  {tool.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
  </div>
- <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors truncate">
+ <h3 className="text-sm font-semibold text-gray-900 group-hover:text-neon-light transition-colors truncate">
  {tool.name}
  </h3>
  </div>
@@ -231,7 +231,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
  {/* FAQ Section ───────────────────────────────────── */}
  <section className="mb-12">
- <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">
+ <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
  {cat.h2Headings[0] || `Frequently Asked Questions About ${cat.name} Tools`}
  </h2>
  <div className="space-y-4">
@@ -241,7 +241,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  key={i}
  className="group rounded-xl border border-gray-200 bg-gray-50 overflow-hidden"
  >
- <summary className="flex items-center justify-between px-5 py-4 text-sm font-medium text-white cursor-pointer hover:bg-gray-100/40 transition">
+ <summary className="flex items-center justify-between px-5 py-4 text-sm font-medium text-gray-700 cursor-pointer hover:bg-gray-100/40 transition">
  <span className="flex items-center gap-2">
  <Sparkles className="w-4 h-4 text-neon-light shrink-0" />
  {heading}
@@ -252,7 +252,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  {i === 0 && (
  <p>
  The best {cat.name.toLocaleLowerCase()} tool depends on your specific needs.
- {' '}<strong className="text-white">{categoryTools[0]?.name || 'the top tool'}</strong>
+ {' '}<strong className="text-gray-900">{categoryTools[0]?.name || 'the top tool'}</strong>
  {' '}leads our ranking with a trending score of {Math.round(categoryTools[0]?.trending_score || 0)}
  , but {categoryTools[1]?.name || 'alternatives'} offer unique advantages.
  Consider your budget, required features, and whether Asian language support matters.
@@ -284,7 +284,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  )}
  {i === 4 && (
  <p>
- The best {cat.name.toLocaleLowerCase()} tool for you depends on your specific needs, but our data shows that <strong className="text-white">{categoryTools[0]?.name || 'the top-ranked tool'}</strong> leads in overall community rating. We recommend trying the free tier of your top 2-3 candidates, then comparing based on real-world performance, not marketing claims. Bookmark this page and check back for updated scores — we refresh rankings monthly based on community votes.
+ The best {cat.name.toLocaleLowerCase()} tool for you depends on your specific needs, but our data shows that <strong className="text-gray-900">{categoryTools[0]?.name || 'the top-ranked tool'}</strong> leads in overall community rating. We recommend trying the free tier of your top 2-3 candidates, then comparing based on real-world performance, not marketing claims. Bookmark this page and check back for updated scores — we refresh rankings monthly based on community votes.
  </p>
  )}
  </div>
@@ -299,7 +299,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
     if (relatedPosts.length === 0) return null;
     return (
       <section className="mb-12">
-        <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
           <BookOpen className="w-5 h-5 inline-block text-neon-light mr-2" />
           Related Articles
         </h2>
@@ -319,7 +319,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                 </span>
                 <span className="text-[10px] text-gray-400">{post.date}</span>
               </div>
-              <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1 line-clamp-2">
+              <h3 className="text-sm font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-1 line-clamp-2">
                 {post.title}
               </h3>
               <p className="text-[11px] text-gray-600 line-clamp-2 leading-relaxed">
@@ -335,7 +335,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   {/* Related Playbooks */}
   {relatedPlaybooks.length > 0 && (
  <section className="mb-12">
- <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
+ <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
  <BookOpen className="w-5 h-5 inline-block text-neon-light mr-2" />
  Featured Playbooks
  </h2>
@@ -358,7 +358,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  {pb.difficulty}
  </span>
  </div>
- <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
+ <h3 className="text-sm font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-1">
  {pb.title}
  </h3>
  <p className="text-[11px] text-gray-600 line-clamp-2 mb-2">
@@ -379,7 +379,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  {/* All Tools List (compact) */}
  {categoryTools.length > 12 && (
  <section>
- <h2 className="text-lg font-bold text-white mb-4">
+ <h2 className="text-lg font-bold text-gray-900 mb-4">
  All {categoryTools.length} {cat.name} Tools
  </h2>
  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -390,11 +390,11 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  className="flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-3 hover:bg-white hover:border-gray-200 transition text-sm"
  >
  <div className="w-7 h-7 rounded-md bg-gray-100 flex items-center justify-center shrink-0 border border-gray-200/20">
- <span className="text-white font-bold text-[9px]">
+ <span className="text-gray-900 font-bold text-[9px]">
  {tool.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
  </div>
- <span className="text-white flex-1 truncate">{tool.name}</span>
+ <span className="text-gray-900 flex-1 truncate">{tool.name}</span>
  <span className="text-xs text-amber-400">{tool.avg_rating?.toFixed(1)}</span>
  <span className={cn('text-[10px] px-1.5 py-0.5 rounded', getPricingColor(tool.pricing_tier))}>
  {getPricingLabel(tool.pricing_tier)}

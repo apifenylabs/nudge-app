@@ -322,7 +322,7 @@ export default function AIToolsForFinanceGuide() {
               <BookOpen className="w-3.5 h-3.5" />
               Guide · 10 min read
  </span>
- <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+ <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
  Best AI Tools for Finance &amp; Accounting in Asia (2026)
  </h1>
  <p className="text-lg sm:text-xl text-emerald-100/90 max-w-2xl mb-8">
@@ -395,7 +395,7 @@ export default function AIToolsForFinanceGuide() {
  <section className="max-w-5xl mx-auto px-4 pb-8">
  <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
  <div className="bg-gradient-to-r from-teal-600 to-cyan-600 px-6 py-4">
- <h2 className="text-lg font-semibold text-white">Quick Comparison: Best AI Tools for Finance &amp; Accounting</h2>
+ <h2 className="text-lg font-semibold text-gray-900">Quick Comparison: Best AI Tools for Finance &amp; Accounting</h2>
  </div>
  <div className="overflow-x-auto">
  <table className="w-full text-sm">
@@ -440,7 +440,7 @@ export default function AIToolsForFinanceGuide() {
  <section className="max-w-5xl mx-auto px-4 pb-12">
  <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
  <div className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-4">
- <h2 className="text-lg font-semibold text-white">Dedicated Finance &amp; Accounting Platforms (Asia-Ready)</h2>
+ <h2 className="text-lg font-semibold text-gray-900">Dedicated Finance &amp; Accounting Platforms (Asia-Ready)</h2>
  </div>
  <div className="p-6">
  <p className="text-sm text-gray-600 mb-6">
@@ -545,7 +545,7 @@ export default function AIToolsForFinanceGuide() {
  rel="noopener noreferrer sponsored"
  className="flex items-center gap-3 p-4 rounded-xl bg-white border border-gray-200 hover:border-teal-300 hover:shadow-md transition-all group"
  >
- <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center text-white font-bold text-xs shrink-0">
+ <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center text-gray-900 font-bold text-xs shrink-0">
  {(tool as any)?.name?.charAt(0) || '?'}
  </div>
  <div className="flex-1 min-w-0">
@@ -586,7 +586,7 @@ export default function AIToolsForFinanceGuide() {
  {/* ─── Bottom CTA ─── */}
  <section className="bg-gradient-to-br from-gray-900 to-gray-950 ">
  <div className="max-w-3xl mx-auto px-4 py-20 text-center">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
  Take Control of Your Finances with AI
  </h2>
  <p className="text-gray-400 mb-8 max-w-xl mx-auto">

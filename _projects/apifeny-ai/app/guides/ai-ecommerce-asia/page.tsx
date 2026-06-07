@@ -403,7 +403,7 @@ export default function AIEcommerceAsiaGuide() {
  Guide &middot; 12 min read
  </div>
 
- <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+ <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
  AI for E-Commerce in Asia{' '}
  <span className="bg-gradient-to-r from-rose-400 to-orange-400 bg-clip-text text-transparent">
  (2026)
@@ -457,7 +457,7 @@ export default function AIEcommerceAsiaGuide() {
  {/* ── Table of Contents ───────────────────────────────────────── */}
  <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
  <div className="bg-gray-50/50 border border-gray-200 rounded-xl p-6 sm:p-8">
- <h2 className="text-white font-semibold mb-4 flex items-center gap-2">
+ <h2 className="text-gray-900 font-semibold mb-4 flex items-center gap-2">
  <BookOpen className="w-5 h-5 text-rose-400" />
  What You&apos;ll Learn
  </h2>
@@ -842,7 +842,7 @@ export default function AIEcommerceAsiaGuide() {
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
  <div className="relative rounded-2xl bg-gradient-to-br from-rose-500/10 via-orange-500/5 to-tech-800 border border-gray-200 p-8 sm:p-12">
  <ShoppingCart className="w-10 h-10 text-rose-400 mx-auto mb-4" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Ready to Transform Your E-Commerce Store with AI?
  </h2>
  <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">
@@ -875,7 +875,7 @@ export default function AIEcommerceAsiaGuide() {
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="flex items-center gap-2 mb-8">
  <BookOpen className="w-5 h-5 text-rose-400" />
- <h2 className="text-2xl font-bold text-white">Related Guides &amp; Articles</h2>
+ <h2 className="text-2xl font-bold text-gray-900">Related Guides &amp; Articles</h2>
  </div>
 
  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -892,7 +892,7 @@ export default function AIEcommerceAsiaGuide() {
  </span>
  ))}
  </div>
- <h3 className="font-semibold text-white group-hover:text-rose-300 transition mb-2 line-clamp-2">
+ <h3 className="font-semibold text-gray-900 group-hover:text-rose-300 transition mb-2 line-clamp-2">
  {related.title}
  </h3>
  <p className="text-sm text-gray-400 line-clamp-2 mb-3">

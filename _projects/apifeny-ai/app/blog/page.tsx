@@ -174,7 +174,7 @@ export default function BlogListPage() {
  <section className="bg-gradient-to-br from-blue-600 to-purple-700">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="max-w-2xl mx-auto text-center">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Stay Ahead with AI Insights
  </h2>
  <p className="text-blue-100 mb-6">

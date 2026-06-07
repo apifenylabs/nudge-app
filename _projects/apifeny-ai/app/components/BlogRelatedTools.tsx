@@ -17,7 +17,7 @@ export default function BlogRelatedTools({ postTitle, postTags }: Props) {
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="flex items-center gap-2 mb-8">
  <Wrench className="w-5 h-5 text-neon" />
- <h2 className="text-2xl font-bold text-white">AI Tools Mentioned</h2>
+ <h2 className="text-2xl font-bold text-gray-900">AI Tools Mentioned</h2>
  </div>
 
  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -32,7 +32,7 @@ export default function BlogRelatedTools({ postTitle, postTags }: Props) {
  {tool.name.charAt(0)}
  </div>
  <div className="min-w-0">
- <h3 className="font-semibold text-white group-hover:text-neon-light transition truncate">
+ <h3 className="font-semibold text-gray-900 group-hover:text-neon-light transition truncate">
  {tool.name}
  </h3>
  <p className="text-sm text-gray-400 line-clamp-2 mt-1">

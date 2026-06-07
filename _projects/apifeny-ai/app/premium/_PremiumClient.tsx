@@ -138,7 +138,7 @@ export default function PremiumPage() {
             <span className="text-xs font-medium text-amber-700">Apifeny Pro</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
             Stop Collecting AI Tools.{' '}
             <span className="bg-gradient-to-r from-neon via-aqua to-violet-400 bg-clip-text text-transparent">
               Start Shipping.
@@ -173,17 +173,17 @@ export default function PremiumPage() {
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10 text-center">
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">79+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-gray-900">79+</div>
               <div className="text-xs text-gray-400 mt-1">Playbooks</div>
             </div>
             <div className="w-px h-10 bg-gray-100 hidden sm:block" />
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">300+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-gray-900">300+</div>
               <div className="text-xs text-gray-400 mt-1">AI Prompts</div>
             </div>
             <div className="w-px h-10 bg-gray-100 hidden sm:block" />
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">$9</div>
+              <div className="text-2xl sm:text-3xl font-bold text-gray-900">$9</div>
               <div className="text-xs text-gray-400 mt-1">Per Playbook or Free</div>
             </div>
           </div>
@@ -194,7 +194,7 @@ export default function PremiumPage() {
       <section className="py-12 sm:py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
               Everything You Need to Ship with AI
             </h2>
             <p className="text-sm text-gray-600 max-w-xl mx-auto">
@@ -211,7 +211,7 @@ export default function PremiumPage() {
                 <div className="w-10 h-10 rounded-lg bg-neon/10 border border-neon/20 flex items-center justify-center mb-3">
                   <feature.icon className="w-5 h-5 text-neon-light" />
                 </div>
-                <h3 className="text-sm font-semibold text-white mb-1">{feature.title}</h3>
+                <h3 className="text-sm font-semibold text-gray-900 mb-1">{feature.title}</h3>
                 <p className="text-xs text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
@@ -223,7 +223,7 @@ export default function PremiumPage() {
       <section id="plans" className="py-12 sm:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
               Simple Pricing. No Surprises.
             </h2>
             <p className="text-sm text-gray-600 max-w-lg mx-auto">
@@ -249,9 +249,9 @@ export default function PremiumPage() {
                 )}
 
                 <div className="mb-4">
-                  <h3 className="text-lg font-semibold text-white">{plan.name}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900">{plan.name}</h3>
                   <div className="flex items-baseline gap-1 mt-2">
-                    <span className="text-3xl font-bold text-white">${plan.price}</span>
+                    <span className="text-3xl font-bold text-gray-900">${plan.price}</span>
                     <span className="text-gray-400 text-sm">{plan.period}</span>
                   </div>
                   <p className="text-xs text-gray-400 mt-1">{plan.description}</p>
@@ -318,7 +318,7 @@ export default function PremiumPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="rounded-xl border border-gray-300/30 bg-gray-50/30 p-6 sm:p-8">
             <Shield className="w-10 h-10 text-neon/60 mx-auto mb-3" />
-            <h3 className="text-base font-semibold text-white mb-3">Vibe Checked. Results Backed.</h3>
+            <h3 className="text-base font-semibold text-gray-900 mb-3">Vibe Checked. Results Backed.</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-lg mx-auto">
               {GUARANTEES.map((g) => (
                 <div key={g} className="flex items-start gap-2">

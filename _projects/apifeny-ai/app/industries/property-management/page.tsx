@@ -184,7 +184,7 @@ export default function PropertyManagementPage() {
  <Home className="w-5 h-5 text-neon" />
  <span className="text-neon font-semibold text-sm uppercase tracking-wider">AI in Property Management</span>
  </div>
- <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+ <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
  AI for{' '}
  <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
  Property Management
@@ -192,7 +192,7 @@ export default function PropertyManagementPage() {
  </h1>
  <p className="text-lg sm:text-xl text-gray-600 max-w-3xl leading-relaxed mb-8">
  Property management is being reshaped by AI &mdash; from predictive maintenance that prevents costly
- breakdowns to intelligent leasing that fills vacancies faster. <strong className="text-white">
+ breakdowns to intelligent leasing that fills vacancies faster. <strong className="text-gray-900">
  AI helps property managers reduce costs, optimize revenue, improve tenant satisfaction, and
  manage larger portfolios with the same team.</strong>
  </p>
@@ -227,7 +227,7 @@ export default function PropertyManagementPage() {
  ].map((stat) => (
  <div key={stat.label} className="flex flex-col items-center gap-1">
  <span className="text-neon-light">{stat.icon}</span>
- <span className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</span>
+ <span className="text-2xl sm:text-3xl font-bold text-gray-900">{stat.value}</span>
  <span className="text-sm text-gray-400">{stat.label}</span>
  </div>
  ))}
@@ -238,7 +238,7 @@ export default function PropertyManagementPage() {
  {/* Why AI in Property Management */}
  <section className="border-b border-gray-200 bg-white/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Why Property Management Needs AI
  </h2>
  <p className="text-gray-600 max-w-3xl mb-8 leading-relaxed">
@@ -255,7 +255,7 @@ export default function PropertyManagementPage() {
  ].map((item) => (
  <div key={item.title} className="bg-gray-50/40 border border-gray-200 rounded-xl p-5">
  <span className="text-neon-light block mb-2">{item.icon}</span>
- <h3 className="font-semibold text-white mb-1">{item.title}</h3>
+ <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
@@ -266,7 +266,7 @@ export default function PropertyManagementPage() {
  {/* Applications */}
  <section id="applications" className="border-b border-gray-200">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
- <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+ <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
  Real AI Applications in Property Management
  </h2>
  <p className="text-gray-600 max-w-2xl mb-10 leading-relaxed">
@@ -279,7 +279,7 @@ export default function PropertyManagementPage() {
  <div className={`bg-gradient-to-br ${app.color} border ${app.border} rounded-xl p-6 sm:p-8`}>
  <div className="flex items-center gap-3 mb-4">
  <span className={app.textColor}>{app.icon}</span>
- <h3 className="text-xl sm:text-2xl font-bold text-white">{app.title}</h3>
+ <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{app.title}</h3>
  </div>
  <p className="text-gray-600 mb-4 leading-relaxed">{app.description}</p>
  <ul className="space-y-2">
@@ -299,7 +299,7 @@ export default function PropertyManagementPage() {
  {/* Top AI Tools */}
  <section id="tools" className="border-b border-gray-200 bg-white/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Top AI Tools for Property Management
  </h2>
  <p className="text-gray-600 mb-8 max-w-2xl">
@@ -311,12 +311,12 @@ export default function PropertyManagementPage() {
  <div key={cat.title} className="bg-gray-50/40 border border-gray-200 rounded-xl p-5">
  <div className="flex items-center gap-2 mb-4">
  <span className="text-neon-light">{cat.icon}</span>
- <h3 className="font-semibold text-white">{cat.title}</h3>
+ <h3 className="font-semibold text-gray-900">{cat.title}</h3>
  </div>
  <div className="space-y-3">
  {cat.tools.map((tool) => (
  <div key={tool.name} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0">
- <h4 className="text-sm font-medium text-white">{tool.name}</h4>
+ <h4 className="text-sm font-medium text-gray-900">{tool.name}</h4>
  <p className="text-xs text-gray-400">{tool.desc}</p>
  </div>
  ))}
@@ -332,7 +332,7 @@ export default function PropertyManagementPage() {
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <div className="flex items-center gap-2 mb-2">
  <BookOpen className="w-5 h-5 text-neon" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
  Property & AI Guides
  </h2>
  </div>
@@ -352,7 +352,7 @@ export default function PropertyManagementPage() {
  href={`/blog/${post.slug}`}
  className="group bg-gray-50/40 border border-gray-200 rounded-xl p-5 hover:border-neon/30 transition-all"
  >
- <h3 className="font-semibold text-white group-hover:text-neon-light transition-colors mb-2">
+ <h3 className="font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-2">
  {post.title}
  </h3>
  <p className="text-sm text-gray-400 line-clamp-2 mb-3">{post.excerpt}</p>
@@ -371,7 +371,7 @@ export default function PropertyManagementPage() {
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <div className="flex items-center gap-2 mb-2">
  <BarChart3 className="w-5 h-5 text-neon" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
  Related Comparisons
  </h2>
  </div>
@@ -389,7 +389,7 @@ export default function PropertyManagementPage() {
  href={`/compare/${comp.slug}`}
  className="group bg-gray-50/40 border border-gray-200 rounded-xl p-5 hover:border-neon/30 transition-all"
  >
- <h3 className="font-semibold text-white group-hover:text-neon-light transition-colors mb-2">
+ <h3 className="font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-2">
  {comp.title}
  </h3>
  <p className="text-sm text-gray-400 line-clamp-2 mb-3">{comp.excerpt}</p>
@@ -416,7 +416,7 @@ export default function PropertyManagementPage() {
  <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
  <div className="bg-gradient-to-br from-neon/10 to-emerald-600/10 border border-neon/20 rounded-2xl p-8 sm:p-12">
  <Sparkles className="w-8 h-8 text-neon mx-auto mb-4" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Modernize Your Property Management
  </h2>
  <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">

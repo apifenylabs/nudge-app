@@ -102,7 +102,7 @@ export default function ToolsClient() {
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
  {/* Page header */}
  <div className="mb-6 sm:mb-8">
- <h1 className="text-2xl sm:text-3xl font-bold text-white">AI Tools Directory</h1>
+ <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">AI Tools Directory</h1>
  <p className="text-sm text-gray-700 mt-1">
  Browse, filter, and discover the best AI tools for any task
  </p>

@@ -200,7 +200,7 @@ function CommunityPlaybookCard({
  </div>
 
  {/* Title & description */}
- <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
+ <h3 className="text-sm font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-1">
  {playbook.title}
  </h3>
  <p className="text-[11px] text-gray-700 line-clamp-2 mb-3 leading-relaxed">
@@ -278,11 +278,11 @@ function SubmitPlaybookCard() {
  <div className="w-12 h-12 rounded-full bg-neon/10 flex items-center justify-center mb-3 group-hover:scale-110 transition">
  <Sparkles className="w-6 h-6 text-neon-light" />
  </div>
- <h3 className="text-sm font-semibold text-white mb-1">Share Your Playbook</h3>
+ <h3 className="text-sm font-semibold text-gray-900 mb-1">Share Your Playbook</h3>
  <p className="text-[11px] text-gray-700 max-w-[200px] mb-3">
  Built something with AI? Share your workflow, prompts, and results with the community.
  </p>
- <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-neon hover:bg-neon-dark text-white text-[11px] font-medium transition">
+ <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-neon hover:bg-neon-dark text-gray-900 text-[11px] font-medium transition">
  Submit playbook
  <ArrowRight className="w-3 h-3" />
  </span>
@@ -354,7 +354,7 @@ export default function CommunityPlaybooksPage() {
  <Sparkles className="w-3.5 h-3.5" />
  Community
  </div>
- <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+ <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
  Community{' '}
  <span className="bg-gradient-to-r from-emerald-400 to-asia bg-clip-text text-transparent">
  Playbooks
@@ -369,17 +369,17 @@ export default function CommunityPlaybooksPage() {
  <div className="flex flex-wrap gap-4 sm:gap-6">
  <div className="flex items-center gap-2 text-xs text-gray-700">
  <Sparkles className="w-4 h-4 text-emerald-400" />
- <span className="font-semibold text-white">{communityPlaybooks.length}</span> playbooks
+ <span className="font-semibold text-gray-900">{communityPlaybooks.length}</span> playbooks
  </div>
  <div className="flex items-center gap-2 text-xs text-gray-700">
  <ThumbsUp className="w-4 h-4 text-emerald-400" />
- <span className="font-semibold text-white">
+ <span className="font-semibold text-gray-900">
  {communityPlaybooks.reduce((s, p) => s + p.upvotes, 0)}
  </span> total upvotes
  </div>
  <div className="flex items-center gap-2 text-xs text-gray-700">
  <TrendingUp className="w-4 h-4 text-emerald-400" />
- <span className="font-semibold text-white">
+ <span className="font-semibold text-gray-900">
  {communityPlaybooks.filter((p) => p.revenue_impact).length}
  </span> with revenue impact
  </div>

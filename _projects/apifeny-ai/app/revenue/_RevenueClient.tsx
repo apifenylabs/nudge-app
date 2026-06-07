@@ -57,7 +57,7 @@ export default function RevenuePage() {
  <DollarSign className="w-3.5 h-3.5" />
  Revenue Leaderboard
  </div>
- <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+ <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
  Revenue Tracker{' '}
  <span className="bg-gradient-to-r from-amber-400 to-emerald-400 bg-clip-text text-transparent">
  Leaderboard
@@ -120,7 +120,7 @@ export default function RevenuePage() {
  </div>
  <div>
  <div className="text-xs text-gray-600 mb-0.5">Most Profitable Playbook</div>
- <div className="text-sm font-semibold text-white">
+ <div className="text-sm font-semibold text-gray-900">
  {mostProfitablePlaybook[1].name}
  </div>
  <div className="text-[11px] text-gray-700">
@@ -144,7 +144,7 @@ export default function RevenuePage() {
  {/* Leaderboard */}
  <div className="rounded-xl border border-gray-200 bg-white overflow-hidden mb-6">
  <div className="p-4 sm:p-5 border-b border-gray-200">
- <h2 className="text-base font-semibold text-white flex items-center gap-2">
+ <h2 className="text-base font-semibold text-gray-900 flex items-center gap-2">
  <Trophy className="w-4 h-4 text-amber-400" />
  Revenue Leaderboard
  </h2>
@@ -209,7 +209,7 @@ export default function RevenuePage() {
  {revenueStories.length === 0 && (
  <div className="p-8 text-center">
  <DollarSign className="w-10 h-10 text-gray-400 mx-auto mb-3" />
- <h3 className="text-base font-semibold text-white mb-1">No revenue stories yet</h3>
+ <h3 className="text-base font-semibold text-gray-900 mb-1">No revenue stories yet</h3>
  <p className="text-xs text-gray-700">Be the first to submit your results!</p>
  </div>
  )}
@@ -218,7 +218,7 @@ export default function RevenuePage() {
  {/* CTA */}
  <div className="rounded-xl border border-dashed border-gray-200 bg-white/40 p-6 sm:p-8 text-center">
  <TrendingUp className="w-10 h-10 text-amber-400/60 mx-auto mb-3" />
- <h3 className="text-lg font-semibold text-white mb-1">Have Revenue to Share?</h3>
+ <h3 className="text-lg font-semibold text-gray-900 mb-1">Have Revenue to Share?</h3>
  <p className="text-sm text-gray-700 max-w-md mx-auto mb-4">
  Tracked real results from one of our playbooks? Submit your story and join the leaderboard.
  </p>
@@ -253,7 +253,7 @@ export default function RevenuePage() {
  <div className="text-[10px] text-gray-600">Average MRR per Playbook</div>
  </div>
  <div className="p-3 rounded-lg bg-gray-100/40 border border-gray-200">
- <div className="text-lg font-bold text-white">{maxRevenue.toLocaleString()}</div>
+ <div className="text-lg font-bold text-gray-900">{maxRevenue.toLocaleString()}</div>
  <div className="text-[10px] text-gray-600">Highest MRR Reported</div>
  </div>
  </div>

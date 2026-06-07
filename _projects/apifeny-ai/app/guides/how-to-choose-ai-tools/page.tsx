@@ -280,7 +280,7 @@ export default function HowToChooseAIToolsPage() {
  <FAQSchema faqs={guideFaqs} />
  </div>
 
- <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+ <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
  How to Choose AI Tools{' '}
  <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
  That Actually Work
@@ -324,7 +324,7 @@ export default function HowToChooseAIToolsPage() {
  {/* ── Quick Navigation ─────────────────────────────────────────── */}
  <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
  <div className="bg-gray-50/50 border border-gray-200 rounded-xl p-6">
- <h2 className="text-white font-semibold mb-4 flex items-center gap-2">
+ <h2 className="text-gray-900 font-semibold mb-4 flex items-center gap-2">
  <ChevronRight className="w-4 h-4 text-violet-400" />
  Jump to Section
  </h2>
@@ -386,7 +386,7 @@ export default function HowToChooseAIToolsPage() {
  <span className="text-xs font-medium text-violet-400 uppercase tracking-wider">
  Step {step.num} of {STEPS.length}
  </span>
- <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-1">
  {step.title}
  </h2>
  {/* FAQ Schema */}
@@ -479,7 +479,7 @@ export default function HowToChooseAIToolsPage() {
  <section className="border-t border-gray-200 py-12 sm:py-16">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="text-center mb-8">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Start With These{' '}
  <span className="text-violet-400">Top-Rated Tools</span>
  </h2>
@@ -499,13 +499,13 @@ export default function HowToChooseAIToolsPage() {
  className="group bg-gray-50/40 border border-gray-200 rounded-xl p-5 hover:border-violet-500/30 transition-all"
  >
  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center mb-4">
- <span className="text-white font-bold">
+ <span className="text-gray-900 font-bold">
  {tool.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
- <h3 className="text-white font-semibold text-sm group-hover:text-violet-300 transition mb-1.5">
+ <h3 className="text-gray-900 font-semibold text-sm group-hover:text-violet-300 transition mb-1.5">
  {tool.name}
  </h3>
  <p className="text-xs text-gray-400 line-clamp-2 mb-3">
@@ -546,7 +546,7 @@ export default function HowToChooseAIToolsPage() {
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="flex items-center gap-3 mb-8">
  <AlertTriangle className="w-6 h-6 text-amber-400" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
  Common Mistakes to Avoid
  </h2>
  {/* FAQ Schema */}
@@ -566,7 +566,7 @@ export default function HowToChooseAIToolsPage() {
  <FAQSchema faqs={guideFaqs} />
  </div>
  <div>
- <h3 className="text-white font-semibold mb-1.5">{mistake.title}</h3>
+ <h3 className="text-gray-900 font-semibold mb-1.5">{mistake.title}</h3>
  <p className="text-sm text-gray-600 mb-3 leading-relaxed">
  {mistake.description}
  </p>
@@ -599,7 +599,7 @@ export default function HowToChooseAIToolsPage() {
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="flex items-center gap-3 mb-8">
  <ClipboardCheck className="w-6 h-6 text-violet-400" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
  5 Questions to Ask{' '}
  <span className="text-violet-400">Before You Buy</span>
  </h2>
@@ -619,7 +619,7 @@ export default function HowToChooseAIToolsPage() {
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
- <h3 className="text-white font-semibold text-sm leading-snug">{dq.question}</h3>
+ <h3 className="text-gray-900 font-semibold text-sm leading-snug">{dq.question}</h3>
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
@@ -638,7 +638,7 @@ export default function HowToChooseAIToolsPage() {
  <div className="mt-8 bg-gradient-to-br from-violet-500/5 to-purple-500/5 border border-violet-500/10 rounded-xl p-6 sm:p-8">
  <div className="flex items-center gap-2 mb-4">
  <ClipboardCheck className="w-5 h-5 text-violet-400" />
- <h3 className="text-white font-semibold">Printable Checklist</h3>
+ <h3 className="text-gray-900 font-semibold">Printable Checklist</h3>
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
@@ -674,7 +674,7 @@ export default function HowToChooseAIToolsPage() {
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
  <div className="relative rounded-2xl bg-gradient-to-br from-violet-500/10 via-purple-500/5 to-tech-800 border border-gray-200 p-8 sm:p-12">
  <Search className="w-10 h-10 text-violet-400 mx-auto mb-4" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Ready to Find Your Perfect AI Stack?
  </h2>
  <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">
@@ -712,7 +712,7 @@ export default function HowToChooseAIToolsPage() {
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="flex items-center gap-2 mb-8">
  <BookOpen className="w-5 h-5 text-neon" />
- <h2 className="text-2xl font-bold text-white">Related Guides & Articles</h2>
+ <h2 className="text-2xl font-bold text-gray-900">Related Guides & Articles</h2>
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
@@ -733,7 +733,7 @@ export default function HowToChooseAIToolsPage() {
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
- <h3 className="font-semibold text-white group-hover:text-neon-light transition mb-2 line-clamp-2">
+ <h3 className="font-semibold text-gray-900 group-hover:text-neon-light transition mb-2 line-clamp-2">
  {related.title}
  </h3>
  <p className="text-sm text-gray-400 line-clamp-2 mb-3">

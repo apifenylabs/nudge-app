@@ -55,11 +55,11 @@ export default function CollectionPage({ params }: CollectionPageProps) {
  <div className="relative">
  <div className="flex items-center gap-3 mb-3">
  <span className="text-3xl">{collection.icon}</span>
- <span className="text-[10px] font-bold px-2 py-1 rounded-full bg-white/10 text-white/80 border border-white/20 uppercase tracking-wider">
+ <span className="text-[10px] font-bold px-2 py-1 rounded-full bg-white/10 text-gray-900/80 border border-white/20 uppercase tracking-wider">
  Curated Collection
  </span>
  </div>
- <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">{collection.title}</h1>
+ <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{collection.title}</h1>
  <p className="text-sm sm:text-base text-gray-800 max-w-2xl mb-4">
  {collection.description}
  </p>

@@ -197,7 +197,7 @@ export default function BestAIToolsPage() {
  Updated Daily · {totalCount}+ Curated Tools · 47 Blog Posts
  </div>
 
- <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight animate-slide-up">
+ <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight animate-slide-up">
  Best AI Tools in{' '}
  <span className="bg-gradient-to-r from-neon-light via-asia to-aqua bg-clip-text text-transparent">
  2026
@@ -207,7 +207,7 @@ export default function BestAIToolsPage() {
  </h1>
 
  <p className="mt-5 sm:mt-6 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
- Stop collecting AI tools. Start finding the <strong className="text-white">single best tool</strong> for every task.
+ Stop collecting AI tools. Start finding the <strong className="text-gray-900">single best tool</strong> for every task.
  Expert rankings, real user reviews, and Asia-ready filters — all in one place.
  </p>
 
@@ -255,7 +255,7 @@ export default function BestAIToolsPage() {
  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-asia/20 to-amber-500/10 flex items-center justify-center shrink-0">
  <Trophy className="w-5 h-5 text-asia" />
  </div>
- <h2 className="text-2xl sm:text-3xl font-bold text-white">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
  Top Rated AI Tools in 2026
  </h2>
  </div>
@@ -302,12 +302,12 @@ export default function BestAIToolsPage() {
  {/* Logo */}
  <div className="flex items-start gap-3 mb-3">
  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-gray-200/30 group-hover:border-neon/30 transition">
- <span className="text-white font-bold text-sm">
+ <span className="text-gray-900 font-bold text-sm">
  {tool.name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
  </div>
  <div className="min-w-0 flex-1">
- <h3 className="text-base font-semibold text-white truncate group-hover:text-neon-light transition-colors">
+ <h3 className="text-base font-semibold text-gray-900 truncate group-hover:text-neon-light transition-colors">
  {tool.name}
  </h3>
  <p className="text-xs text-gray-700 line-clamp-2 mt-0.5 leading-relaxed">
@@ -417,7 +417,7 @@ export default function BestAIToolsPage() {
  <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center border border-gray-200">
  <stat.icon className="w-5 h-5 text-neon-light" />
  </div>
- <span className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</span>
+ <span className="text-2xl sm:text-3xl font-bold text-gray-900">{stat.value}</span>
  <span className="text-xs sm:text-sm text-gray-600">{stat.label}</span>
  </div>
  ))}
@@ -444,7 +444,7 @@ export default function BestAIToolsPage() {
  <Icon className="w-5 h-5 text-neon-light" />
  </div>
  <div>
- <h2 className="text-xl sm:text-2xl font-bold text-white">
+ <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
  Best AI {section.name.replace('Writing & Content', 'Writing Tools').replace('Code & Development', 'Coding Tools').replace('Design & Creative', 'Design Tools').replace('Marketing & SEO', 'Marketing Tools')}
  </h2>
  <p className="text-sm text-gray-700 mt-1 max-w-xl">
@@ -471,12 +471,12 @@ export default function BestAIToolsPage() {
  >
  <div className="flex items-start gap-2.5 mb-2">
  <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-gray-200/20 group-hover:border-neon/30 transition">
- <span className="text-white font-bold text-xs">
+ <span className="text-gray-900 font-bold text-xs">
  {tool.name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
  </div>
  <div className="min-w-0 flex-1">
- <h3 className="text-sm font-semibold text-white truncate group-hover:text-neon-light transition">
+ <h3 className="text-sm font-semibold text-gray-900 truncate group-hover:text-neon-light transition">
  {tool.name}
  </h3>
  <p className="text-[11px] text-gray-700 line-clamp-2 mt-0.5">
@@ -538,7 +538,7 @@ export default function BestAIToolsPage() {
  <section className="border-y border-gray-200 bg-gray-50/50">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
  <div className="text-center mb-10 sm:mb-12">
- <h2 className="text-2xl sm:text-3xl font-bold text-white">How Apifeny AI Helps You Find the Best Tools</h2>
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">How Apifeny AI Helps You Find the Best Tools</h2>
  <p className="text-sm sm:text-base text-gray-700 mt-2 max-w-xl mx-auto">
  We don&apos;t just list tools. We rank them by what actually matters.
  </p>
@@ -574,7 +574,7 @@ export default function BestAIToolsPage() {
  <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center border border-gray-200 mb-4">
  <item.icon className="w-6 h-6 text-white" />
  </div>
- <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+ <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
  <p className="text-sm text-gray-700 leading-relaxed">{item.description}</p>
  </div>
  </div>
@@ -590,7 +590,7 @@ export default function BestAIToolsPage() {
  <BookOpen className="w-5 h-5 text-emerald-400" />
  </div>
  <div>
- <h2 className="text-xl sm:text-2xl font-bold text-white">
+ <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
  Step-by-Step AI Playbooks
  </h2>
  <p className="text-xs sm:text-sm text-gray-700">
@@ -632,7 +632,7 @@ export default function BestAIToolsPage() {
  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-asia/20 to-amber-500/10 flex items-center justify-center shrink-0">
  <Quote className="w-5 h-5 text-asia" />
  </div>
- <h2 className="text-2xl sm:text-3xl font-bold text-white">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
  Trusted by Builders, Marketers &amp; Creators
  </h2>
  </div>
@@ -705,7 +705,7 @@ export default function BestAIToolsPage() {
 
  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
  <div className="text-center mb-10">
- <h2 className="text-2xl sm:text-3xl font-bold text-white">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
  Three Ways to Find Your Perfect AI Tool
  </h2>
  <p className="text-sm sm:text-base text-gray-700 mt-2 max-w-xl mx-auto">
@@ -721,7 +721,7 @@ export default function BestAIToolsPage() {
  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-neon/20 to-neon-dark/10 flex items-center justify-center mx-auto mb-4 border border-neon/20 group-hover:border-neon/40 transition">
  <GitCompare className="w-7 h-7 text-neon-light" />
  </div>
- <h3 className="text-lg font-bold text-white mb-2">Compare Tools</h3>
+ <h3 className="text-lg font-bold text-gray-900 mb-2">Compare Tools</h3>
  <p className="text-sm text-gray-700 leading-relaxed mb-4">
  Side-by-side comparison of top AI tools. See pricing, features, ratings, and Asia-readiness at a glance.
  </p>
@@ -738,7 +738,7 @@ export default function BestAIToolsPage() {
  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-asia/20 to-amber-500/10 flex items-center justify-center mx-auto mb-4 border border-asia/20 group-hover:border-asia/40 transition">
  <ListChecks className="w-7 h-7 text-asia" />
  </div>
- <h3 className="text-lg font-bold text-white mb-2">View Rankings</h3>
+ <h3 className="text-lg font-bold text-gray-900 mb-2">View Rankings</h3>
  <p className="text-sm text-gray-700 leading-relaxed mb-4">
  Expert-curated workflow rankings. Discover the #1 tool for content creation, coding, marketing, and more.
  </p>
@@ -755,7 +755,7 @@ export default function BestAIToolsPage() {
  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-aqua/20 to-cyan-500/10 flex items-center justify-center mx-auto mb-4 border border-aqua/20 group-hover:border-aqua/40 transition">
  <BookOpen className="w-7 h-7 text-aqua" />
  </div>
- <h3 className="text-lg font-bold text-white mb-2">Get the Playbook</h3>
+ <h3 className="text-lg font-bold text-gray-900 mb-2">Get the Playbook</h3>
  <p className="text-sm text-gray-700 leading-relaxed mb-4">
  Step-by-step guides to build AI-powered workflows. From content creation to automation — follow the blueprint.
  </p>
@@ -777,7 +777,7 @@ export default function BestAIToolsPage() {
  <BookOpen className="w-5 h-5 text-sky-400" />
  </div>
  <div>
- <h2 className="text-xl sm:text-2xl font-bold text-white">
+ <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
  Latest from the Blog
  </h2>
  <p className="text-xs sm:text-sm text-gray-700">
@@ -806,7 +806,7 @@ export default function BestAIToolsPage() {
  <BookOpen className="w-4 h-4 text-gray-800" />
  </div>
  </div>
- <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-2 leading-snug">
+ <h3 className="text-sm font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-2 leading-snug">
  {post.title}
  </h3>
  <p className="text-xs text-gray-700 line-clamp-2 leading-relaxed">
@@ -921,7 +921,7 @@ export default function BestAIToolsPage() {
  <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-aqua/10 rounded-full blur-[120px] pointer-events-none" />
 
  <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center">
- <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
+ <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
  Ready to Find the Best AI Tools for Your Workflow?
  </h2>
  <p className="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">

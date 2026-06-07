@@ -43,7 +43,7 @@ export default function RankingsPage() {
  <Layers className="w-3.5 h-3.5" />
  Workflow Rankings
  </div>
- <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+ <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
  AI Rankings by{' '}
  <span className="bg-gradient-to-r from-neon-light to-aqua bg-clip-text text-transparent">
  Workflow
@@ -59,13 +59,13 @@ export default function RankingsPage() {
  <div className="flex flex-wrap gap-4 sm:gap-6">
  <div className="flex items-center gap-2 text-xs text-gray-700">
  <Layers className="w-4 h-4 text-neon-light" />
- <span className="font-semibold text-white">{RANKING_CATEGORIES.length}</span> workflows
+ <span className="font-semibold text-gray-900">{RANKING_CATEGORIES.length}</span> workflows
  </div>
  <div className="flex items-center gap-2 text-xs text-gray-700">
- <span className="font-semibold text-white">60+</span> tools ranked
+ <span className="font-semibold text-gray-900">60+</span> tools ranked
  </div>
  <div className="flex items-center gap-2 text-xs text-gray-700">
- <span className="font-semibold text-white">5-factor</span> Cosme algorithm
+ <span className="font-semibold text-gray-900">5-factor</span> Cosme algorithm
  </div>
  </div>
  </div>
@@ -73,7 +73,7 @@ export default function RankingsPage() {
 
  {/* Rankings Grid */}
  <section>
- <h2 className="text-lg font-semibold text-white mb-6">Choose your workflow</h2>
+ <h2 className="text-lg font-semibold text-gray-900 mb-6">Choose your workflow</h2>
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
  {RANKING_CATEGORIES.map((rc) => (
  <Link
@@ -92,7 +92,7 @@ export default function RankingsPage() {
  <ChevronRight className="w-3 h-3" />
  </span>
  </div>
- <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
+ <h3 className="text-sm font-semibold text-gray-900 group-hover:text-neon-light transition-colors mb-1">
  {rc.title}
  </h3>
  <p className="text-xs text-gray-600 mb-1">{rc.subtitle}</p>
@@ -111,7 +111,7 @@ export default function RankingsPage() {
  {/* CTA */}
  <section className="mt-12 rounded-xl border border-dashed border-gray-200 bg-white/40 p-8 text-center">
  <Layers className="w-10 h-10 text-neon/60 mx-auto mb-3" />
- <h3 className="text-lg font-semibold text-white mb-1">Can&apos;t decide?</h3>
+ <h3 className="text-lg font-semibold text-gray-900 mb-1">Can&apos;t decide?</h3>
  <p className="text-sm text-gray-700 max-w-md mx-auto mb-4">
  Browse our full tools directory with powerful filters — find the right tool for any job.
  </p>

@@ -414,7 +414,7 @@ export default function MidjourneyVsDalleCompare() {
  <Star className="w-3.5 h-3.5" />
  Head-to-Head Comparison
  </div>
- <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+ <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
  Midjourney vs DALL-E 3{' '}
  <span className="bg-gradient-to-r from-purple-300 to-fuchsia-300 bg-clip-text text-transparent">
  2026
@@ -445,7 +445,7 @@ export default function MidjourneyVsDalleCompare() {
  {/* ─── Table of Contents ─────────────────────────────────── */}
  <section className="mb-12">
  <div className="bg-gray-50/40 border border-gray-200 rounded-xl p-6">
- <h2 className="text-sm font-semibold text-white mb-4 flex items-center gap-2">
+ <h2 className="text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
  <BookOpen className="w-4 h-4 text-purple-400" />
  Table of Contents
  </h2>
@@ -477,7 +477,7 @@ export default function MidjourneyVsDalleCompare() {
 
  {/* ─── Quick Verdict Scorecard ────────────────────────────── */}
  <section id="verdict" className="mb-12 scroll-mt-20">
- <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+ <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
  <BarChart3 className="w-6 h-6 text-purple-400" />
  Quick Verdict · Scorecard
  </h2>
@@ -490,7 +490,7 @@ export default function MidjourneyVsDalleCompare() {
  <Palette className="w-5 h-5 text-purple-300" />
  </div>
  <div>
- <h3 className="text-lg font-bold text-white">Midjourney</h3>
+ <h3 className="text-lg font-bold text-gray-900">Midjourney</h3>
  <p className="text-xs text-gray-400">V6 — Discord + Web Alpha</p>
  </div>
  </div>
@@ -513,7 +513,7 @@ export default function MidjourneyVsDalleCompare() {
  <Sparkles className="w-5 h-5 text-emerald-400" />
  </div>
  <div>
- <h3 className="text-lg font-bold text-white">DALL-E 3</h3>
+ <h3 className="text-lg font-bold text-gray-900">DALL-E 3</h3>
  <p className="text-xs text-gray-400">OpenAI — ChatGPT + API</p>
  </div>
  </div>
@@ -534,7 +534,7 @@ export default function MidjourneyVsDalleCompare() {
  <p className="text-sm text-gray-700 text-center">
  <strong className="text-purple-300">Midjourney</strong> wins on: image quality, style control, creative control ·{' '}
  <strong className="text-emerald-400">DALL-E 3</strong> wins on: text rendering, editing, speed, accessibility, affordability ·{' '}
- <strong className="text-white">Tie</strong> on: character consistency
+ <strong className="text-gray-900">Tie</strong> on: character consistency
  </p>
  </div>
  </section>
@@ -548,7 +548,7 @@ export default function MidjourneyVsDalleCompare() {
  >
  <div className="flex items-center gap-3 mb-6">
  <section.icon className="w-6 h-6 text-purple-400" />
- <h2 className="text-2xl font-bold text-white">{section.category}</h2>
+ <h2 className="text-2xl font-bold text-gray-900">{section.category}</h2>
  </div>
 
  <div className="overflow-x-auto rounded-xl border border-gray-200">
@@ -593,7 +593,7 @@ export default function MidjourneyVsDalleCompare() {
  <section id="usecases" className="mb-12 scroll-mt-20">
  <div className="flex items-center gap-3 mb-6">
  <Users className="w-6 h-6 text-purple-400" />
- <h2 className="text-2xl font-bold text-white">Use Cases — Who Wins What</h2>
+ <h2 className="text-2xl font-bold text-gray-900">Use Cases — Who Wins What</h2>
  </div>
 
  <div className="space-y-4">
@@ -607,7 +607,7 @@ export default function MidjourneyVsDalleCompare() {
  <uc.icon className="w-5 h-5 text-purple-300" />
  </div>
  <div className="flex-1 min-w-0">
- <h3 className="text-lg font-semibold text-white mb-1">{uc.title}</h3>
+ <h3 className="text-lg font-semibold text-gray-900 mb-1">{uc.title}</h3>
  <p className="text-sm text-purple-300 font-medium mb-2">{uc.verdict}</p>
  <p className="text-sm text-gray-600 leading-relaxed">{uc.details}</p>
  </div>
@@ -646,7 +646,7 @@ export default function MidjourneyVsDalleCompare() {
  <Shield className="w-3.5 h-3.5" />
  Our Take
  </div>
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
  Final Recommendation
  </h2>
 
@@ -654,7 +654,7 @@ export default function MidjourneyVsDalleCompare() {
  <div className="rounded-xl bg-gray-50/60 border border-purple-500/20 p-5">
  <div className="flex items-center gap-2 mb-3">
  <Palette className="w-5 h-5 text-purple-300" />
- <h3 className="text-base font-bold text-white">Choose Midjourney if you:</h3>
+ <h3 className="text-base font-bold text-gray-900">Choose Midjourney if you:</h3>
  </div>
  <ul className="space-y-2">
  {[
@@ -675,7 +675,7 @@ export default function MidjourneyVsDalleCompare() {
  <div className="rounded-xl bg-gray-50/60 border border-emerald-500/20 p-5">
  <div className="flex items-center gap-2 mb-3">
  <Sparkles className="w-5 h-5 text-emerald-400" />
- <h3 className="text-base font-bold text-white">Choose DALL-E 3 if you:</h3>
+ <h3 className="text-base font-bold text-gray-900">Choose DALL-E 3 if you:</h3>
  </div>
  <ul className="space-y-2">
  {[
@@ -696,7 +696,7 @@ export default function MidjourneyVsDalleCompare() {
 
  {/* Bottom line */}
  <div className="bg-white/60 border border-gray-200 rounded-xl p-5">
- <h3 className="text-base font-bold text-white mb-2 flex items-center gap-2">
+ <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center gap-2">
  <Star className="w-5 h-5 text-yellow-400" />
  The Smartest Setup
  </h3>
@@ -714,7 +714,7 @@ export default function MidjourneyVsDalleCompare() {
 
  {/* ─── FAQ ────────────────────────────────────────────────── */}
  <section id="faq" className="mb-12 scroll-mt-20">
- <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+ <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
  <MessageSquare className="w-6 h-6 text-purple-400" />
  Frequently Asked Questions
  </h2>
@@ -725,7 +725,7 @@ export default function MidjourneyVsDalleCompare() {
  key={i}
  className="group rounded-xl bg-gray-50/40 border border-gray-200 overflow-hidden"
  >
- <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-medium text-white hover:text-purple-300 transition list-none">
+ <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-medium text-gray-700 hover:text-purple-300 transition list-none">
  {faq.q}
  <ChevronRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition shrink-0" />
  </summary>
@@ -739,7 +739,7 @@ export default function MidjourneyVsDalleCompare() {
 
  {/* ─── Related Comparisons ──────────────────────────────── */}
  <section className="mb-12">
- <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+ <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
  <BarChart3 className="w-6 h-6 text-purple-400" />
  Related Comparisons
  </h2>
@@ -750,7 +750,7 @@ export default function MidjourneyVsDalleCompare() {
  >
  <div className="flex items-center gap-3 mb-2">
  <Globe className="w-5 h-5 text-blue-300" />
- <h3 className="text-sm font-semibold text-white group-hover:text-blue-300 transition">
+ <h3 className="text-sm font-semibold text-gray-900 group-hover:text-blue-300 transition">
  Gemini vs ChatGPT
  </h3>
  </div>
@@ -764,7 +764,7 @@ export default function MidjourneyVsDalleCompare() {
  >
  <div className="flex items-center gap-3 mb-2">
  <Zap className="w-5 h-5 text-neon-light" />
- <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition">
+ <h3 className="text-sm font-semibold text-gray-900 group-hover:text-neon-light transition">
  DeepSeek vs ChatGPT
  </h3>
  </div>
@@ -777,7 +777,7 @@ export default function MidjourneyVsDalleCompare() {
 
  {/* ─── CTA ──────────────────────────────────────────────── */}
  <section className="rounded-xl bg-gray-50/60 border border-dashed border-gray-200 p-8 text-center">
- <h2 className="text-xl font-bold text-white mb-2">Still deciding?</h2>
+ <h2 className="text-xl font-bold text-gray-900 mb-2">Still deciding?</h2>
  <p className="text-sm text-gray-600 max-w-md mx-auto mb-4">
  Browse our full directory of AI tools with Asia-ready filters and editorial rankings.
  </p>

@@ -347,7 +347,7 @@ export default function NotionAIVsChatGPTVsGemini() {
  <div className="border-t border-gray-200 mt-12 pt-8">
  <div className="flex flex-wrap items-center justify-between gap-4">
  <div className="flex items-center gap-3">
- <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-sm font-bold">AF</div>
+ <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-gray-900 text-sm font-bold">AF</div>
  <div>
  <p className="text-sm font-medium text-gray-900">{POST.author}</p>
  <p className="text-xs text-gray-500">Curated AI tools and playbooks for Asia</p>
@@ -381,7 +381,7 @@ export default function NotionAIVsChatGPTVsGemini() {
 
  {/* CTA */}
  <section className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-xl p-8 mt-12 text-center">
- <h3 className="text-xl font-bold text-white mb-2">Find Your Perfect AI Stack</h3>
+ <h3 className="text-xl font-bold text-gray-900 mb-2">Find Your Perfect AI Stack</h3>
  <p className="text-blue-100 mb-4">Browse 79 playbooks and 85 curated tools for Asian solopreneurs.</p>
  <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
  <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors">

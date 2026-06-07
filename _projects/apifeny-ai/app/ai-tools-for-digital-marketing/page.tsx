@@ -138,7 +138,7 @@ export default function AIToolsForDigitalMarketingPage() {
  Digital Marketing Edition
  </div>
 
- <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl">
+ <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight max-w-4xl">
  Best AI Tools for{' '}
  <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
  Digital Marketing
@@ -194,7 +194,7 @@ export default function AIToolsForDigitalMarketingPage() {
  {/* ── Why This Matters ─────────────────────────────────────────── */}
  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="text-center mb-12">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
  Why AI for Digital Marketing — <span className="text-green-400">Now</span>
  </h2>
  <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -219,7 +219,7 @@ export default function AIToolsForDigitalMarketingPage() {
  <div className="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center mb-4">
  <item.icon className="w-5 h-5 text-green-400" />
  </div>
- <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+ <h3 className="text-gray-900 font-semibold mb-2">{item.title}</h3>
  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
@@ -229,7 +229,7 @@ export default function AIToolsForDigitalMarketingPage() {
  {/* ── Quick Comparison Table ──────────────────────────────────── */}
  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="text-center mb-10">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Top Digital Marketing AI Tools — <span className="text-green-400">At a Glance</span>
  </h2>
  <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -295,7 +295,7 @@ export default function AIToolsForDigitalMarketingPage() {
  <div>
  <div className="flex items-center gap-2 mb-3">
  <cat.icon className="w-5 h-5 text-green-400" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white">{cat.title}</h2>
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">{cat.title}</h2>
  </div>
  <p className="text-gray-600 max-w-2xl">{cat.description}</p>
  </div>
@@ -333,12 +333,12 @@ export default function AIToolsForDigitalMarketingPage() {
  >
  <div className="flex items-start gap-3">
  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0">
- <span className="text-white font-bold text-sm">
+ <span className="text-gray-900 font-bold text-sm">
  {tool.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
  </div>
  <div className="min-w-0">
- <h3 className="text-white font-medium text-sm group-hover:text-green-300 transition truncate">
+ <h3 className="text-gray-900 font-medium text-sm group-hover:text-green-300 transition truncate">
  {tool.name}
  </h3>
  <p className="text-xs text-gray-400 mt-0.5 line-clamp-2">
@@ -373,7 +373,7 @@ export default function AIToolsForDigitalMarketingPage() {
  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="flex items-center gap-2 mb-8">
  <BookOpen className="w-5 h-5 text-green-400" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white">Digital Marketing Playbooks</h2>
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Digital Marketing Playbooks</h2>
  </div>
 
  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -396,7 +396,7 @@ export default function AIToolsForDigitalMarketingPage() {
  href={`/playbook/${pb.slug}`}
  className="group bg-gray-100 border border-gray-200 rounded-xl p-6 hover:border-green-500/30 transition-all"
  >
- <h3 className="font-semibold text-white group-hover:text-green-300 transition mb-2">
+ <h3 className="font-semibold text-gray-900 group-hover:text-green-300 transition mb-2">
  {pb.title}
  </h3>
  <p className="text-sm text-gray-400 line-clamp-2 mb-3">
@@ -414,7 +414,7 @@ export default function AIToolsForDigitalMarketingPage() {
  {/* ── FAQ Section ──────────────────────────────────────────────── */}
  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="max-w-3xl mx-auto">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 text-center">
  Frequently Asked Questions
  </h2>
  <div className="space-y-4 mt-8">
@@ -448,7 +448,7 @@ export default function AIToolsForDigitalMarketingPage() {
  key={i}
  className="group bg-gray-100 border border-gray-200 rounded-xl overflow-hidden"
  >
- <summary className="px-5 py-4 text-white font-medium cursor-pointer hover:bg-gray-100 transition-colors flex items-center justify-between list-none">
+ <summary className="px-5 py-4 text-gray-700 font-medium cursor-pointer hover:bg-gray-100 transition-colors flex items-center justify-between list-none">
  <span>{faq.q}</span>
  <span className="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-2">
  ▼
@@ -491,7 +491,7 @@ export default function AIToolsForDigitalMarketingPage() {
  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="relative rounded-2xl bg-gradient-to-br from-green-500/10 via-emerald-500/5 to-tech-800 border border-gray-200 p-8 sm:p-12 text-center">
  <Megaphone className="w-10 h-10 text-green-400 mx-auto mb-4" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Ready to Transform Your Digital Marketing?
  </h2>
  <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">

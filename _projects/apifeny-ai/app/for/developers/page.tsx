@@ -242,7 +242,7 @@ export default function DevelopersPage() {
  <Rocket className="w-5 h-5 text-emerald-400" />
  <span className="text-emerald-400 font-semibold text-sm uppercase tracking-wider">For Developers</span>
  </div>
- <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+ <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
  Best AI Tools for{' '}
  <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
  Developers in Asia
@@ -250,7 +250,7 @@ export default function DevelopersPage() {
  </h1>
  <p className="text-lg sm:text-xl text-gray-600 max-w-3xl leading-relaxed mb-8">
  Whether you&apos;re building the next unicorn or shipping side projects at 2 AM — these are the{' '}
- <strong className="text-white">AI developer tools tested and curated for Asian engineers</strong>.
+ <strong className="text-gray-900">AI developer tools tested and curated for Asian engineers</strong>.
  Code assistants, autonomous agents, APIs, deployment, and data tools. From $0/month.
  </p>
  <div className="flex flex-wrap gap-3">
@@ -284,7 +284,7 @@ export default function DevelopersPage() {
  ].map((stat) => (
  <div key={stat.label} className="flex flex-col items-center gap-1">
  <span className="text-emerald-400">{stat.icon}</span>
- <span className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</span>
+ <span className="text-2xl sm:text-3xl font-bold text-gray-900">{stat.value}</span>
  <span className="text-sm text-gray-400">{stat.label}</span>
  </div>
  ))}
@@ -295,7 +295,7 @@ export default function DevelopersPage() {
  {/* ── Categories ── */}
  <section id="categories" className="border-b border-gray-200/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
- <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+ <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
  Tools by Category
  </h2>
  <p className="text-gray-600 max-w-2xl mb-10 leading-relaxed">
@@ -312,7 +312,7 @@ export default function DevelopersPage() {
  >
  <div className={`flex items-center gap-2 mb-2 ${cat.textColor}`}>
  {cat.icon}
- <h3 className="font-bold text-white">{cat.title}</h3>
+ <h3 className="font-bold text-gray-900">{cat.title}</h3>
  </div>
  <p className="text-sm text-gray-400 mb-3">{cat.description}</p>
  <span className="text-xs text-emerald-400 group-hover:gap-2 inline-flex items-center gap-1 transition-all">
@@ -335,7 +335,7 @@ export default function DevelopersPage() {
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="flex items-center gap-3 mb-2">
  <span className={cat.textColor}>{cat.icon}</span>
- <h2 className="text-2xl sm:text-3xl font-bold text-white">{cat.title}</h2>
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">{cat.title}</h2>
  </div>
  <p className="text-gray-400 mb-6 max-w-2xl">{cat.description}</p>
 
@@ -349,7 +349,7 @@ export default function DevelopersPage() {
  href={`/tools/${toolSlug}`}
  className="bg-gray-100 border border-gray-200/30 rounded-xl p-4 hover:border-emerald-500/30 transition-all group"
  >
- <h3 className="font-semibold text-white group-hover:text-emerald-400 transition-colors mb-1">
+ <h3 className="font-semibold text-gray-900 group-hover:text-emerald-400 transition-colors mb-1">
  {tool.name || tool.title || toolSlug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}
  </h3>
  {tool.tagline && (
@@ -395,7 +395,7 @@ export default function DevelopersPage() {
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <div className="flex items-center gap-2 mb-2">
  <BookOpen className="w-5 h-5 text-emerald-400" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
  Developer-Focused Guides
  </h2>
  </div>
@@ -410,7 +410,7 @@ export default function DevelopersPage() {
  href={`/blog/${post.slug}`}
  className="group bg-gray-100 border border-gray-200/30 rounded-xl p-5 hover:border-emerald-500/30 transition-all"
  >
- <h3 className="font-semibold text-white group-hover:text-emerald-400 transition-colors mb-2">
+ <h3 className="font-semibold text-gray-900 group-hover:text-emerald-400 transition-colors mb-2">
  {post.title}
  </h3>
  <p className="text-sm text-gray-400 line-clamp-2 mb-3">{post.excerpt}</p>
@@ -429,7 +429,7 @@ export default function DevelopersPage() {
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <div className="flex items-center gap-2 mb-2">
  <Rocket className="w-5 h-5 text-emerald-400" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
  Developer Workflow Playbooks
  </h2>
  </div>
@@ -452,7 +452,7 @@ export default function DevelopersPage() {
  }`}>
  {p.difficulty}
  </span>
- <h3 className="font-semibold text-white mt-2 mb-1 group-hover:text-emerald-400 transition-colors">
+ <h3 className="font-semibold text-gray-900 mt-2 mb-1 group-hover:text-emerald-400 transition-colors">
  {p.title}
  </h3>
  <p className="text-sm text-gray-400 line-clamp-2">{p.description}</p>
@@ -483,7 +483,7 @@ export default function DevelopersPage() {
  {/* ── Why Developers in Asia ── */}
  <section className="border-b border-gray-200/30 bg-white/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Why Developers in Asia Need Different AI Tools
  </h2>
  <p className="text-gray-600 max-w-3xl mb-8 leading-relaxed">
@@ -500,7 +500,7 @@ export default function DevelopersPage() {
  ].map((item) => (
  <div key={item.title} className="bg-gray-100 border border-gray-200/30 rounded-xl p-5">
  <span className="text-emerald-400 block mb-2">{item.icon}</span>
- <h3 className="font-semibold text-white mb-1">{item.title}</h3>
+ <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
@@ -511,7 +511,7 @@ export default function DevelopersPage() {
  {/* ── Quick Comparison: Top 5 AI Code Tools ── */}
  <section className="border-b border-gray-200/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Quick Comparison: Top AI Coding Tools in 2026
  </h2>
  <p className="text-gray-600 mb-8 max-w-2xl">
@@ -567,7 +567,7 @@ export default function DevelopersPage() {
  <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
  <div className="bg-gradient-to-br from-emerald-500/10 to-cyan-600/10 border border-emerald-500/20 rounded-2xl p-8 sm:p-12">
  <Sparkles className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Ready to Supercharge Your Dev Workflow?
  </h2>
  <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">

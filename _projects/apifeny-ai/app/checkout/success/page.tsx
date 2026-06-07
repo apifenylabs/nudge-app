@@ -88,7 +88,7 @@ function SuccessContent() {
         </div>
 
         {/* What's Next */}
-        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white mb-6">
+        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-gray-900 mb-6">
           <h3 className="text-lg font-semibold mb-3">⚡ What Happens Next</h3>
           <ul className="space-y-3">
             <li className="flex items-start gap-2">

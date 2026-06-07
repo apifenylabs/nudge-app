@@ -116,11 +116,11 @@ function CheckoutOverlay({ onBack }: { onBack: () => void }) {
  <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center mb-4">
  <Zap className="w-8 h-8 text-white" />
  </div>
- <h3 className="text-xl font-bold text-white mb-1">AI Workflow Automation</h3>
+ <h3 className="text-xl font-bold text-gray-900 mb-1">AI Workflow Automation</h3>
  <p className="text-sm text-gray-700">Complete PDF Playbook</p>
  <div className="mt-3 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/20">
  <DollarSign className="w-4 h-4 text-amber-400" />
- <span className="text-lg font-bold text-white">$9</span>
+ <span className="text-lg font-bold text-gray-900">$9</span>
  <span className="text-xs text-gray-700">one-time</span>
  </div>
  </div>
@@ -176,7 +176,7 @@ function AiWorkflowAutomationInner() {
  <span className="text-3xl">⚡</span>
  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-100 text-amber-700 border-amber-200 border border-amber-500/30">Premium</span>
  </div>
- <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">Build Autonomous Workflows That Save 20+ Hours Per Week</h1>
+ <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Build Autonomous Workflows That Save 20+ Hours Per Week</h1>
  <p className="text-sm sm:text-base text-gray-800 max-w-2xl mb-4 leading-relaxed">
  From no-code connectors to multi-agent systems — this playbook shows you how to audit,
  design, deploy, and scale AI-powered automation. Includes 7 ready-to-deploy automation
@@ -257,7 +257,7 @@ Give me the top 10 automation opportunities with estimated tool costs and setup 
 
  {/* What's Inside */}
  <section className="mb-8 sm:mb-10" id="preview">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-amber-400" /> What&apos;s Inside</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-amber-400" /> What&apos;s Inside</h2>
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
  {includedItems.map((item, i) => {
  const Icon = item.icon;
@@ -273,7 +273,7 @@ Give me the top 10 automation opportunities with estimated tool costs and setup 
 
  {/* Chapter Preview */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-cyan-400" /> Chapter Preview</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-cyan-400" /> Chapter Preview</h2>
  <div className="space-y-3">
  {sections.map((section) => (
  <details key={section.id} className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-amber-400/20">
@@ -281,7 +281,7 @@ Give me the top 10 automation opportunities with estimated tool costs and setup 
  <div className="flex items-center gap-3">
  <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">{section.icon}</div>
  <div>
- <span className="text-sm sm:text-base font-medium text-white group-hover:text-amber-400 transition">{section.title}</span>
+ <span className="text-sm sm:text-base font-medium text-gray-900 group-hover:text-amber-400 transition">{section.title}</span>
  <p className="text-xs text-gray-600 mt-0.5">{section.description}</p>
  </div>
  </div>
@@ -304,12 +304,12 @@ Give me the top 10 automation opportunities with estimated tool costs and setup 
 
  {/* FAQ */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Lightbulb className="w-4 h-4 text-cyan-400" /> FAQ</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Lightbulb className="w-4 h-4 text-cyan-400" /> FAQ</h2>
  <div className="space-y-3">
  {faqItems.map((faq, i) => (
  <details key={i} className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-amber-400/20">
  <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none">
- <span className="text-sm sm:text-base font-medium text-white group-hover:text-amber-400 transition pr-4">{faq.q}</span>
+ <span className="text-sm sm:text-base font-medium text-gray-900 group-hover:text-amber-400 transition pr-4">{faq.q}</span>
  <ChevronRight className="w-5 h-5 text-gray-600 shrink-0 transition-transform group-open:rotate-90" />
  </summary>
  <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-200 pt-3">
@@ -324,7 +324,7 @@ Give me the top 10 automation opportunities with estimated tool costs and setup 
  <section className="mb-8 sm:mb-10">
  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-500/20 via-green-500/10 to-tech-800 border border-emerald-500/20 p-6 sm:p-8 text-center">
  <Shield className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
- <h2 className="text-lg sm:text-xl font-bold text-white mb-2">100% Risk-Free — 30-Day Guarantee</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">100% Risk-Free — 30-Day Guarantee</h2>
  <p className="text-sm text-gray-700 max-w-lg mx-auto mb-4">If you don&apos;t save 20+ hours/week within 30 days, full refund.</p>
  <button onClick={() => setShowCheckout(true)}
  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-white font-semibold text-sm hover:opacity-90 transition shadow-lg shadow-amber-500/20">

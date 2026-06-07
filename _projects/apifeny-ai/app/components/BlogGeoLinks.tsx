@@ -84,7 +84,7 @@ export default function BlogGeoLinks({ postSlug, postTags }: Props) {
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="flex items-center gap-2 mb-8">
  <Globe className="w-5 h-5 text-neon" />
- <h2 className="text-2xl font-bold text-white">Region-Specific AI Guides</h2>
+ <h2 className="text-2xl font-bold text-gray-900">Region-Specific AI Guides</h2>
  </div>
  <p className="text-gray-600 text-sm mb-6">
  Looking for AI tools tailored to your market? Check out our country-specific guides:
@@ -99,7 +99,7 @@ export default function BlogGeoLinks({ postSlug, postTags }: Props) {
  >
  <div className="flex items-center gap-3 mb-2">
  <span className="text-2xl">{geo.flag}</span>
- <h3 className="font-semibold text-white group-hover:text-neon-light transition">
+ <h3 className="font-semibold text-gray-900 group-hover:text-neon-light transition">
  AI Tools for {geo.name}
  </h3>
  </div>

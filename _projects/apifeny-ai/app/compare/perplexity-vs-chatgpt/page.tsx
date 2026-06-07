@@ -357,7 +357,7 @@ export default function PerplexityVsChatGPTCompare() {
  <Star className="w-3.5 h-3.5" />
  Head-to-Head Comparison
  </div>
- <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+ <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
  Perplexity vs ChatGPT{' '}
  <span className="bg-gradient-to-r from-violet-300 to-pink-300 bg-clip-text text-transparent">
  2026
@@ -388,7 +388,7 @@ export default function PerplexityVsChatGPTCompare() {
  {/* ─── Table of Contents ─────────────────────────────────── */}
  <section className="mb-12">
  <div className="bg-gray-50/40 border border-gray-200 rounded-xl p-6">
- <h2 className="text-sm font-semibold text-white mb-4 flex items-center gap-2">
+ <h2 className="text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
  <BookOpen className="w-4 h-4 text-violet-400" />
  Table of Contents
  </h2>
@@ -419,7 +419,7 @@ export default function PerplexityVsChatGPTCompare() {
 
  {/* ─── Quick Verdict Scorecard ────────────────────────────── */}
  <section id="verdict" className="mb-12 scroll-mt-20">
- <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+ <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
  <BarChart3 className="w-6 h-6 text-violet-400" />
  Quick Verdict · Scorecard
  </h2>
@@ -432,7 +432,7 @@ export default function PerplexityVsChatGPTCompare() {
  <Search className="w-5 h-5 text-violet-300" />
  </div>
  <div>
- <h3 className="text-lg font-bold text-white">Perplexity</h3>
+ <h3 className="text-lg font-bold text-gray-900">Perplexity</h3>
  <p className="text-xs text-gray-400">Sonar / Sonar Pro</p>
  </div>
  </div>
@@ -454,7 +454,7 @@ export default function PerplexityVsChatGPTCompare() {
  <Sparkles className="w-5 h-5 text-aqua" />
  </div>
  <div>
- <h3 className="text-lg font-bold text-white">ChatGPT</h3>
+ <h3 className="text-lg font-bold text-gray-900">ChatGPT</h3>
  <p className="text-xs text-gray-400">GPT-4o / o3</p>
  </div>
  </div>
@@ -474,7 +474,7 @@ export default function PerplexityVsChatGPTCompare() {
  <p className="text-sm text-gray-700 text-center">
  <strong className="text-violet-300">Perplexity</strong> wins on: research, citations, real-time data ·{' '}
  <strong className="text-aqua">ChatGPT</strong> wins on: writing, coding, ecosystem, multimodal ·{' '}
- <strong className="text-white">Tie</strong> on: pricing
+ <strong className="text-gray-900">Tie</strong> on: pricing
  </p>
  </div>
  </section>
@@ -488,7 +488,7 @@ export default function PerplexityVsChatGPTCompare() {
  >
  <div className="flex items-center gap-3 mb-6">
  <section.icon className="w-6 h-6 text-violet-400" />
- <h2 className="text-2xl font-bold text-white">{section.category}</h2>
+ <h2 className="text-2xl font-bold text-gray-900">{section.category}</h2>
  </div>
 
  <div className="overflow-x-auto rounded-xl border border-gray-200">
@@ -533,7 +533,7 @@ export default function PerplexityVsChatGPTCompare() {
  <section id="usecases" className="mb-12 scroll-mt-20">
  <div className="flex items-center gap-3 mb-6">
  <Users className="w-6 h-6 text-violet-400" />
- <h2 className="text-2xl font-bold text-white">Use Cases — Who Wins What</h2>
+ <h2 className="text-2xl font-bold text-gray-900">Use Cases — Who Wins What</h2>
  </div>
 
  <div className="space-y-4">
@@ -547,7 +547,7 @@ export default function PerplexityVsChatGPTCompare() {
  <uc.icon className="w-5 h-5 text-violet-300" />
  </div>
  <div className="flex-1 min-w-0">
- <h3 className="text-lg font-semibold text-white mb-1">{uc.title}</h3>
+ <h3 className="text-lg font-semibold text-gray-900 mb-1">{uc.title}</h3>
  <p className="text-sm text-violet-300 font-medium mb-2">{uc.verdict}</p>
  <p className="text-sm text-gray-600 leading-relaxed">{uc.details}</p>
  </div>
@@ -586,7 +586,7 @@ export default function PerplexityVsChatGPTCompare() {
  <Shield className="w-3.5 h-3.5" />
  Our Take
  </div>
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
  Recommendation for Asia Founders
  </h2>
 
@@ -594,7 +594,7 @@ export default function PerplexityVsChatGPTCompare() {
  <div className="rounded-xl bg-gray-50/60 border border-violet-500/20 p-5">
  <div className="flex items-center gap-2 mb-3">
  <Search className="w-5 h-5 text-violet-300" />
- <h3 className="text-base font-bold text-white">Choose Perplexity if you:</h3>
+ <h3 className="text-base font-bold text-gray-900">Choose Perplexity if you:</h3>
  </div>
  <ul className="space-y-2">
  {[
@@ -615,7 +615,7 @@ export default function PerplexityVsChatGPTCompare() {
  <div className="rounded-xl bg-gray-50/60 border border-aqua/20 p-5">
  <div className="flex items-center gap-2 mb-3">
  <Sparkles className="w-5 h-5 text-aqua" />
- <h3 className="text-base font-bold text-white">Choose ChatGPT if you:</h3>
+ <h3 className="text-base font-bold text-gray-900">Choose ChatGPT if you:</h3>
  </div>
  <ul className="space-y-2">
  {[
@@ -636,7 +636,7 @@ export default function PerplexityVsChatGPTCompare() {
 
  {/* Bottom line */}
  <div className="bg-white/60 border border-gray-200 rounded-xl p-5">
- <h3 className="text-base font-bold text-white mb-2 flex items-center gap-2">
+ <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center gap-2">
  <Star className="w-5 h-5 text-yellow-400" />
  The Smartest Setup
  </h3>
@@ -654,7 +654,7 @@ export default function PerplexityVsChatGPTCompare() {
 
  {/* ─── FAQ ────────────────────────────────────────────────── */}
  <section id="faq" className="mb-12 scroll-mt-20">
- <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+ <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
  <MessageSquare className="w-6 h-6 text-violet-400" />
  Frequently Asked Questions
  </h2>
@@ -665,7 +665,7 @@ export default function PerplexityVsChatGPTCompare() {
  key={i}
  className="group rounded-xl bg-gray-50/40 border border-gray-200 overflow-hidden"
  >
- <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-medium text-white hover:text-violet-300 transition list-none">
+ <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-medium text-gray-700 hover:text-violet-300 transition list-none">
  {faq.q}
  <ChevronRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition shrink-0" />
  </summary>
@@ -679,7 +679,7 @@ export default function PerplexityVsChatGPTCompare() {
 
  {/* ─── Related CTA ───────────────────────────────────────── */}
  <section className="rounded-xl bg-gray-50/60 border border-dashed border-gray-200 p-8 text-center">
- <h2 className="text-xl font-bold text-white mb-2">Still deciding?</h2>
+ <h2 className="text-xl font-bold text-gray-900 mb-2">Still deciding?</h2>
  <p className="text-sm text-gray-600 max-w-md mx-auto mb-4">
  Browse our full directory of AI tools with Asia-ready filters and editorial rankings.
  </p>

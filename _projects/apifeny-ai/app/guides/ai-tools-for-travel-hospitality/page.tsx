@@ -415,17 +415,17 @@ export default function AIToolsForTravelHospitalityPage() {
               { label: 'AI Tools for Travel & Hospitality' },
             ]}
           />
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-gray-900/90 backdrop-blur-sm">
  <Compass className="h-4 w-4" />
  Travel & Hospitality
  </div>
- <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+ <h1 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
  Best AI Tools for Travel & Hospitality in 2026
  </h1>
  <p className="mx-auto mb-8 max-w-3xl text-lg text-white/80 sm:text-xl">
  From AI-powered itinerary planning and hotel revenue management to destination marketing and sustainable tourism — the definitive guide to AI tools transforming the travel and hospitality industry across Asia-Pacific.
  </p>
- <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/70">
+ <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-900/70">
  <span className="flex items-center gap-1.5">
  <BookOpen className="h-4 w-4" />
  20 min read
@@ -695,7 +695,7 @@ export default function AIToolsForTravelHospitalityPage() {
  <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
  <div className="mx-auto max-w-4xl">
  <div className="rounded-2xl bg-gradient-to-br from-sky-600 to-teal-600 p-12 text-center ">
- <h2 className="mb-4 text-3xl font-bold text-white">
+ <h2 className="mb-4 text-3xl font-bold text-gray-900">
  Ready to Transform Your Travel Business?
  </h2>
  <p className="mx-auto mb-8 max-w-2xl text-lg text-white/80">

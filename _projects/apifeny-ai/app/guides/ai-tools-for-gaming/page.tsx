@@ -473,17 +473,17 @@ export default function AIToolsForGamingPage() {
               { label: 'AI Tools for Gaming' },
             ]}
           />
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-gray-900/90 backdrop-blur-sm">
  <Gamepad2 className="h-4 w-4" />
  Game Development
  </div>
- <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+ <h1 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
  Best AI Tools for Game Development in 2026
  </h1>
  <p className="mx-auto mb-8 max-w-3xl text-lg text-white/80 sm:text-xl">
  From 3D asset generation and procedural world building to NPC dialogue and player analytics — the definitive guide to AI tools transforming game development for indie devs and studios across Asia-Pacific.
  </p>
- <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/70">
+ <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-900/70">
  <span className="flex items-center gap-1.5">
  <BookOpen className="h-4 w-4" />
  25 min read
@@ -799,7 +799,7 @@ export default function AIToolsForGamingPage() {
  <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
  <div className="mx-auto max-w-4xl">
  <div className="rounded-2xl bg-gradient-to-br from-purple-600 to-blue-600 p-12 text-center ">
- <h2 className="mb-4 text-3xl font-bold text-white">
+ <h2 className="mb-4 text-3xl font-bold text-gray-900">
  Ready to Ship Your Game?
  </h2>
  <p className="mx-auto mb-8 max-w-2xl text-lg text-white/80">

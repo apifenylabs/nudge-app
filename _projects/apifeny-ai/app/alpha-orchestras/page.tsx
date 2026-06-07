@@ -113,7 +113,7 @@ export default function AlphaOrchestrasPage() {
  <Cpu className="w-4 h-4" />
  <span>Alpha Orchestras — Building in Public</span>
  </div>
- <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+ <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
  AI Trading Orchestra <span className="text-aqua">Alpha</span>
  </h1>
  <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -127,12 +127,12 @@ export default function AlphaOrchestrasPage() {
  <Calendar className="w-4 h-4 text-aqua" />
  <span className="text-sm font-medium text-gray-600 uppercase tracking-wider">{WEEKLY.week}</span>
  </div>
- <h2 className="text-2xl font-bold text-white mb-2">{WEEKLY.title}</h2>
+ <h2 className="text-2xl font-bold text-gray-900 mb-2">{WEEKLY.title}</h2>
  <p className="text-gray-600 mb-6">{WEEKLY.summary}</p>
  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
  {WEEKLY.stats.map((s) => (
  <div key={s.label} className="bg-white/50 border border-gray-200 rounded-lg p-3 text-center">
- <div className="text-lg font-bold text-white">{s.value}</div>
+ <div className="text-lg font-bold text-gray-900">{s.value}</div>
  <div className="text-xs text-gray-400">{s.label}</div>
  <div className="text-xs text-gray-500 mt-0.5">{s.delta}</div>
  </div>
@@ -144,7 +144,7 @@ export default function AlphaOrchestrasPage() {
  <div className="bg-gray-100 border border-gray-200 rounded-xl p-6 mb-8">
  <div className="flex items-center gap-2 mb-4">
  <Target className="w-4 h-4 text-aqua" />
- <h3 className="text-lg font-semibold text-white">Pipeline Overview</h3>
+ <h3 className="text-lg font-semibold text-gray-900">Pipeline Overview</h3>
  </div>
  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
  {[
@@ -159,7 +159,7 @@ export default function AlphaOrchestrasPage() {
  ].map((s) => (
  <div key={s.name} className="bg-white/50 border border-gray-200 rounded-lg p-3 flex justify-between items-start">
  <div>
- <div className="text-sm font-semibold text-white">{s.name}</div>
+ <div className="text-sm font-semibold text-gray-900">{s.name}</div>
  <div className="text-xs text-gray-400">{s.market} · {s.confidence}</div>
  <div className="text-xs text-gray-500 mt-1">{s.note}</div>
  </div>
@@ -179,7 +179,7 @@ export default function AlphaOrchestrasPage() {
  <div className="space-y-4 mb-8">
  <div className="flex items-center gap-2 mb-2">
  <GitBranch className="w-4 h-4 text-aqua" />
- <h3 className="text-lg font-semibold text-white">Weekly Build Log</h3>
+ <h3 className="text-lg font-semibold text-gray-900">Weekly Build Log</h3>
  </div>
  {WEEKLY.entries.map((entry, i) => (
  <div
@@ -189,7 +189,7 @@ export default function AlphaOrchestrasPage() {
  <div className="flex items-center gap-2 mb-1">
  <span className="text-xs font-medium text-aqua">{entry.date}</span>
  </div>
- <h4 className="text-base font-semibold text-white mb-2">{entry.title}</h4>
+ <h4 className="text-base font-semibold text-gray-900 mb-2">{entry.title}</h4>
  <p className="text-sm text-gray-600 mb-3">{entry.description}</p>
  {entry.tags && (
  <div className="flex flex-wrap gap-1.5">
@@ -211,20 +211,20 @@ export default function AlphaOrchestrasPage() {
  <div className="bg-gray-100 border border-gray-200 rounded-xl p-6 mb-8">
  <div className="flex items-center gap-2 mb-4">
  <Shield className="w-4 h-4 text-aqua" />
- <h3 className="text-lg font-semibold text-white">Operating Principles</h3>
+ <h3 className="text-lg font-semibold text-gray-900">Operating Principles</h3>
  </div>
  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-600">
  <div className="bg-white/50 border border-gray-200 rounded-lg p-3">
- <strong className="text-white">No Black Boxes:</strong> Every strategy is built from first principles. You can read the code, see the backtests, and verify the live fills on-chain.
+ <strong className="text-gray-900">No Black Boxes:</strong> Every strategy is built from first principles. You can read the code, see the backtests, and verify the live fills on-chain.
  </div>
  <div className="bg-white/50 border border-gray-200 rounded-lg p-3">
- <strong className="text-white">Pipeline Before Live:</strong> R&D → Backtest → Gate Check → Paper → LIVE. No skipped stages.
+ <strong className="text-gray-900">Pipeline Before Live:</strong> R&D → Backtest → Gate Check → Paper → LIVE. No skipped stages.
  </div>
  <div className="bg-white/50 border border-gray-200 rounded-lg p-3">
- <strong className="text-white">Self-Healing Systems:</strong> Cron-loop detects failures (missing TP/SL, stale data) and auto-recovers. No babysitting required.
+ <strong className="text-gray-900">Self-Healing Systems:</strong> Cron-loop detects failures (missing TP/SL, stale data) and auto-recovers. No babysitting required.
  </div>
  <div className="bg-white/50 border border-gray-200 rounded-lg p-3">
- <strong className="text-white">Compounding Mindset:</strong> Treat the $112 pilot as if it's $500+. All plays run. All signals fire. Real money, real decisions.
+ <strong className="text-gray-900">Compounding Mindset:</strong> Treat the $112 pilot as if it's $500+. All plays run. All signals fire. Real money, real decisions.
  </div>
  </div>
  </div>

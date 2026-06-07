@@ -156,7 +156,7 @@ export default function SubmitPlaybookPage() {
  <div className="w-16 h-16 rounded-full bg-emerald-500/20 flex items-center justify-center mx-auto mb-4">
  <CheckCircle className="w-8 h-8 text-emerald-400" />
  </div>
- <h1 className="text-2xl sm:text-3xl font-bold text-white mb-3">Playbook Submitted!</h1>
+ <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Playbook Submitted!</h1>
  <p className="text-sm text-gray-700 max-w-md mx-auto mb-6">
  Thank you for sharing your workflow! Our team will review it and publish it to the
  community within 48 hours.
@@ -195,7 +195,7 @@ export default function SubmitPlaybookPage() {
  <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-asia/80 mb-4 shadow-lg shadow-emerald-500/20">
  <Sparkles className="w-7 h-7 text-white" />
  </div>
- <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+ <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
  Submit a Playbook
  </h1>
  <p className="text-sm sm:text-base text-gray-700 max-w-lg mx-auto">
@@ -214,7 +214,7 @@ export default function SubmitPlaybookPage() {
  <form onSubmit={handleSubmit} className="space-y-8">
  {/* Basic Info */}
  <section className="rounded-xl border border-gray-200 bg-gray-50/50 p-6">
- <h2 className="text-base font-semibold text-white mb-4">Basic Info</h2>
+ <h2 className="text-base font-semibold text-gray-900 mb-4">Basic Info</h2>
  <div className="space-y-4">
  <div>
  <label className="block text-xs font-medium text-gray-700 mb-1.5">
@@ -255,7 +255,7 @@ export default function SubmitPlaybookPage() {
 
  {/* Author Info */}
  <section className="rounded-xl border border-gray-200 bg-gray-50/50 p-6">
- <h2 className="text-base font-semibold text-white mb-4">About You</h2>
+ <h2 className="text-base font-semibold text-gray-900 mb-4">About You</h2>
  <div className="space-y-4">
  <div>
  <label className="block text-xs font-medium text-gray-700 mb-1.5">
@@ -286,7 +286,7 @@ export default function SubmitPlaybookPage() {
 
  {/* Classification */}
  <section className="rounded-xl border border-gray-200 bg-gray-50/50 p-6">
- <h2 className="text-base font-semibold text-white mb-4">Classification</h2>
+ <h2 className="text-base font-semibold text-gray-900 mb-4">Classification</h2>
  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
  <div>
  <label className="block text-xs font-medium text-gray-700 mb-1.5">Difficulty</label>
@@ -351,7 +351,7 @@ export default function SubmitPlaybookPage() {
 
  {/* Tools Used */}
  <section className="rounded-xl border border-gray-200 bg-gray-50/50 p-6">
- <h2 className="text-base font-semibold text-white mb-4">
+ <h2 className="text-base font-semibold text-gray-900 mb-4">
  Tools Used <span className="text-rose-400">*</span>
  </h2>
  <p className="text-xs text-gray-600 mb-3">Select the tools this playbook covers.</p>
@@ -414,7 +414,7 @@ export default function SubmitPlaybookPage() {
  {/* Steps */}
  <section className="rounded-xl border border-gray-200 bg-gray-50/50 p-6">
  <div className="flex items-center justify-between mb-4">
- <h2 className="text-base font-semibold text-white">
+ <h2 className="text-base font-semibold text-gray-900">
  Steps <span className="text-rose-400">*</span>
  </h2>
  <button
@@ -432,7 +432,7 @@ export default function SubmitPlaybookPage() {
  {form.steps.map((step, i) => (
  <div key={i} className="p-4 rounded-lg bg-gray-50 border border-gray-200">
  <div className="flex items-center gap-2 mb-3">
- <span className="w-6 h-6 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center text-white font-bold text-[10px]">
+ <span className="w-6 h-6 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center text-gray-900 font-bold text-[10px]">
  {i + 1}
  </span>
  <span className="text-xs text-gray-600">Step {i + 1}</span>
@@ -489,7 +489,7 @@ export default function SubmitPlaybookPage() {
  {/* Pro Tips */}
  <section className="rounded-xl border border-gray-200 bg-gray-50/50 p-6">
  <div className="flex items-center justify-between mb-4">
- <h2 className="text-base font-semibold text-white flex items-center gap-2">
+ <h2 className="text-base font-semibold text-gray-900 flex items-center gap-2">
  <Lightbulb className="w-4 h-4 text-asia" />
  Pro Tips
  </h2>
@@ -532,7 +532,7 @@ export default function SubmitPlaybookPage() {
 
  {/* Revenue Impact (optional section) */}
  <section className="rounded-xl border border-dashed border-emerald-500/20 bg-gray-50/30 p-6">
- <h2 className="text-base font-semibold text-white mb-3 flex items-center gap-2">
+ <h2 className="text-base font-semibold text-gray-900 mb-3 flex items-center gap-2">
  <TrendingUp className="w-4 h-4 text-emerald-400" />
  Real Results (optional but encouraged)
  </h2>
@@ -594,7 +594,7 @@ export default function SubmitPlaybookPage() {
 
  {/* Sample prompts */}
  <div className="mt-6 pt-4 border-t border-gray-200">
- <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+ <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center gap-2">
  <MessageSquare className="w-4 h-4 text-sky-400" />
  Sample Prompts (optional)
  </h3>
@@ -678,7 +678,7 @@ export default function SubmitPlaybookPage() {
 
  {/* Tags */}
  <section className="rounded-xl border border-gray-200 bg-gray-50/50 p-6">
- <h2 className="text-base font-semibold text-white mb-4">Tags</h2>
+ <h2 className="text-base font-semibold text-gray-900 mb-4">Tags</h2>
  <input
  type="text"
  value={form.tags}

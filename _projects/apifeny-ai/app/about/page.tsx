@@ -39,7 +39,7 @@ export default function AboutPage() {
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  {/* Mission */}
  <div className="text-center mb-12 sm:mb-16">
- <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+ <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
  About Apifeny AI
  </h1>
  <p className="text-base sm:text-lg text-gray-800 max-w-2xl mx-auto leading-relaxed">
@@ -61,7 +61,7 @@ export default function AboutPage() {
  <div className="w-10 h-10 rounded-lg bg-neon/10 flex items-center justify-center mb-4">
  <Icon className="w-5 h-5 text-neon-light" />
  </div>
- <h3 className="text-lg font-semibold text-white mb-2">{v.title}</h3>
+ <h3 className="text-lg font-semibold text-gray-900 mb-2">{v.title}</h3>
  <p className="text-sm text-gray-700 leading-relaxed">{v.description}</p>
  </div>
  );
@@ -70,7 +70,7 @@ export default function AboutPage() {
 
  {/* Build in Public CTA */}
  <div className="rounded-xl border border-neon/20 bg-neon/10 p-6 sm:p-8 mb-8 text-center">
- <h2 className="text-xl font-bold text-white mb-2">Built in the Open</h2>
+ <h2 className="text-xl font-bold text-gray-900 mb-2">Built in the Open</h2>
  <p className="text-sm text-gray-800 max-w-xl mx-auto mb-4">
  We share every step of building Apifeny AI — tools added, features shipped,
  Asia Scores improved. No smoke and mirrors.
@@ -86,14 +86,14 @@ export default function AboutPage() {
 
  {/* How it works */}
  <div className="rounded-xl border border-gray-200 bg-white/40 p-6 sm:p-8">
- <h2 className="text-xl font-bold text-white mb-4">How It Works</h2>
+ <h2 className="text-xl font-bold text-gray-900 mb-4">How It Works</h2>
  <div className="space-y-4">
  <div className="flex gap-4">
  <div className="w-8 h-8 rounded-full bg-neon/15 text-neon-light flex items-center justify-center text-sm font-bold shrink-0">
  1
  </div>
  <div>
- <h3 className="text-sm font-semibold text-white">Browse & Filter</h3>
+ <h3 className="text-sm font-semibold text-gray-900">Browse & Filter</h3>
  <p className="text-xs sm:text-sm text-gray-700 mt-1">
  Use our filters — category, pricing, Asia Score, use case, and more — to find the
  perfect tool for your needs.
@@ -105,7 +105,7 @@ export default function AboutPage() {
  2
  </div>
  <div>
- <h3 className="text-sm font-semibold text-white">Compare & Save</h3>
+ <h3 className="text-sm font-semibold text-gray-900">Compare & Save</h3>
  <p className="text-xs sm:text-sm text-gray-700 mt-1">
  Read detailed tool pages with Asia Score, playbooks, pricing, and reviews. Save
  tools to your stack for later comparison.
@@ -117,7 +117,7 @@ export default function AboutPage() {
  3
  </div>
  <div>
- <h3 className="text-sm font-semibold text-white">Try & Contribute</h3>
+ <h3 className="text-sm font-semibold text-gray-900">Try & Contribute</h3>
  <p className="text-xs sm:text-sm text-gray-700 mt-1">
  Visit the tool directly through our curated links. Found a great tool we missed?
  Submit it to help the community.

@@ -15,7 +15,7 @@ export default function SubmitPage() {
  <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-neon to-aqua/80 mb-4 shadow-lg shadow-neon/20">
  <Sparkles className="w-7 h-7 text-white" />
  </div>
- <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+ <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
  Submit an AI Tool
  </h1>
  <p className="text-sm sm:text-base text-gray-700 max-w-lg mx-auto">

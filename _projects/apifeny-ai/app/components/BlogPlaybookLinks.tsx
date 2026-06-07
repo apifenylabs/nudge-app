@@ -179,7 +179,7 @@ export default function BlogPlaybookLinks({ postTags, relatedToolSlugs, playbook
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
  <div className="flex items-center gap-2 mb-4">
  <BookOpen className="w-5 h-5 text-cyan-400" />
- <h2 className="text-lg font-bold text-white">Related Playbooks</h2>
+ <h2 className="text-lg font-bold text-gray-900">Related Playbooks</h2>
  </div>
  <p className="text-sm text-gray-400 mb-4">
  Step-by-step guides to implement the AI tools and workflows discussed in this article.
@@ -226,7 +226,7 @@ export default function BlogPlaybookLinks({ postTags, relatedToolSlugs, playbook
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
  <div className="flex items-center gap-2 mb-4">
  <BookOpen className="w-5 h-5 text-cyan-400" />
- <h2 className="text-lg font-bold text-white">Dive Deeper</h2>
+ <h2 className="text-lg font-bold text-gray-900">Dive Deeper</h2>
  </div>
  <p className="text-sm text-gray-400 mb-4">
  Read in-depth comparisons and guides about the tools used in this playbook.

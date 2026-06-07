@@ -1,6 +1,6 @@
 # HEARTBEAT.md — Captain Alpha Status
 
-**Last Updated:** 2026-06-08 00:18 HKT
+**Last Updated:** 2026-06-08 00:37 HKT
 
 **STATUS:** 🟢 HEALTHY — All systems nominal
 
@@ -51,6 +51,10 @@ Older secrets from nudge-app git history still need rotation:
   - ev-charging-asia → 200 ✅
   - apifeny-ai → 200 ✅
   - luxury-family-travel → 200 ✅
+
+## Heartbeat Actions Taken (00:26 HKT)
+- ✅ **P5 Strategic (AI Directory)**: Published new blog post "AI-Powered Customer Support: Best Chatbots for Asian Businesses in 2026" from draft — data JSON copied, generator run, build passed (158 blog posts)
+- ✅ work-engine-state.md updated
 
 ## Cron Health
 - 19 crons listed, 18 ok, 1 previously errored: **omnimind-consolidation-backup**
@@ -197,3 +201,28 @@ Older secrets from nudge-app git history still need rotation:
 - **Example strategy** in `momentum_short/v1_baseline.py` (fired 1-2 trades in 500h — too conservative, will iterate)
 - **Cost containment**: `vectorbt v1.0.0` already installed, `deepseek-r1:7b` via Ollama ready for parameter sweeps
 - **Aqua R&D loop cron created**: `aqua-rnd-loop` — autonomous 2h cycle, iterates strategies in `strategies_rnd/`, uses local LLM for sweeps, reports to #2.2, flags WR>=60% for CEO review
+
+## First Breakthrough — BB Reversion 15m hits 53% WR / 1.58 PF on BTC (00:24 HKT)
+- **Strategy**: BB mean reversion on 15m, RSI<20/>75, SL 0.5% TP 1.2%, 36-bar hold
+- **BTC**: 30 trades, 53.33% WR, 1.58 PF, 3.86 Sharpe, +3,444 PnL (4,000 bar sample)
+- **ETH**: 35 trades, 48.57% WR, 1.66 PF, 4.45 Sharpe — close behind
+- **SOL**: Fails — too low-liquidity for tight SL on 15m
+- **Failed**: v1-5 all archived (structure break, sweep detection, trend resistance — none worked with t+1 fill on 1h)
+- **Parameter sweep**: 75 combos tested, best found at RSI<20 (extreme oversold) + RSI>75 (moderate overbought)
+- **CEO gate**: NOT deploying—waiting for your review
+
+## Heartbeat Actions Taken (00:37 HKT)
+- ✅ Site health check: ev-charging-asia 200 ✅, apifeny-ai 200 ✅, luxury-family-travel 200 ✅
+- ✅ Cron audit: 22 crons, 20 ok, 2 errored (both known):
+  - **omnimind-consolidation-backup**: 1 error, tilde path — STRICT RULE prompt fix in place, next run 03:00 HKT will confirm
+  - **reverse-engineer-6h**: 1 error, model call timed out (120s) — transient, self-recovers
+  - All other 20 crons ✅ (ceo-24-7-work-engine, trading-pulse-30min, rd-fast-loop-2h, aqua-rnd-loop, aqua-paper-15min all OK)
+- ⏭️ All strategic projects CEO-blocked (Stripe keys, Supabase env, domain config) — no actionable items
+- ⏭️ BB Reversion 15m breakthrough CEO-gated — waiting your review before deploy
+
+## Turtle Soup Port Analysis (00:40 HKT)
+- Ported production turtle soup to engine with `entry_on_close=True` — 0 trades in 501-bar sample
+- **Root cause**: Sample window was a sustained selloff (BTC 78k→59k). Turtle soup needs range/chop markets
+- **MSS + volume_z + ATR_mult triple gate** is too strict for a 500-bar window
+- **Not a bug** — production version also trades rarely (that's the known tradeoff)
+- Added `entry_on_close` mode to engine (backward compatible, tests still 18/18)

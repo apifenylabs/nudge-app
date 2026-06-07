@@ -123,11 +123,11 @@ function CheckoutOverlay({ onBack }: { onBack: () => void }) {
  <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center mb-4">
  <Layout className="w-8 h-8 text-white" />
  </div>
- <h3 className="text-xl font-bold text-white mb-1">Directory Builder Template</h3>
+ <h3 className="text-xl font-bold text-gray-900 mb-1">Directory Builder Template</h3>
  <p className="text-sm text-gray-700">Complete PDF Playbook</p>
  <div className="mt-3 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/20">
  <DollarSign className="w-4 h-4 text-emerald-400" />
- <span className="text-lg font-bold text-white">$19</span>
+ <span className="text-lg font-bold text-gray-900">$19</span>
  <span className="text-xs text-gray-700">one-time</span>
  </div>
  </div>
@@ -183,7 +183,7 @@ function DirectoryBuilderTemplateInner() {
  <span className="text-3xl">🏗️</span>
  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Premium</span>
  </div>
- <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">Build a Profitable Niche Directory in 2 Weeks</h1>
+ <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Build a Profitable Niche Directory in 2 Weeks</h1>
  <p className="text-sm sm:text-base text-gray-800 max-w-2xl mb-4 leading-relaxed">
  The complete blueprint for building, launching, and monetizing niche directories with AI.
  From niche selection to affiliate revenue — including Cosme-style ranking algorithms,
@@ -251,7 +251,7 @@ Score out of 10 and give me a green/yellow/red light.`}
 
  {/* What's Inside */}
  <section className="mb-8 sm:mb-10" id="preview">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-emerald-400" /> What&apos;s Inside</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-emerald-400" /> What&apos;s Inside</h2>
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
  {includedItems.map((item, i) => {
  const Icon = item.icon;
@@ -267,7 +267,7 @@ Score out of 10 and give me a green/yellow/red light.`}
 
  {/* Chapter Preview */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-cyan-400" /> Chapter Preview</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-cyan-400" /> Chapter Preview</h2>
  <div className="space-y-3">
  {sections.map((section) => (
  <details key={section.id} className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-emerald-400/20">
@@ -275,7 +275,7 @@ Score out of 10 and give me a green/yellow/red light.`}
  <div className="flex items-center gap-3">
  <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">{section.icon}</div>
  <div>
- <span className="text-sm sm:text-base font-medium text-white group-hover:text-emerald-400 transition">{section.title}</span>
+ <span className="text-sm sm:text-base font-medium text-gray-900 group-hover:text-emerald-400 transition">{section.title}</span>
  <p className="text-xs text-gray-600 mt-0.5">{section.description}</p>
  </div>
  </div>
@@ -298,12 +298,12 @@ Score out of 10 and give me a green/yellow/red light.`}
 
  {/* FAQ */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Lightbulb className="w-4 h-4 text-cyan-400" /> FAQ</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Lightbulb className="w-4 h-4 text-cyan-400" /> FAQ</h2>
  <div className="space-y-3">
  {faqItems.map((faq, i) => (
  <details key={i} className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-emerald-400/20">
  <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none">
- <span className="text-sm sm:text-base font-medium text-white group-hover:text-emerald-400 transition pr-4">{faq.q}</span>
+ <span className="text-sm sm:text-base font-medium text-gray-900 group-hover:text-emerald-400 transition pr-4">{faq.q}</span>
  <ChevronRight className="w-5 h-5 text-gray-600 shrink-0 transition-transform group-open:rotate-90" />
  </summary>
  <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-200 pt-3">
@@ -319,7 +319,7 @@ Score out of 10 and give me a green/yellow/red light.`}
  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-500/20 via-green-500/10 to-tech-800 border border-emerald-500/20 p-6 sm:p-8 text-center">
  <div className="absolute inset-0 bg-gray-50 opacity-20" />
  <Shield className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
- <h2 className="text-lg sm:text-xl font-bold text-white mb-2">100% Risk-Free — 30-Day Money-Back Guarantee</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">100% Risk-Free — 30-Day Money-Back Guarantee</h2>
  <p className="text-sm text-gray-700 max-w-lg mx-auto mb-4">
  If this template doesn&apos;t help you build and launch a directory within 30 days, I&apos;ll refund every cent.
  </p>
@@ -337,14 +337,14 @@ Score out of 10 and give me a green/yellow/red light.`}
  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 mb-4">
  <Layout className="w-8 h-8 text-white" />
  </div>
- <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Ready to Build Your Directory Empire?</h2>
+ <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Ready to Build Your Directory Empire?</h2>
  <p className="text-sm text-gray-700 max-w-lg mx-auto mb-4">
  Get the complete 50+ page PDF playbook. Every prompt, every setup guide,
  every automation — all you need to build and monetize niche directories with AI.
  </p>
  <div className="inline-flex items-center gap-4 px-4 py-2 rounded-xl bg-white border border-gray-200 mb-4">
  <div className="text-left">
- <div className="text-2xl font-bold text-white">$19</div>
+ <div className="text-2xl font-bold text-gray-900">$19</div>
  <div className="text-[10px] text-gray-600">one-time payment</div>
  </div>
  <div className="h-8 w-px border-gray-200" />

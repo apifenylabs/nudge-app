@@ -146,7 +146,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  )}
  </div>
 
- <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">{playbook.title}</h1>
+ <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{playbook.title}</h1>
  <p className="text-sm text-gray-700 max-w-2xl mb-2">{playbook.description}</p>
 
  {playbook.subtitle && (
@@ -263,7 +263,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  <div className="rounded-xl bg-gradient-to-r from-emerald-500/10 to-asia/10 border border-emerald-500/20 p-5">
  <div className="flex items-center gap-2 mb-3">
  <DollarSign className="w-5 h-5 text-emerald-400" />
- <h2 className="text-sm font-semibold text-white">Revenue Impact</h2>
+ <h2 className="text-sm font-semibold text-gray-900">Revenue Impact</h2>
  </div>
  <p className="text-sm text-gray-700">{playbook.revenue_impact}</p>
  </div>
@@ -273,7 +273,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  {/* Real Results */}
  {playbook.real_results && playbook.real_results.length > 0 && (
  <section className="mb-8">
- <h2 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+ <h2 className="text-sm font-semibold text-gray-900 mb-3 flex items-center gap-2">
  <TrendingUp className="w-4 h-4 text-emerald-400" />
  Real Results
  </h2>
@@ -294,7 +294,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
 
  {/* Step-by-Step Guide */}
  <section className="mb-8">
- <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+ <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
  <BookOpen className="w-4 h-4 text-neon-light" />
  Step-by-Step Guide
  </h2>
@@ -305,11 +305,11 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  className="rounded-xl border border-gray-200 bg-white p-5 sm:p-6 relative"
  >
  <div className="flex items-start gap-4">
- <div className="w-10 h-10 rounded-full bg-gradient-to-br from-neon to-aqua flex items-center justify-center text-white font-bold text-sm shrink-0">
+ <div className="w-10 h-10 rounded-full bg-gradient-to-br from-neon to-aqua flex items-center justify-center text-gray-900 font-bold text-sm shrink-0">
  {i + 1}
  </div>
  <div className="flex-1 min-w-0">
- <h3 className="text-base font-semibold text-white mb-1">{step.title}</h3>
+ <h3 className="text-base font-semibold text-gray-900 mb-1">{step.title}</h3>
  <p className="text-sm text-gray-800 leading-relaxed">{step.description}</p>
  {step.tip && (
  <div className="mt-3 flex items-start gap-2 p-3 rounded-lg bg-asia/10 border border-asia/20">
@@ -329,7 +329,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  {/* Sample Prompts */}
  {playbook.sample_prompts && playbook.sample_prompts.length > 0 && (
  <section className="mb-8">
- <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+ <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
  <MessageSquare className="w-4 h-4 text-sky-400" />
  Sample Prompts & Results
  </h2>
@@ -368,7 +368,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
 
  {/* Pro Tips */}
  <section className="mb-8">
- <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+ <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
  <Sparkles className="w-4 h-4 text-asia" />
  Pro Tips
  </h2>
@@ -393,7 +393,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  {/* Common Mistakes */}
  {playbook.common_mistakes && playbook.common_mistakes.length > 0 && (
  <section className="mb-8">
- <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+ <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
  <AlertTriangle className="w-4 h-4 text-amber-400" />
  Common Mistakes to Avoid
  </h2>
@@ -421,7 +421,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  {relatedTools.length > 0 && (
  <section className="pt-6 border-t border-gray-200">
  <div className="flex items-center justify-between mb-6">
- <h2 className="text-lg font-bold text-white">Tools Used in This Playbook</h2>
+ <h2 className="text-lg font-bold text-gray-900">Tools Used in This Playbook</h2>
  <Link
  href="/tools"
  className="text-sm text-neon-light hover:text-neon transition flex items-center gap-1"

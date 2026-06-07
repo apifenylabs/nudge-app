@@ -123,7 +123,7 @@ export default function AIToolsForStartupsPage() {
  Startup Edition
  </div>
 
- <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl">
+ <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight max-w-4xl">
  Best AI Tools for{' '}
  <span className="bg-gradient-to-r from-rocket-400 to-orange-400 bg-clip-text text-transparent">
  Startups
@@ -175,7 +175,7 @@ export default function AIToolsForStartupsPage() {
  {/* ── Why This Matters ─────────────────────────────────────────── */}
  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="text-center mb-12">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
  Why Startups Need AI — <span className="text-rocket-400">Now</span>
  </h2>
  <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -200,7 +200,7 @@ export default function AIToolsForStartupsPage() {
  <div className="w-10 h-10 rounded-lg bg-rocket-500/10 flex items-center justify-center mb-4">
  <item.icon className="w-5 h-5 text-rocket-400" />
  </div>
- <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+ <h3 className="text-gray-900 font-semibold mb-2">{item.title}</h3>
  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
@@ -210,7 +210,7 @@ export default function AIToolsForStartupsPage() {
  {/* ── Quick Comparison Table ──────────────────────────────────── */}
  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="text-center mb-10">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Top Startup AI Tools — <span className="text-rocket-400">At a Glance</span>
  </h2>
  <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -276,7 +276,7 @@ export default function AIToolsForStartupsPage() {
  <div>
  <div className="flex items-center gap-2 mb-3">
  <cat.icon className="w-5 h-5 text-rocket-400" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white">{cat.title}</h2>
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">{cat.title}</h2>
  </div>
  <p className="text-gray-600 max-w-2xl">{cat.description}</p>
  </div>
@@ -315,12 +315,12 @@ export default function AIToolsForStartupsPage() {
  >
  <div className="flex items-start gap-3">
  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0">
- <span className="text-white font-bold text-sm">
+ <span className="text-gray-900 font-bold text-sm">
  {tool.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
  </div>
  <div className="min-w-0">
- <h3 className="text-white font-medium text-sm group-hover:text-rocket-300 transition truncate">
+ <h3 className="text-gray-900 font-medium text-sm group-hover:text-rocket-300 transition truncate">
  {tool.name}
  </h3>
  <p className="text-xs text-gray-400 mt-0.5 line-clamp-2">
@@ -355,7 +355,7 @@ export default function AIToolsForStartupsPage() {
  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="flex items-center gap-2 mb-8">
  <BookOpen className="w-5 h-5 text-rocket-400" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white">Startup Playbooks</h2>
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Startup Playbooks</h2>
  </div>
 
  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -371,7 +371,7 @@ export default function AIToolsForStartupsPage() {
  href={`/playbook/${pb.slug}`}
  className="group bg-gray-100 border border-gray-200 rounded-xl p-6 hover:border-rocket-500/30 transition-all"
  >
- <h3 className="font-semibold text-white group-hover:text-rocket-300 transition mb-2">
+ <h3 className="font-semibold text-gray-900 group-hover:text-rocket-300 transition mb-2">
  {pb.title}
  </h3>
  <p className="text-sm text-gray-400 line-clamp-2 mb-3">
@@ -396,7 +396,7 @@ export default function AIToolsForStartupsPage() {
  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="relative rounded-2xl bg-gradient-to-br from-rocket-500/10 via-orange-500/5 to-tech-800 border border-gray-200 p-8 sm:p-12 text-center">
  <Rocket className="w-10 h-10 text-rocket-400 mx-auto mb-4" />
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
  Ready to Supercharge Your Startup?
  </h2>
  <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">

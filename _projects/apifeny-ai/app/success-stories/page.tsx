@@ -24,7 +24,7 @@ export default function SuccessStoriesPage() {
  <Trophy className="w-3.5 h-3.5" />
  Community Success
  </div>
- <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+ <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
  Real Results from{' '}
  <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
  Real People

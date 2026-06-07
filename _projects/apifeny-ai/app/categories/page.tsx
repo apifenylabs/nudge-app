@@ -29,7 +29,7 @@ export default function CategoriesPage() {
  <section className="max-w-5xl mx-auto px-4 py-16 sm:py-24">
  <div className="mb-12">
  <span className="text-neon font-semibold text-sm uppercase tracking-wider">Categories</span>
- <h1 className="text-4xl sm:text-5xl font-bold text-white mt-2 mb-4">
+ <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mt-2 mb-4">
  AI Tool Categories
  </h1>
  <p className="text-lg text-gray-600 max-w-2xl leading-relaxed">
@@ -51,7 +51,7 @@ export default function CategoriesPage() {
  className={`block bg-gradient-to-br ${cat.gradient} border border-gray-200 rounded-xl p-6 hover:border-gray-200 transition-all group`}
  >
  <div className="text-3xl mb-3">{cat.icon}</div>
- <h2 className="text-white font-bold text-lg mb-1 group-hover:text-neon-light transition-colors">
+ <h2 className="text-gray-900 font-bold text-lg mb-1 group-hover:text-neon-light transition-colors">
  {cat.name}
  </h2>
  <p className="text-sm text-gray-600 mb-2 line-clamp-2">{cat.description}</p>

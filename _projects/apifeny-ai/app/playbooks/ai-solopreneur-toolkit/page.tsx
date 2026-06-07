@@ -143,11 +143,11 @@ function CheckoutOverlay({ onBack }: { onBack: () => void }) {
  <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center mb-4">
  <DollarSign className="w-8 h-8 text-white" />
  </div>
- <h3 className="text-xl font-bold text-white mb-1">AI Solopreneur Toolkit</h3>
+ <h3 className="text-xl font-bold text-gray-900 mb-1">AI Solopreneur Toolkit</h3>
  <p className="text-sm text-gray-700">Complete PDF Playbook</p>
  <div className="mt-3 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/20">
  <DollarSign className="w-4 h-4 text-amber-400" />
- <span className="text-lg font-bold text-white">$9</span>
+ <span className="text-lg font-bold text-gray-900">$9</span>
  <span className="text-xs text-gray-700">one-time</span>
  </div>
  </div>
@@ -203,7 +203,7 @@ function AiSolopreneurToolkitInner() {
  <span className="text-3xl">📦</span>
  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-100 text-amber-700 border-amber-200 border border-amber-500/30">Premium</span>
  </div>
- <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">
+ <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
  Spend $70/mo on AI to Replace $2,200/mo in Services
  </h1>
  <p className="text-sm sm:text-base text-gray-800 max-w-2xl mb-4 leading-relaxed">
@@ -274,7 +274,7 @@ Please give me:
 
  {/* What's Inside */}
  <section className="mb-8 sm:mb-10" id="preview">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-amber-400" /> What&apos;s Inside</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-amber-400" /> What&apos;s Inside</h2>
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
  {includedItems.map((item, i) => {
  const Icon = item.icon;
@@ -291,7 +291,7 @@ Please give me:
  {/* The $2,200 Breakdown */}
  <section className="mb-8 sm:mb-10">
  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-red-500/10 via-amber-500/10 to-tech-800 border border-amber-500/20 p-6 sm:p-8">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 text-center">The $2,200/mo You&apos;re Burning — Replaced by $70/mo AI</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 text-center">The $2,200/mo You&apos;re Burning — Replaced by $70/mo AI</h2>
  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
  <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20">
  <div className="text-lg font-bold text-red-400">$2,000/mo</div>
@@ -324,7 +324,7 @@ Please give me:
 
  {/* Chapter Sections */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-cyan-400" /> Chapter Preview</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4 text-cyan-400" /> Chapter Preview</h2>
  <div className="space-y-3">
  {sections.map((section) => (
  <details key={section.id} className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-amber-400/20">
@@ -332,7 +332,7 @@ Please give me:
  <div className="flex items-center gap-3">
  <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">{section.icon}</div>
  <div>
- <span className="text-sm sm:text-base font-medium text-white group-hover:text-amber-400 transition">{section.title}</span>
+ <span className="text-sm sm:text-base font-medium text-gray-900 group-hover:text-amber-400 transition">{section.title}</span>
  <p className="text-xs text-gray-600 mt-0.5">{section.description}</p>
  </div>
  </div>
@@ -355,12 +355,12 @@ Please give me:
 
  {/* FAQ */}
  <section className="mb-8 sm:mb-10">
- <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Lightbulb className="w-4 h-4 text-cyan-400" /> FAQ</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Lightbulb className="w-4 h-4 text-cyan-400" /> FAQ</h2>
  <div className="space-y-3">
  {faqItems.map((faq, i) => (
  <details key={i} className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-amber-400/20">
  <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none">
- <span className="text-sm sm:text-base font-medium text-white group-hover:text-amber-400 transition pr-4">{faq.q}</span>
+ <span className="text-sm sm:text-base font-medium text-gray-900 group-hover:text-amber-400 transition pr-4">{faq.q}</span>
  <ChevronRight className="w-5 h-5 text-gray-600 shrink-0 transition-transform group-open:rotate-90" />
  </summary>
  <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-200 pt-3">
@@ -378,7 +378,7 @@ Please give me:
  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-emerald-500/15 rounded-full blur-[100px] pointer-events-none" />
  <div className="relative">
  <Shield className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
- <h2 className="text-lg sm:text-xl font-bold text-white mb-2">100% Risk-Free — 30-Day Money-Back Guarantee</h2>
+ <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">100% Risk-Free — 30-Day Money-Back Guarantee</h2>
  <p className="text-sm text-gray-700 max-w-lg mx-auto mb-4">
  If this toolkit doesn&apos;t save you at least $500/mo within 30 days, I&apos;ll refund every cent.
  You keep the playbook and all prompts even if you ask for a refund.
@@ -400,14 +400,14 @@ Please give me:
  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 mb-4">
  <DollarSign className="w-8 h-8 text-white" />
  </div>
- <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Ready to Save $2,130/mo?</h2>
+ <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Ready to Save $2,130/mo?</h2>
  <p className="text-sm text-gray-700 max-w-lg mx-auto mb-4">
  Get the complete 40+ page PDF playbook. Every prompt, setup guide, and
  ROI calculator you need to replace $2,200/mo in services with $70/mo in AI.
  </p>
  <div className="inline-flex items-center gap-4 px-4 py-2 rounded-xl bg-white border border-gray-200 mb-4">
  <div className="text-left">
- <div className="text-2xl font-bold text-white">$9</div>
+ <div className="text-2xl font-bold text-gray-900">$9</div>
  <div className="text-[10px] text-gray-600">one-time payment</div>
  </div>
  <div className="h-8 w-px border-gray-200" />

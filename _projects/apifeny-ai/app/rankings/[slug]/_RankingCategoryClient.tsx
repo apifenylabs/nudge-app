@@ -205,7 +205,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  Top {cat.displayCount}
  </span>
  </div>
- <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">{cat.title}</h1>
+ <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{cat.title}</h1>
  <p className="text-sm text-gray-700 max-w-2xl mb-4">{cat.description}</p>
 
  {/* Score range */}
@@ -316,7 +316,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  {/* Tool info */}
  <div className="flex-1 min-w-0">
  <div className="flex items-center gap-2 mb-1">
- <h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-neon-light transition-colors truncate">
+ <h3 className="text-sm sm:text-base font-semibold text-gray-900 group-hover:text-neon-light transition-colors truncate">
  {rt.tool.name}
  </h3>
  {rt.tool.is_agentic && (
@@ -381,7 +381,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  if (relatedPlaybooks.length === 0) return null;
  return (
  <section className="mt-8 mb-8">
- <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+ <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
  <BookOpen className="w-4 h-4 text-neon-light" />
  Related Playbooks
  </h2>
@@ -397,7 +397,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  >
  <div className="flex items-center gap-2 mb-2">
  <span className="text-xl">{pb.icon}</span>
- <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors">
+ <h3 className="text-sm font-semibold text-gray-900 group-hover:text-neon-light transition-colors">
  {pb.title}
  </h3>
  </div>
@@ -427,7 +427,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
 
  {/* How scoring works */}
  <section className="rounded-xl border border-gray-200 bg-white p-6">
- <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+ <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center gap-2">
  <Sparkles className="w-4 h-4 text-neon-light" />
  How the ranking works
  </h3>
@@ -441,7 +441,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  ].map((factor, i) => (
  <div key={i} className="p-3 rounded-lg bg-gray-50 border border-gray-200 hover:scale-[1.02] transition-transform">
  <div className="flex items-center justify-between mb-1">
- <span className="text-xs font-medium text-white">{factor.label}</span>
+ <span className="text-xs font-medium text-gray-900">{factor.label}</span>
  <span className="text-[10px] font-bold text-neon-light">{factor.weight}</span>
  </div>
  <p className="text-[10px] text-gray-600">{factor.desc}</p>

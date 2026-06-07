@@ -375,7 +375,7 @@ export default function AIToolsForPersonalFinanceGuide() {
               <Wallet className="w-3.5 h-3.5" />
               Guide · 18 min read
             </span>
- <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+ <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
  Best AI Tools for Personal Finance in 2026
  </h1>
  <p className="text-lg sm:text-xl text-emerald-100/90 max-w-2xl mb-8">
@@ -424,7 +424,7 @@ export default function AIToolsForPersonalFinanceGuide() {
  <section className="max-w-5xl mx-auto px-4 pb-8">
  <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
  <div className="bg-gradient-to-r from-slate-700 to-emerald-800 px-6 py-4">
- <h2 className="text-lg font-semibold text-white">Quick Comparison: Best AI Personal Finance Tools</h2>
+ <h2 className="text-lg font-semibold text-gray-900">Quick Comparison: Best AI Personal Finance Tools</h2>
  </div>
  <div className="overflow-x-auto">
  <table className="w-full text-sm">
@@ -468,7 +468,7 @@ export default function AIToolsForPersonalFinanceGuide() {
  <section className="max-w-5xl mx-auto px-4 pb-16">
  <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
  <div className="bg-gradient-to-r from-emerald-800 to-slate-700 px-6 py-4">
- <h2 className="text-lg font-semibold text-white flex items-center gap-2">
+ <h2 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
  <Target className="w-5 h-5" />
  Which Tool for Which Finance Use Case?
  </h2>
@@ -537,7 +537,7 @@ export default function AIToolsForPersonalFinanceGuide() {
  rel="noopener noreferrer sponsored"
  className="flex items-center gap-3 p-4 rounded-xl bg-white border border-gray-200 hover:border-emerald-300 hover:shadow-md transition-all group"
  >
- <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-600 to-teal-600 flex items-center justify-center text-white font-bold text-xs shrink-0">
+ <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-600 to-teal-600 flex items-center justify-center text-gray-900 font-bold text-xs shrink-0">
  {(tool as any)?.name?.charAt(0) || '?'}
  </div>
  <div className="flex-1 min-w-0">
@@ -578,7 +578,7 @@ export default function AIToolsForPersonalFinanceGuide() {
  {/* ─── Bottom CTA ─── */}
  <section className="bg-gradient-to-br from-gray-900 to-gray-950 ">
  <div className="max-w-3xl mx-auto px-4 py-20 text-center">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
  Ready to Take Control of Your Finances with AI?
  </h2>
  <p className="text-gray-400 mb-8 max-w-xl mx-auto">

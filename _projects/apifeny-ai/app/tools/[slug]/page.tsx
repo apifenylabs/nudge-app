@@ -142,7 +142,7 @@ export default function ToolPage({ params }: ToolPageProps) {
  <div className="flex items-start gap-3">
  <Zap className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
  <div>
- <h3 className="text-sm font-semibold text-white flex items-center gap-2">
+ <h3 className="text-sm font-semibold text-gray-900 flex items-center gap-2">
  Best Deal: Try {tool.name}
  {aff.badge && (
  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
@@ -187,7 +187,7 @@ export default function ToolPage({ params }: ToolPageProps) {
 
  return (
  <section className="mt-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
- <h2 className="text-sm font-semibold text-white mb-4 flex items-center gap-2">
+ <h2 className="text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
  <TrendingUp className="w-4 h-4 text-neon-light" />
  Ranking Position
  </h2>
@@ -199,7 +199,7 @@ export default function ToolPage({ params }: ToolPageProps) {
  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 border border-gray-200 hover:border-neon/30 hover:bg-gray-200 transition group"
  >
  <span className="text-sm">{rc.icon}</span>
- <span className="text-xs text-gray-700 group-hover:text-white transition">
+ <span className="text-xs text-gray-700 group-hover:text-gray-900 transition">
  {rc.title}
  </span>
  <ChevronRight className="w-3 h-3 text-gray-600" />
@@ -222,7 +222,7 @@ export default function ToolPage({ params }: ToolPageProps) {
 
  return (
  <section className="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
- <h2 className="text-sm font-semibold text-white mb-4 flex items-center gap-2">
+ <h2 className="text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
  <BookOpen className="w-4 h-4 text-neon-light" />
  Related Playbooks
  </h2>
@@ -238,7 +238,7 @@ export default function ToolPage({ params }: ToolPageProps) {
  >
  <div className="flex items-center gap-2 mb-1">
  <span className="text-lg">{pb.icon}</span>
- <h3 className="text-xs font-semibold text-white group-hover:text-neon-light transition-colors">
+ <h3 className="text-xs font-semibold text-gray-900 group-hover:text-neon-light transition-colors">
  {pb.title}
  </h3>
  </div>

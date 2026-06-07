@@ -147,7 +147,7 @@ export default function BestAIWritingToolsPage() {
  {allWritingTools.length} AI Writing Tools · Updated 2026
  </div>
 
- <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight animate-slide-up">
+ <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight animate-slide-up">
  Best AI Writing Tools in{' '}
  <span className="bg-gradient-to-r from-rose-400 via-pink-400 to-amber-400 bg-clip-text text-transparent">
  2026
@@ -157,8 +157,8 @@ export default function BestAIWritingToolsPage() {
  </h1>
 
  <p className="mt-5 sm:mt-6 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
- From versatile assistants like <strong className="text-white">ChatGPT</strong> and <strong className="text-white">Claude</strong>
- &nbsp;to specialised copywriting tools like <strong className="text-white">Jasper</strong> and <strong className="text-white">Copy.ai</strong> —
+ From versatile assistants like <strong className="text-gray-900">ChatGPT</strong> and <strong className="text-gray-900">Claude</strong>
+ &nbsp;to specialised copywriting tools like <strong className="text-gray-900">Jasper</strong> and <strong className="text-gray-900">Copy.ai</strong> —
  find the perfect AI writing companion for every type of content.
  </p>
 
@@ -205,7 +205,7 @@ export default function BestAIWritingToolsPage() {
  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-asia/20 to-amber-500/10 flex items-center justify-center shrink-0">
  <Trophy className="w-5 h-5 text-asia" />
  </div>
- <h2 className="text-2xl sm:text-3xl font-bold text-white">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
  Top AI Writing Tools in 2026
  </h2>
  </div>
@@ -239,12 +239,12 @@ export default function BestAIWritingToolsPage() {
 
  <div className="flex items-start gap-3 mb-3">
  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-gray-200/30 group-hover:border-rose-400/30 transition">
- <span className="text-white font-bold text-sm">
+ <span className="text-gray-900 font-bold text-sm">
  {tool.name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
  </div>
  <div className="min-w-0 flex-1">
- <h3 className="text-base font-semibold text-white truncate group-hover:text-rose-300 transition-colors">{tool.name}</h3>
+ <h3 className="text-base font-semibold text-gray-900 truncate group-hover:text-rose-300 transition-colors">{tool.name}</h3>
  <p className="text-xs text-gray-700 line-clamp-2 mt-0.5 leading-relaxed">{tool.tagline}</p>
  </div>
  </div>
@@ -304,7 +304,7 @@ export default function BestAIWritingToolsPage() {
  <Layers className="w-5 h-5 text-rose-400" />
  </div>
  <div>
- <h2 className="text-xl sm:text-2xl font-bold text-white">{cat.name}</h2>
+ <h2 className="text-xl sm:text-2xl font-bold text-gray-900">{cat.name}</h2>
  <p className="text-sm text-gray-700 mt-1 max-w-xl">{cat.description}</p>
  </div>
  </div>
@@ -315,10 +315,10 @@ export default function BestAIWritingToolsPage() {
  className="group block rounded-xl border border-gray-200 bg-white p-4 transition-all duration-300 hover:border-rose-400/30 hover:bg-white hover:-translate-y-0.5">
  <div className="flex items-start gap-2.5 mb-2">
  <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-gray-200/20">
- <span className="text-white font-bold text-xs">{tool.name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase()}</span>
+ <span className="text-gray-900 font-bold text-xs">{tool.name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase()}</span>
  </div>
  <div className="min-w-0 flex-1">
- <h3 className="text-sm font-semibold text-white truncate group-hover:text-rose-300 transition">{tool.name}</h3>
+ <h3 className="text-sm font-semibold text-gray-900 truncate group-hover:text-rose-300 transition">{tool.name}</h3>
  <p className="text-[11px] text-gray-700 line-clamp-2 mt-0.5">{tool.tagline}</p>
  </div>
  </div>
@@ -339,7 +339,7 @@ export default function BestAIWritingToolsPage() {
  <section className="border-y border-gray-200 bg-gray-50/50">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="text-center mb-8 sm:mb-10">
- <h2 className="text-2xl sm:text-3xl font-bold text-white">Quick Comparison: Top 6 AI Writing Tools</h2>
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Quick Comparison: Top 6 AI Writing Tools</h2>
  <p className="text-sm sm:text-base text-gray-700 mt-2 max-w-xl mx-auto">
  Compare the leading AI writing assistants across key dimensions.
  </p>
@@ -401,7 +401,7 @@ export default function BestAIWritingToolsPage() {
  <BookOpen className="w-5 h-5 text-emerald-400" />
  </div>
  <div>
- <h2 className="text-xl sm:text-2xl font-bold text-white">Content Creation Playbook</h2>
+ <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Content Creation Playbook</h2>
  <p className="text-xs sm:text-sm text-gray-700">Follow this step-by-step guide to create content with AI.</p>
  </div>
  </div>
@@ -412,7 +412,7 @@ export default function BestAIWritingToolsPage() {
  >
  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
  <div>
- <h3 className="text-lg font-semibold text-white">{contentPlaybook.title}</h3>
+ <h3 className="text-lg font-semibold text-gray-900">{contentPlaybook.title}</h3>
  <p className="text-sm text-gray-700 mt-1">{typeof contentPlaybook.description === 'string' ? contentPlaybook.description : ''}</p>
  </div>
  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-rose-400 shrink-0">
@@ -442,7 +442,7 @@ export default function BestAIWritingToolsPage() {
  <div className="absolute top-[-30%] left-[-10%] w-[70%] h-[70%] bg-rose-500/10 rounded-full blur-[150px] pointer-events-none" />
 
  <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center">
- <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
+ <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
  Ready to Create Better Content with AI?
  </h2>
  <p className="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">

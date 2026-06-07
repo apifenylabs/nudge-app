@@ -565,7 +565,7 @@ export default function AiForAgriculturePage() {
  <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
  <div className="mx-auto max-w-4xl">
  <div className="rounded-2xl bg-gradient-to-br from-green-600 to-emerald-600 p-12 text-center ">
- <h2 className="mb-4 text-3xl font-bold text-white">
+ <h2 className="mb-4 text-3xl font-bold text-gray-900">
  Ready to Transform Your Farm with AI?
  </h2>
  <p className="mx-auto mb-8 max-w-2xl text-lg text-white/80">

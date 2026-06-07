@@ -228,7 +228,7 @@ export default function PlaybookPage({ params }: PlaybookPageProps) {
  className="rounded-xl border border-gray-200 bg-white p-5 sm:p-6 relative shadow-sm"
  >
  <div className="flex items-start gap-4">
- <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
+ <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-gray-900 font-bold text-sm shrink-0">
  {i + 1}
  </div>
  <div className="flex-1 min-w-0">
@@ -345,7 +345,7 @@ export default function PlaybookPage({ params }: PlaybookPageProps) {
  >
  <div className="flex items-start justify-between mb-2">
  <div className="flex items-center gap-2 min-w-0">
- <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-[10px] font-bold text-white shrink-0">
+ <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-[10px] font-bold text-gray-900 shrink-0">
  {story.author.name.charAt(0)}
  </div>
  <div className="min-w-0">
@@ -532,7 +532,7 @@ export default function PlaybookPage({ params }: PlaybookPageProps) {
  >
  <div className="flex items-center gap-3">
  <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shrink-0">
- <span className="text-white font-bold text-xs">
+ <span className="text-gray-900 font-bold text-xs">
  {tool.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
  </div>

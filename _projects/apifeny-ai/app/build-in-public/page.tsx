@@ -144,7 +144,7 @@ export default function BuildInPublicPage() {
  <Zap className="w-4 h-4" />
  <span>Building in Public — Live Updates</span>
  </div>
- <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+ <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
  Build in <span className="text-aqua">Public</span>
  </h1>
  <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -162,7 +162,7 @@ export default function BuildInPublicPage() {
  ].map((stat) => (
  <div key={stat.label} className="bg-gray-50/50 border border-gray-200 rounded-xl p-4 text-center">
  <stat.icon className="w-5 h-5 text-aqua mx-auto mb-2" />
- <div className="text-2xl font-bold text-white">{stat.value}</div>
+ <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
  <div className="text-sm text-gray-400">{stat.label}</div>
  </div>
  ))}
@@ -184,7 +184,7 @@ export default function BuildInPublicPage() {
  <Icon className="w-4 h-4" />
  </div>
  <div>
- <h3 className="text-lg font-semibold text-white">{build.title}</h3>
+ <h3 className="text-lg font-semibold text-gray-900">{build.title}</h3>
  <div className="flex items-center gap-2 text-sm text-gray-400">
  <Calendar className="w-3.5 h-3.5" />
  <span>{build.date}</span>

@@ -332,7 +332,7 @@ export default function DeepSeekVsChatGPTCompare() {
  <Star className="w-3.5 h-3.5" />
  Head-to-Head Comparison
  </div>
- <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+ <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
  DeepSeek vs ChatGPT{' '}
  <span className="bg-gradient-to-r from-neon-light to-aqua bg-clip-text text-transparent">
  2026
@@ -363,7 +363,7 @@ export default function DeepSeekVsChatGPTCompare() {
  {/* ─── Table of Contents ─────────────────────────────────── */}
  <section className="mb-12">
  <div className="bg-gray-50/40 border border-gray-200 rounded-xl p-6">
- <h2 className="text-sm font-semibold text-white mb-4 flex items-center gap-2">
+ <h2 className="text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
  <BookOpen className="w-4 h-4 text-neon" />
  Table of Contents
  </h2>
@@ -393,7 +393,7 @@ export default function DeepSeekVsChatGPTCompare() {
 
  {/* ─── Quick Verdict Scorecard ────────────────────────────── */}
  <section id="verdict" className="mb-12 scroll-mt-20">
- <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+ <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
  <BarChart3 className="w-6 h-6 text-neon" />
  Quick Verdict · Scorecard
  </h2>
@@ -406,7 +406,7 @@ export default function DeepSeekVsChatGPTCompare() {
  <Zap className="w-5 h-5 text-neon-light" />
  </div>
  <div>
- <h3 className="text-lg font-bold text-white">DeepSeek</h3>
+ <h3 className="text-lg font-bold text-gray-900">DeepSeek</h3>
  <p className="text-xs text-gray-400">V3 / R1 — Open Source</p>
  </div>
  </div>
@@ -428,7 +428,7 @@ export default function DeepSeekVsChatGPTCompare() {
  <Sparkles className="w-5 h-5 text-aqua" />
  </div>
  <div>
- <h3 className="text-lg font-bold text-white">ChatGPT</h3>
+ <h3 className="text-lg font-bold text-gray-900">ChatGPT</h3>
  <p className="text-xs text-gray-400">GPT-4o / o3 — Proprietary</p>
  </div>
  </div>
@@ -448,7 +448,7 @@ export default function DeepSeekVsChatGPTCompare() {
  <p className="text-sm text-gray-700 text-center">
  <strong className="text-neon-light">DeepSeek</strong> wins on: coding, pricing, Asian languages ·{' '}
  <strong className="text-aqua">ChatGPT</strong> wins on: English writing, ecosystem, multimodal ·{' '}
- <strong className="text-white">Tie</strong> on: reasoning
+ <strong className="text-gray-900">Tie</strong> on: reasoning
  </p>
  </div>
  </section>
@@ -462,7 +462,7 @@ export default function DeepSeekVsChatGPTCompare() {
  >
  <div className="flex items-center gap-3 mb-6">
  <section.icon className="w-6 h-6 text-neon" />
- <h2 className="text-2xl font-bold text-white">{section.category}</h2>
+ <h2 className="text-2xl font-bold text-gray-900">{section.category}</h2>
  </div>
 
  <div className="overflow-x-auto rounded-xl border border-gray-200">
@@ -507,7 +507,7 @@ export default function DeepSeekVsChatGPTCompare() {
  <section id="usecases" className="mb-12 scroll-mt-20">
  <div className="flex items-center gap-3 mb-6">
  <Users className="w-6 h-6 text-neon" />
- <h2 className="text-2xl font-bold text-white">Use Cases — Who Wins What</h2>
+ <h2 className="text-2xl font-bold text-gray-900">Use Cases — Who Wins What</h2>
  </div>
 
  <div className="space-y-4">
@@ -521,7 +521,7 @@ export default function DeepSeekVsChatGPTCompare() {
  <uc.icon className="w-5 h-5 text-neon-light" />
  </div>
  <div className="flex-1 min-w-0">
- <h3 className="text-lg font-semibold text-white mb-1">{uc.title}</h3>
+ <h3 className="text-lg font-semibold text-gray-900 mb-1">{uc.title}</h3>
  <p className="text-sm text-neon-light font-medium mb-2">{uc.verdict}</p>
  <p className="text-sm text-gray-600 leading-relaxed">{uc.details}</p>
  </div>
@@ -560,7 +560,7 @@ export default function DeepSeekVsChatGPTCompare() {
  <Shield className="w-3.5 h-3.5" />
  Our Take
  </div>
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
  Recommendation for Asia Solopreneurs
  </h2>
 
@@ -568,7 +568,7 @@ export default function DeepSeekVsChatGPTCompare() {
  <div className="rounded-xl bg-gray-50/60 border border-neon/20 p-5">
  <div className="flex items-center gap-2 mb-3">
  <Zap className="w-5 h-5 text-neon-light" />
- <h3 className="text-base font-bold text-white">Choose DeepSeek if you:</h3>
+ <h3 className="text-base font-bold text-gray-900">Choose DeepSeek if you:</h3>
  </div>
  <ul className="space-y-2">
  {[
@@ -589,7 +589,7 @@ export default function DeepSeekVsChatGPTCompare() {
  <div className="rounded-xl bg-gray-50/60 border border-aqua/20 p-5">
  <div className="flex items-center gap-2 mb-3">
  <Sparkles className="w-5 h-5 text-aqua" />
- <h3 className="text-base font-bold text-white">Choose ChatGPT if you:</h3>
+ <h3 className="text-base font-bold text-gray-900">Choose ChatGPT if you:</h3>
  </div>
  <ul className="space-y-2">
  {[
@@ -610,7 +610,7 @@ export default function DeepSeekVsChatGPTCompare() {
 
  {/* Bottom line */}
  <div className="bg-white/60 border border-gray-200 rounded-xl p-5">
- <h3 className="text-base font-bold text-white mb-2 flex items-center gap-2">
+ <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center gap-2">
  <Star className="w-5 h-5 text-yellow-400" />
  The Smartest Setup
  </h3>
@@ -628,7 +628,7 @@ export default function DeepSeekVsChatGPTCompare() {
 
  {/* ─── FAQ ────────────────────────────────────────────────── */}
  <section id="faq" className="mb-12 scroll-mt-20">
- <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+ <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
  <MessageSquare className="w-6 h-6 text-neon" />
  Frequently Asked Questions
  </h2>
@@ -639,7 +639,7 @@ export default function DeepSeekVsChatGPTCompare() {
  key={i}
  className="group rounded-xl bg-gray-50/40 border border-gray-200 overflow-hidden"
  >
- <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-medium text-white hover:text-neon-light transition list-none">
+ <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-medium text-gray-700 hover:text-neon-light transition list-none">
  {faq.q}
  <ChevronRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition shrink-0" />
  </summary>
@@ -653,7 +653,7 @@ export default function DeepSeekVsChatGPTCompare() {
 
  {/* ─── Related CTA ───────────────────────────────────────── */}
  <section className="rounded-xl bg-gray-50/60 border border-dashed border-gray-200 p-8 text-center">
- <h2 className="text-xl font-bold text-white mb-2">Still deciding?</h2>
+ <h2 className="text-xl font-bold text-gray-900 mb-2">Still deciding?</h2>
  <p className="text-sm text-gray-600 max-w-md mx-auto mb-4">
  Browse our full directory of AI tools with Asia-ready filters and editorial rankings.
  </p>

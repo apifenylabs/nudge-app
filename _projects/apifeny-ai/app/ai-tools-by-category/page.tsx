@@ -117,14 +117,14 @@ export default function AIToolsByCategoryPage() {
  {totalTools}+ Tools Catalogued
  </span>
  </div>
- <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
+ <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
  AI Tools{' '}
  <span className="bg-gradient-to-r from-neon-light to-aqua-light bg-clip-text text-transparent">
  by Category
  </span>
  </h1>
  <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-8">
- Stop searching. We&apos;ve organized <strong className="text-white">{totalTools}+ AI tools</strong> into
+ Stop searching. We&apos;ve organized <strong className="text-gray-900">{totalTools}+ AI tools</strong> into
  13 categories — each with real community ratings, affiliate offers,
  and Asia-readiness scores. Find the right tool in 2 minutes.
  </p>
@@ -159,7 +159,7 @@ export default function AIToolsByCategoryPage() {
 
  <section id="all-categories" className="max-w-5xl mx-auto px-4 py-16 sm:py-20">
  <div className="mb-12">
- <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+ <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
  All AI Tool Categories
  </h2>
  <p className="text-gray-600 max-w-2xl">
@@ -188,7 +188,7 @@ export default function AIToolsByCategoryPage() {
  <span className="text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full">{toolCount} tools</span>
  </div>
 
- <h3 className="text-white font-semibold text-base mb-1 group-hover:text-neon-light transition-colors">
+ <h3 className="text-gray-900 font-semibold text-base mb-1 group-hover:text-neon-light transition-colors">
  {cat.name}
  </h3>
  <p className="text-sm text-gray-600 mb-3 line-clamp-2 leading-relaxed">
@@ -209,7 +209,7 @@ export default function AIToolsByCategoryPage() {
  {/* ── WHY BROWSE BY CATEGORY ─────────────────────── */}
  <section className="border-t border-gray-200/30 py-16 sm:py-20 px-4">
  <div className="max-w-5xl mx-auto">
- <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
+ <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
  Why Browse AI Tools by Category?
  </h2>
  <p className="text-gray-600 max-w-2xl mx-auto text-center mb-12">
@@ -254,7 +254,7 @@ export default function AIToolsByCategoryPage() {
  className="bg-gray-100 border border-gray-200/30 rounded-xl p-5 hover:border-gray-300/50 transition-all"
  >
  <span className="text-2xl mb-3 block">{item.icon}</span>
- <h3 className="text-white font-semibold mb-1">{item.title}</h3>
+ <h3 className="text-gray-900 font-semibold mb-1">{item.title}</h3>
  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
  </div>
  ))}
@@ -265,7 +265,7 @@ export default function AIToolsByCategoryPage() {
  {/* ── CROSS-LINK: COUNTRY PAGES ──────────────────── */}
  <section className="border-t border-gray-200/30 py-16 px-4">
  <div className="max-w-5xl mx-auto">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 text-center">
  AI Tools by Country
  </h2>
  <p className="text-gray-600 max-w-2xl mx-auto text-center mb-8">
@@ -304,7 +304,7 @@ export default function AIToolsByCategoryPage() {
  {/* ── FAQ ─────────────────────────────────────────── */}
  <section className="border-t border-gray-200/30 py-16 px-4">
  <div className="max-w-3xl mx-auto">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 text-center">
  Frequently Asked Questions
  </h2>
  <div className="space-y-4 mt-8">
@@ -313,7 +313,7 @@ export default function AIToolsByCategoryPage() {
  key={i}
  className="group bg-gray-100 border border-gray-200/40 rounded-xl overflow-hidden"
  >
- <summary className="px-5 py-4 text-white font-medium cursor-pointer hover:bg-gray-100 transition-colors flex items-center justify-between list-none">
+ <summary className="px-5 py-4 text-gray-700 font-medium cursor-pointer hover:bg-gray-100 transition-colors flex items-center justify-between list-none">
  <span>{faq.name}</span>
  <span className="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-2">
  ▼
@@ -331,7 +331,7 @@ export default function AIToolsByCategoryPage() {
  {/* ── CTA ─────────────────────────────────────────── */}
  <section className="border-t border-gray-200/30 py-16 px-4">
  <div className="max-w-3xl mx-auto text-center">
- <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+ <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
  Can&apos;t Find What You&apos;re Looking For?
  </h2>
  <p className="text-gray-600 mb-6 max-w-lg mx-auto">
