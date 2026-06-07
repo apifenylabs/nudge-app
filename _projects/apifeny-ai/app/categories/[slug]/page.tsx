@@ -277,6 +277,16 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  We&apos;ve flagged Asia-ready tools throughout to help you find the best fit for your region.
  </p>
  )}
+ {i === 3 && (
+ <p>
+ Comparing top tools side-by-side is the fastest way to find your fit. We score every tool on features, pricing, Asia-readiness, and community ratings. Our comparison table above ranks all {categoryTools.length} {cat.name.toLocaleLowerCase()} tools. Head-to-head comparisons like this help you see which tool handles your specific workflow — whether that&apos;s Asian language support, API access, or free tier generosity — before you commit.
+ </p>
+ )}
+ {i === 4 && (
+ <p>
+ The best {cat.name.toLocaleLowerCase()} tool for you depends on your specific needs, but our data shows that <strong className="text-white">{categoryTools[0]?.name || 'the top-ranked tool'}</strong> leads in overall community rating. We recommend trying the free tier of your top 2-3 candidates, then comparing based on real-world performance, not marketing claims. Bookmark this page and check back for updated scores — we refresh rankings monthly based on community votes.
+ </p>
+ )}
  </div>
  </details>
  ))}

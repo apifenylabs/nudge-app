@@ -41,6 +41,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Which AI chatbot is best for your workflow?',
       'Best AI assistants for Asian languages',
       'Free vs paid AI chatbots: what you get',
+      'ChatGPT vs Claude vs Gemini vs DeepSeek: head-to-head',
+      'Can AI chatbots handle multilingual conversations effectively?',
     ],
   },
   'code-development': {
@@ -63,6 +65,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Which AI coding assistant ships the most?',
       'AI code generation for full-stack development',
       'Coding with AI in Asian languages',
+      'GitHub Copilot vs Cursor vs Claude: which speeds you up most?',
+      'Can AI replace code reviews and debugging for production apps?',
     ],
   },
   'writing-content': {
@@ -85,6 +89,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Best AI writing tools for SEO content',
       'AI copywriting for Asian markets',
       'Free vs premium AI writing assistants',
+      'How to avoid AI detection and keep your content ranked',
+      'Can AI writing tools write fluently in Chinese, Japanese, and Korean?',
     ],
   },
   'image-generation': {
@@ -108,6 +114,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Which AI image generator creates the best visuals?',
       'AI image generation for Asian marketing',
       'Pricing and features comparison',
+      'Midjourney vs DALL-E 3 vs Stable Diffusion 3: which wins?',
+      'Best free AI image generators for commercial use in 2026',
     ],
   },
   'video-animation': {
@@ -131,6 +139,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Best AI video generators compared',
       'AI video editing for Asian content creators',
       'Text-to-video vs AI-assisted editing',
+      'Sora vs Runway vs Pika: which AI video tool delivers the most?',
+      'How to create professional AI videos on a zero-dollar budget',
     ],
   },
   'marketing-seo': {
@@ -153,6 +163,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Best AI tools for marketing automation',
       'AI SEO tools that actually rank',
       'Marketing to Asian audiences with AI',
+      'How to build a full marketing funnel with AI in 2026',
+      'AI-powered A/B testing and conversion optimization',
     ],
   },
   'design-creative': {
@@ -175,6 +187,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Best AI design tools for non-designers',
       'AI-powered UI/UX design tools',
       'Designing for Asian markets with AI',
+      'Canva AI vs Figma AI vs Adobe Firefly: which is best for branding?',
+      'How to generate consistent brand assets with AI',
     ],
   },
   'data-analytics': {
@@ -198,6 +212,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Best AI tools for data analysis',
       'AI-powered business intelligence',
       'Data visualization with AI',
+      'Can AI replace spreadsheets for small business analytics?',
+      'How to use AI for real-time dashboards and reporting',
     ],
   },
   'ai-agents': {
@@ -220,6 +236,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Which AI agent is most capable?',
       'Autonomous agents for solopreneurs',
       'Agentic AI for Asian workflows',
+      'Devin vs Cursor Agent vs Claude Code: autonomous coding compared',
+      'How to build a personal AI agent stack in 2026',
     ],
   },
   'productivity': {
@@ -243,6 +261,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Best AI tools for daily productivity',
       'AI meeting assistants that save hours',
       'Smart scheduling and task management with AI',
+      'Notion AI vs Motion vs Reclaim: which scheduling AI wins?',
+      'How to build a second brain with AI note-taking tools',
     ],
   },
   'audio-voice': {
@@ -265,6 +285,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Best AI voice cloning for Asian languages',
       'AI music generation compared',
       'Text-to-speech tools that sound natural',
+      'ElevenLabs vs PlayHT vs Murf: which TTS is most realistic?',
+      'How to create AI audiobooks and podcasts in any language',
     ],
   },
   'no-code-automation': {
@@ -288,6 +310,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Best no-code platforms with AI features',
       'AI workflow automation for small businesses',
       'Integrating AI into your existing stack',
+      'Zapier vs Make vs n8n: which AI automation platform scales?',
+      'How to build AI agents without writing any code',
     ],
   },
   'research-analysis': {
@@ -311,6 +335,8 @@ export const CATEGORIES: Record<string, CategoryInfo> = {
       'Best AI tools for market research',
       'AI competitive intelligence tools',
       'Research faster with AI assistants',
+      'Perplexity vs Google Deep Research: which digs deeper?',
+      'How to automate competitive analysis with AI agents',
     ],
   },
 };

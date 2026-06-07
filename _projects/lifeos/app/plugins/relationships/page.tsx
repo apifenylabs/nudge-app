@@ -15,6 +15,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { PLUGINS } from '@/app/lib/plugin-registry';
+import LoveLanguageQuiz from '@/app/components/LoveLanguageQuiz';
 
 const plugin = PLUGINS.find(p => p.id === 'relationships')!;
 
@@ -82,6 +83,11 @@ export default function RelationshipsPluginPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* ── Love Language Quiz ── */}
+      <section className="max-w-4xl mx-auto px-4 py-12 border-t border-gray-100">
+        <LoveLanguageQuiz />
       </section>
 
       {/* ── Conversation Phases (Interactive Step-Through) ── */}

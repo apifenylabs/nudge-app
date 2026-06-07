@@ -14,6 +14,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { PLUGINS } from '@/app/lib/plugin-registry';
+import FamilyActivityPlanner from '@/app/components/FamilyActivityPlanner';
 
 const plugin = PLUGINS.find(p => p.id === 'family')!;
 
@@ -85,6 +86,11 @@ export default function FamilyPluginPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* ── Family Activity Planner ── */}
+      <section className="max-w-4xl mx-auto px-4 py-12 border-t border-gray-100">
+        <FamilyActivityPlanner />
       </section>
 
       {/* ── Conversation Phases (Interactive Step-Through) ── */}
