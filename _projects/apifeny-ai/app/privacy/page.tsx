@@ -15,9 +15,9 @@ export default function PrivacyPage() {
  </div>
  <h1 className="text-2xl sm:text-3xl font-bold text-white">Privacy Policy</h1>
  </div>
- <p className="text-sm text-tech-200 mb-8">Last updated: January 2025</p>
+ <p className="text-sm text-gray-700 mb-8">Last updated: January 2025</p>
 
- <div className="prose prose-sm prose-invert max-w-none space-y-6 text-tech-100">
+ <div className="prose prose-sm prose-invert max-w-none space-y-6 text-gray-800">
  <section>
  <h2 className="text-lg font-semibold text-white mb-2">1. Introduction</h2>
  <p className="leading-relaxed">
@@ -29,7 +29,7 @@ export default function PrivacyPage() {
 
  <section>
  <h2 className="text-lg font-semibold text-white mb-2">2. Information We Collect</h2>
- <h3 className="text-sm font-semibold text-tech-100 mb-1">Personal Information</h3>
+ <h3 className="text-sm font-semibold text-gray-800 mb-1">Personal Information</h3>
  <p className="leading-relaxed mb-3">
  We may collect personal information that you voluntarily provide to us when you:
  </p>
@@ -40,7 +40,7 @@ export default function PrivacyPage() {
  </ul>
  <p className="leading-relaxed">This information may include your name, email address, and website URL.</p>
 
- <h3 className="text-sm font-semibold text-tech-100 mb-1 mt-4">Automatically Collected Information</h3>
+ <h3 className="text-sm font-semibold text-gray-800 mb-1 mt-4">Automatically Collected Information</h3>
  <p className="leading-relaxed">
  When you visit our site, we automatically collect certain information through
  analytics services (Vercel Analytics and Speed Insights), including your IP

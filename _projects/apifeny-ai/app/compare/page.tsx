@@ -129,7 +129,7 @@ const COMPARISONS = [
 
 export default function CompareIndexPage() {
  return (
- <div className="min-h-screen bg-tech-900">
+ <div className="min-h-screen bg-white">
  <BreadcrumbSchema
  items={[
  { name: 'Home', item: '/' },
@@ -141,7 +141,7 @@ export default function CompareIndexPage() {
  {/* Back link */}
  <Link
  href="/tools"
- className="inline-flex items-center gap-1.5 text-sm text-tech-400 hover:text-neon-light transition mb-6 group"
+ className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-neon-light transition mb-6 group"
  >
  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition" />
  Back to Tools
@@ -149,7 +149,7 @@ export default function CompareIndexPage() {
 
  {/* ─── Hero ─────────────────────────────────────────────── */}
  <section className="mb-12">
- <div className="relative rounded-2xl bg-gradient-to-br from-neon/5 via-tech-800 to-aqua/5 border border-tech-500/30 p-8 sm:p-12">
+ <div className="relative rounded-2xl bg-gradient-to-br from-neon/5 via-tech-800 to-aqua/5 border border-gray-200 p-8 sm:p-12">
  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon/10 border border-neon/20 text-neon-light text-xs font-medium mb-4">
  <BarChart3 className="w-3.5 h-3.5" />
  Side-by-Side
@@ -160,7 +160,7 @@ export default function CompareIndexPage() {
  Comparisons
  </span>
  </h1>
- <p className="text-sm sm:text-base text-tech-100/70 max-w-2xl">
+ <p className="text-sm sm:text-base text-gray-800/70 max-w-2xl">
  Honest, data-backed head-to-head comparisons of the most popular AI tools.
  Scorecards, pricing breakdowns, use-case verdicts — everything you need to choose.
  </p>
@@ -174,22 +174,22 @@ export default function CompareIndexPage() {
  <Link
  key={cmp.slug}
  href={`/compare/${cmp.slug}`}
- className="group rounded-xl bg-tech-800/40 border border-tech-500/20 overflow-hidden hover:border-neon/40 transition"
+ className="group rounded-xl bg-gray-50/40 border border-gray-200 overflow-hidden hover:border-neon/40 transition"
  >
  <div className={`bg-gradient-to-br ${cmp.color} p-6`}>
  <div className="flex items-center gap-3 mb-3">
- <div className="w-10 h-10 rounded-lg bg-tech-800/50 flex items-center justify-center">
+ <div className="w-10 h-10 rounded-lg bg-gray-50/50 flex items-center justify-center">
  <cmp.icon className="w-5 h-5 text-neon-light" />
  </div>
  <h2 className="text-xl font-bold text-white group-hover:text-neon-light transition">
  {cmp.title}
  </h2>
  </div>
- <p className="text-sm text-tech-200 leading-relaxed mb-4">
+ <p className="text-sm text-gray-700 leading-relaxed mb-4">
  {cmp.description}
  </p>
  <div className="flex items-center justify-between">
- <span className="text-xs text-tech-400 font-mono">{cmp.score}</span>
+ <span className="text-xs text-gray-400 font-mono">{cmp.score}</span>
  <span className="inline-flex items-center gap-1 text-xs text-neon-light group-hover:gap-2 transition-all">
  View comparison <ChevronRight className="w-3 h-3" />
  </span>
@@ -201,9 +201,9 @@ export default function CompareIndexPage() {
  </section>
 
  {/* ─── CTA ──────────────────────────────────────────────── */}
- <section className="mt-12 rounded-xl bg-tech-800/60 border border-dashed border-tech-500/30 p-8 text-center">
+ <section className="mt-12 rounded-xl bg-gray-50/60 border border-dashed border-gray-200 p-8 text-center">
  <h2 className="text-xl font-bold text-white mb-2">Want to compare two AI tools?</h2>
- <p className="text-sm text-tech-300 max-w-md mx-auto mb-4">
+ <p className="text-sm text-gray-600 max-w-md mx-auto mb-4">
  We add new comparisons regularly. Check the detailed scorecards, pricing tables, and
  use-case verdicts for each matchup.
  </p>

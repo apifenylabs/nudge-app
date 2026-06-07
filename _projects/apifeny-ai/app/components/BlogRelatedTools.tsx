@@ -13,7 +13,7 @@ export default function BlogRelatedTools({ postTitle, postTags }: Props) {
  if (tools.length === 0) return null;
 
  return (
- <section className="border-t border-tech-500/20 bg-tech-800/30 mt-12">
+ <section className="border-t border-gray-200 bg-gray-50/30 mt-12">
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="flex items-center gap-2 mb-8">
  <Wrench className="w-5 h-5 text-neon" />
@@ -25,24 +25,24 @@ export default function BlogRelatedTools({ postTitle, postTags }: Props) {
  <Link
  key={tool.slug}
  href={`/tools/${tool.slug}`}
- className="group bg-tech-800/40 border border-tech-500/20 rounded-xl p-5 hover:border-neon/30 transition-all"
+ className="group bg-gray-50/40 border border-gray-200 rounded-xl p-5 hover:border-neon/30 transition-all"
  >
  <div className="flex items-start gap-3">
- <div className="w-10 h-10 rounded-lg bg-tech-700/50 flex items-center justify-center shrink-0 text-lg font-bold text-neon-light">
+ <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shrink-0 text-lg font-bold text-neon-light">
  {tool.name.charAt(0)}
  </div>
  <div className="min-w-0">
  <h3 className="font-semibold text-white group-hover:text-neon-light transition truncate">
  {tool.name}
  </h3>
- <p className="text-sm text-tech-400 line-clamp-2 mt-1">
+ <p className="text-sm text-gray-400 line-clamp-2 mt-1">
  {tool.tagline}
  </p>
  <div className="flex items-center gap-1.5 mt-2 text-xs">
  <span className="px-2 py-0.5 rounded-full bg-neon/10 text-neon-light border border-neon/20">
  {tool.pricing_tier}
  </span>
- <span className="px-2 py-0.5 rounded-full bg-tech-700/50 text-tech-400 border border-tech-500/20">
+ <span className="px-2 py-0.5 rounded-full bg-white text-gray-400 border border-gray-200">
  {tool.category}
  </span>
  </div>

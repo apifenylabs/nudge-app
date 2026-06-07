@@ -151,7 +151,7 @@ export default function ToolPage({ params }: ToolPageProps) {
  </span>
  )}
  </h3>
- <p className="text-xs text-tech-200 mt-1">
+ <p className="text-xs text-gray-700 mt-1">
  {aff.commission_note}
  </p>
  <p className="text-[10px] text-emerald-400/80 mt-1 flex items-center gap-1">
@@ -186,7 +186,7 @@ export default function ToolPage({ params }: ToolPageProps) {
  if (rankedCategories.length === 0) return null;
 
  return (
- <section className="mt-8 rounded-xl border border-tech-500/30 bg-tech-700/60 p-6">
+ <section className="mt-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
  <h2 className="text-sm font-semibold text-white mb-4 flex items-center gap-2">
  <TrendingUp className="w-4 h-4 text-neon-light" />
  Ranking Position
@@ -196,17 +196,17 @@ export default function ToolPage({ params }: ToolPageProps) {
  <Link
  key={rc.slug}
  href={`/rankings/${rc.slug}`}
- className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-tech-600 border border-tech-500/30 hover:border-neon/30 hover:bg-tech-500 transition group"
+ className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 border border-gray-200 hover:border-neon/30 hover:bg-gray-200 transition group"
  >
  <span className="text-sm">{rc.icon}</span>
- <span className="text-xs text-tech-200 group-hover:text-white transition">
+ <span className="text-xs text-gray-700 group-hover:text-white transition">
  {rc.title}
  </span>
- <ChevronRight className="w-3 h-3 text-tech-300" />
+ <ChevronRight className="w-3 h-3 text-gray-600" />
  </Link>
  ))}
  </div>
- <p className="text-[10px] text-tech-300 mt-3">
+ <p className="text-[10px] text-gray-600 mt-3">
  Featured in {Math.min(rankedCategories.length, 4)} of {rankedCategories.length} ranking{rankedCategories.length !== 1 ? 's' : ''}
  </p>
  </section>
@@ -221,12 +221,12 @@ export default function ToolPage({ params }: ToolPageProps) {
  if (relatedPlaybooks.length === 0) return null;
 
  return (
- <section className="mt-6 rounded-xl border border-tech-500/30 bg-tech-700/60 p-6">
+ <section className="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-6">
  <h2 className="text-sm font-semibold text-white mb-4 flex items-center gap-2">
  <BookOpen className="w-4 h-4 text-neon-light" />
  Related Playbooks
  </h2>
- <p className="text-xs text-tech-200 mb-4">
+ <p className="text-xs text-gray-700 mb-4">
  This tool is used in {relatedPlaybooks.length} playbook{relatedPlaybooks.length !== 1 ? 's' : ''}.
  </p>
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -234,7 +234,7 @@ export default function ToolPage({ params }: ToolPageProps) {
  <Link
  key={pb.slug}
  href={`/playbook/${pb.slug}`}
- className="group rounded-xl border border-tech-500/30 bg-tech-700/80 p-3 hover:border-neon/40 hover:-translate-y-0.5 transition-all"
+ className="group rounded-xl border border-gray-200 bg-white p-3 hover:border-neon/40 hover:-translate-y-0.5 transition-all"
  >
  <div className="flex items-center gap-2 mb-1">
  <span className="text-lg">{pb.icon}</span>
@@ -242,7 +242,7 @@ export default function ToolPage({ params }: ToolPageProps) {
  {pb.title}
  </h3>
  </div>
- <p className="text-[10px] text-tech-200 line-clamp-2">{pb.description}</p>
+ <p className="text-[10px] text-gray-700 line-clamp-2">{pb.description}</p>
  <div className="flex items-center gap-1 mt-2 text-[9px] text-neon-light opacity-0 group-hover:opacity-100 transition-opacity">
  View playbook
  <ChevronRight className="w-2.5 h-2.5" />

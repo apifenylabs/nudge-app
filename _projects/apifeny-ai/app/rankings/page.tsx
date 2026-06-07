@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RankingsPage() {
  return (
- <>
+ <div className="min-h-screen bg-white">
  <BreadcrumbSchema
  items={[
  { name: 'Home', item: '/' },
@@ -29,7 +29,7 @@ export default function RankingsPage() {
  {/* Back / Breadcrumb */}
  <Link
  href="/tools"
- className="inline-flex items-center gap-1.5 text-sm text-tech-200 hover:text-white transition mb-6 group"
+ className="inline-flex items-center gap-1.5 text-sm text-gray-700 hover:text-white transition mb-6 group"
  >
  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition" />
  All Tools
@@ -37,8 +37,8 @@ export default function RankingsPage() {
 
  {/* Hero */}
  <section className="relative mb-10 sm:mb-12">
- <div className="absolute inset-0 bg-tech-grid opacity-30 rounded-2xl" />
- <div className="relative rounded-2xl bg-gradient-to-br from-neon/10 via-aqua/5 to-tech-800 border border-tech-500/30 p-8 sm:p-12">
+ <div className="absolute inset-0 bg-gray-50 opacity-30 rounded-2xl" />
+ <div className="relative rounded-2xl bg-gradient-to-br from-neon/10 via-aqua/5 to-tech-800 border border-gray-200 p-8 sm:p-12">
  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon/10 border border-neon/20 text-neon-light text-xs font-medium mb-4">
  <Layers className="w-3.5 h-3.5" />
  Workflow Rankings
@@ -49,7 +49,7 @@ export default function RankingsPage() {
  Workflow
  </span>
  </h1>
- <p className="text-sm sm:text-base text-tech-100/70 max-w-2xl mb-6">
+ <p className="text-sm sm:text-base text-gray-800/70 max-w-2xl mb-6">
  Not all AI tools are equal for every job. We rank tools by the work you actually do —
  from strategic planning to code review, content creation to agent building.
  Each ranking is editorially curated and powered by our Cosme-style algorithm.
@@ -57,14 +57,14 @@ export default function RankingsPage() {
 
  {/* Stats */}
  <div className="flex flex-wrap gap-4 sm:gap-6">
- <div className="flex items-center gap-2 text-xs text-tech-200">
+ <div className="flex items-center gap-2 text-xs text-gray-700">
  <Layers className="w-4 h-4 text-neon-light" />
  <span className="font-semibold text-white">{RANKING_CATEGORIES.length}</span> workflows
  </div>
- <div className="flex items-center gap-2 text-xs text-tech-200">
+ <div className="flex items-center gap-2 text-xs text-gray-700">
  <span className="font-semibold text-white">60+</span> tools ranked
  </div>
- <div className="flex items-center gap-2 text-xs text-tech-200">
+ <div className="flex items-center gap-2 text-xs text-gray-700">
  <span className="font-semibold text-white">5-factor</span> Cosme algorithm
  </div>
  </div>
@@ -79,15 +79,15 @@ export default function RankingsPage() {
  <Link
  key={rc.slug}
  href={`/rankings/${rc.slug}`}
- className="group relative rounded-xl bg-gradient-to-br border border-tech-500/30 p-5 hover:border-neon/40 transition-all hover:-translate-y-1 overflow-hidden"
+ className="group relative rounded-xl bg-gradient-to-br border border-gray-200 p-5 hover:border-neon/40 transition-all hover:-translate-y-1 overflow-hidden"
  style={{ backgroundImage: `linear-gradient(135deg, ${rc.gradient}), linear-gradient(to bottom right, var(--color-tech-700), var(--color-tech-700))` }}
  >
  {/* Overlay */}
- <div className="absolute inset-0 bg-tech-grid opacity-20" />
+ <div className="absolute inset-0 bg-gray-50 opacity-20" />
  <div className="relative">
  <div className="flex items-center justify-between mb-3">
  <span className="text-2xl">{rc.icon}</span>
- <span className="text-[10px] text-tech-300 group-hover:text-neon-light transition-colors flex items-center gap-0.5">
+ <span className="text-[10px] text-gray-600 group-hover:text-neon-light transition-colors flex items-center gap-0.5">
  View ranking
  <ChevronRight className="w-3 h-3" />
  </span>
@@ -95,11 +95,11 @@ export default function RankingsPage() {
  <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
  {rc.title}
  </h3>
- <p className="text-xs text-tech-300 mb-1">{rc.subtitle}</p>
- <p className="text-[11px] text-tech-200 line-clamp-2 leading-relaxed">
+ <p className="text-xs text-gray-600 mb-1">{rc.subtitle}</p>
+ <p className="text-[11px] text-gray-700 line-clamp-2 leading-relaxed">
  {rc.description}
  </p>
- <div className="mt-3 flex items-center gap-1 text-[10px] text-tech-400">
+ <div className="mt-3 flex items-center gap-1 text-[10px] text-gray-400">
  <span>Top {rc.displayCount} tools</span>
  </div>
  </div>
@@ -109,10 +109,10 @@ export default function RankingsPage() {
  </section>
 
  {/* CTA */}
- <section className="mt-12 rounded-xl border border-dashed border-tech-500/30 bg-tech-700/40 p-8 text-center">
+ <section className="mt-12 rounded-xl border border-dashed border-gray-200 bg-white/40 p-8 text-center">
  <Layers className="w-10 h-10 text-neon/60 mx-auto mb-3" />
  <h3 className="text-lg font-semibold text-white mb-1">Can&apos;t decide?</h3>
- <p className="text-sm text-tech-200 max-w-md mx-auto mb-4">
+ <p className="text-sm text-gray-700 max-w-md mx-auto mb-4">
  Browse our full tools directory with powerful filters — find the right tool for any job.
  </p>
  <Link
@@ -124,6 +124,6 @@ export default function RankingsPage() {
  </Link>
  </section>
  </div>
- </>
+ </div>
  );
 }

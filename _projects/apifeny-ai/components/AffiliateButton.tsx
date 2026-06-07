@@ -117,7 +117,7 @@ const badgeColorMap: Record<string, string> = {
  'Most Popular': 'bg-neon/20 text-neon-light border-neon/30',
  'Free Tier': 'bg-sky-500/20 text-sky-400 border-sky-500/30',
  'Pro Pick': 'bg-asia/20 text-asia border-asia/30',
- 'Free Trial': 'bg-amber-500/20 text-amber-400 border-amber-500/30',
+ 'Free Trial': 'bg-amber-100 text-amber-700 border-amber-200',
 };
 
 export const AffiliateBadge: FC<AffiliateBadgeProps> = ({ label, className }) => {

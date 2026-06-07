@@ -58,8 +58,8 @@ function CheckoutOverlay({ onBack }) {
 
  return (
  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
- <div className="relative max-w-md w-full bg-tech-800 border border-tech-500/30 rounded-2xl p-6 shadow-2xl shadow-neon/10">
- <button onClick={onBack} className="absolute top-4 right-4 text-tech-300 hover:text-white" aria-label="Close">
+ <div className="relative max-w-md w-full bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-2xl shadow-neon/10">
+ <button onClick={onBack} className="absolute top-4 right-4 text-gray-600 hover:text-white" aria-label="Close">
  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
  </svg>
@@ -70,11 +70,11 @@ function CheckoutOverlay({ onBack }) {
  <FileText className="w-8 h-8 text-white" />
  </div>
  <h3 className="text-xl font-bold text-white mb-1">AI for Social Media Management</h3>
- <p className="text-sm text-tech-200">Complete PDF Playbook</p>
+ <p className="text-sm text-gray-700">Complete PDF Playbook</p>
  <div className="mt-3 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-neon/15 border border-neon/20">
  <DollarSign className="w-4 h-4 text-neon-light" />
  <span className="text-lg font-bold text-white">$7</span>
- <span className="text-xs text-tech-200">one-time</span>
+ <span className="text-xs text-gray-700">one-time</span>
  </div>
  </div>
 
@@ -89,10 +89,10 @@ function CheckoutOverlay({ onBack }) {
  ) : (
  <form onSubmit={handlePurchase} className="space-y-4">
  <div>
- <label htmlFor="ce" className="block text-sm font-medium text-tech-200 mb-1">Email</label>
+ <label htmlFor="ce" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
  <input id="ce" type="email" value={email} onChange={(e) => setEmail(e.target.value)}
  placeholder="your@email.com" required
- className="w-full bg-tech-900 border border-tech-500/50 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/60 focus:ring-1 focus:ring-neon/20" />
+ className="w-full bg-white border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-neon/60 focus:ring-1 focus:ring-neon/20" />
  </div>
  <button type="submit" disabled={loading}
  className="w-full py-3 rounded-xl bg-gradient-to-r from-neon to-aqua text-white font-semibold text-sm hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
@@ -103,7 +103,7 @@ function CheckoutOverlay({ onBack }) {
  )}
  </button>
  {status === 'error' && <p className="text-xs text-red-400">{message}</p>}
- <p className="text-[10px] text-tech-300 text-center">Secure checkout. Instant download.</p>
+ <p className="text-[10px] text-gray-600 text-center">Secure checkout. Instant download.</p>
  </form>
  )}
  </div>
@@ -119,40 +119,40 @@ function AIForSocialMediaManagementInner() {
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
  <SeoMetadata title="AI for Social Media Management — Apifeny" description="Manage social media with AI: content calendars, caption writing, visuals, scheduling, and engagement analysis with ChatGPT, Claude, and Canva AI." />
  <nav className="mb-4">
- <ol className="flex flex-wrap items-center gap-1.5 text-xs text-tech-300">
+ <ol className="flex flex-wrap items-center gap-1.5 text-xs text-gray-600">
  <li><Link href="/" className="hover:text-white">Home</Link></li>
- <li className="text-tech-500">/</li>
+ <li className="text-gray-500">/</li>
  <li><Link href="/playbooks" className="hover:text-white">Playbooks</Link></li>
- <li className="text-tech-100 truncate max-w-[200px]">AI for Social Media</li>
+ <li className="text-gray-800 truncate max-w-[200px]">AI for Social Media</li>
  </ol>
  </nav>
- <Link href="/playbooks" className="inline-flex items-center gap-1.5 text-sm text-tech-200 hover:text-white mb-6 group">
+ <Link href="/playbooks" className="inline-flex items-center gap-1.5 text-sm text-gray-700 hover:text-white mb-6 group">
  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5" /> All Playbooks
  </Link>
 
  {/* Hero */}
  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-pink-500/30 to-rose-500/30 border border-neon/20 mb-8 sm:mb-10">
- <div className="absolute inset-0 bg-tech-grid opacity-30" />
+ <div className="absolute inset-0 bg-gray-50 opacity-30" />
  <div className="absolute top-0 right-0 w-96 h-96 bg-neon/10 rounded-full blur-[120px] pointer-events-none" />
  <div className="absolute bottom-0 left-0 w-64 h-64 bg-aqua/10 rounded-full blur-[100px] pointer-events-none" />
  <div className="relative p-6 sm:p-8 lg:p-10">
  <div className="flex items-center gap-2 mb-3">
  <span className="text-3xl">📱</span>
- <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-500/20 text-amber-400 border border-amber-500/30">Beginner</span>
+ <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-100 text-amber-700 border-amber-200 border border-amber-500/30">Beginner</span>
  </div>
  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">AI for Social Media Management: Schedule to Viral</h1>
- <p className="text-sm sm:text-base text-tech-100 max-w-2xl mb-4 leading-relaxed">Manage social media like a pro with AI. From content calendars and scheduling to engagement analysis and trend spotting — this 35+ page PDF shows you how to use ChatGPT, Claude, and Canva AI to grow your presence across 6 platforms.</p>
+ <p className="text-sm sm:text-base text-gray-800 max-w-2xl mb-4 leading-relaxed">Manage social media like a pro with AI. From content calendars and scheduling to engagement analysis and trend spotting — this 35+ page PDF shows you how to use ChatGPT, Claude, and Canva AI to grow your presence across 6 platforms.</p>
  <div className="flex flex-wrap gap-3 mb-4">
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600 text-tech-100"><FileText className="w-3 h-3" /> 35+ pages</span>
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600 text-tech-100"><Clock className="w-3 h-3" /> 6 chapters</span>
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600 text-tech-100"><Sparkles className="w-3 h-3" /> 25+ prompts</span>
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600 text-tech-100"><Globe className="w-3 h-3" /> Updated June 2026</span>
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800"><FileText className="w-3 h-3" /> 35+ pages</span>
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800"><Clock className="w-3 h-3" /> 6 chapters</span>
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800"><Sparkles className="w-3 h-3" /> 25+ prompts</span>
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800"><Globe className="w-3 h-3" /> Updated June 2026</span>
  </div>
  <div className="flex flex-wrap items-center gap-3">
  <button onClick={() => setShowCheckout(true)} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-neon to-aqua text-white font-semibold text-sm hover:opacity-90 hover:-translate-y-0.5 shadow-lg shadow-neon/20"><Download className="w-4 h-4" /> Download PDF — $7</button>
- <a href="#preview" className="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-tech-700 border border-tech-500/30 text-tech-100 text-sm font-medium hover:text-white hover:border-neon/30"><BookOpen className="w-4 h-4" /> Preview Contents</a>
+ <a href="#preview" className="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-white border border-gray-200 text-gray-800 text-sm font-medium hover:text-white hover:border-neon/30"><BookOpen className="w-4 h-4" /> Preview Contents</a>
  </div>
- <div className="mt-4 flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-tech-200">
+ <div className="mt-4 flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-gray-700">
  <span className="flex items-center gap-1.5"><Sparkles className="w-3.5 h-3.5 text-amber-400 shrink-0" /> 750+ creators have downloaded this playbook</span>
  <span className="flex items-center gap-1.5"><Shield className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> 30-Day Guarantee — grow your reach 5x or get refunded</span>
  </div>
@@ -190,7 +190,7 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  {includedItems.map((item, i) => (
  <div key={i} className="flex items-start gap-3 p-4 rounded-xl border border-pink-500/20 bg-pink-500/10">
  <div className="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center"><IconRenderer name={item.icon} className="w-5 h-5 text-pink-400" /></div>
- <div><p className="text-sm font-medium text-white">{item.text}</p><p className="text-xs text-tech-300 mt-0.5">{item.subtext}</p></div>
+ <div><p className="text-sm font-medium text-white">{item.text}</p><p className="text-xs text-gray-600 mt-0.5">{item.subtext}</p></div>
  </div>
  ))}
  </div>
@@ -203,7 +203,7 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  {whoItsFor.map((item, i) => (
  <div key={i} className="flex items-start gap-3 p-4 rounded-xl border border-rose-500/20 bg-rose-500/5">
  <div className="w-10 h-10 rounded-lg bg-rose-500/10 flex items-center justify-center"><IconRenderer name={item.icon} className="w-5 h-5 text-rose-400" /></div>
- <div><p className="text-sm font-medium text-white">{item.text}</p><p className="text-xs text-tech-300 mt-0.5">{item.subtext}</p></div>
+ <div><p className="text-sm font-medium text-white">{item.text}</p><p className="text-xs text-gray-600 mt-0.5">{item.subtext}</p></div>
  </div>
  ))}
  </div>
@@ -216,7 +216,7 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  {whatYoullLearn.map((item, i) => (
  <div key={i} className="flex items-start gap-3 p-4 rounded-xl border border-pink-500/20 bg-pink-500/5">
  <div className="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center"><IconRenderer name={item.icon} className="w-5 h-5 text-pink-400" /></div>
- <div><p className="text-sm font-medium text-white">{item.text}</p><p className="text-xs text-tech-300 mt-0.5">{item.subtext}</p></div>
+ <div><p className="text-sm font-medium text-white">{item.text}</p><p className="text-xs text-gray-600 mt-0.5">{item.subtext}</p></div>
  </div>
  ))}
  </div>
@@ -225,21 +225,21 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  {/* Chapter Preview */}
  <section className="mb-8 sm:mb-10">
  <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><SearchIcon className="w-4 h-4 text-amber-400" /> Chapter Preview</h2>
- <p className="text-sm text-tech-200 mb-6">Here's everything covered. Each chapter has actionable strategies and ready-to-use prompts.</p>
+ <p className="text-sm text-gray-700 mb-6">Here's everything covered. Each chapter has actionable strategies and ready-to-use prompts.</p>
  <div className="space-y-4">
  {sections.map((s) => (
- <details key={s.id} className="group rounded-xl border border-tech-500/20 bg-tech-700/50 overflow-hidden transition hover:border-pink-500/20">
+ <details key={s.id} className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-pink-500/20">
  <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none">
  <div className="flex items-center gap-3 min-w-0">
- <div className="w-10 h-10 rounded-lg bg-tech-600 flex items-center justify-center"><IconRenderer name={s.icon} className={'w-5 h-5 ' + s.color} /></div>
- <div><h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-pink-300">{s.title}</h3><p className="text-xs text-tech-300 mt-0.5 line-clamp-1">{s.desc}</p></div>
+ <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center"><IconRenderer name={s.icon} className={'w-5 h-5 ' + s.color} /></div>
+ <div><h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-pink-300">{s.title}</h3><p className="text-xs text-gray-600 mt-0.5 line-clamp-1">{s.desc}</p></div>
  </div>
- <ChevronRight className="w-5 h-5 text-tech-300 shrink-0 transition-transform group-open:rotate-90" />
+ <ChevronRight className="w-5 h-5 text-gray-600 shrink-0 transition-transform group-open:rotate-90" />
  </summary>
- <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-tech-500/10 pt-3">
+ <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-200 pt-3">
  <ul className="space-y-2">
  {s.items.map((item, i) => (
- <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-tech-100"><CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />{item}</li>
+ <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-gray-800"><CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />{item}</li>
  ))}
  </ul>
  </div>
@@ -256,7 +256,7 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  <div key={i} className={'flex flex-col items-center text-center p-4 sm:p-5 rounded-xl border ' + st.border + ' ' + st.bg}>
  <div className={'w-10 h-10 rounded-lg ' + st.bg + ' flex items-center justify-center mb-2'}><IconRenderer name={st.icon} className={'w-5 h-5 ' + st.color} /></div>
  <div className={'text-xl sm:text-2xl font-bold ' + st.color}>{st.value}</div>
- <div className="text-xs text-tech-200 mt-1">{st.label}</div>
+ <div className="text-xs text-gray-700 mt-1">{st.label}</div>
  </div>
  ))}
  </div>
@@ -267,10 +267,10 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Star className="w-4 h-4 text-amber-400" /> Reviews</h2>
  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
  {testimonials.map((t, i) => (
- <div key={i} className="flex flex-col p-5 rounded-xl border border-tech-500/20 bg-tech-700/60">
+ <div key={i} className="flex flex-col p-5 rounded-xl border border-gray-200 bg-gray-50">
  <div className="flex items-center gap-0.5 mb-3">{Array.from({ length: t.stars }).map((_, si) => (<Star key={si} className="w-4 h-4 text-amber-400 fill-amber-400" />))}</div>
- <blockquote className="text-xs sm:text-sm text-tech-100 leading-relaxed mb-3 flex-1">&ldquo;{t.quote}&rdquo;</blockquote>
- <div className="border-t border-tech-500/10 pt-3 mt-auto"><div className="text-sm font-medium text-white">{t.name}</div><div className="text-xs text-tech-300">{t.title}</div></div>
+ <blockquote className="text-xs sm:text-sm text-gray-800 leading-relaxed mb-3 flex-1">&ldquo;{t.quote}&rdquo;</blockquote>
+ <div className="border-t border-gray-200 pt-3 mt-auto"><div className="text-sm font-medium text-white">{t.name}</div><div className="text-xs text-gray-600">{t.title}</div></div>
  </div>
  ))}
  </div>
@@ -284,24 +284,24 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  <div key={i} className="relative flex flex-col p-5 rounded-xl border border-amber-500/20 bg-amber-500/5">
  <div className="absolute -top-2 right-3"><span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">FREE</span></div>
  <div className="text-base font-semibold text-white mb-1 pr-12">{bonus.name}</div>
- <p className="text-xs text-tech-200 mb-2">{bonus.desc}</p>
- <div className="flex items-center gap-2 mt-auto"><span className="text-lg font-bold text-emerald-400">$0</span><span className="text-xs text-tech-300 line-through">{bonus.value}</span></div>
+ <p className="text-xs text-gray-700 mb-2">{bonus.desc}</p>
+ <div className="flex items-center gap-2 mt-auto"><span className="text-lg font-bold text-emerald-400">$0</span><span className="text-xs text-gray-600 line-through">{bonus.value}</span></div>
  </div>
  ))}
  </div>
- <p className="mt-4 text-xs text-tech-300 text-center">Get all bonuses instantly when you buy today.</p>
+ <p className="mt-4 text-xs text-gray-600 text-center">Get all bonuses instantly when you buy today.</p>
  </section>
 
  {/* FOMO */}
  <section className="mb-8 sm:mb-10">
- <div className="relative overflow-hidden rounded-2xl border border-tech-500/20 bg-tech-700/60 p-6 sm:p-8 text-center">
+ <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8 text-center">
  <div className="absolute inset-0 bg-gradient-to-br from-neon/5 via-transparent to-cyan-500/5 pointer-events-none" />
  <div className="relative">
  <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center justify-center gap-2"><Clock className="w-5 h-5 text-cyan-400" /> Price Increasing Soon</h2>
  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-4">
- <div className="text-center"><div className="text-3xl sm:text-4xl font-bold text-neon-light">$7</div><div className="text-xs text-tech-300">Current price</div></div>
- <div className="hidden sm:block text-2xl text-tech-500">&rarr;</div>
- <div className="text-center"><div className="text-2xl sm:text-3xl font-bold text-tech-300 line-through">$14</div><div className="text-xs text-tech-300">Next tier</div></div>
+ <div className="text-center"><div className="text-3xl sm:text-4xl font-bold text-neon-light">$7</div><div className="text-xs text-gray-600">Current price</div></div>
+ <div className="hidden sm:block text-2xl text-gray-500">&rarr;</div>
+ <div className="text-center"><div className="text-2xl sm:text-3xl font-bold text-gray-600 line-through">$14</div><div className="text-xs text-gray-600">Next tier</div></div>
  </div>
  <div className="flex flex-wrap items-center justify-center gap-4 mb-3">
  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs"><TrendingUp className="w-3.5 h-3.5" /> Sales: 750+</span>
@@ -317,9 +317,9 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Lightbulb className="w-4 h-4 text-cyan-400" /> Frequently Asked Questions</h2>
  <div className="space-y-3">
  {faqItems.map((faq, i) => (
- <details key={i} className="group rounded-xl border border-tech-500/20 bg-tech-700/50 overflow-hidden transition hover:border-pink-500/20">
- <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none"><span className="text-sm sm:text-base font-medium text-white group-hover:text-pink-300 pr-4">{faq.q}</span><ChevronRight className="w-5 h-5 text-tech-300 shrink-0 transition-transform group-open:rotate-90" /></summary>
- <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-tech-500/10 pt-3"><p className="text-xs sm:text-sm text-tech-200 leading-relaxed">{faq.a}</p></div>
+ <details key={i} className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-pink-500/20">
+ <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none"><span className="text-sm sm:text-base font-medium text-white group-hover:text-pink-300 pr-4">{faq.q}</span><ChevronRight className="w-5 h-5 text-gray-600 shrink-0 transition-transform group-open:rotate-90" /></summary>
+ <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-200 pt-3"><p className="text-xs sm:text-sm text-gray-700 leading-relaxed">{faq.a}</p></div>
  </details>
  ))}
  </div>
@@ -328,13 +328,13 @@ For each hook, tell me why it works and what kind of post would follow it.`}
  {/* Guarantee */}
  <section className="mb-8 sm:mb-10">
  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-500/20 via-green-500/10 to-tech-800 border border-emerald-500/20 p-6 sm:p-8 text-center">
- <div className="absolute inset-0 bg-tech-grid opacity-20" />
+ <div className="absolute inset-0 bg-gray-50 opacity-20" />
  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-emerald-500/15 rounded-full blur-[100px] pointer-events-none" />
  <div className="relative">
  <Shield className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
  <h2 className="text-lg sm:text-xl font-bold text-white mb-2">100% Risk-Free — 30-Day Money-Back Guarantee</h2>
- <p className="text-sm text-tech-200 max-w-lg mx-auto mb-4 leading-relaxed">If AI for Social Media Management doesn't help you grow your reach within 30 days, I'll refund every cent. No questions asked. You keep the bonuses.</p>
- <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-tech-300">
+ <p className="text-sm text-gray-700 max-w-lg mx-auto mb-4 leading-relaxed">If AI for Social Media Management doesn't help you grow your reach within 30 days, I'll refund every cent. No questions asked. You keep the bonuses.</p>
+ <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-gray-600">
  <span className="flex items-center gap-1"><CheckCircle className="w-3.5 h-3.5 text-emerald-400" /> Instant download</span>
  <span className="flex items-center gap-1"><CheckCircle className="w-3.5 h-3.5 text-emerald-400" /> 30-day guarantee</span>
  <span className="flex items-center gap-1"><CheckCircle className="w-3.5 h-3.5 text-emerald-400" /> Free updates</span>
@@ -345,19 +345,19 @@ For each hook, tell me why it works and what kind of post would follow it.`}
 
  {/* Final CTA */}
  <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-violet-500/20 via-fuchsia-500/10 to-neon/10 border border-neon/20 p-6 sm:p-8 text-center">
- <div className="absolute inset-0 bg-tech-grid opacity-20" />
+ <div className="absolute inset-0 bg-gray-50 opacity-20" />
  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-neon/15 rounded-full blur-[100px] pointer-events-none" />
  <div className="relative">
  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-neon to-aqua mb-4"><FileText className="w-8 h-8 text-white" /></div>
  <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Ready to Get Started?</h2>
- <p className="text-sm text-tech-200 max-w-lg mx-auto mb-4">Get the complete 35+ page PDF playbook.</p>
- <div className="inline-flex items-center gap-4 px-4 py-2 rounded-xl bg-tech-700/80 border border-tech-500/20 mb-4">
- <div className="text-left"><div className="text-2xl font-bold text-white">$7</div><div className="text-[10px] text-tech-300">one-time payment</div></div>
- <div className="h-8 w-px bg-tech-500/30" />
- <div className="text-left"><div className="text-xs font-medium text-emerald-400">Lifetime access</div><div className="text-[10px] text-tech-300">Free updates</div></div>
+ <p className="text-sm text-gray-700 max-w-lg mx-auto mb-4">Get the complete 35+ page PDF playbook.</p>
+ <div className="inline-flex items-center gap-4 px-4 py-2 rounded-xl bg-white border border-gray-200 mb-4">
+ <div className="text-left"><div className="text-2xl font-bold text-white">$7</div><div className="text-[10px] text-gray-600">one-time payment</div></div>
+ <div className="h-8 w-px border-gray-200" />
+ <div className="text-left"><div className="text-xs font-medium text-emerald-400">Lifetime access</div><div className="text-[10px] text-gray-600">Free updates</div></div>
  </div>
  <button onClick={() => setShowCheckout(true)} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-neon to-aqua text-white font-semibold text-sm hover:opacity-90 hover:-translate-y-0.5 shadow-lg shadow-neon/20"><ShoppingCart className="w-4 h-4" /> Download PDF — $7</button>
- <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-[10px] text-tech-300">
+ <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-[10px] text-gray-600">
  <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-emerald-400" /> Instant download</span>
  <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-emerald-400" /> 30-day guarantee</span>
  <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-emerald-400" /> Free updates</span>
@@ -375,9 +375,9 @@ export default function AIForSocialMediaManagementPage() {
  <Suspense fallback={
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
  <div className="animate-pulse space-y-4">
- <div className="h-4 bg-tech-700 rounded w-1/4" />
- <div className="h-8 bg-tech-700 rounded w-3/4" />
- <div className="h-64 bg-tech-700 rounded" />
+ <div className="h-4 bg-white rounded w-1/4" />
+ <div className="h-8 bg-white rounded w-3/4" />
+ <div className="h-64 bg-white rounded" />
  </div>
  </div>
  }>

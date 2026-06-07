@@ -41,7 +41,7 @@ export default function CollectionPage({ params }: CollectionPageProps) {
  {/* Back link */}
  <Link
  href="/tools"
- className="inline-flex items-center gap-1.5 text-sm text-tech-200 hover:text-white transition mb-6 group"
+ className="inline-flex items-center gap-1.5 text-sm text-gray-700 hover:text-white transition mb-6 group"
  >
  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition" />
  All Tools
@@ -49,9 +49,9 @@ export default function CollectionPage({ params }: CollectionPageProps) {
 
  {/* Collection Hero */}
  <div
- className={`rounded-xl bg-gradient-to-r ${collection.gradient} bg-tech-700/90 border border-tech-500/30 p-6 sm:p-8 mb-6 sm:mb-8 relative overflow-hidden`}
+ className={`rounded-xl bg-gradient-to-r ${collection.gradient} bg-white border border-gray-200 p-6 sm:p-8 mb-6 sm:mb-8 relative overflow-hidden`}
  >
- <div className="absolute inset-0 bg-tech-grid opacity-30" />
+ <div className="absolute inset-0 bg-gray-50 opacity-30" />
  <div className="relative">
  <div className="flex items-center gap-3 mb-3">
  <span className="text-3xl">{collection.icon}</span>
@@ -60,10 +60,10 @@ export default function CollectionPage({ params }: CollectionPageProps) {
  </span>
  </div>
  <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">{collection.title}</h1>
- <p className="text-sm sm:text-base text-tech-100 max-w-2xl mb-4">
+ <p className="text-sm sm:text-base text-gray-800 max-w-2xl mb-4">
  {collection.description}
  </p>
- <div className="flex items-center gap-3 text-xs text-tech-200">
+ <div className="flex items-center gap-3 text-xs text-gray-700">
  <span className="flex items-center gap-1">
  <BookmarkPlus className="w-3.5 h-3.5" />
  {tools.length} tools
@@ -81,7 +81,7 @@ export default function CollectionPage({ params }: CollectionPageProps) {
  </div>
  ) : (
  <div className="text-center py-16">
- <p className="text-tech-200">No tools found in this collection yet.</p>
+ <p className="text-gray-700">No tools found in this collection yet.</p>
  </div>
  )}
  </div>

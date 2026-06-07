@@ -351,13 +351,13 @@ function ScoreBar({ score, label, color }: { score: number; label: string; color
  return (
  <div className="flex items-center gap-3">
  <span className={`text-xs ${textColor} w-16 shrink-0`}>{label}</span>
- <div className="flex-1 h-2.5 rounded-full bg-tech-700 overflow-hidden">
+ <div className="flex-1 h-2.5 rounded-full bg-white overflow-hidden">
  <div
  className={`h-full rounded-full transition-all ${barColor}`}
  style={{ width: `${score * 10}%` }}
  />
  </div>
- <span className="text-xs font-mono text-tech-300 w-8 text-right">{score.toFixed(1)}</span>
+ <span className="text-xs font-mono text-gray-600 w-8 text-right">{score.toFixed(1)}</span>
  </div>
  );
 }
@@ -388,7 +388,7 @@ function WinnerBadge({ winner }: { winner: string }) {
 
 export default function MidjourneyVsDalleCompare() {
  return (
- <div className="min-h-screen bg-tech-900">
+ <div className="min-h-screen bg-white">
  <BreadcrumbSchema
  items={[
  { name: 'Home', item: '/' },
@@ -401,7 +401,7 @@ export default function MidjourneyVsDalleCompare() {
  {/* Back link */}
  <Link
  href="/compare"
- className="inline-flex items-center gap-1.5 text-sm text-tech-400 hover:text-neon-light transition mb-6 group"
+ className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-neon-light transition mb-6 group"
  >
  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition" />
  Back to Comparisons
@@ -409,7 +409,7 @@ export default function MidjourneyVsDalleCompare() {
 
  {/* ─── Hero ─────────────────────────────────────────────── */}
  <section className="relative mb-12">
- <div className="relative rounded-2xl bg-gradient-to-br from-purple-500/10 via-tech-800 to-fuchsia-500/5 border border-tech-500/30 p-8 sm:p-12">
+ <div className="relative rounded-2xl bg-gradient-to-br from-purple-500/10 via-tech-800 to-fuchsia-500/5 border border-gray-200 p-8 sm:p-12">
  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-medium mb-4">
  <Star className="w-3.5 h-3.5" />
  Head-to-Head Comparison
@@ -420,7 +420,7 @@ export default function MidjourneyVsDalleCompare() {
  2026
  </span>
  </h1>
- <p className="text-sm sm:text-base text-tech-100/70 max-w-2xl mb-6">
+ <p className="text-sm sm:text-base text-gray-800/70 max-w-2xl mb-6">
  Two of the most popular AI image generators go head-to-head. Midjourney is known for
  breathtaking aesthetic quality and fine-grained creative control. DALL-E 3 excels with
  text rendering, accessibility, and clean API integration. We break down pricing,
@@ -429,13 +429,13 @@ export default function MidjourneyVsDalleCompare() {
 
  {/* Quick stat pills */}
  <div className="flex flex-wrap gap-3">
- <div className="px-3 py-1.5 rounded-lg bg-tech-700/60 border border-tech-500/20 text-xs text-tech-200">
+ <div className="px-3 py-1.5 rounded-lg bg-gray-50 border border-gray-200 text-xs text-gray-700">
  <span className="text-purple-300 font-semibold">Midjourney</span> — $10-60/mo
  </div>
- <div className="px-3 py-1.5 rounded-lg bg-tech-700/60 border border-tech-500/20 text-xs text-tech-200">
+ <div className="px-3 py-1.5 rounded-lg bg-gray-50 border border-gray-200 text-xs text-gray-700">
  <span className="text-emerald-400 font-semibold">DALL-E 3</span> — Included in ChatGPT Plus $20/mo
  </div>
- <div className="px-3 py-1.5 rounded-lg bg-tech-700/60 border border-tech-500/20 text-xs text-tech-200">
+ <div className="px-3 py-1.5 rounded-lg bg-gray-50 border border-gray-200 text-xs text-gray-700">
  Midjourney: best aesthetics · DALL-E 3: best text + API
  </div>
  </div>
@@ -444,7 +444,7 @@ export default function MidjourneyVsDalleCompare() {
 
  {/* ─── Table of Contents ─────────────────────────────────── */}
  <section className="mb-12">
- <div className="bg-tech-800/40 border border-tech-500/20 rounded-xl p-6">
+ <div className="bg-gray-50/40 border border-gray-200 rounded-xl p-6">
  <h2 className="text-sm font-semibold text-white mb-4 flex items-center gap-2">
  <BookOpen className="w-4 h-4 text-purple-400" />
  Table of Contents
@@ -465,7 +465,7 @@ export default function MidjourneyVsDalleCompare() {
  <a
  key={item.href}
  href={item.href}
- className="flex items-center gap-2 text-sm text-tech-300 hover:text-purple-300 transition px-3 py-2 rounded-lg hover:bg-tech-700/40"
+ className="flex items-center gap-2 text-sm text-gray-600 hover:text-purple-300 transition px-3 py-2 rounded-lg hover:bg-white/40"
  >
  <ChevronRight className="w-3 h-3 shrink-0" />
  {item.label}
@@ -484,14 +484,14 @@ export default function MidjourneyVsDalleCompare() {
 
  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
  {/* Midjourney */}
- <div className="rounded-xl bg-tech-800/50 border border-purple-500/30 p-6">
+ <div className="rounded-xl bg-gray-50/50 border border-purple-500/30 p-6">
  <div className="flex items-center gap-3 mb-4">
  <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
  <Palette className="w-5 h-5 text-purple-300" />
  </div>
  <div>
  <h3 className="text-lg font-bold text-white">Midjourney</h3>
- <p className="text-xs text-tech-400">V6 — Discord + Web Alpha</p>
+ <p className="text-xs text-gray-400">V6 — Discord + Web Alpha</p>
  </div>
  </div>
  <div className="space-y-2.5">
@@ -507,14 +507,14 @@ export default function MidjourneyVsDalleCompare() {
  </div>
 
  {/* DALL-E 3 */}
- <div className="rounded-xl bg-tech-800/50 border border-emerald-500/30 p-6">
+ <div className="rounded-xl bg-gray-50/50 border border-emerald-500/30 p-6">
  <div className="flex items-center gap-3 mb-4">
  <div className="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center">
  <Sparkles className="w-5 h-5 text-emerald-400" />
  </div>
  <div>
  <h3 className="text-lg font-bold text-white">DALL-E 3</h3>
- <p className="text-xs text-tech-400">OpenAI — ChatGPT + API</p>
+ <p className="text-xs text-gray-400">OpenAI — ChatGPT + API</p>
  </div>
  </div>
  <div className="space-y-2.5">
@@ -530,8 +530,8 @@ export default function MidjourneyVsDalleCompare() {
  </div>
  </div>
 
- <div className="mt-6 p-4 rounded-lg bg-tech-800/30 border border-tech-500/20">
- <p className="text-sm text-tech-200 text-center">
+ <div className="mt-6 p-4 rounded-lg bg-gray-50/30 border border-gray-200">
+ <p className="text-sm text-gray-700 text-center">
  <strong className="text-purple-300">Midjourney</strong> wins on: image quality, style control, creative control ·{' '}
  <strong className="text-emerald-400">DALL-E 3</strong> wins on: text rendering, editing, speed, accessibility, affordability ·{' '}
  <strong className="text-white">Tie</strong> on: character consistency
@@ -551,20 +551,20 @@ export default function MidjourneyVsDalleCompare() {
  <h2 className="text-2xl font-bold text-white">{section.category}</h2>
  </div>
 
- <div className="overflow-x-auto rounded-xl border border-tech-500/20">
+ <div className="overflow-x-auto rounded-xl border border-gray-200">
  <table className="w-full text-sm">
  <thead>
- <tr className="bg-tech-800/80">
- <th className="text-left px-4 py-3 text-tech-200 font-semibold border-b border-tech-500/20 w-[25%]">
+ <tr className="bg-gray-50/80">
+ <th className="text-left px-4 py-3 text-gray-700 font-semibold border-b border-gray-200 w-[25%]">
  Aspect
  </th>
- <th className="text-left px-4 py-3 text-purple-300 font-semibold border-b border-tech-500/20 w-[30%]">
+ <th className="text-left px-4 py-3 text-purple-300 font-semibold border-b border-gray-200 w-[30%]">
  Midjourney
  </th>
- <th className="text-left px-4 py-3 text-emerald-400 font-semibold border-b border-tech-500/20 w-[30%]">
+ <th className="text-left px-4 py-3 text-emerald-400 font-semibold border-b border-gray-200 w-[30%]">
  DALL-E 3
  </th>
- <th className="text-left px-4 py-3 text-tech-400 font-semibold border-b border-tech-500/20 w-[15%]">
+ <th className="text-left px-4 py-3 text-gray-400 font-semibold border-b border-gray-200 w-[15%]">
  Winner
  </th>
  </tr>
@@ -573,11 +573,11 @@ export default function MidjourneyVsDalleCompare() {
  {section.items.map((row, i) => (
  <tr
  key={row.label}
- className={i % 2 === 0 ? 'bg-tech-900/40' : 'bg-tech-800/20'}
+ className={i % 2 === 0 ? 'bg-white/40' : 'bg-gray-50/20'}
  >
- <td className="px-4 py-3 text-tech-200 font-medium">{row.label}</td>
- <td className="px-4 py-3 text-tech-300">{row.midjourney}</td>
- <td className="px-4 py-3 text-tech-300">{row.dalle}</td>
+ <td className="px-4 py-3 text-gray-700 font-medium">{row.label}</td>
+ <td className="px-4 py-3 text-gray-600">{row.midjourney}</td>
+ <td className="px-4 py-3 text-gray-600">{row.dalle}</td>
  <td className="px-4 py-3">
  <WinnerBadge winner={row.winner} />
  </td>
@@ -600,7 +600,7 @@ export default function MidjourneyVsDalleCompare() {
  {USE_CASES.map((uc) => (
  <div
  key={uc.title}
- className="rounded-xl bg-tech-800/40 border border-tech-500/20 p-6 hover:border-purple-500/30 transition"
+ className="rounded-xl bg-gray-50/40 border border-gray-200 p-6 hover:border-purple-500/30 transition"
  >
  <div className="flex items-start gap-4">
  <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center shrink-0">
@@ -609,7 +609,7 @@ export default function MidjourneyVsDalleCompare() {
  <div className="flex-1 min-w-0">
  <h3 className="text-lg font-semibold text-white mb-1">{uc.title}</h3>
  <p className="text-sm text-purple-300 font-medium mb-2">{uc.verdict}</p>
- <p className="text-sm text-tech-300 leading-relaxed">{uc.details}</p>
+ <p className="text-sm text-gray-600 leading-relaxed">{uc.details}</p>
  </div>
  <div className="shrink-0">
  <span
@@ -639,8 +639,8 @@ export default function MidjourneyVsDalleCompare() {
 
  {/* ─── Recommendation ──────────────────────────────────────── */}
  <section id="recommendation" className="mb-12 scroll-mt-20">
- <div className="relative rounded-2xl bg-gradient-to-br from-purple-500/10 via-tech-800 to-fuchsia-500/5 border border-tech-500/30 p-8 sm:p-10 overflow-hidden">
- <div className="absolute inset-0 bg-tech-grid opacity-20" />
+ <div className="relative rounded-2xl bg-gradient-to-br from-purple-500/10 via-tech-800 to-fuchsia-500/5 border border-gray-200 p-8 sm:p-10 overflow-hidden">
+ <div className="absolute inset-0 bg-gray-50 opacity-20" />
  <div className="relative">
  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-medium mb-4">
  <Shield className="w-3.5 h-3.5" />
@@ -651,7 +651,7 @@ export default function MidjourneyVsDalleCompare() {
  </h2>
 
  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
- <div className="rounded-xl bg-tech-800/60 border border-purple-500/20 p-5">
+ <div className="rounded-xl bg-gray-50/60 border border-purple-500/20 p-5">
  <div className="flex items-center gap-2 mb-3">
  <Palette className="w-5 h-5 text-purple-300" />
  <h3 className="text-base font-bold text-white">Choose Midjourney if you:</h3>
@@ -664,7 +664,7 @@ export default function MidjourneyVsDalleCompare() {
  'Need consistent brand visuals with style parameter control',
  'Are willing to learn Discord-based workflows and MJ parameters',
  ].map((item) => (
- <li key={item} className="flex items-start gap-2 text-sm text-tech-200">
+ <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
  <CheckCircle2 className="w-4 h-4 text-purple-300 mt-0.5 shrink-0" />
  {item}
  </li>
@@ -672,7 +672,7 @@ export default function MidjourneyVsDalleCompare() {
  </ul>
  </div>
 
- <div className="rounded-xl bg-tech-800/60 border border-emerald-500/20 p-5">
+ <div className="rounded-xl bg-gray-50/60 border border-emerald-500/20 p-5">
  <div className="flex items-center gap-2 mb-3">
  <Sparkles className="w-5 h-5 text-emerald-400" />
  <h3 className="text-base font-bold text-white">Choose DALL-E 3 if you:</h3>
@@ -685,7 +685,7 @@ export default function MidjourneyVsDalleCompare() {
  'Prefer faster generation (5-10 seconds vs 1 minute)',
  'Already use ChatGPT Plus and want image gen included',
  ].map((item) => (
- <li key={item} className="flex items-start gap-2 text-sm text-tech-200">
+ <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
  <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
  {item}
  </li>
@@ -695,12 +695,12 @@ export default function MidjourneyVsDalleCompare() {
  </div>
 
  {/* Bottom line */}
- <div className="bg-tech-900/60 border border-tech-500/30 rounded-xl p-5">
+ <div className="bg-white/60 border border-gray-200 rounded-xl p-5">
  <h3 className="text-base font-bold text-white mb-2 flex items-center gap-2">
  <Star className="w-5 h-5 text-yellow-400" />
  The Smartest Setup
  </h3>
- <p className="text-sm text-tech-200 leading-relaxed">
+ <p className="text-sm text-gray-700 leading-relaxed">
  Use <strong className="text-purple-300">both</strong>. Midjourney for your
  hero images, concept art, and any visual where beauty matters more than text.
  DALL-E 3 for text-in-image workflows, quick iterations, and API-integrated
@@ -723,13 +723,13 @@ export default function MidjourneyVsDalleCompare() {
  {FAQS.map((faq, i) => (
  <details
  key={i}
- className="group rounded-xl bg-tech-800/40 border border-tech-500/20 overflow-hidden"
+ className="group rounded-xl bg-gray-50/40 border border-gray-200 overflow-hidden"
  >
  <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-medium text-white hover:text-purple-300 transition list-none">
  {faq.q}
- <ChevronRight className="w-4 h-4 text-tech-400 group-open:rotate-90 transition shrink-0" />
+ <ChevronRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition shrink-0" />
  </summary>
- <div className="px-5 pb-4 text-sm text-tech-300 leading-relaxed border-t border-tech-500/10 pt-3">
+ <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-200 pt-3">
  {faq.a}
  </div>
  </details>
@@ -746,7 +746,7 @@ export default function MidjourneyVsDalleCompare() {
  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
  <Link
  href="/compare/gemini-vs-chatgpt"
- className="group rounded-xl bg-tech-800/40 border border-blue-500/20 p-5 hover:border-blue-500/40 transition"
+ className="group rounded-xl bg-gray-50/40 border border-blue-500/20 p-5 hover:border-blue-500/40 transition"
  >
  <div className="flex items-center gap-3 mb-2">
  <Globe className="w-5 h-5 text-blue-300" />
@@ -754,13 +754,13 @@ export default function MidjourneyVsDalleCompare() {
  Gemini vs ChatGPT
  </h3>
  </div>
- <p className="text-xs text-tech-400">
+ <p className="text-xs text-gray-400">
  Google AI vs OpenAI's flagship — pricing, multimodal, ecosystem.
  </p>
  </Link>
  <Link
  href="/compare/deepseek-vs-chatgpt"
- className="group rounded-xl bg-tech-800/40 border border-neon/20 p-5 hover:border-neon/40 transition"
+ className="group rounded-xl bg-gray-50/40 border border-neon/20 p-5 hover:border-neon/40 transition"
  >
  <div className="flex items-center gap-3 mb-2">
  <Zap className="w-5 h-5 text-neon-light" />
@@ -768,7 +768,7 @@ export default function MidjourneyVsDalleCompare() {
  DeepSeek vs ChatGPT
  </h3>
  </div>
- <p className="text-xs text-tech-400">
+ <p className="text-xs text-gray-400">
  Open-source vs closed-source — coding, pricing, Asian languages.
  </p>
  </Link>
@@ -776,9 +776,9 @@ export default function MidjourneyVsDalleCompare() {
  </section>
 
  {/* ─── CTA ──────────────────────────────────────────────── */}
- <section className="rounded-xl bg-tech-800/60 border border-dashed border-tech-500/30 p-8 text-center">
+ <section className="rounded-xl bg-gray-50/60 border border-dashed border-gray-200 p-8 text-center">
  <h2 className="text-xl font-bold text-white mb-2">Still deciding?</h2>
- <p className="text-sm text-tech-300 max-w-md mx-auto mb-4">
+ <p className="text-sm text-gray-600 max-w-md mx-auto mb-4">
  Browse our full directory of AI tools with Asia-ready filters and editorial rankings.
  </p>
  <div className="flex flex-wrap items-center justify-center gap-3">
@@ -791,7 +791,7 @@ export default function MidjourneyVsDalleCompare() {
  </Link>
  <Link
  href="/compare"
- className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-tech-500/40 text-tech-200 hover:text-white hover:border-purple-500/40 text-sm font-medium transition"
+ className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-gray-200 text-gray-700 hover:text-white hover:border-purple-500/40 text-sm font-medium transition"
  >
  View all comparisons
  <BarChart3 className="w-4 h-4" />

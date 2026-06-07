@@ -20,6 +20,7 @@ interface BlogPost {
  slug: string;
  title: string;
  date: string;
+ updatedAt?: string;
 }
 
 interface Playbook {
@@ -149,6 +150,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
  { url: `${BASE_URL}/privacy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
  { url: `${BASE_URL}/terms`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
+ { url: `${BASE_URL}/affiliate-disclosure`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
  { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
  { url: `${BASE_URL}/playbooks`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
  { url: `${BASE_URL}/premium`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
@@ -255,10 +257,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
  } catch { return []; }
  })();
 
- // Blog detail pages — use actual publish date for lastModified
+ // Blog detail pages — use updatedAt ?? date for lastModified
  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post): MetadataRoute.Sitemap[number] => ({
  url: `${BASE_URL}/blog/${post.slug}`,
- lastModified: new Date(post.date || Date.now()),
+ lastModified: new Date(post.updatedAt || post.date || Date.now()),
  changeFrequency: 'monthly',
  priority: 0.6,
  }));

@@ -18,8 +18,8 @@ export default function SuccessStoriesPage() {
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
  {/* Hero */}
  <section className="relative mb-10 sm:mb-12">
- <div className="absolute inset-0 bg-tech-grid opacity-30 rounded-2xl" />
- <div className="relative rounded-2xl bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-tech-800 border border-tech-500/30 p-8 sm:p-12">
+ <div className="absolute inset-0 bg-gray-50 opacity-30 rounded-2xl" />
+ <div className="relative rounded-2xl bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-tech-800 border border-gray-200 p-8 sm:p-12">
  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-4">
  <Trophy className="w-3.5 h-3.5" />
  Community Success
@@ -30,7 +30,7 @@ export default function SuccessStoriesPage() {
  Real People
  </span>
  </h1>
- <p className="text-sm sm:text-base text-tech-100/70 max-w-2xl mb-6">
+ <p className="text-sm sm:text-base text-gray-800/70 max-w-2xl mb-6">
  See what others have achieved by following our AI playbooks. Revenue numbers, traffic
  growth, productivity gains — all verified by our editorial team.
  </p>
@@ -45,14 +45,14 @@ export default function SuccessStoriesPage() {
  </Link>
  <Link
  href="/revenue"
- className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-tech-600 hover:bg-tech-500 text-white text-sm font-medium transition"
+ className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-white text-sm font-medium transition"
  >
  Revenue Leaderboard
  <TrendingUp className="w-4 h-4" />
  </Link>
  <Link
  href="/playbooks"
- className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-tech-600 hover:bg-tech-500 text-white text-sm font-medium transition"
+ className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-white text-sm font-medium transition"
  >
  Browse Playbooks
  <Sparkles className="w-4 h-4" />

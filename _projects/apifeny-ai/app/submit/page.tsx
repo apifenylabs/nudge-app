@@ -18,7 +18,7 @@ export default function SubmitPage() {
  <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
  Submit an AI Tool
  </h1>
- <p className="text-sm sm:text-base text-tech-200 max-w-lg mx-auto">
+ <p className="text-sm sm:text-base text-gray-700 max-w-lg mx-auto">
  Help us grow the largest AI tools directory for Asia. Submit your tool or a tool
  you love, and we&apos;ll review it for inclusion in our curated collection.
  </p>
@@ -37,7 +37,7 @@ export default function SubmitPage() {
  </div>
 
  {/* Form */}
- <div className="rounded-xl border border-tech-500/30 bg-tech-700/50 p-6 sm:p-8">
+ <div className="rounded-xl border border-gray-200 bg-gray-50/50 p-6 sm:p-8">
  <SubmitToolForm />
  </div>
  </div>

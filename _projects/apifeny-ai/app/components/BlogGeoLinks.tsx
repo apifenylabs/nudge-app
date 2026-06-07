@@ -80,13 +80,13 @@ export default function BlogGeoLinks({ postSlug, postTags }: Props) {
  const matchedPages = GEO_PAGES.filter(g => matchedGeoSlugs.has(g.slug));
 
  return (
- <section className="border-t border-tech-500/20 bg-tech-800/30 mt-12">
+ <section className="border-t border-gray-200 bg-gray-50/30 mt-12">
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="flex items-center gap-2 mb-8">
  <Globe className="w-5 h-5 text-neon" />
  <h2 className="text-2xl font-bold text-white">Region-Specific AI Guides</h2>
  </div>
- <p className="text-tech-300 text-sm mb-6">
+ <p className="text-gray-600 text-sm mb-6">
  Looking for AI tools tailored to your market? Check out our country-specific guides:
  </p>
 
@@ -95,7 +95,7 @@ export default function BlogGeoLinks({ postSlug, postTags }: Props) {
  <Link
  key={geo.slug}
  href={`/${geo.slug}`}
- className="group bg-tech-800/40 border border-tech-500/20 rounded-xl p-5 hover:border-neon/30 transition-all"
+ className="group bg-gray-50/40 border border-gray-200 rounded-xl p-5 hover:border-neon/30 transition-all"
  >
  <div className="flex items-center gap-3 mb-2">
  <span className="text-2xl">{geo.flag}</span>
@@ -103,7 +103,7 @@ export default function BlogGeoLinks({ postSlug, postTags }: Props) {
  AI Tools for {geo.name}
  </h3>
  </div>
- <p className="text-xs text-tech-400">
+ <p className="text-xs text-gray-400">
  Curated AI tools ranked for {geo.name}&apos;s market — with local pricing, 
  language support, and region-specific compliance info.
  </p>

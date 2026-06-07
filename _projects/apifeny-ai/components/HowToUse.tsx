@@ -28,8 +28,8 @@ const PIPELINE_META: Record<string, { label: string; color: string; icon: string
  research: { label: 'Research & Analysis', color: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30', icon: '🔍' },
  content: { label: 'Content Creation', color: 'bg-rose-500/20 text-rose-400 border-rose-500/30', icon: '📝' },
  design: { label: 'Design & Creative', color: 'bg-fuchsia-500/20 text-fuchsia-400 border-fuchsia-500/30', icon: '🎨' },
- testing: { label: 'Testing & QA', color: 'bg-amber-500/20 text-amber-400 border-amber-500/30', icon: '🧪' },
- marketing: { label: 'Marketing & Growth', color: 'bg-orange-500/20 text-orange-400 border-orange-500/30', icon: '📊' },
+ testing: { label: 'Testing & QA', color: 'bg-amber-100 text-amber-700 border-amber-200', icon: '🧪' },
+ marketing: { label: 'Marketing & Growth', color: 'bg-orange-100 text-orange-700 border-orange-200', icon: '📊' },
  'all-rounder': { label: 'All-Rounder', color: 'bg-neon/20 text-neon-light border-neon/30', icon: '⚡' },
 };
 

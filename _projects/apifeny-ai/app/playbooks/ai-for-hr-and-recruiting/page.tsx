@@ -133,16 +133,16 @@ function CheckoutOverlay({ onBack }: { onBack: () => void }) {
  };
  return (
  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
- <div className="relative max-w-md w-full bg-tech-800 border border-tech-500/30 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-neon/10">
- <button onClick={onBack} className="absolute top-4 right-4 text-tech-300 hover:text-white transition" aria-label="Close">
+ <div className="relative max-w-md w-full bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-neon/10">
+ <button onClick={onBack} className="absolute top-4 right-4 text-gray-600 hover:text-white transition" aria-label="Close">
  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
  </button>
  <div className="text-center mb-6">
  <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center mb-4"><Users className="w-8 h-8 text-white" /></div>
  <h3 className="text-xl font-bold text-white mb-1">AI for HR &amp; Recruiting</h3>
- <p className="text-sm text-tech-200 mb-1">Complete PDF Playbook</p>
+ <p className="text-sm text-gray-700 mb-1">Complete PDF Playbook</p>
  <div className="mt-3 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-neon/15 border border-neon/20">
- <DollarSign className="w-4 h-4 text-neon-light" /><span className="text-lg font-bold text-white">$9</span><span className="text-xs text-tech-200">one-time</span>
+ <DollarSign className="w-4 h-4 text-neon-light" /><span className="text-lg font-bold text-white">$9</span><span className="text-xs text-gray-700">one-time</span>
  </div>
  </div>
  {status === 'success' ? (
@@ -154,16 +154,16 @@ function CheckoutOverlay({ onBack }: { onBack: () => void }) {
  ) : (
  <form onSubmit={handlePurchase} className="space-y-4">
  <div>
- <label htmlFor="ce" className="block text-sm font-medium text-tech-200 mb-1">Email</label>
+ <label htmlFor="ce" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
  <input id="ce" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="your@email.com" required
- className="w-full bg-tech-900 border border-tech-500/50 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/60 focus:ring-1 focus:ring-neon/20 transition" />
+ className="w-full bg-white border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-neon/60 focus:ring-1 focus:ring-neon/20 transition" />
  </div>
  <button type="submit" disabled={loading}
  className="w-full py-3 rounded-xl bg-gradient-to-r from-neon to-aqua text-white font-semibold text-sm hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
  {loading ? <><svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg> Processing...</> : <><Download className="w-4 h-4" /> Download PDF — $9</>}
  </button>
  {status === 'error' && <p className="text-xs text-red-400 text-center">{message}</p>}
- <p className="text-[10px] text-tech-300 text-center">Secure checkout. Instant download.</p>
+ <p className="text-[10px] text-gray-600 text-center">Secure checkout. Instant download.</p>
  </form>
  )}
  </div>
@@ -178,37 +178,37 @@ function AiForHrAndRecruitingInner() {
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
  <SeoMetadata title="AI for HR & Recruiting — Apifeny" description="Revolutionize your HR workflows with AI: automated resume screening, structured interview guides, personalized onboarding, and employee sentiment analysis." />
  <nav aria-label="Breadcrumb" className="mb-4">
- <ol className="flex flex-wrap items-center gap-1.5 text-xs text-tech-300">
+ <ol className="flex flex-wrap items-center gap-1.5 text-xs text-gray-600">
  <li><Link href="/" className="hover:text-white transition">Home</Link></li>
- <li className="text-tech-500">/</li>
+ <li className="text-gray-500">/</li>
  <li><Link href="/playbooks" className="hover:text-white transition">Playbooks</Link></li>
- <li className="text-tech-100 truncate max-w-[200px]">AI for HR &amp; Recruiting</li>
+ <li className="text-gray-800 truncate max-w-[200px]">AI for HR &amp; Recruiting</li>
  </ol>
  </nav>
- <Link href="/playbooks" className="inline-flex items-center gap-1.5 text-sm text-tech-200 hover:text-white transition mb-6 group"><ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition" /> All Playbooks</Link>
+ <Link href="/playbooks" className="inline-flex items-center gap-1.5 text-sm text-gray-700 hover:text-white transition mb-6 group"><ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition" /> All Playbooks</Link>
 
  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-violet-500/25 via-purple-500/15 to-tech-800 border border-violet-500/20 mb-8 sm:mb-10">
- <div className="absolute inset-0 bg-tech-grid opacity-30" />
+ <div className="absolute inset-0 bg-gray-50 opacity-30" />
  <div className="absolute top-0 right-0 w-96 h-96 bg-violet-500/10 rounded-full blur-[120px] pointer-events-none" />
  <div className="absolute bottom-0 left-0 w-64 h-64 bg-violet-500/10 rounded-full blur-[100px] pointer-events-none" />
  <div className="relative p-6 sm:p-8 lg:p-10">
  <div className="flex items-center gap-2 mb-3">
  <span className="text-3xl">👥</span>
- <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-500/20 text-amber-400 border border-amber-500/30">Premium</span>
+ <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-100 text-amber-700 border-amber-200 border border-amber-500/30">Premium</span>
  </div>
  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">AI for HR &amp; Recruiting</h1>
- <p className="text-sm sm:text-base text-tech-100 max-w-2xl mb-4 leading-relaxed">Revolutionize your HR workflows with AI: automated resume screening, structured interview guides, personalized onboarding, performance review drafting, and employee sentiment analysis. Designed for HR professionals, recruiters, and team leads.</p>
+ <p className="text-sm sm:text-base text-gray-800 max-w-2xl mb-4 leading-relaxed">Revolutionize your HR workflows with AI: automated resume screening, structured interview guides, personalized onboarding, performance review drafting, and employee sentiment analysis. Designed for HR professionals, recruiters, and team leads.</p>
  <div className="flex flex-wrap gap-3 mb-4">
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600 text-tech-100 border border-tech-500/30"><FileText className="w-3 h-3" /> 40+ pages</span>
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600 text-tech-100 border border-tech-500/30"><Clock className="w-3 h-3" /> 8 chapters</span>
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600 text-tech-100 border border-tech-500/30"><Sparkles className="w-3 h-3" /> 5+ AI prompts</span>
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600 text-tech-100 border border-tech-500/30"><Globe className="w-3 h-3" /> Updated June 2026</span>
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800 border border-gray-200"><FileText className="w-3 h-3" /> 40+ pages</span>
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800 border border-gray-200"><Clock className="w-3 h-3" /> 8 chapters</span>
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800 border border-gray-200"><Sparkles className="w-3 h-3" /> 5+ AI prompts</span>
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800 border border-gray-200"><Globe className="w-3 h-3" /> Updated June 2026</span>
  </div>
  <div className="flex flex-wrap items-center gap-3">
  <button onClick={() => setShowCheckout(true)} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-neon to-aqua text-white font-semibold text-sm hover:opacity-90 transition hover:-translate-y-0.5 shadow-lg shadow-neon/20"><Download className="w-4 h-4" /> Download PDF — $9</button>
- <a href="#preview" className="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-tech-700 border border-tech-500/30 text-tech-100 text-sm font-medium hover:text-white hover:border-neon/30 transition"><BookOpen className="w-4 h-4" /> Preview</a>
+ <a href="#preview" className="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-white border border-gray-200 text-gray-800 text-sm font-medium hover:text-white hover:border-neon/30 transition"><BookOpen className="w-4 h-4" /> Preview</a>
  </div>
- <div className="mt-4 flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-tech-200">
+ <div className="mt-4 flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-gray-700">
  <span className="flex items-center gap-1.5"><Sparkles className="w-3.5 h-3.5 text-amber-400 shrink-0" /> Used by 100+ HR teams</span>
  <span className="flex items-center gap-1.5"><Shield className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> 30-Day Guarantee — save 10x or refund</span>
  </div>
@@ -247,7 +247,7 @@ Please give me:
  const ICON = item.icon; return (
  <div key={i} className="flex items-start gap-3 p-4 rounded-xl border border-violet-500/20 bg-violet-500/10">
  <div className="w-10 h-10 rounded-lg bg-violet-500/10 flex items-center justify-center shrink-0"><ICON className="w-5 h-5 text-violet-400" /></div>
- <div><p className="text-sm font-medium text-white">{item.text}</p><p className="text-xs text-tech-300 mt-0.5">{item.subtext}</p></div>
+ <div><p className="text-sm font-medium text-white">{item.text}</p><p className="text-xs text-gray-600 mt-0.5">{item.subtext}</p></div>
  </div>
  );})}
  </div>
@@ -256,19 +256,19 @@ Please give me:
 
  <section className="mb-8 sm:mb-10">
  <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><SearchIcon className="w-4 h-4 text-amber-400" /> Chapter Preview</h2>
- <p className="text-sm text-tech-200 mb-6">Here&apos;s everything covered. Each chapter is packed with actionable strategies and ready-to-use prompts.</p>
+ <p className="text-sm text-gray-700 mb-6">Here&apos;s everything covered. Each chapter is packed with actionable strategies and ready-to-use prompts.</p>
  <div className="space-y-4">
  {sections.map((section) => (
- <details key={section.id} className="group rounded-xl border border-tech-500/20 bg-tech-700/50 overflow-hidden transition hover:border-violet-500/20">
+ <details key={section.id} className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-violet-500/20">
  <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none">
  <div className="flex items-center gap-3 min-w-0">
- <div className="w-10 h-10 rounded-lg bg-tech-600 flex items-center justify-center shrink-0">{section.icon}</div>
- <div className="min-w-0"><h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-violet-300 transition">{section.title}</h3><p className="text-xs text-tech-300 mt-0.5 line-clamp-1">{section.description}</p></div>
+ <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center shrink-0">{section.icon}</div>
+ <div className="min-w-0"><h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-violet-300 transition">{section.title}</h3><p className="text-xs text-gray-600 mt-0.5 line-clamp-1">{section.description}</p></div>
  </div>
- <ChevronRight className="w-5 h-5 text-tech-300 shrink-0 transition-transform group-open:rotate-90" />
+ <ChevronRight className="w-5 h-5 text-gray-600 shrink-0 transition-transform group-open:rotate-90" />
  </summary>
- <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-tech-500/10 pt-3">
- <ul className="space-y-2">{section.items.map((item, i) => (<li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-tech-100"><CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />{item}</li>))}</ul>
+ <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-200 pt-3">
+ <ul className="space-y-2">{section.items.map((item, i) => (<li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-gray-800"><CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />{item}</li>))}</ul>
  </div>
  </details>
  ))}
@@ -282,7 +282,7 @@ Please give me:
  <div key={i} className={'flex flex-col items-center text-center p-4 sm:p-5 rounded-xl border ' + item.border + ' ' + item.bg}>
  <div className={'w-10 h-10 rounded-lg ' + item.bg + ' flex items-center justify-center mb-2'}><Icon className={'w-5 h-5 ' + item.color} /></div>
  <div className={'text-xl sm:text-2xl font-bold ' + item.color}>{item.value}</div>
- <div className="text-xs text-tech-200 mt-1">{item.label}</div>
+ <div className="text-xs text-gray-700 mt-1">{item.label}</div>
  </div>
  );})}
  </div>
@@ -292,10 +292,10 @@ Please give me:
  <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Star className="w-4 h-4 text-amber-400" /> Reviews</h2>
  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
  {testimonials.map((t, i) => (
- <div key={i} className="flex flex-col p-5 rounded-xl border border-tech-500/20 bg-tech-700/60">
+ <div key={i} className="flex flex-col p-5 rounded-xl border border-gray-200 bg-gray-50">
  <div className="flex items-center gap-0.5 mb-3">{Array.from({ length: t.stars }).map((_, si) => (<Star key={si} className="w-4 h-4 text-amber-400 fill-amber-400" />))}</div>
- <blockquote className="text-xs sm:text-sm text-tech-100 leading-relaxed mb-3 flex-1">&ldquo;{t.quote}&rdquo;</blockquote>
- <div className="border-t border-tech-500/10 pt-3 mt-auto"><div className="text-sm font-medium text-white">{t.name}</div><div className="text-xs text-tech-300">{t.title}</div></div>
+ <blockquote className="text-xs sm:text-sm text-gray-800 leading-relaxed mb-3 flex-1">&ldquo;{t.quote}&rdquo;</blockquote>
+ <div className="border-t border-gray-200 pt-3 mt-auto"><div className="text-sm font-medium text-white">{t.name}</div><div className="text-xs text-gray-600">{t.title}</div></div>
  </div>
  ))}
  </div>
@@ -308,21 +308,21 @@ Please give me:
  <div key={i} className="relative flex flex-col p-5 rounded-xl border border-amber-500/20 bg-amber-500/5">
  <div className="absolute -top-2 right-3"><span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">FREE</span></div>
  <div className="text-base font-semibold text-white mb-1 pr-12">{b.name}</div>
- <p className="text-xs text-tech-200 mb-2">{b.desc}</p>
- <div className="flex items-center gap-2 mt-auto"><span className="text-lg font-bold text-emerald-400">$0</span><span className="text-xs text-tech-300 line-through">{b.value}</span></div>
+ <p className="text-xs text-gray-700 mb-2">{b.desc}</p>
+ <div className="flex items-center gap-2 mt-auto"><span className="text-lg font-bold text-emerald-400">$0</span><span className="text-xs text-gray-600 line-through">{b.value}</span></div>
  </div>
  ))}
  </div>
  </section>
 
  <section className="mb-8 sm:mb-10">
- <div className="relative overflow-hidden rounded-2xl border border-tech-500/20 bg-tech-700/60 p-6 sm:p-8 text-center">
+ <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8 text-center">
  <div className="relative">
  <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center justify-center gap-2"><Clock className="w-5 h-5 text-cyan-400" /> Price Increasing Soon</h2>
  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-4">
- <div className="text-center"><div className="text-3xl sm:text-4xl font-bold text-neon-light">$9</div><div className="text-xs text-tech-300">Current</div></div>
- <div className="hidden sm:block text-2xl text-tech-500">&rarr;</div>
- <div className="text-center"><div className="text-2xl sm:text-3xl font-bold text-tech-300 line-through">$18</div><div className="text-xs text-tech-300">Next tier</div></div>
+ <div className="text-center"><div className="text-3xl sm:text-4xl font-bold text-neon-light">$9</div><div className="text-xs text-gray-600">Current</div></div>
+ <div className="hidden sm:block text-2xl text-gray-500">&rarr;</div>
+ <div className="text-center"><div className="text-2xl sm:text-3xl font-bold text-gray-600 line-through">$18</div><div className="text-xs text-gray-600">Next tier</div></div>
  </div>
  <button onClick={() => setShowCheckout(true)} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-neon to-aqua text-white font-semibold text-sm hover:opacity-90 transition shadow-lg shadow-neon/20"><ShoppingCart className="w-4 h-4" /> Buy Now at $9</button>
  </div>
@@ -333,13 +333,13 @@ Please give me:
  <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center gap-2"><Lightbulb className="w-4 h-4 text-cyan-400" /> FAQ</h2>
  <div className="space-y-3">
  {faqItems.map((faq, i) => (
- <details key={i} className="group rounded-xl border border-tech-500/20 bg-tech-700/50 overflow-hidden transition hover:border-violet-500/20">
+ <details key={i} className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-violet-500/20">
  <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none">
  <span className="text-sm sm:text-base font-medium text-white group-hover:text-violet-300 transition pr-4">{faq.q}</span>
- <ChevronRight className="w-5 h-5 text-tech-300 shrink-0 transition-transform group-open:rotate-90" />
+ <ChevronRight className="w-5 h-5 text-gray-600 shrink-0 transition-transform group-open:rotate-90" />
  </summary>
- <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-tech-500/10 pt-3">
- <p className="text-xs sm:text-sm text-tech-200 leading-relaxed">{faq.a}</p>
+ <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-200 pt-3">
+ <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">{faq.a}</p>
  </div>
  </details>
  ))}
@@ -350,7 +350,7 @@ Please give me:
  <div className="relative">
  <Shield className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
  <h2 className="text-lg sm:text-xl font-bold text-white mb-2">30-Day Money-Back Guarantee</h2>
- <p className="text-sm text-tech-200 max-w-lg mx-auto mb-4">If the AI for HR &amp; Recruiting playbook doesn&apos;t help you reduce time-to-hire by at least 30% within 30 days, I&apos;ll refund every cent. No questions asked.</p>
+ <p className="text-sm text-gray-700 max-w-lg mx-auto mb-4">If the AI for HR &amp; Recruiting playbook doesn&apos;t help you reduce time-to-hire by at least 30% within 30 days, I&apos;ll refund every cent. No questions asked.</p>
  <button onClick={() => setShowCheckout(true)} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-neon to-aqua text-white font-semibold text-sm hover:opacity-90 transition shadow-lg shadow-neon/20">
  <Download className="w-4 h-4" /> Download PDF — $9
  </button>
@@ -365,7 +365,7 @@ Please give me:
 
 export default function AiForHrAndRecruitingPage() {
  return (
- <Suspense fallback={<div className="max-w-5xl mx-auto px-4 py-8"><div className="animate-pulse space-y-4"><div className="h-4 bg-tech-700 rounded w-1/4" /><div className="h-8 bg-tech-700 rounded w-3/4" /><div className="h-64 bg-tech-700 rounded" /></div></div>}>
+ <Suspense fallback={<div className="max-w-5xl mx-auto px-4 py-8"><div className="animate-pulse space-y-4"><div className="h-4 bg-white rounded w-1/4" /><div className="h-8 bg-white rounded w-3/4" /><div className="h-64 bg-white rounded" /></div></div>}>
  <AiForHrAndRecruitingInner />
  </Suspense>
  );

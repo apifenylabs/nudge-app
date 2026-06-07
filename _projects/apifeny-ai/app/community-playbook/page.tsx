@@ -85,8 +85,8 @@ function CommunityPlaybookCard({
  const shareLinks = getShareLinks(playbook);
 
  return (
- <div className="group relative rounded-xl border border-tech-500/30 bg-tech-700/80 p-5 hover:border-neon/40 transition-all hover:-translate-y-1">
- <div className="absolute inset-0 bg-tech-grid opacity-20 rounded-xl pointer-events-none" />
+ <div className="group relative rounded-xl border border-gray-200 bg-white p-5 hover:border-neon/40 transition-all hover:-translate-y-1">
+ <div className="absolute inset-0 bg-gray-50 opacity-20 rounded-xl pointer-events-none" />
  <div className="relative">
  {/* Header */}
  <div className="flex items-start justify-between mb-3">
@@ -100,7 +100,7 @@ function CommunityPlaybookCard({
  playbook.difficulty === 'Beginner'
  ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
  : playbook.difficulty === 'Intermediate'
- ? 'bg-amber-500/20 text-amber-400 border-amber-500/30'
+ ? 'bg-amber-100 text-amber-700 border-amber-200'
  : 'bg-neon/20 text-neon-light border-neon/30'
  )}
  >
@@ -113,7 +113,7 @@ function CommunityPlaybookCard({
  </span>
  )}
  </div>
- <span className="text-[10px] text-tech-400 mt-0.5 block">
+ <span className="text-[10px] text-gray-400 mt-0.5 block">
  by {playbook.author.name}
  </span>
  </div>
@@ -131,7 +131,7 @@ function CommunityPlaybookCard({
  'flex items-center gap-1 px-2 py-1 rounded-lg text-xs border transition',
  userVote === 'up'
  ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
- : 'bg-tech-800 text-tech-300 border-tech-500/30 hover:border-emerald-500/30 hover:text-emerald-400'
+ : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-emerald-500/30 hover:text-emerald-400'
  )}
  >
  <ThumbsUp className="w-3 h-3" />
@@ -147,7 +147,7 @@ function CommunityPlaybookCard({
  'flex items-center gap-1 px-2 py-1 rounded-lg text-xs border transition',
  userVote === 'down'
  ? 'bg-rose-500/20 text-rose-400 border-rose-500/30'
- : 'bg-tech-800 text-tech-300 border-tech-500/30 hover:border-rose-500/30 hover:text-rose-400'
+ : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-rose-500/30 hover:text-rose-400'
  )}
  >
  <ThumbsDown className="w-3 h-3" />
@@ -162,7 +162,7 @@ function CommunityPlaybookCard({
  e.stopPropagation();
  setShowShareMenu(!showShareMenu);
  }}
- className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs bg-tech-800 text-tech-300 border border-tech-500/30 hover:border-sky-500/30 hover:text-sky-400 transition"
+ className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs bg-gray-50 text-gray-600 border border-gray-200 hover:border-sky-500/30 hover:text-sky-400 transition"
  >
  <Share2 className="w-3 h-3" />
  {playbook.shares}
@@ -170,7 +170,7 @@ function CommunityPlaybookCard({
 
  {showShareMenu && (
  <div
- className="absolute right-0 top-full mt-1 w-36 rounded-xl border border-tech-500/30 bg-tech-800 shadow-xl shadow-black/30 z-50 overflow-hidden"
+ className="absolute right-0 top-full mt-1 w-36 rounded-xl border border-gray-200 bg-gray-50 shadow-xl shadow-black/30 z-50 overflow-hidden"
  onClick={(e) => e.stopPropagation()}
  >
  <a
@@ -178,7 +178,7 @@ function CommunityPlaybookCard({
  target="_blank"
  rel="noopener noreferrer"
  onClick={() => incrementShareCount(playbook.id)}
- className="flex items-center gap-2 px-3 py-2 text-xs text-tech-200 hover:bg-tech-700 hover:text-white transition"
+ className="flex items-center gap-2 px-3 py-2 text-xs text-gray-700 hover:bg-white hover:text-white transition"
  >
  <Twitter className="w-3.5 h-3.5 text-sky-400" />
  Share on X
@@ -188,7 +188,7 @@ function CommunityPlaybookCard({
  target="_blank"
  rel="noopener noreferrer"
  onClick={() => incrementShareCount(playbook.id)}
- className="flex items-center gap-2 px-3 py-2 text-xs text-tech-200 hover:bg-tech-700 hover:text-white transition"
+ className="flex items-center gap-2 px-3 py-2 text-xs text-gray-700 hover:bg-white hover:text-white transition"
  >
  <Linkedin className="w-3.5 h-3.5 text-blue-400" />
  Share on LinkedIn
@@ -203,7 +203,7 @@ function CommunityPlaybookCard({
  <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
  {playbook.title}
  </h3>
- <p className="text-[11px] text-tech-200 line-clamp-2 mb-3 leading-relaxed">
+ <p className="text-[11px] text-gray-700 line-clamp-2 mb-3 leading-relaxed">
  {playbook.description}
  </p>
 
@@ -220,7 +220,7 @@ function CommunityPlaybookCard({
  {playbook.tags.slice(0, 4).map((tag) => (
  <span
  key={tag}
- className="px-1.5 py-0.5 rounded text-[9px] font-medium bg-tech-800 text-tech-300 border border-tech-500/30"
+ className="px-1.5 py-0.5 rounded text-[9px] font-medium bg-gray-50 text-gray-600 border border-gray-200"
  >
  #{tag}
  </span>
@@ -229,7 +229,7 @@ function CommunityPlaybookCard({
 
  {/* Stats */}
  <div className="flex items-center justify-between">
- <div className="flex items-center gap-3 text-[10px] text-tech-400">
+ <div className="flex items-center gap-3 text-[10px] text-gray-400">
  <span className="flex items-center gap-1">
  <MessageSquare className="w-3 h-3" />
  {playbook.steps.length} steps
@@ -247,7 +247,7 @@ function CommunityPlaybookCard({
  </div>
  <Link
  href={`/community-playbook/${playbook.id}`}
- className="text-[10px] text-tech-300 group-hover:text-neon-light transition-colors flex items-center gap-0.5"
+ className="text-[10px] text-gray-600 group-hover:text-neon-light transition-colors flex items-center gap-0.5"
  >
  Read playbook
  <ChevronRight className="w-3 h-3" />
@@ -279,7 +279,7 @@ function SubmitPlaybookCard() {
  <Sparkles className="w-6 h-6 text-neon-light" />
  </div>
  <h3 className="text-sm font-semibold text-white mb-1">Share Your Playbook</h3>
- <p className="text-[11px] text-tech-200 max-w-[200px] mb-3">
+ <p className="text-[11px] text-gray-700 max-w-[200px] mb-3">
  Built something with AI? Share your workflow, prompts, and results with the community.
  </p>
  <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-neon hover:bg-neon-dark text-white text-[11px] font-medium transition">
@@ -348,8 +348,8 @@ export default function CommunityPlaybooksPage() {
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
  {/* Hero */}
  <section className="relative mb-8">
- <div className="absolute inset-0 bg-tech-grid opacity-30 rounded-2xl" />
- <div className="relative rounded-2xl bg-gradient-to-br from-asia/10 via-emerald-500/5 to-tech-800 border border-tech-500/30 p-8 sm:p-12">
+ <div className="absolute inset-0 bg-gray-50 opacity-30 rounded-2xl" />
+ <div className="relative rounded-2xl bg-gradient-to-br from-asia/10 via-emerald-500/5 to-tech-800 border border-gray-200 p-8 sm:p-12">
  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-4">
  <Sparkles className="w-3.5 h-3.5" />
  Community
@@ -360,24 +360,24 @@ export default function CommunityPlaybooksPage() {
  Playbooks
  </span>
  </h1>
- <p className="text-sm sm:text-base text-tech-100/70 max-w-2xl mb-6">
+ <p className="text-sm sm:text-base text-gray-800/70 max-w-2xl mb-6">
  Real workflows from real people. Each playbook includes the exact prompts used, what
  worked, what didn&apos;t, and measurable results — including revenue where applicable.
  </p>
 
  {/* Stats */}
  <div className="flex flex-wrap gap-4 sm:gap-6">
- <div className="flex items-center gap-2 text-xs text-tech-200">
+ <div className="flex items-center gap-2 text-xs text-gray-700">
  <Sparkles className="w-4 h-4 text-emerald-400" />
  <span className="font-semibold text-white">{communityPlaybooks.length}</span> playbooks
  </div>
- <div className="flex items-center gap-2 text-xs text-tech-200">
+ <div className="flex items-center gap-2 text-xs text-gray-700">
  <ThumbsUp className="w-4 h-4 text-emerald-400" />
  <span className="font-semibold text-white">
  {communityPlaybooks.reduce((s, p) => s + p.upvotes, 0)}
  </span> total upvotes
  </div>
- <div className="flex items-center gap-2 text-xs text-tech-200">
+ <div className="flex items-center gap-2 text-xs text-gray-700">
  <TrendingUp className="w-4 h-4 text-emerald-400" />
  <span className="font-semibold text-white">
  {communityPlaybooks.filter((p) => p.revenue_impact).length}
@@ -393,7 +393,7 @@ export default function CommunityPlaybooksPage() {
  <select
  value={regionFilter}
  onChange={(e) => setRegionFilter(e.target.value)}
- className="bg-tech-800 border border-tech-500/50 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500/50 transition"
+ className="bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500/50 transition"
  >
  <option value="global">🌍 Global</option>
  <option value="asia">🌏 Asia</option>
@@ -403,13 +403,13 @@ export default function CommunityPlaybooksPage() {
 
  {/* Search */}
  <div className="relative flex-1 max-w-md">
- <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-tech-300" />
+ <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600" />
  <input
  type="text"
  value={searchQuery}
  onChange={(e) => setSearchQuery(e.target.value)}
  placeholder="Search playbooks..."
- className="w-full bg-tech-800 border border-tech-500/50 rounded-lg pl-9 pr-4 py-2 text-sm text-white placeholder:text-tech-300 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/20 transition"
+ className="w-full bg-gray-50 border border-gray-200 rounded-lg pl-9 pr-4 py-2 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/20 transition"
  />
  </div>
 
@@ -417,7 +417,7 @@ export default function CommunityPlaybooksPage() {
  <select
  value={sortBy}
  onChange={(e) => setSortBy(e.target.value as 'votes' | 'newest')}
- className="bg-tech-800 border border-tech-500/50 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500/50 transition"
+ className="bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500/50 transition"
  >
  <option value="votes">Most Votes</option>
  <option value="newest">Newest</option>
@@ -432,7 +432,7 @@ export default function CommunityPlaybooksPage() {
  'px-2.5 py-1 rounded-full text-[10px] font-medium border transition',
  !tagFilter
  ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
- : 'bg-tech-800 text-tech-300 border-tech-500/30 hover:border-tech-400/50'
+ : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-gray-200/50'
  )}
  >
  All
@@ -445,7 +445,7 @@ export default function CommunityPlaybooksPage() {
  'px-2.5 py-1 rounded-full text-[10px] font-medium border transition',
  tagFilter === tag
  ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
- : 'bg-tech-800 text-tech-300 border-tech-500/30 hover:border-tech-400/50'
+ : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-gray-200/50'
  )}
  >
  #{tag}
@@ -466,7 +466,7 @@ export default function CommunityPlaybooksPage() {
 
  {filtered.length === 0 && (
  <div className="text-center py-12">
- <p className="text-sm text-tech-300">No playbooks match your search.</p>
+ <p className="text-sm text-gray-600">No playbooks match your search.</p>
  </div>
  )}
  </div>

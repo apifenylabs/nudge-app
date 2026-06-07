@@ -167,7 +167,7 @@ export default function BestAIToolsPage() {
  }, []);
 
  return (
- <>
+ <div className="min-h-screen bg-white">
  <BreadcrumbSchema
  items={[
  { name: 'Home', item: '/' },
@@ -183,9 +183,9 @@ export default function BestAIToolsPage() {
  />
 
  {/* ───── HERO ───── */}
- <section className="relative overflow-hidden border-b border-tech-500/20">
+ <section className="relative overflow-hidden border-b border-gray-200">
  {/* Background grid + glow */}
- <div className="absolute inset-0 bg-tech-grid opacity-40 pointer-events-none" />
+ <div className="absolute inset-0 bg-gray-50 opacity-40 pointer-events-none" />
  <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-neon/10 rounded-full blur-[120px] pointer-events-none" />
  <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-aqua/10 rounded-full blur-[100px] pointer-events-none" />
 
@@ -203,10 +203,10 @@ export default function BestAIToolsPage() {
  2026
  </span>
  <br />
- <span className="text-tech-100">Curated Directory of {totalCount}+ Tools</span>
+ <span className="text-gray-800">Curated Directory of {totalCount}+ Tools</span>
  </h1>
 
- <p className="mt-5 sm:mt-6 text-base sm:text-lg text-tech-200 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
+ <p className="mt-5 sm:mt-6 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
  Stop collecting AI tools. Start finding the <strong className="text-white">single best tool</strong> for every task.
  Expert rankings, real user reviews, and Asia-ready filters — all in one place.
  </p>
@@ -221,7 +221,7 @@ export default function BestAIToolsPage() {
  </Link>
  <Link
  href="/categories/writing-content"
- className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-tech-500/40 text-tech-100 hover:border-neon/30 hover:text-white text-sm sm:text-base font-medium transition-all"
+ className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-gray-200 text-gray-800 hover:border-neon/30 hover:text-white text-sm sm:text-base font-medium transition-all"
  >
  <Zap className="w-4 h-4" />
  Browse by Category
@@ -229,7 +229,7 @@ export default function BestAIToolsPage() {
  </div>
 
  {/* Trust indicators */}
- <div className="mt-10 sm:mt-14 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-tech-300 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+ <div className="mt-10 sm:mt-14 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-gray-600 animate-fade-in" style={{ animationDelay: '0.3s' }}>
  <div className="flex items-center gap-2">
  <BarChart3 className="w-4 h-4 text-emerald-400" />
  <span>Editorially Ranked</span>
@@ -259,7 +259,7 @@ export default function BestAIToolsPage() {
  Top Rated AI Tools in 2026
  </h2>
  </div>
- <p className="text-sm sm:text-base text-tech-200 ml-[52px]">
+ <p className="text-sm sm:text-base text-gray-700 ml-[52px]">
  Our expert picks — ranked by trending score, user ratings, and Asia-readiness
  </p>
  </div>
@@ -278,7 +278,7 @@ export default function BestAIToolsPage() {
  key={tool.id}
  href={`/tools/${tool.slug}`}
  className={cn(
- 'group relative block rounded-xl border border-tech-500/30 bg-tech-700 p-5 transition-all duration-300',
+ 'group relative block rounded-xl border border-gray-200 bg-white p-5 transition-all duration-300',
  'hover:border-neon/40 hover:shadow-lg hover:shadow-neon/5 hover:-translate-y-1',
  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon/50'
  )}
@@ -293,7 +293,7 @@ export default function BestAIToolsPage() {
  ? 'bg-gradient-to-br from-slate-300 to-slate-400 text-black'
  : i === 2
  ? 'bg-gradient-to-br from-amber-600 to-amber-700 text-white'
- : 'bg-tech-500 text-tech-100 border border-tech-400/30'
+ : 'bg-gray-200 text-gray-800 border border-gray-200/30'
  )}
  >
  #{i + 1}
@@ -301,7 +301,7 @@ export default function BestAIToolsPage() {
 
  {/* Logo */}
  <div className="flex items-start gap-3 mb-3">
- <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-tech-400/30 group-hover:border-neon/30 transition">
+ <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-gray-200/30 group-hover:border-neon/30 transition">
  <span className="text-white font-bold text-sm">
  {tool.name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
@@ -310,7 +310,7 @@ export default function BestAIToolsPage() {
  <h3 className="text-base font-semibold text-white truncate group-hover:text-neon-light transition-colors">
  {tool.name}
  </h3>
- <p className="text-xs text-tech-200 line-clamp-2 mt-0.5 leading-relaxed">
+ <p className="text-xs text-gray-700 line-clamp-2 mt-0.5 leading-relaxed">
  {tool.tagline}
  </p>
  </div>
@@ -318,7 +318,7 @@ export default function BestAIToolsPage() {
 
  {/* Badges */}
  <div className="flex flex-wrap items-center gap-2 mb-3">
- <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600/60 text-tech-100 border border-tech-500/30">
+ <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800 border border-gray-200">
  {tool.category}
  </span>
  <span
@@ -331,7 +331,7 @@ export default function BestAIToolsPage() {
  : tool.pricing_tier === 'Paid'
  ? 'bg-neon/20 text-neon-light border-neon/30'
  : tool.pricing_tier === 'Enterprise'
- ? 'bg-amber-500/20 text-amber-400 border-amber-500/30'
+ ? 'bg-amber-100 text-amber-700 border-amber-200'
  : 'bg-gray-500/20 text-gray-400 border-gray-500/30'
  )}
  >
@@ -358,13 +358,13 @@ export default function BestAIToolsPage() {
  ? 'fill-asia text-asia'
  : s === 'half'
  ? 'fill-asia/50 text-asia'
- : 'fill-none text-tech-400'
+ : 'fill-none text-gray-400'
  )}
  />
  ));
  })()}
  </div>
- <span className="text-xs text-tech-200">
+ <span className="text-xs text-gray-700">
  {tool.avg_rating.toFixed(1)}
  {tool.total_ratings >= 1000
  ? ` (${(tool.total_ratings / 1000).toFixed(1)}K)`
@@ -374,7 +374,7 @@ export default function BestAIToolsPage() {
 
  {/* Trending score bar */}
  <div className="flex items-center gap-2">
- <div className="flex-1 h-1.5 rounded-full bg-tech-600 overflow-hidden">
+ <div className="flex-1 h-1.5 rounded-full bg-gray-100 overflow-hidden">
  <div
  className="h-full rounded-full bg-gradient-to-r from-neon to-aqua transition-all duration-500"
  style={{ width: `${tool.trending_score}%` }}
@@ -397,14 +397,14 @@ export default function BestAIToolsPage() {
  >
  <span>Explore All {totalCount}+ Tools →</span>
  </Link>
- <p className="mt-3 text-xs text-tech-300">
+ <p className="mt-3 text-xs text-gray-600">
  Sort by trending, rating, category, or Asia-readiness. Real user reviews, updated daily.
  </p>
  </div>
  </section>
 
  {/* ───── BRIDGE: STATS BAR ───── */}
- <section className="border-y border-tech-500/20 bg-tech-800/50">
+ <section className="border-y border-gray-200 bg-gray-50/50">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
  {[
@@ -414,11 +414,11 @@ export default function BestAIToolsPage() {
  { label: 'Blog Guides', value: '47', icon: BarChart3 },
  ].map((stat) => (
  <div key={stat.label} className="flex flex-col items-center gap-2">
- <div className="w-10 h-10 rounded-xl bg-tech-600/60 flex items-center justify-center border border-tech-500/20">
+ <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center border border-gray-200">
  <stat.icon className="w-5 h-5 text-neon-light" />
  </div>
  <span className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</span>
- <span className="text-xs sm:text-sm text-tech-300">{stat.label}</span>
+ <span className="text-xs sm:text-sm text-gray-600">{stat.label}</span>
  </div>
  ))}
  </div>
@@ -435,19 +435,19 @@ export default function BestAIToolsPage() {
  return (
  <section
  key={section.name}
- className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 border-b border-tech-500/10 last:border-b-0"
+ className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 border-b border-gray-200 last:border-b-0"
  >
  {/* Section header */}
  <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
  <div className="flex items-start gap-3">
- <div className="w-10 h-10 rounded-xl bg-tech-600/60 flex items-center justify-center shrink-0 border border-tech-500/20 mt-1">
+ <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center shrink-0 border border-gray-200 mt-1">
  <Icon className="w-5 h-5 text-neon-light" />
  </div>
  <div>
  <h2 className="text-xl sm:text-2xl font-bold text-white">
  Best AI {section.name.replace('Writing & Content', 'Writing Tools').replace('Code & Development', 'Coding Tools').replace('Design & Creative', 'Design Tools').replace('Marketing & SEO', 'Marketing Tools')}
  </h2>
- <p className="text-sm text-tech-200 mt-1 max-w-xl">
+ <p className="text-sm text-gray-700 mt-1 max-w-xl">
  {section.config.description}
  </p>
  </div>
@@ -467,10 +467,10 @@ export default function BestAIToolsPage() {
  <Link
  key={tool.id}
  href={`/tools/${tool.slug}`}
- className="group relative block rounded-xl border border-tech-500/30 bg-tech-700/80 p-4 transition-all duration-300 hover:border-neon/30 hover:bg-tech-700 hover:-translate-y-0.5"
+ className="group relative block rounded-xl border border-gray-200 bg-white p-4 transition-all duration-300 hover:border-neon/30 hover:bg-white hover:-translate-y-0.5"
  >
  <div className="flex items-start gap-2.5 mb-2">
- <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-tech-400/20 group-hover:border-neon/30 transition">
+ <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-gray-200/20 group-hover:border-neon/30 transition">
  <span className="text-white font-bold text-xs">
  {tool.name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
@@ -479,7 +479,7 @@ export default function BestAIToolsPage() {
  <h3 className="text-sm font-semibold text-white truncate group-hover:text-neon-light transition">
  {tool.name}
  </h3>
- <p className="text-[11px] text-tech-200 line-clamp-2 mt-0.5">
+ <p className="text-[11px] text-gray-700 line-clamp-2 mt-0.5">
  {tool.tagline}
  </p>
  </div>
@@ -500,7 +500,7 @@ export default function BestAIToolsPage() {
  </span>
  <div className="flex items-center gap-1">
  <Star className="w-2.5 h-2.5 fill-asia text-asia" />
- <span className="text-[10px] text-tech-200">{tool.avg_rating.toFixed(1)}</span>
+ <span className="text-[10px] text-gray-700">{tool.avg_rating.toFixed(1)}</span>
  </div>
  <div className="flex items-center gap-0.5 ml-auto">
  <TrendingUp className="w-2.5 h-2.5 text-neon-light" />
@@ -516,7 +516,7 @@ export default function BestAIToolsPage() {
  {firstPlaybook && (
  <Link
  href={`/playbook/${firstPlaybook.slug}`}
- className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-tech-700 border border-tech-500/30 text-xs text-tech-100 hover:border-neon/30 hover:text-neon-light transition"
+ className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-gray-200 text-xs text-gray-800 hover:border-neon/30 hover:text-neon-light transition"
  >
  <BookOpen className="w-3 h-3" />
  <span>Playbook: {firstPlaybook.title}</span>
@@ -524,7 +524,7 @@ export default function BestAIToolsPage() {
  )}
  <Link
  href={`/categories/${section.config.slug}`}
- className="inline-flex items-center gap-1 text-xs text-tech-300 hover:text-neon-light transition"
+ className="inline-flex items-center gap-1 text-xs text-gray-600 hover:text-neon-light transition"
  >
  Browse category page
  <ArrowRight className="w-3 h-3" />
@@ -535,11 +535,11 @@ export default function BestAIToolsPage() {
  })}
 
  {/* ───── HOW IT WORKS ───── */}
- <section className="border-y border-tech-500/20 bg-tech-800/50">
+ <section className="border-y border-gray-200 bg-gray-50/50">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
  <div className="text-center mb-10 sm:mb-12">
  <h2 className="text-2xl sm:text-3xl font-bold text-white">How Apifeny AI Helps You Find the Best Tools</h2>
- <p className="text-sm sm:text-base text-tech-200 mt-2 max-w-xl mx-auto">
+ <p className="text-sm sm:text-base text-gray-700 mt-2 max-w-xl mx-auto">
  We don&apos;t just list tools. We rank them by what actually matters.
  </p>
  </div>
@@ -567,15 +567,15 @@ export default function BestAIToolsPage() {
  ].map((item) => (
  <div
  key={item.title}
- className={`relative rounded-xl bg-gradient-to-br ${item.gradient} bg-tech-700 border border-tech-500/30 p-6`}
+ className={`relative rounded-xl bg-gradient-to-br ${item.gradient} bg-white border border-gray-200 p-6`}
  >
- <div className="absolute inset-0 bg-tech-grid opacity-20 rounded-xl pointer-events-none" />
+ <div className="absolute inset-0 bg-gray-50 opacity-20 rounded-xl pointer-events-none" />
  <div className="relative">
- <div className="w-12 h-12 rounded-xl bg-tech-600/60 flex items-center justify-center border border-tech-500/20 mb-4">
+ <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center border border-gray-200 mb-4">
  <item.icon className="w-6 h-6 text-white" />
  </div>
  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
- <p className="text-sm text-tech-200 leading-relaxed">{item.description}</p>
+ <p className="text-sm text-gray-700 leading-relaxed">{item.description}</p>
  </div>
  </div>
  ))}
@@ -593,7 +593,7 @@ export default function BestAIToolsPage() {
  <h2 className="text-xl sm:text-2xl font-bold text-white">
  Step-by-Step AI Playbooks
  </h2>
- <p className="text-xs sm:text-sm text-tech-200">
+ <p className="text-xs sm:text-sm text-gray-700">
  Not sure where to start? Follow our battle-tested playbooks.
  </p>
  </div>
@@ -604,7 +604,7 @@ export default function BestAIToolsPage() {
  <div className="mt-8 text-center">
  <Link
  href="/playbooks"
- className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-tech-500/30 text-tech-100 hover:border-neon/30 hover:text-white text-sm font-medium transition-all"
+ className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-200 text-gray-800 hover:border-neon/30 hover:text-white text-sm font-medium transition-all"
  >
  Browse all {playbooks.length} playbooks
  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -613,7 +613,7 @@ export default function BestAIToolsPage() {
  </section>
 
  {/* ───── CURATED COLLECTIONS ───── */}
- <section className="border-y border-tech-500/20 bg-tech-800/50">
+ <section className="border-y border-gray-200 bg-gray-50/50">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
  <FeaturedCollections />
  </div>
@@ -625,7 +625,7 @@ export default function BestAIToolsPage() {
  </section>
 
  {/* ───── TESTIMONIALS / SOCIAL PROOF ───── */}
- <section className="border-y border-tech-500/20 bg-tech-800/50">
+ <section className="border-y border-gray-200 bg-gray-50/50">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
  <div className="text-center mb-10 sm:mb-12">
  <div className="flex items-center justify-center gap-3 mb-3">
@@ -636,7 +636,7 @@ export default function BestAIToolsPage() {
  Trusted by Builders, Marketers &amp; Creators
  </h2>
  </div>
- <p className="text-sm sm:text-base text-tech-200 max-w-xl mx-auto">
+ <p className="text-sm sm:text-base text-gray-700 max-w-xl mx-auto">
  Real stories from people who use Apifeny AI to find their tools and ship faster.
  </p>
  </div>
@@ -664,12 +664,12 @@ export default function BestAIToolsPage() {
  ].map((testimonial) => (
  <div
  key={testimonial.name}
- className={`relative rounded-xl bg-gradient-to-br ${testimonial.gradient} bg-tech-700 border border-tech-500/30 p-6`}
+ className={`relative rounded-xl bg-gradient-to-br ${testimonial.gradient} bg-white border border-gray-200 p-6`}
  >
- <div className="absolute inset-0 bg-tech-grid opacity-20 rounded-xl pointer-events-none" />
+ <div className="absolute inset-0 bg-gray-50 opacity-20 rounded-xl pointer-events-none" />
  <div className="relative">
- <Quote className="w-8 h-8 text-tech-400/40 mb-3" />
- <p className="text-sm text-tech-100 leading-relaxed mb-4 italic">
+ <Quote className="w-8 h-8 text-gray-400/40 mb-3" />
+ <p className="text-sm text-gray-800 leading-relaxed mb-4 italic">
  &ldquo;{testimonial.quote}&rdquo;
  </p>
  <div className="flex items-center gap-1 mb-2">
@@ -679,7 +679,7 @@ export default function BestAIToolsPage() {
  </div>
  <div>
  <p className="text-sm font-semibold text-white">{testimonial.name}</p>
- <p className="text-xs text-tech-300">{testimonial.role}</p>
+ <p className="text-xs text-gray-600">{testimonial.role}</p>
  </div>
  </div>
  </div>
@@ -689,7 +689,7 @@ export default function BestAIToolsPage() {
  <div className="mt-10 text-center">
  <Link
  href="/success-stories"
- className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-tech-500/30 text-tech-100 hover:border-neon/30 hover:text-white text-sm font-medium transition-all"
+ className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-200 text-gray-800 hover:border-neon/30 hover:text-white text-sm font-medium transition-all"
  >
  Read more success stories
  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -700,7 +700,7 @@ export default function BestAIToolsPage() {
 
  {/* ───── CTA COMPARE / RANKINGS / PLAYBOOK ───── */}
  <section className="relative overflow-hidden">
- <div className="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none" />
+ <div className="absolute inset-0 bg-gray-50 opacity-30 pointer-events-none" />
  <div className="absolute top-[-20%] left-[-5%] w-[50%] h-[50%] bg-neon/10 rounded-full blur-[100px] pointer-events-none" />
 
  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
@@ -708,7 +708,7 @@ export default function BestAIToolsPage() {
  <h2 className="text-2xl sm:text-3xl font-bold text-white">
  Three Ways to Find Your Perfect AI Tool
  </h2>
- <p className="text-sm sm:text-base text-tech-200 mt-2 max-w-xl mx-auto">
+ <p className="text-sm sm:text-base text-gray-700 mt-2 max-w-xl mx-auto">
  Whether you&apos;re comparing, ranking, or following a playbook — we&apos;ve got you covered.
  </p>
  </div>
@@ -716,13 +716,13 @@ export default function BestAIToolsPage() {
  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
  <Link
  href="/tools?view=compare"
- className="group block rounded-xl border border-tech-500/30 bg-tech-700 p-6 text-center hover:border-neon/30 hover:-translate-y-1 transition-all"
+ className="group block rounded-xl border border-gray-200 bg-white p-6 text-center hover:border-neon/30 hover:-translate-y-1 transition-all"
  >
  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-neon/20 to-neon-dark/10 flex items-center justify-center mx-auto mb-4 border border-neon/20 group-hover:border-neon/40 transition">
  <GitCompare className="w-7 h-7 text-neon-light" />
  </div>
  <h3 className="text-lg font-bold text-white mb-2">Compare Tools</h3>
- <p className="text-sm text-tech-200 leading-relaxed mb-4">
+ <p className="text-sm text-gray-700 leading-relaxed mb-4">
  Side-by-side comparison of top AI tools. See pricing, features, ratings, and Asia-readiness at a glance.
  </p>
  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-neon-light group-hover:text-neon transition">
@@ -733,13 +733,13 @@ export default function BestAIToolsPage() {
 
  <Link
  href="/rankings"
- className="group block rounded-xl border border-tech-500/30 bg-tech-700 p-6 text-center hover:border-neon/30 hover:-translate-y-1 transition-all"
+ className="group block rounded-xl border border-gray-200 bg-white p-6 text-center hover:border-neon/30 hover:-translate-y-1 transition-all"
  >
  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-asia/20 to-amber-500/10 flex items-center justify-center mx-auto mb-4 border border-asia/20 group-hover:border-asia/40 transition">
  <ListChecks className="w-7 h-7 text-asia" />
  </div>
  <h3 className="text-lg font-bold text-white mb-2">View Rankings</h3>
- <p className="text-sm text-tech-200 leading-relaxed mb-4">
+ <p className="text-sm text-gray-700 leading-relaxed mb-4">
  Expert-curated workflow rankings. Discover the #1 tool for content creation, coding, marketing, and more.
  </p>
  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-asia group-hover:text-asia-light transition">
@@ -750,13 +750,13 @@ export default function BestAIToolsPage() {
 
  <Link
  href="/playbooks"
- className="group block rounded-xl border border-tech-500/30 bg-tech-700 p-6 text-center hover:border-neon/30 hover:-translate-y-1 transition-all"
+ className="group block rounded-xl border border-gray-200 bg-white p-6 text-center hover:border-neon/30 hover:-translate-y-1 transition-all"
  >
  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-aqua/20 to-cyan-500/10 flex items-center justify-center mx-auto mb-4 border border-aqua/20 group-hover:border-aqua/40 transition">
  <BookOpen className="w-7 h-7 text-aqua" />
  </div>
  <h3 className="text-lg font-bold text-white mb-2">Get the Playbook</h3>
- <p className="text-sm text-tech-200 leading-relaxed mb-4">
+ <p className="text-sm text-gray-700 leading-relaxed mb-4">
  Step-by-step guides to build AI-powered workflows. From content creation to automation — follow the blueprint.
  </p>
  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-aqua group-hover:text-aqua-light transition">
@@ -769,7 +769,7 @@ export default function BestAIToolsPage() {
  </section>
 
  {/* ───── BLOG / LEARNING ───── */}
- <section className="border-y border-tech-500/20 bg-tech-800/50">
+ <section className="border-y border-gray-200 bg-gray-50/50">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
  <div className="flex items-center justify-between mb-8">
  <div className="flex items-center gap-3">
@@ -780,7 +780,7 @@ export default function BestAIToolsPage() {
  <h2 className="text-xl sm:text-2xl font-bold text-white">
  Latest from the Blog
  </h2>
- <p className="text-xs sm:text-sm text-tech-200">
+ <p className="text-xs sm:text-sm text-gray-700">
  Expert guides, comparisons, and Asia-focused AI strategies
  </p>
  </div>
@@ -799,17 +799,17 @@ export default function BestAIToolsPage() {
  <Link
  key={post.slug}
  href={`/blog/${post.slug}`}
- className="group block rounded-xl border border-tech-500/30 bg-tech-700 p-5 hover:border-neon/30 hover:-translate-y-0.5 transition-all"
+ className="group block rounded-xl border border-gray-200 bg-white p-5 hover:border-neon/30 hover:-translate-y-0.5 transition-all"
  >
  <div className="flex items-center gap-2 mb-3">
  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center group-hover:border-neon/30 transition">
- <BookOpen className="w-4 h-4 text-tech-100" />
+ <BookOpen className="w-4 h-4 text-gray-800" />
  </div>
  </div>
  <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-2 leading-snug">
  {post.title}
  </h3>
- <p className="text-xs text-tech-200 line-clamp-2 leading-relaxed">
+ <p className="text-xs text-gray-700 line-clamp-2 leading-relaxed">
  {post.excerpt}
  </p>
  <div className="flex items-center gap-1 text-xs text-neon-light/60 group-hover:text-neon-light transition-colors mt-3">
@@ -823,7 +823,7 @@ export default function BestAIToolsPage() {
  <div className="mt-8 text-center">
  <Link
  href="/blog"
- className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-tech-500/30 text-tech-100 hover:border-neon/30 hover:text-white text-sm font-medium transition-all"
+ className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-200 text-gray-800 hover:border-neon/30 hover:text-white text-sm font-medium transition-all"
  >
  Read all 47 expert guides
  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -838,58 +838,58 @@ export default function BestAIToolsPage() {
  </section>
 
  {/* ───── SEO KEYWORD FOOTER ───── */}
- <section className="border-t border-tech-500/20 bg-tech-800/50">
+ <section className="border-t border-gray-200 bg-gray-50/50">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
  <div>
- <h3 className="text-xs font-semibold text-tech-200 uppercase tracking-wider mb-3">By Category</h3>
+ <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">By Category</h3>
  <ul className="space-y-2">
- <li><Link href="/categories/writing-content" className="text-xs text-tech-300 hover:text-neon-light transition">AI Writing Tools</Link></li>
- <li><Link href="/categories/code-development" className="text-xs text-tech-300 hover:text-neon-light transition">AI Coding Tools</Link></li>
- <li><Link href="/categories/design-creative" className="text-xs text-tech-300 hover:text-neon-light transition">AI Design Tools</Link></li>
- <li><Link href="/categories/marketing-seo" className="text-xs text-tech-300 hover:text-neon-light transition">AI Marketing Tools</Link></li>
- <li><Link href="/categories" className="text-xs text-tech-300 hover:text-neon-light transition">All Categories →</Link></li>
+ <li><Link href="/categories/writing-content" className="text-xs text-gray-600 hover:text-neon-light transition">AI Writing Tools</Link></li>
+ <li><Link href="/categories/code-development" className="text-xs text-gray-600 hover:text-neon-light transition">AI Coding Tools</Link></li>
+ <li><Link href="/categories/design-creative" className="text-xs text-gray-600 hover:text-neon-light transition">AI Design Tools</Link></li>
+ <li><Link href="/categories/marketing-seo" className="text-xs text-gray-600 hover:text-neon-light transition">AI Marketing Tools</Link></li>
+ <li><Link href="/categories" className="text-xs text-gray-600 hover:text-neon-light transition">All Categories →</Link></li>
  </ul>
  </div>
  <div>
- <h3 className="text-xs font-semibold text-tech-200 uppercase tracking-wider mb-3">By Workflow</h3>
+ <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">By Workflow</h3>
  <ul className="space-y-2">
- <li><Link href="/rankings" className="text-xs text-tech-300 hover:text-neon-light transition">Workflow Rankings</Link></li>
- <li><Link href="/tools" className="text-xs text-tech-300 hover:text-neon-light transition">All Tools</Link></li>
- <li><Link href="/playbooks" className="text-xs text-tech-300 hover:text-neon-light transition">Playbooks</Link></li>
- <li><Link href="/blog" className="text-xs text-tech-300 hover:text-neon-light transition">Blog &amp; Guides</Link></li>
- <li><Link href="/collections" className="text-xs text-tech-300 hover:text-neon-light transition">Curated Collections →</Link></li>
+ <li><Link href="/rankings" className="text-xs text-gray-600 hover:text-neon-light transition">Workflow Rankings</Link></li>
+ <li><Link href="/tools" className="text-xs text-gray-600 hover:text-neon-light transition">All Tools</Link></li>
+ <li><Link href="/playbooks" className="text-xs text-gray-600 hover:text-neon-light transition">Playbooks</Link></li>
+ <li><Link href="/blog" className="text-xs text-gray-600 hover:text-neon-light transition">Blog &amp; Guides</Link></li>
+ <li><Link href="/collections" className="text-xs text-gray-600 hover:text-neon-light transition">Curated Collections →</Link></li>
  </ul>
  </div>
  <div>
- <h3 className="text-xs font-semibold text-tech-200 uppercase tracking-wider mb-3">Top Tools 2026</h3>
+ <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">Top Tools 2026</h3>
  <ul className="space-y-2">
  {topByTrending(5).map((tool) => (
  <li key={tool.id}>
- <Link href={`/tools/${tool.slug}`} className="text-xs text-tech-300 hover:text-neon-light transition truncate block">
+ <Link href={`/tools/${tool.slug}`} className="text-xs text-gray-600 hover:text-neon-light transition truncate block">
  {tool.name}
  </Link>
  </li>
  ))}
- <li><Link href="/tools" className="text-xs text-tech-300 hover:text-neon-light transition">View all {totalCount}+ tools →</Link></li>
+ <li><Link href="/tools" className="text-xs text-gray-600 hover:text-neon-light transition">View all {totalCount}+ tools →</Link></li>
  </ul>
  </div>
  <div>
- <h3 className="text-xs font-semibold text-tech-200 uppercase tracking-wider mb-3">SEO Resources</h3>
+ <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wider mb-3">SEO Resources</h3>
  <ul className="space-y-2">
- <li><Link href="/sitemap.xml" className="text-xs text-tech-300 hover:text-neon-light transition">Sitemap</Link></li>
- <li><Link href="/privacy" className="text-xs text-tech-300 hover:text-neon-light transition">Privacy Policy</Link></li>
- <li><Link href="/terms" className="text-xs text-tech-300 hover:text-neon-light transition">Terms of Service</Link></li>
- <li><Link href="/submit" className="text-xs text-tech-300 hover:text-neon-light transition">Submit a Tool</Link></li>
- <li className="pt-2 text-[10px] text-tech-400 leading-relaxed">
+ <li><Link href="/sitemap.xml" className="text-xs text-gray-600 hover:text-neon-light transition">Sitemap</Link></li>
+ <li><Link href="/privacy" className="text-xs text-gray-600 hover:text-neon-light transition">Privacy Policy</Link></li>
+ <li><Link href="/terms" className="text-xs text-gray-600 hover:text-neon-light transition">Terms of Service</Link></li>
+ <li><Link href="/submit" className="text-xs text-gray-600 hover:text-neon-light transition">Submit a Tool</Link></li>
+ <li className="pt-2 text-[10px] text-gray-400 leading-relaxed">
  Discover the best AI tools of 2026 — curated, ranked, and reviewed. Free AI tool directory with Asia-ready filters.
  </li>
  </ul>
  </div>
  </div>
- <div className="mt-8 pt-6 border-t border-tech-500/10 text-center">
- <p className="text-[10px] text-tech-400 leading-loose max-w-2xl mx-auto">
- <strong className="text-tech-300">Popular searches:</strong>{' '}
+ <div className="mt-8 pt-6 border-t border-gray-200 text-center">
+ <p className="text-[10px] text-gray-400 leading-loose max-w-2xl mx-auto">
+ <strong className="text-gray-600">Popular searches:</strong>{' '}
  <Link href="/tools/chatgpt" className="hover:text-neon-light transition">ChatGPT</Link> ·{' '}
  <Link href="/tools/claude" className="hover:text-neon-light transition">Claude</Link> ·{' '}
  <Link href="/tools/gemini" className="hover:text-neon-light transition">Gemini</Link> ·{' '}
@@ -915,8 +915,8 @@ export default function BestAIToolsPage() {
  <LandingPageCrossLinks currentSlug="best-ai-tools" />
 
  {/* ───── FINAL CTA ───── */}
- <section className="relative overflow-hidden border-t border-tech-500/20">
- <div className="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none" />
+ <section className="relative overflow-hidden border-t border-gray-200">
+ <div className="absolute inset-0 bg-gray-50 opacity-30 pointer-events-none" />
  <div className="absolute top-[-30%] left-[-10%] w-[70%] h-[70%] bg-neon/10 rounded-full blur-[150px] pointer-events-none" />
  <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-aqua/10 rounded-full blur-[120px] pointer-events-none" />
 
@@ -924,7 +924,7 @@ export default function BestAIToolsPage() {
  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
  Ready to Find the Best AI Tools for Your Workflow?
  </h2>
- <p className="mt-4 text-base sm:text-lg text-tech-200 max-w-2xl mx-auto">
+ <p className="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
  Stop wasting hours searching through endless lists. Apifeny AI has already done the work for you — {totalCount}+ tools ranked, reviewed, and ready to explore.
  </p>
 
@@ -937,17 +937,17 @@ export default function BestAIToolsPage() {
  </Link>
  <Link
  href="/categories/writing-content"
- className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-tech-500/40 text-tech-100 hover:border-neon/30 hover:text-white text-sm sm:text-base font-medium transition-all"
+ className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-gray-200 text-gray-800 hover:border-neon/30 hover:text-white text-sm sm:text-base font-medium transition-all"
  >
  Browse by Category
  </Link>
  </div>
 
- <div className="mt-6 text-xs text-tech-300">
+ <div className="mt-6 text-xs text-gray-600">
  No account required. No email needed. Start exploring instantly.
  </div>
  </div>
  </section>
- </>
+ </div>
  );
 }

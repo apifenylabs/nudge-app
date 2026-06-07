@@ -233,9 +233,9 @@ export default function DevelopersPage() {
  );
 
  return (
- <main className="min-h-screen bg-gray-950">
+ <main className="min-h-screen bg-white">
  {/* ── Hero ── */}
- <section className="relative overflow-hidden border-b border-tech-700/30">
+ <section className="relative overflow-hidden border-b border-gray-200/30">
  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-cyan-600/5 pointer-events-none" />
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
  <div className="flex items-center gap-2 mb-4">
@@ -248,7 +248,7 @@ export default function DevelopersPage() {
  Developers in Asia
  </span>
  </h1>
- <p className="text-lg sm:text-xl text-tech-300 max-w-3xl leading-relaxed mb-8">
+ <p className="text-lg sm:text-xl text-gray-600 max-w-3xl leading-relaxed mb-8">
  Whether you&apos;re building the next unicorn or shipping side projects at 2 AM — these are the{' '}
  <strong className="text-white">AI developer tools tested and curated for Asian engineers</strong>.
  Code assistants, autonomous agents, APIs, deployment, and data tools. From $0/month.
@@ -263,7 +263,7 @@ export default function DevelopersPage() {
  </Link>
  <Link
  href="#essentials"
- className="inline-flex items-center gap-2 border border-tech-600 text-tech-200 font-medium px-6 py-3 rounded-xl hover:border-emerald-500/50 hover:text-white transition-all"
+ className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 font-medium px-6 py-3 rounded-xl hover:border-emerald-500/50 hover:text-white transition-all"
  >
  <BookOpen className="w-4 h-4" />
  Developer Guides
@@ -273,7 +273,7 @@ export default function DevelopersPage() {
  </section>
 
  {/* ── Stats Strip ── */}
- <section className="border-b border-tech-700/30 bg-tech-900/50">
+ <section className="border-b border-gray-200/30 bg-white/50">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
  <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
  {[
@@ -285,7 +285,7 @@ export default function DevelopersPage() {
  <div key={stat.label} className="flex flex-col items-center gap-1">
  <span className="text-emerald-400">{stat.icon}</span>
  <span className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</span>
- <span className="text-sm text-tech-400">{stat.label}</span>
+ <span className="text-sm text-gray-400">{stat.label}</span>
  </div>
  ))}
  </div>
@@ -293,12 +293,12 @@ export default function DevelopersPage() {
  </section>
 
  {/* ── Categories ── */}
- <section id="categories" className="border-b border-tech-700/30">
+ <section id="categories" className="border-b border-gray-200/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
  Tools by Category
  </h2>
- <p className="text-tech-300 max-w-2xl mb-10 leading-relaxed">
+ <p className="text-gray-600 max-w-2xl mb-10 leading-relaxed">
  Every tool on this page is selected for developers — free tiers, API access, local pricing
  for Asian markets, and multilingual support where it matters.
  </p>
@@ -314,7 +314,7 @@ export default function DevelopersPage() {
  {cat.icon}
  <h3 className="font-bold text-white">{cat.title}</h3>
  </div>
- <p className="text-sm text-tech-400 mb-3">{cat.description}</p>
+ <p className="text-sm text-gray-400 mb-3">{cat.description}</p>
  <span className="text-xs text-emerald-400 group-hover:gap-2 inline-flex items-center gap-1 transition-all">
  Browse {cat.title}
  <ArrowRight className="w-3 h-3" />
@@ -330,14 +330,14 @@ export default function DevelopersPage() {
  <section
  key={cat.slug}
  id={`cat-${cat.slug}`}
- className="border-b border-tech-700/20 scroll-mt-20"
+ className="border-b border-gray-200/20 scroll-mt-20"
  >
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="flex items-center gap-3 mb-2">
  <span className={cat.textColor}>{cat.icon}</span>
  <h2 className="text-2xl sm:text-3xl font-bold text-white">{cat.title}</h2>
  </div>
- <p className="text-tech-400 mb-6 max-w-2xl">{cat.description}</p>
+ <p className="text-gray-400 mb-6 max-w-2xl">{cat.description}</p>
 
  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
  {cat.tools.map((toolSlug) => {
@@ -347,16 +347,16 @@ export default function DevelopersPage() {
  <Link
  key={toolSlug}
  href={`/tools/${toolSlug}`}
- className="bg-tech-800/40 border border-tech-700/30 rounded-xl p-4 hover:border-emerald-500/30 transition-all group"
+ className="bg-gray-100 border border-gray-200/30 rounded-xl p-4 hover:border-emerald-500/30 transition-all group"
  >
  <h3 className="font-semibold text-white group-hover:text-emerald-400 transition-colors mb-1">
  {tool.name || tool.title || toolSlug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}
  </h3>
  {tool.tagline && (
- <p className="text-sm text-tech-400 line-clamp-2">{tool.tagline}</p>
+ <p className="text-sm text-gray-400 line-clamp-2">{tool.tagline}</p>
  )}
  {tool.pricing_tier && (
- <span className="inline-block mt-2 text-xs font-medium px-2 py-0.5 rounded-full bg-tech-700/40 text-tech-400 border border-tech-600/30">
+ <span className="inline-block mt-2 text-xs font-medium px-2 py-0.5 rounded-full bg-white/40 text-gray-400 border border-gray-300/30">
  {tool.pricing_tier}{tool.pricing_min_usd && tool.pricing_min_usd > 0 ? ` · $${tool.pricing_min_usd}+/mo` : ''}
  </span>
  )}
@@ -367,8 +367,8 @@ export default function DevelopersPage() {
 
  {/* Related blog posts */}
  {cat.blogPosts.length > 0 && (
- <div className="mt-8 pt-6 border-t border-tech-700/20">
- <h4 className="text-sm font-semibold text-tech-400 uppercase tracking-wider mb-3">
+ <div className="mt-8 pt-6 border-t border-gray-200/20">
+ <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
  Related Guides
  </h4>
  <div className="flex flex-wrap gap-3">
@@ -376,7 +376,7 @@ export default function DevelopersPage() {
  <Link
  key={post.slug}
  href={`/blog/${post.slug}`}
- className="inline-flex items-center gap-1.5 text-sm text-tech-300 bg-tech-800/30 border border-tech-700/30 rounded-lg px-3 py-1.5 hover:text-emerald-400 hover:border-emerald-500/30 transition-all"
+ className="inline-flex items-center gap-1.5 text-sm text-gray-600 bg-gray-100 border border-gray-200/30 rounded-lg px-3 py-1.5 hover:text-emerald-400 hover:border-emerald-500/30 transition-all"
  >
  <BookOpen className="w-3.5 h-3.5" />
  {post.label}
@@ -391,7 +391,7 @@ export default function DevelopersPage() {
  ))}
 
  {/* ── Developer Blog Posts ── */}
- <section className="border-b border-tech-700/30 bg-tech-900/30">
+ <section className="border-b border-gray-200/30 bg-white/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <div className="flex items-center gap-2 mb-2">
  <BookOpen className="w-5 h-5 text-emerald-400" />
@@ -399,7 +399,7 @@ export default function DevelopersPage() {
  Developer-Focused Guides
  </h2>
  </div>
- <p className="text-tech-300 mb-8 max-w-2xl">
+ <p className="text-gray-600 mb-8 max-w-2xl">
  Deep-dive guides, comparisons, and tutorials written specifically for software engineers
  and developers in Asia.
  </p>
@@ -408,12 +408,12 @@ export default function DevelopersPage() {
  <Link
  key={post.slug}
  href={`/blog/${post.slug}`}
- className="group bg-tech-800/40 border border-tech-700/30 rounded-xl p-5 hover:border-emerald-500/30 transition-all"
+ className="group bg-gray-100 border border-gray-200/30 rounded-xl p-5 hover:border-emerald-500/30 transition-all"
  >
  <h3 className="font-semibold text-white group-hover:text-emerald-400 transition-colors mb-2">
  {post.title}
  </h3>
- <p className="text-sm text-tech-400 line-clamp-2 mb-3">{post.excerpt}</p>
+ <p className="text-sm text-gray-400 line-clamp-2 mb-3">{post.excerpt}</p>
  <span className="text-xs text-emerald-400 group-hover:gap-2 inline-flex items-center gap-1 transition-all">
  Read Guide
  <ArrowRight className="w-3 h-3" />
@@ -425,7 +425,7 @@ export default function DevelopersPage() {
  </section>
 
  {/* ── Developer Playbooks ── */}
- <section className="border-b border-tech-700/30">
+ <section className="border-b border-gray-200/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <div className="flex items-center gap-2 mb-2">
  <Rocket className="w-5 h-5 text-emerald-400" />
@@ -433,7 +433,7 @@ export default function DevelopersPage() {
  Developer Workflow Playbooks
  </h2>
  </div>
- <p className="text-tech-300 mb-8 max-w-2xl">
+ <p className="text-gray-600 mb-8 max-w-2xl">
  Step-by-step playbooks to supercharge your development workflow with AI. Copy, paste, adapt.
  </p>
  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -441,7 +441,7 @@ export default function DevelopersPage() {
  <Link
  key={p.slug}
  href={`/playbooks/${p.slug}`}
- className="group bg-gradient-to-br from-tech-800/50 to-tech-900/50 border border-tech-700/30 rounded-xl p-5 hover:border-emerald-500/30 transition-all"
+ className="group bg-gradient-to-br from-tech-800/50 to-tech-900/50 border border-gray-200/30 rounded-xl p-5 hover:border-emerald-500/30 transition-all"
  >
  <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
  p.difficulty === 'Beginner'
@@ -455,14 +455,14 @@ export default function DevelopersPage() {
  <h3 className="font-semibold text-white mt-2 mb-1 group-hover:text-emerald-400 transition-colors">
  {p.title}
  </h3>
- <p className="text-sm text-tech-400 line-clamp-2">{p.description}</p>
- <div className="flex items-center gap-1 text-xs text-tech-500 mt-3">
+ <p className="text-sm text-gray-400 line-clamp-2">{p.description}</p>
+ <div className="flex items-center gap-1 text-xs text-gray-500 mt-3">
  <Clock className="w-3 h-3" />
  <span>{p.read_time_minutes} min</span>
  </div>
  </Link>
  )) : (
- <div className="col-span-full text-tech-500 italic">
+ <div className="col-span-full text-gray-500 italic">
  Playbooks loading — check back soon.
  <Link href="/playbooks" className="text-emerald-400 hover:underline ml-2">Browse all playbooks →</Link>
  </div>
@@ -471,7 +471,7 @@ export default function DevelopersPage() {
  <div className="mt-6 text-center">
  <Link
  href="/playbooks"
- className="inline-flex items-center gap-1.5 text-sm text-tech-300 hover:text-emerald-400 transition-colors"
+ className="inline-flex items-center gap-1.5 text-sm text-gray-600 hover:text-emerald-400 transition-colors"
  >
  View all playbooks ({playbooks.length})
  <ArrowRight className="w-3.5 h-3.5" />
@@ -481,12 +481,12 @@ export default function DevelopersPage() {
  </section>
 
  {/* ── Why Developers in Asia ── */}
- <section className="border-b border-tech-700/30 bg-tech-900/30">
+ <section className="border-b border-gray-200/30 bg-white/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
  Why Developers in Asia Need Different AI Tools
  </h2>
- <p className="text-tech-300 max-w-3xl mb-8 leading-relaxed">
+ <p className="text-gray-600 max-w-3xl mb-8 leading-relaxed">
  AI tools built for Silicon Valley engineers often miss what Asian developers
  actually deal with — CJK character handling, local cloud providers (Alibaba Cloud,
  Tencent Cloud, AWS Singapore), regional API latency, and pricing in local currencies.
@@ -498,10 +498,10 @@ export default function DevelopersPage() {
  { icon: <DollarSign className="w-5 h-5" />, title: 'Regional Pricing', desc: 'USD pricing hurts Asian devs. We highlight tools with free tiers, regional pricing, or payment via local gateways.' },
  { icon: <Shield className="w-5 h-5" />, title: 'Data Compliance', desc: 'PDPA (SG), PDPO (HK), PIPA (KR), China Data Security Law — AI tools you use must respect local data residency requirements.' },
  ].map((item) => (
- <div key={item.title} className="bg-tech-800/40 border border-tech-700/30 rounded-xl p-5">
+ <div key={item.title} className="bg-gray-100 border border-gray-200/30 rounded-xl p-5">
  <span className="text-emerald-400 block mb-2">{item.icon}</span>
  <h3 className="font-semibold text-white mb-1">{item.title}</h3>
- <p className="text-sm text-tech-400 leading-relaxed">{item.desc}</p>
+ <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -509,19 +509,19 @@ export default function DevelopersPage() {
  </section>
 
  {/* ── Quick Comparison: Top 5 AI Code Tools ── */}
- <section className="border-b border-tech-700/30">
+ <section className="border-b border-gray-200/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
  Quick Comparison: Top AI Coding Tools in 2026
  </h2>
- <p className="text-tech-300 mb-8 max-w-2xl">
+ <p className="text-gray-600 mb-8 max-w-2xl">
  Not sure which AI coding tool to start with? Here&apos;s how the heavy hitters compare
  for Asian developers.
  </p>
  <div className="overflow-x-auto">
- <table className="w-full text-sm text-tech-300 border-collapse">
+ <table className="w-full text-sm text-gray-600 border-collapse">
  <thead>
- <tr className="border-b border-tech-700/40">
+ <tr className="border-b border-gray-200/40">
  <th className="text-left py-3 px-4 font-semibold text-white">Tool</th>
  <th className="text-left py-3 px-4 font-semibold text-white">Type</th>
  <th className="text-left py-3 px-4 font-semibold text-white">Free Tier</th>
@@ -539,18 +539,18 @@ export default function DevelopersPage() {
  { name: 'Bolt.new', type: 'App Builder', free: 'Yes (limited)', cjk: 'Basic', best: 'Rapid full-stack prototyping' },
  { name: 'Aider', type: 'Terminal Agent', free: 'Yes (BYO API)', cjk: 'Good', best: 'Git-aware pair programming' },
  ].map((row, i) => (
- <tr key={row.name} className={`border-b border-tech-700/20 ${i % 2 === 0 ? 'bg-tech-800/20' : ''}`}>
+ <tr key={row.name} className={`border-b border-gray-200/20 ${i % 2 === 0 ? 'bg-gray-100' : ''}`}>
  <td className="py-3 px-4 font-medium text-white">{row.name}</td>
  <td className="py-3 px-4">{row.type}</td>
  <td className="py-3 px-4">{row.free}</td>
  <td className="py-3 px-4">{row.cjk}</td>
- <td className="py-3 px-4 text-tech-400">{row.best}</td>
+ <td className="py-3 px-4 text-gray-400">{row.best}</td>
  </tr>
  ))}
  </tbody>
  </table>
  </div>
- <p className="text-xs text-tech-500 mt-4">
+ <p className="text-xs text-gray-500 mt-4">
  CJK Support: How well the tool handles Chinese, Japanese, and Korean characters in code,
  comments, and documentation.
  </p>
@@ -570,7 +570,7 @@ export default function DevelopersPage() {
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
  Ready to Supercharge Your Dev Workflow?
  </h2>
- <p className="text-tech-300 max-w-xl mx-auto mb-6 leading-relaxed">
+ <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">
  Pick one category above, try a free-tier tool this week, and read the related guide.
  Most tools cost $0 to start — upgrade only when your velocity demands it.
  </p>
@@ -584,7 +584,7 @@ export default function DevelopersPage() {
  </Link>
  <Link
  href="/playbooks"
- className="inline-flex items-center gap-2 border border-tech-600 text-tech-200 font-medium px-6 py-3 rounded-xl hover:border-emerald-500/50 hover:text-white transition-all"
+ className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 font-medium px-6 py-3 rounded-xl hover:border-emerald-500/50 hover:text-white transition-all"
  >
  <BookOpen className="w-4 h-4" />
  Dev Playbooks

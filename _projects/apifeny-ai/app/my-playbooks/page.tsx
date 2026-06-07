@@ -125,8 +125,8 @@ export default function MyPlaybooksPage() {
  return (
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
  {/* Hero */}
- <div className="relative rounded-2xl bg-gradient-to-br from-violet-500/10 via-fuchsia-500/5 to-tech-800 border border-tech-500/30 p-6 sm:p-10 mb-8">
- <div className="absolute inset-0 bg-tech-grid opacity-30 rounded-2xl pointer-events-none" />
+ <div className="relative rounded-2xl bg-gradient-to-br from-violet-500/10 via-fuchsia-500/5 to-tech-800 border border-gray-200 p-6 sm:p-10 mb-8">
+ <div className="absolute inset-0 bg-gray-50 opacity-30 rounded-2xl pointer-events-none" />
  <div className="relative">
  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-xs font-medium mb-4">
  <Heart className="w-3.5 h-3.5" />
@@ -135,11 +135,11 @@ export default function MyPlaybooksPage() {
  <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">
  Your Playbook Dashboard
  </h1>
- <p className="text-sm text-tech-100/70 max-w-xl mb-4">
+ <p className="text-sm text-gray-800/70 max-w-xl mb-4">
  Track playbooks, log your results, and share your success story with the community.
  All data stays in your browser.
  </p>
- <div className="flex flex-wrap gap-3 text-xs text-tech-200">
+ <div className="flex flex-wrap gap-3 text-xs text-gray-700">
  <span className="flex items-center gap-1">
  <Bookmark className="w-3.5 h-3.5 text-violet-400" />
  {trackedSlugs.length} tracked
@@ -153,7 +153,7 @@ export default function MyPlaybooksPage() {
  </div>
 
  {/* Tab Navigation */}
- <div className="flex gap-1 mb-6 bg-tech-700/50 rounded-xl p-1 border border-tech-500/20">
+ <div className="flex gap-1 mb-6 bg-gray-50/50 rounded-xl p-1 border border-gray-200">
  {tabs.map((tab) => {
  const Icon = tab.icon;
  return (
@@ -163,8 +163,8 @@ export default function MyPlaybooksPage() {
  className={cn(
  'flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition flex-1 justify-center',
  activeTab === tab.id
- ? 'bg-tech-600 text-white shadow-lg'
- : 'text-tech-300 hover:text-white'
+ ? 'bg-gray-100 text-white shadow-lg'
+ : 'text-gray-600 hover:text-white'
  )}
  >
  <Icon className="w-4 h-4" />
@@ -186,10 +186,10 @@ export default function MyPlaybooksPage() {
  ))}
  </div>
  ) : (
- <div className="rounded-xl border border-dashed border-tech-500/30 bg-tech-700/40 p-8 text-center mb-8">
- <Bookmark className="w-10 h-10 text-tech-400 mx-auto mb-3" />
+ <div className="rounded-xl border border-dashed border-gray-200 bg-white/40 p-8 text-center mb-8">
+ <Bookmark className="w-10 h-10 text-gray-400 mx-auto mb-3" />
  <h3 className="text-base font-semibold text-white mb-1">No playbooks tracked yet</h3>
- <p className="text-xs text-tech-200 max-w-md mx-auto mb-4">
+ <p className="text-xs text-gray-700 max-w-md mx-auto mb-4">
  Browse playbooks and save the ones you want to follow.
  </p>
  <Link
@@ -221,13 +221,13 @@ export default function MyPlaybooksPage() {
  <h2 className="text-lg font-semibold text-white mb-4">Log Your Results</h2>
 
  {/* Add result form */}
- <div className="rounded-xl border border-tech-500/30 bg-tech-700/80 p-4 sm:p-5 mb-6">
+ <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-5 mb-6">
  <h3 className="text-sm font-semibold text-white mb-3">Add a Result</h3>
  <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
  <select
  value={newResultPlaybook}
  onChange={(e) => setNewResultPlaybook(e.target.value)}
- className="w-full bg-tech-800 border border-tech-500/40 rounded-lg px-3 py-2 text-sm text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/50"
+ className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-neon/50"
  >
  <option value="">Select playbook</option>
  {playbooks.map((p) => (
@@ -241,19 +241,19 @@ export default function MyPlaybooksPage() {
  value={newResultMetric}
  onChange={(e) => setNewResultMetric(e.target.value)}
  placeholder="Metric (e.g. Monthly Traffic)"
- className="w-full bg-tech-800 border border-tech-500/40 rounded-lg px-3 py-2 text-sm text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/50"
+ className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-neon/50"
  />
  <input
  type="text"
  value={newResultValue}
  onChange={(e) => setNewResultValue(e.target.value)}
  placeholder="Value (e.g. 24K visitors)"
- className="w-full bg-tech-800 border border-tech-500/40 rounded-lg px-3 py-2 text-sm text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/50"
+ className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-neon/50"
  />
  <button
  onClick={addResult}
  disabled={!newResultPlaybook || !newResultMetric || !newResultValue}
- className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-neon hover:bg-neon-dark disabled:bg-tech-500 disabled:text-tech-300 text-white text-sm font-medium transition"
+ className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-neon hover:bg-neon-dark disabled:bg-gray-200 disabled:text-gray-600 text-white text-sm font-medium transition"
  >
  <Plus className="w-4 h-4" />
  Add
@@ -269,7 +269,7 @@ export default function MyPlaybooksPage() {
  return (
  <div
  key={result.id}
- className="flex items-center justify-between rounded-xl border border-tech-500/30 bg-tech-700/60 p-3 sm:p-4"
+ className="flex items-center justify-between rounded-xl border border-gray-200 bg-gray-50 p-3 sm:p-4"
  >
  <div className="flex items-center gap-3 min-w-0">
  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500/20 to-teal-500/10 flex items-center justify-center">
@@ -279,14 +279,14 @@ export default function MyPlaybooksPage() {
  <div className="text-sm font-medium text-white">
  {result.metric}: <span className="text-emerald-400">{result.value}</span>
  </div>
- <div className="text-[11px] text-tech-300">
+ <div className="text-[11px] text-gray-600">
  {pb?.title || result.playbookSlug} &middot; {result.date}
  </div>
  </div>
  </div>
  <button
  onClick={() => deleteResult(result.id)}
- className="p-1.5 rounded-lg text-tech-400 hover:text-red-400 hover:bg-red-500/10 transition"
+ className="p-1.5 rounded-lg text-gray-400 hover:text-red-400 hover:bg-red-500/10 transition"
  >
  <Trash2 className="w-4 h-4" />
  </button>
@@ -295,10 +295,10 @@ export default function MyPlaybooksPage() {
  })}
  </div>
  ) : (
- <div className="rounded-xl border border-dashed border-tech-500/30 bg-tech-700/40 p-8 text-center">
- <TrendingUp className="w-10 h-10 text-tech-400 mx-auto mb-3" />
+ <div className="rounded-xl border border-dashed border-gray-200 bg-white/40 p-8 text-center">
+ <TrendingUp className="w-10 h-10 text-gray-400 mx-auto mb-3" />
  <h3 className="text-base font-semibold text-white mb-1">No results logged yet</h3>
- <p className="text-xs text-tech-200 max-w-md mx-auto">
+ <p className="text-xs text-gray-700 max-w-md mx-auto">
  Track your progress by logging metrics from the playbooks you follow.
  </p>
  </div>
@@ -314,22 +314,22 @@ export default function MyPlaybooksPage() {
  <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center">
  <Check className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
  <h3 className="text-lg font-semibold text-white mb-1">Story Submitted! 🎉</h3>
- <p className="text-sm text-tech-200 max-w-md mx-auto mb-4">
+ <p className="text-sm text-gray-700 max-w-md mx-auto mb-4">
  Your story has been saved locally. Our editorial team will review it for inclusion
  on the public feed.
  </p>
  <button
  onClick={() => setStorySubmitted(false)}
- className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-tech-600 hover:bg-tech-500 text-white text-sm font-medium transition"
+ className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-white text-sm font-medium transition"
  >
  Submit Another
  </button>
  </div>
  ) : (
- <div className="rounded-xl border border-tech-500/30 bg-tech-700/80 p-5 sm:p-6">
+ <div className="rounded-xl border border-gray-200 bg-white p-5 sm:p-6">
  <div className="space-y-4">
  <div>
- <label className="block text-sm font-medium text-tech-100 mb-1">
+ <label className="block text-sm font-medium text-gray-800 mb-1">
  Title <span className="text-red-400">*</span>
  </label>
  <input
@@ -337,18 +337,18 @@ export default function MyPlaybooksPage() {
  value={storyTitle}
  onChange={(e) => setStoryTitle(e.target.value)}
  placeholder="e.g. Built a $420 MRR SaaS in 72 hours"
- className="w-full bg-tech-800 border border-tech-500/40 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/50"
+ className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-neon/50"
  />
  </div>
 
  <div>
- <label className="block text-sm font-medium text-tech-100 mb-1">
+ <label className="block text-sm font-medium text-gray-800 mb-1">
  Playbook Used <span className="text-red-400">*</span>
  </label>
  <select
  value={storyPlaybook}
  onChange={(e) => setStoryPlaybook(e.target.value)}
- className="w-full bg-tech-800 border border-tech-500/40 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-neon/50"
+ className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-neon/50"
  >
  <option value="">Select a playbook</option>
  {playbooks.map((p) => (
@@ -360,7 +360,7 @@ export default function MyPlaybooksPage() {
  </div>
 
  <div>
- <label className="block text-sm font-medium text-tech-100 mb-1">
+ <label className="block text-sm font-medium text-gray-800 mb-1">
  Description
  </label>
  <textarea
@@ -368,12 +368,12 @@ export default function MyPlaybooksPage() {
  onChange={(e) => setStoryDescription(e.target.value)}
  placeholder="Tell us what you built and how the playbook helped..."
  rows={3}
- className="w-full bg-tech-800 border border-tech-500/40 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/50"
+ className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-neon/50"
  />
  </div>
 
  <div>
- <label className="block text-sm font-medium text-tech-100 mb-1">
+ <label className="block text-sm font-medium text-gray-800 mb-1">
  Revenue Proof (optional)
  </label>
  <input
@@ -381,7 +381,7 @@ export default function MyPlaybooksPage() {
  value={storyRevenue}
  onChange={(e) => setStoryRevenue(e.target.value)}
  placeholder="e.g. $3.2K MRR"
- className="w-full bg-tech-800 border border-tech-500/40 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/50"
+ className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-neon/50"
  />
  </div>
 
@@ -394,7 +394,7 @@ export default function MyPlaybooksPage() {
  Submit Your Story
  </button>
 
- <p className="text-[10px] text-tech-400 text-center">
+ <p className="text-[10px] text-gray-400 text-center">
  Your story will be saved locally. No account needed. We&apos;ll review for
  inclusion on the public feed.
  </p>
@@ -415,8 +415,8 @@ function TrackedPlaybookCard({
  onUntrack: (slug: string) => void;
 }) {
  return (
- <div className="group relative rounded-xl border border-violet-500/30 bg-tech-700/80 p-4 overflow-hidden">
- <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none" />
+ <div className="group relative rounded-xl border border-violet-500/30 bg-white p-4 overflow-hidden">
+ <div className="absolute inset-0 bg-gray-50 opacity-20 pointer-events-none" />
  <div className="relative">
  <div className="flex items-center justify-between mb-2">
  <div className="flex items-center gap-2">
@@ -439,8 +439,8 @@ function TrackedPlaybookCard({
  <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-0.5">
  {playbook.title}
  </h3>
- <p className="text-[11px] text-tech-200 line-clamp-1">{playbook.description}</p>
- <div className="flex items-center gap-2 mt-2 text-[10px] text-tech-300">
+ <p className="text-[11px] text-gray-700 line-clamp-1">{playbook.description}</p>
+ <div className="flex items-center gap-2 mt-2 text-[10px] text-gray-600">
  <span className="flex items-center gap-0.5">
  <Clock className="w-3 h-3" />
  {playbook.read_time_minutes} min
@@ -466,13 +466,13 @@ function UntrackedPlaybookCard({
  onTrack: (slug: string) => void;
 }) {
  return (
- <div className="group relative rounded-xl border border-tech-500/30 bg-tech-700/60 p-4 hover:border-neon/30 transition-all overflow-hidden">
- <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none" />
+ <div className="group relative rounded-xl border border-gray-200 bg-gray-50 p-4 hover:border-neon/30 transition-all overflow-hidden">
+ <div className="absolute inset-0 bg-gray-50 opacity-20 pointer-events-none" />
  <div className="relative">
  <div className="flex items-center justify-between mb-2">
  <div className="flex items-center gap-2">
  <span className="text-lg">{playbook.icon}</span>
- <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-tech-600 text-tech-300 border border-tech-500/30">
+ <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-600 border border-gray-200">
  {playbook.difficulty}
  </span>
  </div>
@@ -481,7 +481,7 @@ function UntrackedPlaybookCard({
  e.preventDefault();
  onTrack(playbook.slug);
  }}
- className="p-1.5 rounded-lg text-tech-400 hover:text-violet-400 hover:bg-violet-500/10 transition"
+ className="p-1.5 rounded-lg text-gray-400 hover:text-violet-400 hover:bg-violet-500/10 transition"
  >
  <Plus className="w-3.5 h-3.5" />
  </button>
@@ -490,8 +490,8 @@ function UntrackedPlaybookCard({
  <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-0.5">
  {playbook.title}
  </h3>
- <p className="text-[11px] text-tech-200 line-clamp-1">{playbook.description}</p>
- <div className="flex items-center gap-2 mt-2 text-[10px] text-tech-300">
+ <p className="text-[11px] text-gray-700 line-clamp-1">{playbook.description}</p>
+ <div className="flex items-center gap-2 mt-2 text-[10px] text-gray-600">
  <span className="flex items-center gap-0.5">
  <Clock className="w-3 h-3" />
  {playbook.read_time_minutes} min

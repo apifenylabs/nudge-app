@@ -157,7 +157,7 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
  (tool as any).solopreneur_score >= 7
  ? 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30'
  : (tool as any).solopreneur_score >= 4
- ? 'bg-amber-500/15 text-amber-300 border-amber-500/30'
+ ? 'bg-amber-100 text-amber-700 border-amber-200'
  : 'bg-tech-600/60 text-tech-200 border-tech-500/30'
  )}
  >

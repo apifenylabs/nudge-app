@@ -294,10 +294,10 @@ function CheckoutOverlay({ onBack }: { onBack: () => void }) {
 
  return (
  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
- <div className="relative max-w-md w-full bg-tech-800 border border-tech-500/30 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-neon/10">
+ <div className="relative max-w-md w-full bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-neon/10">
  <button
  onClick={onBack}
- className="absolute top-4 right-4 text-tech-300 hover:text-white transition"
+ className="absolute top-4 right-4 text-gray-600 hover:text-white transition"
  aria-label="Close"
  >
  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -310,11 +310,11 @@ function CheckoutOverlay({ onBack }: { onBack: () => void }) {
  <FileText className="w-8 h-8 text-white" />
  </div>
  <h3 className="text-xl font-bold text-white mb-1">AI Personal Assistant Setup Guide</h3>
- <p className="text-sm text-tech-200">Complete PDF Playbook</p>
+ <p className="text-sm text-gray-700">Complete PDF Playbook</p>
  <div className="mt-3 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-neon/15 border border-neon/20">
  <DollarSign className="w-4 h-4 text-neon-light" />
  <span className="text-lg font-bold text-white">$7</span>
- <span className="text-xs text-tech-200">one-time</span>
+ <span className="text-xs text-gray-700">one-time</span>
  </div>
  </div>
 
@@ -334,7 +334,7 @@ function CheckoutOverlay({ onBack }: { onBack: () => void }) {
  ) : (
  <form onSubmit={handlePurchase} className="space-y-4">
  <div>
- <label htmlFor="checkout-email" className="block text-sm font-medium text-tech-200 mb-1">
+ <label htmlFor="checkout-email" className="block text-sm font-medium text-gray-700 mb-1">
  Email address
  </label>
  <input
@@ -344,7 +344,7 @@ function CheckoutOverlay({ onBack }: { onBack: () => void }) {
  onChange={(e) => setEmail(e.target.value)}
  placeholder="your@email.com"
  required
- className="w-full bg-tech-900 border border-tech-500/50 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/60 focus:ring-1 focus:ring-neon/20 transition"
+ className="w-full bg-white border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-neon/60 focus:ring-1 focus:ring-neon/20 transition"
  />
  </div>
 
@@ -373,7 +373,7 @@ function CheckoutOverlay({ onBack }: { onBack: () => void }) {
  <p className="text-xs text-red-400 text-center">{message}</p>
  )}
 
- <p className="text-[10px] text-tech-300 text-center">
+ <p className="text-[10px] text-gray-600 text-center">
  Secure checkout. Your PDF will be available immediately after purchase.
  <br />You will also receive a download link via email.
  </p>
@@ -395,22 +395,22 @@ function AISolopreneurToolkitInner() {
  <SeoMetadata title="AI Personal Assistant Setup Guide — Apifeny" description="Set up your own AI personal assistant in under an hour. Covers tool selection, automation setup, scheduling, email management, and task triage with ChatGPT, Claude, and Zapier." />
  {/* Breadcrumb */}
  <nav aria-label="Breadcrumb" className="mb-4">
- <ol className="flex flex-wrap items-center gap-1.5 text-xs text-tech-300">
+ <ol className="flex flex-wrap items-center gap-1.5 text-xs text-gray-600">
  <li>
  <Link href="/" className="hover:text-white transition">Home</Link>
  </li>
- <li className="text-tech-500">/</li>
+ <li className="text-gray-500">/</li>
  <li>
  <Link href="/playbooks" className="hover:text-white transition">Playbooks</Link>
  </li>
- <li className="text-tech-100 truncate max-w-[200px]">AI Personal Assistant Setup Guide</li>
+ <li className="text-gray-800 truncate max-w-[200px]">AI Personal Assistant Setup Guide</li>
  </ol>
  </nav>
 
  {/* Back link */}
  <Link
  href="/playbooks"
- className="inline-flex items-center gap-1.5 text-sm text-tech-200 hover:text-white transition mb-6 group"
+ className="inline-flex items-center gap-1.5 text-sm text-gray-700 hover:text-white transition mb-6 group"
  >
  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition" />
  All Playbooks
@@ -420,14 +420,14 @@ function AISolopreneurToolkitInner() {
  {/* HERO SECTION */}
  {/* ═══════════════════════════════════════════════════ */}
  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-sky-500/30 to-violet-500/30 border border-neon/20 mb-8 sm:mb-10">
- <div className="absolute inset-0 bg-tech-grid opacity-30" />
+ <div className="absolute inset-0 bg-gray-50 opacity-30" />
  <div className="absolute top-0 right-0 w-96 h-96 bg-neon/10 rounded-full blur-[120px] pointer-events-none" />
  <div className="absolute bottom-0 left-0 w-64 h-64 bg-aqua/10 rounded-full blur-[100px] pointer-events-none" />
 
  <div className="relative p-6 sm:p-8 lg:p-10">
  <div className="flex items-center gap-2 mb-3">
  <span className="text-3xl">🧠</span>
- <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-500/20 text-amber-400 border border-amber-500/30">
+ <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-100 text-amber-700 border-amber-200 border border-amber-500/30">
  Premium
  </span>
  </div>
@@ -436,7 +436,7 @@ function AISolopreneurToolkitInner() {
  AI Personal Assistant Setup Guide
  </h1>
 
- <p className="text-sm sm:text-base text-tech-100 max-w-2xl mb-4 leading-relaxed">
+ <p className="text-sm sm:text-base text-gray-800 max-w-2xl mb-4 leading-relaxed">
  Set up ChatGPT, Notion AI & Zapier to automate scheduling, emails, research, and daily tasks
  From choosing your niche to scaling past $10K/month — this 50+ page PDF
  gives you every system, prompt, and strategy you need.
@@ -444,19 +444,19 @@ function AISolopreneurToolkitInner() {
 
  {/* Key stats */}
  <div className="flex flex-wrap gap-3 mb-4">
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600 text-tech-100 border border-tech-500/30">
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800 border border-gray-200">
  <FileText className="w-3 h-3" />
  50+ pages
  </span>
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600 text-tech-100 border border-tech-500/30">
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800 border border-gray-200">
  <Clock className="w-3 h-3" />
  8 chapters
  </span>
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600 text-tech-100 border border-tech-500/30">
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800 border border-gray-200">
  <Sparkles className="w-3 h-3" />
  50+ prompts
  </span>
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600 text-tech-100 border border-tech-500/30">
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800 border border-gray-200">
  <Globe className="w-3 h-3" />
  Updated July 2026
  </span>
@@ -473,7 +473,7 @@ function AISolopreneurToolkitInner() {
  </button>
  <a
  href="#preview"
- className="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-tech-700 border border-tech-500/30 text-tech-100 text-sm font-medium hover:text-white hover:border-neon/30 transition"
+ className="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-white border border-gray-200 text-gray-800 text-sm font-medium hover:text-white hover:border-neon/30 transition"
  >
  <BookOpen className="w-4 h-4" />
  Preview Contents
@@ -481,7 +481,7 @@ function AISolopreneurToolkitInner() {
  </div>
 
  {/* Trust signals after CTA buttons */}
- <div className="mt-4 flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-tech-200">
+ <div className="mt-4 flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-gray-700">
  <span className="flex items-center gap-1.5">
  <Sparkles className="w-3.5 h-3.5 text-amber-400 shrink-0" />
  127+ builders have downloaded this playbook
@@ -534,14 +534,14 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  return (
  <div
  key={i}
- className="flex items-start gap-3 p-4 rounded-xl border border-tech-500/20 bg-tech-700/60 hover:border-neon/20 transition"
+ className="flex items-start gap-3 p-4 rounded-xl border border-gray-200 bg-gray-50 hover:border-neon/20 transition"
  >
  <div className="w-10 h-10 rounded-lg bg-neon/10 flex items-center justify-center shrink-0">
  <Icon className="w-5 h-5 text-neon-light" />
  </div>
  <div>
  <p className="text-sm font-medium text-white">{item.text}</p>
- <p className="text-xs text-tech-300 mt-0.5">{item.subtext}</p>
+ <p className="text-xs text-gray-600 mt-0.5">{item.subtext}</p>
  </div>
  </div>
  );
@@ -569,7 +569,7 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  </div>
  <div>
  <p className="text-sm font-medium text-white">{item.text}</p>
- <p className="text-xs text-tech-300 mt-0.5">{item.subtext}</p>
+ <p className="text-xs text-gray-600 mt-0.5">{item.subtext}</p>
  </div>
  </div>
  );
@@ -598,7 +598,7 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  </div>
  <div>
  <p className="text-sm font-medium text-white">{item.text}</p>
- <p className="text-xs text-tech-300 mt-0.5">{item.subtext}</p>
+ <p className="text-xs text-gray-600 mt-0.5">{item.subtext}</p>
  </div>
  </div>
  );
@@ -614,7 +614,7 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  <SearchIcon className="w-4 h-4 text-amber-400" />
  Chapter Preview
  </h2>
- <p className="text-sm text-tech-200 mb-6">
+ <p className="text-sm text-gray-700 mb-6">
  Here&apos;s everything covered in the AI Personal Assistant Setup Guide. Each chapter is
  packed with actionable strategies, real examples, and ready-to-use prompts.
  </p>
@@ -623,29 +623,29 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  {sections.map((section) => (
  <details
  key={section.id}
- className="group rounded-xl border border-tech-500/20 bg-tech-700/50 overflow-hidden transition hover:border-neon/20"
+ className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-neon/20"
  >
  <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none">
  <div className="flex items-center gap-3 min-w-0">
- <div className="w-10 h-10 rounded-lg bg-tech-600 flex items-center justify-center shrink-0">
+ <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center shrink-0">
  {section.icon}
  </div>
  <div className="min-w-0">
  <h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-neon-light transition">
  {section.title}
  </h3>
- <p className="text-xs text-tech-300 mt-0.5 line-clamp-1">
+ <p className="text-xs text-gray-600 mt-0.5 line-clamp-1">
  {section.description}
  </p>
  </div>
  </div>
- <ChevronRight className="w-5 h-5 text-tech-300 shrink-0 transition-transform group-open:rotate-90" />
+ <ChevronRight className="w-5 h-5 text-gray-600 shrink-0 transition-transform group-open:rotate-90" />
  </summary>
 
- <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-tech-500/10 pt-3">
+ <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-200 pt-3">
  <ul className="space-y-2">
  {section.items.map((item, i) => (
- <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-tech-100">
+ <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-gray-800">
  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
  {item}
  </li>
@@ -677,7 +677,7 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  <Icon className={`w-5 h-5 ${item.color}`} />
  </div>
  <div className={`text-xl sm:text-2xl font-bold ${item.color}`}>{item.value}</div>
- <div className="text-xs text-tech-200 mt-1">{item.label}</div>
+ <div className="text-xs text-gray-700 mt-1">{item.label}</div>
  </div>
  );
  })}
@@ -702,7 +702,7 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  {testimonials.map((t, i) => (
  <div
  key={i}
- className="flex flex-col p-5 rounded-xl border border-tech-500/20 bg-tech-700/60"
+ className="flex flex-col p-5 rounded-xl border border-gray-200 bg-gray-50"
  >
  {/* Star rating */}
  <div className="flex items-center gap-0.5 mb-3">
@@ -710,12 +710,12 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  <Star key={si} className="w-4 h-4 text-amber-400 fill-amber-400" />
  ))}
  </div>
- <blockquote className="text-xs sm:text-sm text-tech-100 leading-relaxed mb-3 flex-1">
+ <blockquote className="text-xs sm:text-sm text-gray-800 leading-relaxed mb-3 flex-1">
  &ldquo;{t.quote}&rdquo;
  </blockquote>
- <div className="border-t border-tech-500/10 pt-3 mt-auto">
+ <div className="border-t border-gray-200 pt-3 mt-auto">
  <div className="text-sm font-medium text-white">{t.name}</div>
- <div className="text-xs text-tech-300">{t.title}</div>
+ <div className="text-xs text-gray-600">{t.title}</div>
  </div>
  </div>
  ))}
@@ -742,15 +742,15 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  </span>
  </div>
  <div className="text-base font-semibold text-white mb-1 pr-12">{bonus.name}</div>
- <p className="text-xs text-tech-200 mb-2">{bonus.desc}</p>
+ <p className="text-xs text-gray-700 mb-2">{bonus.desc}</p>
  <div className="flex items-center gap-2 mt-auto">
  <span className="text-lg font-bold text-emerald-400">$0</span>
- <span className="text-xs text-tech-300 line-through">{bonus.value}</span>
+ <span className="text-xs text-gray-600 line-through">{bonus.value}</span>
  </div>
  </div>
  ))}
  </div>
- <p className="mt-4 text-xs text-tech-300 text-center">
+ <p className="mt-4 text-xs text-gray-600 text-center">
  Get all 3 bonuses instantly when you buy today.
  </p>
  </section>
@@ -759,7 +759,7 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  {/* FOMO SECTION */}
  {/* ═══════════════════════════════════════════════════ */}
  <section className="mb-8 sm:mb-10">
- <div className="relative overflow-hidden rounded-2xl border border-tech-500/20 bg-tech-700/60 p-6 sm:p-8 text-center">
+ <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8 text-center">
  <div className="absolute inset-0 bg-gradient-to-br from-neon/5 via-transparent to-cyan-500/5 pointer-events-none" />
  <div className="relative">
  <h2 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-center justify-center gap-2">
@@ -769,12 +769,12 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-4">
  <div className="text-center">
  <div className="text-3xl sm:text-4xl font-bold text-neon-light">$7</div>
- <div className="text-xs text-tech-300">Current price</div>
+ <div className="text-xs text-gray-600">Current price</div>
  </div>
- <div className="hidden sm:block text-2xl text-tech-500">→</div>
+ <div className="hidden sm:block text-2xl text-gray-500">→</div>
  <div className="text-center">
- <div className="text-2xl sm:text-3xl font-bold text-tech-300 line-through">$19</div>
- <div className="text-xs text-tech-300">Next tier</div>
+ <div className="text-2xl sm:text-3xl font-bold text-gray-600 line-through">$19</div>
+ <div className="text-xs text-gray-600">Next tier</div>
  </div>
  </div>
  <div className="flex flex-wrap items-center justify-center gap-4 mb-3">
@@ -810,16 +810,16 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  {faqItems.map((faq, i) => (
  <details
  key={i}
- className="group rounded-xl border border-tech-500/20 bg-tech-700/50 overflow-hidden transition hover:border-neon/20"
+ className="group rounded-xl border border-gray-200 bg-white overflow-hidden transition hover:border-neon/20"
  >
  <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none">
  <span className="text-sm sm:text-base font-medium text-white group-hover:text-neon-light transition pr-4">
  {faq.q}
  </span>
- <ChevronRight className="w-5 h-5 text-tech-300 shrink-0 transition-transform group-open:rotate-90" />
+ <ChevronRight className="w-5 h-5 text-gray-600 shrink-0 transition-transform group-open:rotate-90" />
  </summary>
- <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-tech-500/10 pt-3">
- <p className="text-xs sm:text-sm text-tech-200 leading-relaxed">{faq.a}</p>
+ <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-200 pt-3">
+ <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">{faq.a}</p>
  </div>
  </details>
  ))}
@@ -831,19 +831,19 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  {/* ═══════════════════════════════════════════════════ */}
  <section className="mb-8 sm:mb-10">
  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-500/20 via-green-500/10 to-tech-800 border border-emerald-500/20 p-6 sm:p-8 text-center">
- <div className="absolute inset-0 bg-tech-grid opacity-20" />
+ <div className="absolute inset-0 bg-gray-50 opacity-20" />
  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-emerald-500/15 rounded-full blur-[100px] pointer-events-none" />
  <div className="relative">
  <Shield className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
  <h2 className="text-lg sm:text-xl font-bold text-white mb-2">
  100% Risk-Free — 30-Day Money-Back Guarantee
  </h2>
- <p className="text-sm text-tech-200 max-w-lg mx-auto mb-4 leading-relaxed">
+ <p className="text-sm text-gray-700 max-w-lg mx-auto mb-4 leading-relaxed">
  If the AI Personal Assistant Setup Guide doesn&apos;t help you save 10x times your investment
  within 30 days, I&apos;ll refund every cent. No questions asked. You keep the bonuses
  even if you ask for a refund — that&apos;s how confident I am this will work for you.
  </p>
- <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-tech-300">
+ <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-gray-600">
  <span className="flex items-center gap-1">
  <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
  Instant download
@@ -865,7 +865,7 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  {/* FINAL CTA — PRICE CARD */}
  {/* ═══════════════════════════════════════════════════ */}
  <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-violet-500/20 via-fuchsia-500/10 to-neon/10 border border-neon/20 p-6 sm:p-8 text-center">
- <div className="absolute inset-0 bg-tech-grid opacity-20" />
+ <div className="absolute inset-0 bg-gray-50 opacity-20" />
  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-neon/15 rounded-full blur-[100px] pointer-events-none" />
 
  <div className="relative">
@@ -876,20 +876,20 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
  Ready to Build Your AI-Powered Business?
  </h2>
- <p className="text-sm text-tech-200 max-w-lg mx-auto mb-4">
+ <p className="text-sm text-gray-700 max-w-lg mx-auto mb-4">
  Get the complete 50+ page PDF playbook. Every strategy, prompt, and system
  you need to go from idea to profitable solopreneur.
  </p>
 
- <div className="inline-flex items-center gap-4 px-4 py-2 rounded-xl bg-tech-700/80 border border-tech-500/20 mb-4">
+ <div className="inline-flex items-center gap-4 px-4 py-2 rounded-xl bg-white border border-gray-200 mb-4">
  <div className="text-left">
  <div className="text-2xl font-bold text-white">$7</div>
- <div className="text-[10px] text-tech-300">one-time payment</div>
+ <div className="text-[10px] text-gray-600">one-time payment</div>
  </div>
- <div className="h-8 w-px bg-tech-500/30" />
+ <div className="h-8 w-px border-gray-200" />
  <div className="text-left">
  <div className="text-xs font-medium text-emerald-400">Lifetime access</div>
- <div className="text-[10px] text-tech-300">Free updates</div>
+ <div className="text-[10px] text-gray-600">Free updates</div>
  </div>
  </div>
 
@@ -901,7 +901,7 @@ Bonus: Write the exact ChatGPT/Claude prompt I should start my day with.`}
  Download PDF — $7
  </button>
 
- <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-[10px] text-tech-300">
+ <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-[10px] text-gray-600">
  <span className="flex items-center gap-1">
  <CheckCircle className="w-3 h-3 text-emerald-400" />
  Instant download
@@ -932,9 +932,9 @@ export default function AISolopreneurToolkitPage() {
  <Suspense fallback={
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
  <div className="animate-pulse space-y-4">
- <div className="h-4 bg-tech-700 rounded w-1/4" />
- <div className="h-8 bg-tech-700 rounded w-3/4" />
- <div className="h-64 bg-tech-700 rounded" />
+ <div className="h-4 bg-white rounded w-1/4" />
+ <div className="h-8 bg-white rounded w-3/4" />
+ <div className="h-64 bg-white rounded" />
  </div>
  </div>
  }>

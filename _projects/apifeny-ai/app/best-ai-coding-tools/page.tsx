@@ -119,7 +119,7 @@ export default function BestAICodingToolsPage() {
  }, [top6, allCodingTools.length]);
 
  return (
- <>
+ <div className="min-h-screen bg-white">
  <BreadcrumbSchema
  items={[
  { name: 'Home', item: '/' },
@@ -135,8 +135,8 @@ export default function BestAICodingToolsPage() {
  />
 
  {/* ───── HERO ───── */}
- <section className="relative overflow-hidden border-b border-tech-500/20">
- <div className="absolute inset-0 bg-tech-grid opacity-40 pointer-events-none" />
+ <section className="relative overflow-hidden border-b border-gray-200">
+ <div className="absolute inset-0 bg-gray-50 opacity-40 pointer-events-none" />
  <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-neon/10 rounded-full blur-[120px] pointer-events-none" />
  <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-aqua/10 rounded-full blur-[100px] pointer-events-none" />
 
@@ -153,10 +153,10 @@ export default function BestAICodingToolsPage() {
  2026
  </span>
  <br />
- <span className="text-tech-100">AI Code Assistants, IDEs &amp; Agents</span>
+ <span className="text-gray-800">AI Code Assistants, IDEs &amp; Agents</span>
  </h1>
 
- <p className="mt-5 sm:mt-6 text-base sm:text-lg text-tech-200 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
+ <p className="mt-5 sm:mt-6 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
  From AI-native IDEs like Cursor and Windsurf to terminal agents like{' '}
  <strong className="text-white">Claude Code</strong> and <strong className="text-white">Aider</strong> —
  find the perfect AI coding assistant for your workflow. Ranked by real developer ratings.
@@ -172,14 +172,14 @@ export default function BestAICodingToolsPage() {
  </Link>
  <Link
  href="/tools"
- className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-tech-500/40 text-tech-100 hover:border-sky-400/30 hover:text-white text-sm sm:text-base font-medium transition-all"
+ className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-gray-200 text-gray-800 hover:border-sky-400/30 hover:text-white text-sm sm:text-base font-medium transition-all"
  >
  <Zap className="w-4 h-4" />
  View All {toolsData.filter((t) => t.is_published).length} Tools
  </Link>
  </div>
 
- <div className="mt-10 sm:mt-14 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-tech-300 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+ <div className="mt-10 sm:mt-14 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-gray-600 animate-fade-in" style={{ animationDelay: '0.3s' }}>
  <div className="flex items-center gap-2">
  <Terminal className="w-4 h-4 text-sky-400" />
  <span>13 Coding Tools Ranked</span>
@@ -209,7 +209,7 @@ export default function BestAICodingToolsPage() {
  Top AI Coding Tools in 2026
  </h2>
  </div>
- <p className="text-sm sm:text-base text-tech-200 ml-[52px]">
+ <p className="text-sm sm:text-base text-gray-700 ml-[52px]">
  Ranked by trending score, real developer ratings, and code quality
  </p>
  </div>
@@ -221,7 +221,7 @@ export default function BestAICodingToolsPage() {
  key={tool.id}
  href={`/tools/${tool.slug}`}
  className={cn(
- 'group relative block rounded-xl border border-tech-500/30 bg-tech-700 p-5 transition-all duration-300',
+ 'group relative block rounded-xl border border-gray-200 bg-white p-5 transition-all duration-300',
  'hover:border-sky-400/40 hover:shadow-lg hover:shadow-sky-500/5 hover:-translate-y-1',
  )}
  >
@@ -234,14 +234,14 @@ export default function BestAICodingToolsPage() {
  ? 'bg-gradient-to-br from-slate-300 to-slate-400 text-black'
  : i === 2
  ? 'bg-gradient-to-br from-amber-600 to-amber-700 text-white'
- : 'bg-tech-500 text-tech-100 border border-tech-400/30'
+ : 'bg-gray-200 text-gray-800 border border-gray-200/30'
  )}
  >
  #{i + 1}
  </div>
 
  <div className="flex items-start gap-3 mb-3">
- <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-tech-400/30 group-hover:border-sky-400/30 transition">
+ <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-gray-200/30 group-hover:border-sky-400/30 transition">
  <span className="text-white font-bold text-sm">
  {tool.name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
@@ -250,14 +250,14 @@ export default function BestAICodingToolsPage() {
  <h3 className="text-base font-semibold text-white truncate group-hover:text-sky-300 transition-colors">
  {tool.name}
  </h3>
- <p className="text-xs text-tech-200 line-clamp-2 mt-0.5 leading-relaxed">
+ <p className="text-xs text-gray-700 line-clamp-2 mt-0.5 leading-relaxed">
  {tool.tagline}
  </p>
  </div>
  </div>
 
  <div className="flex flex-wrap items-center gap-2 mb-3">
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600/60 text-tech-100 border border-tech-500/30">
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800 border border-gray-200">
  <Code className="w-2.5 h-2.5" />
  {tool.pricing_tier === 'Open Source' ? 'Open Source' : tool.pricing_tier}
  </span>
@@ -275,7 +275,7 @@ export default function BestAICodingToolsPage() {
  >
  {tool.pricing_tier === 'Freemium' ? 'Free+' : tool.pricing_tier === 'Open Source' ? 'OSS' : tool.pricing_tier}
  </span>
- <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-tech-600/60 text-tech-100 border border-tech-500/30">
+ <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-gray-100 text-gray-800 border border-gray-200">
  <Terminal className="w-2.5 h-2.5" />
  {tool.slug === 'cursor' || tool.slug === 'windsurf' ? 'AI IDE'
  : tool.slug === 'claude-code' || tool.slug === 'aider' || tool.slug === 'devin' ? 'Terminal Agent'
@@ -294,15 +294,15 @@ export default function BestAICodingToolsPage() {
  else stars.push('empty');
  }
  return stars.map((s, si) => (
- <Star key={si} className={cn('w-3 h-3', s === 'full' ? 'fill-asia text-asia' : s === 'half' ? 'fill-asia/50 text-asia' : 'fill-none text-tech-400')} />
+ <Star key={si} className={cn('w-3 h-3', s === 'full' ? 'fill-asia text-asia' : s === 'half' ? 'fill-asia/50 text-asia' : 'fill-none text-gray-400')} />
  ));
  })()}
  </div>
- <span className="text-xs text-tech-200">{tool.avg_rating.toFixed(1)}</span>
+ <span className="text-xs text-gray-700">{tool.avg_rating.toFixed(1)}</span>
  </div>
 
  <div className="flex items-center gap-2">
- <div className="flex-1 h-1.5 rounded-full bg-tech-600 overflow-hidden">
+ <div className="flex-1 h-1.5 rounded-full bg-gray-100 overflow-hidden">
  <div
  className="h-full rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 transition-all duration-500"
  style={{ width: `${tool.trending_score}%` }}
@@ -329,14 +329,14 @@ export default function BestAICodingToolsPage() {
 
  {/* ───── CATEGORY BREAKDOWN ───── */}
  {categories.map((cat) => (
- <section key={cat.name} className="border-t border-tech-500/10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+ <section key={cat.name} className="border-t border-gray-200 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="flex items-start gap-3 mb-6">
- <div className="w-10 h-10 rounded-xl bg-tech-600/60 flex items-center justify-center shrink-0 border border-tech-500/20 mt-1">
+ <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center shrink-0 border border-gray-200 mt-1">
  <Layers className="w-5 h-5 text-sky-400" />
  </div>
  <div>
  <h2 className="text-xl sm:text-2xl font-bold text-white">{cat.name}</h2>
- <p className="text-sm text-tech-200 mt-1 max-w-xl">{cat.description}</p>
+ <p className="text-sm text-gray-700 mt-1 max-w-xl">{cat.description}</p>
  </div>
  </div>
 
@@ -345,22 +345,22 @@ export default function BestAICodingToolsPage() {
  <Link
  key={tool.id}
  href={`/tools/${tool.slug}`}
- className="group block rounded-xl border border-tech-500/30 bg-tech-700/80 p-4 transition-all duration-300 hover:border-sky-400/30 hover:bg-tech-700 hover:-translate-y-0.5"
+ className="group block rounded-xl border border-gray-200 bg-white p-4 transition-all duration-300 hover:border-sky-400/30 hover:bg-white hover:-translate-y-0.5"
  >
  <div className="flex items-start gap-2.5 mb-2">
- <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-tech-400/20">
+ <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-gray-200/20">
  <span className="text-white font-bold text-xs">{tool.name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase()}</span>
  </div>
  <div className="min-w-0 flex-1">
  <h3 className="text-sm font-semibold text-white truncate group-hover:text-sky-300 transition">{tool.name}</h3>
- <p className="text-[11px] text-tech-200 line-clamp-2 mt-0.5">{tool.tagline}</p>
+ <p className="text-[11px] text-gray-700 line-clamp-2 mt-0.5">{tool.tagline}</p>
  </div>
  </div>
  <div className="flex items-center gap-2">
  <span className={cn('inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium border', tool.pricing_tier === 'Free' ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' : tool.pricing_tier === 'Freemium' ? 'bg-sky-500/20 text-sky-400 border-sky-500/30' : 'bg-neon/20 text-neon-light border-neon/30')}>
  {tool.pricing_tier === 'Freemium' ? 'Free+' : tool.pricing_tier}
  </span>
- <div className="flex items-center gap-1"><Star className="w-2.5 h-2.5 fill-asia text-asia" /><span className="text-[10px] text-tech-200">{tool.avg_rating.toFixed(1)}</span></div>
+ <div className="flex items-center gap-1"><Star className="w-2.5 h-2.5 fill-asia text-asia" /><span className="text-[10px] text-gray-700">{tool.avg_rating.toFixed(1)}</span></div>
  <div className="flex items-center gap-0.5 ml-auto"><TrendingUp className="w-2.5 h-2.5 text-sky-400" /><span className="text-[9px] text-sky-400 font-medium">{tool.trending_score}</span></div>
  </div>
  </Link>
@@ -370,11 +370,11 @@ export default function BestAICodingToolsPage() {
  ))}
 
  {/* ───── COMPARISON TABLE ───── */}
- <section className="border-y border-tech-500/20 bg-tech-800/50">
+ <section className="border-y border-gray-200 bg-gray-50/50">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="text-center mb-8 sm:mb-10">
  <h2 className="text-2xl sm:text-3xl font-bold text-white">Quick Comparison: Top 5 AI Coding Tools</h2>
- <p className="text-sm sm:text-base text-tech-200 mt-2 max-w-xl mx-auto">
+ <p className="text-sm sm:text-base text-gray-700 mt-2 max-w-xl mx-auto">
  See how the leading AI coding assistants stack up.
  </p>
  </div>
@@ -382,25 +382,25 @@ export default function BestAICodingToolsPage() {
  <div className="overflow-x-auto">
  <table className="w-full text-left border-collapse">
  <thead>
- <tr className="border-b border-tech-500/30">
- <th className="px-4 py-3 text-xs font-semibold text-tech-200 uppercase tracking-wider">Tool</th>
- <th className="px-4 py-3 text-xs font-semibold text-tech-200 uppercase tracking-wider">Type</th>
- <th className="px-4 py-3 text-xs font-semibold text-tech-200 uppercase tracking-wider">Pricing</th>
- <th className="px-4 py-3 text-xs font-semibold text-tech-200 uppercase tracking-wider">Rating</th>
- <th className="px-4 py-3 text-xs font-semibold text-tech-200 uppercase tracking-wider">Trending</th>
- <th className="px-4 py-3 text-xs font-semibold text-tech-200 uppercase tracking-wider">Asia-Ready</th>
- <th className="px-4 py-3 text-xs font-semibold text-tech-200 uppercase tracking-wider">Agentic</th>
+ <tr className="border-b border-gray-200">
+ <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider">Tool</th>
+ <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider">Type</th>
+ <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider">Pricing</th>
+ <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider">Rating</th>
+ <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider">Trending</th>
+ <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider">Asia-Ready</th>
+ <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider">Agentic</th>
  </tr>
  </thead>
  <tbody>
  {[...allCodingTools].sort((a, b) => b.trending_score - a.trending_score).slice(0, 5).map((tool) => (
- <tr key={tool.id} className="border-b border-tech-500/10 hover:bg-tech-700/30 transition">
+ <tr key={tool.id} className="border-b border-gray-200 hover:bg-white transition">
  <td className="px-4 py-3">
  <Link href={`/tools/${tool.slug}`} className="text-sm font-semibold text-white hover:text-sky-300 transition">
  {tool.name}
  </Link>
  </td>
- <td className="px-4 py-3 text-xs text-tech-200">
+ <td className="px-4 py-3 text-xs text-gray-700">
  {tool.slug === 'cursor' || tool.slug === 'windsurf' ? 'AI IDE'
  : tool.slug === 'copilot' || tool.slug === 'tabnine' || tool.slug === 'sourcegraph-cody' ? 'Extension'
  : tool.slug === 'claude-code' || tool.slug === 'aider' || tool.slug === 'devin' || tool.slug === 'cline' ? 'Agent'
@@ -411,15 +411,15 @@ export default function BestAICodingToolsPage() {
  {tool.pricing_tier === 'Freemium' ? 'Free+' : tool.pricing_tier === 'Open Source' ? 'OSS' : tool.pricing_tier}
  </span>
  </td>
- <td className="px-4 py-3 text-xs text-tech-100">
+ <td className="px-4 py-3 text-xs text-gray-800">
  <div className="flex items-center gap-1">
  <Star className="w-3 h-3 fill-asia text-asia" />
  {tool.avg_rating.toFixed(1)}
  </div>
  </td>
  <td className="px-4 py-3 text-xs"><span className="text-sky-400 font-medium">{tool.trending_score}</span></td>
- <td className="px-4 py-3 text-xs">{tool.asia_ready ? <span className="text-emerald-400">✓ Yes</span> : <span className="text-tech-400">—</span>}</td>
- <td className="px-4 py-3 text-xs">{tool.is_agentic ? <span className="text-sky-400">✓ Yes</span> : <span className="text-tech-400">—</span>}</td>
+ <td className="px-4 py-3 text-xs">{tool.asia_ready ? <span className="text-emerald-400">✓ Yes</span> : <span className="text-gray-400">—</span>}</td>
+ <td className="px-4 py-3 text-xs">{tool.is_agentic ? <span className="text-sky-400">✓ Yes</span> : <span className="text-gray-400">—</span>}</td>
  </tr>
  ))}
  </tbody>
@@ -443,18 +443,18 @@ export default function BestAICodingToolsPage() {
  </div>
  <div>
  <h2 className="text-xl sm:text-2xl font-bold text-white">Start with a Playbook</h2>
- <p className="text-xs sm:text-sm text-tech-200">Not sure where to start? Follow this step-by-step AI workflow guide.</p>
+ <p className="text-xs sm:text-sm text-gray-700">Not sure where to start? Follow this step-by-step AI workflow guide.</p>
  </div>
  </div>
 
  <Link
  href={`/playbook/${codingPlaybook.slug}`}
- className="block rounded-xl border border-tech-500/30 bg-tech-700 p-6 hover:border-sky-400/30 hover:-translate-y-0.5 transition-all"
+ className="block rounded-xl border border-gray-200 bg-white p-6 hover:border-sky-400/30 hover:-translate-y-0.5 transition-all"
  >
  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
  <div>
  <h3 className="text-lg font-semibold text-white group-hover:text-sky-300">{codingPlaybook.title}</h3>
- <p className="text-sm text-tech-200 mt-1">{typeof codingPlaybook.description === 'string' ? codingPlaybook.description : ''}</p>
+ <p className="text-sm text-gray-700 mt-1">{typeof codingPlaybook.description === 'string' ? codingPlaybook.description : ''}</p>
  </div>
  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-sky-400 shrink-0">
  Read the playbook <ArrowRight className="w-4 h-4" />
@@ -478,15 +478,15 @@ export default function BestAICodingToolsPage() {
  <LandingPageCrossLinks currentSlug="best-ai-coding-tools" />
 
  {/* ───── FINAL CTA ───── */}
- <section className="relative overflow-hidden border-t border-tech-500/20">
- <div className="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none" />
+ <section className="relative overflow-hidden border-t border-gray-200">
+ <div className="absolute inset-0 bg-gray-50 opacity-30 pointer-events-none" />
  <div className="absolute top-[-30%] left-[-10%] w-[70%] h-[70%] bg-sky-500/10 rounded-full blur-[150px] pointer-events-none" />
 
  <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center">
  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
  Ready to Ship Faster with AI Coding Tools?
  </h2>
- <p className="mt-4 text-base sm:text-lg text-tech-200 max-w-2xl mx-auto">
+ <p className="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
  Stop switching between mediocre tools. We&apos;ve done the research — {allCodingTools.length} AI coding assistants ranked, compared, and ready for you.
  </p>
 
@@ -499,13 +499,13 @@ export default function BestAICodingToolsPage() {
  </Link>
  <Link
  href="/tools"
- className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-tech-500/40 text-tech-100 hover:border-sky-400/30 hover:text-white text-sm sm:text-base font-medium transition-all"
+ className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-gray-200 text-gray-800 hover:border-sky-400/30 hover:text-white text-sm sm:text-base font-medium transition-all"
  >
  Explore All AI Tools
  </Link>
  </div>
  </div>
  </section>
- </>
+ </div>
  );
 }

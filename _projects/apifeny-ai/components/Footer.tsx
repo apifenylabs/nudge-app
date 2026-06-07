@@ -116,6 +116,12 @@ export default function Footer() {
  Terms of Service
  </Link>
  </li>
+ <li>
+ <Link href="/affiliate-disclosure" className="text-gray-500 hover:text-gray-900 text-sm transition flex items-center gap-1.5 group">
+ <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-neon transition" />
+ Affiliate Disclosure
+ </Link>
+ </li>
  </ul>
  </div>
  </div>
@@ -133,6 +139,8 @@ export default function Footer() {
  <Link href="/terms" className="hover:text-gray-900 transition">Terms</Link>
  <span className="text-gray-300">·</span>
  <Link href="/changelog" className="hover:text-gray-900 transition">Changelog</Link>
+ <span className="text-gray-300">·</span>
+ <Link href="/affiliate-disclosure" className="hover:text-gray-900 transition">Affiliate Disclosure</Link>
  </div>
  </div>
  </div>

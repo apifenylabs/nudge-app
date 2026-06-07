@@ -174,9 +174,9 @@ const TOOL_CATEGORIES = [
 
 export default function HRPage() {
  return (
- <main className="min-h-screen bg-gray-950">
+ <main className="min-h-screen bg-white">
  {/* Hero */}
- <section className="relative overflow-hidden border-b border-tech-700/30">
+ <section className="relative overflow-hidden border-b border-gray-200">
  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-purple-600/5 pointer-events-none" />
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
  <div className="flex items-center gap-2 mb-4">
@@ -189,7 +189,7 @@ export default function HRPage() {
  Human Resources
  </span>
  </h1>
- <p className="text-lg sm:text-xl text-tech-300 max-w-3xl leading-relaxed mb-8">
+ <p className="text-lg sm:text-xl text-gray-600 max-w-3xl leading-relaxed mb-8">
  HR is at the center of AI&apos;s workplace transformation. From talent acquisition and performance
  management to employee engagement and compliance &mdash; <strong className="text-white">AI helps
  HR teams hire smarter, retain top talent, and build data-driven people strategies</strong> that
@@ -205,7 +205,7 @@ export default function HRPage() {
  </Link>
  <Link
  href="#tools"
- className="inline-flex items-center gap-2 border border-tech-600 text-tech-200 font-medium px-6 py-3 rounded-xl hover:border-neon/50 hover:text-white transition-all"
+ className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 font-medium px-6 py-3 rounded-xl hover:border-neon/50 hover:text-white transition-all"
  >
  <BarChart3 className="w-4 h-4" />
  Top AI Tools
@@ -215,7 +215,7 @@ export default function HRPage() {
  </section>
 
  {/* Stats Strip */}
- <section className="border-b border-tech-700/30 bg-tech-900/50">
+ <section className="border-b border-gray-200 bg-white/50">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
  <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
  {[
@@ -227,7 +227,7 @@ export default function HRPage() {
  <div key={stat.label} className="flex flex-col items-center gap-1">
  <span className="text-neon-light">{stat.icon}</span>
  <span className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</span>
- <span className="text-sm text-tech-400">{stat.label}</span>
+ <span className="text-sm text-gray-400">{stat.label}</span>
  </div>
  ))}
  </div>
@@ -235,12 +235,12 @@ export default function HRPage() {
  </section>
 
  {/* Why AI in HR */}
- <section className="border-b border-tech-700/30 bg-tech-900/30">
+ <section className="border-b border-gray-200 bg-white/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
  Why HR Needs AI
  </h2>
- <p className="text-tech-300 max-w-3xl mb-8 leading-relaxed">
+ <p className="text-gray-600 max-w-3xl mb-8 leading-relaxed">
  Modern HR teams face unprecedented challenges &mdash; talent shortages, distributed workforces,
  rising compliance requirements, and employee expectations for personalized experiences.
  AI offers powerful solutions across the employee lifecycle.
@@ -252,10 +252,10 @@ export default function HRPage() {
  { icon: <Shield className="w-5 h-5" />, title: 'Fairness', desc: 'Skills-based matching and bias-detection AI create more equitable hiring and promotion processes.' },
  { icon: <Globe className="w-5 h-5" />, title: 'Scale', desc: 'AI enables HR teams to manage global, remote, and hybrid workforces without proportional headcount growth.' },
  ].map((item) => (
- <div key={item.title} className="bg-tech-800/40 border border-tech-700/30 rounded-xl p-5">
+ <div key={item.title} className="bg-gray-50/40 border border-gray-200 rounded-xl p-5">
  <span className="text-neon-light block mb-2">{item.icon}</span>
  <h3 className="font-semibold text-white mb-1">{item.title}</h3>
- <p className="text-sm text-tech-400 leading-relaxed">{item.desc}</p>
+ <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -263,12 +263,12 @@ export default function HRPage() {
  </section>
 
  {/* Applications */}
- <section id="applications" className="border-b border-tech-700/30">
+ <section id="applications" className="border-b border-gray-200">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
  Real AI Applications in Human Resources
  </h2>
- <p className="text-tech-300 max-w-2xl mb-10 leading-relaxed">
+ <p className="text-gray-600 max-w-2xl mb-10 leading-relaxed">
  From hire to retire &mdash; here&apos;s how AI is reshaping every stage of the employee lifecycle.
  </p>
 
@@ -279,10 +279,10 @@ export default function HRPage() {
  <span className={app.textColor}>{app.icon}</span>
  <h3 className="text-xl sm:text-2xl font-bold text-white">{app.title}</h3>
  </div>
- <p className="text-tech-300 mb-4 leading-relaxed">{app.description}</p>
+ <p className="text-gray-600 mb-4 leading-relaxed">{app.description}</p>
  <ul className="space-y-2">
  {app.details.map((detail) => (
- <li key={detail} className="flex items-start gap-2 text-sm text-tech-400">
+ <li key={detail} className="flex items-start gap-2 text-sm text-gray-400">
  <CheckCircle className={`w-4 h-4 mt-0.5 flex-shrink-0 ${app.textColor}`} />
  <span>{detail}</span>
  </li>
@@ -295,27 +295,27 @@ export default function HRPage() {
  </section>
 
  {/* Top AI Tools */}
- <section id="tools" className="border-b border-tech-700/30 bg-tech-900/30">
+ <section id="tools" className="border-b border-gray-200 bg-white/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
  Top AI Tools for Human Resources
  </h2>
- <p className="text-tech-300 mb-8 max-w-2xl">
+ <p className="text-gray-600 mb-8 max-w-2xl">
  Leading AI platforms used by HR teams worldwide for recruiting, analytics, engagement, and compliance.
  </p>
 
  <div className="grid sm:grid-cols-2 gap-4">
  {TOOL_CATEGORIES.map((cat) => (
- <div key={cat.title} className="bg-tech-800/40 border border-tech-700/30 rounded-xl p-5">
+ <div key={cat.title} className="bg-gray-50/40 border border-gray-200 rounded-xl p-5">
  <div className="flex items-center gap-2 mb-4">
  <span className="text-neon-light">{cat.icon}</span>
  <h3 className="font-semibold text-white">{cat.title}</h3>
  </div>
  <div className="space-y-3">
  {cat.tools.map((tool) => (
- <div key={tool.name} className="border-b border-tech-700/20 pb-2 last:border-0 last:pb-0">
+ <div key={tool.name} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0">
  <h4 className="text-sm font-medium text-white">{tool.name}</h4>
- <p className="text-xs text-tech-400">{tool.desc}</p>
+ <p className="text-xs text-gray-400">{tool.desc}</p>
  </div>
  ))}
  </div>
@@ -326,7 +326,7 @@ export default function HRPage() {
  </section>
 
  {/* Related Blog Posts */}
- <section className="border-b border-tech-700/30">
+ <section className="border-b border-gray-200">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <div className="flex items-center gap-2 mb-2">
  <BookOpen className="w-5 h-5 text-neon" />
@@ -334,7 +334,7 @@ export default function HRPage() {
  HR & AI Guides
  </h2>
  </div>
- <p className="text-tech-300 mb-8 max-w-2xl">
+ <p className="text-gray-600 mb-8 max-w-2xl">
  Deep-dive guides on AI applications in human resources and people management.
  </p>
  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -348,12 +348,12 @@ export default function HRPage() {
  <Link
  key={post.slug}
  href={`/blog/${post.slug}`}
- className="group bg-tech-800/40 border border-tech-700/30 rounded-xl p-5 hover:border-neon/30 transition-all"
+ className="group bg-gray-50/40 border border-gray-200 rounded-xl p-5 hover:border-neon/30 transition-all"
  >
  <h3 className="font-semibold text-white group-hover:text-neon-light transition-colors mb-2">
  {post.title}
  </h3>
- <p className="text-sm text-tech-400 line-clamp-2 mb-3">{post.excerpt}</p>
+ <p className="text-sm text-gray-400 line-clamp-2 mb-3">{post.excerpt}</p>
  <span className="text-xs text-neon-light group-hover:gap-2 inline-flex items-center gap-1 transition-all">
  Read Guide
  <ArrowRight className="w-3 h-3" />
@@ -365,7 +365,7 @@ export default function HRPage() {
  </section>
 
  {/* Related Comparisons */}
- <section className="border-b border-tech-700/30 bg-tech-900/30">
+ <section className="border-b border-gray-200 bg-white/30">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
  <div className="flex items-center gap-2 mb-2">
  <BarChart3 className="w-5 h-5 text-neon" />
@@ -373,7 +373,7 @@ export default function HRPage() {
  Related Comparisons
  </h2>
  </div>
- <p className="text-tech-300 mb-8 max-w-2xl">
+ <p className="text-gray-600 mb-8 max-w-2xl">
  Side-by-side comparisons of AI tools relevant to HR professionals.
  </p>
  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -385,12 +385,12 @@ export default function HRPage() {
  <Link
  key={comp.slug}
  href={`/compare/${comp.slug}`}
- className="group bg-tech-800/40 border border-tech-700/30 rounded-xl p-5 hover:border-neon/30 transition-all"
+ className="group bg-gray-50/40 border border-gray-200 rounded-xl p-5 hover:border-neon/30 transition-all"
  >
  <h3 className="font-semibold text-white group-hover:text-neon-light transition-colors mb-2">
  {comp.title}
  </h3>
- <p className="text-sm text-tech-400 line-clamp-2 mb-3">{comp.excerpt}</p>
+ <p className="text-sm text-gray-400 line-clamp-2 mb-3">{comp.excerpt}</p>
  <span className="text-xs text-neon-light group-hover:gap-2 inline-flex items-center gap-1 transition-all">
  View Comparison
  <ArrowRight className="w-3 h-3" />
@@ -401,7 +401,7 @@ export default function HRPage() {
  <div className="mt-6 text-center">
  <Link
  href="/compare"
- className="inline-flex items-center gap-1.5 text-sm text-tech-300 hover:text-neon-light transition-colors"
+ className="inline-flex items-center gap-1.5 text-sm text-gray-600 hover:text-neon-light transition-colors"
  >
  Browse all comparisons
  <ArrowRight className="w-3.5 h-3.5" />
@@ -417,7 +417,7 @@ export default function HRPage() {
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
  Build a Smarter HR Function
  </h2>
- <p className="text-tech-300 max-w-xl mx-auto mb-6 leading-relaxed">
+ <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">
  Start small &mdash; try an AI recruiting tool for your next role or set up engagement pulse surveys.
  Most HR platforms offer free trials or demos tailored to your team size.
  </p>
@@ -431,7 +431,7 @@ export default function HRPage() {
  </Link>
  <Link
  href="/best-ai-tools"
- className="inline-flex items-center gap-2 border border-tech-600 text-tech-200 font-medium px-6 py-3 rounded-xl hover:border-neon/50 hover:text-white transition-all"
+ className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 font-medium px-6 py-3 rounded-xl hover:border-neon/50 hover:text-white transition-all"
  >
  <Sparkles className="w-4 h-4" />
  Browse All AI Tools

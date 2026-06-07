@@ -98,14 +98,14 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
 
  const difficultyColor = {
  Beginner: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
- Intermediate: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
+ Intermediate: 'bg-amber-100 text-amber-700 border-amber-200',
  Advanced: 'bg-neon/20 text-neon-light border-neon/30',
  };
 
  return (
  <>
  {/* Reading Progress Bar */}
- <div className="fixed top-0 left-0 z-50 h-0.5 bg-tech-800 w-full">
+ <div className="fixed top-0 left-0 z-50 h-0.5 bg-gray-50 w-full">
  <div
  className="h-full bg-gradient-to-r from-neon to-aqua transition-all duration-150 ease-out"
  style={{ width: `${scrollProgress}%` }}
@@ -116,7 +116,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  {/* Back */}
  <Link
  href="/community-playbook"
- className="inline-flex items-center gap-1.5 text-sm text-tech-200 hover:text-white transition mb-6 group"
+ className="inline-flex items-center gap-1.5 text-sm text-gray-700 hover:text-white transition mb-6 group"
  >
  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition" />
  Community Playbooks
@@ -124,9 +124,9 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
 
  {/* Hero */}
  <div
- className={`rounded-xl bg-gradient-to-r ${playbook.gradient} bg-tech-700/90 border border-tech-500/30 p-6 sm:p-8 mb-6 sm:mb-8 relative overflow-hidden`}
+ className={`rounded-xl bg-gradient-to-r ${playbook.gradient} bg-white border border-gray-200 p-6 sm:p-8 mb-6 sm:mb-8 relative overflow-hidden`}
  >
- <div className="absolute inset-0 bg-tech-grid opacity-30" />
+ <div className="absolute inset-0 bg-gray-50 opacity-30" />
  <div className="relative">
  <div className="flex items-center gap-3 mb-3">
  <span className="text-3xl">{playbook.icon}</span>
@@ -147,14 +147,14 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  </div>
 
  <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">{playbook.title}</h1>
- <p className="text-sm text-tech-200 max-w-2xl mb-2">{playbook.description}</p>
+ <p className="text-sm text-gray-700 max-w-2xl mb-2">{playbook.description}</p>
 
  {playbook.subtitle && (
- <p className="text-xs text-tech-300 italic mb-3">{playbook.subtitle}</p>
+ <p className="text-xs text-gray-600 italic mb-3">{playbook.subtitle}</p>
  )}
 
  {/* Author & Stats */}
- <div className="flex flex-wrap items-center gap-4 text-xs text-tech-300 mt-4">
+ <div className="flex flex-wrap items-center gap-4 text-xs text-gray-600 mt-4">
  <span className="flex items-center gap-1.5">
  <span className="w-5 h-5 rounded-full bg-neon/20 flex items-center justify-center text-[8px] font-bold text-neon-light">
  {playbook.author.name.charAt(0)}
@@ -178,7 +178,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  {/* Tools used */}
  {relatedTools.length > 0 && (
  <div className="flex flex-wrap items-center gap-2 mt-4">
- <span className="text-xs text-tech-300">Tools used:</span>
+ <span className="text-xs text-gray-600">Tools used:</span>
  {relatedTools.map((tool) => (
  <Link
  key={tool.slug}
@@ -202,7 +202,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition',
  userVote === 'up'
  ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
- : 'bg-tech-800 text-tech-300 border-tech-500/30 hover:border-emerald-500/30 hover:text-emerald-400'
+ : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-emerald-500/30 hover:text-emerald-400'
  )}
  >
  <ThumbsUp className="w-3.5 h-3.5" />
@@ -214,7 +214,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition',
  userVote === 'down'
  ? 'bg-rose-500/20 text-rose-400 border-rose-500/30'
- : 'bg-tech-800 text-tech-300 border-tech-500/30 hover:border-rose-500/30 hover:text-rose-400'
+ : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-rose-500/30 hover:text-rose-400'
  )}
  >
  <ThumbsDown className="w-3.5 h-3.5" />
@@ -225,19 +225,19 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  <div className="relative ml-auto">
  <button
  onClick={() => setShowShareMenu(!showShareMenu)}
- className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-tech-800 text-tech-300 border border-tech-500/30 hover:border-sky-500/30 hover:text-sky-400 transition"
+ className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-gray-50 text-gray-600 border border-gray-200 hover:border-sky-500/30 hover:text-sky-400 transition"
  >
  <Share2 className="w-3.5 h-3.5" />
  Share ({playbook.shares})
  </button>
  {showShareMenu && (
- <div className="absolute right-0 top-full mt-1 w-40 rounded-xl border border-tech-500/30 bg-tech-800 shadow-xl shadow-black/30 z-50 overflow-hidden">
+ <div className="absolute right-0 top-full mt-1 w-40 rounded-xl border border-gray-200 bg-gray-50 shadow-xl shadow-black/30 z-50 overflow-hidden">
  <a
  href={shareLinks.twitter}
  target="_blank"
  rel="noopener noreferrer"
  onClick={() => incrementShareCount(playbook.id)}
- className="flex items-center gap-2 px-3 py-2 text-xs text-tech-200 hover:bg-tech-700 hover:text-white transition"
+ className="flex items-center gap-2 px-3 py-2 text-xs text-gray-700 hover:bg-white hover:text-white transition"
  >
  <Twitter className="w-3.5 h-3.5 text-sky-400" />
  Share on X
@@ -247,7 +247,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  target="_blank"
  rel="noopener noreferrer"
  onClick={() => incrementShareCount(playbook.id)}
- className="flex items-center gap-2 px-3 py-2 text-xs text-tech-200 hover:bg-tech-700 hover:text-white transition"
+ className="flex items-center gap-2 px-3 py-2 text-xs text-gray-700 hover:bg-white hover:text-white transition"
  >
  <Linkedin className="w-3.5 h-3.5 text-blue-400" />
  Share on LinkedIn
@@ -265,7 +265,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  <DollarSign className="w-5 h-5 text-emerald-400" />
  <h2 className="text-sm font-semibold text-white">Revenue Impact</h2>
  </div>
- <p className="text-sm text-tech-200">{playbook.revenue_impact}</p>
+ <p className="text-sm text-gray-700">{playbook.revenue_impact}</p>
  </div>
  </section>
  )}
@@ -284,8 +284,8 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4 text-center"
  >
  <div className="text-xl font-bold text-emerald-400 mb-1">{result.value}</div>
- <div className="text-[11px] font-medium text-tech-300 mb-1">{result.metric}</div>
- <p className="text-[10px] text-tech-400">{result.description}</p>
+ <div className="text-[11px] font-medium text-gray-600 mb-1">{result.metric}</div>
+ <p className="text-[10px] text-gray-400">{result.description}</p>
  </div>
  ))}
  </div>
@@ -302,7 +302,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  {playbook.steps.map((step, i) => (
  <div
  key={i}
- className="rounded-xl border border-tech-500/30 bg-tech-700/80 p-5 sm:p-6 relative"
+ className="rounded-xl border border-gray-200 bg-white p-5 sm:p-6 relative"
  >
  <div className="flex items-start gap-4">
  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-neon to-aqua flex items-center justify-center text-white font-bold text-sm shrink-0">
@@ -310,11 +310,11 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  </div>
  <div className="flex-1 min-w-0">
  <h3 className="text-base font-semibold text-white mb-1">{step.title}</h3>
- <p className="text-sm text-tech-100 leading-relaxed">{step.description}</p>
+ <p className="text-sm text-gray-800 leading-relaxed">{step.description}</p>
  {step.tip && (
  <div className="mt-3 flex items-start gap-2 p-3 rounded-lg bg-asia/10 border border-asia/20">
  <Lightbulb className="w-4 h-4 text-asia shrink-0 mt-0.5" />
- <p className="text-xs text-tech-100">
+ <p className="text-xs text-gray-800">
  <span className="font-semibold text-asia">Pro tip:</span> {step.tip}
  </p>
  </div>
@@ -335,28 +335,28 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  </h2>
  <div className="space-y-4">
  {playbook.sample_prompts.map((sp, i) => (
- <div key={i} className="rounded-xl border border-tech-500/30 bg-tech-700/80 p-5">
+ <div key={i} className="rounded-xl border border-gray-200 bg-white p-5">
  <div className="mb-3">
- <span className="text-[10px] font-medium text-tech-400 uppercase tracking-wider mb-1 block">
+ <span className="text-[10px] font-medium text-gray-400 uppercase tracking-wider mb-1 block">
  Prompt #{i + 1}
  </span>
- <div className="rounded-lg bg-tech-800 border border-tech-500/30 p-3 text-sm text-tech-100 font-mono">
+ <div className="rounded-lg bg-gray-50 border border-gray-200 p-3 text-sm text-gray-800 font-mono">
  {sp.prompt}
  </div>
  </div>
  <div className="space-y-2">
  <div>
  <span className="text-[10px] font-medium text-emerald-400 block mb-0.5">What happened</span>
- <p className="text-xs text-tech-200">{sp.output_summary}</p>
+ <p className="text-xs text-gray-700">{sp.output_summary}</p>
  </div>
  <div>
  <span className="text-[10px] font-medium text-neon-light block mb-0.5">✅ Worked</span>
- <p className="text-xs text-tech-200">{sp.what_worked}</p>
+ <p className="text-xs text-gray-700">{sp.what_worked}</p>
  </div>
  {sp.what_didnt && (
  <div>
  <span className="text-[10px] font-medium text-amber-400 block mb-0.5">❌ Didn&apos;t work</span>
- <p className="text-xs text-tech-200">{sp.what_didnt}</p>
+ <p className="text-xs text-gray-700">{sp.what_didnt}</p>
  </div>
  )}
  </div>
@@ -379,7 +379,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  className="flex items-start gap-3 p-4 rounded-xl border border-asia/20 bg-asia/5"
  >
  <Lightbulb className="w-5 h-5 text-asia shrink-0 mt-0.5" />
- <p className="text-sm text-tech-100">{tip}</p>
+ <p className="text-sm text-gray-800">{tip}</p>
  </div>
  ))}
  </div>
@@ -403,10 +403,10 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
  <div className="flex items-start gap-3">
  <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
  <div>
- <p className="text-sm text-tech-100 mb-1">
+ <p className="text-sm text-gray-800 mb-1">
  <span className="text-amber-400 font-medium">Mistake:</span> {item.mistake}
  </p>
- <p className="text-sm text-tech-200">
+ <p className="text-sm text-gray-700">
  <span className="text-emerald-400 font-medium">Fix:</span> {item.fix}
  </p>
  </div>
@@ -419,7 +419,7 @@ export default function CommunityPlaybookPage({ params }: CommunityPlaybookPageP
 
  {/* Related Tools */}
  {relatedTools.length > 0 && (
- <section className="pt-6 border-t border-tech-500/20">
+ <section className="pt-6 border-t border-gray-200">
  <div className="flex items-center justify-between mb-6">
  <h2 className="text-lg font-bold text-white">Tools Used in This Playbook</h2>
  <Link

@@ -112,7 +112,7 @@ export default function AIToolsForStartupsPage() {
  .slice(0, 6);
 
  return (
- <div className="min-h-screen bg-tech-900">
+ <div className="min-h-screen bg-white">
  {/* ── Hero Section ─────────────────────────────────────────────── */}
  <section className="relative overflow-hidden">
  <div className="absolute inset-0 bg-gradient-to-b from-rocket-500/10 via-transparent to-tech-900 pointer-events-none" />
@@ -131,22 +131,22 @@ export default function AIToolsForStartupsPage() {
  in 2026
  </h1>
 
- <p className="text-lg sm:text-xl text-tech-200 max-w-2xl mb-8 leading-relaxed">
+ <p className="text-lg sm:text-xl text-gray-700 max-w-2xl mb-8 leading-relaxed">
  Hand-picked AI tools that actually make sense for early-stage startups, bootstrapped founders,
  and small teams. Affordable pricing, free tiers, Asia-ready — no enterprise bloat.
  </p>
 
  {/* Quick stats */}
  <div className="flex flex-wrap gap-6 mb-8 text-sm">
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <CheckCircle className="w-4 h-4 text-green-400" />
  <span>{toolCount}+ tools curated</span>
  </div>
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <DollarSign className="w-4 h-4 text-green-400" />
  <span>Most under $20/month</span>
  </div>
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <Users className="w-4 h-4 text-green-400" />
  <span>Built for teams of 1-10</span>
  </div>
@@ -163,7 +163,7 @@ export default function AIToolsForStartupsPage() {
  </Link>
  <Link
  href="/playbooks"
- className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-tech-500/40 text-tech-100 hover:border-rocket-500/30 hover:text-white text-sm sm:text-base font-medium transition-all"
+ className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-gray-200 text-gray-800 hover:border-rocket-500/30 hover:text-white text-sm sm:text-base font-medium transition-all"
  >
  <BookOpen className="w-4 h-4" />
  Startup Playbooks
@@ -178,7 +178,7 @@ export default function AIToolsForStartupsPage() {
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
  Why Startups Need AI — <span className="text-rocket-400">Now</span>
  </h2>
- <p className="text-tech-300 max-w-3xl mx-auto leading-relaxed">
+ <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
  In 2026, AI is no longer optional for startups. The most efficient early-stage companies use AI
  to do the work of 5+ full-time hires — coding, content, design, marketing, and customer support —
  for under $100/month total. This page cuts through the noise and shows you exactly which tools
@@ -195,13 +195,13 @@ export default function AIToolsForStartupsPage() {
  ].map((item, i) => (
  <div
  key={i}
- className="bg-tech-800/50 border border-tech-500/20 rounded-xl p-6 hover:border-rocket-500/20 transition-all"
+ className="bg-gray-100 border border-gray-200 rounded-xl p-6 hover:border-rocket-500/20 transition-all"
  >
  <div className="w-10 h-10 rounded-lg bg-rocket-500/10 flex items-center justify-center mb-4">
  <item.icon className="w-5 h-5 text-rocket-400" />
  </div>
  <h3 className="text-white font-semibold mb-2">{item.title}</h3>
- <p className="text-sm text-tech-400 leading-relaxed">{item.desc}</p>
+ <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -213,22 +213,22 @@ export default function AIToolsForStartupsPage() {
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
  Top Startup AI Tools — <span className="text-rocket-400">At a Glance</span>
  </h2>
- <p className="text-tech-300 max-w-2xl mx-auto leading-relaxed">
+ <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
  The most popular AI tools among early-stage founders. All rated for startup value,
  pricing, and Asia-readiness.
  </p>
  </div>
 
- <div className="overflow-x-auto rounded-xl border border-tech-500/20">
+ <div className="overflow-x-auto rounded-xl border border-gray-200">
  <table className="w-full text-sm text-left">
  <thead>
- <tr className="bg-tech-800 border-b border-tech-500/20">
- <th className="px-5 py-4 text-tech-200 font-semibold">Tool</th>
- <th className="px-5 py-4 text-tech-200 font-semibold hidden sm:table-cell">Best For</th>
- <th className="px-5 py-4 text-tech-200 font-semibold">Starting Price</th>
- <th className="px-5 py-4 text-tech-200 font-semibold hidden md:table-cell">Free Tier</th>
- <th className="px-5 py-4 text-tech-200 font-semibold">Rating</th>
- <th className="px-5 py-4 text-tech-200 font-semibold">Asia Ready</th>
+ <tr className="bg-gray-50 border-b border-gray-200">
+ <th className="px-5 py-4 text-gray-700 font-semibold">Tool</th>
+ <th className="px-5 py-4 text-gray-700 font-semibold hidden sm:table-cell">Best For</th>
+ <th className="px-5 py-4 text-gray-700 font-semibold">Starting Price</th>
+ <th className="px-5 py-4 text-gray-700 font-semibold hidden md:table-cell">Free Tier</th>
+ <th className="px-5 py-4 text-gray-700 font-semibold">Rating</th>
+ <th className="px-5 py-4 text-gray-700 font-semibold">Asia Ready</th>
  </tr>
  </thead>
  <tbody>
@@ -240,29 +240,29 @@ export default function AIToolsForStartupsPage() {
  { slug: 'copilot', name: 'GitHub Copilot', best: 'Code completion, IDE native', price: 'Free / $10/mo', free: '✅ 2K completions', rating: 4.5, asia: '✅' },
  { slug: 'canva-ai', name: 'Canva AI', best: 'Design for non-designers', price: 'Free / $13/mo', free: '✅ Robust', rating: 4.6, asia: '✅' },
  ].map((row, i) => (
- <tr key={row.slug} className={`border-b border-tech-500/10 ${i % 2 === 0 ? 'bg-tech-800/30' : 'bg-tech-900/20'} hover:bg-tech-800/60 transition-colors`}>
+ <tr key={row.slug} className={`border-b border-gray-200 ${i % 2 === 0 ? 'bg-gray-100' : 'bg-white/20'} hover:bg-gray-100 transition-colors`}>
  <td className="px-5 py-4">
  <Link href={`/tools/${row.slug}`} className="text-white font-medium hover:text-rocket-400 transition">
  {row.name}
  </Link>
  </td>
- <td className="px-5 py-4 text-tech-300 hidden sm:table-cell">{row.best}</td>
+ <td className="px-5 py-4 text-gray-600 hidden sm:table-cell">{row.best}</td>
  <td className="px-5 py-4 text-green-400 font-medium">{row.price}</td>
- <td className="px-5 py-4 text-tech-300 hidden md:table-cell">{row.free}</td>
+ <td className="px-5 py-4 text-gray-600 hidden md:table-cell">{row.free}</td>
  <td className="px-5 py-4">
  <div className="flex items-center gap-1">
  <Star className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
- <span className="text-tech-200">{row.rating}</span>
+ <span className="text-gray-700">{row.rating}</span>
  </div>
  </td>
- <td className="px-5 py-4 text-tech-300">{row.asia}</td>
+ <td className="px-5 py-4 text-gray-600">{row.asia}</td>
  </tr>
  ))}
  </tbody>
  </table>
  </div>
 
- <p className="text-center text-xs text-tech-500 mt-4">
+ <p className="text-center text-xs text-gray-500 mt-4">
  Prices as of May 2026. All tools have free tiers suitable for early-stage startups.{' '}
  <Link href="/tools" className="text-rocket-400 hover:text-rocket-300 underline">Browse all {toolCount} tools →</Link>
  </p>
@@ -270,7 +270,7 @@ export default function AIToolsForStartupsPage() {
 
  {/* ── Category Sections ───────────────────────────────────────── */}
  {STARTUP_CATEGORIES.map((cat) => (
- <section key={cat.id} className={`bg-gradient-to-b ${cat.color} border-y border-tech-500/10`}>
+ <section key={cat.id} className={`bg-gradient-to-b ${cat.color} border-y border-gray-200`}>
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
  <div className="flex items-start justify-between mb-8">
  <div>
@@ -278,7 +278,7 @@ export default function AIToolsForStartupsPage() {
  <cat.icon className="w-5 h-5 text-rocket-400" />
  <h2 className="text-2xl sm:text-3xl font-bold text-white">{cat.title}</h2>
  </div>
- <p className="text-tech-300 max-w-2xl">{cat.description}</p>
+ <p className="text-gray-600 max-w-2xl">{cat.description}</p>
  </div>
  <Link
  href={`/categories/${cat.slug}`}
@@ -311,7 +311,7 @@ export default function AIToolsForStartupsPage() {
  <Link
  key={tool.id}
  href={`/tools/${tool.slug}`}
- className="group bg-tech-800/60 border border-tech-500/20 rounded-lg p-4 hover:border-rocket-500/30 transition-all"
+ className="group bg-gray-100 border border-gray-200 rounded-lg p-4 hover:border-rocket-500/30 transition-all"
  >
  <div className="flex items-start gap-3">
  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0">
@@ -323,13 +323,13 @@ export default function AIToolsForStartupsPage() {
  <h3 className="text-white font-medium text-sm group-hover:text-rocket-300 transition truncate">
  {tool.name}
  </h3>
- <p className="text-xs text-tech-400 mt-0.5 line-clamp-2">
+ <p className="text-xs text-gray-400 mt-0.5 line-clamp-2">
  {tool.tagline || tool.description?.slice(0, 80)}
  </p>
  {tool.avg_rating > 0 && (
  <div className="flex items-center gap-1 mt-1.5">
  <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
- <span className="text-xs text-tech-400">{tool.avg_rating.toFixed(1)}</span>
+ <span className="text-xs text-gray-400">{tool.avg_rating.toFixed(1)}</span>
  </div>
  )}
  </div>
@@ -369,12 +369,12 @@ export default function AIToolsForStartupsPage() {
  <Link
  key={pb.slug}
  href={`/playbook/${pb.slug}`}
- className="group bg-tech-800/40 border border-tech-500/20 rounded-xl p-6 hover:border-rocket-500/30 transition-all"
+ className="group bg-gray-100 border border-gray-200 rounded-xl p-6 hover:border-rocket-500/30 transition-all"
  >
  <h3 className="font-semibold text-white group-hover:text-rocket-300 transition mb-2">
  {pb.title}
  </h3>
- <p className="text-sm text-tech-400 line-clamp-2 mb-3">
+ <p className="text-sm text-gray-400 line-clamp-2 mb-3">
  {pb.description}
  </p>
  <div className="flex items-center gap-1 text-xs text-rocket-400 group-hover:gap-2 transition-all">
@@ -394,12 +394,12 @@ export default function AIToolsForStartupsPage() {
  />
 
  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
- <div className="relative rounded-2xl bg-gradient-to-br from-rocket-500/10 via-orange-500/5 to-tech-800 border border-tech-500/30 p-8 sm:p-12 text-center">
+ <div className="relative rounded-2xl bg-gradient-to-br from-rocket-500/10 via-orange-500/5 to-tech-800 border border-gray-200 p-8 sm:p-12 text-center">
  <Rocket className="w-10 h-10 text-rocket-400 mx-auto mb-4" />
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
  Ready to Supercharge Your Startup?
  </h2>
- <p className="text-tech-300 max-w-xl mx-auto mb-6 leading-relaxed">
+ <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">
  Browse our full directory of {toolCount}+ AI tools, find the right stack for your stage,
  and start shipping faster than ever.
  </p>
@@ -413,7 +413,7 @@ export default function AIToolsForStartupsPage() {
  </Link>
  <Link
  href="/categories"
- className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-tech-500/40 text-tech-100 hover:border-rocket-500/30 hover:text-white transition-all"
+ className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-gray-200 text-gray-800 hover:border-rocket-500/30 hover:text-white transition-all"
  >
  Browse by Category
  </Link>

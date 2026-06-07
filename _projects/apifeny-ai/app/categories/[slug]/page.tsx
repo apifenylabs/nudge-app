@@ -78,7 +78,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  const asiaReadyCount = categoryTools.filter(t => t.asia_ready).length;
 
  return (
- <>
+ <div className="min-h-screen bg-white">
  <BreadcrumbSchema
  items={[
  { name: 'Home', item: '/' },
@@ -107,12 +107,12 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
  Best {cat.name} Tools
  </h1>
- <p className="text-tech-300 text-sm mt-1">
+ <p className="text-gray-600 text-sm mt-1">
  {categoryTools.length} tools • {freeCount} free/freemium • {paidCount} paid • {asiaReadyCount} Asia-ready
  </p>
  </div>
  </div>
- <p className="text-sm sm:text-base text-tech-100/80 max-w-3xl mt-4 leading-relaxed">
+ <p className="text-sm sm:text-base text-gray-800/80 max-w-3xl mt-4 leading-relaxed">
  {cat.longDescription}
  </p>
  </div>
@@ -120,25 +120,25 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
  {/* Quick stats */}
  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-10">
- <div className="rounded-xl border border-tech-500/30 bg-tech-700/60 p-4 text-center">
+ <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 text-center">
  <div className="text-2xl font-bold text-white">{categoryTools.length}</div>
- <div className="text-[11px] text-tech-300 mt-0.5">Tools Listed</div>
+ <div className="text-[11px] text-gray-600 mt-0.5">Tools Listed</div>
  </div>
- <div className="rounded-xl border border-tech-500/30 bg-tech-700/60 p-4 text-center">
+ <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 text-center">
  <div className="text-2xl font-bold text-emerald-400">{freeCount}</div>
- <div className="text-[11px] text-tech-300 mt-0.5">Free / Freemium</div>
+ <div className="text-[11px] text-gray-600 mt-0.5">Free / Freemium</div>
  </div>
- <div className="rounded-xl border border-tech-500/30 bg-tech-700/60 p-4 text-center">
+ <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 text-center">
  <div className="text-2xl font-bold text-aqua-400">
  {categoryTools.reduce((max, t) => Math.max(max, t.avg_rating || 0), 0).toFixed(1)}
  </div>
- <div className="text-[11px] text-tech-300 mt-0.5">Top Rating</div>
+ <div className="text-[11px] text-gray-600 mt-0.5">Top Rating</div>
  </div>
- <div className="rounded-xl border border-tech-500/30 bg-tech-700/60 p-4 text-center">
+ <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 text-center">
  <div className="text-2xl font-bold text-asia">
  {Math.round((asiaReadyCount / Math.max(categoryTools.length, 1)) * 100)}%
  </div>
- <div className="text-[11px] text-tech-300 mt-0.5">Asia-Ready</div>
+ <div className="text-[11px] text-gray-600 mt-0.5">Asia-Ready</div>
  </div>
  </div>
 
@@ -147,7 +147,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
  Compare {cat.name} Tools
  </h2>
- <p className="text-tech-300 text-sm mb-6">
+ <p className="text-gray-600 text-sm mb-6">
  Our curated rankings are based on Asia-readiness, pricing, community ratings, and real-world performance.
  </p>
 
@@ -156,15 +156,15 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  <Link
  key={tool.slug}
  href={`/tools/${tool.slug}`}
- className="group relative rounded-xl border border-tech-500/30 bg-tech-700/80 p-5 hover:border-neon/40 transition-all hover:-translate-y-1 overflow-hidden"
+ className="group relative rounded-xl border border-gray-200 bg-white p-5 hover:border-neon/40 transition-all hover:-translate-y-1 overflow-hidden"
  >
- <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none" />
+ <div className="absolute inset-0 bg-gray-50 opacity-10 pointer-events-none" />
  <div className="relative">
  {/* Header */}
  <div className="flex items-start justify-between mb-3">
  <div className="min-w-0 flex-1">
  <div className="flex items-center gap-2 mb-1">
- <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-tech-400/30">
+ <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center shrink-0 border border-gray-200/30">
  <span className="text-white font-bold text-xs">
  {tool.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
@@ -173,7 +173,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  {tool.name}
  </h3>
  </div>
- <p className="text-[11px] text-tech-300 line-clamp-2 leading-relaxed">
+ <p className="text-[11px] text-gray-600 line-clamp-2 leading-relaxed">
  {tool.tagline || tool.description?.split('.')[0]}
  </p>
  </div>
@@ -211,13 +211,13 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
  {/* Trending score bar */}
  <div className="flex items-center gap-2">
- <div className="flex-1 h-1.5 rounded-full bg-tech-600 overflow-hidden">
+ <div className="flex-1 h-1.5 rounded-full bg-gray-100 overflow-hidden">
  <div
  className="h-full rounded-full bg-gradient-to-r from-neon/60 to-aqua/60 transition-all"
  style={{ width: `${Math.min((tool.trending_score || 0), 100)}%` }}
  />
  </div>
- <span className="text-[10px] text-tech-400 font-mono">{Math.round(tool.trending_score)}</span>
+ <span className="text-[10px] text-gray-400 font-mono">{Math.round(tool.trending_score)}</span>
  <div className="flex items-center gap-1 text-[10px] text-neon-light opacity-0 group-hover:opacity-100 transition-opacity">
  <span>Details</span>
  <ChevronRight className="w-3 h-3" />
@@ -239,16 +239,16 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  {cat.h2Headings.map((heading, i) => (
  <details
  key={i}
- className="group rounded-xl border border-tech-500/30 bg-tech-700/60 overflow-hidden"
+ className="group rounded-xl border border-gray-200 bg-gray-50 overflow-hidden"
  >
- <summary className="flex items-center justify-between px-5 py-4 text-sm font-medium text-white cursor-pointer hover:bg-tech-600/40 transition">
+ <summary className="flex items-center justify-between px-5 py-4 text-sm font-medium text-white cursor-pointer hover:bg-gray-100/40 transition">
  <span className="flex items-center gap-2">
  <Sparkles className="w-4 h-4 text-neon-light shrink-0" />
  {heading}
  </span>
- <ChevronRight className="w-4 h-4 text-tech-400 transition-transform group-open:rotate-90 shrink-0" />
+ <ChevronRight className="w-4 h-4 text-gray-400 transition-transform group-open:rotate-90 shrink-0" />
  </summary>
- <div className="px-5 pb-4 text-sm text-tech-200 leading-relaxed">
+ <div className="px-5 pb-4 text-sm text-gray-700 leading-relaxed">
  {i === 0 && (
  <p>
  The best {cat.name.toLocaleLowerCase()} tool depends on your specific needs.
@@ -303,7 +303,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           <BookOpen className="w-5 h-5 inline-block text-neon-light mr-2" />
           Related Articles
         </h2>
-        <p className="text-tech-300 text-sm mb-6">
+        <p className="text-gray-600 text-sm mb-6">
           Read our latest deep-dives on {cat.name.toLocaleLowerCase()} tools and tactics
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -311,18 +311,18 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group relative rounded-xl border border-tech-500/30 bg-tech-700/60 p-5 hover:border-neon/40 hover:-translate-y-1 transition-all"
+              className="group relative rounded-xl border border-gray-200 bg-gray-50 p-5 hover:border-neon/40 hover:-translate-y-1 transition-all"
             >
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-[10px] text-tech-300 font-mono px-1.5 py-0.5 rounded border border-tech-500/20">
+                <span className="text-[10px] text-gray-600 font-mono px-1.5 py-0.5 rounded border border-gray-200">
                   {post.tags?.[0] || 'AI Tools'}
                 </span>
-                <span className="text-[10px] text-tech-400">{post.date}</span>
+                <span className="text-[10px] text-gray-400">{post.date}</span>
               </div>
               <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1 line-clamp-2">
                 {post.title}
               </h3>
-              <p className="text-[11px] text-tech-300 line-clamp-2 leading-relaxed">
+              <p className="text-[11px] text-gray-600 line-clamp-2 leading-relaxed">
                 {post.excerpt}
               </p>
             </Link>
@@ -339,7 +339,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  <BookOpen className="w-5 h-5 inline-block text-neon-light mr-2" />
  Featured Playbooks
  </h2>
- <p className="text-tech-300 text-sm mb-6">
+ <p className="text-gray-600 text-sm mb-6">
  Step-by-step guides using {cat.name.toLocaleLowerCase()} tools
  </p>
 
@@ -348,23 +348,23 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  <Link
  key={pb.slug}
  href={`/playbook/${pb.slug}`}
- className="group relative rounded-xl overflow-hidden border border-tech-500/30 p-5 hover:border-neon/40 transition-all hover:-translate-y-1"
+ className="group relative rounded-xl overflow-hidden border border-gray-200 p-5 hover:border-neon/40 transition-all hover:-translate-y-1"
  style={{ backgroundImage: `linear-gradient(135deg, ${pb.gradient || 'from-tech-600/80 to-tech-700/80'}), linear-gradient(to bottom right, rgba(17,17,34,0.85), rgba(17,17,34,0.85))` }}
  >
  <div className="relative">
  <div className="flex items-center gap-2 mb-2">
  <span className="text-xl">{pb.icon || '📖'}</span>
- <span className="text-[10px] text-tech-300 font-mono px-1.5 py-0.5 rounded border border-tech-500/20">
+ <span className="text-[10px] text-gray-600 font-mono px-1.5 py-0.5 rounded border border-gray-200">
  {pb.difficulty}
  </span>
  </div>
  <h3 className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors mb-1">
  {pb.title}
  </h3>
- <p className="text-[11px] text-tech-300 line-clamp-2 mb-2">
+ <p className="text-[11px] text-gray-600 line-clamp-2 mb-2">
  {pb.description}
  </p>
- <div className="flex items-center gap-2 text-[10px] text-tech-400">
+ <div className="flex items-center gap-2 text-[10px] text-gray-400">
  <span>{pb.steps?.length || 0} steps</span>
  <span>•</span>
  <span>{pb.read_time_minutes || 10} min read</span>
@@ -387,9 +387,9 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  <Link
  key={tool.slug}
  href={`/tools/${tool.slug}`}
- className="flex items-center gap-3 rounded-lg border border-tech-500/20 bg-tech-700/40 p-3 hover:bg-tech-700/70 hover:border-tech-500/40 transition text-sm"
+ className="flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-3 hover:bg-white hover:border-gray-200 transition text-sm"
  >
- <div className="w-7 h-7 rounded-md bg-tech-600 flex items-center justify-center shrink-0 border border-tech-400/20">
+ <div className="w-7 h-7 rounded-md bg-gray-100 flex items-center justify-center shrink-0 border border-gray-200/20">
  <span className="text-white font-bold text-[9px]">
  {tool.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
  </span>
@@ -399,7 +399,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  <span className={cn('text-[10px] px-1.5 py-0.5 rounded', getPricingColor(tool.pricing_tier))}>
  {getPricingLabel(tool.pricing_tier)}
  </span>
- <ChevronRight className="w-3.5 h-3.5 text-tech-400 shrink-0" />
+ <ChevronRight className="w-3.5 h-3.5 text-gray-400 shrink-0" />
  </Link>
  ))}
  </div>
@@ -425,7 +425,34 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
  }),
  }}
  />
+      {/* FAQPage structured data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: cat.h2Headings.map((heading, i) => ({
+              '@type': 'Question',
+              name: heading,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: i === 0
+                  ? `The best ${cat.name.toLocaleLowerCase()} tool depends on your specific needs. ${categoryTools[0]?.name || 'the top tool'} leads our ranking with a trending score of ${Math.round(categoryTools[0]?.trending_score || 0)}. Consider your budget, required features, and whether Asian language support matters.`
+                  : i === 1
+                  ? `When choosing a ${cat.name.toLocaleLowerCase()} tool, look for features like integrations, automation capabilities, and team collaboration features. Most tools offer free trials so you can test before committing.`
+                  : i === 2
+                  ? `Of the ${categoryTools.length} tools in our ${cat.name} category, ${freeCount > 0 ? `${freeCount} offer free tiers or freemium plans.` : 'most require a paid plan for full access.'} We have flagged Asia-ready tools throughout to help you find the best fit.`
+                  : i === 3
+                  ? `Comparing top tools side-by-side is the fastest way to find your fit. We score every tool on features, pricing, Asia-readiness, and community ratings. Head-to-head comparisons help you see which tool handles your specific workflow.`
+                  : `The best ${cat.name.toLocaleLowerCase()} tool for you depends on your specific needs, but our data shows that ${categoryTools[0]?.name || 'the top-ranked tool'} leads in overall community rating. We recommend trying the free tier of your top 2-3 candidates.`
+              }
+            })),
+          }),
+        }}
+      />
+
  </div>
- </>
+ </div>
  );
 }

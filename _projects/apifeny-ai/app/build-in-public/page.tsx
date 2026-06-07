@@ -136,7 +136,7 @@ const typeConfig: Record<string, { label: string; icon: typeof Zap; color: strin
 
 export default function BuildInPublicPage() {
  return (
- <div className="min-h-screen bg-tech-900">
+ <div className="min-h-screen bg-white">
  <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
  {/* Hero */}
  <div className="text-center mb-16">
@@ -147,7 +147,7 @@ export default function BuildInPublicPage() {
  <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
  Build in <span className="text-aqua">Public</span>
  </h1>
- <p className="text-xl text-tech-300 max-w-2xl mx-auto">
+ <p className="text-xl text-gray-600 max-w-2xl mx-auto">
  Every deploy, every feature, every fix — logged transparently. No hype, just shipped code.
  </p>
  </div>
@@ -160,10 +160,10 @@ export default function BuildInPublicPage() {
  { label: 'Build Days', value: '10+', icon: Calendar },
  { label: 'Features Shipped', value: '17+', icon: GitCommit },
  ].map((stat) => (
- <div key={stat.label} className="bg-tech-800/50 border border-tech-700 rounded-xl p-4 text-center">
+ <div key={stat.label} className="bg-gray-50/50 border border-gray-200 rounded-xl p-4 text-center">
  <stat.icon className="w-5 h-5 text-aqua mx-auto mb-2" />
  <div className="text-2xl font-bold text-white">{stat.value}</div>
- <div className="text-sm text-tech-400">{stat.label}</div>
+ <div className="text-sm text-gray-400">{stat.label}</div>
  </div>
  ))}
  </div>
@@ -176,7 +176,7 @@ export default function BuildInPublicPage() {
  return (
  <div
  key={i}
- className="bg-tech-800/30 border border-tech-700 rounded-xl p-6 hover:border-tech-600 transition-colors"
+ className="bg-gray-50/30 border border-gray-200 rounded-xl p-6 hover:border-gray-300 transition-colors"
  >
  <div className="flex items-start justify-between mb-3">
  <div className="flex items-center gap-3">
@@ -185,7 +185,7 @@ export default function BuildInPublicPage() {
  </div>
  <div>
  <h3 className="text-lg font-semibold text-white">{build.title}</h3>
- <div className="flex items-center gap-2 text-sm text-tech-400">
+ <div className="flex items-center gap-2 text-sm text-gray-400">
  <Calendar className="w-3.5 h-3.5" />
  <span>{build.date}</span>
  </div>
@@ -195,11 +195,11 @@ export default function BuildInPublicPage() {
  {cfg.label}
  </span>
  </div>
- <p className="text-tech-300 mb-3">{build.description}</p>
+ <p className="text-gray-600 mb-3">{build.description}</p>
  {build.stats && build.stats.length > 0 && (
  <div className="flex flex-wrap gap-2">
  {build.stats.map((s) => (
- <span key={s} className="text-xs bg-tech-700/50 text-tech-300 px-2.5 py-1 rounded-full border border-tech-600">
+ <span key={s} className="text-xs bg-white text-gray-600 px-2.5 py-1 rounded-full border border-gray-300">
  {s}
  </span>
  ))}
@@ -211,14 +211,14 @@ export default function BuildInPublicPage() {
  </div>
 
  {/* Footer CTA */}
- <div className="text-center mt-12 py-8 border-t border-tech-700">
- <p className="text-tech-400 text-sm">
+ <div className="text-center mt-12 py-8 border-t border-gray-200">
+ <p className="text-gray-400 text-sm">
  Building 8 sites across Asia —{' '}
  <Link href="/" className="text-aqua hover:underline">Apifeny AI</Link>
  {' '}·{' '}
- <a href="https://ev-charging-asia.vercel.app" className="text-tech-300 hover:underline">EV Charging Asia</a>
+ <a href="https://ev-charging-asia.vercel.app" className="text-gray-600 hover:underline">EV Charging Asia</a>
  {' '}·{' '}
- <a href="https://family-travel-directory.vercel.app" className="text-tech-300 hover:underline">Family Travel</a>
+ <a href="https://family-travel-directory.vercel.app" className="text-gray-600 hover:underline">Family Travel</a>
  {' '}·{' '}
 
  </p>

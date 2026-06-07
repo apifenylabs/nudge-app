@@ -80,7 +80,7 @@ function ToolsPageContent() {
  value={filters.search}
  onChange={(e) => setFilters({ ...filters, search: e.target.value })}
  placeholder="Search tools..."
- className="w-full bg-tech-800 border border-tech-500/50 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-tech-300 focus:outline-none focus:border-neon/50 focus:ring-1 focus:ring-neon/20 transition"
+ className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-neon/50 focus:ring-1 focus:ring-neon/20 transition"
  />
  </div>
 
@@ -103,7 +103,7 @@ export default function ToolsClient() {
  {/* Page header */}
  <div className="mb-6 sm:mb-8">
  <h1 className="text-2xl sm:text-3xl font-bold text-white">AI Tools Directory</h1>
- <p className="text-sm text-tech-200 mt-1">
+ <p className="text-sm text-gray-700 mt-1">
  Browse, filter, and discover the best AI tools for any task
  </p>
  </div>

@@ -360,7 +360,7 @@ export default function AIEcommerceAsiaGuide() {
  const relatedPosts = getRelatedPosts('ai-ecommerce-asia', 3) || [];
 
  return (
- <div className="min-h-screen bg-tech-900">
+ <div className="min-h-screen bg-white">
  <BreadcrumbSchema
  items={[
  { name: 'Home', item: BASE_URL },
@@ -410,7 +410,7 @@ export default function AIEcommerceAsiaGuide() {
  </span>
  </h1>
 
- <p className="text-lg sm:text-xl text-tech-200 max-w-3xl mb-6 leading-relaxed">
+ <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mb-6 leading-relaxed">
  Top tools and strategies for e-commerce SMBs in Singapore, Malaysia, Thailand, Philippines,
  Vietnam, and Indonesia. From AI product photography to multi-language chatbots, inventory
  forecasting to marketplace optimization — everything you need to compete with AI.
@@ -418,15 +418,15 @@ export default function AIEcommerceAsiaGuide() {
 
  {/* Meta info */}
  <div className="flex flex-wrap gap-4 text-sm">
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <Calendar className="w-4 h-4 text-rose-400" />
  <span>Updated May 2026</span>
  </div>
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <Target className="w-4 h-4 text-rose-400" />
  <span>E-commerce SMBs in ASEAN</span>
  </div>
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <Clock className="w-4 h-4 text-rose-400" />
  <span>12 min read</span>
  </div>
@@ -434,19 +434,19 @@ export default function AIEcommerceAsiaGuide() {
 
  {/* Key stats */}
  <div className="flex flex-wrap gap-4 mt-6 text-sm">
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <CheckCircle className="w-4 h-4 text-green-400" />
  <span>8 actionable AI sections</span>
  </div>
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <CheckCircle className="w-4 h-4 text-green-400" />
  <span>Pricing &amp; ROI comparison table</span>
  </div>
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <CheckCircle className="w-4 h-4 text-green-400" />
  <span>7-day getting-started roadmap</span>
  </div>
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <CheckCircle className="w-4 h-4 text-green-400" />
  <span>FAQ &amp; tool recommendations</span>
  </div>
@@ -456,7 +456,7 @@ export default function AIEcommerceAsiaGuide() {
 
  {/* ── Table of Contents ───────────────────────────────────────── */}
  <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
- <div className="bg-tech-800/50 border border-tech-500/20 rounded-xl p-6 sm:p-8">
+ <div className="bg-gray-50/50 border border-gray-200 rounded-xl p-6 sm:p-8">
  <h2 className="text-white font-semibold mb-4 flex items-center gap-2">
  <BookOpen className="w-5 h-5 text-rose-400" />
  What You&apos;ll Learn
@@ -466,7 +466,7 @@ export default function AIEcommerceAsiaGuide() {
  <a
  key={s.id}
  href={`#${s.id}`}
- className="flex items-center gap-2.5 text-sm text-tech-300 hover:text-rose-400 transition-colors p-2 rounded-lg hover:bg-tech-800/40"
+ className="flex items-center gap-2.5 text-sm text-gray-600 hover:text-rose-400 transition-colors p-2 rounded-lg hover:bg-gray-50/40"
  >
  <s.icon className="w-4 h-4 shrink-0" />
  {s.title.replace(/^\d+\.\s*/, '')}
@@ -480,7 +480,7 @@ export default function AIEcommerceAsiaGuide() {
  {/* ── Why Now Section ────────────────────────────────────────── */}
  <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
  <div className="border-l-4 border-rose-500 bg-rose-500/10 rounded-lg p-6">
- <p className="text-sm text-tech-200 leading-relaxed">
+ <p className="text-sm text-gray-700 leading-relaxed">
  <strong className="text-rose-400">The Asian e-commerce AI advantage:</strong> Southeast
  Asia&apos;s e-commerce market is projected to exceed <strong>$300 billion GMV by 2027</strong>,
  with AI-adopting SMBs capturing disproportionate market share. Businesses that use AI across
@@ -838,14 +838,14 @@ export default function AIEcommerceAsiaGuide() {
  </section>
 
  {/* ── CTA ────────────────────────────────────────────────────── */}
- <section className="border-t border-tech-500/10 py-12 sm:py-16">
+ <section className="border-t border-gray-200 py-12 sm:py-16">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
- <div className="relative rounded-2xl bg-gradient-to-br from-rose-500/10 via-orange-500/5 to-tech-800 border border-tech-500/30 p-8 sm:p-12">
+ <div className="relative rounded-2xl bg-gradient-to-br from-rose-500/10 via-orange-500/5 to-tech-800 border border-gray-200 p-8 sm:p-12">
  <ShoppingCart className="w-10 h-10 text-rose-400 mx-auto mb-4" />
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
  Ready to Transform Your E-Commerce Store with AI?
  </h2>
- <p className="text-tech-300 max-w-xl mx-auto mb-6 leading-relaxed">
+ <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">
  Browse our curated directory of AI tools vetted for Asian e-commerce businesses.
  Compare features, pricing, and find the perfect tools for your Shopee, Lazada,
  or TikTok Shop store.
@@ -860,7 +860,7 @@ export default function AIEcommerceAsiaGuide() {
  </Link>
  <Link
  href="/categories"
- className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-tech-500/40 text-tech-100 hover:border-rose-500/30 hover:text-white transition-all"
+ className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-gray-200 text-gray-800 hover:border-rose-500/30 hover:text-white transition-all"
  >
  Browse by Category
  </Link>
@@ -871,7 +871,7 @@ export default function AIEcommerceAsiaGuide() {
 
  {/* ── Related Blog Posts ─────────────────────────────────────── */}
  {relatedPosts.length > 0 && (
- <section className="border-t border-tech-500/10 py-12 sm:py-16">
+ <section className="border-t border-gray-200 py-12 sm:py-16">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="flex items-center gap-2 mb-8">
  <BookOpen className="w-5 h-5 text-rose-400" />
@@ -883,11 +883,11 @@ export default function AIEcommerceAsiaGuide() {
  <Link
  key={related.slug}
  href={`/blog/${related.slug}`}
- className="group bg-tech-800/40 border border-tech-500/20 rounded-xl p-6 hover:border-rose-500/30 transition-all"
+ className="group bg-gray-50/40 border border-gray-200 rounded-xl p-6 hover:border-rose-500/30 transition-all"
  >
  <div className="flex flex-wrap gap-1.5 mb-3">
  {related.tags.slice(0, 2).map((tag) => (
- <span key={tag} className="text-[10px] font-medium px-1.5 py-0.5 rounded-full border border-tech-500/30 text-tech-400">
+ <span key={tag} className="text-[10px] font-medium px-1.5 py-0.5 rounded-full border border-gray-200 text-gray-400">
  {tag.replace(/-/g, ' ')}
  </span>
  ))}
@@ -895,7 +895,7 @@ export default function AIEcommerceAsiaGuide() {
  <h3 className="font-semibold text-white group-hover:text-rose-300 transition mb-2 line-clamp-2">
  {related.title}
  </h3>
- <p className="text-sm text-tech-400 line-clamp-2 mb-3">
+ <p className="text-sm text-gray-400 line-clamp-2 mb-3">
  {related.excerpt}
  </p>
  <div className="flex items-center gap-1 text-xs text-rose-400 group-hover:gap-2 transition-all">
@@ -910,15 +910,15 @@ export default function AIEcommerceAsiaGuide() {
  )}
 
  {/* ── Re-explore tools CTA ──────────────────────────────────── */}
- <section className="border-t border-tech-500/10 py-12">
+ <section className="border-t border-gray-200 py-12">
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
- <div className="inline-flex items-center gap-2 text-sm text-tech-400">
+ <div className="inline-flex items-center gap-2 text-sm text-gray-400">
  <Sparkles className="w-4 h-4 text-rose-400" />
  <span>Explore more AI tools on</span>
  <Link href="/" className="text-rose-400 hover:text-rose-300 font-medium underline underline-offset-4">
  Apifeny AI
  </Link>
- <span className="text-tech-500">&mdash;</span>
+ <span className="text-gray-500">&mdash;</span>
  <Link href="/guides" className="text-rose-400 hover:text-rose-300 font-medium underline underline-offset-4">
  All Guides
  </Link>

@@ -100,12 +100,12 @@ function getTagColor(tag: string): string {
  if (['research', 'backtest', 'validation'].some(k => t.includes(k))) return typeColors.validation;
  if (['automation', 'cron', 'self-healing'].some(k => t.includes(k))) return typeColors.automation;
  if (['system', 'process'].some(k => t.includes(k))) return typeColors.system;
- return 'text-tech-300 border-tech-500 bg-tech-700/50';
+ return 'text-gray-600 border-gray-200 bg-gray-50/50';
 }
 
 export default function AlphaOrchestrasPage() {
  return (
- <div className="min-h-screen bg-tech-900">
+ <div className="min-h-screen bg-white">
  <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
  {/* Hero */}
  <div className="text-center mb-16">
@@ -116,32 +116,32 @@ export default function AlphaOrchestrasPage() {
  <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
  AI Trading Orchestra <span className="text-aqua">Alpha</span>
  </h1>
- <p className="text-xl text-tech-300 max-w-2xl mx-auto">
+ <p className="text-xl text-gray-600 max-w-2xl mx-auto">
  Multiple AI trading strategies running on Hyperliquid — built from scratch, live, and transparent.
  </p>
  </div>
 
  {/* Weekly Stats */}
- <div className="bg-tech-800/50 border border-tech-700 rounded-xl p-6 mb-8">
+ <div className="bg-gray-100 border border-gray-200 rounded-xl p-6 mb-8">
  <div className="flex items-center gap-2 mb-4">
  <Calendar className="w-4 h-4 text-aqua" />
- <span className="text-sm font-medium text-tech-300 uppercase tracking-wider">{WEEKLY.week}</span>
+ <span className="text-sm font-medium text-gray-600 uppercase tracking-wider">{WEEKLY.week}</span>
  </div>
  <h2 className="text-2xl font-bold text-white mb-2">{WEEKLY.title}</h2>
- <p className="text-tech-300 mb-6">{WEEKLY.summary}</p>
+ <p className="text-gray-600 mb-6">{WEEKLY.summary}</p>
  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
  {WEEKLY.stats.map((s) => (
- <div key={s.label} className="bg-tech-900/50 border border-tech-700 rounded-lg p-3 text-center">
+ <div key={s.label} className="bg-white/50 border border-gray-200 rounded-lg p-3 text-center">
  <div className="text-lg font-bold text-white">{s.value}</div>
- <div className="text-xs text-tech-400">{s.label}</div>
- <div className="text-xs text-tech-500 mt-0.5">{s.delta}</div>
+ <div className="text-xs text-gray-400">{s.label}</div>
+ <div className="text-xs text-gray-500 mt-0.5">{s.delta}</div>
  </div>
  ))}
  </div>
  </div>
 
  {/* Pipeline Overview */}
- <div className="bg-tech-800/50 border border-tech-700 rounded-xl p-6 mb-8">
+ <div className="bg-gray-100 border border-gray-200 rounded-xl p-6 mb-8">
  <div className="flex items-center gap-2 mb-4">
  <Target className="w-4 h-4 text-aqua" />
  <h3 className="text-lg font-semibold text-white">Pipeline Overview</h3>
@@ -157,18 +157,18 @@ export default function AlphaOrchestrasPage() {
  { name: 'Forex Systematic', stage: 'R&D', confidence: 'Low', market: 'Forex', note: 'Pending broker' },
  { name: 'Equity Swing', stage: 'R&D', confidence: 'Low', market: 'Equities', note: 'Pending broker' },
  ].map((s) => (
- <div key={s.name} className="bg-tech-900/50 border border-tech-700 rounded-lg p-3 flex justify-between items-start">
+ <div key={s.name} className="bg-white/50 border border-gray-200 rounded-lg p-3 flex justify-between items-start">
  <div>
  <div className="text-sm font-semibold text-white">{s.name}</div>
- <div className="text-xs text-tech-400">{s.market} · {s.confidence}</div>
- <div className="text-xs text-tech-500 mt-1">{s.note}</div>
+ <div className="text-xs text-gray-400">{s.market} · {s.confidence}</div>
+ <div className="text-xs text-gray-500 mt-1">{s.note}</div>
  </div>
  <span className={`text-xs px-2 py-0.5 rounded-full border ${
  s.stage === 'LIVE' ? 'text-green-400 border-green-400/30 bg-green-400/10' :
  s.stage === 'Paper' ? 'text-yellow-400 border-yellow-400/30 bg-yellow-400/10' :
  s.stage === 'Backtest' ? 'text-blue-400 border-blue-400/30 bg-blue-400/10' :
  s.stage === 'Blocked' ? 'text-red-400 border-red-400/30 bg-red-400/10' :
- 'text-tech-400 border-tech-500 bg-tech-700/50'
+ 'text-gray-400 border-gray-200 bg-gray-50/50'
  }`}>{s.stage}</span>
  </div>
  ))}
@@ -184,13 +184,13 @@ export default function AlphaOrchestrasPage() {
  {WEEKLY.entries.map((entry, i) => (
  <div
  key={i}
- className="bg-tech-800/30 border border-tech-700 rounded-xl p-5 hover:border-tech-600 transition-colors"
+ className="bg-gray-100 border border-gray-200 rounded-xl p-5 hover:border-gray-300 transition-colors"
  >
  <div className="flex items-center gap-2 mb-1">
  <span className="text-xs font-medium text-aqua">{entry.date}</span>
  </div>
  <h4 className="text-base font-semibold text-white mb-2">{entry.title}</h4>
- <p className="text-sm text-tech-300 mb-3">{entry.description}</p>
+ <p className="text-sm text-gray-600 mb-3">{entry.description}</p>
  {entry.tags && (
  <div className="flex flex-wrap gap-1.5">
  {entry.tags.map((t) => (
@@ -208,35 +208,35 @@ export default function AlphaOrchestrasPage() {
  </div>
 
  {/* Principles */}
- <div className="bg-tech-800/50 border border-tech-700 rounded-xl p-6 mb-8">
+ <div className="bg-gray-100 border border-gray-200 rounded-xl p-6 mb-8">
  <div className="flex items-center gap-2 mb-4">
  <Shield className="w-4 h-4 text-aqua" />
  <h3 className="text-lg font-semibold text-white">Operating Principles</h3>
  </div>
- <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-tech-300">
- <div className="bg-tech-900/50 border border-tech-700 rounded-lg p-3">
+ <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-600">
+ <div className="bg-white/50 border border-gray-200 rounded-lg p-3">
  <strong className="text-white">No Black Boxes:</strong> Every strategy is built from first principles. You can read the code, see the backtests, and verify the live fills on-chain.
  </div>
- <div className="bg-tech-900/50 border border-tech-700 rounded-lg p-3">
+ <div className="bg-white/50 border border-gray-200 rounded-lg p-3">
  <strong className="text-white">Pipeline Before Live:</strong> R&D → Backtest → Gate Check → Paper → LIVE. No skipped stages.
  </div>
- <div className="bg-tech-900/50 border border-tech-700 rounded-lg p-3">
+ <div className="bg-white/50 border border-gray-200 rounded-lg p-3">
  <strong className="text-white">Self-Healing Systems:</strong> Cron-loop detects failures (missing TP/SL, stale data) and auto-recovers. No babysitting required.
  </div>
- <div className="bg-tech-900/50 border border-tech-700 rounded-lg p-3">
+ <div className="bg-white/50 border border-gray-200 rounded-lg p-3">
  <strong className="text-white">Compounding Mindset:</strong> Treat the $112 pilot as if it's $500+. All plays run. All signals fire. Real money, real decisions.
  </div>
  </div>
  </div>
 
  {/* Footer */}
- <div className="text-center py-8 border-t border-tech-700">
- <p className="text-tech-400 text-sm">
+ <div className="text-center py-8 border-t border-gray-200">
+ <p className="text-gray-400 text-sm">
  Part of the <Link href="/" className="text-aqua hover:underline">Apifeny AI</Link> ecosystem
  {' · '}
- <a href="https://dashboard-one-beryl-50.vercel.app" className="text-tech-300 hover:underline">Internal Dashboard</a>
+ <a href="https://dashboard-one-beryl-50.vercel.app" className="text-gray-600 hover:underline">Internal Dashboard</a>
  {' · '}
- <span className="text-tech-500">Updated weekly</span>
+ <span className="text-gray-500">Updated weekly</span>
  </p>
  </div>
  </div>

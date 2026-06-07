@@ -37,13 +37,13 @@ export function getPricingLabel(tier: string): string {
 
 export function getPricingColor(tier: string): string {
   const colors: Record<string, string> = {
-    'Free': 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
-    'Freemium': 'bg-sky-500/20 text-sky-400 border-sky-500/30',
+    'Free': 'bg-emerald-100 text-emerald-700 border-emerald-200',
+    'Freemium': 'bg-sky-100 text-sky-700 border-sky-200',
     'Paid': 'bg-neon/20 text-neon-light border-neon/30',
-    'Enterprise': 'bg-amber-500/20 text-amber-400 border-amber-500/30',
-    'Open Source': 'bg-gray-500/20 text-gray-400 border-gray-500/30',
+    'Enterprise': 'bg-amber-100 text-amber-700 border-amber-200',
+    'Open Source': 'bg-gray-100 text-gray-700 border-gray-200',
   };
-  return colors[tier] || 'bg-gray-500/20 text-gray-400 border-gray-500/30';
+  return colors[tier] || 'bg-gray-100 text-gray-700 border-gray-200';
 }
 
 export function getAsiaScoreColor(score: number): string {
@@ -61,10 +61,10 @@ export function getAsiaScoreColorLight(score: number): string {
 }
 
 export function getAsiaScoreBg(score: number): string {
-  if (score >= 8) return 'bg-emerald-500/20 border-emerald-500/30';
+  if (score >= 8) return 'bg-emerald-100 border-emerald-200';
   if (score >= 6) return 'bg-asia/20 border-asia/30';
-  if (score >= 4) return 'bg-amber-500/20 border-amber-500/30';
-  return 'bg-gray-500/20 border-gray-500/30';
+  if (score >= 4) return 'bg-amber-100 border-amber-200';
+  return 'bg-gray-100 border-gray-200';
 }
 
 export function getAsiaScoreBgLight(score: number): string {
@@ -90,16 +90,16 @@ export function renderStars(rating: number): ('full' | 'half' | 'empty')[] {
  */
 export function getPipelineStageBadge(stage: string): { label: string; color: string; icon: string } {
   const badges: Record<string, { label: string; color: string; icon: string }> = {
-    'planning':     { label: 'Strategic Planning', color: 'bg-violet-500/20 text-violet-400 border-violet-500/30', icon: '🧠' },
-    'ideation':     { label: 'Ideation',           color: 'bg-fuchsia-500/20 text-fuchsia-400 border-fuchsia-500/30', icon: '💡' },
-    'research':     { label: 'Research',           color: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30', icon: '🔬' },
-    'coding':       { label: 'Coding',             color: 'bg-blue-500/20 text-blue-400 border-blue-500/30', icon: '💻' },
-    'review':       { label: 'Review/Testing',     color: 'bg-amber-500/20 text-amber-400 border-amber-500/30', icon: '✅' },
-    'deployment':   { label: 'Deployment',         color: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30', icon: '🚀' },
-    'content':      { label: 'Content',            color: 'bg-pink-500/20 text-pink-400 border-pink-500/30', icon: '✍️' },
-    'marketing':    { label: 'Marketing',          color: 'bg-orange-500/20 text-orange-400 border-orange-500/30', icon: '📊' },
-    'build':        { label: 'Agent Building',     color: 'bg-purple-500/20 text-purple-400 border-purple-500/30', icon: '🤖' },
-    'monetization': { label: 'Monetization',       color: 'bg-green-500/20 text-green-400 border-green-500/30', icon: '💰' },
+    'planning':     { label: 'Strategic Planning', color: 'bg-violet-100 text-violet-700 border-violet-200', icon: '🧠' },
+    'ideation':     { label: 'Ideation',           color: 'bg-fuchsia-100 text-fuchsia-700 border-fuchsia-200', icon: '💡' },
+    'research':     { label: 'Research',           color: 'bg-cyan-100 text-cyan-700 border-cyan-200', icon: '🔬' },
+    'coding':       { label: 'Coding',             color: 'bg-blue-100 text-blue-700 border-blue-200', icon: '💻' },
+    'review':       { label: 'Review/Testing',     color: 'bg-amber-100 text-amber-700 border-amber-200', icon: '✅' },
+    'deployment':   { label: 'Deployment',         color: 'bg-emerald-100 text-emerald-700 border-emerald-200', icon: '🚀' },
+    'content':      { label: 'Content',            color: 'bg-pink-100 text-pink-700 border-pink-200', icon: '✍️' },
+    'marketing':    { label: 'Marketing',          color: 'bg-orange-100 text-orange-700 border-orange-200', icon: '📊' },
+    'build':        { label: 'Agent Building',     color: 'bg-purple-100 text-purple-700 border-purple-200', icon: '🤖' },
+    'monetization': { label: 'Monetization',       color: 'bg-green-100 text-green-700 border-green-200', icon: '💰' },
   };
-  return badges[stage] || { label: 'General', color: 'bg-gray-500/20 text-gray-400 border-gray-500/30', icon: '📌' };
+  return badges[stage] || { label: 'General', color: 'bg-gray-100 text-gray-700 border-gray-200', icon: '📌' };
 }

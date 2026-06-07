@@ -26,7 +26,7 @@ export default function ToolCommunityPlaybooks({
 
  const difficultyColor = {
  Beginner: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
- Intermediate: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
+ Intermediate: 'bg-amber-100 text-amber-700 border-amber-200',
  Advanced: 'bg-neon/20 text-neon-light border-neon/30',
  };
 

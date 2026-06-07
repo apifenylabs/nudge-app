@@ -235,7 +235,7 @@ export default function HowToChooseAIToolsPage() {
  const relatedPosts = getRelatedPosts('how-to-choose-ai-tools', 3) || [];
 
  return (
- <div className="min-h-screen bg-tech-900">
+ <div className="min-h-screen bg-white">
  {/* Breadcrumb + Article schema */}
  <BreadcrumbSchema
  items={[
@@ -288,26 +288,26 @@ export default function HowToChooseAIToolsPage() {
  for You
  </h1>
 
- <p className="text-lg sm:text-xl text-tech-200 max-w-3xl mb-6 leading-relaxed">
+ <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mb-6 leading-relaxed">
  Stop picking AI tools based on hype. Our 6-step framework helps you evaluate, test, and
  choose the right tools for your specific team, budget, and workflow — no marketing fluff.
  </p>
 
  {/* Stats */}
  <div className="flex flex-wrap gap-6 text-sm">
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <CheckCircle className="w-4 h-4 text-green-400" />
  <span>6-step decision framework</span>
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <AlertTriangle className="w-4 h-4 text-amber-400" />
  <span>4 common mistakes to avoid</span>
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
- <div className="flex items-center gap-2 text-tech-300">
+ <div className="flex items-center gap-2 text-gray-600">
  <ClipboardCheck className="w-4 h-4 text-green-400" />
  <span>5 must-ask questions before buying</span>
  {/* FAQ Schema */}
@@ -323,7 +323,7 @@ export default function HowToChooseAIToolsPage() {
 
  {/* ── Quick Navigation ─────────────────────────────────────────── */}
  <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
- <div className="bg-tech-800/50 border border-tech-500/20 rounded-xl p-6">
+ <div className="bg-gray-50/50 border border-gray-200 rounded-xl p-6">
  <h2 className="text-white font-semibold mb-4 flex items-center gap-2">
  <ChevronRight className="w-4 h-4 text-violet-400" />
  Jump to Section
@@ -333,7 +333,7 @@ export default function HowToChooseAIToolsPage() {
  <a
  key={step.num}
  href={`#step-${step.num}`}
- className="text-sm text-tech-300 hover:text-violet-400 transition flex items-center gap-2 py-1.5"
+ className="text-sm text-gray-600 hover:text-violet-400 transition flex items-center gap-2 py-1.5"
  >
  <span className="w-5 h-5 rounded-full bg-violet-500/10 text-violet-400 text-xs flex items-center justify-center shrink-0">
  {step.num}
@@ -343,7 +343,7 @@ export default function HowToChooseAIToolsPage() {
  ))}
  <a
  href="#mistakes"
- className="text-sm text-tech-300 hover:text-amber-400 transition flex items-center gap-2 py-1.5"
+ className="text-sm text-gray-600 hover:text-amber-400 transition flex items-center gap-2 py-1.5"
  >
  <span className="w-5 h-5 rounded-full bg-amber-500/10 text-amber-400 text-xs flex items-center justify-center shrink-0">
  !
@@ -352,7 +352,7 @@ export default function HowToChooseAIToolsPage() {
  </a>
  <a
  href="#framework"
- className="text-sm text-tech-300 hover:text-violet-400 transition flex items-center gap-2 py-1.5"
+ className="text-sm text-gray-600 hover:text-violet-400 transition flex items-center gap-2 py-1.5"
  >
  <span className="w-5 h-5 rounded-full bg-violet-500/10 text-violet-400 text-xs flex items-center justify-center shrink-0">
  ? 
@@ -398,12 +398,12 @@ export default function HowToChooseAIToolsPage() {
 
  {/* Description */}
  <div className="ml-14 sm:ml-14">
- <p className="text-tech-300 leading-relaxed mb-4">
+ <p className="text-gray-600 leading-relaxed mb-4">
  {step.description}
  </p>
 
  {/* Tips */}
- <div className="bg-tech-800/40 border border-tech-500/20 rounded-lg p-4 mb-4">
+ <div className="bg-gray-50/40 border border-gray-200 rounded-lg p-4 mb-4">
  <div className="flex items-center gap-2 mb-3">
  <Lightbulb className="w-4 h-4 text-amber-400" />
  <span className="text-xs font-medium text-amber-400 uppercase tracking-wider">Tips</span>
@@ -412,7 +412,7 @@ export default function HowToChooseAIToolsPage() {
  </div>
  <ul className="space-y-2">
  {step.tips.map((tip, i) => (
- <li key={i} className="text-sm text-tech-300 flex items-start gap-2">
+ <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
  <span className="text-amber-400 mt-0.5 shrink-0">•</span>
  {tip}
  </li>
@@ -424,14 +424,14 @@ export default function HowToChooseAIToolsPage() {
 
  {/* Example / Scoring fields */}
  {'example' in step && step.example && (
- <div className="bg-tech-800/20 border border-tech-500/10 rounded-lg p-4">
+ <div className="bg-gray-50/20 border border-gray-200 rounded-lg p-4">
  <div className="flex items-center gap-2 mb-2">
  <Sparkles className="w-4 h-4 text-green-400" />
  <span className="text-xs font-medium text-green-400 uppercase tracking-wider">Example</span>
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
- <pre className="text-sm text-tech-300 whitespace-pre-wrap font-sans">
+ <pre className="text-sm text-gray-600 whitespace-pre-wrap font-sans">
  {step.example}
  </pre>
  {/* FAQ Schema */}
@@ -440,7 +440,7 @@ export default function HowToChooseAIToolsPage() {
  )}
 
  {'scoringFields' in step && step.scoringFields && (
- <div className="bg-tech-800/20 border border-tech-500/10 rounded-lg p-4">
+ <div className="bg-gray-50/20 border border-gray-200 rounded-lg p-4">
  <div className="flex items-center gap-2 mb-3">
  <ClipboardCheck className="w-4 h-4 text-violet-400" />
  <span className="text-xs font-medium text-violet-400 uppercase tracking-wider">
@@ -451,7 +451,7 @@ export default function HowToChooseAIToolsPage() {
  </div>
  <ul className="space-y-2">
  {step.scoringFields.map((field, i) => (
- <li key={i} className="text-sm text-tech-300 flex items-start gap-2">
+ <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
  <CheckCircle className="w-3.5 h-3.5 text-green-400 mt-0.5 shrink-0" />
  {field}
  </li>
@@ -467,7 +467,7 @@ export default function HowToChooseAIToolsPage() {
 
  {/* Divider (except last) */}
  {idx < STEPS.length - 1 && (
- <div className="ml-14 mt-8 border-l-2 border-dashed border-tech-500/20 h-8" />
+ <div className="ml-14 mt-8 border-l-2 border-dashed border-gray-200 h-8" />
  )}
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
@@ -476,14 +476,14 @@ export default function HowToChooseAIToolsPage() {
  </section>
 
  {/* ── Recommended Tools ────────────────────────────────────────── */}
- <section className="border-t border-tech-500/10 py-12 sm:py-16">
+ <section className="border-t border-gray-200 py-12 sm:py-16">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="text-center mb-8">
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
  Start With These{' '}
  <span className="text-violet-400">Top-Rated Tools</span>
  </h2>
- <p className="text-tech-300 max-w-2xl mx-auto">
+ <p className="text-gray-600 max-w-2xl mx-auto">
  Based on our editorial curation and community ratings, these are the most reliable AI tools
  across categories. Each one has a free tier, proven track record, and strong fit for teams.
  </p>
@@ -496,7 +496,7 @@ export default function HowToChooseAIToolsPage() {
  <Link
  key={tool.id}
  href={`/tools/${tool.slug}`}
- className="group bg-tech-800/40 border border-tech-500/20 rounded-xl p-5 hover:border-violet-500/30 transition-all"
+ className="group bg-gray-50/40 border border-gray-200 rounded-xl p-5 hover:border-violet-500/30 transition-all"
  >
  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-tech-500 to-tech-600 flex items-center justify-center mb-4">
  <span className="text-white font-bold">
@@ -508,13 +508,13 @@ export default function HowToChooseAIToolsPage() {
  <h3 className="text-white font-semibold text-sm group-hover:text-violet-300 transition mb-1.5">
  {tool.name}
  </h3>
- <p className="text-xs text-tech-400 line-clamp-2 mb-3">
+ <p className="text-xs text-gray-400 line-clamp-2 mb-3">
  {tool.tagline || tool.description?.slice(0, 100)}
  </p>
  {tool.avg_rating > 0 && (
  <div className="flex items-center gap-1">
  <Star className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
- <span className="text-xs text-tech-400">{tool.avg_rating.toFixed(1)}</span>
+ <span className="text-xs text-gray-400">{tool.avg_rating.toFixed(1)}</span>
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
@@ -542,7 +542,7 @@ export default function HowToChooseAIToolsPage() {
  </section>
 
  {/* ── Common Mistakes ──────────────────────────────────────────── */}
- <section id="mistakes" className="border-t border-tech-500/10 py-12 sm:py-16">
+ <section id="mistakes" className="border-t border-gray-200 py-12 sm:py-16">
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="flex items-center gap-3 mb-8">
  <AlertTriangle className="w-6 h-6 text-amber-400" />
@@ -557,7 +557,7 @@ export default function HowToChooseAIToolsPage() {
  {MISTAKES.map((mistake, i) => (
  <div
  key={i}
- className="bg-tech-800/30 border border-tech-500/20 rounded-xl p-6"
+ className="bg-gray-50/30 border border-gray-200 rounded-xl p-6"
  >
  <div className="flex items-start gap-4">
  <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
@@ -567,12 +567,12 @@ export default function HowToChooseAIToolsPage() {
  </div>
  <div>
  <h3 className="text-white font-semibold mb-1.5">{mistake.title}</h3>
- <p className="text-sm text-tech-300 mb-3 leading-relaxed">
+ <p className="text-sm text-gray-600 mb-3 leading-relaxed">
  {mistake.description}
  </p>
  <div className="flex items-start gap-2 text-sm">
  <span className="text-green-400 font-medium shrink-0 mt-0.5">✓ Fix:</span>
- <span className="text-tech-300">{mistake.fix}</span>
+ <span className="text-gray-600">{mistake.fix}</span>
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
@@ -595,7 +595,7 @@ export default function HowToChooseAIToolsPage() {
  </section>
 
  {/* ── Decision Framework ───────────────────────────────────────── */}
- <section id="framework" className="border-t border-tech-500/10 py-12 sm:py-16">
+ <section id="framework" className="border-t border-gray-200 py-12 sm:py-16">
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="flex items-center gap-3 mb-8">
  <ClipboardCheck className="w-6 h-6 text-violet-400" />
@@ -611,7 +611,7 @@ export default function HowToChooseAIToolsPage() {
  {DECISION_QUESTIONS.map((dq, i) => (
  <div
  key={i}
- className="bg-tech-800/40 border border-tech-500/20 rounded-xl p-5 hover:border-violet-500/20 transition-all"
+ className="bg-gray-50/40 border border-gray-200 rounded-xl p-5 hover:border-violet-500/20 transition-all"
  >
  <div className="flex items-center gap-3 mb-3">
  <div className="w-8 h-8 rounded-lg bg-violet-500/10 flex items-center justify-center shrink-0">
@@ -623,7 +623,7 @@ export default function HowToChooseAIToolsPage() {
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
- <p className="text-xs text-tech-400 leading-relaxed ml-11">
+ <p className="text-xs text-gray-400 leading-relaxed ml-11">
  {dq.why}
  </p>
  {/* FAQ Schema */}
@@ -642,20 +642,20 @@ export default function HowToChooseAIToolsPage() {
  {/* FAQ Schema */}
  <FAQSchema faqs={guideFaqs} />
  </div>
- <p className="text-sm text-tech-300 mb-4">
+ <p className="text-sm text-gray-600 mb-4">
  Take these questions with you when evaluating AI tools. Check off each one as you go.
  </p>
  <div className="space-y-2">
  {DECISION_QUESTIONS.map((dq, i) => (
  <label
  key={i}
- className="flex items-center gap-3 p-2 rounded-lg hover:bg-tech-800/40 cursor-pointer"
+ className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50/40 cursor-pointer"
  >
  <input
  type="checkbox"
- className="w-4 h-4 rounded border-tech-500/50 bg-tech-800 text-violet-500 focus:ring-violet-500"
+ className="w-4 h-4 rounded border-gray-200 bg-gray-50 text-violet-500 focus:ring-violet-500"
  />
- <span className="text-sm text-tech-200">{dq.question}</span>
+ <span className="text-sm text-gray-700">{dq.question}</span>
  </label>
  ))}
  {/* FAQ Schema */}
@@ -670,14 +670,14 @@ export default function HowToChooseAIToolsPage() {
  </section>
 
  {/* ── CTA ──────────────────────────────────────────────────────── */}
- <section className="border-t border-tech-500/10 py-12 sm:py-16">
+ <section className="border-t border-gray-200 py-12 sm:py-16">
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
- <div className="relative rounded-2xl bg-gradient-to-br from-violet-500/10 via-purple-500/5 to-tech-800 border border-tech-500/30 p-8 sm:p-12">
+ <div className="relative rounded-2xl bg-gradient-to-br from-violet-500/10 via-purple-500/5 to-tech-800 border border-gray-200 p-8 sm:p-12">
  <Search className="w-10 h-10 text-violet-400 mx-auto mb-4" />
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
  Ready to Find Your Perfect AI Stack?
  </h2>
- <p className="text-tech-300 max-w-xl mx-auto mb-6 leading-relaxed">
+ <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">
  Browse {toolsData.filter(t => t.is_published).length} curated AI tools organized by
  category, with ratings, pricing, and real use case recommendations. No hype, no fluff.
  </p>
@@ -691,7 +691,7 @@ export default function HowToChooseAIToolsPage() {
  </Link>
  <Link
  href="/categories"
- className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-tech-500/40 text-tech-100 hover:border-violet-500/30 hover:text-white transition-all"
+ className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-gray-200 text-gray-800 hover:border-violet-500/30 hover:text-white transition-all"
  >
  Browse by Category
  </Link>
@@ -708,7 +708,7 @@ export default function HowToChooseAIToolsPage() {
 
  {/* ── Related Blog Posts ─────────────────────────────────────── */}
  {relatedPosts.length > 0 && (
- <section className="border-t border-tech-500/10 py-12 sm:py-16">
+ <section className="border-t border-gray-200 py-12 sm:py-16">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="flex items-center gap-2 mb-8">
  <BookOpen className="w-5 h-5 text-neon" />
@@ -722,11 +722,11 @@ export default function HowToChooseAIToolsPage() {
  <Link
  key={related.slug}
  href={`/blog/${related.slug}`}
- className="group bg-tech-800/40 border border-tech-500/20 rounded-xl p-6 hover:border-neon/30 transition-all"
+ className="group bg-gray-50/40 border border-gray-200 rounded-xl p-6 hover:border-neon/30 transition-all"
  >
  <div className="flex flex-wrap gap-1.5 mb-3">
  {related.tags.slice(0, 2).map((tag) => (
- <span key={tag} className="text-[10px] font-medium px-1.5 py-0.5 rounded-full border border-tech-500/30 text-tech-400">
+ <span key={tag} className="text-[10px] font-medium px-1.5 py-0.5 rounded-full border border-gray-200 text-gray-400">
  {tag.replace(/-/g, ' ')}
  </span>
  ))}
@@ -736,7 +736,7 @@ export default function HowToChooseAIToolsPage() {
  <h3 className="font-semibold text-white group-hover:text-neon-light transition mb-2 line-clamp-2">
  {related.title}
  </h3>
- <p className="text-sm text-tech-400 line-clamp-2 mb-3">
+ <p className="text-sm text-gray-400 line-clamp-2 mb-3">
  {related.excerpt}
  </p>
  <div className="flex items-center gap-1 text-xs text-neon-light group-hover:gap-2 transition-all">

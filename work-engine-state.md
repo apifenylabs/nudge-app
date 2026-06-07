@@ -1,22 +1,35 @@
 # Work Engine State
-## Last Updated: 2026-06-07 14:24 HKT
+## Last Updated: 2026-06-07 23:26 HKT
 
-### Completed: AI Developer Tools (CI/CD, Deployment, Monitoring) Guide — AI Directory
-- **Project:** AI Directory (apifeny-ai) — P5 Strategic
-- **Action:** Created `data/blog/ai-developer-tools-cicd-deployment-monitoring-asia-2026.json`
-- **Content:** 27,702 chars (~6,500 words), 7 parts covering: AI coding assistants (Copilot/Cursor/Tabnine/Amazon Q Developer), AI-enhanced CI/CD (GitHub Actions, GitLab CI/CD, Jenkins), deployment platforms (Vercel/Netlify/Railway/Fly.io/Coolify), observability (Datadog/Grafana/New Relic/Sentry/PagerDuty), IaC (Terraform/Pulumi/Crossplane), AI infrastructure (Pinecone/Qdrant/Weaviate/Milvus/BentoML), regional toolchain recommendations (SG/IN/CN/JP/KR/ID/VN), procurement strategy & compliance checklist
-- **SEO gap:** Filled "AI developer tools / CI/CD / monitoring for Asia" — 0 dedicated posts previously
-- **Build check:** `npx next build` — passed clean (658/658 pages)
-- **Tags:** 18 relevant tags
-- **Internal links:** 5 related posts linked
+### ✅ P5 Strategic: AI Directory — Blog page restore + draft cleanup
+- Restored `ai-customer-support-chatbots-asia-2026` page.tsx from data/blog JSON (was accidentally overwritten during draft work)
+- Saved CEO's draft as new slug `ai-customer-support-chatbots-comparison-2026` under drafts/
+- Build: `npx next build` — passed clean (660+ pages)
 
-### ✅ Completed: Internal links for all 15 missing posts (2026-06-07 15:08 HKT)
+### ✅ P3 Strategic: LifeOS — Cloud Message Sync on Chat (this session)
+- **Project:** LifeOS
+- **Modified** `app/page.tsx`:
+  - Added `syncMessageToCloud()` callback — fires `POST /api/session/messages` for each user message and AI reply (fire-and-forget)
+  - Wired into all 3 code paths: successful API reply, fallback conversation-engine, and ultimate stub reply
+  - Also syncs the welcome message when opening a plugin (fire-and-forget)
+  - All existing localStorage persistence preserved; cloud sync is additive
+- **Build:** `npx next build` — passed clean (10 routes)
 
-All 158 blog posts now have contextual "📖 See also:" internal links. 5 posts with unique tags got manually selected links.
+### ✅ Previously: P3 Strategic: LifeOS — Cloud Session Sync on Plugin Open
+### ✅ Previously: P1 Revenue: AI Directory — Affiliate Disclosure Page
+### ✅ Previously: P4 Strategic: Titan — Stripe Checkout + Pricing Rewire
+### ✅ Previously: P3 Strategic: LifeOS — Supabase Session Store + Cloud Dashboard
+### ✅ Previously: P3/P4/P5: LifeDashboard, FAQPage JSON-LD, Titan font preload
 
-### Cursor: Next priority — P5 Strategic: AI Directory — content refresh or SEO meta optimization
+## Cursor: Next priority
 
-All high-volume SEO gaps filled (Developer Tools, CDP, Marketing Analytics, Voice Agents, Customer Service). Next:
-- Option A: Premium playbook pages with affiliate CTAs (blocked on env vars)
-- Option B: Refresh top-10 visited posts with updated stats for 2026 H2
-- Option C: AI tools comparison tables for most visited category pages
+### Revenue P0-P2 (CEO env var blocked)
+⬜ CEO: Sign up for affiliate programs, set `NEXT_PUBLIC_AFFILIATE_*` env vars
+⬜ CEO: Stripe checkout SQL context / Stripe env vars
+⬜ CEO: Git PAT token renewal
+
+### Strategic P3-P5 (Actionable items)
+- **P3 LifeOS**: Next: ~~sync chat messages to cloud session~~ ✅ DONE — Need CEO for: Supabase table creation (`conversation_messages` policy), production Supabase env vars, or new categories
+- **P4 Titan**: Deploy to Vercel with Stripe env vars (CEO needed for live keys)
+- **P5 AI Directory**: Next: publish another blog post from drafts, manual internal links for sections-format posts
+- **P6 Analytics**: ✅ Done — Vercel Analytics wired on all 3 sites, GA4 needs `NEXT_PUBLIC_GA_ID`

@@ -184,7 +184,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  {/* Back link */}
  <Link
  href="/rankings"
- className="inline-flex items-center gap-1.5 text-sm text-tech-200 hover:text-white transition mb-6 group"
+ className="inline-flex items-center gap-1.5 text-sm text-gray-700 hover:text-white transition mb-6 group"
  >
  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition" />
  All Rankings
@@ -192,9 +192,9 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
 
  {/* Hero */}
  <section className="relative mb-8 sm:mb-10">
- <div className="absolute inset-0 bg-tech-grid opacity-30 rounded-2xl" />
+ <div className="absolute inset-0 bg-gray-50 opacity-30 rounded-2xl" />
  <div
- className="relative rounded-2xl border border-tech-500/30 p-8 sm:p-12 overflow-hidden"
+ className="relative rounded-2xl border border-gray-200 p-8 sm:p-12 overflow-hidden"
  style={{ backgroundImage: `linear-gradient(135deg, ${cat.gradient}), linear-gradient(to bottom right, rgba(17,17,34,0.9), rgba(17,17,34,0.9))` }}
  >
  <div className="relative">
@@ -206,10 +206,10 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  </span>
  </div>
  <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">{cat.title}</h1>
- <p className="text-sm text-tech-200 max-w-2xl mb-4">{cat.description}</p>
+ <p className="text-sm text-gray-700 max-w-2xl mb-4">{cat.description}</p>
 
  {/* Score range */}
- <div className="flex flex-wrap items-center gap-3 text-[11px] text-tech-300 mb-4">
+ <div className="flex flex-wrap items-center gap-3 text-[11px] text-gray-600 mb-4">
  <span className="flex items-center gap-1">
  <TrendingUp className="w-3.5 h-3.5 text-neon-light" />
  Score range: {topScore.toFixed(1)} — {rankedTools[rankedTools.length - 1]?.score.toFixed(1)}
@@ -230,7 +230,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  <Info className="w-4 h-4 text-asia shrink-0 mt-0.5" />
  <div>
  <h3 className="text-xs font-semibold text-asia mb-1">Why this matters</h3>
- <p className="text-xs text-tech-100/80 leading-relaxed">{insight.why}</p>
+ <p className="text-xs text-gray-800/80 leading-relaxed">{insight.why}</p>
  </div>
  </div>
  </div>
@@ -240,9 +240,9 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  {insight.stats.map((stat, i) => {
  const [val, ...rest] = stat.split(/\s(.+)/);
  return (
- <div key={i} className="rounded-lg border border-tech-500/20 bg-tech-800/60 p-3 text-center hover:border-neon/30 transition-colors">
+ <div key={i} className="rounded-lg border border-gray-200 bg-gray-50/60 p-3 text-center hover:border-neon/30 transition-colors">
  <div className="text-xs font-bold text-neon-light mb-0.5">{val}</div>
- <div className="text-[10px] text-tech-300">{rest.join('') || val}</div>
+ <div className="text-[10px] text-gray-600">{rest.join('') || val}</div>
  </div>
  );
  })}
@@ -251,7 +251,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  {/* Start here if */}
  <div className="flex items-start gap-2 rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-3">
  <Lightbulb className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
- <p className="text-[11px] text-tech-100 leading-relaxed">
+ <p className="text-[11px] text-gray-800 leading-relaxed">
  <span className="font-semibold text-emerald-400">Start here if: </span>
  {insight.startHere}
  </p>
@@ -262,18 +262,18 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
 
  {/* Region Filter */}
  <div className="flex items-center gap-2 mb-6">
- <Globe className="w-4 h-4 text-tech-300" />
- <span className="text-xs text-tech-300 mr-1">Region:</span>
+ <Globe className="w-4 h-4 text-gray-600" />
+ <span className="text-xs text-gray-600 mr-1">Region:</span>
  <select
  value={regionFilter}
  onChange={(e) => setRegionFilter(e.target.value)}
- className="bg-tech-800 border border-tech-500/50 rounded-lg px-3 py-1.5 text-sm text-white focus:outline-none focus:border-neon/50 transition"
+ className="bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-sm text-white focus:outline-none focus:border-neon/50 transition"
  >
  {Object.entries(REGION_LABELS).map(([key, label]) => (
  <option key={key} value={key}>{label}</option>
  ))}
  </select>
- <span className="text-[10px] text-tech-400 ml-1">
+ <span className="text-[10px] text-gray-400 ml-1">
  ({rankedTools.length} tools)
  </span>
  </div>
@@ -286,10 +286,10 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  key={rt.tool.id}
  href={`/tools/${rt.tool.slug}`}
  className={cn(
- 'group relative flex items-center gap-4 sm:gap-6 rounded-xl border border-tech-500/30 p-4 sm:p-5 transition-all hover:-translate-y-0.5',
+ 'group relative flex items-center gap-4 sm:gap-6 rounded-xl border border-gray-200 p-4 sm:p-5 transition-all hover:-translate-y-0.5',
  i === 0
  ? 'bg-gradient-to-r from-amber-500/10 via-neon/5 to-tech-700 border-amber-500/20 hover:border-amber-500/40'
- : 'bg-tech-700/80 hover:border-neon/40'
+ : 'bg-white hover:border-neon/40'
  )}
  >
  {/* Rank badge */}
@@ -307,8 +307,8 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  <span className="text-lg sm:text-xl font-bold text-amber-200">3</span>
  </div>
  ) : (
- <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-tech-800 border border-tech-500/30 flex items-center justify-center">
- <span className="text-base sm:text-lg font-bold text-tech-200">{rt.rank}</span>
+ <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center">
+ <span className="text-base sm:text-lg font-bold text-gray-700">{rt.rank}</span>
  </div>
  )}
  </div>
@@ -325,7 +325,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  </span>
  )}
  </div>
- <p className="text-xs sm:text-sm text-tech-200 line-clamp-1">{rt.tool.tagline}</p>
+ <p className="text-xs sm:text-sm text-gray-700 line-clamp-1">{rt.tool.tagline}</p>
 
  {/* Pipeline stage tags */}
  {rt.tool.best_for_pipeline_stage && (
@@ -344,12 +344,12 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  ? 'bg-neon/15 border-neon/30 text-neon-light'
  : rt.score >= 4
  ? 'bg-amber-500/15 border-amber-500/30 text-amber-400'
- : 'bg-tech-800 border-tech-500/30 text-tech-300'
+ : 'bg-gray-50 border-gray-200 text-gray-600'
  )}
  >
  {rt.score.toFixed(1)}
  </div>
- <span className="text-[9px] text-tech-400 uppercase tracking-wider">Score</span>
+ <span className="text-[9px] text-gray-400 uppercase tracking-wider">Score</span>
  <div className="hidden lg:block mt-1">
  <AffiliateButton
  toolSlug={rt.tool.slug}
@@ -361,14 +361,14 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  </div>
 
  {/* Chevron */}
- <ChevronRight className="w-4 h-4 text-tech-400 group-hover:text-neon-light transition-colors shrink-0" />
+ <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-neon-light transition-colors shrink-0" />
  </Link>
  ))}
  </div>
 
  {rankedTools.length === 0 && (
  <div className="text-center py-12">
- <p className="text-sm text-tech-300">No tools match the selected region filter.</p>
+ <p className="text-sm text-gray-600">No tools match the selected region filter.</p>
  </div>
  )}
  </section>
@@ -385,7 +385,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  <BookOpen className="w-4 h-4 text-neon-light" />
  Related Playbooks
  </h2>
- <p className="text-sm text-tech-200 mb-4">
+ <p className="text-sm text-gray-700 mb-4">
  These playbooks match the {cat.pipelineStage} stage of your workflow.
  </p>
  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -393,7 +393,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  <Link
  key={pb.slug}
  href={`/playbook/${pb.slug}`}
- className="group rounded-xl border border-tech-500/30 bg-tech-700/80 p-4 hover:border-neon/40 hover:-translate-y-0.5 transition-all"
+ className="group rounded-xl border border-gray-200 bg-white p-4 hover:border-neon/40 hover:-translate-y-0.5 transition-all"
  >
  <div className="flex items-center gap-2 mb-2">
  <span className="text-xl">{pb.icon}</span>
@@ -401,7 +401,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  {pb.title}
  </h3>
  </div>
- <p className="text-xs text-tech-200 line-clamp-2 mb-3">{pb.description}</p>
+ <p className="text-xs text-gray-700 line-clamp-2 mb-3">{pb.description}</p>
  {pb.real_results && pb.real_results.length > 0 && (
  <div className="flex flex-wrap gap-2">
  {pb.real_results.slice(0, 2).map((r, i) => (
@@ -426,7 +426,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  })()}
 
  {/* How scoring works */}
- <section className="rounded-xl border border-tech-500/30 bg-tech-700/50 p-6">
+ <section className="rounded-xl border border-gray-200 bg-white p-6">
  <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
  <Sparkles className="w-4 h-4 text-neon-light" />
  How the ranking works
@@ -439,12 +439,12 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  { label: 'Editor Pick', weight: '15%', desc: 'Editorially selected — curated by our team' },
  { label: 'Saves & Bookmarking', weight: '10%', desc: 'Total saves normalized across the dataset' },
  ].map((factor, i) => (
- <div key={i} className="p-3 rounded-lg bg-tech-800 border border-tech-500/20 hover:scale-[1.02] transition-transform">
+ <div key={i} className="p-3 rounded-lg bg-gray-50 border border-gray-200 hover:scale-[1.02] transition-transform">
  <div className="flex items-center justify-between mb-1">
  <span className="text-xs font-medium text-white">{factor.label}</span>
  <span className="text-[10px] font-bold text-neon-light">{factor.weight}</span>
  </div>
- <p className="text-[10px] text-tech-300">{factor.desc}</p>
+ <p className="text-[10px] text-gray-600">{factor.desc}</p>
  </div>
  ))}
  </div>
@@ -454,7 +454,7 @@ export default function RankingCategoryPage({ params }: RankingCategoryPageProps
  <div className="mt-8 text-center">
  <Link
  href="/tools"
- className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-tech-600 hover:bg-tech-500 text-white text-sm font-medium transition"
+ className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-white text-sm font-medium transition"
  >
  Browse all tools
  <ChevronRight className="w-4 h-4" />
@@ -472,8 +472,8 @@ const PIPELINE_COLORS: Record<string, string> = {
  'research': 'bg-sky-500/15 text-sky-400 border-sky-500/30',
  'ideation': 'bg-pink-500/15 text-pink-400 border-pink-500/30',
  'coding': 'bg-blue-500/15 text-blue-400 border-blue-500/30',
- 'review': 'bg-amber-500/15 text-amber-400 border-amber-500/30',
- 'testing': 'bg-orange-500/15 text-orange-400 border-orange-500/30',
+ 'review': 'bg-amber-100 text-amber-700 border-amber-200 border-amber-500/30',
+ 'testing': 'bg-orange-100 text-orange-700 border-orange-200 border-orange-500/30',
  'deployment': 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30',
  'content': 'bg-rose-500/15 text-rose-400 border-rose-500/30',
  'marketing': 'bg-fuchsia-500/15 text-fuchsia-400 border-fuchsia-500/30',
@@ -503,7 +503,7 @@ function PipelineBadge({ stage }: { stage: string }) {
  <span
  className={cn(
  'px-2 py-0.5 rounded-full text-[9px] font-medium border transition hover:scale-105',
- PIPELINE_COLORS[stage] || 'bg-tech-800 border-tech-500/30 text-tech-300'
+ PIPELINE_COLORS[stage] || 'bg-gray-50 border-gray-200 text-gray-600'
  )}
  >
  Best for {PIPELINE_LABELS[stage] || stage}

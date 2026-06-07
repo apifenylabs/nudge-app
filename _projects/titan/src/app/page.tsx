@@ -16,6 +16,8 @@ function ParticleField() {
   const visibilityRef = useRef(true);
   const [showCanvas, setShowCanvas] = useState(false);
 
+  const animIdRef = useRef<number | null>(null);
+
   useEffect(() => {
     // Check for prefers-reduced-motion
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -31,7 +33,7 @@ function ParticleField() {
       reducedMotionRef.current = e.matches;
       if (e.matches) {
         // User switched to reduced motion — cancel animation
-        if (animId) cancelAnimationFrame(animId);
+        if (animIdRef.current !== null) cancelAnimationFrame(animIdRef.current);
         const canvas = canvasRef.current;
         if (canvas) {
           const ctx = canvas.getContext("2d");
@@ -49,7 +51,6 @@ function ParticleField() {
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
 
-      let animId: number;
       let w = window.innerWidth;
       let h = window.innerHeight;
       let time = 0;
@@ -129,7 +130,7 @@ function ParticleField() {
       const draw = () => {
         // Skip draw if reduced motion or tab hidden
         if (!visibilityRef.current) {
-          animId = requestAnimationFrame(draw);
+          animIdRef.current = requestAnimationFrame(draw);
           return;
         }
         if (reducedMotionRef.current) {
@@ -245,12 +246,15 @@ function ParticleField() {
           }
         }
 
-        animId = requestAnimationFrame(draw);
+        animIdRef.current = requestAnimationFrame(draw);
       };
       draw();
 
       return () => {
-        cancelAnimationFrame(animId);
+        if (animIdRef.current !== null) {
+          cancelAnimationFrame(animIdRef.current);
+          animIdRef.current = null;
+        }
         window.removeEventListener("resize", resize);
         window.removeEventListener("mousemove", onMouse);
         window.removeEventListener("mouseleave", onLeave);
@@ -802,10 +806,47 @@ export default function HomePage() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
+  /* ── SoftwareApplication + FAQPage JSON-LD schema ───── */
+  const landingSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Titan — AI Agent Builder",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web",
+        "description": "Build, train, and deploy AI agents without code. Visual node-based agent studio, skill trees, rank-based progression, and multi-agent orchestration.",
+        "url": "https://titan.apifenylabs.com",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/PreOrder"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://titan.apifenylabs.com" },
+          { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://titan.apifenylabs.com/features" },
+          { "@type": "ListItem", "position": 3, "name": "Pricing", "item": "https://titan.apifenylabs.com/pricing" }
+        ]
+      }
+    ]
+  };
+
   if (!mounted) return null;
 
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(landingSchema),
+        }}
+      />
+
       <ParticleField />
 
       <Navbar />

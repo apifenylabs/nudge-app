@@ -175,13 +175,13 @@ export default function BlogPlaybookLinks({ postTags, relatedToolSlugs, playbook
  if (matchedPlaybooks.length === 0) return null;
 
  return (
- <section className="border-y border-tech-500/20 bg-tech-800/30">
+ <section className="border-y border-gray-200 bg-gray-50/30">
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
  <div className="flex items-center gap-2 mb-4">
  <BookOpen className="w-5 h-5 text-cyan-400" />
  <h2 className="text-lg font-bold text-white">Related Playbooks</h2>
  </div>
- <p className="text-sm text-tech-400 mb-4">
+ <p className="text-sm text-gray-400 mb-4">
  Step-by-step guides to implement the AI tools and workflows discussed in this article.
  </p>
  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -189,14 +189,14 @@ export default function BlogPlaybookLinks({ postTags, relatedToolSlugs, playbook
  <Link
  key={pb.slug}
  href={`/playbooks/${pb.slug}`}
- className="group block bg-tech-800/50 border border-tech-600/20 rounded-xl p-4 hover:bg-tech-700/50 hover:border-cyan-500/20 transition-all"
+ className="group block bg-gray-50/50 border border-gray-300/20 rounded-xl p-4 hover:bg-white hover:border-cyan-500/20 transition-all"
  >
  <div className="flex items-start gap-3">
  <span className="text-2xl shrink-0">{pb.icon}</span>
  <div className="min-w-0">
  <p className="text-sm font-medium text-white truncate group-hover:text-cyan-300 transition-colors">{pb.title}</p>
- <p className="text-xs text-tech-400 mt-1 line-clamp-2">{pb.subtitle}</p>
- <span className="inline-block mt-2 text-[11px] text-tech-500 bg-tech-700/30 px-2 py-0.5 rounded-full">{pb.difficulty}</span>
+ <p className="text-xs text-gray-400 mt-1 line-clamp-2">{pb.subtitle}</p>
+ <span className="inline-block mt-2 text-[11px] text-gray-500 bg-white px-2 py-0.5 rounded-full">{pb.difficulty}</span>
  </div>
  </div>
  </Link>
@@ -222,13 +222,13 @@ export default function BlogPlaybookLinks({ postTags, relatedToolSlugs, playbook
  const toolQuery = relatedToolSlugs.slice(0, 3).join(', ');
 
  return (
- <section className="border-y border-tech-500/20 bg-tech-800/30 mt-8">
+ <section className="border-y border-gray-200 bg-gray-50/30 mt-8">
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
  <div className="flex items-center gap-2 mb-4">
  <BookOpen className="w-5 h-5 text-cyan-400" />
  <h2 className="text-lg font-bold text-white">Dive Deeper</h2>
  </div>
- <p className="text-sm text-tech-400 mb-4">
+ <p className="text-sm text-gray-400 mb-4">
  Read in-depth comparisons and guides about the tools used in this playbook.
  </p>
  <div className="flex flex-wrap gap-2">
@@ -236,7 +236,7 @@ export default function BlogPlaybookLinks({ postTags, relatedToolSlugs, playbook
  <Link
  key={toolSlug}
  href={`/blog?tag=${toolSlug}`}
- className="group inline-flex items-center gap-1.5 rounded-full border border-tech-500/30 bg-tech-800/50 px-3.5 py-1.5 text-sm font-medium text-tech-300 hover:border-cyan/30 hover:text-cyan-light hover:bg-cyan/10 transition-all"
+ className="group inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50/50 px-3.5 py-1.5 text-sm font-medium text-gray-600 hover:border-cyan/30 hover:text-cyan-light hover:bg-cyan/10 transition-all"
  >
  <span>Blog posts about {toolSlug}</span>
  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />

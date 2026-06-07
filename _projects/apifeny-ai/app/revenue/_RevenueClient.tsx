@@ -50,8 +50,8 @@ export default function RevenuePage() {
  return (
  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
  {/* Hero */}
- <div className="relative rounded-2xl bg-gradient-to-br from-amber-500/10 via-emerald-500/5 to-tech-800 border border-tech-500/30 p-6 sm:p-10 mb-8">
- <div className="absolute inset-0 bg-tech-grid opacity-30 rounded-2xl pointer-events-none" />
+ <div className="relative rounded-2xl bg-gradient-to-br from-amber-500/10 via-emerald-500/5 to-tech-800 border border-gray-200 p-6 sm:p-10 mb-8">
+ <div className="absolute inset-0 bg-gray-50 opacity-30 rounded-2xl pointer-events-none" />
  <div className="relative">
  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-medium mb-4">
  <DollarSign className="w-3.5 h-3.5" />
@@ -63,7 +63,7 @@ export default function RevenuePage() {
  Leaderboard
  </span>
  </h1>
- <p className="text-sm text-tech-100/70 max-w-xl mb-4">
+ <p className="text-sm text-gray-800/70 max-w-xl mb-4">
  Real revenue numbers from people using AI playbooks. All data anonymized and
  verified by our editorial team.
  </p>
@@ -73,7 +73,7 @@ export default function RevenuePage() {
  <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-3 sm:p-4">
  <div className="flex items-center gap-2 mb-1">
  <DollarSign className="w-4 h-4 text-amber-400" />
- <span className="text-[10px] text-tech-300">Total MRR Tracked</span>
+ <span className="text-[10px] text-gray-600">Total MRR Tracked</span>
  </div>
  <div className="text-lg sm:text-xl font-bold text-amber-400">
  ${(totalMRR / 1000).toFixed(1)}K
@@ -82,7 +82,7 @@ export default function RevenuePage() {
  <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-3 sm:p-4">
  <div className="flex items-center gap-2 mb-1">
  <TrendingUp className="w-4 h-4 text-emerald-400" />
- <span className="text-[10px] text-tech-300">Avg Revenue</span>
+ <span className="text-[10px] text-gray-600">Avg Revenue</span>
  </div>
  <div className="text-lg sm:text-xl font-bold text-emerald-400">
  ${avgRevenue.toLocaleString()}/mo
@@ -91,7 +91,7 @@ export default function RevenuePage() {
  <div className="rounded-xl border border-violet-500/20 bg-violet-500/5 p-3 sm:p-4">
  <div className="flex items-center gap-2 mb-1">
  <Trophy className="w-4 h-4 text-violet-400" />
- <span className="text-[10px] text-tech-300">Highest Revenue</span>
+ <span className="text-[10px] text-gray-600">Highest Revenue</span>
  </div>
  <div className="text-lg sm:text-xl font-bold text-violet-400">
  ${maxRevenue.toLocaleString()}/mo
@@ -100,7 +100,7 @@ export default function RevenuePage() {
  <div className="rounded-xl border border-sky-500/20 bg-sky-500/5 p-3 sm:p-4">
  <div className="flex items-center gap-2 mb-1">
  <Users className="w-4 h-4 text-sky-400" />
- <span className="text-[10px] text-tech-300">Verified Stories</span>
+ <span className="text-[10px] text-gray-600">Verified Stories</span>
  </div>
  <div className="text-lg sm:text-xl font-bold text-sky-400">
  {verifiedCount}/{revenueStories.length}
@@ -119,11 +119,11 @@ export default function RevenuePage() {
  <Crown className="w-5 h-5 text-amber-400" />
  </div>
  <div>
- <div className="text-xs text-tech-300 mb-0.5">Most Profitable Playbook</div>
+ <div className="text-xs text-gray-600 mb-0.5">Most Profitable Playbook</div>
  <div className="text-sm font-semibold text-white">
  {mostProfitablePlaybook[1].name}
  </div>
- <div className="text-[11px] text-tech-200">
+ <div className="text-[11px] text-gray-700">
  ${mostProfitablePlaybook[1].total.toLocaleString()} total revenue from{' '}
  {mostProfitablePlaybook[1].count} story
  {mostProfitablePlaybook[1].count !== 1 ? 'ies' : 'y'}
@@ -142,8 +142,8 @@ export default function RevenuePage() {
  )}
 
  {/* Leaderboard */}
- <div className="rounded-xl border border-tech-500/30 bg-tech-700/80 overflow-hidden mb-6">
- <div className="p-4 sm:p-5 border-b border-tech-500/20">
+ <div className="rounded-xl border border-gray-200 bg-white overflow-hidden mb-6">
+ <div className="p-4 sm:p-5 border-b border-gray-200">
  <h2 className="text-base font-semibold text-white flex items-center gap-2">
  <Trophy className="w-4 h-4 text-amber-400" />
  Revenue Leaderboard
@@ -155,7 +155,7 @@ export default function RevenuePage() {
  return (
  <div
  key={story.id}
- className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 hover:bg-tech-600/30 transition"
+ className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 hover:bg-gray-100 transition"
  >
  {/* Rank */}
  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center shrink-0">
@@ -166,7 +166,7 @@ export default function RevenuePage() {
  ) : index === 2 ? (
  <Award className="w-5 h-5 sm:w-6 sm:h-6 text-amber-600" />
  ) : (
- <span className="text-sm font-bold text-tech-400">#{index + 1}</span>
+ <span className="text-sm font-bold text-gray-400">#{index + 1}</span>
  )}
  </div>
 
@@ -178,13 +178,13 @@ export default function RevenuePage() {
  >
  {story.title}
  </Link>
- <div className="flex items-center gap-2 text-[10px] sm:text-xs text-tech-300 mt-0.5">
+ <div className="flex items-center gap-2 text-[10px] sm:text-xs text-gray-600 mt-0.5">
  <span>{story.author.name}</span>
- <span className="text-tech-500">·</span>
+ <span className="text-gray-500">·</span>
  <span>{story.source_name}</span>
  {story.revenue?.verified && (
  <>
- <span className="text-tech-500">·</span>
+ <span className="text-gray-500">·</span>
  <span className="flex items-center gap-0.5 text-emerald-400">
  <CheckCircle className="w-3 h-3" />
  Verified
@@ -199,7 +199,7 @@ export default function RevenuePage() {
  <div className="text-sm sm:text-base font-bold text-emerald-400">
  ${story.revenue?.amount?.toLocaleString()}
  </div>
- <div className="text-[10px] text-tech-300">/mo</div>
+ <div className="text-[10px] text-gray-600">/mo</div>
  </div>
  </div>
  );
@@ -208,18 +208,18 @@ export default function RevenuePage() {
 
  {revenueStories.length === 0 && (
  <div className="p-8 text-center">
- <DollarSign className="w-10 h-10 text-tech-400 mx-auto mb-3" />
+ <DollarSign className="w-10 h-10 text-gray-400 mx-auto mb-3" />
  <h3 className="text-base font-semibold text-white mb-1">No revenue stories yet</h3>
- <p className="text-xs text-tech-200">Be the first to submit your results!</p>
+ <p className="text-xs text-gray-700">Be the first to submit your results!</p>
  </div>
  )}
  </div>
 
  {/* CTA */}
- <div className="rounded-xl border border-dashed border-tech-500/30 bg-tech-700/40 p-6 sm:p-8 text-center">
+ <div className="rounded-xl border border-dashed border-gray-200 bg-white/40 p-6 sm:p-8 text-center">
  <TrendingUp className="w-10 h-10 text-amber-400/60 mx-auto mb-3" />
  <h3 className="text-lg font-semibold text-white mb-1">Have Revenue to Share?</h3>
- <p className="text-sm text-tech-200 max-w-md mx-auto mb-4">
+ <p className="text-sm text-gray-700 max-w-md mx-auto mb-4">
  Tracked real results from one of our playbooks? Submit your story and join the leaderboard.
  </p>
  <div className="flex flex-wrap items-center justify-center gap-3">
@@ -232,7 +232,7 @@ export default function RevenuePage() {
  </Link>
  <Link
  href="/success-stories"
- className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-tech-600 hover:bg-tech-500 text-white text-sm font-medium transition"
+ className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-white text-sm font-medium transition"
  >
  Browse All Stories
  <ChevronRight className="w-4 h-4" />
@@ -241,24 +241,24 @@ export default function RevenuePage() {
  </div>
 
  {/* Affiliate Disclosure & Monetization Summary */}
- <div className="rounded-xl border border-tech-500/30 bg-tech-700/40 p-5">
- <h3 className="text-xs font-semibold text-tech-200 mb-3 uppercase tracking-wider">Monetization Summary</h3>
+ <div className="rounded-xl border border-gray-200 bg-white/40 p-5">
+ <h3 className="text-xs font-semibold text-gray-700 mb-3 uppercase tracking-wider">Monetization Summary</h3>
  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
- <div className="p-3 rounded-lg bg-tech-600/40 border border-tech-500/20">
+ <div className="p-3 rounded-lg bg-gray-100/40 border border-gray-200">
  <div className="text-lg font-bold text-amber-400">{totalMRR.toLocaleString()}+</div>
- <div className="text-[10px] text-tech-300">Total Reported MRR</div>
+ <div className="text-[10px] text-gray-600">Total Reported MRR</div>
  </div>
- <div className="p-3 rounded-lg bg-tech-600/40 border border-tech-500/20">
+ <div className="p-3 rounded-lg bg-gray-100/40 border border-gray-200">
  <div className="text-lg font-bold text-emerald-400">{avgRevenue.toLocaleString()}</div>
- <div className="text-[10px] text-tech-300">Average MRR per Playbook</div>
+ <div className="text-[10px] text-gray-600">Average MRR per Playbook</div>
  </div>
- <div className="p-3 rounded-lg bg-tech-600/40 border border-tech-500/20">
+ <div className="p-3 rounded-lg bg-gray-100/40 border border-gray-200">
  <div className="text-lg font-bold text-white">{maxRevenue.toLocaleString()}</div>
- <div className="text-[10px] text-tech-300">Highest MRR Reported</div>
+ <div className="text-[10px] text-gray-600">Highest MRR Reported</div>
  </div>
  </div>
- <p className="text-[10px] text-tech-400 leading-relaxed">
- <strong className="text-tech-200">Affiliate Disclosure:</strong> Some playbooks and tools linked on this page include affiliate links.
+ <p className="text-[10px] text-gray-400 leading-relaxed">
+ <strong className="text-gray-700">Affiliate Disclosure:</strong> Some playbooks and tools linked on this page include affiliate links.
  Apifeny AI may earn a commission at no extra cost to you. Revenue stories are self-reported by users and
  may not reflect typical results. Individual results vary based on effort, market conditions, and execution.
  As an Amazon Associate and Klook Partner, we earn from qualifying purchases.

@@ -106,9 +106,9 @@ export default function AIToolsByCategoryPage() {
  type="application/ld+json"
  dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
  />
- <main className="min-h-screen bg-gray-950">
+ <main className="min-h-screen bg-white">
  {/* ── HERO ────────────────────────────────────────── */}
- <section className="relative overflow-hidden border-b border-tech-700/30">
+ <section className="relative overflow-hidden border-b border-gray-200/30">
  <div className="absolute inset-0 bg-gradient-to-b from-neon-900/10 via-transparent to-transparent pointer-events-none" />
  <div className="max-w-5xl mx-auto px-4 py-16 sm:py-24">
  <div className="mb-4">
@@ -123,7 +123,7 @@ export default function AIToolsByCategoryPage() {
  by Category
  </span>
  </h1>
- <p className="text-lg text-tech-300 max-w-2xl leading-relaxed mb-8">
+ <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-8">
  Stop searching. We&apos;ve organized <strong className="text-white">{totalTools}+ AI tools</strong> into
  13 categories — each with real community ratings, affiliate offers,
  and Asia-readiness scores. Find the right tool in 2 minutes.
@@ -137,7 +137,7 @@ export default function AIToolsByCategoryPage() {
  <a
  key={slug}
  href={`#cat-${slug}`}
- className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-tech-600/50 bg-tech-800/50 text-sm text-tech-200 hover:border-neon/30 hover:text-neon-light transition-all"
+ className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300/50 bg-gray-100 text-sm text-gray-700 hover:border-neon/30 hover:text-neon-light transition-all"
  >
  <span>{cat.icon}</span>
  <span>{cat.name}</span>
@@ -162,7 +162,7 @@ export default function AIToolsByCategoryPage() {
  <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
  All AI Tool Categories
  </h2>
- <p className="text-tech-300 max-w-2xl">
+ <p className="text-gray-600 max-w-2xl">
  Each category contains hand-picked tools with detailed reviews, pricing comparisons,
  and Asia-readiness analysis. Click any category to explore.
  </p>
@@ -180,23 +180,23 @@ export default function AIToolsByCategoryPage() {
  key={cat.slug}
  id={`cat-${cat.slug}`}
  href={`/categories/${cat.slug}`}
- className="group block bg-gradient-to-br from-tech-800/60 to-tech-900/60 border border-tech-700/40 rounded-xl p-5 hover:border-neon/30 hover:shadow-lg hover:shadow-neon/5 transition-all"
+ className="group block bg-gradient-to-br from-tech-800/60 to-tech-900/60 border border-gray-200/40 rounded-xl p-5 hover:border-neon/30 hover:shadow-lg hover:shadow-neon/5 transition-all"
  >
  {/* Icon + count */}
  <div className="flex items-center justify-between mb-3">
  <span className="text-2xl">{cat.icon}</span>
- <span className="text-xs text-tech-400 bg-tech-800 px-2 py-0.5 rounded-full">{toolCount} tools</span>
+ <span className="text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full">{toolCount} tools</span>
  </div>
 
  <h3 className="text-white font-semibold text-base mb-1 group-hover:text-neon-light transition-colors">
  {cat.name}
  </h3>
- <p className="text-sm text-tech-300 mb-3 line-clamp-2 leading-relaxed">
+ <p className="text-sm text-gray-600 mb-3 line-clamp-2 leading-relaxed">
  {cat.description}
  </p>
 
  {/* Search intent label */}
- <div className="flex items-center gap-1.5 text-xs text-tech-400 mt-auto">
+ <div className="flex items-center gap-1.5 text-xs text-gray-400 mt-auto">
  <Search className="w-3 h-3 shrink-0" />
  <span className="truncate">{intent}</span>
  </div>
@@ -207,12 +207,12 @@ export default function AIToolsByCategoryPage() {
  </section>
 
  {/* ── WHY BROWSE BY CATEGORY ─────────────────────── */}
- <section className="border-t border-tech-700/30 py-16 sm:py-20 px-4">
+ <section className="border-t border-gray-200/30 py-16 sm:py-20 px-4">
  <div className="max-w-5xl mx-auto">
  <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
  Why Browse AI Tools by Category?
  </h2>
- <p className="text-tech-300 max-w-2xl mx-auto text-center mb-12">
+ <p className="text-gray-600 max-w-2xl mx-auto text-center mb-12">
  Finding the right AI tool shouldn&apos;t take hours. Here&apos;s how category browsing helps.
  </p>
 
@@ -251,11 +251,11 @@ export default function AIToolsByCategoryPage() {
  ].map((item, i) => (
  <div
  key={i}
- className="bg-tech-800/40 border border-tech-700/30 rounded-xl p-5 hover:border-tech-600/50 transition-all"
+ className="bg-gray-100 border border-gray-200/30 rounded-xl p-5 hover:border-gray-300/50 transition-all"
  >
  <span className="text-2xl mb-3 block">{item.icon}</span>
  <h3 className="text-white font-semibold mb-1">{item.title}</h3>
- <p className="text-sm text-tech-300 leading-relaxed">{item.desc}</p>
+ <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
  </div>
  ))}
  </div>
@@ -263,12 +263,12 @@ export default function AIToolsByCategoryPage() {
  </section>
 
  {/* ── CROSS-LINK: COUNTRY PAGES ──────────────────── */}
- <section className="border-t border-tech-700/30 py-16 px-4">
+ <section className="border-t border-gray-200/30 py-16 px-4">
  <div className="max-w-5xl mx-auto">
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
  AI Tools by Country
  </h2>
- <p className="text-tech-300 max-w-2xl mx-auto text-center mb-8">
+ <p className="text-gray-600 max-w-2xl mx-auto text-center mb-8">
  Find the best AI tools available and popular in your country.
  </p>
  <div className="flex flex-wrap justify-center gap-2">
@@ -292,7 +292,7 @@ export default function AIToolsByCategoryPage() {
  <Link
  key={country.slug}
  href={`/ai-tools-${country.slug}`}
- className="px-3 py-1.5 rounded-full border border-tech-700/40 bg-tech-800/30 text-sm text-tech-300 hover:text-neon-light hover:border-neon/20 transition-all"
+ className="px-3 py-1.5 rounded-full border border-gray-200/40 bg-gray-100 text-sm text-gray-600 hover:text-neon-light hover:border-neon/20 transition-all"
  >
  {country.name}
  </Link>
@@ -302,7 +302,7 @@ export default function AIToolsByCategoryPage() {
  </section>
 
  {/* ── FAQ ─────────────────────────────────────────── */}
- <section className="border-t border-tech-700/30 py-16 px-4">
+ <section className="border-t border-gray-200/30 py-16 px-4">
  <div className="max-w-3xl mx-auto">
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
  Frequently Asked Questions
@@ -311,15 +311,15 @@ export default function AIToolsByCategoryPage() {
  {faqSchema.mainEntity.map((faq, i) => (
  <details
  key={i}
- className="group bg-tech-800/30 border border-tech-700/40 rounded-xl overflow-hidden"
+ className="group bg-gray-100 border border-gray-200/40 rounded-xl overflow-hidden"
  >
- <summary className="px-5 py-4 text-white font-medium cursor-pointer hover:bg-tech-800/50 transition-colors flex items-center justify-between list-none">
+ <summary className="px-5 py-4 text-white font-medium cursor-pointer hover:bg-gray-100 transition-colors flex items-center justify-between list-none">
  <span>{faq.name}</span>
- <span className="text-tech-400 group-open:rotate-180 transition-transform shrink-0 ml-2">
+ <span className="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-2">
  ▼
  </span>
  </summary>
- <div className="px-5 pb-4 text-sm text-tech-300 leading-relaxed border-t border-tech-700/30 pt-3">
+ <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-200/30 pt-3">
  {faq.acceptedAnswer.text}
  </div>
  </details>
@@ -329,12 +329,12 @@ export default function AIToolsByCategoryPage() {
  </section>
 
  {/* ── CTA ─────────────────────────────────────────── */}
- <section className="border-t border-tech-700/30 py-16 px-4">
+ <section className="border-t border-gray-200/30 py-16 px-4">
  <div className="max-w-3xl mx-auto text-center">
  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
  Can&apos;t Find What You&apos;re Looking For?
  </h2>
- <p className="text-tech-300 mb-6 max-w-lg mx-auto">
+ <p className="text-gray-600 mb-6 max-w-lg mx-auto">
  Browse all tools alphabetically, check our detailed playbooks, or submit your own tool recommendation.
  </p>
  <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -346,13 +346,13 @@ export default function AIToolsByCategoryPage() {
  </Link>
  <Link
  href="/categories"
- className="px-6 py-3 rounded-xl border border-tech-600 text-tech-200 font-semibold hover:border-neon/30 hover:text-neon-light transition-all"
+ className="px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-semibold hover:border-neon/30 hover:text-neon-light transition-all"
  >
  View Category Grid
  </Link>
  <Link
  href="/submit"
- className="px-6 py-3 rounded-xl text-tech-300 hover:text-white transition-all text-sm"
+ className="px-6 py-3 rounded-xl text-gray-600 hover:text-white transition-all text-sm"
  >
  Submit a Tool
  </Link>

@@ -349,7 +349,7 @@ export default function BlogAffiliateCTA({
  <h3 className="text-lg font-bold text-white mb-1">
  Try These AI Tools
  </h3>
- <p className="text-sm text-tech-300">
+ <p className="text-sm text-gray-600">
  The tools mentioned in this guide — start free, upgrade when you grow.
  </p>
  </div>
@@ -365,17 +365,17 @@ export default function BlogAffiliateCTA({
  href={tool.url}
  target="_blank"
  rel="noopener noreferrer sponsored"
- className="group flex items-center gap-3 p-3 bg-tech-900/80 border border-tech-500/20 rounded-lg hover:border-neon/30 hover:bg-tech-800/80 transition-all"
+ className="group flex items-center gap-3 p-3 bg-white/80 border border-gray-200 rounded-lg hover:border-neon/30 hover:bg-gray-50/80 transition-all"
  >
  <div className="flex-1 min-w-0">
  <div className="flex items-center gap-1.5">
  <span className="text-sm font-semibold text-white group-hover:text-neon-light transition-colors truncate">
  {tool.name}
  </span>
- <ExternalLink className="w-3 h-3 text-tech-500 group-hover:text-neon shrink-0" />
+ <ExternalLink className="w-3 h-3 text-gray-500 group-hover:text-neon shrink-0" />
  </div>
  <div className="flex items-center gap-1.5 mt-0.5">
- <span className="text-[10px] text-tech-500">{tool.category}</span>
+ <span className="text-[10px] text-gray-500">{tool.category}</span>
  {tool.badge && (
  <span className="text-[10px] font-medium px-1.5 py-0.5 rounded-full bg-neon/10 text-neon-light">
  {tool.badge}
@@ -383,13 +383,13 @@ export default function BlogAffiliateCTA({
  )}
  </div>
  </div>
- <Zap className="w-4 h-4 text-tech-600 group-hover:text-neon shrink-0 transition-colors" />
+ <Zap className="w-4 h-4 text-gray-600 group-hover:text-neon shrink-0 transition-colors" />
  </a>
  );
  })}
  </div>
 
- <p className="mt-3 text-[11px] text-tech-500 flex items-center gap-1">
+ <p className="mt-3 text-[11px] text-gray-500 flex items-center gap-1">
  <ShieldCheck className="w-3 h-3" />
  Some links are affiliate links. We earn a commission if you upgrade — at no extra cost to you.
  </p>

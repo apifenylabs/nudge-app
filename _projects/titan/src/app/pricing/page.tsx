@@ -105,24 +105,48 @@ const plans: Plan[] = [
 ];
 
 /* ─────────────────────────────────────────────────────────────
-   localStorage mock checkout
+   Checkout — creates Stripe session via API
+   Falls back to localStorage mock when Stripe keys absent (dev mode)
    ───────────────────────────────────────────────────────────── */
-function simulateCheckout(planId: string, billing: BillingCycle) {
-  const key = "titan_mock_checkout";
-  const existing = JSON.parse(localStorage.getItem(key) || "{}");
-  const now = Date.now();
+async function createCheckout(planId: string, billing: BillingCycle) {
+  try {
+    const res = await fetch("/api/checkout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ plan_id: planId, billing }),
+    });
+    const data = await res.json();
 
-  existing[planId] = {
-    planId,
-    billing,
-    purchasedAt: now,
-    expiresAt: now + (billing === "annual" ? 365 : 30) * 24 * 60 * 60 * 1000,
-    status: "active",
-    orderId: `mock_${planId}_${now}`,
-  };
+    if (!res.ok) throw new Error(data.error || "Checkout failed");
 
-  localStorage.setItem(key, JSON.stringify(existing));
-  return existing[planId];
+    // Redirect to Stripe Checkout (or mock sandbox in dev)
+    if (data.url) {
+      window.location.href = data.url;
+      return;
+    }
+
+    throw new Error("No checkout URL returned");
+  } catch (err) {
+    console.error("Checkout API error, falling back to localStorage mock:", err);
+
+    // Fallback: localStorage mock (dev mode)
+    const key = "titan_mock_checkout";
+    const existing = JSON.parse(localStorage.getItem(key) || "{}");
+    const now = Date.now();
+
+    existing[planId] = {
+      planId,
+      billing,
+      purchasedAt: now,
+      expiresAt: now + (billing === "annual" ? 365 : 30) * 24 * 60 * 60 * 1000,
+      status: "active",
+      orderId: `mock_${planId}_${now}`,
+      mock: true,
+    };
+
+    localStorage.setItem(key, JSON.stringify(existing));
+    return existing[planId];
+  }
 }
 
 function getActivePlans(): Record<string, any> {
@@ -268,9 +292,11 @@ function SuccessModal({
           <div className="text-slate-500 mt-1">Expires</div>
           <div className="text-slate-300">{new Date(order.expiresAt).toLocaleDateString()}</div>
         </div>
-        <p className="text-[10px] text-slate-600 mb-4">
-          🔒 Test mode — no real payment processed. Stripe checkout coming soon.
-        </p>
+        {order.mock && (
+          <p className="text-[10px] text-amber-600 mb-4">
+            🧪 Dev mode — no real payment processed. Set STRIPE_SECRET_KEY for live payments.
+          </p>
+        )}
         <button
           onClick={onClose}
           className="w-full py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/30 transition-all"
@@ -401,10 +427,12 @@ export default function PricingPage() {
     })),
   };
 
-  const handleCheckout = (planId: string) => {
-    const order = simulateCheckout(planId, billing);
-    setActivePlans(getActivePlans());
-    setCheckoutOrder(order);
+  const handleCheckout = async (planId: string) => {
+    const order = await createCheckout(planId, billing);
+    if (order) {
+      setActivePlans(getActivePlans());
+      setCheckoutOrder(order);
+    }
   };
 
   if (!mounted) return null;
@@ -526,11 +554,18 @@ export default function PricingPage() {
           ))}
         </div>
 
-        {/* Test mode notice */}
+        {/* Checkout status */}
         <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/5 border border-amber-500/20 text-xs text-amber-400">
-            <span>🔬</span>
-            Test mode — localStorage mock. Real Stripe checkout coming soon.
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-xs">
+            {process.env.NEXT_PUBLIC_STRIPE_PK ? (
+              <span className="text-green-400 border-green-500/20 bg-green-500/5">
+                ✅ Live payments — powered by Stripe
+              </span>
+            ) : (
+              <span className="text-amber-400 border-amber-500/20 bg-amber-500/5">
+                🧪 Dev mode — set NEXT_PUBLIC_STRIPE_PK for live payments
+              </span>
+            )}
           </div>
         </div>
 
