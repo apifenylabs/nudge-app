@@ -40,5 +40,27 @@
       "question": "Trip cost?",
       "answer": "RM 40-60 ($12-18 SGD) charging + RM 60-70 tolls. About 60% less than petrol."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "singapore-to-kuala-lumpur-by-ev-road-trip",
+      "title": "Singapore to Kuala Lumpur by EV: Complete Family Road Trip Guide with Malacca Stopover"
+    },
+    {
+      "slug": "ev-road-trip-singapore-to-kuala-lumpur-charging-stops",
+      "title": "EV Road Trip from Singapore to Kuala Lumpur — Complete Charging Stops Guide 2026"
+    },
+    {
+      "slug": "singapore-penang-ev-road-trip-guide",
+      "title": "Singapore to Penang EV Road Trip Guide: Best Charging Stops"
+    },
+    {
+      "slug": "ev-road-trip-malaysia-singapore-2026",
+      "title": "Singapore to Kuala Lumpur & Penang: Complete 2026 EV Road Trip Guide"
+    },
+    {
+      "slug": "malaysia-kuala-lumpur-penang-ev-road-trip",
+      "title": "Malaysia EV Road Trip: Kuala Lumpur to Penang — Coastal Route Family Guide"
+    }
   ]
 }

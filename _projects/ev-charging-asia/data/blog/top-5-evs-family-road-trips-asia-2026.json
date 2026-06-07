@@ -44,5 +44,27 @@
     }
   ],
   "relatedStations": [],
-  "imageUrl": "/blog/images/top-5-evs-family-road-trips-asia-2026.jpg"
+  "imageUrl": "/blog/images/top-5-evs-family-road-trips-asia-2026.jpg",
+  "relatedPosts": [
+    {
+      "slug": "myanmar-ev-road-trip-yangon-bagan-mandalay",
+      "title": "Myanmar EV Road Trip: Yangon to Bagan to Mandalay — Complete Charging Guide 2026"
+    },
+    {
+      "slug": "sri-lanka-ev-road-trip-colombo-kandy-galle",
+      "title": "Sri Lanka EV Road Trip: Colombo to Kandy to Galle — Complete Charging Guide 2026"
+    },
+    {
+      "slug": "ev-road-trip-malaysia-singapore-2026",
+      "title": "Singapore to Kuala Lumpur & Penang: Complete 2026 EV Road Trip Guide"
+    },
+    {
+      "slug": "philippines-ev-road-trip-manila-baguio-tagaytay-batangas",
+      "title": "Philippines EV Road Trip: Manila to Baguio & Tagaytay — Complete Charging Guide 2026"
+    },
+    {
+      "slug": "taiwan-east-coast-taroko-taitung-kenting-ev-road-trip",
+      "title": "Taiwan East Coast EV Road Trip: Taroko Gorge to Taitung & Kenting — Complete 7-Day Itinerary 2026"
+    }
+  ]
 }

@@ -38,5 +38,27 @@
       "question": "Is EV charging reliable in Myanmar given power cuts?",
       "answer": "Not always. Myanmar experiences daily rolling blackouts (2-8 hours). Outside Yangon, many chargers are non-functional during grid outages. Installing home solar + battery storage is strongly recommended for EV owners."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "myanmar-ev-road-trip-yangon-bagan-mandalay",
+      "title": "Myanmar EV Road Trip: Yangon to Bagan to Mandalay — Complete Charging Guide 2026"
+    },
+    {
+      "slug": "vietnam-ev-market-guide",
+      "title": "Vietnam EV Market Guide 2026 — VinFast Dominance, Charging Network, and What Expats Need to Know"
+    },
+    {
+      "slug": "myanmar-ev-charging-landscape-2026",
+      "title": "Myanmar EV Charging Landscape 2026"
+    },
+    {
+      "slug": "singapore-penang-ev-road-trip-guide",
+      "title": "Singapore to Penang EV Road Trip Guide: Best Charging Stops"
+    },
+    {
+      "slug": "vietnam-ev-road-trip-guide-hanoi-ho-chi-minh-city",
+      "title": "Vietnam EV Road Trip Guide: Hanoi to Ho Chi Minh City via Da Nang — The Ultimate Coastal Route"
+    }
   ]
 }

@@ -193,7 +193,7 @@ pluginAdapterRegistry.register(
     plugin: 'mindfulness-os',
     provider: 'headspace',
     factory: (config) => {
-      return new HeadspaceAdapter(config as MindfulnessAdapterConfig);
+      return new HeadspaceAdapter(config as unknown as MindfulnessAdapterConfig);
     },
     configSchema: {
       apiKey: { type: 'string', required: true, label: 'Headspace API Key' },
@@ -206,7 +206,7 @@ pluginAdapterRegistry.register(
     plugin: 'mindfulness-os',
     provider: 'calm',
     factory: (config) => {
-      return new CalmAdapter(config as MindfulnessAdapterConfig);
+      return new CalmAdapter(config as unknown as MindfulnessAdapterConfig);
     },
     configSchema: {
       apiKey: { type: 'string', required: true, label: 'Calm API Key' },

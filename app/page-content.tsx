@@ -45,7 +45,7 @@ interface BlogPost {
   tags: string[];
   readingTime: string;
   content: string;
-  relatedDestinations: string[];
+  relatedDestinations?: string[];
 }
 
 // ─── Static Data ────────────────────────────────────────────────

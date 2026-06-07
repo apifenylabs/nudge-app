@@ -41,5 +41,27 @@
       "question": "Trip cost?",
       "answer": "IDR 80,000-120,000 per full charge at SPKLU rates. Round trip: approximately IDR 150,000-200,000."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "indonesia-java-jakarta-yogyakarta-ev-road-trip",
+      "title": "Trans-Java EV Road Trip: Jakarta to Yogyakarta — Indonesia's First EV Highway"
+    },
+    {
+      "slug": "jakarta-surabaya-trans-java-ev-road-trip-2026",
+      "title": "Jakarta to Surabaya EV Road Trip: Complete Trans-Java Toll Guide 2026"
+    },
+    {
+      "slug": "singapore-to-kuala-lumpur-ev-family-guide",
+      "title": "Singapore to Kuala Lumpur EV Road Trip — Complete Family Guide"
+    },
+    {
+      "slug": "bali-ev-road-trip-complete-family-guide",
+      "title": "Bali EV Road Trip: Complete Family Guide to Driving Around the Island of the Gods"
+    },
+    {
+      "slug": "malaysia-kuala-lumpur-penang-ev-road-trip",
+      "title": "Malaysia EV Road Trip: Kuala Lumpur to Penang — Coastal Route Family Guide"
+    }
   ]
 }

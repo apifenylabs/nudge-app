@@ -39,5 +39,27 @@
       "question": "Can I pay with foreign credit cards at Sri Lanka EV chargers?",
       "answer": "Yes, most major networks (Heliox, Lanka EV Power) accept Visa and Mastercard. Heliox also accepts Bitcoin, Ethereum, and USDT for crypto users."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "sri-lanka-ev-road-trip-colombo-kandy-galle",
+      "title": "Sri Lanka EV Road Trip: Colombo to Kandy to Galle — Complete Charging Guide 2026"
+    },
+    {
+      "slug": "vietnam-ev-road-trip-guide-hanoi-ho-chi-minh-city",
+      "title": "Vietnam EV Road Trip Guide: Hanoi to Ho Chi Minh City via Da Nang — The Ultimate Coastal Route"
+    },
+    {
+      "slug": "laos-ev-charging-guide-2026",
+      "title": "Laos EV Charging Guide 2026 — Vientiane, Luang Prabang, and the Slow-Charging Reality"
+    },
+    {
+      "slug": "malaysia-to-singapore-ev-road-trip-2026",
+      "title": "Kuala Lumpur to Singapore: The Ultimate EV Road Trip Guide 2026"
+    },
+    {
+      "slug": "taiwan-ev-road-trip-guide",
+      "title": "Taiwan EV Road Trip Guide 2026 — Taipei to Kaohsiung, Hualien Coast, and Charging Infrastructure"
+    }
   ]
 }

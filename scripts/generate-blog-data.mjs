@@ -44,7 +44,7 @@ export interface BlogPost {
   tags: string[];
   readingTime: string;
   content: string;
-  ${relatedField}: string[];
+  ${relatedField}?: string[];
   featuredImage?: string;
 }
 

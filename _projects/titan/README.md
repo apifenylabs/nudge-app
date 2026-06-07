@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Titan — Solo Leveling Visual Agent Builder
 
-## Getting Started
+> **Build agents like you're hunting in a gate. Level up. Evolve. Conquer.**
 
-First, run the development server:
+Titan is a gamified AI agent builder where progression mirrors Solo Leveling — your agents grow stronger through hunts, dungeons, and shadow extraction. Built on Next.js with Supabase persistence.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Stack
+
+- **Next.js 14** (App Router) — Framework
+- **Supabase** — Auth + persistence
+- **Tailwind CSS** — Styling
+- **TypeScript** — Type safety
+- **Three.js / R3F** — 3D dungeon rendering
+- **Vercel** — Deployment
+
+## 🎮 Core Game Loop
+
+```
+Select a Gate → Deploy Agents → Hunt Monsters → Gain EXP
+     ↑                                        |
+     └────── Level Up → Evolve → Unlock ──────┘
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Hunt**: Deploy AI agents into procedurally generated dungeons
+- **Level Up**: Each hunt grants EXP — track progress visually
+- **Evolve**: Hit rank thresholds — Common → Uncommon → Rare → Epic → Legendary
+- **Shadow Extraction**: Defeated monsters become your shadow army
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/             # App Router pages
+│   ├── page.tsx     # Landing / hub
+│   ├── hunt/        # Active hunt interface
+│   ├── agents/      # Agent roster & management
+│   └── dungeon/     # Dungeon exploration
+├── components/      # Reusable UI components
+├── lib/             # Utility functions & game logic
+├── hooks/           # Custom React hooks
+└── styles/          # Global styles
+supabase/
+├── migrations/      # Database schema migrations
+└── seed.sql         # Seed data
+```
 
-## Learn More
+## 🧩 Core Systems
 
-To learn more about Next.js, take a look at the following resources:
+| System | Status | Description |
+|--------|--------|-------------|
+| Agent Ranks | ✅ | Common → Legendary tier system |
+| EXP/Leveling | ✅ | Full level-up pipeline |
+| Hunt Engine | ✅ | Deploy agents into gates |
+| Dungeon Gen | 🏗️ | Procedural room generation |
+| Shadow Army | 📝 | Collect & rank shadows |
+| PvP Arena | 📝 | Agent-vs-agent battles |
+| Guild System | 📝 | Multiplayer guilds & raids |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Local Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Install dependencies
+npm install
 
-## Deploy on Vercel
+# Start dev server
+npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Build for production
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔗 Live
+
+- **Production**: [titan-app-puce.vercel.app](https://titan-app-puce.vercel.app)
+- **Main alias**: [titan-app.vercel.app](https://titan-app.vercel.app) *(requires deploy protection toggle)*
+
+## 🧪 Testing
+
+```bash
+# Unit tests
+npm run test
+
+# E2E tests (Playwright)
+npx playwright test
+```
+
+## 🏔️ Roadmap
+
+1. **Phase 1** (done) — Agent ranks, leveling, basic hunt engine
+2. **Phase 2** (in progress) — Supabase persistence, dungeon generation
+3. **Phase 3** — Shadow army, ranking leaderboard
+4. **Phase 4** — PvP arena, guilds, raids
+
+---
+
+*"Arise."*

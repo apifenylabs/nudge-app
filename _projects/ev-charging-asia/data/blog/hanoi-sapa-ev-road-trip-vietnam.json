@@ -39,5 +39,27 @@
       "question": "What connector does Vietnam use for EV charging?",
       "answer": "Vietnam uses CCS2 for DC fast charging (VinFast network) and Type 2 for AC. Same as Europe. CHAdeMO and GB/T are not used. Bring a Type 2 cable for hotel charging."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "hanoi-sapa-ha-long-bay-vietnam-ev-road-trip",
+      "title": "Northern Vietnam EV Road Trip: Hanoi → Sapa → Ha Long Bay"
+    },
+    {
+      "slug": "vietnam-ev-road-trip-guide-hanoi-ho-chi-minh-city",
+      "title": "Vietnam EV Road Trip Guide: Hanoi to Ho Chi Minh City via Da Nang — The Ultimate Coastal Route"
+    },
+    {
+      "slug": "cambodia-ev-road-trip-angkor-wat",
+      "title": "Cambodia EV Road Trip — Phnom Penh to Siem Reap (Angkor Wat) in an Electric Car"
+    },
+    {
+      "slug": "vietnam-ev-market-guide",
+      "title": "Vietnam EV Market Guide 2026 — VinFast Dominance, Charging Network, and What Expats Need to Know"
+    },
+    {
+      "slug": "top-10-ev-friendly-hotels-vietnam-best-family-stays-with-ev-charging-2026",
+      "title": "Top 10 EV-Friendly Hotels in Vietnam: Best Family Stays with EV Charging 2026"
+    }
   ]
 }

@@ -49,5 +49,27 @@
       "question": "Total trip cost?",
       "answer": "VND 37,600,000-69,400,000 ($1,550-2,860 USD) for a family of 4 over 7 days including rental, charging, hotels, food, and activities."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "vietnam-ev-charging-guide-2026",
+      "title": "Vietnam EV Charging Guide 2026: Road Tripping from Hanoi to Ho Chi Minh City with an Electric Car"
+    },
+    {
+      "slug": "vietnam-da-nang-hoi-an-hue-central-vietnam-ev-road-trip",
+      "title": "Central Vietnam EV Road Trip: Da Nang to Hoi An to Hue — Heritage Route Charging Guide 2026"
+    },
+    {
+      "slug": "da-nang-to-nha-trang-ev-coastal-road-trip-vietnam",
+      "title": "Da Nang to Nha Trang Coastal EV Road Trip"
+    },
+    {
+      "slug": "top-10-ev-friendly-hotels-vietnam-best-family-stays-with-ev-charging-2026",
+      "title": "Top 10 EV-Friendly Hotels in Vietnam: Best Family Stays with EV Charging 2026"
+    },
+    {
+      "slug": "vietnam-north-south-ev-road-trip-guide",
+      "title": "Vietnam North to South EV Road Trip Guide: Hanoi to HCMC — 10-Day Itinerary for 2026"
+    }
   ]
 }

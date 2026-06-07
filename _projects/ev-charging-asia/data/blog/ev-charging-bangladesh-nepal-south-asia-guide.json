@@ -16,5 +16,11 @@
     "off-grid EV",
     "developing market EV"
   ],
-  "imageUrl": "/images/blog/placeholder.jpg"
+  "imageUrl": "/images/blog/placeholder.jpg",
+  "relatedPosts": [
+    {
+      "slug": "papua-new-guinea-ev-guide",
+      "title": "EV Charging in Papua New Guinea: A Practical Guide for Adventurous EV Owners"
+    }
+  ]
 }

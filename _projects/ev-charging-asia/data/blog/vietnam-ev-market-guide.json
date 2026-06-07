@@ -42,5 +42,27 @@
       "question": "What are the EV incentives in Vietnam?",
       "answer": "Zero import tax on EVs, reduced registration fee (50% of petrol cars), and VinFast's battery lease option lowers upfront cost. Some cities offer free parking for EVs at public lots."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "vietnam-ev-family-guide",
+      "title": "Vietnam EV Guide for Families: Hanoi to Ho Chi Minh by Electric Car"
+    },
+    {
+      "slug": "vietnam-north-south-ev-road-trip-guide",
+      "title": "Vietnam North to South EV Road Trip Guide: Hanoi to HCMC — 10-Day Itinerary for 2026"
+    },
+    {
+      "slug": "best-ev-hotels-vietnam-free-charging-2026",
+      "title": "Best EV Hotels in Vietnam with Free Charging 2026"
+    },
+    {
+      "slug": "vietnam-ev-charging-guide-2026",
+      "title": "Vietnam EV Charging Guide 2026: Road Tripping from Hanoi to Ho Chi Minh City with an Electric Car"
+    },
+    {
+      "slug": "hanoi-sapa-ha-long-bay-vietnam-ev-road-trip",
+      "title": "Northern Vietnam EV Road Trip: Hanoi → Sapa → Ha Long Bay"
+    }
   ]
 }

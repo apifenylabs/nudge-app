@@ -48,5 +48,27 @@
       "question": "What's the best EV for PNG conditions?",
       "answer": "A BYD Atto 3 (or BYD Seal) with Vehicle-to-Load (V2L) capability is ideal — V2L lets you use the car battery to power appliances and solar charge management. High ground clearance is essential. The MG ZS EV is another practical option with local parts support. Teslas are less practical due to lack of service infrastructure."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "mongolia-ev-charging-guide-2026",
+      "title": "Mongolia EV Charging Guide 2026: Ulaanbaatar to the Gobi Desert — Asia's Next EV Frontier"
+    },
+    {
+      "slug": "india-ev-charging-guide-2026",
+      "title": "India EV Charging Guide 2026 — City-by-City Breakdown"
+    },
+    {
+      "slug": "survive-broken-ev-chargers-asia",
+      "title": "How to Survive an EV Road Trip When Chargers Are Broken"
+    },
+    {
+      "slug": "vietnam-ev-road-trip-guide-hanoi-ho-chi-minh-city",
+      "title": "Vietnam EV Road Trip Guide: Hanoi to Ho Chi Minh City via Da Nang — The Ultimate Coastal Route"
+    },
+    {
+      "slug": "cambodia-ev-road-trip-angkor-wat",
+      "title": "Cambodia EV Road Trip — Phnom Penh to Siem Reap (Angkor Wat) in an Electric Car"
+    }
   ]
 }

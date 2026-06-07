@@ -30,29 +30,17 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "public/**/*.ts",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "_archive",
-    "_projects",
-    "affiliate-tracking",
-    "ev-charging-asia",
-    "family-travel-directory",
-    "luxury-family-travel",
-    "kids-activities-asia",
-    "senior-friendly-travel-asia",
-    "apifeny-ai",
-    "social-beast-components",
-    "social-beast",
-    "generalscan",
-    "scanwise",
-    "appfactory-beast",
-    "data",
-    "scripts"
+    "node_modules"
   ]
 }

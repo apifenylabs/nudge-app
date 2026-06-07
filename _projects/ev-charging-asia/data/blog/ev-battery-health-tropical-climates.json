@@ -45,5 +45,11 @@
       "question": "What is the best EV battery type for tropical climates?",
       "answer": "LFP (Lithium Iron Phosphate) chemistry — used in BYD's Blade Battery — handles heat better, lasts longer, and can be charged to 100% more regularly. NMC batteries also work well with active cooling but degrade faster under heat stress."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "ev-cross-border-asean-thailand-malaysia-singapore-guide",
+      "title": "EV Cross-Border Travel in ASEAN 2026: Thailand, Malaysia & Singapore Guide"
+    }
   ]
 }

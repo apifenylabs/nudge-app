@@ -38,5 +38,27 @@
       "question": "How much of an EV battery can be recycled?",
       "answer": "Modern hydrometallurgical recycling can recover 95%+ of nickel, cobalt, and lithium, 80%+ of copper, and 85% of graphite. This is a significant improvement over early methods which only recovered ~50% of valuable materials."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "ev-charging-asia-2026-guide",
+      "title": "EV Charging Apps and Payment Guide for Asia — Which Ones You Actually Need"
+    },
+    {
+      "slug": "ccs2-vs-chademo-asia",
+      "title": "CCS2 vs CHAdeMO: Which Charging Standard Should You Pick in Asia?"
+    },
+    {
+      "slug": "best-evs-asia-road-trips-2026",
+      "title": "Best EVs for Asia Road Trips 2026: Top Models, Range Comparisons & Country-by-Country Guide"
+    },
+    {
+      "slug": "ev-charging-in-asia-2026-complete-guide",
+      "title": "EV Charging in Asia 2026 — Complete Guide to Connectors, Networks, and Road Trips"
+    },
+    {
+      "slug": "ev-road-trip-preparation-checklist-asia-2026",
+      "title": "Ultimate EV Road Trip Preparation Checklist for Asia 2026 — What to Pack, Plan & Pre-Check"
+    }
   ]
 }

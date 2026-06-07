@@ -45,5 +45,27 @@
       "question": "What cables and adapters do I need for EV charging in East Timor?",
       "answer": "East Timor uses European-style Type C and Type F (Schuko) plugs at 220V/50Hz — the same as Indonesia. You must bring: a portable EVSE (Type 2 to Schuko), a heavy-duty extension cord (at least 20 meters), a universal travel adapter, and ideally a voltage tester. Hotels will not have any EV-specific equipment, so you need to be fully self-sufficient."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "vietnam-ev-road-trip-guide-hanoi-ho-chi-minh-city",
+      "title": "Vietnam EV Road Trip Guide: Hanoi to Ho Chi Minh City via Da Nang — The Ultimate Coastal Route"
+    },
+    {
+      "slug": "philippines-ev-charging-guide",
+      "title": "Philippines EV Charging Guide 2026 — Complete Guide to Charging in Manila, Cebu, and Key Routes"
+    },
+    {
+      "slug": "ccs2-vs-chademo-asia",
+      "title": "CCS2 vs CHAdeMO: Which Charging Standard Should You Pick in Asia?"
+    },
+    {
+      "slug": "taiwan-ev-road-trip-guide",
+      "title": "Taiwan EV Road Trip Guide 2026 — Taipei to Kaohsiung, Hualien Coast, and Charging Infrastructure"
+    },
+    {
+      "slug": "thailand-coastal-ev-road-trip",
+      "title": "Thailand Coastal EV Road Trip: Phuket to Hua Hin via Khao Lak (2026)"
+    }
   ]
 }

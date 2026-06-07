@@ -16,5 +16,27 @@
     "SEA road trip",
     "charging network"
   ],
-  "imageUrl": "/images/blog/placeholder.jpg"
+  "imageUrl": "/images/blog/placeholder.jpg",
+  "relatedPosts": [
+    {
+      "slug": "ccs2-vs-chademo-asia",
+      "title": "CCS2 vs CHAdeMO: Which Charging Standard Should You Pick in Asia?"
+    },
+    {
+      "slug": "asean-ccs2-cross-border-ev-travel-2026",
+      "title": "ASEAN Unifies EV Charging: CCS-2 Standard Enables Cross-Border Road Trips in 2026"
+    },
+    {
+      "slug": "ev-charging-in-asia-2026-complete-guide",
+      "title": "EV Charging in Asia 2026 — Complete Guide to Connectors, Networks, and Road Trips"
+    },
+    {
+      "slug": "india-ev-charging-complete-guide-2026",
+      "title": "India EV Charging Complete Guide 2026 — Networks, Stations & Road Trip Tips"
+    },
+    {
+      "slug": "indonesia-ev-charging-complete-guide-2026",
+      "title": "Indonesia EV Charging Complete Guide 2026 — Networks, Stations & Road Trip Tips"
+    }
+  ]
 }

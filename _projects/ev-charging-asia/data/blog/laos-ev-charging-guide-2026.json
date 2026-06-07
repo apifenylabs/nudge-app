@@ -39,5 +39,27 @@
       "question": "What connector does Laos use for EV charging?",
       "answer": "CCS2 for DC fast charging, Type 2 for AC. Same as Europe and most of Southeast Asia outside Japan and China."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "vietnam-ev-road-trip-guide-hanoi-ho-chi-minh-city",
+      "title": "Vietnam EV Road Trip Guide: Hanoi to Ho Chi Minh City via Da Nang — The Ultimate Coastal Route"
+    },
+    {
+      "slug": "malaysia-to-singapore-ev-road-trip-2026",
+      "title": "Kuala Lumpur to Singapore: The Ultimate EV Road Trip Guide 2026"
+    },
+    {
+      "slug": "sri-lanka-ev-charging-guide-2026",
+      "title": "Sri Lanka EV Charging Guide 2026 — Colombo to Kandy, Galle & Beyond"
+    },
+    {
+      "slug": "taiwan-ev-road-trip-guide",
+      "title": "Taiwan EV Road Trip Guide 2026 — Taipei to Kaohsiung, Hualien Coast, and Charging Infrastructure"
+    },
+    {
+      "slug": "thailand-coastal-ev-road-trip",
+      "title": "Thailand Coastal EV Road Trip: Phuket to Hua Hin via Khao Lak (2026)"
+    }
   ]
 }

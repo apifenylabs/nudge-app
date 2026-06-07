@@ -34,5 +34,27 @@
       "question": "What apps do I need for EV charging in Cambodia?",
       "answer": "EAV App (primary), Charge.IN App (backup). Both show real-time availability. Download offline maps too."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "cambodia-ev-road-trip-angkor-wat",
+      "title": "Cambodia EV Road Trip — Phnom Penh to Siem Reap (Angkor Wat) in an Electric Car"
+    },
+    {
+      "slug": "singapore-penang-ev-road-trip-guide",
+      "title": "Singapore to Penang EV Road Trip Guide: Best Charging Stops"
+    },
+    {
+      "slug": "bangkok-to-phuket-ev-road-trip-guide",
+      "title": "Bangkok to Phuket EV Road Trip Guide: Charging Stops, Costs & Family Tips [2026]"
+    },
+    {
+      "slug": "hong-kong-guangzhou-ev-road-trip-guide",
+      "title": "Hong Kong to Guangzhou EV Road Trip Guide: Cross-Border Charging [2026]"
+    },
+    {
+      "slug": "indonesia-jakarta-bandung-ev-road-trip",
+      "title": "Indonesia EV Road Trip: Jakarta to Bandung — Complete Family Guide"
+    }
   ]
 }

@@ -38,5 +38,27 @@
       "question": "Winter tyres needed?",
       "answer": "December-March: yes. Hakone Turnpike gets icy. Winter tyres required by law when roads are slippery."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "bangkok-ayutthaya-ev-microtrip",
+      "title": "Bangkok to Ayutthaya EV Microtrip: Weekend History Trip for Families"
+    },
+    {
+      "slug": "kuala-lumpur-penang-ev-microtrip",
+      "title": "Kuala Lumpur to Penang EV Microtrip: Weekend Drive Guide for Families"
+    },
+    {
+      "slug": "japan-tokyo-osaka-ev-family-road-trip",
+      "title": "Japan's Golden Route by EV: Tokyo to Osaka Family Road Trip via Hakone, Nagoya & Kyoto"
+    },
+    {
+      "slug": "hokkaido-ev-road-trip-guide",
+      "title": "Hokkaido EV Road Trip Guide 2026: Complete Itinerary, Charging Stations & Essential Tips for Japan's Northern Frontier"
+    },
+    {
+      "slug": "japan-ev-road-trip-guide-2026",
+      "title": "Japan EV Road Trip Guide 2026: Complete Route Planner, Charging Networks & Must-See Stops"
+    }
   ]
 }

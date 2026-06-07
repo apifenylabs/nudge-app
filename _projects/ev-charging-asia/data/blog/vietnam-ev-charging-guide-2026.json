@@ -23,5 +23,27 @@
   ],
   "readingTime": "15 min read",
   "imageUrl": "https://images.unsplash.com/photo-1528127269322-539801943592?w=1200",
-  "content": ""
+  "content": "",
+  "relatedPosts": [
+    {
+      "slug": "vietnam-north-south-ev-road-trip-guide",
+      "title": "Vietnam North to South EV Road Trip Guide: Hanoi to HCMC — 10-Day Itinerary for 2026"
+    },
+    {
+      "slug": "top-10-ev-friendly-hotels-vietnam-best-family-stays-with-ev-charging-2026",
+      "title": "Top 10 EV-Friendly Hotels in Vietnam: Best Family Stays with EV Charging 2026"
+    },
+    {
+      "slug": "vietnam-ho-chi-minh-da-nang-ev-family-road-trip",
+      "title": "Vietnam Central Coast by EV: Ho Chi Minh City to Da Nang Family Road Trip via Nha Trang & Hoi An"
+    },
+    {
+      "slug": "best-ev-hotels-vietnam-free-charging-2026",
+      "title": "Best EV Hotels in Vietnam with Free Charging 2026"
+    },
+    {
+      "slug": "vietnam-da-nang-hoi-an-hue-central-vietnam-ev-road-trip",
+      "title": "Central Vietnam EV Road Trip: Da Nang to Hoi An to Hue — Heritage Route Charging Guide 2026"
+    }
+  ]
 }

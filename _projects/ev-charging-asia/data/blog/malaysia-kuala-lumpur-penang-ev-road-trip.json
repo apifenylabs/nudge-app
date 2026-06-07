@@ -43,5 +43,27 @@
       "question": "Can I take EV to Penang Hill?",
       "answer": "Drive to Base Station (free parking), then take funicular. Private vehicles cannot drive to the top."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "malaysia-kl-penang-ev-road-trip-guide",
+      "title": "Malaysia EV Road Trip Guide: Kuala Lumpur to Penang"
+    },
+    {
+      "slug": "malaysia-kl-penang-extended-ev-road-trip",
+      "title": "Kuala Lumpur to Penang Extended EV Road Trip: Ipoh Detours, Taiping Heritage & Langkawi Ferry"
+    },
+    {
+      "slug": "singapore-to-kuala-lumpur-by-ev-road-trip",
+      "title": "Singapore to Kuala Lumpur by EV: Complete Family Road Trip Guide with Malacca Stopover"
+    },
+    {
+      "slug": "singapore-kuala-lumpur-penang-malaysia-ev-road-trip",
+      "title": "Singapore → KL → Penang EV Road Trip: Extended Malaysia Itinerary"
+    },
+    {
+      "slug": "singapore-to-kuala-lumpur-ev-family-guide",
+      "title": "Singapore to Kuala Lumpur EV Road Trip — Complete Family Guide"
+    }
   ]
 }

@@ -39,5 +39,27 @@
       "question": "What connector do I need for charging in Cambodia?",
       "answer": "CCS2 is the standard. Type 2 AC is also common. Bring your own Type 2 cable as many AC chargers are untethered. CHAdeMO is rare."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "phnom-penh-siem-reap-cambodia-ev-road-trip",
+      "title": "Phnom Penh to Siem Reap EV Road Trip: Angkor Wat by Electric Car [2026]"
+    },
+    {
+      "slug": "hanoi-sapa-ev-road-trip-vietnam",
+      "title": "Hanoi to Sapa EV Road Trip — Conquering Vietnam's Mountain Roads in an Electric Car"
+    },
+    {
+      "slug": "asean-ccs2-cross-border-ev-travel-2026",
+      "title": "ASEAN Unifies EV Charging: CCS-2 Standard Enables Cross-Border Road Trips in 2026"
+    },
+    {
+      "slug": "india-ev-charging-guide-2026",
+      "title": "India EV Charging Guide 2026 — City-by-City Breakdown"
+    },
+    {
+      "slug": "survive-broken-ev-chargers-asia",
+      "title": "How to Survive an EV Road Trip When Chargers Are Broken"
+    }
   ]
 }

@@ -41,5 +41,27 @@
       "question": "Is Phuket EV-friendly?",
       "answer": "Yes, best island infrastructure. Airport has DC fast chargers. 20+ resorts offer guest charging. Rent at airport."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "top-10-ev-friendly-hotels-thailand-2026",
+      "title": "Top 10 EV-Friendly Hotels in Thailand (2026 Guide)"
+    },
+    {
+      "slug": "top-10-ev-friendly-hotels-asia-families",
+      "title": "Top 10 EV-Friendly Hotels in Asia for Families"
+    },
+    {
+      "slug": "thailand-coastal-ev-road-trip",
+      "title": "Thailand Coastal EV Road Trip: Phuket to Hua Hin via Khao Lak (2026)"
+    },
+    {
+      "slug": "bangkok-to-phuket-ev-road-trip-guide",
+      "title": "Bangkok to Phuket EV Road Trip Guide: Charging Stops, Costs & Family Tips [2026]"
+    },
+    {
+      "slug": "asean-ccs2-cross-border-ev-travel-2026",
+      "title": "ASEAN Unifies EV Charging: CCS-2 Standard Enables Cross-Border Road Trips in 2026"
+    }
   ]
 }

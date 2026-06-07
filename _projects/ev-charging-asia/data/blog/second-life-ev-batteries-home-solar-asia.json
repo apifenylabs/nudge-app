@@ -38,5 +38,19 @@
       "question": "Can I use my EV as a home battery without buying a second unit?",
       "answer": "Yes, if your EV supports V2H (Vehicle-to-Home). Nissan Leaf (with xStorage), BYD Atto 3 (with V2H inverter), and Mitsubishi Outlander PHEV all support it. A V2H unit costs $2,000-4,500 but avoids buying a separate battery."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "laos-ev-charging-guide-2026",
+      "title": "Laos EV Charging Guide 2026 — Vientiane, Luang Prabang, and the Slow-Charging Reality"
+    },
+    {
+      "slug": "asia-ev-battery-recycling-guide-2026",
+      "title": "Asia EV Battery Recycling Guide 2026 — Regulations, Facilities & What Happens to Old EV Batteries"
+    },
+    {
+      "slug": "ev-insurance-guide-asia",
+      "title": "EV Insurance Guide Asia 2026 — What You Need for Comprehensive Coverage in Different Countries"
+    }
   ]
 }

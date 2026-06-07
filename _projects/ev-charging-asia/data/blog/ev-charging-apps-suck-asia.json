@@ -38,5 +38,27 @@
       "question": "Can I use one RFID card for all chargers?",
       "answer": "Not yet. Gentari, Shell, and ChargEV each issue their own RFID cards. The Gentari Go card is the best single solution."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "asean-ccs2-cross-border-ev-travel-2026",
+      "title": "ASEAN Unifies EV Charging: CCS-2 Standard Enables Cross-Border Road Trips in 2026"
+    },
+    {
+      "slug": "ev-charging-shopping-malls-asia",
+      "title": "EV Charging at Shopping Malls in Asia: Where to Charge While You Shop (2026)"
+    },
+    {
+      "slug": "ev-charging-in-asia-2026-complete-guide",
+      "title": "EV Charging in Asia 2026 — Complete Guide to Connectors, Networks, and Road Trips"
+    },
+    {
+      "slug": "ev-charging-network-comparison-southeast-asia-charge-plus-shell-plugshare",
+      "title": "EV Charging Network Comparison Southeast Asia: Charge+ vs Shell Recharge vs PlugShare (2026 Guide)"
+    },
+    {
+      "slug": "ev-insurance-guide-asia",
+      "title": "EV Insurance Guide Asia 2026 — What You Need for Comprehensive Coverage in Different Countries"
+    }
   ]
 }

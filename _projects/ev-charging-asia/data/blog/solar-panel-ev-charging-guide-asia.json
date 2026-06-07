@@ -41,5 +41,27 @@
       "answer": "Individual solar is usually not feasible for apartments. Options include shared solar subscriptions or green electricity plans."
     }
   ],
-  "imageUrl": "/blog/images/solar-panel-ev-charging-guide-asia.jpg"
+  "imageUrl": "/blog/images/solar-panel-ev-charging-guide-asia.jpg",
+  "relatedPosts": [
+    {
+      "slug": "ev-charging-shopping-malls-asia",
+      "title": "EV Charging at Shopping Malls in Asia: Where to Charge While You Shop (2026)"
+    },
+    {
+      "slug": "ev-road-trip-cost-comparison-asia",
+      "title": "EV Road Trip Cost Comparison Across Asia: Thailand vs Malaysia vs Japan vs India"
+    },
+    {
+      "slug": "best-evs-asia-road-trips-2026",
+      "title": "Best EVs for Asia Road Trips 2026: Top Models, Range Comparisons & Country-by-Country Guide"
+    },
+    {
+      "slug": "ev-charging-in-asia-2026-complete-guide",
+      "title": "EV Charging in Asia 2026 — Complete Guide to Connectors, Networks, and Road Trips"
+    },
+    {
+      "slug": "ev-charging-apps-suck-asia",
+      "title": "Why EV Charging Apps Suck in Southeast Asia (And What to Do About It)"
+    }
+  ]
 }

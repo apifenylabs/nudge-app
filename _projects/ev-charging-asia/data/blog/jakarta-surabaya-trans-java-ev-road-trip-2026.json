@@ -45,5 +45,27 @@
       "question": "Total trip cost?",
       "answer": "Charging: Rp 300,000-500,000 ($19-32 USD). Tolls: Rp 550,000-700,000 ($34-44 USD). Hotels: Rp 400,000-1,500,000 per night."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "indonesia-java-jakarta-yogyakarta-ev-road-trip",
+      "title": "Trans-Java EV Road Trip: Jakarta to Yogyakarta — Indonesia's First EV Highway"
+    },
+    {
+      "slug": "indonesia-jakarta-bandung-ev-road-trip",
+      "title": "Indonesia EV Road Trip: Jakarta to Bandung — Complete Family Guide"
+    },
+    {
+      "slug": "indonesia-ev-charging-complete-guide-2026",
+      "title": "Indonesia EV Charging Complete Guide 2026 — Networks, Stations & Road Trip Tips"
+    },
+    {
+      "slug": "bali-ev-road-trip-complete-family-guide",
+      "title": "Bali EV Road Trip: Complete Family Guide to Driving Around the Island of the Gods"
+    },
+    {
+      "slug": "bali-kuta-ubud-sanur-loop-family-ev-road-trip",
+      "title": "Bali Family EV Loop: Kuta → Ubud → Sanur in 5 Days"
+    }
   ]
 }

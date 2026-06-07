@@ -22,12 +22,50 @@
   ],
   "readingTime": "12 min read",
   "content": "# Indonesia EV Charging Guide 2026 — Jakarta to Bali & Beyond\n\nIndonesia's EV transition is gathering real momentum. With the government targeting 15 million electric two-wheelers and 2 million electric cars by 2030, the charging infrastructure is expanding rapidly — especially along the Java toll road corridor connecting Jakarta, Bandung, Semarang, Surabaya, and Bali.\n\nThis is the most comprehensive guide to EV charging in Indonesia in 2026.\n\n## The EV Charging Landscape in Indonesia (2026)\n\nIndonesia's charging network (known as **SPKLU** — Stasiun Pengisian Kendaraan Listrik Umum) has grown substantially:\n\n- **2,100+** public charging stations\n- **5,800+** charging points\n- **PLN** (state electricity company) operates the largest network\n- **CCS2** is the official standard, with some CHAdeMO legacy units\n- Key private players: **PLN Icon+**, **Charge+**, **V-GREEN**\n\n### Major Charging Networks\n\n| Network | Stations | Connectors | Payment |\n|---------|----------|------------|---------|\n| **PLN Icon+** | 900+ | CCS2, Type 2 AC | App / QR |\n| **Charge+** | 450+ | CCS2 | App / QR |\n| **V-GREEN** (Hyundai) | 300+ | CCS2, CHAdeMO | App / Card |\n| **GESITS** | 200+ | CCS2 | App / QR |\n| **E-Mobility** (Toyota) | 150+ | CCS2 | App |\n\n## Charging Along the Java Toll Road\n\nThe **Trans-Java Toll Road** (Jakarta → Surabaya, ~760 km) is now fully EV-drivable.\n\n### Jakarta → Bandung (~150 km)\n- **Puncak corridor**: Multiple PLN stations every 30 km\n- **Cipularang Toll**: New 120 kW chargers at rest areas\n- **Bandung city**: 40+ stations, concentrated in Dago and the city center\n\n### Bandung → Semarang (~350 km)\n- **Brebes Exit**: PLN 60 kW station at rest area KM 260\n- **Pemalang**: V-GREEN 120 kW — the fastest on this stretch\n- **Semarang**: 25+ stations including malls and hotels\n\n### Semarang → Surabaya (~320 km)\n- **Ngawi**: PLN 60 kW (new, opened March 2026)\n- **Madiun**: Charge+ 100 kW\n- **Surabaya**: 50+ stations, Tunjungan Plaza has DC fast charging\n\n### Bali (Tourist Hub)\nBali has **80+ charging stations**, mostly concentrated in South Bali (Kuta, Seminyak, Canggu, Sanur), Ubud, Nusa Dua, and Denpasar.\n\n## Best EV Charging Apps for Indonesia\n\n### 1. PLN Mobile\nEssential but mixed reviews. Always call the station contact before relying on a specific charger.\n\n### 2. Charge+\nMore reliable real-time data. Good coverage in Jakarta, Bandung, and Surabaya.\n\n### 3. PlugShare Indonesia\nCommunity check-ins invaluable for verifying working stations.\n\n## Charging Costs in Indonesia\n\n- **PLN DC fast charging**: Rp 2,467/kWh (~$0.15 USD)\n- **PLN AC charging**: Rp 1,644/kWh (~$0.10 USD)\n- **Private chargers**: Rp 3,500-5,000/kWh (~$0.22-0.31 USD)\n- **Hotel charging**: Often free for guests\n\n**Real-world cost**: A full charge for a BYD Dolphin costs roughly **Rp 111,000 ($7 USD)** at a PLN DC charger.\n\n## Top EV Road Trip Routes in Indonesia\n\n### 1. Jakarta → Bandung → Semarang → Surabaya (Full Java Crossing)\n**Distance**: ~760 km\n**Charging stops**: 4-5 stops (PLN Icon+ stations every 60-80 km)\n\n### 2. Denpasar → Ubud → Bedugul → Singaraja (Bali Loop)\n**Distance**: ~200 km\n**Tip**: The climb to Bedugul uses more battery, but regen descent recovers some.\n\n### 3. Surabaya → Malang → Batu\n**Distance**: ~90 km\n**Best for**: Mountain scenery and Gunung Bromo approach.\n\n## Practical Tips\n\n- **Payment**: GoPay, OVO, QRIS — all widely accepted\n- **Flood season** (Nov-Mar): Lower ground stations may be inaccessible\n- **Hotel charging**: Increasingly common at mid-range and luxury hotels (Aryaduta, Accor, JW Marriott)\n\n## The Future (2026-2027)\n\nPLN targeting 5,000 stations by 2027, battery swapping for two-wheelers, and the new capital (IKN Nusantara) designed as EV-first city.\n\n<!-- affiliate:booking.com/search?destination=Indonesia&filter=ev_charging -->",
-  "relatedDestinations": ["Indonesia", "Bali", "Jakarta"],
+  "relatedDestinations": [
+    "Indonesia",
+    "Bali",
+    "Jakarta"
+  ],
   "imageUrl": "/blog/images/indonesia-ev-charging-guide-2026.jpg",
   "faq": [
-    {"question": "What connector does Indonesia use for EV charging?", "answer": "CCS2 is the official standard. Some older stations also have CHAdeMO."},
-    {"question": "Can I drive from Jakarta to Bali in an EV?", "answer": "Not directly — you need to cross the Bali Strait by ferry. But Jakarta to Surabaya on the Trans-Java toll road is fully EV-drivable with charging every 60-80 km."},
-    {"question": "Which app do I need for EV charging in Indonesia?", "answer": "PLN Mobile is essential for the largest network. Charge+ is a good backup."},
-    {"question": "Is EV charging available in Bali?", "answer": "Yes, Bali has 80+ stations concentrated in South Bali, Ubud, and Nusa Dua. Most resorts offer guest charging."}
+    {
+      "question": "What connector does Indonesia use for EV charging?",
+      "answer": "CCS2 is the official standard. Some older stations also have CHAdeMO."
+    },
+    {
+      "question": "Can I drive from Jakarta to Bali in an EV?",
+      "answer": "Not directly — you need to cross the Bali Strait by ferry. But Jakarta to Surabaya on the Trans-Java toll road is fully EV-drivable with charging every 60-80 km."
+    },
+    {
+      "question": "Which app do I need for EV charging in Indonesia?",
+      "answer": "PLN Mobile is essential for the largest network. Charge+ is a good backup."
+    },
+    {
+      "question": "Is EV charging available in Bali?",
+      "answer": "Yes, Bali has 80+ stations concentrated in South Bali, Ubud, and Nusa Dua. Most resorts offer guest charging."
+    }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "indonesia-java-jakarta-yogyakarta-ev-road-trip",
+      "title": "Trans-Java EV Road Trip: Jakarta to Yogyakarta — Indonesia's First EV Highway"
+    },
+    {
+      "slug": "bali-lombok-ev-ferry-guide-2026",
+      "title": "Bali to Lombok by EV"
+    },
+    {
+      "slug": "jakarta-surabaya-trans-java-ev-road-trip-2026",
+      "title": "Jakarta to Surabaya EV Road Trip: Complete Trans-Java Toll Guide 2026"
+    },
+    {
+      "slug": "where-to-charge-ev-bali-complete-guide",
+      "title": "Where to Charge Your EV in Bali — Complete Guide to the Island's Charging Network 2026"
+    },
+    {
+      "slug": "bali-kuta-ubud-sanur-loop-family-ev-road-trip",
+      "title": "Bali Family EV Loop: Kuta → Ubud → Sanur in 5 Days"
+    }
   ]
 }

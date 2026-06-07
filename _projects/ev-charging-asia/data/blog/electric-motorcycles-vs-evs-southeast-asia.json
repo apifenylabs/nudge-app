@@ -44,5 +44,27 @@
       "question": "What is the range of an electric motorcycle in real-world SEA conditions?",
       "answer": "60-150 km depending on model. In heavy traffic with frequent stop-and-go, regenerative braking helps. At full speed (80+ km/h), range drops significantly to 50-70 km for most models."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "best-ev-charging-apps-asia-comparison",
+      "title": "Best EV Charging Apps for Asia: Which Ones Actually Work [2026]"
+    },
+    {
+      "slug": "ev-charging-asia-2026-guide",
+      "title": "EV Charging Apps and Payment Guide for Asia — Which Ones You Actually Need"
+    },
+    {
+      "slug": "ev-vs-hybrid-vs-petrol-southeast-asia-tco-2026",
+      "title": "EV vs Hybrid vs Petrol in Southeast Asia 2026 — Total Cost of Ownership Comparison"
+    },
+    {
+      "slug": "ev-road-trip-preparation-checklist-asia-2026",
+      "title": "Ultimate EV Road Trip Preparation Checklist for Asia 2026 — What to Pack, Plan & Pre-Check"
+    },
+    {
+      "slug": "ev-maintenance-humid-climate-asia",
+      "title": "EV Maintenance in Humid Climates: Essential Guide for Southeast Asian EV Owners [2026]"
+    }
   ]
 }

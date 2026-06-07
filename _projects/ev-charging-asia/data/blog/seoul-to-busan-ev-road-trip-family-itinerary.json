@@ -44,5 +44,27 @@
       "question": "How much does this trip cost vs KTX?",
       "answer": "EV road trip: ~KRW 45,000-55,000 (charging + tolls). KTX for family of 4: KRW 210,000-360,000. You save 70-85% on transport."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "seoul-busan-gyeongju-south-korea-ev-road-trip",
+      "title": "South Korea EV Road Trip: Seoul → Busan → Gyeongju"
+    },
+    {
+      "slug": "south-korea-ev-charging-network",
+      "title": "South Korea EV Charging Network Guide 2026 — Complete Guide for Foreigners Using Korean Chargers"
+    },
+    {
+      "slug": "south-korea-ev-charging-complete-guide-2026",
+      "title": "South Korea EV Charging Guide 2026 — Networks, Highway Stops & Complete Route Planning"
+    },
+    {
+      "slug": "indonesia-jakarta-bandung-ev-road-trip",
+      "title": "Indonesia EV Road Trip: Jakarta to Bandung — Complete Family Guide"
+    },
+    {
+      "slug": "singapore-to-kuala-lumpur-ev-family-guide",
+      "title": "Singapore to Kuala Lumpur EV Road Trip — Complete Family Guide"
+    }
   ]
 }

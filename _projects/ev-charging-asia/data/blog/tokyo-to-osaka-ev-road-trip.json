@@ -47,5 +47,27 @@
       "question": "Best EV for this trip?",
       "answer": "Nissan Leaf e+ (62 kWh, 458 km WLTP) — uses CHAdeMO, available at all major rental agencies, good family space."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "japan-tokyo-osaka-ev-family-road-trip",
+      "title": "Japan's Golden Route by EV: Tokyo to Osaka Family Road Trip via Hakone, Nagoya & Kyoto"
+    },
+    {
+      "slug": "osaka-kyoto-nara-kansai-ev-road-trip",
+      "title": "Osaka, Kyoto & Nara EV Road Trip: The Perfect Kansai Electric Getaway"
+    },
+    {
+      "slug": "japan-ev-road-trip-guide-2026",
+      "title": "Japan EV Road Trip Guide 2026: Complete Route Planner, Charging Networks & Must-See Stops"
+    },
+    {
+      "slug": "japan-tokyo-osaka-chubu-ev-road-trip",
+      "title": "Japan's Chubu Region EV Road Trip: Tokyo to Osaka via the Japanese Alps"
+    },
+    {
+      "slug": "top-10-ev-friendly-hotels-japan-best-stays-with-ev-charging-2026",
+      "title": "Top 10 EV-Friendly Hotels in Japan: Best Stays with EV Charging 2026"
+    }
   ]
 }

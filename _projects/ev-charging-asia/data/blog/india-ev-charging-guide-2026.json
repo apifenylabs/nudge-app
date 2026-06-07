@@ -39,5 +39,27 @@
       "answer": "Not yet for cars. Battery swapping is currently limited to two-wheelers (Bounce, Sun Mobility) and three-wheelers (Battery Smart). NIO has battery swap stations in China but hasn't launched in India. For cars, conventional charging is the only option."
     }
   ],
-  "imageUrl": "/blog/images/india-ev-charging-guide-2026.jpg"
+  "imageUrl": "/blog/images/india-ev-charging-guide-2026.jpg",
+  "relatedPosts": [
+    {
+      "slug": "taiwan-ev-road-trip-guide",
+      "title": "Taiwan EV Road Trip Guide 2026 — Taipei to Kaohsiung, Hualien Coast, and Charging Infrastructure"
+    },
+    {
+      "slug": "ev-charging-india-road-trip-complete-guide-2026",
+      "title": "EV Charging in India: Complete Road Trip Guide for 2026 — Networks, Costs & Routes"
+    },
+    {
+      "slug": "thailand-ev-charging-guide-bangkok-chiang-mai-phuket-pattaya",
+      "title": "Thailand EV Charging Guide — Best Routes from Bangkok to Chiang Mai, Phuket, and Pattaya"
+    },
+    {
+      "slug": "asean-ccs2-cross-border-ev-travel-2026",
+      "title": "ASEAN Unifies EV Charging: CCS-2 Standard Enables Cross-Border Road Trips in 2026"
+    },
+    {
+      "slug": "ev-charging-in-asia-2026-complete-guide",
+      "title": "EV Charging in Asia 2026 — Complete Guide to Connectors, Networks, and Road Trips"
+    }
+  ]
 }

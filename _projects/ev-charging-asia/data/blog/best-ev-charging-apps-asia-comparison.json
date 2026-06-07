@@ -42,5 +42,27 @@
     }
   ],
   "relatedStations": [],
-  "imageUrl": "/blog/images/best-ev-charging-apps-asia-comparison.jpg"
+  "imageUrl": "/blog/images/best-ev-charging-apps-asia-comparison.jpg",
+  "relatedPosts": [
+    {
+      "slug": "ev-charging-asia-2026-guide",
+      "title": "EV Charging Apps and Payment Guide for Asia — Which Ones You Actually Need"
+    },
+    {
+      "slug": "ev-vs-hybrid-vs-petrol-southeast-asia-tco-2026",
+      "title": "EV vs Hybrid vs Petrol in Southeast Asia 2026 — Total Cost of Ownership Comparison"
+    },
+    {
+      "slug": "ev-maintenance-humid-climate-asia",
+      "title": "EV Maintenance in Humid Climates: Essential Guide for Southeast Asian EV Owners [2026]"
+    },
+    {
+      "slug": "ev-road-trip-preparation-checklist-asia-2026",
+      "title": "Ultimate EV Road Trip Preparation Checklist for Asia 2026 — What to Pack, Plan & Pre-Check"
+    },
+    {
+      "slug": "electric-motorcycles-vs-evs-southeast-asia",
+      "title": "Electric Motorcycles vs EVs in Southeast Asia — Practical Comparison for Urban Commuting in 2026"
+    }
+  ]
 }

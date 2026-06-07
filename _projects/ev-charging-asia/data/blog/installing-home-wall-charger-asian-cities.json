@@ -36,5 +36,27 @@
       "question": "Can I install myself?",
       "answer": "No. Requires licensed electrician for 32A+ current. DIY risks fire, shock, and voids home insurance."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "ev-charging-costs-asia-country-comparison",
+      "title": "EV Charging Costs Across Asia: Country-by-Country Price Guide (2026)"
+    },
+    {
+      "slug": "ev-charging-malaysia-vs-singapore",
+      "title": "EV Charging in Malaysia vs Singapore: What's Actually Different?"
+    },
+    {
+      "slug": "how-to-charge-ev-at-condo-singapore",
+      "title": "How to Charge an EV at a Condo in Singapore — 2026 Guide"
+    },
+    {
+      "slug": "buying-used-ev-hong-kong-battery-check-guide",
+      "title": "Buying a Used EV in Hong Kong: Complete Battery Health Check Guide"
+    },
+    {
+      "slug": "hong-kong-ev-charging-complete-guide-2026",
+      "title": "Hong Kong EV Charging Guide 2026: Complete Guide for EV Owners &amp; Visitors"
+    }
   ]
 }

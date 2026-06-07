@@ -6,218 +6,280 @@ import WaitlistForm from "./components/WaitlistForm";
 
 /* ─────────────────────────────────────────────────────────────
    Particle Background (Enhanced with Corona, Nebula, Hue Cycling)
+   — Optimized: respects prefers-reduced-motion, defers init via
+     requestIdleCallback, pauses when tab hidden
    ───────────────────────────────────────────────────────────── */
 function ParticleField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouseRef = useRef({ x: -9999, y: -9999 });
+  const reducedMotionRef = useRef(false);
+  const visibilityRef = useRef(true);
+  const [showCanvas, setShowCanvas] = useState(false);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    // Check for prefers-reduced-motion
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    reducedMotionRef.current = mq.matches;
 
-    let animId: number;
-    let w = window.innerWidth;
-    let h = window.innerHeight;
-    let time = 0;
-    let nebulaTime = 0;
-
-    const resize = () => {
-      w = window.innerWidth;
-      h = window.innerHeight;
-      canvas!.width = w;
-      canvas!.height = h;
-    };
-    window.addEventListener("resize", resize);
-    resize();
-
-    // mouse tracking
-    const onMouse = (e: MouseEvent) => {
-      mouseRef.current.x = e.clientX;
-      mouseRef.current.y = e.clientY;
-    };
-    const onLeave = () => {
-      mouseRef.current.x = -9999;
-      mouseRef.current.y = -9999;
-    };
-    window.addEventListener("mousemove", onMouse, { passive: true });
-    window.addEventListener("mouseleave", onLeave, { passive: true });
-
-    const particles: {
-      x: number; y: number;
-      vx: number; vy: number;
-      r: number;
-      baseHue: number;
-      hueShift: number;
-      life: number;
-    }[] = [];
-
-    // Nebula wisps — large slow-drifting blobs
-    const nebulaWisps: {
-      x: number; y: number;
-      vx: number; vy: number;
-      r: number;
-      hue: number;
-    }[] = [];
-
-    const count = Math.min(100, Math.floor((w * h) / 18000));
-    const wispCount = Math.min(6, Math.floor((w * h) / 80000));
-
-    for (let i = 0; i < count; i++) {
-      particles.push({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        r: Math.random() * 1.8 + 0.4,
-        baseHue: Math.random() * 360,
-        hueShift: Math.random() * Math.PI * 2,
-        life: 1,
-      });
+    if (mq.matches) {
+      // Don't render canvas at all for reduced motion users
+      return;
     }
 
-    for (let i = 0; i < wispCount; i++) {
-      nebulaWisps.push({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.08,
-        vy: (Math.random() - 0.5) * 0.08,
-        r: 120 + Math.random() * 180,
-        hue: 180 + Math.random() * 60, // cyan to purple range
-      });
-    }
+    // Listen for changes to reduced-motion preference
+    const handleMqChange = (e: MediaQueryListEvent) => {
+      reducedMotionRef.current = e.matches;
+      if (e.matches) {
+        // User switched to reduced motion — cancel animation
+        if (animId) cancelAnimationFrame(animId);
+        const canvas = canvasRef.current;
+        if (canvas) {
+          const ctx = canvas.getContext("2d");
+          if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+      }
+    };
+    mq.addEventListener("change", handleMqChange);
 
-    const draw = () => {
-      time += 0.005;
-      nebulaTime += 0.002;
-      ctx!.clearRect(0, 0, w, h);
+    // Defer canvas setup to avoid blocking LCP
+    const setup = () => {
+      setShowCanvas(true);
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
 
-      const mx = mouseRef.current.x;
-      const my = mouseRef.current.y;
+      let animId: number;
+      let w = window.innerWidth;
+      let h = window.innerHeight;
+      let time = 0;
+      let nebulaTime = 0;
 
-      // ── 1. Draw nebula wisps behind everything ──
-      for (const wisp of nebulaWisps) {
-        wisp.x += wisp.vx + Math.sin(nebulaTime + wisp.hue) * 0.15;
-        wisp.y += wisp.vy + Math.cos(nebulaTime * 0.7 + wisp.hue * 0.5) * 0.15;
+      const resize = () => {
+        w = window.innerWidth;
+        h = window.innerHeight;
+        canvas!.width = w;
+        canvas!.height = h;
+      };
+      window.addEventListener("resize", resize);
+      resize();
 
-        // gentle edge bounce so they stay visible
-        if (wisp.x < -wisp.r) wisp.x = w + wisp.r;
-        if (wisp.x > w + wisp.r) wisp.x = -wisp.r;
-        if (wisp.y < -wisp.r) wisp.y = h + wisp.r;
-        if (wisp.y > h + wisp.r) wisp.y = -wisp.r;
+      // mouse tracking
+      const onMouse = (e: MouseEvent) => {
+        mouseRef.current.x = e.clientX;
+        mouseRef.current.y = e.clientY;
+      };
+      const onLeave = () => {
+        mouseRef.current.x = -9999;
+        mouseRef.current.y = -9999;
+      };
+      window.addEventListener("mousemove", onMouse, { passive: true });
+      window.addEventListener("mouseleave", onLeave, { passive: true });
 
-        const alpha = 0.03 + 0.02 * Math.sin(nebulaTime * 1.3 + wisp.hue);
-        const gradient = ctx!.createRadialGradient(wisp.x, wisp.y, 0, wisp.x, wisp.y, wisp.r);
-        gradient.addColorStop(0, `hsla(${wisp.hue + 10 * Math.sin(nebulaTime + wisp.hue)}, 80%, 60%, ${alpha})`);
-        gradient.addColorStop(0.5, `hsla(${wisp.hue - 30}, 70%, 40%, ${alpha * 0.6})`);
-        gradient.addColorStop(1, `hsla(${wisp.hue - 60}, 60%, 20%, 0)`);
+      // Tab visibility: pause animation when hidden
+      const onVisibility = () => {
+        visibilityRef.current = !document.hidden;
+      };
+      document.addEventListener("visibilitychange", onVisibility);
 
-        ctx!.beginPath();
-        ctx!.arc(wisp.x, wisp.y, wisp.r, 0, Math.PI * 2);
-        ctx!.fillStyle = gradient;
-        ctx!.fill();
+      const particles: {
+        x: number; y: number;
+        vx: number; vy: number;
+        r: number;
+        baseHue: number;
+        hueShift: number;
+        life: number;
+      }[] = [];
+
+      // Nebula wisps — large slow-drifting blobs
+      const nebulaWisps: {
+        x: number; y: number;
+        vx: number; vy: number;
+        r: number;
+        hue: number;
+      }[] = [];
+
+      const count = Math.min(100, Math.floor((w * h) / 18000));
+      const wispCount = Math.min(6, Math.floor((w * h) / 80000));
+
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          r: Math.random() * 1.8 + 0.4,
+          baseHue: Math.random() * 360,
+          hueShift: Math.random() * Math.PI * 2,
+          life: 1,
+        });
       }
 
-      // ── 2. Main particles with hue cycling ──
-      for (const p of particles) {
-        // drift
-        p.x += p.vx;
-        p.y += p.vy;
+      for (let i = 0; i < wispCount; i++) {
+        nebulaWisps.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.08,
+          vy: (Math.random() - 0.5) * 0.08,
+          r: 120 + Math.random() * 180,
+          hue: 180 + Math.random() * 60,
+        });
+      }
 
-        // subtle sine wave wobble
-        p.vx += Math.sin(time + p.hueShift) * 0.002;
-        p.vy += Math.cos(time + p.hueShift * 1.3) * 0.002;
-
-        // clamp velocity
-        const maxV = 0.4;
-        if (Math.abs(p.vx) > maxV) p.vx = Math.sign(p.vx) * maxV;
-        if (Math.abs(p.vy) > maxV) p.vy = Math.sign(p.vy) * maxV;
-
-        // edge wrap
-        if (p.x < 0) p.x = w;
-        if (p.x > w) p.x = 0;
-        if (p.y < 0) p.y = h;
-        if (p.y > h) p.y = 0;
-
-        // mouse repel
-        const dx = p.x - mx;
-        const dy = p.y - my;
-        const distMouse = Math.sqrt(dx * dx + dy * dy);
-        if (distMouse < 120 && distMouse > 0) {
-          const force = (120 - distMouse) / 120;
-          p.x += (dx / distMouse) * force * 2;
-          p.y += (dy / distMouse) * force * 2;
+      const draw = () => {
+        // Skip draw if reduced motion or tab hidden
+        if (!visibilityRef.current) {
+          animId = requestAnimationFrame(draw);
+          return;
+        }
+        if (reducedMotionRef.current) {
+          return;
         }
 
-        // cycle hue over time
-        const hue = (p.baseHue + time * 12 + p.hueShift * 8) % 360;
-        const pulse = 0.25 + 0.15 * Math.sin(time * 2 + p.hueShift);
+        time += 0.005;
+        nebulaTime += 0.002;
+        ctx!.clearRect(0, 0, w, h);
 
-        // draw particle
-        ctx!.beginPath();
-        ctx!.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx!.fillStyle = `hsla(${hue}, 80%, 70%, ${pulse})`;
-        ctx!.fill();
+        const mx = mouseRef.current.x;
+        const my = mouseRef.current.y;
 
-        // soft glow ring on larger particles
-        if (p.r > 1.3) {
+        // ── 1. Nebula wisps ──
+        for (const wisp of nebulaWisps) {
+          wisp.x += wisp.vx + Math.sin(nebulaTime + wisp.hue) * 0.15;
+          wisp.y += wisp.vy + Math.cos(nebulaTime * 0.7 + wisp.hue * 0.5) * 0.15;
+
+          if (wisp.x < -wisp.r) wisp.x = w + wisp.r;
+          if (wisp.x > w + wisp.r) wisp.x = -wisp.r;
+          if (wisp.y < -wisp.r) wisp.y = h + wisp.r;
+          if (wisp.y > h + wisp.r) wisp.y = -wisp.r;
+
+          const alpha = 0.03 + 0.02 * Math.sin(nebulaTime * 1.3 + wisp.hue);
+          const gradient = ctx!.createRadialGradient(wisp.x, wisp.y, 0, wisp.x, wisp.y, wisp.r);
+          gradient.addColorStop(0, `hsla(${wisp.hue + 10 * Math.sin(nebulaTime + wisp.hue)}, 80%, 60%, ${alpha})`);
+          gradient.addColorStop(0.5, `hsla(${wisp.hue - 30}, 70%, 40%, ${alpha * 0.6})`);
+          gradient.addColorStop(1, `hsla(${wisp.hue - 60}, 60%, 20%, 0)`);
+
           ctx!.beginPath();
-          ctx!.arc(p.x, p.y, p.r * 3, 0, Math.PI * 2);
-          ctx!.fillStyle = `hsla(${hue}, 80%, 70%, ${pulse * 0.12})`;
+          ctx!.arc(wisp.x, wisp.y, wisp.r, 0, Math.PI * 2);
+          ctx!.fillStyle = gradient;
           ctx!.fill();
         }
-      }
 
-      // ── 3. Corona burst — occasional star-burst from center ──
-      const coronaChance = 0.008;
-      if (Math.random() < coronaChance) {
-        const cx = w / 2 + (Math.random() - 0.5) * w * 0.5;
-        const cy = h / 2 + (Math.random() - 0.5) * h * 0.3;
-        const countBeams = 6 + Math.floor(Math.random() * 8);
-        const hue = (time * 30) % 360;
-        for (let i = 0; i < countBeams; i++) {
-          const angle = (Math.PI * 2 * i) / countBeams + (Math.random() - 0.5) * 0.4;
-          const len = 40 + Math.random() * 80;
+        // ── 2. Main particles ──
+        for (const p of particles) {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          p.vx += Math.sin(time + p.hueShift) * 0.002;
+          p.vy += Math.cos(time + p.hueShift * 1.3) * 0.002;
+
+          const maxV = 0.4;
+          if (Math.abs(p.vx) > maxV) p.vx = Math.sign(p.vx) * maxV;
+          if (Math.abs(p.vy) > maxV) p.vy = Math.sign(p.vy) * maxV;
+
+          if (p.x < 0) p.x = w;
+          if (p.x > w) p.x = 0;
+          if (p.y < 0) p.y = h;
+          if (p.y > h) p.y = 0;
+
+          const dx = p.x - mx;
+          const dy = p.y - my;
+          const distMouse = Math.sqrt(dx * dx + dy * dy);
+          if (distMouse < 120 && distMouse > 0) {
+            const force = (120 - distMouse) / 120;
+            p.x += (dx / distMouse) * force * 2;
+            p.y += (dy / distMouse) * force * 2;
+          }
+
+          const hue = (p.baseHue + time * 12 + p.hueShift * 8) % 360;
+          const pulse = 0.25 + 0.15 * Math.sin(time * 2 + p.hueShift);
+
           ctx!.beginPath();
-          ctx!.moveTo(cx, cy);
-          ctx!.lineTo(cx + Math.cos(angle) * len, cy + Math.sin(angle) * len);
-          ctx!.strokeStyle = `hsla(${hue + i * 20}, 90%, 70%, 0.15)`;
-          ctx!.lineWidth = 0.5 + Math.random();
-          ctx!.stroke();
-        }
-      }
+          ctx!.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx!.fillStyle = `hsla(${hue}, 80%, 70%, ${pulse})`;
+          ctx!.fill();
 
-      // ── 4. Dynamic connections with hue variation ──
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 130) {
-            const alpha = 0.07 * (1 - dist / 130);
-            const hue = (particles[i].baseHue + particles[j].baseHue) / 2 + time * 10;
+          if (p.r > 1.3) {
             ctx!.beginPath();
-            ctx!.moveTo(particles[i].x, particles[i].y);
-            ctx!.lineTo(particles[j].x, particles[j].y);
-            ctx!.strokeStyle = `hsla(${hue % 360}, 70%, 70%, ${alpha})`;
-            ctx!.lineWidth = 0.6;
+            ctx!.arc(p.x, p.y, p.r * 3, 0, Math.PI * 2);
+            ctx!.fillStyle = `hsla(${hue}, 80%, 70%, ${pulse * 0.12})`;
+            ctx!.fill();
+          }
+        }
+
+        // ── 3. Corona burst ──
+        const coronaChance = 0.008;
+        if (Math.random() < coronaChance) {
+          const cx = w / 2 + (Math.random() - 0.5) * w * 0.5;
+          const cy = h / 2 + (Math.random() - 0.5) * h * 0.3;
+          const countBeams = 6 + Math.floor(Math.random() * 8);
+          const hue = (time * 30) % 360;
+          for (let i = 0; i < countBeams; i++) {
+            const angle = (Math.PI * 2 * i) / countBeams + (Math.random() - 0.5) * 0.4;
+            const len = 40 + Math.random() * 80;
+            ctx!.beginPath();
+            ctx!.moveTo(cx, cy);
+            ctx!.lineTo(cx + Math.cos(angle) * len, cy + Math.sin(angle) * len);
+            ctx!.strokeStyle = `hsla(${hue + i * 20}, 90%, 70%, 0.15)`;
+            ctx!.lineWidth = 0.5 + Math.random();
             ctx!.stroke();
           }
         }
-      }
 
-      animId = requestAnimationFrame(draw);
-    };
-    draw();
+        // ── 4. Dynamic connections ──
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 130) {
+              const alpha = 0.07 * (1 - dist / 130);
+              const hue = (particles[i].baseHue + particles[j].baseHue) / 2 + time * 10;
+              ctx!.beginPath();
+              ctx!.moveTo(particles[i].x, particles[i].y);
+              ctx!.lineTo(particles[j].x, particles[j].y);
+              ctx!.strokeStyle = `hsla(${hue % 360}, 70%, 70%, ${alpha})`;
+              ctx!.lineWidth = 0.6;
+              ctx!.stroke();
+            }
+          }
+        }
 
-    return () => {
-      cancelAnimationFrame(animId);
-      window.removeEventListener("resize", resize);
-      window.removeEventListener("mousemove", onMouse);
-      window.removeEventListener("mouseleave", onLeave);
+        animId = requestAnimationFrame(draw);
+      };
+      draw();
+
+      return () => {
+        cancelAnimationFrame(animId);
+        window.removeEventListener("resize", resize);
+        window.removeEventListener("mousemove", onMouse);
+        window.removeEventListener("mouseleave", onLeave);
+        document.removeEventListener("visibilitychange", onVisibility);
+      };
     };
+
+    // Defer canvas init — use requestIdleCallback with setTimeout fallback
+    if (typeof requestIdleCallback === "function") {
+      const idleId = requestIdleCallback(setup, { timeout: 200 });
+      return () => {
+        cancelIdleCallback(idleId);
+        mq.removeEventListener("change", handleMqChange);
+      };
+    } else {
+      const timer = setTimeout(setup, 200);
+      return () => {
+        clearTimeout(timer);
+        mq.removeEventListener("change", handleMqChange);
+      };
+    }
   }, []);
+
+  if (!showCanvas && !reducedMotionRef.current) {
+    // Show a static gradient placeholder before canvas kicks in
+    return (
+      <div className="fixed inset-0 pointer-events-none z-0 bg-gradient-to-b from-[#0a0a1a] via-[#0f0f2a] to-[#0a0a1a]" />
+    );
+  }
 
   return (
     <canvas

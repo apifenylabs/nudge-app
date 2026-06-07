@@ -50,5 +50,27 @@
       "question": "Is this route possible in a short-range EV like the Nissan Sakura?",
       "answer": "No. Rent a longer-range EV (BYD Atto 3, Tesla Model 3, Nissan Leaf e+) for the mountain sections. The Sakura's 180 km range is insufficient."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "malaysia-kl-penang-ev-road-trip-guide",
+      "title": "Malaysia EV Road Trip Guide: Kuala Lumpur to Penang"
+    },
+    {
+      "slug": "malaysia-kuala-lumpur-penang-ev-road-trip",
+      "title": "Malaysia EV Road Trip: Kuala Lumpur to Penang — Coastal Route Family Guide"
+    },
+    {
+      "slug": "penang-langkawi-ev-ferry-guide-2026",
+      "title": "Penang to Langkawi by EV"
+    },
+    {
+      "slug": "kl-penang-cameron-highlands-ev-road-trip",
+      "title": "KL → Penang → Cameron Highlands: A 5-Day Family EV Road Trip Through Malaysia"
+    },
+    {
+      "slug": "singapore-to-kuala-lumpur-by-ev-road-trip",
+      "title": "Singapore to Kuala Lumpur by EV: Complete Family Road Trip Guide with Malacca Stopover"
+    }
   ]
 }

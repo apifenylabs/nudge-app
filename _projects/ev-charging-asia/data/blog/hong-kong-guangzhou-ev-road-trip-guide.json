@@ -43,5 +43,27 @@
     "cn-gz-001",
     "cn-sz-001"
   ],
-  "imageUrl": "/blog/images/hong-kong-guangzhou-ev-road-trip-guide.jpg"
+  "imageUrl": "/blog/images/hong-kong-guangzhou-ev-road-trip-guide.jpg",
+  "relatedPosts": [
+    {
+      "slug": "hong-kong-guangzhou-ev-road-trip",
+      "title": "Hong Kong to Guangzhou EV Road Trip: Cross-Border Driving Through Greater Bay Area"
+    },
+    {
+      "slug": "hong-kong-to-macau-ev-ferry-driving-itinerary",
+      "title": "Hong Kong to Macau by EV: Ferry + Driving Itinerary — Complete Guide for Families"
+    },
+    {
+      "slug": "chinese-family-ev-road-trip-spring-festival-2026",
+      "title": "Chinese Families Are Going Viral for EV Road Trips in 2026 — Here's How You Can Too"
+    },
+    {
+      "slug": "hong-kong-ev-charging-complete-guide-2026",
+      "title": "Hong Kong EV Charging Guide 2026: Complete Guide for EV Owners &amp; Visitors"
+    },
+    {
+      "slug": "shanghai-hangzhou-ev-road-trip-guide",
+      "title": "Shanghai to Hangzhou EV Road Trip: West Lake, Tea & Charging Guide [2026]"
+    }
+  ]
 }

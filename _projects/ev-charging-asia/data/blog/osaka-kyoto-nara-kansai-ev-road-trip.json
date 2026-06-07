@@ -35,5 +35,27 @@
       "question": "Where's the best place to charge in Kyoto?",
       "answer": "Shijo Karasuma underground parking (CHAdeMO 50kW) is central. Kyoto Station garage has 20kW chargers. Aeon Mall Kyoto Gojo has 50kW chargers."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "tokyo-to-osaka-ev-road-trip",
+      "title": "Tokyo to Osaka EV Road Trip: Japan's Golden Route by Electric Car — Complete Family Itinerary"
+    },
+    {
+      "slug": "japan-ev-road-trip-guide-2026",
+      "title": "Japan EV Road Trip Guide 2026: Complete Route Planner, Charging Networks & Must-See Stops"
+    },
+    {
+      "slug": "japan-tokyo-osaka-ev-family-road-trip",
+      "title": "Japan's Golden Route by EV: Tokyo to Osaka Family Road Trip via Hakone, Nagoya & Kyoto"
+    },
+    {
+      "slug": "japan-tokyo-osaka-chubu-ev-road-trip",
+      "title": "Japan's Chubu Region EV Road Trip: Tokyo to Osaka via the Japanese Alps"
+    },
+    {
+      "slug": "top-10-ev-friendly-hotels-japan-best-stays-with-ev-charging-2026",
+      "title": "Top 10 EV-Friendly Hotels in Japan: Best Stays with EV Charging 2026"
+    }
   ]
 }

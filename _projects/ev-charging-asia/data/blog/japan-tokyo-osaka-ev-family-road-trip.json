@@ -50,5 +50,27 @@
       "question": "Is autumn or spring better?",
       "answer": "Both are excellent. Spring has cherry blossoms and mild weather. Autumn has fall colors and cooler temperatures. Book hotels months ahead for either season."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "tokyo-to-osaka-ev-road-trip",
+      "title": "Tokyo to Osaka EV Road Trip: Japan's Golden Route by Electric Car — Complete Family Itinerary"
+    },
+    {
+      "slug": "japan-ev-road-trip-guide-2026",
+      "title": "Japan EV Road Trip Guide 2026: Complete Route Planner, Charging Networks & Must-See Stops"
+    },
+    {
+      "slug": "osaka-kyoto-nara-kansai-ev-road-trip",
+      "title": "Osaka, Kyoto & Nara EV Road Trip: The Perfect Kansai Electric Getaway"
+    },
+    {
+      "slug": "japan-tokyo-osaka-chubu-ev-road-trip",
+      "title": "Japan's Chubu Region EV Road Trip: Tokyo to Osaka via the Japanese Alps"
+    },
+    {
+      "slug": "top-10-ev-friendly-hotels-japan-best-stays-with-ev-charging-2026",
+      "title": "Top 10 EV-Friendly Hotels in Japan: Best Stays with EV Charging 2026"
+    }
   ]
 }

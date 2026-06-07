@@ -39,5 +39,27 @@
       "answer": "Yes, they're outdoor-rated for Korean winters. Charging speed may be reduced without battery pre-conditioning."
     }
   ],
-  "imageUrl": "/blog/images/ev-winter-driving-japan-korea-guide.jpg"
+  "imageUrl": "/blog/images/ev-winter-driving-japan-korea-guide.jpg",
+  "relatedPosts": [
+    {
+      "slug": "hokkaido-ev-road-trip-guide",
+      "title": "Hokkaido EV Road Trip Guide 2026: Complete Itinerary, Charging Stations & Essential Tips for Japan's Northern Frontier"
+    },
+    {
+      "slug": "japan-ev-road-trip-guide-2026",
+      "title": "Japan EV Road Trip Guide 2026: Complete Route Planner, Charging Networks & Must-See Stops"
+    },
+    {
+      "slug": "seoul-busan-gyeongju-south-korea-ev-road-trip",
+      "title": "South Korea EV Road Trip: Seoul → Busan → Gyeongju"
+    },
+    {
+      "slug": "top-10-ev-friendly-destinations-japan",
+      "title": "Top 10 EV-Friendly Destinations in Japan for Families 2026"
+    },
+    {
+      "slug": "top-10-ev-friendly-hotels-japan-best-stays-with-ev-charging-2026",
+      "title": "Top 10 EV-Friendly Hotels in Japan: Best Stays with EV Charging 2026"
+    }
+  ]
 }

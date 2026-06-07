@@ -49,5 +49,27 @@
       "question": "Total trip cost?",
       "answer": "NTD 53,800-91,300 ($1,640-2,780 USD) for a family of 4 over 7 days including rental, charging, hotels, food, and activities."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "taiwan-ev-road-trip-guide",
+      "title": "Taiwan EV Road Trip Guide 2026 — Taipei to Kaohsiung, Hualien Coast, and Charging Infrastructure"
+    },
+    {
+      "slug": "indonesia-jakarta-bandung-ev-road-trip",
+      "title": "Indonesia EV Road Trip: Jakarta to Bandung — Complete Family Guide"
+    },
+    {
+      "slug": "singapore-to-kuala-lumpur-ev-family-guide",
+      "title": "Singapore to Kuala Lumpur EV Road Trip — Complete Family Guide"
+    },
+    {
+      "slug": "malaysia-kuala-lumpur-penang-ev-road-trip",
+      "title": "Malaysia EV Road Trip: Kuala Lumpur to Penang — Coastal Route Family Guide"
+    },
+    {
+      "slug": "thailand-bangkok-chiang-mai-ev-guide",
+      "title": "Thailand EV Family Road Trip: Bangkok to Chiang Mai — Complete Route Guide"
+    }
   ]
 }

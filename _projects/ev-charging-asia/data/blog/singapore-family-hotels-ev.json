@@ -44,5 +44,27 @@
       "question": "What charging cable do I need for Singapore hotels?",
       "answer": "Bring your own Type 2 cable. Many hotel AC chargers in Singapore do not provide tethered cables. DC fast chargers always have tethered cables."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "top-10-ev-friendly-hotels-asia-families",
+      "title": "Top 10 EV-Friendly Hotels in Asia for Families"
+    },
+    {
+      "slug": "top-10-ev-friendly-hotels-asia",
+      "title": "Top 10 EV-Friendly Hotels in Asia — Best Stays With Destination Charging"
+    },
+    {
+      "slug": "best-ev-hotels-vietnam-free-charging-2026",
+      "title": "Best EV Hotels in Vietnam with Free Charging 2026"
+    },
+    {
+      "slug": "singapore-penang-ev-road-trip-guide",
+      "title": "Singapore to Penang EV Road Trip Guide: Best Charging Stops"
+    },
+    {
+      "slug": "top-10-ev-friendly-hotels-in-malaysia-best-family-stays-with-ev-charging-2026",
+      "title": "Top 10 EV-Friendly Hotels in Malaysia: Best Family Stays with EV Charging 2026"
+    }
   ]
 }

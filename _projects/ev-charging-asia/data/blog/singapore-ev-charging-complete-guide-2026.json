@@ -21,8 +21,34 @@
   "excerpt": "The ultimate guide to EV charging in Singapore in 2026. Blue SG, SP Group, Charge+, and Shell Recharge coverage map. HDB and condo charging installation, per-kWh costs, best apps, and driving to Johor via the Causeway.",
   "date": "2026-05-29",
   "readingTime": "12 min read",
-  "relatedStations": ["mys-johor-bahru-001", "mys-johor-bahru-002", "mys-johor-bahru-003"],
+  "relatedStations": [
+    "mys-johor-bahru-001",
+    "mys-johor-bahru-002",
+    "mys-johor-bahru-003"
+  ],
   "country": "singapore",
   "featuredImage": "https://images.unsplash.com/photo-1555626040-e1c57de52163?w=1200",
-  "schemaType": "Guide"
+  "schemaType": "Guide",
+  "relatedPosts": [
+    {
+      "slug": "hong-kong-ev-charging-complete-guide-2026",
+      "title": "Hong Kong EV Charging Guide 2026: Complete Guide for EV Owners &amp; Visitors"
+    },
+    {
+      "slug": "singapore-to-johor-bahru-ev-road-trip-cross-border-charging-guide-for-families",
+      "title": "Singapore to Johor Bahru EV Road Trip: Cross-Border Charging Guide for Families"
+    },
+    {
+      "slug": "ev-charging-apps-suck-asia",
+      "title": "Why EV Charging Apps Suck in Southeast Asia (And What to Do About It)"
+    },
+    {
+      "slug": "ev-charging-costs-asia-country-comparison",
+      "title": "EV Charging Costs Across Asia: Country-by-Country Price Guide (2026)"
+    },
+    {
+      "slug": "china-ev-guide-for-foreigners",
+      "title": "China EV Guide for Foreigners 2026 — How to Charge, Apps, Payment, and Cross-Border Driving Tips"
+    }
+  ]
 }

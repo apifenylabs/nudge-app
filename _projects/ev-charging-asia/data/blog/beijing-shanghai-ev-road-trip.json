@@ -12,5 +12,27 @@
     "express-charging"
   ],
   "readingTime": "10 min read",
-  "content": "Write 800+ words here. Cover: route overview 1200km 12 hours. G2 expressway charging every 50km. State Grid 350kW chargers. Stops: Beijing to Jinan 400km. Jinan springs and food. Jinan to Nanjing 550km via Xuzhou. Nanjing history and wall. Nanjing to Shanghai 300km. Total EV cost 300RMB vs petrol 800RMB. Apps: State Grid e-Charging, TELD, Amap. Tips for families: book hotels with charging, snacks at service plazas, download entertainment. Seasons: spring best.\n\n<!-- affiliate:booking.com/search?destination=China\\&filter=ev_charging -->\n"
+  "content": "Write 800+ words here. Cover: route overview 1200km 12 hours. G2 expressway charging every 50km. State Grid 350kW chargers. Stops: Beijing to Jinan 400km. Jinan springs and food. Jinan to Nanjing 550km via Xuzhou. Nanjing history and wall. Nanjing to Shanghai 300km. Total EV cost 300RMB vs petrol 800RMB. Apps: State Grid e-Charging, TELD, Amap. Tips for families: book hotels with charging, snacks at service plazas, download entertainment. Seasons: spring best.\n\n<!-- affiliate:booking.com/search?destination=China\\&filter=ev_charging -->\n",
+  "relatedPosts": [
+    {
+      "slug": "shanghai-hangzhou-ev-road-trip-guide",
+      "title": "Shanghai to Hangzhou EV Road Trip: West Lake, Tea & Charging Guide [2026]"
+    },
+    {
+      "slug": "china-ev-charging-guide-foreigners-2026",
+      "title": "China EV Charging Guide for Foreign Tourists 2026: Renting, Apps, WeChat, and City-by-City Breakdown"
+    },
+    {
+      "slug": "china-yangtze-river-delta-ev-road-trip",
+      "title": "Shanghai to Hangzhou to Nanjing: Yangtze River Delta EV Road Trip 2026"
+    },
+    {
+      "slug": "hong-kong-guangzhou-ev-road-trip",
+      "title": "Hong Kong to Guangzhou EV Road Trip: Cross-Border Driving Through Greater Bay Area"
+    },
+    {
+      "slug": "hong-kong-guangzhou-ev-road-trip-guide",
+      "title": "Hong Kong to Guangzhou EV Road Trip Guide: Cross-Border Charging [2026]"
+    }
+  ]
 }

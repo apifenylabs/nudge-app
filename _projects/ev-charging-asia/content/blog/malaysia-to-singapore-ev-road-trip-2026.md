@@ -1,3 +1,12 @@
+---
+title: "Kuala Lumpur to Singapore: The Ultimate EV Road Trip Guide 2026"
+description: "Complete guide to driving from KL to Singapore by EV in 2026. Route planning, charging stops along the North-South Expressway, border crossing tips, and estimated costs."
+date: "2026-06-01"
+author: "EV Charging Asia Team"
+tags: ["ev", "ev-charging", "malaysia", "singapore", "road-trip", "cross-border"]
+category: "road-trip"
+---
+
 # Kuala Lumpur to Singapore: The Ultimate EV Road Trip Guide 2026
 
 The Kuala Lumpur to Singapore drive is one of Southeast Asia's most popular road trip routes — and in 2026, it's finally fully viable for electric vehicles. With Malaysia's rapid charging corridor along the North-South Expressway (NSE/NKVE) now boasting a charging station every 50km, and Singapore's dense network of AC and DC chargers, you can make the 350km journey stress-free.

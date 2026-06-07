@@ -15,5 +15,27 @@
     "breakdown Asia",
     "stranded EV"
   ],
-  "imageUrl": "/images/blog/placeholder.jpg"
+  "imageUrl": "/images/blog/placeholder.jpg",
+  "relatedPosts": [
+    {
+      "slug": "bangkok-to-krabi-ev-road-trip-southern-thailand",
+      "title": "Bangkok to Krabi EV Road Trip: Southern Thailand Adventure with Charging Stops in Chumphon and Surat Thani"
+    },
+    {
+      "slug": "chennai-to-pondicherry-ev-road-trip-east-coast-road",
+      "title": "Chennai to Pondicherry EV Road Trip: India's Emerging EV Corridor Along the East Coast Road"
+    },
+    {
+      "slug": "ev-cross-border-asean-thailand-malaysia-singapore-guide",
+      "title": "EV Cross-Border Travel in ASEAN 2026: Thailand, Malaysia & Singapore Guide"
+    },
+    {
+      "slug": "ev-vs-petrol-cost-thailand-2026",
+      "title": "Cost Analysis: EV vs Petrol Car for Family Travel in Thailand 2026"
+    },
+    {
+      "slug": "japan-ev-road-trip-guide-international-visitors",
+      "title": "EV Road Tripping in Japan: Complete Guide for International Visitors (2026)"
+    }
+  ]
 }

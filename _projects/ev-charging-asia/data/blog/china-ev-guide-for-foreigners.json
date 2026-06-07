@@ -41,5 +41,27 @@
       "question": "Is it expensive to charge an EV in China?",
       "answer": "No — it's very cheap. Home charging: 0.3-0.8 RMB/kWh. Public DC fast charging: 0.8-2.0 RMB/kWh. A full charge for a 60 kWh battery costs 18-120 RMB (US$2.50-17). Compare to a petrol tank at ~450 RMB."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "china-ev-charging-guide-foreigners-2026",
+      "title": "China EV Charging Guide for Foreign Tourists 2026: Renting, Apps, WeChat, and City-by-City Breakdown"
+    },
+    {
+      "slug": "hong-kong-guangzhou-ev-road-trip",
+      "title": "Hong Kong to Guangzhou EV Road Trip: Cross-Border Driving Through Greater Bay Area"
+    },
+    {
+      "slug": "south-korea-ev-charging-network",
+      "title": "South Korea EV Charging Network Guide 2026 — Complete Guide for Foreigners Using Korean Chargers"
+    },
+    {
+      "slug": "ccs2-vs-chademo-asia",
+      "title": "CCS2 vs CHAdeMO: Which Charging Standard Should You Pick in Asia?"
+    },
+    {
+      "slug": "hong-kong-ev-charging-complete-guide-2026",
+      "title": "Hong Kong EV Charging Guide 2026: Complete Guide for EV Owners &amp; Visitors"
+    }
   ]
 }

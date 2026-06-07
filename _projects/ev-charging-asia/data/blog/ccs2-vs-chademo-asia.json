@@ -48,5 +48,27 @@
       "answer": "Yes, if you have the right adapter. Tesla Model 3 and Model Y sold in Asia (outside Japan) use CCS2, so they can charge at any CCS2 station. In Japan, Tesla vehicles ship with CHAdeMO, so a CHAdeMO adapter is recommended for non-Supercharger access."
     }
   ],
-  "imageUrl": "/blog/images/ccs2-vs-chademo-asia.jpg"
+  "imageUrl": "/blog/images/ccs2-vs-chademo-asia.jpg",
+  "relatedPosts": [
+    {
+      "slug": "ev-charging-in-asia-2026-complete-guide",
+      "title": "EV Charging in Asia 2026 — Complete Guide to Connectors, Networks, and Road Trips"
+    },
+    {
+      "slug": "china-ev-guide-for-foreigners",
+      "title": "China EV Guide for Foreigners 2026 — How to Charge, Apps, Payment, and Cross-Border Driving Tips"
+    },
+    {
+      "slug": "ev-charging-asia-2026-guide",
+      "title": "EV Charging Apps and Payment Guide for Asia — Which Ones You Actually Need"
+    },
+    {
+      "slug": "indonesia-ev-charging-complete-guide-2026",
+      "title": "Indonesia EV Charging Complete Guide 2026 — Networks, Stations & Road Trip Tips"
+    },
+    {
+      "slug": "asia-ev-battery-recycling-guide-2026",
+      "title": "Asia EV Battery Recycling Guide 2026 — Regulations, Facilities & What Happens to Old EV Batteries"
+    }
+  ]
 }

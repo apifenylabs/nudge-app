@@ -45,5 +45,27 @@
       "question": "What's the best charging setup for a 10-van delivery fleet?",
       "answer": "Install 10x 22kW AC chargers (one per bay) for overnight charging, plus 2x 60kW DC chargers for midday top-ups. Estimated investment: $60,000-80,000. Add rooftop solar to reduce charging costs by 30-50%."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "best-ev-charging-apps-asia-comparison",
+      "title": "Best EV Charging Apps for Asia: Which Ones Actually Work [2026]"
+    },
+    {
+      "slug": "ev-charging-asia-2026-guide",
+      "title": "EV Charging Apps and Payment Guide for Asia — Which Ones You Actually Need"
+    },
+    {
+      "slug": "ev-vs-hybrid-vs-petrol-southeast-asia-tco-2026",
+      "title": "EV vs Hybrid vs Petrol in Southeast Asia 2026 — Total Cost of Ownership Comparison"
+    },
+    {
+      "slug": "electric-motorcycles-vs-evs-southeast-asia",
+      "title": "Electric Motorcycles vs EVs in Southeast Asia — Practical Comparison for Urban Commuting in 2026"
+    },
+    {
+      "slug": "ev-charging-apps-suck-asia",
+      "title": "Why EV Charging Apps Suck in Southeast Asia (And What to Do About It)"
+    }
   ]
 }

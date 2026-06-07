@@ -40,5 +40,27 @@
       "answer": "Most manufacturers recommend coolant replacement every 4-5 years for both the battery thermal system and drive unit. Coolant breaks down faster in hot climates."
     }
   ],
-  "imageUrl": "/blog/images/ev-maintenance-humid-climate-asia.jpg"
+  "imageUrl": "/blog/images/ev-maintenance-humid-climate-asia.jpg",
+  "relatedPosts": [
+    {
+      "slug": "ev-road-trip-preparation-checklist-asia-2026",
+      "title": "Ultimate EV Road Trip Preparation Checklist for Asia 2026 — What to Pack, Plan & Pre-Check"
+    },
+    {
+      "slug": "best-ev-charging-apps-asia-comparison",
+      "title": "Best EV Charging Apps for Asia: Which Ones Actually Work [2026]"
+    },
+    {
+      "slug": "ev-charging-network-comparison-southeast-asia-charge-plus-shell-plugshare",
+      "title": "EV Charging Network Comparison Southeast Asia: Charge+ vs Shell Recharge vs PlugShare (2026 Guide)"
+    },
+    {
+      "slug": "best-family-friendly-ev-road-trips-southeast-asia",
+      "title": "Best Family-Friendly EV Road Trips in Southeast Asia"
+    },
+    {
+      "slug": "ev-charging-asia-2026-guide",
+      "title": "EV Charging Apps and Payment Guide for Asia — Which Ones You Actually Need"
+    }
+  ]
 }

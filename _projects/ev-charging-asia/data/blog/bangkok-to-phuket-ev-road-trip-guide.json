@@ -34,5 +34,27 @@
       "question": "Is Phuket itself EV-friendly?",
       "answer": "Very. 30+ public charging stations, including 150kW at Central Floresta and Jungceylon Patong. Most major hotels offer charging."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "bangkok-pattaya-rayong-ev-road-trip",
+      "title": "Bangkok → Pattaya → Rayong: A 4-Day Family EV Beach Road Trip in Thailand"
+    },
+    {
+      "slug": "thailand-bangkok-chiang-mai-offbeat-ev-road-trip",
+      "title": "Thailand EV Adventure: Bangkok to Chiang Mai via Sukhothai, Lampang & Doi Inthanon"
+    },
+    {
+      "slug": "thailand-bangkok-chiang-mai-ev-guide",
+      "title": "Thailand EV Family Road Trip: Bangkok to Chiang Mai — Complete Route Guide"
+    },
+    {
+      "slug": "bangkok-chiang-mai-ev-road-trip-itinerary",
+      "title": "Bangkok to Chiang Mai EV Road Trip: 5-Day Northern Thailand Family Adventure Through Lampang, Tak & Nakhon Sawan"
+    },
+    {
+      "slug": "thailand-ev-charging-guide-bangkok-chiang-mai-phuket-pattaya",
+      "title": "Thailand EV Charging Guide — Best Routes from Bangkok to Chiang Mai, Phuket, and Pattaya"
+    }
   ]
 }

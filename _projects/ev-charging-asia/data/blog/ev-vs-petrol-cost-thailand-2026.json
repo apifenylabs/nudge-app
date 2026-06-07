@@ -41,5 +41,27 @@
       "answer": "Major highways are well covered. Rural areas remain underserved. Check the EA Anywhere or PTT Station app before heading into remote areas."
     }
   ],
-  "imageUrl": "/blog/images/ev-vs-petrol-cost-thailand-2026.jpg"
+  "imageUrl": "/blog/images/ev-vs-petrol-cost-thailand-2026.jpg",
+  "relatedPosts": [
+    {
+      "slug": "bangkok-to-phuket-ev-road-trip-guide",
+      "title": "Bangkok to Phuket EV Road Trip Guide: Charging Stops, Costs & Family Tips [2026]"
+    },
+    {
+      "slug": "top-10-ev-friendly-hotels-asia",
+      "title": "Top 10 EV-Friendly Hotels in Asia — Best Stays With Destination Charging"
+    },
+    {
+      "slug": "best-family-friendly-ev-road-trips-southeast-asia",
+      "title": "Best Family-Friendly EV Road Trips in Southeast Asia"
+    },
+    {
+      "slug": "thailand-bangkok-chiang-mai-ev-guide",
+      "title": "Thailand EV Family Road Trip: Bangkok to Chiang Mai — Complete Route Guide"
+    },
+    {
+      "slug": "bangkok-pattaya-rayong-ev-road-trip",
+      "title": "Bangkok → Pattaya → Rayong: A 4-Day Family EV Beach Road Trip in Thailand"
+    }
+  ]
 }

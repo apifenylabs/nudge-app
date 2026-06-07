@@ -1,0 +1,1 @@
+/home/captain/life/CONSOLIDATION.md

@@ -41,5 +41,27 @@
       "question": "Is Jeju Island good for EV driving?",
       "answer": "Excellent. Jeju was the testbed for Korea's EV program and has the highest per-capita charging coverage. Jeju Airport has DC fast chargers for rental returns. Seogwipo and Hallasan have coverage. Ideal for a scenic island road trip."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "south-korea-ev-charging-complete-guide-2026",
+      "title": "South Korea EV Charging Guide 2026 — Networks, Highway Stops & Complete Route Planning"
+    },
+    {
+      "slug": "seoul-to-busan-ev-road-trip-family-itinerary",
+      "title": "Seoul to Busan EV Road Trip: 5-Day Family Journey via Gyeongju, Daegu & Korea's Ultra-Fast Charging Corridor"
+    },
+    {
+      "slug": "top-10-ev-friendly-hotels-south-korea-best-stays-with-ev-charging-2026",
+      "title": "Top 10 EV-Friendly Hotels in South Korea: Best Stays with EV Charging 2026"
+    },
+    {
+      "slug": "seoul-busan-gyeongju-south-korea-ev-road-trip",
+      "title": "South Korea EV Road Trip: Seoul → Busan → Gyeongju"
+    },
+    {
+      "slug": "china-ev-guide-for-foreigners",
+      "title": "China EV Guide for Foreigners 2026 — How to Charge, Apps, Payment, and Cross-Border Driving Tips"
+    }
   ]
 }

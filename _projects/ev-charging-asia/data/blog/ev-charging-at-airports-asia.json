@@ -48,5 +48,27 @@
       "question": "What connector do I need at Asian airports?",
       "answer": "CCS2 at most airports (Changi, Incheon, BKK, KLIA, HKG, TPE, MNL). CHAdeMO at Japanese airports (Narita, Haneda). GB/T at Chinese airports (Pudong, Beijing). Bring adapters if your EV uses a different standard."
     }
+  ],
+  "relatedPosts": [
+    {
+      "slug": "south-korea-ev-charging-network",
+      "title": "South Korea EV Charging Network Guide 2026 — Complete Guide for Foreigners Using Korean Chargers"
+    },
+    {
+      "slug": "ev-charging-apps-suck-asia",
+      "title": "Why EV Charging Apps Suck in Southeast Asia (And What to Do About It)"
+    },
+    {
+      "slug": "singapore-ev-charging-complete-guide-2026",
+      "title": "Singapore EV Charging Guide 2026: Complete Guide for EV Owners &amp; Visitors"
+    },
+    {
+      "slug": "singapore-best-family-hotels-ev-charging",
+      "title": "5 Best Family-Friendly Hotels in Singapore with EV Charging (2026)"
+    },
+    {
+      "slug": "asean-ccs2-cross-border-ev-travel-2026",
+      "title": "ASEAN Unifies EV Charging: CCS-2 Standard Enables Cross-Border Road Trips in 2026"
+    }
   ]
 }

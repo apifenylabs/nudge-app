@@ -323,7 +323,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
 
         <BlogBookingCTA tags={post.tags} />
 
-        {post.relatedDestinations.length > 0 && (
+        {post.relatedDestinations && post.relatedDestinations.length > 0 && (
           <div className="mt-12 pt-8 border-t border-gray-200">
             <h3 className="text-lg font-bold text-gray-900 mb-4">Related Destinations</h3>
             <div className="flex flex-wrap gap-3">

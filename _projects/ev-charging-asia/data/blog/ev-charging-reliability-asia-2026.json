@@ -12,5 +12,15 @@
     "planning",
     "charging-tips"
   ],
-  "imageUrl": "/blog/images/ev-charging-reliability-asia-2026.jpg"
+  "imageUrl": "/blog/images/ev-charging-reliability-asia-2026.jpg",
+  "relatedPosts": [
+    {
+      "slug": "survive-broken-ev-chargers-asia",
+      "title": "How to Survive an EV Road Trip When Chargers Are Broken"
+    },
+    {
+      "slug": "summer-ev-road-trip-guide-asia-2026",
+      "title": "Summer EV Road Trip Guide Asia 2026: Best June-August Routes, Heat Management & Family Itineraries"
+    }
+  ]
 }

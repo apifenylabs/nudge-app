@@ -13,5 +13,27 @@
     "reliability",
     "safety"
   ],
-  "imageUrl": "/blog/images/survive-broken-ev-chargers-asia.jpg"
+  "imageUrl": "/blog/images/survive-broken-ev-chargers-asia.jpg",
+  "relatedPosts": [
+    {
+      "slug": "ev-charging-reliability-asia-2026",
+      "title": "EV Charging Reliability in Asia: Which Countries Have Working Chargers?"
+    },
+    {
+      "slug": "india-ev-charging-guide-2026",
+      "title": "India EV Charging Guide 2026 — City-by-City Breakdown"
+    },
+    {
+      "slug": "vietnam-ev-road-trip-guide-hanoi-ho-chi-minh-city",
+      "title": "Vietnam EV Road Trip Guide: Hanoi to Ho Chi Minh City via Da Nang — The Ultimate Coastal Route"
+    },
+    {
+      "slug": "cambodia-ev-road-trip-angkor-wat",
+      "title": "Cambodia EV Road Trip — Phnom Penh to Siem Reap (Angkor Wat) in an Electric Car"
+    },
+    {
+      "slug": "hanoi-sapa-ev-road-trip-vietnam",
+      "title": "Hanoi to Sapa EV Road Trip — Conquering Vietnam's Mountain Roads in an Electric Car"
+    }
+  ]
 }

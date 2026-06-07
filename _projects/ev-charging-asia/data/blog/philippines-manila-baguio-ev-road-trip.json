@@ -45,5 +45,27 @@
     "ph-tarlac-001",
     "ph-manila-001"
   ],
-  "imageUrl": "/blog/images/philippines-manila-baguio-ev-road-trip.jpg"
+  "imageUrl": "/blog/images/philippines-manila-baguio-ev-road-trip.jpg",
+  "relatedPosts": [
+    {
+      "slug": "philippines-ev-road-trip-manila-baguio-tagaytay-batangas",
+      "title": "Philippines EV Road Trip: Manila to Baguio & Tagaytay — Complete Charging Guide 2026"
+    },
+    {
+      "slug": "manila-to-baguio-ev-road-trip-philippines-cordillera-mountain-route",
+      "title": "Manila to Baguio EV Road Trip: Philippines' Cordillera Mountain Route"
+    },
+    {
+      "slug": "philippines-inter-island-ev-ferry-roro-guide-2026",
+      "title": "Philippines Inter-Island EV RORO Guide"
+    },
+    {
+      "slug": "singapore-penang-ev-road-trip-guide",
+      "title": "Singapore to Penang EV Road Trip Guide: Best Charging Stops"
+    },
+    {
+      "slug": "philippines-ev-charging-guide",
+      "title": "Philippines EV Charging Guide 2026 — Complete Guide to Charging in Manila, Cebu, and Key Routes"
+    }
+  ]
 }
