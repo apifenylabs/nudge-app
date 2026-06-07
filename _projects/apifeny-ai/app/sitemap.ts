@@ -74,13 +74,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
  } catch { return []; }
  })();
 
+ // ====== NON-COUNTRY ai-tools-* dirs that should NOT appear in the geo section ======
+ const NON_COUNTRY_AI_TOOLS = new Set([
+ 'ai-tools-for-startups',
+ 'ai-tools-by-category',
+ 'ai-tools-for-digital-marketing',
+ ]);
+
  // Dynamically discover all ai-tools-* country pages from the app directory
  const aiToolCountryEntries: MetadataRoute.Sitemap = (() => {
  try {
  const appDir = path.join(process.cwd(), 'app');
  const entries = fs.readdirSync(appDir, { withFileTypes: true });
  return entries
- .filter(d => d.isDirectory() && d.name.startsWith('ai-tools-') && d.name !== 'ai-tools-for-startups' && d.name !== 'ai-tools-by-category')
+ .filter(d => d.isDirectory() && d.name.startsWith('ai-tools-') && !NON_COUNTRY_AI_TOOLS.has(d.name))
  .map(d => ({
  url: `${BASE_URL}/${d.name}`,
  lastModified: new Date(),
@@ -102,6 +109,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
  lastModified: new Date(),
  changeFrequency: 'monthly' as const,
  priority: 0.6,
+ }));
+ } catch { return []; }
+ })();
+
+ // Dynamically discover all /collection/ (singular) collection detail pages
+ const collectionSingularEntries: MetadataRoute.Sitemap = (() => {
+ try {
+ const collDir = path.join(process.cwd(), 'app', 'collection', '[slug]');
+ if (!fs.existsSync(collDir)) return [];
+ // Load collection slugs from the same source used by generateStaticParams
+ const { getAllCollectionSlugs } = require('../lib/collections');
+ return getAllCollectionSlugs().map((slug: string): MetadataRoute.Sitemap[number] => ({
+ url: `${BASE_URL}/collection/${slug}`,
+ lastModified: new Date(),
+ changeFrequency: 'weekly',
+ priority: 0.7,
  }));
  } catch { return []; }
  })();
@@ -130,6 +153,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${BASE_URL}/playbooks`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
  { url: `${BASE_URL}/premium`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
  { url: `${BASE_URL}/ai-tools-for-startups`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+ { url: `${BASE_URL}/ai-tools-for-digital-marketing`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
  { url: `${BASE_URL}/best-ai-tools`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
  { url: `${BASE_URL}/best-ai-coding-tools`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
  { url: `${BASE_URL}/best-ai-writing-tools`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
@@ -141,13 +165,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${BASE_URL}/compare/cursor-vs-copilot`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
  { url: `${BASE_URL}/compare/perplexity-vs-chatgpt`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
  { url: `${BASE_URL}/compare/gemini-vs-chatgpt`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-
  // Compare pages added after initial sitemap creation
  { url: `${BASE_URL}/compare/midjourney-vs-dalle`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
  { url: `${BASE_URL}/compare/claude-vs-gemini`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
  { url: `${BASE_URL}/compare/grok-vs-chatgpt`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
  { url: `${BASE_URL}/compare/windsurf-vs-cursor`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-
+ // Guides
  { url: `${BASE_URL}/guides`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
  { url: `${BASE_URL}/guides/how-to-choose-ai-tools`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
  { url: `${BASE_URL}/guides/ai-automation-for-small-business`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
@@ -176,6 +199,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${BASE_URL}/guides/ai-tools-for-agriculture`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
  { url: `${BASE_URL}/guides/ai-tools-for-manufacturing`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
  { url: `${BASE_URL}/guides/ai-tools-for-science-research`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+ // For-pages (audience segments)
  { url: `${BASE_URL}/for/solopreneurs`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
  { url: `${BASE_URL}/for/developers`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
  { url: `${BASE_URL}/for/marketers`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
@@ -184,6 +208,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${BASE_URL}/community-playbook`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
  { url: `${BASE_URL}/success-stories`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
  { url: `${BASE_URL}/build-in-public`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
+ { url: `${BASE_URL}/changelog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
+ { url: `${BASE_URL}/my-playbooks`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
+ { url: `${BASE_URL}/alpha-orchestras`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
  // Static blog feature pages (standalone, not in dynamic blog data)
  { url: `${BASE_URL}/blog/ai-tools-philippines-2026`, lastModified: new Date('2026-05-15'), changeFrequency: 'monthly', priority: 0.6 },
  { url: `${BASE_URL}/blog/best-ai-tools-asia-2026`, lastModified: new Date('2026-05-10'), changeFrequency: 'monthly', priority: 0.6 },
@@ -193,6 +220,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${BASE_URL}/blog/ai-hr-recruiting-asia-2026`, lastModified: new Date('2026-05-31'), changeFrequency: 'monthly', priority: 0.6 },
  { url: `${BASE_URL}/blog/ai-legal-compliance-asia-2026`, lastModified: new Date('2026-05-31'), changeFrequency: 'monthly', priority: 0.6 },
  { url: `${BASE_URL}/blog/ai-supply-chain-logistics-asia-2026`, lastModified: new Date('2026-05-31'), changeFrequency: 'monthly', priority: 0.6 },
+ { url: `${BASE_URL}/blog/ai-customer-support-asia-2026`, lastModified: new Date('2026-06-09'), changeFrequency: 'monthly', priority: 0.6 },
  // User-facing pages (lower priority for SEO but still relevant)
  { url: `${BASE_URL}/submit-playbook`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
  { url: `${BASE_URL}/revenue`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
@@ -206,7 +234,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  priority: 0.8,
  }));
 
- // Collection detail pages (from collections.json)
+ // Collection detail pages (from collections.json, plural route)
  const collectionEntries: MetadataRoute.Sitemap = collections.map((col): MetadataRoute.Sitemap[number] => ({
  url: `${BASE_URL}/collections/${col.slug || col.id}`,
  lastModified: new Date(),
@@ -276,6 +304,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  return [
  ...aiToolCountryEntries,
  ...playbooksPluralEntries,
+ ...collectionSingularEntries,
  ...industryEntries,
  ...staticEntries,
  ...toolEntries,

@@ -19,7 +19,7 @@ const TelemetryInit = dynamic(
  { ssr: false }
 );
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap", preload: true });
 const BASE_URL = 'https://apifeny-ai.vercel.app';
 
 export const metadata: Metadata = {
@@ -86,12 +86,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
  }),
  }}
  />
- {/* Travelpayouts */}
- <script
- dangerouslySetInnerHTML={{
- __html: `(function(){var s=document.createElement("script");s.async=1;s.src="https://emrldtp.cc/NTMwNDAx.js?t=530401";document.head.appendChild(s);})()`,
- }}
- />
  </head>
  <body className="min-h-screen bg-white text-gray-900 flex flex-col">
  <Header />
@@ -102,6 +96,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
  <GoogleAnalytics />
  <EcosystemToggle />
  <TelemetryInit />
+ {/* Travelpayouts — lazy-loaded, non-blocking */}
+ <Script
+ id="travelpayouts"
+ strategy="lazyOnload"
+ dangerouslySetInnerHTML={{
+ __html: `(function(){var s=document.createElement("script");s.async=1;s.src="https://emrldtp.cc/NTMwNDAx.js?t=530401";document.head.appendChild(s);})()`,
+ }}
+ />
  </body>
  </html>
  );

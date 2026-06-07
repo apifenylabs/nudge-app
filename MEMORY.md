@@ -1,3 +1,12 @@
+### HARD RULE: NEVER hardcode secrets in tracked files (2026-06-07 08:43 HKT) — IMMUTABLE
+- Secrets API keys, tokens, passwords, PATs are NEVER written to ANY tracked file: no .py, .ts, .tsx, .js, .sh, .json, .yaml, .yml, .md (including memory/*.md), .txt, .env, config files
+- Secrets live ONLY in: .env.local (gitignored) or Vercel/GitHub/cloud environment variables
+- This rule is CHECKED FIRST every session in MEMORY.md section scan
+- Violation is P0 critical: auto-kill task, alert CEO immediately
+- .env.example can contain public/anonymous keys only (NEXT_PUBLIC_* anon keys are DESIGNED to be public)
+- ANY file that references a secret MUST use env var interpolation only, NEVER hardcoded values
+- Git history with secrets must be force-rewritten with BFG Repo-Cleaner
+
 ### HARD RULE: Governance gate is immutable (2026-05-30 10:11 HKT)
 - Every ALLOC_ in config.py must map to a strategy in APPROVED_STRATEGIES
 - Unregistered strategies are AUTO-KILLED (critical violation, blocks bot start)

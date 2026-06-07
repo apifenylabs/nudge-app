@@ -1,7 +1,9 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import Link from 'next/link';
+import { getBlogPostsForCountry } from '@/lib/blog-data';
+import type { BlogPost } from '@/lib/blog-data';
 import {
   ArrowRight, ChevronRight, Sparkles, TrendingUp, Trophy, Star,
   Zap, BookOpen, MapPin, Globe, Wallet, ShieldCheck,
@@ -193,6 +195,9 @@ export default function CountryPageTemplate({
           </div>
         </div>
       </section>
+
+      {/* IN-DEPTH GUIDES (Blog Posts) */}
+      <BlogGuideSection config={config} />
 
       {/* CATEGORY SECTIONS */}
       {categorySections.map((section) => {
@@ -386,6 +391,72 @@ function CompactToolCard({ tool }: { tool: Tool }) {
         </div>
       </div>
     </Link>
+  );
+}
+
+function BlogGuideSection({ config }: { config: CountryConfig }) {
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+
+  useEffect(() => {
+    const countryName = config.countryName;
+    const countrySlug = config.slug;
+    const results = getBlogPostsForCountry(countryName, countrySlug, 4);
+    setPosts(results);
+  }, [config.countryName, config.slug]);
+
+  if (posts.length === 0) return null;
+
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 border-b border-gray-200">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div>
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center shrink-0">
+              <BookOpen className="w-5 h-5 text-blue-600" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+              In-Depth Guides for {config.countryName}
+            </h2>
+          </div>
+          <p className="text-sm sm:text-base text-gray-500 ml-[52px]">
+            Comprehensive guides and analysis for {config.countryName}&apos;s AI ecosystem
+          </p>
+        </div>
+        <Link
+          href="/blog"
+          className="group inline-flex items-center gap-1.5 text-sm text-blue-600 hover:text-blue-700 transition shrink-0"
+        >
+          View all guides
+          <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+        </Link>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+        {posts.map((post) => (
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="group rounded-xl border border-gray-200 bg-white p-5 sm:p-6 hover:border-blue-300 hover:shadow-md transition-all"
+          >
+            <h3 className="font-semibold text-gray-900 group-hover:text-blue-700 transition mb-2 line-clamp-2">
+              {post.title}
+            </h3>
+            <p className="text-sm text-gray-500 line-clamp-3 mb-3">
+              {post.excerpt}
+            </p>
+            <div className="flex items-center gap-3 text-xs text-gray-400">
+              <span className="inline-flex items-center gap-1">
+                <BookOpen className="w-3 h-3" />
+                {post.readingTime || '5 min read'}
+              </span>
+              {post.date && (
+                <span>{post.date}</span>
+              )}
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }
 

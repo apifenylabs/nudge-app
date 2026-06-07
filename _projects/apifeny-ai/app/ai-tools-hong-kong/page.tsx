@@ -9,6 +9,7 @@ import {
 import SeoMetadata from '@/components/SeoMetadata';
 import FeaturedPlaybooks from '@/components/FeaturedPlaybooks';
 import BlogCategoryLinks from '@/components/BlogCategoryLinks';
+import CountryBlogPosts from '@/components/CountryBlogPosts';
 import LandingPageCrossLinks from '@/components/LandingPageCrossLinks';
 import BrowseByCountry from '@/components/BrowseByCountry';
 import { toolsData } from '@/lib/data';
@@ -123,12 +124,15 @@ export default function AIToolsHongKongPage() {
 
       <BrowseByCountry />
 
-      {/* BLOG LINKS */}
-      <section className="bg-gray-50 border-y border-gray-200">
+            <section className="bg-gray-50 border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <BlogCategoryLinks />
         </div>
       </section>
+      <CountryBlogPosts
+        countryName="Hong Kong"
+        countrySlug="hong-kong"
+      />
 
       {/* FOMO BAR */}
       <div className="border-b border-gray-200 bg-white">

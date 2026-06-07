@@ -1,3 +1,16 @@
+<!-- BEGIN:sekretz-rule -->
+# 🚨 HARD RULE: Never hardcode secrets in tracked files (2026-06-07)
+
+**This is checked FIRST every session. If you skip this, CEO will rightfully call you an idiot.**
+
+- Secrets (API keys, tokens, passwords, PATs) NEVER go in ANY tracked file: .py, .ts, .tsx, .js, .sh, .json, .yaml, .yml, .md (including memory/*.md), .txt, .env, config files
+- Secrets live ONLY in: .env.local (gitignored) or Vercel/GitHub cloud env vars
+- If you need to document which env vars exist, use placeholder values (sk-YOUR_KEY_HERE) — never real ones
+- Violation = P0 critical. CEO must be notified immediately.
+- Git history with secrets must be force-rewritten with BFG Repo-Cleaner
+- This applies to ALL apifenylabs repos on GitHub — every single one is PUBLIC
+<!-- END:sekretz-rule -->
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 

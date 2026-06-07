@@ -142,6 +142,48 @@ export function getBlogPostsForTool(
  * - Blog post tags against tool slugs, category, use_cases
  * Returns scored + ranked results, deduplicated.
  */
+/**
+ * Find blog posts related to a country by matching:
+ * - Country name in blog post title (highest score)
+ * - Country name in blog post tags
+ * - Country code / capital / demonym in tags or excerpt
+ */
+export function getBlogPostsForCountry(
+  countryName: string,
+  countrySlug: string,
+  limit: number = 4
+): BlogPost[] {
+  const cn = countryName.toLowerCase();
+  const cs = countrySlug.toLowerCase().replace('ai-tools-', '');
+
+  const scored = allPosts.map(p => {
+    let score = 0;
+    const titleLow = p.title.toLowerCase();
+    const excerptLow = p.excerpt.toLowerCase();
+    const tagLow = p.tags.map(t => t.toLowerCase());
+
+    // Country name in title = strongest
+    if (titleLow.includes(cn)) score += 5;
+    if (titleLow.includes(cs)) score += 3;
+
+    // Country in excerpt
+    if (excerptLow.includes(cn)) score += 2;
+    if (excerptLow.includes(cs)) score += 1;
+
+    // Tag matches
+    if (tagLow.some(t => t === cs || t.includes(cn))) score += 3;
+    if (tagLow.some(t => t.includes(cs) && t !== cs)) score += 1;
+
+    return { post: p, score };
+  });
+
+  return scored
+    .filter(s => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(s => s.post);
+}
+
 export function getToolsForBlogPost(
   postTitle: string,
   postTags: string[],

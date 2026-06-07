@@ -1,6 +1,8 @@
 import json, os, requests, re
 
-DEEPSEEK_KEY = "sk-bd34aad94bc348faa306a253d606d7db"
+# SECURITY: Secret read from environment ONLY — NEVER hardcode here.
+# Set DEEPSEEK_API_KEY in .env.local (gitignored) or environment.
+DEEPSEEK_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
 
 def ask_deepseek(prompt, model="deepseek-chat", max_tokens=4096):
     headers = {"Content-Type": "application/json", "Authorization": "Bearer " + DEEPSEEK_KEY}
