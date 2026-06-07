@@ -1,0 +1,5 @@
+#!/bin/sh
+# Pre-commit hook: block secrets from being committed
+# Scans staged files for known secret patterns
+
+. "$(dirname "$0")/../scripts/scan-secrets.sh" --pre-commit

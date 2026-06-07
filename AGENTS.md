@@ -9,6 +9,22 @@
 - Violation = P0 critical. CEO must be notified immediately.
 - Git history with secrets must be force-rewritten with BFG Repo-Cleaner
 - This applies to ALL apifenylabs repos on GitHub — every single one is PUBLIC
+
+## 🛑 Human-approval gate for sensitive actions
+
+**Before writing ANY secret/API key/token to ANY file anywhere (local or otherwise), STOP and ask CEO for approval.**
+
+- This includes: local config files, auth profiles, dotfiles, environment files, credential stores
+- This includes: generating files that contain keys as examples or templates
+- This includes: writing keys to network services, cloud vaults, or deployment env vars
+- If uncertain whether something is a secret → treat it as one → ask CEO
+
+Exceptions (no approval needed):
+- Reading a key from an env var and passing it to a runtime API call (no persistence)
+- Writing placeholder values (sk-YOUR_KEY_HERE) in .env.example
+- The pre-commit hook in .githooks/pre-commit — it only BLOCKS, never stores
+
+Violation = immediate CEO notification with full context.
 <!-- END:sekretz-rule -->
 
 <!-- BEGIN:nextjs-agent-rules -->
