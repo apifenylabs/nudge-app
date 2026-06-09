@@ -32,7 +32,6 @@ export function extractFaqFromContent(
     const heading = match[1].trim();
     if (heading.endsWith('?')) {
       const body = match[2].trim();
-      // Extract the first meaningful paragraph as the answer
       const firstParagraph = extractFirstParagraph(body);
       if (firstParagraph && firstParagraph.length > 20) {
         faqs.push({
@@ -43,6 +42,29 @@ export function extractFaqFromContent(
         });
       }
     }
+  }
+
+  // Strategy 1b: H3 headings that look like questions or "How to / What / Why / When / Where / Is / Are / Can / Do / Does"
+  const h3QuestionRegex = /### (.+?)\n([\s\S]*?)(?=\n## |\n### |$)/g;
+  while ((match = h3QuestionRegex.exec(content)) !== null) {
+    const heading = match[1].trim();
+    // Match headings that are clearly questions or actionable "how to" guides
+    const isQuestion = heading.endsWith('?') ||
+      /^(How|What|Why|When|Where|Which|Who|Is|Are|Can|Do|Does|Should|Would|Will)/i.test(heading) ||
+      /^(Top|Best|Ultimate|Complete|Definitive|Step-by-Step|Guide to)/i.test(heading);
+    if (isQuestion && !faqs.some(f => f.question.toLowerCase() === heading.toLowerCase())) {
+      const body = match[2].trim();
+      const firstParagraph = extractFirstParagraph(body);
+      if (firstParagraph && firstParagraph.length > 20) {
+        faqs.push({
+          question: heading,
+          answer: firstParagraph.length > 500
+            ? firstParagraph.substring(0, 497) + '...'
+            : firstParagraph,
+        });
+      }
+    }
+    if (faqs.length >= 6) break;
   }
 
   // Strategy 2: Extract "Key Takeaways" / "FAQ" sections
