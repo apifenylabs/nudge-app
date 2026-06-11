@@ -1,0 +1,46 @@
+{
+  "name": "senior-friendly-travel",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "generate-blog-data": "node scripts/generate-blog-data.mjs",
+    "build": "npm run generate-blog-data && next build",
+    "start": "next start",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "test": "jest",
+    "pm2:start": "pm2 start npm --name \"senior-friendly-travel\" -- run start",
+    "pm2:stop": "pm2 stop senior-friendly-travel",
+    "pm2:restart": "pm2 restart senior-friendly-travel",
+    "pm2:logs": "pm2 logs senior-friendly-travel",
+    "pm2:status": "pm2 status senior-friendly-travel"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.10.2",
+    "@supabase/supabase-js": "^2.104.0",
+    "@tailwindcss/postcss": "^4.2.4",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.468.0",
+    "mapbox-gl": "^3.3.0",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-leaflet": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/mapbox-gl": "^3.3.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "js-beautify": "^1.15.4",
+    "postcss": "^8.5.10",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^5"
+  }
+}

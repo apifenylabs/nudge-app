@@ -1,0 +1,855 @@
+[
+  {
+    "id": "rio-001",
+    "name": "Rio Zoo (Jardim Zoologico do Rio)",
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.3,
+    "priceRange": "$$",
+    "popularity": 82,
+    "description": "The oldest zoo in Latin America, home to over 2,000 animals across 140 species including lions, giraffes, elephants, and native Brazilian wildlife like jaguars and toucans. Shaded tropical pathways and historic pavilion architecture make for a pleasant family stroll in Rio's north zone.",
+    "location": "Parque da Quinta da Boa Vista, Sao Cristovao, Rio de Janeiro",
+    "bestTime": "Morning (9-11 AM, weekdays)",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Snack Bars",
+      "Shaded Walkways",
+      "Bathrooms"
+    ],
+    "safetyFeatures": [
+      "Animal Barriers",
+      "Security Guards",
+      "First Aid Post",
+      "Fenced Playground"
+    ],
+    "tipsAndTricks": [
+      "Skip the weekends -- it gets shoulder-to-shoulder with local families and the animal houses feel cramped.",
+      "Bring an umbrella stroller. The paths are wide but some sections have cracked pavement.",
+      "Feedings happen at 10 AM for the big cats and 2 PM for the primates. Time your visit around those.",
+      "Combine with the Museu Nacional next door -- free on Sundays, kids love the dinosaur skeletons.",
+      "The snack bars only take cash (Reais). No ATM inside, so grab money beforehand."
+    ],
+    "parentStory": {
+      "title": "Toucan at arm's reach changed everything",
+      "excerpt": "A toucan hopped right up to the viewing glass, beak wide open. My 6-year-old pressed her hand against the glass, eye-to-eye with it. She whispered 'he's smiling at me.' That's Rio Zoo -- raw and real.",
+      "author": "Mariana, mom of 2 from Singapore",
+      "fullStory": "The zoo is old -- like, founding-era 1940s old. But that character is what makes it. The toucan enclosure puts you inches away from them. No fancy glass, just mesh. Our daughter stood frozen for 10 minutes while a toucan preened on the other side. It's not a high-tech zoo experience. It's better."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo only, 2-3 hours + playground",
+      "fullDay": "Zoo + Quinta da Boa Vista park + Museu Nacional",
+      "bestFor": "Ages 3-10, animal lovers, families on a budget"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Rio Zoo",
+      "Jardim Zoologico Rio",
+      "family things to do Rio de Janeiro"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ]
+  },
+  {
+    "id": "rio-002",
+    "name": "Rio de Janeiro Botanical Garden (Jardim Botanico)",
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "category": "Parks & Nature",
+    "ageRange": "0-14",
+    "safetyRating": 4.7,
+    "priceRange": "$",
+    "popularity": 88,
+    "description": "A 140-hectare tropical paradise with 6,500 plant species, the iconic imperial palm avenue, orchid house, and a Japanese garden. Wild marmosets and peacocks roam freely, making it a living classroom for kids in the shadow of Corcovado mountain.",
+    "location": "Rua Jardim Botanico 1008, Rio de Janeiro",
+    "bestTime": "Morning (opens 8 AM, quietest before 10)",
+    "imageUrl": "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+    "amenities": [
+      "Picnic Areas",
+      "Shaded Benches",
+      "Cafe",
+      "Restrooms"
+    ],
+    "safetyFeatures": [
+      "Fenced Grounds",
+      "Security at Entrance",
+      "Wide Open Spaces",
+      "Well-Marked Paths"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 8 AM sharp. The marmosets are most active in the first hour and the morning light through the palm avenue is golden for photos.",
+      "Don't feed the marmosets -- it's illegal and teaches them to beg. They'll come within 3 feet naturally anyway.",
+      "The orchid house has 3,000+ species. Give kids a 'find the weirdest flower' challenge.",
+      "There's a children's garden near the cafe with sensory plants and a mini-maze.",
+      "Bring a picnic for under the imperial palms. Shaded benches near the lake are usually quiet."
+    ],
+    "parentStory": {
+      "title": "The marmoset that photobombed our Christmas card",
+      "excerpt": "A wild marmoset jumped onto my son's shoulder while we were eating croissants under the palms. He froze, I snapped. That photo is now our family Christmas card.",
+      "author": "Carlos, dad of 2 from Hong Kong",
+      "fullStory": "We went on a weekday morning and had the garden almost to ourselves. The highlight wasn't the orchids or the palms -- it was a marmoset that made friends with our 5-year-old. It sat on his shoulder, nibbled a croissant crumb, and posed like a pro. The garden is vast and peaceful, and the 360m imperial palm avenue is unmatched for photos."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main garden + orchid house + Japanese garden, 2-3 hours",
+      "fullDay": "Add picnic lunch + sensory garden + nearby Parque Lage",
+      "bestFor": "All ages, nature lovers, photographers"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Jardim Botanico Rio",
+      "Botanical Garden Rio de Janeiro",
+      "Rio with kids nature"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80"
+    ]
+  },
+  {
+    "id": "sao-paulo-001",
+    "name": "Sao Paulo Zoo (Zoologico de Sao Paulo)",
+    "city": "Sao Paulo",
+    "country": "Brazil",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.5,
+    "priceRange": "$$",
+    "popularity": 85,
+    "description": "One of Latin America's largest zoos spanning 82 hectares of Atlantic Forest with over 3,000 animals from 400+ species. Naturalistic enclosures and a leader in conservation of Brazilian species like the golden lion tamarin and maned wolf.",
+    "location": "Av. Miguel Estéfano 4241, Agua Funda, Sao Paulo",
+    "bestTime": "Weekday mornings, April-October",
+    "imageUrl": "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Shaded Walkways",
+      "Restaurants",
+      "Playground",
+      "Tram Tours"
+    ],
+    "safetyFeatures": [
+      "Veterinary Station",
+      "First Aid",
+      "Security Patrols",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "The zoo is huge -- rent a stroller even if your kid usually walks. The loop is 4+ km.",
+      "Go on a Tuesday or Wednesday. Weekends mean 2-hour waits just to park.",
+      "The free tram runs every 20 minutes. Ride to the back enclosures and walk back downhill.",
+      "Bring water. Kiosks are spaced far apart and the heat is brutal even in shade.",
+      "The reptile house is air-conditioned with an incredible anaconda exhibit."
+    ],
+    "parentStory": {
+      "title": "The world's longest walk -- and my 3-year-old walked it",
+      "excerpt": "I thought a 4km zoo loop was ambitious with a 3-year-old. She walked every step because every enclosure had something new.",
+      "author": "Laura, mom of 1 from Jakarta",
+      "fullStory": "Sao Paulo Zoo is massive and I expected to carry my daughter half the way. But the enclosures are so varied -- monkey island to aviary to elephant yard -- that she kept running to the next one. Her favorite was the duck lake where capybaras just hang out. Who knew a giant guinea pig would be the hit?"
+    },
+    "itineraryComparison": {
+      "halfDay": "Main loop via tram to back, walk back, 3 hours",
+      "fullDay": "Full zoo + zoo safari + nearby Science Park",
+      "bestFor": "Ages 3-12, nature-loving families"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Sao Paulo Zoo",
+      "Zoologico SP",
+      "family things to do Sao Paulo"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ]
+  },
+  {
+    "id": "sao-paulo-002",
+    "name": "Hopi Hari Theme Park",
+    "city": "Sao Paulo",
+    "country": "Brazil",
+    "category": "Theme Parks",
+    "ageRange": "3-14",
+    "safetyRating": 4.4,
+    "priceRange": "$$$",
+    "popularity": 83,
+    "description": "Brazil's largest theme park, 70 km from Sao Paulo, with 8 themed areas and 45+ attractions including Brazil's tallest roller coaster (Montezum). Family zones, live shows, and a massive water park section make it a full-day destination.",
+    "location": "Rodovia dos Bandeirantes km 72, Vinhedo, SP",
+    "bestTime": "Weekdays, March-May or August-October",
+    "imageUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+    "amenities": [
+      "Stroller Parking",
+      "Baby Care Station",
+      "Lockers",
+      "Restaurants",
+      "ATM"
+    ],
+    "safetyFeatures": [
+      "Ride Inspections",
+      "Height Restrictions",
+      "Lost Child Center",
+      "Medical Station"
+    ],
+    "tipsAndTricks": [
+      "Midweek is the secret -- on weekdays you can ride everything in 4 hours vs 90-min queues on weekends.",
+      "Montezum has a 1.3m height minimum. Measure your kid at home to avoid a meltdown at the gate.",
+      "The water park section closes at 4 PM. Do it first, then hit dry rides.",
+      "Rent a locker for R$30 -- saves carrying bags through the park all day.",
+      "Check show schedules on the app and plan meals around indoor theatre shows for an AC break."
+    ],
+    "parentStory": {
+      "title": "My 6-year-old conqueror of Brazil's tallest coaster",
+      "excerpt": "She measured exactly 1.31m -- one centimeter over the minimum. She rode Montezum with her hands up the whole way. I cried. She didn't.",
+      "author": "Renata, mom of 1 from Manila",
+      "fullStory": "We drove 70km from Sao Paulo for this park and I wasn't sure our daughter would be tall enough. She barely cleared 1.3m. She rode Montezum 4 times. Then we spent the afternoon in Kaminda (kids' area) which has perfectly sized versions of the big rides. A full 10-hour day she still talks about."
+    },
+    "itineraryComparison": {
+      "halfDay": "Not recommended -- 45 min drive each way",
+      "fullDay": "Arrive 10 AM, water park first, dry rides after lunch, leave 6 PM",
+      "bestFor": "Ages 3-14, thrill-seeking families"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Hopi Hari",
+      "theme park Sao Paulo",
+      "family roller coaster Brazil"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+    ]
+  },
+  {
+    "id": "buenos-aires-001",
+    "name": "Buenos Aires Zoo (Ecoparque)",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.2,
+    "priceRange": "$",
+    "popularity": 78,
+    "description": "Formerly a traditional zoo, now transformed into an eco-park focused on conservation, rehabilitation, and education. Historic 19th-century architecture remains while the focus has shifted to native species and environmental awareness programs.",
+    "location": "Av. General Las Heras 4100, Palermo, Buenos Aires",
+    "bestTime": "Weekday mornings, spring (Oct-Nov)",
+    "imageUrl": "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Educational Programs",
+      "Picnic Areas",
+      "Cafes"
+    ],
+    "safetyFeatures": [
+      "Rehabilitation Protocols",
+      "Educational Guides",
+      "Open Green Spaces",
+      "Security Personnel"
+    ],
+    "tipsAndTricks": [
+      "Don't expect a traditional zoo -- fewer animals as it transitions to a rescue center. Adjust expectations.",
+      "The historic buildings (elephant house, aviary) are architectural gems.",
+      "The reptile rehab center is the standout -- they release rescued iguanas and turtles back to the wild.",
+      "Combine with Palermo parks (Rosedal, Japanese Garden) for a full day outdoors.",
+      "Entry is free or donation-based. Best budget activity in Buenos Aires."
+    ],
+    "parentStory": {
+      "title": "The day my daughter became a conservationist",
+      "excerpt": "She saw a rescued tortoise with a missing leg and asked why. The guide explained the pet trade. My 7-year-old gave us a passionate lecture on conservation that night.",
+      "author": "Tomas, dad of 2 from Kuala Lumpur",
+      "fullStory": "Ecoparque isn't the zoo I grew up with -- smaller, focused on rescue. My daughter was confused at first. But when the guide showed the rehabilitation center and explained they save animals from illegal trafficking, her eyes lit up. She asked me to never buy exotic pets. That's a win."
+    },
+    "itineraryComparison": {
+      "halfDay": "Ecoparque + Botanical Garden + Palermo lakes",
+      "fullDay": "Add Japanese Garden + MALBA museum (indoor break)",
+      "bestFor": "Ages 4-10, eco-conscious families"
+    },
+    "commissionRate": "2%",
+    "seoKeywords": [
+      "Buenos Aires Ecoparque",
+      "Buenos Aires zoo",
+      "family Buenos Aires parks"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1438109491414-7198515b166b?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ]
+  },
+  {
+    "id": "buenos-aires-002",
+    "name": "Temaiken Biopark",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.9,
+    "priceRange": "$$",
+    "popularity": 90,
+    "description": "Argentina's premier biopark combining a zoo, aquarium, aviary, and botanical garden in 34 hectares with species from five continents. Walk-through aviary, spectacular ocean tank with sharks and rays -- world-class standards rivaling the best facilities globally.",
+    "location": "RP25 km 0.5, Belen de Escobar, Buenos Aires Province",
+    "bestTime": "Weekdays, March-November",
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Restaurants",
+      "Picnic Zones",
+      "Souvenir Shop",
+      "Playgrounds"
+    ],
+    "safetyFeatures": [
+      "Glass Barriers",
+      "Life Jackets (Aquarium)",
+      "First Aid Posts",
+      "Trained Staff Throughout"
+    ],
+    "tipsAndTricks": [
+      "50km from Buenos Aires -- rent a car or take the organized bus tour. Don't rely on taxis for return.",
+      "The walk-through aviary and aquarium are the crown jewels. Go to the aquarium first to beat crowds.",
+      "The ocean tank viewing window is 3 storeys high. Sit for 15 minutes -- kids find the rays hypnotic.",
+      "Bring swimsuits for the splash park (summer only). A lifesaver on hot days.",
+      "Pack a picnic. The designated picnic areas are shaded and lovely."
+    ],
+    "parentStory": {
+      "title": "The ocean tank that quieted my toddler",
+      "excerpt": "My 2-year-old doesn't sit still for 30 seconds. She sat in front of the ocean tank for 45 minutes. Rays, sharks, silver fish -- she waved at them all.",
+      "author": "Valentina, mom of 2 from Bangkok",
+      "fullStory": "We drove from Buenos Aires expecting a decent zoo. Temaiken is world-class. The aquarium tunnel is extraordinary -- a moving walkway through a submerged tunnel with sharks overhead. But the massive ocean tank was the showstopper. My toddler pressed her face against the glass for nearly an hour."
+    },
+    "itineraryComparison": {
+      "halfDay": "Not recommended -- 1+ hour drive each way",
+      "fullDay": "Arrive 10 AM, aquarium first, aviary, land animals, picnic, leave 5 PM",
+      "bestFor": "Ages 2-14, animal lovers, families willing to travel"
+    },
+    "commissionRate": "6%",
+    "seoKeywords": [
+      "Temaiken Biopark",
+      "Buenos Aires aquarium",
+      "family day trip Buenos Aires"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ]
+  },
+  {
+    "id": "cape-town-001",
+    "name": "Two Oceans Aquarium",
+    "city": "Cape Town",
+    "country": "South Africa",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.8,
+    "priceRange": "$$",
+    "popularity": 92,
+    "description": "One of the world's top aquariums, showcasing marine life from both the Atlantic and Indian Oceans. The I&J Ocean Exhibit holds 2 million liters with sharks, rays, and a kelp forest. Penguins, sea turtles, and touch pools make it unforgettable for young children.",
+    "location": "V&A Waterfront, Dock Rd, Cape Town",
+    "bestTime": "Weekday mornings (opens 9:30 AM)",
+    "imageUrl": "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Baby Changing Facilities",
+      "Cafe",
+      "Gift Shop",
+      "Lockers"
+    ],
+    "safetyFeatures": [
+      "Glass Safety Barriers",
+      "Life Jackets (Penguin Encounters)",
+      "First Aid Station",
+      "Security"
+    ],
+    "tipsAndTricks": [
+      "Book penguin feeding online in advance (11:30 AM). Only 30 spots -- gone within an hour of opening.",
+      "The touch pool at the entrance is free even without admission. Good warm-up for nervous kids.",
+      "The kelp forest exhibit is most photogenic around 10 AM when morning light streams through the tank.",
+      "Avoid SA school holidays (July, December) -- queues wrap around the building.",
+      "Combine with V&A Waterfront -- free splash fountains and the ferris wheel are a 2-min walk away."
+    ],
+    "parentStory": {
+      "title": "She told the penguin her deepest secrets",
+      "excerpt": "At the penguin feeding, our 4-year-old leaned in and whispered to a penguin for 5 minutes. The keeper waited. The penguin tilted its head. I have no idea what she said.",
+      "author": "Nadia, mom of 1 from Singapore",
+      "fullStory": "We spent the whole morning at Two Oceans. The ocean exhibit is breathtaking -- a 2-million-liter tank with ragged-tooth sharks that look terrifying but the guides explain they're docile. The penguin encounter costs extra but watching a 4-year-old confide in a penguin is the purest thing I've ever witnessed."
+    },
+    "itineraryComparison": {
+      "halfDay": "Main exhibits + penguin encounter + touch pool, 3 hours",
+      "fullDay": "Add V&A Waterfront + Cape Wheel + lunch at the waterfront",
+      "bestFor": "Ages 2-12, marine lovers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Two Oceans Aquarium",
+      "Cape Town with kids",
+      "family aquarium South Africa"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1647592720834-ffe28f6ddf75?w=800&q=80",
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80"
+    ]
+  },
+  {
+    "id": "cape-town-002",
+    "name": "Table Mountain Aerial Cableway",
+    "city": "Cape Town",
+    "country": "South Africa",
+    "category": "Parks & Nature",
+    "ageRange": "0-99",
+    "safetyRating": 4.9,
+    "priceRange": "$$",
+    "popularity": 96,
+    "description": "The iconic cable car ride to the flat-topped summit of Table Mountain, offering 360-degree views of Cape Town, Robben Island, and the Cape Peninsula. The revolving floor provides an unforgettable experience for kids, with hiking trails and dassies (rock hyraxes) at the top.",
+    "location": "Tafelberg Rd, Cape Town (Lower Cable Station)",
+    "bestTime": "Early morning (first car at 8 AM winter, 8:30 AM summer)",
+    "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "amenities": [
+      "Cable Car (Revolving Floor)",
+      "Restaurant at Top",
+      "Restrooms",
+      "Walking Trails",
+      "Souvenir Shop"
+    ],
+    "safetyFeatures": [
+      "Weather Monitoring",
+      "Cable Safety Systems",
+      "Guided Paths",
+      "Emergency Personnel"
+    ],
+    "tipsAndTricks": [
+      "Check the webcam before you go -- the cableway closes on short notice due to wind.",
+      "Book tickets online 24+ hours in advance. Walk-up queue can be 90+ minutes.",
+      "Bring jackets -- it's often 10C colder at the top, even in summer.",
+      "Don't feed the dassies (rock hyraxes). They're wild and they bite.",
+      "The Summit Circle is a flat 45-min paved walk with incredible views -- no hiking boots needed."
+    ],
+    "parentStory": {
+      "title": "The revolving floor made my 3-year-old's jaw drop",
+      "excerpt": "As the cable car rotated, my 3-year-old watched the whole city spin. She said 'we're in a flying house.' Worth the entire 12-hour flight from Doha.",
+      "author": "Aisha, mom of 2 from Dubai",
+      "fullStory": "The cable ride is surprisingly smooth and the revolving floor is genius -- the car rotates 360 degrees during the 5-min ascent so everyone sees everything. At the top we walked the Platteklip Gorge trail (just the first 200m) and the dassies stole our snacks. Go at 3 PM for golden hour."
+    },
+    "itineraryComparison": {
+      "halfDay": "Cable car up, summit walk, photos, cable car down, 2-3 hours",
+      "fullDay": "Add hiking down via Platteklip Gorge (2-3h) + lunch at the mountain restaurant",
+      "bestFor": "All ages, especially 3+ for cable car experience"
+    },
+    "commissionRate": "4%",
+    "seoKeywords": [
+      "Table Mountain cable car",
+      "Cape Town family",
+      "Table Mountain with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80"
+    ]
+  },
+  {
+    "id": "johannesburg-001",
+    "name": "Johannesburg Zoo",
+    "city": "Johannesburg",
+    "country": "South Africa",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-12",
+    "safetyRating": 4.4,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "The largest zoo in South Africa with over 2,000 animals across 55 hectares. Famous for its zoo lake, children's farm, and the only polar bear exhibit in Africa. Excellent conservation programs and behind-the-scenes animal encounters.",
+    "location": "Jan Smuts Ave, Parkview, Johannesburg",
+    "bestTime": "Weekday mornings, March-May or August-October",
+    "imageUrl": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Children's Farm",
+      "Playground",
+      "Restaurants",
+      "Zoo Lake Paddle Boats"
+    ],
+    "safetyFeatures": [
+      "Fenced Enclosures",
+      "Security Guards",
+      "First Aid Room",
+      "CCTV Coverage"
+    ],
+    "tipsAndTricks": [
+      "The polar bear exhibit is controversial. Explain to older kids why polar bears in Africa need cooling systems.",
+      "Do the 10:30 AM seal feeding -- the seals get rowdy and the keeper commentary is excellent.",
+      "Buy a combo ticket for zoo + paddle boats at the entrance -- saves 20%.",
+      "If only Saturday works, arrive at 8 AM when gates open.",
+      "The zoo ranger tour (R50) goes behind the scenes to the kitchen and vet areas. Book at info desk."
+    ],
+    "parentStory": {
+      "title": "The lion yawned and my son screamed with laughter",
+      "excerpt": "The lion yawned right in front of us, showing massive teeth, and my 4-year-old burst into hysterical laughter. He was 3 meters from a wild predator and thought it was hilarious.",
+      "author": "David, dad of 2 from Perth",
+      "fullStory": "We heard Joburg Zoo was just okay but it exceeded expectations. The enclosures are large, the animals visible, and the children's farm has goats and rabbits they can pet. Two lions were lounging 3 meters from the glass and our son couldn't stop laughing."
+    },
+    "itineraryComparison": {
+      "halfDay": "Zoo + children's farm + paddle boats, 3 hours",
+      "fullDay": "Add Johannesburg Botanical Garden (adjacent) + Emmarentia Dam",
+      "bestFor": "Ages 2-10, animal lovers"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Johannesburg Zoo",
+      "Joburg with kids",
+      "family activities Johannesburg"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80",
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80"
+    ]
+  },
+  {
+    "id": "johannesburg-002",
+    "name": "Gold Reef City Theme Park",
+    "city": "Johannesburg",
+    "country": "South Africa",
+    "category": "Theme Parks",
+    "ageRange": "3-14",
+    "safetyRating": 4.5,
+    "priceRange": "$$$",
+    "popularity": 86,
+    "description": "A dynamic theme park built on a 19th-century gold mine, combining thrill rides with South African history. The Anaconda roller coaster and Tower of Terror are major draws, while the underground gold mine tour takes families 220m down. Cultural village, 4D theater, and extensive family zones.",
+    "location": "Data Cres, Ormonde, Johannesburg South",
+    "bestTime": "Weekdays, March-May or August-September",
+    "imageUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+    "amenities": [
+      "Stroller Parking",
+      "Baby Care Facilities",
+      "Restaurants",
+      "Lockers",
+      "ATM"
+    ],
+    "safetyFeatures": [
+      "Height Restrictions",
+      "Ride Inspections",
+      "Medical Room",
+      "Lost Child Center"
+    ],
+    "tipsAndTricks": [
+      "Book the underground gold mine tour online. It's 220m deep and takes 90 min -- fascinating for kids 6+.",
+      "Anaconda has a 1.2m height requirement. Lots of kids get turned away at the gate.",
+      "The heritage tour includes gold-pouring demonstrations. Kids get a tiny gold-plated souvenir coin.",
+      "Bring snacks. Theme park food is overpriced and queues during peak are brutal.",
+      "The cultural village has traditional Zulu dancing at 1 PM and 3 PM. Don't miss it."
+    ],
+    "parentStory": {
+      "title": "220 meters underground changed how my son sees money",
+      "excerpt": "He asked where gold comes from. I said 'the ground.' Next thing, we're 220m underground in a real gold mine wearing hard hats. He told everyone 'money comes from rocks' for a week.",
+      "author": "Thabo, dad of 1 from Nairobi",
+      "fullStory": "We came for the rides but the gold mine tour was the highlight. The guides are former miners with incredible stories. My 7-year-old wore a hard hat and rode the cage elevator down 220m. He touched real gold-bearing rock. Now he understands why miners do this dangerous work."
+    },
+    "itineraryComparison": {
+      "halfDay": "Gold mine tour + 3-4 rides, 3-4 hours",
+      "fullDay": "Gold mine + all rides + cultural village + 4D theater",
+      "bestFor": "Ages 4-14, families who want rides + history"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Gold Reef City",
+      "Johannesburg theme park",
+      "family Joburg activities"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80"
+    ]
+  },
+  {
+    "id": "nairobi-001",
+    "name": "Nairobi National Park Safari",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "category": "Zoos & Aquariums",
+    "ageRange": "4-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 91,
+    "description": "The world's only wildlife capital within a capital city -- a 117 sq km national park on Nairobi's doorstep with lions, giraffes, zebras, rhinos, cheetahs, and hippos against a backdrop of the city skyline. A genuine safari experience without leaving the city.",
+    "location": "Lang'ata Rd, Nairobi (7 km from city center)",
+    "bestTime": "Dry season (June-September, Jan-Feb), early morning 6:30-10 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+    "amenities": [
+      "Game Drive Vehicles",
+      "Picnic Sites",
+      "Guides Available",
+      "Restrooms at Gate",
+      "Observation Platforms"
+    ],
+    "safetyFeatures": [
+      "Armed Rangers",
+      "Closed Roof Vehicles Required",
+      "Stay-in-Vehicle Policy",
+      "Gate Security"
+    ],
+    "tipsAndTricks": [
+      "Book a private vehicle with pop-up roof ($80-120 for 4 hours) -- way better than a crowded tour bus.",
+      "Go at 6:30 AM when gates open. Lions are most active at dawn and the light is spectacular.",
+      "Bring binoculars. Cheap ones for each kid turn the drive into a treasure hunt.",
+      "Pack a picnic breakfast. The hippo pools have designated safe picnic spots.",
+      "The park is small but the rhino sanctuary is the absolute highlight -- we saw 7 in one morning."
+    ],
+    "parentStory": {
+      "title": "Five lions crossing the road in front of our car",
+      "excerpt": "A pride of five lions walked across the road 10 meters in front of us. My 6-year-old whispered 'they're like giant cats.' My 8-year-old was speechless. Nairobi National Park is surreal.",
+      "author": "Grace, mom of 3 from Sydney",
+      "fullStory": "We were nervous about safety but the park is well-managed. Armed rangers patrol constantly. Within 20 minutes we saw zebras, giraffes, and then the lions. The rhino sanctuary is remarkable -- we saw 7 white rhinos including a baby. The Nairobi skyline in the background creates photos that look photoshopped."
+    },
+    "itineraryComparison": {
+      "halfDay": "Morning game drive 6:30-11 AM, best for Big 5 and rhinos",
+      "fullDay": "Morning drive + picnic + afternoon at Nairobi Animal Orphanage (adjacent)",
+      "bestFor": "Ages 5+, first-time safari families"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Nairobi National Park",
+      "Kenya safari with kids",
+      "family safari Nairobi"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80"
+    ]
+  },
+  {
+    "id": "nairobi-002",
+    "name": "Giraffe Centre (Lang'ata Giraffe Centre)",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.9,
+    "priceRange": "$",
+    "popularity": 94,
+    "description": "A conservation and education center dedicated to the endangered Rothschild's giraffe. The elevated feeding platform lets kids feed giraffes eye-to-eye -- a magical hands-on experience. This breeding program has saved the species from extinction and now reintroduces them to the wild.",
+    "location": "Lang'ata Rd, Karen, Nairobi",
+    "bestTime": "11 AM (feeding time), weekdays preferred",
+    "imageUrl": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+    "amenities": [
+      "Elevated Feeding Platform",
+      "Education Center",
+      "Gift Shop",
+      "Picnic Area",
+      "Nature Trail"
+    ],
+    "safetyFeatures": [
+      "Supervised Feeding",
+      "Hand Sanitizer Stations",
+      "Height-Restricted Platform",
+      "Staff Throughout"
+    ],
+    "tipsAndTricks": [
+      "The giraffe's tongues are 45cm long, dark blue, and incredibly rough. Your kid will scream-laugh when they get licked. Embrace it.",
+      "Arrive at 11 AM for the official feeding talk -- the guides explain the conservation story and it's way more interesting than you'd expect.",
+      "Go mid-week to avoid groups. Weekends have long queues of local families and school trips.",
+      "The nature trail is short and easy -- a nice 15-min walk after the feeding.",
+      "Combine with Karen Blixen Museum (10 min drive) for a full morning. The museum has a lovely garden cafe."
+    ],
+    "parentStory": {
+      "title": "When a giraffe kissed my 3-year-old",
+      "excerpt": "A 14-foot giraffe bent down, extended its 45cm tongue, and gently took a pellet from my daughter's open palm. She shrieked with joy. I cried. My wife filmed the whole thing.",
+      "author": "Michael, dad of 2 from Seoul",
+      "fullStory": "The Giraffe Centre is small and you could spend just 30 minutes there. But we stayed 2 hours. The elevated platform puts you face-to-face with these magnificent animals. The guides are knowledgeable and passionate. Watching my 3-year-old feed a giraffe for the first time is a memory I'll never forget. Proceeds go to conservation -- it's wholesome in every way."
+    },
+    "itineraryComparison": {
+      "halfDay": "Giraffe Centre (1-2 hours) + Karen Blixen Museum + lunch at Talisman",
+      "fullDay": "Add Nairobi National Park morning game drive + Giraffe Centre afternoon",
+      "bestFor": "Ages 0-14, especially toddlers and preschoolers"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Giraffe Centre Nairobi",
+      "feed giraffes Kenya",
+      "Nairobi with kids"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80",
+      "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80"
+    ]
+  },
+  {
+    "id": "mauritius-001",
+    "name": "Casela World of Adventures",
+    "city": "Mauritius",
+    "country": "Mauritius",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$$",
+    "popularity": 88,
+    "description": "Mauritius's premier adventure park combining a wildlife safari, zoo, and thrill activities in one massive estate. Feed giraffes, walk with lions (supervised), ride quad bikes through sugarcane fields, and zip-line over crocodile enclosures. Family-friendly with dedicated children's zones.",
+    "location": "Royal Rd, Cascavelle, Mauritius",
+    "bestTime": "Weekday mornings, April-June or September-November",
+    "imageUrl": "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurants",
+      "Swimming Pool",
+      "Gift Shop",
+      "Lockers",
+      "Buggy Rentals"
+    ],
+    "safetyFeatures": [
+      "Supervised Animal Encounters",
+      "Safety Briefings",
+      "First Aid Stations",
+      "Life Jackets"
+    ],
+    "tipsAndTricks": [
+      "Book the 'Safari Tour' online at least 48 hours in advance. The walk-in queue sells out by 10 AM.",
+      "The lion walk (walking alongside lions with handlers) is for ages 15+. Don't disappoint younger kids -- do giraffe feeding instead.",
+      "The zip-line over the croc enclosure is the park's signature thrill. Minimum age is 8. It's worth the extra fee.",
+      "Bring swimwear. There's a free pool and water play area that kids love on hot afternoons.",
+      "Skip the overpriced lunch buffet. The cafe at the entrance has better food for half the price."
+    ],
+    "parentStory": {
+      "title": "My 5-year-old fed a giraffe AND petted a giant tortoise",
+      "excerpt": "Within one hour she fed a giraffe, touched a 150-year-old giant tortoise, and rode a pony. She turned to me and said 'this is the best day of my whole life.' Casela delivers.",
+      "author": "Sarah, mom of 2 from Singapore",
+      "fullStory": "Casela is expensive but worth it. The park is huge and well-maintained. The safari bus takes you through African savanna enclosures with rhinos, zebras, and ostriches. The giant tortoise enclosure is incredible -- these ancient creatures roam freely and the kids can touch their shells. The giraffe feeding platform is identical to Nairobi but in a stunning Mauritian setting. A full-day experience."
+    },
+    "itineraryComparison": {
+      "halfDay": "Safari bus + giraffe feeding + tortoise enclosure, 3 hours",
+      "fullDay": "Add zip-line + quad bikes (if kids old enough) + pool time",
+      "bestFor": "Ages 3-12, adventure families"
+    },
+    "commissionRate": "7%",
+    "seoKeywords": [
+      "Casela Mauritius",
+      "Mauritius with kids",
+      "family adventure Mauritius"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1775144113652-6592b3ebeb06?w=800&q=80",
+      "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80"
+    ]
+  },
+  {
+    "id": "seychelles-001",
+    "name": "Ste Anne Marine National Park Boat Tour",
+    "city": "Seychelles",
+    "country": "Seychelles",
+    "category": "Parks & Nature",
+    "ageRange": "2-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 85,
+    "description": "A stunning marine park of six islands just 5 km from Victoria, Mahé. Crystal-clear turquoise waters, coral reefs teeming with tropical fish, sea turtles, and stingrays. Glass-bottom boats allow even non-swimmers to observe the underwater world. Snorkeling gear provided for the adventurous.",
+    "location": "Ste Anne Marine National Park, Mahé, Seychelles",
+    "bestTime": "April-May or October-November (calm seas), 8:30 AM start",
+    "imageUrl": "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+    "amenities": [
+      "Glass-Bottom Boat",
+      "Snorkeling Gear Provided",
+      "Life Jackets (Kids Sizes)",
+      "Beach Picnic Lunch",
+      "Restrooms at Jetty"
+    ],
+    "safetyFeatures": [
+      "Licensed Boat Captains",
+      "Life Jackets for All Sizes",
+      "Emergency Radio",
+      "Shallow Water Zones for Kids"
+    ],
+    "tipsAndTricks": [
+      "Book a private glass-bottom boat for your family ($150-200 for 4 hours). Group tours pack 20+ people and feel rushed.",
+      "The best snorkeling is at Ile Moyenne (Round Island). The current is gentle and there are massive parrotfish and turtles.",
+      "Bring reef-safe sunscreen. Regular sunscreen damages coral and the guides are strict about enforcing this.",
+      "For toddlers (2-5), ask about the glass-bottom option. They'll see everything without getting in the water.",
+      "Pack seasickness meds for kids. The crossing from Mahé can get choppy, especially in July-August."
+    ],
+    "parentStory": {
+      "title": "My 4-year-old snorkeled with a sea turtle",
+      "excerpt": "I put a life jacket and mask on my 4-year-old, held her hand, and pointed down. A massive green sea turtle was swimming right below us. She put her face in the water and screamed with joy. Inhaled a little seawater. Worth it.",
+      "author": "James, dad of 2 from London",
+      "fullStory": "I was nervous taking a 4-year-old snorkeling. But the guides were patient and the water at Ile Moyenne is like a bathtub -- warm, shallow, calm. They gave her a toddler-sized life jacket that kept her perfectly buoyant. The turtle swam right under her. The boat crew had fruit and cold drinks ready. My wife and I got to snorkel in shifts. Perfect family day."
+    },
+    "itineraryComparison": {
+      "halfDay": "3-island tour (Ste Anne, Cerf, Moyenne), 4 hours",
+      "fullDay": "4-island tour + beach BBQ lunch + snorkeling at all spots, 6-7 hours",
+      "bestFor": "Ages 3+, beach and water families"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Ste Anne Marine Park",
+      "Seychelles with kids",
+      "family snorkeling Seychelles"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+      "https://images.unsplash.com/photo-1718863336605-5e9c7c738336?w=800&q=80",
+      "https://images.unsplash.com/photo-1738023354227-16a406891bd2?w=800&q=80"
+    ]
+  },
+  {
+    "id": "bali-extra-001",
+    "name": "Bali Bird Park",
+    "city": "Bali",
+    "country": "Indonesia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "0-14",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 84,
+    "description": "A spectacular 2-hectare aviary park home to over 1,000 birds from 250 species, including the iconic Bali Myna (almost extinct in the wild). Walk-through aviaries let birds fly freely around you while interactive shows feature owls, parrots, and birds of prey. A conservation success story nested in the Gianyar jungle.",
+    "location": "Jl. Serma Cok Ngurah Gambir, Batubulan, Gianyar, Bali",
+    "bestTime": "Morning (opens 9 AM), dry season April-October",
+    "imageUrl": "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurant",
+      "Souvenir Shop",
+      "Shaded Walkways",
+      "Nursing Room"
+    ],
+    "safetyFeatures": [
+      "Supervised Bird Interactions",
+      "Hand Sanitizer Stations",
+      "First Aid",
+      "Shaded Rest Areas"
+    ],
+    "tipsAndTricks": [
+      "Arrive at 9 AM opening. The walk-through aviaries are magical when it's quiet and the birds are most active.",
+      "The 11:30 AM bird show is unmissable -- eagles, owls, and cockatoos fly directly over your head. Front rows get the best experience.",
+      "The Bali Myna breeding center has a viewing window. This critically endangered bird has been saved by this park's breeding program.",
+      "There's a small splash pool near the restaurant. Bring a change of clothes for toddlers.",
+      "Combine with Batubulan's famous Barong dance performances (10 min drive) for a full cultural day."
+    ],
+    "parentStory": {
+      "title": "A Bali Myna landed on my daughter's outstretched arm",
+      "excerpt": "The park guide invited my 7-year-old to hold her arm out. A rare Bali Myna flew down and perched there. White feathers, blue eye patches. She didn't breathe for 30 seconds. Neither did I.",
+      "author": "Anita, mom of 2 from Hong Kong",
+      "fullStory": "Bali Bird Park is a hidden gem. It's not as flashy as the monkey forest or rice terraces, but it's where conservation meets hands-on magic. The guided tour (included) takes you through the breeding center where they're saving the Bali Myna from extinction. The walk-through aviary is stunning -- hornbills fly inches from your head. My daughter's bond with that one bird was unforgettable."
+    },
+    "itineraryComparison": {
+      "halfDay": "Park + bird show + restaurant lunch, 3 hours",
+      "fullDay": "Add Batubulan Barong dance + nearby Batuan Temple",
+      "bestFor": "Ages 2-12, bird lovers, families wanting a break from beach"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Bali Bird Park",
+      "Bali with kids",
+      "family activities Bali"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80",
+      "https://images.unsplash.com/photo-1716745324526-8a4149760198?w=800&q=80",
+      "https://images.unsplash.com/photo-1772550018808-ebbcc271726c?w=800&q=80"
+    ]
+  }
+]

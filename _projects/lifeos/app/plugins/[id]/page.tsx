@@ -264,7 +264,59 @@ export default function PluginPage({ params }: { params: { id: string } }) {
   const statusBadge = STATUS_BADGES[plugin.status] || STATUS_BADGES['coming-soon'];
   const isAvailable = plugin.status === 'active' || plugin.status === 'beta';
 
-  // ─── JSON-LD: BreadcrumbList + SoftwareApplication ───
+  // ─── FAQ items auto-generated from plugin features + phases ───
+  const faqItems = [
+    {
+      '@type': 'Question',
+      name: `What is ${plugin.name} in LifeOS?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `${plugin.name} is a LifeOS AI copilot plugin for ${catInfo.label.toLowerCase()}. ${plugin.description} It offers ${plugin.features.length} features across ${plugin.phases.length} conversation phases.`
+      }
+    },
+    {
+      '@type': 'Question',
+      name: `What can ${plugin.name} do?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: plugin.features.join('. ') + '.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: `Is ${plugin.name} free?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Yes, ${plugin.name} is completely free to use with no account required. Start a conversation right from your browser.`
+      }
+    },
+    {
+      '@type': 'Question',
+      name: `How does the ${plugin.name} AI conversation work?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `The AI leads you through ${plugin.phases.length} phases: ${plugin.phases.map(p => p.name).join(', ')}. In each phase, the AI asks probing questions, researches options, and helps you make decisions.`
+      }
+    },
+    {
+      '@type': 'Question',
+      name: `How is ${plugin.name} different from ChatGPT?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Unlike generic ChatGPT, ${plugin.name} is a structured AI copilot that leads you through ${catInfo.label.toLowerCase()} decisions phase by phase. It doesn't wait for you to know the right questions — it asks, probes, and guides you with purpose-built conversation flows.`
+      }
+    },
+    ...plugin.features.slice(0, 3).map(f => ({
+      '@type': 'Question' as const,
+      name: f.endsWith('?') ? f : `Does ${plugin.name} support ${f.toLowerCase()}?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Yes, ${plugin.name} includes ${f.toLowerCase()} as one of its core features. The AI will guide you through this as part of your ${catInfo.label.toLowerCase()} journey.`
+      }
+    })),
+  ];
+
+  // ─── JSON-LD: BreadcrumbList + SoftwareApplication + FAQPage ───
   const pluginJsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -292,6 +344,11 @@ export default function PluginPage({ params }: { params: { id: string } }) {
           bestRating: '5',
           ratingCount: '128',
         } : undefined,
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `https://lifeos.vercel.app/plugins/${plugin.id}#faq`,
+        mainEntity: faqItems,
       },
     ],
   };
@@ -364,6 +421,29 @@ export default function PluginPage({ params }: { params: { id: string } }) {
               </svg>
               <span className="text-sm text-gray-700">{f}</span>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── FAQ (visible + schema.org JSON-LD) ── */}
+      <section className="max-w-4xl mx-auto px-4 py-12 border-t border-gray-100">
+        <h2 className="text-lg font-semibold text-gray-900 mb-1">Frequently Asked Questions</h2>
+        <p className="text-sm text-gray-500 mb-6">
+          Quick answers about {plugin.name}.
+        </p>
+        <div className="space-y-3">
+          {faqItems.slice(0, 5).map((item, i) => (
+            <details key={i} className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-gray-300 transition-colors">
+              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-medium text-gray-900 hover:text-teal-700 transition-colors [&::-webkit-details-marker]:hidden">
+                <span>{item.name}</span>
+                <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+                {item.acceptedAnswer.text}
+              </div>
+            </details>
           ))}
         </div>
       </section>

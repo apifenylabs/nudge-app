@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import Head from 'next/head';
 
 interface ChangelogEntry {
   version: string;
@@ -139,6 +140,12 @@ export default function ChangelogPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      <Head>
+        <title>Changelog — LifeOS AI Copilot</title>
+        <meta name="description" content="Track LifeOS updates — new plugins, features, improvements, and fixes. Latest version 0.8.0 with Weekly Digest, Personality Profile, and habit-mood correlation." />
+        <meta property="og:title" content="Changelog — LifeOS AI Copilot" />
+        <meta property="og:description" content="Track LifeOS product updates and releases." />
+      </Head>
       {/* Nav */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">

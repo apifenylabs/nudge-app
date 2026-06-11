@@ -1,0 +1,147 @@
+{
+  "title": "Directory Beast - Master Schema v1",
+  "version": "1.0.0",
+  "last_migrated": "2026-05-02T14:49:27.017Z",
+  "destination_required_fields": [
+    "id",
+    "name",
+    "city",
+    "country",
+    "category",
+    "ageRange",
+    "safetyRating",
+    "priceRange",
+    "popularity",
+    "description",
+    "location",
+    "bestTime",
+    "imageUrl",
+    "amenities",
+    "safetyFeatures",
+    "tipsAndTricks",
+    "parentStory",
+    "itineraryComparison",
+    "commissionRate",
+    "seoKeywords",
+    "gallery",
+    "affiliateLinks",
+    "slug",
+    "revenue_engine",
+    "information_gain",
+    "flywheel_connect",
+    "geo_metadata"
+  ],
+  "new_modules": [
+    "revenue_engine",
+    "information_gain",
+    "flywheel_connect",
+    "geo_metadata"
+  ],
+  "sample": {
+    "id": "tokyo-001",
+    "name": "Tokyo Disneyland",
+    "city": "Tokyo",
+    "country": "Japan",
+    "category": "Theme Parks & Attractions",
+    "ageRange": "3-12",
+    "safetyRating": 4.9,
+    "priceRange": "$$$",
+    "popularity": 98,
+    "description": "The ultimate family destination with classic Disney magic. Two incredible parks with exceptional safety standards, stroller rentals, baby care centers, and numerous family-friendly restaurants.",
+    "location": "1-1 Maihama, Urayasu, Chiba",
+    "bestTime": "Weekdays, September-November",
+    "imageUrl": "https://live.staticflickr.com/5170/5219970061_9d9e843d0d_b.jpg",
+    "amenities": [
+      "Stroller Rental",
+      "Baby Care Centers",
+      "Family Restrooms",
+      "Height Restrictions",
+      "First Aid"
+    ],
+    "safetyFeatures": [
+      "Trained Staff",
+      "Emergency Protocols",
+      "Lost Child Centers",
+      "Allergy-Friendly Options"
+    ],
+    "tipsAndTricks": [
+      "Go on a Tuesday or Wednesday — weekend crowds are 3x worse and you'll spend half your day in line.",
+      "Bring your own snacks. The park allows outside food and a packed lunch saves $40+ per person.",
+      "Use the Disney Resort app to book 'Priority Pass' slots — they're free and save 60-90 minutes of waiting per ride.",
+      "The Baby Care Centers have private nursing rooms, microwaves for bottles, and vending machines with formula.",
+      "If your kid gets overwhelmed, head to the 'Quiet Areas' near It's a Small World — soundproofed and rarely crowded."
+    ],
+    "parentStory": {
+      "title": "The meltdown that turned into our best memory",
+      "excerpt": "Our 4-year-old screamed for 20 minutes outside Space Mountain. Too short. Too scary. We almost left. Then a cast member took us to the backlot to watch the parade setup. She spent an hour waving at characters. That moment — a stranger's kindness — saved our day.",
+      "author": "Sarah, mom of 2 from Melbourne",
+      "fullStory": "We'd planned this trip for 6 months. The moment we got to Space Mountain, our youngest had a full meltdown. Too tall? No. Too scary? Also no. She was mad she COULDN'T ride. A cast member noticed, knelt down, and whispered something to her. Next thing we knew, she was helping set up the parade floats backstage. She still talks about it 2 years later."
+    },
+    "itineraryComparison": {
+      "halfDay": "Ride 3-4 attractions, lunch, character meet, leave by 3pm",
+      "fullDay": "Ride 6-8 attractions, both parks, parade, dinner, fireworks",
+      "bestFor": "Ages 3-12, especially Disney fans"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Tokyo Disneyland",
+      "family theme park Japan",
+      "kid-friendly Tokyo"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80"
+    ],
+    "affiliateLinks": {
+      "booking": {
+        "url": "https://www.booking.com/searchresults.html?ss=Tokyo%2C+Japan&aid=2875669-affiliate",
+        "text": "Book family-friendly hotels in Tokyo"
+      },
+      "klook": {
+        "url": "https://www.klook.com/search/?keyword=Tokyo+Disneyland+Tokyo&aid=119991",
+        "text": "Find Tokyo Disneyland deals on Klook"
+      },
+      "viator": {
+        "url": "https://www.viator.com/Tokyo/things-to-do?aid=P00299136",
+        "text": "Book tours & activities in Tokyo"
+      }
+    },
+    "slug": "tokyo-001",
+    "revenue_engine": {
+      "klook_product_id": null,
+      "viator_product_id": null,
+      "current_price_usd": 0,
+      "last_price_check": null
+    },
+    "information_gain": {
+      "reddit_sentiment_snippet": "",
+      "primary_source_url": "",
+      "human_verified_tip": "",
+      "geo_highlight_score": 0
+    },
+    "flywheel_connect": {
+      "related_ev_station_id": null,
+      "related_luxury_stay_id": null,
+      "related_family_activity_id": null
+    },
+    "geo_metadata": {
+      "last_updated": "2026-05-02",
+      "data_version": "1.0.0",
+      "verification_status": "AI"
+    }
+  },
+  "change_log": [
+    {
+      "version": "1.0.0",
+      "date": "2026-05-02",
+      "phase": 1,
+      "changes": [
+        "Added revenue_engine, information_gain, flywheel_connect, geo_metadata"
+      ],
+      "guardrails": [
+        "Additive only"
+      ]
+    }
+  ]
+}

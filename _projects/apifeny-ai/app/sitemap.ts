@@ -146,6 +146,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
  { url: `${BASE_URL}/collections`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
  { url: `${BASE_URL}/categories`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
  { url: `${BASE_URL}/rankings`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+ { url: `${BASE_URL}/trending`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
+ { url: `${BASE_URL}/monthly-roundup`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
+ { url: `${BASE_URL}/ai-news`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
  { url: `${BASE_URL}/submit`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
  { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
  { url: `${BASE_URL}/privacy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
@@ -284,6 +287,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
  priority: 0.7,
  }));
 
+ // AI News detail pages
+ const aiNewsEntries: MetadataRoute.Sitemap = (() => {
+   try {
+     const { aiNewsArticles } = require('../lib/ai-news-data');
+     return aiNewsArticles.map((a: { id: string; publishedAt: string }): MetadataRoute.Sitemap[number] => ({
+       url: `${BASE_URL}/ai-news/${a.id}`,
+       lastModified: new Date(a.publishedAt),
+       changeFrequency: 'monthly',
+       priority: 0.6,
+     }));
+   } catch { return []; }
+ })();
+
  // Category pages
  interface CategoryEntry {
  slug: string;
@@ -316,5 +332,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
  ...playbookEntries,
  ...rankingEntries,
  ...categoryEntries,
+ ...aiNewsEntries,
  ];
 }

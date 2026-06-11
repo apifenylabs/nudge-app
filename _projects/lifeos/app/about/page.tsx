@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 // ─── Plugin definitions (mirrors plugin-registry for marketing display) ───
 const PLUGIN_DISPLAY = [
@@ -114,6 +115,12 @@ export default function AboutPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      <Head>
+        <title>About — LifeOS AI Copilot</title>
+        <meta name="description" content="LifeOS is a personality-aware AI copilot that guides you through travel, finance, health, career, and more. Built for people who want to live intentionally." />
+        <meta property="og:title" content="About — LifeOS AI Copilot" />
+        <meta property="og:description" content="A personality-aware AI copilot with 12 specialized plugins for every area of life." />
+      </Head>
       <style jsx global>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(12px); }

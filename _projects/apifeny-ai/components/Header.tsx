@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Search, Menu, X, ArrowUpRight, Crown } from 'lucide-react';
+import { Search, Menu, X, ArrowUpRight, Crown, Flame, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function Header() {
@@ -84,6 +84,30 @@ export default function Header() {
  )}
  >
  Tools
+ </Link>
+ <Link
+ href="/trending"
+ className={cn(
+ 'px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-1.5',
+ pathname.startsWith('/trending')
+ ? 'bg-neon/15 text-neon-light'
+ : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+ )}
+ >
+ <Flame className="w-3.5 h-3.5 text-orange-500" />
+ Trending
+ </Link>
+ <Link
+ href="/monthly-roundup"
+ className={cn(
+ 'px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-1.5',
+ pathname.startsWith('/monthly-roundup')
+ ? 'bg-neon/15 text-neon-light'
+ : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+ )}
+ >
+ <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
+ Monthly
  </Link>
  <Link
  href="/collections"

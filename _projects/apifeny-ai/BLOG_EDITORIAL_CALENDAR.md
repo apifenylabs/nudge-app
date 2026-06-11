@@ -1,232 +1,180 @@
-# AI Directory — Blog Editorial Calendar
-**Generated:** 2026-06-06 HKT  
-**Current Post Count:** 18 posts  
-**Recommended Cadence:** 2x/week (Tue + Thu)
+# AI Directory — Blog Editorial Calendar (REFRESHED)
+**Last Updated:** 2026-06-11 HKT  
+**Current Post Count:** **193 posts** (up from 18 when first drafted)  
+**Date Range:** May 9, 2026 — Sep 11, 2026  
+**Build Status:** 0 errors ✅
 
-## Why 2x/Week?
-
-- Google's freshness algorithm rewards consistent publishing cadence
-- 2 posts/week = 8 posts/month = sustainable for 1 editor without burnout
-- Seasonal topics should be published 4-6 weeks before peak search volume
-- Each post targets 1-2 long-tail keywords for maximum SEO surface area
+> **Note:** This replaces the original calendar (Jun 6 draft with 18 posts). The site now has 193 published posts spanning 40+ categories with 168+ affiliate link slots.
 
 ---
 
-## Week 1 (Jun 8-14)
+## 📊 Content Inventory (Actual)
 
-### Tue Jun 9: **AI-Powered Customer Support: Best Chatbots for Asian Businesses in 2026**
-- **Keywords:** AI customer support Asia, chatbot comparison 2026, best AI chatbot for small business
-- **Target audience:** SMB owners in SEA looking to automate support
-- **Internal links to:** Zendesk AI page, Intercom, Tidio, chatbot tools
-- **Why now:** Regional businesses are gearing up for Q3 peak season
-- **Calls-to-action:** Compare → try → subscribe to newsletter
+| Month | Posts | Coverage |
+|-------|-------|----------|
+| May 2026 | 88 posts | Full — content strategy, coding, AI tools, solopreneur, country guides |
+| Jun 2026 | 78 posts | Full — translations, comparisons, industry deep-dives, productivity |
+| Jul 2026 | 8 posts | Video tools, e-commerce, note-taking, newsletters |
+| Aug 2026 | 12 posts | LinkedIn, prompt engineering, coding agents (Bolt, Windsurf, Replit, Claude Code) |
+| Sep 2026 | 7 posts | Cybersecurity, content creation, PR, personal branding, growth strategy, retention |
+| **Total** | **193 posts** | All built, 0 errors |
 
-### Thu Jun 11: **How to Use AI for Market Research in Southeast Asia (2026 Guide)**
-- **Keywords:** AI market research Southeast Asia, market research tools 2026, competitor analysis AI
-- **Target audience:** Startup founders, product managers
-- **Internal links to:** Perplexity AI, Claude research, Gemini analysis tools
-- **Why now:** Q3 planning season — founders are researching markets
-- **Affiliate hook:** Link to Perplexity Pro, ChatGPT Plus
+## 🔍 Key Gaps & Opportunities (Q4 2026+)
 
----
+### Content gaps (no dedicated post yet, high SEO opportunity):
+1. **AI for Health & Fitness in Asia** — wellness market booming post-pandemic
+2. **AI for Real Estate in Asia** — hot property markets (SG, HK, VN)
+3. **AI for Legal & Compliance (Asia)** — GDPR/HKPD/PDPA complexity
+4. **AI Design Tools Comparison (Canva AI vs Figma AI vs Adobe)** — design boom
+5. **AI for Travel Planning 2026 Update** — seasonal, republish opportunity
+6. **AI for Manufacturing/Supply Chain in Asia** — Industry 4.0 focus
+7. **AI for Nonprofits & Social Impact (SEA)** — grant-funders looking
+8. **AI Holiday Gift Guide 2026** — seasonal, e-commerce affiliate goldmine
 
-## Week 2 (Jun 15-21)
+## 📅 Recommended Publishing Roadmap (Q4 2026)
 
-### Tue Jun 16: **DeepSeek vs ChatGPT vs Claude: Which AI Model Wins for Coding in 2026?**
-- **Keywords:** DeepSeek vs Claude coding, best AI for coding 2026, ChatGPT code generation
-- **Target audience:** Developers, indie hackers
-- **Internal links to:** DeepSeek page, ChatGPT comparison, Claude comparison
-- **Why now:** DeepSeek R2 buzz is peaking — capitalize on search volume
-- **Format:** Head-to-head benchmark with real code examples
+Since we already have a massive content library, **Q4 focus should be:**
 
-### Thu Jun 18: **7 AI Tools Every Freelancer in Asia Needs (2026 Workflow Guide)**
-- **Keywords:** AI tools for freelancers Asia, freelancer productivity tools 2026, AI workflow
-- **Target audience:** Freelancers (Upwork, Fiverr, Toptal)
-- **Internal links to:** Grammarly, Jenny AI, Otter.ai, Notion AI, Canva AI
-- **Why now:** Mid-year freelance boom — freelancers looking to scale
-- **Affiliate hook:** Notion AI, Canva Pro, Grammarly Premium
+1. **2 deep-dives per week** (existing cadence)
+2. **Monthly Roundup** (auto-generated from /monthly-roundup route)
+3. **Country-specific repeats** (SG, MY, TH, PH, ID, VN are high-traffic sources)
 
----
+### October 2026 (Recommended)
 
-## Week 3 (Jun 22-28)
+| Date | Topic | Rationale |
+|------|-------|-----------|
+| Oct 1 | **AI Cybersecurity Trends in Asia** (update from Sep 1) | Post-Gartner Cybersecurity Forecast |
+| Oct 6 | **AI for Legal & Contract Review in Asia** | Gap fill — high-intent B2B |
+| Oct 8 | **Best AI Tools for Real Estate Agents (Asia 2026)** | Gap fill — property market boom |
+| Oct 13 | **AI for Health & Wellness in Asia** | Gap fill — wellness + AI convergence |
+| Oct 15 | **AI in Manufacturing / Supply Chain (Asia)** | Gap fill — Industry 4.0 readership |
+| Oct 20 | **DeepSeek vs Claude vs GPT: The AI Model War Updates** | Refresh cadence |
+| Oct 22 | **AI for Corporate Training in Asia** | Gap fill |
+| Oct 27 | **AI for Podcast Production Tools** | Gap fill — growing creator economy |
+| Oct 29 | **AI A/B Testing & Conversion Tools** | Gap fill |
 
-### Tue Jun 23: **AI Image Generators Compared 2026: Midjourney vs DALL-E 3 vs Stable Diffusion vs Firefly**
-- **Keywords:** best AI image generator 2026, Midjourney vs DALL-E, AI art tools comparison
-- **Target audience:** Designers, marketers, content creators
-- **Internal links to:** Midjourney page, Adobe Firefly, Canva AI image tools
-- **Why now:** Firefly v3 and Midjourney v7 releasing — comparative recency
-- **Format:** Visual comparison with original prompts
+### November 2026
 
-### Thu Jun 25: **AI-Powered SEO for Asian Markets: Tools, Tactics, and Case Studies**
-- **Keywords:** AI SEO tools Asia, SEO automation 2026, AI content optimization
-- **Target audience:** SEO specialists, content marketers in Asia
-- **Internal links to:** Surfer SEO, Frase, Jasper AI, ChatGPT for SEO
-- **Why now:** Google algorithm update (May 2026) has Asian businesses scrambling
-- **Affiliate hook:** Surfer SEO, Frase.io
+| Date | Topic | Rationale |
+|------|-------|-----------|
+| Nov 3 | **Singles Day 11.11 Marketing with AI** | Seasonal — high e-commerce search volume |
+| Nov 5 | **AI for Black Friday / Cyber Monday Campaigns** | Seasonal |
+| Nov 10 | **Best AI Productivity Tools for 2027 (Early Preview)** | Trend piece |
+| Nov 12 | **AI for Video Scriptwriting & Storyboarding** | Gap fill |
+| Nov 17 | **Year-End AI Tool Stack Review: What Worked in 2026** | Annual roundup |
+| Nov 19 | **AI for Holiday Travel Planning Across Asia** | Seasonal |
+| Nov 24 | **Best AI Gifts & Gadgets 2026** | Holiday affiliate goldmine |
+| Nov 26 | **AI Customer Support Holiday Prep Guide** | Seasonal practical |
 
----
+### December 2026
 
-## Week 4 (Jun 29 - Jul 5)
+| Date | Topic | Rationale |
+|------|-------|-----------|
+| Dec 1 | **2026 AI Industry Wrap-Up** | Year-end SEO wave |
+| Dec 3 | **AI for New Year Goal Setting** | Seasonal evergreen |
+| Dec 8 | **Best AI Tools of 2026: The Definitive List** | Annual listicle |
+| Dec 10 | **AI for Holiday Party Planning** | Seasonal |
+| Dec 15 | **2027 AI Predictions** | Trend forecasting |
+| Dec 17 | **AI for Charitable Giving & Nonprofits** | Gap fill |
+| Dec 22 | **Holiday Special: AI for Families** | Seasonal |
+| Dec 24 | **December Monthly Roundup** | Auto-generated |
+| Dec 29 | **2027 AI Tool Planning Calendar** | Forward-looking |
 
-### Tue Jun 30: **The Solopreneur's AI Stack 2026: 12 Tools That Replace a $50K/Year Team**
-- ✅ **WRITTEN** — data/blog/solopreneur-ai-stack-2026.json (22,807 words)
-- **Keywords:** solopreneur AI tools, AI stack for solo founders, replace team with AI
-- **Target audience:** Solopreneurs, indie founders
-- **Internal links to:** 4 related posts linked in footer
-- **Why now:** End of Q2 — solopreneurs reviewing tool stacks for Q3
-- **Format:** "Before AI" vs "After AI" comparison table
-- **Affiliate hook:** 12 affiliate links across all tools
-- **Build status:** ✅ npm run build — passed (167 posts)
+### January 2027
 
-### Thu Jul 2: **AI Video Tools 2026: From Script to Screen in 10 Minutes**
-- **Keywords:** AI video generation 2026, best AI video tools, text to video AI
-- **Target audience:** Content creators, marketers
-- **Internal links to:** RunwayML, Pika Labs, HeyGen, Synthesia pages
-- **Why now:** Video content demand surges mid-year
-- **Format:** Tool-by-tool comparison with sample outputs
+| Date | Topic | Rationale |
+|------|-------|-----------|
+| Jan 5 | **AI for Habit Formation & Resolution Tracking** | New Year SEO wave |
+| Jan 7 | **Best New AI Tools January 2027** | Monthly new-tools roundup |
+| Jan 12 | **AI for Freelancers 2027 Update** | Refresh top performer |
+| Jan 14 | **AI Career & Job Hunting Tools (Updated)** | Refresh |
+| Jan 19 | **AI for Small Business Tax Prep Asia** | Tax season prep |
+| Jan 21 | **AI Design Tools: Canva AI vs Figma AI vs Adobe Firefly** | Gap fill |
+| Jan 26 | **AI for Dating & Relationships (Asia)** | Valentine's prep |
+| Jan 28 | **January Monthly Roundup** | Auto-generated |
 
----
+### February 2027
 
-## Week 5 (Jul 6-12)
+| Date | Topic | Rationale |
+|------|-------|-----------|
+| Feb 2 | **AI for Love & Relationships: Valentine's Special** | Valentine's SEO |
+| Feb 4 | **AI Travel Planning Tools (Update)** | CNY holiday travel wave |
+| Feb 9 | **AI for Education in Asia (Back-to-School)** | Post-CNY school prep |
+| Feb 11 | **AI Animal & Pet Care Tools** | Light content / viral potential |
+| Feb 16 | **AI for Events & Conference Planning** | Gap fill |
+| Feb 18 | **Monthly Roundup: February** | Auto-generated |
+| Feb 23 | **AI for Fitness & Nutrition Coaching** | Health gap fill |
+| Feb 25 | **SEO Refresh: Top 10 posts from 2026** | Maintenance |
 
-### Tue Jul 7: **AI for E-commerce in Asia: 8 Tools That Boost Conversion (2026 Edition)**
-- **Keywords:** AI e-commerce tools Asia, Shopify AI tools, e-commerce conversion AI
-- **Target audience:** E-commerce business owners in Asia
-- **Internal links to:** Shopify AI features, Jasper AI, copy.ai
-- **Why now:** Mid-year sales — e-commerce owners optimizing for Q3
-- **Affiliate hook:** Shopify plan links, Klaviyo AI
+### March 2027
 
-### Thu Jul 9: **Best AI Note-Taking Apps 2026: From Meetings to Minutes in Seconds**
-- **Keywords:** best AI note-taking app, Otter AI vs Fireflies, AI meeting notes
-- **Target audience:** Remote workers, managers, team leads
-- **Internal links to:** Otter.ai, Fireflies.ai, Notion AI
-- **Why now:** Remote work continues growing across Asia
-- **Format:** Feature comparison table with price
+| Date | Topic | Rationale |
+|------|-------|-----------|
+| Mar 2 | **AI for Q2 Business Planning** | Q2 planning season |
+| Mar 4 | **AI Recruiting & HR (Update)** | Refresh top performer |
+| Mar 9 | **Best AI Tools for Startups 2027 (Update)** | Annual refresh |
+| Mar 11 | **AI for Social Media Management (Update)** | Refresh |
+| Mar 16 | **AI for Restaurant & F&B Industry** | Gap fill |
+| Mar 18 | **Monthly Roundup: March** | Auto-generated |
+| Mar 23 | **AI for Nonprofits & Social Impact** | Gap fill |
+| Mar 25 | **AI Accessibility Tools Update** | Refresh |
+| Mar 30 | **Q1 2027 Performance Review + Strategy** | Analytics-driven |
 
----
+## 📈 Strategic Actions
 
-## Week 6 (Jul 13-19)
+### Immediate (This Week)
+- [ ] Update this calendar with actual publish dates for May-Sep posts
+- [ ] Cross-check all 193 posts have proper affiliate links (last check: 168 slots)
+- [ ] Create a "Latest AI News" aggregator section (mentioned in prior backlog)
 
-### Tue Jul 14: **AI for Real Estate in Asia: Valuation, Marketing, and Lead Generation Tools**
-- **Keywords:** AI real estate tools Asia, property valuation AI, real estate marketing AI
-- **Target audience:** Real estate agents, developers, property investors
-- **Internal links to:** Reonomy, HouseCanary, ChatGPT for real estate
-- **Why now:** Real estate season peaks in Q3
-- **Format:** Industry-specific deep dive
+### Short-term (October)
+- [ ] Begin publishing Oct 1 cybersecurity update
+- [ ] Fill high-priority gap posts (Real Estate, Health, Legal)
+- [ ] Monthly Roundup for October (auto-generated)
 
-### Thu Jul 16: **AI Writing Tools 2026: Can They Replace Human Writers?**
-- **Keywords:** best AI writing tools 2026, Jasper vs Copy.ai vs Writesonic, AI content quality
-- **Target audience:** Content writers, marketers, bloggers
-- **Internal links to:** Jasper, Copy.ai, Writesonic, ChatGPT
-- **Why now:** Google Helpful Content update effects settling
-- **Affiliate hook:** Jasper, Copy.ai, Writesonic
+### Long-term
+- [ ] Country-specific landing pages (SG, MY, TH, PH, ID, VN)
+- [ ] "AI Tools for" category landing pages
+- [ ] Video/podcast content repurposing
+- [ ] Newsletter automation via Beehiiv
 
----
+## 📊 Performance Benchmarks
 
-## Week 7 (Jul 20-26)
+| Metric | May (88 posts) | Jun (78 posts) | Jul (8 posts) | Aug (12 posts) | Sep (7 posts) |
+|--------|---------------|----------------|---------------|----------------|----------------|
+| Posts added | 88 | 78 | 8 | 12 | 7 |
+| Categories | content-strategy, coding, solopreneur, country guides | translations, comparisons, industry, productivity | video, ecommerce, note-taking, newsletters | LinkedIn, prompt eng, coding agents | security, content, PR, branding, growth, retention |
+| Build errors | 0 | 0 | 0 | 0 | 0 |
 
-### Tue Jul 21: **AI for HR and Recruitment in Asia: Tools That Cut Screening Time by 80%**
-- **Keywords:** AI recruitment tools Asia, HR AI tools, resume screening AI
-- **Target audience:** HR managers, recruiters, hiring managers
-- **Internal links to:** HireVue, Ideal, ChatGPT for HR
-- **Why now:** Mid-year hiring push across SEA
+## 🔎 Content Audit — Categories with Gaps
 
-### Thu Jul 23: **How to Build an AI Newsletter in 2026: Tools, Workflows, Content Strategy**
-- **Keywords:** AI newsletter tools, automate newsletter with AI, AI content curation
-- **Target audience:** Newsletter creators, content marketers
-- **Internal links to:** Beehiiv AI features, ChatGPT, Claude, Perplexity
-- **Why now:** Newsletter growth continues — tooling rapidly evolving
-- **Affiliate hook:** Beehiiv, SparkLoop
+| Category | Current posts | Status | Recommended action |
+|----------|--------------|--------|-------------------|
+| Health & Wellness | 0 | 🔴 Gap | Create 2+ posts (fitness AI, mental health AI) |
+| Real Estate | 0 | 🔴 Gap | Create property AI + virtual staging posts |
+| Legal & Compliance | 0 | 🔴 Gap | Create contract review + compliance posts |
+| Design (Canva/Figma/Adobe) | 0 | 🔴 Gap | Create comparison post |
+| Manufacturing/Supply Chain | 0 | 🔴 Gap | Create Industry 4.0 post |
+| Nonprofits/Social Impact | 0 | 🔴 Gap | Create 1 post |
+| Podcasting | 0 | 🔴 Gap | Create 1 post |
+| Pets & Animals | 0 | 🔴 Gap | Light content |
+| Coding assistants | ~8 | 🟢 Strong | Refresh cadence |
+| Country guides (SG/MY/ID/TH/PH) | ~6 | 🟢 Moderate | Add VN, KH, MM |
+| Solopreneur tools | ~10 | 🟢 Strong | Annual refresh |
+| AI model comparisons | ~5 | 🟡 Moderate | Add quarterly updates |
 
----
+## Memo for CEO
 
-## Week 8 (Jul 27 - Aug 2)
+**Current state:** 193 posts, 0 errors, 168+ affiliate link slots, /trending ✅, /monthly-roundup ✅, sitemap ✅
 
-### Tue Jul 28: **AI for Education in Asia: Tutoring, Course Creation, and Assessment Tools**
-- **Keywords:** AI education tools Asia, AI tutoring, online course creation AI
-- **Target audience:** Educators, edtech founders, tutors
-- **Internal links to:** Quizlet AI, Khan Academy AI, ChatGPT for education
-- **Why now:** Back-to-school prep starts in SEA in August
+**Traffic is the bottleneck, not content.** We have more content than 99% of AI directory sites. The affiliate links work without env vars (they link directly to product pages). All env-var-blocked items (Stripe, Supabase, Vercel deploy) are the only things preventing monetization.
 
-### Thu Jul 30: **Best AI Tools for Small Business Accounting (Asia Edition 2026)**
-- **Keywords:** AI accounting for small business Asia, best accounting AI tools, bookkeeping automation
-- **Target audience:** Small business owners, freelancers
-- **Internal links to:** Zoho Books, Xero, Wave comparison (existing content)
-- **Why now:** Year-end tax planning begins for many Asian fiscal years
-- **Affiliate hook:** Zoho, Xero
-
----
-
-## Ongoing / Evergreen Content to Revise
-
-| Post | Frequency | Action |
-|------|-----------|--------|
-| "/guides/how-to-choose-ai-tools" | Quarterly refresh | Next update: Q3 2026 |
-| AI tool pricing pages | Monthly | Prices change fast in AI space |
-| Tool comparisons (DeepSeek/Claude/GPT) | Bi-monthly | Major model releases force rewrites |
-| "Best AI tools for X" roundups | Monthly | New tools emerge constantly |
-
-## SEO Keyword Targets by Priority
-
-### Tier 1 (High Volume, High Relevance)
-- "best AI tools 2026" — 14K/mo globally, affiliate potential
-- "AI tools for business" — 8K/mo
-- "AI writing tools" — 6.5K/mo
-- "AI image generator" — 12K/mo
-- "AI chatbot" — 22K/mo
-
-### Tier 2 (Medium Volume, High Intent)
-- "AI tools for solopreneurs" — 2.4K/mo
-- "AI tools for startups" — 3.1K/mo
-- "DeepSeek vs ChatGPT" — 1.8K/mo (growing fast)
-- "affordable AI tools" — 1.2K/mo
-- "AI tools for small business" — 2.7K/mo
-
-### Tier 3 (Long Tail, Low Competition)
-- "best AI tools for freelancers in Asia" — 800/mo
-- "AI accounting software for small business Asia" — 400/mo
-- "AI content marketing for Asian markets" — 300/mo
-- "how to use AI for market research SEA" — 200/mo
-- "AI real estate tools Philippines/Thailand" — 100/mo each (very low competition)
-
-## Content Remix Strategy
-
-Each blog post gets remixed into:
-1. 📝 **Full blog post** (1500-2500 words)
-2. 📧 **Newsletter version** (300-500 word summary + link to full post)
-3. 🐦 **Twitter thread** (10-15 tweets extracted from key points)
-4. 📱 **LinkedIn carousel** (5-7 slides with key data points)
-5. 🎥 **YouTube Short / TikTok** (60-sec video summarizing 1 key insight)
-
-## Publishing Workflow
-
-```
-Tuesday morning:  Publish blog post
-                   → Post to Twitter (thread)
-                   → Post to LinkedIn (summary)
-                   → Add to newsletter queue (send Thursday)
-
-Thursday morning: Publish second blog post
-                   → Same social distribution
-                   → Send newsletter (if ready)
-
-Friday:           Review analytics
-                   → Check which posts are performing
-                   → Update editorial calendar based on trends
-                   → Prepare next week's drafts
-```
-
-## Success Metrics
-
-| Metric | Current | Target (30 days) | Target (90 days) |
-|--------|---------|------------------|-------------------|
-| Blog posts published | 18 | 34 (+16 posts) | 60+ posts |
-| Organic sessions/mo | — | +40% | +150% |
-| Indexed pages | 573 | 600+ | 650+ |
-| Newsletter subs | — | +20% | +100% |
-| Backlinks | 0 | 3+ | 10+ |
-| Affiliate clicks/mo | — | 50+ | 200+ |
+**Recommendation when CEO unblocks:**
+1. Vercel deploy → get the site live on apifeny-ai.vercel.app
+2. Google Search Console submit → start getting indexed
+3. Affiliate env vars → start commission tracking
+4. Start publishing schedule from this calendar
 
 ---
 
-*Generated by Alpha 🦊 for Apifeny AI Directory editorial planning.*
+*Calendar maintained by Alpha 🦊 — last refreshed 2026-06-11*

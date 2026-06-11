@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Zap, Swords, ShieldCheck, Cpu, Globe, Users, TrendingUp, ArrowRight, Sparkles, Trophy } from 'lucide-react';
+import { Swords, ShieldCheck, Cpu, Globe, Users, TrendingUp, ArrowRight, Sparkles, Trophy } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About — Titan AI Agent Platform',
@@ -165,21 +165,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-6 py-8 border-t border-gray-800">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2">
-            <Zap className="w-5 h-5 text-amber-500" />
-            <span className="font-semibold">Titan</span>
-          </div>
-          <nav className="flex gap-6 text-sm text-gray-500">
-            <Link href="/" className="hover:text-gray-300 transition-colors">Home</Link>
-            <Link href="/changelog" className="hover:text-gray-300 transition-colors">Changelog</Link>
-            <Link href="/about" className="text-amber-400 hover:text-amber-300 transition-colors">About</Link>
-            <Link href="/robotics" className="hover:text-gray-300 transition-colors">Robotics</Link>
-          </nav>
-        </div>
-      </footer>
+
     </div>
   );
 }

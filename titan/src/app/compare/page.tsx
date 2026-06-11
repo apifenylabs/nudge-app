@@ -162,6 +162,12 @@ function Cell({ value }: { value: boolean | string }) {
 
 export default function ComparePage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+  return (
     <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-white">
       {/* Nav */}
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -314,5 +320,61 @@ export default function ComparePage() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How does Titan compare to Replit for agent building?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Titan focuses on visual agent progression with 7 evolution stages to God-Tier, god-tier certification, swarm orchestration, and hardware deployment to robots. Replit is primarily an in-browser IDE for app prototyping and collaborative coding — it lacks agent progression, certification, and hardware deployment.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What makes Titan different from Cursor?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cursor is an AI-powered code editor for inline code generation within a local IDE environment. Titan is a complete agent operating system with visual skill tree editing, god-tier badge certification, swarm coordination, and robotics bridge deployment to ROS2, Arduino, and Raspberry Pi.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Titan support hardware deployment like robotics?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Titan\'s Robotics Bridge allows certified agents to deploy directly to ROS2 robots, Arduino microcontrollers, ESP32 devices, and Raspberry Pi. No other AI agent platform offers hardware deployment — making Titan unique for robotics engineering, manufacturing, and IoT use cases.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Is Titan free to use?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Titan offers a free tier with no credit card required. Users can start building agents, progressing through the skill tree, and deploying to robotics. Higher tiers with advanced features like swarm orchestration and god-tier certification are available.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What is agent progression in Titan?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Agent progression in Titan is a visual 7-stage evolution system: Hatchling (1-4), Apprentice (5-9), Adept (10-14), Master (15-19), Grandmaster (20-24), Legend (25-29), and God-Tier (30+). Each stage unlocks visual prestige elements, new capabilities, and higher-level skills. At God-Tier, agents gain golden auras, crown badges, and the ability to command up to 5 agents simultaneously.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I use Titan with Lovable or v0?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Lovable and v0 are rapid UI prototyping tools from natural language prompts — they are complementary to Titan, not competitors. You can prototype a frontend in Lovable/v0, then build and deploy your agent backend on Titan. Titan is the only platform that handles agent progression, certification, and robotics deployment end-to-end.'
+      }
+    }
+  ]
+};

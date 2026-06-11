@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     url: "https://titan.apifeny.com",
     siteName: "Titan",
   },
+  manifest: "/manifest.json",
   twitter: {
     card: "summary_large_image",
     title: "Titan — Build Your AI Agent Army",

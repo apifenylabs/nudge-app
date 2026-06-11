@@ -1,0 +1,13 @@
+{
+  "name": "Titan — Build Your AI Agent Army",
+  "short_name": "Titan",
+  "description": "A visual AI agent builder with Solo Leveling progression mechanics. Train agents across 6 tiers, unlock 24+ skill nodes, and deploy to robots or the cloud.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#6366f1",
+  "categories": ["productivity", "developer-tools", "artificial-intelligence"],
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

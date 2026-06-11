@@ -192,6 +192,39 @@ export default function ComparePage() {
       ]} />
       <FaqPageJsonLd items={FAQS} pageSlug="compare" />
 
+      {/* ── SoftwareApplication JSON-LD ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Titan — Compare Plans",
+            operatingSystem: "Web",
+            applicationCategory: "AIApplication",
+            description:
+              "Compare Titan plans side by side: Free, Pro, and Enterprise tiers. Features include agent builder, swarm orchestration, skill forge, arena, and God-Tier engine.",
+            url: "https://titan-app-puce.vercel.app/compare",
+            offers: {
+              "@type": "AggregateOffer",
+              priceCurrency: "USD",
+              lowPrice: "0",
+              highPrice: "99",
+              offerCount: "3",
+              offers: [
+                { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
+                { "@type": "Offer", name: "Pro", price: "19", priceCurrency: "USD" },
+                { "@type": "Offer", name: "Enterprise", price: "99", priceCurrency: "USD" },
+              ],
+            },
+            author: {
+              "@type": "Organization",
+              name: "Apifeny Labs",
+            },
+          }),
+        }}
+      />
+
       {/* ── Navigation ── */}
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">

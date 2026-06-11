@@ -248,6 +248,40 @@ export default function FeaturesPage() {
         { label: "Features", href: "/features" },
       ]} />
 
+      {/* ── SoftwareApplication JSON-LD ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Titan — AI Agent Platform",
+            operatingSystem: "Web",
+            applicationCategory: "AIApplication",
+            description:
+              "Discover all Titan features: AI Agent Builder, Agent Swarm Orchestration, Gamified Progression, Skill Forge & Certifications, Arena Battles, Marketplace & more.",
+            url: "https://titan-app-puce.vercel.app/features",
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "USD",
+            },
+            author: {
+              "@type": "Organization",
+              name: "Apifeny Labs",
+            },
+            featureList: [
+              "AI Agent Builder — visual drag-and-drop agent creation",
+              "Agent Swarm Orchestration — parallel multi-agent execution",
+              "Gamified Progression — XP, levels, skill forge",
+              "Arena — head-to-head agent battles",
+              "Marketplace — publish & discover agent blueprints",
+              "God-Tier Engine — unlock legendary multi-agent capabilities",
+            ],
+          }),
+        }}
+      />
+
       {/* ── Navigation ── */}
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">

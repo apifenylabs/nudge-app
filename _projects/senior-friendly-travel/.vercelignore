@@ -1,0 +1,74 @@
+# Git
+.git
+.gitignore
+.github
+
+# Build outputs
+.next
+out/
+dist/
+build/
+
+# Dependencies
+node_modules
+
+# Python/scripts
+__pycache__
+*.pyc
+.pytest_cache
+
+# Agent files
+HEARTBEAT.md
+SIGNOFF-MATRIX.md
+AGENTS.md
+IDENTITY.md
+CLAUDE.md
+CONTINUOUS_WORKFLOW.md
+
+# Docs
+CHECK_DEPLOYMENT_STATUS.md
+DATA_EXPANSION_PLAN.md
+DEPLOYMENT_PLAN.md
+LAUNCH_CHECKLIST.md
+AFFILIATE_SETUP.md
+
+# Environment
+.env*
+!.env.example
+
+# Symlinks not present on Vercel - all workspace project symlinks
+app-factory
+luxury-family-travel
+social-beast-approvals
+socialos
+trading-playbooks
+pending-posts
+scanwise
+social
+kidscan-beast
+ev-charging-asia
+generalscan
+family-directory
+appfactory-beast
+shared-knowledge
+paperclip-archive
+ai-cofounder
+directory-beast
+family-travel-directory
+decentralized-memory
+kids-activities-asia
+social-beast-dashboard
+apifeny-ai
+social-beast-logs
+social-beast
+senior-friendly-travel-asia
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo

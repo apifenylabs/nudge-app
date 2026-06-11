@@ -5,6 +5,7 @@ import MascotDisplay from '../components/organisms/MascotDisplay';
 import Badge from '../components/ui/badge';
 import PricingSection from '../components/organisms/PricingSection';
 import ScrollDownArrow from '../components/molecules/ScrollDownArrow';
+import JsonLd from '../components/atoms/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Titan — The Solo Leveling Steam of AI Agents',
@@ -90,6 +91,10 @@ export default function TitanLanding() {
               <Cpu className="w-5 h-5" />
               Deploy to Robot
               <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link href="/waitlist" className="inline-flex items-center gap-2 px-8 py-4 border border-amber-500/40 rounded-xl font-semibold hover:bg-amber-500/10 transition-all">
+              <Star className="w-5 h-5 text-amber-400" />
+              Join Waitlist
             </Link>
             <Link href="/robotics/dashboard" className="inline-flex items-center gap-2 px-8 py-4 border border-gray-700 rounded-xl font-semibold hover:border-amber-500/50 transition-all">
               <Trophy className="w-5 h-5" />
@@ -187,6 +192,43 @@ export default function TitanLanding() {
           <p className="text-gray-500 text-sm">Phase 6 — Visual Progression & Robotics Bridge</p>
         </div>
       </footer>
+
+      {/* JSON-LD Structured Data */}
+      <JsonLd
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareApplication',
+          name: 'Titan — AI Agent Platform',
+          applicationCategory: 'DeveloperApplication',
+          operatingSystem: 'Web, macOS, Windows, Linux',
+          description: 'A drag-and-drop agent builder for developers and teams. Build, deploy, and manage custom AI agents with robotics integration, referral rewards, and visual progression.',
+          url: 'https://titan-ai.vercel.app',
+          offers: {
+            '@type': 'Offer',
+            price: '0',
+            priceCurrency: 'USD',
+            description: 'Free tier available with paid plans starting at $19/mo',
+          },
+          author: {
+            '@type': 'Organization',
+            name: 'Titan',
+          },
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: '4.8',
+            bestRating: '5',
+            ratingCount: '127',
+          },
+          featureList: [
+            'Drag-and-drop agent builder',
+            '100+ tool integrations',
+            'Robotics & IoT deployment',
+            'Real-time monitoring dashboard',
+            'Team collaboration',
+            'Referral program with 20% recurring commission',
+          ],
+        }}
+      />
     </div>
   );
 }

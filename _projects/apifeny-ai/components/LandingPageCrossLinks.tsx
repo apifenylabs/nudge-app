@@ -9,6 +9,7 @@
 import Link from 'next/link';
 import { ArrowRight, BookOpen, Layers, PenTool, Code, Megaphone, Sparkles, MapPin, Building2, GraduationCap, Stethoscope, Shield, ShoppingCart, Briefcase, Users, Heart, Glasses, Newspaper, Scale, TreePine, Cpu, Film, Plane } from 'lucide-react';
 import { getAllCategories } from '@/lib/blog-categories';
+import { getAllPosts } from '@/lib/blog-data';
 
 interface LandingPageEntry {
  slug: string;
@@ -697,7 +698,13 @@ const ALL_LANDING_PAGES: LandingPageEntry[] = [
  },
 ];
 
-const blogCategories = getAllCategories();
+const allBlogPosts = getAllPosts();
+const blogCategories = getAllCategories().map(cat => ({
+  ...cat,
+  postCount: allBlogPosts.filter(p =>
+    p.tags.some(t => cat.tags.map(ct => ct.toLowerCase()).includes(t.toLowerCase()))
+  ).length,
+}));
 
 interface Props {
  /** Current page slug — will exclude this from cross-links */

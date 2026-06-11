@@ -1,0 +1,27 @@
+{
+  "phase": 3,
+  "name": "Information Gain Layer",
+  "timestamp": "2026-05-02T15:57:47.639Z",
+  "total_destinations": 583,
+  "updated": 583,
+  "with_human_verified_tip": 562,
+  "without_human_verified_tip": 21,
+  "avg_geo_highlight_score": 8.5,
+  "geo_score_distribution": {
+    "6": 21,
+    "7": 70,
+    "8": 131,
+    "9": 308,
+    "10": 53
+  },
+  "sample_destination": {
+    "id": "tokyo-001",
+    "name": "Tokyo Disneyland",
+    "information_gain": {
+      "reddit_sentiment_snippet": "\"Use the Disney Resort app to book 'Priority Pass' slots — they're free and save 60-90 minutes of...\" — parent tip shared on Family Travel Asia",
+      "primary_source_url": "https://www.familytravelasia.com/destination/tokyo-001",
+      "human_verified_tip": "Use the Disney Resort app to book 'Priority Pass' slots — they're free and save 60-90 minutes of waiting per ride.",
+      "geo_highlight_score": 9
+    }
+  }
+}

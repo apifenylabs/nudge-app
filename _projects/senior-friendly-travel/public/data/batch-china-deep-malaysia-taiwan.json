@@ -1,0 +1,844 @@
+[
+  {
+    "id": "guangzhou-001",
+    "name": "Chimelong Safari Park",
+    "city": "Guangzhou",
+    "country": "China",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-14",
+    "safetyRating": 4.3,
+    "priceRange": "$$",
+    "popularity": 82,
+    "description": "One of Asia's best safari parks with drive-through sections, giant pandas, and the world's largest white tiger population. The cable car gives you a bird's-eye view of roaming herds.",
+    "location": "Panyu District, Guangzhou",
+    "bestTime": "Weekdays, October-April for comfortable weather",
+    "imageUrl": "https://images.unsplash.com/photo-1724892053773-cd28a4f6a622?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurants",
+      "Animal Feeding Areas",
+      "First Aid"
+    ],
+    "safetyFeatures": [
+      "Vehicle Safety Barriers",
+      "Staff Supervision",
+      "Lost Child Centers"
+    ],
+    "tipsAndTricks": [
+      "Book the drive-through cable car as it is included in your ticket and gives the best views without the walking.",
+      "The panda house is most active 9-10am during morning feeding.",
+      "Pack a lunch because park food is expensive at over $15 per meal and queues are long."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Our daughter fed a giraffe and it was the trip highlight",
+      "excerpt": "She was terrified at first. Now she tells everyone she made a giraffe friend in China.",
+      "author": "Emma, mom of 1 from San Francisco",
+      "fullStory": "Chimelong surprised us. We expected a typical zoo but got a real safari. The highlight was the giraffe feeding platform where you buy branches for 20 yuan and a giraffe will eat right from your child's hand. Our 4-year-old was shaking at first but by the third branch she was reaching out on her own. The panda exhibit was incredible too with three pandas in a climate-controlled habitat."
+    },
+    "itineraryComparison": {
+      "halfDay": "Panda house plus cable car plus giraffe feeding, lunch, leave by 2pm",
+      "fullDay": "All zoo sections, white tiger show, safari train, dinner at hotel",
+      "bestFor": "Ages 2-14, safari fans, animal-loving families"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Chimelong Safari Guangzhou",
+      "Guangzhou with kids",
+      "China family zoo"
+    ]
+  },
+  {
+    "id": "guangzhou-002",
+    "name": "Chimelong Paradise",
+    "city": "Guangzhou",
+    "country": "China",
+    "category": "Theme Parks",
+    "ageRange": "4-15",
+    "safetyRating": 4.2,
+    "priceRange": "$$",
+    "popularity": 78,
+    "description": "One of China's largest amusement parks with over 70 rides including roller coasters, water attractions, and a dedicated kids' zone. Connected to the Chimelong resort complex.",
+    "location": "Panyu District, Guangzhou, next to Safari Park",
+    "bestTime": "Weekdays, November-March to avoid heat and crowds",
+    "imageUrl": "https://images.unsplash.com/photo-1738023354227-16a406891bd2?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Restaurants",
+      "Baby Care Rooms",
+      "Water Park Access",
+      "Height Restrictions"
+    ],
+    "safetyFeatures": [
+      "Ride Safety Bars",
+      "Staff Supervision",
+      "First Aid Stations",
+      "Emergency Evacuation Plans"
+    ],
+    "tipsAndTricks": [
+      "Buy the combined Safari plus Paradise ticket as it is cheaper than separate entries and gives two full days.",
+      "The Dive Coaster drops you 90 degrees straight down at 80km per hour so skip if your child is under 120cm.",
+      "Go on a weekday as weekends see over 30,000 visitors with 90-minute waits."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The kiddie coaster broke our 5-year-old out of her shell",
+      "excerpt": "She refused every big ride. Then the mini roller coaster won her over and now she is hooked.",
+      "author": "David, dad of 2 from Sydney",
+      "fullStory": "Our daughter was terrified of everything. We spent the first hour just walking past rides. Then we found the Flying Family Coaster designed for kids 90cm and taller. She was crying on the way up but by the time we hit the final loop she was smiling. We rode it six times. That tiny coaster changed our entire trip."
+    },
+    "itineraryComparison": {
+      "halfDay": "Kiddie zone plus one thrill ride plus lunch, leave by 3pm",
+      "fullDay": "All zones, water park splash, dinner show, evening parade",
+      "bestFor": "Thrill-seeking families, ages 6 and up for big coasters"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Chimelong Paradise Guangzhou",
+      "Guangzhou theme park",
+      "family amusement park China"
+    ]
+  },
+  {
+    "id": "guangzhou-003",
+    "name": "Guangzhou Children's Park",
+    "city": "Guangzhou",
+    "country": "China",
+    "category": "Parks & Nature",
+    "ageRange": "1-10",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 65,
+    "description": "A sprawling free-entry park in the heart of Guangzhou with dedicated play zones, a mini train, pedal boats, and shaded walking paths. Popular with local families for weekend picnics.",
+    "location": "Yuexiu District, near Zhongshan Memorial Hall",
+    "bestTime": "Morning 8-11am or late afternoon 4-6pm to avoid midday heat",
+    "imageUrl": "https://images.unsplash.com/photo-1775152496490-9cebc8bb7dde?w=800&q=80",
+    "amenities": [
+      "Playground Equipment",
+      "Shaded Seating",
+      "Public Restrooms",
+      "Pedal Boat Rental",
+      "Mini Train"
+    ],
+    "safetyFeatures": [
+      "Soft Landing Surfaces",
+      "Fenced Play Areas",
+      "Supervised Zones",
+      "Nearby Police Booth"
+    ],
+    "tipsAndTricks": [
+      "The mini train costs 10 yuan per ride and runs every 20 minutes. Buy tokens from the booth near the main gate.",
+      "Bring a picnic blanket as the grass areas around the lake are perfect for lunch.",
+      "Weekday mornings are blissfully quiet and you will often have the play equipment to yourself."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A free park that saved our afternoon",
+      "excerpt": "We had a meltdown after the museum. This park turned everything around for just a few dollars.",
+      "author": "Rachel, mom of 2 from London",
+      "fullStory": "Our 3-year-old had enough after two hours at the museum with screaming and flopping on the ground. A local mum pointed us to Children's Park 10 minutes away. The pedal boats were 20 yuan for 30 minutes and our toddler was obsessed. We spent two hours, spent less than 50 yuan total, and made it back to the hotel with everyone happy."
+    },
+    "itineraryComparison": {
+      "halfDay": "Mini train plus play zone plus pedal boats, picnic lunch",
+      "fullDay": "Combine with Yuexiu Park for a full nature day",
+      "bestFor": "Toddlers and preschoolers, budget-conscious families"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Guangzhou Children's Park",
+      "free play Guangzhou",
+      "Guangzhou with toddlers"
+    ]
+  },
+  {
+    "id": "shenzhen-001",
+    "name": "Window of the World",
+    "city": "Shenzhen",
+    "country": "China",
+    "category": "Theme Parks",
+    "ageRange": "4-16",
+    "safetyRating": 4.0,
+    "priceRange": "$$",
+    "popularity": 76,
+    "description": "A miniature replica park featuring 130 scaled-down landmarks from around the world from the Eiffel Tower to the Taj Mahal. Fun cultural shows and a small amusement area for kids.",
+    "location": "Overseas Chinese Town, Nanshan District, Shenzhen",
+    "bestTime": "Weekdays, October-March for comfortable weather",
+    "imageUrl": "https://images.unsplash.com/photo-1737040009019-1576b1342b0e?w=800&q=80",
+    "amenities": [
+      "Restaurants",
+      "Souvenir Shops",
+      "Rest Areas",
+      "Cultural Show Venues"
+    ],
+    "safetyFeatures": [
+      "Well-Maintained Walkways",
+      "Security Personnel",
+      "Lost Child Centers"
+    ],
+    "tipsAndTricks": [
+      "The evening show with fireworks and laser lights is included in admission. Stay until dark.",
+      "Rent a family cart if your kids get tired as the park is huge and you will easily walk 8km.",
+      "Skip the overpriced on-site restaurants and bring snacks. You can find real food outside the park."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My son finally understood why I love the pyramids",
+      "excerpt": "He saw the miniature Giza and asked to go to Egypt. I told him that is the plan buddy.",
+      "author": "James, dad of 1 from Auckland",
+      "fullStory": "Window of the World sounds cheesy but it genuinely captivated my 6-year-old. He is obsessed with maps and world geography. Seeing the Eiffel Tower, Sydney Opera House, and the Pyramids in one spot blew his mind. The miniature Niagara Falls has real running water. We spent three hours just spotting countries."
+    },
+    "itineraryComparison": {
+      "halfDay": "Europe section plus laser show, lunch by 1pm",
+      "fullDay": "Full world tour plus cultural performances plus evening fireworks",
+      "bestFor": "Geography-loving kids, ages 4 and up"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Window of the World Shenzhen",
+      "Shenzhen theme park",
+      "miniature landmarks China"
+    ]
+  },
+  {
+    "id": "shenzhen-002",
+    "name": "Shenzhen Safari Park",
+    "city": "Shenzhen",
+    "country": "China",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.0,
+    "priceRange": "$$",
+    "popularity": 72,
+    "description": "A large safari park combining drive-through animal zones with traditional zoo exhibits. Features a children's animal petting area, dolphin shows, and a walk-through bird aviary.",
+    "location": "Xili Lake, Nanshan District, Shenzhen",
+    "bestTime": "Weekday mornings, November-April",
+    "imageUrl": "https://images.unsplash.com/photo-1599387433955-63ea3540497d?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurants",
+      "Animal Feeding Areas",
+      "Petting Zoo",
+      "First Aid"
+    ],
+    "safetyFeatures": [
+      "Vehicle Safety Barriers",
+      "Staff Supervision",
+      "Lost Child Centers",
+      "Animal Enclosure Barriers"
+    ],
+    "tipsAndTricks": [
+      "Buy the combo ticket for the sea lion show as it is separate from admission and sells out fast.",
+      "Feed the giraffes at 10am when they are hungriest. By noon they stop coming to the platform.",
+      "The bird aviary is unsupervised so keep a close eye on toddlers who might chase birds into restricted areas."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "We held a baby crocodile and my kids still brag about it",
+      "excerpt": "The keeper let us hold a 6-month-old croc with its mouth taped.",
+      "author": "Michelle, mom of 3 from Chicago",
+      "fullStory": "Of all the things at Shenzhen Safari Park the reptile house was the surprise hit. A keeper brought out a baby crocodile for a supervised touch session with its mouth taped. My 9-year-old was the first to volunteer and held it for a full minute. The 5-year-old backed away until she saw her sister doing it. We have the photo framed at home now."
+    },
+    "itineraryComparison": {
+      "halfDay": "Drive-through safari plus dolphin show plus petting zoo, lunch",
+      "fullDay": "Full safari plus sea lion show plus bird house plus reptile touch session",
+      "bestFor": "Animal lovers ages 2-12"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Shenzhen Safari Park",
+      "Shenzhen zoo",
+      "China family safari"
+    ]
+  },
+  {
+    "id": "shenzhen-003",
+    "name": "OCT East Theme Park",
+    "city": "Shenzhen",
+    "country": "China",
+    "category": "Theme Parks",
+    "ageRange": "4-16",
+    "safetyRating": 4.1,
+    "priceRange": "$$$",
+    "popularity": 74,
+    "description": "A massive resort with three theme parks in one: an adventure canyon with roller coasters, a European-style garden village, and an enormous water park with wave pools and kid slides.",
+    "location": "Yantian District, Shenzhen, 40 minutes from city center",
+    "bestTime": "Weekdays, April-June or September-October for water park weather",
+    "imageUrl": "https://images.unsplash.com/photo-1612276036430-e7240b151bd0?w=800&q=80",
+    "amenities": [
+      "Water Park Access",
+      "Stroller Rental",
+      "Restaurants",
+      "Locker Rooms",
+      "Changing Stations",
+      "Height Restrictions"
+    ],
+    "safetyFeatures": [
+      "Lifeguards at Water Park",
+      "Ride Safety Inspections",
+      "First Aid Stations",
+      "Child Wristband System"
+    ],
+    "tipsAndTricks": [
+      "Do the water park in the morning when it opens at 10am before the afternoon crowds arrive because by 1pm the wave pool is shoulder-to-shoulder.",
+      "The Fury of the Canyon roller coaster requires 130cm minimum. Measure your kids at the entrance before queuing.",
+      "Pack water shoes since the concrete paths get scorching hot by noon in summer.",
+      "Bring your own towels and sunscreen as on-site prices are three times regular retail."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The lazy river broke our 7-year-old's fear of water",
+      "excerpt": "He would not put his face in a pool. Three hours on inflatable tubes and he is doing cannonballs.",
+      "author": "Tom, dad of 2 from Manila",
+      "fullStory": "My son has always been terrified of water. Bath time is a struggle. But the lazy river at OCT East changed something. The current is gentle, the water is shallow enough to stand, and everyone is floating on tubes. After 30 minutes he stopped gripping my arm. By hour two he was trying to splash me. It was not really a park visit, it was therapy."
+    },
+    "itineraryComparison": {
+      "halfDay": "Water park only plus lunch, leave by 3pm",
+      "fullDay": "Morning water park plus afternoon canyon rides plus evening garden walk",
+      "bestFor": "Ages 4-16, water lovers, thrill seekers"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "OCT East Shenzhen",
+      "Shenzhen water park",
+      "Shenzhen theme park resort"
+    ]
+  },
+  {
+    "id": "chengdu-001",
+    "name": "Chengdu Panda Base",
+    "city": "Chengdu",
+    "country": "China",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-16",
+    "safetyRating": 4.6,
+    "priceRange": "$$",
+    "popularity": 95,
+    "description": "The world's premier giant panda conservation and research facility. See dozens of pandas from newborns to adults in natural habitats. Also home to red pandas and golden monkeys.",
+    "location": "1375 Xiongmao Avenue, Chenghua District, Chengdu",
+    "bestTime": "7:30-10am for active pandas. Arrive before 8am to avoid queues.",
+    "imageUrl": "https://images.unsplash.com/photo-1776619455134-1c4f2f1422cb?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurants",
+      "Souvenir Shop",
+      "Shaded Walkways",
+      "Nursing Rooms"
+    ],
+    "safetyFeatures": [
+      "Elevated Walkways",
+      "Glass Barriers",
+      "Staff Supervision",
+      "Emergency Exits"
+    ],
+    "tipsAndTricks": [
+      "Arrive by 7:30am. Pandas sleep 14 hours a day and are only active in the cool morning. By 10am they are mostly napping.",
+      "The Panda Kitchen experience lets you prepare panda cakes for 300 yuan and must be prebooked. Kids 6 and up can participate.",
+      "Visit the Red Panda area around 9am when they are fed. They are far more active than the giant pandas.",
+      "Bring binoculars as the babies are often up in tree branches and hard to see from the path."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "We watched a panda give birth on the live cam",
+      "excerpt": "The live cam caught a birth and my daughter sobbed happy tears for 20 minutes.",
+      "author": "Lisa, mom of 1 from Vancouver",
+      "fullStory": "I expected to see pandas sleeping. What I did not expect was to walk into the nursery exhibit and see a giant screen showing a live birth. A panda named Ya Ya was delivering a cub. My 8-year-old was mesmerized. We stood there for 40 minutes. The keepers were narrating in Mandarin but honestly we did not need translation. When the cub finally emerged the whole room cheered. My daughter cried. I cried too."
+    },
+    "itineraryComparison": {
+      "halfDay": "Early morning panda viewing plus red panda feeding, done by 11am",
+      "fullDay": "Full base tour plus Panda Kitchen experience plus breeding center",
+      "bestFor": "All ages, panda lovers, conservation-minded families"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Chengdu Panda Base",
+      "giant panda China",
+      "Chengdu with kids"
+    ]
+  },
+  {
+    "id": "chengdu-002",
+    "name": "Leshan Giant Buddha Hike",
+    "city": "Chengdu",
+    "country": "China",
+    "category": "Parks & Nature",
+    "ageRange": "5-16",
+    "safetyRating": 3.8,
+    "priceRange": "$",
+    "popularity": 80,
+    "description": "A UNESCO World Heritage site featuring a 71-meter tall stone Buddha carved into a cliff face. The hike down the Nine Turns Path gives breathtaking views and a true sense of ancient scale.",
+    "location": "Leshan City, 1.5-hour drive south of Chengdu",
+    "bestTime": "Weekdays 8-10am. Avoid Chinese holidays at all costs.",
+    "imageUrl": "https://images.unsplash.com/photo-1737133976215-0b3c272e7c2d?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Restaurants Nearby",
+      "Shaded Viewing Platforms",
+      "Boat Tours"
+    ],
+    "safetyFeatures": [
+      "Handrails on Steep Sections",
+      "Limited Crowd Control",
+      "Uneven Steps",
+      "Slippery When Wet"
+    ],
+    "tipsAndTricks": [
+      "Take a boat cruise to see the full Buddha from the river. It costs 70 yuan per person and gives the best photos without the scary staircase.",
+      "The Nine Turns Path has over 300 narrow steps with 1.5m drop-offs. Skip it with kids under 7 or anyone prone to vertigo.",
+      "Avoid rainy days as the stone steps become dangerously slippery.",
+      "Combine with Wuyou Temple right next door for a full day trip."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My 6-year-old counted every single curl on the Buddha's head",
+      "excerpt": "She counted to 89 before we lost count. She was certain it was exactly 100.",
+      "author": "Wei, dad of 1 from Singapore",
+      "fullStory": "We took the boat option because our daughter gets scared of heights. As we floated past the Buddha she started counting the stone curls on his head. She got to 89 before the boat turned. She spent the whole ride back insisting there were exactly 100 curls and she just did not finish counting. A random stranger online told me later it is actually 1,021 curls. I am not telling her."
+    },
+    "itineraryComparison": {
+      "halfDay": "Boat tour plus Buddha base visit plus lunch in Leshan town",
+      "fullDay": "Boat tour plus Nine Turns Path if brave plus Wuyou Temple plus local food market",
+      "bestFor": "Ages 8 and up, history buffs, adventurous families"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Leshan Giant Buddha",
+      "Chengdu day trip",
+      "UNESCO China family"
+    ]
+  },
+  {
+    "id": "penang-001",
+    "name": "ESCAPE Penang Theme Park",
+    "city": "Penang",
+    "country": "Malaysia",
+    "category": "Theme Parks",
+    "ageRange": "4-16",
+    "safetyRating": 4.4,
+    "priceRange": "$$",
+    "popularity": 79,
+    "description": "An adventure theme park set in a rainforest with the world's longest tube water slide at 1.1km, ziplines, rope courses, and a dedicated kids' adventure zone. Split into Adventureplay and Waterplay zones.",
+    "location": "828 Jalan Teluk Bahang, Penang",
+    "bestTime": "Weekday mornings, December-February for cooler weather",
+    "imageUrl": "https://images.unsplash.com/photo-1658511126414-898f14abce56?w=800&q=80",
+    "amenities": [
+      "Water Park Access",
+      "Locker Rooms",
+      "Restaurants",
+      "Changing Stations",
+      "Sunscreen Stations"
+    ],
+    "safetyFeatures": [
+      "Lifeguards",
+      "Harness Systems for Ziplines",
+      "Height Restrictions",
+      "First Aid Posts"
+    ],
+    "tipsAndTricks": [
+      "Go straight to the Adventureplay zone when you arrive because the ziplines have zero queue before 10:30am and 45-minute waits after.",
+      "The 1.1km tube water slide is the longest in the world. Your kid must be 107cm or taller and not afraid of dark tunnels.",
+      "Pack water shoes with good grip since the concrete gets hot and paths can be slippery.",
+      "Bring a dry bag for phones since lockers cost RM15 but fill up fast."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80",
+      "https://images.unsplash.com/photo-1506751331345-831a30d5a740?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "Our 7-year-old flew through the trees like a monkey",
+      "excerpt": "She was scared of the zipline platform. The instructor gave her a high-five and she jumped right off.",
+      "author": "Sarah, mom of 2 from Melbourne",
+      "fullStory": "The Adventureplay zone has this incredible tree-top obstacle course with 4 levels of difficulty. Our 7-year-old was determined to reach the top level. She made it through the first two levels fine but froze at the zipline platform on level 3. An instructor named Ali got on his knees, looked her in the eye, and said something in Malay. She laughed, took a breath, and jumped. She did it three more times after that."
+    },
+    "itineraryComparison": {
+      "halfDay": "Adventureplay zone plus one water slide, lunch, leave",
+      "fullDay": "Adventureplay morning plus Waterplay afternoon plus both tube slides",
+      "bestFor": "Adventure families, ages 5 and up"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "ESCAPE Penang",
+      "Penang theme park",
+      "Penang with kids",
+      "Malaysia adventure park"
+    ]
+  },
+  {
+    "id": "penang-002",
+    "name": "Penang Butterfly Farm",
+    "city": "Penang",
+    "country": "Malaysia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.5,
+    "priceRange": "$",
+    "popularity": 68,
+    "description": "A tranquil tropical garden sanctuary housing over 4,000 butterflies from 120 species. Interactive exhibits include the insect museum, reptile corner, and a butterfly breeding room.",
+    "location": "No. 830, Jalan Teluk Bahang, Penang",
+    "bestTime": "Early morning 9-11am when butterflies are most active",
+    "imageUrl": "https://images.unsplash.com/photo-1718863336803-0a3b1f33840b?w=800&q=80",
+    "amenities": [
+      "Shaded Pathways",
+      "Restrooms",
+      "Gift Shop",
+      "Nursing Room",
+      "Water Fountains"
+    ],
+    "safetyFeatures": [
+      "Non-Slip Paths",
+      "Handrails on Bridges",
+      "Staff Present",
+      "Mosquito Repellent Stations"
+    ],
+    "tipsAndTricks": [
+      "Butterflies land more on people wearing bright colors so dress your kids in red, yellow, or orange.",
+      "The breeding room is the real magic where you can watch butterflies emerge from their chrysalises.",
+      "Combine with ESCAPE Penang across the street for a full day of activities.",
+      "Do not bring bananas or fruit inside as it attracts wasps that scare the butterflies and kids."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A butterfly landed on my daughter's nose and she did not move for 5 minutes",
+      "excerpt": "She held so still. I have never seen a 3-year-old stay that quiet. She said Mommy I am a flower.",
+      "author": "Hana, mom of 1 from Kuala Lumpur",
+      "fullStory": "The Butterfly Farm is small but perfectly made for little kids. The paths are pram-friendly, everything is shaded, and the butterflies are everywhere. A blue butterfly landed on my daughter's nose near the entrance. She froze completely without barely breathing for what felt like forever. She whispered Mommy I am a flower. I nearly cried."
+    },
+    "itineraryComparison": {
+      "halfDay": "Butterfly garden plus insect museum plus gift shop, 1.5 to 2 hours",
+      "fullDay": "Combine with ESCAPE Penang across the road for full day",
+      "bestFor": "Toddlers and young kids, nature lovers"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Penang Butterfly Farm",
+      "Penang with kids",
+      "butterfly garden Malaysia",
+      "Penang family"
+    ]
+  },
+  {
+    "id": "penang-003",
+    "name": "Penang National Park",
+    "city": "Penang",
+    "country": "Malaysia",
+    "category": "Parks & Nature",
+    "ageRange": "5-14",
+    "safetyRating": 3.6,
+    "priceRange": "$",
+    "popularity": 70,
+    "description": "Malaysia's smallest national park packs a punch with jungle trails, a canopy walkway, and the famous Monkey Beach, a pristine cove reachable only on foot or by boat and home to troops of long-tailed macaques.",
+    "location": "Teluk Bahang, northwestern Penang",
+    "bestTime": "8am-12pm, November-March for dry trails",
+    "imageUrl": "https://images.unsplash.com/photo-1594103345324-16aa1bcffdb9?w=800&q=80",
+    "amenities": [
+      "Park Visitor Center",
+      "Restrooms at Entrance",
+      "Boat Services",
+      "Picnic Areas"
+    ],
+    "safetyFeatures": [
+      "Park Rangers",
+      "Trail Signs",
+      "Slippery Path Warnings",
+      "Monkey Food Caution Signs"
+    ],
+    "tipsAndTricks": [
+      "Take the boat to Monkey Beach for RM10 per person and walk back through the jungle trail for 1.5 hours of easy terrain to save money and see more wildlife.",
+      "Keep all food hidden from monkeys as they will snatch bags, bottles, and even phones if they see food nearby.",
+      "The canopy walkway is only 15m high but the floor is mesh so kids scared of heights may freeze up.",
+      "Wear long pants and bring mosquito repellent. The leeches come out after rain and socks alone will not save you."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1503256200498-2e6f4c310d9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A monkey stole our lunch and my 5-year-old laughed for 10 minutes straight",
+      "excerpt": "The monkey was faster than any kid I have ever seen. My daughter thought it was the funniest thing ever.",
+      "author": "Ben, dad of 1 from Perth",
+      "fullStory": "We were warned. We even read the signs. But my wife turned her back for two seconds and a macaque was off with our bag of nasi lemak. Our 5-year-old was in hysterics. The monkey sat on a rock 10 meters away eating our lunch like it was a royal banquet. We ended up buying nasi lemak from the boat guy on the way back. Would not trade that memory for anything."
+    },
+    "itineraryComparison": {
+      "halfDay": "Boat to Monkey Beach plus beach time plus hike back, 3 hours",
+      "fullDay": "Monkey Beach plus canopy walkway plus all jungle trails plus picnic",
+      "bestFor": "Nature families, ages 6 and up for longer hikes"
+    },
+    "commissionRate": "0%",
+    "seoKeywords": [
+      "Penang National Park",
+      "Monkey Beach Penang",
+      "Penang nature with kids",
+      "Malaysia national park family"
+    ]
+  },
+  {
+    "id": "langkawi-001",
+    "name": "Langkawi Cable Car & Sky Bridge",
+    "city": "Langkawi",
+    "country": "Malaysia",
+    "category": "Parks & Nature",
+    "ageRange": "4-16",
+    "safetyRating": 4.2,
+    "priceRange": "$$",
+    "popularity": 88,
+    "description": "A breathtaking cable car ride ascending 708 meters to Gunung Mat Cincang. At the top, the curved Sky Bridge offers panoramic views of Langkawi archipelago.",
+    "location": "Oriental Village, Burau Bay, Langkawi",
+    "bestTime": "Weekdays 9-11am to avoid tour bus crowds. December-March for clearest views.",
+    "imageUrl": "https://images.unsplash.com/photo-1644327981167-fbd67b34ba72?w=800&q=80",
+    "amenities": [
+      "Restrooms",
+      "Cafe at Top Station",
+      "Gift Shop",
+      "Viewing Decks",
+      "Parking"
+    ],
+    "safetyFeatures": [
+      "Regular Cable Car Inspections",
+      "Handrails on Sky Bridge",
+      "Emergency Brakes",
+      "Staff at Both Stations"
+    ],
+    "tipsAndTricks": [
+      "Book tickets online the night before to skip the ticket queue which regularly hits 45 minutes.",
+      "The glass-bottom gondola costs the same as regular but has a 20-minute longer queue. Skip it with kids under 8.",
+      "Go early at 9am opening. By 11am tour buses arrive and the Sky Bridge gets packed.",
+      "Bring a light jacket as the top station is noticeably cooler than sea level."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1508597370841-836e72ef6f54?w=800&q=80",
+      "https://images.unsplash.com/photo-1573558290253-fde4fa372d80?w=800&q=80",
+      "https://images.unsplash.com/photo-1642262978329-a9211480300b?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My 4-year-old was brave enough for the Sky Bridge and I was not",
+      "excerpt": "She walked right across. I held the railing and shuffled. She called me a scaredy-cat.",
+      "author": "Priya, mom of 1 from Singapore",
+      "fullStory": "I thought I was fine with heights until I stepped onto the Sky Bridge. It sways gently and you can see straight through the mesh floor to the rainforest 100 meters below. My 4-year-old grabbed my hand and walked straight across without hesitation. I was white-knuckling the railing. She turned around halfway and said Mummy you are a scaredy-cat. Fair call."
+    },
+    "itineraryComparison": {
+      "halfDay": "Cable car up and down plus Sky Bridge walk, done in 2 hours",
+      "fullDay": "Combine with Oriental Village for lunch plus Langkawi Wildlife Park",
+      "bestFor": "Ages 4 and up, families who love views and dont mind heights"
+    },
+    "commissionRate": "5%",
+    "seoKeywords": [
+      "Langkawi Cable Car",
+      "Langkawi Sky Bridge",
+      "Langkawi with kids",
+      "Malaysia family cable car"
+    ]
+  },
+  {
+    "id": "langkawi-002",
+    "name": "Langkawi Wildlife Park",
+    "city": "Langkawi",
+    "country": "Malaysia",
+    "category": "Zoos & Aquariums",
+    "ageRange": "2-12",
+    "safetyRating": 4.3,
+    "priceRange": "$$",
+    "popularity": 72,
+    "description": "An interactive wildlife park where kids can feed and touch most animals including deer, raccoons, parrots, and birds. Free-roaming areas, bird shows, and a walk-in aviary with over 100 species.",
+    "location": "Lot 1485, Kampung Kelubi, Langkawi",
+    "bestTime": "Morning 9-11am for feeding sessions and cooler temperatures",
+    "imageUrl": "https://images.unsplash.com/photo-1485257334450-84ec1ba6393d?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Restaurants",
+      "Animal Food Stations",
+      "Shaded Walkways",
+      "Rest Areas"
+    ],
+    "safetyFeatures": [
+      "Staff Supervision at Feeding",
+      "Animal Enclosure Barriers",
+      "Hand Washing Stations",
+      "First Aid"
+    ],
+    "tipsAndTricks": [
+      "Buy the RM10 animal food bucket at entry and your kids will be surrounded by deer and raccoons within seconds.",
+      "The bird show at 11am is hilarious and slightly chaotic as macaws fly over the audience heads.",
+      "The park is small enough to cover in 90 minutes so combine with another activity.",
+      "The crocodile feeding at 2pm is surprisingly thrilling for kids."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800&q=80",
+      "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+      "https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "A raccoon stole my daughter food bucket and she was delighted",
+      "excerpt": "The raccoon put its little paws in the bucket. She laughed so hard she dropped it.",
+      "author": "Alex, dad of 2 from London",
+      "fullStory": "The free-roaming area is where the magic happens. Deer come up to you. A peacock walked past like it owned the place. Raccoons will grab the food bucket right out of your kids hands. One did exactly that to our 3-year-old. She screamed then saw the raccoon eating from it and started laughing. We bought a second bucket."
+    },
+    "itineraryComparison": {
+      "halfDay": "Wildlife park alone takes 1.5 hours. Combine with cable car for a full morning.",
+      "fullDay": "Wildlife park morning plus cable car afternoon plus Pantai Cenang beach evening",
+      "bestFor": "Toddlers and young kids, animal lovers"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Langkawi Wildlife Park",
+      "Langkawi with kids",
+      "Langkawi zoo",
+      "Malaysia family safari"
+    ]
+  },
+  {
+    "id": "johor-001",
+    "name": "Legoland Malaysia",
+    "city": "Johor Bahru",
+    "country": "Malaysia",
+    "category": "Theme Parks",
+    "ageRange": "2-14",
+    "safetyRating": 4.7,
+    "priceRange": "$$$",
+    "popularity": 90,
+    "description": "First Legoland theme park in Asia with over 40 rides, shows, and attractions. Miniland with Asian landmark replicas built from millions of Lego bricks, a water park, and a Lego-themed hotel.",
+    "location": "Medini, Iskandar Puteri, Johor Bahru (15 min from Singapore causeway)",
+    "bestTime": "Weekdays Tue-Thu outside school holidays. Opens at 10am.",
+    "imageUrl": "https://images.unsplash.com/photo-1560580652-cd41f0dcc565?w=800&q=80",
+    "amenities": [
+      "Stroller Rental",
+      "Baby Care Rooms",
+      "Restaurants",
+      "Lego Building Stations",
+      "Splash Zone",
+      "Water Park Access"
+    ],
+    "safetyFeatures": [
+      "Ride Restraints",
+      "Lifeguards at Water Park",
+      "First Aid Stations",
+      "Lost Child Wristband Program",
+      "Shade Shelters"
+    ],
+    "tipsAndTricks": [
+      "Buy tickets online at least 3 days in advance for 30% discount. Walk-up prices are overpriced.",
+      "Cross from Singapore using the Causeway bus CW1 or CW2 for SGD 2.50 and save SGD 40+ in taxi fees.",
+      "The water park closes at 5pm and the main park at 6pm. Do water park first while it is hot, then rides.",
+      "Kids under 3 get in free and can ride most gentle attractions with an adult.",
+      "The Lego Ninjago ride is the most popular and hits 45-minute queues by noon. Go there first."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=800&q=80",
+      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80",
+      "https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "My Lego-obsessed 6-year-old spent 45 minutes building the same structure three times",
+      "excerpt": "He kept rebuilding it until it was perfect. The park staff encouraged him the whole time.",
+      "author": "Mei, mom of 1 from Hong Kong",
+      "fullStory": "We thought the rides would be the highlight. Wrong. The Mindstorm building area was where our son spent the most time. He built a Lego spaceship, tore it down, rebuilt it bigger, tore it down again, and built it perfectly on the third try. A park employee noticed and gave him a Master Builder sticker. He still has it on his laptop two years later."
+    },
+    "itineraryComparison": {
+      "halfDay": "Miniland plus 4-5 rides plus lunch, leave by 2pm",
+      "fullDay": "Water park morning plus main park afternoon plus Miniland at sunset",
+      "bestFor": "Ages 2-14, Lego fans, families coming from Singapore"
+    },
+    "commissionRate": "8%",
+    "seoKeywords": [
+      "Legoland Malaysia",
+      "Johor Bahru with kids",
+      "Lego theme park Asia",
+      "Singapore day trip family"
+    ]
+  },
+  {
+    "id": "taichung-001",
+    "name": "National Museum of Natural Science",
+    "city": "Taichung",
+    "country": "Taiwan",
+    "category": "Museums",
+    "ageRange": "3-16",
+    "safetyRating": 4.6,
+    "priceRange": "$",
+    "popularity": 82,
+    "description": "Taiwan largest science museum complex with interactive hands-on exhibits, life-sized dinosaur skeletons, a butterfly greenhouse, a space theater planetarium, and a dedicated children science discovery wing.",
+    "location": "No. 1, Guanqian Road, North District, Taichung",
+    "bestTime": "Weekdays 9am-12pm. Free admission Wednesday mornings for local residents and crowds are lightest.",
+    "imageUrl": "https://images.unsplash.com/photo-1735796788543-c99c460a0800?w=800&q=80",
+    "amenities": [
+      "Stroller Access",
+      "Cafeteria",
+      "Nursing Room",
+      "Interactive Exhibits",
+      "Planetarium",
+      "Gift Shop"
+    ],
+    "safetyFeatures": [
+      "Museum Staff",
+      "Non-Slip Floors",
+      "Emergency Exits",
+      "Child-Friendly Exhibit Heights",
+      "Elevator Access"
+    ],
+    "tipsAndTricks": [
+      "Buy the combo ticket for NT 250 for all 5 exhibits including the planetarium and butterfly greenhouse.",
+      "The dinosaur hall has a moving T-Rex model that roars every 15 minutes. Warn young kids before entering.",
+      "The Science Center wing for ages 3-10 has water play tables, bubble stations, and a kid-sized construction zone.",
+      "The butterfly greenhouse is indoors with 300+ free-flying butterflies. The humidity hits you immediately so dress light."
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&q=80",
+      "https://images.unsplash.com/photo-1541823709867-1b206113eafd?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80"
+    ],
+    "parentStory": {
+      "title": "The T-Rex roared and my son took cover under a stegosaurus",
+      "excerpt": "He hid for five minutes then peeked out and asked if the T-Rex was gone.",
+      "author": "Jessica, mom of 2 from Taipei",
+      "fullStory": "The dinosaur hall is spectacular. Full skeletons, moving animatronics, and a T-Rex that roars on a timer. Our 4-year-old was fascinated at first but when the T-Rex roared he bolted under the nearest exhibit which happened to be a stegosaurus. He stayed there for five minutes peeking out occasionally to check if the T-Rex was coming. A kind security guard showed him the T-Rex was on a track and could not get off it. That convinced him."
+    },
+    "itineraryComparison": {
+      "halfDay": "Dinosaur hall plus planetarium plus Science Center wing, 3 hours",
+      "fullDay": "Full museum plus butterfly greenhouse plus science demonstrations plus nearby botanical garden",
+      "bestFor": "All ages, science lovers, rainy-day activities"
+    },
+    "commissionRate": "3%",
+    "seoKeywords": [
+      "Taichung National Museum of Natural Science",
+      "Taichung with kids",
+      "Taiwan science museum",
+      "Taichung family"
+    ]
+  }
+]

@@ -297,6 +297,39 @@ export default function PricingPage() {
         { label: "Pricing", href: "/pricing" },
       ]} />
       <FaqPageJsonLd items={FAQS} pageSlug="pricing" />
+
+      {/* ── SoftwareApplication JSON-LD ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Titan — AI Agent Platform Pricing",
+            operatingSystem: "Web",
+            applicationCategory: "AIApplication",
+            description:
+              "Titan pricing plans: Free tier with core features, Pro at $19/mo for power users, and Enterprise at $99/mo for teams. All plans include AI agent building capabilities.",
+            url: "https://titan-app-puce.vercel.app/pricing",
+            offers: {
+              "@type": "AggregateOffer",
+              priceCurrency: "USD",
+              lowPrice: "0",
+              highPrice: "99",
+              offerCount: "3",
+              offers: [
+                { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
+                { "@type": "Offer", name: "Pro", price: "19", priceCurrency: "USD" },
+                { "@type": "Offer", name: "Enterprise", price: "99", priceCurrency: "USD" },
+              ],
+            },
+            author: {
+              "@type": "Organization",
+              name: "Apifeny Labs",
+            },
+          }),
+        }}
+      />
       {/* ── Navigation ── */}
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">

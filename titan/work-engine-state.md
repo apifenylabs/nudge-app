@@ -1,6 +1,6 @@
 # Work Engine State — Titan
 
-Last updated: 2026-06-01 14:37 HKT
+Last updated: 2026-06-11 18:37 HKT
 
 ## Completed Tasks
 
@@ -28,14 +28,12 @@ Last updated: 2026-06-01 14:37 HKT
 | 3 | `src/app/api/robotics/deploy/route.ts` | ✅ **BUILT** — POST endpoint with validation of agentId, platform, optional endpoint/config |
 | 4 | `src/app/api/robotics/status/route.ts` | ✅ **BUILT** — GET endpoint: single deployment by ?id= or filtered list by ?platform=&agentId= |
 
-## Next Steps (cursor → Post-Phase 6 — Polish & GA4)
-
 ### Phase 6d Robotics Full UI ✅ (All Built)
 1. ✅ `src/app/robotics/dashboard/page.tsx` — fully built with LiveMetrics, deploy modal, cards
 2. ✅ `src/app/robotics/[platform]/page.tsx` — 6 platform guides fully authored (RPi 5, Jetson Nano, Portenta H7, ESP32-S3, Rover Pro, Robotic Arm)
 3. ✅ `src/lib/swarm/god-tier-engine.ts` — fully implemented with 13 abilities, thresholds, descriptors
 
-### Next Actual Tasks
-1. **Fix titan-app.vercel.app alias** — deployment at titan-app-puce.vercel.app works but `titan-app.vercel.app` returns 404. The latest production deploys also return 401 (auth middleware issue). Needs Vercel domain alias check.
-2. **GA4 tracking setup** for all routes (original P4 task from HEARTBEAT.md)
-3. **Comparison pages** for AI Directory (cross-listed from P5)
+### 2026-06-11 — Global Footer Added ✅
+- `src/components/organisms/Footer.tsx` — responsive footer with brand, nav links (About, Changelog, Robotics, Referral, Waitlist), copyright
+- Integrated into root layout with flex column for consistent sticky footer
+- Build verified: 0 errors

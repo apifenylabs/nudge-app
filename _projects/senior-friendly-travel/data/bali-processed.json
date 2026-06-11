@@ -1,0 +1,93 @@
+{
+  "city": "Bali",
+  "country": "Indonesia",
+  "lastUpdated": "2026-04-22T15:25:06.727Z",
+  "activities": [
+    {
+      "id": "bali-new-1",
+      "name": "Bali Family Park 1",
+      "category": "Park",
+      "ageRange": "2-11",
+      "safetyRating": "4.5",
+      "description": "A wonderful family-friendly park in Bali. Perfect for children of all ages with safety measures in place.",
+      "location": "Bali, Indonesia",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000001"
+    },
+    {
+      "id": "bali-new-2",
+      "name": "Bali Family Beach 2",
+      "category": "Beach",
+      "ageRange": "0-12",
+      "safetyRating": "4.8",
+      "description": "A wonderful family-friendly beach in Bali. Perfect for children of all ages with safety measures in place.",
+      "location": "Bali, Indonesia",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000002"
+    },
+    {
+      "id": "bali-new-3",
+      "name": "Bali Family Museum 3",
+      "category": "Museum",
+      "ageRange": "2-17",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly museum in Bali. Perfect for children of all ages with safety measures in place.",
+      "location": "Bali, Indonesia",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000003"
+    },
+    {
+      "id": "bali-new-4",
+      "name": "Bali Family Beach 4",
+      "category": "Beach",
+      "ageRange": "1-8",
+      "safetyRating": "4.9",
+      "description": "A wonderful family-friendly beach in Bali. Perfect for children of all ages with safety measures in place.",
+      "location": "Bali, Indonesia",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000004"
+    },
+    {
+      "id": "bali-new-5",
+      "name": "Bali Family Cultural 5",
+      "category": "Cultural",
+      "ageRange": "2-17",
+      "safetyRating": "4.7",
+      "description": "A wonderful family-friendly cultural in Bali. Perfect for children of all ages with safety measures in place.",
+      "location": "Bali, Indonesia",
+      "amenities": [
+        "Family Restrooms",
+        "Stroller Access",
+        "Play Area"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1500000000005"
+    }
+  ],
+  "source": "Simulated data - would be real scraping in production",
+  "seoContent": {
+    "metaTitle": "Family Travel Guide: Bali, Indonesia",
+    "metaDescription": "Complete family travel guide for Bali. Safety-rated activities, age recommendations, and essential tips.",
+    "keywords": [
+      "Bali family travel",
+      "things to do in Bali with kids",
+      "Bali children activities"
+    ],
+    "article": "Bali is a fantastic destination for families. Our guide covers the best activities for children of all ages."
+  }
+}

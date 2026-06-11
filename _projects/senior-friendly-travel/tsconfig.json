@@ -1,0 +1,60 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  "exclude": [
+    "node_modules",
+    "_archive",
+    "_projects",
+    "affiliate-tracking",
+    "ev-charging-asia",
+    "family-travel-directory",
+    "luxury-family-travel",
+    "kids-activities-asia",
+    "senior-friendly-travel-asia",
+    "apifeny-ai",
+    "social-beast-components",
+    "social-beast",
+    "generalscan",
+    "scanwise",
+    "appfactory-beast",
+    "data",
+    "scripts",
+    "ai-cofounder",
+    "ai-cofounder.bak"
+  ]
+}

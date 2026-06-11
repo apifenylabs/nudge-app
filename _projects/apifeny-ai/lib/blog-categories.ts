@@ -7,7 +7,6 @@ export interface BlogCategory {
   seoDescription: string;
   keywords: string[];
   tags: string[];  // Tags that map to this category
-  postCount: number;
 }
 
 const categories: BlogCategory[] = [
@@ -19,7 +18,6 @@ const categories: BlogCategory[] = [
     seoDescription: 'Expert reviews and practical guides for the best AI tools in 2026. Compare coding assistants, writing tools, design apps, marketing platforms, and more for Asian solopreneurs.',
     keywords: ['AI tools reviews', 'best AI tools 2026', 'AI tools Asia', 'AI software comparison', 'AI tool guide'],
     tags: ['ai-tools', 'AI-tools', 'best-ai-tools', 'AI SEO', 'AI coding', 'AI-assistants'],
-    postCount: 0,
   },
   {
     slug: 'asia',
@@ -29,7 +27,6 @@ const categories: BlogCategory[] = [
     seoDescription: 'Discover AI tools optimized for Asian markets, languages, and business needs. Compare solutions for Singapore, Malaysia, Hong Kong, Japan, Thailand, Indonesia, and the Philippines.',
     keywords: ['AI tools Singapore', 'AI tools Malaysia', 'AI tools Japan', 'AI tools Hong Kong', 'Asia AI solutions'],
     tags: ['asia', 'singapore', 'malaysia', 'japan', 'hong-kong', 'Hong Kong', 'Hong-Kong', 'thailand', 'indonesia', 'vietnam', 'philippines', 'South Korea', 'asia-marketing', 'southeast-asia', 'kuala-lumpur', 'kl', 'china-ai'],
-    postCount: 0,
   },
   {
     slug: 'productivity',
@@ -39,7 +36,6 @@ const categories: BlogCategory[] = [
     seoDescription: 'Boost your productivity with AI automation tools. Compare workflow automation, scheduling assistants, email triage, and time management tools tested for Asian solopreneurs.',
     keywords: ['AI productivity', 'automation tools', 'workflow automation', 'time management AI', 'AI scheduling'],
     tags: ['productivity', 'automation', 'n8n', 'zapier', 'workflow', 'time-management', 'scheduling'],
-    postCount: 0,
   },
   {
     slug: 'solopreneur',
@@ -49,7 +45,6 @@ const categories: BlogCategory[] = [
     seoDescription: 'Curated AI tools and stacks for solopreneurs in Asia. Compare accounting, marketing, automation, and productivity tools that save you 20+ hours per week on a budget.',
     keywords: ['AI for solopreneurs', 'solo business tools', 'AI automation solopreneur', 'budget AI tools', 'freelancer AI tools'],
     tags: ['solopreneur', 'freelance', 'freelancer', 'budget', 'money-saving', 'startup'],
-    postCount: 0,
   },
   {
     slug: 'marketing',
@@ -59,7 +54,6 @@ const categories: BlogCategory[] = [
     seoDescription: 'AI-powered marketing tools and strategies for Asian markets. Compare social media management, email marketing, SEO tools, and content creation platforms for your business.',
     keywords: ['AI marketing', 'social media AI', 'email marketing AI', 'AI SEO tools', 'marketing automation'],
     tags: ['marketing', 'social-media', 'email-marketing', 'seo', 'marketing-automation', 'LinkedIn', 'digital-marketing', 'content-strategy', 'growth'],
-    postCount: 0,
   },
   {
     slug: 'coding-development',
@@ -69,7 +63,6 @@ const categories: BlogCategory[] = [
     seoDescription: 'Compare the best AI coding assistants and development tools in 2026. Cursor vs Copilot vs Windsurf, no-code platforms, and development tools for Asian developers.',
     keywords: ['AI coding tools', 'coding assistants', 'GitHub Copilot', 'Cursor AI', 'AI development tools'],
     tags: ['coding', 'programming', 'development', 'app-building', 'app-development', 'no-code', 'mvp', 'cursor', 'Copilot', 'AI-coding', 'developer-tools', 'website-builders', 'website-design'],
-    postCount: 0,
   },
   {
     slug: 'content-creation',
@@ -79,7 +72,6 @@ const categories: BlogCategory[] = [
     seoDescription: 'Create content faster with AI writing, image generation, and video editing tools. Compare Midjourney, DALL-E, Canva AI, and writing tools for Asian creators.',
     keywords: ['AI content creation', 'AI writing tools', 'AI image generation', 'AI video editing', 'content creation AI'],
     tags: ['content-creation', 'ai-writing-tools', 'image-generation', 'midjourney', 'adobe-firefly', 'dall-e', 'dalle', 'canva', 'blogging', 'video-creation', 'video-editing', 'video-marketing', 'design', 'AI-design', 'ai-content', 'ai-art', 'content'],
-    postCount: 0,
   },
   {
     slug: 'comparisons',
@@ -89,7 +81,6 @@ const categories: BlogCategory[] = [
     seoDescription: 'Head-to-head comparisons of popular AI tools. ChatGPT vs Claude vs Gemini, Cursor vs Copilot, Midjourney vs DALL-E, and more. Find the best AI for your needs.',
     keywords: ['AI comparisons', 'ChatGPT vs Claude', 'Cursor vs Copilot', 'AI tool comparison', 'best AI 2026'],
     tags: ['comparison', 'ChatGPT', 'Claude', 'Gemini', 'DeepSeek', 'AI-comparison', 'perplexity', 'jasper-ai'],
-    postCount: 0,
   },
   {
     slug: 'translation-language',
@@ -99,7 +90,6 @@ const categories: BlogCategory[] = [
     seoDescription: 'Compare AI translation and localization tools for Chinese, Japanese, Korean, Thai, Vietnamese, and Bahasa. DeepL vs Gemini, localization workflows, and language learning apps.',
     keywords: ['AI translation', 'language tools', 'Asian languages', 'localization tools', 'DeepL vs Gemini'],
     tags: ['translation', 'localization', 'language-learning', 'asian-languages', 'deepL', 'japanese', 'korean', 'mandarin', 'multilingual', 'bahasa', 'google-translate'],
-    postCount: 0,
   },
   {
     slug: 'accounting-finance',
@@ -109,7 +99,6 @@ const categories: BlogCategory[] = [
     seoDescription: 'AI-powered accounting and finance tools for Asian businesses. Compare Xero, Zoho Books, Wave, QuickBooks, and tax compliance tools for Singapore, Hong Kong, Malaysia, India.',
     keywords: ['AI accounting', 'finance tools', 'bookkeeping AI', 'Asian accounting', 'tax compliance AI'],
     tags: ['accounting', 'finance', 'bookkeeping', 'tax', 'xero', 'zoho-books', 'ai-accounting', 'quickbooks', 'sst', 'business'],
-    postCount: 0,
   },
   {
     slug: 'ecommerce',
@@ -119,7 +108,6 @@ const categories: BlogCategory[] = [
     seoDescription: 'Boost your e-commerce sales with AI tools for product photography, inventory management, customer service chatbots, and sales analytics. Tested for Shopee, Lazada, and Grab.',
     keywords: ['AI e-commerce', 'Shopee AI tools', 'Lazada automation', 'AI product photography', 'e-commerce Asia'],
     tags: ['ecommerce', 'shopee', 'lazada', 'grab', 'product-photography', 'product-images', 'e-commerce Asia', 'inventory management', 'tiktok-shop', 'customer-service', 'chatbots'],
-    postCount: 0,
   },
 ];
 

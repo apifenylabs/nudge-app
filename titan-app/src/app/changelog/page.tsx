@@ -207,6 +207,29 @@ export default function ChangelogPage() {
         ]}
       />
 
+      {/* ── SoftwareApplication JSON-LD ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Titan — Changelog & Release Notes",
+            operatingSystem: "Web",
+            applicationCategory: "AIApplication",
+            description:
+              "Titan release notes, feature updates, bug fixes, and platform improvements. Track the evolution of the AI agent platform.",
+            url: "https://titan-app-puce.vercel.app/changelog",
+            applicationSuite: "Titan",
+            releaseNotes: "https://titan-app-puce.vercel.app/changelog",
+            author: {
+              "@type": "Organization",
+              name: "Apifeny Labs",
+            },
+          }),
+        }}
+      />
+
       {/* ─── Hero ─────────────────────────────────────────── */}
       <section className="relative overflow-hidden border-b border-violet-200/30 bg-gradient-to-b from-violet-950 via-violet-900 to-purple-950">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,92,246,0.15),transparent_70%)]" />
