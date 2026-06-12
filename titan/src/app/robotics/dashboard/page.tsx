@@ -18,6 +18,7 @@ import {
   Loader2,
   ChevronRight,
 } from 'lucide-react';
+import JsonLd from '@/components/atoms/JsonLd';
 
 import type {
   RobotPlatform,
@@ -372,6 +373,16 @@ function SummaryCard({
 
 // ─── Main Page ──────────────────────────────────────────────────────────
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://titan.apifeny.com' },
+    { '@type': 'ListItem', position: 2, name: 'Robotics', item: 'https://titan.apifeny.com/robotics' },
+    { '@type': 'ListItem', position: 3, name: 'Dashboard', item: 'https://titan.apifeny.com/robotics/dashboard' },
+  ],
+};
+
 export default function RoboticsDashboardPage() {
   const [deployments, setDeployments] = useState<DeploymentHealth[]>([]);
   const [loading, setLoading] = useState(true);
@@ -443,7 +454,9 @@ export default function RoboticsDashboardPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <>
+      <JsonLd schema={breadcrumbSchema} />
+      <div className="min-h-screen bg-slate-950 text-white">
       {/* Header */}
       <div className="border-b border-slate-800/60 bg-slate-900/50 backdrop-blur-sm">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
@@ -538,5 +551,6 @@ export default function RoboticsDashboardPage() {
         )}
       </AnimatePresence>
     </div>
+    </>
   );
 }

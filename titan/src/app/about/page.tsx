@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Swords, ShieldCheck, Cpu, Globe, Users, TrendingUp, ArrowRight, Sparkles, Trophy } from 'lucide-react';
+import JsonLd from '@/components/atoms/JsonLd';
 
 export const metadata: Metadata = {
   title: 'About — Titan AI Agent Platform',
@@ -42,9 +43,73 @@ const VALUES = [
   },
 ];
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://titan.apifeny.com/about/#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://titan.apifeny.com' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://titan.apifeny.com/about' },
+  ],
+};
+
+const aboutSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://titan.apifeny.com/#organization',
+      name: 'Titan by Apifeny Labs',
+      url: 'https://titan.apifeny.com',
+      description: 'Titan is the visual progression platform for AI agents — build, certify, and deploy autonomous agents with RPG-style skill trees and God-Tier certification.',
+      foundingDate: '2026-01',
+      founder: { '@type': 'Organization', name: 'Apifeny Labs' },
+      sameAs: [
+        'https://github.com/apifeny/titan',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://titan.apifeny.com/#website',
+      url: 'https://titan.apifeny.com',
+      name: 'Titan AI Agent Platform',
+      description: 'AI agent progression platform with visual skill trees, swarm coordination, and hardware-agnostic deployment.',
+      publisher: { '@id': 'https://titan.apifeny.com/#organization' },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': 'https://titan.apifeny.com/#softwareapplication',
+      name: 'Titan AI Agent Platform',
+      applicationCategory: 'DeveloperApplication',
+      operatingSystem: 'Web browser (cross-platform)',
+      description: 'Visual AI agent progression platform with skill trees, certification badges, swarm coordination, and hardware-agnostic deployment.',
+      url: 'https://titan.apifeny.com',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/PreOrder',
+      },
+      author: { '@id': 'https://titan.apifeny.com/#organization' },
+      featureList: [
+        'Visual Skill Trees for AI agents',
+        'OWASP-secured Certification Badges (Bronze to God-Tier)',
+        'Swarm Coordination (multi-agent orchestration)',
+        'Hardware-agnostic deployment (cloud, edge, ROS2 robots)',
+        'Community skill marketplace',
+        'BYO models and custom tools',
+      ],
+      screenshot: 'https://titan.apifeny.com/og.png',
+    },
+  ],
+};
+
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white">
+    <>
+      <JsonLd schema={breadcrumbSchema} />
+      <JsonLd schema={aboutSchema} />
+      <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white">
       {/* Hero */}
       <section className="relative overflow-hidden px-6 pt-20 pb-16">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/20 via-transparent to-transparent" />
@@ -167,5 +232,6 @@ export default function AboutPage() {
 
 
     </div>
+    </>
   );
 }

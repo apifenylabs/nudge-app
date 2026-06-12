@@ -7,6 +7,13 @@
 - ANY file that references a secret MUST use env var interpolation only, NEVER hardcoded values
 - Git history with secrets must be force-rewritten with BFG Repo-Cleaner
 
+### HARD RULE: Goals & Milestones first — every session (2026-06-12 08:50 HKT)
+- GOALS_AND_MILESTONES.md is read FIRST every session and every cron run
+- Every action must push a milestone forward. No aimless building.
+- Ranking targets and revenue milestones are the only valid work drivers
+- Blockers are logged and surfaced; do not work around them with non-milestone work
+- Daily check: status report to CEO on milestone progress
+
 ### HARD RULE: Governance gate is immutable (2026-05-30 10:11 HKT)
 - Every ALLOC_ in config.py must map to a strategy in APPROVED_STRATEGIES
 - Unregistered strategies are AUTO-KILLED (critical violation, blocks bot start)

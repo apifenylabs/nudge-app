@@ -1,8 +1,8 @@
 {
-  "version": "2026-06-03-consolidation-primary",
-  "generated": "2026-06-03T02:00:00+08:00",
-  "semanticCount": 79,
-  "graphEdgeCount": 101,
+  "version": "2026-06-12-consolidation-primary",
+  "generated": "2026-06-12T02:00:00+08:00",
+  "semanticCount": 86,
+  "graphEdgeCount": 110,
   "nodes": [
     {
       "id": "chunk-crypnuevo-cross-1779217287655",
@@ -638,6 +638,62 @@
       "type": "semantic",
       "confidence": 0.9,
       "timestamp": "2026-06-03T02:00:00+08:00"
+    },
+    {
+      "id": "aqua-execution-pipeline-failure",
+      "name": "Aqua Execution Pipeline \u2014 Zero Trades Since Go-Live (5 days)",
+      "summary": "HL_PRIVATE_KEY empty at runtime + grouped call misuse = zero Aqua trades since Jun 7. 5 missed trades. ETH LONG would have won +1.6%. 3 bugs found.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-06-12T02:00:00+08:00"
+    },
+    {
+      "id": "cross-codebase-bug-propagation",
+      "name": "Cross-Codebase Bug Propagation \u2014 Known Fixes Not Ported",
+      "summary": "Ghost-killer TP/SL bug (fixed Jun 2 in legacy) re-emerged in Aqua rewrite. Fix knowledge existed but was not transferred during codebase migration.",
+      "type": "semantic",
+      "confidence": 0.9,
+      "timestamp": "2026-06-12T02:00:00+08:00"
+    },
+    {
+      "id": "fvg-fill-strategy-dead-intraday",
+      "name": "FVG Fill Strategy \u2014 Not Deployable on Crypto Intraday",
+      "summary": "60-63% WR was look-ahead bias. Realistic entry: 38-42% WR, negative expectancy. Crypto 15m fills gaps too fast. No timeframe magic.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-06-12T02:00:00+08:00"
+    },
+    {
+      "id": "liquidity-engine-r-and-d",
+      "name": "Liquidity Engine \u2014 Sub-Candle L2 Stream Strategy",
+      "summary": "Built Jun 11. WebSocket L2 stream, wall detection, imbalance, trade flow. First mechanism not dependent on OHLCV lag. Unproven but promising.",
+      "type": "semantic",
+      "confidence": 0.7,
+      "timestamp": "2026-06-12T02:00:00+08:00"
+    },
+    {
+      "id": "wosobu-auditor-transition",
+      "name": "CEO Role Evolution \u2014 Delegator to Auditor",
+      "summary": "Since Jun 10, Wosobu catches silent failures, demands proof, rejects strategies with data. Healthier dynamic. Claims need 2x validation.",
+      "type": "semantic",
+      "confidence": 0.9,
+      "timestamp": "2026-06-12T02:00:00+08:00"
+    },
+    {
+      "id": "aqua-cron-fleet-consolidation",
+      "name": "Aqua Cron Fleet \u2014 8 Archived, 14 Active, 0 Errors",
+      "summary": "Jun 11: 8 R&D crons archived with CEO approval. Fleet aligned to active work. Cleanest cron state since May 19.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-06-12T02:00:00+08:00"
+    },
+    {
+      "id": "alpha-velocity-stalled",
+      "name": "Alpha-Velocity Engine \u2014 Deployed but Untraded",
+      "summary": "79\u21920k spec proven (99.1% reach, 95d median). 73.5% WR, 5.35 PF. Zero trades executed due to HL env var blocker.",
+      "type": "semantic",
+      "confidence": 1.0,
+      "timestamp": "2026-06-12T02:00:00+08:00"
     }
   ],
   "edges": [
@@ -1246,6 +1302,60 @@
       "target_id": "trading-discipline-transition-may31",
       "relation_type": "supports",
       "weight": 0.85
+    },
+    {
+      "source_id": "aqua-execution-pipeline-failure",
+      "target_id": "grouped-tpsl-fix-deployed",
+      "relation_type": "mirrors-with-own-variant",
+      "weight": 0.95
+    },
+    {
+      "source_id": "aqua-execution-pipeline-failure",
+      "target_id": "knowledge-execution-gap-pattern",
+      "relation_type": "exemplifies",
+      "weight": 0.9
+    },
+    {
+      "source_id": "cross-codebase-bug-propagation",
+      "target_id": "knowledge-execution-gap-pattern",
+      "relation_type": "specializes",
+      "weight": 0.9
+    },
+    {
+      "source_id": "cross-codebase-bug-propagation",
+      "target_id": "grouped-tpsl-fix-deployed",
+      "relation_type": "explains",
+      "weight": 0.9
+    },
+    {
+      "source_id": "fvg-fill-strategy-dead-intraday",
+      "target_id": "wosobu-auditor-transition",
+      "relation_type": "supports",
+      "weight": 0.85
+    },
+    {
+      "source_id": "liquidity-engine-r-and-d",
+      "target_id": "fvg-fill-strategy-dead-intraday",
+      "relation_type": "replaces-direction",
+      "weight": 0.7
+    },
+    {
+      "source_id": "wosobu-auditor-transition",
+      "target_id": "cpso-framework-emergence",
+      "relation_type": "complements",
+      "weight": 0.85
+    },
+    {
+      "source_id": "alpha-velocity-stalled",
+      "target_id": "aqua-execution-pipeline-failure",
+      "relation_type": "blocked-by",
+      "weight": 1.0
+    },
+    {
+      "source_id": "alpha-velocity-stalled",
+      "target_id": "revenue-day-39-structural",
+      "relation_type": "extends",
+      "weight": 0.9
     }
   ]
 }

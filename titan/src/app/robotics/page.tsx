@@ -20,6 +20,7 @@ import { useLevelProgression } from '../../lib/swarm/use-level-progression';
 import { checkGodTierUnlock, getGodTierAbilities, getGodTierTier } from '../../lib/swarm/god-tier-engine';
 
 import type { Variants } from 'framer-motion';
+import JsonLd from '../../components/atoms/JsonLd';
 
 const fadeIn: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -93,8 +94,19 @@ export default function RoboticsPage() {
   const abilities = getGodTierAbilities(progState.level);
   const tierNum = getGodTierTier(progState.level);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://titan.apifeny.com' },
+      { '@type': 'ListItem', position: 2, name: 'Robotics', item: 'https://titan.apifeny.com/robotics' },
+    ],
+  };
+
   return (
-    <main className="min-h-screen bg-[#0F172A] text-[#F1F5F9] overflow-hidden relative">
+    <>
+      <JsonLd schema={breadcrumbSchema} />
+      <main className="min-h-screen bg-[#0F172A] text-[#F1F5F9] overflow-hidden relative">
       {/* ── Background gradient ────────────────────────────── */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -370,5 +382,6 @@ export default function RoboticsPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

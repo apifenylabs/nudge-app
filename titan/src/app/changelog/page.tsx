@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Bug, Sparkles, TrendingUp, Shield, Rocket, RefreshCw, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import JsonLd from '@/components/atoms/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Changelog — Titan Updates & Releases',
@@ -130,9 +131,20 @@ function formatDate(iso: string): string {
   return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://titan.apifeny.com' },
+    { '@type': 'ListItem', position: 2, name: 'Changelog', item: 'https://titan.apifeny.com/changelog' },
+  ],
+};
+
 export default function ChangelogPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white">
+    <>
+      <JsonLd schema={breadcrumbSchema} />
+      <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white">
       {/* Header */}
       <section className="relative overflow-hidden px-6 pt-20 pb-16">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent" />
@@ -209,5 +221,6 @@ export default function ChangelogPage() {
 
 
     </div>
+    </>
   );
 }

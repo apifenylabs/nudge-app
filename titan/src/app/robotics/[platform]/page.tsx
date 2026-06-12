@@ -4,6 +4,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
+import JsonLd from '@/components/atoms/JsonLd';
 import {
   Cpu,
   CircuitBoard,
@@ -854,8 +855,20 @@ export default function PlatformGuidePage() {
     );
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://titan.apifeny.com' },
+      { '@type': 'ListItem', position: 2, name: 'Robotics', item: 'https://titan.apifeny.com/robotics' },
+      { '@type': 'ListItem', position: 3, name: guide.name, item: `https://titan.apifeny.com/robotics/${guide.id}` },
+    ],
+  };
+
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100">
+    <>
+      <JsonLd schema={breadcrumbSchema} />
+      <main className="min-h-screen bg-slate-950 text-slate-100">
       {/* ── Platform Nav Bar ─────────────────────────────────────── */}
       <div className="sticky top-0 z-50 border-b border-slate-800/60 bg-slate-900/80 backdrop-blur-xl">
         <div className="mx-auto max-w-6xl px-4">
@@ -1143,5 +1156,6 @@ export default function PlatformGuidePage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

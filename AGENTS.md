@@ -33,6 +33,22 @@ Violation = immediate CEO notification with full context.
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
+<!-- BEGIN:goals-first -->
+# 🎯 Goals & Milestones First — Every Session
+
+**Before any action, read GOALS_AND_MILESTONES.md.**
+
+1. Read the goals file. Verify current milestone status.
+2. Ask: does my planned action move ANY milestone forward?
+   - Yes → proceed (explain which milestone)
+   - No → STOP. Do not do it.
+3. If blocked, log the blocker. Do not do alternative work that doesn't push milestones.
+4. Every heartbeat/cron run: check milestones and report progress toward targets.
+5. No aimless page-building. Every page must serve a ranking or revenue goal.
+
+_Added 2026-06-12 per CEO directive. Violation is a discipline issue._
+<!-- END:goals-first -->
+
 <!-- BEGIN:scope-before-code -->
 # 🔭 Scope Before Code — Universal
 

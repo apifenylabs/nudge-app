@@ -1,33 +1,37 @@
 import { MetadataRoute } from 'next'
 
-const BASE_URL = 'https://titan-app-puce.vercel.app'
+const BASE_URL = 'https://titan.apifeny.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const base = BASE_URL;
   return [
     // ── Top-level pages ──
-    { url: BASE_URL, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${BASE_URL}/features`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/pricing`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/changelog`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE_URL}/login`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/privacy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
+    { url: base, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${base}/features`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/pricing`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/changelog`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
+    { url: `${base}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/login`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${base}/privacy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
+    { url: `${base}/compare`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${base}/sandbox`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${base}/byo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${base}/affiliate`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
 
     // ── Dashboard (app-level pages — require auth) ──
-    { url: `${BASE_URL}/dashboard`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
-    { url: `${BASE_URL}/dashboard/progression`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.5 },
-    { url: `${BASE_URL}/dashboard/lifeos`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.5 },
-    { url: `${BASE_URL}/dashboard/forge`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.5 },
-    { url: `${BASE_URL}/dashboard/analytics`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
-    { url: `${BASE_URL}/dashboard/automation`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
-    { url: `${BASE_URL}/dashboard/swarm`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
-    { url: `${BASE_URL}/dashboard/security`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
-    { url: `${BASE_URL}/dashboard/billing`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
+    { url: `${base}/dashboard`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
+    { url: `${base}/dashboard/progression`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.5 },
+    { url: `${base}/dashboard/lifeos`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.5 },
+    { url: `${base}/dashboard/lifeos/marketplace`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
+    { url: `${base}/dashboard/forge`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.5 },
+    { url: `${base}/dashboard/analytics`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
+    { url: `${base}/dashboard/automation`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
+    { url: `${base}/dashboard/swarm`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
+    { url: `${base}/dashboard/security`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
+    { url: `${base}/dashboard/billing`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
 
     // ── Robotics ──
-    { url: `${BASE_URL}/robotics`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE_URL}/robotics/dashboard`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
-    { url: `${BASE_URL}/byo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/affiliate`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
-  ]
+    { url: `${base}/robotics`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${base}/robotics/dashboard`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
+  ];
 }

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Check, Sparkles, Zap, Cpu, Rocket, Users, Star } from 'lucide-react';
+import JsonLd from '@/components/atoms/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Join the Waitlist — Titan',
@@ -30,9 +31,20 @@ const SOCIAL_PROOF = [
 // Re-import for JSX usage
 import { Globe, ShieldCheck } from 'lucide-react';
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://titan.apifeny.com' },
+    { '@type': 'ListItem', position: 2, name: 'Waitlist', item: 'https://titan.apifeny.com/waitlist' },
+  ],
+};
+
 export default function WaitlistPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white">
+    <>
+      <JsonLd schema={breadcrumbSchema} />
+      <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white">
       {/* Hero */}
       <section className="relative overflow-hidden px-6 pt-32 pb-20">
         {/* Background glow */}
@@ -189,5 +201,6 @@ export default function WaitlistPage() {
         </div>
       </footer>
     </div>
+    </>
   );
 }

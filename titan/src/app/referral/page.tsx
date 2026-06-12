@@ -4,6 +4,8 @@ import {
   Zap, Gift, Users, TrendingUp, DollarSign, Star, ShieldCheck,
   ArrowRight, Sparkles, Copy, CheckCircle, ExternalLink
 } from 'lucide-react';
+import JsonLd from '@/components/atoms/JsonLd';
+import ReferralClient from './ReferralClient';
 
 export const metadata: Metadata = {
   title: 'Referral Program — Titan AI Agent Platform',
@@ -83,9 +85,45 @@ const FAQ = [
   },
 ];
 
+const referralProgramSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Titan Affiliate & Referral Program',
+  description:
+    'Earn 20% recurring commission by referring AI agent builders to Titan. No cap, monthly payouts, 90-day cookie window.',
+  brand: {
+    '@type': 'Brand',
+    name: 'Titan',
+  },
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'USD',
+    offerCount: '5',
+    offers: [
+      { '@type': 'Offer', name: 'Bronze — 1–5 referrals', price: '0', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Silver — 6–20 referrals', price: '0', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Gold — 21–50 referrals', price: '0', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Diamond — 51–100 referrals', price: '0', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'God-Tier — 100+ referrals', price: '0', priceCurrency: 'USD' },
+    ],
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://titan.apifeny.com' },
+    { '@type': 'ListItem', position: 2, name: 'Referral Program', item: 'https://titan.apifeny.com/referral' },
+  ],
+};
+
 export default function ReferralPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white">
+    <>
+      <JsonLd schema={breadcrumbSchema} />
+      <JsonLd schema={referralProgramSchema} />
+      <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white">
       {/* Hero */}
       <section className="relative overflow-hidden px-6 pt-20 pb-16">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/20 via-transparent to-transparent" />
@@ -195,6 +233,9 @@ export default function ReferralPage() {
         </div>
       </section>
 
+      {/* Earnings Calculator (client interactive) */}
+      <ReferralClient />
+
       {/* Tiers */}
       <section className="px-6 py-16 bg-gray-900/30">
         <div className="max-w-4xl mx-auto">
@@ -216,27 +257,8 @@ export default function ReferralPage() {
         </div>
       </section>
 
-      {/* Sample Referral Link */}
-      <section className="px-6 py-16">
-        <div className="max-w-3xl mx-auto p-8 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700">
-          <Copy className="w-8 h-8 mx-auto mb-4 text-emerald-400" />
-          <h2 className="text-2xl font-bold text-center mb-2">Your Referral Link</h2>
-          <p className="text-gray-400 text-center mb-6 max-w-md mx-auto">
-            After signing up, your unique link will look like this — ready to share anywhere.
-          </p>
-          <div className="flex items-center gap-3 p-4 rounded-xl bg-gray-700/40 border border-gray-600/40">
-            <code className="flex-1 text-sm text-emerald-300 font-mono break-all">
-              titan.build/refer?ref=yourname
-            </code>
-            <button className="shrink-0 p-2 rounded-lg bg-gray-600 hover:bg-gray-500 transition-colors" title="Copy example link">
-              <Copy className="w-4 h-4" />
-            </button>
-          </div>
-          <p className="text-gray-500 text-xs mt-3 text-center">
-            You&apos;ll get your real link after creating a free account.
-          </p>
-        </div>
-      </section>
+      {/* Sample Referral Link — interactive copy demo */}
+      {/* (moved into ReferralClient) */}
 
       {/* FAQ */}
       <section className="px-6 py-16 bg-gray-900/30">
@@ -302,5 +324,6 @@ export default function ReferralPage() {
         </div>
       </footer>
     </div>
+    </>
   );
 }

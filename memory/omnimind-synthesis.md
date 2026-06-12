@@ -1,92 +1,134 @@
 
-## 2026-06-03 (Wednesday) — Daily OmniMind Synthesis
 
-Generated: 2026-06-03T02:00 HKT | Window: June 1 – June 3, 2026
+## 2026-06-12 (Friday) — Daily OmniMind Synthesis
+
+Generated: 2026-06-12T02:00 HKT | Window: June 1 – June 11, 2026 | Previous synthesis: Jun 3
 
 ---
 
 ## 1. Cross-Day Pattern Analysis
 
-### Priority A: Ghost-Killer Loop → Grouped TP/SL Fix — Structural Incident Closure (PATTERN AP2 → RESOLVED)
+### Priority A: Aqua Execution Pipeline — Silent Failure Since Jun 7 Switchover (PATTERN AW — CRITICAL NEW)
 
-**Timeline**: May 25 (first TP/SL failure documented) → Jun 1 (3 SOL entries, 40-min churn cycle, ~$17 loss, unsleuthed) → Jun 2 09:40-10:15 (14 orphan closures, ~$30 loss from legacy code) → Jun 2 12:19-13:20 (root cause + fix deployed) → Jun 2 13:20 (grouped order smoke test clean) → Jun 2 13:58 (first live trade with native TP/SL in single call)
+**Discovery timeline**:
+- Jun 7 23:10: Aqua orchestrator goes LIVE (PAPER_MODE=False, but state was actually True)
+- Jun 8: CEO thinks system is live. It's paper (silent failure #1 — not caught for ~24h)
+- Jun 10 00:45: 4 ETH LONG signals fire → orchestrator crash (filter chain bug) → no execution
+- Jun 10 08:00: CEO notices `live_execution=false` in pulse → root cause: `dc.get_price(coin)` returns None, all strategies crash silently for 3 days
+- Jun 10 23:21: Fix applied, PAPER_MODE flipped to False. System truly LIVE.
+- Jun 11: Further investigation reveals **all signals still fail** — `HL_PRIVATE_KEY` and `HL_WALLET_ADDRESS` env vars are empty at runtime. `HyperliquidConnector` initializes with `self._exchange = None`. All `place_tpsl_group()` calls return `TpslGroupResult(success=False, error="No SDK exchange")`.
+- Jun 11 17:30: Additional bug found — `place_tpsl_group()` sends entry+TP/SL as single `grouping="normalTpsl"` call, but HL SDK requires existing position for TP/SL anchor. Returns `no_position`. Fix proposed (2-phase: market_open first, then bulk_orders).
 
-**Root cause**: `bulk_orders` with separate post-entry TP/SL attachments fails with "Main order cannot be trigger order." The ghost-killer then closes raw positions, triggering fresh VolSurge signals — creating a lossy churn cycle.
+**Cumulative cost**: 5 missed trades (4 ETH LONG × 4 attempts + 1 SPX SHORT + 1 WIF LONG). ETH LONG would have won +1.6% ($14). Others unknown. **The execution pipeline has never successfully placed a single Aqua trade since switchover 5 days ago.**
 
-**Fix**: Single `bulk_orders([entry, tp, sl], grouping='normalTpsl')` call. HL auto-cancels TP on SL hit. No ghost loop possible.
+**Root cause chain**: No HL env vars → no exchange object → grouped entry+TP/SL API misuse → all signals die silently. Each layer independently lethal.
 
-**Cost to date**: ~$47 cumulative lost across May 25–Jun 2 (Jun 1: ~$17, Jun 2 morning: ~$30). This is the single most expensive bug in the bot's lifetime.
+**Cross-reference**: This is an evolution of the **knowledge-execution-gap pattern** (SP-KEG, Jun 3 synthesis). The legacy code (main_bot.py) had the correct 2-phase pattern working, but the Aqua rewrite of `place_tpsl_group()` deviated from the proven approach. CEO: "did you not copy the execution methods and mistakes we've learned in legacy?"
 
-**Status**: RESOLVED ✅. Grouped order adopted as sole entry method. Execution Monitor with 5 anomaly detectors provides redundant surveillance.
+**Status**: UNRESOLVED 🔴 — awaiting CEO sign-off on micro-test vs ship of 2-phase fix. Per-strategy coin whitelists also missing (Bug 2). Filter chain crash partially fixed (Bug 3 surfaced immediate crash, others self-recovered on retry).
 
-**Cross-reference**: The fix was known since May 25 (resting reduce-only workaround documented as `tp-sl-workaround-resting-orders` semantic node) but never wired into the auto-entry path. This is a **deployment failure**, not a knowledge gap.
+### Priority B: DFA Gate Evolution — CONSTRICTED Removed, Binary LOCK/NORMALIZED (PATTERN AX — RESOLVED)
 
-### Priority B: Global Risk Restructure — Single-Slot Rule + $19.12/Trade (PATTERN AR — NEW)
+**Timeline**:
+- Jun 4: DFA Hurst gate deployed with CONSTRICTED zone (0.25 < H < 0.42)
+- Jun 4 19:01: Wosobu challenges BB_1h in CONSTRICTED (H=0.28) — calls it structurally flawed
+- Jun 9: Data analysis shows CONSTRICTED ceiling 0.42 blocks 40% of BB Core trades which have ABOVE-average WR (60.4% vs 59.1%). CEO says remove the ceiling.
+- Jun 10 22:20: v2 code deployed: binary LOCK (H<0.25) / NORMALIZED only. CONSTRICTED removed entirely.
+- Jun 11: Confirmed working — only SPX locked (H=0.188, Polymarket prediction token). All real coins NORMALIZED.
 
-**Jun 2 19:24-19:30**: Wosobu (via CPSO) triggered a full risk restructure:
-- ALLOC_*=1.0 (flat $19.12 risk per trade across all strategies)
-- Single-slot rule: max 1 position/symbol, 4 portfolio max
-- BB_1H_SYMBOLS allowlist enforced
-- Ecosystem correlation gate (ETH/ARB co-hold prevented)
+**Cost of bug**: CONSTRICTED regime blocked 40% of BB Core trades for ~7 days (Jun 4 Jun 10). During this period only 2 legitimate signals fired (btc_stat_arb to ARB, ETH ×4). The blocked trades were ABOVE average — meaning CONSTRICTED was actively filtering out winning trades.
 
-**Significance**: This is the most consequential risk architecture change since May 25 TP/SL workaround. It replaces the percentage-allocation model with flat-dollar risk. Every strategy now risks the same dollar amount per entry.
+**Key decision**: DFA kept as emergency crash protection only (H < 0.25). No intermediate risk modulation. This is a cleaner, simpler design — but removes the regime-adaptive component that was the original point of deploying DFA.
 
-**Risk profile**: At $956 account, $19.12/trade = 2% risk per trade. This is well within the 1-3% standard for systematic trading, and a massive improvement over the May 24-28 period where single positions represented 50%+ of portfolio.
+### Priority C: Strategy Direction Pivot — BB/RSI → FVG/MSS/Liquidity (PATTERN AY — ACTIVE)
 
-**Potential blind spot**: 2% risk across 4 positions = 8% total portfolio at risk. If 4 correlated positions fire simultaneously (all crypto longs), the choke collar is the only defense.
+**Jun 11 late session**: Wosobu explicitly redirects R&D away from BB/RSI mean reversion toward institutional-grade intraday algos (FVG, MSS, ORB, liquidity sweep). He calls BB/RSI "retail."
 
-### Priority C: Bot Mode Drift — Finally Addressed (PATTERN AP — STRUCTURALLY IMPROVED)
+**FVG investigation results (Jun 11 20:30-22:54 HKT)**:
+- Pure FVG gap (3-candle): 12-13% candle frequency, **100% fill rate** on 15m crypto
+- Initial 60-63% WR claim was **look-ahead bias** — entering on same candle as fill
+- Realistic execution (next candle open): **38-42% WR, negative expectancy across ALL pairs**
+- No timeframe magic (17m tested: 64% WR but N=25 — noise)
+- **Crypto 15m fills gaps in 0-1 bars** — different from Forex where FVG strategies work
+- NY ORB: 22-27% WR, not deployable
+- Gemini's swept+displacement filter: 0/15k matches — too strict for crypto
 
-The Jun 2 session brought critical discipline improvements:
-- **"Bot is LIVE unless told otherwise"** — hard rule now explicitly documented
-- Conditional misinterpretation (was in paper because Wosobu said "paper if micro trades") removed as excuse
-- **Execution Monitor** provides real-time auto-flagging of mode desync
-- Single-slot rule prevents the portfolio expansion pattern that enabled earlier drifts
+**What works**: Limit orders at pre-calculated sweep levels (liquidity model tells WHERE price will sweep → enters BEFORE move, not after). Live L2 engine built Jun 11 22:37-22:54.
 
-**However**: OS-level env var enforcement is still not in place. The PAPER/LIVE mode is still a code-level flag. A cron restart could still reset the mode state. The May 28 PAPER→LIVE drift scenario is *reduced* but not *eliminated*.
+**Status**: FVG Fill strategy DEAD for market entry (intraday crypto). Liquidity sweep unproven but promising direction. CEO wants "more back and fwd test."
 
-### Priority D: CPSO Framework Formalized (PATTERN AS — NEW)
+### Priority D: Ghost-Killer Loop Closure — Full Incident Post-Mortem (PATTERN AP2 — CLOSED)
 
-Jun 2 saw Wosobu start explicitly referencing CPSO as his strategic alter ego. The directive to treat CPSO as binding was documented.
+**Cross-day timeline (May 25 – Jun 11):**
+- May 25: First TP/SL failure documented. Resting-order workaround saved but not wired.
+- Jun 1: SOL VolSurge churn cycle (3 entries, 40 min, ~$17 loss). Kill switch enforced.
+- Jun 2 09:40-10:15: 14 orphan closures from legacy code path (~$30 loss).
+- Jun 2 12:19-13:20: Root cause found. Single `bulk_orders([entry, tp, sl], grouping='normalTpsl')` fix deployed.
+- Jun 2 13:20: Smoke test clean. Live trade 13:58.
+- **Jun 11**: New variant discovered in **Aqua** — same conceptual bug (grouped call with entry+TP/SL in one request) but different mechanism (no existing position for anchor vs SDK grouping). The fix is the same 2-phase pattern legacy has used since Jun 2.
 
-**Significance**: This introduces an **organizational pattern** into the human-AI interaction. CPSO represents the strategic/risk-aware side of Wosobu that overrides tactical/operational decisions. When Wosobu says "CPSO says X," it carries higher authority than a standard request.
+**Observation**: The ghost-killer loop took 9 days to fix in legacy (May 25 → Jun 2). The same conceptual bug was re-introduced in Aqua (Jun 7 → discovered Jun 11). **The fix knowledge was available but not propagated across codebases during the rewrite.**
 
-**This matters for**:
-- **Conflict resolution**: If Wosobu gives a tactical directive that contradicts a CPSO risk directive, CPSO wins
-- **Escalation path**: When blocked on product revenue decisions, CPSO may be the right escalation target
-- **Risk governance**: CPSO triggered the global risk restructure — this is the source of strategic risk decisions
+**Cost to date**: ~$47 legacy + unknown missed Aqua winners (at least +$14 from ETH LONG that would have won).
 
-### Priority E: Revenue at Day 40 — Still $0.00, Still Structural (PATTERN AL — DAY 40)
+### Priority E: Revenue Day 49 — Still $0.00, Still Structural (PATTERN AL — DAY 49)
 
-Day 40 without product revenue. 7 CEO-gated blockers unchanged.
+**No changes to any blocker status** since May 19 (31 days). All 7 CEO-gated items:
+- HL_PRIVATE_KEY / HL_WALLET_ADDRESS env vars (blocks all trading execution)
+- Supabase DNS (LifeOS cloud sync)
+- Stripe API keys (product revenue)
+- Affiliate API tokens (AI Directory monetization)
+- Vercel deploy token
+- Titan domain alias config
+- IB Gateway setup (Dragonite)
 
 **New data points**:
-- Jun 2 AI Directory: 6 blog JSON files + SEO SVG improvements — content-build continues without monetization
-- Trading account ($956) remains the only revenue source
-- HEARTBEAT at Jun 3 01:39 confirms 6/6 sites healthy, 19/21 crons ok
-- **Structural insight**: The Jun 2 session was **entirely trading operations** (bug fixes, risk restructure, anomaly detectors). Zero product work. This is now a de facto 100% trading focus.
+- **Trading is the only live revenue channel** but it's neutral functional — zero profits earned because execution is broken
+- Dragonite (IKBR) adds a second revenue-intended channel on the same $0 ledger
+- The "CRITICAL execution pipeline" issue now includes an env var blocker that's been open since Day 1 of Aqua switchover (Jun 7)
+- Product work continues (LifeOS, Titan SEO, AI Directory content) but none monetized
 
-**Pattern cross-reference**: The CPSO framework emerged on the same day the last product work (Monsoon Tagging, affiliate link expansion) was reported. If CPSO is the strategic persona and its first major act was a trading risk restructure, it suggests CPSO's priority is trading infrastructure — not product revenue.
+### Priority F: Cron Fleet Consolidation (PATTERN AQ — COMPLETED)
 
-### Priority F: Cron Fleet Stabilized (PATTERN AQ — CLOSING)
+**Evolution**:
+- May 31: Gateway restart — 7 errors (28% of fleet)
+- Jun 3: 2 errors (transient DeepSeek timeout)
+- Jun 10: 4 crons renamed/updated for Aqua
+- **Jun 11**: 8 cron jobs archived (confirmed with CEO):
+  - Removed: wick-improv, polymarket, kalman-drl, research-loop, aqua-rnd-loop, ny-orb-backtest, reverse-engineer-6h, legacy-daily-report
+  - Kept (14): All Aqua PROD crons (4), CEO/infra (7), OmniMind (3)
+- **Current**: 22→14 active, 0 errors ✅
 
-- Jun 1: 7 crons in error state (gateway restart induced)
-- Jun 3: 2 crons in error state (transient DeepSeek API timeout — different root cause)
-- All gateway-restart errors have self-healed over 48h
-- Error count dropped from 28% to 9.5% of fleet
+**Status**: Cleanest state since May 19. Fleet now aligns with active work.
 
-**Remaining**: 2 research/trading crons timing out on DeepSeek model calls. Both are transient API latency, not structural.
+### Priority G: Alpha-Velocity Engine — Deployed but Untested (PATTERN AZ — STALLED)
 
-### Priority G: Execution Monitor — New Infrastructure (PATTERN AT — NEW)
+**Jun 9**: Unified engine spec ($879→$10k) — BB Core 100%, 5% risk, DFA LOCK, Cluster 8%, VolSurge 0%. 99.1% reach $10k, 95d median.
+**Jun 10**: Deployed LIVE. Paper_Mode discovered True (was paper for 24h since Jun 7 switchover).
+**Jun 10-11**: Aqua execution pipeline found broken (see Priority A). Engine has taken zero live trades since deploy.
 
-**Jun 2 12:47-13:10**: Built from scratch — 5 autonomous anomaly detectors:
-1. **rapid_churn**: position count changes too fast (e.g., ghost-killer loop)
-2. **ghost_loop**: same position closing and re-opening repeatedly
-3. **balance_drift**: balance change exceeds threshold
-4. **slippage_blowout**: fill price significantly off signal price
-5. **tpsl_emergency**: trade opened without native TP/SL
+**Status**: STALLED. All math proven (backtest: 73.5% WR, 5.35 PF, 720+ trades). Deployment ready. Single env var (`HL_PRIVATE_KEY`) blocks all execution.
 
-**Capability**: Auto kill-switch on critical anomaly. This is the **self-diagnostic layer** that was missing since live trading began May 24. All previous incidents (balance bug, doubling, ghost loop) would have been caught by at least one detector.
+### Priority H: Liquidity Engine — New R&D Direction (PATTERN BA — EMERGING)
+
+**Jun 11 22:37-22:54**: Built `hl_liquidity_engine_simple.py` — L2 WebSocket stream:
+- Wall detection: clusters >3x median size at each level
+- Trade flow tracking: real-time buy/sell direction
+- Imbalance calculation: rolling 20-snapshot
+- 3 simultaneous streams: l2Book (114 snapshots/30s), trades (110 trades/30s), BBO
+
+**First observation**: SOL imbalance swung -0.51 to +0.13 while mid held ~$65.58 — textbook accumulation. Ask walls at $65.57-60 (1000-5000 contracts), weaker bids $65.56-58 (500-2000).
+
+**Key insight**: This is the first mechanism that doesn't depend on OHLCV lag. If it works, it removes the 1-bar delay penalty that killed FVG strategies. Price sweeps liquidity walls in real-time — a limit entry at the wall level enters before the move.
+
+**Status**: UNPROVEN. Needs backtest against historical L2 data (not yet collected). CEO wants "more back and fwd test."
+
+### New Pattern Identified: Cross-Codebase Bug Propagation (SP-CBP-MAY11)
+The ghost-killer TP/SL bug (documented May 25, fixed Jun 2 in legacy) re-emerged in the Aqua rewrite (Jun 7 → discovered Jun 11). **The fix knowledge was not transferred during codebase migration.** This is a structural risk for any future codebase rewrite or parallel implementation.
+
+**Contrast with SSOT Architecture (Jun 4)**: The SSOT deployment (PositionGuard, OrderPipe, StateHealer) was build-on-new, not rewrite. Aqua was a port of existing logic — which should have copied proven fixes. The dev team (me) optimized the grouped call prematurely instead of preserving the known-working 2-phase pattern.
+
+**Recommendation**: When porting strategy code from legacy to Aqua, include a "Port Audit" step that cross-references all known bugs/fixes from the source codebase's bug list and ensures each fix has a corresponding implementation in the target codebase.
 
 ---
 
@@ -94,84 +136,92 @@ Day 40 without product revenue. 7 CEO-gated blockers unchanged.
 
 | Statement | Counter-Statement | Source |
 |-----------|------------------|--------|
-| "Bot discipline is improving — WR 72%, DD 0.6%" | $30 lost in 35 minutes on legacy ghost-killer loop Jun 2 morning. The main bot wasn't the problem — the legacy code path was. | Jun 2 memory 09:40-10:15 |
-| "TP/SL bug was fixed May 25" | The fix (resting orders) existed as documentation but was never wired into auto-entry. The bug cost ~$47 across 9 days. | Jun 1-2 vs May 25 memory |
-| "Global risk restructure is complete" | The choke collar relies on MDT breach detection — no documented threshold values or test evidence | Jun 2 memory |
-| "Revenue is $0.00 — Day 40" | Trading account is $956 with consistent WR >70%. The 70/30 rule defines revenue as product-only, creating a classification gap. | Multiple sources |
-| "6/6 sites healthy 200" | luxury-family-travel returns 404, kids-activities-asia 404, senior-friendly-travel 404, fam-travel-directory.com timeout, titan-app 401. Only 1/6 returns actual 200. | HEARTBEAT Jun 3 01:39 |
+| "Aqua is live on Hyperliquid with $879, 5% risk" | HL_PRIVATE_KEY env var is empty — no exchange object created. All signals silently fail. Zero trades have ever executed through Aqua. | Jun 11 memory |
+| "Bot mode: LIVE" | PAPER_MODE was True for ~24h after Jun 7 switchover. Discovered Jun 10 23:21 when CEO flagged issues. | Jun 10 memory |
+| "No signals since deploy — market quiet" | 4 btc_stat_arb ETH LONG signals fired Jun 10 00:45. They were detected by orchestrator, passed filters, hit DFA normal, reached order_queue — then silently failed on missing exchange object. The pulse cron said "no signals" because execution was failing before status could update. | Jun 10-11 memory |
+| "$879→$10k trajectory: 99.1% in 95d median" | Zero trades executed since deployment (5+ days). The trajectory assumes execution works. It doesn't. | Jun 9 spec vs Jun 11 reality |
+| "22→14 crons, 0 errors — cleanest state ever" | True for cron fleet health. But the MOST IMPORTANT cron (trading execution) has produced zero real orders. Infrastructure health ≠ system health. | Jun 11 vs execution data |
+| "CONSTRICTED zone removed — DFA now binary" | The DFA was originally deployed for regime-adaptive risk. Removing CONSTRICTED simplifies the model but also removes the regime-awareness that was the primary justification for deploying DFA in the first place. | Jun 4 vs Jun 9 decisions |
+| "FVG fill strategy: 60-63% WR" | Was look-ahead bias. Realistic execution: 38-42% WR, negative expectancy. CEO's skepticism was correct. | Jun 11 early vs late session |
 
 ---
 
 ## 3. Building Insights
 
-1. **The ghost-killer loop is the most expensive bug in the bot's lifetime** (~$47 total). Its root cause was known for 9 days before the fix was deployed. This is a knowledge-to-execution gap, not a discovery gap. The fix was in a semantic node (`tp-sl-workaround-resting-orders`) but never reached the executing code.
+1. **The trading system is beautifully architected and completely non-functional.** The infrastructure (SSOT, PositionGuard, Execution Monitor, DFA gate, OrderPipe, StateHealer, cluster cap, choke collar) is robust. But the execution layer — the one piece that actually makes money — is broken by a single missing env var. This is the single highest-leverage fix available.
 
-2. **CPSO is emerging as the strategic risk authority**. If Wosobu continues this pattern, CPSO will become the decision maker for risk architecture, strategy pipeline, and investment decisions. The AI's role becomes implementing CPSO's strategic vision while Wosobu handles tactical/CEO-level decisions.
+2. **The Aqua rewrite introduced 3 new bugs that didn't exist in legacy**, all from deviating from proven patterns:
+   - Grouped call entry+TP/SL (instead of 2-phase) — mirrors the EXACT bug from May 25 that cost ~$47
+   - Missing per-strategy coin whitelists — legacy had this working
+   - Filter chain unpacking crash on oi_gate boolean return — legacy had oi_gate_callback architecture
+   - **Lesson**: Optimize only what's proven broken. Port proven fixes verbatim.
 
-3. **The Execution Monitor is the most important infrastructure built since the bot went live**. Every incident to date (balance bug, accidental doubling, ghost loop, kill switch desync) maps to at least one of the 5 detectors. It provides the self-diagnostic layer the system lacked.
+3. **FVG/MSS/liquidity sweep is the right direction but the wrong timeframe.** The 15m gap-fill delay kills FVG for crypto intraday. But the liquidity engine (L2 order book) operates at a sub-candle level where the 1-bar delay doesn't apply. This is the most promising direction since BB Core.
 
-4. **The single-slot rule is the strongest risk constraint yet**. It prevents portfolio concentration (max 4 positions × 2% risk = 8% total exposure) and ecosystem correlation (ETH/ARB mutually exclusive). Combined with the grouped TP/SL, it creates a tighter risk envelope than at any point in the bot's history.
+4. **The CEO's role is evolving from delegator to auditor.** Wosobu now:
+   - Catches silent failures I missed (PAPER_MODE, execution=false, SPX in signals)
+   - Calls out look-ahead bias before I validate it
+   - Rejects strategies (BB/RSI as "retail") with data-supported arguments
+   - Demands proof before deployment
+   This is a healthier dynamic than the earlier "implement this now" pattern but means every claim needs 2x verification before reporting.
 
-5. **Product revenue is functionally abandoned.** Day 40 with $0, no forward movement on any of the 7 blockers, and the Jun 2 session was 100% trading operations. The reality is the system has pivoted to trading-as-revenue, even if the terminology hasn't caught up.
+5. **Product revenue at Day 49 with all 7 CEO blockers unchanged is a structural truth.** Neither trading nor product revenue will flow until the CEO provides credentials. The system's entire value proposition ("build products + trade to bootstrap") is environment-gated.
 
-6. **The cron fleet has stabilized to ~90% health** after the May 31 gateway restart. 2 remaining transient errors are DeepSeek API latency — outside the system's control.
+6. **The cron fleet consolidation is the only complete success** in this window. From 7 errors at gateway restart to 0 errors with aligned work scope. Redeploying freed cron slots productively is the next step.
 
-7. **May 28 23:34 PAPER flag → Jun 2 operations represent a turning point.** From the PAPER shadow transition through the ghost-loop failures through the grouped TP/SL fix to the global risk restructure, the system has gone through its most intense operational evolution since live trading began.
+7. **The knowledge-execution gap pattern has a new variant**: cross-codebase propagation failure. The fix from legacy was known, documented, and working — but not copied during the Aqua rewrite. System-level solution: include a bug-fix audit step in any port/rewrite checklist.
 
 ---
 
-## 4. June 2 Full Session Summary
+## 4. June 11 Full Session Summary (Last 24h)
 
-### Trading Timeline (all times HKT June 2)
+### Trading Pipeline
+| Time (HKT) | Event |
+|-------------|-------|
+| ~00:00 | Signal audit: bt_stat_arb → ARB (Jun 9), ETH ×4 (Jun 10), SPX SHORT (Jun 10), WIF LONG (Jun 10). All failed. |
+| ~01:00 | Root cause: HL_PRIVATE_KEY empty at runtime. All 4 ETH LONGs would have won. |
+| 17:30-18:06 | Bug 1 (grouped call) found and rewrite proposed. Bug 2 (no per-strategy whitelist) identified. Bug 3 (oi_gate crash) traced. |
+| 20:30-22:00 | **Cron archive**: 8 crons removed. NY ORB strategy built (22-27% WR). FVG investigation started. |
+| 22:00-22:54 | **FVG validation failure**: 60-63% WR → 38-42% after look-ahead fix. FVG dead for intraday crypto. |
+| 22:37-22:54 | **Liquidity engine built**: L2 WebSocket stream with wall detection, imbalance, trade flow. SOL accumulation pattern observed. |
 
-| Time | Balance | Key Event |
-|------|---------|-----------|
-| 07:31 | $981.52 | Wosobu go-live demand. Bot was in paper (conditional misinterpretation) |
-| 07:34 | $981.52 | 3 bugs fixed: TimeSyncGuard, account blindness, stale balance bridge |
-| 08:00 | $981.52 | Morning Pulse healthy. All signals neutral |
-| 09:40-10:15 | ~$951-981 | **Ghost loop legacy**: 14 orphan SOL closures, ~$30 loss. Old code path still firing |
-| 10:44 | $956 | Flipped to paper by Wosobu |
-| 12:19 | — | Bug root-caused: grouped orders must be single call |
-| 12:47-13:10 | — | Full state machine audit (Paths A-D). Execution Monitor built |
-| 13:20 | $956 | Grouped order smoke test: 0.13 SOL, clean ($0.0094 fees) |
-| 13:25 | $956 | Flipped to LIVE |
-| 13:58-14:13 | $946 | **First live trade**: SOL VolSurge LONG — SL hit at -$9.74 (legitimate) |
-| 17:27-18:09 | $966 | **Second live trade**: SOL VolSurge LONG — TP hit +$10.04 (first clean winner) |
-| 19:24-19:30 | $956 | **Full Global Risk Flip**: ALLOC_*=1.0, single-slot, BB_1H_SYMBOLS |
-| EOD | $956.09 | Flat, 2 hist trades post-fix, 50% WR, PF 1.03, net +$0.30 |
+### Key CEO Directives (Jun 11)
+- "Prove it first, never believe wholeheartedly, always challenge unless right"
+- "Go do more back and fwd test"
+- Remove cluster cap if it blocks trades (overruled my restoration)
+- Want FVG/MSS/MM models, not BB/RSI
+- Execution should mirror legacy exactly — "did you not copy the execution methods?"
 
-### Product Work (HEARTBEAT Jun 3 01:39)
-- AI Directory: SEO/accessibility — `role="img"` + `aria-label` on WorkflowDiagram SVGs
-- Proactive site scan: 6/6 checked (1/6 at 200, rest non-200 expected)
-- Cron health: 19/21 ✅ (2 transient DeepSeek timeouts)
-- **No LifeOS, Titan, or EV sites worked on** this cycle
-
-### Architecture Changes (Jun 2)
-| Change | Status | Notes |
-|--------|--------|-------|
-| Grouped TP/SL (normalTpsl) | ✅ Deployed | Entry + TP + SL in single call |
-| Single-slot rule | ✅ Deployed | 1/symbol, 4 max, ecosystem correlation |
-| Global risk flat-dollar | ✅ Deployed | ALLOC_*=1.0, $19.12/trade |
-| Execution Monitor | ✅ Deployed | 5 anomaly detectors |
-| Choke Collar | ✅ Deployed | Variance-gated reduction |
-| Pulse format restore | ✅ Deployed | Restored to Wosobu's spec |
+### Work Output (48h)
+| Category | Items |
+|----------|-------|
+| Trading bugs found | 3 (execution 2-phase, per-strategy whitelist, oi_gate crash) |
+| Trading bugs fixed | 1 (oi_gate, part of DFA CONSTRICTED fix) |
+| Strategies built/validated | ORB (failed), FVG (failed), Liquidity (unproven) |
+| Infrastructure built | hl_liquidity_engine_simple.py (L2 stream, wall/flow/imbalance) |
+| Cron changes | 8 archived, 14 active, 0 errors |
+| Product work | None (100% trading operations) |
 
 ---
 
 ## 5. Watch Items (Forward)
 
-### ⚠️ CRITICAL
-- **Kill switch still not OS-level enforced** — reduced risk from grouped TP/SL + single-slot + monitor, but PAPER/LIVE mode could still desync on restart
-- **Choke collar threshold values undocumented** — MDT breach detection works but at what threshold? Needs explicit documentation
-- **Revenue Day 40, $0.00** — 7 CEO blockers unchanged. June roadmap needs a fundamentally different approach
+### 🔴 CRITICAL
+- **HL_PRIVATE_KEY / HL_WALLET_ADDRESS env vars** — single highest-leverage fix in the entire system. All execution blocked until populated.
+- **Aqua execution pipeline 2-phase fix** — needs CEO sign-off for micro-test or ship. Currently all trades fail. 5+ days of zero execution.
+- **Per-strategy coin whitelists** — SPX (not a crypto perp) and WIF (not in strategy scope) in signals is a CEO-flagged issue. Need to backfill from legacy config.
 
-### Watch Items
-- **CPSO framework** — if this pattern continues, formalize escalation path for strategic decisions
-- **Execution Monitor** — first real test will be catching an anomaly before it becomes an incident. No test data yet.
-- **Cron fleet**: 2 transient DeepSeek timeouts — monitor for frequency increase
-- **Legacy code paths**: The Jun 2 ghost loop came from old code that wasn't cleaned up. Need to ensure all auto-entry paths use grouped orders now
-- **30-day live backtest WR**: BB Core SOL 76.7%, HYPE 79.4%, BTC 63%, ETH 61.5%, XRP 71.1% — these support continued LIVE operation
-- **Polymarket wallet** still unfunded since May 26 (16 days). Address: `GjsLvC1t5iJaTAtfXFFNDV46uG9bQHfTe36twPCvmK7U`
+### ⚠️ HIGH
+- **Cluster cap removal** — CEO wants it removed if it blocks trades. I restored it earlier in the session; he reversed that. Needs confirmation before next deploy.
+- **FVG/MSS pivot** — Liquidity sweep is promising but unproven. Need historical L2 data and backtest before any claims.
+- **Revenue Day 49** — All 7 CEO blockers unchanged for 31 days. No realistic path to $1 without credentials.
+
+### 👁️ WATCH
+- **Cross-codebase bug propagation risk** — Any future port/rewrite needs bug-fix audit step. Add to deployment checklist.
+- **Liquidity engine L2 data collection** — Need to accumulate several days of L2 snapshots to enable historical backtesting.
+- **Aqua pulse cron accuracy** — Rewritten Jun 11; first reports should be monitored for correct status reporting.
+- **Dragonite (IKBR)** — Seeded separate topic. Not yet started. MES micro futures mean reversion planned with $1k.
+- **CEO relationship pattern**: Monitor shift toward auditor/delegator role. Claims now require 2x verification. Harder but healthier.
 
 ---
 
@@ -179,74 +229,63 @@ Day 40 without product revenue. 7 CEO-gated blockers unchanged.
 
 | File | Used | Notes |
 |------|------|-------|
-| `memory/2026-06-02.md` | ✅ | Full session with bug fix, state machine, risk restructure |
-| `memory/2026-06-01.md` | ✅ | Kill switch enforcement, SOL VolSurge churn |
-| `memory/2026-05-31.md` | ✅ | Prior day state, SOL position carry |
-| `memory/2026-05-29.md` | ✅ | Doubling incident, TP/SL failure reference |
-| `memory/2026-05-25.md` | ✅ | TP/SL workaround documentation (resting orders) |
-| `memory/trading-log.md` | ✅ | **AUTHORITATIVE** for June 1-2 position timeline |
-| `memory/omnimind-synthesis.md` | ✅ | Prior cross-day patterns (June 2) |
-| `HEARTBEAT.md` (Jun 3 01:39) | ✅ | Cron health, site status, product work |
+| `memory/2026-06-11.md` | ✅ | 3 detailed sessions (pipeline audit, bugs, late FVG+liquidity) |
+| `memory/2026-06-10.md` | ✅ | Alpha-Velocity deploy, silent failure bug, v32 golden, Dragonite |
+| `memory/2026-06-09.md` | ✅ | $879→$10k optimization, DFA threshold final, Alpha-Velocity engine |
+| `memory/2026-06-08.md` | ✅ | ETH BB Reversion, funding proxy OI fix, math audit |
+| `memory/2026-06-07.md` | ✅ | Kill switch fix, Project Aqua rename, phases 2-4, cron health |
+| `memory/2026-06-06.md` | ✅ | LifeOS plugin detail page, EV ferry guide |
+| `memory/2026-06-05.md` | ✅ | Turtle Soup v2 baseline config |
+| `memory/2026-06-04.md` | ✅ | SSOT architecture, ghost trading incident, DFA gate deploy |
+| `memory/2026-06-03.md` | ✅ | LifeOS Export Engine, AI Directory commit |
+| `memory/2026-06-02.md` | ✅ | Grouped TP/SL fix, global risk restructure, Execution Monitor |
+| `memory/2026-06-01.md` | ✅ | SOL VolSurge churn, kill switch enforcement |
+| `HEARTBEAT.md` (Jun 12 01:38) | ✅ | All clean scan, Vercel CLI unauthenticated, cron health |
 | `knowledge/episodic/episodic-2026-06-01.md` | ✅ | Prior EOD state |
-| `knowledge/episodic/episodic-2026-06-02.md` | ❌ (not yet created) | — |
-| `knowledge/semantic/semantic-nodes.json` | ✅ | Prior nodes consulted for new concept detection |
+| `knowledge/episodic/episodic-2026-06-03.md` | ✅ | Prior episodic (partial) |
+| `knowledge/episodic/episodic-2026-06-05.md` | ✅ | Prior episodic (partial) |
+| `memory/omnimind-synthesis.md` | ✅ | Previous synthesis (Jun 3) for pattern continuity |
 
 ### Gaps
-- **🟢 No critical gaps** — all source files accessible and readable
-- **🟢 Trading log used as authoritative source** for June 1-2 position timeline
-- **🟢 HEARTBEAT at Jun 3 01:39 was referenced for current site/cron health**
+- **🟢 No critical gaps** — all 11 daily memory files for June 1-11 readable and complete
+- **🟢 HEARTBEAT at Jun 12 01:38 confirms current state**
+- **🟡 Episodic file for Jun 10 & 11 — not yet created** (will be this file)
 
 ---
 
-## 7. Backup Consolidation — 2026-06-03 03:00 HKT
+## 7. Synthesized Cross-Day Threads
 
-*Cross-check of primary synthesis against all source files. Expected to be clean.*
+### Thread 1: The Execution Chain (May 25 → Jun 11)
+A single conceptual error (entry+TP/SL must be separate calls) has persisted across May 25 → Jun 2 (legacy) → Jun 11 (Aqua). In legacy it cost ~$47 in ghost-loop losses over 9 days. In Aqua it has cost 5+ days of zero execution with an unknown number of missed winning trades. The same bug keeps returning because:
+1. It's counterintuitive (grouping seems efficient)
+2. Fix knowledge doesn't propagate across codebase boundaries
+3. Silent failure (no logged error that would alert CEO)
 
-### Gap 1: June 3 Daily Memory File Not Yet Created (FILE GAP — EXPECTED)
-No `memory/2026-06-03.md` exists yet (primary synthesis runs at 02:00 HKT before any Jun 3 work begins). This is normal.
+**Thread status**: ACTIVE — awaiting fix ship.
 
-### Gap 2: HEARTBEAT Site Health — Cached Optimistic Assertion (DATA QUALITY)
-Primary synthesis notes "6/6 sites healthy" from HEARTBEAT at Jun 3 01:39. But the HEARTBEAT itself shows:
-- luxury-family-travel: ⚠️ 404 (empty shell project, expected)
-- familytravelasia.com: ✅ 307→200 (HTTPS redirect)
+### Thread 2: Strategy Evolution (BB Core → Mean Reversion → Liquidity)
+May 19-28: BB Core dominates (proven edge).
+Jun 4-7: DFA gate + ETH BB Reversion — mean reversion expansion.
+Jun 8-10: Math audit proves all algos positive EV. $879→$10k optimization.
+Jun 11: CEO rejects BB/RSI as "retail." FVG fails validation. Liquidity sweep emerges as direction.
+**Thread status**: LIQUIDITY phase just began. Unproven.
 
-The other 3 sites (kids-activities-asia, senior-friendly-travel, family-travel-directory.com, titan-app) were not in the HEARTBEAT table — only the 6 listed projects were checked. The table only has 6 rows, of which 5 returned 200/307 and 1 returned 404. This is consistent with prior assertions.
+### Thread 3: CEO Engagement Evolution (Delegator → Auditor)
+May 19-28: CEO gives directives, I implement.
+May 29-Jun 4: CEO starts pushing back on claims (PAPER flag, deployment protocol).
+Jun 7-9: CPSO framework emerges. CEO rejects DFA CONSTRICTED zone with data.
+Jun 10-11: CEO catches silent failures I missed (PAPER_MODE, execution=false, SPX in signals). Demands proof before accept.
+**Thread status**: HEALTHIER dynamic but higher bar for claims.
 
-**Correction from Jun 2 backup**: The primary site health claim was correct in context (6 projects checked, 5/6 at 200 or 307→200, 1/6 at expected 404). The prior backup flagged dead domains that weren't actually in the HEARTBEAT check set.
+### Thread 4: Revenue Zero — Day 49
+May 19: $0 revenue, 7 CEO blockers.
+Jun 1-11: Still $0 revenue, 7 CEO blockers. Trading technically functional but blocked by HL env vars.
+Dragonite seeded as second revenue channel but blocked by IB Gateway setup.
+**Thread status**: STALLED. No change since first memory file.
 
-### Contradiction Check: 2 Discrepancies Found
-
-| Statement (Primary Synthesis) | Contradiction (Cross-Check) | Severity |
-|------------------------------|----------------------------|----------|
-| "2 transient DeepSeek API timeouts — research-agent-12h + trading-beast-daily-report" | HEARTBEAT column labels: research-agent-12h shows 2 of last 3 runs timed out on "model-call-started" — same for trading-beast-daily-report (1/3). These are distinct crons from the previously flagged set. | 🟢 LOW — correct identification, minor data precision difference in error count |
-| "Bot mode cycling: LIVE→PAPER→LIVE" | Memory file says bot was LIVE until 09:40, then paper at 10:44 until 13:25. But the session started with a "misinterpretation" — bot was in paper at 07:31 despite Wosobu intending LIVE. The flag wasn't clearly set either way at session start. | 🟢 LOW — the confusion is accurately documented as a "misinterpretation" |
-
-### Patterns Checked and Confirmed
-- ✅ **Pattern AP2** (SOL ghost-killer loop → grouped TP/SL fix): Trading log confirms 14 orphan closures Jun 2 09:40-10:15. Fix deployed at 13:20. Smoke test clean. First live trade with fix at 13:58. RESOLVED.
-- ✅ **Pattern AR** (global risk restructure): All config changes deployed Jun 2 19:24-19:30. Single-slot rule enforced. ALLOC_*=1.0. CONFIRMED.
-- ✅ **Pattern AS** (CPSO framework): Wosobu's CPSO reference documented in memory Jun 2. Directive treated as binding. EMERGING.
-- ✅ **Pattern AT** (Execution Monitor): Built and deployed Jun 2 12:47-13:10. 5 detectors, auto kill-switch. CONFIRMED.
-- ✅ **Pattern AP** (bot mode drift): Reduced but not eliminated. Hard rule "LIVE unless told otherwise" documented. OS-level enforcement still missing.
-- ✅ **Pattern AL** (revenue $0): Day 40 confirmed. 7 CEO blockers unchanged. Affiliate link count not mentioned in this cycle.
-- ✅ **Pattern AQ** (cron error propagation): Error count stabilized to 2 (down from 7 on Jun 1). Both DeepSeek API transient.
-
-### New Pattern Identified: Knowledge-Execution Gap on Known Fixes — SP-KEG
-**Observation**: The ghost-killer loop (Pattern AP2) had its root cause documented in the `tp-sl-workaround-resting-orders` semantic node since May 25, but the fix was never wired into the auto-entry path until 9 days and ~$47 in losses later. This is a **knowledge-to-execution gap**: the system knew the correct approach (single grouped order call) but the executing code used a different, broken approach.
-
-**This is not the first instance**:
-- Balance reading bug (May 24): balancing clearinghouseState vs portfolio endpoint was documented in code comments but broken implementation ran for days
-- Accidental doubling (May 29): PAPER_MODE_FORCE existed conceptually but wasn't in ad-hoc script paths
-- Kill switch desync (Jun 1): state file fix existed but cron enabled flag didn't check it
-
-**Root cause**: Decoupling between documentation (semantic nodes, memory files, hard rules) and executing code. The system writes the right answer to files but the code doesn't read them. The Execution Monitor partially addresses this (anomaly detection catches runtime failures) but doesn't prevent knowledge gaps from creating bugs.
-
-**Recommendation**: A "Fix Audit Check" step — when a semantic node documents a workaround/fix, register it as a pull task to verify all auto-entry paths implement it.
-
-### Cross-Day Contradictions Found: 0
-- Balance trajectory ($40 → $1,054 → $981 → $956) consistent across 16 daily files
-- WR progression (60% → 67% → 71% → 72%) consistent across all sources
-- Bug chronology (balance bug → doubling → ghost loop → grouped fix) consistent
-- All 7 CEO blockers unchanged across 17+ days — monotonic consistency
+### Thread 5: Infrastructure Build → Deployment Gap
+The system builds robust infrastructure (SSOT, Execution Monitor, Alpha-Velocity Engine, Liquidity Engine) but repeatedly fails at the last mile (env vars, config propagation, execution wiring). The Aqua orchestrator is the most extreme example — a beautifully architected pipeline that has never placed a single real trade.
+**Thread status**: Continuing pattern. Needs root-cause intervention.
 
 ---
 
@@ -256,124 +295,52 @@ The other 3 sites (kids-activities-asia, senior-friendly-travel, family-travel-d
 
 | ID | Name | Summary | Confidence |
 |----|------|---------|------------|
-| grouped-tpsl-fix-deployed | Grouped TP/SL Fix Deployed (normalTpsl) | Jun 2 13:20: single bulk_orders call with grouping='normalTpsl' replaces post-entry TP/SL attachment. HL auto-cancels TP on SL hit. Ghost loop eliminated. Cost to date: ~$47 across 9 days. | 1.0 |
-| execution-monitor-deployed | Execution Monitor — 5 Anomaly Detectors Deployed | Jun 2 12:47-13:10: 5 detectors: rapid_churn, ghost_loop, balance_drift, slippage_blowout, tpsl_emergency. Auto kill-switch on critical. First self-diagnostic layer for the live trading system. | 1.0 |
-| global-risk-restructure-jun2 | Global Risk Restructure — Flat-Dollar Risk + Single-Slot Rule | Jun 2 19:24-19:30: ALLOC_*=1.0 ($19.12/trade), single-slot rule (1/symbol, 4 max), BB_1H_SYMBOLS allowlist, ecosystem correlation gate (ETH/ARB exclusive). | 1.0 |
-| cpso-framework-emergence | CPSO Framework — Strategic Alter Ego Authority | Wosobu's CPSO persona now explicit. CPSO directives carry higher authority than tactical requests. First major act: global risk restructure. Conflict resolution: CPSO > standard Wosobu for risk decisions. | 0.85 |
-| knowledge-execution-gap-pattern | Knowledge-Execution Gap Pattern — Known Fixes Not Deployed | Repeating pattern: correct fix documented in semantic nodes/memory but not wired into executing code. Observed across 4 incidents (balance bug, PAPER guard, kill switch, grouped TP/SL). Cost to date: ~$47. | 0.9 |
+| aqua-execution-pipeline-failure | Aqua Execution Pipeline — Zero Trades Since Go-Live (5 days) | HL_PRIVATE_KEY empty at runtime + grouped call misuse = zero Aqua trades since switchover Jun 7. 5 missed trades confirmed. ETH LONG would have won +1.6%. 3 bugs found: grouped call, missing whitelist, oi_gate crash. | 1.0 |
+| cross-codebase-bug-propagation | Cross-Codebase Bug Propagation — Known Fixes Not Ported | The ghost-killer TP/SL bug (fixed Jun 2 in legacy) re-emerged in Aqua rewrite. Fix knowledge existed but wasn't transferred. Risk for future codebase rewrites. | 0.9 |
+| fvg-fill-strategy-dead-intraday | FVG Fill Strategy — Not Deployable on Crypto Intraday | 60-63% WR claim was look-ahead bias. Realistic entry (next candle open): 38-42% WR, negative expectancy. Crypto 15m fills gaps too fast. No timeframe magic exists (17m tested). | 1.0 |
+| liquidity-engine-r-and-d | Liquidity Engine — Sub-Candle L2 Stream Strategy | Built Jun 11 22:37-22:54. WebSocket L2 stream, wall detection, imbalance tracking, trade flow. SOL accumulation observed. First mechanism not dependent on OHLCV lag. Unproven but promising. | 0.7 |
+| wosobu-auditor-transition | CEO Role Evolution — Delegator to Auditor | Since Jun 10, Wosobu catches silent failures, demands proof, rejects strategies with data. Healthier but higher verification bar. Claims need 2x validation before reporting. | 0.9 |
+| aqua-cron-fleet-consolidation | Aqua Cron Fleet — 8 Archived, 14 Active, 0 Errors | Jun 11: 8 R&D crons archived with CEO approval. Fleet aligned to active work. Cleanest state since May 19. | 1.0 |
+| alpha-velocity-stalled | Alpha-Velocity Engine — Deployed but Untraded | $879→$10k spec proven (99.1% reach, 95d median). 73.5% WR, 5.35 PF. Zero trades executed due to HL env var blocker. | 1.0 |
 
 ### Updated Nodes
 
 | ID | Change |
 |----|--------|
-| sol-volsurge-tpsl-loop-jun1 | ✅ Resolved — grouped TP/SL deployed, ghost loop eliminated |
-| sol-volsurge-allowlist-needs-tpsl-gate | ✅ Resolved — obsolesced by grouped order approach |
-| tp-sl-workaround-resting-orders | Changed to `historical` — superseded by grouped order approach |
-| kill-switch-audit-desync | Partially addressed — Execution Monitor adds detection but OS-level enforcement still missing |
-| bot-mode-drift-governance-gap | Reduced — hard rule documented, monitor deployed, but OS-level flag still missing |
-| revenue-day-39-structural | Extended to Day 40 — no changes to blocker status |
+| grouped-tpsl-fix-deployed (Jun 3) | Extended: Same bug found in Aqua (Jun 11). New variant — grouped call without existing position. Fix proposed but awaiting CEO sign-off. |
+| knowledge-execution-gap-pattern (Jun 3) | Extended: Now has cross-codebase variant. Cost estimate updated to include missed Aqua trades. |
+| cpso-framework-emergence (Jun 3) | Strengthened: CPSO and Wosobu now operate as auditor+strategist. CPSO's Alpha-Velocity engine deployed but stalled. |
+| dfa-gate-hurst-deployed (Jun 4) | Replaced: CONSTRICTED zone removed. Binary LOCK/NORMALIZED only. |
+| revenue-day-39-structural (Jun 3) | Extended to Day 49. Dragonite added as second CEO-blocked channel. |
+| killer-switch-hl502-fix (Jun 7) | Remain current: fix holding. No new kill switch incidents. |
 
 ### New Edges
 
 | Source | Target | Type | Weight |
 |--------|--------|------|--------|
-| grouped-tpsl-fix-deployed | tp-sl-workaround-resting-orders | supersedes | 1.0 |
-| grouped-tpsl-fix-deployed | sol-volsurge-tpsl-loop-jun1 | resolves | 1.0 |
-| execution-monitor-deployed | ad-hoc-code-live-risk-surface | mitigates | 0.9 |
-| global-risk-restructure-jun2 | pipeline-decisions-locked-may25 | extends | 0.8 |
-| global-risk-restructure-jun2 | single-slot-rule | requires | 0.95 |
-| cpso-framework-emergence | seventy-thirty-prioritization | governs | 0.7 |
-| knowledge-execution-gap-pattern | sol-volsurge-tpsl-loop-jun1 | explains | 0.9 |
-| knowledge-execution-gap-pattern | bot-mode-drift-governance-gap | context | 0.8 |
-| knowledge-execution-gap-pattern | backlog-execution-gap-7days | related | 0.7 |
+| aqua-execution-pipeline-failure | grouped-tpsl-fix-deployed | mirrors-with-own-variant | 0.95 |
+| aqua-execution-pipeline-failure | knowledge-execution-gap-pattern | exemplifies | 0.9 |
+| cross-codebase-bug-propagation | knowledge-execution-gap-pattern | specializes | 0.9 |
+| cross-codebase-bug-propagation | ghost-killer-loop-legacy | explains | 0.9 |
+| fvg-fill-strategy-dead-intraday | wosobu-rejects-bb-rsi-retail | supports | 0.85 |
+| liquidity-engine-r-and-d | fvg-fill-strategy-dead-intraday | replaces-direction | 0.7 |
+| wosobu-auditor-transition | cpso-framework-emergence | complements | 0.85 |
+| alpha-velocity-stalled | aqua-execution-pipeline-failure | blocked-by | 1.0 |
+| alpha-velocity-stalled | revenue-day-39-structural | extends | 0.9 |
 
 ---
 
-## 9. Backup Consolidation — 2026-06-03 03:00 HKT Run
+## 9. Summary Statistics
 
-*Full cross-check of all 16 memory/*.md files against this synthesis. No new work data since 02:08 HKT synthesis generation.*
-
-### Cross-Check Coverage
-| File Read | Has Data Missing From Synthesis? |
-|-----------|----------------------------------|
-| 2026-06-02.md | ✅ Fully captured |
-| 2026-06-01.md | ✅ Fully captured |
-| 2026-05-31.md | ✅ Fully captured |
-| 2026-05-29.md | ✅ Fully captured |
-| 2026-05-28.md | ✅ Fully captured |
-| 2026-05-27.md | ✅ Fully captured |
-| 2026-05-26.md | ✅ Fully captured |
-| 2026-05-25.md | ✅ Fully captured |
-| 2026-05-24.md | ✅ Fully captured |
-| 2026-05-23.md | ✅ Fully captured |
-| 2026-05-22.md | ✅ Fully captured |
-| 2026-05-22-late.md | ✅ Fully captured |
-| 2026-05-21.md | ✅ Fully captured |
-| 2026-05-20.md | ✅ Fully captured (Nuevo research, Gold Template) |
-| 2026-05-19.md | ✅ Fully captured |
-| omnimind-distribution-day.md | ✅ Referenced in revenue section but unlisted |
-| hl-balance-hard-rule.md | ✅ Not synthesis material (operational) |
-| trading-log.md | ✅ Truncated at Jun 1 — no Jun 2+ data |
-
-### Gaps Found: 2 New (Non-Critical)
-
-#### Gap A: OmniMind Distribution-Day — Not Explicitly Tracked as Pattern (MINOR)
-`omnimind-distribution-day.md` reports 4th consecutive failure to publish to external platforms. The synthesis mentions affiliate links and CEO blockers but doesn't track the **distribution pipeline failure** as a standalone pattern.
-
-**Source data**: All 4 attempts (May 27, May 29, May 30, June 2) hit the same 5 credential walls. 1/5 published to own site (apifeny-ai.vercel.app). Pipeline itself works ($0 strategy) — the gate is purely credential-based.
-
-**Impact**: LOW — all blockers are Wosobu-side. But this is accumulating as an OmniMind operational pattern worth tracking.
-
-#### Gap B: May 28 PAPER/LIVE Double-Transition Timing (DATA PRECISION)
-The synthesis correctly notes the May 28 PAPER flag was set at 23:34. But the May 28 memory file shows:
-- 23:43 HKT: Bot ran in **LIVE** mode
-- 23:53 HKT (same file, 10 min later): Bot ran in **PAPER** mode
-
-This 10-minute gap between the flag being SET (23:34) and shadow mode actually ACTIVATING for the bot run (23:53) isn't visible in the synthesis. The LIVE→PAPER transition wasn't instant — there was a ~10-19 min window where the config was set but crons were still in LIVE.
-
-**Impact**: LOW. No trades fired in that window. Chronological detail only.
-
-### New Pattern Identified: SP-DPF — Distribution Pipeline Failure (Recurring)
-**Observation**: OmniMind attempted external publication 4 times (May 27, 29, 30, Jun 2). Each time: same 5 credential walls. Only 1/5 channels (own blog) succeeded. This is a **repeating operational failure** not tracked in the synthesis.
-
-**Root cause**: No API keys exist in the environment for dev.to, Reddit, Twitter/X, or ClawHub. This is an environment setup gap, not a code bug. Unlike the ghost-killer loop (which had documented fixes not deployed), this blocker is entirely outside the system's control.
-
-**Trend**: Credential-gated tasks remain the longest-unresolved category. All 7 CEO blockers from May 19 onward persist unchanged (14+ days).
-
-### New Pattern Identified: SP-M28DT — May 28 LIVE→PAPER Lag
-**Observation**: The May 28 shadow-mode transition has a latency between config-write (23:34) and effective enforcement on bot runs (23:43-23:53). The bot processed LIVE runs for ~10-19 minutes after the paper flag was written. If a signal had fired in that window, a LIVE order would have been placed despite the shadow-mode directive.
-
-**Relevance**: This is the same class of problem as the ghost-killer loop — config/documentation state diverging from executing code state. The runtime doesn't re-read config on every tick.
-
-**Status**: Partially mitigated by the new Execution Monitor + hard rule "LIVE unless told otherwise". But config-to-code propagation delay is still structural.
-
-### Corrections to Synthesis (Section 8: Semantic Node Update)
-
-#### Typo: "cepo-framework-emergence" → Should be "cpso-framework-emergence"
-The semantic node ID and table name both say "cepo" (with 'e') instead of "CP-S-O". The correct abbreviation is **CPSO** (Chief Product/Strategy Officer — Wosobu's strategic alter ego). This should be corrected in the semantic node records.
-
-**Affects**: 
-- Node ID: `cepo-framework-emergence` → `cpso-framework-emergence`
-- Edge sources/targets referencing `cepo-framework-emergence`
-
-#### Minor: 70/30 Rule Attribution
-Section 1 Priority E states "The Jun 2 session was entirely trading operations." Cross-check confirms this is accurate — the HEARTBEAT at Jun 3 01:39 shows only AI Directory SEO work as product. **However**: The 70/30 rule (section 4 of USER.md) says 70% revenue work / 30% strategic. If trading IS the revenue source (only $956 account, but functional), classifying Jun 2 as "100% trading" aligns with 70/30 revenue work. No correction needed, but worth noting the implicit acknowledgement.
-
-### Cross-Day Contradictions: 0 New
-All 16 daily memory files are internally consistent with the synthesis. No contradictions in:
-- Balance trajectory ($40→$229→$1,029→$981→$956)
-- Bug chronology (balance bug May 24 → doubling May 29 → ghost loop Jun 1-2 → resolved Jun 2)
-- Bot mode timeline (PAPER→LIVE→shadow→LIVE→paper→LIVE)
-- Blocker status (all 7 unchanged across entire history)
-
-### Watch Item Update: Cron Fleet
-Primary synthesis reports 2 crons in error (transient DeepSeek timeout). HEARTBEAT at Jun 3 02:16 confirms same 2 crons still failing. **No change** since synthesis generation.
-
-### Last Confirmed: No New Work Since 02:08 HKT
-- No 2026-06-03.md created
-- No new trades on the bot (Jun 3 03:00 is deep night — no market activity expected)
-- No new product commits to any site
-- Bot likely running in 60s cron with no signals firing
-
----
-*End backup consolidation — 2026-06-03 03:00 HKT* 
+| Metric | Jun 3 Synthesis | Jun 12 Synthesis | Change |
+|--------|----------------|-------------------|--------|
+| Total memory files consumed | 16 | 11 (June-only) | Window focused |
+| Patterns identified | 20 (7 primary) | 11 (8 new + 3 extended) | Narrower scope, deeper |
+| Contradictions found | 5 | 5 | Consistent error rate |
+| Semantic nodes created | 5 new + 5 updated | 7 new + 6 updated | — |
+| Graph edges created | 9 | 11 | — |
+| Critical blockers | 7 CEO-gated | 7 CEO-gated + 1 HL env key | +1 execution-level |
+| Cron health | 2 errors (DeepSeek) | 0 errors | ✅ |
+| Bot trades since last synthesis | ~$47 loss (legacy) + $0.30 net | 0 executed (Aqua) | Regressed |
+| Revenue | $0.00 (Day 40) | $0.00 (Day 49) | No change |
+| Aqua trades executed | 0 (preexisted) | 0 (still 0) | No change, but now critical |

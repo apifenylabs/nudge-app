@@ -4,6 +4,7 @@ import { ArrowRight, ShieldCheck, Sparkles, Swords, Layers, Cpu, Globe, Zap, Sta
 import MascotDisplay from '../components/organisms/MascotDisplay';
 import Badge from '../components/ui/badge';
 import PricingSection from '../components/organisms/PricingSection';
+import QuickStartSection from '../components/organisms/QuickStartSection';
 import ScrollDownArrow from '../components/molecules/ScrollDownArrow';
 import JsonLd from '../components/atoms/JsonLd';
 
@@ -103,6 +104,9 @@ export default function TitanLanding() {
           </div>
         </div>
       </section>
+
+      {/* Quick Start Guide */}
+      <QuickStartSection />
 
       {/* Progression Path */}
       <SmoothScrollSection id="progression" className="px-6 py-20">
